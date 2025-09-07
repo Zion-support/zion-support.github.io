@@ -1,6 +1,4 @@
-
 ;
-
 export type AdminNotesPanelProps = {targetType: string; // e && e.g., 'user' | 'listing';}
   targetId: string; // unique identifier for the target;}
 }
@@ -8,7 +6,6 @@ export type AdminNotesPanelProps = {targetType: string; // e && e.g., 'user' | '
 type Note = {target_type: string; // e.g., 'user' | 'listing';}
   target_id: string; // unique identifier for the target;}
 import React, { useEffect, useMemo, useState } from 'react';
-
 export type AdminNotesPanelProps = any;
   targetId: string; // unique identifier for the target;
 }
@@ -26,16 +23,12 @@ type Note = {id: string;
   targetId: string;
   text: string;
 
-
-
   authorId: string;}
   createdAt: number;}
 }}
-
 export default function AdminNotesPanel() {authorId: string;}
   createdAt: number;}
 }
-
 export default function AdminNotesPanel({
   targetType}
   targetId}
@@ -61,7 +54,6 @@ const res = await fetch(}
         {}
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
 
-       
 }
         body: JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {method: 'POST'}
   headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId},body: JSON.stringify({ targetType, targetId, text })})if (!res.ok) {alert('Failed to add note';}
@@ -106,7 +98,6 @@ if (isAdmin) fetchNotes();}
       setAdding(false)}
     }
   }
-
 
     }
   }

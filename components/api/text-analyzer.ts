@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface TextAnalysisResult {
 
-
 text: string;
   statistics: {characters: number;
     charactersNoSpaces: number;
@@ -32,8 +31,6 @@ text: string;
 }>;
     trigrams: Array<{ phrase: string; count: number }>
 };
-
-
 export default async function handler(
   req: NextApiRequest;
   res: NextApiResponse<TextAnalysisResult | { error: string } />
@@ -80,7 +77,6 @@ const matches = word.match(/[aeiouy]{1,2}/g);
 
 return matches ? matches.length : 1;
 };
-
 
 const syllables = text.split(/\s+/).reduce((total, word) => {
      ;}
@@ -195,7 +191,6 @@ const wordsArray = text && text.toLowerCase().split(/\s+/);
 const bigramCounts = new Map<string, number />();
 
 const trigramCounts = new Map<string, number />();
-
 
 for (let i = 0; i < wordsArray.length - 1; i++) {}
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;

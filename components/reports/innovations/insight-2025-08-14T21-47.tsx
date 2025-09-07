@@ -1,10 +1,9 @@
-
 export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
-        <title />Innovation Insight — 2025-08-14 21-47</title>;import Head from 'next/head';
-
+      <Head>;
+        <title />Innovation Insight — 2025-08-14 21-47</title>;
+import Head from 'next/head';
 export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
+      <Head>;
         <title />Innovation Insight — 2025-08-14 21-47</title>;
         <meta;
           name='description';
@@ -20,7 +19,7 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
 
   return (
     <div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
+      <Head>;
         <title />Innovation Insight — 2025-08-14 21-47</title>;
         <meta;
 name='description'
@@ -69,7 +68,7 @@ className='mt-4'
   )export default function Page() {return (export default function Page() {return (</div>;)export default function Page() {return (export default function Page() {export default function Page() {export default function Page() {return (export default function Page() {export default function Page() {return (}
 "
 export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Innovation Insight — 2025-08-14 21-47</title>;"
         <meta name=\"description\" content=\"An inventive insight derived from autonomous research.\" />;"
         <meta property=\"og:title\" content=\"Innovation Insight — 2025-08-14 21-47\" />;"
@@ -84,16 +83,13 @@ export default function Page() {return (export default function Page() {return (
       </main>;
     </div>;
   )}
-
 export default function Page() {return (import Head from 'next / head';
-
 export default /**;
  * Page - Function description;
  */;
 function Page() {return (<div className='min - h-screen bg - slate - 950 text - white' />;
     </div>;
   );
-
 export default function Page() {;
 "
               '<ul class=\"list-disc pl-6\" /><li />Opportunity: Transform recurring signals into structured guides</li><li />Idea: Build a feature row summarizing value, capability, and link to details</li><li />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/newsroom</a></li></ul>'
@@ -106,7 +102,6 @@ export default function Page() {;
         </p>
       </main>
   );
-
 export default function Page() {
   return (
 
@@ -116,7 +111,6 @@ export default function Page() {
     </div>;
 
   );
-
 export default function Page() {
   return (
 
@@ -124,18 +118,16 @@ export default function Page() {
   return (}
 }
 }
-
 export default function Page() {
   return (
 import Head from 'next / head';
-
 export default /**
  * Page - Function description;
  */
 function Page() {
   return (
     <div className='min - h-screen bg - slate - 950 text - white' />;
-      <Head />;
+      <Head>;
         <title  /> Innovation Insight — 2025 - 08 - 14 21 - 47</title>;
         <meta;
           name='description';
@@ -176,14 +168,13 @@ function Page() {
  */;"
 function Page() {return (<div className=\"min - h-screen bg - slate - 950 text - white\" />;
     </div>);
-
 export default /**
  * Page - Function description;
  */
 function Page() {
   return ("
     <div className=\"min - h-screen bg - slate - 950 text - white\" />;
-      <Head />;
+      <Head>;
         <title  /> Innovation Insight — 2025 - 08 - 14 21 - 47</title>;"
         <meta name=\"description\" content=\"An inventive insight derived from autonomous research.\" />;"
         <meta property=\"og:title\" content=\"Innovation Insight — 2025 - 08 - 14 21 - 47\" />;"
@@ -198,7 +189,7 @@ function Page() {
       </main>
     </div>
   );
-}<Head />;
+}<Head>;
         <title />Innovation Insight — 2025-08-14 21-47</title>;
         <meta name=&quot;description&quot; content=&quot;An inventive insight derived from autonomous research.&quot; />;
         <meta property=&quot;og:title&quot; content=&quot;Innovation Insight — 2025-08-14 21-47&quot; />;
@@ -224,7 +215,7 @@ function Page() {
     </div>;
     </div>;"
   )export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Innovation Insight — 2025-08-14 21-47</title>;"
         <meta name=\"description\" content=\"An inventive insight derived from autonomous research.\" />;"
         <meta property=\"og:title\" content=\"Innovation Insight — 2025-08-14 21-47\" />;"
@@ -247,10 +238,7 @@ function Page() {
     </div>);
 }
 
-
-
-
-      <Head />
+      <Head>
         <title />Innovation Insight — 2025-08-14 21-47</title>
         <meta name=&quot;description&quot; content=&quot;An inventive insight derived from autonomous research.&quot; />
         <meta property=&quot;og:title&quot; content=&quot;Innovation Insight — 2025-08-14 21-47&quot; />
@@ -277,7 +265,6 @@ className='mt-4'
     </div>
     </div>;
   );
-
 export default function Page() {
   return (
 
@@ -286,7 +273,7 @@ export default function Page() {
 
 "
     <div className=\"min-h-screen bg-slate-950 text-white\" />
-      <Head />
+      <Head>
         <title />Innovation Insight — 2025-08-14 21-47</title>"
         <meta name=\"description\" content=\"An inventive insight derived from autonomous research.\" />"
         <meta property=\"og:title\" content=\"Innovation Insight — 2025-08-14 21-47\" />"
@@ -315,6 +302,5 @@ export default function Page() {
   }
 }
 ;
-
 
 "

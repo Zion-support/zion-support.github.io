@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -155,7 +153,6 @@ shape.size}
           ctx && ctx.stroke();}
         }
 
-
         ctx.restore();
       });
       // Draw energy waves;
@@ -181,7 +178,6 @@ const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50;}
 
       animationFrameId = requestAnimationFrame(animate)
 };
-
 
     animate();
 
@@ -354,7 +350,4 @@ transform: translate(0, 0);}
     </div>
 )
 };
-
-
 export default UltraFuturisticBackground2040;
-

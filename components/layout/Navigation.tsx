@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Home, Brain, Cpu, Rocket;
@@ -26,7 +24,6 @@ setIsScrolled(window.scrollY > 50)) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -233,7 +230,6 @@ className='flex items-center space-x-2 text-gray-300 hover: text-white transitio
                       <span className='font-medium' />{item.name}</span>
                     </Link>
 
-                  
 }
                 </div>;
               ))}
@@ -289,9 +285,6 @@ className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() = /> setIsOpen(false)}
 
             />
-            
-
-
 
             {/* Mobile Menu *}
 }
@@ -368,14 +361,10 @@ className='flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 tran
                     </div>
                   ))}
                 </div>
-                      
+
 }
                     </div>;
                   ))}
-
-
-
-
 
                 {/* Contact Information */}
 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20' />
@@ -421,8 +410,6 @@ className='flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 tran
     </>
 )
 };
-
-
 export default Navigation;
 
 "

@@ -8,5 +8,4 @@ function useLocalStorage<T />() {const [storedValue, setStoredValue] = useState<
       setStoredValue(valueToStore)window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {console.error(`Error setting localStorage key \"${key}\":`, error)}
   }return [storedValue, setValue] as const;
 }
-
 export default useLocalStorage;

@@ -1,5 +1,3 @@
-
-
 password.toLowerCase () .includes (pattern) );
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 
@@ -20,11 +18,10 @@ if (entropy < 30) feedback.push ('Password is too predictable');
 
     hasCommonPatterns: boolean;
     entropy: number;
- 
+
 }
   suggestions: string[];
 }
-
 export default async function handler(
 
   req: NextApiRequest;

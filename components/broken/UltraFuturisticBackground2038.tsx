@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -9,7 +7,6 @@ interface UltraFuturisticBackground2038Props {
   children?: React.ReactNode}
 }
 }
-
 export default function UltraFuturisticBackground2038({ }
   intensity;}
 import { motion } from 'framer-motion';
@@ -24,7 +21,6 @@ import { motion } from 'framer-motion';
 
   children?: React.ReactNode;
 }
-
 export default function UltraFuturisticBackground2038() {const canvasRef = useRef<HTMLCanvasElement />(null)const containerRef =;
   useRef<HTMLDivElement />(null;
   useEffect(() => ;
@@ -130,7 +126,7 @@ primary: [
   return $3;}
 }
           }
-         
+
 }
 ;
   const colors  = getThemeColors()case 'cyberpunk':;
@@ -171,7 +167,6 @@ primary: [
 ];}
 }
           }
-
 
         case 'cyberpunk':
           return {
@@ -483,10 +478,8 @@ if (particle.life <= 0) {
 
       });
 
-
       requestAnimationFrame(animate)
 };
-
 
     initParticles();
     animate();
@@ -658,13 +651,8 @@ key={i}
 "
                   ease: \"easeInOut\"
 
-
                   left: `${(i * 12) % 10}
 }%`
-
-
-
-
 
                 }}
                 animate={{

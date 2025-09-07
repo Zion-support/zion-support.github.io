@@ -1,5 +1,3 @@
-
-
 trace: on-first-retry' ,
 };
 reporter: [ ['list'], ['json', {
@@ -27,4 +25,3 @@ reporter: [ ['list'], ['json', {
   //     name: webkit',  //     use: { ...devices['Desktop Safari'],}
 },  //   }
   // ]
-

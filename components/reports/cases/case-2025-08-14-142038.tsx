@@ -1,10 +1,9 @@
-
 export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
-        <title />Case Study — Autonomous Reports</title>;import Head from 'next/head';
-
+      <Head>;
+        <title />Case Study — Autonomous Reports</title>;
+import Head from 'next/head';
 export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
+      <Head>;
         <title />Case Study — Autonomous Reports</title>;
         <meta;
           name='description';
@@ -17,7 +16,7 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
 
   return (
     <div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
+      <Head>;
         <title />Case Study — Autonomous Reports</title>;
         <meta;
 name='description'
@@ -60,17 +59,15 @@ className='mt-4'
         </p>;
       </main>;"
   )export default function Page() {return (export default function Page() {return (export default function Page() {export default function Page() {</div>;)export default function Page() {return (return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Case Study — Autonomous Reports</title>;
 import Head from 'next / head';
-
 export default /**;
  * Page - Function description;
  */;
 function Page() {return (<div className='min - h-screen bg - slate - 950 text - white' />;
     </div>;
   );
-
 export default function Page() {;
 
 "
@@ -83,7 +80,6 @@ export default function Page() {;
         </p>
       </main>
   );
-
 export default function Page() {
   return (
 
@@ -92,16 +88,15 @@ export default function Page() {
 
   return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Case Study — Autonomous Reports</title>;
-
 export default /**
  * Page - Function description;
  */
 function Page() {
   return (
     <div className='min - h-screen bg - slate - 950 text - white' />;
-      <Head />;
+      <Head>;
         <title  /> Case Study — Autonomous Reports</title>;
         <meta;
           name='description';
@@ -136,7 +131,7 @@ function Page() {
  * Page - Function description;
  */;"
 function Page() {return (<div className=\"min - h-screen bg - slate - 950 text - white\" />;
-      <Head />;"
+      <Head>;"
         <title  /> Case Study — Autonomous Reports</title>;<meta name=\"description\" content=\"Pragmatic case scenario inspired by live site signals.\" />;"
         <meta property=\"og:title\" content=\"Case Study — Autonomous Reports\" />;"
         <meta property=\"og:description\" content=\"Pragmatic case scenario inspired by live site signals.\" />;}"
@@ -149,7 +144,7 @@ function Page() {return (<div className=\"min - h-screen bg - slate - 950 text -
       </main>
     </div>
   );
-}<Head />;
+}<Head>;
         <title />Case Study — Autonomous Reports</title>;
         <meta name=&quot;description&quot; content=&quot;Pragmatic case scenario inspired by live site signals.&quot; />;
         <meta property=&quot;og:title&quot; content=&quot;Case Study — Autonomous Reports&quot; />;
@@ -175,17 +170,16 @@ function Page() {return (<div className=\"min - h-screen bg - slate - 950 text -
     </div>;
     </div>;"
   )export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Case Study — Autonomous Reports</title>;
     </div>);
-
 export default /**
  * Page - Function description;
  */
 function Page() {
   return ("
     <div className=\"min - h-screen bg - slate - 950 text - white\" />;
-      <Head />;
+      <Head>;
         <title  /> Case Study — Autonomous Reports</title>;
 "
         <meta name=\"description\" content=\"Pragmatic case scenario inspired by live site signals.\" />;"
@@ -216,10 +210,7 @@ function Page() {
     </div>);
 }
 
-
-
-
-      <Head />
+      <Head>
         <title />Case Study — Autonomous Reports</title>
         <meta name=&quot;description&quot; content=&quot;Pragmatic case scenario inspired by live site signals.&quot; />
         <meta property=&quot;og:title&quot; content=&quot;Case Study — Autonomous Reports&quot; />
@@ -245,14 +236,13 @@ className='mt-4'
     </div>
     </div>;
   );
-
 export default function Page() {
   return (
 
 export default function Page() {
   return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />
-      <Head />
+      <Head>
         <title />Case Study — Autonomous Reports</title>"
         <meta name=\"description\" content=\"Pragmatic case scenario inspired by live site signals.\" />"
         <meta property=\"og:title\" content=\"Case Study — Autonomous Reports\" />"

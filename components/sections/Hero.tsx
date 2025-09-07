@@ -1,5 +1,3 @@
-
-
 import React from 'react';,
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
@@ -20,8 +18,6 @@ title: string;
   secondaryAction;}
 }
   stats   }) => {
-
-
 
   return (}
     <section className;}
@@ -44,7 +40,7 @@ href={primaryAction && primaryAction.href}
                   {primaryAction.text}
                   <ArrowRight className='w-5 h-5 ml-2' />
                 </Button>
-              
+
 }
               {secondaryAction && (;}
                 <Button;}
@@ -143,8 +139,6 @@ className='mt-16 md:mt-20 animate-fade-in'
     </section>
   )
 };
-
 export default Hero;
-
 
 "

@@ -1,11 +1,7 @@
-
-
-
 import React from 'react';
 import { motion   } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle   } from 'lucide-react';
 import Button from '../ui/Button';
-
 import { motion } from 'framer-motion';
 import {
   ArrowRight;
@@ -38,7 +34,6 @@ interface EnhancedHero2026Props {
     revolutionaryServices: number}
   }
 }
-
 export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
   const containerVariants = null;
     visible: {
@@ -93,8 +88,6 @@ ease: 'easeInOut'}
 
             }}
 
-
-
           />
 
             }}
@@ -110,7 +103,6 @@ variants={containerVariant}
           initial='hidden';
           animate='visible';
           className='space-y-8' />
-
 
           {/* Main Headline */}
 
@@ -218,13 +210,10 @@ href='/services'
                 <ArrowRight className=\"ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform\" />
               </Button>
 
-
           {/* Enhanced CTA Section */}
 
-              
               <Button;"
 href=\"/contact\" 
-
 
               <Button;"
 href=\"/contact\" 

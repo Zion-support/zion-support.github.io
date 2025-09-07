@@ -1,7 +1,5 @@
 import Link from 'next/link';
-
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
@@ -161,7 +159,6 @@ const mainNavigation = [
 },{ name: 'Resources'}
   href: '/resources', icon: BookOpen}
 }];
-
 export default function UltraFuturisticNavigation2031() {const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null />(null)const [scrolled, setScrolled] = useState(false)useEffect(() => {
 const handleScroll = () => ;
@@ -233,7 +230,6 @@ const mainNavigation = [
   href: '/resources', icon: BookOpen}
 }
 ];
-
 export default function UltraFuturisticNavigation2031() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -371,7 +367,6 @@ className='relative group'
 
             </div>;
 
-
             {/* CTA Buttons */}
 
 <div className='hidden lg:flex items-center space-x-4' />
@@ -462,7 +457,6 @@ const main_navigation = [
   href: '/resources', icon: BookOpen}
 }
 ];
-
 export default /**;
  * UltraFuturisticNavigation2031 - Function description;
  */;

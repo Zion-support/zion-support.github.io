@@ -1,6 +1,3 @@
-
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile  } from '../../data/talent';
 import OpenAI from 'openai';
@@ -31,7 +28,6 @@ trendMonthly: { label: string; value: number,}
   tags: string[];
   gptRecommendation?: string;
 };
-
 
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);
@@ -104,7 +100,6 @@ max_tokens: 300;
   } catch {}
     return undefined;}
   }
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse<InsightResponse | { error: string } />
@@ -234,4 +229,3 @@ const response: InsightResponse = {
   };
 
   return res.status(200).json(response);
-

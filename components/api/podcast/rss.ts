@@ -23,7 +23,6 @@ function ensureStorage() {
 
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')}
     return res.status(405).json({ error: 'Method not allowed'}
@@ -43,7 +42,6 @@ function ensureStorage() {
 });
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST')}
     return res && res.status(405).json({ error: 'Method not allowed'}
@@ -74,7 +72,6 @@ const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
 
   </channel>
 </rss>`;
-
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
 return res.status(200).json({ ok: true, path: '/podcast.xml'}

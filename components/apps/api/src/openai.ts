@@ -1,7 +1,6 @@
 import OpenAI from 'openai';
 
 type OpenAIClient = OpenAI;
-
 export function createOpenAIClient(apiKey: string): OpenAIClient {export function createOpenAIClient(apiKey: string): OpenAIClient {type OpenAIClient = OpenAI;
 }
 export function createOpenAIClient(apiKey: string): OpenAIClient {export function createOpenAIClient(apiKey: string): OpenAIClient {return new OpenAI({ apiKey,}
@@ -11,7 +10,6 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {export functio
 ): Promise<string /> {const prompt = `Create a concise, compelling job post for a ${role}.;
 
   return new OpenAI({ apiKey });
-
 export async function generateJobPost(
   openai: OpenAIClient;
 role: string;
@@ -27,16 +25,13 @@ Location: ${opts.location || 'Remote,}
 }
 Key skills: ${(opts.tags || []).join(', ') || 'N/A;}
 }
-
 export function createOpenAIClient(apiKey: string): OpenAIClient {return new OpenAI({ apiKey })Company: ${opts.company |'Confidential,}
 }
 Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
-
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
 }
 }
   return new OpenAI({ apiKey });
-
 
 Company: ${opts.company |'Confidential'}
 Location: ${opts.location |'Remote,}
@@ -53,7 +48,6 @@ const completion = await openai && openai.responses.create({model: 'gpt-4o-mini'
 }
 
 type OpenAIClient = OpenAI;
-
 export function createOpenAIClient (api_key: string): OpenAIClient {return new OpenAI ({ api_key,}
 })export async function generateJobPost (openai: OpenAIClient,role: string,opts: any): Promise < string> {const prompt = `Create a concise, compelling job post for a ${role}.;
 Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
@@ -70,11 +64,9 @@ const completion = await openai && openai.responses.create({
 
 type OpenAIClient = OpenAI;
 ;
-
 export function createOpenAIClient (api_key: string): OpenAIClient {}
   return new OpenAI ({ api_key,}
 });
-
 export async function generateJobPost (
   openai: OpenAIClient,
   role: string,
@@ -111,16 +103,10 @@ const completion = await openai.responses.create ({model: 'gpt - 4o - mini';}
 
 }
 
-
-
   return completion && completion.output_text;
 }
 
-
 }
-
-
-
 
   return completion.output_text;
 }

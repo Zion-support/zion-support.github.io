@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import { readLogs } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {}
     return res.status(401).json({ error: 'Unauthorized',}
@@ -31,4 +29,3 @@ return res.status(200).json({
 return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length,}
 });
 }
-

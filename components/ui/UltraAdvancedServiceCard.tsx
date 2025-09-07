@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ExternalLink, Star, TrendingUp;
@@ -50,7 +48,6 @@ interface UltraAdvancedServiceCardProps  {service: {id: string;
 
     color: string;
 
-
     textColor: string;
     link: string;
     marketPosition: string;
@@ -84,8 +81,6 @@ interface UltraAdvancedServiceCardProps  {service: {id: string;
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps /> = ({ service   }
 }) => {
 
-
-
   const [isExpanded, setIsExpanded] = useState(false);
 
 const [isHovered, setIsHovered] = useState(false);
@@ -100,7 +95,6 @@ const getCategoryIcon = null;
     if (category.includes('Internet') |category.includes('Network'))return <Globe className='w-4 h-4' />;}
     return <Zap className='w-4 h-4' />}
 };
-
 
 const containerVariants = {}
     hidden: { opacity: 0, y: 20}
@@ -241,8 +235,6 @@ className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 r
             </div>
           </div>
 
-
-
           {/* Expandable Content *}
 }
           <AnimatePresence />;
@@ -288,16 +280,10 @@ key={index}
                       </div>
                     ))}
 
-
-
-
                 {/* ROI */}
 <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3' />
                   <h4 className='text-white font-semibold mb-2' />ROI Promise</h4>
                   <p className='text-gray-300 text-sm' />{service.roi}</p>
-
-
-
 
                 </div>
 
@@ -371,8 +357,6 @@ className='flex justify-center mt-4';
 
 )
 };
-
-
 export default UltraAdvancedServiceCard;
 
 "

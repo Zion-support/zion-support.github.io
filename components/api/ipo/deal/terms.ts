@@ -12,7 +12,6 @@ const terms = readJsonFile('deal/terms && terms.json', {round: 'Series A',
     leadInvestor: 'TBD'})import { readJsonFile ,}
 } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
-
 export default /**;
  * handler - Function description;
  */;
@@ -36,9 +35,9 @@ const terms = readJsonFile ('deal / terms.json', {round: 'Series A',
     discount: '20%',
   lead_investor: 'TBD'})res.status (200).json (terms),
 }ursor/fix-website-loading-errors-and-merge-6662;
-}}import { readJsonFile  } from '../../../../utils/api/storage';
+}}
+import { readJsonFile  } from '../../../../utils/api/storage';
 import { requireSuperadminApi  } from '../../../../utils/api/auth';
-
 export default function handler() {if (!requireSuperadminApi(req, res)) return;
 
 const terms = readJsonFile('deal/terms.json', {round: 'Series A';
@@ -69,7 +68,6 @@ const terms = readJsonFile('deal/terms && terms.json', {
  ,}
 });
   res && res.status(200).json(terms);
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
     target: '$10,000,000';
@@ -88,10 +86,8 @@ leadInvestor: 'TBD,
 }
     leadInvestor: 'TBD,
 });
-
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
-
 export default /**
  * handler - Function description;
  */
@@ -109,7 +105,6 @@ const terms = readJsonFile ('deal / terms.json', {
  ,}
 });
   res.status (200).json (terms);
-
 export default /**
  * handler - Function description;
  */
@@ -130,16 +125,9 @@ const terms = readJsonFile ('deal / terms.json', {
 
 }
 
-
-
-
 }
-
-
-
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!requireSuperadminApi(req, res)) return;
 
@@ -152,7 +140,6 @@ const terms = readJsonFile('deal/terms.json', {
  ,}
 });
   res.status(200).json(terms);
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!requireSuperadminApi(req, res)) return;
 
@@ -172,6 +159,3 @@ const terms = readJsonFile('deal/terms.json', {
 }
 
 }
-
-
-

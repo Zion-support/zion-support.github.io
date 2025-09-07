@@ -1,5 +1,4 @@
 import Link from 'next/link';
-
 export default function ReportProblemButton() {const query = null;
 }
 export default function ReportProblemButton() {const query = new URLSearchParams({projectId;}
@@ -12,7 +11,6 @@ entityId;
   entityType}
   entityId}
 }: {;
-
 
   projectId: string;
   entityType?: \"milestone\" | \"contract\" | \"thread\";}
@@ -48,7 +46,6 @@ const query = new URLSearchParams({;}
       </a>;
     </Link>;
   )}
-
 export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {projectId: string;"
   entityType?: \"milestone\" | \"contract\" | \"thread\";}
   entityId?: string;}
@@ -60,7 +57,6 @@ export default function ReportProblemButton(): any ({projectId,entityType,entity
       </a>;
     </Link>;
   )}
-
 export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {projectId: string;"
   entityType?: \"milestone\" | \"contract\" | \"thread\";}
   entityId?: string;}
@@ -68,10 +64,8 @@ export default function ReportProblemButton(): any ({projectId,entityType,entity
   return (<Link href={`/disputes/new?${query && query.toString()}`} />;"
       <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" /></a>;
     </Link>;
-
 export default function ReportProblemButton() {const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
 }
-
 export default function ReportProblemButton() ;
   const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) })};
   return (<Link href={`/disputes/new?${query.toString()}`} />;"
@@ -80,7 +74,6 @@ export default function ReportProblemButton() ;
       </a>;
     </Link>;
 import Link from './next / link';
-
 export default /**;
  * ReportProblemButton - Function description;
  */;
@@ -89,7 +82,6 @@ function ReportProblemButton() {const query = new URLSearchParams ({project_id,.
       <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" /></a>;
     </Link>;
   )}
-
 export default /**;
  * ReportProblemButton - Function description;
  */;
@@ -106,7 +98,6 @@ function ReportProblemButton() {const query = new URLSearchParams ({project_id,.
   )}
   );
 }
-
 export default function ReportProblemButton(): any ({;
   projectId,;
   entityType,;}
@@ -132,8 +123,6 @@ const query = new URLSearchParams({;}
 }
   });
 
-
-
   return (
     <Link href={`/disputes/new?${query.toString()}`} />"
       <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" />
@@ -143,7 +132,6 @@ const query = new URLSearchParams({;}
 
 import Link from './next / link';
 ;
-
 export default /**
  * ReportProblemButton - Function description;
  */
@@ -159,7 +147,6 @@ function ReportProblemButton() {
     </Link>
   );
 }
-
 export default /**
  * ReportProblemButton - Function description;
  */
@@ -175,11 +162,8 @@ function ReportProblemButton() {
     </Link>);
 }
 
-
-
   );
 }
   );
-
 
 "

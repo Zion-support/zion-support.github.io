@@ -1,9 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
-
 import type { TalentProfile } from '@/utils/types/talent';
 
 const hasSupabase =;
@@ -13,7 +10,6 @@ const hasSupabase =;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh')
   .split(',')
   .map(x => x.trim());
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -127,4 +123,3 @@ return res;
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');
-

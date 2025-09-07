@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -15,7 +13,6 @@ interface Particle {
   type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk';}
 }
 }
-
 export default function UltraFuturisticBackground2029() {const canvasRef = null;
               delay: i * 0.3;}
 resizeCanvas ()window.addEventListener ('resize', resizeCanvas)// Initialize particles;}
@@ -29,7 +26,6 @@ if (particle.y < 0) particle.y = canvas.height;
 if (particle.y > canvas.height) particle.y = 0;
 // Draw particle ctx.save ()ctx.globalAlpha = particle.opacity;
 // Different effects for different particle types switch (particle.type) {case 'quantum': // Quantum particles with glow effect;
-
 export default function UltraFuturisticBackground2029() {const canvasRef = useRef<HTMLCanvasElement />(null)const particlesRef = useRef<Particle[] />([])const animationRef =;
   useRef<number | undefined />(undefined;
   useEffect(() => ;
@@ -45,7 +41,6 @@ canvas.height = window.innerHeight) => {
 }
 };
 
-
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles;
@@ -54,7 +49,6 @@ const initParticles = (
   const particles: Particle[] = [];
 
 const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
-
 
 for (let i = 0; i < particleCount; i++) {
         const type = ['quantum', 'holographic', 'neural', 'cyberpunk'][
@@ -84,7 +78,6 @@ type}
 
       particlesRef.current = particles;
 };
-
 
     initParticles();
     // Animation loop;

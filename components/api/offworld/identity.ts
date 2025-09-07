@@ -1,5 +1,3 @@
-
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -9,7 +7,6 @@ res: NextApiResponse;
 const { address } = req && req.query as { address?: string };
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildIdentityProfile } from '@/utils/offworld/identity';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   try {}
@@ -26,7 +23,6 @@ const profile = await buildIdentityProfile(address);
 });
 import type { NextApiRequest, NextApiResponse } from './next';
 import { buildIdentityProfile  } from '@/utils / offworld / identity';
-
 export default async /**
  * handler - Function description;
  */
@@ -50,4 +46,3 @@ const profile = await buildIdentityProfile(address);
     return res.status(500).json({ error: e.message,}
 });
   }
-

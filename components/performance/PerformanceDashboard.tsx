@@ -1,4 +1,4 @@
-  loadTime: number;
+loadTime: number;
 import React, { useState, useEffect } from './react';
 
 interface PerformanceMetrics  {load_time: number;
@@ -49,7 +49,6 @@ interface PerformanceMetrics  {load_time: number;
       )}
     </div>;
   )}
-
 export default PerformanceDashboard;
 
 const PerformanceDashboard: React.FC = () => {const [metrics, set_metrics] =;
@@ -161,5 +160,4 @@ if (return null) {$2;}
   );
 }
     </div>)}
-
 export default PerformanceDashboard;"

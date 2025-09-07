@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
@@ -26,7 +25,6 @@ const tabs: Array<{
   label: 'Python'}
 }
 ];
-
 export default function CodeSamples({ samples }: Props) {
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
 
@@ -44,7 +42,6 @@ const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
   { key: 'python'}
   label: 'Python'}
 }];
-
 export default function CodeSamples({ samples }: Props) {
   const [active, setActive] = useState<typeof tabs[number]['key'] />('curl');
 

@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
 }
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
@@ -9,8 +8,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React, { useEffect, useState } from 'react';
-
-
 import dynamic from 'next/dynamic';
 
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {}
@@ -24,7 +21,6 @@ return did.lens || did.ens || null;
   } catch {}
     return null;}
   }
-
 export default function Web3LoginButton() {;
 
 const [open, setOpen] = useState(false);
@@ -68,7 +64,6 @@ const onLoggedIn = (
   return $3;}
 }
 };
-
 
 const disconnect = async () => {
     window.localStorage.removeItem('zion-web3-user');
@@ -130,4 +125,3 @@ onClick={() = /> setOpen(true)}
 
     </>
   );
-

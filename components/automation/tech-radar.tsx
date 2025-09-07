@@ -1,5 +1,3 @@
-
-
 import fs from 'fs';,
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -26,7 +24,6 @@ type Item = any;
 
         </ul>;
       </section>;
-
 
       <section />;"
         <h2 className=\"font-semibold text-lg mb-3\" />PyPI (30 days)</h2>;"
@@ -64,7 +61,6 @@ type Item = any;
         </section>;
       ))}
 }
-
 export default /**;
  * TechRadar - Function description;
  */;
@@ -113,6 +109,5 @@ function TechRadar() {const langs = Object.keys (github;"
     </div>
 );
 }
-
 
 "

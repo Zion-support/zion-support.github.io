@@ -6,5 +6,4 @@ const Layout.dynamic = () => ;
     </div>
   );
 }
-
 export default Layout.dynamic;

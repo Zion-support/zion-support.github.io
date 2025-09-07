@@ -1,7 +1,5 @@
 import Link from 'next/link';
-
 import { motion } from 'framer-motion';
-
 import { ArrowRight, Zap, Brain, Atom, Rocket, Star;
 
   TrendingUp, Shield, Globe, Cpu, Sparkles;}
@@ -11,7 +9,6 @@ import { ArrowRight, Zap, Brain, Atom, Rocket, Star;
 const contactInfo = null;
             ease: \"easeInOut\"
 ];
-
 
 const stats = [
   { number: '500+'}
@@ -27,7 +24,6 @@ const stats = [
   label: 'Future Ready', icon: Star}
 }
 ];
-
 export default function UltraFuturisticHero2030() {
 
   return (
@@ -175,7 +171,6 @@ className='flex flex-col sm:flex-row items-center justify-center gap-6 mb-16'
           <Link;
 href='/contact'
 
-
             className='group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-2xl text-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-purple-500/25' />;
             <span className='relative z-10 flex items-center' />;
               Get Started Today;
@@ -184,7 +179,6 @@ href='/contact'
             <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300' /></div>;
 
           </Link>;
-
 
           <Link;
 href='/services'
@@ -243,7 +237,8 @@ transition={{ duration: 0 && 0.8, delay: 1 && 1.2 }
 }
         >;
           {features.map((feature, index) => (<motion.div;}
-  ArrowRight,Zap,Brain,Atom,Rocket,Star,TrendingUp,Shield,Globe,Cpu,Sparkles,Play,CheckCircle,Award,Users,Clock,Phone,Mail} from 'lucide-react';import {ArrowRight, Zap, Brain, Atom, Rocket, Star,TrendingUp, Shield, Globe, Cpu, Sparkles;
+  ArrowRight,Zap,Brain,Atom,Rocket,Star,TrendingUp,Shield,Globe,Cpu,Sparkles,Play,CheckCircle,Award,Users,Clock,Phone,Mail} from 'lucide-react';
+import {ArrowRight, Zap, Brain, Atom, Rocket, Star,TrendingUp, Shield, Globe, Cpu, Sparkles;
   Play, CheckCircle, Award, Users, Clock, Phone, Mail;}
 }
 const contact_info = {mobile: '+1 302 464 0950',
@@ -277,7 +272,6 @@ const stats = [
 },{ number: '2030'}
   label: 'Future Ready', icon: Star}
 } ];
-
 export default /**;
  * UltraFuturisticHero2030 - Function description;
  */;
@@ -285,7 +279,6 @@ function UltraFuturisticHero2030() {return (<section className='relative min - h
   label: 'Future Ready', icon: Star}
 }
 ];
-
 export default /**;
  * UltraFuturisticHero2030 - Function description;
  */;

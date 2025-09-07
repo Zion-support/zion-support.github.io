@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) ;}
@@ -8,14 +7,11 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React, { useCallback, useEffect, useState } from 'react';
-
-
 import dynamic from 'next/dynamic';
 
 const isClient = typeof window !== 'undefined';
   }) => void;
 };
-
 
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
@@ -174,7 +170,6 @@ body: JSON.stringify({
             {error}
           </div>
 
-        
 }
         <div className=\"space-y-3\" />;"
           <button onClick={handleEvmConnect} disabled={loading} className=\"w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black\" />;
@@ -189,7 +184,6 @@ body: JSON.stringify({
       </div>;
     </div>;
   )}
-
 export default function Web3LoginModal() {if (!isClient) return null;return <ModalInner {...props} />;        </div>;"
         {error && (<div className=\"mb-3 rounded-md bg-red-50 dark: bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300\" />{erro}
 }</div>;
@@ -209,7 +203,6 @@ export default function Web3LoginModal() {if (!isClient) return null;return <Mod
     </div>
   );
 }
-
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;}
 }

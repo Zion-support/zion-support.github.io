@@ -5,7 +5,6 @@ const openai = null;
     return res.status(500).json({ error: 'Assistant request failed' })
   },
 }
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -46,4 +45,3 @@ const message = completion.choices?.[0]?.message || {
     return res.status(500).json({ error: 'Assistant request failed',}
 });
   }
-

@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Star, Users, TrendingUp, DollarSign, Clock;
@@ -25,7 +22,6 @@ Lock;
 Code,
 Database;
 Cloud;
-
 import Button from '../ui/Button';
 
 interface Service {;
@@ -769,8 +765,6 @@ href='/contact'
     </section>
 )
 };
-
-
 export default EnhancedServiceShowcase;
 
 "

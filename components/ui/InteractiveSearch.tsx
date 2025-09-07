@@ -1,10 +1,6 @@
-
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
 export default function InteractiveSearch({ placeholder;
-
 export default function InteractiveSearch({}
   placeholder = 'Search talent, skills, or jobs...'}
 }: {}
@@ -36,7 +32,7 @@ className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gr
         >
           ✕
         </button>
-      
+
 }
     </motion.div>
   );

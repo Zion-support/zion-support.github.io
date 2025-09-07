@@ -1,14 +1,10 @@
-
-
 import React from 'react';,
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Target, Cpu, Database, Cloud, Lock, ArrowRight;}
   Star, TrendingUp, Users, CheckCircle;}
   } from 'lucide-react';
-
 export default function UltraFuturisticHero2027() {const features = null;
             ease: \"easeInOut\";
     {icon: Atom;
@@ -33,14 +29,12 @@ text: 'Enterprise Security',
   }
 }
 import React from 'react';
-
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
       color: 'from-red-400 to-orange-400',;
     }
 ];
-
 
 const stats = [
     {
@@ -357,10 +351,6 @@ className='text-center'
                   </div>
                   <div className='text-cyan-300 font-medium' />{trust}</div>
                 </motion.div>
-
-
-
-
 
               )
 }"

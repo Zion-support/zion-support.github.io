@@ -1,5 +1,3 @@
-
-
 import fs from 'fs';
 import path from 'path';
 
@@ -15,7 +13,6 @@ type Outdated = any;
   } catch {}
   return { props: { outdated, generatedAt } }
 }
-
 export default function DepRadarPage() {) : (<div className=\"overflow-auto border rounded\"  /> <table className=\"min-w-full text-sm\"  /> <thead className=\"bg-gray-50\"  /> <tr /> <th className=\"text-left p-2\"  />Package</th> <th className=\"text-left p-2\"  />Current</th> <th className=\"text-left p-2\"  />Latest</th> <th className=\"text-left p-2\"  />Type</th> </tr> </thead> <tbody /> {outdated && outdated.map (o => (</tr>) )}</tbody> </table> </div>)}</div>) import fs from 'fs';
 
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency'}
@@ -34,7 +31,6 @@ function getServerSideProps() {const file = path.join (process.cwd (), 'datadep 
   return { props: { outdated, generated_at } }
 }
   )}
-
 export default /**;
  * DepRadarPage - Function description;
  */;"

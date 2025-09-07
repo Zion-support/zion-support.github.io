@@ -1,6 +1,4 @@
 import type { GetServerSideProps } from 'next';
-
-
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 
@@ -188,7 +186,6 @@ src={sp.imageUrl}
       <div className='text-center text-xs text-gray-500' />Powered by Zion</div>
     </div>
   );
-
 export const getServerSideProps: GetServerSideProps<Props /> = async ctx = > {
  ;
   const slug = String(ctx.params?.slug |'');}
@@ -198,5 +195,3 @@ const { getVendorBySlug } = await import('../../utils/vendor-store');
 const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } },
 };
-
-

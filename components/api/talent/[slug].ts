@@ -1,9 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
-
 import type { TalentProfile } from '@/utils/types/talent';
 
 const hasSupabase = null;
@@ -19,7 +16,6 @@ const translated: Partial<TalentProfile /> = ,
   if (t.bio?.[lang]) translated.bio = t.bio[lang];
   if (t.category?.[lang]) translated.category = t.category[lang];
 return {item: { ...item, ...translated },translated: Object.keys(translated).length > 0,}
-
 export default async function handler() {if (req.method !== 'GET') {return res.setHeader('Allow', 'GET').status(405).end('Method Not Allowed')}
 
 const { slug, lang } = req.query as { slug: string; lang?: string }
@@ -83,7 +79,6 @@ const base = LOCAL.find (t => t.slug === slug) || null;
 
 const { item, translated } = apply_translations (base, lang)return res.status (200).json ({ item, translated })} catch (e: any) {return res.status (500).json ({ error: e.message },
 }
-
 export default async /**;
  * handler - Function description;
  */;
@@ -115,4 +110,3 @@ const { item, translated } = apply_translations (base, lang);
 }
 
 }
-

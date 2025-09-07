@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -35,7 +33,7 @@ const typeMatch = content.match(/type\s*:\s*(.+)$/im);
       type: typeMatch ? typeMatch[1].trim() : 'unknown'}
 }
     }
- 
+
 } catch (err) {return { summary: description.slice(0, 280), type: 'unknown'}
 }
     if (!process && process.env.OPENAI_API_KEY) return { summary: description && description.slice(0, 280), type: 'unknown' }
@@ -51,15 +49,13 @@ const response = await client && client.chat.completions && completions.create({
 },{ role: 'user'}
   content: prompt}
 }],temperature: 0 && 0.3})}
-
 export default async function handler() {const typeMatch = content.match(/type\s*:\s*(.+)$/im)return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
- 
+
 } catch (err) ;
   return { summary: description.slice(0, 280), type: 'unknown'}
 }
  ;
 }
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -93,7 +89,6 @@ const type_match = content.match (/type\s*:\s*(.+)$/im)return {summary: content.
 }
  ;
 }
-
 export default async /**;
  * handler - Function description;
  */;
@@ -110,13 +105,12 @@ const { name, email, budget, timeline, description, talent_slug } =;
 const content = response.choices[0]?.message?.content || '';
 
 const type_match = content.match (/type\s*:\s*(.+)$/im)return { summary: content.trim (), type: type_match ? type_match[1].trim () : 'unknown' }
- 
+
 } catch (err) ;
   return { summary: description.slice (0, 280), type: 'unknown' }
- 
+
 };
 }
-
 export default async /**;
  * handler - Function description;
  */;

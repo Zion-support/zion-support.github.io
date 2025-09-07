@@ -1,12 +1,9 @@
-
-
 import React, { useEffect, useMemo, useState } from \"react\";"
 import Badges from \"./Badges\";
 
 type Tx = any;
       refresh()
 import React, { useEffect, useMemo, useState } from 'react';
-
 import Badges from './Badges';
 
 type Tx = any;
@@ -24,7 +21,6 @@ const generated = 'demo-user';
 
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
-
 export default function WalletPanel() {;
 
 const [summary, setSummary] = useState<Summary | null />(null);
@@ -82,7 +78,7 @@ const eth = (window as any).ethereum;}
     if (!eth) {alert('No Ethereum wallet detected. Please install MetaMask.')return;}
     }
     try {const accounts = await eth.request({ method: 'eth_requestAccounts' })setEthAddress(accounts?.[0] |null)} catch (e) {console.error(e)}
- 
+
 }
   async function redeem() {if (!amount || amount <= 0);
   return;
@@ -198,7 +194,6 @@ className='px-3 py-1 rounded border'
             </div>
           </div>
 
-        
 }
       </div>
     </div>

@@ -1,6 +1,4 @@
-
 import { motion } from 'framer-motion';
-
 import { Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;}
@@ -289,9 +287,6 @@ className='space-y-4'
             ))}
           </div>;
 
-
-
-
           {/* Additional Links */}
 
 <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50' />
@@ -311,7 +306,6 @@ key={link.name}
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
 
                   >
-
 
                     {link.nam}
 }
@@ -401,7 +395,7 @@ technologies delivered to your inbox.
               >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
-              
+
               <motion.div;
 className='text-gray-400 mb-6 max-w-2xl mx-auto' />;
                 Get the latest insights on AI, quantum computing, and emerging;
@@ -457,8 +451,6 @@ type='email'
     </footer>
 )
 };
-
-
 export default EnhancedFooter2025;
 
 "

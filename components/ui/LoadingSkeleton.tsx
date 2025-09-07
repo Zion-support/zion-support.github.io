@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { motion } from 'framer-motion';
   rounded?: string;
@@ -14,7 +12,4 @@ const Skeleton: React.FC<SkeletonProps /> = ({ }
 
 )
 };
-
-
 export default Skeleton;
-

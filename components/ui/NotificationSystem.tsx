@@ -97,7 +97,6 @@ const NotificationContext  = createContext<NotificationContextType | undefined /
   children: ReactNode;}
 }
 }
-
 export const NotificationProvider: React.FC<NotificationProviderProps /> = ({ children   }
 }) => {
 }
@@ -151,7 +150,6 @@ const NotificationContainer: React.FC = () => ;"
       ))}
     </div>;
   )}
-
 export default NotificationSystem;
 ursor/automate-test-improve-and-merge-code-646c;"
               {notification.title && (<p className=\"text-sm\" />{notification.message}</p>;
@@ -201,7 +199,6 @@ const Icon  = icons[notification.type];return (<div className={colors[notificati
       </div>;
     </div>;
   )}
-
 export const useNotifications = () => ;
   const context = useContext(NotificationContext)if (context === undefined) {throw new Error('useNotifications must be used within a NotificationProvider')}
  ;
@@ -215,11 +212,8 @@ interface NotificationProviderProps {
   children: ReactNode;}
 }
 }
-
 export const NotificationProvider: React.FC<NotificationProviderProps /> = ({ children   }
 }) => {
-
-
 
   const [notifications, setNotifications] = useState<Notification[] />([]);
 
@@ -230,7 +224,7 @@ const addNotification = (
   return $3;}
 }
 const newNotification = { ...notification, id };
-    
+
     setNotifications(prev => [...prev, newNotification]);
 
     if (notification.duration !== 0) {
@@ -246,7 +240,6 @@ const removeNotification = (
 }
 };
 
-
   return (
     <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }} />
       {children}
@@ -254,7 +247,6 @@ const removeNotification = (
     </NotificationContext.Provider>
   )
 };
-
 
 const NotificationContainer: React.FC = () => {}
  ;}
@@ -293,8 +285,6 @@ onClick={() = /> handleDismiss(notification.id)}"
     </div>
   )
 };
-
-
 export default NotificationSystem;
 
   return (
@@ -315,8 +305,6 @@ onClick={() = /> onRemove(notification.id)}"
     </div>
   )
 };
-
-
 export const useNotifications = (
  ;
   const context = useContext(NotificationContext);

@@ -1,7 +1,5 @@
 import Link from 'next/link';
-
 import { motion } from 'framer-motion';
-
 import { ArrowRight, Star, Users, Award, Clock;
   Brain, Atom, Shield, Rocket, Zap;
   TrendingUp, Globe, Cpu, Database, Cloud;}
@@ -375,7 +373,8 @@ key={service.id}
                   viewport={{ once: true }
 } />;
                   <UltraFuturisticServiceCard2026;
-  ArrowRight,Star,Users,Award,Clock,Brain,Atom,Shield,Rocket,Zap,TrendingUp,Globe,Cpu,Database,Cloud,Lock,Palette,Target,CheckCircle,Sparkles} from 'lucide-react';import { ArrowRight, Star, Users, Award, Clock,Brain, Atom, Shield, Rocket, Zap;
+  ArrowRight,Star,Users,Award,Clock,Brain,Atom,Shield,Rocket,Zap,TrendingUp,Globe,Cpu,Database,Cloud,Lock,Palette,Target,CheckCircle,Sparkles} from 'lucide-react';
+import { ArrowRight, Star, Users, Award, Clock,Brain, Atom, Shield, Rocket, Zap;
   TrendingUp, Globe, Cpu, Database, Cloud;
   Lock, Palette, Target, CheckCircle, Sparkles;}
 // Import new service data;}
@@ -743,7 +742,6 @@ and autonomous operations;
               </p>
             </motion.div>
 
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
               {featuredIT.map((service, index) => (}
                 <motion.div;}
@@ -801,7 +799,6 @@ features: service.features.slice(0, 5),
                 </motion.div>
               ))}
             </div>
-
 
             <motion.div;
             </div />;
@@ -879,7 +876,6 @@ and AI-powered insights;
               </p>
             </motion.div>
 
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
               {featuredMicroSaas.map((service, index) => (}
                 <motion.div;}
@@ -937,7 +933,6 @@ features: service.features.slice(0, 5),
                 </motion.div>
               ))}
             </div>
-
 
             <motion.div;
             </div />;
@@ -1011,7 +1006,6 @@ className='text-center mb-16'
 deliver exceptional results;
               </p>
             </motion.div>
-
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8' />
               <motion.div;
@@ -1261,8 +1255,6 @@ href='mailto:kleber@ziontechgroup.com'
 
 )
 };
-
-
 export default Homepage2037;
 
 "

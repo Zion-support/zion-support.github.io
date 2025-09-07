@@ -1,5 +1,3 @@
-
-
 import React from \"react\","
 import fs from \"fs\";"
 import path from \"path\";
@@ -7,10 +5,10 @@ import path from \"path\";
 type Experiment = any;
 import React from 'react';
 import fs from 'fs';
-
 import path from 'path';
 
-type Experiment = any;import React from 'react';
+type Experiment = any;
+import React from 'react';
 
 type Experiment = {title: string;
 hypothesis?: string;
@@ -23,7 +21,6 @@ type Props = {
   updatedAt: string | null;}
 items: Experiment[]}
 };
-
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
 <main className = 'mx-auto max-w-4xl px-4 py-12' />
@@ -36,7 +33,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
           No curated output yet. It will appear here automatically after the;
 next run.
         </p>
-      
+
 }
       <div className='mt-6 space-y-4' />
         {items.map((exp, idx) => (}
@@ -183,7 +180,6 @@ export default function CurationPage() {return (<main className=\"mx-auto max-w-
       </div>
     </main>
   );
-
 export async function getStaticProps() {
   try {;
 "

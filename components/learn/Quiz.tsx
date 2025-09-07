@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from 'react';
 
 type Question = any;
@@ -12,8 +9,6 @@ type Question = any;
 type Props = {questions: Question[];}
   onComplete: (score: number) => void}
 };
-
-
 export default function Quiz({ questions, onComplete }: Props) {}
 }
 export default function Quiz({ questions, onComplete }: Props) {;}

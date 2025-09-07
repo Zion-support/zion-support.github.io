@@ -19,7 +19,7 @@ export default function ContactForm() {
     budget: '',
     message: ''
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -34,7 +34,7 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -74,7 +74,7 @@ export default function ContactForm() {
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               Contact Information
             </h2>
-            
+
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <PhoneIcon className="w-5 h-5 text-blue-600" />
@@ -83,7 +83,7 @@ export default function ContactForm() {
                   <p className="text-gray-600">+1 302 464 0950</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <EnvelopeIcon className="w-5 h-5 text-blue-600" />
                 <div>
@@ -91,7 +91,7 @@ export default function ContactForm() {
                   <p className="text-gray-600">kleber@ziontechgroup.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <MapPinIcon className="w-5 h-5 text-blue-600" />
                 <div>
@@ -99,7 +99,7 @@ export default function ContactForm() {
                   <p className="text-gray-600">364 E Main St STE 1008 <br />Middletown DE 19709</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <ClockIcon className="w-5 h-5 text-blue-600" />
                 <div>
@@ -169,7 +169,7 @@ export default function ContactForm() {
                     placeholder="Your full name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *

@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -129,7 +127,6 @@ ease: 'easeInOut',}
           <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />
         </div>
 
-
         {/* Scanning Lines */}
         <motion.div;
 className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30';
@@ -184,7 +181,4 @@ clip-path: polygon(
     </>;
   )
 };
-
-
 export default UltraFuturisticBackground2047;
-

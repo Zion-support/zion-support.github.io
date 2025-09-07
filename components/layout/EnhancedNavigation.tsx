@@ -193,8 +193,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps /> = ({ className = \
   }
 }) => {
 
-
-
  ;
   const [isOpen, setIsOpen] = useState(false);
 
@@ -725,8 +723,6 @@ const contact_info = {mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.
             </div>;</motion.div>)}
       </AnimatePresence>;
     </nav>)}
-
 export default EnhancedNavigation;})export default EnhancedNavigation;
 })}
-
 export default EnhancedNavigation;"

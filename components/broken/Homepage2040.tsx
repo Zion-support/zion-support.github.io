@@ -1,5 +1,3 @@
-
-
 import React, { Suspense, lazy, useState, useEffect } from 'react',
 import Layout from './layout/Layout';,
 import Link from 'next/link';
@@ -17,4 +15,3 @@ import { innovativeMicroSaasServices2025V2  } from '../data/2025-innovative-micr
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
 // Lazy load heavy components for better performance;
 const LazyServiceCard = null;
-

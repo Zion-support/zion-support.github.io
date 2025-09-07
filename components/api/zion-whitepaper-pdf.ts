@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
-
-
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.addPage();}
@@ -12,7 +10,6 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
     width: 480}
 align: 'left'}
   });
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse;
@@ -29,7 +26,6 @@ const edition =
     'Content-Disposition'}
     `attachment; filename=\"zion-protocol-${edition}.pdf\"`
   );
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -46,7 +42,6 @@ const edition =
     'Content-Disposition'}"
     `attachment; filename=\"zion-protocol-${edition}.pdf\"`
   );
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const editionParam = null;
 }

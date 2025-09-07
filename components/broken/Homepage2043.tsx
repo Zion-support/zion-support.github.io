@@ -1,9 +1,6 @@
-
-
 import React, { useEffect, useState, useCallback } from 'react',
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;}
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon;}
@@ -198,7 +195,6 @@ const prevService = (
 }
 };
 
-
   return (
     <Layout />;
       {/* Main Content */}
@@ -334,7 +330,6 @@ ease: 'easeInOut'}
               ))}
             </div>;
 
-
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,
@@ -469,7 +464,6 @@ reshaping the future.
               </p>
             </motion.div>
 
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
               {features.map((feature, index) => (}
                 <motion.div;}
@@ -572,9 +566,6 @@ key={feature.title}
           </div>;
 
         </section>;
-
-
-
 
         {/* Enhanced Featured Services Section */}
 
@@ -1189,7 +1180,6 @@ index === currentTestimonialIndex;
           </div>;
         </section>;
 
-
                     }`}
                   />
                 ))}
@@ -1287,7 +1277,6 @@ className='px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 f
 )
 };
 
-
   Math.random () * 100;
 }%`;
 top: `$ {}
@@ -1324,7 +1313,6 @@ top: `$ {Math.random () * 100;}
 }whileInView= {{opacity: 1, y: 0;}"
 }transition = {{}> <h2 className=\"text-4xl md:text-5xl font-bold text-white mb-6\"  /> Ready to Experience the <span className=\"block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent\"  /> Future of AI? </span> </h2> <p className=\"text-xl text-gray-300 mb-12 max-w-3xl mx-auto\"  /> Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className=\"flex flex-col sm:flex-row gap-6 justify-center items-center\"  /> <motion && motion.button  /> Start Your Journey <ArrowRight className=\"w-6 h-6\" /> </motion && motion.button> <motion && motion.button  /> <Phone className=\"w-6 h-6\" /> Contact Us </motion && motion.button> </div> <div className=\"text-center\" /> <div className=\"inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4\" /> <Phone className=\"w-8 h-8 text-white\" /> text-xl font-semibold text-white mb-2\">Call Us</h3> <p className=\" text-cyan-400\" />+1 302 464 0950</p> </div> <div className=\" text-center\" /> <div className=\" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4\" /> <Mail className=\" w-8 h-8 text-white\"/> </div> <h3 className=\" text-xl font-semibold text-white mb-2\" />Email Us</h3> <p className=\" text-cyan-400\" />kleber@ziontechgroup && ziontechgroup.com</p> </div> <div className=\" text-center\" /> <div className=\" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4\" /> <MapPin className=\" w-8 h-8 text-white\"/> </div> <h3 className=\" text-xl font-semibold text-white mb-2\" />Visit Us</h3> <p className=\" text-cyan-400\"  />364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion && motion.div> </div> </section> </main> </Layout>;
 }
-
 export default Homepage2043;"
                   <h3 className=\"text - xl font - semibold text - white mb - 2\" />Call Us</h3>;"
                   <p className=\"text - cyan - 400\" />+1 302 464 0950</p>;
@@ -1390,12 +1378,8 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
   once: true;}"
 } /> <h2 className=\"text - 4xl md:text - 5xl font - bold text - white mb - 6\"  /> Ready to Experience the <span className=\"block bg - gradient - to - r from - purple - 400 via - pink - 400 to - red - 400 bg - clip - text text - transparent\"  /> Future of AI? </span> </h2> <p className=\"text - xl text - gray - 300 mb - 12 max - w-3xl mx - auto\"  /> Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className=\"flex flex - col sm:flex - row gap - 6 justify - center items - center\"  /> <motion.button  /> Start Your Journey <ArrowRight className=\"w - 6 h - 6\" /> </motion.button> <motion.button  /> <Phone className=\"w - 6 h - 6\" /> Contact Us </motion.button> </div> <div className=\"text - center\" /> <div className=\"inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r from - blue - 500 to - cyan - 500 mb - 4\" /> <Phone className=\"w - 8 h - 8 text - white\" /> text - xl font - semibold text - white mb - 2\">Call Us</h3> <p className=\" text - cyan - 400\" />+1 302 464 0950</p> </div> <div className=\" text - center\" /> <div className=\" inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r from - purple - 500 to - pink - 500 mb - 4\" /> <Mail className=\" w - 8 h - 8 text - white\"/> </div> <h3 className=\" text - xl font - semibold text - white mb - 2\" />Email Us</h3> <p className=\" text - cyan - 400\" />kleber@ziontechgroup.com</p> </div> <div className=\" text - center\" /> <div className=\" inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r from - emerald - 500 to - teal - 500 mb - 4\" /> <MapPin className=\" w - 8 h - 8 text - white\"/> </div> <h3 className=\" text - xl font - semibold text - white mb - 2\" />Visit Us</h3> <p className=\" text - cyan - 400\"  />364 E Main St STE 1008 < br />Middletown DE 19709</p> </div> </div> </motion.div> </div> </section> </main> </Layout>);
 }
-
 export default Homepage2043)
 };
-
-
 export default Homepage2043;
-
 
 "

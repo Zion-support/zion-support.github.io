@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 
@@ -22,7 +20,6 @@ type Props = {participant: RemoteParticipant | LocalParticipant;
 }
 }
 }
-
 export default function ParticipantTile({
   participant,
   isLocal}
@@ -102,14 +99,12 @@ type Props = {
   is_local?: boolean;}
   display_name?: string;}
 }
-
 export default /**;
  * ParticipantTile - Function description;
  */;
 function ParticipantTile() {  const video_ref = useRef < HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant,is_local?: boolean;}
   display_name?: string;}
 }
-
 export default /**;
  * ParticipantTile - Function description;
  */;
@@ -186,6 +181,5 @@ if ( {) {$2;}
     </div>
 );
 }
-
 
 "

@@ -6,5 +6,4 @@ const OptimizedImage.dynamic = () => ;
     </div>
   );
 }
-
 export default OptimizedImage.dynamic;

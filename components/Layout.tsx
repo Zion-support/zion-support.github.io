@@ -11,7 +11,6 @@ interface LayoutProps {
   ogDescription?: string;
   ogUrl?: string;
 }
-
 export default function Layout({ 
   children, 
   title = "Zion Tech Group - Leading AI & Technology Solutions",

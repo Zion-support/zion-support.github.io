@@ -1,4 +1,4 @@
-  data;
+data;
 }: {data: { updatedAt: string | null; proposals: any[],}
 }
   data,}: {data: { updatedAt: string | null; proposals: any[] ,}
@@ -29,5 +29,3 @@
       </ul>
     </div>
   );
-
-

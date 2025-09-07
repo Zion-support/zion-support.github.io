@@ -1,9 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import { authenticateRequest } from '@/utils/auth';
 import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = null;
 import {
@@ -11,8 +8,8 @@ import {
 getTenants,
 rotateTenantApiKey;}
 updateTenant;}
-} from '@/utils/tenant';import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
-
+} from '@/utils/tenant';
+import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method |'GET').toUpperCase()
   if (method === 'GET') {
@@ -60,15 +57,14 @@ const result = rotateTenantApiKey(tenantId);
     return res && res.status(200).json({ tenant: result,}
 });
   }
-
 import { authenticate_request } from '@/utils / auth';
 import {
   create_tenant,
   get_tenants,
   rotateTenantApiKey,}
   update_tenant,}
-} from '@/utils / tenant';import { create_tenant, get_tenants, rotateTenantApiKey, update_tenant } from '@/utils / tenant';
-
+} from '@/utils / tenant';
+import { create_tenant, get_tenants, rotateTenantApiKey, update_tenant } from '@/utils / tenant';
 export default /**
  * handler - Function description;
  */
@@ -153,14 +149,12 @@ const result = rotateTenantApiKey (tenant_id)if ;
 return res.status (405).json ({ error: 'Method not allowed',}
 });
 }
-
 import {
   createTenant,
   getTenants,
   rotateTenantApiKey,;}
   updateTenant,;}
 } from '@/utils/tenant';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase(),
 
@@ -219,5 +213,3 @@ const result = rotateTenantApiKey(tenantId);
 return res.status(405).json({ error: 'Method not allowed',}
 });
 }
-
-

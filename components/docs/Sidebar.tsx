@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import { ApiDocsSpec, Visibility  } from '../../data/api-docs/types';
 
@@ -15,7 +12,6 @@ interface SidebarProps {
   onChangeVisibility: (v: Visibility | 'all') => void}
 }
 }
-
 export default function Sidebar({
   spec;
 activeEndpointId,
@@ -85,7 +81,6 @@ key={v}
   onChangeVersion: (v: string) => void;
   visibility_filter: Visibility | 'all';
   onChangeVisibility: (v: Visibility | 'all') => void;
-
 export default /**;
  * Sidebar - Function description;
  */;

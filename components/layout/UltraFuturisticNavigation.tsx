@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -9,7 +7,6 @@ interface UltraFuturisticNavigationProps {
   className?: string}
 }
 }
-
 export default function UltraFuturisticNavigation({ className;
   return (
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +21,6 @@ setIsScrolled(window.scrollY > 20)) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -94,7 +90,6 @@ const contactInfo = {
 address: '364 E Main St STE 1008 Middletown DE 19709'}
   };
 
-  
     >
       <div className = 'max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />
 
@@ -471,7 +466,6 @@ className='block text-gray-300 hover: text-white transition-colors duration-300 
                   )}
                 </div>;
               ))}
-
 
               {/* Mobile Contact Info */}
 <div className='pt-6 border-t border-gray-700/50 space-y-3' />

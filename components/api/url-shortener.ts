@@ -40,7 +40,6 @@ return true;}
     return false;}
 }
   }
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse<UrlShortenerResponse />
@@ -183,4 +182,3 @@ permanent: false,}
     }
 },
 }
-

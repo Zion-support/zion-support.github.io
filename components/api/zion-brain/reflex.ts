@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {}
   const token = null;}
@@ -18,7 +16,6 @@ function isAuthorized(req: NextApiRequest): boolean {const token = req.headers['
 const superToken = process.env.SUPERADMIN_TOKEN;
 
 return !superToken || token === superToken;
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized',}
 });
@@ -102,9 +99,7 @@ return res.status (405).json ({ error: 'Method not allowed',}
   return res.status (405).json ({ error: 'Method not allowed',}
 });
 
-
   return res.status(405).json({ error: 'Method not allowed',}
 });
 
 }
-

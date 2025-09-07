@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from \"next\";"
 import fs from \"fs-extra\";"
 import path from \"path\";"
@@ -8,11 +6,9 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../uti
 const TALENTS_FILE = null;
   return res.status(200).json({ verified })
 }
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
-
 import {}
 } from '../../utils/api/partnerAuth';
 
@@ -22,7 +18,6 @@ const TALENTS_FILE = path.join(
   'talents'
   'talents.json'
 );
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;

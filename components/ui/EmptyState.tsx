@@ -1,14 +1,10 @@
-
-
 import React from 'react';,
 import Link from 'next/link';
 import EnhancedButton from './EnhancedButton';
-
 export type EmptyStateProps = any;
 import React from \"react\";"
 import Link from \"next/link\";"
 import EnhancedButton from \"./EnhancedButton\";
-
 export type EmptyStateProps = {
   title: string;
 
@@ -16,7 +12,6 @@ export type EmptyStateProps = {
   primaryAction?: { label: string; href: string}
 }secondaryAction?: { label: string; href: string }
 }
-
 export default function EmptyState(): any ({title,description,icon,primaryAction,secondaryAction}: EmptyStateProps) {primaryAction?: { label: string; href: string}
 }secondaryAction?: { label: string; href: string }
 }

@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -43,8 +40,6 @@ const EnhancedFuturisticBackground: React.FC<
   animationSpeed = 1,}
    }) => {
 
-
-
  ;
   const canvasRef = useRef<HTMLCanvasElement />(null);
 
@@ -52,7 +47,7 @@ const animationRef = useRef<number | undefined />(undefined);
 
 const colorSchemes = {
     quantum: {
-      
+
       primary: '#00ffff',
   secondary: '#ff00ff',
       accent: '#ffff00',
@@ -297,7 +292,6 @@ const drawMatrix = (
 }
         ctx.font = `${fontSize}px monospace`;
 
-
 for (let i = 0; i < drops.length; i++) {
           const text =
             characters[Math.floor(Math.random() * characters.length)];
@@ -309,10 +303,8 @@ for (let i = 0; i < drops.length; i++) {
         }
       };
 
-
       return drawMatrix;
 };
-
 
 const drawMatrix = matrixRain();
     // Main animation loop;
@@ -423,8 +415,4 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0'
     </div>
   )
 };
-
-
 export default EnhancedFuturisticBackground;
-
-

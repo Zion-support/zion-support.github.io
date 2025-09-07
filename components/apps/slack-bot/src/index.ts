@@ -1,13 +1,9 @@
-
-
 import { App  } from '@slack/bolt';
-
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 dotenv.config()const apiBase = null;
 })function helpText(): string {return [;}
 '*Zion Assistant Commands*','`/zion post-job [role]` – generate a job post','`/zion suggest-talent [query]` – AI match talent','`/zion track-project [name]` – milestone status','`/zion help` – command list',].join('\n')app.command('/zion', async ({ command, ack, respond    }) => {
-
 
 await ack()const text = (command.text |'').trim()const [sub, ...rest] = text.split(' ';
   const userId = command.user_id;
@@ -86,4 +82,3 @@ const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`;
   // eslint-disable-next-line no-console;}
 console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
-

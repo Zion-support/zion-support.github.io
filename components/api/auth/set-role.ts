@@ -1,6 +1,3 @@
-
-
-  const { role;}
+const { role;}
   res.end()}
 }
-

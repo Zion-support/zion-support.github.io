@@ -6,5 +6,4 @@ const PerformanceMonitor.dynamic = () => ;
     </div>
   );
 }
-
 export default PerformanceMonitor.dynamic;

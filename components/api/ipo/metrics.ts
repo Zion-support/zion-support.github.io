@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 export default function handler() {appendAuditLog({ type: 'metrics_view' })import { appendAuditLog ,}
 } from '../../../utils / api / storage';
-
 export default /**;
  * handler - Function description;
  */;
@@ -27,7 +25,6 @@ function handler() {appendAuditLog ({ type: 'metrics_view',}
 }{ label: 'CAC / LTV ratio',}
   value: '1:5.6', trend: 0.4,}
 },import { appendAuditLog  } from '../../../utils/api/storage';
-
 export default function handler() {appendAuditLog({ type: 'metrics_view',}
 })const data = [
   { label: 'Monthly Recurring Revenue (MRR)',}
@@ -56,13 +53,10 @@ export default function handler() {appendAuditLog({ type: 'metrics_view',}
     { label: 'Churn rate',}
   value: '2.4%', trend: -0.3,}
 }
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   appendAuditLog({ type: 'metrics_view',}
 });
-
 import { appendAuditLog } from '../../../utils / api / storage';
-
 export default /**
  * handler - Function description;
  */
@@ -267,8 +261,6 @@ const data = null;
 }];
   res.status (200).json (data);
 }
-
-
 
 }
 

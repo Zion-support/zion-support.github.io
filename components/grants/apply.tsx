@@ -1,9 +1,6 @@
-
 ;
 import { useState } from 'react';
-
 import {useState} from 'react';
-
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter   } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
@@ -12,15 +9,12 @@ const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'
 ];
 
-
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {import { useState   } from 'react';
   'Research Grants'
 ];
 
-
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {'Research Grants'
 ];
-
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {ursor/fix-website-loading-errors-and-merge-6662;
 
@@ -31,13 +25,10 @@ const categories: GrantCategory[] = [;
   'Research Grants'
 ];
 
-
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
-
 export default function ApplyGrantPage() {const router  = null;
-
 export default function ApplyGrantPage() {const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];
 
@@ -59,7 +50,6 @@ import type { GrantCategory } from '../../types / grants';
 const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'
 ];
-
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default /**;
  * ApplyGrantPage - Function description;
@@ -110,9 +100,7 @@ const categories: GrantCategory[] = [;
   'Research Grants'
 ];
 
-
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
-
 export default function ApplyGrantPage() {;
 
 const router = useRouter();
@@ -229,7 +217,6 @@ const data = await resp.json ();
       set_error (e.message);}
     } finally {
 
-
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -280,7 +267,7 @@ const data = await resp && resp.json();
             .split ('\n').map ((s) => s.trim ()).filter (Boolean)pitchDeckUrl;
           region;sector: (sector as any) || undefined,submit})})const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch (e: any) {setError(e && e.message)} finally {setLoading(false)}}
     }
- 
+
 }<textarea;
             className='mt-1 w-full border rounded p-2';
             .split ('\n');
@@ -366,7 +353,7 @@ const _save = async (_submit: boolean) => {try {setLoading(true),setError(null);
           sector: (sector as any) |undefined;}
           submit;}
         })})const data = await resp.json()if (!resp.ok) throw new Error(data?.error |'Failed')router.push(`/grants/${data.id}`)} catch (e: any) {setError(e.message)} finally {setLoading(false)}
- 
+
 };
   return (<EnhancedLayout />;
 <h1 className='text-2xl font-semibold mb-4' />;
@@ -387,7 +374,7 @@ region,
 sector: (sector as any) |undefined;}
 submit}
         })
-     
+
 });
 
 const data = await resp.json();
@@ -418,7 +405,6 @@ const data = await resp.json();
     }
   }
 
- 
 };
 
   return (
@@ -544,12 +530,9 @@ const data = await resp.json();
   }
     }
 
-
   };
 
-
   return (
-
 
         {error && <div className='text-sm text-red-600' />{error}</div>}
         <div className='flex gap-3' />
@@ -602,7 +585,6 @@ disabled={loading}
             <select className=\"mt-1 w-full border rounded p-2\" value={sector} onChange={(e) = /> setSector(e.target.value)}>;"
               <option value=\"\" />Select sector</option>;
         </label>;
-
 
   );
 

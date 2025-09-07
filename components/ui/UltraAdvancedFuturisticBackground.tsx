@@ -1,5 +1,3 @@
-
-
 let animationFrameId: number;
 let particles: Array< {
   resizeCanvas ();
@@ -13,8 +11,6 @@ particles.push ({ intensity = 'high',
   enableQuantumEffects = true,}
   children,}
    }) => {
-
-
 
   intensity?: 'low' | 'medium' | 'high';
 
@@ -430,10 +426,8 @@ Math.PI * 2}
         }
       }
 
-
       animationFrameId = requestAnimationFrame(animate)
 };
-
 
     initParticles();
     animate();
@@ -481,7 +475,4 @@ ref={canvasRef}
 
   );
 }
-
 export default UltraAdvancedFuturisticBackground;
-
-

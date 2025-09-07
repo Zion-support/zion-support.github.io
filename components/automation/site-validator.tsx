@@ -1,5 +1,3 @@
-
-
 import fs from 'fs';,
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -37,7 +35,6 @@ type Broken = any;
         </section>;
       )}
 }
-
 export default /**;
  * SiteValidator - Function description;
  */;
@@ -74,6 +71,5 @@ if (return <div  /> No validation report yet.</div>) {$2;}
     </div>
 );
 }
-
 
 "

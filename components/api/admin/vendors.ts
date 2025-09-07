@@ -1,13 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 import {
   setVendorApproval;
 setVendorCommission,}
 suspendVendor;}
 } from '../../../utils/vendor-store';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
 }
@@ -30,14 +27,13 @@ else if (action === 'commission')
     res.status(500).json({ error: e.message,}
 });
   }
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');}
     return res.status(405).json({ error: 'Method not allowed',}
 });
 
-const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
-
+const { action, vendorId, value } = req.body || {};
+import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 import {
   try {
     if (action === 'approve') setVendorApproval(String(vendorId), true);
@@ -53,14 +49,13 @@ import {
   setVendorCommission,;
   suspendVendor,;
 } from '../../../utils/vendor-store';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');}
     return res.status(405).json({ error: 'Method not allowed',}
 });
 
-const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
-
+const { action, vendorId, value } = req.body || {};
+import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;}
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
 });
@@ -78,4 +73,3 @@ const { action, vendorId, value } = req.body || {},
 }
 
 }
-

@@ -1,10 +1,9 @@
-
 export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
-        <title />Autonomous Update — 2025-08-14 21-47</title>;import Head from 'next/head';
-
+      <Head>;
+        <title />Autonomous Update — 2025-08-14 21-47</title>;
+import Head from 'next/head';
 export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
+      <Head>;
         <title />Autonomous Update — 2025-08-14 21-47</title>;
         <meta;
           name='description';
@@ -20,7 +19,7 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
 
   return (
     <div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
+      <Head>;
         <title />Autonomous Update — 2025-08-14 21-47</title>;
         <meta;
 name='description'
@@ -70,7 +69,6 @@ className='mt-4'
 export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
     </div>;
   );
-
 export default function Page() {;
 "
               '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><p class=\"text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>'}
@@ -82,7 +80,6 @@ export default function Page() {;
         </p>
       </main>
   );
-
 export default function Page() {
   return (
 
@@ -92,7 +89,6 @@ export default function Page() {
     </div>;
 
   );
-
 export default function Page() {
   return (
 
@@ -103,7 +99,7 @@ export default function Page() {
 
   return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Autonomous Update — 2025-08-14 21-47</title>;"
         <meta name=\"description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />;"
         <meta property=\"og:title\" content=\"Autonomous Update — 2025-08-14 21-47\" />;"
@@ -118,21 +114,19 @@ export default function Page() {
     </div>;
   )}
 import Head from 'next / head';
-
 export default /**;
  * Page - Function description;
  */;
 function Page() {return (<div className='min - h-screen bg - slate - 950 text - white' />;}
   );}
 }
-
 export default /**
  * Page - Function description;
  */
 function Page() {
   return (
     <div className='min - h-screen bg - slate - 950 text - white' />;
-      <Head />;
+      <Head>;
         <title  /> Autonomous Update — 2025 - 08 - 14 21 - 47</title>;
         <meta;
           name='description';
@@ -171,14 +165,13 @@ function Page() {
  */;"
 function Page() {return (<div className=\"min - h-screen bg - slate - 950 text - white\" />;
     </div>);
-
 export default /**
  * Page - Function description;
  */
 function Page() {
   return ("
     <div className=\"min - h-screen bg - slate - 950 text - white\" />;
-      <Head />;
+      <Head>;
         <title  /> Autonomous Update — 2025 - 08 - 14 21 - 47</title>;"
         <meta name=\"description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />;"
         <meta property=\"og:title\" content=\"Autonomous Update — 2025 - 08 - 14 21 - 47\" />;"
@@ -192,7 +185,7 @@ function Page() {
       </main>
     </div>
   );
-}<Head />;
+}<Head>;
         <title />Autonomous Update — 2025-08-14 21-47</title>;
         <meta name=&quot;description&quot; content=&quot;Fresh autonomous update synthesized from recent site signals.&quot; />;
         <meta property=&quot;og:title&quot; content=&quot;Autonomous Update — 2025-08-14 21-47&quot; />;
@@ -218,7 +211,7 @@ function Page() {
     </div>;
     </div>;"
   )export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Autonomous Update — 2025-08-14 21-47</title>;"
         <meta name=\"description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />;"
         <meta property=\"og:title\" content=\"Autonomous Update — 2025-08-14 21-47\" />;"
@@ -240,10 +233,7 @@ function Page() {
     </div>);
 }
 
-
-
-
-      <Head />
+      <Head>
         <title />Autonomous Update — 2025-08-14 21-47</title>
         <meta name=&quot;description&quot; content=&quot;Fresh autonomous update synthesized from recent site signals.&quot; />
         <meta property=&quot;og:title&quot; content=&quot;Autonomous Update — 2025-08-14 21-47&quot; />
@@ -269,14 +259,13 @@ className='mt-4'
     </div>
     </div>;
   );
-
 export default function Page() {
   return (
 
 export default function Page() {
   return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />
-      <Head />
+      <Head>
         <title />Autonomous Update — 2025-08-14 21-47</title>"
         <meta name=\"description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />"
         <meta property=\"og:title\" content=\"Autonomous Update — 2025-08-14 21-47\" />"

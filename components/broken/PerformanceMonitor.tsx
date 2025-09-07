@@ -1,4 +1,3 @@
-
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -74,8 +73,6 @@ else if (metrics.cls < 0.4) score += 50;else score += 25;}
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics /> => {
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics /> => {
 
-
-
  ;
   return new Promise ( (resolve) => {}
   if (typeof window !== 'undefined' && 'performance' in window) {}
@@ -96,8 +93,6 @@ const formatTime = (ms: number) : string => {;
   return 'N/A'}
 };
 
-
-
 //Get device icon const getDeviceIcon = (
   switch (deviceType) {
   case 'mobile':;
@@ -114,13 +109,11 @@ let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
 
-
 else score += 25;
 ) => {
   return $3;}
 }
 };
-
 
 //Don't render anything in production return (<AnimatePresence /> {"
   isVisible && (<motion.div </div /> <div className = \"flex items-center space-x-2\"  /> <button  /> <RefreshCw className= {
@@ -151,7 +144,6 @@ if (score >= 50) return 'Needs Improvement';) => {
   return $3;}
 }
 }
-
 export default PerformanceMonitor;
 
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
@@ -296,7 +288,6 @@ if (score >= 50) return 'Needs Improvement';) => {
   return $3;}
 }
 }
-
 export default PerformanceMonitor;
 
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => ;
@@ -317,7 +308,6 @@ if (return 'N / A') {$2;}
 // Check condition;
 if (return `$ {) {$2;
 ;
-
 export default PerformanceMonitor;
 ;
 }
@@ -402,9 +392,7 @@ if (return 'Good') {$2;}
 if (return 'Needs Improvement') {$2;}
 }
 }
-
 export default PerformanceMonitor;
-
 export default PerformanceMonitor;
 }}}
 "

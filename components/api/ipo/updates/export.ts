@@ -1,9 +1,7 @@
-
 const id = String(req.query.id || '')import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile   } from '../../../../utils/api/storage';
 import { requireSuperadminApi  } from '../../../../utils/api/auth';
 import PDFDocument from 'pdfkit';
-
 export default function handler() {if (!requireSuperadminApi(req, res)) return;
 
 const id = String(req.query.id || '')const id = String(req.query.id || '')const updates = readJsonFile('updates.json', [] as any[])const u = updates.find((x: any) => x.id === id),if (!u);}
@@ -12,9 +10,7 @@ const id = String(req.query.id || '')const id = String(req.query.id || '')const 
   const doc = new PDFDocument({ size: 'A4'}
   margin: 50 })import { readJsonFile }
 } from '../../../../utils/api/storage';
-
 export default function handler() {export default function handler() {if (!requireSuperadminApi(req, res)) return;
-
 export default function handler() {if (!requireSuperadminApi(req, res)) return;
 
 const id = String(req.query.id || '')const updates = readJsonFile('updates.json', [] as any[])const u = updates.find((x: any) => x.id === id),if (!u);}
@@ -45,11 +41,9 @@ const id = null;}"
   const doc = new PDFDocument({ size: \"A4\", margin: 50}"
 })doc && doc.pipe(res)doc && doc.fontSize(20).text(u && u.title, { underline: true })doc && doc.moveDown()doc && doc.fontSize(12).fillColor(\"gray\").text(`Date: ${u && u.date}`)doc && doc.moveDown()doc && doc.fillColor(\"black\").fontSize(14).text(\"Summary\")doc && doc.fontSize(12).text(u && u.summary || \"\")doc && doc.moveDown()doc && doc.fontSize(14).text(\"KPIs\")doc && doc.fontSize(12).text(u && u.kpis || \"\")doc && doc.end()doc && doc.end()doc.fontSize(14).text('KPIs')doc.fontSize(12).text(u.kpis || '')doc.fontSize(14).text('KPIs')doc.fontSize(12).text(u.kpis || '')doc.fontSize(14).text('KPIs')doc.fontSize(12).text(u.kpis || '')}doc.fontSize(14).text('KPIs')doc.fontSize(12).text(u.kpis || '')doc.end(
 }
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile  } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
@@ -67,7 +61,6 @@ const u = updates.find((x: any) => x.id === id),
 const doc = new PDFDocument({ size: 'A4'}
   margin: 50}
 });
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   doc.pipe(res);}
@@ -116,7 +109,6 @@ const doc = new PDFDocument({ size: \"A4\", margin: 50}
   doc && doc.end();
   doc && doc.end();
 
-
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
   doc.end()
@@ -125,7 +117,6 @@ import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile   } from '../../../../utils / api / storage';
 import { requireSuperadminApi   } from '../../../../utils / api / auth';
 import PDFDocument from './pdfkit';
-
 export default /**;
  * handler - Function description;
  */;

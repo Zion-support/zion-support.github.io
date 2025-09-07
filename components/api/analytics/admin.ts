@@ -1,8 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import { createServerClient } from '../../../utils/supabase/server';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = null;
@@ -181,4 +178,3 @@ const geoCounts: Record<string, number /> = {}usersData.forEach(u => {geoCounts[
     });
 
   }
-

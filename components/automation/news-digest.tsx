@@ -1,5 +1,3 @@
-
-
 import fs from 'fs';
 import path from 'path';
 
@@ -10,7 +8,6 @@ type NewsItem = any;
  ;
   return { props: { items, generatedAt } };
 }
-
 export default function NewsDigestPage() {return (<div className=\"space-y-6\" />;"
       <h1 className=\"text-2xl font-semibold\" />AI Automation: News Digest</h1>;}"
       <div className=\"text-xs text-gray-500\" />Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—}
@@ -33,6 +30,5 @@ export default function NewsDigestPage() {return (<div className=\"space-y-6\" /
 
 );
 }
-
 
 "

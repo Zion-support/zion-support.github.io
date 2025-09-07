@@ -1,7 +1,5 @@
 import Link from 'next/link';
-
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
@@ -255,7 +253,6 @@ const certifications = [
   'Quantum Security Certified',
   'AI Ethics Compliant',
 ];
-
 export default function UltraFuturisticNavigation2034() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -287,7 +284,6 @@ const closeDropdown = (
 }
 };
 
-
   return (
     <>
       {/* Top Contact Bar */}
@@ -296,7 +292,6 @@ const closeDropdown = (
   return (
     <>;
       {/* Top Contact Bar */}
-
 
                 {contactInfo.mobile}
               </span>
@@ -558,4 +553,3 @@ href='/contact'
 <div className='h-20' /></div>
     </>
   );
-

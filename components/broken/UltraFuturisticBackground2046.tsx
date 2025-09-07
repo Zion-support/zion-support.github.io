@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -474,7 +472,4 @@ if ( {) {$2;}
     </div>
 )
 };
-
-
 export default UltraFuturisticBackground2046;
-

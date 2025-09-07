@@ -1,19 +1,13 @@
-
-
 import React from \"react\";
-
 export type Badge = any;
 import React from 'react';
   id: string;
 label: string;
 
-
 ;
 import React from 'react';
-
 export type Badge = any;id: string;
 label: string;
-
 export function currentBadge(balance: number): Badge | null {let current: Badge | null = null;}
 threshold: number, //token balance threshold;}
 }
@@ -28,7 +22,6 @@ const BADGES: Badge[] = [;
 },{ id: 'elite'}
   label: 'Elite', threshold: 1000}
 }];
-
 export type Badge = {id: string,label: string,threshold: number, // token balance threshold;}
 }
 
@@ -58,7 +51,6 @@ if (current = b) {}
 
  ;
   return current;
-
 export default function Badges({ balance }: { balance: number}
 }) {
   const active = currentBadge(balance);

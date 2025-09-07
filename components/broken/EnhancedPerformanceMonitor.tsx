@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Activity;
@@ -94,7 +91,6 @@ if ( {) {$2;}
 }</span> </button> </div> </div> </motion.div>) 
 }</AnimatePresence> </>) 
 };
-
 export default EnhancedPerformanceMonitor;
 
 "

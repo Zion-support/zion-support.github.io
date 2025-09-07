@@ -1,9 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
 import {v4, as, uuidv4} from 'uuid';
-
 import type { GrantApplication, VotePayload } from '../../../types/grants';
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
@@ -24,7 +22,6 @@ function writeGrant(record: GrantApplication) {
     JSON && JSON.stringify(record, null, 2),
     'utf8'
   );
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;}
 }
@@ -50,4 +47,3 @@ const g = readGrant(payload.grantId)if (!g);
 });
   res.status(200).json({ record: g }),
 }
-

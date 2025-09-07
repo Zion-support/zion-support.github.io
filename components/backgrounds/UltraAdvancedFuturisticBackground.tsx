@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -14,7 +11,6 @@ interface UltraAdvancedFuturisticBackgroundProps {
   enableQuantumEffects?: boolean;}
 }
 }
-
 export default function UltraAdvancedFuturisticBackground({children;
   intensity;
 canvas.width = window.innerWidth;
@@ -27,8 +23,6 @@ const particles: Array< {
   const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5);
 for (let i = 0, i < count, i++) {
   particles.push ({
-
-  
 
 export default function UltraAdvancedFuturisticBackground({
   children,
@@ -60,7 +54,6 @@ const ctx = canvas.getContext('2d')if (!ctx);
 const particles: Array<{
 x: number;
       y: number;
-
 export default /**
  * UltraAdvancedFuturisticBackground - Function description;
  */
@@ -409,7 +402,6 @@ for (let i = 0; i < 20; i++) {
       animationRef.current = requestAnimationFrame(animate)
 };
 
-
     // Handle window resize;
 const handleResize = (
       canvas.width = window.innerWidth;
@@ -417,7 +409,6 @@ canvas.height = window.innerHeight) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('resize', handleResize);
     initParticles();
@@ -502,4 +493,3 @@ ref={canvasRef}
     </div>
 );
 }
-

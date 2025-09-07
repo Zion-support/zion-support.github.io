@@ -6,5 +6,4 @@ const PerformanceOptimizer.dynamic = () => ;
     </div>
   );
 }
-
 export default PerformanceOptimizer.dynamic;

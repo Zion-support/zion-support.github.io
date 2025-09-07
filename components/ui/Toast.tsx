@@ -1,9 +1,6 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
-
 export type ToastType = any;
 }, [toast.id, toast.duration, onRemove]);
 
@@ -16,9 +13,7 @@ onRemove: (id: string) => void,) => {
   return $3;}
 }
 }
-
 import React from 'react';
-
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -37,8 +32,6 @@ interface ToastProps {;
   return $3;}
 }
 const ToastItem: React.FC<ToastProps /> = ({ toast, onRemove    }) => {
-
-
 
   const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
@@ -81,7 +74,6 @@ const getIcon = (
 const getBorderColor = (
     switch (toast.type) {
       case 'success':
-
 
        ;
   return 'border-green-500/20';
@@ -154,7 +146,6 @@ interface ToastContainerProps  {toasts: Toast[];
 }
 export const ToastContainer: React.FC<ToastContainerProps /> = ({ toasts,onRemove   }) => {
 
-
 return (className=\"flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200\">
 "
           <X className=\"w-4 h-4 text-white/60 hover:text-white\" />;
@@ -187,7 +178,6 @@ return (className=\"flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transiti
 )
 };
 
-
 // Hook for managing toasts;
 export const useToast = (
  ;
@@ -202,7 +192,6 @@ const addToast = (toast: Omit<Toast, 'id' />) => {
 const newToast = { ...toast, id };
 setToasts(prev => [...prev, newToast])
 };
-
 
 const removeToast = (
     setToasts(prev => prev.filter(toast => toast.id !== id));) => {
@@ -242,6 +231,5 @@ const showWarning = () => {
     removeToast}
   }
 };
-
 
 "

@@ -1,5 +1,4 @@
 import Card from '../ui/Card';
-
 import { Zap } from 'lucide-react';
 
 interface Feature {
@@ -11,21 +10,21 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false,}
 };
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true,}
 };
   }
-  
+
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);}
   }
-  
+
   render() {
     if (this.state.hasError) {}
       return <div />Something went wrong.</div>;}
     }
-    
+
     return this.props.children;
 
   }
@@ -50,7 +49,6 @@ interface FeaturesProps {
           </p>;
         </div>;{/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`} />
-
 
           {features && features.map((feature, index) => (;}
             <Card;}
@@ -84,7 +82,4 @@ className='text-center group bg-gray-900/50 border border-gray-800 hover: border
     </section>
 )
 };
-
-
 export default Features;
-

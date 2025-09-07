@@ -12,8 +12,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({ size = 'md',
   className = ''}
    }) => {
 
-
-
  ;
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -35,5 +33,4 @@ className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 roun
     </div>
   );
 };
-
 export default LoadingSpinner;

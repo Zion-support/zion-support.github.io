@@ -17,7 +17,6 @@ function ensureStorage() {
 });
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   ensureStorage();}
@@ -33,4 +32,3 @@ const episode = episodes.find(e => e.id === id);
   return res.status(200).json({ episode });
   return res.status(200).json({ episode })
 }
-

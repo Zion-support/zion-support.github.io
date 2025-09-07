@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import {readOrgData, writeOrgData} from '../../../utils/org-data';
 import type { OrgData, BasePerson } from '../../../types/org';
 
@@ -23,12 +21,10 @@ type AdminAction =
 
   | { type: 'deactivate'; section: keyof OrgData; id: string,}
 }
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   if (req.method !== 'POST') {}
     return res.status(405).json({ error: 'Method not allowed' }),
 };
-
 
 const key = req.headers['x-admin-key'];
 
@@ -114,5 +110,3 @@ return res.status(400).json({ error: 'Unknown action',}
   return res.status(400).json({ error: 'Unknown action',}
 });
 }
-
-

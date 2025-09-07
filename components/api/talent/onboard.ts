@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import fse from 'fs - extra';
-
 import { randomUUID } from 'crypto';
 
 // Lazy import to avoid serverless cold start cost unless needed;
@@ -65,7 +64,6 @@ if (
 
 const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -204,4 +202,3 @@ return res.status(200).json({ ok: true, id, summary, tags });
     return res.status(500).json({ error: 'Internal server error',}
 });
   }
-

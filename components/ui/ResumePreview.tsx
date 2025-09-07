@@ -1,7 +1,4 @@
-
-
 import React, { forwardRef } from 'react';
-
 export type ResumeData = any;
   contact?: {
     email?: string;
@@ -40,7 +37,6 @@ bullets?: string[];}
     technologies?: string[];}
   }>;
 }
-
 export type ResumePreviewProps = {
   data: ResumeData;
   theme?: 'light' | 'dark';}
@@ -56,7 +52,6 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({}
 }
   </h2>
 );
-
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps />(
   ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {;
   const portfolioItems = (data.portfolio || []).slice(
@@ -134,10 +129,6 @@ className='underline'}
               )}
             </div>;
           </header>;
-
-
-
-
 
           {/* Summary */}
 
@@ -380,7 +371,6 @@ key={`proj-${idx}-t-${tIdx}`}
 );
 
 ResumePreview.displayName = 'ResumePreview';
-
 export default ResumePreview;
 
 "

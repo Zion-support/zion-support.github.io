@@ -1,4 +1,3 @@
-
 ;
 import type { DefaultSeoProps } from 'next-seo';
   defaultTitle: 'Zion Tech Solutions';
@@ -28,8 +27,8 @@ const config: DefaultSeoProps = {defaultTitle: 'Zion Tech Solutions',
   content: '#111827',}
 };
 }
-
-export default config;import type { DefaultSeoProps } from 'next - seo';
+export default config;
+import type { DefaultSeoProps } from 'next - seo';
 
   additionalMetaTags: [
 { name: 'viewport',}
@@ -38,11 +37,7 @@ export default config;import type { DefaultSeoProps } from 'next - seo';
   content: '#111827',}
 };
 }
-
 export default config;
-
-
-
 import type { DefaultSeoProps } from 'next - seo';
   default_title: 'Zion Tech Solutions';
   title_template: '%s | Zion Tech Solutions',
@@ -63,14 +58,10 @@ import type { DefaultSeoProps } from 'next - seo';
   content: '#111827',}
 };
 }
-
 export default config;ursor/fix-website-loading-errors-and-merge-6662;
-
 export default config;
 
 const config: DefaultSeoProps;
-
 export default config;
 ;
-
 export default config;

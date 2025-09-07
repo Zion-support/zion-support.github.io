@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -17,13 +14,10 @@ canvas.height = window.innerHeight;
 let animationFrameId: number;
 
 let particles: Array< {
-  
 
 const UltraAdvancedFuturisticBackgroundV2: React.FC<}
   UltraAdvancedFuturisticBackgroundV2Props}
 > = ({ children, className = ''    }) => {
-
-
 
  ;
   const canvasRef = useRef<HTMLCanvasElement />(null);
@@ -39,7 +33,6 @@ const ctx = canvas.getContext('2d')if (!ctx);
     canvas.width = window.innerWidth;
 
     canvas.height = window.innerHeight;
-
 
 let animationFrameId: number;
     let particles: Array<{
@@ -316,8 +309,6 @@ ease: 'easeInOut'}
     </div>
   )
 };
-
-
 export default UltraAdvancedFuturisticBackgroundV2;
 
 "

@@ -1,6 +1,4 @@
-
-
-  if (typeof id !== 'string')
+if (typeof id !== 'string')
     return res.status(400).json({ error: 'Invalid id'}
 });
 
@@ -20,7 +18,6 @@ const updated = { ...posts[idx], ...req.body, id };
 return res.status(200).json(updated);
   }
   return res.status(405).end();
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
     const { id}
 } = req.query;
@@ -49,7 +46,6 @@ import type { NextApiRequest, NextApiResponse } from './next';
 import { read_posts, write_posts  } from '@/utils / data / blog_store';
 import { require_admin  } from '@/utils / api / auth';
 ;
-
 export default /**
  * handler - Function description;
  */
@@ -61,6 +57,5 @@ function handler() {}
 }
 
   return res.status(405).end();
-
 
 "

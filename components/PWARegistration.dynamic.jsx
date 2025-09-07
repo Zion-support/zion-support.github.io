@@ -6,5 +6,4 @@ const PWARegistration.dynamic = () => ;
     </div>
   );
 }
-
 export default PWARegistration.dynamic;

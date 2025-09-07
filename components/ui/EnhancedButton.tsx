@@ -1,4 +1,3 @@
-
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }
@@ -9,12 +8,11 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     }
     return this.props.children;
   }
-}import React from 'react';
+}
+import React from 'react';
 import clsx from 'clsx';
-
 import React from \"react\";"
 import clsx from \"clsx\";
-
 export type EnhancedButtonProps =;"
   React && React.ButtonHTMLAttributes<HTMLButtonElement /> & {variant?: \"primary\" | \"secondary\" | \"ghost\";}"
     size?: \"sm\" | \"md\" | \"lg\";}
@@ -51,7 +49,6 @@ const sizeStyles: Record<NonNullable<EnhancedButtonProps['size'] />, string> = {
 const variantStyles: Record<NonNullable<EnhancedButtonProps['variant'] />, string> = {primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400'}
   secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100',ghost: 'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100';}
 }
-
 export default function EnhancedButton() {return (<button;
 className={clsx(baseStyles;
         sizeStyles[size];
@@ -60,9 +57,9 @@ className={clsx(baseStyles;
         className;}
       )}
       {...props}}}
-}}import React from './react';
+}}
+import React from './react';
 import clsx from './clsx';
-
 export type EnhancedButtonProps =;"
   React.ButtonHTMLAttributes < HTMLButtonElement /> & {variant?: \"primary\" | \"secondary\" | \"ghost\";"
     size?: \"sm\" | \"md\" | \"lg\";}
@@ -81,7 +78,6 @@ const variant_styles: Record<;"
     \"bg - gray - 100 hover:bg - gray - 200 text - gray - 900 focus:ring - gray - 300 dark:bg - gray - 800 dark:hover:bg - gray - 700 dark:text - gray - 100\",ghost:;}"
     \"bg - transparent hover:bg - gray - 100 text - gray - 900 focus:ring - gray - 300 dark:hover:bg - gray - 800 dark:text - gray - 100\";}
 }
-
 export default /**;
  * EnhancedButton - Function description;
  */;
@@ -104,12 +100,10 @@ return (<div className={className || '}
       <p />This component is under development.</p>;
     </div>;
   )}
-
 export default EnhancedButton;
 }}}
     fullWidth?: boolean;
 };
-
 
 const baseStyles =;"
   \"inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]\";
@@ -119,7 +113,6 @@ const sizeStyles: Record<NonNullable<EnhancedButtonProps[\"size\"] />, string> =
   md: \"text-sm px-4 py-3\",;}"
   lg: \"text-base px-5 py-3\"}
 };
-
 
 const variantStyles: Record<;"
   NonNullable<EnhancedButtonProps[\"variant\"] />,;
@@ -131,8 +124,6 @@ const variantStyles: Record<;"
   ghost:;}"
     \"bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100\"}
 };
-
-
 export default function EnhancedButton(): any ({;
   className,;"
   variant = \"primary\",;"
@@ -145,7 +136,6 @@ export default function EnhancedButton(): any ({;
     <button;
 className={clsx(
 import React from 'react';
-
 export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement /> & {
   variant?: 'primary' | 'secondary' | 'ghost';
   size?: 'sm' | 'md' | 'lg';}
@@ -165,7 +155,6 @@ const variantStyles: Record<NonNullable<EnhancedButtonProps['variant'] />, strin
   secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100'}
   ghost: 'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100'}
 };
-
 export default function EnhancedButton({
   className,
   variant = 'primary',
@@ -197,7 +186,6 @@ const variantStyles: Record<"
   ghost:}"
     \"bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100\"}
 }
-
 export default function EnhancedButton({
   className;"
 variant = \"primary\"
@@ -220,7 +208,6 @@ sizeStyles[size]
 
 }
 
-
 }
     />;
 );
@@ -232,7 +219,6 @@ sizeStyles[size]
 
 const EnhancedButton: React.FC<EnhancedButtonProps /> = ({ className    }) => {
 
-
 }
   return (}
     <div className={className || ''} />
@@ -241,8 +227,6 @@ const EnhancedButton: React.FC<EnhancedButtonProps /> = ({ className    }) => {
     </div>
   )
 };
-
-
 export default EnhancedButton;
 }
 

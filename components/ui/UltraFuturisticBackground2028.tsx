@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect, useRef } from 'react';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -28,7 +25,6 @@ interface UltraFuturisticBackground2028Props {
   children: React.ReactNode}
 }
 }
-
 export default function UltraFuturisticBackground2028({ children}
 }: UltraFuturisticBackground2028Props) {
   const canvasRef = null;
@@ -40,7 +36,6 @@ export default function UltraFuturisticBackground2028({ children}
 }
   /* Floating Circles */;}
 }<motion.div;
-
 export default /**;
  * UltraFuturisticBackground2028 - Function description;
  */;
@@ -51,7 +46,6 @@ interface UltraFuturisticBackground2028Props {
   children: React.ReactNode;}
 }
 }
-
 export default /**;
  * UltraFuturisticBackground2028 - Function description;
  */;
@@ -141,7 +135,6 @@ canvas.height = window.innerHeight) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('resize', handleResize);
     return () => {}
@@ -283,7 +276,6 @@ className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rou
           animate={{y: [0, -15, 0],opacity: [0.25, 0.55, 0.25]}}
           transition={{duration: 5,repeat: Infinity,ease: 'easeInOut'}}}}/>;
       </div>;
-
 
       {/* Energy Waves */}
 

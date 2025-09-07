@@ -31,4 +31,3 @@ res.status(200).json(JSON.parse(data));}
     res.status(500).json({ error: 'Failed to read content' })
   },
 }
-

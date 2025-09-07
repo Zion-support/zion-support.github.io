@@ -1,14 +1,11 @@
 import Head from 'next/head';
-
 import { useRouter  } from 'next/router';
 import { getServiceById  } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail';,
 import Button from '../../components/ui/Button';
-
 export default function ServiceDetailPage() {
 
 export default function ServiceDetailPage() {;
-
 export default function ServiceDetailPage() {
 
 if (!id || typeof id !== 'string') {
@@ -51,7 +48,7 @@ const service = getServiceById(id);
   }
   return (
     <>
-      <Head />
+      <Head>
         <title />{service.name} | Zion Tech Group - Micro SaaS Services</title>
 <meta name='description' content={service.description} />
         <meta;

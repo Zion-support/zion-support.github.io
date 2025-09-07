@@ -1,5 +1,3 @@
-
-
 'use client';
 import {
   Brain,
@@ -330,8 +328,6 @@ href='/contact'
     </section>
 )
 };
-
-
 export default ServicesSection;
 
 "

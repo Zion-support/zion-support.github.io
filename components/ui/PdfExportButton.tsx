@@ -1,7 +1,4 @@
-
-
 import React from 'react';
-
 export type PdfExportButtonProps = any;
   return (
     if (!targetRef.current) return;
@@ -26,7 +23,6 @@ margin: [10, 10, 10, 10],
 
     html2pdf().set(opt).from(element).save()
 };
-
 
     >
       Download as PDF;

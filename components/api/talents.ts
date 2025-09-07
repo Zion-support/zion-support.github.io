@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from \"next\";"
 import fs from \"fs-extra\";"
 import path from \"path\";"
@@ -7,7 +5,6 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../uti
 import { v4 as uuidv4 } from \"uuid\";
 "
 const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\");
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
   const started = null;}
   return res.status(201).json({ id: record.id })
@@ -19,7 +16,6 @@ import {}
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
 
-
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
@@ -30,7 +26,8 @@ import { v4 as uuidv4  } from 'uuid';
 const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\")export default async function handler() ;
   const started = null;
   return res.status(201).json({ id: record.id }
-}import fs from 'fs - extra';
+}
+import fs from 'fs - extra';
 import {} from '../../utils/api/partnerAuth';
 
 const TALENTS_FILE = path.join(process.cwd()'data';
@@ -105,7 +102,6 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../uti
 import { v4 as uuidv4 } from \"uuid\";
 "
 const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\");
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now();
 
@@ -117,20 +113,20 @@ const auth = await authenticateRequest(req);
   if (!(await enforceRateLimit(auth.apiKey))) {}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);}"
     return res.status(429).json({ error: \"Rate limit exceeded\" })
- 
+
 }"
   if (req.method !== \"POST\") {"
     res.setHeader(\"Allow\", \"POST\");}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);}"
     return res.status(405).json({ error: \"Method Not Allowed\" })
- 
+
 }
 
 const { name, email, skills, programTrack, certificationStatus } = req.body || {};
   if (!name || !email) {}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);}"
     return res.status(400).json({ error: \"Missing required fields\" })
- 
+
 }
   await fs.ensureDir(path.dirname(TALENTS_FILE));
 

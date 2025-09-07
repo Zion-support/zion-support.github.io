@@ -1,5 +1,3 @@
-
-
 import dynamic from 'next/dynamic';,
 import React, { useEffect, useState } from 'react';
 import { useWallet  } from '../../hooks/useWallet';
@@ -21,7 +19,6 @@ const ClientOnlyBridge = dynamic(
 }
 
 );
-
 export default function TokenIntegrationsPage() {}
   const { account, connect } = useWallet();
 
@@ -177,7 +174,6 @@ onClick={syncDepin}
           </div>
         )}
       </section>
-
 
 <section className='space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800' />
         <h2 className='text-lg font-semibold' />Operator AI Actions</h2>

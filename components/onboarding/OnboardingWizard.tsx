@@ -49,7 +49,6 @@ brief.
         }
 ];
 
-
     }
     return [;
       {title: 'Complete your profile';

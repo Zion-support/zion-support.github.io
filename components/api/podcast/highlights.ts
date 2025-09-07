@@ -19,7 +19,6 @@ function ensureStorage() {
 });
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')}
     return res.status(405).json({ error: 'Method not allowed',}
@@ -47,4 +46,3 @@ const highlights = segments.map((t: string, i: number) => ({label: `Highlight ${
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 
 return res.status(200).json({ episode });
-

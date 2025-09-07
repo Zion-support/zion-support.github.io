@@ -1,5 +1,3 @@
-
-
 import { Pool, PoolClient } from 'pg';
 let pool: Pool | null;
     throw err;
@@ -24,5 +22,3 @@ const result = await fn(client);
   } finally {}
     client.release ();}
   }
-
-

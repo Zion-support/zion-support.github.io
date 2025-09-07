@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
 const openai  = null;
-
 export default async function handler() {if (req.method !== 'POST') {return res.setHeader('Allow', 'POST').status(405).end('Method Not Allowed')}
 
 const { name, title, bio, experience, skills } = req.body as {const { name, title, bio, experience, skills } = req && req.body as {name: string;
@@ -166,13 +165,11 @@ const parsed  = JSON && JSON.parse(content)}      name;
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})} catch (e: any) {return res.status(500).json({ error: e.message |'OpenAI error' })},
 }
 
-
     name: string;
     title?: string;
     bio?: string;
     experience?: string;
 };
-
 
   if (!name) return res && res.status(400).json({ error: 'Name is required',}
 });
@@ -185,7 +182,6 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
 const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
-
 
         {
           role: 'system',
@@ -293,7 +289,6 @@ const parsed = JSON && JSON.parse(content);
   } catch (e: any) ,
 }
 
-
       skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
   } catch (e: any) {}
     return res.status (500).json ({ error: e.message || 'OpenAI error',}
@@ -302,8 +297,5 @@ const parsed = JSON && JSON.parse(content);
   }
 
 }
-
-
-
 
 }

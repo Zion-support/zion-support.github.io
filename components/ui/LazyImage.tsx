@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -14,7 +12,6 @@ interface LazyImageProps {
   height?: number;}
 }
 }
-
 export const LazyImage: React.FC<LazyImageProps /> = ({src;
   alt;
 
@@ -44,7 +41,6 @@ const handleLoad = (
 }
 };
 
-
   return (
     <div className={`relative overflow - hidden ${class_name}`} />
 
@@ -58,8 +54,6 @@ alt=''
         }`}
         style={{ width, height }}
       />
-
-
 
       {/* Actual Image */}
       {isInView && (<motion&& motion.img;}
@@ -83,7 +77,4 @@ className='w-full h-full object-cover'
     </div>
 )
 };
-
-
 export default LazyImage;
-

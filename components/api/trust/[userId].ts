@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import { computeTrustScore  } from '../../../utils/trust/compute';
 import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
@@ -73,7 +71,6 @@ const lower = content.toLowerCase()let level: TrustScoreBreakdown['riskLevel'] =
 }
  ;
 }
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -217,4 +214,3 @@ await supabase;
 });
   return res.status(405).json({ error: 'Method not allowed' }),
 }
-

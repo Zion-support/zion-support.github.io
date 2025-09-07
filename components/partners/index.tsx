@@ -1,6 +1,4 @@
-
-
-    name: \"\";"
+name: \"\";"
     entityType: \"\";"
     pocName: \"\";"
     pocEmail: \"\";"
@@ -24,7 +22,7 @@ const data = await res && res.json();
   return (
     <div className='min-h-screen bg-gray-50 text-gray-900' />;
 
-      <Head />;
+      <Head>;
         <title />Zion Partners</title>;
       </Head>;
       <div className='max-w-4xl mx-auto py-12 px-4' />;
@@ -84,7 +82,7 @@ className='w-full border rounded px-3 py-2 mb-6'
             >;
     setResult(data)}"
   return (<div className=\"min-h-screen bg-gray-50 text-gray-900\" />;
-      <Head />;
+      <Head>;
         <title />Zion Partners</title>;
       </Head>;"
       <div className=\"max-w-4xl mx-auto py-12 px-4\" />;"

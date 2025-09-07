@@ -1,5 +1,4 @@
 import React from 'react';
-
 export function VerifiedBadge({ labels }: { labels: string[],}
 }) {
 
@@ -32,4 +31,3 @@ fillRule='evenodd'
   );
 
 }
-

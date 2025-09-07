@@ -1,9 +1,6 @@
-
-
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles;
@@ -210,7 +207,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
         description: 'Business transformation services'}
       }
     ]
- 
+
 }
   {
     name: 'AI & Consciousness',
@@ -395,7 +392,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
         description: 'Instant branded invoices and payments'}
       }
     ]
- 
+
 }
   {
     name: 'Quantum & Emerging Tech',
@@ -486,7 +483,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
         description: 'Revolutionary space AI'}
       }
     ]
- 
+
 }
   {
     name: 'Enterprise IT',
@@ -794,7 +791,6 @@ setIsScrolled(window.scrollY > 10)) => {
 }
 };
 
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -811,7 +807,6 @@ const closeDropdowns = (
 }
 };
 
-
 const closeMobileMenu = (
     setIsOpen(false);
 
@@ -820,8 +815,6 @@ closeDropdowns()) => {
 }
 };
 
-
-  
     >
 
       {/* Background Effects */}
@@ -902,7 +895,6 @@ initial={{ opacity: 0, y: 10, scale: 0.95 }
 }
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-
 
 className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
@@ -1207,10 +1199,6 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
                         />;
                       </button>;
 
-
-
-
-
                       {/* Mobile Dropdown */}
 
                       <AnimatePresence />
@@ -1245,9 +1233,6 @@ child.featured;
 
                                   </div>
                                 )}
-
-
-
 
                               </Link>
 
@@ -1310,8 +1295,6 @@ href={`mailto: ${contactInfo.email}`}
 )
 };
 
-
-
 }, [])
 };
 
@@ -1355,14 +1338,9 @@ href={`mailto: ${contactInfo.email}`}
 } />)}</a>) )}</motion.div>)}</AnimatePresence> </div>) )}<Link key= {action.name;}
 }href= {action.href;}
 }className = {}
-
 export default UltraFuturisticNavigation2035;
 }
-
 export default UltraFuturisticNavigation2035;
-
 export default UltraFuturisticNavigation2035;  )}
-
 export default UltraFuturisticNavigation2035;
-
 export default UltraFuturisticNavigation2035;"

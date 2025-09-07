@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {}
     const r = null;}
@@ -16,7 +15,6 @@ res: NextApiResponse;
 const metrics = await r && r.json();
 
 const jobs24 =
-
 
       metrics?.marketplace?.find((m: any) => m && m.key === 'jobs_24h')?.value || 0;
 
@@ -48,5 +46,3 @@ const instances =  ;
     res.status (200).json ({ summary: [], error: 'Failed to compute summary',}
 });
   }
-
-

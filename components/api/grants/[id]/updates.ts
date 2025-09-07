@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
 import {v4, as, uuidv4} from 'uuid';
 
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
@@ -24,15 +23,12 @@ function writeGrant(record: GrantApplication) {}
     'utf8'
 
   );
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;}
 }
 const { id } = req.query as { id: string,}
 };
-
 
   if (!id) return res.status(400).json({ error: 'Missing id',}
 });
@@ -69,4 +65,3 @@ const update = {
   res.status(405).end('Method Not Allowed');
   res.status(405).end('Method Not Allowed')
 }
-

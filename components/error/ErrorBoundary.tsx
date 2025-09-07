@@ -75,5 +75,4 @@ interface State  {hasError: boolean;
       )}return this.props.children;
   }
 }
-
 export default ErrorBoundary;"

@@ -7,10 +7,7 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React from 'react';
-
-
 import { motion  } from 'framer-motion';
-
 import Link from 'next/link';
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, Star, ArrowRight, Play, CheckCircle;}
@@ -32,7 +29,7 @@ const contactInfo = null;
 }
                 left: `${Math.random() * 100}%`
                 top: `${Math.random() * 100}%`
-              
+
 }              animate={{
                 y: [0, -20, 0]
                 opacity: [0.3, 0.8, 0.3]}
@@ -64,7 +61,6 @@ className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           </span>
           <Sparkles className='w-5 h-5 text-cyan-400' />
         </motion.div>
-
 
         {/* Main Heading *}
 }

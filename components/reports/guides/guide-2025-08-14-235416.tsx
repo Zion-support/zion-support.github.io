@@ -1,10 +1,9 @@
-
 export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
-        <title />Guide — Cloud Improving Implementation</title>;import Head from 'next/head';
-
+      <Head>;
+        <title />Guide — Cloud Improving Implementation</title>;
+import Head from 'next/head';
 export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
+      <Head>;
         <title />Guide — Cloud Improving Implementation</title>;
         <meta;
           name='description';
@@ -20,7 +19,7 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
 
   return (
     <div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
+      <Head>;
         <title />Guide — Cloud Improving Implementation</title>;
         <meta;
 name='description'
@@ -64,14 +63,12 @@ className='mt-4'
               '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/landing\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/landing</a></p><h2 />Overview</h2><p />Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry; iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class = \"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>',export default function Page() {return ;"
   return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
   );
-
 export default function Page() {;
-
 export default function Page() {
 
   return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Guide — Cloud Improving Implementation</title>;"
         <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\" />;"
         <meta property=\"og:title\" content=\"Guide — Cloud Improving Implementation\" />;"
@@ -86,10 +83,8 @@ export default function Page() {
       </main>;
     </div>;
   )}
-
 export default function Page() {return (}
 import Head from 'next / head';
-
 export default /**;
  * Page - Function description;
  */;
@@ -97,14 +92,13 @@ function Page() {return (<div className='min - h-screen bg - slate - 950 text - 
   );}
 }
 }
-
 export default /**
  * Page - Function description;
  */
 function Page() {
   return (
     <div className='min - h-screen bg - slate - 950 text - white' />;
-      <Head />;
+      <Head>;
         <title  /> Guide — Cloud Improving Implementation</title>;
         <meta;
           name='description';
@@ -145,14 +139,13 @@ function Page() {
  */;"
 function Page() {return (<div className=\"min - h-screen bg - slate - 950 text - white\" />;
     </div>);
-
 export default /**
  * Page - Function description;
  */
 function Page() {
   return ("
     <div className=\"min - h-screen bg - slate - 950 text - white\" />;
-      <Head />;
+      <Head>;
         <title  /> Guide — Cloud Improving Implementation</title>;"
         <meta name=\"description\" content=\"Step - by - step guidance derived from live research signals.\" />;"
         <meta property=\"og:title\" content=\"Guide — Cloud Improving Implementation\" />;"
@@ -181,7 +174,7 @@ function Page() {
       </main>;
     </div>;"
   )export default function Page() {return ()export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Guide — Cloud Improving Implementation</title>;"
         <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\" />;"
         <meta property=\"og:title\" content=\"Guide — Cloud Improving Implementation\" />;"
@@ -200,7 +193,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 
             __html:;"
               '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/landing\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/landing</a></p><h2 />Overview</h2><p />Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2 />Steps</h2><ol /><li />Clarify objectives and measurable outcomes.</li><li />Map data, models, evaluation, and deployment workflow.</li><li />Automate checks for security, cost, and reliability.</li><li />Instrument telemetry; iterate with feedback loops.</li><li />Publish results and integrate learnings.</li></ol><h2 />Links</h2><p /><a class=\"text-cyan-300 underline\" href=\"https: //ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p>'
-          
+
 }
         />
         <p className='mt-6 text-white/60 text-sm' />
@@ -209,7 +202,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
       </main>
     </div>
   );
-
 export default function Page() {
   return (
 
@@ -218,7 +210,7 @@ export default function Page() {
 
 "
     <div className = \"min-h-screen bg-slate-950 text-white\" />
-      <Head />
+      <Head>
         <title />Guide — Cloud Improving Implementation</title>"
         <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\" />"
         <meta property=\"og:title\" content=\"Guide — Cloud Improving Implementation\" />"
@@ -234,7 +226,7 @@ export default function Page() {
 
 "
     <div className=\"min-h-screen bg-slate-950 text-white\" />
-      <Head />
+      <Head>
         <title />Guide — Cloud Improving Implementation</title>"
         <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\" />"
         <meta property=\"og:title\" content=\"Guide — Cloud Improving Implementation\" />"
@@ -252,7 +244,7 @@ export default function Page() {
  ;
   return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />
-      <Head />
+      <Head>
         <title />Guide — Cloud Improving Implementation</title>
         <meta name=&quot;description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />
         <meta property=&quot;og:title&quot; content=&quot;Guide — Cloud Improving Implementation&quot; />
@@ -274,12 +266,11 @@ export default function Page() {
 
   )
 import Head from 'next/head';
-
 export default function Page(req, res) {
   try {
   return (;"
     <div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Guide — Cloud Improving Implementation</title>;"
         <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\" />;"
         <meta property=\"og:title\" content=\"Guide — Cloud Improving Implementation\" />;"
@@ -293,7 +284,7 @@ export default function Page(req, res) {
         <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Deep Research Factory.</p>;
       </main>;"
     <div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Guide — Cloud Improving Implementation</title>;"
         <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\" />;"
         <meta property=\"og:title\" content=\"Guide — Cloud Improving Implementation\" />;"
@@ -308,7 +299,7 @@ export default function Page(req, res) {
       </main>;
 "
 export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Guide — Cloud Improving Implementation</title>;
         <meta name=&quot;description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />;
         <meta property=&quot;og:title&quot; content=&quot;Guide — Cloud Improving Implementation&quot; />;
@@ -325,7 +316,7 @@ export default function Page() {return (<div className=\"min-h-screen bg-slate-9
   )}
     </div>;"
   )})export default function Page() {try {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Guide — Cloud Improving Implementation</title>;"
         <meta name=\"description\" content=\"Step-by-step guidance derived from live research signals.\" />;"
         <meta property=\"og:title\" content=\"Guide — Cloud Improving Implementation\" />;"
@@ -350,6 +341,5 @@ export default function Page() {return (<div className=\"min-h-screen bg-slate-9
   }
 }
 ;
-
 
 "

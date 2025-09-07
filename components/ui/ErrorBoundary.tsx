@@ -78,5 +78,4 @@ if ( {) {$2;}
     return this.props.children;
   }
 }
-
 export default ErrorBoundary;"

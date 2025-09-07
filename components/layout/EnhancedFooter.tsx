@@ -32,10 +32,8 @@ const currentYear = new Date().getFullYear();
 const company = null;
 ];
 
-
 const resources = null;
 ];
-
 
 const socialLinks = null;
 
@@ -521,5 +519,4 @@ const social_links = [
         </div>;
       </div>;
 }
-
 export default EnhancedFooter;"

@@ -1,15 +1,11 @@
-
-
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { Phone, Mail, MapPin, Globe;
   Clock, ChevronDown, ChevronUp;}
   MessageCircle, Calendar, Star;}
   } from 'lucide-react';
 
 const contactInfo = null;
-
 export default function TopContactBar() {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
@@ -69,7 +65,6 @@ href={`tel: ${contactInfo.mobile}`}
               </div>
             </div>
 
-
             {/* Center - Business Hours & Rating */}
 <div className='hidden lg:flex items-center space-x-6 text-sm' />;
               {/* Business Hours */}
@@ -89,7 +84,6 @@ href={`tel: ${contactInfo.mobile}`}
                     href={action.href}
                     className=\"flex items - center space - x-2 px - 3 py - 1.5 text - xs text - gray - 300 hover: text - white bg - gray - 800 / 50 hover:bg - cyan - 500 / 20 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow-cyan-500 / 30\">
 
-
             {/* Right Side - Quick Actions & Expand Button */}
 
 <div className='flex items-center space-x-4' />
@@ -104,14 +98,12 @@ href={`tel: ${contactInfo.mobile}`}
                     className='flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover: text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'
                    />
 
-
                     {action.icon}
                     <span />{action.nam}
 }</span>;
                   </a>;
                 ))}
               </div>;
-
 
               {/* Expand/Collapse Button */}
               <button;
@@ -137,7 +129,6 @@ className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover: 
           </div>
         </div>
       </div>
-
 
                     <span />{action.nam}
 }</span>;
@@ -332,7 +323,7 @@ href='/comprehensive-services-showcase-2025'
               </div>
             </div>
           </motion.div>
-        
+
 }
       </AnimatePresence>;
     </div>;

@@ -1,11 +1,9 @@
 import React, { useMemo, useState } from 'react';
-
 export type LegalStructure =;
   | 'Cayman Foundation';
   | 'Swiss Verein';
   | 'US 501(c)(6)';
   | 'DAO-native Wrapper';
-
 export default function CharterGenerator() {const [legalStructure, setLegalStructure] =;
     useState<LegalStructure />('Cayman Foundation')const [protocolName, setProtocolName] = useState('Zion');
   const [tokenSymbol, setTokenSymbol] = useState('ZION$');

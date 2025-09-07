@@ -1,5 +1,3 @@
-
-
 import { motion } from 'framer-motion';
 import {
   Mail,
@@ -36,7 +34,6 @@ const handleChange = (
 }
     })
 };
-
 
 const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -138,7 +135,6 @@ experts to discuss how we can help you achieve your technology;
 goals.
           </p>
         </motion.div>
-
 
         <div className='grid grid-cols-1 lg: grid-cols-2 gap-12 max-w-7xl mx-auto' />
           {/* Contact Information *}
@@ -426,7 +422,6 @@ className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-
                     <span />Something went wrong. Please try again.</span>
                   </motion.div>
 
-                
 }
                 <button;
 type='submit';
@@ -456,8 +451,6 @@ type='submit';
     </section>
 )
 };
-
-
 export default ContactForm;
 
 "

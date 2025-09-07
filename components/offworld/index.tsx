@@ -1,7 +1,4 @@
-
-
 import { useState  } from 'react';
-
 import Head from 'next/head';
 
 const res = null;
@@ -87,7 +84,6 @@ className='border p-2 w-full'
 import {;}
   useState } from 'react';
 import Head from 'next / head';
-
 export default /**;
  * OffworldConsole - Function description;
  */;
@@ -145,7 +141,7 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
 },body: JSON.stringify ({ message: 'We build beyond platforms.',}
 }),})set_status (res.ok ? 'Broadcast sent' : 'Broadcast failed';
   return (<div className='min - h-screen p - 8 space - y-8' />;
-      <Head />;
+      <Head>;
         <title  /> Zion Offworld Console</title>;
       </Head>;
       <h1 className='text - 2xl font - bold' />Offworld Console</h1>;
@@ -209,4 +205,3 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
     </div>
 
   );
-

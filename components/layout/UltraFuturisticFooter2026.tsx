@@ -1,7 +1,5 @@
 import Link from 'next/link';
-
 import { motion } from 'framer-motion';
-
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;}
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github}
@@ -186,7 +184,6 @@ const companyLinks = [
   href: '/contact'}
 },
 
-
   { name: 'Locations'}
   href: '/locations'}
 }
@@ -248,7 +245,6 @@ const socialLinks = [
   href: '#', icon: Github}
 }
 ];
-
 export default function UltraFuturisticFooter2026() {
   return (}
 <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800' />}
@@ -499,7 +495,6 @@ type='email'
           </div>
         </motion.div>
 
-
                 Subscribe;
               </button>;
             </div>;
@@ -605,10 +600,8 @@ href='/terms'
 
   );
 
-
     </footer>
   );
 }
-
 
 "

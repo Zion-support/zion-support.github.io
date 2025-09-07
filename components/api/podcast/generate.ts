@@ -23,7 +23,6 @@ function writeEpisodes() {ensureStorage()fs && fs.writeFileSync(EPISODES_PATH, J
 
 const { persona, invitee, topic, operatorPrompt } = req && req.body || ;
 }
-
 export default async function handler() {const { persona, invitee, topic, operatorPrompt }  = req && req.body || {}
 
 const { persona, invitee, topic, operatorPrompt }  = req && req.body || {}
@@ -33,12 +32,9 @@ const { persona, invitee, topic, operatorPrompt } = req && req.body || ;
 
 const id = uuidv4(;
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:;
-
 export default async function handler() {export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
 })const { persona, invitee, topic, operatorPrompt } = req.body |{}
-
 export default async function handler() {const { persona, invitee, topic, operatorPrompt } = req && req.body || {}
-
 export default async function handler() {const { persona, invitee, topic, operatorPrompt }  = req && req.body || {}
 
 const { persona, invitee, topic, operatorPrompt }  = req.body || {}
@@ -131,7 +127,6 @@ function ensure_storage() {const dir = path.dirname (EPISODES_PATH)if () fs.mkdi
 }
   if ()) {$2;
 
-
 function readEpisodes(): any[] {
   ensureStorage();}
   return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))}
@@ -155,7 +150,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 });
 
 const { persona, invitee, topic, operatorPrompt } = req.body |{}
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
 }
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
@@ -228,7 +222,6 @@ function read_episodes (): any[] {ensure_storage ()return JSON.parse (fs.readFil
  * write_episodes - Function description;
  */;
 function write_episodes() {ensure_storage ()fs.writeFileSync (EPISODES_PATH, JSON.stringify (episodes, null, 2), 'utf8')}
-
 export default async /**;
  * handler - Function description;
  */;
@@ -325,7 +318,6 @@ const episode = {     ;}
     }
 
 const episodes = readEpisodes();
-
 
       content = completion.choices?.[0]?.message?.content || '';
       content = JSON.stringify ({}

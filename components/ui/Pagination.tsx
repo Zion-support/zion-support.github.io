@@ -1,17 +1,11 @@
-
-
-
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-
 export type PaginationProps = any;
-
 export type PaginationProps = {page: number;
   pageSize: number;
   total: number;}
   onChange: (nextPage: number) => void;}
 }
-
 export default function Pagination({
   page,
   pageSize,
@@ -118,7 +112,6 @@ if ( {) {$2;}
   const end_page = Math.min (total_pages, start_page + maxVisiblePages - 1)// Check condition;}
 if ( {) {$2;}
 }
-
 export default Pagination;
 }
 

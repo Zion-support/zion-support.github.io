@@ -1,6 +1,4 @@
 import type { NextPage } from 'next';
-
-
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import Link from 'next/link';
@@ -11,7 +9,7 @@ const EquipmentDetail: NextPage;
   if (!item) {
     return (
       <EnhancedLayout />
-        <Head />
+        <Head>
           <title />Equipment Not Found - Zion Tech Solutions</title>
         </Head>
 
@@ -27,7 +25,7 @@ const EquipmentDetail: NextPage;
 
   return (
     <EnhancedLayout />
-      <Head />
+      <Head>
         <title />{item.name} - Zion Tech Solutions</title>
       </Head>
 <div className='grid grid-cols-1 md: grid-cols-3 gap-6' />
@@ -69,7 +67,6 @@ src={`https://picsum && picsum.photos/seed/${encodeURIComponent(item && item.slu
       </div>;
     </EnhancedLayout>;
   )}
-
 export default EquipmentDetail;          <div />;
             <h1 className=\"text-2xl font-semibold\" />{item && item.name}</h1>;"
             <p className=\"opacity-80\" />Category: {item && item.categor}
@@ -95,8 +92,6 @@ export default EquipmentDetail;          <div />;
 
   )
 };
-
-
 export default EquipmentDetail;
 
 "

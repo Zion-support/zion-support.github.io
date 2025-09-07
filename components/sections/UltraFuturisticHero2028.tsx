@@ -1,5 +1,3 @@
-
-
 import React from 'react';,
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -7,7 +5,6 @@ import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   ArrowRight, Star, TrendingUp, Users, Award, Play;}
   CheckCircle, DollarSign, Clock, Target, Crown}
  } from 'lucide-react';
-
 export default function UltraFuturisticHero2028() {
   const features = null;
             and Autonomous AI Civilization. We're building tomorrow's solutions today.

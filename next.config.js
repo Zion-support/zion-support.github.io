@@ -1,64 +1,65 @@
-import bundleAnalyzer from '@next/bundle-analyzer';
-
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Performance optimizations
   compress: true,
   poweredByHeader: false,
-  generateEtags: true,
-  
-  // Disable linting during build
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  
-  // Disable type checking during build
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  
-  // Webpack configuration to handle TypeScript and JSX
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Handle TypeScript files
-    config.module.rules.push({
-      test: /\.tsx?$/,
-      use: [
-        {
-          loader: 'ts-loader',
-          options: {
-            transpileOnly: true,
-            compilerOptions: {
-              jsx: 'preserve',
-            },
-          },
-        },
-      ],
-    });
-    
-    return config;
-  },
+  generateEtags: false,
   
   // Image optimization
   images: {
-    domains: ['localhost'],
     formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   
-  // Security headers
+  // Bundle optimization
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      // Production optimizations
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'all',
+            enforce: true,
+          },
+        },
+      };
+    }
+    return config;
+  },
+  
+  // Experimental features for performance
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react'],
+  },
+  
+  // Headers for security and performance
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
           {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
             key: 'X-Frame-Options',
             value: 'DENY',
           },
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
           },
           {
             key: 'Referrer-Policy',
@@ -68,34 +69,6 @@ const nextConfig = {
       },
     ];
   },
-  
-  // Redirects
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-  },
-  
-  
-  // Experimental features
-  experimental: {
-    optimizeCss: true,
-  },
-  
-  // Output configuration
-  output: 'standalone',
-  
-  // Trailing slash
-  trailingSlash: false,
-  
-  // Environment variables
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
-  },
 };
 
-export default withBundleAnalyzer(nextConfig);
+export default nextConfig;

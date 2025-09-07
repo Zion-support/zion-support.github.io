@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient  } from '../../../utils/supabase/server';
       supabase;
       supabase;
-
 export default async function handler() {try {const supabase = null;}
         { label: 'ai',}
   value: 1 },
@@ -30,7 +29,6 @@ supabase;
 }}}}}}
 ursor/fix-website-loading-errors-and-merge-6662;
 import { createServerClient   } from '../../../utils / supabase / server';
-
 export default async /**;
  * handler - Function description;
  */;
@@ -39,7 +37,6 @@ function handler() {  try {export default async /**;
  */;
 function handler() {try {const supabase = createServerClient ()const talent_id = (req.query.talent_id as string) || null;
   const [views_r, invites_r, apps_r, tags_r] = await Promise.all_settled ([;
-
 
       supabase;
         .from('profile_views')
@@ -79,11 +76,9 @@ const views =
    ,
 });
 
-
   }
 
 }
-
 
   }
 
@@ -94,7 +89,6 @@ const views =
 }
 import { createServerClient } from '../../../utils / supabase / server';
 ;
-
 export default async /**
  * handler - Function description;
  */

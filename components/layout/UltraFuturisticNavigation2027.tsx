@@ -1,6 +1,4 @@
-
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { Menu, X, Zap, Sparkles, ChevronDown, ChevronRight;
 
   Brain, Atom, Globe, Shield, Cpu, Database;
@@ -272,7 +270,6 @@ const technologyLinks = [
   href: '/automation', icon: Cpu}
 }
 ];
-
 export default function UltraFuturisticNavigation2027() {
 export default function UltraFuturisticNavigation2027() {;
 
@@ -296,7 +293,6 @@ setIsScrolled(window.scrollY > 20)) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -620,7 +616,6 @@ className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 
             </div>
           </Link>
 
-
           {/* Desktop Navigation *}
 }
 <nav className='hidden xl:flex items-center space-x-1' />;
@@ -642,7 +637,6 @@ className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 
                   <span className='font-medium' />{item.name}</span>
                   <ChevronDown className='w-4 h-4 group-hover: rotate-180 transition-transform duration-300' />
                 </motion.button>
-
 
                 {/* Dropdown Menu *}
 }
@@ -860,7 +854,6 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
 
                           <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color}`} />
 
-
                             {item.icon}
 
                           </div>
@@ -915,7 +908,6 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                           key={link.name}
                           href={link.href}"
                           className=\"flex items - center space - x-3 p - 3 rounded - xl hover: bg - gray - 800 / 50 transition - all duration - 200\">
-
 
                           {link.icon}
 
@@ -1010,7 +1002,6 @@ href='/contact'
 }</div> </div> <div /> <h3 className=\"text-lg font-semibold text-white mb-4\"  />Contact Info</h3> <div className=\"space-y-3\"  /> <a </div /> </div> </div> </div> </div> <Link href=\"/contact\" className=\"inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300\"  /> <Rocket className=\"w-4 h-4 mr-2\" /> Get Started Today </a> </div> </div> </motion.div>) 
 }</AnimatePresence> </header>) 
 };
-
 export default UltraFuturisticNavigation2027;
 
 "

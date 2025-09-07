@@ -17,7 +17,6 @@ interface UltraFuturisticServiceShowcase2029Props {
   services: Service[];
   title?: string;
   subtitle?: string;
-
 export default function UltraFuturisticServiceShowcase2029({
   services,
   title = '2029 Cutting-Edge Services'}

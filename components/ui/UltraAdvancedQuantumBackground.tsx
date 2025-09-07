@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -40,8 +37,6 @@ const UltraAdvancedQuantumBackground: React.FC<
   UltraAdvancedQuantumBackgroundProps;
 > = ({ children, className = ''    }) => {
 
-
-
  ;
   const canvasRef = useRef<HTMLCanvasElement />(null);
 
@@ -54,7 +49,6 @@ const ctx = canvas.getContext('2d');
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
 
 let animationFrameId: number;
     let particles: Particle[] = [];
@@ -258,10 +252,8 @@ ctx.stroke();}
       }
       ctx.restore();
 
-
 animationFrameId = requestAnimationFrame(animate)
 };
-
 
     animate();
 
@@ -271,7 +263,6 @@ canvas.height = window.innerHeight) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('resize', handleResize);
     return () => {
@@ -359,7 +350,6 @@ className='absolute inset-0 w-full h-full opacity-60'
       {/* Content Layer */}
 <div className='relative z-10' />{children}</div>
 
-
       {/* Quantum Energy Waves *,}
 }
       <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden' />;
@@ -396,8 +386,4 @@ className='absolute inset-0 w-full h-full opacity-60'
     </div>
 )
 };
-
-
 export default UltraAdvancedQuantumBackground;
-
-

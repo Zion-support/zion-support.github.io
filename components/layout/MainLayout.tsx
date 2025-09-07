@@ -1,14 +1,11 @@
-
-
 ;
 }
 
 const MainLayout: React.FC<MainLayoutProps /> = ({ children,title,description,keywords,image,url,type = 'website',noindex = false,nofollow = false,canonical;}
    }) => {
 
-
 return (<>;}
-      <Head />;}
+      <Head>;}
         <title />{title || 'Zion Tech Group'}</title>;
         <meta name=\"description\" content={description || 'Leading technology solutions provider'} />;"
         {keywords && <meta name=\"keywords\" content={keywords} />}
@@ -37,7 +34,6 @@ type = 'website';
   image = '/og-image.jpg';
   url;
 ursor/automate-test-improve-and-merge-code-646c;
-
 import React from 'react';
 import Head from 'next/head';
 
@@ -48,10 +44,9 @@ interface MainLayoutProps {
   canonical?: string;}
 }
 }
-
 export default function MainLayout() {ursor/automate-test-improve-and-merge-code-646c;
   return (<>;}
-      <Head />;}
+      <Head>;}
         <title />{title}</title>;"
         <meta name=\"description\" content={description} />;"
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />;"
@@ -122,7 +117,7 @@ export default function MainLayout() {ursor/automate-test-improve-and-merge-code
 </>)export default MainLayout;
   title = 'Zion Tech Group - Leading Technology Solutions Provider',description = 'Zion Tech Group provides cutting - edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',og_image = '/og - image.jpg';
 }) => {return (<>;}
-      <Head />;}
+      <Head>;}
         <title />{title}</title>;"
         <meta name=\"description\" content={description} />;"
         <meta name=\"keywords\" content={keywords} />;"
@@ -142,7 +137,13 @@ export default function MainLayout() {ursor/automate-test-improve-and-merge-code
       <div className=\"min - h-screen bg - white\" />;
         {children}
       </div>;
-import React from 'react'; import Head from 'next/head'; import Header from './Header'; import Footer from './Footer'; import PerformanceOptimizer from '../PerformanceOptimizer'; import AccessibilityEnhancer from '../AccessibilityEnhancer'; import SEOEnhancer from '../SEOEnhancer';
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+import PerformanceOptimizer from '../PerformanceOptimizer';
+import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import SEOEnhancer from '../SEOEnhancer';
 
 interface MainLayoutProps {}
   children: React.ReactNode; title?: string; description?: string; keywords?: string; ogImage?: string}
@@ -152,13 +153,18 @@ const MainLayout: React.FC<MainLayoutProps /> = ({ children,title = 'Zion Tech G
 
 }
 ;}"
-  return ( <> <Head /> <title />{title}</title> <meta name=\"description\" content={description} /> <meta name=\"keywords\" content={keywords} /> <meta property=\"og: title\" content={title} /> <meta property=\"og:description\" content={description} /> <meta property=\"og:image\" content={ogImag}"
+  return ( <> <Head> <title />{title}</title> <meta name=\"description\" content={description} /> <meta name=\"keywords\" content={keywords} /> <meta property=\"og: title\" content={title} /> <meta property=\"og:description\" content={description} /> <meta property=\"og:image\" content={ogImag}"
 } /> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> </Head> <SEOEnhancer title={title} description={description} keywords={keywords} ogImage={ogImage} /> <PerformanceOptimizer preloadImages={[ '/hero-bg.jpg','/services-bg.jpg','/team-bg.jpg']} preloadFonts={[ 'https: ]} /> <AccessibilityEnhancer /> <div className='min-h-screen flex flex-col' /> <Header /> <main id='main-content' className='flex-grow' role='main' /> {childre}
 } </main> <Footer /> </div> </AccessibilityEnhancer> </> ;
 }
-
 export default MainLayout;
-import React from 'react'; import Head from 'next/head'; import Header from './Header'; import Footer from './Footer'; import PerformanceOptimizer from '../PerformanceOptimizer'; import AccessibilityEnhancer from '../AccessibilityEnhancer'; import SEOEnhancer from '../SEOEnhancer';
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+import PerformanceOptimizer from '../PerformanceOptimizer';
+import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import SEOEnhancer from '../SEOEnhancer';
 
 interface MainLayoutProps {}
   children: React && React.ReactNode; title?: string; description?: string; keywords?: string; ogImage?: string}
@@ -168,14 +174,12 @@ const MainLayout: React.FC<MainLayoutProps /> = ({ children,title = 'Zion Tech G
 
 }
 ;}"
-  return ( <> <Head /> <title />{title}</title> <meta name=\"description\" content={description} /> <meta name=\"keywords\" content={keywords} /> <meta property=\"og: title\" content={title} /> <meta property=\"og:description\" content={description} /> <meta property=\"og:image\" content={ogImag}"
+  return ( <> <Head> <title />{title}</title> <meta name=\"description\" content={description} /> <meta name=\"keywords\" content={keywords} /> <meta property=\"og: title\" content={title} /> <meta property=\"og:description\" content={description} /> <meta property=\"og:image\" content={ogImag}"
 } /> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> </Head> <SEOEnhancer title={title} description={description} keywords={keywords} ogImage={ogImage} /> <PerformanceOptimizer preloadImages={[ '/hero-bg && bg.jpg','/services-bg && bg.jpg','/team-bg && bg.jpg']} preloadFonts={[ 'https: ]} /> <AccessibilityEnhancer /> <div className='min-h-screen flex flex-col' /> <Header /> <main id='main-content' className='flex-grow' role='main' /> {childre}
 } </main> <Footer /> </div> </AccessibilityEnhancer> </> ;
 }
-
 export default MainLayout;
     </>)}
-
 export default MainLayout;
 ursor/automate-test-improve-and-merge-code-646c;"
         <meta name=\"keywords\" content={keywords} />;"
@@ -207,10 +211,8 @@ return (<>;}
       </div>;
     </>;
   )}}
-
 export default MainLayout;ursor/automate-test-improve-and-merge-code-646c;
 }
-
 export default function MainLayout({ 
   title, 
   description, 
@@ -221,7 +223,7 @@ export default function MainLayout({
  ;
   return (
     <>}
-      <Head />}
+      <Head>}
         <title />{title}</title>"
         <meta name=\"description\" content={description} />"
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />"
@@ -244,7 +246,6 @@ export default function MainLayout({
   image = '/og - image.jpg',
   url;
   return (
-
 
 "
         {image && <meta property=\"og: image\" content={image} />}"
@@ -306,7 +307,6 @@ type = 'website',;
       </div>;
     </>;
   );
-
 export default MainLayout;
       </Head>;
         <Header />;"
@@ -317,7 +317,6 @@ export default MainLayout;
       </div>;
 </>);
 ;
-
 export default MainLayout;
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting - edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
@@ -326,7 +325,7 @@ export default MainLayout;
 }) => {
   return (
     <>;}
-      <Head />;}
+      <Head>;}
         <title />{title}</title>;"
         <meta name=\"description\" content={description} />;"
         <meta name=\"keywords\" content={keywords} />;"
@@ -346,7 +345,13 @@ export default MainLayout;
       <div className=\"min - h-screen bg - white\" />;
         {children}
       </div>;
-import React from 'react'; import Head from 'next/head'; import Header from './Header'; import Footer from './Footer'; import PerformanceOptimizer from '../PerformanceOptimizer'; import AccessibilityEnhancer from '../AccessibilityEnhancer'; import SEOEnhancer from '../SEOEnhancer';
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+import PerformanceOptimizer from '../PerformanceOptimizer';
+import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import SEOEnhancer from '../SEOEnhancer';
 
 interface MainLayoutProps {}
   children: React.ReactNode; title?: string; description?: string; keywords?: string; ogImage?: string}
@@ -356,12 +361,17 @@ const MainLayout: React.FC<MainLayoutProps /> = ({ children,title = 'Zion Tech G
 
 }
 ;}"
-  return ( <> <Head /> <title />{title}</title> <meta name=\"description\" content={description} /> <meta name=\"keywords\" content={keywords} /> <meta property=\"og: title\" content={title} /> <meta property=\"og:description\" content={description} /> <meta property=\"og:image\" content={ogImag}"
+  return ( <> <Head> <title />{title}</title> <meta name=\"description\" content={description} /> <meta name=\"keywords\" content={keywords} /> <meta property=\"og: title\" content={title} /> <meta property=\"og:description\" content={description} /> <meta property=\"og:image\" content={ogImag}"
 } /> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> </Head> <SEOEnhancer title={title} description={description} keywords={keywords} ogImage={ogImage} /> <PerformanceOptimizer preloadImages={[ '/hero-bg.jpg','/services-bg.jpg','/team-bg.jpg']} preloadFonts={[ 'https: ]} /> <AccessibilityEnhancer /> <div className='min-h-screen flex flex-col' /> <Header /> <main id='main-content' className='flex-grow' role='main' /> {children} </main> <Footer /> </div> </AccessibilityEnhancer> </> 
 };
-
 export default MainLayout;
-import React from 'react'; import Head from 'next/head'; import Header from './Header'; import Footer from './Footer'; import PerformanceOptimizer from '../PerformanceOptimizer'; import AccessibilityEnhancer from '../AccessibilityEnhancer'; import SEOEnhancer from '../SEOEnhancer';
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+import PerformanceOptimizer from '../PerformanceOptimizer';
+import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import SEOEnhancer from '../SEOEnhancer';
 
 interface MainLayoutProps {}
   children: React && React.ReactNode; title?: string; description?: string; keywords?: string; ogImage?: string}
@@ -371,20 +381,17 @@ const MainLayout: React.FC<MainLayoutProps /> = ({ children,title = 'Zion Tech G
 
 }
 ;}"
-  return ( <> <Head /> <title />{title}</title> <meta name=\"description\" content={description} /> <meta name=\"keywords\" content={keywords} /> <meta property=\"og: title\" content={title} /> <meta property=\"og:description\" content={description} /> <meta property=\"og:image\" content={ogImag}"
+  return ( <> <Head> <title />{title}</title> <meta name=\"description\" content={description} /> <meta name=\"keywords\" content={keywords} /> <meta property=\"og: title\" content={title} /> <meta property=\"og:description\" content={description} /> <meta property=\"og:image\" content={ogImag}"
 } /> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> </Head> <SEOEnhancer title={title} description={description} keywords={keywords} ogImage={ogImage} /> <PerformanceOptimizer preloadImages={[ '/hero-bg && bg.jpg','/services-bg && bg.jpg','/team-bg && bg.jpg']} preloadFonts={[ 'https: ]} /> <AccessibilityEnhancer /> <div className='min-h-screen flex flex-col' /> <Header /> <main id='main-content' className='flex-grow' role='main' /> {children} </main> <Footer /> </div> </AccessibilityEnhancer> </> 
 };
-
 export default MainLayout;
     </>);
 }
-
 export default MainLayout;"
         <meta name=\"keywords\" content={keywords} />"
         {canonical && <link rel=\"canonical\" href={canonical} />}"
         <link rel=\"icon\" href=\"/favicon.ico\" />
       </Head>
-      
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -394,8 +401,6 @@ interface MainLayoutProps {
 }
 
 const MainLayout: React.FC<MainLayoutProps /> = ({ children, title, description    }) => {
-
-
 
   return (}
     <>}
@@ -411,5 +416,4 @@ const MainLayout: React.FC<MainLayoutProps /> = ({ children, title, description 
     </>
   );
 };
-
 export default MainLayout;"

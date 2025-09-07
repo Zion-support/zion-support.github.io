@@ -1,7 +1,5 @@
 import Link from 'next/link';
-
 import { motion } from 'framer-motion';
-
 import { ArrowRight, Star;
 
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
@@ -124,7 +122,6 @@ className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold round
                 </Link>
               </div>
 
-
               {/* Trust Indicators *}
 }
               <motion&& motion.div;
@@ -133,7 +130,6 @@ className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold round
 
                 animate={{ opacity: 1, y: 0 }
 }
-
 
                 transition={{ duration: 0.8, delay: 0.4 }
 }
@@ -257,7 +253,6 @@ our consciousness evolution and quantum AI platforms;
               </p>
             </motion.div>
 
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16' />
               {featuredAI.map((service, index) => (}
                 <motion.div;}
@@ -299,7 +294,6 @@ variant='consciousness'
 
               ))}
             </div>
-
 
 <div className='text-center' />
               <Link href='/ai-services' />
@@ -647,7 +641,6 @@ solutions designed for the future;
               </p>
             </motion.div>
 
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16' />
               {featuredMicroSaas.map((service, index) => (}
                 <motion.div;}
@@ -689,7 +682,6 @@ variant='automation'
 
               ))}
             </div>
-
 
 <div className='text-center' />
               <Link href='/services' />
@@ -818,7 +810,6 @@ AI-powered DevOps automation;
               </p>
             </motion.div>
 
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16' />
               {featuredIT.map((service, index) => (}
                 <motion.div;}
@@ -860,7 +851,6 @@ variant='quantum'
 
               ))}
             </div>
-
 
 <div className='text-center' />
               <Link href='/it-services' />
@@ -1095,7 +1085,6 @@ className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all dur
                   </p>
                 </motion.div>
 
-
               ))}
             </div>;
           </div>;
@@ -1188,8 +1177,6 @@ className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold round
     </Layout>
 )
 };
-
-
 export default Homepage2038;
 
 "

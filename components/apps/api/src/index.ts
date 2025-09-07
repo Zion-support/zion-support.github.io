@@ -1,5 +1,3 @@
-
-
 import Fastify from 'fastify';,
 import cors from '@fastify/cors';,
 import rateLimit from '@fastify/rate-limit';,
@@ -127,4 +125,3 @@ app.listen({ port, host: '0.0.0.0',}
   app.log.error(err);}
   process.exit(1);}
 });
-

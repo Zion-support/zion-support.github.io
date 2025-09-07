@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -165,11 +163,9 @@ const quickLinks = [
     color: 'from-green-500 to-yellow-600'}
   }
 ];
-
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null />(null);
@@ -283,7 +279,6 @@ if (e.key === 'Escape') closeMenu(),) => {
 
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />
                 </button>
-
 
                 {/* Mega Menu *}
 }

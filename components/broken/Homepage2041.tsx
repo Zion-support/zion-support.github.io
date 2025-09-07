@@ -1,7 +1,5 @@
 import Layout from './layout/Layout';
-
 import { motion } from 'framer-motion';
-
 import { ArrowRight;
   Star;
   Search;
@@ -231,7 +229,6 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8'
 }
               whileInView={{ opacity: 1, y: 0 }}
 
-
               transition={{ duration: 0.8 }}
               viewport={{ once: true }
 }
@@ -264,13 +261,7 @@ className='text-center'
           </div>
         </section>
 
-
-
               ))}
-
-
-
-
 
         {/* Featured Services Section *}
 }
@@ -422,13 +413,7 @@ key={i}
           </div>
         </section>
 
-
-
               ))}
-
-
-
-
 
         {/* CTA Section */}
 
@@ -476,7 +461,6 @@ href='/2041-futuristic-services-showcase'
 )
 };
 
-
   Math.random () * 100;
 }%`;
 top: `$ {Math.random () * 100;}
@@ -487,7 +471,6 @@ top: `$ {Math.random () * 100;}
 }whileInView= {{opacity: 1, y: 0;}
 }transition = {;}
 }
-
 export default Homepage2041;
 }%`;
 
@@ -533,11 +516,8 @@ export default Homepage2041;
 }</motion.div />) ) "
 }</motion.div> </div> </section> > <h2 className=\"text-5xl md:text-6xl font-bold text-white mb-8\"  /> Ready to Shape the Future? </h2> <p className=\"text-xl text-gray-300 mb-12 leading-relaxed\"  /> Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href=\"/contact\" className=\"px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3\"  /> <Sparkles className=\"w-6 h-6\" /> Start Your Journey </a> <Link href=\"/2041-futuristic-services-showcase\" className=\"px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3\"  /> <Target className=\"w-6 h-6\" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>) 
 };
-
 export default Homepage2041;  )
 };
-
 export default Homepage2041;
-
 
 "

@@ -1,6 +1,3 @@
-
-
-
 const localeToFlag: Record<string, string /> = {
 
   en: 'us';
@@ -35,7 +32,6 @@ const localeLabelKey: Record<string, string /> = {
   es: 'lang.spanish'}
   ar: 'lang.arabic'}
 };  ar: 'lang.arabic'}
-
 export default function LanguageSwitcher() {}
   const { t}
 } = useTranslation();
@@ -51,7 +47,6 @@ const changeLanguage = async (lng: string) => {
     document.documentElement.setAttribute('lang', lng);}
 setOpen(false)}
 };
-
 
   return (
     <div className='relative' />;

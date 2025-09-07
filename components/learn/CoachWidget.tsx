@@ -1,7 +1,4 @@
-
-
 import React, { useState } from 'react';
-
 export default function CoachWidget() {
   const [input, setInput] = useState('');
 
@@ -45,4 +42,3 @@ className='flex-1 border rounded px-3 py-2 bg-white dark: bg-black'
       )}
     </div>
   );
-

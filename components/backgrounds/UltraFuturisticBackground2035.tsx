@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -185,7 +183,6 @@ className='absolute inset-0'
           />
         </div>
 
-          
 } />;
         </div>;
 
@@ -222,7 +219,6 @@ ease: 'easeInOut'}
               repeat: Infinity,
               delay: Math.random() * 2,
 
-
           />}
           />;}
         ))}
@@ -253,11 +249,10 @@ className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent
 ease: 'easeInOut'}
           }}"
             ease: 'easeInOut'          }}            ease: \"easeInOut\"
-          
+
 }
         />
             ease: 'easeInOut'          }}
-
 
         />;
         <motion.div;
@@ -393,14 +388,12 @@ ease: 'linear'}
                 right: `${Math.random() * 32}px`
                 top: `${i * 5}%`
 
-              
 }
               animate={{
                 height: [8, 32, 8]}
                 opacity: [0.3, 1, 0.3]}
               }}
               animate={{
-
 
               transition={{
                 duration: 2 + Math.random() * 2,
@@ -410,11 +403,7 @@ ease: 'linear'}
 ease: 'easeInOut'}
               }}
 
-
-
               }}
-
-
 
             />
           ))}

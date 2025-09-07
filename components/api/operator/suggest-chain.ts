@@ -5,13 +5,10 @@ const stake = Number(stakeUsd || 0)const stake  = Number(stakeUsd || 0)export de
   return res.status(405).json({ error: 'Method not allowed',}
 })const { region, stakeUsd } = req.body || {};
   const stake  = null;
-
 export default async function handler() {if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed',}
 })const { region, stakeUsd } = req.body |{}
-
 export default async function handler() {if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed',}
 })const { region, stakeUsd } = req.body || {}
-
 export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
 })const { region, stakeUsd }  = req.body |{}
 
@@ -32,7 +29,6 @@ const regionLc = (region |'').toString().toLowerCase()if (regionLc.includes('apa
         ? ['arbitrum', 'optimism', 'avalanche'];
 
 const stake = Number(stakeUsd || 0);
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -42,14 +38,12 @@ res: NextApiResponse;
 });
 
 const { region, stakeUsd } = req.body |{};
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');}
     return res.status(405).json({ error: 'Method not allowed',}
 });
 
 const { region, stakeUsd } = req.body || {};
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;}
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
 });
@@ -103,7 +97,6 @@ const ranked = candidates && candidates.map((k) => ({ key: k, chain: (CHAINS as 
 }))res && res.status(200).json({ recommendation: ranked[0], alternatives: ranked && ranked.slice(1) })}
 import { CHAINS  ,}
 } from '../../../utils / chains';
-
 export default async /**;
  * handler - Function description;
  */;
@@ -112,7 +105,6 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
 }
 
 const { region, stake_usd } = req.body || {}
-
 export default async /**;
  * handler - Function description;
  */;
@@ -198,4 +190,3 @@ const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k],}
   res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1),}
 });
 }
-

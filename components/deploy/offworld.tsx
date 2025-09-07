@@ -1,6 +1,4 @@
-
-
-      const res = null;
+const res = null;
       setStatus('')
     }
 
@@ -28,7 +26,7 @@ setStatus('Deployed successfully');
   }
   return (
 <div className='min-h-screen p-8' />
-      <Head />
+      <Head>
         <title />Zion Offworld Deploy</title>
       </Head>
       <h1 className='text-2xl font-bold mb-4' />Zion OS Offworld Deploy</h1>
@@ -60,4 +58,3 @@ className='px-4 py-2 bg-black text-white rounded'
     </div>
   );
 }
-

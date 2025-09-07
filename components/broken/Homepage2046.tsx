@@ -1,7 +1,5 @@
 import Layout from './layout/Layout';
-
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3;
@@ -14,7 +12,6 @@ import Link from 'next/link';
 // Import our new innovative services;
 import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices } from '../data/innovative-2046-it-services';
-
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
 // Enhanced loading component with quantum effects;
 className='text-center relative z-10'
@@ -38,7 +35,7 @@ animate={{
             scale: { duration: 2, repeat: Infinity, ease: 'easeInOut'}
 }
             boxShadow: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
-          
+
 }
 
           className='w-32 h-32 mx-auto mb-8'
@@ -300,7 +297,6 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
              />
 
             >
-
 
             <motion.div;
 initial={{ opacity: 0, y: 50 }
@@ -970,8 +966,6 @@ whileHover={{}
     </Layout>
 )
 };
-
-
 export default Homepage2046;
 
 "

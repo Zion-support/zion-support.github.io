@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -48,4 +47,3 @@ const text = completion.choices?.[0]?.message?.content ?? '';
     return fallback()}
 },
 }
-

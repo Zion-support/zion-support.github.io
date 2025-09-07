@@ -6,5 +6,4 @@ const MainSidebar.dynamic = () => ;
     </div>
   );
 }
-
 export default MainSidebar.dynamic;

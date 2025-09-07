@@ -1,6 +1,4 @@
-
 import { motion } from 'framer-motion';
-
 import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;}
@@ -136,7 +134,6 @@ const quickLinks = [
   href: '/resources'}
 },
 
-
     { name: 'Case Studies'}
   href: '/case-studies'}
 },
@@ -171,7 +168,6 @@ const companyInfo = [
     { name: 'Support'}
   href: '/support'}
 },
-
 
   { name: 'Status'}
   href: '/status'}
@@ -214,7 +210,6 @@ const certifications = [
   'PCI DSS Level 1',
   'FedRAMP Authorized'
 ];
-
 export default function UltraFuturisticFooter2030() {
   return (
 <footer className = 'bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden' />
@@ -533,6 +528,5 @@ href='/terms'
 
   );
 }
-
 
 "

@@ -1,11 +1,8 @@
-
-
 import fs from 'fs';,
 import path from 'path';
 import type { GetStaticProps } from 'next';
 
 type Item = any;
-
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className=\"space-y-6\" />"
@@ -36,6 +33,5 @@ export default function InnovationDigest({ items }: Props) {
       </ul>
 );
 }
-
 
 "

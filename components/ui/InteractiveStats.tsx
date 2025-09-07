@@ -1,7 +1,4 @@
-
-
-    let start: number | null;
-
+let start: number | null;
 export default function InteractiveStats() {
   const hires = useCounter(1200, 1200);
 
@@ -30,7 +27,6 @@ interface InteractiveStatsProps {
   className?: string;}
 }
 }
-
 export default function InteractiveStats() {return (<div className={className} />;
       {stats.map((stat, index) => (<div;}
           key={index}

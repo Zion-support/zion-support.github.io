@@ -1,12 +1,9 @@
 import React from 'react';
-
-
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket  } from 'lucide-react';
 import { innovative2026AIServices  } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices  } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
-
 export default function Enhanced2026ServiceShowcase() {}
   const containerVariants = null;}
 import { motion } from 'framer-motion';
@@ -28,8 +25,6 @@ Rocket;
   Globe,;
   Rocket,;
 
-
-
   ArrowRight,
   Star,
   TrendingUp,
@@ -43,7 +38,6 @@ Rocket;
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
-
 export default function Enhanced2026ServiceShowcase() {
   const containerVariants = {}
     hidden: { opacity: 0}
@@ -93,7 +87,6 @@ key={service.id}
 }
 whileHover='hover'
       className='group relative'
-
 
      />
       <motion.div;
@@ -178,7 +171,6 @@ className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           </div>
         </div>
 
-
         {/* Hover glow effect *}
 }
 <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />;
@@ -228,7 +220,6 @@ the future of business.
 }
           whileInView={{ opacity: 1, y: 0 }
 }
-
 
           transition={{ duration: 0.8, delay: 0.2 }}
 className='mb-20'

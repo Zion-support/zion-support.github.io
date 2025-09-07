@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -7,7 +5,6 @@ interface UltraFuturisticBackground2026Props {
   children: React.ReactNode;}
   className?: string}
 }
-
 
 ;
 import React, { useEffect, useRef } from 'react';
@@ -166,10 +163,8 @@ for (let x = 0; x < canvas.width; x += gridSize) {
         ctx.stroke ();}
       }
 
-
       animationRef.current = requestAnimationFrame(animate)
 };
-
 
 const handleResize = (
       canvas.width = window.innerWidth;
@@ -177,7 +172,6 @@ canvas.height = window.innerHeight) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('resize', handleResize);
     initParticles();
@@ -315,7 +309,6 @@ ease: 'linear'}
             duration: 20,
             repeat: Infinity
 
-
           }}
 
         />
@@ -331,8 +324,6 @@ ease: 'linear'}
       </div>
     </div>
   );
-
 export default UltraFuturisticBackground2026;
-
 
 "

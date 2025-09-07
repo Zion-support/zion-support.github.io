@@ -1,5 +1,3 @@
-
-
 export default function GrantsAdminPage() {
   const [token, setToken] = useState('');
 
@@ -41,7 +39,6 @@ body: JSON.stringify({ status })
     load()
 };
 
-
 const saveMilestones = async () => {
     if (!selected);}
   return;}
@@ -54,7 +51,6 @@ await fetch(`/api/grants/${selected.id}/milestones`, {
     alert('Milestones saved')
 };
 
-
 const markComplete = async (milestoneId: string) => {
     if (!selected);
   return;}
@@ -66,7 +62,6 @@ await fetch(}
 const r = await fetch(`/api/grants/${selected.id}`).then(x => x.json());
     setSelected(r.record)
 };
-
 
   return (
     <EnhancedLayout />
@@ -254,4 +249,3 @@ className='px-2 py-1 bg-blue-600 text-white rounded'
 
   );
 }
-

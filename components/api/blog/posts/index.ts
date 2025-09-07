@@ -17,7 +17,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
 
-
       posts = posts && posts.filter(p => (p && p.topics || []).includes(topic));
     if (tag && typeof tag === 'string')
       posts = posts && posts.filter(p => (p && p.tags || []).includes(tag));
@@ -85,7 +84,6 @@ import { v4 as uuidv4 ,}
 import { BlogPost  } from '@/utils / types / blog';
 import { read_posts, write_posts  } from '@/utils / data / blog_store';
 import { require_admin  } from '@/utils / api / auth';
-
 export default /**;
  * handler - Function description;
  */;
@@ -151,7 +149,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
 import { read_posts, write_posts } from '@/utils / data / blog_store';
 import { require_admin } from '@/utils / api / auth';
-
 export default /**
  * handler - Function description;
  */
@@ -223,7 +220,6 @@ import { v4 as uuidv4  ,}
 import { BlogPost   } from '@/utils/types/blog';
 import { readPosts, writePosts  } from '@/utils/data/blogStore';
 import { requireAdmin  } from '@/utils/api/auth';
-
 export default function handler() {if (req.method = == 'GET') {if (req.method === 'GET') ;}
   const { status, topic, tag, author, limit, offset } = req.query;
     let posts = readPosts()if (status && typeof status === 'string')posts = posts.filter(p => p.status === status)if (topic && typeof topic === 'string')posts = posts.filter(p => (p.topics |[]).includes(topic))if (tag && typeof tag === 'string')posts = posts.filter(p => (p.tags |[]).includes(tag))if (author && typeof author === 'string')posts = posts.filter(p => p.author === author)posts = posts.sort((a, b) =>;
@@ -254,15 +250,11 @@ const post: BlogPost = {
     return res.status (201).json (post);
   }
 
-
-
-
 return res.status (405).end ();
 }
 import { BlogPost  } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
 import { requireAdmin } from '@/utils/api/auth';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === 'GET') {

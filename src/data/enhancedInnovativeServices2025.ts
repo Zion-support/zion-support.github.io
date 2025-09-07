@@ -1,10 +1,9 @@
- export interface ServiceContact {
+export interface ServiceContact {
   phone: string;
    email: string;
    website: string;}
    address: string}
 }
-
 export interface MicroSaasService {
   id: number;
    name: string;
@@ -27,7 +26,6 @@ export interface MicroSaasService {
    freeTier: boolean;}
    trialPeriod: string}
 }
-
 export interface ITService {
   id: number;
    name: string;
@@ -47,7 +45,6 @@ export interface ITService {
    deliveryTime: string;}
    support: string}
 }
-
 export interface AIService {
   id: number;
    name: string;
@@ -69,5 +66,4 @@ export interface AIService {
    aiScore: number;}
    useCases: string[]}
 }
-
 export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['';\"\";"

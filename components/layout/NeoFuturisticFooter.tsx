@@ -1,11 +1,8 @@
-
-
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 
 const contactInfo = null;
-
 export default function NeoFuturisticFooter() {
   return (
               Productized AI, IT and micro SaaS solutions with transparent;
@@ -67,5 +64,3 @@ aria-label='LinkedIn'
     </footer>
   );
 }
-
-

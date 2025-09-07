@@ -1,8 +1,6 @@
 import React, { createContext, useCallback, useContext, useMemo, useState } from 'react';
 import { AnimatePresence, motion  } from 'framer-motion';
-
 export type ToastVariant = 'default' | 'success' | 'error' | 'info';
-
 export type Toast = {id: string;
   title?: string;
   description?: string;
@@ -11,7 +9,6 @@ export type Toast = {id: string;
   onAction?: () => void;}
   durationMs?: number;}
 }
-
 export type ToastContextValue = {toasts: Toast[];
   addToast: (toast: Omit<Toast, 'id' />) => string;
   removeToast: (id: string) => void;}
@@ -62,7 +59,6 @@ const item: Toast = { id, variant: 'default'}
       </div>;
     </ToastContext.Provider>;
   )}
-
 export function useToast() {const ctx = useContext(ToastContext)if (!ctx) throw new Error('useToast must be used within ToastProvider';}
   return ctx;}
 }"

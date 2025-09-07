@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import { motion   } from 'framer-motion';
 import Link from 'next/link';
@@ -8,7 +5,6 @@ import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, Chec
 import { aiAutonomousServices2026   } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026   } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026  } from '../../data/2026-metaverse-digital-reality-services';
-
 export default function UltraAdvancedHero2026() {const totalServices = null;
 import { ArrowRight;
   Star;
@@ -25,9 +21,7 @@ import { ArrowRight;
   ArrowRight,Star,TrendingUp,Zap,Brain,Rocket,Globe,Sparkles,CheckCircle,Phone,Mail,MapPin} from 'lucide-react';
 import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
-
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-
 export default function UltraAdvancedHero2026() {
   const totalServices = null;
 import {
@@ -59,7 +53,6 @@ MapPin;
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-
 export default function UltraAdvancedHero2026() {
   const totalServices =
     aiAutonomousServices2026.length +
@@ -92,7 +85,6 @@ import {
 import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
 import { quantumSpaceTechServices2026 } from '../../data / 2026 - quantum - space - tech - services';
 import { metaverseDigitalRealityServices2026 } from '../../data / 2026 - metaverse - digital - reality - services';
-
 export default /**
  * UltraAdvancedHero2026 - Function description;
  */
@@ -106,10 +98,10 @@ function UltraAdvancedHero2026() {
 const contact_info = {
     phone: '+1 302 464 0950'}
   email: 'kleber@ziontechgroup.com'}
-    address: '364 E Main St STE 1008 Middletown DE 19709'  }import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
+    address: '364 E Main St STE 1008 Middletown DE 19709'  }
+import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
 import { quantumSpaceTechServices2026 } from '../../data / 2026 - quantum - space - tech - services';
 import { metaverseDigitalRealityServices2026 } from '../../data / 2026 - metaverse - digital - reality - services';
-
 export default /**
  * UltraAdvancedHero2026 - Function description;
  */
@@ -122,7 +114,6 @@ const contact_info = {
   email: 'kleber@ziontechgroup.com'}
     address: '364 E Main St STE 1008 Middletown DE 19709'}
 };
-
 
 const container_variants = {}
     hidden: { opacity: 0}
@@ -282,7 +273,6 @@ href='/contact'
               Get Started Today;
             </Link>
           </motion.div>
-
 
             className=\"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6\">
 

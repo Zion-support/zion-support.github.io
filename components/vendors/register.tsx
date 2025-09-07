@@ -1,7 +1,4 @@
-
-
 import { FormEvent, useState } from 'react';
-
 export default function VendorRegisterPage() {
   const [loading, setLoading] = useState(false);
 
@@ -115,4 +112,3 @@ disabled={loading}
     </div>
 
   );
-

@@ -1,9 +1,5 @@
-
-
 import React from 'react';
-
 export default function CertificatePreview({ courseId, userId;
-
 export default function CertificatePreview({
   courseId;}
 userId = \"demo-user\"}
@@ -31,6 +27,5 @@ href={url}"
       </a>
     </div>
   );
-
 
 "

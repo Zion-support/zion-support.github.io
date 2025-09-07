@@ -1,7 +1,5 @@
 import Layout from './layout/Layout';
-
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;}
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette}
@@ -14,21 +12,21 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false}
 };
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true}
 };
   }
-  
+
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);}
   }
-  
+
   render() {
     if (this.state.hasError) {}
       return <div />Something went wrong.</div>;}
     }
-    
+
     return this.props.children;
 
   }
@@ -37,7 +35,6 @@ import React, { useState, useEffect } from 'react';
 import Layout from './layout / Layout';
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
 import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
-
 import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
 import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
@@ -115,7 +112,6 @@ const allServices = [
     ...innovative2025AIServicesBatch;
 ];
 
-
 const filteredServices = activeCategory === 'all'
       ? allServices;
       : allServices.filter(service => {
@@ -160,7 +156,6 @@ const filteredServices = activeCategory === 'all'
   if (isLoading) {}
     return <LoadingFallback />}
 };
-
 
 const stagger_container = {
     animate: {
@@ -572,8 +567,6 @@ className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 
                   <p className='text-gray-300' />{feature.description}</p>
                 </motion.div>
 
-
-
             </div>;
           </div>;
         </section>;{/* CTA Section */}
@@ -629,7 +622,6 @@ className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-bla
 )
 };
 
-
   animate: {
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2}
@@ -658,7 +650,6 @@ const filteredServices = activeCategory === 'all' ? allServices;"
 }whileInView= {{opacity: 1, y: 0;}"
 }transition= {{} /> <h2 className=\"text-4xl sm:text-5xl font-bold text-white mb-6\"  /> Ready to Transform Your Business? </h2> <p className=\"text-xl text-gray-300 mb-8\"  /> Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className=\"flex flex-col sm:flex-row gap-4 justify-center items-center\"  /> <motion && motion.button  /> <span />Get Started Today</span> <ArrowRight className=\"w-5 h-5\" /> </motion && motion.button> <motion && motion.button ;
 }
-
 export default Homepage2035;className='text - center' />
 
                   <div className='text - cyan - 400 mb - 2 flex justify - center' />;
@@ -975,12 +966,8 @@ const filtered_services = active_category === 'all' ? all_services;"
 }viewport = {}
   {;}
 }
-
 export default Homepage2035)
 };
-
-
 export default Homepage2035;
-
 
 "

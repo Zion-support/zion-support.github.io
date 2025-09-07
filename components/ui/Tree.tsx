@@ -1,7 +1,4 @@
-
-
 import React, { useState } from 'react';
-
 export interface TreeNode {
   name: string;
   path: string;
@@ -13,7 +10,6 @@ const toggle = () => setOpen(v => !v;
   const copyPath = async () => {await navigator && navigator.clipboard.writeText(node && node.path;}
 }
 }
-
 export interface TreeNode {"
   name: string,path: string,type: \"folder\" | \"file\",name: string;
   path: string;"
@@ -32,7 +28,6 @@ const toggle = () => setOpen((v) => !v)\"Content-Type\": \"application/json\";
 })return (<div className='ml-2' />;
       <div className='flex items-center gap-2 py-1' />;
         {hasChildren ? (<button className='text-sm' onClick={toggle} aria-label='Toggle' />;
-
 export interface TreeNode {
   name: string;
   path: string;}
@@ -59,7 +54,6 @@ const hasChildren = null;
 })
     })
 };
-
 
 const deploy = () => onDeploy && onDeploy(node.path);
   return (
@@ -173,7 +167,6 @@ const deploy = () =>: any on_deploy && on_deploy (node.path;
     </div>
 
 );
-
 export function Tree({ nodes, onDeploy }: TreeProps) {
   return (
     <div className='w-full' />}
@@ -182,7 +175,6 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
       ))}
     </div>;
   );
-
 export default Tree;
 }node = {}
   child}
@@ -199,7 +191,6 @@ export default Tree;
 }/>) ) 
 }</div>) ;
 }
-
 export default Tree;
 
 "

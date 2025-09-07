@@ -1,13 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import type { TrustPeerReview } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST');
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -37,4 +33,3 @@ return res.status(400).json({ error: 'Missing or invalid fields',}
   } catch {}
 return res.status(200).json({ ok: true, review });
 }
-

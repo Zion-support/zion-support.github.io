@@ -1,4 +1,3 @@
-
 ;
 import React from './react';
 
@@ -8,5 +7,4 @@ const PageTransition = () =>: any ;
     </div>
   );
 }
-
 export default PageTransition;

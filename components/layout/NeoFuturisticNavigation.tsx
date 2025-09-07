@@ -1,9 +1,6 @@
-
-
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
 import { Menu;
 	X;
 	ChevronDown;
@@ -55,7 +52,6 @@ import { Menu;
 	Link as LinkIcon;}
   } from 'lucide-react';
 import Button from '../ui/Button';
-
 export default function NeoFuturisticNavigation() {const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null />(null),const router = null;}
@@ -437,7 +433,6 @@ const newServiceLinks = [
   href: '/services/llm-usage-governance'}
 }
   ]>
-
 
 const contactInfo = {mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',

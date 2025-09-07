@@ -1,7 +1,4 @@
-
-
 import React from 'react';
-
 export default function FuturisticBackground() {
 
 class ErrorBoundary extends React.Component {
@@ -25,7 +22,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
 export default function FuturisticBackground() {return (<div className='pointer-events-none absolute inset-0 overflow-hidden' />;}
       {/* Animated gradient background */}
       {/* Glow orbs */}
@@ -36,4 +32,3 @@ export default function FuturisticBackground() {return (<div className='pointer-
 
     </div>
   );
-

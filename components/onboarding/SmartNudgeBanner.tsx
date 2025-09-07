@@ -1,11 +1,6 @@
-
-
-
 import React from 'react';
 import { X  } from 'lucide-react';
-
 export type SmartNudgeBannerProps = any;
-
 export type SmartNudgeBannerProps = {
   role: 'talent' | 'client';
 }
@@ -15,13 +10,11 @@ try {const v =;}
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;}
       setHidden(v = == 'dismissed')} catch ;
 }
-
 export type SmartNudgeBannerProps = {role: 'talent' | 'client',userId?: string | null;
   message: string;
 }
 }
 }
-
 export default function SmartNudgeBanner({
   role;
 userId,}
@@ -65,4 +58,3 @@ onClick={dismiss}
 }</div>
     </div>
   );
-

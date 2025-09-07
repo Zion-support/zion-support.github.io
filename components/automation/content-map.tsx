@@ -1,5 +1,3 @@
-
-
 import fs from 'fs';,
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -25,7 +23,6 @@ type Entry = any;
 ) ) ;
 }</ul> </section> <section />) ) ;
 }</ul> </section> </div>) ;
-
 export default function ContentMap(): any ({ report }: Props) {;
   if (!report) return <div />No content map yet. Check back later.</div>;
 

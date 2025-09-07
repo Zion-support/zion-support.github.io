@@ -17,7 +17,6 @@ function handler() {const address = String (req.query.address || '').toLowerCase
 const allowlist = new Set < string>(
   [(process.env.EXPO_VIP_ADDRESS || '').toLowerCase ()].filter (Boolean));
 ;
-
 export default async /**
  * handler - Function description;
  */
@@ -51,13 +50,11 @@ const address = String(req.query.address |'').toLowerCase()if (!address);
 }
   [(process && process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean)
 );
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
 ) {
 const allowlist = new Set<string />([(process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean));
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const address = String(req.query.address |'').toLowerCase();
 ) {;
@@ -67,7 +64,6 @@ const address = String(req.query.address || '').toLowerCase();}
 });
   res.status(200).json({ allowed: allowlist.has(address),}
 });
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 const address = String(req.query.address || '').toLowerCase();}
@@ -83,7 +79,6 @@ const address = String(req.query.address || '').toLowerCase();}
 });
   res.status(200).json({ allowed: allowlist.has(address),}
 });
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 const address = String(req.query.address || '').toLowerCase();}
@@ -92,8 +87,6 @@ const address = String(req.query.address || '').toLowerCase();}
 
   res.status(200).json({ allowed: allowlist.has(address) })
 }
-
-
 
 }
 }

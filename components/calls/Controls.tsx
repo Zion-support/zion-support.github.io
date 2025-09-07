@@ -1,10 +1,7 @@
-
-
 import React from 'react';
 import type { Room } from 'livekit-client';
 
 type Props = any;
-
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
  ;
   const [micEnabled, setMicEnabled] = React.useState(true);
@@ -24,7 +21,6 @@ const enabled =
     setMicEnabled(enabled)}
 };
 
-
 const toggleCam = async () => {
     if (!room);
   return;
@@ -32,7 +28,6 @@ const toggleCam = async () => {
 const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);}
 setCamEnabled(enabled)}
 };
-
 
 const toggleScreenShare = async () => {
     if (!room);
@@ -78,4 +73,3 @@ onClick={toggleMic}
     </div>
 
   );
-

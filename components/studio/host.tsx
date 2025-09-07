@@ -1,13 +1,9 @@
-
-
-
 import React, { useState } from 'react';
 
 type PersonaConfig = any;
   language: string;
   cloneStyleText?: string;
 }
-
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig />({
     voice: 'Visionary',
@@ -292,5 +288,3 @@ href={episode.audio.mp3Url}
     </div>
   );
 }
-
-

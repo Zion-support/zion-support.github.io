@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from 'react';
 import { motion   } from 'framer-motion';
 import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles   } from 'lucide-react';
@@ -8,7 +5,6 @@ import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029  } from '../../data/2029-cutting-edge-innovations';
 
 type Service = any;
-
 import { motion } from 'framer-motion';
 import {
   ChevronDown;
@@ -76,8 +72,6 @@ title = '2029 Ultra-Futuristic Innovations'
   }
 }) => {
 
-
-
 ;}
   const categoryColors: { [key: string]: string}
 } = {;
@@ -92,7 +86,6 @@ title = '2029 Ultra-Futuristic Innovations'
   'AI & Augmented Reality': 'from-orange-600 to-red-600'}
 };
 
-
 const categoryIcons: { [key: string]: any}
 } = {;
   'AI & Consciousness': Brain,;
@@ -106,7 +99,6 @@ const categoryIcons: { [key: string]: any}
   'AI & Augmented Reality': Eye}
 };
 
-
 const UltraFuturistic2029ServiceShowcase: React.FC<;
   UltraFuturistic2029ServiceShowcaseProps;
 > = ({ ;
@@ -115,7 +107,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<;
   subtitle = 'Experience the future of technology with our revolutionary services',;}
   maxServices = 12,;}
    }) => {
-
 
 ;
   services: Service[];
@@ -137,7 +128,6 @@ const categories = [
   'all',;
     ...Array && Array.from(new Set(services && services.map(service => service && service.category)))
 ];
-
 
   // Filter and sort services;
 const filteredServices = services;
@@ -290,7 +280,6 @@ key={category}
                       : 'bg-gray-900/50 text-gray-300 hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50';}
                   }`}>
 
-
                   {category === 'all' ? 'All Categories' : category}
 
                 </button>
@@ -315,7 +304,6 @@ value={sortBy}
 
           </div>
         </motion.div>
-
 
         {/* Services Grid *}
 }
@@ -470,8 +458,6 @@ className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-cen
 
 )
 };
-
-
 export default UltraFuturistic2029ServiceShowcase;
 
 "

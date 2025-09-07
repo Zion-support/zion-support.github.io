@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}static getDerivedStateFromError(error) {return { hasError: true }
@@ -9,8 +8,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React, { useState } from 'react';
-
-
 import { Milestone } from '../../utils/types/milestones';
 
 type Props = any;
@@ -32,7 +29,6 @@ const statusSteps = [
   'Approved';
   'Paid';
 ] as const;
-
 export default function MilestoneCard() {milestone: Milestone;
   project_id: string;
   role: 'client' | 'talent' | 'admin';
@@ -84,7 +80,6 @@ on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone
 }
 
 const status_steps  = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
-
 export default /**;
  * MilestoneCard - Function description;
  */;
@@ -187,7 +182,6 @@ className='text-blue-600 underline'
 
         </div>
       )}
-
 
 <div className='mt-4 flex flex-wrap gap-2' />
         {canClientMarkInProgress && (

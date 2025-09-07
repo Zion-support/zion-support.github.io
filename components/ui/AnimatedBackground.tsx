@@ -18,4 +18,3 @@ export default function AnimatedBackground() {return (<div className='pointer-ev
       `}</style />
     </div>
   );
-

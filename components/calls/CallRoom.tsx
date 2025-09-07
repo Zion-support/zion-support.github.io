@@ -1,13 +1,8 @@
-
-
-
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets   } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
-
 export type StartMode = any;
-
 import {
   Room;
 RoomEvent,
@@ -16,7 +11,6 @@ LocalParticipant,
 createLocalTracks;}
 VideoPresets;}
   Room,RoomEvent,RemoteParticipant,LocalParticipant,createLocalTracks,VideoPresets,} from 'livekit-client';
-
 export type StartMode = 'video' | 'audio';
   projectId: string;
   userId: string;
@@ -28,8 +22,6 @@ export type StartMode = 'video' | 'audio';
 
   onLeave?: (durationSec: number) => void,
 };
-
-
 export default function CallRoom(): any ({;
   projectId,;
   userId,;
@@ -125,7 +117,6 @@ const list: Array<RemoteParticipant | LocalParticipant /> = [
 }
 };
 
-
   useEffect(() => {
 
     connect();
@@ -157,7 +148,6 @@ const durationSec = connectedAt;
 
     onLeave?.(durationSec)
 };
-
 
 const gridCols = useMemo(() => {
    ;
@@ -202,4 +192,3 @@ key={String((p as any).sid || (p as any).identity) + idx}
     </div>
   );
 }
-

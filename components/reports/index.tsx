@@ -1,8 +1,5 @@
-
 export default function ReportsIndex() {export default function ReportsIndex() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-
 export default function ReportsIndex() {;
-
 export default function ReportsIndex() {
   return (
     <div className='min-h-screen bg-slate-950 text-white' />;}
@@ -43,9 +40,7 @@ export default function ReportsIndex() {
       <main className=\"container mx-auto px-4 py-12 max-w-7xl\" />;}
         {/* Header */}
 
-
         {/* Back to Home */}
-
 
         {/* Back to Home */}
         <div className='mt-12 text-center' />;
@@ -55,12 +50,10 @@ href='/'"
           <Link href=\"/\" className=\"inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200\" />;
 import Link from 'next / link';
 import ContentCategorizer from '../../components / ContentCategorizer';
-
 export default /**;
  * ReportsIndex - Function description;
  */;
 function ReportsIndex() {return (<div className='min - h-screen bg - slate - 950 text - white' />;
-
 export default /**
  * ReportsIndex - Function description;
  */
@@ -222,8 +215,6 @@ export default function ReportsIndex() {return (<div className=\"min-h-screen bg
     </div>);
 }
 
-
-
     </div>
     </div>
   );
@@ -254,8 +245,6 @@ export default function ReportsIndex() {return (<div className=\"min-h-screen bg
 
     </div>);
 }
-
-
 
     </div>);
 }

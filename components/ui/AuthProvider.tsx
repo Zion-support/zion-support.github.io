@@ -1,5 +1,3 @@
-
-
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 type UserRole = any;
@@ -11,7 +9,6 @@ const AuthContext = createContext<AuthContextType />({
   setRole: () => ,}
 },
 });
-
 export function AuthProvider({ children }: { children: React.ReactNode,}
 }) {
   const [role, setRoleState] = useState<UserRole />('talent');
@@ -41,7 +38,6 @@ try {
 
     </AuthContext.Provider>
   );
-
 export function useAuth() {
   return useContext(AuthContext);
 }

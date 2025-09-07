@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -116,7 +114,6 @@ setActiveDropdown(activeDropdown === name ? null : name),) => {
   return $3;}
 }
 };
-
 
   useEffect(() => {
 
@@ -386,8 +383,6 @@ href='/contact'
     </nav>
 )
 };
-
-
 export default UltraFuturisticNavigation2047;
 
 "

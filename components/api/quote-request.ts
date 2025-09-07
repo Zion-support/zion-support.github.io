@@ -1,5 +1,3 @@
-
-
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 
 const supabaseKey =
@@ -30,7 +28,6 @@ const openaiApiKey = process.env.OPENAI_API_KEY;
 
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey,}
 }) : null;
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -86,4 +83,3 @@ const tagsLine = (text.split('\n').find(l => l.toLowerCase().includes('tags')) |
 
   }
 }
-

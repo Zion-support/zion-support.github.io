@@ -5,7 +5,6 @@ interface CardProps {
   className?: string;}
 }
 }
-
 export default function Card() {return (<div className={`bg-white rounded-lg shadow-md p-6 ${className}`} />
 
       {children}
@@ -159,7 +158,6 @@ const CardFooter = null;
     {...props}
   />;"
 ))CardFooter.displayName = \"CardFooter\";
-
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }hover?: boolean;
 }
 

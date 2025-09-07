@@ -1,10 +1,7 @@
 import path from 'path';
 import fs from 'fs';
-
-
 import DocsLayout from '../../../components/docs/DocsLayout';
 import CodeBlock from '../../../components/docs/CodeBlock';
-
 export type Section = any;
   id: string;
 
@@ -16,13 +13,11 @@ export type Section = any;
 type DocsContent = {title: string;}
   sections: Section[];}
 }}
-
 export const getServerSideProps: GetServerSideProps<PageProps />  = async () => {const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json')const raw = fs.readFileSync(contentPath, 'utf8';}
   const docs = JSON.parse(raw) as DocsContent;}
   return { props: { docs } }
 
 }
-
 export default function ApiDocsPage({ docs,}
 }: PageProps) {}
       nav={docs.sections.map(s => ({ id: s.id, title: s.title }))}
@@ -51,4 +46,3 @@ export default function ApiDocsPage({ docs,}
     </DocsLayout>
   );
 }
-

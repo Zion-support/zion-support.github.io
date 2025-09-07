@@ -6,5 +6,4 @@ const Navigation.dynamic = () => ;
     </div>
   );
 }
-
 export default Navigation.dynamic;

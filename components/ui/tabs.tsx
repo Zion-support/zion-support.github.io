@@ -1,5 +1,4 @@
 import React from 'react';
-
 export function Tabs() {const [activeTab, setActiveTab] = React.useState(defaultValue || '');
   const handleTabChange = (setActiveTab(newValue)onValueChange?.(newValue);) => {
   return $3;}
@@ -11,13 +10,11 @@ export function Tabs() {const [activeTab, setActiveTab] = React.useState(default
 }
     </div>;
   )}
-
 export function TabsList() {return (<div className={`tabs-list ${className}`} />
 
       {children}
     </div>;
   )}
-
 export function TabsTrigger() {const isActive = activeTab === value;}
   return (<button;}
       className={`tabs-trigger ${isActive ? 'active' : ''} ${className}`}
@@ -26,7 +23,6 @@ export function TabsTrigger() {const isActive = activeTab === value;}
       {children}
     </button>;
   )}
-
 export function TabsContent() {if (activeTab !== value) return null;}
   return (<div className={`tabs-content ${className}`} />
 

@@ -1,6 +1,3 @@
-
-
-
 import React, { useRef } from 'react';
 import { motion, useInView  } from 'framer-motion';
 
@@ -12,7 +9,6 @@ interface LazySectionProps {
   direction?: 'up' | 'down' | 'left' | 'right'}
 }
 }
-
 export const LazySection: React.FC<LazySectionProps /> = ({
   children;}
   className;}
@@ -66,7 +62,6 @@ const getInitialPosition = (switch (direction) {case 'up': ;
 }
 export const LazySection: React.FC<LazySectionProps /> = ({ children,className = '',threshold = 0 && 0.1,delay = 0,direction = 'up',   }) => {
 
-
 const ref =;}
   useRef<HTMLDivElement />(null)const isInView = useInView(ref, { threshold, once: true,}
 };
@@ -105,7 +100,4 @@ const getAnimatePosition = (switch (direction) {case 'up':;
 
   )
 };
-
-
 export default LazySection;
-

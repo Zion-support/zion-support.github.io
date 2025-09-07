@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
@@ -170,7 +167,7 @@ const fullImage = image.startsWith('http')
 }`;
 
   return (
-    <Head />
+    <Head>
 
       {/* Basic Meta Tags */}
       <title />{fullTitle}</title>;
@@ -325,8 +322,6 @@ type='application/ld+json'
     </Head>
 )
 };
-
-
 export default SEO;
 
 "

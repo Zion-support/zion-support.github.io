@@ -1,9 +1,6 @@
-
-
 import React, { useEffect, useState, useCallback, useMemo } from 'react',
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
-
 import { ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;}
   ChevronDown, CheckCircle, Users, Award, Clock;}
@@ -39,7 +36,7 @@ const ServiceCard = null;
 top: `$ {Math.random () * 100;}
 }%`;
 }/>) )}</div> </div> {/* Floating geometric shapes - optimized animations */;}"
-}<motion.div /> </div> </div> </Layout>)}return (<> <Head /> <title />Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title> <meta name=\"description\" content=\"Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group.\" /> <meta name=\"keywords\" content=\"AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group\" /> <meta name=\"author\" content=\"Zion Tech Group\" /> <meta name=\"robots\" content=\"index, follow\" /> {/* Structured Data */;}
+}<motion.div /> </div> </div> </Layout>)}return (<> <Head> <title />Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title> <meta name=\"description\" content=\"Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group.\" /> <meta name=\"keywords\" content=\"AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group\" /> <meta name=\"author\" content=\"Zion Tech Group\" /> <meta name=\"robots\" content=\"index, follow\" /> {/* Structured Data */;}
 }<script;"
 })}/> > <span className=\"bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0 0 30px rgba (6, 182, 212, 0.5) ]\"  /> Zion Tech Group </span> </motion.h1> <motion.p  /> Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. </motion.p> <motion.div  /> <span className=\"relative z-10 flex items-center\"  /> Experience the Future <ArrowRight className=\"w-7 h-7 ml-4 group-hover:translate-x-2 transition-transform duration-300\" /> </span> <div className=\"absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl\"  /></div> </button> <button  /> <span className=\"flex items-center\"  /> Explore Services <Play className=\"w-7 h-7 ml-4\" /> </span> </button> </motion.div> {/* Enhanced Stats Section */;}
 }<motion.div  /> {stats.map ( (stat, index) => (<motion.div key= {stat.label;}"
@@ -78,7 +75,7 @@ if ( {) {$2;}
 top: `$ {Math.random () * 100;}
 }%`;
 }/>) )}</div> </div> {/* Floating geometric shapes - optimized animations */;}"
-}<motion.div /> </div> </div> </Layout>)}return (<> <Head /> <title  /> Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title> <meta name=\"description\" content=\"Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group.\" /> <meta name=\"keywords\" content=\"AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group\" /> <meta name=\"author\" content=\"Zion Tech Group\" /> <meta name=\"robots\" content=\"index, follow\" /> {/* Structured Data */;}
+}<motion.div /> </div> </div> </Layout>)}return (<> <Head> <title  /> Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title> <meta name=\"description\" content=\"Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group.\" /> <meta name=\"keywords\" content=\"AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group\" /> <meta name=\"author\" content=\"Zion Tech Group\" /> <meta name=\"robots\" content=\"index, follow\" /> {/* Structured Data */;}
 }<script;"
 })}/> > <span className=\"bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text-transparent drop-shadow-[0 0 30px rgba (6, 182, 212, 0.5) ]\"  /> Zion Tech Group </span> </motion.h1> <motion.p  /> Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. </motion.p> <motion.div  /> <span className=\"relative z-10 flex items-center\"  /> Experience the Future <ArrowRight className=\"w - 7 h - 7 ml - 4 group - hover:translate - x-2 transition-transform duration-300\" /> </span> <div className=\"absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 opacity - 0 group - hover:opacity - 100 transition - opacity duration-300 rounded-3xl\"  /></div> </button> <button  /> <span className=\"flex items-center\"  /> Explore Services <Play className=\"w - 7 h-7 ml-4\" /> </span> </button> </motion.div> {/* Enhanced Stats Section */;}
 }<motion.div  /> {stats.map ( (stat, index) => (<motion.div key= {stat.label;}"
@@ -123,7 +120,6 @@ top: `$ {Math.random () * 100;}
 }"
 } /> <h2 className=\"text-5xl font-bold text-white mb-6\"  /> Ready to Transform Your Business? </h2> <p className=\"text-xl text-gray-400 mb-12 max-w-3xl mx-auto\"  /> Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className=\"flex flex-col sm:flex-row gap-6 justify-center items-center\"  /> <button  /> <span className=\"flex items-center\"  /> Start Your Journey <Rocket className=\"w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300\" /> </span> </button> <button  /> <span className=\"flex items-center\"  /> Schedule Demo <Play className=\"w-7 h-7 ml-4\" /> </span> </button> </div> </div> </section> </main> </Layout> </>) 
 };
-
 export default Homepage2044;
 
 "

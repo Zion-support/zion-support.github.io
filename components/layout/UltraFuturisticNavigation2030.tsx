@@ -1,7 +1,5 @@
 import Link from 'next/link';
-
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
@@ -217,7 +215,6 @@ const quickLinks = [
     color: 'from-orange-500 to-red-500'}
   }
 ];
-
 export default function UltraFuturisticNavigation2030() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -628,7 +625,6 @@ href='/pricing'
               </div>
             </motion.div>
 
-          
 }
         </AnimatePresence>;
       </nav>;

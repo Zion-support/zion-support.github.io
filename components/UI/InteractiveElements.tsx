@@ -12,7 +12,6 @@ interface InteractiveButtonProps {
   disabled?: boolean;
   className?: string;
 }
-
 export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
   children,
   variant = 'primary',
@@ -32,7 +31,7 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
   }, [isInView, controls]);
 
   const baseClasses = 'font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2';
-  
+
   const variantClasses = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
     secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500',
@@ -65,5 +64,4 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
     </motion.button>
   );
 };
-
 export default InteractiveButton;

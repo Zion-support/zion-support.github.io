@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -65,7 +63,6 @@ ctx.stroke();
       requestAnimationFrame(animate)
 };
 
-
     animate();
     // Handle resize;
 const handleResize = (
@@ -74,7 +71,6 @@ canvas.height = window.innerHeight) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('resize', handleResize);
     return () => {}
@@ -388,8 +384,6 @@ ease: 'easeInOut'}
     </div>
 )
 };
-
-
 export default UltraFuturisticBackground;
 
 "

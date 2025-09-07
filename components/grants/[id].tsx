@@ -1,10 +1,7 @@
-
-
 import { useEffect, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
-
 export default function GrantDetailPage() {
   const router = null;
 
@@ -173,4 +170,3 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
 
   );
 }
-

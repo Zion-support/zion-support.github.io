@@ -1,6 +1,4 @@
-
 import { motion } from 'framer-motion';
-
 import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Rocket, Shield, Cpu, Target, Microscope, Users;
 
@@ -248,7 +246,6 @@ const itemVariants = {}
 visible: { opacity: 1, y: 0}
 }
 };
-
 export default function UltraFuturisticFooter2032() {
   return (
 <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden' />}
@@ -322,7 +319,6 @@ challenges.
                     className='hover: text-cyan-300 transition-colors'
                    />
                     {contactInfo.website}
-
 
                     {contactInfo.website}
 
@@ -421,7 +417,6 @@ className='text-slate-300 hover: text-purple-300 transition-colors duration-200 
 
                 </ul>
               </div>
-
 
               {/* Social Links */}
 

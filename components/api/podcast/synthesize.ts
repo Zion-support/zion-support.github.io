@@ -24,7 +24,6 @@ if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true,}
 });
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -116,4 +115,3 @@ return res.status(200).json({ episode });
   }
 }
 }
-

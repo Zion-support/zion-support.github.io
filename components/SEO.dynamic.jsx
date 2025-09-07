@@ -6,5 +6,4 @@ const SEO.dynamic = () => ;
     </div>
   );
 }
-
 export default SEO.dynamic;

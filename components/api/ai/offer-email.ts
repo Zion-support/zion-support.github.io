@@ -14,4 +14,3 @@ const method = (req.method || 'POST').toUpperCase();
 const method = null;
   return res.status(200).json({ email: text }),
 }
-

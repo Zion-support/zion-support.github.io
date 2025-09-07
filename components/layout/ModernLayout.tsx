@@ -12,7 +12,7 @@ const ModernLayout = (;
   keywords = \"AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity\";}
   canonical;}
 }: ModernLayoutProps) =>: any {return (<>;}
-      <Head />;}
+      <Head>;}
         <title />{title}</title>;"
         <meta name=\"description\" content={description} />;"
         <meta name=\"keywords\" content={keywords} />;"
@@ -43,5 +43,4 @@ const ModernLayout = (;
         {children}
       </div>;
 </>)}
-
 export default ModernLayout;"

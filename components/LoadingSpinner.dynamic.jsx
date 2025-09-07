@@ -6,5 +6,4 @@ const LoadingSpinner.dynamic = () => ;
     </div>
   );
 }
-
 export default LoadingSpinner.dynamic;

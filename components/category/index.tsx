@@ -1,8 +1,6 @@
-
 <div className=\"container mx-auto px-4 py-10\" />;
 "
 export default function CategoryIndexPage() {return (<div className=\"container mx-auto px-4 py-10\" />;
-
 export default function CategoryIndexPage() {export default /**;
  * CategoryIndexPage - Function description;
  */;
@@ -46,9 +44,7 @@ function CategoryIndexPage() {return (<div className='container mx-auto px-4 py-
     </div>
   );
 
-
   );
-
 export default /**
  * CategoryIndexPage - Function description;
  */

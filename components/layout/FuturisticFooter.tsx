@@ -1,13 +1,9 @@
-
-
 import React from 'react';,
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
-
 export default function FuturisticFooter() {
   const currentYear = null;
 ];
-
 
 const serviceCategories = [
   {;
@@ -35,7 +31,6 @@ const serviceCategories = [
       href: '/services?category=Blockchain%20%26%20Web3',;}
     }
 ];
-
 
 const socialLinks = [
   {;

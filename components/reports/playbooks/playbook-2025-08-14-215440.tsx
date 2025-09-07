@@ -1,10 +1,9 @@
-
 export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
-        <title />Playbook — Autonomous Delivery</title>;import Head from 'next/head';
-
+      <Head>;
+        <title />Playbook — Autonomous Delivery</title>;
+import Head from 'next/head';
 export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
+      <Head>;
         <title />Playbook — Autonomous Delivery</title>;
         <meta;
           name='description';
@@ -17,7 +16,7 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
 
   return (
     <div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
+      <Head>;
         <title />Playbook — Autonomous Delivery</title>;
         <meta;
 name='description'
@@ -64,7 +63,6 @@ className='mt-4'
 export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
     </div>;
   );
-
 export default function Page() {;
 "
               '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/explore</a></p><h2 />Purpose</h2><p />Operational steps to execute reliably with measurable outcomes.</p><h2 />Checklist</h2><ol /><li />Define objectives, KPIs, and guardrails.</li><li />Inventory data, models, tools, and constraints.</li><li />Design evaluation and feedback loops upfront.</li><li />Implement smallest viable slice with telemetry.</li><li />Iterate, measure, and harden for production.</li></ol><h2 />Notes</h2><p class=\"text-white/75\" />Autonomous cloud systems are live and improving the app in real timeAutonomous Cloud AutomationsSelf-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously.Explore AutomationsLive Meta Factory24/7A</p>'}
@@ -76,7 +74,6 @@ export default function Page() {;
         </p>
       </main>
   );
-
 export default function Page() {
   return (
 
@@ -86,7 +83,6 @@ export default function Page() {
     </div>;
 
   );
-
 export default function Page() {
   return (
 
@@ -97,7 +93,7 @@ export default function Page() {
 
   return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Playbook — Autonomous Delivery</title>;"
         <meta name=\"description\" content=\"A practical step-by-step playbook for reliable autonomous delivery.\" />;"
         <meta property=\"og:title\" content=\"Playbook — Autonomous Delivery\" />;"
@@ -112,21 +108,19 @@ export default function Page() {
     </div>;
   )}
 import Head from 'next / head';
-
 export default /**;
  * Page - Function description;
  */;
 function Page() {return (<div className='min - h-screen bg - slate - 950 text - white' />;}
   );}
 }
-
 export default /**
  * Page - Function description;
  */
 function Page() {
   return (
     <div className='min - h-screen bg - slate - 950 text - white' />;
-      <Head />;
+      <Head>;
         <title  /> Playbook — Autonomous Delivery</title>;
         <meta;
           name='description';
@@ -162,14 +156,13 @@ function Page() {
  */;"
 function Page() {return (<div className=\"min - h-screen bg - slate - 950 text - white\" />;
     </div>);
-
 export default /**
  * Page - Function description;
  */
 function Page() {
   return ("
     <div className=\"min - h-screen bg - slate - 950 text - white\" />;
-      <Head />;
+      <Head>;
         <title  /> Playbook — Autonomous Delivery</title>;"
         <meta name=\"description\" content=\"A practical step - by - step playbook for reliable autonomous delivery.\" />;"
         <meta property=\"og:title\" content=\"Playbook — Autonomous Delivery\" />;"
@@ -183,7 +176,7 @@ function Page() {
       </main>
     </div>
   );
-}<Head />;
+}<Head>;
         <title />Playbook — Autonomous Delivery</title>;
         <meta name=&quot;description&quot; content=&quot;A practical step-by-step playbook for reliable autonomous delivery.&quot; />;
         <meta property=&quot;og:title&quot; content=&quot;Playbook — Autonomous Delivery&quot; />;
@@ -209,7 +202,7 @@ function Page() {
     </div>;
     </div>;"
   )export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Playbook — Autonomous Delivery</title>;"
         <meta name=\"description\" content=\"A practical step-by-step playbook for reliable autonomous delivery.\" />;"
         <meta property=\"og:title\" content=\"Playbook — Autonomous Delivery\" />;"
@@ -231,10 +224,7 @@ function Page() {
     </div>);
 }
 
-
-
-
-      <Head />
+      <Head>
         <title />Playbook — Autonomous Delivery</title>
         <meta name=&quot;description&quot; content=&quot;A practical step-by-step playbook for reliable autonomous delivery.&quot; />
         <meta property=&quot;og:title&quot; content=&quot;Playbook — Autonomous Delivery&quot; />
@@ -260,14 +250,13 @@ className='mt-4'
     </div>
     </div>;
   );
-
 export default function Page() {
   return (
 
 export default function Page() {
   return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />
-      <Head />
+      <Head>
         <title />Playbook — Autonomous Delivery</title>"
         <meta name=\"description\" content=\"A practical step-by-step playbook for reliable autonomous delivery.\" />"
         <meta property=\"og:title\" content=\"Playbook — Autonomous Delivery\" />"

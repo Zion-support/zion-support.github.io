@@ -1,5 +1,3 @@
-
-
 const EnhancedFooter = (
 
  ;
@@ -109,6 +107,4 @@ href='/blog'
 
   ),
 };
-
 export default EnhancedFooter;
-

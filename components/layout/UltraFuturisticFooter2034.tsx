@@ -1,7 +1,5 @@
 import Link from 'next/link';
-
 import { motion } from 'framer-motion';
-
 import { Rocket, Brain, Atom, Zap, Sparkles, Shield;
   Phone, Mail, MapPin, Globe, ArrowRight;
 
@@ -174,7 +172,6 @@ const stats = [
   value: '99.9%', icon: CheckCircle}
 }
 ];
-
 export default function UltraFuturisticFooter2034() {
   return (
 <footer className = 'bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden' />
@@ -264,7 +261,6 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
                 </div>
               </motion.div>
             </div>
-
 
             {/* Services *}
 }
@@ -452,7 +448,6 @@ key={social.name}
                         <social.icon className='w-5 h-5' />                      </Link>
 
                       </Link>
-
 
                     )
 }

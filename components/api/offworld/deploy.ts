@@ -1,12 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import { execSync  } from 'child_process';
-
 import path from 'path';
 import fs from 'fs';
 import { addDirectory  } from '@/utils/offworld/ipfs';
-
 export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
 })try {// Ensure export;
 }
@@ -87,4 +83,3 @@ const { cid, provider } = await add_directory (out_dir)if (return res.status (50
 }
 ,
 }
-

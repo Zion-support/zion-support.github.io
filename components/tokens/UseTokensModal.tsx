@@ -1,12 +1,7 @@
-
-
-
-
 export type RedemptionType =;
   | \"boost_profile\";"
   | \"promote_listing\";"
   | \"premium_support\";
-
 export default function UseTokensModal({
   isOpen;
 onClose,
@@ -198,7 +193,5 @@ disabled={!account |isSubmitting |tokens <= 0}
   )}
     </div>)}
 }
-
-
 
 "

@@ -1,4 +1,4 @@
- export interface AdvancedAIService  {id: string;
+export interface AdvancedAIService  {id: string;
    title: string;
    description: string;
    category: string;
@@ -21,5 +21,4 @@
    website: string;}
    address: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: strin
 }
-
 export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = ['';\"\";"

@@ -1,7 +1,7 @@
-
 ;
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry,
-}import { defineConfig, devices } from @playwright/test';
+}
+import { defineConfig, devices } from @playwright/test';
 default defineConfig({testDir: tests/e2e',  use: {baseURL: process.env.PLAYWRIGHT_BASE_URL |http://localhost:3000',    trace: on-first-retry,}
 }projects: [;
       name: Desktop Chrome',      use: {browserName: chromium',        channel: chrome,}
@@ -20,7 +20,8 @@ default defineConfig({testDir: tests/e2e',  use: {baseURL: process.env.PLAYWRIGH
     {name: Desktop Safari',      use: {browserName: webkit'}
    ,
 }
-    {name: Mobile Chrome',      use: {browserName: chromium',        ...devices['Pixel 5']}import { define_config, devices } from @playwright / test';
+    {name: Mobile Chrome',      use: {browserName: chromium',        ...devices['Pixel 5']}
+import { define_config, devices } from @playwright / test';
 default define_config ({test_dir: tests / e2e',  use: {baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on - first - retry,}
 }
   projects: [;

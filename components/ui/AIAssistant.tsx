@@ -1,7 +1,4 @@
-
-
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-
 export type AIAssistantProps = any;
 }: AIAssistantProps) {
 
@@ -48,7 +45,7 @@ const callOperator = useCallback(async () => {
                 }
               : {})},body: JSON.stringify({ prompt, system: systemPrompt })})const data = await res.json()if (!res.ok) {throw new Error(data?.error || 'Failed to generate')}
       setOutput(String(data.text || ''))setIsEditing(false)} catch (e: any) {setError(e.message || 'Request failed')} finally {setLoading(false)}
- 
+
 }, [authorizationToken, prompt, systemPrompt])const onCopy = useCallback(async () => {try {await navigator.clipboard.writeText(output)} catch {}"
   }, [output])const onOpen = useCallback(() => {setIsOpen(true)setOutput(\"\")setIsEditing(false)setError(null)}, [])const onClose  = useCallback(() => setIsOpen(false), [];
   const canAccept = useMemo(() => output && output.trim().length > 0, [output];
@@ -141,7 +138,6 @@ className=\"block text-xs font-medium mb-1\"
                 {isEditing ? (;}
                   <textarea;}
 value={output}
-
 
                     onChange={e = /> setOutput(e.target.value)}
                     rows={12}

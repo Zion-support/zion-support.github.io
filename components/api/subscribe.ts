@@ -1,10 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase  } from '../../utils/supabase/client';
-
 export default async function handler() {if (req.method !== 'POST') return res.status(405).send('Method Not Allowed')const { email } = req.body || {},if (!email || typeof email !== 'string') return res.status(400).send('Invalid email')try {// Basic validation;
 
 const normalized  = null;
-
 export default async function handler() {if (req.method !== 'POST') return res.status(405).send('Method Not Allowed')try {// Basic validation;
 
 const normalized = email && email.trim().toLowerCase(;
@@ -52,7 +50,6 @@ const { data, error } = await supabase;
   created_at: new Date().toISOString()}).select('*').single()if (error) {}
 import { supabase  ,}
 } from '../../utils / supabase / client';
-
 export default async /**;
  * handler - Function description;
  */;
@@ -60,7 +57,6 @@ function handler() {if (return res.status (405).send ('Method Not Allowed')) {$2
 }
 }
 import { supabase } from '../../utils/supabase/client';
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -86,17 +82,14 @@ const { data, error } = await supabase;
 const { data, error } = await supabase;
       .from('email_signups')
 
-
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
     return res.status(400).send('Invalid email');
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
   const { email } = req.body || ,
 };
   if (!email || typeof email !== 'string')
     return res.status(400).send('Invalid email');
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');}
 }
@@ -140,7 +133,6 @@ source: 'mobile-launch',
     if (error) {}
 import { supabase } from '../../utils / supabase / client';
 ;
-
 export default async /**
  * handler - Function description;
  */
@@ -152,7 +144,6 @@ function handler() {
 const { email } = req.body || {}
   if (return res.status (400).send ('Invalid email')) {$2;}
 }
-
 export default async /**;
  * handler - Function description;
  */;
@@ -244,9 +235,7 @@ if ( {) {$2;}
 
     return res.status(500).send(e?.message || 'Unexpected error');
 
-
     return res.status(500).send(e?.message || 'Unexpected error');
-
 
 }
 }

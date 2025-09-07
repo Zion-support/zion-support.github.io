@@ -103,5 +103,3 @@ return res.status(500).json({ error: 'Unexpected error',}
   }    return res.status(500).json({ error: 'Unexpected error' })
  ,
 }
-
-

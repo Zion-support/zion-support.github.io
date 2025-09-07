@@ -6,5 +6,4 @@ const ModernLayout.dynamic = () => ;
     </div>
   );
 }
-
 export default ModernLayout.dynamic;

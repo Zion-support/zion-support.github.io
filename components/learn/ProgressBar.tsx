@@ -1,9 +1,6 @@
-
-
 import React from 'react';
 
 type ProgressBarProps = any;
-
 export default function ProgressBar({ value }: ProgressBarProps) {}
 export default function ProgressBar({ value }: ProgressBarProps) {;
 
@@ -35,6 +32,5 @@ type ProgressBarProps = { value: number}
 };
 );
 }
-
 
 "

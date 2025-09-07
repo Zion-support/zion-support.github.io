@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed'}
 });
@@ -37,7 +36,7 @@ question: `Which topic is central to ${moduleTitl,) => {
             'Legacy ERP'
           ]
           answerIndex: 1;
-       
+
 }
           question: 'What does DAO commonly refer to?';
           options: [;
@@ -84,7 +83,6 @@ question: `Which topic is central to ${moduleTitl,) => {
       ]
     })
 };
-
 
   if (!apiKey) return fallback();
   try {}

@@ -31,7 +31,6 @@ return (
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN;
   );
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {}
     res.status(401).json({ error: 'Unauthorized',}
@@ -82,7 +81,6 @@ function handler() {if () {) {$2;}
     res.status (401).json ({ error: 'Unauthorized',}
 })return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN;
 }
-
 export default /**;
  * handler - Function description;
  */;
@@ -148,4 +146,3 @@ const idx = ms.find_index ((m) => m.id === milestone_id)if ;
   writeGrant(existing);
 res.status(200).json({ record: existing,}
 });
-

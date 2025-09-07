@@ -1,8 +1,5 @@
-
-
 import React from 'react';
 import Link from 'next/link';
-
 import { Phone, Mail, MapPin, Globe, Rocket, Brain, Atom;
   Shield, Users, Briefcase, BookOpen, MessageCircle;
   Star, TrendingUp, Target, Layers, Cpu, Database;
@@ -134,7 +131,6 @@ const socialLinks = [
   href: 'https://github.com/ziontechgroup', icon: Code}
 }
 ];
-
 export default function UltraFuturisticFooter2028() {
   return (
 <footer className = 'bg-black/95 backdrop-blur-xl border-t border-purple-500/30' />

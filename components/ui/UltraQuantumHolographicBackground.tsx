@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect, useRef, useState } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -13,7 +10,6 @@ interface UltraQuantumHolographicBackgroundProps {
   className?: string;}
 }
 }
-
 export default function UltraQuantumHolographicBackground({children;
   intensity;
 
@@ -59,7 +55,7 @@ const [isVisible, setIsVisible] = useState(false);
   // Color schemes;
 const colorSchemes = {
     quantum: {
-      
+
       primary: '#00ffff',
   secondary: '#ff00ff',
       tertiary: '#ffff00',
@@ -160,7 +156,6 @@ this.y = Math.random() * dimensions.height;}
         }
       }this.vy = Math.random() * 2 + 1;          }}
         }
-
 
         // Energy pulse;
 if (this.type === 'energy') {}
@@ -308,10 +303,8 @@ const gridSize = 50;
         ctx && ctx.stroke();}
       }
 
-
       animationId = requestAnimationFrame(animate)
 };
-
 
     animate();
     return () => {
@@ -394,9 +387,6 @@ className='absolute inset-0'
 ease: 'easeInOut'}
           }}
 
-
-
-
         />
       </div>
         />;
@@ -404,7 +394,6 @@ ease: 'easeInOut'}
       {/* Content Layer */}
 
 <div className='relative z-20' />{children}</div>
-
 
       {/* Quantum Noise Effect */}
       <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5' />;

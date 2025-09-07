@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import Link from 'next/link';
@@ -62,7 +60,6 @@ setScrollY(window.scrollY)) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('scroll', handleScroll);
@@ -276,7 +273,6 @@ href='/2025-innovative-services-showcase-v2'
                   <span />Explore Services</span>;
                   <ArrowUpRight className='w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200' />;
                 </Link>;
-
 
                 <Link;
 href='/contact'
@@ -838,7 +834,6 @@ href='/2025-innovative-services-showcase-v2'
       <UltraFuturisticFooter2047 />;
     </div>;
   )export default Homepage2047;  )}
-
 export default Homepage2047;
                     </p>;
                     <div className='flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors duration - 200' />;
@@ -935,16 +930,10 @@ export default Homepage2047;
 
     </div>)
 };
-
-
 export default Homepage2047)
 };
-
-
 export default Homepage2047;
 ;
-
-
 
       {/* Footer */}
       <UltraFuturisticFooter2047 />
@@ -952,8 +941,6 @@ export default Homepage2047;
 
 )
 };
-
-
 export default Homepage2047;
 
 "

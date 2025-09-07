@@ -1,9 +1,5 @@
-
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-
 export type AnalyzeRequestBody = any;
 }`;
 
@@ -17,13 +13,10 @@ const completion = await client.chat.completions.create ({
   role: 'system',}
   content: system;}
 }
-
 export type AnalyzeResponse = {
 }
   analysis: string,}
 };
-
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse<AnalyzeResponse | { error: string } />
@@ -112,4 +105,3 @@ const analysis = completion.choices?.[0]?.message?.content?.trim () || 'No analy
 }
 
 }
-

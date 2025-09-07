@@ -1,5 +1,3 @@
-
-
 import type { NextPage } from 'next',
 import Head from 'next/head';,
 import React from 'react';,
@@ -22,7 +20,6 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 
 const mapLocalToServiceItem = null;
-
 export default function ServicesIndexPage () {
  export default function ServicesIndexPage () {}
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (}
@@ -40,7 +37,7 @@ body: JSON.stringify ({
 }
 budgetRange: values.budgetRange;
 }
-<Head /> <title />Zion AI Marketplace - Services</title> <meta name=\"description\" content=\"Discover curated IT services. Request quotes with AI-assisted summaries.\" /> </Head>) )
+<Head> <title />Zion AI Marketplace - Services</title> <meta name=\"description\" content=\"Discover curated IT services. Request quotes with AI-assisted summaries.\" /> </Head>) )
 }</div> </div> </div> </div> <QuoteRequestModal open= {}
   modalOpen}
 }onClose= {}
@@ -52,7 +49,6 @@ budgetRange: values.budgetRange;
   handleSubmit }
 }/> </div>) 
 };
-
 export default ServicesPage;
 
 "

@@ -1,6 +1,5 @@
 import { useEffect, useState  } from 'react';
 import Head from 'next/head';
-
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');
 
@@ -16,7 +15,6 @@ const [loading, setLoading] = useState(false);
 
   useEffect(() => {
 
-
     const saved = null;}
     if (saved) setToken(saved);}
   }, []);
@@ -25,7 +23,7 @@ const [loading, setLoading] = useState(false);
       method: 'POST'}
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ apiKey })
-   
+
 });
 
 const data = await res.json();
@@ -52,16 +50,16 @@ const data = await res.json();
       method: 'POST'}
 }
       headers: token ? { Authorization: `Bearer ${token}` } : {}
-   
+
 };
   const data = await res.json()if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)}
- 
+
 }
 
  ;
   return (
 <div className='min-h-screen bg-gray-50 text-gray-900' />
-      <Head />
+      <Head>
         <title />Zion Partner Dashboard</title>
       </Head>
       <div className='max-w-5xl mx-auto py-12 px-4' />

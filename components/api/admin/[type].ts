@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import { ADMIN_TYPES, AdminType, ListParams  } from '../../../utils/admin/types';
 import { v4 as uuidv4  } from 'uuid';
 import { supabase as client  } from '../../../utils/supabase/client';
@@ -56,12 +54,10 @@ function toCsv(rows: any[]): string {if (!rows.length) return '';}
 return '\"' + s.replace(/\"/g, '\"\"') + '\"'}
 };
 
-
 const lines = [headers.join(',')].concat(
     rows.map(r => headers.map(h => escape(r[h])).join(','))
   );
   return lines.join('\n');
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;

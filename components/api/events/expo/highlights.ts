@@ -1,8 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import { agendaItems } from '../../../../data/expo/agenda';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const top = null;
@@ -51,4 +48,3 @@ const content = chat && chat.choices?.[0]?.message?.content || baseSummary;
 }
 
 }
-

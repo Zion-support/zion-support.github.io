@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -119,7 +117,6 @@ canvas.height = window.innerHeight) => {
 }
 };
 
-
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles;
@@ -206,7 +203,6 @@ drawSpaceTimeEffects(ctx, colors);}
 
       animationRef.current = requestAnimationFrame(animate)
 };
-
 
     animate();
     return () => {
@@ -358,7 +354,6 @@ ease: 'easeInOut'}
                 scaleX: [0, 1, 0]}
               }}
 
-
               transition={{
                 duration: 3,
                 delay: i * 0.1,
@@ -366,16 +361,10 @@ ease: 'easeInOut'}
 ease: 'easeInOut'}
               }}
 
-
-
-
-
               transition={{
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
-
-
 
             />}
 }
@@ -386,8 +375,6 @@ ease: 'easeInOut'}
     </div>
 )
 };
-
-
 export default UltraFuturisticBackground2035;
 
 "

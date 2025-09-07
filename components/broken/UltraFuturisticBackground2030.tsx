@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 
 canvas.width = window.innerWidth;
@@ -19,7 +17,6 @@ interface UltraFuturisticBackground2030Props {
 
 const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props /> = ({ children   }
 }) => {
-
 
 const canvasRef = null;
   useEffect(() => {
@@ -55,7 +52,6 @@ interface UltraFuturisticBackground2030Props {
 
 const UltraFuturisticBackground2030: React.FC < UltraFuturisticBackground2030Props> = ({ children   }
 }) => {
-
 
 useEffect (() => {const canvas = canvas_ref.current;
     // Check condition;}
@@ -129,7 +125,6 @@ ctx.globalAlpha = ((100 - distance) / 100) * 0.3;
       animationId = requestAnimationFrame(animate)
 };
 
-
     initParticles();
     animate();
 
@@ -140,7 +135,6 @@ initParticles()) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('resize', handleResize);
     return () => {
@@ -373,12 +367,10 @@ ease: 'easeInOut'}
     </div>
   );
 }
-
 export default UltraFuturisticBackground2030;      </div>
     </div>
   );
 }
-
 export default UltraFuturisticBackground2030;transition={{duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 10,ease: 'easeInOut'            }}/>;
         ))}
       </div>;
@@ -393,7 +385,6 @@ export default UltraFuturisticBackground2030;transition={{duration: Math.random(
     </div>
   )
 };
-
 export default UltraFuturisticBackground2030;
 
 "

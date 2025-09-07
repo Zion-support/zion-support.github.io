@@ -1,10 +1,7 @@
-
-
-    isRoleBased: boolean;
+isRoleBased: boolean;
     isFreeProvider: boolean;
   },
 }
-
 export default async function handler(
   req: NextApiRequest;
   res: NextApiResponse<EmailValidationResult | { error: string } />
@@ -110,4 +107,3 @@ isFreeProvider}
     res.status(500).json({ error: 'Internal server error' })
   },
 }
-

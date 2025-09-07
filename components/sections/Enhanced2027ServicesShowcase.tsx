@@ -1,10 +1,9 @@
-
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom;}
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
+import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
+import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom;
 Rocket, Shield, Target, CheckCircle, ExternalLink;}
   Search, Filter, Grid, List, ChevronDown}
@@ -65,7 +64,6 @@ const getCategoryColor = (
     )
 };
 
-
 const getCategoryIcon = (
    ;
   const icons = {
@@ -86,7 +84,6 @@ const getCategoryIcon = (
     };
     return icons[category as keyof typeof icons] || <Zap className='w-5 h-5' />
 };
-
 
   return (
     <section className='py-20 bg-gray-900' />
@@ -324,7 +321,6 @@ className='group'
                           key={idx}className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                         />                    <div className=\"flex flex-wrap gap-2 mb-6\" />;
                       {service.tags.slice(0, 3).map((tag, idx) => (<span;}
                           key={idx}
-
 
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'
                          />
@@ -598,7 +594,6 @@ href='/pricing'
 )
 };
 
-
   /* Search and Filters */ 
 }<motion.div /> </div> </div> > {
   categories.map ( (category) => (<option key= {}
@@ -657,7 +652,6 @@ href='/pricing'
       </div>;}
     </section>;}
   )}
-
 export default Enhanced2027ServicesShowcase;
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center' />;
               <Link;
@@ -749,11 +743,8 @@ export default Enhanced2027ServicesShowcase;
 }</AnimatePresence> > <div className=\"text-6xl mb-4\"  />🔍</div> <h3 className=\"text-2xl font-bold text-white mb-4\"  />No services found</h3> <p className=\"text-gray-400 mb-8\"  /> Try adjusting your search terms or category filter to find what you're looking for. </p> <button  /> Clear Filters </button> </motion.div>)
 }{;}
 }
-
 export default Enhanced2027ServicesShowcase;  )
 }
-
 export default Enhanced2027ServicesShowcase;
-
 
 "

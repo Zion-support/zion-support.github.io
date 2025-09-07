@@ -1,9 +1,7 @@
-
 ;
 import Head from 'next/head';
-
 export default function Page() {return (export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
+      <Head>;
         <title />Reference Architecture — Autonomous Content Mesh</title>;
         <meta;
           name='description';
@@ -31,7 +29,7 @@ export default function Page() {return (export default function Page() {export d
               '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>';
 
     <div className='min-h-screen bg-slate-950 text-white' />
-      <Head />
+      <Head>
         <title />Reference Architecture — Autonomous Content Mesh</title>
         <meta;
 name='description'
@@ -71,7 +69,7 @@ className='mt-4'
   );  return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />
 
-      <Head />
+      <Head>
         <title />Reference Architecture — Autonomous Content Mesh</title>"
         <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />"
         <meta property=\"og: title\" content=\"Reference Architecture — Autonomous Content Mesh\" />"
@@ -84,7 +82,7 @@ className='mt-4'
       </main>
     </div>
   )
- 
+
 } catch (error) {"
     console.error(\"Error:\", error);}"
     return res.status(500).json({ error: \"Internal server error\"}
@@ -101,7 +99,7 @@ className='mt-4'
     </div>;
   )return (return (</div>;"
   )return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Reference Architecture — Autonomous Content Mesh</title>;"
         <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />;"
         <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\" />;"
@@ -126,7 +124,7 @@ className='mt-4'
   )return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
   );  return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Reference Architecture — Autonomous Content Mesh</title>;"
         <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />;"
         <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\" />;"
@@ -153,7 +151,7 @@ export default function Page() {return ('<p />Signal source: <a class=\"text-cya
     </div>;
   )return (return (</div>;"
   )return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Reference Architecture — Autonomous Content Mesh</title>;"
         <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />;"
         <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\" />;"
@@ -168,14 +166,12 @@ export default function Page() {return ('<p />Signal source: <a class=\"text-cya
       </main>;
     </div>;
 import Head from 'next / head';
-
 export default /**;
  * Page - Function description;
  */;
 function Page() {return (<div className='min - h-screen bg - slate - 950 text - white' />;}
   );}
 }
-
 export default function Page(){
   return ("
               '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>'"
@@ -193,7 +189,7 @@ export default function Page(){
     </div>;
   );  return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />
-      <Head />
+      <Head>
         <title />Reference Architecture — Autonomous Content Mesh</title>"
         <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />"
         <meta property=\"og: title\" content=\"Reference Architecture — Autonomous Content Mesh\" />"
@@ -210,14 +206,13 @@ export default function Page(){
 
 import Head from 'next / head';
 ;
-
 export default /**
  * Page - Function description;
  */
 function Page() {
   return (
     <div className='min - h-screen bg - slate - 950 text - white' />;
-      <Head />;
+      <Head>;
         <title  /> Reference Architecture — Autonomous Content Mesh</title>;
         <meta;
           name='description';
@@ -255,7 +250,7 @@ function Page() {
     </div>)return (<div className=\"min - h-screen bg - slate - 950 text - white\" />;
     </div>);  return ("
     <div className=\"min - h-screen bg - slate - 950 text - white\" />;
-      <Head />;
+      <Head>;
         <title  /> Reference Architecture — Autonomous Content Mesh</title>;"
         <meta name=\"description\" content=\"High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.\" />;"
         <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\" />;"

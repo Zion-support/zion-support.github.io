@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 
 type Props = any;
@@ -10,8 +8,6 @@ type Props = any;
 
   }) => Promise<void /> | void;
 };
-
-
 export default function MilestoneForm({ onSubmit }: Props) {
   const [title, setTitle] = useState('');
 
@@ -118,4 +114,3 @@ type='submit';
     </form>
   );
 }
-

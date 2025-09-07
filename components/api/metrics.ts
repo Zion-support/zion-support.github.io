@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
 function rand(min: number, max: number) {}
   return Math.floor(Math.random() * (max - min + 1)) + min,}
 }
@@ -28,7 +27,6 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
     series.push(last)}
   }
   return series;
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));}
@@ -163,8 +161,5 @@ value: Math.round(m.value * factor)}
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
   }
 
-
-
   res.status(200).json(response),
 }
-

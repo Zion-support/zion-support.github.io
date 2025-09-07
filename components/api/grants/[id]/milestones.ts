@@ -29,7 +29,6 @@ return (
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN;
   );
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (!isAuthorized(req)) {}
@@ -113,4 +112,3 @@ const payload = req.body as MilestonesUpdatePayload;
   res.status(405).end('Method Not Allowed');
   res.status(405).end('Method Not Allowed')
 }
-

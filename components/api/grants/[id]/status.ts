@@ -29,7 +29,6 @@ return (
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN;
   );
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (!isAuthorized(req)) {}
@@ -58,4 +57,3 @@ const payload = req.body as StatusUpdatePayload;
   writeGrant(existing);
 res.status(200).json({ record: existing,}
 });
-

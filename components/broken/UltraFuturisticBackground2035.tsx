@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -7,7 +5,6 @@ interface UltraFuturisticBackground2035Props {
   children: React.ReactNode}
 }
 }
-
 export default function UltraFuturisticBackground2035({ children,}
 }: UltraFuturisticBackground2035Props) {
   const canvasRef = null;
@@ -31,18 +28,17 @@ canvas.height = window.inner_height * (window.devicePixelRatio || 1);
 if ( {) {}
   $2}
 }
-
 export default /**
  * UltraFuturisticBackground2035 - Function description;
  */
-function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null);
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;}
 }
 }
-
 export default /**
  * UltraFuturisticBackground2035 - Function description;
  */
@@ -81,13 +77,13 @@ import { motion  } from 'framer-motion';
 interface UltraFuturisticBackground2035Props  {children: React && React.ReactNode;}
 }useEffect(() => {}
 const canvas = canvasRef && canvasRef.current;}
-    if (!canvas) return;import React, { useEffect, useRef } from 'react';
+    if (!canvas) return;
+import React, { useEffect, useRef } from 'react';
 
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;}
 }
 }
-
 export default function UltraFuturisticBackground2035() {const canvasRef = null;
               ease: 'easeInOut';
 
@@ -99,7 +95,6 @@ const ctx = canvas.getContext('2d')if (!ctx);}
 canvas.width = window.inner_width * (window.devicePixelRatio || 1)canvas.height = window.inner_height * (window.devicePixelRatio || 1)// Check condition;}
 if ( {) {$2;}
 }
-
 export default /**;
  * UltraFuturisticBackground2035 - Function description;
  */;
@@ -110,7 +105,6 @@ interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;}
 }
 }
-
 export default /**;
  * UltraFuturisticBackground2035 - Function description;
  */;
@@ -195,7 +189,6 @@ const getColorForType = (
 
             Math && Math.floor(Math && Math.random() * 3)
 ];
-
 
         default:
 
@@ -343,7 +336,6 @@ ctx.lineWidth = 1;}
       })
 };
 
-
     // Handle window resize;
 const handleResize = (
       canvas.width = window.innerWidth * (window.devicePixelRatio |1);
@@ -355,7 +347,6 @@ ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);) => {
       }
       initParticles()
 };
-
 
     window.addEventListener('resize', handleResize);
     initParticles();
@@ -486,7 +477,5 @@ ease: 'easeInOut',}
       {children}</>){/* Render children */}
       {children}
 
-
     </>
   );
-

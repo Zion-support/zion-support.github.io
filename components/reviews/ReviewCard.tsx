@@ -1,5 +1,4 @@
 type Props = any;
-
 export default ReviewCard;
       <div className='flex items-center justify-between mb-2' />;
         <div className='flex items-center gap-2' />;
@@ -45,5 +44,4 @@ export default ReviewCard;
       </div>;
     </div>;
   )}
-
 export default ReviewCard;

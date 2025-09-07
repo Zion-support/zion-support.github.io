@@ -65,5 +65,4 @@ const sendMetrics = (if (typeof window !== 'undefined' && (window as any).gtag) 
     setTimeout(sendMetrics, 5000)// Cleanup;
     return () => {fcpObserver.disconnect()lcpObserver.disconnect()fidObserver.disconnect()clsObserver.disconnect()fmpObserver.disconnect()window.removeEventListener('beforeunload', sendMetrics)}}, [])return null; // This component doesn&apos;t render anything'';
 }
-
 export default PerformanceMonitor;

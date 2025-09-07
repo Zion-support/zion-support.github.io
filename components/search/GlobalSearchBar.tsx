@@ -11,11 +11,9 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 import React from 'react';
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useRouter  } from 'next/router';
-
 export default function GlobalSearchBar() {useEffect(() => {
 if (!query) {setSuggestions([])return;      return;
       setSuggestions([])return;
-
 export default function GlobalSearchBar() {
 
 export default function GlobalSearchBar() {;
@@ -40,22 +38,22 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false}
 };
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true}
 };
   }
-  
+
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);}
   }
-  
+
   render() {
     if (this.state.hasError) {}
       return <div />Something went wrong.</div>;}
     }
     controller && controller.current?.abort()controller && controller.current = new AbortController()const run = async () => {try {const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {signal: controller && controller.current!.signal})const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
-   
+
 }
 
 const id = setTimeout(run, 150)return () => clearTimeout(id)}, [query])const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
@@ -80,7 +78,6 @@ const Speech: any = (window as any).SpeechRecognition || (window as any).webkitS
   return $3;}
 }
   useEffect, useMemo, useRef, useState   } from 'react';
-
 export default function GlobalSearchBar() {export default function GlobalSearchBar() {const router = useRouter()const [query, setQuery] =;
   useState('');
   const [suggestions, setSuggestions] = useState<string[] />([])const [open, setOpen] = useState(false;
@@ -96,12 +93,11 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     }return this.props.children;
   }
 }
-
 export default function GlobalSearchBar() {useEffect(() => {
 if (!query) {setSuggestions([])return;      return;}
       setSuggestions([])return;}
     }}controller && controller.current?.abort()controller && controller.current = new AbortController()const run = async () => {try {const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {signal: controller && controller.current!.signal})const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true)} catch {}
-   
+
 }
 
 const id = setTimeout(run, 150)return () => clearTimeout(id)}, [query])const j = await r && r.json()setSuggestions(j && j.suggestions || [])setOpen(true;
@@ -172,7 +168,6 @@ const rec = new Speech()rec.lang = 'en-US';
     }return this.props.children;
   }
 }
-
 export default function GlobalSearchBar() {const router = useRouter()const [query, setQuery] =;
   useState('');
   const [suggestions, setSuggestions] = useState<string[] />([])const [open, setOpen] = useState(false;
@@ -478,7 +473,6 @@ type=\"button\"
     </form>;
   )})}
 import { use_router  } from 'next / router';
-
 export default /**;
  * GlobalSearchBar - Function description;
  */;
@@ -489,7 +483,6 @@ function GlobalSearchBar() {const router = use_router ()const [query, set_query]
 if ( {) {$2;}
 }
       set_suggestions ([])return;      return;
-
 
                   {s}
                     router.push(`/search?q=${encodeURIComponent(s)}`)
@@ -507,7 +500,6 @@ if ( {) {$2;}
 
 import { use_router}
 } from 'next / router';
-
 export default /**
  * GlobalSearchBar - Function description;
  */

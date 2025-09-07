@@ -13,5 +13,4 @@ export interface ZionService  {id: string;
    address: string;}
    website: string} ctaLabel: string href: string external?: boolean
 }
-
 export const zionTechGroup2025Services: ZionService[] = [';';;"

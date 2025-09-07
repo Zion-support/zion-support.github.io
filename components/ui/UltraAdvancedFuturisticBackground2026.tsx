@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -412,7 +410,6 @@ const schemeColors = colors[colorScheme] || colors['neural-network'];
           ))}
     }
 
-
     // Initialize neural network;
 if (enableNeuralNetworks) {
 for (let i = 0; i < 20; i++) {
@@ -566,10 +563,8 @@ ctx.restore();}
         });
       }
 
-
       animationFrameId = requestAnimationFrame(animate)
 };
-
 
     animate();
     return () => {
@@ -644,8 +639,6 @@ ease: 'easeInOut'}
     </div>
   )
 };
-
-
 export default UltraAdvancedFuturisticBackground2026;
 
 "

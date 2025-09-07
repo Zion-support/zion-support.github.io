@@ -1,11 +1,10 @@
-
-
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles  } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
@@ -308,7 +307,6 @@ href={service.link}
             ))}
           </div>
 
-
 <div className='text-center mt-8' />
             <Link;
 href='/services?category=ai-autonomous'
@@ -341,7 +339,6 @@ initial='hidden'
               </p>
             </div>
           </div>
-
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
             {featuredQuantumServices.map((service, index) => (}
@@ -410,7 +407,6 @@ href={service.link}
             )
 }
           </div>
-
 
 <div className='text-center mt-8' />
             <Link;
@@ -513,7 +509,6 @@ href={service.link}
             )
 }
           </div>
-
 
 <div className='text-center mt-8' />
             <Link;

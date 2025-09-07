@@ -1,10 +1,7 @@
-
-
 type Props = {
   region?: string;}
   service?: string}
 };
-
 
 function matchesRegion(profile: TalentProfile, region?: string) {
   if (!region) return true;
@@ -21,7 +18,6 @@ return (
     profile.skills.some(sk => sk.toLowerCase().includes(s))}
   );}
 }
-
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () =>
@@ -66,7 +62,6 @@ export default function TalentGrid({ region, service }: Props) {
                 className=\"text - xs px - 2 py - 1 rounded bg - gray - 100 dark: bg - gray - 800 text - gray - 600 dark:text - gray - 300\" />
 
                 {sk}
-
 
               </span>
 

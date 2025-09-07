@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
@@ -52,7 +50,7 @@ setIsSearching (false) }
 
   const handleClickOutside = (
   if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
-  
+
 ,) => {
   return $3;}
 }
@@ -216,7 +214,6 @@ setIsSearching (false) }
 // Debounce utility function function debounce<T extends (...args: unknown[]) = /> any> (func: T;
 wait: number 
 }
-
 export default EnhancedSearch;
 
 "

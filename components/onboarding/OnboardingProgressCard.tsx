@@ -1,26 +1,20 @@
-
-
 import React from 'react';,
 import Link from 'next/link';
 import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
-
 export type OnboardingStep = any;
   label: string;
   completed: boolean
 };
-
-export type OnboardingStep = {id: string;import React from 'react';,import Link from 'next/link';}
+export type OnboardingStep = {id: string;
+import React from 'react';,import Link from 'next/link';}
 import { CheckCircle2, Circle, PartyPopper  } from 'lucide-react';
-
 export type OnboardingStep = any;label: string;
   completed: boolean;
 }
-
 export type OnboardingProgressCardProps = {title: string;
   steps: OnboardingStep[];}
   highlightColorClass?: string}
 };
-
 
 function computePercentage(steps: OnboardingStep[]): number {
 

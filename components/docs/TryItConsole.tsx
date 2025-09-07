@@ -1,18 +1,13 @@
-
-
-
 import React, { useMemo, useState } from 'react';
 
 interface TryItProps  {path: string; // full URL or relative;
   requiresAuth: boolean;
-
 export default function TryItConsole() {const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
   const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';}
 }
 interface TryItProps  {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',method,path,requiresAuth}: TryItProps) {const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
   const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',const [baseUrl, setBaseUrl]  = useState('https://api.zion.os')path: string, // full URL or relative;
   requiresAuth: boolean;
-
 export default function TryItConsole({
   method;
 path}
@@ -23,7 +18,6 @@ requiresAuth}
   path: string, // full URL or relative;}
 requiresAuth: boolean}
 }
-
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
 
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');

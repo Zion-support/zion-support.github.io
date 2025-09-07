@@ -1,6 +1,4 @@
-
 import { useState } from 'react';
-
 export type FeedbackContext = any;
     onClose(true)
 export default function FeedbackModal({
@@ -47,7 +45,7 @@ comment}
 kind;}
 context: defaultContext |{}
         })
-     
+
 });
     setLoading(false);
     onClose(true);
@@ -108,9 +106,7 @@ className={
                 checked = {kind === 'feature'}
                 onChange={() = /> setKind('feature';}
 }
-
 export type FeedbackContext = { action_type?: string; metadata?: any }
-
 export default function FeedbackModal ({is_open,on_close,default_context,default_kind = 'general',user_headers}: {is_open: boolean;
   on_close: (submitted: boolean) => void;
   default_context?: FeedbackContext;}
@@ -215,6 +211,5 @@ onClick={() = /> onClose(false)}
     </div>
   );
 }
-
 
 "

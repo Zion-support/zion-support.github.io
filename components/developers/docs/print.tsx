@@ -1,9 +1,6 @@
-
-
 import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
 import content from '../../../data/docs/content.json';
-
 export type Section = any;
   }, []);
   return (
@@ -39,7 +36,6 @@ key = {i}
             {s && s.code && s && s.code.map((c, i) = /> (<pre key={i} className=\"mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap\" />{c && c.content}</pre>;
             ))}
 }
-
 export default /**;
  * PrintDocs - Function description;
  */;

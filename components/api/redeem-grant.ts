@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from \"next\","
 import fs from \"fs-extra\";"
 import path from \"path\";"
@@ -22,7 +20,6 @@ const REDEMPTIONS_FILE = path.join(
   'partners'
   'grant-redemptions.json'
 );
-
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
@@ -74,7 +71,7 @@ const records = (await fs.pathExists(REDEMPTIONS_FILE))
     res.setHeader(\"Allow\", \"POST\");}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);}"
     return res.status(405).json({ error: \"Method Not Allowed\" })
- 
+
 }
 
 const { studentEmail, grantCode, courseId } = req.body || {};
