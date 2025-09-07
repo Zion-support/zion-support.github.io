@@ -1,4 +1,5 @@
 import React from 'react';
+import TestimonialCard from '@/components/TestimonialCard';
 import Link from 'next/link';
 
 // Simple TestimonialCard component
