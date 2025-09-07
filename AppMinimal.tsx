@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export default function AppMinimal(): React.JSX.Element {
   return (
     <main>
@@ -9,15 +8,3 @@ export default function AppMinimal(): React.JSX.Element {
     </main>
   );
 }
-=======
-const AppMinimal: React.FC = () => {
-  return (
-    <main>
-      <h1>Zion Tech Group</h1>
-      <p>Leading the future of technology</p>
-    </main>
-  );
-};
-
-export default AppMinimal;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-ec2c

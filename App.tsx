@@ -1,23 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function App() {
-  return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Zion Tech Group
-        </h1>
-        <p className="text-lg text-gray-600">
-          Welcome to our application
-        </p>
-      </div>
-    </div>
-  );
-}
-=======
 import React, { JSX } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { AccessibilityProvider } from './components/AccessibilityProvider';
 import SEOHead from './components/SEOHead';
 import Analytics from './components/Analytics';
@@ -80,7 +63,7 @@ export default function App(): JSX.Element {
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a 
+                <Link 
                   href="/contact" 
                   className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
                 >
@@ -88,8 +71,8 @@ export default function App(): JSX.Element {
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/services" 
                   className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
                 >
@@ -97,7 +80,7 @@ export default function App(): JSX.Element {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                   Explore Services
-                </a>
+                </Link>
                 </div>
               </motion.div>
             </div>
@@ -214,7 +197,7 @@ export default function App(): JSX.Element {
                   how our innovative solutions can drive your business forward.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <a 
+                  <Link 
                     href="/contact" 
                     className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
                   >
@@ -222,7 +205,7 @@ export default function App(): JSX.Element {
                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </a>
+                  </Link>
                   <a 
                     href="tel:+13024640950" 
                     className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
@@ -243,4 +226,3 @@ export default function App(): JSX.Element {
     </AccessibilityProvider>
   );
 }
->>>>>>> dbe5fd47af13285347009b34a7a7bf2071025560
