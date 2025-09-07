@@ -1,7 +1,12 @@
 # Automation Report
 
+<<<<<<< HEAD
+**Timestamp:** 2025-09-07T05:22:55.964Z
+**Duration:** 28320ms
+=======
 **Timestamp:** 2025-09-07T05:09:16.275Z
 **Duration:** NaNms
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 
 ## Summary
 - ✅ Successful: 3
@@ -10,8 +15,13 @@
 
 ## Successful Operations
 - Operation
+<<<<<<< HEAD
+- ESLint
+- Build
+=======
 - scripts/performance-monitor-enhanced.js
 - scripts/auto-fixer.js
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 
 ## Errors
 - scripts/comprehensive-error-fixer.cjs: Command failed: node scripts/comprehensive-error-fixer.cjs
@@ -32,6 +42,63 @@ Error fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/
   path: '/workspace/media/docu-script/requirements.txt'
 }
 
+<<<<<<< HEAD
+- scripts/auto-fixer.js: Command failed: node scripts/auto-fixer.js
+/workspace/scripts/auto-fixer.js:3
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';
+^
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+- scripts/advanced-build-optimizer.js: Command failed: node scripts/advanced-build-optimizer.js
+/workspace/scripts/advanced-build-optimizer.js:3
+ursor/integrate-build-improve-and-re-verify-8f7d;
+                                            ^
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+- scripts/performance-monitor-enhanced.js: Command failed: node scripts/performance-monitor-enhanced.js
+/workspace/scripts/performance-monitor-enhanced.js:3
+ursor/fix-syntax-push-and-merge-to-main-40de;
+                                        ^^
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.16.0
+
+- TypeScript: spawnSync /bin/sh ENOBUFS
+=======
 - scripts/advanced-build-optimizer.js: spawnSync /bin/sh ENOBUFS
 - ESLint: Command failed: npm run lint
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
@@ -52,6 +119,7 @@ ReferenceError: module is not defined in ES module scope
 This file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
     at <unknown> (next.config.js:58:1)
 
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 
 ## Warnings
 

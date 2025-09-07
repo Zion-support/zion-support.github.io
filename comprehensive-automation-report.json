@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
+  "timestamp": "2025-09-07T05:22:55.964Z",
+  "duration": 28320,
+=======
   "timestamp": "2025-09-07T05:09:16.275Z",
   "duration": null,
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
   "summary": {
     "successful": 3,
     "errors": 5,
@@ -10,6 +15,14 @@
     "success": [
       "Pre-automation checks passed",
       {
+<<<<<<< HEAD
+        "check": "ESLint",
+        "output": "\n> ziontechgroup-site@1.0.0 lint\n> node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000\n\n"
+      },
+      {
+        "check": "Build",
+        "output": "\n> ziontechgroup-site@1.0.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup-site@1.0.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env.production, .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n\n   Creating an optimized production build ...\n ✓ Compiled successfully in 8.7s\n   Skipping validation of types\n   Skipping linting\n   Collecting page data ...\n   Generating static pages (0/26) ...\n   Generating static pages (6/26) \r\n   Generating static pages (12/26) \r\n   Generating static pages (19/26) \r\n ✓ Generating static pages (26/26)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                      Size  First Load JS\n┌ ○ /_not-found                                 160 B         102 kB\n├ ○ /research                                   160 B         102 kB\n├ ○ /services/ai-analytics-dashboard            160 B         102 kB\n├ ○ /services/ai-analytics-platform             160 B         102 kB\n├ ○ /services/ai-code-reviewer                  160 B         102 kB\n├ ○ /services/ai-content-generation             160 B         102 kB\n├ ○ /services/ai-content-generator              160 B         102 kB\n├ ○ /services/ai-content-optimizer              160 B         102 kB\n├ ○ /services/ai-content-writer                 180 B         105 kB\n├ ○ /services/ai-copilots                       160 B         102 kB\n├ ○ /services/ai-customer-insights              160 B         102 kB\n├ ○ /services/ai-customer-support               180 B         105 kB\n├ ○ /services/ai-customer-support-automation    180 B         105 kB\n├ ○ /services/ai-finance-analyzer               160 B         102 kB\n├ ○ /services/ai-healthcare-assistant           160 B         102 kB\n├ ○ /services/ai-powered-tools                  160 B         102 kB\n├ ○ /services/ai-project-management             160 B         102 kB\n├ ○ /services/ai-project-manager                160 B         102 kB\n├ ○ /services/ai-services                       180 B         105 kB\n├ ○ /services/blockchain                        180 B         105 kB\n├ ○ /services/micro-saas                        180 B         105 kB\n└ ○ /solutions                                  180 B         105 kB\n+ First Load JS shared by all                  102 kB\n  ├ chunks/255-310f1cc3c9beb704.js            45.7 kB\n  ├ chunks/4bd1b696-c023c6e3521b1417.js       54.2 kB\n  └ other shared chunks (total)               1.93 kB\n\nRoute (pages)                                    Size  First Load JS\n┌ ○ / (318 ms)                                3.26 kB        89.2 kB\n├   /_app                                         0 B        82.9 kB\n├ ƒ /sitemap                                    241 B        83.1 kB\n└ ○ /space-tech (320 ms)                      4.09 kB          90 kB\n+ First Load JS shared by all                 82.9 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js      44.8 kB\n  ├ chunks/main-f0223600fb885098.js           36.1 kB\n  └ other shared chunks (total)               1.99 kB\n\nƒ Middleware                                  33.3 kB\n\n○  (Static)   prerendered as static content\nƒ  (Dynamic)  server-rendered on demand\n\n\n> ziontechgroup-site@1.0.0 postbuild\n> echo \"Build completed\"\n\nBuild completed\n"
+=======
         "script": "scripts/performance-monitor-enhanced.js",
         "category": "performance-monitoring",
         "output": "ℹ️ Starting enhanced performance monitoring...\nℹ️ Monitoring build performance...\n❌ Build performance monitoring failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n\n❌ Performance monitoring failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n\n"
@@ -18,6 +31,7 @@
         "script": "scripts/auto-fixer.js",
         "category": "error-fixing",
         "output": "[INFO] Starting auto-fixer...\n[INFO] Checking for merge conflicts...\n[INFO] No merge conflicts found\n[INFO] Fixing import errors...\n[INFO] Fixing TypeScript errors...\n[ERROR] Failed to fix TypeScript errors\n[INFO] Fixing syntax errors...\n[ERROR] Failed to fix syntax errors\n[INFO] Report saved to /workspace/error-reports/auto-fixer-report.json\n[INFO] Auto-fixer completed. Applied: 1, Failed: 1\n"
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
       }
     ],
     "errors": [
@@ -27,6 +41,21 @@
         "error": "Command failed: node scripts/comprehensive-error-fixer.cjs\nError fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/media/docu-script/requirements.txt'\n    at Object.statSync (node:fs:1740:25)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:86:25)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)\n    at ComprehensiveErrorFixer.getAllJSFiles (/workspace/scripts/comprehensive-error-fixer.cjs:99:5)\n    at ComprehensiveErrorFixer.fixSyntaxErrors (/workspace/scripts/comprehensive-error-fixer.cjs:26:24)\n    at ComprehensiveErrorFixer.run (/workspace/scripts/comprehensive-error-fixer.cjs:157:18)\n    at Object.<anonymous> (/workspace/scripts/comprehensive-error-fixer.cjs:177:9)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'stat',\n  path: '/workspace/media/docu-script/requirements.txt'\n}\n"
       },
       {
+<<<<<<< HEAD
+        "script": "scripts/auto-fixer.js",
+        "category": "error-fixing",
+        "error": "Command failed: node scripts/auto-fixer.js\n/workspace/scripts/auto-fixer.js:3\n#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';\n^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+      },
+      {
+        "script": "scripts/advanced-build-optimizer.js",
+        "category": "build-optimization",
+        "error": "Command failed: node scripts/advanced-build-optimizer.js\n/workspace/scripts/advanced-build-optimizer.js:3\nursor/integrate-build-improve-and-re-verify-8f7d;\n                                            ^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+      },
+      {
+        "script": "scripts/performance-monitor-enhanced.js",
+        "category": "performance-monitoring",
+        "error": "Command failed: node scripts/performance-monitor-enhanced.js\n/workspace/scripts/performance-monitor-enhanced.js:3\nursor/fix-syntax-push-and-merge-to-main-40de;\n                                        ^^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+=======
         "script": "scripts/advanced-build-optimizer.js",
         "category": "build-optimization",
         "error": "spawnSync /bin/sh ENOBUFS"
@@ -34,14 +63,18 @@
       {
         "check": "ESLint",
         "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
       },
       {
         "check": "TypeScript",
         "error": "spawnSync /bin/sh ENOBUFS"
+<<<<<<< HEAD
+=======
       },
       {
         "check": "Build",
         "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n"
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
       }
     ],
     "warnings": [],
