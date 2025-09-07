@@ -9,15 +9,21 @@ export default function ContactPage() {
     service: '',
     message: ''
   });
+<<<<<<< HEAD
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
+=======
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
+<<<<<<< HEAD
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -155,6 +161,90 @@ export default function ContactPage() {
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
+=======
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setSubmitStatus('success');
+    setIsSubmitting(false);
+    setFormData({ name: '', email: '', company: '', service: '', message: '' });
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
+            Contact Us
+          </h1>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Ready to transform your business? Get in touch with our expert team to discuss your project requirements.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
+            <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your full name"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="your.email@company.com"
+                />
+              </div>
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium mb-2">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your company name"
+                />
+              </div>
+              <div>
+                <label htmlFor="service" className="block text-sm font-medium mb-2">
+                  Service Interest
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
@@ -232,4 +322,8 @@ export default function ContactPage() {
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09

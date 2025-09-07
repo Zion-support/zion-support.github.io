@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Page() {
@@ -11,4 +12,11 @@ export default function Page() {
       </div>
     </div>
   );
+=======
+import type { AppProps } from 'next/app';
+import '../styles/globals.css';
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09
 }
