@@ -1,5 +1,5 @@
-import React from \"react\";
-import Head from \"next/head\";
+import React from "react";
+import Head from "next/head";
 import {
   Check,
   Star,
@@ -104,32 +104,32 @@ import {
   Brain as BrainIcon,
   Atom as AtomIcon,
   Globe2 as Globe2Icon,
-  Bot as BotIcon,}
-  ChevronRight as ChevronRightIcon,}
-} from \"lucide-react\";
-import Button from \"../components/ui/Button\";
-import Card from \"../components/ui/Card\";
-import UltraFuturisticBackground from \"../components/ui/UltraFuturisticBackground\";
-import UltraFuturisticCard from \"../components/ui/UltraFuturisticCard\";
+  Bot as BotIcon,
+  ChevronRight as ChevronRightIcon,
+} from "lucide-react";
+import Button from "../components/ui/Button";
+import Card from "../components/ui/Card";
+import UltraFuturisticBackground from "../components/ui/UltraFuturisticBackground";
+import UltraFuturisticCard from "../components/ui/UltraFuturisticCard";
 import {
   enhancedRealMicroSaasServices,
-  getServicesByCategory,}
-  getPopularServices,}
-} from \"../data/enhanced-real-micro-saas-services\";
-import { nextGenerationAIServices } from \"../data/next-generation-ai-services\";
-import { cuttingEdgeITServices } from \"../data/cutting-edge-it-services\";
-import { innovativeMicroSaasV2Services } from \"../data/innovative-micro-saas-v2\";
+  getServicesByCategory,
+  getPopularServices,
+} from "../data/enhanced-real-micro-saas-services";
+import { nextGenerationAIServices } from "../data/next-generation-ai-services";
+import { cuttingEdgeITServices } from "../data/cutting-edge-it-services";
+import { innovativeMicroSaasV2Services } from "../data/innovative-micro-saas-v2";
 export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState<\"monthly\" | \"yearly\">(
-    \"monthly\",
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
+    "monthly",
   );
-  const [selectedPlan, setSelectedPlan] = useState<string | null />(null);
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
   const contactInfo = {
-    mobile: \"+1 302 464 0950\",
-    email: \"kleber@ziontechgroup.com\",
-    address: \"364 E Main St STE 1008 Middletown DE 19709\",}
-    website: \"https://ziontechgroup.com\",}
+    mobile: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008 Middletown DE 19709",
+    website: "https://ziontechgroup.com",
   };
 
   const popularServices = getPopularServices();

@@ -1,7 +1,7 @@
-import React from \"react\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-import { motion } from \"framer-motion\";
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   Shield,
   Lock,
@@ -9,19 +9,19 @@ import {
   Database,
   Mail,
   Phone,
-  MapPin,}
-  Users,}
-} from \"lucide-react\";
-import MainLayout from \"../components/layout/MainLayout\";
+  MapPin,
+  Users,
+} from "lucide-react";
+import MainLayout from "../components/layout/MainLayout";
 
 export default function PrivacyPage() {
   return (
-    <MainLayout;
-title=\"Privacy Policy - Zion Tech Group\"
-      description=\"Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information.\"
-      keywords=\"privacy policy, data protection, personal information, GDPR compliance\"
-      canonical=\"https://ziontechgroup.com/privacy\"
-     />}
+    <MainLayout
+      title="Privacy Policy - Zion Tech Group"
+      description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
+      keywords="privacy policy, data protection, personal information, GDPR compliance"
+      canonical="https://ziontechgroup.com/privacy"
+    >}
       <div className=\"min-h-screen bg-gray-50\" />}
         {/* Hero Section */}
         <section className=\"bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20\" />

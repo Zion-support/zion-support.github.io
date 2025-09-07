@@ -5,11 +5,11 @@
   "/deploy/genesis": "pages/deploy/genesis.js",
   "/design-map": "pages/design-map.js",
   "/governance/global-outreach": "pages/governance/global-outreach.js",
-  "/pricing": "pages/pricing.js",
   "/privacy": "pages/privacy.js",
-  "/summit": "pages/summit.js",
+  "/pricing": "pages/pricing.js",
   "/space-tech": "pages/space-tech.js",
-  "/zion-global-2025": "pages/zion-global-2025.js",
+  "/summit": "pages/summit.js",
   "/team": "pages/team.js",
+  "/zion-global-2025": "pages/zion-global-2025.js",
   "/_document": "pages/_document.js"
 }
