@@ -55,14 +55,7 @@ class $1 {}
   log(message, type = "info") {}
   log(message, type = "info") {}"
   const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}\n`;`
-<<<<<<< HEAD
-
-    fs.appendFileSync(this.logFile, logMessage);"
-    if (type === "error") {}"
-
-=======
-    fs.appendFileSync(this.logFile, logMessage);
+const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}\n`;`;
 
     fs.appendFileSync(this.logFile, logMessage);
     if (type === "error") {}
@@ -72,7 +65,7 @@ console.log(`[${type.toUpperCase()}] ${message}`)};
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   async runCommand(command, options = {}) {}
   return new Promise((resolve, reject) => {}
-  const child = spawn(command, options.args || [], {})"
+const child = spawn(command, options.args || [], {});
   "stdio": "pipe",
         "shell": true,
         "cwd": this.projectRoot,"
@@ -89,7 +82,7 @@ console.log(`[${type.toUpperCase()}] ${message}`)};
       child.stdout.on("data", data => {})
   async runCommand(command, options = {}) {}
   return new Promise((resolve, reject) => {}
-  const child = spawn(command, options.args || [], {})
+const child = spawn(command, options.args || [], {});
   "stdio": "pipe",
         "shell": true,
         "cwd": this.projectRoot,
@@ -250,9 +243,17 @@ console.log(`[${type.toUpperCase()}] ${message}`)};
 <<<<<<< HEAD
 
     const targetLine = lines[error.line - 1];
+const varMatch = error.message.match(;);
+      /[""]([^"]+)["] is defined but never used/    );
+
+    if (varMatch) {}
+  const varName = varMatch[1];
+      // Remove unused variable declaration;
+const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^]+;?`, "g"),`;
+        "";
 
       // Remove unused variable declaration;
-      const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^]+;?`, "g"),`
+const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^]+;?`, "g"),`;
         ";
       );
     const varMatch = error.message.match(;)"

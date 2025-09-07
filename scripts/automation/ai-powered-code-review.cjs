@@ -3,16 +3,16 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
       this.projectRoot,logs"
       "ai-code-review.log"
       this.projectRoot,logs"
       "code-review-history.json"
   console.log(""🤖 AI-Powered Code Review System Initialized")
   fs.mkdirSync(logDir, { "recursive"})
-  const data = fs.readFileSync(this.reviewHistory, "utf8")
+const data = fs.readFileSync(this.reviewHistory, "utf8");
   "totalReviews"
           "totalIssues"
           "totalImprovements"
@@ -49,8 +49,8 @@ const { execSync, spawn } = require("child_process")
   console.error(" Error during code "review": ")
 this.logError("Code review failed")
   console.log("" Reviewing ""TypeScript/JavaScript"" files...")
-    const tsFiles = this.findFiles(["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx")]
-  const content = fs.readFileSync(file, ")
+const tsFiles = this.findFiles(["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx")];
+const content = fs.readFileSync(file, ");
         results.filesReviewed++;"
         results.issues.push(...fileResults.issues);"
         results.improvements.push(...fileResults.improvements);"
@@ -63,7 +63,7 @@ this.logError("Code review failed")
         "message": "Usage of "any type detected. Consider using proper TypeScript types."
         "line": this.findLineNumber(content, "any")
         "suggestion": "Replace with specific interface or union type"
-    const importMatches = content.match(/import\s+.*\s+from\s+["][^""]+["")]
+const importMatches = content.match(/import\s+.*\s+from\s+["][^""]+["")];
   "file"
             "type": "typescript"
             "severity": "info","message": "Unused import ${importedItem}"
@@ -82,10 +82,10 @@ this.logError("Code review failed")
         "suggestion": "Review useEffect dependencies for optimization"
 // console.log(""⚛ Reviewing React components...")
   console.log("⚛ Reviewing React components...")
-    const reactFiles = this.findFiles(["**/*.tsx", "**/*.jsx")]
-  const content = fs.readFileSync(file, "utf8")
-    const reactFiles = this.findFiles(["**/*.tsx", "**/*.jsx")]
-  const content = fs.readFileSync(file, "utf8")
+const reactFiles = this.findFiles(["**/*.tsx", "**/*.jsx")];
+const content = fs.readFileSync(file, "utf8");
+const reactFiles = this.findFiles(["**/*.tsx", "**/*.jsx")];
+const content = fs.readFileSync(file, "utf8");
         } catch (error) {  console.error(Error reviewing React component ${file  }:, error")
   const results = { "issues": [], "improvements"}
     if (!content.includes("interface") && !content.includes("type Props") && !content.includes("PropTypes")
@@ -116,8 +116,8 @@ this.logError("Code review failed")
         "line": this.findLineNumber(content, "<button")
         "suggestion": "Add aria-label or aria-labelledby for screen readers"
   console.log(""⚙ Reviewing configuration files...")
-    const configFiles = ["package.json", "tsconfig.json", "next.config.js", "tailwind.config.js", "eslint.config.js"]
-  const content = fs.readFileSync(configFile, "utf8")
+const configFiles = ["package.json", "tsconfig.json", "next.config.js", "tailwind.config.js", "eslint.config.js"];
+const content = fs.readFileSync(configFile, "utf8");
   const results = { "issues": [], "improvements"}
     if (filePath === "package.json")
   for (const ["dep", "version")]
@@ -144,12 +144,12 @@ this.logError("Code review failed")
   console.error("Error parsing package."json": ")
   console.error("Error parsing package."json": ")
   console.log(""� Reviewing package dependencies...")
-      const outdatedCheck = execSync("npm outdated --json")
+const outdatedCheck = execSync("npm outdated --json");
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
   console.log("� Reviewing package dependencies...")
-      const outdatedCheck = execSync("npm outdated --json")
+const outdatedCheck = execSync("npm outdated --json");
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
@@ -158,7 +158,7 @@ this.logError("Code review failed")
             "type": "dependencies"
             "severity": "info`,"message": Outdated package: ${pkg} ("current": ${info.current}, "latest"`)
             "line": 0,"suggestion": `Update ${pkg} to latest version"}"
-      const auditCheck = execSync("npm audit --json")
+const auditCheck = execSync("npm audit --json");
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
@@ -199,20 +199,20 @@ this.logError("Code review failed")
   if (issue.severity === "info" && issue.type === ")
   if (issue.severity === "info" && issue.type === "typescript")
   if (issue.message.includes(`Unused import``)
-        const content = fs.readFileSync(issue.file, "utf8")
-        const lines = content.split("\n")
+const content = fs.readFileSync(issue.file, "utf8");
+const lines = content.split("\n");
         if (importLine.includes("import")
           fs.writeFileSync(issue.file, lines.join(")
-  const glob = require("glob")
-        const matches = glob.sync(pattern, { "cwd"})
-  const glob = require("glob")
-        const matches = glob.sync(pattern, { "cwd"})
+const glob = require("glob");
+const matches = glob.sync(pattern, { "cwd"});
+const glob = require("glob");
+const matches = glob.sync(pattern, { "cwd"});
         if (stat.isDirectory() && !item.startsWith(".") && !item.includes("node_modules")
     if (pattern.includes("*.ts") && ext === ".ts"
     if (pattern.includes("*.tsx") && ext === ".tsx"
     if (pattern.includes("*.js") && ext === ".js"
     if (pattern.includes("*.jsx") && ext === ".jsx"
-  const lines = content.split("\n")
+const lines = content.split("\n");
   console.error("Error saving review "history": ")
   "timestamp"
       "summary"
@@ -242,12 +242,12 @@ this.logError("Code review failed")
     // In production, you"
   console.log("� Setting up file change monitoring...")
     // In production, you"
-  const gitStatus = execSync("git status --porcelain")
+const gitStatus = execSync("git status --porcelain");
   "cwd"
         "encoding": "utf8"
   console.log(""� Changes detected, performing quick review...")
   if (file.endsWith(".ts") || file.endsWith(".tsx")
-  const gitStatus = execSync("git status --porcelain")
+const gitStatus = execSync("git status --porcelain");
   "cwd"
         "encoding": "utf8"
         .split("\n")
@@ -261,31 +261,4 @@ this.logError("Code review failed")
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-<<<<<<< HEAD
-  const content = fs.readFileSync(filePath, ")
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-  const content = fs.readFileSync(filePath, ")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  const content = fs.readFileSync(filePath, ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  const content = fs.readFileSync(filePath, ")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
-        .map(line => line.split(" ")"
-</button>"`;
-
+const content = fs.readFileSync(filePath, ");

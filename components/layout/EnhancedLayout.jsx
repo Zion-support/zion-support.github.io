@@ -3,54 +3,9 @@
 ;
   return (<div className="min-h-screen flex flex-col">;
 
-  return (
-    <div className="min-h-screen flex flex-col">;
-      <EnhancedNavigation />;
-      <main className="flex-1">;
-        {children}
-      </main>;
-      <EnhancedFooter />;
-    </div>);
-},
-export default EnhancedLayout;
-;
-    </div>)},export default EnhancedLayout;import React from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
-  )}export default EnhancedLayout;
-import React from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
-<<<<<<< HEAD
-const EnhancedLayout = ({ children }) => {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <EnhancedNavigation />
-      <main className="flex-1">
-=======
-const EnhancedLayout = $2;
-export default EnhancedLayout,
-=======
-<<<<<<< HEAD
-<EnhancedNavigation /> <main className="flex-1" > {
-  children 
-}</main> <EnhancedFooter /> </div>) 
-}
-export default EnhancedLayout
-=======
-import React from 'react';
-import PropTypes from 'prop-types';
-import EnhancedFooter from './EnhancedFooter';
-
-const EnhancedLayout = ({ children }) => {
-  return (
-
->>>>>>> origin/main
-        {children}
-      </main>
-      <EnhancedFooter />
-    </div>
-<<<<<<< HEAD
+import React from 'react';'
+import EnhancedNavigation from './EnhancedNavigation';'
+import EnhancedFooter from './EnhancedFooter';'
   )
 },
 

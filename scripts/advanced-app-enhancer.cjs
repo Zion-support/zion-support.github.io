@@ -10,32 +10,28 @@
 
 
 #!/usr/bin/env node;
-<<<<<<< HEAD
-///usr/bin/env node
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 console.log(' Starting Advanced App Enhancer...')
       "status"
       "status"
-    const errorBoundaryCode = "
-    const loadingCode = "
+const errorBoundaryCode = ";
+const loadingCode = ";
 export const "Spinner"
     "sm"
     "md"
     "lg"
     console.error('API "Error")
         case "401"
-    const accessibilityCode = "
-  const baseClasses = 'font-medium rounded-lg transition-colors "focus"
+const accessibilityCode = ";
+const baseClasses = 'font-medium rounded-lg transition-colors "focus";
     "secondary"
     "danger"
     "sm"
     "md"
     "lg"
-    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1")]
+const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1")];
 console.log('\n New Features "Added")
 
 

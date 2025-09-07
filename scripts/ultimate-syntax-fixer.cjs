@@ -10,20 +10,16 @@
 
 
 #!/usr/bin/env node;
-<<<<<<< HEAD
-///usr/bin/env node
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 // console.log(' Ultimate Syntax Fixer...')
 console.log('======')
-const filesToFix = ['pages/api/health.ts']
+const filesToFix = ['pages/api/health.ts'];
   'components/LoadingSpinner.tsx'
   'pages/docs/api-quick-start.tsx'
   'pages/docs/api-reference.tsx'
   'pages/docs/authentication.tsx'
-    let content = fs.readFileSync(filePath, 'utf8')
+let content = fs.readFileSync(filePath, 'utf8');
     content = content.replace(/\}\s*\}\s*$/gm, '}')
       console.log('    Fixed extra closing braces')
     content = content.replace(/"([^"]*?)\"\s*"\}/g, '"$1"

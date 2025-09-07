@@ -1,87 +1,20 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export {};
-module.exports = {};
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-describe('Signup Auto Login', () => {
-  test('renders signup auto login', () => {
-    // Add signup auto login tests here
+module.exports = {}// Mock test for signup auto login;
+describe('Signup Auto Login', () => {it('should render without crashing', () => {expect(true).toBe(true)})})';'
+})ursor/automate-test-improve-and-merge-code-2480;
+module.exports =  ;
+}
+
+export {}module.exports = {}module.exports = {}module.exports = {}// Mock test for signup auto login;
+describe('Signup Auto Login', () => {it('should render without crashing', () => {expect(true).toBe(true)ursor/automate-test-improve-and-merge-code-646c;'
+}
+module.exports = {}module.exports = {}module.exports = {}
+// Mock test for signup auto login,
+describe('Signup Auto Login', () => {'
+  }
+  it('should render without crashing', () => {'
+    }
     expect(true).toBe(true);
-<<<<<<< HEAD
-=======
-  });
-});
-=======
-<<<<<<< HEAD
-import { describe, it, expect } from '@jest/globals';
-
-describe('signup-auto-login', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
-
-
-// Mock test for signup auto login
-// Mock test for signup auto login;
-describe('Signup Auto Login', () => {
-  it('should render without crashing', () => {
-    expect(true).toBe(true);
-
-});
-});
-
-
-
-
-
-
-
-export {};
-module.exports = {};
-
-
-module.exports = {};
-
-
-
-module.exports = {};
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-// Mock test for signup auto login
-describe('Signup Auto Login', () => {
-  it('should render without crashing', () => {
-    expect(true).toBe(true);
-});'
+});''
 
 
 module.exports = {};

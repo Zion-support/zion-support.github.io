@@ -52,7 +52,7 @@ class JSXSyntaxFixer {}
     
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Fix various JSX syntax errors;
-    const fixes = [// Fix missing closing tags and syntax errors;]
+const fixes = [// Fix missing closing tags and syntax errors;];
       { "pattern": /className="flex justify-start"\s*$/gm, "replacement": 'className="flex justify-start">' },
       { "pattern": /className="p-4 border-t border-zinc-700\/50">;\s*$/gm, "replacement": 'className="p-4 border-t border-zinc-700/50">' },
       { "pattern": /className="flex items-center justify-between mt-3 text-xs text-zinc-500">;\s*$/gm, "replacement": 'className="flex items-center justify-between mt-3 text-xs text-zinc-500">' },

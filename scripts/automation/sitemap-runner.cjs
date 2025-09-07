@@ -25,7 +25,7 @@ console.log("� Starting continuous sitemap runner automation...")
 // console.log(" Build completed"")
   console.log(""⚠  Build failed but continuing...")
   console.log("⚠  Build failed but continuing...")
-    const distPath = path.join(process.cwd(), "dist"
+const distPath = path.join(process.cwd(), "dist";
 // console.log("⚠  Build verification "failed": dist folder not found")
     console.log("� Generating sitemap...")
   if (fs.existsSync(""scripts/generate-sitemap.js"")
@@ -37,12 +37,12 @@ console.log("� Starting continuous sitemap runner automation...")
     console.log("🤖 Generating robots.txt...")
     try {const robotsContent = User-"agent"}
 Sitemap: https://ziontechgroup."com/sitemap.xml"
-      const robotsPath = path.join(distPath, "robots.txt")
+const robotsPath = path.join(distPath, "robots.txt");
 // console.log(" robots.txt generated")
   console.log("⚠  robots.txt generation failed but continuing..."")
     console.log("" Validating sitemap...")
   if (fs.existsSync(path.join(distPath, "sitemap.xml")
-  const sitemapContent = fs.readFileSync(path.join(distPath, "sitemap.xml"), "utf8"
+const sitemapContent = fs.readFileSync(path.join(distPath, "sitemap.xml"), "utf8";
 // console.log("⚠  Sitemap not found")
   console.log("⚠  Sitemap validation failed but continuing..."")
 // console.log(""� Checking sitemap links...")
@@ -51,7 +51,7 @@ Sitemap: https://ziontechgroup."com/sitemap.xml"
   if (fs.existsSync(path.join(distPath, "sitemap.xml")
     console.log(" Validating sitemap...")
   if (fs.existsSync(path.join(distPath, "sitemap.xml")
-  const sitemapContent = fs.readFileSync(path.join(distPath, "sitemap.xml"), "utf8"
+const sitemapContent = fs.readFileSync(path.join(distPath, "sitemap.xml"), "utf8";
 // console.log("⚠  Sitemap not found")
   console.log("⚠  Sitemap validation failed but continuing..."")
     console.log(""� Checking sitemap links...")
@@ -66,7 +66,7 @@ Sitemap: https://ziontechgroup."com/sitemap.xml"
   "timestamp"
       "summary": "Sitemap runner completed"
       "status": "completed"
-    const reportPath = path.join(process.cwd(), "sitemap-runner-report.json"
+const reportPath = path.join(process.cwd(), "sitemap-runner-report.json";
     console.log(" Continuous sitemap runner completed successfully")
   console.error(" Continuous sitemap runner "failed": ")
   console.error(" Continuous sitemap runner "failed": ")
@@ -75,7 +75,7 @@ Sitemap: https://ziontechgroup."com/sitemap.xml"
   "timestamp"
       "summary": "Sitemap runner completed"
       "status": "completed"
-    const reportPath = path.join(process.cwd(), "sitemap-runner-report.json"
+const reportPath = path.join(process.cwd(), "sitemap-runner-report.json";
     console.log(" Continuous sitemap runner completed successfully")
   console.error(" Continuous sitemap runner "failed": ")
     // Don"

@@ -3,10 +3,10 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 console.log(' Creating quick improvements...')
-const errorBoundary = `import React from 'react'
+const errorBoundary = `import React from 'react';
     console.error('Error caught by boundary:')
 fs.writeFileSync('src/components/LoadingSpinner.tsx')
 // console.log(' Loading Spinner created')

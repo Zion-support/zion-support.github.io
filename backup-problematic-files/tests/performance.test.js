@@ -1,5 +1,6 @@
 // Performance.test utility;
 export const Performance.test = () => {// Implementation here;
+  }
   return null;
 }interface Performance.testProps  {// Add props here as needed;
 }export default function Performance.test() {return (<div>;

@@ -1,37 +1,11 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
   console.log(' Starting Enhanced Syntax Fixer...')
-    const files = findCodeFiles('.;')
-        const originalContent = fs.readFileSync(file, 'utf8')
+const files = findCodeFiles('.;');
+const originalContent = fs.readFileSync(file, 'utf8');
         if (&& !content.match(/}\s*export default')
             if (&& !prevLine.endsWith(')
     && !prevLine.endsWith('}')
@@ -45,8 +19,7 @@ const { execSync } = require('child_process')
     .endsWith('}')
           if (&& !body.trim().endsWith(')
     && !body.trim().endsWith('}') && !body.trim().endsWith('}')
-    const reportPath = 'enhanced-syntax-fix-report.json;'
-<<<<<<< HEAD
+const reportPath = 'enhanced-syntax-fix-report.json;';
 
     console.error(' Enhanced syntax fixer "failed")
 

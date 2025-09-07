@@ -1,29 +1,94 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';'
+import { ArrowRightIcon } from '@heroicons/react/24/outline';'
 
 export const metadata = {
-  title: 'AI Predictive Analytics | Zion Tech Group',
-  description: 'Professional AI predictive analytics solutions for your business needs.',
-  keywords: 'ai-predictive-analytics, services, business, technology'
+  }
+  "title": 'Ai Predictive Analytics - Zion Tech Group','
+  "description": 'Professional ai predictive analytics solutions for your business needs.','
 };
 
-function FeatureCard({ title, description, icon, benefits }: {
-  title: string;
-  description: string;
-  icon: string;
-  benefits: string[];
-}) {
-  return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
-      <p className="text-gray-300 mb-6">{description}</p>
-      <ul className="space-y-2 text-gray-300">
-        {benefits.map((benefit, index) => (
-          <li key={index}>• {benefit}</li>
-        ))}
-      </ul>
+export default function AiPredictiveAnalyticsPage() {
+}
+return (;
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">"
+      <div className="container mx-auto px-4 py-20">"
+        <div className="text-center mb-16">"
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">"
+            Ai Predictive Analytics
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+            Professional ai predictive analytics solutions designed to meet your business requirements,
+and drive growth. Our expert team delivers high-quality, scalable solutions.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">"
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">"
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>"
+            <p className="text-gray-300 mb-6">Description of the first key feature.</p>"
+            <ul className="space-y-2 text-gray-300">"
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">"
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>"
+            <p className="text-gray-300 mb-6">Description of the second key feature.</p>"
+            <ul className="space-y-2 text-gray-300">"
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">"
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>"
+            <p className="text-gray-300 mb-6">Description of the third key feature.</p>"
+            <ul className="space-y-2 text-gray-300">"
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+
+
+        
+        <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">"
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">"
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>"
+            <p className="text-gray-300 mb-6">Description of the first key feature.</p>"
+            <ul className="space-y-2 text-gray-300">"
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">"
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>"
+            <p className="text-gray-300 mb-6">Description of the second key feature.</p>"
+            <ul className="space-y-2 text-gray-300">"
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">"
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>"
+            <p className="text-gray-300 mb-6">Description of the third key feature.</p>"
+            <ul className="space-y-2 text-gray-300">"
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
     </div>
   );
 }

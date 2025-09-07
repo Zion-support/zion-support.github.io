@@ -3,9 +3,9 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
     this.logFile = path.join(this.projectRoot, ""automation/logs/build-error-fixer.log"")
     console.log(")
     await fs.appendFile(this.logFile, logMessage + "\n")
@@ -25,14 +25,14 @@ const path = require("path")
     await this.log("�  Clearing npm cache...")
     await this.runCommand("npm cache clean --force", { "silent"})
     await this.log("� Reinstalling dependencies...")
-    const installResult = await this.runCommand("npm install --legacy-peer-deps")
+const installResult = await this.runCommand("npm install --legacy-peer-deps");
   await this.log(" Dependencies reinstalled successfully")
   "type": "dependency-reinstall"
         "action": "npm install --legacy-peer-deps"
         "timestamp"
   await this.log(" Fixing Next.js configuration...")
-  const nextConfigPath = path.join(this.projectRoot, "next.config.js")
-      let nextConfig = "
+const nextConfigPath = path.join(this.projectRoot, "next.config.js");
+let nextConfig = ";
   nextConfig = await fs.readFile(nextConfigPath, "utf8")
       // Create or update Next.js configconst fixedConfig = /** @type {import("next"})
   "reactStrictMode"
@@ -57,8 +57,8 @@ const path = require("path")
         "file": "next.config.js"
         "timestamp": new Date().toISOString()})} catch (error) {  await this.log(` Error fixing Next.js "config"`})
   await this.log(" Fixing TypeScript configuration...")
-  const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
-      const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, "utf8")
+const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
+const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, "utf8");
         "target": "es5"
         "lib": ["dom", "dom.iterable", "es6"]
         "allowJs"
@@ -83,8 +83,8 @@ const path = require("path")
         "file": "tsconfig.json"
         "timestamp": new Date().toISOString()})} catch (error) {  await this.log(` Error fixing TypeScript "config"`})
   await this.log(" Fixing package.json...")
-  const packageJsonPath = path.join(this.projectRoot, "package.json")
-      const packageJson = JSON.parse(await fs.readFile(packageJsonPath, "utf8")
+const packageJsonPath = path.join(this.projectRoot, "package.json");
+const packageJson = JSON.parse(await fs.readFile(packageJsonPath, "utf8");
         "dev": "next dev"
         "build": "next build"
         "start": "next start"
@@ -97,7 +97,7 @@ const path = require("path")
         "file": "package.json"
         "timestamp": new Date().toISOString()})} catch (error) {  await this.log(` Error fixing package."json"`})
   await this.log("🧪 Testing build...")
-    const buildResult = await this.runCommand("npm run build", { "silent"})
+const buildResult = await this.runCommand("npm run build", { "silent"});
   await this.log(" Build test successful")
   "type": "build-test"
         "result": "success"

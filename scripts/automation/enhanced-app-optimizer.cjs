@@ -33,7 +33,7 @@ class EnhancedAppOptimizer {}
 
     const timestamp = new Date().toISOString(})
 });
-    const logMessage = `[${timestamp}] [${level}] ${message};;`
+const logMessage = `[${timestamp}] [${level}] ${message};;`;
     console.log(logMessage);
     try {}
 <<<<<<< HEAD
@@ -51,9 +51,8 @@ class EnhancedAppOptimizer {}
     const optimizations = [];
     try {}
       // Analyze bundle size;
-      const bundleAnalysis = execSync('npm run "build": analyze', { })
-        "cwd": this.projectRoot,
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+const bundleAnalysis = execSync('npm run "build": analyze', { });
+        "cwd": this.projectRoot, 
         "stdio": 'pipe',
         "timeout": 120000;
       };);
@@ -300,7 +299,7 @@ class EnhancedAppOptimizer {}
     })};
     return files};
   generateSitemap() {}
-    const pages = ['/',]
+const pages = ['/',];
       '/about',
       '/services',
       '/ai-services',

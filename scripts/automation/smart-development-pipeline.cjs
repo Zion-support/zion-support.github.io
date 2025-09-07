@@ -45,11 +45,7 @@ const CONFIG = {}"
 // Utility functions;"
 const log = (message, level = "INFO") => {}"
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-  const logMessage = `[${timestamp}] [${level}] ${message}`;`
+const logMessage = `[${timestamp}] [${level}] ${message}`;`;
   console.log("logMessage);
   const logMessage = `[${timestamp}] [${level}] ${message};`"
   console.log("logMessage);"
@@ -61,7 +57,7 @@ const log = (message, level = "INFO") => {}"
   fs.appendFileSync(path.join(CONFIG.LOG_DIR, "smart-development-pipeline.log"), logMessage + "\n")};"
 const executeCommand = (command, options = {}) => {}
   try {}
-  const result = execSync(command, {})"
+const result = execSync(command, {});
   "cwd": CONFIG.PROJECT_ROOT,
       "encoding": "utf8",
       "stdio": options.silent ? "pipe" : "inherit","
@@ -682,7 +678,7 @@ describe("${fileName}", () => {}
   it("matches snapshot`, () => {`}
   const { container } = render(<${fileName} />);
     expect(container).toMatchSnapshot()})})} else {}
-  return `import { ${fileName} } from `./${fileName}`;`
+return `import { ${fileName} } from `./${fileName}`;`;
 describe(`${fileName}`, () => {`}
   it("should work correctly", () => {}
 <<<<<<< HEAD

@@ -52,18 +52,55 @@ class ErrorMonitor {}
   async checkTypeScriptErrors() {}
     try {}"
       this.log("info", "Checking TypeScript errors...");
-      const result = execSync("npx tsc --noEmit", {"cwd": this.projectRoot,"encoding": "utf8";})
-        stdio: "pipe"}"
-});"
-      return { "status": "clean", "errors": [] };"
+const result = execSync("npx tsc --noEmit", {"cwd": this.projectRoot,"encoding": "utf8";});
+        stdio: "pipe"}
+});
+      return { "status": "clean", "errors": [] };
     } catch (error) {}
 
       return { "status": "errors", "errors": errors.toString() };"
     };
   async checkLintingErrors() {}
-
-  async scanLogFiles() {}"
-    this.log("info", "Scanning log files for errors...");"
+    try {}
+      this.log("info", "Checking linting errors...");
+const result = execSync("npm run lint", {"cwd": this.projectRoot,"encoding": "utf8";});
+        stdio: "pipe"}
+});
+      return { "status": "clean", "errors": [] };
+    } catch (error) {}
+      const errors = error.stdout || error.stderr || error.message;
+      this.log("warn", `Linting errors "found": ${errors.length} characters`);
+      return { "status": "errors", "errors": errors.toString() };
+    };
+  };
+  async checkBuildErrors() {}
+    try {}
+      this.log("info", "Checking build errors...");
+const result = execSync("npm run build", {"cwd": this.projectRoot,"encoding": "utf8";});
+        stdio: "pipe"}
+});
+      return { "status": "clean", "errors": [] };
+    } catch (error) {}
+      const errors = error.stdout || error.stderr || error.message;
+      this.log("warn", `Build errors "found": ${errors.length} characters`);
+      return { "status": "errors", "errors": errors.toString() };
+    };
+  };
+  async checkTestErrors() {}
+    try {}
+      this.log("info", "Checking test errors...");
+const result = execSync("npm test", {"cwd": this.projectRoot,"encoding": "utf8";});
+        stdio: "pipe"}
+});
+      return { "status": "clean", "errors": [] };
+    } catch (error) {}
+      const errors = error.stdout || error.stderr || error.message;
+      this.log("warn", `Test errors "found": ${errors.length} characters`);
+      return { "status": "errors", "errors": errors.toString() };
+    };
+  };
+  async scanLogFiles() {}
+    this.log("info", "Scanning log files for errors...");
     const logFiles = [];
     // Find all log files;
     const findLogFiles = (dir) => {}
@@ -75,9 +112,10 @@ class ErrorMonitor {}
         if (stat.isDirectory()) {}"
           findLogFiles(filePath)} else if (file.endsWith(".log") || file.endsWith(".txt")) {}"
           logFiles.push(filePath)};
-    findLogFiles(this.logDir);"
-    findLogFiles(path.join(this.projectRoot, "logs"));"
-    const errorPatterns = [/error/i,/exception/i,/failed/i;]
+      })};
+    findLogFiles(this.logDir);
+    findLogFiles(path.join(this.projectRoot, "logs"));
+const errorPatterns = [/error/i,/exception/i,/failed/i;];
       /fatal/i;
       /critical/i;
       /timeout/i;
@@ -174,9 +212,7 @@ class ErrorMonitor {}
     report.summary.warnings = report.logErrors.length;
     report.summary.totalIssues = report.summary.totalErrors + report.summary.warnings;
     // Save report;
-    const reportFile = path.join()
-<<<<<<< HEAD
-=======
+const reportFile = path.join();
       this.reportsDir;
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

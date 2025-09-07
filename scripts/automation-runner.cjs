@@ -11,7 +11,7 @@ function run(command, options = {}) {
 	const result = spawnSync(command, {
 function run(command, options = {}) {}
 	console.log(`\n$ ${command}`);
-	const result = spawnSync(command, {})
+const result = spawnSync(command, {});
 		"shell": true,
 		"stdio": 'inherit',
 		...options}

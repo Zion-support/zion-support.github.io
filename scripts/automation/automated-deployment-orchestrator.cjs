@@ -48,11 +48,7 @@ const CONFIG = {}"
 // Utility functions;"
 const log = (message, level = "INFO") => {}"
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-  const logMessage = `[${timestamp}] [${level}] ${message}`;`
+const logMessage = `[${timestamp}] [${level}] ${message}`;`;
   console.log("logMessage);
   const logMessage = `[${timestamp}] [${level}] ${message};`"
   console.log("logMessage);"
@@ -64,7 +60,7 @@ const log = (message, level = "INFO") => {}"
   fs.appendFileSync(path.join(CONFIG.LOG_DIR, "automated-deployment-orchestrator.log"), logMessage + "\n")};"
 const executeCommand = (command, options = {}) => {}
   try {}
-  const result = execSync(command, {})"
+const result = execSync(command, {});
   "cwd": CONFIG.PROJECT_ROOT,
       "encoding": "utf8",
       "stdio": options.silent ? "pipe" : "inherit","
@@ -164,11 +160,12 @@ class HealthCheckSystem {}
     const startTime = Date.now();
     for (let attempt = 0; attempt <= checkConfig.retries; attempt++) {}`;
   try {log(`Running ${checkName} (attempt ${attempt + 1}/${checkConfig.retries + 1})`);
-        const checkResult = executeCommand(checkConfig.command, {})"
+const checkResult = executeCommand(checkConfig.command, {});
   "silent": true,
-          "timeout": checkConfig.timeout;"
-
-          "timeout": checkConfig.timeout }"
+          "timeout": checkConfig.timeout;
+const checkResult = executeCommand(checkConfig.command, {});
+  "silent": true,
+          "timeout": checkConfig.timeout }
 });
         if (checkResult.success) {}
   result.passed = true;

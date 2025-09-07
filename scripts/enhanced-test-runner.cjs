@@ -56,7 +56,7 @@ async function runJestTests() {}
   
   try {}
     const startTime = Date.now();
-    const output = execSync('npm test -- --coverage --json', { })
+const output = execSync('npm test -- --coverage --json', { });
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -134,7 +134,7 @@ async function runPlaywrightTests() {}
   
   try {}
     const startTime = Date.now();
-    const output = execSync('npx playwright test --reporter=json', { })
+const output = execSync('npx playwright test --reporter=json', { });
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -163,7 +163,7 @@ async function runCypressTests() {}
   
   try {}
     const startTime = Date.now();
-    const output = execSync('npx cypress run --reporter json', { })
+const output = execSync('npx cypress run --reporter json', { });
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -192,7 +192,7 @@ async function runLintTests() {}
   
   try {}
     const startTime = Date.now();
-    const output = execSync('npm run lint', { })
+const output = execSync('npm run lint', { });
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -225,7 +225,7 @@ async function runTypeTests() {}
   
   try {}
     const startTime = Date.now();
-    const output = execSync('npx tsc --noEmit', { })
+const output = execSync('npx tsc --noEmit', { });
       "encoding": 'utf8',
       "stdio": 'pipe'
     }

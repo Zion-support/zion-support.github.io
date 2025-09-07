@@ -43,7 +43,7 @@ async function main() {
     console.log('🔍 Cleaning up conflict markers...');
     
     // List of files to clean
-    const filesToClean = [
+const filesToClean = [;
       'resolve-all-merge-conflicts.cjs',
       'resolve-merge-conflicts-final.cjs',
       'resolve-all-conflicts.cjs',

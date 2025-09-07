@@ -273,20 +273,12 @@ throw error}
     this.log('Starting dependency resolution...');
     try {
       // Run comprehensive dependency checks
-  // TODO: Implement
-
-  // TODO: Implement
-      // Run comprehensive dependency checks;
-      const [vulnCheck, outdatedCheck, packageLockCheck, duplicateCheck] = await Promise.all([this.runDependencyCheck(),
+const [vulnCheck, outdatedCheck, packageLockCheck, duplicateCheck] = await Promise.all([this.runDependencyCheck(),;
         this.runOutdatedCheck(),
         this.checkPackageLockIssues(),
         this.checkDuplicateDependencies()]
       ]);
-<<<<<<< HEAD
-      const totalIssues = vulnCheck.count + outdatedCheck.count + 
-=======
-      const totalIssues = vulnCheck.count + outdatedCheck.count +
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+const totalIssues = vulnCheck.count + outdatedCheck.count +;
                          (packageLockCheck.success ? 0 : 1) + duplicateCheck.duplicates.length;
       if (totalIssues === 0) {
 

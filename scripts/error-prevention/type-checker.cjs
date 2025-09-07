@@ -83,7 +83,7 @@ class TypeChecker {}
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       
-      const child = spawn('npm', ['run', 'type-check'], {})
+const child = spawn('npm', ['run', 'type-check'], {});
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();"
       };);

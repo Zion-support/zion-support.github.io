@@ -3,9 +3,9 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const fs = require("child_process")
-const path = require("child_process")
-const { execSync } = require("child_process")
+const fs = require("child_process");
+const path = require("child_process");
+const { execSync } = require("child_process");
     this.backupDir = path.join(this.projectRoot, "backups")
 <<<<<<< HEAD
 =======
@@ -13,7 +13,7 @@ const { execSync } = require("child_process")
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     console.log("� Creating system backup...")
         fs.mkdirSync(this.backupDir, { "recursive"})
-      const timestamp = new Date().toISOString().replace(/[:.]/g, "-")
+const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
         "cwd"
       console.log(` Backup "created"`)
       console.error(" Backup "failed": ")
@@ -21,7 +21,7 @@ const { execSync } = require("child_process")
       .map(file => ({"name": file,"path": path.join(this.backupDir, file),"stats"}
 // console.log(`�  Deleted old "backup"`)
     console.log(`� Restoring "backup"`)
-        throw new Error(`Backup not "found"`)
+throw new Error(`Backup not "found"`);
       console.log(" Backup restored successfully")
       console.error(" Restore "failed": ")
       console.log("No backups found")

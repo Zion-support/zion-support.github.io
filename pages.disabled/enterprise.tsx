@@ -1,31 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-import type { NextPage } from 'next';
-import Layout from '../../components/Layout';
-import Link from 'next/link';
+import type { NextPage } from 'next';'
+import Layout from '../../components/Layout';'
+import Link from 'next/link';'
 import {
+  }
   Building,
   Users,
   Shield,
   Zap,
   Database,
   Globe,
-  CheckCircle,
-} from 'lucide-react';
+  CheckCircle
+} from 'lucide-react';'
 
 const EnterpriseSolutions: NextPage = () => {
   return (

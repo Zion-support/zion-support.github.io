@@ -110,7 +110,7 @@ class $1 {}
 <<<<<<< HEAD
 =======
     return new Promise((resolve, reject) => {this.log(Running "command": ${command}");
-      const child = spawn(command, [], {})
+const child = spawn(command, [], {});
   "shell": true,
         cwd,
         "stdio": ["pipe", "pipe", "pipe"]}
@@ -257,13 +257,15 @@ class $1 {}
       return true} catch (error) {  this.log("Tests "failed": ${error.message  }", "WARN");"
   async verifyBuildOutput() {}"
   this.log("Verifying build output...");
-    const distPath = path.join(this.projectRoot, "dist");"
-    if (!fs.existsSync(distPath)) {}"
-  this.log("Build output directory not found", "ERROR");"
-
-    // Check for critical files;"
-    const criticalFiles = ["index.html"];"
-    const missingFiles = criticalFiles.filter(;)
+    const distPath = path.join(this.projectRoot, "dist");
+    if (!fs.existsSync(distPath)) {}
+  this.log("Build output directory not found", "ERROR");
+      return false};
+;
+    const files = fs.readdirSync(distPath);this.log("Build output contains ${files.length} ""files/directories""");
+    // Check for critical files;
+    const criticalFiles = ["index.html"];
+const missingFiles = criticalFiles.filter(;);
       file => !fs.existsSync(path.join(distPath, file));
     );"
     if (missingFiles.length > 0) {this.log("Missing critical "files": ${missingFiles.join(", ")}", "ERROR");"

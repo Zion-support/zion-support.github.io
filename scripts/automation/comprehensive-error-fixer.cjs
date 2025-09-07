@@ -45,17 +45,21 @@ class ComprehensiveErrorFixer {
   console.log("[${new Date().toISOString()}] ${message}")}"
   async fixTypeScriptErrors() {
   let fixes = 0;
-    // Fix common TypeScript syntax errors;"
-    const filesToFix = ["src/components/MobileExperienceEnhancer.tsx",
+    // Fix common TypeScript syntax errors;
+const filesToFix = ["src/components/MobileExperienceEnhancer.tsx",;
       "src/components/ModernUIEnhancer.tsx",
       "src/components/NotificationSystem.tsx",
       "src/context/auth/AuthContext.tsx",
       "src/context/auth/profileMapper.ts",
       "src/context/auth/useAuthEventHandlers.ts","
     // Fix common TypeScript syntax errors;
-    const filesToFix = ["
-
-      "src/context/auth/useAuthEventHandlers.ts","]
+const filesToFix = [;
+  "src/components/MobileExperienceEnhancer.tsx",
+      "src/components/ModernUIEnhancer.tsx",
+      "src/components/NotificationSystem.tsx",
+      "src/context/auth/AuthContext.tsx",
+      "src/context/auth/profileMapper.ts",
+      "src/context/auth/useAuthEventHandlers.ts",
     ]];
 for (const filePath of filesToFix) {
   if (fs.existsSync(filePath)) {
@@ -69,14 +73,58 @@ for (const filePath of filesToFix) {
           content = content.replace(/:\s*any/g, ": any");"
           // Fix missing semicolons and colons;"
           content = content.replace(/\(\s*\)\s*=>\s*{/g, "() => {");
-          content = content.replace(/:\s*{\s*;/g, ": {");"
-          // Fix property signatures;"
-          content = content.replace(/action\?\s*:\s*{\s*;/g, "action?: {");"
-          content = content.replace(;)"
-            /"logout": \s*any\(\)\s*=>\s*Promise<any>;/g,"
-</any>"
-
-          content = content.replace(/<\/>;/g, "</>");"
+          content = content.replace(/:\s*{\s*;/g, ": {");
+          // Fix property signatures;
+          content = content.replace(/action\?\s*:\s*{\s*;/g, "action?: {");
+          content = content.replace(;
+            /"logout": \s*any\(\)\s*=>\s*Promise<any>;/g,
+            ""logout": () => Promise<any>;";
+          // Fix "any" type annotations;
+          content = content.replace(/:\s*any"/g, ": string");
+          content = content.replace(/:\s*any/g, ": any");
+          // Fix missing semicolons and colons;
+          content = content.replace(/\(\s*\)\s*=>\s*{/g, "() => {");
+          content = content.replace(/:\s*{\s*;/g, ": {");
+          // Fix property signatures;
+          content = content.replace(/action\?\s*:\s*{\s*;/g, "action?: {");
+          content = content.replace(;
+            /"logout": \s*any\(\)\s*=>\s*Promise<any>;/g,
+            ""logout": () => Promise<any>;
+          );
+          if (content !== originalContent) {
+  fs.writeFileSync(filePath, content);
+            fixes++;
+            this.log("  ✅ Fixed TypeScript errors in ${filePath}")}
+        } catch (error) {
+  this.log("Error fixing TypeScript errors in ${filePath  }: ${error.message}")}
+      }
+    }
+;
+    return fixes}
+;
+  async fixJSXErrors() {
+  let fixes = 0;
+    // Fix common JSX syntax errors;
+const filesToFix = ["src/components/ScrollToTop.jsx",;
+      "src/components/home/ServicesShowcase.jsx",
+      "src/layout/PrimaryNav.jsx",
+      "src/legal/TermsOfService.tsx",
+    // Fix common JSX syntax errors;
+const filesToFix = [;
+  "src/components/ScrollToTop.jsx",
+      "src/components/home/ServicesShowcase.jsx",
+      "src/layout/PrimaryNav.jsx",
+      "src/legal/TermsOfService.tsx",
+    ];
+    for (const filePath of filesToFix) {
+  if (fs.existsSync(filePath)) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
+          let originalContent = content;
+          // Fix JSX closing tags;
+          content = content.replace(/<\/>div>/g, "</div>");
+          content = content.replace(/<\/>header>/g, "</header>");
+          content = content.replace(/<\/>;/g, "</>");
           // Fix JSX expressions;
 <<<<<<< HEAD
         
@@ -152,12 +200,12 @@ for (const filePath of filesToFix) {
   async fixConsoleStatements() {
   let fixes = 0;
     // Replace console statements with proper logging;
-    const filesToFix = ["src/hooks/useAICodeGeneration.jsx",
+const filesToFix = ["src/hooks/useAICodeGeneration.jsx",;
       "src/hooks/usePerformance.jsx",
       "src/utils/productionLogger.js",
       "src/utils/safeStorage.js",
     // Replace console statements with proper logging;
-    const filesToFix = [
+const filesToFix = [;
   "src/hooks/useAICodeGeneration.jsx",
       "src/hooks/usePerformance.jsx",
       "src/utils/productionLogger.js",

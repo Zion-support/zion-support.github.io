@@ -39,7 +39,7 @@ class $1 {}
   };
   async runCommand(command, options = {}) {}
   try {}
-  const result = execSync(command, {})"
+const result = execSync(command, {});
   "encoding": "utf8",
         "cwd": this.projectRoot,
         "stdio": "pipe","
@@ -64,7 +64,7 @@ class $1 {}
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   async runCommand(command, options = {}) {}
   try {}
-  const result = execSync(command, {})
+const result = execSync(command, {});
   "encoding": "utf8",
         "cwd": this.projectRoot,
         "stdio": "pipe",

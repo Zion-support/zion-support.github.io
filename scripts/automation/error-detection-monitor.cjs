@@ -214,17 +214,7 @@ class ErrorDetectionMonitor {}
 <<<<<<< HEAD
 =======
     
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-    
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    const checks = [{ "name": 'TypeScript', "check": this.runTypeScriptCheck.bind(this) },]
+const checks = [{ "name": 'TypeScript', "check": this.runTypeScriptCheck.bind(this) },];
       { "name": 'ESLint', "check": this.runLintCheck.bind(this) },
       { "name": 'Build', "check": this.runBuildCheck.bind(this) },
       { "name": 'Dependencies', "check": this.runDependencyCheck.bind(this) };

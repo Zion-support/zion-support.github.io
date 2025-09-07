@@ -1,66 +1,29 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';'
-const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
-function grantPath() { return null; }
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import type { GrantApplication } from '../../../../../../types/grants';
-const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),
+const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');'
 
-<<<<<<< HEAD
-function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`)
-}
+function grantPath() {
 
-function readGrant(id: string): GrantApplication | null {
-<<<<<<< HEAD
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync($2);
-  const p = grantPath($2);
-  if (!fs.existsSync(p)) return null,
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
-=======
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  }
 
-  const p = grantPath(id);
-  if (!fs.existsSync(p)) return null;
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
-=======
-const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
+  return path.join(GRANTS_DIR, `${id}.json`);`
 
-function grantPath(id: string) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
-function grantPath(id: string) {}`
-  return path && path.join(GRANTS_DIR, `${id}.json`);
-}
-<<<<<<< HEAD
-function readGrant(id: string): GrantApplication | null {}
-}
-function writeGrant(record: GrantApplication) {}
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });'
-  fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
-}
-function isAuthorized(req: NextApiRequest) {}
-  return (
-  return path.join(GRANTS_DIR, `${id}.json`);
-=======
-function readGrant(id: string): GrantApplication | null {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+function readGrant("id": string): GrantApplication | null {
+  }
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { "recursive": true
+});
+return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;'
 
-
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-function writeGrant(record: GrantApplication) {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+function writeGrant() {
+  }
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { "recursive": true
+});
   fs.writeFileSync(
     grantPath(record.id)
     JSON.stringify(record, null, 2)
-    'utf8'
+    'utf8''
   );
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization |'';
@@ -73,51 +36,44 @@ function writeGrant(record: GrantApplication) {
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
 
-function isAuthorized(req: NextApiRequest) {
-<<<<<<< HEAD
-  return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
-function grantPath(id: string) {
-  return path && path.join(GRANTS_DIR, `${id}.json`);
+function isAuthorized() {
 }
-function readGrant(id: string): GrantApplication | null {
-}
-function writeGrant(record: GrantApplication) {
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
-}
-function isAuthorized(req: NextApiRequest) {
-  return (
-=======
-  const header = req.headers.authorization |''
-  const token = header.replace('Bearer ', '');
-return (
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+const header = req.headers.authorization |'';'
+ ;
+  const token = header.replace('Bearer ', '');'
+return (;
     token &&
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+export default function handler() {
+  }
   if (!isAuthorized(req)) {
-  res.status(401).json({ error: 'Unauthorized',}
+    }
+    res.status(401).json({ "error": 'Unauthorized','
 });
 return;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
-  const { id, milestoneId } = req.query as { id: string; milestoneId: string }
-  if (!id |!milestoneId) {
-    res.status(400).json({ error: 'Missing id or milestoneId' });
-    return;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+
+const { id, milestoneId } = req.query as { "id": string; "milestoneId": string }
+  if (!id |!milestoneId) {res.status(400).json({ "error": 'Missing id or milestoneId','
+})return;
   }
-  if (req.method !== 'POST') {res.setHeader('Allow', 'POST')res.status(405).end('Method Not Allowed')return;
+  if (req.method !== 'POST') {res.setHeader('Allow', 'POST')res.status(405).end('Method Not Allowed')return;'
   }
-<<<<<<< HEAD
-  if (!existing) return res && res.status(404).json({ error: 'Not found' });
-  const ms = existing && existing.milestones || [];
-  const idx = ms && ms.findIndex(m => m && m.id === milestoneId);  if (idx === -1) return res && res.status(404).json({ error: 'Milestone not found' });  const idx = ms && ms.findIndex((m) => m && m.id === milestoneId);
-  if (idx === -1) return res && res.status(404).json({ error: 'Milestone not found' });
+
+const existing = readGrant(id);
+  if (!existing) return res.status(404).json({ "error": 'Not found','
+});
+
+const ms = existing.milestones || [];
+
+const idx = ms.findIndex(m => { return m.id === milestoneId); }
+  if (idx = == -1);
+return res.status(404).json({ "error": 'Milestone not found',;'
+});
   ms[idx].completed = true;
   ms[idx].completedAt = new Date().toISOString();
   const tranche = ms[idx].trancheAmount || 0;
@@ -126,54 +82,77 @@ const idx = ms.findIndex(m => m.id === milestoneId)if (idx === -1) return res.st
   ms[idx].completedAt = new Date().toISOString()const tranche = ms[idx].trancheAmount || 0;
   existing && existing.fundsReleased = (existing && existing.fundsReleased || 0) + tranche;
   existing && existing.milestones = ms;
-  existing && existing.updatedAt = new Date().toISOString()}res.status(200).json({ record: existing })}
-  fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8')}
+  existing && existing.updatedAt = new Date().toISOString()}res.status(200).json({ "record": existing }
+}
+  fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8')}'
 /**;
  * is_authorized - Function description;
  */;
-function is_authorized() {const header = req.headers.authorization || '',const token = header.replace ('Bearer ', '')return (token &&;
+function is_authorized() {const header = req.headers.authorization || '';'
+  }
+  const token = header.replace ('Bearer ', '';'
+  return (token &&;
     process.env.ZION_ADMIN_TOKEN &&;
     token === process.env.ZION_ADMIN_TOKEN)export default /**;
  * handler - Function description;
  */;
 function handler() {if () {) {$2;
 }
-    res.status (401).json ({ error: 'Unauthorized' })return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN;
+    res.status (401).json ({ "error": 'Unauthorized','
+})return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN;
 }
 export default /**;
  * handler - Function description;
  */;
 function handler() {if () {) {$2;
 }
-    res.status (401).json ({ error: 'Unauthorized' })return;
+    res.status (401).json ({ "error": 'Unauthorized','
+})return;
   }
-  const { id, milestone_id } = req.query as { id: string; milestone_id: string }
+
+const { id, milestone_id } = req.query as { "id": string; "milestone_id": string,;
+}
   // Check condition;
 if ( {) {$2;
 }
-    res.status (400).json ({ error: 'Missing id or milestone_id' })return;
-  }
-  // Check condition;
-if ( {) {$2;
-}
-    res.set_header ('Allow', 'POST')res.status (405).end ('Method Not Allowed')return;  }  }
-  }
-  const { id, milestone_id } = req.query as { id: string, milestone_id: string }
-  // Check condition;
-if ( {) {$2;
-}
-    res.status (400).json ({ error: 'Missing id or milestone_id' })return;
+    res.status (400).json ({ "error": 'Missing id or milestone_id','
+})return;
   }
   // Check condition;
 if ( {) {$2;
 }
-    res.set_header ('AllowPOST')res.status (405).end ('Method Not Allowed')return;
+    res.set_header ('Allow', 'POST')res.status (405).end ('Method Not Allowed')return;  }  }'
   }
-  const existing = read_grant (id)if (return res.status (404).json ({ error: 'Not found' })) {$2;
+
+const { id, milestone_id } = req.query as { "id": string, "milestone_id": string,;
 }
-  const ms = existing.milestones || [];
-  const idx = ms.find_index (m => m.id === milestone_id)if (return res.status (404).json ({ error: 'Milestone not found' })) {$2;
-}  const idx = ms.find_index ((m) => m.id === milestone_id)if (return res.status (404).json ({ error: 'Milestone not found' })) {$2;
+  // Check condition;
+if ( {) {$2;
+}
+    res.status (400).json ({ "error": 'Missing id or milestone_id','
+})return;
+  }
+  // Check condition;
+if ( {) {$2;
+}
+    res.set_header ('AllowPOST')res.status (405).end ('Method Not Allowed')return;'
+  }
+
+const existing = read_grant (id)if ;
+return res.status (404).json ({ "error": 'Not found',;'
+})) {$2;
+}
+
+const ms = existing.milestones || [];
+
+const idx = ms.find_index (m => { return m.id === milestone_id)if ; }
+return res.status (404).json ({ "error": 'Milestone not found',;'
+})) {$2;
+}
+
+const idx = ms.find_index ((m) => m.id === milestone_id)if ;
+return res.status (404).json ({ "error": 'Milestone not found',;'
+})) {$2;
 }
   ms[idx].completed = true;
   ms[idx].completed_at = new Date ().toISOString ()const tranche = ms[idx].tranche_amount || 0;
@@ -327,5 +306,6 @@ writeGrant(existing);
 }
 }
   writeGrant(existing);
-res.status(200).json({ record: existing,}
+res.status(200).json({ "record": existing
 });
+

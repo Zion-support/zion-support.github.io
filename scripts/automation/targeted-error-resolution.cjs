@@ -11,39 +11,16 @@
 
 <<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
     this.logFile = path.join(this.projectRoot, 'logs', 'targeted-error-resolution.log')
     this.reportFile = path.join(this.projectRoot, 'enhanced-reports', 'targeted-error-resolution-report.json')
     this.log(' Starting targeted error resolution automation...')
       // Create reports directory if it doesn'
-      const reportsDir = path.join(this.projectRoot, 'enhanced-reports')
+const reportsDir = path.join(this.projectRoot, 'enhanced-reports');
         "status"
-      const result = execSync('npm run type-check 2>&1', { "encoding"})
+const result = execSync('npm run type-check 2>&1', { "encoding"});
       execSync('npm run lint -- --fix', { "encoding"})
     fixed = fixed.replace(/([^"'])([a-zA-Z_$][a-zA-Z0-9_$]*):\s*([^"'])/g, '$1"$2"
     fixed = fixed.replace(/from ['"]\.\.\/([^'"]+)['"]/g, "

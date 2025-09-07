@@ -10,19 +10,15 @@
 
 
 #!/usr/bin/env node;
-<<<<<<< HEAD
-///usr/bin/env node
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 // console.log(' Fixing All Corrupted Files...')
 console.log('=====')
-const corruptedFiles = ['pages/docs/api-reference.tsx']
+const corruptedFiles = ['pages/docs/api-reference.tsx'];
   'pages/docs/authentication.tsx'
   'pages/docs/first-steps.tsx'
   'pages/docs/getting-started.tsx'
-    let content = ''
+let content = '';
     if (filePath === 'pages/docs/api-reference.tsx')
       content = "
     "phone"

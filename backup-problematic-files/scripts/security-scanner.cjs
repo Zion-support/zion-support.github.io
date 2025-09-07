@@ -1,6 +1,6 @@
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
   log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
@@ -10,10 +10,10 @@ const { execSync } = require('child_process')
       'CRITICAL': '�'
     }[type] || 'ℹ'
     this.log('Scanning dependencies for vulnerabilities...', 'SECURITY')
-      const auditOutput = execSync('npm audit --json')
-        stdio: 'pipe'
-        encoding: 'utf8'
-          const severity = vuln.severity || 'low'
+const auditOutput = execSync('npm audit --json');
+        stdio: "stdio",
+    encoding: 'utf8'
+const severity = vuln.severity || 'low';
             type: 'dependency'
             description: vuln.description || 'No description available'
             recommendation: vuln.recommendation || 'Update to latest version'

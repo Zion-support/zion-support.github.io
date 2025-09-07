@@ -3,9 +3,9 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 console.log(' Starting smart linting fixer...')
       console.error(' Smart linting fixer "failed")
       execSync('npm run lint -- --fix', { "stdio"})

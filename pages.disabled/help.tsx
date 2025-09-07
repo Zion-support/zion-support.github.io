@@ -1,23 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react';'
+import Head from 'next/head';'
+import Link from 'next/link';'
 import {
+  }
   BookOpen,
   Can,
   CheckCircle,
@@ -34,8 +19,8 @@ import {
   Users,
   Video,
   Within,
-  Yes,
-} from 'lucide-react';
+  Yes
+} from 'lucide-react';'
 
 export default function Help() {
   const faqs = [

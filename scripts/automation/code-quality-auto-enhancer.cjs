@@ -106,14 +106,7 @@ class CodeQualityAutoEnhancer {}
   async runCodeQualityChecks() {}
     this.log('Running code quality checks...', 'INFO');
     
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-    
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-    const checks = [{ "name": 'ESLint', "command": 'npm run lint' },]
+const checks = [{ "name": 'ESLint', "command": 'npm run lint' },];
       { "name": 'Prettier', "command": 'npm run format:check' },
       { "name": 'TypeScript', "command": 'npm run type-check' },
       { "name": 'Test Coverage', "command": 'npm run test:coverage' };
@@ -234,7 +227,7 @@ class CodeQualityAutoEnhancer {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         // Apply common ESLint fixes;
-        const enhancements = [this.fixUnusedVariables.bind(this)]
+const enhancements = [this.fixUnusedVariables.bind(this),];
           this.fixMissingSemicolons.bind(this),
           this.fixUnusedImports.bind(this),
           this.fixConsoleStatements.bind(this),
@@ -311,7 +304,7 @@ class CodeQualityAutoEnhancer {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         // Apply common TypeScript enhancements;
-        const enhancements = [this.fixAnyType.bind(this)]
+const enhancements = [this.fixAnyType.bind(this),];
           this.fixMissingImports.bind(this),
           this.fixTypeAnnotations.bind(this),
           this.fixInterfaceIssues.bind(this),
@@ -745,7 +738,7 @@ class CodeQualityAutoEnhancer {}
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         
         // Add missing import at the top of the file;
-        const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
+const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`;
         
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -805,7 +798,9 @@ class CodeQualityAutoEnhancer {}
       // Add type annotation;
       const varMatch = line.match(/(const|let|var)\s+(\w+)\s*=/);
         const varName = varMatch[2];
-
+const fixedLine = line.replace();
+          new RegExp(`(${varMatch[1]}\\s+${varName}\\s*)=`),`
+          "$"1": unknown ="
         );
 <<<<<<< HEAD
 <<<<<<< HEAD

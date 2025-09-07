@@ -1,74 +1,43 @@
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-  resumeOptions: ResumeOption[],
-  selectedResume: ResumeOption | null,
-  handleResumeSelect: (resumeId: string) => void,
-  handleDownloadResume: () => void,
-  isLoading: boolean
+"resumeOptions": ResumeOption[],
+  "selectedResume": ResumeOption | null,
+  "handleResumeSelect": ("resumeId": string) => void,
+  "handleDownloadResume": () => void,
+  "isLoading": boolean
 }
 
 export function SelectResumeSection({;
-import React from 'react';
+}
+import React from 'react';'
   resumeOptions;
   selectedResume;
   handleResumeSelect;
-<<<<<<< HEAD
-  handleDownloadResume;
-
-import React from 'react',;
-=======
-  handleDownloadResume;import React from 'react',;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-import { FileText } from 'lucide-react',;
-import { ResumeOption } from '../resume-selector/types',;
-import { ResumePreviewCard } from './ResumePreviewCard',;
-import { Resume } from '@/types/resume',;
+  handleDownloadResume;import React from 'react';'
+import { FileText } from 'lucide-react';'
+import { ResumeOption } from '../resume-selector/types',;'
+import { ResumePreviewCard } from './ResumePreviewCard',;'
+import { Resume } from '@/types/resume',;'
 interface SelectResumeSectionProps {;
-  resumeOptions: ResumeOption[],;
-  selectedResume: ResumeOption | null,;
-  handleResumeSelect: (resumeId: string) => void,;
-  handleDownloadResume: () => void,;
-  isLoading: boolean;
+  }
+  "resumeOptions": ResumeOption[],;
+  "selectedResume": ResumeOption | null,;
+  "handleResumeSelect": ("resumeId": string) => void,;
+  "handleDownloadResume": () => void,;
+  "isLoading": boolean;
 }
-
-<<<<<<< HEAD
-
-  resumeOptions: ResumeOption[]
-  selectedResume: ResumeOption | null
-  handleResumeSelect: (resumeId: string) => void
-  handleDownloadResume: () => void
-
-  isLoading: boolean
-}
-export function SelectResumeSection({
-import {FileText} from 'lucide-react';
-import {ResumeOption} from '../resume - selector / types';
-import {ResumePreviewCard} from './ResumePreviewCard';
-
-                selectedResume?.id === option && option.id 
-                  ? 'bg-zion-purple/20 border border-zion-purple' 
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
-              }`}
+                  : 'bg-zion-blue-dark/30 "hover":bg-zion-blue-dark/50''
+              }`}`
               onClick={() => handleResumeSelect(option && option.id)}
             >;
-              <div className="flex items-center">;
-                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;
-                <span className="text-white">{option && option.title}</span>;
+              <div className="flex items-center">;"
+                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;"
+                <span className="text-white">{option && option.title}</span>;"
               </div>;
             </button>;
           ))}
-            <ResumePreviewCard
-              resume={selectedResume && selectedResume.resume as Resume}
+            <ResumePreviewCard,
+resume={selectedResume && selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
-              isLoading={isLoading}
-            />;
+              isLoading={isLoading} />;
           )}
         </>;
 <<<<<<< HEAD

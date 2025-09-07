@@ -1,61 +1,26 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
-
-
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import path from "path";
+import type { NextApiRequest, NextApiResponse } from "next";"
+import path from "path";"
 import {
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
-import {
+  }
   ensureDisputeUploadDir,
   getDisputeById,
-  upsertDispute,
-} from '../../../../utils/fsdb';
+  upsertDispute
+} from "../../../../utils/fsdb";"
 import {
+  }
   parseUserFromRequest,
-  ensureInvolvedOrAdmin,
-} from '../../../../utils/auth';
-
-export const config = null;
-      fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
-    })
-  })
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-import type { NextApiRequest, NextApiResponse } from "next";
-import path from "path";
-import {
-  ensureDisputeUploadDir
-  getDisputeById
-  upsertDispute,;
-} from "../../../../utils/fsdb";
-import {
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import path from "path";
-import {
-
-  ensureDisputeUploadDir
-  getDisputeById
-  upsertDispute,;
-} from "../../../../utils/fsdb";
-import {
-  parseUserFromRequest
-  ensureInvolvedOrAdmin,;
-} from "../../../../utils/auth";
+  ensureInvolvedOrAdmin
+} from "../../../../utils/auth";"
 export const config = {
-  api: { bodyParser: { sizeLimit: "20mb" } },;
+  }
+  "api": { "bodyParser": { "sizeLimit": "20mb" } },"
 };
 
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {;
+export default async function handler() {
+  }
   const { id } = req.query;
+  if (typeof id !== "string")"
+    return res.status(400).json({ "error": "Invalid id" });"
 
   if (typeof id !== 'string')
     return res.status(400).json({ error: 'Invalid id' });
@@ -64,85 +29,50 @@ export default async function handler(
 origin/cursor/automate-test-improve-and-merge-code-2533
   const user = parseUserFromRequest(req);
 
-  if (req && req.method === "POST") {
+  if (req.method === "POST") {"
+    }
     const dispute = await getDisputeById(id);
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
-import type { NextApiRequest, NextApiResponse } from './next';
-import path from './path';
-import {
-  ensureDisputeUploadDir
-  getDisputeById
-  upsert_dispute
-} from '../../../../utils / fsdb';
-import {
-  parseUserFromRequest
-  ensureInvolvedOrAdmin
-} from '../../../../utils / auth';
-export const config = {
-  api: { body_parser: { size_limit: "20mb" } }
-}
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const { id } = req.query;
-  if (
-    return res.status (400).json ({ error: "Invalid id" })) {
-  $2
-}
-  const user = parseUserFromRequest (req);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    const dispute = await getDisputeById (id);
-    if (return res.status (404).json ({ error: "Dispute not found" })) {
-  $2
-}
+    if (!dispute) return res.status(404).json({ "error": "Dispute not found" });"
+
     try {
-      ensureInvolvedOrAdmin (user, dispute.clientUserId, dispute.talentUserId);
-    } catch (e: any) {
-      return res.status (e.status_code || 403).json ({ error: "Forbidden" });
+      }
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+    } catch ("e": any) {
+      }
+      return res.status(e.statusCode || 403).json({ "error": "Forbidden" });"
     }
     const { files } =;
       req.body ||;
 
-      { recursive: true }
-
-    if (!dispute) return res.status(404).json({ error: "Dispute not found" });
-    try {
-ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
-    } catch (e: any) {
-      return res.status(e.statusCode |403).json({ error: "Forbidden" });
-    }
-    const { files } =
-      req.body |
+const { files } =;
+      req.body ||
       ({} as {
-        files: { fileName: string; mimeType: string; base64: string }[];
+        }
+        "files": { "fileName": string; "mimeType": string; "base64": string }[];
       });
     if (!Array.isArray(files) || files.length === 0)
-      return res.status(400).json({ error: 'No files' });
+      return res.status(400).json({ "error": "No files" });"
 
     const now = new Date().toISOString();
     const dir = await ensureDisputeUploadDir(dispute.id);
 
     for (const f of files) {
-      const buffer = Buffer.from(f.base64, 'base64');
-      const safeName = f.fileName.replace(/[^a-zA-Z0-9.-]/g, '_');
-      const filePath = path.join(dir, `${now}-${safeName}`);
-      
+      }
+      const safeName = f.fileName.replace(/[^a-zA-Z0-9.-]/g, "_");"
+      const filePath = path.join(dir, `${Date.now()}-${safeName}`);`      const buffer = Buffer.from(f.base64, "base64");"
+
       await fsPromisesWrite(filePath, buffer);
-      
-      dispute.uploads = dispute.uploads || [];
-      dispute.uploads.push({
-        fileName: safeName,
-        fileSize: buffer.length,
-        mimeType: f.mimeType || 'application/octet-stream',
-        path: filePath,
-        uploadedAt: now,
-        uploadedByUserId: user.id,
+
+      dispute.attachments = dispute.attachments || [];
+      dispute.attachments.push({
+        }
+        "id": `att-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,`
+        "fileName": safeName,
+        "fileSize": buffer.length,
+        "mimeType": f.mimeType || "application/octet-stream","
+        "path": filePath,
+        "uploadedAt": now,
+        "uploadedByUserId": user.id
       });
     }
     dispute.updatedAt = now;
@@ -150,25 +80,23 @@ ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
     return res.status(201).json({ dispute });
   }
 
-  res.setHeader('Allow', 'POST');
-  return res.status(405).end('Method Not Allowed');
-
-async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
-  const fs = await import("fs");
-  await new Promise<void>((resolve, reject) => {
-fs.mkdir(
-      require('path').dirname(filePath),
-      { recursive: true },
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-      { recursive: true }
-
-      (err: any) => {
-        if (return reject (err)) {
-  $2
+  res.setHeader("Allow", "POST");"
+  return res.status(405).end("Method Not Allowed");"
 }
-        fs.write_file (file_path, data, (err2: any) =>;
-          err2 ? reject (err2) : resolve ()
+
+async function fsPromisesWrite("filePath": string, "data": Buffer): Promise<void> {
+  }
+  const fs = await import("fs");"
+  await new Promise<void>((resolve, reject) => {
+    }
+    fs.mkdir(
+      require("path").dirname(filePath),"
+      { "recursive": true },
+      ("err": any) => {
+        }
+        if (err) return reject(err);
+        fs.writeFile(filePath, data, ("err2": any) =>
+          err2 ? reject(err2) : resolve(),
         );
       }
     );

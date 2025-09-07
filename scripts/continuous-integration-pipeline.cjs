@@ -1,30 +1,8 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-=======
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-
-
-
-const { execSync } = require("$1")
-const fs = require("$1")
-const path = require("path")
+const { execSync } = require("$1");
+const fs = require("$1");
+const path = require("path");
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "ci-pipeline.log")
       fs.mkdirSync(this.reportsDir, { "recursive"})
@@ -38,22 +16,22 @@ const path = require("path")
       this.log(` "Failed"`)
       return { "success": false, "error"}
     this.log("� Installing dependencies...")
-    return await this.runCommand("npm install", "Install Dependencies")
+return await this.runCommand("npm install", "Install Dependencies");
     this.log(" Running linting...")
-    return await this.runCommand("npm run "lint": fix", "Linting")
+return await this.runCommand("npm run "lint": fix", "Linting");
     this.log(" Running type checking...")
-    return await this.runCommand("npm run type-check", "Type Checking")
+return await this.runCommand("npm run type-check", "Type Checking");
     this.log("🧪 Running tests...")
-    return await this.runCommand("npm run test", "Tests")
+return await this.runCommand("npm run test", "Tests");
     this.log("� Running build...")
-    return await this.runCommand("npm run build", "Build")
+return await this.runCommand("npm run build", "Build");
     this.log("� Running security audit...")
-    return await this.runCommand("npm audit", "Security Audit")
+return await this.runCommand("npm audit", "Security Audit");
     this.log("⚡ Running performance test...")
       "npm run build && npm run start &"
       "Performance Test"
     this.log(" Running deployment test...")
-    const deployScript = path.join(this.projectRoot, "scripts/deploy.sh")
+const deployScript = path.join(this.projectRoot, "scripts/deploy.sh");
         "bash scripts/deploy.sh --dry-run"
         "Deployment Test"
       this.log("⚠  No deployment script found")
@@ -72,7 +50,7 @@ const path = require("path")
         "failed"
       "results"
       "recommendations"
-    const reportPath = path.join(this.reportsDir, "ci-pipeline-report.json")
+const reportPath = path.join(this.reportsDir, "ci-pipeline-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8"
     this.log(` CI report "generated"`)
         "type": "error"

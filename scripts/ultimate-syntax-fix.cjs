@@ -70,7 +70,7 @@ console.log('======================');
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
-  return content
+return content;
     // Fix malformed JSX tags
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
     .replace(/<h2([^>]*)>([^<]+)><\/h2>/gm, '<h2$1>$2</h2>')
@@ -132,7 +132,7 @@ function fixAllSyntax(content) {
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 // Files to fix
-const filesToFix = [
+const filesToFix = [;
   'pages/about.tsx',
   'pages/blog.tsx',
   'pages/ai-services.tsx',

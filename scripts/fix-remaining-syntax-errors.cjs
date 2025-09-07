@@ -28,31 +28,17 @@ function fixHoverSyntax(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-<<<<<<< HEAD
-const fs = require('fs')
-const path = require('path')
-console.log('🔧 Fixing remaining syntax errors...')
-// Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    let originalContent = content
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    // Fix common syntax issues
-    content = content.replace(/import\s*{\s*{\s*([^}]+)\s*}/g, 'import { $1 }');
-    content = content.replace(/^\s*{\s*$/gm, '');
-    content = content.replace(/^\s*}\s*$/gm, '');
-    content = content.replace(/^\s*;\s*$/gm, '');
-    content = content.replace(/^\s*icon,\s*$/gm, '');
-    content = content.replace(/^\s*title,\s*$/gm, '');
-    content = content.replace(/^\s*description,\s*$/gm, '');
-    content = content.replace(/^\s*features,\s*$/gm, '');
-    content = content.replace(/^\s*icon:\s*string;\s*$/gm, '');
-    content = content.replace(/^\s*title:\s*string;\s*$/gm, '');
-    content = content.replace(/^\s*description:\s*string;\s*$/gm, '');
-    content = content.replace(/^\s*features:\s*string\[\];\s*$/gm, '');
-    content = content.replace(/^\s*}\s*$/gm, '');
-    content = content.replace(/^\s*;\s*$/gm, '');
+    // Fix various hover syntax patterns
+const patterns = [;
+      { from: /"hover":\s*/g, to: 'hover:' },
+      { from: /"focus":\s*/g, to: 'focus:' },
+      { from: /"group-hover":\s*/g, to: 'group-hover:' },
+      { from: /"sm":\s*/g, to: 'sm:' },
+      { from: /"md":\s*/g, to: 'md:' },
+      { from: /"lg":\s*/g, to: 'lg:' },
+      { from: /"xl":\s*/g, to: 'xl:' },
+      { from: /"2xl":\s*/g, to: '2xl:' },
+    ];
     
     // Fix unterminated regexp literals
     content = content.replace(/^\s*<\/p>\s*$/gm, '        </p>');
@@ -120,7 +106,7 @@ main
 
 // Function to find and fix all TypeScript/JSX files
 function fixAllFiles() {
-  const filesToCheck = [
+const filesToCheck = [;
     'components/Footer.tsx',
     'components/Header.tsx',
     'components/layout/MainLayout.tsx',

@@ -78,19 +78,25 @@ class AutoFixer {}
 
     this.log("info", `Fixed merge conflicts in ${fixedFiles} files`);"
     return fixedFiles};
-  async fixSyntaxErrors() {}"
-    this.log("info", "Fixing syntax errors...");"
-    const syntaxFixes = [// Fix missing semicolons;]"
-      { "pattern": /([^}])\s*$/gm, "replacement": "$1,", "description": "Add missing semicolons" };"
-      // Fix missing commas;"
-      { "pattern": /([^}])\s*$/gm, "replacement": "$1,", "description": "Add missing commas" };"
-      // Fix missing quotes;"
-      { "pattern": /([^])\s*$/gm replacement: "$1, "description": "Add missing quotes" };
-      { "pattern": /([^"])\s*$/gm, "replacement": "$1", "description": "Add missing quotes" };"
-      // Fix missing brackets;"
-      { "pattern": /([^}])\s*$/gm, "replacement": "$1}", "description": "Add missing brackets" };"
-      // Fix missing parentheses;"
-      { "pattern": /([^)])\s*$/gm, "replacement": "$1)", "description": "Add missing parentheses" }];"
+  async fixSyntaxErrors() {}
+    this.log("info", "Fixing syntax errors...");
+    let fixedFiles = 0;
+const syntaxFixes = [// Fix missing semicolons;];
+      { "pattern": /([^}])\s*$/gm, "replacement": "$1,", "description": "Add missing semicolons" };
+      // Fix missing commas;
+      { "pattern": /([^}])\s*$/gm, "replacement": "$1,", "description": "Add missing commas" };
+      // Fix missing quotes;
+      { "pattern": /([^""])\s*$/gm replacement: "$1, "description": "Add missing quotes" };
+      { "pattern": /([^"])\s*$/gm, "replacement": "$1", "description": "Add missing quotes" };
+      // Fix missing brackets;
+      { "pattern": /([^}])\s*$/gm, "replacement": "$1}", "description": "Add missing brackets" };
+      // Fix missing parentheses;
+      { "pattern": /([^)])\s*$/gm, "replacement": "$1)", "description": "Add missing parentheses" }];
+    const files = this.getAllSourceFiles();
+    for (const file of files) {}
+      try {}
+        let content = fs.readFileSync(file, "utf8");
+        const originalContent = content;
         let fileFixes = 0;
         for (const fix of syntaxFixes) {}
           if (fix.pattern.test(content)) {}

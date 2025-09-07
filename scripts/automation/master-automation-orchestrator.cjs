@@ -3,9 +3,9 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
     this.logFile = path.join(this.projectRoot, "logs", "master-automation.log")
     this.dashboardFile = path.join(this.projectRoot, "logs", "automation-dashboard.json")
   "errorFixer": { status: "idle", "lastRun": null, "errorsFixed"}
@@ -14,8 +14,8 @@ const { execSync, spawn } = require("child_process")
       "codeQuality": { status: "idle", "lastRun": null, "improvements"}
       "testing": { status: "idle", "lastRun": null, "testsPassed"}
       "deployment": { status: "idle", "lastRun": null, "deployments"}
-  const dirs = ["logs", "automation", "reports"]
-  const dirPath = path.join(this.projectRoot, ")
+const dirs = ["logs", "automation", "reports"];
+const dirPath = path.join(this.projectRoot, ");
   fs.mkdirSync(dirPath", { "recursive"})
   fs.mkdirSync(dirPath, { "recursive"})
   log(message, level = "INFO")
@@ -44,39 +44,39 @@ const { execSync, spawn } = require("child_process")
   this.log(" Starting Continuous Monitoring...")
     this.log(" Continuous monitoring started")
   this.log(" Running Error Monitoring...")
-      const result = execSync("node ""scripts/automation/enhanced-error-fixer.cjs""")
+const result = execSync("node ""scripts/automation/enhanced-error-fixer.cjs""");
   "encoding": "utf8"
         "stdio": "pipe"
       if (result.includes("fixed")
-      const result = execSync("node "scripts/automation/enhanced-error-fixer.cjs"")
+const result = execSync("node "scripts/automation/enhanced-error-fixer.cjs"");
   "encoding": "utf8"
         "stdio": "pipe"
       if (result.includes("fixed")
       this.log(" Error monitoring completed")} catch (error) {  this.log(" Error monitoring "failed": ${error.message  }", "ERROR")
   this.log("⚡ Running Performance Monitoring...")
-      const buildResult = execSync("npm run build")
+const buildResult = execSync("npm run build");
   "encoding": "utf8"
         "stdio": "pipe"
       if (buildResult.includes("Build completed")
         this.log(" Performance optimization applied")
       this.automationStatus.performanceMonitor.lastRun = new Date().toISOString()} catch (error) {  this.log(" Performance monitoring "failed": ${error.message  }", "ERROR")
   this.log("� Running Security Scanning...")
-      const auditResult = execSync("npm audit --audit-level=moderate")
+const auditResult = execSync("npm audit --audit-level=moderate");
   "encoding": "utf8"
         "stdio": "pipe"
       if (auditResult.includes("found")
 } catch (error) {this.log(" Performance monitoring "failed": ${error.message}", "ERROR")
   this.log("� Running Security Scanning...")
-      const auditResult = execSync("npm audit --audit-level=moderate")
+const auditResult = execSync("npm audit --audit-level=moderate");
   "encoding": "utf8"
         "stdio": "pipe"
       if (auditResult.includes("found")
       this.log(" Security scanning completed")} catch (error) {  this.log(" Security scanning "failed": ${error.message  }", "ERROR")
   this.log("� Running Code Quality Monitoring...")
-      const lintResult = execSync("npm run lint")
+const lintResult = execSync("npm run lint");
   "encoding": "utf8"
         "stdio": "pipe"
-      const typeResult = execSync("npm run type-check")
+const typeResult = execSync("npm run type-check");
   "encoding": "utf8"
         "stdio": "pipe"
       if (lintResult.includes("0 errors") && typeResult.includes("0 errors")

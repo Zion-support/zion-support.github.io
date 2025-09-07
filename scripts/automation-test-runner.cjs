@@ -8,21 +8,14 @@
  * Automation Test Runner;
  * Tests all automation scripts and reports results;
  */
-<<<<<<< HEAD
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-          "status"
-=======
-
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
         "encoding"
         "stdio"
         "status"
         "status"
-    const testScripts = [{ "path": 'scripts/health-check.cjs', "desc"}]
+const testScripts = [{ "path": 'scripts/health-check.cjs', "desc"}];
       { "path": 'scripts/simple-performance-monitor.cjs', "desc"}
       { "path": 'scripts/simple-code-quality.cjs', "desc"}
 <<<<<<< HEAD

@@ -10,15 +10,11 @@
 
 
 #!/usr/bin/env node;
-<<<<<<< HEAD
-///usr/bin/env node
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 // console.log(' Final Build Fixer')
 console.log('=====')
-      const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx']
+const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx'];
         'pages/ai-services.tsx'
         'pages/api.tsx'
       console.error('Error fixing "files")

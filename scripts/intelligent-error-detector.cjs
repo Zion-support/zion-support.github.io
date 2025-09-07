@@ -3,9 +3,9 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const fs = require("child_process")
-const path = require("child_process")
-const { execSync } = require("child_process")
+const fs = require("child_process");
+const path = require("child_process");
+const { execSync } = require("child_process");
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
 <<<<<<< HEAD
 =======
@@ -13,17 +13,17 @@ const { execSync } = require("child_process")
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   log(message, level = "INFO")
       fs.mkdirSync(this.reportsDir, { "recursive"})
-      const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
       if (content.includes(";")
         issues.push({"type": "error","message": "Double semicolon detected"})
           line: this.findLineNumber(content, ",")
       if (content.includes("import") && content.includes(";")
         issues.push({"type": "error","message": "Malformed import statement"})
           line: this.findLineNumber(content, "import")
-      const stringRegex = /([""])([^"")]
+const stringRegex = /([""])([^"")];
         if (match[2].length < 100 && !match[2].includes("${"})
           issues.push({"type": "warning","message": "Possible unterminated string"})
-      const lines = content.split("\n")
+const lines = content.split("\n");
         if (trimmed && !trimmed.endsWith("") && !trimmed.endsWith("{"})
             !trimmed.endsWith("}") && !trimmed.startsWith("//")
             !trimmed.startsWith("*") && !trimmed.startsWith("/*")
@@ -33,19 +33,19 @@ const { execSync } = require("child_process")
             issues.push({"type": "suggestion","message": "Consider adding semicolon"})
         this.errors.push({"file": relativePath,"issues"})
       this.log(`Error scanning ${filePath}: ${error.message}`, "ERROR"`)
-    const lines = content.split("\n")
+const lines = content.split("\n");
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules"
       this.log(`Error scanning directory ${dirPath}: ${error.message}`, "ERROR"`)
-    const extensions = [".js", ".jsx", ".ts", ".tsx", ".cjs", ".mjs"]
+const extensions = [".js", ".jsx", ".ts", ".tsx", ".cjs", ".mjs"];
     this.log(" Running ESLint...", "INFO")
-      const result = execSync("npm run lint", {"cwd": this.projectRoot,"encoding": "utf8"})
+const result = execSync("npm run lint", {"cwd": this.projectRoot,"encoding": "utf8"});
         stdio: "pipe"
       this.log(" ESLint passed", "SUCCESS")
       this.log(" ESLint found issues", "ERROR")
         "file": "ESLint"
           type: "error","message": "ESLint validation failed"
     this.log(" Running TypeScript type check...", "INFO")
-      const result = execSync("npm run type-check", {"cwd": this.projectRoot,"encoding": "utf8"})
+const result = execSync("npm run type-check", {"cwd": this.projectRoot,"encoding": "utf8"});
         stdio: "pipe"
       this.log(" TypeScript type check passed", "SUCCESS")
       this.log(" TypeScript type check found issues", "ERROR")
@@ -54,7 +54,7 @@ const { execSync } = require("child_process")
       "timestamp"
       summary: {totalErrors: this.errors.length,"totalWarnings"}
       "errors"
-    const reportPath = path.join(this.reportsDir, "intelligent-error-detector-report.json")
+const reportPath = path.join(this.reportsDir, "intelligent-error-detector-report.json");
     this.log(`� Report saved "to": ${reportPath}`, "SUCCESS"`)
       recommendations.push("Fix all syntax errors before proceeding")
       recommendations.push("Review and address warnings")

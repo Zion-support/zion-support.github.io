@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-}</div> </div>) import fs from 'fs';
-import fs from 'fs';
-import path from 'path';
-export type Trend = {
-  let items: Trend[] = [];  try {
-    const raw = fs.readFileSync (file, 'utf - 8');
-    items = JSON.parse (raw);
-  } catch {}
- </div> </div>) ) ;
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-export type Trend = {
-  id: string
-  date: string
-  title: string
-  highlights: string[]
-  summary: string
-  tags: string[]
-}
-export async function getServerSideProps() {
+
+
+import fs from 'fs';'
+import path from 'path';'
 
 </div> </div>) ) 
 
@@ -47,32 +30,7 @@ export async function getServerSideProps() {;
 import fs from 'fs';
 import path from 'path';
 export type Trend = any;
-</div> </div>) )
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-export type Trend = {
-  id: string
-  date: string
-  title: string
-  highlights: string[]
-  summary: string
-  tags: string[]
-}
-export async function getServerSideProps() {
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-export type Trend = {
-  id: string,
-import fs from 'fs';
-import path from 'path';
-export type Trend = $2;
-  date: string,
-  title: string,
-  highlights: string[],
-  summary: string,
-  tags: string[]
-  );
+return { "props": { items } },;
 }
 
 }</div> </div>) import fs from 'fs';

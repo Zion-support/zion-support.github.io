@@ -83,7 +83,7 @@ class BuildMonitor {}
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       
-      const child = spawn('npm', ['run', 'build'], {})
+const child = spawn('npm', ['run', 'build'], {});
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();"
       };);
@@ -166,7 +166,7 @@ class BuildMonitor {}
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       
       // Clean build directory;
-      const cleanChild = spawn('npm', ['run', 'clean'], {})
+const cleanChild = spawn('npm', ['run', 'clean'], {});
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);

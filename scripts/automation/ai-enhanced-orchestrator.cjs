@@ -14,25 +14,11 @@
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-const pm2 = require('pm2')
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-const os = require('os')
-<<<<<<< HEAD
-=======
+const pm2 = require('pm2');
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+const os = require('os');
     this.logFile = path.join(this.projectRoot, 'logs', 'ai-enhanced-orchestrator.log')
     this.configFile = path.join(this.projectRoot, 'logs', 'orchestrator-config.json')
     this.metricsFile = path.join(this.projectRoot, 'logs', 'enhanced-metrics.json')
@@ -48,7 +34,7 @@ const os = require('os')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
     fs.appendFile(this.logFile, logMessage + '\n')
-      const config = await fs.readFile(this.configFile, 'utf8')
+const config = await fs.readFile(this.configFile, 'utf8');
       this.log(' Configuration loaded successfully')
       this.log('� Using default configuration')
       this.log(` Failed to save configuration: ${error.message}`, 'ERROR'`)
@@ -69,33 +55,4 @@ const os = require('os')
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-      const result = execSync('top -bn1 | grep "Cpu(s)"
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-      const result = execSync('top -bn1 | grep "Cpu(s)"
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      const result = execSync('top -bn1 | grep "Cpu(s)"
-<<<<<<< HEAD
-      const result = execSync('top -bn1 | grep "Cpu(s)"
-
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+const result = execSync('top -bn1 | grep "Cpu(s)";

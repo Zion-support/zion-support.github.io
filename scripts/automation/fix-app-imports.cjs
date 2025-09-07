@@ -91,7 +91,7 @@ class AppImportsFixer {}
     
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Define the pages to check;
-    const pages = [{ "name": 'HomePage', "path": './pages/HomePage' },]
+const pages = [{ "name": 'HomePage', "path": './pages/HomePage' },];
       { "name": 'ServicesPage', "path": './pages/ServicesPage' },
       { "name": 'SolutionsPage', "path": './pages/SolutionsPage' },
       { "name": 'AboutPage', "path": './pages/AboutPage' },

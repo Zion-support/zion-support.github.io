@@ -1,183 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-const allowlist = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
+const allowlist = new Set<string>([(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean))export default async function handler("req": NextApiRequest;'
+  "res": NextApiResponse;
 
-const allowlist = null;
-
-const allowlist = new Set<string>(
-  [(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean)
-);
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-<<<<<<< HEAD
-
-const allowlist  = null;const allowlist = new Set<string>([(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean))export default async function handler(req: NextApiRequest;
-  res: NextApiResponse;const allowlist = new Set < string>([(process.env.EXPO_VIP_ADDRESS || '').toLowerCase ()].filter (Boolean))export default async /**;
+const allowlist = new Set < string>([(process.env.EXPO_VIP_ADDRESS || '').toLowerCase ()].filter (Boolean))export default async /**;'
  * handler - Function description;
  */;
-function handler() {const address = String (req.query.address || '').toLowerCase ()if (return res.status (400).json ({ allowed: false })) {$2;
-
+function handler() {const address = String (req.query.address || '').toLowerCase ()if ;'
+}
+return res.status (400).json ({ "allowed": false,;
+})) {$2;
 
 ;
-const allowlist = new Set < string>(
-  [(process.env.EXPO_VIP_ADDRESS || '').toLowerCase ()].filter (Boolean));
+
+}
+
+const allowlist = new Set < string>(;
+  [(process.env.EXPO_VIP_ADDRESS || '').toLowerCase ()].filter (Boolean));'
 ;
 export default async /**
  * handler - Function description
  */
 function handler() {
-  const address = String (req.query.address || '').toLowerCase ();
-  if (return res.status (400).json ({ allowed: false })) {
+  }
+  const address = String (req.query.address || '').toLowerCase ();'
+  if (return res.status (400).json ({ "allowed": false })) {
   $2
 }
-  res.status (200).json ({ allowed: allowlist.has (address) });
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const address = String (req.query.address || '').toLowerCase ();
-  if (return res.status (400).json ({ allowed: false })) {
-  $2
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-const allowlist = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-const allowlist = new Set<string>(
-  [(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean)
-);
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-;
-const allowlist = new Set < string>('
-  [(process.env.EXPO_VIP_ADDRESS || '').toLowerCase ()].filter (Boolean));
-;
-export default async /**;
+  res.status (200).json ({ "allowed": allowlist.has (address)
+})export default async /**;
  * handler - Function description;
- */
-function handler() { return null; }
-  if (return res.status (400).json ({ allowed: false })) {}
-  $2;
+ */;
+function handler() {const address = String (req.query.address || '').toLowerCase ()if ;'
 }
-  res.status (200).json ({ allowed: allowlist.has (address) });
-export default async /**;
- * handler - Function description;
- */
-function handler() { return null; }
-  if (return res.status (400).json ({ allowed: false })) {}
-  $2;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+return res.status (400).json ({ "allowed": false,;
+})) {$2;
 }
-  res.status (200).json ({ allowed: allowlist.has (address) });
-
+  res.status (200).json ({ "allowed": allowlist.has (address) })}[(process && process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean))export default async function handler() {const allowlist = new Set<string>([(process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean))export default async function handler() {const address = String(req.query.address |'').toLowerCase()) {const address = String(req.query.address || '').toLowerCase()if (!address) return res.status(400).json({ "allowed": false })res.status(200).json({ "allowed": allowlist.has(address) })export default async function handler() {const address = String(req.query.address || '').toLowerCase()if (!address) return res.status(400).json({ "allowed": false })res.status(200).json({ "allowed": allowlist.has(address),'
+})) {const address = String(req.query.address || '').toLowerCase()if (!address);'
 }
-<<<<<<< HEAD
+return res.status(400).json({ "allowed": false })res.status(200).json({ "allowed": allowlist.has(address),;
+})export default async function handler() ;
+  const address = String(req.query.address || '').toLowerCase()if (!address);'
+return res.status(400).json({ "allowed": false })res.status(200).json({ "allowed": allowlist.has(address) },;
+}ursor/fix-website-loading-errors-and-merge-6662;
+}
 }}
-}}if (!address) return res.status(400).json({ allowed: false })res.status(200).json({ allowed: allowlist.has(address) })}
-  const address = String(req.query.address |'').toLowerCase()if (!address) return res.status(400).json({ allowed: false })res.status(200).json({ allowed: allowlist.has(address) })res.status(200).json({ allowed: allowlist.has(address) })}
-=======
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  [(process && process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean)
+}}if (!address) return res.status(400).json({ "allowed": false })res.status(200).json({ "allowed": allowlist.has(address) }
+}
+
+const address = String(req.query.address |'').toLowerCase()if (!address);'
+return res.status(400).json({ "allowed": false })res.status(200).json({ "allowed": allowlist.has(address) })res.status(200).json({ "allowed": allowlist.has(address) },;
+}
+  [(process && process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean)'
 );
-export default async function handler(
-  req: NextApiRequest;
-res: NextApiResponse;
-) {
-const allowlist = new Set<string />([(process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean));
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const address = String(req.query.address |'').toLowerCase();
+
+export default async function handler() {
+}
+const allowlist = new Set<string>([(process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean));'
+
+export default async function handler() {
+  }
+  const address = String(req.query.address |'').toLowerCase();'
 ) {;
 
-const address = String(req.query.address || '').toLowerCase();}
-  if (!address) return res.status(400).json({ allowed: false,}
+}
+
+const address = String(req.query.address || '').toLowerCase();'
+  if (!address) return res.status(400).json({ "allowed": false
 });
-  res.status(200).json({ allowed: allowlist.has(address),}
+  res.status(200).json({ "allowed": allowlist.has(address)
 });
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const address = String(req.query.address || '').toLowerCase();
-  if (!address) return res.status(400).json({ allowed: false });
-  res.status(200).json({ allowed: allowlist.has(address) })
-<<<<<<< HEAD
 
+export default async function handler() {;
 
+}
 
-
-
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-
-
-) {;'
-  const address = String(req.query.address || '').toLowerCase();
-  if (!address) return res.status(400).json({ allowed: false });
-  res.status(200).json({ allowed: allowlist.has(address) });
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const address = String(req.query.address || '').toLowerCase();
-  if (!address) return res.status(400).json({ allowed: false });
-  res.status(200).json({ allowed: allowlist.has(address) })
-pr-12243
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+const address = String(req.query.address || '').toLowerCase();'
+  if (!address) return res.status(400).json({ "allowed": false
+});
+  res.status(200).json({ "allowed": allowlist.has(address)
+})
 
 ) {;
 
-const address = String(req.query.address || '').toLowerCase();}
-  if (!address) return res.status(400).json({ allowed: false,}
-});
-  res.status(200).json({ allowed: allowlist.has(address),}
-});
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const address = String(req.query.address || '').toLowerCase();
-<<<<<<< HEAD
-  if (!address) return res.status(400).json({ allowed: false });
-
-  res.status(200).json({ allowed: allowlist.has(address) })
 }
-=======
-=======
-export default async function handler() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  if (!address) return res.status(400).json({ allowed: false });
 
-  res.status(200).json({ allowed: allowlist.has(address) })
+const address = String(req.query.address || '').toLowerCase();'
+  if (!address) return res.status(400).json({ "allowed": false
+});
+  res.status(200).json({ "allowed": allowlist.has(address)
+});
+
+export default async function handler() {;
+
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
+const address = String(req.query.address || '').toLowerCase();'
+  if (!address) return res.status(400).json({ "allowed": false
+});
 
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-  res.status(200).json({ allowed: allowlist.has(address) })
+  res.status(200).json({ "allowed": allowlist.has(address) })
 }
 
 }
@@ -203,14 +126,9 @@ export default async function handler() { return null; }
 
 }
 
+  if (!address) return res.status(400).json({ "allowed": false
+});
 
+  res.status(200).json({ "allowed": allowlist.has(address) })
 
-}
-
-}
-
-  if (!address) return res.status(400).json({ allowed: false });
-
-  res.status(200).json({ allowed: allowlist.has(address) })
-,
 }

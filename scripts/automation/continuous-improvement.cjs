@@ -3,13 +3,13 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log("" Starting continuous improvement automation...")
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log("" Starting continuous improvement automation...")
 // Get automation interval from environment variable ("default")
   console.log(` Running continuous improvement at ${new Date().toISOString()}

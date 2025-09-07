@@ -27,7 +27,7 @@ class ProjectHealthMonitor {}
     ) {}"
         const timestamp = new Date().toISOString(})
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
 <<<<<<< HEAD
 =======
@@ -43,13 +43,13 @@ class ProjectHealthMonitor {}
     checkProjectStructure() {}
         this.log('Checking project structure...');
         
-        const requiredFiles = ['package.json',]
+const requiredFiles = ['package.json',];
             'next.config.js',
             'tsconfig.json',
             'tailwind.config.js'
         ];
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-        const optionalFiles = ['README.md',]
+        
+const optionalFiles = ['README.md',];
             '.gitignore',
             '.env.example',
             'Dockerfile',
@@ -178,7 +178,7 @@ class ProjectHealthMonitor {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
             
-            const totalDeps = Object.keys(packageJson.dependencies || {}).length + 
+const totalDeps = Object.keys(packageJson.dependencies || {}).length +;
                              Object.keys(packageJson.devDependencies || {}).lengt;h;
             
 =======
@@ -236,7 +236,7 @@ class ProjectHealthMonitor {}
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         try {}
-            const auditResult = execSync('npm audit --json', { })
+const auditResult = execSync('npm audit --json', { });
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
@@ -279,10 +279,10 @@ class ProjectHealthMonitor {}
         const security = this.checkSecurity(;);
 <<<<<<< HEAD
         
-        const totalScore = structure.score + codeQuality.score + typeScript.score + 
+const totalScore = structure.score + codeQuality.score + typeScript.score +;
                           build.score + dependencies.score + security.scor;e;
         
-        const healthStatus = totalScore >= 80 ? 'excellent' : 
+const healthStatus = totalScore >= 80 ? 'excellent' :;
                            totalScore >= 60 ? 'good' : 
                            totalScore >= 40 ? 'fair' : 'poo;r;';
         

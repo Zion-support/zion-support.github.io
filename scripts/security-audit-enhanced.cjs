@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-const fs = require('fs')
-const path = require('path')
-            "status"
-=======
-
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 // console.log('� Auditing dependencies...')
         console.log(' Auditing code security...')
 <<<<<<< HEAD

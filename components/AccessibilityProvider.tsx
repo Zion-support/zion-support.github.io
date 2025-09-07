@@ -1,57 +1,49 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import React, { createContext, useContext, ReactNode } from "react";
+import React, { createContext, useContext, ReactNode } from "react";"
 
 interface AccessibilityContextType {
-  announceToScreenReader: (message: string) => void;
-  setFocus: (elementId: string) => void;
->>>>>>> origin/main
+  }
+  "announceToScreenReader": ("message": string) => void;
+  "setFocus": ("elementId": string) => void;
 }
 
-const AccessibilityContext = createContext<
+const AccessibilityContext = createContext<;
   AccessibilityContextType | undefined
 >(undefined);
 
 interface AccessibilityProviderProps {
-  children: ReactNode;
+  }
+  "children": ReactNode;
 }
 
-<<<<<<< HEAD
-=======
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
-  children,
+export const "AccessibilityProvider": React.FC<AccessibilityProviderProps> = ({
+  }
+  children
 }) => {
-  const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById("live-region");
+  }
+  const announceToScreenReader = ("message": string) => {
+    }
+    const liveRegion = document.getElementById("live-region");"
     if (liveRegion) {
+      }
       liveRegion.textContent = message;
     }
   };
 
-  const setFocus = (elementId: string) => {
+  const setFocus = ("elementId": string) => {
+    }
     const element = document.getElementById(elementId);
     if (element) {
+      }
       element.focus();
     }
   };
 
->>>>>>> origin/main
-=======
-import React, { createContext, useContext, useState } from 'react'
-interface AccessibilityContextType {
-  highContrast: boolean
-  largeText: boolean
-  reducedMotion: boolean
-  toggleHighContrast: () => void
-  toggleLargeText: () => void
-  toggleReducedMotion: () => void
+return (;
+    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
+      {children}
+    </AccessibilityContext.Provider>
+  );
+  return context;
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined)
@@ -85,21 +77,26 @@ export function useAccessibility() {
 }
 
 interface AccessibilityProviderProps {
-  children: React.ReactNode
+  }
+  "children": React.ReactNode;
 }
-
-<<<<<<< HEAD
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
-  const [highContrast, setHighContrast] = useState(false)
-  const [largeText, setLargeText] = useState(false)
-  const [reducedMotion, setReducedMotion] = useState(false)
-  const toggleHighContrast = () => setHighContrast(!highContrast)
-  const toggleLargeText = () => setLargeText(!largeText)
-  const toggleReducedMotion = () => setReducedMotion(!reducedMotion)
+export const "AccessibilityProvider": React.FC < AccessibilityProviderProps> = ({
+  }
+  children
+}) => {
+  }
+  const [high_contrast, setHighContrast] = useState (false);
+  const [large_text, setLargeText] = useState (false);
+  const [reduced_motion, setReducedMotion] = useState (false);
+;
+  const toggleLargeText = () =>: any setLargeText (!large_text);
+  const toggleReducedMotion = () =>: any setReducedMotion (!reduced_motion);
+;
   const value = {
-    highContrast,
-    largeText,
-    reducedMotion,
+    }
+    high_contrast,
+    large_text,
+    reduced_motion,
     toggleHighContrast,
     toggleLargeText,
     toggleReducedMotion,

@@ -1,338 +1,300 @@
 
+async function scorePage() {
 
-
-
-
-
-
-
-
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-const { upsertFile } = require($2);
-async function scorePage(url) {
-  const t0 = Date.now($2);
-  try {
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+    }
 
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '';'
 
+const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html);'
 
-const { upsert_file } = require ('./_lib / github');
+const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length;
+
+const score =;
+      (title ? 20 : 0) +
+      (hasMetaDesc ? 20 : 0) +
+      Math && Math.min(60, h1Count * 10) -
+      Math && Math.min(20, Math && Math.floor(ms / 500));
+    return { url, ms, title, hasMetaDesc, h1Count, "score": Math && Math.max(0, score) };
+  } catch (e) {
+}
+return { url, "error": e && e.message || String(e), "score": 0,;
+};
+  }
+exports && exports.handler = async function () {
+  }
+  try {;
+  }
+  const { upsert_file } = require ('./_lib / github');'
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
-async function scorePage() {const html = await resp && resp.text()const ms = Date && Date.now() - t0;
-    const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '';
-    const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html)const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length;
-    const score =;
+async function scorePage() {const html = await resp && resp.text(;
+  }
+  const ms = Date && Date.now() - t0;
+
+const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '';'
+
+const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html;'
+  const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length;
+
+const score =;
       (title ? 20 : 0) +;
       (hasMetaDesc ? 20 : 0) +;
       Math && Math.min(60, h1Count * 10) -;
-      Math && Math.min(20, Math && Math.floor(ms / 500))return { url, ms, title, hasMetaDesc, h1Count, score: Math && Math.max(0, score) }} catch (e) {return { url, error: e && e.message || String(e), score: 0 }}
-exports && exports.handler = async function () {try {const baseUrl  = process && process.env.URL || process && process.env.DEPLOY_URL || '';const baseUrl  = process && process.env.URL || process && process.env.DEPLOY_URL || '';const { upsert_file }  = require ('./_lib / github')async /**;
+      Math && Math.min(20, Math && Math.floor(ms / 500))return { url, ms, title, hasMetaDesc, h1Count, "score": Math && Math.max(0, score) }} catch (e) {return { url, "error": e && e.message || String(e), "score": 0 
+}
+exports && exports.handler = async function () {try ;
+  }
+  const baseUrl  = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
+
+const baseUrl  = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
+
+const { upsert_file }  = require ('./_lib / github')async /**;'
  * score_page - Function description;
  */;
-function score_page() {const t0 = Date.now ()try {const resp = await fetch (url)const html = await resp.text ()const ms = Date.now () - t0;
-    const title = (html.match (/<title>(.*?)<\/title>/i) || [])[1] || '';
-    const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test (html)const h1Count = (html.match (/<h1[^>]*>/gi) || []).length;
-    const score =;
+function score_page() {const t0 = Date.now ()try {const resp = await fetch (url)const html = await resp.text (;
+  }
+  const ms = Date.now () - t0;
+
+const title = (html.match (/<title>(.*?)<\/title>/i) || [])[1] || '';'
+
+const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test (html;'
+  const h1Count = (html.match (/<h1[^>]*>/gi) || []).length;
+
+const score =;
       (title ? 20 : 0) +;
       (hasMetaDesc ? 20 : 0) +;
       Math.min (60, h1Count * 10) -;
-      Math.min (20, Math.floor (ms / 500))return { url, ms, title, hasMetaDesc, h1Count, score: Math.max (0, score) }
-  } catch (e) {return { url, error: e.message || String (e), score: 0 }
+      Math.min (20, Math.floor (ms / 500))return { url, ms, title, hasMetaDesc, h1Count, "score": Math.max (0, score) }
+  } catch (e) {return { url, "error": e.message || String (e), "score": 0 }
+ 
+}
+exports.handler = async function () {try ;
   }
-exports.handler = async function () {try {const base_url = process.env.URL || process.env.DEPLOY_URL || '';
-    const pages = ['/', '/learn', '/dao', '/certifications', '/blog'];
-    const results = [];
+  const base_url = process.env.URL || process.env.DEPLOY_URL || '';'
 
-    const report = { updatedAt: Date && Date.now(), results };
-    const owner = process && process.env.GITHUB_OWNER;
-    ${p}`))}
-        token;
+const pages = ['/', '/learn', '/dao', '/certifications', '/blog'];'
+
+const results = [];
+    ${p}`))}`        token;
       })}
-    return {const report = { updatedAt: Date && Date.now(), results }const owner = process && process.env.GITHUB_OWNER;
-    const repo = process && process.env.GITHUB_REPO;
-    const token = process && process.env.GITHUB_TOKEN;
-    if (owner && repo && token) {await upsertFile({owner,repo,path: 'data/reports/seo/weekly-seo && seo.json',content: JSON && JSON.stringify(report, null, 2),message: 'chore(automation): weekly SEO report',const report = { updated_at: Date.now (), results }const owner = process.env.GITHUB_OWNER;
-    const repo = process.env.GITHUB_REPO;
-    const token  = process.env.GITHUB_TOKEN;// Check condition;
+    return {const report = { "updatedAt": Date && Date.now(), results }
+;
+  const owner = process && process.env.GITHUB_OWNER;
+
+const repo = process && process.env.GITHUB_REPO;
+
+const token = process && process.env.GITHUB_TOKEN;
+    if (owner && repo && token) {await upsertFile({owner,repo,"path": 'data/reports/seo/weekly-seo && seo.json',"content": JSON && JSON.stringify(report, null, 2),"message": 'chore(automation): weekly SEO report',const report = { "updated_at": Date.now (), results }'
+;
+  const owner = process.env.GITHUB_OWNER;
+
+const repo = process.env.GITHUB_REPO;
+
+const token  = process.env.GITHUB_TOKEN;// Check condition;
 if ( {) {$2;
 }
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-        token,
-      });
-    }
-    return {
-
-  const t0 = Date.now(),
-      status_code: 200,
-      body: JSON.stringify ({ ok: true, pages: results.length }),
-    }
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-}async /**
- * score_page - Function description
- */
-function score_page() {
-  const t0 = Date.now (),
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-      await upsert_file ({owner,repo,path: 'data / reports / seo / weekly - seo.json',content: JSON.stringify (report, null, 2),message: 'chore (automation): weekly SEO report',token;
+      await upsert_file ({owner,repo,"path": 'data / reports / seo / weekly - seo.json',"content": JSON.stringify (report, null, 2),"message": 'chore (automation): weekly SEO report',token;'
       })}
-    return {const t0 = Date.now(),status_code: 200,body: JSON.stringify ({ ok: true, pages: results.length })}
-  } catch (e) {return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+    return {const t0 = Date.now(),"status_code": 200,"body": JSON.stringify ({ "ok": true, "pages": results.length })}
+ 
+} catch (e) ;
+  return { "status_code": 500, "body": JSON.stringify ({ "error": e.message }) }
   }
 }async /**;
  * score_page - Function description;
  */;
-function score_page() {const t0 = Date.now (),try {const resp = await fetch (url),const html = await resp.text (),const ms = Date.now () - t0,const title = (html.match (/<title>(.*?)<\/title>/i) || [])[1] || '',const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test (html),const h1Count = (html.match (/<h1[^>]*>/gi) || []).length,const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min (60, h1Count * 10) - Math.min (20, Math.floor (ms / 500)),return { url, ms, title, hasMetaDesc, h1Count, score: Math.max (0, score) }
-const { upsertFile } = require('./_lib/github')async function scorePage() {const t0 = Date.now()try {const resp = await fetch(url)const html = await resp.text()const ms = Date.now() - t0,const title = (html.match(/<title>(.*?)<\/title>/i) || [])[1] || '';
-    const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test(html)const h1Count = (html.match(/<h1[^>]*>/gi) || []).length,const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500)),return { url, ms, title, hasMetaDesc, h1Count, score: Math.max(0, score) }} catch (e) {return { url, error: e.message || String (e), score: 0 }
+function score_page() {const t0 = Date.now (),try {const resp = await fetch (url),const html = await resp.text (),const ms = Date.now () - t0,const title = (html.match (/<title>(.*?)<\/title>/i) || [])[1] || '',const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test (html),const h1Count = (html.match (/<h1[^>]*>/gi) || []).length,const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min (60, h1Count * 10) - Math.min (20, Math.floor (ms / 500));'
+  }
+  return { url, ms, title, hasMetaDesc, h1Count, "score": Math.max (0, score);
+}
+
+const { upsertFile } = require('./_lib/github')async function scorePage() {const t0 = Date.now()try {const resp = await fetch(url)const html = await resp.text()const ms = Date.now() - t0;'
+  }
+  const title = (html.match(/<title>(.*?)<\/title>/i) || [])[1] || '';'
+
+const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test(html)const h1Count = (html.match(/<h1[^>]*>/gi) || []).length,const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500)),return { url, ms, title, hasMetaDesc, h1Count, "score": Math.max(0, score) }} catch (e) ;'
+  return { url, "error": e.message || String (e), "score": 0 }
   }
 }
-exports.handler = async function () {try {const base_url = process.env.URL || process.env.DEPLOY_URL || '',const pages = ['//learn / dao / certifications / blog'],const results = [],for (const p of pages) {results.push (await score_page (`${base_url}${p}`))}
-    const report = { updated_at: Date.now (), results },const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,const token = process.env.GITHUB_TOKEN,// Check condition;
+exports.handler = async function () {try {const base_url = process.env.URL || process.env.DEPLOY_URL || '',const pages = ['//learn / dao / certifications / blog'],const results = [],for (const p of pages) {results.push (await score_page (`${base_url}${p}`);`}
+
+const report = { "updated_at": Date.now (), results },const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO;
+  const token = process.env.GITHUB_TOKEN,// Check condition;
 if ( {) {$2;
 }
-      await upsert_file ({ owner, repo, path: 'data / reports / seo / weekly - seo.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly SEO report', token })}
-    return { status_code: 200, body: JSON.stringify ({ ok: true, pages: results.length }) }} catch (e) {return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }statusCode: 200,body: JSON && JSON.stringify({ ok: true, pages: results && results.length })}} catch (e) {return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }}}async function scorePage() {const t0 = Date && Date.now(),try {const resp = await fetch(url),const html = await resp && resp.text(),const ms = Date && Date.now() - t0,const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '',const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html),const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length,const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math && Math.min(60, h1Count * 10) - Math && Math.min(20, Math && Math.floor(ms / 500)),return { url, ms, title, hasMetaDesc, h1Count, score: Math && Math.max(0, score) }
-  } catch (e) {return { url, error: e && e.message || String(e), score: 0 }
+      await upsert_file ({ owner, repo, "path": 'data / reports / seo / weekly - seo.json', "content": JSON.stringify (report, null, 2), "message": 'chore (automation): weekly SEO report', token })}'
+    return { "status_code": 200, "body": JSON.stringify ({ "ok": true, "pages": results.length }) 
+} catch (e) {return { "status_code": 500, "body": JSON.stringify ({ "error": e.message }) }
+ 
+}"statusCode": 200,"body": JSON && JSON.stringify({ "ok": true, "pages": results && results.length })
+} catch (e) {return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message }) }
+}async function scorePage() {const t0 = Date && Date.now(),try {const resp = await fetch(url),const html = await resp && resp.text(),const ms = Date && Date.now() - t0,const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '',const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html),const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length,const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math && Math.min(60, h1Count * 10) - Math && Math.min(20, Math && Math.floor(ms / 500)),return { url, ms, title, hasMetaDesc, h1Count, "score": Math && Math.max(0, score) }'
+  } catch (e) {return { url, "error": e && e.message || String(e), "score": 0 }
   }
 }
-exports && exports.handler = async function() {try {},statusCode: 200,body: JSON.stringify({ ok: true, pages: results.length })try {},const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',const pages = ['//learn/dao/certifications/blog'],const results = [],for (const p of pages) {results && results.push(await scorePage(`${baseUrl}${p}`))}const report = { updatedAt: Date && Date.now(), results },const owner = process && process.env.GITHUB_OWNER,const repo = process && process.env.GITHUB_REPO,const token = process && process.env.GITHUB_TOKEN,if (owner && repo && token) {await upsertFile({ owner, repo, path: 'data/reports/seo/weekly-seo && seo.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly SEO report', token })}return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }} catch (e) {return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+exports && exports.handler = async function() {try 
+},"statusCode": 200,"body": JSON.stringify({ "ok": true, "pages": results.length })try 
+},const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',const pages = ['//learn/dao/certifications/blog'],const results = [],for (const p of pages) {results && results.push(await scorePage(`${baseUrl}${p}`))}`
+const report = { "updatedAt": Date && Date.now(), results },const owner = process && process.env.GITHUB_OWNER,const repo = process && process.env.GITHUB_REPO,const token = process && process.env.GITHUB_TOKEN,if (owner && repo && token) {await upsertFile({ owner, repo, "path": 'data/reports/seo/weekly-seo && seo.json', "content": JSON && JSON.stringify(report, null, 2), "message": 'chore(automation): weekly SEO report', token })}return { "statusCode": 200, "body": JSON && JSON.stringify({ "ok": true, "pages": results && results.length }) ,'
+} catch (e) {return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message }) }
   }
 }
 }
-},statusCode: 200,body: JSON.stringify({ ok: true, pages: results.length })}} catch (e) {return { statusCode: 500, body: JSON.stringify({ error: e.message }) }}
-}async function scorePage() {const t0 = Date.now(),try {const resp = await fetch(url),const html = await resp.text(),const ms = Date.now() - t0,const title = (html.match(/<title>(.*?)<\/title>/i) || [])[1] || '',const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test(html),const h1Count = (html.match(/<h1[^>]*>/gi) || []).length,const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500)),return { url, ms, title, hasMetaDesc, h1Count, score: Math.max(0, score) }
-  } catch (e) {return { url, error: e.message || String(e), score: 0 }
+},"statusCode": 200,"body": JSON.stringify({ "ok": true, "pages": results.length })
+} catch (e) {return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }}
+}async function scorePage() {const t0 = Date.now(),try {const resp = await fetch(url),const html = await resp.text(),const ms = Date.now() - t0,const title = (html.match(/<title>(.*?)<\/title>/i) || [])[1] || '',const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test(html),const h1Count = (html.match(/<h1[^>]*>/gi) || []).length,const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500)),return { url, ms, title, hasMetaDesc, h1Count, "score": Math.max(0, score) }'
+  } catch (e) ;
+  return { url, "error": e.message || String(e), "score": 0 }
   }
-}exports.handler = async function() {try {const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',const pages = ['//learn/dao/certifications/blog'],const results = [],for (const p of pages) {results.push(await scorePage(`${baseUrl}${p}`))}
-    const report = { updatedAt: Date.now(), results },const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,const token = process.env.GITHUB_TOKEN,if (owner && repo && token) {await upsertFile({owner,repo,path: 'data/reports/seo/weekly-seo.json',content: JSON.stringify(report, null, 2),message: 'chore(automation): weekly SEO report',token;
-      })}return {statusCode: 200,body: JSON.stringify({ ok: true, pages: results.length })}} catch (e) {return { statusCode: 500, body: JSON.stringify({ error: e.message }) }}
-}if (owner && repo && token) {await upsertFile({ owner, repo, path: 'data/reports/seo/weekly-seo.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly SEO report', token })}return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) }
-  } catch (e) {return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+}exports.handler = async function() {try {const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',const pages = ['//learn/dao/certifications/blog'],const results = [],for (const p of pages) {results.push(await scorePage(`${baseUrl}${p}`);`}
+
+const report = { "updatedAt": Date.now(), results },const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO;
+  const token = process.env.GITHUB_TOKEN,if (owner && repo && token) {await upsertFile({owner,repo,"path": 'data/reports/seo/weekly-seo.json',"content": JSON.stringify(report, null, 2),"message": 'chore(automation): weekly SEO report',token;'
+      })}return {"statusCode": 200,"body": JSON.stringify({ "ok": true, "pages": results.length })
+} catch (e) {return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }}
+}if (owner && repo && token) {await upsertFile({ owner, repo, "path": 'data/reports/seo/weekly-seo.json', "content": JSON.stringify(report, null, 2), "message": 'chore(automation): weekly SEO report', token })}return { "statusCode": 200, "body": JSON.stringify({ "ok": true, "pages": results.length }) }'
+ 
+} catch (e) {return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }
   }
-}},statusCode: 200,body: JSON.stringify({ ok: true, pages: results.length })}} catch (e) {return { statusCode: 500, body: JSON.stringify({ error: e.message }) }}
-}async function scorePage() {const t0 = Date.now(),try {const resp = await fetch(url),const html = await resp.text(),const ms = Date.now() - t0,const title = (html.match(/<title>(.*?)<\/title>/i) || [])[1] || '',const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test(html),const h1Count = (html.match(/<h1[^>]*>/gi) || []).length,const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500)),return { url, ms, title, hasMetaDesc, h1Count, score: Math.max(0, score) }
-  } catch (e) {return { url, error: e.message || String(e), score: 0 }
-    ${p}`));
-    }
+
+},"statusCode": 200,"body": JSON.stringify({ "ok": true, "pages": results.length })
+} catch (e) {return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }}
+}async function scorePage() {const t0 = Date.now(),try {const resp = await fetch(url),const html = await resp.text(),const ms = Date.now() - t0,const title = (html.match(/<title>(.*?)<\/title>/i) || [])[1] || '',const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test(html),const h1Count = (html.match(/<h1[^>]*>/gi) || []).length;'
+  }
+  const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500)),return { url, ms, title, hasMetaDesc, h1Count, "score": Math.max(0, score) }
+  } catch (e) ;
+  return { url, "error": e.message || String(e), "score": 0 }
+    ${
+}`));`    }
         token
       });
     }
     return {
-
-
+  }
   try {
-    const resp = await fetch (url),
-    const html = await resp.text (),
-    const ms = Date.now () - t0,
-    const title = (html.match (/<title>(.*?)<\/title>/i) || [])[1] || '',
-    const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test (html),
-    const h1Count = (html.match (/<h1[^>]*>/gi) || []).length,
-    const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min (60, h1Count * 10) - Math.min (20, Math.floor (ms / 500)),
-    return { url, ms, title, hasMetaDesc, h1Count, score: Math.max (0, score) }
-
-const { upsertFile } = require('./_lib/github');
-async function scorePage(url) {
-  const t0 = Date.now();
-  try {
-    const resp = await fetch(url);
-    const html = await resp.text();
-    const ms = Date.now() - t0,
-    const title = (html.match(/<title>(.*?)<\/title>/i) || [])[1] || '';
-    const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test(html);
-    const h1Count = (html.match(/<h1[^>]*>/gi) || []).length,
-    const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500)),
-    return { url, ms, title, hasMetaDesc, h1Count, score: Math.max(0, score) }
+}
+const resp = await fetch (url),;
+const html = await resp.text (),;
+const ms = Date.now () - t0,;
+const title = (html.match (/<title>(.*?)<\/title>/i) || [])[1] || '',;'
+const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test (html),;'
+const h1Count = (html.match (/<h1[^>]*>/gi) || []).length,;
+const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min (60, h1Count * 10) - Math.min (20, Math.floor (ms / 500)),;
+    return { url, ms, title, hasMetaDesc, h1Count, "score": Math.max (0, score) }
   } catch (e) {
-    return { url, error: e.message || String (e), score: 0 }
+   ;
+  }
+  return { url, "error": e.message || String (e), "score": 0 }
   }
 }
 exports.handler = async function () {
+  }
   try {
-    const base_url = process.env.URL || process.env.DEPLOY_URL || '',
-    const pages = ['//learn / dao / certifications / blog'],
-    const results = [],
-    for (const p of pages) {
+}
+const base_url = process.env.URL || process.env.DEPLOY_URL || '',;'
+    const pages = ['//learn / dao / certifications / blog'],'
+const results = [],;
+    for ;
+  const p of pages) {
+      }
+      results.push (await score_page (`${base_url}${p}`));`    }
 
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-      results.push (await score_page (`${base_url}${p}`));
-    }
-    const report = { updated_at: Date.now (), results },
-    const owner = process.env.GITHUB_OWNER,
-    const repo = process.env.GITHUB_REPO,
-    const token = process.env.GITHUB_TOKEN,
-    // Check condition
+const report = { "updated_at": Date.now (), results },;
+const owner = process.env.GITHUB_OWNER,;
+const repo = process.env.GITHUB_REPO,;
+   ;
+const token = process.env.GITHUB_TOKEN,;
+    // Check condition,
 if ( {) {
   $2
 }
-      await upsert_file ({ owner, repo, path: 'data / reports / seo / weekly - seo.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly SEO report', token });
+      await upsert_file ({ owner, repo, "path": 'data / reports / seo / weekly - seo.json', "content": JSON.stringify (report, null, 2), "message": 'chore (automation): weekly SEO report', token });'
     }
-    return { status_code: 200, body: JSON.stringify ({ ok: true, pages: results.length }) }
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-};async function scorePage(url) {
-  const t0 = Date && Date.now(),
+    return { "status_code": 200, "body": JSON.stringify ({ "ok": true, "pages": results.length }) }
+};async function scorePage() {
+}
+const t0 = Date && Date.now(),;
   try {
-    const resp = await fetch(url),
-    const html = await resp && resp.text(),
-    const ms = Date && Date.now() - t0,
-    const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '',
-    const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html),
-    const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length,
-    const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math && Math.min(60, h1Count * 10) - Math && Math.min(20, Math && Math.floor(ms / 500)),
-    return { url, ms, title, hasMetaDesc, h1Count, score: Math && Math.max(0, score) }
+}
+const resp = await fetch(url),;
+const html = await resp && resp.text(),;
+const ms = Date && Date.now() - t0,;
+const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '',;'
+const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html),;'
+const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length,;
+   ;
+const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math && Math.min(60, h1Count * 10) - Math && Math.min(20, Math && Math.floor(ms / 500)),;
+    return { url, ms, title, hasMetaDesc, h1Count, "score": Math && Math.max(0, score) }
   } catch (e) {
-    return { url, error: e && e.message || String(e), score: 0 }
+   ;
+  }
+  return { url, "error": e && e.message || String(e), "score": 0 }
   }
 }
 exports && exports.handler = async function() {
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
-    const pages = ['//learn/dao/certifications/blog'],
-    const results = [],
-
-    for (const p of pages) {
-      results && results.push(await scorePage(`${baseUrl}${p}`))
-    }
-
-    const report = { updatedAt: Date && Date.now(), results },
-    const owner = process && process.env.GITHUB_OWNER,
-    const repo = process && process.env.GITHUB_REPO,
-    const token = process && process.env.GITHUB_TOKEN,
-
-
-    if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/seo/weekly-seo && seo.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly SEO report', token })
-    }
-
-
-    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
-
-  } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-}
   try {}
 }
 },
 
-      statusCode: 200,
-      body: JSON.stringify({ ok: true, pages: results.length })
-    };
+      "statusCode": 200,
+      "body": JSON.stringify({ "ok": true, "pages": results.length })
+   
+};
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
-  }
-}exports.handler = async function() {try {const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',const pages = ['//learn/dao/certifications/blog'],const results = [],for (const p of pages) {results.push(await scorePage(`${baseUrl}${p}`))}
-    const report = { updatedAt: Date.now(), results },const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,const token = process.env.GITHUB_TOKEN,if (owner && repo && token) {await upsertFile({ owner, repo, path: 'data/reports/seo/weekly-seo.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly SEO report', token })}return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) }
-  } catch (e) {return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-    const resp = await fetch($2);
-    const html = await resp.text($2);
-    const ms = $2;
-    const title = $2;
-    const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test($2);
-    const h1Count = $2;
-    const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500)),
-    return { url, ms, title, hasMetaDesc, h1Count, score: Math.max(0, score) }
-  } catch (e) {
-    return { url, error: e.message || String(e), score: 0}
-  }
-},ursor/fix-website-loading-errors-and-merge-6662;
-}
-},
-    if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/seo/weekly-seo.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly SEO report', token })
     }
-
-    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) }
-  } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+    return { "statusCode": 500, "body": JSON.stringify({ "error": e.message })
+};
   }
-},
-},
-},
-},
-origin/cursor/automate-test-improve-and-merge-code-20a4
+}exports.handler = async function() {try {const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',const pages = ['//learn/dao/certifications/blog'],const results = [],for (const p of pages) {results.push(await scorePage(`${baseUrl}${p}`);`}
 
-},
-
-
-
-
-      statusCode: 200,
-      body: JSON.stringify({ ok: true, pages: results.length }),
-  try {}
-}
-},
-
-      statusCode: 200,
-      body: JSON.stringify({ ok: true, pages: results.length })
-    };
-  } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
-  }
-}exports.handler = async function() {try {const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',const pages = ['//learn/dao/certifications/blog'],const results = [],for (const p of pages) {results.push(await scorePage(`${baseUrl}${p}`))}
-    const report = { updatedAt: Date.now(), results },const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,const token = process.env.GITHUB_TOKEN,if (owner && repo && token) {await upsertFile({ owner, repo, path: 'data/reports/seo/weekly-seo.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly SEO report', token })}return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) }
-  } catch (e) {return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+const report = { "updatedAt": Date.now(), results },const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO;
+  const token = process.env.GITHUB_TOKEN,if (owner && repo && token) {await upsertFile({ owner, repo, "path": 'data/reports/seo/weekly-seo.json', "content": JSON.stringify(report, null, 2), "message": 'chore(automation): weekly SEO report', token })}return { "statusCode": 200, "body": JSON.stringify({ "ok": true, "pages": results.length }) }'
+ 
+} catch (e) ;
+  return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }
   }
 },ursor/fix-website-loading-errors-and-merge-6662;
 }
 }
 
 exports.handler = async function() {
+  }
   try {
-    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
-    const pages = ['//learn/dao/certifications/blog'],
-    const results = [],
-exports.handler = $2;
-    const pages = $2;
-    const results = $2;
+}
+const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',;'
+    const pages = ['//learn/dao/certifications/blog'],'
+const results = [],;
     for (const p of pages) {
-      results.push(await scorePage(`${baseUrl}${p}`))
-    }
-    const report = { updatedAt: Date.now(), results },
+      }
+      results.push(await scorePage(`${baseUrl}${p}`))`
+   ;
+}
+
+const report = { "updatedAt": Date.now(), results },;
+
+const owner = process.env.GITHUB_OWNER,;
+const repo = process.env.GITHUB_REPO,;
+   ;
+const token = process.env.GITHUB_TOKEN,;
 
     const owner = $2;
     const repo = $2;
     const token = $2;
     if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/seo/weekly-seo.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly SEO report', token })
+      }
+      await upsertFile({ owner, repo, "path": 'data/reports/seo/weekly-seo.json', "content": JSON.stringify(report, null, 2), "message": 'chore(automation): weekly SEO report', token })'
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) }
-  } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+    return { "statusCode": 200, "body": JSON.stringify({ "ok": true, "pages": results.length }) }
+ 
+} catch (e) {
+   ;
   }
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-
-};
-
+  return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }
+  }
 },

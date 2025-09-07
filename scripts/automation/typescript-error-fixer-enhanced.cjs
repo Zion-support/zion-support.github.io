@@ -3,15 +3,15 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 const { promisify } = require("util")
     this.logDir = path.join(this.projectRoot, "automation/logs")
   fs.mkdirSync(this.logDir, { "recursive"})
     console.log("" Enhanced TypeScript Error Fixer Started")
   async log(message, type = ")
-    const logFile = path.join(this.logDir, "typescript-error-fixer.log")
+const logFile = path.join(this.logDir, "typescript-error-fixer.log");
     await appendFile(logFile, logMessage + "\n")
   "cwd"
         "encoding": "utf8"
@@ -24,7 +24,7 @@ const { promisify } = require("util")
     console.log(")
         "output": error.stdout || error.stderr || ""
 async log(message, type = "INFO")
-    const logFile = path.join(this.logDir, "typescript-error-fixer.log")
+const logFile = path.join(this.logDir, "typescript-error-fixer.log");
     await appendFile(logFile, logMessage + "\n")
   "cwd"
         "encoding": "utf8"
@@ -46,33 +46,33 @@ async log(message, type = "INFO")
           if (fs.existsSync(tsxPath)) {return "import { ${imports} } from "./components/${componentName}.tsx""} else if (fs.existsSync(jsxPath)) {return "import { ${imports} } from "./components/${componentName}.jsx""
       }"
     // Find all "TypeScript/JavaScript"
-    const files = await this.findFiles("src", [".ts", ".tsx", ".js", ".jsx")]
-  const content = await readFile(file, "utf8")
+const files = await this.findFiles("src", [".ts", ".tsx", ".js", ".jsx")];
+const content = await readFile(file, "utf8");
           this.fixes.push({ file, "type": "import", "description": "Fixed import paths" }
 });await this.log("Fixed imports in ${file}")
       } catch (error) {  await this.log("Error fixing imports in ${file  }: ${error.message}", "ERROR")
   await this.log(" Fixing type errors...")
-    const typeFixes = ["]
+const typeFixes = ["];
   "pattern": /const\s+(\w+):\s*any\s*=/g", ""replacement": "const $1: unknown ="}", "
   "pattern": /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g", ""replacement": "function $1(): unknown {"}", "
   "pattern": /:\s*any\s*\[\"]
         "replacement": ": unknown[]"
   await this.log(" Fixing type errors...")
-    const typeFixes = ["]
+const typeFixes = ["];
   pattern: /const\s+(\w+):\s*any\s*=/g", ""replacement": "const $1: unknown ="}", "
   "pattern": /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g", ""replacement": "function $1(): unknown {"}", "
   "pattern": /:\s*any\s*\[\"]
         "replacement": ": unknown[]"
-    const files = await this.findFiles("src", [".ts", ".tsx")]
-  const content = await readFile(file, "utf8")
+const files = await this.findFiles("src", [".ts", ".tsx")];
+const content = await readFile(file, "utf8");
           this.fixes.push({ file, "type": "type", "description": "Fixed type annotations" }
 
           this.fixes.push({ file, "type": "type", "description": "Fixed type annotations" }")"
 });await this.log("Fixed types in ${file}")
       } catch (error) {  await this.log("Error fixing types in ${file  }: ${error.message}", "ERROR")
   await this.log(" Fixing component errors...")
-    const componentFixes = ["]
-  "pattern": /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g", replacement": (match", "componentName) => {return "}
+const componentFixes = ["];
+  "pattern": /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g", ""replacement": (match", "componentName) => {return "}
   )}"
 <<<<<<< HEAD
   console.error(""Error": ")
@@ -81,8 +81,8 @@ async log(message, type = "INFO")
 });await this.log("Added default export to ${file}")
       } catch (error) {  await this.log("Error fixing exports in ${file  }: ${error.message}", "ERROR")
   await this.log(" Fixing ServicesPage specific error...")
-    const appFile = path.join(this.projectRoot, ""src/App.tsx"")
-  let content = await readFile(appFile, "utf8")
+const appFile = path.join(this.projectRoot, ""src/App.tsx"");
+let content = await readFile(appFile, "utf8");
         content = content.replace(/const ServicesPage = lazy\(\(\) => import\("\.\/pages\/ServicesPage"\)\.then\(module => \(\{ "default": module\.ServicesPage \}\)\)\);/g,const ServicesPage = lazy(() => import("./""pages/ServicesPage""").then(module => ({ "default": module.default })));"
         this.fixes.push({ "file": appFile, "type": "import", "description": "Fixed ServicesPage import"})
         await this.log("Fixed ServicesPage import in App.tsx")
@@ -90,7 +90,7 @@ async log(message, type = "INFO")
         this.fixes.push({ "file": appFile, "type": "import", "description": "Fixed ServicesPage import"})
         await this.log("Fixed ServicesPage import in App.tsx")
   await this.log(`Error fixing "ServicesPage": ${error.message}`, "ERROR"`)
-  const fullPath = path.join(currentDir, ")
+const fullPath = path.join(currentDir, ");
   "timestamp": this.startTime.toISOString()", "duration"
       "totalFixes"
       "fixesByType"
@@ -98,7 +98,7 @@ async log(message, type = "INFO")
       "totalFixes"
       "fixesByType"
       "fixes"
-    const reportFile = path.join(this.logDir, ""typescript-fixes-${Date.now()}.json"
+const reportFile = path.join(this.logDir, ""typescript-fixes-${Date.now()}.json";
     await writeFile(reportFile")
     await this.log(` Report "generated"`)
   await this.log(" Starting TypeScript error fixing...")
@@ -106,7 +106,7 @@ async log(message, type = "INFO")
       return report} catch (error) {  await this.log(` Error in TypeScript "fixer": ${error.message  }`, "ERROR")} catch (error) {await this.log(` Error in TypeScript "fixer": ${error.message}`, "ERROR"`)
   async runContinuous(interval = 300000) { // 5 minutes defaultawait this.log(`� Starting continuous TypeScript fixing ("interval"`})
         await new Promise(resolve => setTimeout(resolve, interval))} catch (error) {  await this.log(` Error in continuous "run": ${error.message  }`, "ERROR"`)
-  const continuous = args.includes("--continuous") || args.includes("-c")
+const continuous = args.includes("--continuous") || args.includes("-c");
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
 <<<<<<< HEAD
 <<<<<<< HEAD

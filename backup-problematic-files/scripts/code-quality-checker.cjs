@@ -1,5 +1,5 @@
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
   log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
@@ -7,11 +7,11 @@ const path = require('path')
       'WARNING': '⚠'
       'FIX': ''
     }[type] || 'ℹ'
-    const content = fs.readFileSync(filePath, 'utf8')
-    const lines = content.split('\n')
+const content = fs.readFileSync(filePath, 'utf8');
+const lines = content.split('\n');
       this.log(`Fixed ${fileFixes} issues in ${path.relative(this.projectRoot, filePath)}`, 'FIX'
       this.log(`Found ${fileIssues} issues in ${path.relative(this.projectRoot, filePath)}`, 'WARNING'
-    const lines = content.split('\n')
+const lines = content.split('\n');
       if (line.includes('console.log') && !line.includes('//')
           type: 'console.log'
           message: 'Console.log statement found'
@@ -30,13 +30,13 @@ const path = require('path')
           type: 'missing_semicolon'
           message: 'Missing semicolon'
           severity: 'error'
-    const lines = content.split('\n')
+const lines = content.split('\n');
       case 'console.log'
         lines[lineIndex] = lines[lineIndex].replace(/console\.log\([^)]*\);?/g, ''
       case 'missing_semicolon'
         if (!lines[lineIndex].trim().endsWith(';')
           lines[lineIndex] = lines[lineIndex].trim() + ';'
-    return lines.join('\n')
+return lines.join('\n');
         if (item !== 'node_modules' && item !== '.next' && item !== '.git')
         if (['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs')]
     this.log('\n Code Quality Report', 'INFO')

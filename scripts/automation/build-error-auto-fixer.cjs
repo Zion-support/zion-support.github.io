@@ -282,7 +282,7 @@ class BuildErrorAutoFixer {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         // Basic syntax fixes;
-        const fixes = [this.fixMissingSemicolons.bind(this)]
+const fixes = [this.fixMissingSemicolons.bind(this),];
           this.fixUnclosedBrackets.bind(this),
           this.fixUnclosedQuotes.bind(this),
           this.fixTrailingCommas.bind(this);

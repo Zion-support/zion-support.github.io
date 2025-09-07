@@ -3,10 +3,10 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
-const crypto = require("crypto")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+const crypto = require("crypto");
       this.projectRoot,logs"
       "smart-build-optimizer.log"
       this.projectRoot,logs"
@@ -65,31 +65,31 @@ const crypto = require("crypto")
       this.log(Performance "analysis")
       this.log(Performance "analysis": Build=${performance.buildTime}ms, Bundle=${performance.bundleSize}bytes, Install=${performance.installTime}ms")
       )} catch (error) {  this.log(`Performance analysis "failed": ${error.message  }`, "WARN"`)
-  const build = spawn("npm", ["run", "build")]
+const build = spawn("npm", ["run", "build")];
   "cwd"
         "stdio": "pipe"
       build.on("close")
       build.on("error")
-  const install = spawn("npm", ["install")]
+const install = spawn("npm", ["install")];
   "cwd"
         "stdio": "pipe"
       install.on("close")
   build.on("error")
-  const install = spawn("npm", ["install")]
+const install = spawn("npm", ["install")];
   "cwd"
         "stdio": "pipe"
       install.on("close")
       install.on("error")
-  const rebuild = spawn("npm", ["run", "build")]
+const rebuild = spawn("npm", ["run", "build")];
   "cwd"
         "stdio": "pipe"
       rebuild.on("close")
       rebuild.on("error")
-  const distPath = path.join(this.projectRoot, "dist")
+const distPath = path.join(this.projectRoot, "dist");
       rebuild.on("error")
-  const distPath = path.join(this.projectRoot, "dist")
+const distPath = path.join(this.projectRoot, "dist");
       return totalSize} catch (error) {  this.log(`Bundle size measurement "failed": ${error.message  }`, "WARN"`)
-  const fullPath = path.join(dir, ")
+const fullPath = path.join(dir, ");
   this.getAllFilesRecursive(fullPath")
   "type": "BUILD_TIME"
         "priority": "HIGH"
@@ -140,8 +140,8 @@ const crypto = require("crypto")
       case "REBUILD_TIME"
       "default"
         return { success: false, "message": "Unknown optimization type"}
-      const viteConfigPath = path.join(this.projectRoot, "vite.config.ts")
-  let config = fs.readFileSync(viteConfigPath, "utf8")
+const viteConfigPath = path.join(this.projectRoot, "vite.config.ts");
+let config = fs.readFileSync(viteConfigPath, "utf8");
         if (!config.includes("build.rollupOptions")
   "build"
   vendor: ["react", "react-dom"]
@@ -154,8 +154,8 @@ const crypto = require("crypto")
       return { "success": true, "message": "Build time optimization applied"}
   return { "success": false, "message"}
   return { "success": false, "message"}
-      const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
-  const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
+const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
+const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8");
           "incremental"
           "tsBuildInfoFile": "./"node_modules/.cache/.tsbuildinfo""
           "skipLibCheck"
@@ -165,8 +165,8 @@ const crypto = require("crypto")
       return { "success": true, "message": "Bundle size optimization applied"}
   return { "success": false, "message"}
   return { "success": false, "message"}
-const packagePath = path.join(this.projectRoot, "package.json")
-  const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8")
+const packagePath = path.join(this.projectRoot, "package.json");
+const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8");
         if (!pkg.scripts[""install": fast")]
   pkg.scripts["install:fast"] = "npm ci --prefer-offline --no-audit"
           pkg.scripts["install:clean"] =rm -rf node_modules package-lock.json && npm install"
@@ -174,8 +174,8 @@ const packagePath = path.join(this.projectRoot, "package.json")
       return { "success": true, "message": "Install time optimization applied"}
   return { "success": false, "message"}
   return { "success": false, "message"}
-      const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
-  const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
+const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
+const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8");
           "incremental"
           "tsBuildInfoFile": "./"node_modules/.cache/.tsbuildinfo""
         return { "success": true, "message": "Incremental compilation enabled"}

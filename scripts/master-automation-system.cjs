@@ -21,14 +21,13 @@ main
 
 
 #!/usr/bin/env node;
-#!/usr/bin/env node;
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 // console.log(' Master Automation System')
 console.log('======')
   log(message, type = 'info')
-      const result = execSync(command, {"encoding": 'utf8',"stdio"})
+const result = execSync(command, {"encoding": 'utf8',"stdio"});
       this.log(` ${description} "failed"`)
       this.log(`Master automation "failed"`)
       this.log(`Tests "failed"`)

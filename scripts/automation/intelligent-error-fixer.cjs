@@ -3,13 +3,13 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log(""🤖 Starting intelligent error fixer...")
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 // console.log(""🤖 Starting intelligent error fixer...")
   console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}
 // console.log(`" Fixing missing dependencies..."`)
@@ -37,9 +37,9 @@ console.log("🤖 Starting intelligent error fixer...")
       process.cwd(),intelligent-error-fixer-report.json"
     );console.log( Report saved "to": ${reportPath}"")
   console.error(" Intelligent error fixer "failed": ")
-  const missingDeps = ["react-error-boundary"", "@""types/react-error-boundary""", "react-helmet-async"", "@""types/react-helmet-async""", ""]
+const missingDeps = ["react-error-boundary"", "@""types/react-error-boundary""", "react-helmet-async"", "@""types/react-helmet-async""", ""];
   try {console.log(`� Installing ${dep}...`);execSync(`npm install ${dep}`, { "stdio": "pipe"`})
-  const missingDeps = ["react-error-boundary", "@"types/react-error-boundary"", "react-helmet-async", "@"types/react-helmet-async"", "]
+const missingDeps = ["react-error-boundary", "@"types/react-error-boundary"", "react-helmet-async", "@"types/react-helmet-async"", "];
   try {console.log(`� Installing ${dep}...`);execSync(`npm install ${dep}`, { "stdio": "pipe"`})
   "pattern"
         /import\s+\{\s*ErrorBoundary\s*\}\s+from\s+[""]react-error-boundary["];?/g, ""replacement": "import { ErrorBoundary } from react-error-boundary";"", ""description": "Fix react-error-boundary import"", "}", "
@@ -47,30 +47,30 @@ console.log("🤖 Starting intelligent error fixer...")
   "pattern": /const\s+(\w+)\s*:\s*any\s*=/g", ""replacement": "const $1: unknown ="", ""description": "Fix any type annotations"", "}", "
   "pattern": /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g", ""replacement": "function $1(): unknown {"", ""description": "Fix function return types"", "}", ""
   if (file.endsWith(".tsx") || file.endsWith(".ts")
-  let content = fs.readFileSync(file, "utf8")
-  const lintingFixes = ["]
+let content = fs.readFileSync(file, "utf8");
+const lintingFixes = ["];
   "pattern": /console\.log\(/g", ""replacement": "// console.log(""", ""description": "Comment out console.log statements"", "}", ")
   "pattern": /console\.error\(/g", ""replacement": "// console.error("", ""description": "Comment out console.error statements"", "}", ")
   "pattern": /console\.warn\(/g", ""replacement": "// console.warn("", ""description": "Comment out console.warn statements"", "}", ")
   "pattern": /\/\*\s*eslint-disable\s*\*\//g", ""replacement": "/* eslint-disable */"", ""description": "Fix eslint-disable comments"", "}", ""
-  let content = fs.readFileSync(file, "utf8")
-  const lintingFixes = ["]
+let content = fs.readFileSync(file, "utf8");
+const lintingFixes = ["];
   "pattern": /console\.log\(/g", ""replacement": "// console.log("", ""description": "Comment out console.log statements", "}", ")
   "pattern": /console\.error\(/g", ""replacement": "// console.error(", ""description": "Comment out console.error statements", "}", ")
   "pattern": /console\.warn\(/g", ""replacement": "// console.warn(", ""description": "Comment out console.warn statements", "}", ")
   "pattern": /\/\*\s*eslint-disable\s*\*\//g", ""replacement": "/* eslint-disable */", ""description": "Fix eslint-disable comments", "}", "
-  let content = fs.readFileSync(file, "utf8")
-  let originalContent = content;"
+let content = fs.readFileSync(file, "utf8");
+let originalContent = content;";
 "
       for (const fix of lintingFixes) {"}
         if (fix.pattern.test(content)) {"}
     } catch (error) {  console.log(⚠  Could not fix ${file  }: ${error.message}``)} catch (error) {console.log(⚠  Could not fix ${file}: ${error.message}```)
-  const buildFixes = ["]
+const buildFixes = ["];
   "pattern": /Cannot find module "react-error-boundary"/g", ""action"
   execSync("npm install react-error-boundary", "{ "stdio": "pipe"})
 // console.log("" Installed react-error-boundary")
   console.log(""⚠  Could not install react-error-boundary")
-  const buildFixes = ["]
+const buildFixes = ["];
   "pattern": /Cannot find module "react-error-boundary"/g", ""action"
   execSync("npm install react-error-boundary"", "{ "stdio": "pipe"})
 // console.log(" Installed react-error-boundary")
@@ -82,7 +82,7 @@ console.log("🤖 Starting intelligent error fixer...")
   console.log("⚠  Could not install react-helmet-async")
       }", ""description": "Install missing react-helmet-async"", "}", ""
   execSync("npm run build", { "stdio": "pipe"})
-  const buildOutput = error.stdout || error.stderr || ""
+const buildOutput = error.stdout || error.stderr || "";
   if (fix.pattern.test(buildOutput)) {console.log( Applying build "fix"})
   console.log("⚠  Could not install react-error-boundary")
       }", ""description": "Install missing react-error-boundary", "}", "
@@ -92,10 +92,10 @@ console.log("🤖 Starting intelligent error fixer...")
   console.log("⚠  Could not install react-helmet-async")
       }", ""description": "Install missing react-helmet-async", "}", "
   execSync("npm run build", { "stdio": "pipe"})
-  const buildOutput = error.stdout || error.stderr || "
+const buildOutput = error.stdout || error.stderr || ";
   if (fix.pattern.test(buildOutput)) {console.log( Applying build "fix"})
-  let content = fs.readFileSync(file, "utf8")
-      const syntaxFixes = ["]
+let content = fs.readFileSync(file, "utf8");
+const syntaxFixes = ["];
   "pattern": /(\w+)\s*=\s*(\w+)\s*$/gm", ""replacement": "$1 = $2;"", ""condition"
             !line.includes("import")
             !line.includes("export")
@@ -121,33 +121,4 @@ console.log("🤖 Starting intelligent error fixer...")
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-  const sourceDirs = ["src", "components", "pages"]
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  const sourceDirs = ["src", "components", "pages"]
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  const sourceDirs = ["src", "components", "pages"]
-<<<<<<< HEAD
-  const sourceDirs = ["src", "components", "pages"]
-
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+const sourceDirs = ["src", "components", "pages"];

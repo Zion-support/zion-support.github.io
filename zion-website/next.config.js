@@ -1,3 +1,5 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = $2;
-module.exports = $2;
+
+/* eslint-env node */;
+/** @type {import('next').NextConfig} */;'
+const nextConfig = {/* config options here */;
+}module.exports = nextConfig;

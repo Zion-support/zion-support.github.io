@@ -27,18 +27,12 @@
 
 
 #!/usr/bin/env node;
-
-
-
-
-
-
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 // console.log(' Starting Enhanced App Improvement Automation')
 console.log('======')
-    const output = execSync(command, { "encoding": 'utf8', "stdio"})
+const output = execSync(command, { "encoding": 'utf8', "stdio"});
   "status"
       "status"
       "status"

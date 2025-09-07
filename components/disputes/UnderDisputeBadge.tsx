@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-import useSWR from 'swr';
-<<<<<<< HEAD
-const fetcher = (url: string) => fetch(url).then(r => r.json()),
+import useSWR from 'swr';'
 
-export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean, isLoading: boolean } {
-  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
-  const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' || d.status === 'Under Review')),
-=======
+const fetcher = ("url": string) => fetch(url).then(r => { return r.json()); }
 
-<<<<<<< HEAD
-const fetcher = null;
+export function useProjectDisputeStatus("projectId": string): {
+  }
+  "hasActiveDispute": boolean;
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-export function useProjectDisputeStatus(projectId: string): {
-  hasActiveDispute: boolean;
-const fetcher = (url: string) => fetch(url).then(r => r.json())export function useProjectDisputeStatus(projectId: string): {hasActiveDispute: boolean;
-  isLoading: boolean;
-} {const { data, error }  = useSWR(projectId ? `/api/disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some((d: any) =>;
+  "isLoading": boolean;
+} {const { data, error }  = useSWR(projectId ? `/api/disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some(("d": any) =>;`
       d && d.projectId === projectId &&;
 const fetcher = $2;
 export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean, isLoading: boolean} {
@@ -29,78 +17,22 @@ export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: 
   return { hasActiveDispute, isLoading: !data && !error }
 }
 
-export default function UnderDisputeBadge({ projectId }: { projectId: string }) {
-  const { hasActiveDispute } = useProjectDisputeStatus(projectId);
-  if (!hasActiveDispute) return null;
-  return (
-    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
-      Under Dispute
-    </span>
-const fetcher = null;
-const fetcher = (url: string) => fetch(url).then(r => r.json())export function useProjectDisputeStatus(projectId: string): {hasActiveDispute: boolean;
-  isLoading: boolean;
-} {const { data, error }  = useSWR(projectId ? `/api/disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some((d: any) =>;
-      d && d.projectId === projectId &&;
-      (d && d.status === 'Open' || d && d.status === 'Under Review'))return { hasActiveDispute, isLoading: !data && !error }export default function UnderDisputeBadge(): any ({projectId,}: {projectId,}: {projectId: string;
-}) {const { hasActiveDispute } = useProjectDisputeStatus(projectId)if (!hasActiveDispute) return null;
-  return (<span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>;
-      Under Dispute;
-    </span>;
-  )const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher)return { hasActiveDispute, isLoading: !data && !error }
-}export default function UnderDisputeBadge(): any ({ projectId }: { projectId: string }) {const { hasActiveDispute } = useProjectDisputeStatus(projectId)if (!hasActiveDispute) return null;
-  return (}
-  )}const fetcher  = (url: string) =>: any fetch (url).then (r => r.json ())export function useProjectDisputeStatus (project_id: string): {hasActiveDispute: boolean;
-  is_loading: boolean;
-} {const { data, error } = useSWR (project_id ? `/api / disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some ((d: any) =>;
-      d.project_id === project_id &&;
-      (d.status === 'Open' || d.status === 'Under Review'))return { hasActiveDispute, is_loading: !data && !error }export default /**;
- * UnderDisputeBadge - Function description;
- */;
-function UnderDisputeBadge() {const { hasActiveDispute } = useProjectDisputeStatus (project_id)// Check condition;
-if (return null) {$2;
-}
-  return (<span className='inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow - 300 text - xs'>;
-      Under Dispute;
-    </span>)const { data, error } = useSWR (project_id ? `/api / disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some ((d: any) => d.project_id === project_id && (d.status === 'Open' || d.status === 'Under Review')),return { hasActiveDispute, is_loading: !data && !error }
-}
-export default /**;
- * UnderDisputeBadge - Function description;
- */;
-function UnderDisputeBadge() {const { hasActiveDispute } = useProjectDisputeStatus (project_id)// Check condition;
-if (return null) {$2;
-}
-  return (<span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow-300 text-xs">;
-      Under Dispute;
-    </span>)<span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>;
-      Under Dispute;
-    </span>;
-  )return (<span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">;
-      Under Dispute;
-    </span>;
-
-    <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>;
-      Under Dispute;
-    </span>;
-  );  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
-  return { hasActiveDispute, isLoading: !data && !error }
-}
-
-=======
-<<<<<<< HEAD
-  const hasActiveDispute = !!data?.disputes?.some(;
-    (d: any) =>;
-      d && d.projectId === projectId &&;'
-      (d && d.status === 'Open' || d && d.status === 'Under Review');
+      (d && d.status === 'Open' || d && d.status === 'Under Review');'
   );
-  return { hasActiveDispute, isLoading: !data && !error}
+return { hasActiveDispute, "isLoading": !data && !error,;
 };
-export default function UnderDisputeBadge(): any ({;}
-  projectId,;}
+
+export default function UnderDisputeBadge(): any ({;
+  }
+  projectId,;
 }: {;
 
-  projectId,
+  }
+
+  projectId
 }: {;
-  projectId: string;
+  }
+  "projectId": string;
 }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
@@ -112,69 +44,18 @@ export default function UnderDisputeBadge(): any ({;}
   return { hasActiveDispute, isLoading: !data && !error }
 }
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-export default function UnderDisputeBadge(): any ({ projectId }: { projectId: string }) {;
-  const { hasActiveDispute } = useProjectDisputeStatus(projectId);
+}
+
+const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
-  return (
+return (;
 
-}
-<<<<<<< HEAD
-  );
-=======
-  );
-}
-
-;
-const fetcher = (url: string) =>: any fetch (url).then (r => r.json ());
-;
-export function useProjectDisputeStatus (project_id: string): {};
-  hasActiveDispute: boolean;
-  is_loading: boolean;
-} {}`
-  const { data, error } = useSWR (project_id ? `/api / disputes` : null, fetcher);
-  const hasActiveDispute = !!data?.disputes?.some (
-    (d: any) =>;
-      d.project_id === project_id &&;'
-      (d.status === 'Open' || d.status === 'Under Review'));
-  return { hasActiveDispute, is_loading: !data && !error }
-;
-export default /**;
- * UnderDisputeBadge - Function description;
- */
-function UnderDisputeBadge() {}
-  const { hasActiveDispute } = useProjectDisputeStatus (project_id);
-  // Check condition;
-if (return null) {}
-  $2;
-}
-  return ('
-    <span className='inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow - 300 text - xs'>;
-      Under Dispute;`
-    </span>);  const { data, error } = useSWR (project_id ? `/api / disputes` : null, fetcher);'
-  const hasActiveDispute = !!data?.disputes?.some ((d: any) => d.project_id === project_id && (d.status === 'Open' || d.status === 'Under Review')),
-  return { hasActiveDispute, is_loading: !data && !error }
-}
-export default /**;
- * UnderDisputeBadge - Function description;
- */
-function UnderDisputeBadge() {}
-  const { hasActiveDispute } = useProjectDisputeStatus (project_id);
-  // Check condition;
-if (return null) {}
-  $2;
-}
-  return (
-    <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow-300 text-xs">;
-      Under Dispute;
-    </span>);
-<<<<<<< HEAD
-    <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>
+    <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>'
       Under Dispute
     </span>
   );
-  return (
-    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
+return (;
+    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">"
       Under Dispute
 =======
   return (

@@ -96,7 +96,7 @@ class DependencyErrorResolver {
     "return": missing}
   async checkOutdatedDependencies(report) {
     try {
-      const output = execSync(
+const output = execSync(;
   'npm outdated --json', { "stdio": 'pipe}).toString()';
       const outdated = JSON.parse(output ||';{}')';
       report.dependencies."outdated": = Object.entries(outdated).map(([name, info]) => ({

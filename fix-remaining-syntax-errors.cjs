@@ -2,9 +2,26 @@
 
 const fs = require('fs');
 const path = require('path');
-;
-function fixSyntaxErrors(filePath) {;
-  try {;
+
+console.log('🔧 Fixing remaining syntax errors...');
+
+// List of files with known syntax errors
+const filesToFix = [;
+  '/workspace/src/components/Footer.tsx',
+  '/workspace/src/components/Header.tsx',
+  '/workspace/src/components/HeroSection.tsx',
+  '/workspace/src/components/LoadingSpinner.tsx',
+  '/workspace/src/components/Navigation.tsx',
+  '/workspace/src/components/ServicesSection.tsx'
+];
+
+function fixFile(filePath) {
+  try {
+    if (!fs.existsSync(filePath)) {
+      console.log(`⚠️  File not found: ${filePath}`);
+      return false;
+    }
+
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 ;

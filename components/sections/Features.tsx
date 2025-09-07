@@ -1,5 +1,6 @@
-import Card from '../ui/Card';
-import { Zap } from 'lucide-react';
+import Card from '../ui/Card';'
+
+import { Zap } from 'lucide-react';'
 
 
 =======
@@ -8,55 +9,34 @@ import { Zap } from 'lucide-react';
 
 
 interface Feature {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  icon: React.ReactNode;
-
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {'
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-=======
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  icon: React.ReactNode;
+  "icon": React.ReactNode;
 
 class ErrorBoundary extends React.Component {
+  }
   constructor(props) {
+    }
     super(props);
-    this.state = { hasError: false };
+    this.state = { "hasError": false
+};
   }
 <<<<<<< HEAD
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  static getDerivedStateFromError(error) {}
-    return { hasError: true,}
+}
+return { "hasError": true,;
 };
   }
-
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+  
+  componentDidCatch(error, errorInfo) {
+    }
+    console.error('Error caught by "boundary":', error, errorInfo);'
   }
 
   render() {
-<<<<<<< HEAD
+    }
     if (this.state.hasError) {
+      }
       return <div>Something went wrong.</div>;
 =======
     if (this.state.hasError) {}
@@ -73,16 +53,13 @@ import { Zap  } from 'lucide-react';
 interface Feature  {icon: React.ReactNode;class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
-<<<<<<< HEAD
-}'
+}
 import React from 'react';'
-import Card from '../ui/Card';'
-import { Zap } from 'lucide-react';
+  "title": string;
+  "description": string;
+  "color": string;
 
-  title: string;
-  description: string;
-  color: string;
-  gradient: string;
+  "gradient": string;
 
   delay?: number;
   return ('
@@ -101,110 +78,41 @@ import { Zap } from 'lucide-react';
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
   delay?: number
 }
-=======
-}
-import React from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-import Card from '../ui/Card';
-import { Zap } from 'lucide-react';
-interface Feature {
-  icon: React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  title: string;
-  description: string;
-  color: string;
-import React from 'react';
-import Card from '../ui/Card';
-import { Zap } from 'lucide-react';
-interface Feature {
-  icon: React.ReactNode,
-  title: string,
-  description: string,
-  color: string,
-  gradient: string,
-  delay?: number
-}
-  gradient: string;
 
-<<<<<<< HEAD
 interface FeaturesProps {
-  gradient: string;delay?: number;
-  return (<section className='py-24 bg-black relative overflow-hidden'>;
-      <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
-  title: string,
-  subtitle: string,
-  features: Feature[],
-  columns?: 2 | 3 | 4
-}
-=======
+  }
+  "title": string;
+  "subtitle": string;
+  "features": Feature[];
+          <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-const Features: React.FC<FeaturesProps> = ({
-  title;
-  subtitle;
-  features;
-  columns = 3}) => {
-  const gridCols = {
-    2: 'md:grid-cols-2';
-    3: 'md:grid-cols-2 lg:grid-cols-3';
-    4: 'md:grid-cols-2 lg:grid-cols-4'};
-
-  return (
-    <section className="py-24 bg-black relative overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-20 animate-fade-in">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
-            <Zap className="w-4 h-4 mr-2" />
-            Platform Features
-          </div>
-          <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-            {title}
-          <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;delay?: number;
-}interface FeaturesProps  {title: string;
-  subtitle: string;
-  features: Feature[];
-<<<<<<< HEAD
-          <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-          <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             {subtitle}
           </p>;
         </div>;{/* Features Grid */}
-        <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
-          {features && features.map((feature, index) => (<Card;
-              key={index}}export default Features;  )}export default Features;
-};
+        <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>`
 
-          {features && features.map((feature, index) => (;}
-            <Card;}
+          {features && features.map((feature, index) => (;
+            <Card
+}
 key={index}
 
-className='text-center group bg-gray-900/50 border border-gray-800 hover: border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
+className='text-center group bg-gray-900/50 border border-gray-800 "hover": border-blue-500/30 "hover":bg-gray-900/80 transition-all duration-300 "hover":-translate-y-1''
 
-              style={{ animationDelay: `${index * 0.1 + 0.2}s` ,
-}
-             />;
-              <div className='relative' />;
+              style={{ "animationDelay": `${index * 0.1 + 0.2}s` ,`}
+            >;
+              <div className='relative'>;'
                 <div;
-                  className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
-                >;
-                  {feature.icon}
+                  className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-"hover": scale-110 group-"hover":shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>`
+
+                  {feature.ico
+}
                 </div>;
-                <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm' />;
+                <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent rounded-2xl opacity-0 group-"hover":opacity-100 transition-opacity duration-300 blur-sm' />;'
               </div>;
-              <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>;
+              <h3 className='text-xl font-bold mb-4 text-white group-"hover":text-blue-400 transition-colors duration-300'>;'
                 {feature.title}
               </h3>;
-              <p className='text-gray-400 leading-relaxed'>;
+              <p className='text-gray-400 leading-relaxed'>;'
                 {feature.description}
               </p>;
             </Card>;

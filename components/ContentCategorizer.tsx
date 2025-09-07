@@ -80,19 +80,7 @@ import {
   BarChart3, Globe, Database, Cpu, Rocket, Brain
 } from 'lucide-react',
 
-interface ContentItem {
-  id: string,
-  title: string,
-  href: string,
-  desc: string,
-  category: string,
-  subcategory?: string,
-  date: string,
-  relevance: 'high' | 'medium' | 'low',
-  tags: string[],
-  source: string,
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
-}
+return (<div className=&quot;space - y-6 & quot>;
 
 interface ContentCategory {
   id: string,
@@ -366,112 +354,76 @@ const ContentCategorizer: React.FC = () => {
                 setSelectedCategory($2);
                 setSelectedSubcategory('all')
               }}
-              className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
-            >
-              {categories.map(category => (
-                <option key={category.id} value={category.id}>
-                  {category.name} ({category.count})
-                </option>
-              ))}
-            </select>
-          </div>
+className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white "focus": outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 "focus":border - cyan - 500 / 50 transition - all duration - 200 & quot>
 
+              {categories.map (category => (<option key={category.id} value={category.i
+}>;
+                  {category.name} ({category.count})</option>))}
+            </select>;
+          </div>;
           {/* Subcategory Filter */}
-          <div>
-            <label className="block text-sm font-medium text-white/70 mb-2">Subcategory</label>
-            <select
-              value={selectedSubcategory}
-              onChange={(e) => setSelectedSubcategory(e.target.value)}
-              className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
-            >
-              <option value="all">All Subcategories</option>
-              {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
-                <option key={sub} value={sub}>
-                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
-                </option>
-              ))}
-            </select>
-          </div>
+<div>;
+            <label className=&quot;block text - sm font - medium text - white / 70 mb - 2&quot;>Subcategory</label>;<select;
+              value={selected_subcategory}
+              on_change={(e) => setSelectedSubcategory (e.target.value)}
+              className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white "focus":outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 "focus":border - cyan - 500 / 50 transition - all duration - 200 & quot>
 
+              <option value=&quot;all & quot;>All Subcategories</option>;
+              {selected_category !== 'all' && categories.find (c => c.id === selected_category)?.subcategories?.map (sub => (<option key={sub} value={sub}>;{sub.replace ('- ').replace (/\b\w / g, l => { return l.toUpperCase ())}'
+                </option>))}
+            </select>; }
+          </div>;
           {/* Content Type Filter */}
-          <div>
-            <label className="block text-sm font-medium text-white/70 mb-2">Content Type</label>
-            <select
-              value={selectedType}
-              onChange={(e) => setSelectedType(e.target.value)}
-              className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
-            >
-              {contentTypes.map(type => (
-                <option key={type.id} value={type.id}>
-                  {type.name}
-                </option>
-              ))}
-            </select>
-          </div>
+<div>;
+            <label className=&quot;block text - sm font - medium text - white / 70 mb - 2&quot;>Content Type</label>;<select;
+              value={selected_type}
+              on_change={(e) => setSelectedType (e.target.value)}
+              className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white "focus": outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 "focus":border - cyan - 500 / 50 transition - all duration - 200 & quot>
 
-          {/* Relevance Filter */}
-          <div>
-            <label className="block text-sm font-medium text-white/70 mb-2">Relevance</label>
-            <select
-              value={selectedRelevance}
-              onChange={(e) => setSelectedRelevance(e.target.value)}
-              className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
-            >
-              {relevanceLevels.map(level => (
-                <option key={level.id} value={level.id}>
-                  {level.name}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
+              {content_types.map (type => (<option key={type.id} value={type.i
+}>;{type.name}
+                </option>))}
+            </select>;
+          </div>;
+          {/* Relevance Filter */}<div>;
+            <label className=&quot;block text - sm font - medium text - white / 70 mb - 2&quot;>Relevance</label>;<select;
+              value={selected_relevance}
+              on_change={(e) => setSelectedRelevance (e.target.value)}
+              className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white "focus": outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 "focus":border - cyan - 500 / 50 transition - all duration - 200 & quot>
 
-        {/* Sort Controls and Clear Filters */}
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <label className="text-sm text-white/70">Sort by:</label>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}
-                className="px-3 py-1 bg-white/5 border border-white/10 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-              >
-                <option value="date">Date</option>
-                <option value="relevance">Relevance</option>
-                <option value="title">Title</option>
-              </select>
-              <button
-                onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-                className="p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200"
-              >
-                {sortOrder === 'asc' ? '↑' : '↓'}
-              </button>
-            </div>
-          </div>
-          
-          <button
-            onClick={clearAllFilters}
-            className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200"
-          >
-            Clear All Filters
-          </button>
-        </div>
-      </div>
+              {relevance_levels.map (level => (<option key={level.id} value={level.i
+}>;{level.name}
+                </option>))}
+            </select>;
+          </div>;
+        </div>;
+        {/* Sort Controls and Clear Filters */}<div className=&quot;flex flex - wrap items - center justify - between gap - 4&quot>
 
-      {/* Category Pills */}
-      <div>
-        <div className="flex flex-wrap gap-2">
-          {categories.map(category => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${
-                selectedCategory === category.id
-                  ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300'
-                  : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10'
-              }`}
-            >
-              <category.icon className="w-4 h-4" />
+          <div className=&quot;flex items - center gap - 4&quot>
+
+            <div className=&quot;flex items - center gap - 2&quot>
+
+              <label className=&quot;text - sm text - white / 70 & quot;>Sort "by":</label>;<select;
+                value={sort_by}
+                on_change={(e) => setSortBy (e.target.value as 'date' | 'relevance' | 'title')}'
+                className=&quot;px - 3 py - 1 bg - white / 5 border border - white / 10 rounded text - white text - sm "focus":outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 & quot>
+
+                <option value=&quot;date & quot;>Date</option>;
+                <option value=&quot;relevance & quot;>Relevance</option>;
+                <option value=&quot;title & quot;>Title</option>;
+              </select>;
+              <button;
+                on_click={() => setSortOrder (sort_order === 'asc' ? 'desc' : 'asc')}'
+                className=&quot;p - 1 bg - white / 5 border border - white / 10 rounded "hover":bg - white / 10 transition - colors duration - 200 & quot>
+</button>;
+            </div>;
+          </div>;
+          <button;{/* Category Pills */}
+      <div>;
+        <div className=&quot;flex flex - wrap gap - 2&quot>
+
+          {categories.map (category => { return (<button; }key={category.id}
+              }`}>;`              <category.icon className=&quot;w - 4 h - 4&quot; />;
               {category.name}
               <span className="text-xs bg-white/10 px-2 py-1 rounded-full">
                 {category.count}
@@ -481,13 +433,13 @@ const ContentCategorizer: React.FC = () => {
         </div>
       </div>
 
-      {/* Results Summary */}
-      <div className="text-sm text-white/60">
-        Showing {filteredItems.length} of {contentItems.length} items
-        {searchTerm && ` matching "${searchTerm}"`}
-        {selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
-        {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
-      </div>
+        Showing {filtered_items.length} of {content_items.length} items;
+        {search_term && ` matching &quot;${search_term}&quot;`}`        {selected_category !== 'all' && ` in ${categories.find (c => c.id === selected_category)?.name}`}`        {selected_type !== 'all' && ` of type ${content_types.find (t => { return t.id === selected_type)?.name}`}`
+      </div>; }
+      {/* Content Grid */}{item.type}
+                </div>;
+              </div>;
+              {/* Title and Description */}<h3 className=&quot;text - lg font - semibold text - white mb - 2 group - "hover": text - cyan - 300 transition - colors duration - 200 & quot>
 
       {/* Content Grid */}
       <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
@@ -518,11 +470,9 @@ const ContentCategorizer: React.FC = () => {
               {/* Title and Description */}
               <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">
                 {item.title}
-              </h3>
-              <p className="text-sm text-white/75 mb-4 leading-relaxed">
-                {item.desc}
-              </p>
-
+                {item.des
+}
+              </p>;
               {/* Tags */}
               <div className="flex flex-wrap gap-1 mb-4">
                 {item.tags.slice(0, 3).map((tag, index) => (
@@ -552,13 +502,14 @@ export default ContentCategorizer,
                 </span>
               </div>
               {/* Source and Action */}
-              <div className=&quot;flex items-center justify-between&quot;>
-                <span className=&quot;text-xs text-white/40&quot;>
-                  Source: {item.source}
-                </span>
-                <a
+              <div className=&quot;flex items - center justify - between & quot>
+
+                <span className=&quot;text - xs text - white / 40 & quot>
+
+                  "Source": {item.source}
                   href={item.href}
-        })}
+        }
+}
       </div>;
       {/* No Results */}
 {filteredItems.length === 0 && (

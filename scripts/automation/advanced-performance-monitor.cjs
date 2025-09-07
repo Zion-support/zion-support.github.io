@@ -342,8 +342,8 @@ class $1 {}
       // For now, we"ll use placeholder values;"
 
   async getDiskUsage() {}
-  try {}"
-  const result = execSync("df -h .", {})
+  try {}
+const result = execSync("df -h .", {});
   "cwd": this.projectRoot,
         "encoding": "utf8",
         "stdio": "pipe"}"
@@ -400,7 +400,7 @@ class $1 {}
 
 =======
   try {}
-  const result = execSync("pm2 jlist", {})
+const result = execSync("pm2 jlist", {});
   "cwd": this.projectRoot,
         "encoding": "utf8",
         "stdio": "pipe"}
@@ -475,9 +475,37 @@ class $1 {}
         "status": "running"};"
   return { "processes": 0, "memory": 0, "cpu": 0, "status": "error"   };"
   async getBuildMetrics() {}
-  const buildLogPath = path.join(;)"
-
-    return { "lastBuildTime": 0, "lastBuildSize": 0, "buildCount": 0 };"
+  try {}
+const buildLogPath = path.join(;);
+        this.projectRoot,logs",
+        "build-performance.json";
+  async getBuildMetrics() {}
+  try {}
+const buildLogPath = path.join(;);
+        this.projectRoot,logs",
+        "build-performance.json";
+      );
+      if (fs.existsSync(buildLogPath)) {}
+  const buildData = JSON.parse(fs.readFileSync(buildLogPath, "utf8"));
+        return {}
+  "lastBuildTime": buildData.currentPerformance?.buildTime || 0,
+          "lastBuildSize": buildData.currentPerformance?.bundleSize || 0,
+          "buildCount": this.performanceHistory.filter(m => m.build).length,
+        this.projectRoot, "logs",
+        "build-performance.json";
+      );
+      if (fs.existsSync(buildLogPath)) {}
+  const buildData = JSON.parse(fs.readFileSync(buildLogPath, "utf8"));
+        return {}
+  "lastBuildTime": buildData.currentPerformance?.buildTime || 0,
+          "lastBuildSize": buildData.currentPerformance?.bundleSize || 0,
+          "buildCount": this.performanceHistory.filter(m => m.build).length};
+      };
+    } catch (error) {  this.log(`Failed to get build "metrics": ${error.message  }`, "WARN")};
+;
+    return { "lastBuildTime": 0, "lastBuildSize": 0, "buildCount": 0 };
+  };
+;
   async checkViteConfig() {}
 <<<<<<< HEAD
 
@@ -572,12 +600,26 @@ class $1 {}
 } catch (error) {}
   return 0} catch (error) {}
   async countDependencies() {}
-  const packagePath = path.join(this.projectRoot, "package.json");"
-      if (fs.existsSync(packagePath)) {}"
-  const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8"));"
-        return (;)
+  try {}
+  const packagePath = path.join(this.projectRoot, "package.json");
+      if (fs.existsSync(packagePath)) {}
+  const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8"));
+return (;);
           Object.keys(pkg.dependencies || {}).length +;
           Object.keys(pkg.devDependencies || {}).length;
+        )};
+    } catch (error) {}
+  return 0};
+;
+return (;);
+          Object.keys(pkg.dependencies || {}).length +;
+          Object.keys(pkg.devDependencies || {}).length;
+        )};
+    } catch (error) {}
+  return 0};
+;
+    return 0};
+;
   getAllFilesRecursive(dir, files = []) {}
   const items = fs.readdirSync(dir);
 <<<<<<< HEAD
@@ -687,11 +729,7 @@ class $1 {}
         break};
     return recommendations};
   async autoFixCriticalIssues(issues) {}
-<<<<<<< HEAD
-  const criticalIssues = issues.filter(;)"
-      issue => issue.severity === "CRITICAL";"
-=======
-  const criticalIssues = issues.filter(;)
+const criticalIssues = issues.filter(;);
       issue => issue.severity === "CRITICAL";
     );
 <<<<<<< HEAD

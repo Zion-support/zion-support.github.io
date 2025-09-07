@@ -1,72 +1,85 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '../../../../../utils/api/auth';
-import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects';
-import { isMilestoneStatus } from '../../../../../utils/types/milestones';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser($2);
-  if (!user) return,
-
-  const { projectId, milestoneId } = req.query as { projectId: string, milestoneId: string},
-  const project = getProject($2);
+import type { NextApiRequest, NextApiResponse } from "next";"
+import { requireUser } from "../../../../../utils/api/auth";"
+import {
+  }
+  getProject,
+  updateMilestone,
+  assertParticipantOrAdmin,
+  isClient,
+  isTalent
+} from "../../../../../utils/api/projects";"
+import { isMilestoneStatus } from "../../../../../utils/types/milestones";"
+export default function handler() {
+  }
+  const user = requireUser(req, res);
+  if (!user) return;
+  const { projectId, milestoneId } = req.query as {
+    }
+    "projectId": string;
+    "milestoneId": string;
+  };
+  const project = getProject(projectId);
   if (!project) {
-    res.status(404).json($2);
-    return
+    }
+    res.status(404).json({ "error": "Project not found" });"
+    return;
   }
   if (!assertParticipantOrAdmin(project, user)) {
-    res.status(403).json($2);
-    return
+    }
+    res.status(403).json({ "error": "Forbidden" });"
+    return;
   }
 
-  if (req.method = $2;
+  if (req.method === "PATCH") {"
+    }
+    const body = req.body as any;
     if (body.status && !isMilestoneStatus(body.status)) {
-      res.status(400).json($2);
-      return
+      }
+      res.status(400).json({ "error": "Invalid status" });"
+      return;
     }
 
-    // Enforce status transition rules
-    if (body.status) {
-      const isClientUser = isClient($2);
-      const isTalentUser = isTalent($2);
-      const status: string = $2;
-      const allowed = $2;
-      if (!allowed && user.role !== 'admin') {
-        res.status(403).json($2);
-        return
+    // Enforce status transition rules,
+if (body.status) {
+      }
+      const isTalentUser = isTalent(project, user);
+      const "status": string = body.status;
+const allowed =;
+        (status === "In Progress" && isClientUser) ||"
+        (status === "Submitted" && isTalentUser) ||"
+        (status === "Approved" && isClientUser) ||"
+        (status === "Paid" && isClientUser);"
+      if (!allowed && user.role !== "admin") {"
+        }
+        res.status(403).json({ "error": "Not allowed to set this status" });"
+        return;
       }
 
-      // Add side-effects
-      if (status === 'Submitted') {
-        body.submittedByUserId = user.userId
+      // Add side-effects,
+if (status === "Submitted") {"
+        }
+        body.submittedByUserId = user.userId;
       }
-      if (status === 'Approved') {
-        body.approvedByUserId = user.userId
+      if (status === "Approved") {"
+        }
+        body.approvedByUserId = user.userId;
       }
-      if (status === 'Paid') {
-        body.paidAt = new Date().toISOString()
+      if (status === "Paid") {"
+        }
+        body.paidAt = new Date().toISOString();
       }
     }
 
     const updated = updateMilestone($2);
     if (!updated) {
-      res.status(404).json($2);
-      return
+      }
+      res.status(404).json({ "error": "Milestone not found" });"
+      return;
     }
-    res.status(200).json($2);
-    return
+    res.status(200).json({ "milestone": updated });
+    return;
   }
 
-  res.setHeader($2);
-  res.status(405).end('Method Not Allowed')
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Endpoint working' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+  res.setHeader("AllowPATCH");"
+  res.status(405).end("Method Not Allowed");"
 }

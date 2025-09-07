@@ -1,99 +1,30 @@
-import Image from 'next/image';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-
-interface ImageOptimizerProps {
-  src: string;
-=======
-interface OptimizedImageProps  {src: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-interface OptimizedImageProps  {src: string;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-  alt: string;
+import React from 'react';'
+import Image from 'next/image';'
+interface OptimizedImageProps  {"src": string;
+  }
+  "alt": string;
   width?: number;
   height?: number;
   className?: string;
   priority?: boolean;
   quality?: number;
-  placeholder?: 'blur' | 'empty';
+  placeholder?: 'blur' | 'empty';'
   blurDataURL?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
+}const "OptimizedImage": React.FC<OptimizedImageProps> = ({src,alt,width = 800,height = 600,className = '',priority = false,quality = 85,placeholder = 'blur',blurDataURL = '"data":image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==';'
+}) => {return (<Image;
+
 }
 
-export default function ImageOptimizer({
-  src,
-  alt,
-  width = 800,
-  height = 600,
-  className = '',
-  priority = false,
-  quality = 75,
-  placeholder = 'blur',
-  blurDataURL,
-}: ImageOptimizerProps) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
+const "OptimizedImage": React.FC<OptimizedImageProps> = ({ src,alt,width = 800,height = 600,className = '',priority = false,quality = 85,placeholder = 'blur',blurDataURL = '"data":image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==';'
+   }) => {
 
   // Generate a simple blur placeholder if none provided
   const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
 
-  const handleLoad = () => {
-    setIsLoading(false);
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    setIsLoading(false);
-  };
-
-  if (hasError) {
-    return (
-      <div 
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-        role="img"
-        aria-label={alt}
-      >
-        <span className="text-gray-500 text-sm">Image unavailable</span>
-      </div>
-    );
-  }
-
-  return (
-    <div className={`relative ${className}`}>
-      {isLoading && (
-        <div 
-          className="absolute inset-0 bg-gray-200 animate-pulse rounded"
-          style={{ width, height }}
-        />
-      )}
-      <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        priority={priority}
-        quality={quality}
-        placeholder={placeholder}
-        blurDataURL={blurDataURL || defaultBlurDataURL}
-        onLoad={handleLoad}
-        onError={handleError}
-        className={`transition-opacity duration-300 ${
-          isLoading ? 'opacity-0' : 'opacity-100'
-        }`}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
-    </div>
-  );
 }
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-}const OptimizedImage: React.FC<OptimizedImageProps> = ({src,alt,width = 800,height = 600,className = '',priority = false,quality = 85,placeholder = 'blur',blurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==';
-}) => {return (<Image;
+
+
+return (<Image;
       src={src}
       alt={alt}
       width={width}
@@ -103,10 +34,8 @@ export default function ImageOptimizer({
       quality={quality}
       placeholder={placeholder}
       blurDataURL={blurDataURL}
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
-      style={{objectFit: 'cover',}}
-    />;
-<<<<<<< HEAD
+      sizes="(max-"width": 768px) 100vw, (max-"width": 1200px) 50vw, 33vw";"
+      style={{"objectFit": 'cover'}}' />;
   )}export default OptimizedImage;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======

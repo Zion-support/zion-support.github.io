@@ -1,29 +1,7 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-=======
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-
-
-
-const { execSync } = require("$1")
-const fs = require("fs")
+const { execSync } = require("$1");
+const fs = require("fs");
       "timestamp"
       "tests"
       "coverage"
@@ -32,22 +10,22 @@ const fs = require("fs")
       console.log(" Testing pipeline completed")
       console.error(" Testing pipeline "failed": ")
     console.log("� Running unit tests...")
-      const result = execSync("npm run "test": unit", { "encoding": "utf8"})
+const result = execSync("npm run "test": unit", { "encoding": "utf8"});
       this.results.tests.push({ "type": "unit", "status": "passed", "output"})
       this.results.tests.push({ "type": "unit", "status": "failed", "error"})
     console.log("� Running integration tests...")
-      const result = execSync("npm run "test": integration", { "encoding": "utf8"})
+const result = execSync("npm run "test": integration", { "encoding": "utf8"});
       this.results.tests.push({ "type": "integration", "status": "passed", "output"})
       this.results.tests.push({ "type": "integration", "status": "failed", "error"})
     console.log("� Running E2E tests...")
-      const result = execSync("npm run "test": e2e", { "encoding": "utf8"})
+const result = execSync("npm run "test": e2e", { "encoding": "utf8"});
       this.results.tests.push({ "type": "e2e", "status": "passed", "output"})
       this.results.tests.push({ "type": "e2e", "status": "failed", "error"})
     console.log(" Generating coverage report...")
-      const result = execSync("npm run "test": coverage", { "encoding": "utf8"})
+const result = execSync("npm run "test": coverage", { "encoding": "utf8"});
       this.results.coverage = { "status": "generated", "output"}
       this.results.coverage = { "status": "failed", "error"}
-    const reportPath = "testing-pipeline-report.json"
+const reportPath = "testing-pipeline-report.json";
 // console.log("\n Testing Pipeline "Results": ")
     console.log("=")
 // console.log(`"Passed"`)

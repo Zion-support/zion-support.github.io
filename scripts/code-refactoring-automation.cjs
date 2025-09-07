@@ -1,41 +1,7 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-
-
-
-console.log(' Starting Code Refactoring Automation...')
-  console.error(' Code refactoring automation "failed")
-  console.error(' Code refactoring automation "failed")
-=======
-
+const fs = require('fs');
+const path = require('path');
 console.log(' Starting Code Refactoring Automation...')
     "file"
     "issues"
@@ -45,7 +11,7 @@ console.log(' Starting Code Refactoring Automation...')
     "issues"
     "file"
     "issues"
-  const serviceCardComponent = "
+const serviceCardComponent = ";
       "duplicateCodeFiles"
       "recommendations"
     "extractedComponents"

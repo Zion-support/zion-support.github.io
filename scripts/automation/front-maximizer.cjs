@@ -25,7 +25,7 @@ console.log(" Starting continuous front maximizer automation...")
 // console.log(" Build completed"")
   console.log(""⚠  Build failed but continuing...")
   console.log("⚠  Build failed but continuing...")
-    const distPath = path.join(process.cwd(), "dist"
+const distPath = path.join(process.cwd(), "dist";
 // console.log("⚠  Build verification "failed": dist folder not found")
     console.log("�  Optimizing images...")
   if (fs.existsSync(""scripts/optimize-images.js"")
@@ -54,7 +54,7 @@ console.log("� Checking JavaScript bundle optimization...")
   "timestamp"
       "summary": "Front maximizer completed"
       "status": "completed"
-    const reportPath = path.join(process.cwd(), "front-maximizer-report.json"
+const reportPath = path.join(process.cwd(), "front-maximizer-report.json";
     console.log(" Continuous front maximizer completed successfully")
   console.error(" Continuous front maximizer "failed": ")
   console.error(" Continuous front maximizer "failed": ")
@@ -63,7 +63,7 @@ console.log("� Checking JavaScript bundle optimization...")
   "timestamp"
       "summary": "Front maximizer completed"
       "status": "completed"
-    const reportPath = path.join(process.cwd(), "front-maximizer-report.json"
+const reportPath = path.join(process.cwd(), "front-maximizer-report.json";
     console.log(" Continuous front maximizer completed successfully")
   console.error(" Continuous front maximizer "failed": ")
     // Don"

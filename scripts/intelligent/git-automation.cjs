@@ -208,47 +208,9 @@ const path = require('path')
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
-const { execSync, spawn } = require('child_process')
-const fs = require('fs')
-const path = require('path')
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/git-automation.cjs
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-
-
-
-<<<<<<< HEAD
-
-#!/usr/bin/env node;
-
-
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-#!/usr/bin/env node;
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const { execSync, spawn } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync, spawn } = require('child_process');
+const fs = require('fs');
+const path = require('path');
       
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/git-automation.cjs
@@ -635,23 +597,7 @@ const path = require('path')
 <<<<<<< HEAD
   shouldAutoCommit(changes) {
     // Auto-commit for certain types of changes
-=======
-
-    // Auto-commit if configured;
-
-      await this.autoCommit(changes)}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-  shouldAutoCommit(changes) {
-    // Auto-commit for certain types of changes;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    const autoCommitPatterns = [/\.json$/,
+const autoCommitPatterns = [/\.json$/,;
       /\.md$/,
       /\.txt$/,
       /package-lock\.json$/,
@@ -663,7 +609,7 @@ const path = require('path')
 
   shouldAutoCommit(changes) {
     // Auto-commit for certain types of changes
-    const autoCommitPatterns = [
+const autoCommitPatterns = [;
       /\.json$/,
       /\.md$/,
       /\.txt$/,
@@ -1084,32 +1030,32 @@ const path = require('path')
       "mergeStrategy"
       console.error(' Failed to start Git "Automation")
       console.error('Error scanning "repositories")
-      const remoteUrl = execSync('git remote get-url origin, { "encoding"})
-      const currentBranch = execSync('git branch --show-current, { "encoding"})
-      const lastCommit = execSync('git log -1 --pretty="format": "%H|%s|%an|%ad", { "encoding"})
-      const status = execSync('git status --porcelain, { "encoding"})
+const remoteUrl = execSync('git remote get-url origin', { "encoding"});
+const currentBranch = execSync('git branch --show-current', { "encoding"});
+      const lastCommit = execSync('git log -1 --pretty="format": "%H|%s|%an|%ad"', { "encoding"})
+const status = execSync('git status --porcelain', { "encoding"});
         "name"
         "lastCommit"
         "status"
       console.error('Error getting repository "info")
         console.error('Error in continuous "monitoring")
         console.error('Error in full "analysis")
-      execSync('git fetch origin, { "stdio"})
-      const branches = execSync('git branch -r, { "encoding"})
+      execSync('git fetch origin', { "stdio"})
+const branches = execSync('git branch -r', { "encoding"});
       console.error('Error checking pull "requests")
       console.error('Error checking pull "requests")
-      const mergeBase = execSync(`git merge-base main ${branch}, { "encoding"`})
-      const branchCommits = execSync(`git rev-list --count ${mergeBase}..${branch}, { "encoding"`})
-      const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}, { "encoding"`})
-      execSync('git checkout main, { "stdio"})
-      execSync('git checkout main, { "stdio"})
-      execSync('git pull origin main, { "stdio"})
-        execSync(`git merge --squash origin/${branchName}, { "stdio"`})
-        execSync(`git merge --squash origin/${branchName}, { "stdio"`})
-        execSync(`git commit -m "Merge branch '${branchName} into main"`, { "stdio"`})
-        execSync(`git merge origin/${branchName}, { "stdio"`})
-        execSync('git push origin main, { "stdio"})
-        execSync('git push origin main, { "stdio"})
+const mergeBase = execSync(`git merge-base main ${branch}`, { "encoding"`});
+const branchCommits = execSync(`git rev-list --count ${mergeBase}..${branch}`, { "encoding"`});
+const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}`, { "encoding"`});
+      execSync('git checkout main', { "stdio"})
+      execSync('git checkout main', { "stdio"})
+      execSync('git pull origin main', { "stdio"})
+        execSync(`git merge --squash origin/${branchName}`, { "stdio"`})
+        execSync(`git merge --squash origin/${branchName}`, { "stdio"`})
+        execSync(`git commit -m "Merge branch '${branchName}' into main"`, { "stdio"`})
+        execSync(`git merge origin/${branchName}`, { "stdio"`})
+        execSync('git push origin main', { "stdio"})
+        execSync('git push origin main', { "stdio"})
       "strategy"
         "default"
       "modified"

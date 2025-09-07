@@ -46,7 +46,7 @@ class QualityAssuranceMonitor {}
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
   async runCommand(command, options = {}) {}
     try {}
-      const result = execSync(command, {})
+const result = execSync(command, {});
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": options.silent ? 'pipe' : 'inherit',

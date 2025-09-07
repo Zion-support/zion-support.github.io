@@ -48,7 +48,7 @@ import Head from 'next/hea;d;';
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     
     // Add meta tags to pages;
-    const metaTemplate = '
+const metaTemplate = ';
 import Head from 'next/hea;d;';
 
 <<<<<<< HEAD
@@ -56,7 +56,7 @@ import Head from 'next/hea;d;';
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 export default function Page() {}
-  return (;)
+return (;);
     <>
       <Head>
 
@@ -89,12 +89,8 @@ export default function Page() {}
       
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Generate sitemap;
-  )};"
-      ";"
-      // Generate sitemap;"
-      const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns=http": //www.sitemaps.org/schemas/sitemap/0.9">"
-</urlset>
+const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>;
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
   <url>
 </url>
     <loc>https://ziontechgroup.com</loc>
@@ -127,7 +123,7 @@ export default function Page() {}
       fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
       
       // Generate robots.txt;
-      const robotsContent = "User-"agent": *
+const robotsContent = "User-"agent": *;
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml;";

@@ -29,20 +29,13 @@ const path = require('path')
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
-<<<<<<< HEAD
-=======
-
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
     this.logDir = path.join(this.projectRoot, 'automation', 'logs')
   log(message, level = 'INFO')
   log(message, level = 'INFO')
-    const logFile = path.join(this.logDir, 'enhanced-app-improvement.log')
+const logFile = path.join(this.logDir, 'enhanced-app-improvement.log');
     fs.appendFileSync(logFile, logMessage + '\n')
         "encoding"
         "stdio"
@@ -73,7 +66,7 @@ const path = require('path')
       { "name": 'Memory Usage', "command"}
       { "name": 'Disk Space', "command"}
       { "name": 'Process Status', "command"}
-        const result = execSync(check.command, { "encoding"})
+const result = execSync(check.command, { "encoding"});
         "name"
         "name"
       'git commit -m ""feat": automated improvements and fixes"

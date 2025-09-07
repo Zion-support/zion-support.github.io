@@ -1,7 +1,4 @@
-import React from 'react';
-<<<<<<< HEAD
-export default MainLayout.dynamic;
-=======
+import React from 'react';'
 
 <<<<<<< HEAD
 ;
@@ -24,8 +21,8 @@ const MainLayout.dynamic = () => {}
 =======
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 const MainLayout.dynamic = () => ;
-  return (<div data - testid=\"mainlayout.dynamic\"    />;
-      <h1     /> MainLayout.dynamic</h1>
+  return (<div data - testid="mainlayout.dynamic">;"
+      <h1 > MainLayout.dynamic</h1>
     </div>
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

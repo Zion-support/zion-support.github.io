@@ -1,4 +1,19 @@
-]
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 Comprehensive fix for all files...');
+
+// List of problematic files
+const filesToFix = [;
+  'pages/about.tsx',
+  'pages/blog.tsx', 
+  'pages/contact.tsx',
+  'pages/services.tsx',
+  'pages/talent.tsx'
+];
+
 function fixFile(filePath) {
   try {
   // TODO: Implement

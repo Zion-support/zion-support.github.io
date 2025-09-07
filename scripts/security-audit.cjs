@@ -4,8 +4,7 @@ const { execSync } = require('child_process');
 
 console.log('🔒 Security Audit Starting...');
 
-// Security audit tasks
-const securityChecks = [
+const securityChecks = [;
   {
     name: 'Dependency Vulnerability Scan',
     action: () => {

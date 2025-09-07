@@ -196,7 +196,7 @@ class ESLintErrorAutoFixer {}
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     // Apply common ESLint fixes;
-    const fixes = [this.fixUnusedVariables.bind(this)]
+const fixes = [this.fixUnusedVariables.bind(this),];
       this.fixMissingSemicolons.bind(this),
       this.fixUnusedImports.bind(this),
       this.fixConsoleStatements.bind(this),

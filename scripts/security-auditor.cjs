@@ -83,13 +83,7 @@ class SecurityAuditor {
           const content = fs.readFileSync(envPath, 'utf8');
           
           // Check for sensitive variables
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-          const content = fs.readFileSync(envPath, 'utf8');
-          
-          // Check for sensitive variables
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-          const sensitivePatterns = [/API_KEY/i,
+const sensitivePatterns = [/API_KEY/i,;
             /SECRET/i,
             /PASSWORD/i,
             /TOKEN/i,
@@ -150,7 +144,7 @@ class SecurityAuditor {
       const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
       
       // Check for known vulnerable packages
-      const vulnerablePackages = ['lodash',
+const vulnerablePackages = ['lodash',;
         'moment',
         'jquery',
         'express',
@@ -467,12 +461,12 @@ module.exports = SecurityAuditor;
 
 
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
     this.reportsDir = path.join(this.projectRoot, 'security-reports')
     this.log(' Running npm audit...')
-      const result = execSync('npm audit --audit-level=moderate --json')
+const result = execSync('npm audit --audit-level=moderate --json');
         "encoding"
         "status"
         "status"

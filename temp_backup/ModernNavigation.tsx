@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';'
 interface ModernNavigationProps  {// Add props here as needed;
 }
 export default function ModernNavigation() {return (<div>;
@@ -9,7 +9,8 @@ export default function ModernNavigation() {return (<div>;
 }
 }
 }}
-export default function ModernNavigation({}: ModernNavigationProps) {
+export default function ModernNavigation() {
+  }
   return (
     <div>
       <h1>ModernNavigation</h1>

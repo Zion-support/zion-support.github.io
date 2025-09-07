@@ -3,15 +3,15 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync, spawn } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-const glob = require("glob")
+const { execSync, spawn } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+const glob = require("glob");
     // Get automation interval from environment variable ("default")
-const { execSync, spawn } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-const glob = require("glob")
+const { execSync, spawn } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+const glob = require("glob");
     // Get automation interval from environment variable ("default")
       this.log(" Fixing TypeScript compilation errors...")
       this.log(" Fixing type annotation errors...")
@@ -19,7 +19,7 @@ const glob = require("glob")
       // 4. Fix ""import/export""
       this.log(" Fixing ""import/export"" errors...")
       this.log(" Running TypeScript compiler check...")
-  const result = await this.runCommand("npm", { "args": ["run", "type-check"})]
+const result = await this.runCommand("npm", { "args": ["run", "type-check"})];
         this.log("No TypeScript errors detected")
   this.log(⚠  TypeScript compilation still has issues, but fixes were applied")
       this.log(" Generating TypeScript error fixer report...")
@@ -41,7 +41,7 @@ const glob = require("glob")
       this.log( TypeScript error fixer completed successfully. Applied ${fixesApplied} fixes.")
   this.log(` TypeScript error fixer "failed": ${error.message}"`)
     const filesToFix = [`""src/components/MobileExperienceEnhancer.tsx"""", """src/components/ModernUIEnhancer.tsx""", """src/components/NotificationSystem.tsx"""", """src/components/PerformanceOptimizedLoader.tsx""", """src/components/ProjectManagementTimeline.tsx"""", """src/components/ResourceManagementSystem.tsx""", """src/components/ServicesOverview.tsx"""", """src/components/UltimateServicesShowcase.tsx""", """src/components/UltimateServicesShowcase2025.tsx"""", """src/context/auth/AuthContext.tsx""", """src/context/auth/profileMapper.ts"""", """src/context/auth/useAuthEventHandlers.ts""", """src/context/auth/useAuthState.ts"""", """src/hooks/usePerformanceOptimization.ts""", """src/layout/AppHeader.tsx"""", """src/layout/AppLayout.tsx""", """src/layout/MainNavigation.tsx"""", """src/layout/PrimaryNav.tsx""", """src/legal/TermsOfService.tsx"""", """src/pages/AIServicesPage.tsx""", """src/pages/ForgotPassword.tsx"""", """src/pages/admin/SupportRequests.tsx""", ""`]
-  let content = fs.readFileSync(filePath, "utf8")
+let content = fs.readFileSync(filePath, "utf8");
           // Fix "any"
           content = content.replace(/:\s*any"/g, ": string")
           content = content.replace(/:\s*"anyany/g", ": any")

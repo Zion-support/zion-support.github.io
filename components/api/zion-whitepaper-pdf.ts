@@ -1,91 +1,55 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
-import PDFDocument from 'pdfkit';
-import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
-function writeSection(doc: PDFDocument, title: string, content: string) {
+import PDFDocument from 'pdfkit';'
+
+
+import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';'
+function writeSection() {
+  }
   doc.addPage();
-  doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
+  doc.fontSize(20).fillColor('#111111').text(title, { "underline": true,'
+});
   doc.moveDown();
-  doc.fontSize(11).fillColor('#222222').text(content, {
-    width: 480,
-align: 'left',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+  doc.fontSize(11).fillColor('#222222').text(content, {'
+    }
+    "width": 480,
+"align": 'left','
   });
-export default async function handler(
-  req: NextApiRequest,
-<<<<<<< HEAD
-  res: NextApiResponse
-) {
-  const editionParam = (req.query.edition as string) |'full';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  const edition =
-    editionParam === 'investor' |editionParam === 'developer'
+
+export default async function handler() {
+  }
+  const editionParam = (req.query.edition as string) || 'full';'
+
+const edition =;
+    editionParam === 'investor' || editionParam === 'developer''
       ? editionParam
-      : 'full';
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const editionParam = (req.query.edition as string) || 'full';
-  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
-=======
-=======
-  res: NextApiResponse;
-) {
-  const editionParam = (req.query.edition as string) || 'full';
+      : 'full';'
 
-const edition =
-    editionParam === 'investor' || editionParam === 'developer'
-      ? editionParam;
-      : 'full';
-
-  res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader(}
-    'Content-Disposition'}
-    `attachment; filename=\"zion-protocol-${edition}.pdf\"`
-  );
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  const editionParam = (req.query.edition as string) |'full';
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const edition =
-=======
-
-) {;'
-  const editionParam = (req.query.edition as string) || 'full';
-
-  const edition ='
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    editionParam === 'investor' |editionParam === 'developer'
-      ? editionParam'
-      : 'full';
-export default async function handler() { return null; }
-  res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Type', 'application/pdf');'
   res.setHeader(
-    'Content-Disposition'
-    `attachment; filename="zion-protocol-${edition}.pdf"`
-  );
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+    'Content-Disposition','
+    `attachment; filename="zion-protocol-${edition}.pdf"``  );
 
-  const editionParam = (req.query.edition as string) |'full';
-  const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
-  res.setHeader('Content-Typeapplication/pdf');
-  res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
-=======
+export default async function handler() {
+  }
+  const editionParam = (req.query.edition as string) |'full';'
+
+const edition =;
+    editionParam === 'investor' |editionParam === 'developer''
+      ? editionParam
+      : 'full';'
+
+  res.setHeader('Content-Type', 'application/pdf');'
+  res.setHeader(
+    'Content-Disposition''
+    `attachment; filename="zion-protocol-${edition}.pdf"``  );
+
+export default async function handler() {
+  }
   const editionParam = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  const doc = new (PDFDocument as any)({ autoFirstPage: false });
-  doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
-=======
-  const doc = new (PDFDocument as any)({ autoFirstPage: false });`
-  doc.info.Title = `Zion Protocol Whitepaper (${edition})`;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  doc.info.Author = 'Zion Protocol';
+
+const doc = new (PDFDocument as any)({ "autoFirstPage": false,;
+});
+  doc.info.Title = `Zion Protocol Whitepaper (${edition})`;`  doc.info.Author = 'Zion Protocol';'
   doc.pipe(res);
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -109,71 +73,37 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const sections = getWhitepaperSections($2);
   sections.forEach((s) => writeSection(doc, s.title, s.contentMd)),
 
-  doc
-    .fontSize(26)
-    .fillColor('#000000')
-    .text('Zion Protocol Whitepaper', { align: 'left' });
-  doc.fontSize(14).fillColor('#444444').text(`Edition: ${edition.toUpperCase()}`);
-  doc.moveDown();
-  doc.fontSize(10).fillColor('#666666').text('Operator Prompt (for maintenance):');
-  doc.moveDown(0.5);
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
-  const sections = getWhitepaperSections(edition as any);
-  sections.forEach(s => writeSection(doc, s.title, s.contentMd));
-
-  const sections = getWhitepaperSections(edition as any);
-  // End
-  doc && doc.addPage();
-  doc
-    .fontSize(10)
-=======
-  doc;
-    .fontSize(26)'
-    .fillColor('#000000')'
-    .text('Zion Protocol Whitepaper', { align: 'left' });'`
-  doc.fontSize(14).fillColor('#444444').text(`Edition: ${edition.toUpperCase()}`);
-  doc.moveDown();'
-  doc.fontSize(10).fillColor('#666666').text('Operator Prompt (for maintenance):');
-  doc.moveDown(0.5);'
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
-  const sections = getWhitepaperSections(edition as any);
-  sections.forEach(s => writeSection(doc, s.title, s.contentMd));
-
-  const sections = getWhitepaperSections(edition as any);
-<<<<<<< HEAD
-  // Cover page
-  doc.addPage();
+  // Cover page,
+doc.addPage();
 doc
     .fontSize(26)
-    .fillColor('#000000')
-    .text('Zion Protocol Whitepaper', { align: 'left' });
+    .fillColor('#000000')'
+    .text('Zion Protocol Whitepaper', { "align": 'left','
+});
   doc.moveDown();
   doc
     .fontSize(14)
-    .fillColor('#444444')
-    .text(`Edition: ${edition.toUpperCase()}`);
+    .fillColor('#444444')'
+    .text(`"Edition": ${edition.toUpperCase(,`}`);`
   doc.moveDown();
   doc
     .fontSize(10)
-    .fillColor('#666666')
-    .text('Operator Prompt (for maintenance):');
+    .fillColor('#666666')'
+    .text('Operator Prompt (for maintenance):');'
   doc.moveDown(0.5);
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
-  const sections = getWhitepaperSections(edition as any);
-sections.forEach(s => writeSection(doc, s.title, s.contentMd));
+  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { "width": 480,'
+});
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-  // End
-=======
-  // End;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  doc && doc.addPage();
-  doc;
-    .fontSize(10)'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    .fillColor('#444444')
-    .text('
-      '© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'
+const sections = getWhitepaperSections(edition as any);
+sections.forEach(s => { return writeSection(doc, s.title, s.contentMd)); }
+
+  // End,
+doc && doc.addPage();
+  doc
+    .fontSize(10)
+    .fillColor('#444444')'
+    .text(
+      '© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.''
     );
   getWhitepaperSections,OPERATOR_PROMPT,} from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT  } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection() {doc && doc.addPage(),doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true })doc && doc.moveDown()doc && doc.fontSize(11).fillColor('#222222').text(content, {getWhitepaperSections,OPERATOR_PROMPT,} from '../../utils / whitepaper / zion_whitepaper';import { getWhitepaperSections, OPERATOR_PROMPT  } from '../../utils / whitepaper / zion_whitepaper';

@@ -1,8 +1,17 @@
-import React from 'react';
+
+import React from 'react';'
 ursor/fix-website-loading-errors-and-merge-6662;
-export default function AutomationPage() {return (<div className=\"container mx-auto px-4 py-10\" />;"
-      <h1 className=\"text-2xl font-semibold\" />Automation</h1>;"
-      <p className=\"mt-2 text-gray-600 dark: text-gray-300\" />Automation tools overview coming soon.</p>;
+
+export default function AutomationPage() {return (<div className="container mx-auto px-4 py-10">;"
+      <h1 className="text-2xl font-semibold">Automation</h1>;"
+      <p className="mt-2 text-gray-600 "dark": text-gray-300">Automation tools overview coming soon.</p>;"
+    </div>;
+
+}
+
+export default function AutomationPage() {return (<div className="container mx-auto px-4 py-10">;"
+      <h1 className="text-2xl font-semibold">Automation</h1>;"
+      <p className="mt-2 text-gray-600 "dark": text-gray-300">Automation tools overview coming soon.</p>;"
     </div>;
 "
 export default function AutomationPage() {return (<div className=\"container mx-auto px-4 py-10\" />;"
@@ -15,22 +24,16 @@ export default /**;
  * AutomationPage - Function description;
 <<<<<<< HEAD
  */;
-function AutomationPage() {return (<div className="container mx - auto px - 4 py - 10">;
-      <h1 className="text - 2xl font - semibold">Automation</h1>;
-      <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Automation tools overview coming soon.</p>;
-=======
- */;"
-function AutomationPage() {return (<div className=\"container mx - auto px - 4 py - 10\" />;"
-      <h1 className=\"text - 2xl font - semibold\" />Automation</h1>;}"
-      <p className=\"mt - 2 text - gray - 600 dark: text - gray - 300\" />Automation tools overview coming soon.</p>;}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+function AutomationPage() {return (<div className="container mx - auto px - 4 py - 10">;"
+      <h1 className="text - 2xl font - semibold">Automation</h1>;"
+      <p className="mt - 2 text - gray - 600 "dark": text - gray - 300">Automation tools overview coming soon.</p>;"
     </div>)</div>)})}
   )</div>)})}ursor/fix-website-loading-errors-and-merge-6662;
   )})})})})}
   )})}
 <<<<<<< HEAD
   )}
-<div className="container mx-auto px-4 py-10"> <h1 className="text-2xl font-semibold">Automation</h1> <p className="mt-2 text-gray-600 dark: text-gray-300">Automation tools overview coming soon.</p>;
+<div className="container mx-auto px-4 py-10"> <h1 className="text-2xl font-semibold">Automation</h1> <p className="mt-2 text-gray-600 "dark": text-gray-300">Automation tools overview coming soon.</p>;"
 
 
 import React from 'react';
@@ -48,10 +51,11 @@ import React from 'react';
 
 >>>>>>> origin/main
 export default function AutomationPage() {
-  return (
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl font-semibold">Automation</h1>
-      <p className="mt-2 text-gray-600 dark: text-gray-300">Automation tools overview coming soon.</p>
+}
+return (;
+    <div className="container mx-auto px-4 py-10">"
+      <h1 className="text-2xl font-semibold">Automation</h1>"
+      <p className="mt-2 text-gray-600 "dark": text-gray-300">Automation tools overview coming soon.</p>"
     </div>
 <<<<<<< HEAD
   )
@@ -63,10 +67,11 @@ export default function AutomationPage() {
 
 
 export default function AutomationPage() {;
-  return (
-    <div className="container mx-auto px-4 py-10">;
-      <h1 className="text-2xl font-semibold">Automation</h1>;
-      <p className="mt-2 text-gray-600 dark: text-gray-300">Automation tools overview coming soon.</p>;
+}
+return (;
+    <div className="container mx-auto px-4 py-10">;"
+      <h1 className="text-2xl font-semibold">Automation</h1>;"
+      <p className="mt-2 text-gray-600 "dark": text-gray-300">Automation tools overview coming soon.</p>;"
     </div>;
   ),;
 
@@ -93,33 +98,13 @@ export default /**
  * AutomationPage - Function description
  */
 function AutomationPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-    <div className="container mx - auto px - 4 py - 10">;
-      <h1 className="text - 2xl font - semibold">Automation</h1>;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  return (
-    <div className="container mx-auto px-4 py-10">;
-      <h1 className="text-2xl font-semibold">Automation</h1>;
-      <p className="mt-2 text-gray-600 dark: text-gray-300">Automation tools overview coming soon.</p>;
-    </div>;
-  ),;
-pr-12243
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-export default /**;
- * AutomationPage - Function description;
- */
-function AutomationPage() {}
-  return ("
+return (;
     <div className="container mx - auto px - 4 py - 10">;"
       <h1 className="text - 2xl font - semibold">Automation</h1>;"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Automation tools overview coming soon.</p>;
-    </div>),
+      <p className="mt - 2 text - gray - 600 "dark": text - gray - 300">Automation tools overview coming soon.</p>"
+    </div>
+  );
 }
 
   ),

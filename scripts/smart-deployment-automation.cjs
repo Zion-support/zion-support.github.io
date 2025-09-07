@@ -1,34 +1,8 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 console.log(' Starting Smart Deployment Automation...')
   "environment"
   "status"
@@ -41,7 +15,7 @@ console.log(' Starting Smart Deployment Automation...')
     return { "dependenciesInstalled": true, "securityAudit"}
     return { "dependenciesInstalled": true, "securityAudit"}
     execSync('npm run build', { "stdio"})
-  const buildStats = execSync('du -sh .next', { "encoding"})
+const buildStats = execSync('du -sh .next', { "encoding"});
     execSync('pm2 --version', { "stdio"})
       execSync('pm2 stop all', { "stdio"})
       execSync('pm2 delete all', { "stdio"})
@@ -56,17 +30,16 @@ console.log(' Starting Smart Deployment Automation...')
           "instances"
           "exec_mode"
       execSync('pm2 start ecosystem.basic.cjs', { "stdio"})
-    const pm2Status = execSync('pm2 status', { "encoding"})
+const pm2Status = execSync('pm2 status', { "encoding"});
       "fallbackMethod"
-    const healthCheck = execSync('curl -f "http": //localhost:3000 || echo "Health check failed")
+const healthCheck = execSync('curl -f "http": //localhost:3000 || echo "Health check failed");
       "encoding"
       "applicationResponding"
       "healthCheckResult"
     "buildExists"
     "logsDirectory"
     "applicationStatus"
-    const pm2List = execSync('pm2 list --json', { "encoding"})
-<<<<<<< HEAD
+const pm2List = execSync('pm2 list --json', { "encoding"});
 
   console.log('� Application should be running on "http")
 =======

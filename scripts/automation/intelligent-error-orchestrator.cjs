@@ -125,15 +125,7 @@ class IntelligentErrorOrchestrator {}
 <<<<<<< HEAD
 =======
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-    
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    const checks = [{ "name": 'TypeScript', "command": 'npm run type-check' },]
+const checks = [{ "name": 'TypeScript', "command": 'npm run type-check' },];
       { "name": 'ESLint', "command": 'npm run lint' },
       { "name": 'Build', "command": 'npm run build' },
       { "name": 'Dependencies', "command": 'npm audit --audit-level=moderate' };

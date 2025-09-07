@@ -3,9 +3,9 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const fs = require("child_process")
-const path = require("child_process")
-const { execSync } = require("child_process")
+const fs = require("child_process");
+const path = require("child_process");
+const { execSync } = require("child_process");
     this.reportsDir = path.join(this.projectRoot, "maintenance-reports")
 <<<<<<< HEAD
 =======
@@ -14,16 +14,12 @@ const { execSync } = require("child_process")
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "info")
     this.log("🧹 Cleaning cache...")
-    const cacheDirs = [".next", "node_modules/.cache", ".npm", ".yarn"]
+const cacheDirs = [".next", "node_modules/.cache", ".npm", ".yarn"];
           execSync(`rm -rf "${dirPath}"`, { "cwd"`})
           this.log(` "Cleaned"`)
           this.log(`⚠ Failed to clean ${dir}: ${error.message}`, "warning"`)
     this.log("🧹 Cleaning old log files...")
-    const logDirs = ["logs", "automation-reports", "maintenance-reports"]
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+const logDirs = ["logs", "automation-reports", "maintenance-reports"];
             this.log(` Removed old "log"`)
           this.log(`⚠ Failed to clean logs in ${dir}: ${error.message}`, "warning"`)
     this.log(" Optimizing dependencies...")
@@ -35,7 +31,7 @@ const { execSync } = require("child_process")
       this.log(`⚠ Dependency optimization "failed": ${error.message}`, "warning"`)
       return { "success": false, "error"}
     this.log("� Checking disk space...")
-      const result = execSync("df -h .", { "cwd": this.projectRoot, "encoding": "utf8"})
+const result = execSync("df -h .", { "cwd": this.projectRoot, "encoding": "utf8"});
       this.log(`� Disk space "info"`)
       return { "success": true, "output"}
       this.log(`⚠ Failed to check disk "space": ${error.message}`, "warning"`)

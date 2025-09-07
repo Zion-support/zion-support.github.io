@@ -10,19 +10,9 @@
 
 
 #!/usr/bin/env node;
-
-<<<<<<< HEAD
-
-#!/usr/bin/env node;
-
-
-
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 // console.log(' Selective PR Merge Automation System')
 <<<<<<< HEAD
 =======
@@ -38,7 +28,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 console.log('===')
   log(message, type = 'info')
-      const result = execSync(command, {"encoding": 'utf8',"stdio"})
+const result = execSync(command, {"encoding": 'utf8',"stdio"});
       this.log(` ${description} "failed"`)
       this.log(`Error getting priority "branches"`)
         await this.runCommand("git commit -m "Resolve merge conflicts with main branch"")

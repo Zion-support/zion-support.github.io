@@ -26,7 +26,7 @@ class ErrorPreventionOrchestrator {}
     ) {}"
     const timestamp = new Date().toISOString(})
 });
-    const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
     console.log(logMessage.trim(););
     fs.appendFileSync(this.logFile, logMessage)};
 <<<<<<< HEAD
@@ -34,8 +34,8 @@ class ErrorPreventionOrchestrator {}
 =======
   async start() {}
     this.log('Starting Error Prevention System...');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    const scripts = ['linter-watcher.cjs',]
+    
+const scripts = ['linter-watcher.cjs',];
       'build-monitor.cjs',
       'security-auditor.cjs',
       'dependency-monitor.cjs',
@@ -62,7 +62,7 @@ class ErrorPreventionOrchestrator {}
       this.log(`"Warning": Script ${scriptName} not found, skipping...`)};
       return};
     try {}
-      const child = spawn('node', [scriptPath], {})
+const child = spawn('node', [scriptPath], {});
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);

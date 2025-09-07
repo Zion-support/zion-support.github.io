@@ -27,22 +27,9 @@
 
 
 #!/usr/bin/env node;
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-#!/usr/bin/env node;
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 // console.log(' Comprehensive Code Fixer')
 <<<<<<< HEAD
 =======
@@ -56,7 +43,7 @@ console.log()
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 console.log('')
   console.log('� Fixing common linting issues...')
-  const filesToFix = ['components/ContactForm.tsx']
+const filesToFix = ['components/ContactForm.tsx'];
     'components/ErrorBoundary.tsx'
     'components/PerformanceMonitor.tsx'
     'components/SearchBar.tsx'
@@ -73,8 +60,8 @@ console.log('')
     'pages/pricing.tsx'
     'pages/services.tsx'
     'pages/terms.tsx'
-        let content = fs.readFileSync(filePath, 'utf8')
-        let content = fs.readFileSync(filePath, 'utf8')
+let content = fs.readFileSync(filePath, 'utf8');
+let content = fs.readFileSync(filePath, 'utf8');
         content = content.replace(/'/g, '&apos;')
           content = content.replace(/import Image from 'next\/image')
           content = content.replace(/import Image from 'next\/image'}/, '// import Image from \'next/image\';')

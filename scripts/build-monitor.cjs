@@ -3,12 +3,12 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
     this.reportsDir = path.join(this.projectRoot, 'build-reports')
     this.log('� Running build...')
-      const result = execSync('npm run build')
+const result = execSync('npm run build');
         "encoding"
         "status"
         "encoding"

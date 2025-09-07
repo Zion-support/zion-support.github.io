@@ -1,8 +1,17 @@
-interface FeatureCardProps {icon: string;
-  title: string;
-  description: string;
-  features: string[];
-  gradient: string;
+
+;
+interface FeatureCardProps  {"icon": string,"title": string,"description": string,"features": string[],"gradient": string,className?: string;
+}className?: string;
+  className?: string;
+}
+export default function FeatureCard() {
+}
+interface FeatureCardProps {"icon": string;
+  }
+  "title": string;
+  "description": string;
+  "features": string[];
+  "gradient": string;
   className?: string;
   className?: string;  className?: string;
 }
@@ -11,9 +20,10 @@ export default /**
  */
 function FeatureCard() {
 
+  }
+
   return (
-    <div className={`feature - card group ${class_name}`}>;
-      <div className={`w - 12 h - 12 ${gradient} rounded - lg flex items - center justify - center mb - 4`}>;
+    <div className={`feature - card group ${class_name}`}>;`      <div className={`w - 12 h - 12 ${gradient} rounded - lg flex items - center justify - center mb - 4`}>;`
         <span className=&quot;text - white text - xl & quot;>{icon}</span>;
       </div>;
       <h3 className=&quot;text - xl font - semibold mb - 3&quot;>{title}</h3>;

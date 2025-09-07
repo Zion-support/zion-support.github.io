@@ -3,11 +3,11 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 function log(message, level = 'INFO')
   log('🧪 Creating comprehensive test suite...')
-  const testUtilsContent = "
+const testUtilsContent = ";
   "id"
   "name"
   "email"
@@ -15,14 +15,7 @@ function log(message, level = 'INFO')
   "id"
   "text"
   "sender"
-  const jestSetupContent = "
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+const jestSetupContent = ";
 
     log(` Test suite enhancement "failed"`)
 <<<<<<< HEAD

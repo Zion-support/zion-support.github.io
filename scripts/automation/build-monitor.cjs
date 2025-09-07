@@ -89,7 +89,7 @@ setupSignalHandlers() {}
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`;
     console.log(message);
     
 <<<<<<< HEAD
@@ -127,8 +127,7 @@ setupSignalHandlers() {}"
     fs.appendFileSync(logFile, message + '\n')};
   async runCommand(command, options = {}) {}
     try {}
-      const result = execSync(command, { })
-<<<<<<< HEAD
+const result = execSync(command, { });
         "encoding": 'utf8', 
 =======
         "encoding": 'utf8',

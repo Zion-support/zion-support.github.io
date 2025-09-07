@@ -74,28 +74,15 @@ main();
 
 main();#!/usr/bin/env node;
 
-main();
-
-
-
-
-#!/usr/bin/env node;
-
-main();#!/usr/bin/env node;
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 // console.log('� Enhanced Security Scanner v2.0')
 console.log('======')
   log('info', 'Checking dependencies for vulnerabilities')
-    const output = execSync('npm audit --json', { "encoding"})
+const output = execSync('npm audit --json', { "encoding"});
           "type"
-  const secretPatterns = [/password\s*=\s*['"][^'']
+const secretPatterns = [/password\s*=\s*['"][^''];
     /api[_-]?key\s*=\s*['"][^'']
     /secret\s*=\s*['"][^'']
     /token\s*=\s*['"][^'']

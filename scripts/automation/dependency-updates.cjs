@@ -3,13 +3,13 @@
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log(""� Starting continuous dependency updates automation...")
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log(""� Starting continuous dependency updates automation...")
 // Get automation interval from environment variable ("default")
 // console.log(`" Checking for outdated dependencies..."`)
@@ -35,11 +35,11 @@ console.log(""� Starting continuous dependency updates automation...")
   console.log("⚠  Some updates failed")
 // console.log("⚠  Some updates failed")
 console.log(" Checking for major version updates...")
-  const outdatedOutput = execSync("npm outdated --json")
+const outdatedOutput = execSync("npm outdated --json");
   "encoding": "utf8"
-      const majorUpdates = Object.entries(outdated).filter((["pkg", "info")]
-  const current = info.current.split(".")
-        const latest = info.latest.split(".")
+const majorUpdates = Object.entries(outdated).filter((["pkg", "info")];
+const current = info.current.split(".");
+const latest = info.latest.split(".");
   console.log("⚠  Major version updates "available": ")
         majorUpdates.forEach((["pkg", "info")]
 // console.log("ℹ  Major updates require manual review")

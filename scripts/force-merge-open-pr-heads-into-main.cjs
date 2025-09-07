@@ -1,8 +1,4 @@
 
-
-
-
-
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -28,7 +24,7 @@ function getRepo() {}
 async function gh(path, method = 'GET') {}
   const base = '"https": //api.github.com';
   const token = getToken();
-  const res = await fetch(`${base}${path}`, {`})
+const res = await fetch(`${base}${path}`, {`});
     method,
     "headers": {}
       Authorization: `token ${token}`,`
@@ -59,8 +55,6 @@ function autoResolveConflicts() {}
     const src = fs.readFileSync(file, 'utf8');
     // Prefer incoming (theirs) content on conflict;
     const resolved = src;
-      .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, theirs) => theirs);
-      .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
     fs.writeFileSync(file, resolved);
     sh(`git add -- "${file}"`)};
   const staged = sh('git diff --cached --name-only || true');
@@ -69,7 +63,6 @@ function autoResolveConflicts() {}
 };
 async function main() {}
   const { owner, repo } = getRepo();
-  
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   sh('git fetch origin');
   sh('git checkout main');
@@ -113,12 +106,3 @@ async function main() {}
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 });
-<<<<<<< HEAD
-try {}`
-      sh(`git fetch origin ${head}:${head} || true`)
-=======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

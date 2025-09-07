@@ -103,10 +103,10 @@ class ErrorReportGenerator {}
       "errorSummary": {},
       "recommendations": []};"
   // TypeScript check;
-      try {}"
-  const typeCheckResult = execSync(npx tsc --noEmit --pretty false 2>&1")"
-          {}"
-  "encoding": "utf8"};"
+      try {}
+const typeCheckResult = execSync(npx tsc --noEmit --pretty false 2>&1",);
+          {}
+  "encoding": "utf8"};
         );
         report.projectStatus.typescript = {}"
   "status": "error",
@@ -116,7 +116,21 @@ class ErrorReportGenerator {}
 
           "details": error.message};"
       // ESLint check;
-
+      try {}
+const lintResult = execSync("npx eslint . 2>&1", {});
+  "encoding": "utf8"}
+});
+        report.projectStatus.eslint = {}
+  "status": "error",
+          "errorCount": (lintResult.match(/"error/g") || []).length,
+          "details": lintResult};
+      } catch (error) {}
+  report.projectStatus.eslint = {}
+  "status": "error",
+          "errorCount": 0,
+          "details": error.message};
+      };
+;
       // Build check;
   execSync("npm run build", { "stdio": "pipe" }")
         report.projectStatus.build = {}"
@@ -127,8 +141,29 @@ class ErrorReportGenerator {}
       report.recommendations = this.generateRecommendations(report);
       // Save report;
       const timestamp = Date.now();
-      const reportPath = path.join(;)"`;
-        this.projectRoot,error-reports", `comprehensive-error-report-${timestamp}.json`} catch (error) {`}"
+const reportPath = path.join(;);
+        this.projectRoot,error-reports", `comprehensive-error-report-${timestamp}.json`} catch (error) {`}
+  report.projectStatus.eslint = {}
+  "status": "error",
+          "errorCount": 0,
+          "details": error.message};
+      };
+;
+      // Build check;
+      try {}
+  execSync("npm run build", { "stdio": "pipe" }
+});
+        report.projectStatus.build = {}
+  "status": "success",
+          "details": "Build completed successfully"};
+      } catch (error) {}
+  report.projectStatus.build = {}
+  "status": "error",
+          "details": error.message};
+      };
+;
+      // Generate recommendations;
+      report.recommendations = this.generateRecommendations(report);
 
       // Generate recommendations;
 <<<<<<< HEAD
@@ -154,7 +189,7 @@ class ErrorReportGenerator {}
         this.projectRoot,error-reports", `comprehensive-error-report-${timestamp}.json`;`"
 =======
       const timestamp = Date.now();
-      const reportPath = path.join(;)
+const reportPath = path.join(;);
         this.projectRoot,error-reports", `comprehensive-error-report-${timestamp}.json`;`
       );
 <<<<<<< HEAD

@@ -1,7 +1,4 @@
-import { describe, it, expect } from '@jest/globals';
-
-describe('ModernErrorBoundary', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
+import { render, screen  } from '@testing-library/react';'
+import ModernErrorBoundary from './ModernErrorBoundary';'
+describe('ModernErrorBoundary', () => {it('renders without crashing', () => {render(<$1>)expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()it('displays expected content', () => {render(<ModernErrorBoundary />)})// Add specific test assertions based on component content;'
+  })
