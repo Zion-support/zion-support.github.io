@@ -58,6 +58,7 @@ export default function IncubatorPage() {return (<EnhancedLayout>;
     </EnhancedLayout>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -75,6 +76,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </EnhancedLayout>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Link from 'next/link';
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 export default /**;
@@ -106,8 +109,12 @@ function IncubatorPage() {return (<EnhancedLayout>;
           <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px-4 py-2 border rounded">View Incubator Projects</a></Link>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </EnhancedLayout>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </EnhancedLayout>);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </EnhancedLayout>)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

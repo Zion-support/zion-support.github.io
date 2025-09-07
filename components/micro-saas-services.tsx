@@ -2,19 +2,26 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Brain;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {Brain,Monitor,Search,Shield,Mail,Share2,Check,Star,Zap,TrendingUp,Users,Globe,Lock,BarChart3,Brain;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Monitor;
   Search;
   Shield;
   Mail;
   Share2;
   Check;
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -58,6 +65,8 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Star;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Brain;
   Monitor,Search,Shield,Mail,Share2,Check,import { Brain;
   Monitor;
@@ -66,13 +75,17 @@ import {
   Mail;
   Share2;
   Check;Star;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Zap;
   TrendingUp;
   Users;
   Globe;
   Lock;
   BarChart3;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Calendar;
@@ -430,6 +443,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {
         starter: {
           price: 29,
+=======
+  Calendar;Target;
+  } from 'lucide-react';
+export default function MicroSaasServicesPage() {const microSaasServices = null;
+            we deliver professional solutions with competitive pricing and exceptional value.;
+      features: [;
+        'AI-powered content generation';
+        'Multiple content types (blog, social, email)';
+        'SEO optimization suggestions';
+        'Content templates library';
+        'Plagiarism-free content';
+        'Multi-language support';
+      ];
+      useCases: [;
+        'Blog content creation';
+        'Social media posts';
+        'Email marketing campaigns';
+        'Product descriptions';
+        'Landing page copy';
+        'Newsletter content';
+      ];
+      pricing: {starter: {price: 19,features: [;
+            '5 URLs','5-min monitoring','Basic metrics','Email alerts','7-day retention',],},professional: {price: 49,features: [;
+            '25 URLs','1-min monitoring','Advanced metrics','Multiple alerts','30-day retention','API access',],},enterprise: {price: 299;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           features: [;
             '100 generations / month',
             'Basic templates',
@@ -465,6 +503,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     }
   ];
+<<<<<<< HEAD
     {
           price: 199
           features: [
@@ -967,6 +1006,8 @@ export default function MicroSaasServicesPage() {const microSaasServices = null;
     }
     }
   ];
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     {price: 199;
     {id: 'seo-analytics',name: 'SEO Analytics Dashboard',description:;
         'Comprehensive SEO tracking, competitor analysis, and keyword monitoring to improve your search engine rankings.',icon: <Search className='w-8 h-8 text-white' />,color: 'bg-gradient-to-br from-green-500 to-emerald-600',gradient: 'from-green-400 to-emerald-500',features: [;
@@ -1100,9 +1141,12 @@ export default function MicroSaasServicesPage() {const microSaasServices = null;
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {marketInsights.map((insight, index) => (<Card;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={index}
                 className='card - hover border - gradient - blue text - center';
                 style={{ animation_delay: `${index * 0.1}s` }}
@@ -1116,6 +1160,7 @@ export default function MicroSaasServicesPage() {const microSaasServices = null;
                       {insight.market_size}
                     </div>;
                     <div className='text - green - 400 font - semibold'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       {insight.growth}
@@ -1157,6 +1202,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Services Grid */}
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {insight.growth}</h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Our services are positioned competitively in growing markets with strong demand and proven business models.;
@@ -1238,6 +1285,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card;
                 key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className="card-hover border-gradient-blue text-center";
                     </div>;
                   </div>;
@@ -1245,6 +1295,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </Card>;
             ))}{/* Services Grid */}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                 className="card-hover border-gradient-blue text-center"
@@ -1277,6 +1328,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Services Grid */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -1344,6 +1397,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <h3 className='text - 2xl font - bold text - white'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                           {service.name}
                         </h3>
                         <p className='text-gray-400'>{service.description}</p>
@@ -1359,6 +1413,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {service.features.map((feature, featureIndex) => (
                             <li
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {service.name}</h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Each service is designed to solve specific business challenges with professional-grade features and competitive pricing.;
@@ -1367,6 +1423,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="space-y-16">;
             {microSaasServices.map((service, index) => (<div key={service.id} className="bg-gray-900/50 rounded-2xl p-8 border border-gray-800">;
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
+<<<<<<< HEAD
 =======
                           {service.name}
             </h2>
@@ -1379,6 +1436,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div key={service.id} className="bg-gray-900/50 rounded-2xl p-8 border border-gray-800">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         </h3>;
                         <p className='text - gray - 400'>{service.description}</p>;
                       </div>;
@@ -1424,6 +1483,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </h4>;
                         <ul className="space-y-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {service && service.useCases.map((useCase, useCaseIndex) => (<li key={useCaseIndex} className="flex items-center text-gray-300 text-sm">;
                               <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />;<div className="flex flex-wrap gap-4">;
                         </h3>;
@@ -1957,5 +2019,9 @@ href='/pricing';
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

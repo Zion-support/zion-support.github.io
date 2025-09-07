@@ -11,6 +11,7 @@ const path = require('path')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "encoding"
 
@@ -18,3 +19,6 @@ const path = require('path')
 =======
         "encoding"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        "encoding"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

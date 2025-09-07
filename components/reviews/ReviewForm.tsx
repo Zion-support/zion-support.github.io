@@ -25,6 +25,9 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -96,6 +99,7 @@ type Props = {
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -109,6 +113,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
   const [anonymous, setAnonymous] = useState(false);
@@ -224,6 +230,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;
       setMessage(err && err.message);
@@ -240,12 +249,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
 
+<<<<<<< HEAD
 =======
       setMessage('Review submitted! Pending admin approval.');
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -266,9 +278,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             communication;
             qualityOfWork;
             timeliness;
@@ -276,20 +291,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
   return (
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
   return (<div>;
@@ -305,6 +326,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <StarRating value={rating} onChange={setRating} />;
       </div>;<div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -341,6 +363,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     } catch (err: any) {setMessage(err.message)} finally {setSubmitting(false)}
   }
   return (<form onSubmit={handleSubmit} className='space-y-6'>;
@@ -352,10 +376,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <label className='block text-sm font-medium mb-2'>Your Review</label>;
         <textarea;
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
@@ -367,18 +394,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
+<<<<<<< HEAD
 =======
         <label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
           onChange={e => setText(e && e.target.value)}          required;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+<<<<<<< HEAD
 =======
           onChange={e => setText(e && e.target.value)}          required;
         />;
@@ -386,6 +417,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
@@ -450,6 +483,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onChange={v => setCommunication(v)}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
@@ -457,6 +491,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      set_submitting (false)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       set_submitting (false);
     }
   }
@@ -529,6 +566,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
             <span className='text - sm'>Timeliness</span>;
@@ -604,6 +644,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )disabled={submitting}
       >;
 <<<<<<< HEAD
+<<<<<<< HEAD
         {submitting ? 'Submitting...' : 'Submit Review'}
 
 <<<<<<< HEAD
@@ -642,6 +683,8 @@ export default ReviewForm;
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {submitting ? 'Submitting...' : 'Submit Review'}<button;
         type="submit";
         className="enhanced-button enhanced-button-primary";
@@ -666,10 +709,13 @@ type='submit';
   )}export default ReviewForm;
         {submitting ? 'Submitting...' : 'Submit Review'}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </button>;
       {message && <p className='text - sm'>{message}</p>}
     </form>);
@@ -681,6 +727,7 @@ export default ReviewForm;    </form>);
 export default ReviewForm;
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -709,3 +756,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

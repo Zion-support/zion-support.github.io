@@ -187,6 +187,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = SmartPerformanceOptimizer;
 
@@ -194,3 +195,6 @@ module.exports = SmartPerformanceOptimizer;
 =======
 module.exports = SmartPerformanceOptimizer;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = SmartPerformanceOptimizer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

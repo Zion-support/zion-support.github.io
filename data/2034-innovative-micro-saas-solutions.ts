@@ -4,12 +4,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type InnovativeMicroSaas = {'Multi-speaker diarization',launch_date?: string;export type InnovativeMicroSaas = {export type InnovativeMicroSaas = {id: string;
 export type InnovativeMicroSaas = any;name: string;
   description: string;
@@ -23,9 +26,12 @@ export type InnovativeMicroSaas = any;name: string;
     | 'Financial Technology';
     | 'Human Resources';
     | 'Supply Chain Management';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type InnovativeMicroSaas = {
       'Multi-speaker diarization',
   launch_date?: string;
@@ -33,6 +39,7 @@ export type InnovativeMicroSaas = {
 export type InnovativeMicroSaas = {
 export type InnovativeMicroSaas = {
   id: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -43,6 +50,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export type InnovativeMicroSaas = any;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   description: string;
   tagline?: string;
@@ -139,11 +148,14 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type InnovativeMicroSaas = {
       'Multi-speaker diarization',
   launch_date?: string;
@@ -152,6 +164,7 @@ export type InnovativeMicroSaas = {
 
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -174,6 +187,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
     description:;
@@ -202,6 +217,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -218,6 +234,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'smart - invoice - reconciliation',
     name: 'Smart Invoice Reconciliation',
     description:;
@@ -237,6 +255,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -248,6 +267,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
     category: 'Human Resources'
     pricing: { starter: '$69/mo' }
@@ -258,6 +279,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     realService: true
   }
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -290,10 +312,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'candidate - screening - copilot',
     name: 'Candidate Screening Copilot',
     description:;
       'Summarize resumes, score against job descriptions, and auto - generate interview question sets.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -343,6 +368,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: 'Human Resources',
     pricing: { starter: '$69/mo' },
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
@@ -371,6 +398,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -386,6 +414,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     use_cases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
@@ -397,6 +427,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 	id: string, name: string,
 	description: string, tagline?: string,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -421,6 +452,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 	category:
 		| 'Content Marketing'
 		| 'Business Operations'
@@ -500,6 +533,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -523,6 +557,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		launchDate: '2025-12-01'
 	}
 	{
@@ -534,6 +570,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		features: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'];
 		integrations: ['Google Business ProfileYelp'];
 		useCases: ['Local rankingReputation management'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -562,6 +599,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		realService: true
 	}
 	{
@@ -573,6 +612,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		features: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP'];
 		integrations: ['QuickBooksXeroStripe'];
 		useCases: ['Accounting automationFinance ops'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -601,6 +641,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		realService: true
 	}
 	{
@@ -648,6 +690,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -666,6 +709,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 name: string;
 description: string;
 tagline?: string;
@@ -829,6 +874,7 @@ export type InnovativeMicroSaas = {id: string,name: string,description: string,t
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type InnovativeMicroSaas = {;
 	}
 =======
@@ -846,12 +892,15 @@ export type InnovativeMicroSaas = {;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type InnovativeMicroSaas = {;
 	}
 ];
 ;
 
 export type InnovativeMicroSaas = {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -864,6 +913,8 @@ export type InnovativeMicroSaas = {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 	id: string,;
 	name: string,;
 	description: string,;
@@ -942,6 +993,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -949,6 +1001,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 	}
 ];
 ;
@@ -1203,6 +1257,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1233,3 +1288,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

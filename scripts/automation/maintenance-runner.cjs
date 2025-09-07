@@ -7,6 +7,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -14,6 +15,9 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -22,6 +26,7 @@ const reportsDir = path.join(projectRoot, 'reports')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error('Failed to write maintenance "summary")
 
@@ -29,3 +34,6 @@ const reportsDir = path.join(projectRoot, 'reports')
 =======
   console.error('Failed to write maintenance "summary")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error('Failed to write maintenance "summary")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

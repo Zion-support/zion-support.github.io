@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         .replace(/^>>>>>>>.*$/gm, '')
 =======
@@ -38,6 +39,10 @@ ursor/fix-lint-push-and-merge-to-main-28da
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+        .replace(/^>>>>>>>.*$/gm, '')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
@@ -105,12 +110,15 @@ module.exports = QuickSyntaxFixer;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -121,6 +129,7 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 ursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -128,3 +137,5 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -7,6 +7,7 @@ const { execSync } = require('child_process');
 console.log('🚀 Comprehensive Merge Conflict Resolver');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log('==');
 
@@ -16,19 +17,27 @@ main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+console.log('==');
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 console.log('==');
 
 console.log('==');
 
+<<<<<<< HEAD
 console.log('==');
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     .replace(/
     .replace(/
@@ -49,10 +58,23 @@ function removeMergeConflictMarkers(content) {
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+
+
+
+
+    .replace(/
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -70,6 +92,8 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -151,17 +175,21 @@ function processFile(filePath) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (content.includes('
 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 main
 
@@ -170,6 +198,10 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             files.push(fullPath);
           }
         } catch (error) {
@@ -190,9 +222,12 @@ main
         this.log(`✅ Resolved conflicts in ${filePath}`),,
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`❌ Error resolving ${filePath}: ${error.message}`),,
@@ -218,6 +253,7 @@ main
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 
@@ -225,6 +261,9 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 // Main execution
 async function main() {

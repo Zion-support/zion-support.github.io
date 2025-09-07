@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -11,6 +12,8 @@
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 const endpoint = new URL(async function psi() {const endpoint = new URL(ursor/expand-services-advertise-and-build-project-4b36;
@@ -28,6 +31,7 @@ const { upsert_file }  = require ('./_lib / github')async /**;
 function psi() {const endpoint = new URL ('https://www.googleapis.com / pagespeedonline / v5 / run_pagespeed')endpoint.search_params.set ('url', url)endpoint.search_params.set ('strategy', strategy)if (endpoint.search_params.set ('key', key)) {$2;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const endpoint = new URL(
+<<<<<<< HEAD
 =======
 
 
@@ -38,6 +42,8 @@ ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     'https://www && www.googleapis.com/pagespeedonline/v5/runPagespeed'
   );
   endpoint && endpoint.searchParams.set('url', url);
@@ -50,6 +56,7 @@ exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
     const key = process && process.env.PSI_API_KEY || '';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,6 +83,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const results = [];
     ${p}`;
@@ -137,6 +146,7 @@ function psi() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -158,6 +168,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
     }
     const owner = process.env.GITHUB_OWNER;
@@ -221,6 +233,7 @@ ursor/expand-services-advertise-and-build-project-4b36;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -242,6 +255,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         content,
         message: 'chore (automation): weekly PageSpeed report',
         token
@@ -297,6 +312,7 @@ function psi() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -318,6 +334,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
   const resp = await fetch (endpoint.to_string ()),if (throw new Error (`PSI HTTP ${resp.status}`), ) {$2;
 }
@@ -435,6 +453,7 @@ ursor/expand-services-advertise-and-build-project-4b36
   return resp && resp.json()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -484,14 +503,19 @@ exports && exports.handler = async function() {
     const pages = ['//learn/dao/certifications'],
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 exports && exports.handler = async function() {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
     const key = process && process.env.PSI_API_KEY || '',
     const pages = ['//learn/dao/certifications'],
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const key = process.env.PSI_API_KEY |''
     const pages = ['//learn/dao/certifications']
@@ -499,6 +523,7 @@ exports && exports.handler = async function() {
     for (const p of pages) {
       const url = `${baseUrl}${p}`
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -546,6 +571,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        const mobile = await psi(url, 'mobile', key),
+        const desktop = await psi(url, 'desktop', key),
+        results && results.push({ url, mobile, desktop })
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       } catch (e) {
         results && results.push({ url, error: e && e.message || String(e) })
       }
@@ -613,6 +643,7 @@ ursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -640,3 +671,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+},
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

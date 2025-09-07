@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
@@ -32,21 +33,27 @@ export const metadata = {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 import Link from "next/link";
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export const metadata = {
   title: "AI Services | Zion Tech Group",
   description: "Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.",
   keywords: 'ai-services, services, business, technology'
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
   title: 'Ai Services | Zion Tech Group',
   description: 'Professional ai services services for your business needs.',
   keywords: 'ai-services, services, business, technology',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 };
 
 function FeatureItem({ icon, title, description, benefits }: { icon: string; title: string; description: string; benefits: string[] }) {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="animate-fade-in">
@@ -289,13 +296,16 @@ function FeatureItem({ icon, title, description, benefits }: { icon: string; tit
       </section>
 =======
     <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+=======
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">{title}</h3>
-      <p className="text-gray-600 mb-6">{description}</p>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
       <ul className="space-y-2">
         {benefits.map((benefit, index) => (
-          <li key={index} className="flex items-center text-gray-600">
-            <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
             {benefit}
           </li>
         ))}
@@ -306,6 +316,7 @@ function FeatureItem({ icon, title, description, benefits }: { icon: string; tit
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+<<<<<<< HEAD
 function CTA() {
   return (
     <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
@@ -336,6 +347,8 @@ function CTA() {
 export default function ServicePage() {
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function BenefitCard({ icon, title, description }: { icon: string; title: string; description: string }) {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
@@ -365,6 +378,7 @@ function AIServiceCard({ icon, title, description, features, price }: {
   features: string[];
   price: string;
 }) {
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   return (
     <div className="min-h-screen bg-gray-50">
@@ -569,6 +583,13 @@ function AIServiceCard({ icon, title, description, features, price }: {
       <p className="text-gray-600 mb-4">{description}</p>
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <ul className="space-y-2 mb-4">
         {features.map((feature, index) => (
           <li key={index} className="text-sm text-gray-600 flex items-center">
@@ -578,7 +599,10 @@ function AIServiceCard({ icon, title, description, features, price }: {
         ))}
       </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className="text-lg font-semibold text-blue-600 mb-4">{price}</div>
       <a
         href="mailto:kleber@ziontechgroup.com?subject=AI Service: {title}"
@@ -718,7 +742,7 @@ export default function AIServicesPage() {
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
         <p className="text-xl mb-8">
-          Let's discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
+          Let&apos;s discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

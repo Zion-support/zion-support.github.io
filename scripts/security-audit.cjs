@@ -498,6 +498,7 @@ class SecurityAuditor {
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 =======
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -553,6 +554,8 @@ module.exports = SecurityAuditor;
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -8,6 +8,7 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Milestone } from '../../utils/types/milestones';
 type Props = any;
 type Props = {
@@ -21,6 +22,11 @@ import { Milestone  } from '../../utils/types/milestones';
 type Props = any;
 type Props = {milestone: Milestone;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import { Milestone  } from '../../utils/types/milestones';
+type Props = any;
+type Props = {milestone: Milestone;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   project_id: string;
   role: 'client' | 'talent' | 'admin';
   onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid';
@@ -51,6 +57,7 @@ export default function MilestoneCard() {milestone: Milestone;
           </p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <button
           className='text-sm text-blue-600'
           onClick={() => setExpanded(v => !v)}
@@ -68,6 +75,11 @@ type Props = {
   return (
     <div className='border rounded - lg p - 4 bg - white shadow - sm'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        <button;
+          className='text-sm text-blue-600';
+          onClick={() => setExpanded(v => !v)}>          {expanded ? 'Hide' : 'Details'}type Props = {return (<div className='border rounded - lg p - 4 bg - white shadow - sm'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className='flex items - start justify - between'>;
         <div>;
           <h3 className='text - lg font - semibold'>{milestone.title}</h3>;
@@ -92,6 +104,9 @@ type Props = {
   const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone && milestone.status === 'Submitted';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const canClientMarkPaid  = role !== 'talent' && milestone && milestone.status === 'Approved';>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           {expanded ? 'Hide' : 'Details'}
@@ -126,7 +141,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='flex items-center gap-2'>;
           {statusSteps.map((step, idx) => (<div key={step} className='flex items-center'>;
               <div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) => Promise < void> | void;
 }const status_steps  = ['PendingIn ProgressSubmittedApprovedPaid'] as const;export default /**;
  * MilestoneCard - Function description;
@@ -150,6 +168,7 @@ function MilestoneCard() {const [expanded, set_expanded]  = useState (false)cons
               <div;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className={
                   'h-2 w-2 rounded-full ' +
                   (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
@@ -157,6 +176,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 className={
                   'h - 2 w - 2 rounded - full ' +;
+=======
+                className={'h - 2 w - 2 rounded - full ' +;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')                }
                 title={step}
             <div key={step} className="flex items-center">
@@ -164,6 +186,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {idx < status_steps.length - 1 && (          {status_steps.map ((step, idx) => (
             <div key={step} className="flex items - center">;
               <div;
+<<<<<<< HEAD
                 className={
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -185,6 +208,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 title={step}
             <div key={step} className="flex items-center">;
               <div;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {idx < status_steps.length - 1 && (          {status_steps.map ((step, idx) => (<div key={step} className="flex items - center">;
               <div;
                 className={'h-2 w-2 rounded-full ' +;
@@ -205,6 +230,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 title={step}
               />;
               {idx < statusSteps.length - 1 && (/>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               )}
             </div>;
@@ -241,11 +267,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
 <div className='mt-2 text-xs text-gray-700'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              )}
+            </div>;
+          ))}
+        </div>;
+<div className='mt-2 text-xs text-gray-700'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           Status: {milestone.status}
         </div>;
       </div>;
       {expanded && (<div className='mt-4 space-y-2 text-sm text-gray-800'>;
           {milestone.description && <p>{milestone.description}</p>}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>
           {milestone.attachments && milestone.attachments.length > 0 && (
@@ -277,6 +311,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </a>
                   </li>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>;
           {milestone.attachments && milestone.attachments.length > 0 && (<div>;
 <div className='font-medium'>Attachments</div>;
@@ -293,7 +329,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >;
                       {a.label || a.url}</a>;
                   </li>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;
               <ul className="list-disc ml-5">;
                 {milestone && milestone.attachments.map((a) => (<li key={a && a.id}>;
@@ -317,6 +356,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </ul>;
             </div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>
       )}
@@ -412,6 +452,8 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>;
       )}className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
         {canClientMarkInProgress && (<button;
@@ -504,9 +546,13 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
           </button>)}
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </div>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

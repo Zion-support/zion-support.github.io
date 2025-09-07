@@ -307,6 +307,7 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = TypeScriptErrorAutoFixer;
 
@@ -314,3 +315,6 @@ module.exports = TypeScriptErrorAutoFixer;
 =======
 module.exports = TypeScriptErrorAutoFixer;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = TypeScriptErrorAutoFixer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

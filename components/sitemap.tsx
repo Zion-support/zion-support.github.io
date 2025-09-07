@@ -4,12 +4,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 ;
@@ -73,12 +76,16 @@ import Head from "next/head";
 export default function SitemapPage() {
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const links = [
     { name: "Home", href: "/" }
     { name: "Services", href: "/services" }
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -129,6 +136,9 @@ export default function SitemapPage() {;
     { name: "Support", href: "/support" }
     { name: "Contact", href: "/contact" }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const links = [;
     { name: "Home", href: "/" },;
     { name: "Services", href: "/services" },;
@@ -289,6 +299,7 @@ function SitemapPage() {const links = [;
 
 }
 
+<<<<<<< HEAD
 =======
 
   const links = [;
@@ -309,6 +320,8 @@ function SitemapPage() {const links = [;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 	const links = [
 		{ name: 'Home', href: '/' },
 		{ name: 'Services', href: '/services' },
@@ -320,6 +333,7 @@ function SitemapPage() {const links = [;
 		{ name: 'Support', href: '/support' },
 		{ name: 'Contact', href: '/contact' }
 	];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -335,6 +349,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -364,6 +380,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 	);
 
 }
+<<<<<<< HEAD
 =======
 );
 
@@ -376,6 +393,8 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from './react';
 export default /**
  * SitemapPage - Function description
@@ -575,6 +594,7 @@ function SitemapPage() {const links = [;
               <a className="text-cyan-300" href={l.href}>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	)
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -586,6 +606,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {l.name}
               </a>
             </li>
@@ -598,12 +620,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -655,6 +680,7 @@ function SitemapPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     { name: "Contact", href: "/contact" },;
@@ -676,6 +702,9 @@ function SitemapPage() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    { name: "Contact", href: "/contact" },;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ];
   return (
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -768,6 +797,7 @@ function SitemapPage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -780,3 +810,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

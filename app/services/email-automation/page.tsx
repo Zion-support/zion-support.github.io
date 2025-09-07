@@ -1,5 +1,6 @@
 export const metadata = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'Email Automation Platform | Zion Tech Group',
   description: 'Build powerful email automation platforms with drip campaigns, personalization, and analytics. Professional email marketing solutions starting at $12k.',
 };
@@ -195,6 +196,9 @@ function Plan({ name, price, duration, features }: {
         Get Started
       </a>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: 'Email Automation | Zion Tech Group',
   description:
     'Professional email automation services for your business needs.',
@@ -244,7 +248,11 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>
   );
 }
+

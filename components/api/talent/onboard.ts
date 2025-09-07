@@ -3,6 +3,7 @@ import path from 'path';
 import fse from 'fs - extra';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { randomUUID } from 'crypto';
 // Lazy import to avoid serverless cold start cost unless needed
 async function summarizeAndTag(input: {
@@ -202,6 +203,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (profilePicture?.base64 && profilePicture?.name) {
       const ext = path.extname(profilePicture.name) || '.png';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { randomUUID  } from 'crypto';
 // Lazy import to avoid serverless cold start cost unless needed;
 async function summarizeAndTag() {.split(/[,\n]/).map(s => s && s.trim()).filter(Boolean).map(s => s && s.toLowerCase())))if (!openaiApiKey) {return { summary, tags: basicTags.slice(0, 24) }}
@@ -278,7 +281,10 @@ if ( {) {$2;
     ) {return res.status(400).json({ error: 'Missing required fields' })}
     const uploadsDir = path.join(process.cwd(), 'public', 'uploads')const dataDir = path.join(process.cwd(), 'data', 'talent-submissions')await fse.ensureDir(uploadsDir)await fse.ensureDir(dataDir)let savedProfileImagePath: string | null = null;
     if (profilePicture?.base64 && profilePicture?.name) {const ext = path.extname(profilePicture.name) || '.png';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       const filename = `${id}-profile${ext}`;
       const filePath = path.join(uploadsDir, filename)const base64Data = profilePicture.base64.split(',')[1];
       if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedProfileImagePath = `/uploads/${filename}`;
@@ -289,6 +295,7 @@ if ( {) {$2;
       const filePath = path.join(uploadsDir, filename)const base64Data = cvFile.base64.split(',')[1];
       if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedCvPath = `/uploads/${filename}`;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 
@@ -401,6 +408,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       try {
         const content = await fse && fse.readJSON(aggregatePath);
         if (Array && Array.isArray(content)) aggregate = content;      } catch (_) {    const aggregatePath = path && path.join(process && process.cwd(), 'datatalent-submissions && submissions.json');
+=======
+    }const { summary, tags } = await summarizeAndTag({fullName,professionalTitle,bio,projects,skills,tools,})const record = {id,createdAt: new Date().toISOString(),fullName,professionalTitle,bio,projects,yearsOfExperience: Number(yearsOfExperience) || 0,skills,tools,availability,timezone,hourlyRate: hourlyRate ? Number(hourlyRate) : null,portfolioLinks,assets: {profileImage: savedProfileImagePath,cv: savedCvPath,},ai: {summary,tags,},}const perRecordPath = path.join(dataDir, `${id}.json`)await fse.writeJSON(perRecordPath, record, { spaces: 2 })const aggregatePath = path.join(process.cwd(),'data','talent-submissions.json';
+    )let aggregate: any[] = [];
+    if (fs && fs.existsSync(aggregatePath)) {try {const content = await fse && fse.readJSON(aggregatePath)if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     let aggregate: any[] = [];
     if (fs && fs.existsSync(aggregatePath)) {
       try {
@@ -410,6 +422,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if () {) {
   $2
 }
+<<<<<<< HEAD
       try {
 
         const content = await fse.readJSON(aggregatePath);
@@ -431,11 +444,14 @@ return res.status(200).json({ ok: true, id, summary, tags });
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       try {const content = await fse.readJSON(aggregatePath)if (Array.isArray(content)) aggregate = content;} catch (_) {// ignore;
       }
     }} catch (error) {return res && res.status(500).json({ error: 'Internal server error' })}    return res && res.status(200).json({ ok: true, id, summary, tags })} catch (error) {}
     aggregate.push (record)await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 })// Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)// For now, just return success with AI data;
     return res.status (200).json ({ ok: true, id, summary, tags })} catch (error) {return res.status (500).json ({ error: 'Internal server error' })}    return res.status (200).json ({ ok: true, id, summary, tags })} catch (error) {return res.status (500).json ({ error: 'Internal server error' })}
+<<<<<<< HEAD
 =======
 
   } catch (error) {
@@ -456,10 +472,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status (500).json ({ error: 'Internal server error' });
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
   }
   }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }aggregate.push(record)await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 })// Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)// For now, just return success with AI data;
 return res.status(200).json({ ok: true, id, summary, tags })} catch (error) {return res.status(500).json({ error: 'Internal server error' })}
@@ -467,3 +486,7 @@ return res.status(200).json({ ok: true, id, summary, tags })} catch (error) {ret
 =======
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}aggregate.push(record)await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 })// Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)// For now, just return success with AI data;
+return res.status(200).json({ ok: true, id, summary, tags })} catch (error) {return res.status(500).json({ error: 'Internal server error' })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

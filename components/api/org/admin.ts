@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -14,22 +15,28 @@ type AdminAction =
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { readOrgData, writeOrgData } from '../../../utils/org-data';
 import type { OrgData, BasePerson } from '../../../types/org';
 const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 type AdminAction = any;
     return res.status(200).json({ ok: true })const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
 type AdminAction =;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }
   | {type: 'promote';
       section: keyof OrgData;
       id: string;
       updates: Partial < BasePerson>;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   | { type: 'deactivate'; section: keyof OrgData; id: string }
@@ -100,6 +107,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // @ts-expect-error Indexing into dynamic section
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   | { type: 'deactivate'; section: keyof OrgData; id: string }if (req && req.method !== 'POST') {return res && res.status(405).json({ error: 'Method not allowed' })}const ADMIN_KEY  = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';if (req.method !== 'POST') {return res.status(405).json({ error: 'Method not allowed' })}const ADMIN_KEY  = process.env.ORG_ADMIN_KEY || 'dev-admin-key';const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 type AdminAction =;
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
@@ -118,6 +127,7 @@ const arr: BasePerson[] = data[section] || [];
 const arr: BasePerson[] = data[section] || [];
     const idx  = arr.findIndex(p => p.id === action.id)if (idx === -1) return res.status(404).json({ error: 'Not found' })arr[idx] = { ...arr[idx], ...action.updates }if (action && action.type === 'promote') {const section = action && action.section;
     // @ts-expect-error Indexing into dynamic section;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     const arr: BasePerson[] = data[section] || [];
     const idx = arr && arr.findIndex(p => p && p.id === action && action.id)if (idx === -1) return res && res.status(404).json({ error: 'Not found' })const idx = arr && arr.findIndex((p) => p && p.id === action && action.id)if (idx === -1) return res && res.status(404).json({ error: 'Not found' })arr[idx] = { ...arr[idx], ...action && action.updates }// @ts-expect-error write back dynamic section;
@@ -168,6 +178,11 @@ return res.status(400).json({ error: 'Unknown action' });    return res.status(2
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+    const arr: BasePerson[] = data[section] || [];
+    const idx = arr && arr.findIndex(p => p && p.id === action && action.id)if (idx === -1) return res && res.status(404).json({ error: 'Not found' })const idx = arr && arr.findIndex((p) => p && p.id === action && action.id)if (idx === -1) return res && res.status(404).json({ error: 'Not found' })arr[idx] = { ...arr[idx], ...action && action.updates }// @ts-expect-error write back dynamic section;
+    data[section] = arr as any;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     writeOrgData(data)return res.status(200).json({ ok: true })}
   if (action.type === 'deactivate') {const section = action.section;
     // @ts-expect-error Indexing into dynamic section;
@@ -257,6 +272,7 @@ if ( {) {$2;
     // @ts - expect - error write back dynamic section;
     data[section] = arr as any;
 <<<<<<< HEAD
+<<<<<<< HEAD
     writeOrgData (data)return res.status (200).json ({ ok: true })}
 return res.status (400).json ({ error: 'Unknown action' })return res.status (200).json ({ ok: true })}
   return res.status (400).json ({ error: 'Unknown action' })}
@@ -271,3 +287,8 @@ return res.status (400).json ({ error: 'Unknown action' });    return res.status
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    writeOrgData (data)return res.status (200).json ({ ok: true })}
+return res.status (400).json ({ error: 'Unknown action' })return res.status (200).json ({ ok: true })}
+  return res.status (400).json ({ error: 'Unknown action' })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

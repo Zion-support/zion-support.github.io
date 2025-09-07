@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query;
@@ -18,12 +19,19 @@ import {
   connectOrbit
   appendChatMessage
   recordVote
+=======
+import { connectOrbit,appendChatMessage,recordVote,editConstitution,} from '@/utils/offworld/orbitdb';
+import { connectOrbit;
+  appendChatMessage;
+  recordVote;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   editConstitution;
 } from '@/utils/offworld/orbitdb';
 export default async function handler(
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
   req: NextApiRequest,
   res: NextApiResponse;
+<<<<<<< HEAD
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   req: NextApiRequest
@@ -92,6 +100,8 @@ export default async function handler() {  const { action } = req.query;import {
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution  } from '@/utils/offworld/orbitdb';
 export default async function handler() {req: NextApiRequest;
   res: NextApiResponse;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default async function handler() {import { connectOrbit, appendChatMessage, recordVote, editConstitution  } from '@/utils/offworld/orbitdb';
 export default async function handler() {const { action } = req.query;
   const body  = null;const { action } = req.query;
@@ -104,5 +114,9 @@ export default async function handler() {const { action } = req.query;
     if (action === 'constitution' && req && req.method === 'POST') {await editConstitution(stores, body)return res.status(500).json({ error: e.message })}
       return res.status(200).json({ ok: true })}
     return res.status(400).json({ error: 'Unsupported action' })} catch (e: any) {return res.status(500).json({ error: e.message })}
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket;
   Cpu, Database, Users, Award, BookOpen, Phone
@@ -9,6 +10,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -354,8 +357,12 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket;
   Cpu, Database, Users, Award, BookOpen, Phone;
   } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EnhancedNavigation: React.FC;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 const EnhancedNavigation: React.FC;
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+const EnhancedNavigation: React.FC;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

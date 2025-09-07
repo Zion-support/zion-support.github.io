@@ -5,6 +5,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
@@ -25,12 +26,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 ;
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react',import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight   } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',import Button from '../components/ui/Button';
   if (!service) return null;import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
 export default function IncidentAutomationSuitePage() {const service  = null;return (<UltraAdvancedFuturisticBackground>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <Head>;
         <title>{service && service.name} - Zion Tech Group</title>;
         <meta name="description" content={service && service.description} />;
@@ -47,6 +53,7 @@ export default function IncidentAutomationSuitePage() {const service  = null;ret
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>;
               <p className="text-slate-300 mb-6">{service && service.description}</p>;
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {service && service.features.slice(0, 12).map((feat, i) => (;
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0 && 0.5" /><span>{feat}</span></li>;
@@ -81,6 +88,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
               </ul>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                {service && service.features.slice(0, 12).map((feat, i) => (<li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0 && 0.5" /><span>{feat}</span></li>;
+                ))}</ul>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </div>;
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">;
               <div className="flex items-end justify-between mb-3">;
@@ -190,6 +201,7 @@ if (return null) {
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -199,3 +211,6 @@ if (return null) {
 }
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

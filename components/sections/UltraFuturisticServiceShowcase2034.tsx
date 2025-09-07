@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -395,6 +396,8 @@ const service_categories = [;
 
         <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 import React, { useState } from 'react';
@@ -507,7 +510,10 @@ visible: {opacity: 1, transition: {stagger_children: 0.1;
       </div>;
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
         {/* Header */}hidden: { opacity: 0, y: 20 },visible: { opacity: 1, y: 0 },}const itemVariants = {hidden: { opacity: 0, y: 20 },{/* Header */}<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
@@ -538,6 +544,7 @@ visible: {opacity: 1, transition: {stagger_children: 0.1;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           viewport={{ once: true }}
@@ -579,6 +586,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ].map((stat, index) => (;
               <motion&& motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           viewport={{ once: true }}className='text-center mb-16';
         >;
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>;
@@ -635,6 +644,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">;
             {[;
 <<<<<<< HEAD
+<<<<<<< HEAD
               { label: 'Total Services', value: allServices && allServices.length.toString(), icon: Rocket },{ label: 'Happy Customers', value: '50K+', icon: Users },{ label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },label: 'Total Services',value: allServices.length.toString(),icon: Rocket,},{ label: 'Happy Customers', value: '50K+', icon: Users },{ label: 'Success Rate', value: '99.9%', icon: CheckCircle },{ label: 'Global Reach', value: '45+ Countries', icon: Globe },{ label: 'Global Reach', value: '45+ Countries', icon: Globe }].map((stat, index) => (<motion.div;
             ].map((stat, index) => (<motion&& motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -651,6 +661,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ].map((stat, index) => (;
               <motion&& motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+              { label: 'Total Services', value: allServices && allServices.length.toString(), icon: Rocket },{ label: 'Happy Customers', value: '50K+', icon: Users },{ label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },label: 'Total Services',value: allServices.length.toString(),icon: Rocket,},{ label: 'Happy Customers', value: '50K+', icon: Users },{ label: 'Success Rate', value: '99.9%', icon: CheckCircle },{ label: 'Global Reach', value: '45+ Countries', icon: Globe },{ label: 'Global Reach', value: '45+ Countries', icon: Globe }].map((stat, index) => (<motion.div;
+            ].map((stat, index) => (<motion&& motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={stat && stat.label}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -670,6 +684,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 viewport={{ once: true }}
@@ -699,6 +714,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             ))}
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 viewport={{ once: true }}className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300';
               >;
                 <stat.icon className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
@@ -709,12 +726,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>;
             ))}</div>;
         </motion && motion.div>;))}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Search and Filter */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           viewport={{ once: true }}
@@ -744,6 +765,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+          viewport={{ once: true }}className='mb-12';
+        >;
+          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Search */}
             <div className='relative flex-1 max-w-md'>;
               <input;
@@ -768,6 +794,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <option key={category && category.id} value={category && category.id}>;
                   {category && category.title.split(' ')[0]}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </option>;onChange={e => setSearchTerm(e.target.value)}
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
               />;
@@ -784,9 +813,12 @@ onChange={e => setSelectedCategory(e.target.value)}
               {serviceCategories.map(category => (<option key={category.id} value={category.id}>;
                   {category.title.split(' ')[0]}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </option>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </option>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -798,6 +830,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           viewport={{ once: true }}
@@ -825,6 +858,8 @@ selectedCategory === category.id
                     ? 'border-cyan-500 bg-cyan-500/10'
                     : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           viewport={{ once: true }}className='mb-16';
         >;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
@@ -869,10 +904,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           </div>;
         </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Services Grid */}
         <motion&& motion.div;
           variants={containerVariants}
@@ -888,6 +926,7 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
             >;
               {/* Popular Badge */}
 <<<<<<< HEAD
+<<<<<<< HEAD
               {service.popular && (
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>
                   Popular
@@ -895,15 +934,21 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
               )}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>;
                   Popular;
                 </div>;
               )}<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {/* Service Icon */}
 <div className='flex items-center justify-between mb-4'>;
                 <div;
                   className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 >
                   {service.icon}
@@ -930,6 +975,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 className='text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 >;
                   {service.icon}</div>;
               )}</div>;
@@ -937,7 +984,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div;
           variants={containerVariants})}
               {/* Service Icon */}className='text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                 <stat.icon className='w - 8 h - 8 text - cyan - 400 mx - auto mb - 2' />;
                 <div className='text - 2xl font - bold text - white'>;
@@ -996,6 +1046,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='text - 2xl font - bold text - white'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {service.price}
                   </div>
                   <div className='text-sm text-gray-400'>{service.period}</div>
@@ -1007,6 +1058,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {service.price}<div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>;
                   {service.icon}
                 </div>;
@@ -1050,6 +1103,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h3>;
               <p className="text-gray-300 mb-4 leading-relaxed">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </p>;</div>;
                   <div className='text-sm text-gray-400'>{service.period}</div>;
                 </div>;
@@ -1082,7 +1138,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />;
                     <span>{feature}</span>;
                   </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
                 {service.features.length > 3 && (<div className='text-sm text-cyan-400'>;
                     +{service.features.length - 3} more features;
@@ -1115,6 +1174,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 )}
               </div>;
               {/* Service Meta */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400">
@@ -1167,6 +1227,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='text-sm text-green-300 font-medium'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </div>;
                 <div className="flex items-center space-x-2 text-gray-400">;
                   <Users className="w-4 h-4" />;
@@ -1207,11 +1269,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Expected ROI;
                 </div>;
                 <div className='text-sm text-green-300 font-medium'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                 <div className="text-xs text-green-400 mb-1 font-semibold">Expected ROI</div>
                 <div className="text-sm text-green-300 font-medium">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {service.roi}
                 </div>;
               </div>;
@@ -1266,6 +1331,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {service && service.roi}
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>;
 
 
@@ -1278,6 +1344,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <a
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </div>;{/* Action Buttons */}<div className='flex space-x-3'>;
                 <a;
                 <a;
@@ -1304,9 +1372,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             </motion && motion.div>;<div className='flex space-x-3'>;
                 <a;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            </motion && motion.div>;<div className='flex space-x-3'>;
+                <a;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   href={service.link}
                   className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group';
                 >;
@@ -1323,6 +1396,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span className='text-cyan-400 font-semibold'>;
                     {service.trialDays} days;
                   </span>{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   free trial
                 </div>
@@ -1386,6 +1460,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   free trial;
                 </div>;
               </div>;
@@ -1424,6 +1500,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Get started today and experience the future of business automation.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
+<<<<<<< HEAD
 =======
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -1435,6 +1512,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg'>;
                 View Pricing;
               </a>;
@@ -1624,6 +1703,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </section>)}className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg';
               >;
                 View Pricing;
@@ -1637,9 +1719,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
       </div>;
     </section>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </section>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -73,6 +73,7 @@ try {
     Zap: 'typeof Zap',
     Zap: 'typeof Zap',;
 <<<<<<< HEAD
+<<<<<<< HEAD
     Zap: 'typeof Zap',
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +107,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    Zap: 'typeof Zap'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   });
   console.log('🎉 All core dependencies imported successfully!');
   console.log('📋 Components should be ready for build');

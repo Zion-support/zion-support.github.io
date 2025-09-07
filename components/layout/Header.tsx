@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'Contact', href: '/contact', icon: Phone }
 
   ];
@@ -13,6 +14,8 @@
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     { name: 'Contact', href: '/contact', icon: Phone }];
   const service_categories = [;
     {name: 'Micro SaaS',href: '/services / micro - saas',description: 'Innovative focused software solutions',popular: ['AI Content Generator', 'Social Media Scheduler', 'Invoice Management', 'Time Tracking'];
@@ -275,6 +278,7 @@ const Header = () => {
 
   ];
 
+<<<<<<< HEAD
 =======
 
 
@@ -291,6 +295,8 @@ const Header = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const service_categories = [;
     {
       name: 'Micro SaaS',
@@ -373,6 +379,7 @@ const Header = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -388,12 +395,15 @@ const Header = () => {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
 }
   ];
   ];
   const isActive = (path: string) => location && location.pathname === path;
   const resourceCategories = [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -415,6 +425,8 @@ const Header = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const service_categories = [;
     { name: 'AI Solutions', href: '/services / ai - solutions' },{ name: 'Cloud & DevOps', href: '/services / cloud' },{ name: 'Cybersecurity', href: '/services / cybersecurity' },{ name: 'Data & Analytics', href: '/services / data' },{ name: 'Micro SaaS', href: '/services / micro - saas' },{ name: 'Digital Transformation', href: '/services / transformation' }
   ];
@@ -440,6 +452,7 @@ const Header = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -452,6 +465,9 @@ const Header = () => {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className="flex-shrink-0">;
             <Link href="/" className="text-2xl font-bold text-blue-600">;
               Zion Tech Group;
@@ -492,6 +508,7 @@ const Header = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -501,6 +518,10 @@ const Header = () => {
           </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
+=======
+            </div>;
+          </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
@@ -517,6 +538,7 @@ const Header = () => {
 
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -538,6 +560,8 @@ const Header = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Mobile menu button */}
           <div className="md:hidden">;
             <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -549,6 +573,7 @@ const Header = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -560,6 +585,8 @@ const Header = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -568,6 +595,7 @@ const Header = () => {
         </div>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -591,6 +619,8 @@ const Header = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Mobile Navigation */}
         <AnimatePresence>;
           {isMenuOpen && (<motion&& motion.div;
@@ -621,6 +651,7 @@ const Header = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -630,6 +661,8 @@ const Header = () => {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export default Header;
 import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window && window.scrollY > 0)}; window && window.addEventListener('scroll',handleScroll); return () => window && window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' }]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems && navigationItems.map((item) => ( <Link key={item && item.name} href={item && item.href} className="text-gray-300 hover:text-white"> {item && item.name} </Link> ))} </nav> </div> </header> )} export default Header;
@@ -638,6 +671,7 @@ export default Header;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -664,6 +698,8 @@ export default Header;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className="flex - shrink - 0">;
             <Link href="/" className="text - 2xl font - bold text - blue - 600">;
               Zion Tech Group;
@@ -724,19 +760,25 @@ export default Header;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 export default Header;
 import React, { useState, useEffect } from 'react'; import Link from 'next / link'; import { use_router } from 'next / router'; import { motion, AnimatePresence } from 'framer-motion'; import { Menu, X, Home, Users, Briefcase, Phone, Mail, ChevronDown, Brain, Shield, Cloud, Database, Network, Zap, Target, DollarSign, BookOpen, Calendar, FileText, Award, Globe, Search, ArrowRight } from 'lucide-react'; import { Button } from '../ui / Button'; import { Badge } from '../ui / Badge'; const Header: React.FC = () => { const [is_scrolled, setIsScrolled] = useState (false); useEffect (() => { const handle_scroll = () =>: any { setIsScrolled (window.scroll_y > 0)} window.addEventListener ('scroll', handle_scroll); return () => window.removeEventListener ('scroll', handle_scroll)}, []); const navigation_items = [ { name: 'Home', href: '/' }, { name: 'Services', href: '/services' }, { name: 'Solutions', href: '/solutions' }, { name: 'About', href: '/about' }, { name: 'Careers', href: '/careers' }, { name: 'Contact', href: '/contact' } ]; return ( <header className="sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 h - 14 flex items - center justify - between"> <Link href="/" className="text - white font - bold">Zion Tech Group</Link> <nav className="hidden md:flex items - center gap - 6 text - sm"> {navigation_items.map ((item) => ( <Link key={item.name} href={item.href} className="text - gray - 300 hover:text - white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 export default Header;
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </div>
             <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot;>
               Zion Tech Group
@@ -796,6 +838,7 @@ const Header: React.FC = () => {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
           </nav>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -807,6 +850,8 @@ export default Header;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </nav>
 
           {/* CTA Button */}
@@ -1001,6 +1046,7 @@ const Header: React.FC  = () => {const [isMenuOpen, setIsMenuOpen] = useState(fa
               className="text-gray-700 hover:text-blue-600 p-2"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from 'react';
@@ -1106,6 +1152,8 @@ const Header = () => {
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { useRouter  } from 'next/router';
     { name: 'Contact', href: '/contact', icon: Phone }];
 import { Menu,X,Search,Phone,FileText,BarChart3,Cpu,Shield,Cloud,Database,Zap,Users,CheckCircle,ArrowRight,Star,TrendingUp,Target,Rocket,Code,Network,Atom,Workflow,MessageCircle,ArrowUp,Sparkles,Home,Truck,BookOpen,Leaf,Satellite,HelpCircle,Building2,Factory,Building,DollarSign,ShoppingCart,Heart,Eye,Server,Lock,ChevronDown;
@@ -1697,6 +1745,7 @@ const Header: React.FC  = () => {const [isMenuOpen, setIsMenuOpen] = useState(fa
                           {item.children?.map((child) => (<Link;
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 
@@ -1704,6 +1753,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -1718,6 +1769,7 @@ main
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
         {/* Mobile Menu */}
+<<<<<<< HEAD
 
         {/* Mobile Navigation */}
 
@@ -1733,6 +1785,11 @@ main
         {/* Mobile Menu */}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        {/* Mobile Navigation */}
+
+        {/* Mobile Menu */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -1921,6 +1978,7 @@ main
                     Get Started
                   </Link>
                 </div>
+<<<<<<< HEAD
 
               className="md:hidden"
             >
@@ -1942,6 +2000,8 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </div>
             </motion.div>
           )}
@@ -1970,6 +2030,7 @@ export default Header;
 export default Header;
 import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false)useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 0)}window.addEventListener('scroll',handleScroll)return () => window.removeEventListener('scroll',handleScroll)},[])const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' }]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems.map((item) => ( <Link key={item.name} href={item.href} className="text-gray-300 hover:text-white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2012,6 +2073,8 @@ export default Header;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default Header;
 export default Header;}
 }export default Header;
@@ -2023,7 +2086,10 @@ export default Header;}
 };
 
 export default Header;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

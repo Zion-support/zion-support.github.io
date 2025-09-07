@@ -48,6 +48,7 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "warnings"
 
@@ -55,3 +56,6 @@ const { execSync } = require('child_process')
 =======
         "warnings"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        "warnings"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

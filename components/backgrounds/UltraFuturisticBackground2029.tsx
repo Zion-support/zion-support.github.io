@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface Particle {
@@ -12,6 +13,10 @@ initParticles ();
 // Animation loop // Update and draw particles particlesRef && particlesRef.current.forEach ( (particle, index) => {;
   // Update position particle && particle.x += particle && particle.vx;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+initParticles ()// Animation loop // Update and draw particles particlesRef && particlesRef.current.forEach ( (particle, index) => {// Update position particle && particle.x += particle && particle.vx;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 particle && particle.y += particle && particle.vy;
 // Wrap around edges if (particle && particle.x < 0) particle && particle.x = canvas && canvas.width;
 if (particle && particle.x > canvas && canvas.width) particle && particle.x = 0;
@@ -22,9 +27,14 @@ if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0
 import { motion  } from 'framer-motion';
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function UltraFuturisticBackground2029() {const canvasRef = useRef<HTMLCanvasElement>(null)const particlesRef = useRef<Particle[]>([])const animationRef  = useRef<number | undefined>(undefined)import React, { useEffect, useRef } from 'react';
 interface Particle  {x: number;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export default function UltraFuturisticBackground2029() {const canvasRef = useRef<HTMLCanvasElement>(null)const particlesRef = useRef<Particle[]>([])const animationRef  = useRef<number | undefined>(undefined)import React, { useEffect, useRef } from 'react';
+interface Particle  {x: number;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   y: number;
   vx: number;
   vy: number;
@@ -51,6 +61,7 @@ export default function UltraFuturisticBackground2029() {const canvasRef = useRe
     const ctx = canvas.getContext('2d')if (!ctx) return;
     const resizeCanvas = () => {canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
 
@@ -178,6 +189,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       particlesRef.current.forEach((particle, index) => {
         // Update position
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }resizeCanvas()window.addEventListener('resize', resizeCanvas)// Initialize particles;
     const initParticles = () => {const particles: Particle[] = [];
       const particleCount  = Math.floor((canvas.width * canvas.height) / 20000)for (let i = 0; i < particleCount; i++) {const type = ['quantum', 'holographic', 'neural', 'cyberpunk'][;
@@ -207,7 +220,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)')gradient.addColorStop(0.3, 'rgba(6, 182, 212, 0.1)')gradient.addColorStop(0.6, 'rgba(139, 92, 246, 0.05)')gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)')ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
       particlesRef.current.forEach((particle, index) => {// Update position;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Wrap around edges;
@@ -221,6 +237,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             // Quantum particles with glow effect;
             ctx.shadowColor = particle.color;
             ctx.shadowBlur = 20;
+<<<<<<< HEAD
 <<<<<<< HEAD
             ctx.beginPath();
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -278,6 +295,8 @@ ctx.stroke();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fillStyle = particle.color;
             ctx.fill()];
               if (partner && partner.type === 'quantum') {const distance = Math && Math.sqrt(Math && Math.pow(particle && particle.x - partner && partner.x, 2) +;
@@ -295,7 +314,10 @@ ctx.stroke();
                     Math.pow(particle.y - partner.y, 2))if (distance < 100) {ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 100)})`;
                   ctx.lineWidth = 1;
                   ctx.beginPath()ctx.moveTo(particle.x, particle.y)ctx.lineTo(partner.x, partner.y)ctx.stroke()}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               }
             }
             break;
@@ -303,6 +325,7 @@ ctx.stroke();
             ctx && ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
             ctx && ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;
             ctx && ctx.shadowBlur = 15;
+<<<<<<< HEAD
 <<<<<<< HEAD
             ctx && ctx.beginPath();
             ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
@@ -354,6 +377,8 @@ ctx.stroke();
               });
             }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ctx && ctx.beginPath()ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2)ctx && ctx.fill()break;if (index % 15 === 0) {const connections = particlesRef.current.filter(p =>;
                 p.type === 'neural' &&;
                 Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80;
@@ -508,7 +533,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         transition={{duration: 8;
           repeat: Infinity;
           ease: 'easeInOut';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }}
       {/* Canvas for particle effects */}
       <canvas;
@@ -613,6 +641,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='absolute inset-0'>;
         {/* Quantum field ripples */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
           animate={{
@@ -622,6 +651,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
             ease: 'easeInOut',      {/* Canvas for particle effects */}
       <canvas
+=======
+        <motion.div;
+          className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20';
+          animate={{ease: 'easeInOut',      {/* Canvas for particle effects */}
+      <canvas;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ filter: 'blur(0.5px)' }}
@@ -629,6 +664,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Additional visual layers */}
       <div className="absolute inset-0">
         {/* Quantum field ripples */}
+<<<<<<< HEAD
         <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
           animate={{
@@ -658,6 +694,8 @@ ease: 'easeInOut',
       {/* Additional visual layers */}
       <div className="absolute inset-0">;
         {/* Quantum field ripples */}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <motion.div;
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20";
           animate={{scale: [1, 1.2, 1];
@@ -720,14 +758,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               top: `${30 + i * 8}%`;
               filter: 'blur(1px)';
               boxShadow: '0 0 20px rgba(0, 255, 255, 0.6)';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               delay: i * 0.3
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             }}
             animate={{y: [0, -20, 0],opacity: [0.3, 0.8, 0.3],scale: [1, 1.2, 1],}}duration: 4,repeat: Infinity,transition={{delay: i * 0.3;
               duration: 3 + i * 0.5,repeat: Infinity,ease: 'easeInOut',delay: i * 0.3,}}
           />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         ))}
@@ -744,10 +786,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        ))}}
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               delay: i * 0.3,            }}              delay: i * 0.3;
             }}
           />))}
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>))})</div>;
     </div>;
@@ -759,3 +806,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>))})</div>;
+    </div>;
+)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -282,6 +282,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ConsoleErrorFixer;
 
@@ -289,3 +290,6 @@ module.exports = ConsoleErrorFixer;
 =======
 module.exports = ConsoleErrorFixer;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = ConsoleErrorFixer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

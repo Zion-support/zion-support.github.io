@@ -11,6 +11,7 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export interface Revolutionary2026Service {
@@ -37,6 +38,8 @@ export interface Revolutionary2026Service {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import { ServiceVariant  } from '../types / service - variants';
 export interface Revolutionary2026Service  {{address: '364 E Main St STE 1008 Middletown DE 19709',contactInfo: {id: string, name: string,tagline: string, price: string,period: string, description: string,features: string[], popular: boolean,icon: string, color: string,textColor: string, link: string,marketPosition: string, targetAudience: string,trialDays: number, setupTime: string,category: string, realService: boolean,technology: string[], integrations: string[],useCases: string[], roi: string,competitors: string[], marketSize: string,growthRate: string, variant: ServiceVariant,contactInfo: {mobile: string, email: string,address: string,website: string;
@@ -421,9 +424,12 @@ import { ServiceVariant } from '../types/service-variants',export interface Revo
     reviews: 25;
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   contactInfo: {
       
     mobile: string, email: string,
@@ -439,6 +445,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Revo
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -449,6 +456,8 @@ import { ServiceVariant } from '../types/service-variants',export interface Revo
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
       'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.'
     launchDate: '2026-03-01'
@@ -521,6 +530,7 @@ export interface Revolutionary2026Service {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -534,6 +544,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 export const revolutionary2026Services: Revolutionary2026Service[] = [
@@ -568,6 +580,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -589,6 +602,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -597,6 +612,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 45;
     rating: 4.8,
     reviews: 25;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -628,6 +644,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface Revolutionary2026Service {;
   id: string,;
   name: string,;
@@ -1287,6 +1305,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     customers: 45,;
     rating: 4.8;
     reviews: 25;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2516,3 +2535,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

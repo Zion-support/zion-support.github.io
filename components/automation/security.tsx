@@ -57,6 +57,7 @@ export default function SecurityAudit(): any ({ report }: Props) {;
 export default function SecurityAudit({ report }: Props) {};
 </pre> </div>) ;
 export default function SecurityAudit(): any ({ report }: Props) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -65,6 +66,8 @@ export default function SecurityAudit(): any ({ report }: Props) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 </pre> </div>)
  
 };
@@ -72,6 +75,7 @@ export default function SecurityAudit(): any ({ report }: Props) {;
 
 
 export default function SecurityAudit({ report }: Props) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +97,8 @@ export default function SecurityAudit({ report }: Props) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return (
     <div className="space-y-4">
       <header className="space-y-1">
@@ -119,6 +125,7 @@ export default function SecurityAudit({ report }: Props) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -134,6 +141,8 @@ export default function SecurityAudit({ report }: Props) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">;
 {JSON && JSON.stringify(report, null, 2)}
       </pre>;
@@ -147,6 +156,7 @@ function SecurityAudit() {return (<div className="space - y-4">;
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,10 +175,13 @@ function SecurityAudit() {return (<div className="space - y-4">;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   );
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +203,8 @@ function SecurityAudit() {return (<div className="space - y-4">;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 </pre> </div>);
 export default /**
@@ -227,6 +242,7 @@ interface AuditReport  {generatedAt?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -241,6 +257,8 @@ interface AuditReport  {generatedAt?: string;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 }
 </pre> </div>)
@@ -250,6 +268,7 @@ interface AuditReport  {generatedAt?: string;
  
 };
 </pre> </div>) 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -273,6 +292,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">
@@ -319,7 +340,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   );
 }
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

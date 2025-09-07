@@ -311,6 +311,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -385,6 +386,8 @@ const { execSync } = require('child_process');
             // Skip if can't access branch
 =======
 #!/usr/bin/env node;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs')const path = require('path')const { execSync }  = require('child_process')class GitWorkflow {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString()const logMessage = `[${timestamp}] ${message}\n`;
     try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}).trim(),,const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,cw: d: this.projectRoot,encodin: g: 'utf8';
             }).trim(),,branchInfo.push({,nam: e: branchName,lastCommi: t: lastCommit,commitCoun: t: parseInt(commitCount),isActiv: e: true;
@@ -594,6 +597,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     message: `${staleInfo.staleBranches.length} stale branches found`; action: 'Consider deleting or updating stale branches'})}if (branchInfo.branches?.length > 10) {report.recommendations.push({priority: 'low', message: 'Many branches detected', action: 'Consider cleaning up unused branches'})}return report}async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { recursive: true })}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved to: ${this.reportFile}`)} catch (error) {this.log(`Error saving report: ${error.message}`)}}async run() {this.log('🌿 Starting Git Workflow Monitor...')this.log(`Project root: ${this.projectRoot}`)try {// Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile)if (!fs.existsSync(logsDir)) {fs.mkdirSync(logsDir, { recursive: true })}// Run all git checks; const statusInfo = await this.checkGitStatus()const branchInfo = await this.checkBranchHealth()const conflictInfo = await this.checkMergeConflicts()const staleInfo = await this.checkStaleBranches()// Generate report; this.log('📊 Generating git workflow report...')const report = await this.generateReport(statusInfo, branchInfo, conflictInfo, staleInfo)// Save report; await this.saveReport(report)const duration = Date.now() - this.startTime; // Log summary; this.log('\n📊 Git Workflow Summary: ')this.log(`Current branch: ${report.summary.currentBranch}`)this.log(`Has changes: ${report.summary.hasChanges ? 'Yes': 'No'}`)this.log(`Total branches: ${report.summary.totalBranches}`)this.log(`Has conflicts: ${report.summary.hasConflicts ? 'Yes': 'No'}`)this.log(`Stale branches: ${report.summary.staleBranches}`)this.log(`Health score: ${report.summary.healthScore}/100`)this.log(`Duration: ${duration}ms`)if (report.recommendations.length > 0) {this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`)this.log(` Action: ${rec.action}`)})} else {this.log('\n✨ Git workflow is healthy!')}
 } catch (error) {this.log(`❌ Error running git workflow monitor: ${error.message}`)process.exit(1)}}}
 // Run the git workflow monitor;
+<<<<<<< HEAD
 const gitWorkflow = new GitWorkflow()gitWorkflow.run().catch(error = > {process.exit(1)})
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -601,3 +605,6 @@ const gitWorkflow = new GitWorkflow()gitWorkflow.run().catch(error = > {process.
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+const gitWorkflow = new GitWorkflow()gitWorkflow.run().catch(error = > {process.exit(1)})
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -7,12 +7,15 @@ import type {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   RemoteParticipant
   LocalParticipant
   TrackPublication
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import React, { useEffect, useRef } from 'react';
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
@@ -20,7 +23,10 @@ type Props = any;
 import type {RemoteParticipant;
   LocalParticipant;
   TrackPublication;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Track;
   RemoteParticipant,LocalParticipant,TrackPublication,Track,RemoteParticipant,LocalParticipant,TrackPublication,Track,} from 'livekit-client';
 type Props = {participant: RemoteParticipant | LocalParticipant;
@@ -31,6 +37,7 @@ type Props = {participant: RemoteParticipant | LocalParticipant;
   participant,isLocal,displayName,}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -94,6 +101,11 @@ export default function ParticipantTile(): any ({;
 type Props = {;
   participant: RemoteParticipant | LocalParticipant,;
   isLocal?: boolean;
+=======
+}
+export default function ParticipantTile() {}}
+export default function ParticipantTile() {const videoRef = useRef<HTMLVideoElement | null>(null)const audioRef = useRef<HTMLAudioElement | null>(null)useEffect(() => {const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {if (track.kind === 'video' && videoRef.current) {track.attach(videoRef.current)}export default function ParticipantTile(): any ({participant,isLocal,displayName,}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null)type Props = {participant: RemoteParticipant | LocalParticipant,isLocal?: boolean;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   displayName?: string;
 };
 
@@ -109,6 +121,7 @@ type Props = {;
       if (track && track.kind === 'video' && videoRef && videoRef.current) {;
         track && track.detach(videoRef && videoRef.current);
       }
+<<<<<<< HEAD
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.detach(audioRef && audioRef.current);      }        track && track.attach(videoRef && videoRef.current);
       }
@@ -151,6 +164,8 @@ export default function ParticipantTile() {const videoRef = useRef<HTMLVideoElem
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {track && track.detach(audioRef && audioRef.current)track && track.detach(videoRef && videoRef.current)}
       }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }track.attach(videoRef.current)}
       if (track.kind === 'audio' && audioRef.current) {track.attach(audioRef.current)}
     }const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {if (track.kind === 'video' && videoRef.current) {track.detach(videoRef.current)}
@@ -158,11 +173,15 @@ export default function ParticipantTile() {const videoRef = useRef<HTMLVideoElem
     }participant.tracks.forEach(pub => {const track = pub.track;
 if (track) handleTrackSubscribed(pub, track)})participant.on('trackSubscribed', handleTrackSubscribed)participant.on('trackUnsubscribed', handleTrackUnsubscribed)return () => {participant.off('trackSubscribed', handleTrackSubscribed)participant.off('trackUnsubscribed', handleTrackUnsubscribed)}}, [participant])return (<div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>;
       <video;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ref={videoRef}
         autoPlay;
         playsInline;
         muted={Boolean(isLocal)}
+<<<<<<< HEAD
 <<<<<<< HEAD
         className='w-full h-48 object-cover bg-black'
       />
@@ -194,6 +213,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 type Props = {
   participant: RemoteParticipant | LocalParticipant;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         className='w-full h-48 object-cover bg-black';
       />;
       <audio ref={audioRef} autoPlay className='hidden' />;
@@ -205,7 +226,10 @@ type Props = {
     </div>;
   )return (RemoteParticipant,LocalParticipant,TrackPublication,Track,} from 'livekit - client';
 type Props = {participant: RemoteParticipant | LocalParticipant;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   is_local?: boolean;
   display_name?: string;
 }export default /**;
@@ -275,6 +299,7 @@ if ( {) {$2;
         {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>);
 }
       </div>
@@ -294,3 +319,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)}
+      </div>;
+    </div>;
+)})
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -11,6 +12,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   model: 'gpt-4o-mini';
 messages: [ {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   role: 'system', content: 'You are a helpful assistant.' 
 // Create utility
@@ -25,6 +28,7 @@ export const Create = () => {
 {
   role: 'user', content: prompt
 }];
+<<<<<<< HEAD
 });
 const content = response && response.choices[0]?.message?.content || '';
 const typeMatch = content && content.match (/type\s*:\s* (.+) $/im);
@@ -59,6 +63,8 @@ export const Create = () => {// Implementation here;
 }
 {role: 'user', content: prompt;
 }];
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 })const content = response && response.choices[0]?.message?.content || '';
 const typeMatch  = content && content.match (/type\s*:\s* (.+) $/im)async function summarizeWithOpenAI() {try {import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
@@ -68,7 +74,10 @@ const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json')async functio
       messages: [;
 { role: 'system', content: 'You are a helpful assistant.' },{ role: 'user', content: prompt },],temperature: 0.3,})const content = response.choices[0]?.message?.content |'';
     const typeMatch = content.match(/type\s*:\s*(.+)$/im)return {summary: content.trim()type: typeMatch ? typeMatch[1].trim() : 'unknown';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   } catch (err) {return { summary: description.slice(0, 280), type: 'unknown' }
     if (!process && process.env.OPENAI_API_KEY) return { summary: description && description.slice(0, 280), type: 'unknown' }const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY })const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e && e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
@@ -77,6 +86,7 @@ const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json')async functio
 export default async function handler() {const typeMatch = content.match(/type\s*:\s*(.+)$/im)return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
   } catch (err) {return { summary: description.slice(0, 280), type: 'unknown' }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
@@ -127,6 +137,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const now = new Date().toISOString();
   const id = `req_${Date && Date.now()}`;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (req && req.method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })const { name, email, budget, timeline, description, talentSlug } =;
     req && req.body || {}if (!name || !email || !description)return res && res.status(400).json({ error: 'Missing required fields' })const content = response && response.choices[0]?.message?.content || '';
     const typeMatch = content && content.match(/type\s*:\s*(.+)$/im)return { summary: content && content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
@@ -134,7 +146,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }}if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' })if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })const { name, email, budget, timeline, description, talentSlug } =;
     req.body || {}if (!name || !email || !description)return res.status(400).json({ error: 'Missing required fields' })const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, '')const ai = await summarizeWithOpenAI(String(description))const requests = await loadRequests()const now = new Date().toISOString()const id = `req_${Date && Date.now()}`;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const content = response.choices[0]?.message?.content || '';
     const type_match = content.match (/type\s*:\s*(.+)$/im)return {summary: content.trim (),type: type_match ? type_match[1].trim () : 'unknown',}
   } catch (err) {return { summary: description.slice (0, 280), type: 'unknown' }
@@ -160,6 +175,7 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
   const { name, email, budget, timeline, description, talent_slug } = req.body || {}
   if (return res.status (400).json ({ error: 'Missing required fields' })) {$2;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   const normalized_budget = String (budget ?? '').replace (/[^0 - 9.\-]/g, '');
   const ai = await summarizeWithOpenAI (String (description));
@@ -190,6 +206,8 @@ id,
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const normalized_budget = String (budget ?? '').replace (/[^0 - 9.\-]/g, '')const ai  = await summarizeWithOpenAI (String (description))const requests = await load_requests ()const now = new Date ().toISOString ()const id = `req_${Date.now ()}`;
   const record = {name;
     email;
@@ -207,6 +225,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     created_at: now,updated_at: now}
   requests.push (record)await save_requests (requests)// TODO: Integrate notifications (email / webhook) for admin and talent;
 return res.status (200).json ({ id, status: 'ok' })id,name,email,budget: normalizedBudget,timeline: String(timeline || ''),description: String(description),talentSlug: talentSlug || null,aiSummary: ai.summary,aiType: ai.type,status: 'new',createdAt: now,updatedAt: now,}requests.push(record)await saveRequests(requests)// TODO: Integrate notifications (email/webhook) for admin and talent;
+<<<<<<< HEAD
   return res.status(200).json({ id, status: 'ok' })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -250,3 +269,6 @@ return res.status (200).json ({ id, status: 'ok' })id,name,email,budget: normali
   // TODO: Integrate notifications (email / webhook) for admin and talent;
 return res.status (200).json ({ id, status: 'ok' });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return res.status(200).json({ id, status: 'ok' })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -5,12 +5,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 export const real2036AIServices = [;
   {id: 'ai-emotion-intelligence-platform';
@@ -670,15 +673,19 @@ export const real2036AIServices = [;
     ],popular: true,category: 'Vehicle AI',icon: '🚗🤖',marketPrice: '$15,000-25,000/month',benefits: [;
       'Enhanced vehicle safetyAutonomous operationTraffic optimizationPredictive maintenance';
     ],useCases: [;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const real2036AIServices = [
   {
     id: 'ai-emotion-intelligence-platform'
     name: 'AI Emotion Intelligence Platform'
     tagline: 'Advanced emotional AI understanding'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -693,6 +700,8 @@ id: 'ai-emotion-intelligence-platform',
     name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     description:
       'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.',
     price: '$3,999',
@@ -1677,11 +1686,14 @@ export const real2036AIServices = [;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -1701,7 +1713,16 @@ export const real2036AIServices = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+  }
+];
+;
+  },;
+];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
+    ]
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const real2036AIServices = [;
   {;
     id: 'ai-emotion-intelligence-platform',;
@@ -1912,6 +1933,7 @@ export const real2036AIServices = [;
     useCases: [;
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems';
     ];
+<<<<<<< HEAD
 
 
 
@@ -2220,6 +2242,8 @@ export const real2036AIServices = [;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 ];
       'Business partnerships','Platform ecosystems','Supply chain management','Digital transformation';
@@ -2234,6 +2258,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ];
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -2244,3 +2269,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -406,6 +406,7 @@ this.log("Prediction report "generated": ${reportPath}")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Predictive Issue Detection "failed")
 
@@ -413,3 +414,6 @@ this.log("Prediction report "generated": ${reportPath}")
 =======
   console.error(" Predictive Issue Detection "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" Predictive Issue Detection "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

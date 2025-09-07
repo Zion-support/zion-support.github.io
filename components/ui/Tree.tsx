@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 export interface TreeNode {
@@ -96,6 +97,11 @@ class ErrorBoundary extends React.Component {
     }
     
     return this.props.children;
+=======
+
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 }
 import React, { useState } from 'react';
@@ -124,6 +130,7 @@ function NodeItem(): any ({;
 }: {;
   node: TreeNode;
   depth: number;
+<<<<<<< HEAD
   name: string
   path: string
   type: "folder" | "file"
@@ -162,6 +169,39 @@ export interface TreeNode {;
         {hasChildren ? (;
           <button className='text-sm' onClick={toggle} aria-label='Toggle'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  name: string;
+  path: string;
+  type: "folder" | "file";
+  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+  const toggle  = () => setOpen(v => !v)const copyPath = async () => {await navigator && navigator.clipboard.writeText(node && node.path)}export interface TreeNode  {name: string,path: string,type: "folder" | "file",name: string;
+  path: string;
+  type: "folder" | "file";
+  name: string,path: string,type: "folder" | "file",exists?: boolean;
+  children?: TreeNode[];
+}
+  const [open, setOpen]  = useState<boolean>(false)const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+  const toggle = () => setOpen((v) => !v)"Content-Type": "application/json";
+        // Expect an admin token in local storage, fall back to prompt;
+        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
+      body: JSON.stringify({ path: node.path })})return (<div className='ml-2'>;
+      <div className='flex items-center gap-2 py-1'>;
+        {hasChildren ? (<button className='text-sm' onClick={toggle} aria-label='Toggle'>;export interface TreeNode  {name: string;
+  path: string;
+    await navigator.clipboard.writeText(node.path)}const clonePath = async () => {const url = `${window.location.origin}/api/dev/source-map`;
+    await fetch(url, {method: 'POST',exists?: boolean;
+  children?: TreeNode[];
+}
+interface TreeProps  {nodes: TreeNode[];
+  onDeploy?: (path: string) => void;
+}
+function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {const [open, setOpen]  = useState<boolean>(false)const hasChildren = null;
+      headers: {'Content-Type': 'application/json';
+        // Expect an admin token in local storage, fall back to prompt;
+        'x-admin-token': localStorage.getItem('ADMIN_TOKEN') || '',} as any,body: JSON.stringify({ path: node.path }),})}const deploy = () => onDeploy && onDeploy(node.path)return (<div className='ml-2'>;
+      <div className='flex items-center gap-2 py-1'>;
+        {hasChildren ? (<button className='text-sm' onClick={toggle} aria-label='Toggle'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {open ? '▾' : '▸'}
           </button>;
         ) : (<span className='inline-block w-4' />;
@@ -238,6 +278,7 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
               node={child}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               depth={depth + 1}
               onDeploy={onDeploy}
             />
@@ -265,9 +306,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               on_deploy={on_deploy}
             />          ))}
 
+=======
+              depth={depth + 1}on_deploy={on_deploy}
+            />          ))}onDeploy={onDeploy}
+            />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           ))}
         </div>
       )}
+<<<<<<< HEAD
     </div>
 
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
@@ -297,6 +344,8 @@ export default Tree;
 }export default Tree;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>;
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {return (return (<div className="w-full">;
       {nodes && nodes.map((n) => ()export function Tree() {return (<div className='w-full'>;
@@ -323,6 +372,7 @@ function Tree() {return (<div className="w-full"> {nodes.map ( (n) => (<NodeItem
 }depth= {0;
 }on_deploy= {on_deploy;
 }/>) )}</div>)}export default Tree;}
+<<<<<<< HEAD
 export default Tree;}/>) )}</div>)}export default Tree;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -366,3 +416,6 @@ function Tree() {
 export default Tree;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default Tree;}/>) )}</div>)}export default Tree;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

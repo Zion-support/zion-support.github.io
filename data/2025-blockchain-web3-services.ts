@@ -532,6 +532,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -580,6 +581,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
   {
@@ -606,6 +609,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     support:
       '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.'
     compliance: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -705,6 +709,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 01 - 15',
@@ -713,6 +719,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 6200
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -741,6 +748,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     implementationDetails:
       'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.'
     roi: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.'
@@ -758,6 +767,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     support:
       '24/7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -787,6 +797,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - pink - 500 to - rose - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -795,6 +807,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 2100
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -823,10 +836,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     competitors: [
       'IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain'
     ]
     techStack: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -855,6 +871,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     implementationDetails:
       'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.'
     roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.'
@@ -870,6 +888,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'SAP, Oracle, Microsoft Dynamics, Salesforce, Custom ERP systems, IoT platforms'
     ]
     support:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -899,6 +918,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,
     launch_date: '2024 - 02 - 10',
@@ -907,6 +928,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 680
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -935,6 +957,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     implementationDetails:
       'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.'
     roi: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.'
@@ -955,6 +979,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -974,6 +999,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup.com/web3-social-media-platform',
@@ -985,6 +1012,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.6,
     reviews: 18000
   },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1231,10 +1259,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
 
       'Community support, developer documentation, custom development services, and enterprise solutions.',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -1249,6 +1280,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     support: 'Community support, developer documentation, custom development services, and enterprise solutions.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
     id: 'web3 - social - media - platform',
@@ -1320,6 +1353,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1339,12 +1373,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '🌐',
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
     launch_date: '2024 - 01 - 01',
     customers: 25000,
     rating: 4 && 4.6,
+<<<<<<< HEAD
 <<<<<<< HEAD
     reviews: 18000,
   },
@@ -1399,6 +1436,10 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    reviews: 18000
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];
 
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'];
@@ -1406,6 +1447,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'];
 
     icon: '🌐';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1424,6 +1466,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - purple - 500 to - indigo - 600';
     popular: true;
     launch_date: '2024 - 01 - 01';
@@ -1451,6 +1495,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     rating: 4.6,
     reviews: 18000;
   }
@@ -1485,6 +1532,7 @@ export interface BlockchainWeb3Service {;
 ];
 export interface BlockchainWeb3Service {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
@@ -1498,6 +1546,8 @@ export interface BlockchainWeb3Service {;
   }
 ];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string,;
   name: string,;
   tagline: string,;
@@ -1762,6 +1812,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     rating: 4.6,
     reviews: 18000;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1804,3 +1855,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -55,7 +55,10 @@ export const LazySection: React.FC<LazySectionProps> = ({children;
   }
   const getAnimatePosition = () => {switch (direction) {case 'up':;
 return { opacity: 1, y: 0 }case 'down':;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return { opacity: 1, y: 0 }
       case 'left':;
         return { opacity: 1, x: 0 }
@@ -64,6 +67,7 @@ return { opacity: 1, y: 0 }case 'down':;
       default:;
         return { opacity: 1, y: 0 }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -85,6 +89,11 @@ class ErrorBoundary extends React.Component {
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }>;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     return this.props.children;
   }
@@ -108,6 +117,7 @@ export const LazySection: React.FC<LazySectionProps> = ({children,className = ''
     </motion && motion.div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 };
 
@@ -120,3 +130,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}export default LazySection;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -28,6 +28,7 @@ const glob = require('glob')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const backupPath = path.join(this.backupDir, path.basename(filePath) + "
 
@@ -35,3 +36,6 @@ const glob = require('glob')
 =======
   const backupPath = path.join(this.backupDir, path.basename(filePath) + "
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  const backupPath = path.join(this.backupDir, path.basename(filePath) + "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const messageChannelHandler = {
 <<<<<<< HEAD
 
@@ -84,6 +85,13 @@ export default MessageChannelHandler;
 
 <<<<<<< HEAD
 =======
+=======
+
+}}}},,ursor/integrate-build-improve-and-re-verify-8f7d;
+}}}}ursor/automate-test-improve-and-merge-code-646c;
+}
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }},export const messageChannelHandler = {sendMessage: (message: string) => {},receiveMessage: (callback: (message: string) => void) => {},sendMessage: (message: any) => {},receiveMessage: (callback: any) => {}
 }export const messageChannelHandler: MessageHandler = {sendMessage: (_message) => {// No-op: placeholder for message channel integration;
   },receiveMessage: (_callback) => {// No-op: placeholder for message listener registration;
@@ -108,7 +116,11 @@ if ( {) {$2;
         channel.port1.post_message (message)}
     })}
 }
+<<<<<<< HEAD
 export default MessageChannelHandler;}}}}},,ursor/automate-test-improve-and-merge-code-646c;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default MessageChannelHandler;}}}}},,ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

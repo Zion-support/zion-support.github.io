@@ -28,6 +28,7 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       console.error('\n� App Health Monitor "failed")
 
@@ -35,3 +36,6 @@ const { execSync } = require('child_process')
 =======
       console.error('\n� App Health Monitor "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      console.error('\n� App Health Monitor "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

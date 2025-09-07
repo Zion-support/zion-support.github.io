@@ -33,6 +33,7 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log(`Error processing fixer "queue"`)
 
@@ -40,3 +41,6 @@ const { execSync } = require('child_process')
 =======
       this.log(`Error processing fixer "queue"`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      this.log(`Error processing fixer "queue"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

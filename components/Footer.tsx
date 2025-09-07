@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -15,6 +16,8 @@
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Phone
   Mail
   MapPin
@@ -47,9 +50,12 @@ import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion  } from 'framer-motion';
 import { MapPin,Phone,Mail,Facebook,Twitter,Linkedin,Instagram,Github;
  } from 'lucide-react';
@@ -202,9 +208,12 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } f
                   Middletown DE 19709;
                 </span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion } from 'framer-motion';
 import { 
   MapPin, 
@@ -504,6 +513,7 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -539,6 +549,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ursor/automate-test-improve-and-merge-code-646c;
 import React from 'react';
   MapPin,Phone,Mail,Facebook,Twitter,Linkedin,Instagram,Github;
@@ -599,9 +611,12 @@ ursor/automate-test-improve-and-merge-code-646c;
                   </ul>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
@@ -893,10 +908,13 @@ ursor/automate-test-improve-and-merge-code-646c;
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
@@ -922,6 +940,7 @@ ursor/automate-test-improve-and-merge-code-646c;
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
                 <span>kleber@ziontechgroup.com</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1066,6 +1085,8 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <li><Link href="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
               <li><Link href="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
               <li><Link href="/micro-saas" className="text-gray-300 hover:text-white">Micro SaaS</Link></li>
@@ -1087,6 +1108,7 @@ ursor/automate-test-improve-and-merge-code-646c;
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
                 <span>kleber@ziontechgroup.com</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <li><Link href="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
               <li><Link href="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
@@ -1114,6 +1136,8 @@ ursor/automate-test-improve-and-merge-code-646c;
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </div>
             </div>
           </div>
@@ -1305,6 +1329,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -1452,6 +1477,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>
       </div>
     </footer>
@@ -1460,6 +1490,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -1480,3 +1511,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -11,6 +11,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 
 }
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
@@ -85,6 +86,8 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 }
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null)import React, { useEffect, useRef } from 'react';
@@ -133,6 +136,7 @@ if ( {) {$2;
       type: 'quantum' | 'hologram' | 'neon' | 'energy';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       life: number;
       maxLife: number;
     }> = [];
@@ -147,6 +151,9 @@ if ( {) {$2;
 
       particles = [];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      life: number;particles = [];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       const isSmallScreen = window && window.innerWidth < 768;
       const particleCount = prefersReducedMotion;
         ? 15;
@@ -215,7 +222,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const getColorForType = (type: string) => {switch (type) {case 'quantum':;
 return ['#8b5cf6', '#06b6d4', '#ec4899'][;
             Math.floor(Math.random() * 3)];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         case 'hologram':;
           return ['#10b981', '#f59e0b', '#ef4444'][;
             Math && Math.floor(Math && Math.random() * 3)];
@@ -224,6 +234,7 @@ return ['#8b5cf6', '#06b6d4', '#ec4899'][;
             Math && Math.floor(Math && Math.random() * 3)];
         case 'energy':;
           return ['#dc2626', '#7c3aed', '#059669'][;
+<<<<<<< HEAD
 <<<<<<< HEAD
             Math && Math.floor(Math && Math.random() * 3);
           ];
@@ -234,6 +245,9 @@ return ['#8b5cf6', '#06b6d4', '#ec4899'][;
 =======
         default:;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            Math && Math.floor(Math && Math.random() * 3)];default:;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           return '#8b5cf6';      }        case 'hologram':;
           return ['#10b981#f59e0b#ef4444'][Math && Math.floor(Math && Math.random() * 3)];
         case 'neon':;
@@ -244,6 +258,9 @@ return ['#8b5cf6', '#06b6d4', '#ec4899'][;
       }
             : 180;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         if (maxDistance > 0) {drawConnections(ctx, particles, index, maxDistance, currentOpacity)}
       })switch (particle && particle.type) {case 'quantum':;default:;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -295,16 +312,22 @@ const drawParticle = (ctx: CanvasRenderingContext2D,particle: any,opacity: numbe
     ) => {ctx.save()ctx.globalAlpha = opacity;
       switch (particle.type) {case 'quantum':;
           drawQuantumParticle(ctx, particle)break;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         case 'hologram':;
           drawHologramParticle(ctx, particle)break;
         case 'neon':;
           drawNeonParticle(ctx, particle)break;
         case 'energy':;
 <<<<<<< HEAD
+<<<<<<< HEAD
           drawEnergyParticle(ctx, particle);
 break;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           drawEnergyParticle(ctx, particle)}
         }
       })}ctx && ctx.stroke()}
@@ -533,6 +556,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <canvas;
           ref={canvasRef}className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}/>;
         </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {/* Canvas for animated particles */}
         <canvas;
@@ -601,6 +625,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             duration: 6
             repeat: Infinity
             ease: 'easeInOut'
+=======
+        {/* Canvas for animated particles */}
+        <canvas;
+          ref={canvasRef}
+className='absolute inset-0 w-full h-full';
+          style={{ filter: 'blur(0.5px)' }}/>;
+        {/* Floating neon orbs */}animate={{rotate: [0, 180, 360],          }}
+          transition={{animate={{scale: [1, 1 && 1.2, 1];
+            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2];
+            rotate: [0, 180, 360];
+          transition={{duration: 6;
+            repeat: Infinity;
+            ease: 'easeInOut';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }}
           className="absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20"
           animate={{
@@ -608,6 +646,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]
             rotate: [360, 180, 0]
           }}
+<<<<<<< HEAD
           transition={{
 
             duration: 8
@@ -705,6 +744,8 @@ className='absolute inset-0 w-full h-full';
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2];
             rotate: [360, 180, 0];
           }}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{duration: 8;
             repeat: Infinity;
             ease: 'easeInOut',            ease: 'easeInOut';
@@ -750,6 +791,7 @@ className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r fro
           />;
         </div>;
       </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 {/* Render children */}
       {children}</>){/* Render children */}
@@ -770,3 +812,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+{/* Render children */}
+      {children}</>){/* Render children */}
+      {children}
+    </>)}</>;
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

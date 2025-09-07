@@ -220,11 +220,15 @@ const EnhancedFuturisticBackground: React.FC<;
     // Enhanced particle system;
     class Particle {x: number;
       y: number;vx: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       vy: number;
       size: number;
       color: string;
       opacity: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       life: number;
@@ -232,6 +236,8 @@ const EnhancedFuturisticBackground: React.FC<;
       constructor() {
         this.x = Math.random() * canvas.width;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       life: number;vx: number,vy: number,size: number,color: string,opacity: number,life: number,maxLife: number;
       constructor() {this.x = Math.random() * canvas.width;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -261,7 +267,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         this.x += this.vx;
 =======
       }update() {this.x += this.vx;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.y += this.vy;
         this.life--;
         // Wrap around edges;
@@ -269,6 +278,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Fade out near end of life
         if (this.life < 20) {
@@ -325,6 +335,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     class Connection {
 p1: Particle;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         // Fade out near end of life;
         if (this.life < 20) {this.opacity *= 0.95;
 this.opacity *= 0.95;}
@@ -345,6 +357,7 @@ this.opacity *= 0.95;}
       }}return this.life <= 0 || this.opacity < 0.01;      }ctx.restore()return this.life <= 0 || this.opacity < 0.01;      }ctx.restore()}
       isDead() {return this.life <= 0 || this.opacity < 0.01;}
     }max_life: number,this.coordinate_x = Math.random () * canvas.width;
+<<<<<<< HEAD
 =======
       }
       isDead() {
@@ -373,6 +386,8 @@ this.opacity *= 0.95;}
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.coordinate_y = Math.random () * canvas.height;
         this.vx = (Math.random () - 0.5) * settings.speed * animation_speed;
         this.vy = (Math.random () - 0.5) * settings.speed * animation_speed;
@@ -407,6 +422,7 @@ if ( {) {$2;
           this.opacity *= 0.95;        }          this.opacity *= 0.95;
         }
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     }// Connection lines between particles;
     class Connection {p1: Particle;
@@ -444,6 +460,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
       constructor (p1: Particle, p2: Particle) {
         this.p1 = p1;
+=======
+    }// Connection lines between particles;
+    class Connection {p1: Particle;
+      p2: Particle;
+      opacity: number;
+      constructor(p1: Particle, p2: Particle) {this.p1 = p1;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.p2 = p2;
         this.opacity = 0.1;      }
       draw () {
@@ -727,7 +750,10 @@ if (> 0.975) {) {$2;
 for (let i = 0; i < particles.length; i++) {for (let j = i + 1; j < particles.length; j++) {const distance = Math.sqrt(Math.pow(particles[i].x - particles[j].x, 2) +;
               Math.pow(particles[i].y - particles[j].y, 2))if (distance < 150) {connections.push(new Connection(particles[i], particles[j]))}          const distance = Math.sqrt(Math.pow(particles[i].x - particles[j].x, 2) +;
             Math.pow(particles[i].y - particles[j].y, 2))if (distance < 150) {connections.push(new Connection(particles[i], particles[j]))}connections.push(new Connection(particles[i], particles[j]))}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }
       }// Draw connections;
       connections.forEach(connection => connection.draw())// Add floating geometric shapes;
@@ -735,6 +761,7 @@ for (let i = 0; i < particles.length; i++) {for (let j = i + 1; j < particles.le
         const y = Math.random() * canvas.height;
         const size  = Math.random() * 20 + 10;ctx.save()ctx.globalAlpha = 0.1;
         ctx.strokeStyle = colors.accent;
+<<<<<<< HEAD
 <<<<<<< HEAD
         ctx.lineWidth = 1;
 
@@ -763,6 +790,8 @@ ctx.stroke();
       const prefersReduced = window.matchMedia(
         '(prefers-reduced-motion: reduce)'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ctx.lineWidth = 1;if (Math.random() < 0.5) {// Draw triangle;
           ctx.beginPath()ctx.moveTo(x, y - size)ctx.lineTo(x - size, y + size)ctx.lineTo(x + size, y + size)ctx.closePath()ctx.stroke()} else {// Draw square;
           ctx.stroke_rect (x - size, y - size, size * 2, size * 2)}}ctx && ctx.restore()}
@@ -771,11 +800,15 @@ ctx.stroke();
       window && window.removeEventListener('resize', resizeCanvas)}ctx.restore()}
       // Respect reduced motion;
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       ).matches;
       if (prefersReduced) {// Slow down updates;
         setTimeout(() => {animationRef.current = requestAnimationFrame(animate)}, 100)} else {animationRef.current = requestAnimationFrame(animate)}
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     animate();
     return () => {
@@ -807,20 +840,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='fixed inset-0 w-full h-full pointer-events-none z-0'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     animate()return () => {if (animationRef.current) {cancelAnimationFrame(animationRef.current)}
       window.removeEventListener('resize', resizeCanvas)}}, [colorScheme, intensity, particleCount, animationSpeed])return (<div className={`relative min-h-screen ${className}`}>;
       <canvas;
         ref={canvasRef}className='fixed inset-0 w-full h-full pointer-events-none z-0';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 className='fixed inset-0 w-full h-full pointer-events-none z-0'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         style={{ background: 'transparent' }}
       />;
       {/* Overlay gradient */}
       <div;
         className='fixed inset - 0 pointer - events - none z - 0';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         style={{
@@ -845,6 +884,8 @@ export default EnhancedFuturisticBackground;
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         style={{{/* Content */}
       <div className='relative z-10'>{children}</div>;
     </div>;background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`,}}
@@ -856,6 +897,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       />;
 {/* Content */}
       <div className='relative z - 10'>{children}</div>;
+<<<<<<< HEAD
     </div>)}export default EnhancedFuturisticBackground;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -876,3 +918,6 @@ export default EnhancedFuturisticBackground;
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)}export default EnhancedFuturisticBackground;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

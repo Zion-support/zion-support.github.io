@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -54,6 +55,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
     filters;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { ADMIN_TYPES, AdminType, ListParams   } from '../../../utils/admin/types';
 import { v4 as uuidv4   } from 'uuid';
 import { supabase as client   } from '../../../utils/supabase/client';
@@ -293,12 +296,16 @@ if ( {) {$2;
           `attachment; filename="${type}.csv"`;
         )return res.status(200).send(toCsv(pageItems))return res.status(200).json({ items: pageItems, total })}
   }id: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       updates: Record<string, any>;
     }
     if (!id) return res.status(400).json({ error: 'Missing id' })return res.status(200).json({ items: pageItems, total })}
   }if (req.method === 'PATCH') {const { id, updates } = req.body as {id: string;
       updates: Record<string, any>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
     if (!id) return res && res.status(400).json({ error: 'Missing id' });
@@ -361,6 +368,8 @@ return res.status(405).json({ error: 'Method not allowed' });
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }if (!id) return res && res.status(400).json({ error: 'Missing id' })if (useSupabase) {const { data, error } = await client;
         .from(type).update({ ...updates, updated_at: new Date().toISOString() }).eq('id', id).select('*').single()if (error) return res && res.status(500).json({ error: error && error.message })return res && res.status(200).json({ item: data })} else {const updated = {...list[idx],...updates,updated_at: new Date().toISOString(),}list[idx] = updated as any;return res.status(200).json({ item: updated })}
   }
@@ -420,6 +429,7 @@ return res.status (405).json ({ error: 'Method not allowed' })}return res.status
       const idx = list.findIndex((r: any) => r.id === id)if (idx === -1) return res.status(404).json({ error: 'Not found' })list.splice(idx, 1)return res.status(200).json({ ok: true })}
   }return res.status(405).json({ error: 'Method not allowed' })}return res.status (200) .send (toCsv (data || []) )}return res.status (200) .send (toCsv (pageItems) )}
   }
+<<<<<<< HEAD
 return res.status(405).json({ error: 'Method not allowed' })}return res.status (200) .send (toCsv (data |[]) )}return res.status (200) .send (toCsv (pageItems) )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -558,3 +568,6 @@ return res.status (405).json ({ error: 'Method not allowed' });
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+return res.status(405).json({ error: 'Method not allowed' })}return res.status (200) .send (toCsv (data |[]) )}return res.status (200) .send (toCsv (pageItems) )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 <<<<<<< HEAD
@@ -33,6 +34,10 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+ursor/automate-test-improve-and-merge-code-646c;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}}async generateReadme() {try {this && this.log('📝 Generating README && README.md...')const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json', 'utf8'))const readmeContent  = `# ${packageJson && packageJson.name}${packageJson && packageJson.description || 'A modern web application built with Next && Next.js'}## 🚀 Getting Started;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -1015,6 +1020,7 @@ All endpoints return appropriate HTTP status codes: ;
 - \`500\`: Internal Server Error;
 ## Rate Limiting;
 API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.;
+<<<<<<< HEAD
 ,
 ,
 ### Installation,
@@ -2201,6 +2207,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 docsGenerator.run().catch(error = > {; process.exit(1)});
     };
   };
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ,
   async generateReadme() {,
     try {,
@@ -3619,6 +3627,7 @@ docsGenerator.run().catch(error = > {; process.exit(1)});
 docsGenerator.run().catch(error = > {process.exit(1)});
   process.exit(1)
 }),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -3634,3 +3643,5 @@ docsGenerator.run().catch(error = > {; process.exit(1)});
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

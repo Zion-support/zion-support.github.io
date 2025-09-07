@@ -38,6 +38,7 @@ export interface AdminUser  {id: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import type { NextApiRequest } from 'next';
 =======
@@ -57,16 +58,22 @@ import type { NextApiRequest } from 'next';
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface Session {
 
 export interface Session {;
   userId: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
 
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
   email: string;
@@ -94,6 +101,8 @@ export function getSessionFromReq(req: NextApiRequest): Session | null {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 export interface Session {
@@ -105,6 +114,7 @@ export interface Session {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -114,6 +124,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
@@ -125,6 +137,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -134,6 +147,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
@@ -141,6 +156,7 @@ export const isAdmin = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
@@ -161,6 +177,11 @@ export const isAdmin = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -197,6 +218,7 @@ export function getAdminUser(id: string): AdminUser | null {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -204,6 +226,8 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function getSessionFromReq (req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
   const auth_header = req.headers.authorization;
@@ -254,6 +278,7 @@ export const is_admin = () =>: any {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -280,6 +305,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
   // Check for internal agent headers or IPs
   const userAgent = req.headers['user-agent'] |'';
@@ -300,6 +327,7 @@ export const requireAdminAuth = () => {// Placeholder implementation;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -311,6 +339,8 @@ export const requireAdminAuth = () => {
 
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const isAdmin = () => {
   // Placeholder implementation;
   return true;
@@ -323,9 +353,12 @@ export const isAdmin = () => {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 };
 
 };
@@ -333,6 +366,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -377,3 +411,5 @@ export const isAdmin = () => {
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,8 @@
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -37,16 +40,20 @@ import { appendAuditLog, resolveDataPath  } from '../../../../utils/api/storage'
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,10 +67,13 @@ import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -72,6 +82,8 @@ import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
   const files = fs.readdirSync(dir).map((name) => ({ name }));
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -82,6 +94,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const dir = resolveDataPath(path.join("dataroom", section));
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   if (!fs.existsSync(dir)) return res.status(200).json([]);
@@ -109,6 +122,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  if (!fs.existsSync(dir)) return res.status(200).json([]);
+  const files = fs.readdirSync(dir).map((name) => ({ name }));
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const section = String(req && req.query.section || "General");
   const dir = resolveDataPath(path && path.join("dataroom", section));
   if (!fs && fs.existsSync(dir)) return res && res.status(200).json([]);
@@ -130,6 +147,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -160,6 +178,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -194,6 +214,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 
 
 =======
@@ -233,3 +254,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

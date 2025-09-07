@@ -3,9 +3,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "target": "ES2020",
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     "lib": [
       "dom",
       "dom.iterable",
@@ -35,6 +38,7 @@
     "strict": false,
     "noEmit": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "esModuleInterop": true,
     "module": "ESNext",
 =======
@@ -49,6 +53,11 @@
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-e77d
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -62,6 +71,7 @@
 <<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,6 +105,8 @@
     "paths": {
 <<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
@@ -104,6 +116,7 @@
       "@/styles/*": ["./src/styles/*"],
       "@/assets/*": ["./src/assets/*"]
     },
+<<<<<<< HEAD
     "allowSyntheticDefaultImports": true
   },
 <<<<<<< HEAD
@@ -142,6 +155,8 @@
         "./src/assets/*"
       ]
     },
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     "allowSyntheticDefaultImports": true,
     "target": "ES2017"
   },
@@ -217,6 +232,7 @@
     "src",
     "src.pages.disabled",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "lib_backup*",
     "src_backup*",
     "corrupted-files-backup*",
@@ -235,11 +251,17 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     "src.pages.disabled.auto",
     "components.disabled",
     "src.disabled",
     "src.pages.disabled"
   ]
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-e77d
 }
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

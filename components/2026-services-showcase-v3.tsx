@@ -4,6 +4,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
@@ -20,6 +21,11 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
       intensity="extreme";
       colorScheme="neural-network";
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',  }const contactInfo  = null;return (<UltraQuantumHolographicBackground;
+      intensity="extreme";
+      colorScheme="neural-network";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       particleCount={500}
       animationSpeed={3}>;
       <Head>;
@@ -45,6 +51,7 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
         {/* Navigation */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <UltraAdvancedNavigation2026 />
 
         {/* Hero Section */}
@@ -64,6 +71,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Hero Section */}
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <UltraAdvancedNavigation2026 />;
         {/* Hero Section */}<section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -73,6 +82,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 =======
         <UltraAdvancedNavigation2026 />;
         {/* Hero Section */}<section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">;
@@ -84,15 +94,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >;
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">;
 <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>;
                 Revolutionary 2026 Services;
         <UltraAdvancedNavigation2026 />;{/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion && motion.div        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -109,6 +124,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 business with services designed for tomorrow's challenges.;
               </p>;
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <motion&& motion.a
@@ -138,6 +154,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Enhanced2026ServicesShowcaseV3 />
         </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <motion&& motion.a;
                   href='#services';
               </h1>;
@@ -160,6 +178,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.a;
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
+<<<<<<< HEAD
 =======
                 <motion&& motion.a;
                   href='#services';
@@ -184,6 +203,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   whileTap={{ scale: 0.95 }}className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200';
                 >;
                   Get Started;
@@ -232,9 +253,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Enhanced2026ServicesShowcaseV3 />;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Contact Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-4xl mx-auto text-center'>;
@@ -243,6 +267,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             >
@@ -269,6 +294,8 @@ className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-50
                 </motion.a>
                 <motion.a
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >;
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -284,6 +311,7 @@ className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-50
                 <motion.a;
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
+<<<<<<< HEAD
 =======
             >;
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -301,6 +329,8 @@ className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-50
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   whileTap={{ scale: 0.95 }}className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200";
                 >;
                   <span>Call {contactInfo.mobile}</span>;
@@ -552,8 +582,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </UltraQuantumHolographicBackground>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   )}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

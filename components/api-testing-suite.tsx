@@ -3,14 +3,18 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {
 <<<<<<< HEAD
@@ -56,6 +60,8 @@ icon: <Code className='w-8 h-8 text-white' />,
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600'
       gradient: 'from-indigo-400 to-purple-500'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import {Code,Zap,Shield,BarChart3,CheckCircle,ArrowRight,Play,AlertTriangle,} from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database  } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
 import { Zap, Star  } from 'lucide-react';
@@ -505,7 +511,10 @@ function APITestingSuitePage() {const [is_testing, setIsTesting] = useState (fal
             status: 'pass';
             value: '200';
             threshold: '200';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }
           {name: 'Response Format';
             status: 'pass';
@@ -553,6 +562,7 @@ function APITestingSuitePage() {const [is_testing, setIsTesting] = useState (fal
       </Head>;
       {/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.06),transparent_50%)]' />
@@ -574,6 +584,8 @@ function APITestingSuitePage() {const [is_testing, setIsTesting] = useState (fal
 origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.08),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.06),transparent_50%)]' />;
@@ -949,6 +961,9 @@ href='/contact';
                 <p className="text-gray-400 mb-6">{type && type.description}</p>;
                 <ul className="space-y-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {type && type.tests.map((test, testIndex) => (<li key={testIndex} className="flex items-center text-gray-300">;
                       <CheckCircle className="w-4 h-4 text-indigo-400 mr-3 flex-shrink-0" />;<Card;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -972,18 +987,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='flex items-center text-gray-300';
                     >;
                       <CheckCircle className='w-4 h-4 text-indigo-400 mr-3 flex-shrink-0' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                   {type && type.tests.map((test, testIndex) => (;
                     <li key={testIndex} className="flex items-center text-gray-300">;
                       <CheckCircle className="w-4 h-4 text-indigo-400 mr-3 flex-shrink-0" />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {test}
                     </li>;
                   ))}
                 </ul>;
               </Card>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </div>
@@ -1012,6 +1031,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         </div>;
       </section>;
@@ -1104,6 +1125,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Card className="border-gradient-indigo">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Test Results</h3>;
                 <div className="space-y-3">;
@@ -1201,7 +1225,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </span>                      </div>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   ))}
                 </div>;
               </Card>;
@@ -1215,6 +1242,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className='text-gray-400'>Response Time</span>;
                     <span className='text-indigo-400 font-bold'>;
                       {testResults.responseTime}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </span>
 
@@ -1277,6 +1305,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </span>;
                   </div>;
                   <div className='flex justify-between items-center'>;
@@ -1331,17 +1361,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {testResults && testResults.recommendations.map((rec, index) => (<div key={index} className="flex items-start space-x-3">;
                     <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <span className="text-gray-300">{rec}</span>;<span className='text-gray-300'>{rec}</span>;
                   </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                     <span className="text-gray-300">{rec}</span>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                    <span className="text-gray-300">{rec}</span>;<span className='text-gray-300'>{rec}</span>;
+                  </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
               </div>;
             </Card>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       )}
@@ -1376,6 +1412,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {pricing.map((plan, index) => (
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       )}Simple Pricing;
       {/* Pricing Section */}
             </h2>;
@@ -1398,7 +1436,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             {pricing.map((plan, index) => (<section id='pricing' className='section-padding bg-gradient-cursor'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
@@ -1406,6 +1447,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {test_types.map ((type, index) => (
               <Card;
@@ -1418,6 +1460,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 className='card - hover border - gradient - indigo';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            {test_types.map ((type, index) => (<Card;
+                key={index}className='card - hover border - gradient - indigo';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;
                 <h3 className='text - xl font - bold mb - 4 text - white'>;
@@ -1613,6 +1659,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               testing needs.;
             </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;className={`card-hover border-gradient-indigo ${plan.popular ? 'ring-2 ring-indigo-500 scale-105' : ''}`}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -1630,14 +1679,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;
                     <span className='text - 4xl font - bold text - white'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       {plan.price}
@@ -1660,6 +1713,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {plan.price}</span>;
                     <span className='text-gray-400'>{plan.period}</span>;
                   </div>;
@@ -1671,6 +1726,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='flex items-center text-gray-300';
                     >;
                       <CheckCircle className='w-5 h-5 text-indigo-400 mr-3 flex-shrink-0' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -1698,6 +1754,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </Card>
 =======
+=======
+                      {feature}
+                    </li>;
+                  ))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <Button;
 href='/contact';
                   size='lg';
@@ -1710,7 +1771,10 @@ href='/contact';
                   <ArrowRight className='w-5 h-5 ml-2' />;
                 </Button>;
               </Card>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </div>;
         </div>;
@@ -1754,6 +1818,7 @@ href='/contact';
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Button
               href='/contact'
               size='lg'
@@ -1777,6 +1842,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <Button;
               href='/contact';
               size='lg';
@@ -1818,6 +1885,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 })}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1842,3 +1910,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

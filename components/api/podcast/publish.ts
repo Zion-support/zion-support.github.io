@@ -5,6 +5,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -32,6 +33,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const rssUrl  = null;export default async function handler() {(process.env.SITE_URL |'http://localhost:3000') + '/podcast.xml';
   return res.status(200).json({ ok: true, rssUrl })export default async function handler() {(process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
   return res.status(200).json({ ok: true, rssUrl })export default async function handler() {try {if (req && req.method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })const rssUrl =;
@@ -44,6 +47,7 @@ export default async function handler() {if (req.method !== 'POST') return res.s
 function handler() {if (return res.status (405).json ({ error: 'Method not allowed' })) {$2;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -52,6 +56,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl = null;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -77,17 +83,21 @@ export default async function handler(
     return res && res.status(405).json({ error: 'Method not allowed' });
   const rssUrl =
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl = (process.env.SITE_URL |'http: //localhost:3000') + '/podcast.xml';
 
   return res.status(200).json({ ok: true, rssUrl })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -112,6 +122,8 @@ export default async function handler(
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     (process && process.env.SITE_URL || 'http://localhost:3000') + '/podcast && podcast.xml';
   return res && res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -120,6 +132,7 @@ export default async function handler(
   return res && res.status(200).json({ ok: true, rssUrl })
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,6 +158,8 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 export default async /**
  * handler - Function description
@@ -162,6 +177,7 @@ function handler() {
 function handler() {if (return res.status (405).json ({ error: 'Method not allowed' })) {$2;
 }
   const rss_url = (process.env.SITE_URL || 'http: //localhost:3000') + '/podcast.xml';
+<<<<<<< HEAD
 <<<<<<< HEAD
   return res.status (200).json ({ ok: true, rss_url });
 <<<<<<< HEAD
@@ -235,12 +251,17 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
     return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl =
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return res.status (200).json ({ ok: true, rss_url })}}ursor/fix-website-loading-errors-and-merge-6662;
 }
 <<<<<<< HEAD
 }}
 }}if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })const rssUrl =;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
   return res.status(200).json({ ok: true, rssUrl })return res.status(200).json({ ok: true, rssUrl })}
   return res.status (200).json ({ ok: true, rss_url });
@@ -267,6 +288,7 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -276,3 +298,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

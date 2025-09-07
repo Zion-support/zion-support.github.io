@@ -179,6 +179,7 @@ this.log(`� Report "generated"`)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "ERROR"
 
@@ -186,3 +187,6 @@ this.log(`� Report "generated"`)
 =======
         "ERROR"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        "ERROR"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

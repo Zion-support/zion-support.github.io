@@ -4,18 +4,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
   id: string;
 export interface PracticalBusinessSolution2029  {id: string;name: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -28,6 +32,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export interface PracticalBusinessSolution2029 {
 id: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   tagline: string;
   price: string;
@@ -142,6 +148,7 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 =======
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -173,6 +180,8 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "Practical solutions";
       "Business applications";
       "Real-world use cases";
@@ -196,6 +205,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: "/services/2029-practical-business-solution", category: "Practical Business Solutions 2029"
     realImplementation: true
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -230,10 +240,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     contactInfo: {
 
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -257,6 +270,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ];    features: [;
       "Practical solutions";
       "Business applications";
@@ -289,6 +304,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -300,6 +316,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string,;
   name: string,;
   tagline: string,;
@@ -315,6 +333,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     address: string;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -357,11 +376,17 @@ export interface PracticalBusinessSolution2029 {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+export interface PracticalBusinessSolution2029 {;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "Affordable pricing"
     ],
     link: "/services/2029-practical-business-solution",
     category: "Practical Business Solutions 2029",
     realImplementation: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
     contactInfo: {}
 =======
@@ -379,6 +404,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    contactInfo: {}
+  }
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
 
@@ -401,6 +431,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface PracticalBusinessSolution2029 {;
+<<<<<<< HEAD
 =======
     }
   }
@@ -408,6 +439,8 @@ export interface PracticalBusinessSolution2029 {;
 export interface PracticalBusinessSolution2029 {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   };
 
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =
@@ -443,19 +476,25 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string,name: string,tagline: string,price: string,description: string,features: string[],link: string,category: string,realImplementation: boolean,contactInfo: {mobile: string,email: string,address: string;
   }
 }"Affordable pricing";
     ],link: "/services/2029-practical-business-solution",category: "Practical Business Solutions 2029",realImplementation: true,contactInfo: {id: string,name: string,tagline: string,price: string,description: string,features: string[],link: string,category: string,realImplementation: boolean,contactInfo: {mobile: string,email: string,address: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string,;
   name: string,;
   tagline: string,;
@@ -532,6 +571,7 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -540,6 +580,8 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "Affordable pricing"
     ],
     link: "/services/2029-practical-business-solution",
@@ -547,6 +589,9 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     realImplementation: true,
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -558,6 +603,7 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -599,3 +645,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

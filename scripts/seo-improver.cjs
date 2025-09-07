@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -13,6 +13,10 @@ const path = require("path")
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+const fs = require("child_process")
+const path = require("path")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log("� Generating sitemap...")
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9"
@@ -43,6 +47,7 @@ Allow: /contact"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
@@ -54,3 +59,8 @@ Allow: /contact"
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -3,10 +3,13 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Activity;
@@ -38,6 +41,7 @@ interface PerformanceMetrics  {fcp: number;
   impact: string;
   solution: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   category: 'performance' | 'accessibility' | 'seo' | 'user-experience'
 }
 
@@ -56,11 +60,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) );
 if (metrics.fcp > 2000) score -= 20;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   category: 'performance' | 'accessibility' | 'seo' | 'user-experience';
 }const EnhancedPerformanceMonitor: React.FC;
 //FCP recommendations if (metrics.fcp > 2000) {recs.push ({}return recs;
 }, [])//Wait for page to be fully loaded if (document.readyState !== 'complete') {await new Promise (resolve => {}//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) )if (metrics.fcp > 2000) score -= 20;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 if (metrics.lcp > 2500) score -= 25;
 if (metrics.cls > 0.1) score -= 15;
 if (metrics.ttfb > 600) score -= 20;
@@ -73,6 +82,7 @@ if (!performanceData) {}> <div className="animate-pulse" > <div className="h-4 b
 }> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCwclassName= {`w-4 h-4 $ {//FCP recommendations // Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCwclassName= {
   `w-4 h-4 $ {
@@ -107,6 +117,8 @@ if ( {) {$2;
 export default EnhancedPerformanceMonitor;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 //FCP recommendations if (metrics.fcp > 2000) {//FCP recommendations if (metrics.fcp > 2000) {recs.push ({}return recs;
 }, [])//Wait for page to be fully loaded // Check condition;
 if ( {) {$2;
@@ -143,6 +155,7 @@ if ( {) {$2;
 }`;
 }> {rec.priority;
 }</span> </div> </div>) )}</div> </div>)}) : (<BarChart3 className="w-4 h-4" />)}<span> {isMonitoring ? 'Measuring...': 'Measure Performance';
+<<<<<<< HEAD
 }</span> </button> </div> </div> </motion.div>)}</AnimatePresence> </>)}export default EnhancedPerformanceMonitor;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -195,3 +208,6 @@ if ( {) {
 }`;
 }> {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}</span> </button> </div> </div> </motion.div>)}</AnimatePresence> </>)}export default EnhancedPerformanceMonitor;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

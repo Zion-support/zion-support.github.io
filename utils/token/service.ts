@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -128,6 +129,8 @@ export function getAllTransactions() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 import { randomUUID  } from 'crypto';
@@ -150,9 +153,12 @@ export function getWalletSummary(userId: string): WalletSummary {const wallet = 
   const usd = parseFloat((amount * usdPerToken).toFixed(2))return { tx, usd }export function getAllTransactions() {return tokenStore.getTransactions()export function getConfig() {return {tokenName: 'Zion Token',tokenSymbol: 'ZION',decimals: 18,totalSupply: 1000000;
   }export interface TokenTransaction  {id: string;
   userId: string;id: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -211,6 +217,7 @@ let transactions: TokenTransaction[] = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -223,6 +230,8 @@ let transactions: TokenTransaction[] = [];
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export function issueTokens(
   userId: string,
@@ -230,6 +239,7 @@ export function issueTokens(
   reason: string,
 ): TokenTransaction {
   const transaction: TokenTransaction = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -245,6 +255,8 @@ export function issueTokens(
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
@@ -252,6 +264,7 @@ export function issueTokens(
     reason
     timestamp: Date.now()
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -281,6 +294,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -304,6 +319,7 @@ main
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
@@ -328,6 +344,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   transactions.push(transaction);
   return transaction;
 }
@@ -346,6 +364,7 @@ export function redeemTokens(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -355,11 +374,14 @@ export function redeemTokens(
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     type: "redeem",
     reason,
     timestamp: Date.now()
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     type: "redeem",
 =======
@@ -407,9 +429,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     timestamp: Date.now(),
 =======
+=======
+    type: "redeem",
+    type: 'redeem',
+    reason,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     timestamp: Date.now()
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   transactions.push(transaction);
@@ -426,10 +454,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   transactions.push(transaction);
   return transaction;
 
+<<<<<<< HEAD
 
   transactions.push(transaction);
 
@@ -437,11 +468,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  transactions.push(transaction);
+  return transaction;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -458,6 +494,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     timestamp: Date.now();
   };
 // Token service utilities
@@ -501,15 +539,19 @@ const tokenBalances: TokenBalance[]  = [];export async function createTokenConfi
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>,
 ): void {
   const current = getConfig();
   // Update the configuration
   Object.assign(current, partial);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -615,6 +657,8 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   transactions.push(transaction);
   return transaction;
 }
@@ -622,6 +666,7 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   const current = tokenStore && tokenStore.getConfig();
   tokenStore && tokenStore.setConfig({ ...current, ...partial });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -643,11 +688,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -691,3 +739,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   tokenStore.setConfig({ ...current, ...partial });
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

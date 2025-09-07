@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -49,6 +54,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
       this.log(" Health check completed");";      return report,"
       this.log(" Health check "failed": ${error.message}");"
   .then(report => {);    console.log(" Health check completed successfully");";    process.exit(0),"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -267,3 +273,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
 type InsightResponse = any;
@@ -18,6 +19,8 @@ import {;
 type InsightResponse = {;
   recommendedHourlyUsd: number;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import {LineChart,BarChart,DonutChart,import React, { useEffect, useMemo, useState  } from 'react';
 import { LineChart, BarChart, DonutChart  } from '../components/salary/InsightCharts';
@@ -26,11 +29,15 @@ import { LineChart;
   BarChart;
   DonutChart;} from '../components/salary/InsightCharts';
 type InsightResponse = {recommendedHourlyUsd: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   recommendedMonthlyUsd: number;
   medianHourlyUsd: number;
   minHourlyUsd: number;
   maxHourlyUsd: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   confidence: number;
@@ -352,6 +359,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <label className='block text-sm mb-2'>Role title</label>
             <input
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   confidence: number;type InsightResponse = {recommendedHourlyUsd: number,gpt_recommendation?: string;}  recommendedHourlyUsd: number,recommendedMonthlyUsd: number,medianHourlyUsd: number,minHourlyUsd: number,maxHourlyUsd: number,confidence: number,const [roleTitle, setRoleTitle] = useState('Senior AI Engineer')const [skills, setSkills] = useState('OpenAI, RAG, TypeScript')const [region, setRegion] = useState('Remote, Global')const [remote, setRemote] = useState(true)const [employmentType, setEmploymentType]  = useState<'contract' | 'freelance' | 'full-time'>('contract')trendMonthly: { label: string; value: number }[];
   regionalComparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
@@ -450,6 +459,9 @@ if (return [] as { label: string, value: number }[], ) {
     const median = data.medianHourlyUsd;
     const max = data.maxHourlyUsd;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const lower = Math.max (0, median - min)const upper = Math.max (0, max - median)return [;
       { label: 'Below Median', value: lower || 1 },{ label: 'Median', value: median || 1 },{ label: 'Above Median', value: upper || 1 },];  }, [data])return (<div>      { label: 'Above Median', value: upper || 1 }];
   }, [data])return (<div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />;
@@ -632,6 +644,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {!isLoggedIn && (<div className="mt-3 text-xs text-gray-500">;
                 Advanced filters are available when you sign in.;
               </div>;
+<<<<<<< HEAD
 =======
             <div className="flex items-center gap-2 mt-3">
               <input id="remote" type="checkbox" checked={remote} onChange={(e) => setRemote(e.target.checked)} />
@@ -642,6 +655,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Advanced filters are available when you sign in.
               </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 onChange={e => setRemote(e && e.target.checked)}
               />;
               <label htmlFor='remote' className='text-sm'>;
@@ -683,7 +698,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h3 className='font-medium mb-2'>Actions</h3>;
             <div className='flex flex-col gap-2'>;
               <button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 onClick={saveInsight}
                 className='rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900'>;
                 Save insight;
@@ -696,6 +714,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </button>;
               <button;
                 onClick={() =>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   alert('This would suggest a resume rate optimization.');
                 }
@@ -712,11 +731,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {error && (
             <div className='rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   alert('This would suggest a resume rate optimization.')}<h3 className="font-medium mb-2">Actions</h3>;
             <div className="flex flex-col gap-2">;
               <button onClick={saveInsight} className="rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900">Save insight</button>;
               <button onClick={() => alert('This would prefill a job posting flow.')} className="rounded bg-emerald-600 text-white py-2 text-sm hover:bg-emerald-700">Use in Job Post</button>;
               <button onClick={() => alert('This would suggest a resume rate optimization.')} className="rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700">Optimize Resume Rate</button>;
+<<<<<<< HEAD
 =======
             <h3 className="font-medium mb-2">Actions</h3>
             <div className="flex flex-col gap-2">
@@ -724,6 +746,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <button onClick={() => alert('This would prefill a job posting flow.')} className="rounded bg-emerald-600 text-white py-2 text-sm hover:bg-emerald-700">Use in Job Post</button>
               <button onClick={() => alert('This would suggest a resume rate optimization.')} className="rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700">Optimize Resume Rate</button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                 Optimize Resume Rate;
               </button>            </div>;
@@ -734,6 +758,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
               <div className='text - xs text - gray - 500'>Recommended Monthly</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className='text - xl font - semibold'>;className='rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700';
               >;
                 Optimize Resume Rate;
@@ -765,10 +792,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <div className='text-xs text-gray-500'>Recommended Monthly</div>;
               <div className='text-xl font-semibold'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               <div className='text - xl font - semibold'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {data ? `$${data.recommendedMonthlyUsd}` : '—'}
               </div>;
             </div>;
@@ -814,6 +844,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   data={data && data.regionalComparison.map(r => ({label: r && r.region,value: r && r.medianHourlyUsd,}))}
                 />;
 <<<<<<< HEAD
+<<<<<<< HEAD
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
               )}
@@ -857,6 +888,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {data ? (
                 <div className='flex flex - col items - center gap - 3'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ) : (<div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
               )}{data && (<table className='w-full mt-3 text-sm'>;
                   <thead>;
@@ -880,11 +913,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <h3 className='font-medium mb-3'>Distribution</h3>;
               {data ? (<div className='flex flex - col items - center gap - 3'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <DonutChart;
                     slices={}
                   />;
                   <div className='flex gap-2 flex-wrap justify-center text-xs'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     {donutData && donutData.map(d => (;
                       <span
@@ -893,6 +930,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {donutData && donutData.map(d => (<span;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                    {donutData && donutData.map(d => (<span;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         key={d && d.label}
                         className='rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0 && 0.5'>;
                         {d && d.label}
@@ -906,6 +946,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ) : (<div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />;
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
               <h3 className="font-medium mb-3">Distribution</h3>;
@@ -913,11 +956,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <DonutChart slices={donutData.map((d, i) => ({ label: d.label, value: d.value })) as any} />;
                   <div className="flex gap-2 flex-wrap justify-center text-xs">;
                     {donutData.map((d) => (<span key={d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{d.label}</span>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         key={d.label}
                         className='rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5';
                       >;
                         {d.label}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -993,6 +1040,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                   </span>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </span>;
                     ))}
                   </div>;
@@ -1027,9 +1076,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     key={t}
                     className='rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs'>;
                     {t}</span>                ))}            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
+<<<<<<< HEAD
 =======
                   </span>                ))}            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <h3 className="font-medium mb-3">Signals</h3>;
               <div className="flex gap-2 flex-wrap">;
                 <span className="rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data && data.minHourlyUsd} - ${data && data.maxHourlyUsd} / hr</span>;
@@ -1088,6 +1140,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)</span>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 ))}
@@ -1108,5 +1163,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -5,6 +5,7 @@ type Props = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 };
 
 export default function MilestoneForm(): any ({ onSubmit }: Props) {;
@@ -58,6 +59,8 @@ return;
       setLoading(false);
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 }export default function MilestoneForm(): any ({ onSubmit }: Props) {type Props = {onSubmit: (payload: {import React, { useState } from 'react';
 type Props = any;title: string;
@@ -163,6 +166,9 @@ type Props = any;title: string;
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </form>)}const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setError(null)const parsedAmount = Number(amountUsd)if (!title |!dueDate |!amountUsd |Number.isNaN(parsedAmount)) {setError('Please provide Title, Due Date and a valid Amount.')return;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
@@ -234,9 +240,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       </button>;
     </form>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </form>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

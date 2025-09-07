@@ -102,6 +102,7 @@ async log(message, type = "INFO")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(""Error": ")
 
@@ -109,3 +110,6 @@ async log(message, type = "INFO")
 =======
   console.error(""Error": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(""Error": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -32,6 +32,7 @@ const fs = require("fs");"const path = require("path");"const { exec } = require
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -57,10 +58,13 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -111,6 +115,11 @@ const execAsync = promisify(exec);
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+const execAsync = promisify(exec);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 class BuildMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -129,6 +138,7 @@ const execAsync = promisify(exec);
 
 const execAsync = promisify(exec);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -179,6 +189,8 @@ const execAsync = promisify(exec);
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 class BuildMonitor {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
@@ -224,6 +236,7 @@ class BuildMonitor {}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -248,6 +261,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -280,6 +295,7 @@ main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -298,6 +314,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       execSync('npm run clean', {
         cwd: this.projectRoot,
         stdio: 'ignore',
@@ -310,6 +328,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         timeout: 300000,
       });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -347,6 +366,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
         "timeout": 300000, // 5 minutes timeout;
@@ -356,9 +377,13 @@ main
       const endTime = Date.now();
       const duration = endTime - startTime;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       this.lastBuild = {
         timestamp: new Date().toISOString(),
         success: true,
@@ -368,6 +393,7 @@ main
       const endTime = Date.now();
       const duration = endTime - startTime;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -405,6 +431,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       const buildResult = {}
         "timestamp": new Date().toISOString(),
         duration,
@@ -442,6 +470,7 @@ main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -460,6 +489,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       this.log(`Build completed successfully in ${buildTime}ms`);
       await this.saveBuildReport();
     } catch (error) {
@@ -470,6 +501,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         error: error.message,
         output: error.stdout || error.stderr,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -507,6 +539,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       return buildResult;
     } catch (error) {}
       const endTime = Date.now();
@@ -548,6 +582,7 @@ main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -566,6 +601,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async handleBuildFailure(error) {
     this.log('Handling build failure...');
     try {
@@ -593,6 +630,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       nodeVersion: process.version,
       platform: process.platform,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -630,6 +668,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       return buildResult;
     };
   };
@@ -664,6 +704,7 @@ main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -682,6 +723,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async reportBuildFailure(error) {
     try {
       const failureReport = {
@@ -699,6 +742,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (_) {}
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -736,6 +780,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       this.log('Type check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -834,6 +880,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -876,6 +923,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       // Clean up first;
       await this.cleanupOldBuilds();
 
@@ -944,6 +993,7 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 });
@@ -966,6 +1016,8 @@ module.exports = BuildMonitor;
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 });
 };
@@ -999,6 +1051,7 @@ monitor.start().catch(error => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 module.exports = BuildMonitor;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1027,6 +1080,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 };
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 module.exports = BuildMonitor;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1044,5 +1099,8 @@ main
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

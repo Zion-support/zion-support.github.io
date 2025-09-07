@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -18,6 +17,7 @@ export default function SmartInvoiceGeneratorPage() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="space-y-16">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -34,6 +34,8 @@ export default function SmartInvoiceGeneratorPage() {
         </div>
       </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -72,7 +74,10 @@ export default function SmartInvoiceGeneratorPage() {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
         {/* Features Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
@@ -384,6 +389,7 @@ function IntegrationCard({ icon, title, description }: {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 */
 
@@ -416,3 +422,6 @@ function TestimonialCard({
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

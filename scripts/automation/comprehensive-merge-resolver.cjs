@@ -130,6 +130,7 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     const reportPath = path.join(this.logsDir, ")
 
@@ -138,3 +139,7 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
 
     const reportPath = path.join(this.logsDir, ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+    const reportPath = path.join(this.logsDir, ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

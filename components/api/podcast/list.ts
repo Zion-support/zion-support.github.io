@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = null;
 const EPISODES_PATH = path.join(
   process.cwd()
@@ -45,6 +46,8 @@ const simplified = episodes.map(e => ({
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function ensureStorage() {const dir = path.dirname(EPISODES_PATH)if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })if (!fs.existsSync(EPISODES_PATH))fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')}
 export default function handler() {const EPISODES_PATH = null;
 const EPISODES_PATH = path.join(process.cwd()'data';
@@ -57,6 +60,7 @@ const simplified = episodes.map(e => ({id: e.id,title: e.title,inviteeName: e.in
   const simplified = episodes.map((e) => ({id: e.id, title: e.title,inviteeName: e.invitee?.name || 'Guest', createdAt: e.createdAt,summary: e.bestQuote || '',audio: e.audio || {}}))return res.status(200).json({ episodes: simplified })}
     invitee_name: e.invitee?.name || 'Guest';
     created_at: e.created_at;
+<<<<<<< HEAD
     summary: e.best_quote || '',audio: e.audio || {}}))return res.status (200).json ({ episodes: simplified })return res.status(200).json({ episodes: simplified })return res.status(200).json({ episodes: simplified })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -77,3 +81,6 @@ const simplified = episodes.map(e => ({id: e.id,title: e.title,inviteeName: e.in
     audio: e.audio || {}}));
   return res.status (200).json ({ episodes: simplified });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    summary: e.best_quote || '',audio: e.audio || {}}))return res.status (200).json ({ episodes: simplified })return res.status(200).json({ episodes: simplified })return res.status(200).json({ episodes: simplified })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

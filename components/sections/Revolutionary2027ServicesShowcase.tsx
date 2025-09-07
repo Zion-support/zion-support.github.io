@@ -391,13 +391,17 @@ const Revolutionary2027ServicesShowcase  = null;const containerVariants = {hidde
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0 && 0.1),transparent_50%)]"></div>;<div className="max-w-7xl mx-auto relative z-10">;
         <motion&& motion.div;
         duration: 0.6,ease: 'easeOut' as const,},},}return (<section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Enhanced Background Effects */}
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20'></div>;
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]'></div>;
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0.1),transparent_50%)]'></div>;
       <div className='max-w-7xl mx-auto relative z-10'>;
         {/* Section Header */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -448,6 +452,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -465,7 +471,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             business with solutions that were once science fiction.;
           </p>;
         </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           className='text-center mb-20'>;
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>;
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -488,6 +497,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div;
           variants={containerVariants}
 <<<<<<< HEAD
+<<<<<<< HEAD
 initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
@@ -503,6 +513,11 @@ initial='hidden';
 =======
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'>          initial="hidden";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+initial='hidden';
+          whileInView='visible';
+          viewport={{ once: true }}className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'>          initial="hidden";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           whileInView="visible";
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16";
@@ -551,6 +566,9 @@ initial='hidden';
           variants={containerVariants}
           viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16";
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
         >;
@@ -745,6 +763,9 @@ className='group relative'
                     {service && service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center space-x-2">;
                         <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         <span className="text-sm text-gray-400">{feature}</span>;className='group relative';
             >;
               <div className='relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20'>;
@@ -770,6 +791,7 @@ className='group relative'
                         <span className='text-sm text-gray-400'>{feature}</span>;
                       </div>;
                     ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -815,6 +837,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   </div>;
                   {/* Market Info */}
 <div className='pt-4 border-t border-gray-700/50'>;
@@ -866,6 +890,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <Link
                       href={`/services/${service.id}`}
                       className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-lg hover:shadow-purple-500/25'
@@ -881,6 +906,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <Link;
                       <span className="text-lg text-gray-400">{service.period}</span>;
                     </div>;
@@ -937,11 +964,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>;
               </div>;
             </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                 </div>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           ))}
         </motion.div>;
                 {/* Hover Effect Overlay */}
@@ -954,6 +984,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           viewport={{ once: true }}
@@ -1006,6 +1037,8 @@ className='text-center'
 export default Revolutionary2027ServicesShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           viewport={{ once: true }}className='text-center';
         >;
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;
@@ -1137,6 +1170,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   )}export default Revolutionary2027ServicesShowcase;  )}export default Revolutionary2027ServicesShowcase;export default Revolutionary2027ServicesShowcase;export default Revolutionary2027ServicesShowcase;
   )}className='inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl';
               >;
@@ -1147,6 +1183,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
       </div>;
     </section>;
+<<<<<<< HEAD
 )}export default Revolutionary2027ServicesShowcase;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1166,3 +1203,6 @@ export default Revolutionary2027ServicesShowcase;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default Revolutionary2027ServicesShowcase;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

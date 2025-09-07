@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
@@ -11,6 +12,9 @@ title: string;
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     text: string;
     href: string;
   }
@@ -19,6 +23,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     label: string;
     color: string;
   }>;
+<<<<<<< HEAD
 const Hero: React.FC<HeroProps> = ({
   title
   subtitle
@@ -112,6 +117,8 @@ variant='outline'
     label: string;
     color: string;
   }>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const Hero: React.FC<HeroProps> = ({title;
   subtitle;
   primaryAction;
@@ -153,8 +160,11 @@ const Hero: React.FC<HeroProps> = ({title;
                   href={primaryAction && primaryAction.href}
                   size='lg';
                   className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {title}
           </h1>;
           <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed font - light">;
@@ -169,6 +179,9 @@ const Hero: React.FC<HeroProps> = ({title;
                   {primaryAction && primaryAction.text}
                   <ArrowRight className="w-5 h-5 ml-2" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </Button>;style={{ animationDelay: '0.2s' }}
                 >;
                   {primaryAction.text}
@@ -176,12 +189,15 @@ const Hero: React.FC<HeroProps> = ({title;
                 </Button>;
               )}
               {secondaryAction && (<Button;
+<<<<<<< HEAD
 =======
                 </Button>;
               )}
               {secondaryAction && (;
                 <Button
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   href={secondaryAction && secondaryAction.href}
                   variant='outline';
                   size='lg';
@@ -194,6 +210,9 @@ const Hero: React.FC<HeroProps> = ({title;
                 >;
                   <Play className="w-5 h-5 mr-2" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </Button>;href={secondaryAction.href}
 variant='outline';
                   size='lg';
@@ -203,6 +222,7 @@ variant='outline';
                 >;
                   <Play className='w-5 h-5 mr-2' />;
                   {secondaryAction.text}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -223,6 +243,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </Button>;
               )}
             </div>;
@@ -230,6 +252,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Stats Section */}{stats && (<div;
         {stats && (<div;
             className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             style={{ animationDelay: '0 && 0.6s' }}>;
             {stats && stats.map((stat, index) => (<div key={index} className='text-center group'>;
@@ -244,6 +267,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+            style={{ animationDelay: '0 && 0.6s' }}>;
+            {stats && stats.map((stat, index) => (<div key={index} className='text-center group'>;
+                <div className='relative'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <div;
                     {stat.value}</div>;
                   <div className="absolute -inset - 2 bg - gradient - to - r from - transparent via - blue - 500 / 5 to - transparent rounded - lg opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" />;
@@ -252,6 +280,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />;
                 </div>;
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                   </div>;
@@ -259,6 +288,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 <div className="text - gray - 400 text - xs sm:text - sm md:text - base font - medium">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {stat.label}
                 </div>;
               </div>;
@@ -266,6 +297,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         )}
         {/* Trust Indicators */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div
           className='mt-16 md:mt-20 animate-fade-in'
@@ -302,6 +334,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <div;
           className='mt-16 md:mt-20 animate-fade-in';
             </div>;
@@ -363,7 +397,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Decorative Elements */}
 <div className='absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse' />;
       <div;
@@ -373,6 +410,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div;
         className='absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse';
         style={{ animationDelay: '2s' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
   );
@@ -396,6 +434,8 @@ export default Hero;
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       />;
   )}
 }
@@ -404,9 +444,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />;
     </section>;
   )}export default Hero;</div>;
+<<<<<<< HEAD
 =======
                 </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </div>))}
           </div>)}
         {/* Trust Indicators */}
@@ -448,6 +491,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
       {/* Decorative Elements */}</div>;
       </div>;
+<<<<<<< HEAD
       {/* Decorative Elements */}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -459,3 +503,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Decorative Elements */}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      {/* Decorative Elements */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

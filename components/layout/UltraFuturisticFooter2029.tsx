@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star;
   Rocket, Brain, Atom, Building, Briefcase, Microscope;
@@ -98,6 +99,8 @@ const serviceCategories = [
         name: 'Quantum Neural Networks'
         href: '/quantum-neural-network-platform'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion  } from 'framer-motion';
   Phone;
   Mail;
@@ -149,11 +152,15 @@ const contactInfo  = null;const serviceCategories = [;
   }
 ];{name: 'AI Consciousness Evolution',href: '/ai-consciousness-evolution-2029',},{name: 'Quantum Neural Networks';
         href: '/quantum-neural-network-platform';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
       {name: 'Autonomous Business Operations';
         href: '/autonomous-business-operations-platform';
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       {
         name: 'AI-Powered IT Asset Management',
@@ -390,6 +397,8 @@ const UltraFuturisticFooter2029 = () => {
   return (
     <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {name: 'AI-Powered IT Asset Management',href: '/ai-powered-it-asset-management',},],},{title: '🧠 AI & Technology',services: [;
       { name: 'AI Services', href: '/ai-services' },{ name: 'Machine Learning', href: '/machine-learning' },{ name: 'Natural Language Processing', href: '/nlp-services' },{ name: 'Computer Vision', href: '/computer-vision' },],},{title: '⚛️ Quantum & Emerging Tech';
     services: [;
@@ -408,7 +417,10 @@ const quickLinks = [;
       { name: 'AI Services', href: '/ai-services' },{ name: 'Quantum Technology', href: '/quantum-technology' },{ name: 'IT Infrastructure', href: '/it-infrastructure' },{ name: 'Cybersecurity', href: '/cybersecurity' },{ name: 'Cloud Solutions', href: '/cloud-solutions' },{ name: 'Blockchain', href: '/blockchain-solutions' },],},{title: 'Resources',links: [;
       { name: 'Blog', href: '/blog' },{ name: 'Case Studies', href: '/case-studies' },{ name: 'White Papers', href: '/white-papers' },{ name: 'Documentation', href: '/docs' },{ name: 'API Reference', href: '/api' },{ name: 'Support Center', href: '/support' },],},{title: 'Legal',links: [;
       { name: 'Privacy Policy', href: '/privacy' },{ name: 'Terms of Service', href: '/terms' },{ name: 'Cookie Policy', href: '/cookies' },{ name: 'Data Protection', href: '/data-protection' },{ name: 'Accessibility', href: '/accessibility' },{ name: 'Compliance', href: '/compliance' },],},];const UltraFuturisticFooter2029 = () => {return (<footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>;
@@ -430,6 +442,7 @@ const quickLinks = [;
               technology solutions. Transforming businesses with cutting-edge;
               innovation.;
             </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -457,6 +470,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                         <Link
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Contact Information */}
             <div className='space-y-3 mb-6'>;
               <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>;
@@ -547,8 +562,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </h5>;
                   <ul className='space-y-2'>;
                     {category.services.map(service => (<li key={service.name}>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Contact Information */}
             <div className='space-y-3 mb-6'>;
               <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>;
@@ -582,6 +600,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social && social.color} transition-all duration-200 hover:bg-slate-700/50`}>;
                   <social && social.icon className="w-5 h-5" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </a>;<Link;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                           href={service.href}
@@ -599,10 +620,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                   </ul>;
                 </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                 </a>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
           {/* Service Categories */}
           <div className='lg:col-span-1'>;
@@ -645,6 +669,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   key={link.name}
                   href={link.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className='flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-slate-800/50'
                 >
 <<<<<<< HEAD
@@ -658,13 +683,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 </Link>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className='flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-slate-800/50';
                 >;
                   <link.icon className='w-4 h-4' />                  <span>{link.name}</span>;
                   <link.icon className='w-4 h-4' />;
                   <span>{link.name}</span>;
                 </Link>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
           {/* Footer Sections */}
           <div className='lg:col-span-1'>;
@@ -690,6 +720,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </li>;{/* Footer Sections */}
           {/* Footer Sections */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Footer Sections */}
 <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>
@@ -700,6 +731,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                   <h5 className='text-sm font-medium text-gray-300 mb-3'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <div className='lg:col-span-1'>;
             <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>;
             <div className='space-y-4'>;
@@ -708,6 +741,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <ul className="space-y-2">;
                     {section.links.map((link) => (<li key={link.name}>;
                         <Link;const UltraFuturisticFooter2029 = () =>: any {return (<footer className='bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 border - t border - slate - 700 / 50'>;
+<<<<<<< HEAD
 =======
                   <h5 className="text-sm font-medium text-gray-300 mb-3">{section.title}</h5>
                   <ul className="space-y-2">
@@ -719,6 +753,8 @@ const UltraFuturisticFooter2029 = () =>: any {
   return (
     <footer className='bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 border - t border - slate - 700 / 50'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Main Footer Content */}
       <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 16'>;
         <div className='grid grid - cols - 1 lg:grid - cols - 4 gap - 12'>;
@@ -866,6 +902,9 @@ const UltraFuturisticFooter2029 = () =>: any {
                           href={link.href}
                           className="text - sm text - gray - 400 hover:text - white transition - colors duration - 200";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         >;<h5 className='text-sm font-medium text-gray-300 mb-3'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     {section.title}
@@ -915,6 +954,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='hover:text-white transition-colors'>;
                 Terms of Service;
               </Link>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Link
                 href='/cookies'
@@ -972,6 +1012,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default UltraFuturisticFooter2029;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Link;
                 href='/cookies';
             </div>;
@@ -1038,6 +1080,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </footer>)}export default UltraFuturisticFooter2029)}export default UltraFuturisticFooter2029;)export default UltraFuturisticFooter2029;  )}
 export default UltraFuturisticFooter2029;}
 export default UltraFuturisticFooter2029;<div className='bg-gradient-to-r from-purple-600/10 to-blue-600/10 border-t border-slate-700/50'>;
@@ -1065,6 +1110,7 @@ export default UltraFuturisticFooter2029;<div className='bg-gradient-to-r from-p
         </div>;
       </div>;
     </footer>;
+<<<<<<< HEAD
 )}export default UltraFuturisticFooter2029;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1085,3 +1131,6 @@ export default UltraFuturisticFooter2029;
 }
 export default UltraFuturisticFooter2029;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default UltraFuturisticFooter2029;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

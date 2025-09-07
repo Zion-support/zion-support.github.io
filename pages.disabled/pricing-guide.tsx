@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,8 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
@@ -305,13 +308,17 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {pricingFactors.map((factor, index) => (<motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={factor.factor}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               >
@@ -368,6 +375,8 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                 <Card className="p-8 h-full">;
                   <div className="flex items-start mb-6">;
@@ -418,13 +427,17 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {pricingExamples.map((example, index) => (<motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={example.scenario}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               >
@@ -488,6 +501,8 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                 <Card className="p-8 h-full">;
                   <div className="text-center mb-6">;
@@ -545,13 +560,17 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {costSavingTips.map((tip, index) => (<motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={tip.tip}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               >
@@ -620,6 +639,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                 <Card className="p-6">;
                   <div className="flex items-start">;
@@ -676,9 +697,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     </div>;
   )}export default PricingGuide;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

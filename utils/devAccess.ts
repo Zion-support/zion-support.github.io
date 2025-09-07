@@ -18,24 +18,31 @@ export interface DevIdentity  {export interface DevIdentity  {isAuthenticated: b
 }const gitDir = path && path.join(process && process.cwd(), '.git')if (!fs && fs.existsSync(gitDir)) return { connected: false }const branch = execSync('git rev-parse --abbrev-ref HEAD', {stdio: ['ignore', 'pipe', 'ignore'];
     }).toString().trim()return { connected: true, branch }
   } catch {return { connected: false }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface DevIdentity {
 
 export interface DevIdentity {;
   isAuthenticated: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
   roles: DevRole[];
   userId?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,6 +69,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
@@ -109,6 +118,7 @@ export function requireRoles(req: NextApiRequest;
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
   if (token && adminToken && token === adminToken) {
@@ -123,10 +133,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   return { isAuthenticated: false, roles: [] }
 }
 
+<<<<<<< HEAD
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
@@ -169,6 +182,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
@@ -186,6 +201,7 @@ export function requireRoles(
   return identity;}// Development access utilities;
 export interface DevAccessConfig  {enabled: boolean;
   return identity;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,6 +229,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -254,9 +272,12 @@ export function isDevelopmentMode(): boolean {return process.env.NODE_ENV === 'd
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -285,6 +306,7 @@ if ( {) {$2;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -322,3 +344,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

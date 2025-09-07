@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
@@ -43,6 +44,8 @@ function isAuthorized(req: NextApiRequest): boolean {
     const latencyMs = Date.now() - started;
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export default async function handler() {if (!isAuthorized(req))return res.status(401).json({ error: "Unauthorized" })function isAuthorized(req: NextApiRequest): boolean {import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain  } from '@/utils/zionBrain';
@@ -52,6 +55,7 @@ function isAuthorized(req: NextApiRequest): boolean {const token = null;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken || token === superToken;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
       return res.status (200).json ({ ...result, routed });
@@ -79,10 +83,13 @@ function isAuthorized(req: NextApiRequest): boolean {const token = null;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const started = Date.now()try {const { text, payload } = req.body || {}const result = detectIntent(String(text || ''))const routed = await routeToChain(result.intent, payload || {})const latencyMs  = Date.now() - started;return res.status(200).json({ ...result, routed })} catch (e: any) {const latencyMs = Date.now() - started;
     appendLog({ module: 'router', type: 'audit', status: 'error', latencyMs, payload: { error: e?.message || 'unknown' } })return res.status(500).json({ error: 'Router failure' })}}return res.status (200).json ({ ...result, routed })} catch (e: any) {const latency_ms = Date.now () - started;
       append_log ({module: "router",type: "audit",status: "error",latency_ms,payload: { error: e?.message || "unknown" },})return res.status (500).json ({ error: "Router failure" })}
     append_log ({module: "router",type: "audit",status: "error",latency_ms,payload: { error: e?.message || "unknown" },})return res.status(500).json({ error: "Router failure" })}
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -91,3 +98,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

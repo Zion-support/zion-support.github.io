@@ -113,6 +113,7 @@ class ErrorPreventionOrchestrator {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 
@@ -120,6 +121,9 @@ class ErrorPreventionOrchestrator {}
 =======
       
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           resolve()} else {}
@@ -166,6 +170,7 @@ switch (command) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
     process.exit(1)};
@@ -175,3 +180,7 @@ switch (command) {}
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
     process.exit(1)};
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
+    process.exit(1)};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

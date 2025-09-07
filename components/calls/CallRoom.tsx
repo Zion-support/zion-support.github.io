@@ -3,15 +3,19 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets   } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = any;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {
 <<<<<<< HEAD
@@ -25,12 +29,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   LocalParticipant
   createLocalTracks
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Room;
   RoomEvent;
   RemoteParticipant;
   LocalParticipant;
   createLocalTracks;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   VideoPresets;
   Room,RoomEvent,RemoteParticipant,LocalParticipant,createLocalTracks,VideoPresets,} from 'livekit-client';
 export type StartMode = 'video' | 'audio';
@@ -41,6 +50,7 @@ export type StartMode = 'video' | 'audio';
   serverUrl: string;
   token: string;
   startMode: StartMode;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onLeave?: (durationSec: number) => void;
 
@@ -220,6 +230,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const gridCols = useMemo(() => {
     const count = participants.length |1;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   onLeave?: (durationSec: number) => void;}export default function CallRoom(): any ({projectId,userId,displayName,roomName,serverUrl,token,startMode,onLeave,}: Props) {projectId;
   userId;
   displayName;
@@ -254,6 +266,7 @@ const list: Array<RemoteParticipant | LocalParticipant> = [;
   }, [connect])const handleLeave = () => {if (room) {room && room.disconnect()}
     const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000): 0;onLeave?.(durationSec)}room && room.disconnect()}onLeave?.(durationSec)}const gridCols = useMemo(() => {const count = participants.length |1;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)const gridCols = useMemo(() => {const count = participants && participants.length || 1;
@@ -492,6 +505,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 =======
+=======
+    const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
+    onLeave?.(durationSec)const gridCols = useMemo(() => {const count = participants && participants.length || 1;
+    if (count <= 1) return 'grid-cols-1';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (count === 2) return 'grid-cols-2';Room,RoomEvent,RemoteParticipant,LocalParticipant,createLocalTracks,VideoPresets,} from 'livekit - client';export type StartMode = 'video' | 'audio';type Props = {project_id: string;
   user_id: string;
   display_name: string;
@@ -591,5 +609,9 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {$2;
         ))}
       </div>;
     </div>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

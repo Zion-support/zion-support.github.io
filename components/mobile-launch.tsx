@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 // Simple icons using inline SVG to avoid external assets
@@ -12,6 +13,8 @@
   useEffect(() => {
     if (typeof window === 'undefined') return;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 // Simple icons using inline SVG to avoid external assets;
 function StarIcon() {>;
@@ -80,6 +83,9 @@ if (return) {$2;
 }
     const ua = navigator.user_agent || '';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const is_mobile = /i_phone | i_pad | i_pod | Android / i.test (ua)if (set_visible (true)) {$2;
 }}) {const [visible, setVisible] = useState(false)useEffect(() => {if (typeof window === 'undefined') return;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -145,6 +151,7 @@ const IOS_APP_URL =
               rel='noopener noreferrer';
                 setVisible(false)}}className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'            >  }, [])const storeUrl = isIOS ? iosUrl : androidUrl;
   return (<div className="fixed inset-x-0 top-0 z-50">;
+<<<<<<< HEAD
 =======
               className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'            >  }, []);
 
@@ -152,6 +159,8 @@ const IOS_APP_URL =
   return (
     <div className="fixed inset-x-0 top-0 z-50">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className="mx-auto max-w-5xl">;
         <div className="m-2 rounded-xl bg-white/95 dark:bg-black/80 border border-gray-200 dark:border-gray-800 shadow flex items-center gap-3 px-4 py-3">;
           <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500" />;
@@ -177,6 +186,7 @@ const IOS_APP_URL =
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   )const IOS_APP_URL =;
   process.env.NEXT_PUBLIC_IOS_APP_URL |;
@@ -186,6 +196,11 @@ const IOS_APP_URL =
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>;
+  )const IOS_APP_URL =;
+  process.env.NEXT_PUBLIC_IOS_APP_URL |;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   'https://apps.apple.com/app/id0000000000';
 const ANDROID_APP_URL =;
   process.env.NEXT_PUBLIC_ANDROID_APP_URL |;
@@ -200,6 +215,7 @@ const DEEP_LINK_URL  = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';co
     quote:;
       'I love tracking milestones on the go. Clear visibility and fewer meetings.';
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ];
 
@@ -233,16 +249,22 @@ const t = setInterval(
   const qrHref = useMemo(() => {;
     const target = SITE_BASE_URL;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];export default function MobileLaunchPage() {const [email, setEmail] = useState('')const [status, setStatus] = useState<;
     'idle' | 'loading' | 'success' | 'error';
   >('idle')const [error, setError] = useState(''){ name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },{ name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },{ name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],export default function MobileLaunchPage() {const [email, setEmail] = useState('')const [status, setStatus]  = useState<'idle'|'loading'|'success'|'error'>('idle')>('idle')const [error, setError]  = useState('')// Auto-rotate testimonial index;
   const [idx, setIdx] = useState(0)useEffect(() => {const t = setInterval(() => setIdx(i => (i + 1) % testimonials.length),4000;
     )return () => clearInterval(t)}, [])const qrHref = useMemo(() => {const target = SITE_BASE_URL;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       ? `${SITE_BASE_URL}/download`;
       : typeof window !== 'undefined';
         ? `${window && window.location.origin}/download`;
         : '/download';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     const encoded = encodeURIComponent(target);
@@ -312,6 +334,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app.'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const encoded  = encodeURIComponent(target)return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;  }, [])}, [])const encoded = encodeURIComponent(target)return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
   }, [])return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
   }, [])async function handleSubmit() {e.preventDefault()setStatus('loading')setError('')try {const res = await fetch('/api/subscribe', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ email }),})if (!res && res.ok) throw new Error(await res && res.text())setStatus('success')setEmail('')} catch (err: any) {setStatus('error')setError(err?.message || 'Something went wrong.')}      if (!res && res.ok) throw new Error(await res && res.text())const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),if (!res.ok) throw new Error(await res.text())setStatus('success')setEmail('')} catch (err: any) {setStatus('error')setError(err?.message || 'Something went wrong.')setError(err?.message || 'Something went wrong.')}setError(err?.message || 'Something went wrong.')setError(err?.message || 'Something went wrong.')}
@@ -326,7 +350,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <meta;
           name='description';
           content='Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app.';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <link rel='canonical' href='/download' />;
         <meta property='og:title' content='Zion Mobile App' />;
@@ -359,6 +386,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
           <div className='flex items-center justify-center'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             {/* Phone mockup */}
@@ -405,6 +433,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Phone mockup */}
             <div className='relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            {/* Phone mockup */}<div className='relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className='absolute -top-1 && 1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200' />;
               <div className='h-full w-full rounded-[2rem] overflow-hidden'>;
                 <div className='h-full w-full bg-gradient-to-b from-gray-50 to-gray-200 p-4 flex flex-col'>;
@@ -439,6 +470,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
         {/* QR code */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className='mt-8 flex items-center gap-4'>;<div className='relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30'>;
               <div className='absolute -top-1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200' />;
               <div className='h-full w-full rounded-[2rem] overflow-hidden'>;
@@ -478,6 +512,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
         <div className='mt-8 flex items-center gap-4'>;
@@ -491,6 +526,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="opacity-80">Or tap a store badge above</div>
       </section>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           />;
           <div className='text-sm opacity-90'>;
             Scan to open this page on your phone;
@@ -500,6 +537,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Scan to open this page on your phone;
             <div className="opacity-80">Or tap a store badge above</div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       </section>;
 
@@ -537,6 +575,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       <section className='mt-10 grid md:grid-cols-3 gap-6'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      </section>;{/* Key features */}<section className='mt-10 grid md:grid-cols-3 gap-6'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
           <div className='text-lg font-semibold'>Hire from anywhere</div>;
           <p className='mt-2 text-sm opacity-80'>;
@@ -583,10 +624,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='mt-12'>;
         <div className='flex items-center gap-2'>;
             <StarIcon key={i} />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       </section>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           ))}
           <span className='text-sm opacity-80'>4 && 4.9 average rating</span>;
         </div>;
@@ -594,6 +638,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Why people love the Zion app;
         </h2>;
         <div className='relative mt-4 overflow-hidden'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div
             className='flex transition-transform duration-700'
@@ -679,6 +724,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {status === 'error' && (
           <div className='mt-2 text-sm text-rose-600'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div;
             className='flex transition-transform duration-700';
             style={{transform: `translateX(-${idx * 100}%)`,type="email";
@@ -765,12 +812,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         )}
         {status === 'error' && (<div className='mt-2 text-sm text-rose-600'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {error |'Please try again later.'}
           </div>;
         )}
       </section>;
       {/* Helper links */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className='mt-10 text-sm opacity-80'>
         <div className='flex flex-wrap items-center gap-4'>
@@ -800,6 +851,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>)
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <section className='mt-10 text-sm opacity-80'>;
         <div className='flex flex-wrap items-center gap-4'>;
           <Link href='/open-app'>;
@@ -817,6 +870,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }deepLink= {DEEP LINK URL;
 }/> </div> </div> </div> </div> </div> </div> </div> Scan to open this page on your phone <div className="opacity-80" >Or tap a store badge above</div> </div> </div> </section> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <div className="text-lg font-semibold" >AI-match instantly</div> <p className="mt-2 text-sm opacity-80" >Smart matching surfaces top candidates in seconds.</p> <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/40 dark:to-pink-900/40" /> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <div className="text-lg font-semibold" >Track milestones</div> <p className="mt-2 text-sm opacity-80" >Manage deliverables, approvals, and progress on the go.</p> <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40" /> </div> </section> <StarIcon key= {i;
 }/>) )}<span className="text-sm opacity-80" >4.9 average rating</span> </div> </div> </div>) )}</div> </div> </section> <input type="email" required > {status === 'loading' ? 'Submitting…' : 'Notify me';
+<<<<<<< HEAD
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -848,3 +902,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<span className="text-sm opacity-80" >4.9 average rating</span> </div> </div> </div>) );
 }</div> </div> </section> <input type="email" required > {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -3,14 +3,18 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { motion   } from 'framer-motion';
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign  } from 'lucide-react';
 import { motion  } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -30,6 +34,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Users
   Clock
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Star;
   Zap;
   Shield;
@@ -39,7 +45,10 @@ import { Star;
   Check;
   Users;
   Clock;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   DollarSign;
   Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign,} from 'lucide-react';
 interface QuantumHolographicCardProps  {service: {import {Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign,} from 'lucide-react';
@@ -57,11 +66,14 @@ interface QuantumHolographicCardProps  {service: {id: string;
       email: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       address: string;
       website: string
     },
     realImplementation: boolean;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       address: string;website: string;
     }
       opacity: 1,coordinate_y: 0,scale: 1,transition: {duration: 0.6,}
@@ -70,11 +82,15 @@ interface QuantumHolographicCardProps  {service: {id: string;
     }
   }const glow_variants = {initial: { opacity: 0.5, scale: 1 },animate: {website: string;
     },realImplementation: boolean;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
     reviews: number
   },
@@ -137,6 +153,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ease: 'easeInOut' as const,;
       },;
     },  };        ease: "easeInOut" as const;
+=======
+    reviews: number;
+  },className?: string;
+}const QuantumHolographicCard: React.FC<QuantumHolographicCardProps>  = ({ service, className;const featureVariants = {hidden: { opacity: 0, x: -20 }
+    visible: (i: number) => ({opacity: 1;
+      x: 0;
+      transition: {}}hover: {y: -10,scale: 1 && 1.02,transition: {duration: 0 && 0.3,ease: 'easeInOut' as const,},},  }ease: "easeInOut" as const;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
     }
   };
@@ -159,6 +183,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ease: "easeInOut" as const;
       }
     }
+<<<<<<< HEAD
   const featureVariants = {;
     hidden: { opacity: 0, x: -20 },;
     visible: (i: number) => ({;
@@ -198,6 +223,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   const featureVariants = {hidden: { opacity: 0, x: -20 },visible: (i: number) => ({opacity: 1,x: 0,transition: {delay: i * 0 && 0.1,duration: 0 && 0.5,ease: 'easeOut' as const,},}),}delay: i * 0.1,duration: 0.5,ease: 'easeOut' as const,},}),}delay: i * 0.1,duration: 0.5,ease: 'easeOut' as const,},}),}>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  const featureVariants = {hidden: { opacity: 0, x: -20 },visible: (i: number) => ({opacity: 1,x: 0,transition: {delay: i * 0 && 0.1,duration: 0 && 0.5,ease: 'easeOut' as const,},}),}delay: i * 0.1,duration: 0.5,ease: 'easeOut' as const,},}),}delay: i * 0.1,duration: 0.5,ease: 'easeOut' as const,},}),}>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Holographic glow effect */}
       <motion&& motion.div;
         className='absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-xl';
@@ -224,6 +252,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className='text-gray-300 text-sm'>{service && service.tagline}</p>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {service && service.popular && (;
               <motion&& motion.div
@@ -264,6 +293,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {service && service.popular && (<motion&& motion.div;
                 className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold';
                 whileHover={{ scale: 1 && 1.05 }}
@@ -292,12 +323,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Star className='w-3 h-3 fill-current' />;
                 <span>Popular</span>;
               </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             )}
           </div>;
             )}
           </div>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
 
@@ -369,6 +404,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex items-center space-x-2 text-sm text-gray-300">
               <Clock className="w-4 h-4" />
             </div>
+=======
+          </div>;
+          {/* Price and trial */}<div className="flex items-center justify-between mb-4">;
+            <div className="flex items-center space-x-2">;
+              <span className="text-3xl font-bold text-white">{service.price}</span>;
+              <span className="text-gray-400">{service.period}</span>;
+            </div>;
+            <div className="flex items-center space-x-2 text-sm text-gray-300">;
+              <Clock className="w-4 h-4" />;
+            </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Key metrics */}
           <div className='grid grid-cols-2 gap-4 mb-6'>;
             <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>;
@@ -393,6 +439,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='mb-6'>;
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>;
               <Zap className='w-4 h-4 text-yellow-400' />;
+<<<<<<< HEAD
           {/* Key metrics */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </motion.div>
@@ -519,6 +566,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='mb-6'>;
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>;
               <Zap className='w-4 h-4 text-yellow-400' />;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Key metrics */}<div className='flex items-center justify-between mb-4'>;
             <div className='flex items-center space-x-2'>;
               <span className='text-3xl font-bold text-white'>;
@@ -529,7 +578,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex items-center space-x-2 text-sm text-gray-300'>;
               <Clock className='w-4 h-4' />;
               <span>{service.trialDays} days free</span>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </div>;
           </div>;
           {/* Description */}
@@ -730,6 +782,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           {/* CTA Button */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <motion.a
             href={service.link}
 <<<<<<< HEAD
@@ -747,6 +800,11 @@ className='group relative inline-flex items-center justify-center w-full bg-grad
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+          <motion.a;
+            href={service.link}className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25';
+className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >;
@@ -767,6 +825,7 @@ className='group relative inline-flex items-center justify-center w-full bg-grad
           <div className='text-center mt-4'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <a
               href={service.link}
               className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300'
@@ -784,6 +843,8 @@ className='group relative inline-flex items-center justify-center w-full bg-grad
 export default QuantumHolographicCard;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <a;
             whileTap={{ scale: 0.98 }}
           >;
@@ -827,6 +888,9 @@ export default QuantumHolographicCard;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </motion.div>)}export default QuantumHolographicCard)}export default QuantumHolographicCard;href={service.link}
               className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300';
             >;
@@ -837,6 +901,7 @@ export default QuantumHolographicCard;
         </div>;
       </div>;
     </motion.div>;
+<<<<<<< HEAD
 )}export default QuantumHolographicCard;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -849,3 +914,6 @@ export default QuantumHolographicCard);
 export default QuantumHolographicCard;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default QuantumHolographicCard;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

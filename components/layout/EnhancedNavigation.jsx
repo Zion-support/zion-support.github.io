@@ -5,6 +5,7 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 <<<<<<< HEAD
@@ -30,6 +31,8 @@ const EnhancedNavigation = () =>: any {
             <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>
           </Link>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const EnhancedNavigation = () => {const [isMobileMenuOpen, setIsMobileMenuOpen]  = useState(false)import Link from 'next/link';const EnhancedNavigation = () =>: any {const [isMobileMenuOpen, setIsMobileMenuOpen]  = useState (false)return (<nav className='bg - white shadow - lg sticky top - 0 z - 50'>;
       <div className='container mx - auto px - 4'>;
         <div className='flex justify - between items - center py - 4'>;
@@ -84,6 +87,9 @@ const EnhancedNavigation = () => {const [isMobileMenuOpen, setIsMobileMenuOpen] 
               href='/contact';
               className='bg - blue - 600 text - white px - 6 py - 2 rounded - lg font - medium hover:bg - blue - 700 transition - colors';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >              Get Startedconst EnhancedNavigation = () =>: any {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),>;
   return (<nav className="bg - white shadow - lg sticky top-0 z-50">;
       <div className="container mx-auto px-4">;
@@ -308,9 +314,12 @@ export default EnhancedNavigation;
         )}
       </div>;
     </nav>;
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <Link href="/" className="flex items-center space-x-2">;
             <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items-center justify-center">;
               <span className="text - white font-bold text-xl">Z</span>;
@@ -430,6 +439,7 @@ export default EnhancedNavigation;
           </div>)}
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </nav>)}
 export default EnhancedNavigation;})}export default EnhancedNavigation;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -439,3 +449,7 @@ export default EnhancedNavigation;})}export default EnhancedNavigation;
 export default EnhancedNavigation;}
 export default EnhancedNavigation;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </nav>)}
+export default EnhancedNavigation;})}export default EnhancedNavigation;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

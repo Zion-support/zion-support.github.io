@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   id: string;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import React from 'react';
     monthly?: number;
@@ -36,9 +39,12 @@ import React from 'react';
   },period?: string;
   pricing?: any;
   features: string[],popular?: boolean;competitors?: string[];
+<<<<<<< HEAD
 =======
   competitors?: string[];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   targetMarket?: string;
   useCases?: string[];
     switch (variant) {case 'ai':;
@@ -277,6 +283,9 @@ export default UltraFuturisticServiceCard2026;</div>;
         <div className="absolute inset - 0 bg - gradient - to - br from - white / 0 via - white / 0 to - white / 0 group - hover: from - white / 5 group - hover:via - white / 2 group - hover:to - white / 5 transition - all duration-500 rounded-2xl"></div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </motion.div>),})UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';export default UltraFuturisticServiceCard2026;category: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   icon: string;
@@ -297,6 +306,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 interface ServiceCardProps  {service: Service;
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
+<<<<<<< HEAD
 }const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps>  = ({ service, variant;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -308,3 +318,6 @@ UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps>  = ({ service, variant;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

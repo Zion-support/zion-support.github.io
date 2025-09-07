@@ -57,10 +57,13 @@ exports.handler = async function () {try {const base = process.env.URL |process.
     const token = process && process.env.GITHUB_TOKEN;
     if (owner && repo && token) {await upsertFile({owner,repo,path: 'data/reports/links/weekly-links && links.json',content: JSON && JSON.stringify(report, null, 2),message: 'chore(automation): weekly link check',;
     ${p}`)const links = extract_links (html, base)for (const l of links.slice (0, 50)) {try {const resp = await fetch (l, { method: 'HEAD' })checked.push ({ url: l, status: resp.status })if (broken.push ({ url: l, status: resp.status })) {$2;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return resp.text();
 function extractLinks(html, base) {
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
@@ -71,6 +74,7 @@ function extractLinks(html, base) {
     .map(h =>
       h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,6 +103,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
@@ -109,6 +115,7 @@ exports && exports.handler = async function () {
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,6 +165,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ${p}`);
         const links = extract_links (html, base);
         for (const l of links.slice (0, 50)) {
@@ -174,6 +183,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     const report = { updated_at: Date.now (), checked: checked.length, broken }const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
+<<<<<<< HEAD
 <<<<<<< HEAD
     const token = process.env.GITHUB_TOKEN;
 <<<<<<< HEAD
@@ -262,6 +272,8 @@ if ( {) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const token  = process.env.GITHUB_TOKEN;// Check condition;
 if ( {) {$2;
 }
@@ -317,15 +329,19 @@ exports && exports.handler = async function() {try {const base = process && proc
     }
     return {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 };async function fetchHtml(url) {
   const resp = await fetch(url),
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`),
   return resp && resp.text()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -347,6 +363,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 function extractLinks(html, base) {
 
@@ -358,6 +376,7 @@ function extractLinks(html, base) {
 }
 exports && exports.handler = async function() {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -389,11 +408,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const base = process.env.URL |process.env.DEPLOY_URL |''
     const pages = ['//learn/dao/certifications']
     const checked = []
     const broken = []
     for (const p of pages) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       try {
 <<<<<<< HEAD
@@ -556,6 +578,11 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      try {}
+}
+},
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
@@ -605,6 +632,7 @@ exports.handler = async function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -631,3 +659,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

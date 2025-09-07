@@ -15,6 +15,7 @@ const path = require('path');
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -30,6 +31,8 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Final targeted fixes for remaining syntax errors
 const fixes = [
   // Fix missing semicolons in import statements
@@ -38,12 +41,15 @@ const fixes = [
     replacement: 'import { $1 } from \'$2\';'
   },
 
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // Fix malformed import statements
   {
     pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
@@ -51,12 +57,16 @@ const fixes = [
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // Fix missing semicolons after import statements
   {
     pattern: /import\s+([^]+)\s*$/gm,
@@ -79,6 +89,7 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+<<<<<<< HEAD
   
 
 
@@ -91,6 +102,12 @@ main
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+  // Fix unterminated string literals
+
+  // Fix unterminated string literals
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     pattern: /export\s+([^]+)\s*$/gm,
     replacement: 'export $1;'
@@ -112,6 +129,7 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+<<<<<<< HEAD
   
 
   // Fix malformed function declarations
@@ -123,6 +141,12 @@ main
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+  // Fix malformed function declarations
+
+  // Fix malformed function declarations
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     pattern: /const\s+([^=]+)\s*=\s*([^;]+)\s*$/gm,
     replacement: 'const $1 = $2;'
@@ -144,6 +168,7 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+<<<<<<< HEAD
   
 
   // Fix missing closing brackets and parentheses
@@ -155,6 +180,12 @@ main
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+  // Fix missing closing brackets and parentheses
+
+  // Fix missing closing brackets and parentheses
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     pattern: /function\s+([^(]+)\s*\([^)]*\)\s*{\s*$/gm,
     replacement: 'function $1() {\n'
@@ -176,6 +207,7 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+<<<<<<< HEAD
   
 
   // Fix malformed JSX attributes
@@ -187,17 +219,26 @@ main
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+  // Fix malformed JSX attributes
+
+  // Fix malformed JSX attributes
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     pattern: /const\s+([^=]+)\s*=\s*\([^)]*\)\s*=>\s*([^;]+)\s*$/gm,
     replacement: 'const $1 = () => $2;'
   },
 
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // Fix missing semicolons in object properties
   {
     pattern: /(\w+):\s*([^,}]+)\s*$/gm,
@@ -205,10 +246,14 @@ main
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   // Fix malformed return statements
 
   // Fix malformed return statements
+<<<<<<< HEAD
 =======
   
 =======
@@ -228,6 +273,8 @@ main
   // Fix malformed return statements
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   {
     pattern: /(\w+)\s*$/gm,
@@ -250,6 +297,7 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+<<<<<<< HEAD
   
 
   // Fix duplicated content (remove duplicate lines)
@@ -261,6 +309,12 @@ main
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+  // Fix duplicated content (remove duplicate lines)
+
+  // Fix duplicated content (remove duplicate lines)
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     pattern: /return\s+([^;]+)\s*$/gm,
     replacement: 'return $1;'
@@ -282,6 +336,7 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+<<<<<<< HEAD
   
 
   // Fix missing closing brackets in arrays
@@ -293,6 +348,12 @@ main
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+  // Fix missing closing brackets in arrays
+
+  // Fix missing closing brackets in arrays
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     pattern: /if\s*\([^)]+\)\s*{\s*$/gm,
     replacement: 'if (condition) {\n'
@@ -314,6 +375,7 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+<<<<<<< HEAD
   
 
   // Fix malformed JSX closing tags
@@ -325,6 +387,12 @@ main
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+  // Fix malformed JSX closing tags
+
+  // Fix malformed JSX closing tags
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     pattern: /for\s*\([^)]+\)\s*{\s*$/gm,
     replacement: 'for (let i = 0; i < length; i++) {\n'
@@ -428,10 +496,14 @@ main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 console.log('🔧 Fixing final syntax errors...');
 
 console.log('🔧 Fixing final syntax errors...');
 
+<<<<<<< HEAD
 =======
 
 
@@ -464,6 +536,8 @@ console.log('🔧 Fixing final syntax errors...');
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Fix specific files with known issues
 const filesToFix = [
     'src/components/SEO.tsx',
@@ -474,6 +548,7 @@ const filesToFix = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -486,6 +561,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];
 
 function fixFile(filePath) {
@@ -503,6 +580,7 @@ function fixFile(filePath) {
 
 =======
 
+<<<<<<< HEAD
         console.log(`File not found: ${filePath}`);
         return 0;
     }
@@ -559,6 +637,19 @@ main
     let modified = false;
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    }
+
+        return;
+
+        return;
+
+    }
+
+    let content = fs.readFileSync(filePath, 'utf8');
+
+    let modified = false;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);
@@ -566,6 +657,7 @@ main
         content = newContent;
         modified = true}
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -579,10 +671,14 @@ main
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       return true}
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
   return false}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -608,6 +704,9 @@ function walkDirectory(dir) {
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       if (stat.isDirectory()) {
         fixedCount += walkDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
         if (fixFile(filePath)) {
@@ -616,6 +715,7 @@ function walkDirectory(dir) {
     }
   } catch (error) {
     console.error(`Error reading directory ${dir}:`, error.message)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -646,6 +746,11 @@ function walkDirectory(dir) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+
+    let fixes = 0;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // Fix textarea.tsx
     if (filePath.includes('textarea.tsx')) {
         // Fix malformed className
@@ -697,6 +802,7 @@ function fixFile(filePath) {
         console.log(`✨ No issues found in ${filePath}`);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     let content = fs.readFileSync(filePath, 'utf8');
 
@@ -722,20 +828,26 @@ function fixFile(filePath) {
     return fixes;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     return fixes;
 }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Process all files
 let totalFixes = 0;
 filesToFix.forEach(file => {
     totalFixes += fixFile(file);
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -749,6 +861,8 @@ filesToFix.forEach(file => {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
@@ -756,6 +870,7 @@ console.log(`   Total fixes applied: ${totalFixes}`);
 
 
 if (totalFixes > 0) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -806,6 +921,8 @@ if (totalFixes > 0) {
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 <<<<<<< HEAD
 main
@@ -874,6 +991,7 @@ if (totalFixes > 0) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -885,6 +1003,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
     console.log('\n✅ Final syntax error fixing completed!');
 } else {
@@ -906,6 +1026,7 @@ const path = require('path')
     "replacement"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "replacement"
 
@@ -940,6 +1061,8 @@ main
     "replacement"
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 <<<<<<< HEAD
 main

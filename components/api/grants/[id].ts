@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 } from '../../../types/grants';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
@@ -47,6 +48,8 @@ return;
 return;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants')function ensureDir() {if (!fs.existsSync(GRANTS_DIR)) {fs.mkdirSync(GRANTS_DIR, { recursive: true })}
 function grantPath() {return path.join(GRANTS_DIR, `${id}.json`)function readGrant(id: string): GrantApplication | null {ensureDir()function ensureDir() {if (!fs && fs.existsSync(GRANTS_DIR)) {fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })}
 function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)function ensureDir() {if (!fs && fs.existsSync(GRANTS_DIR)) {fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })}
@@ -108,6 +111,7 @@ if ( {) {$2;
 if ( {) {$2;
 }
       res.status (404).json ({ error: 'Not found' })return;res.status(404).json({ error: 'Not found' })return;
+<<<<<<< HEAD
     }
     res.status(200).json({ record: g })return;
   }if (req.method === 'PUT') {const existing = readGrant(id)if (!existing) {res.status(404).json({ error: 'Not found' })return;}
@@ -248,6 +252,12 @@ if ( {) {
     }
     res.status (200).json ({ record: g });
     return;  }      return;
+=======
+    }
+    res.status(200).json({ record: g })return;
+  }if (req.method === 'PUT') {const existing = readGrant(id)if (!existing) {res.status(404).json({ error: 'Not found' })return;}
+    res.status (200).json ({ record: g })return;  }      return;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     res.status (200).json ({ record: g });
     return;
@@ -264,6 +274,7 @@ if ( {) {
       return;
     }
     const payload = req && req.body as UpdateGrantPayload;
+<<<<<<< HEAD
     const next: GrantApplication = {
       ...existing
       ...payload,    }
@@ -282,6 +293,8 @@ if ( {) {
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const next: GrantApplication = {...existing;
       ...payload,    }
     const payload  = req && req.body as UpdateGrantPayload;...existing,...payload,status: payload.submit ? 'Submitted' : existing.status,updatedAt: new Date().toISOString(),} as GrantApplication;
@@ -293,6 +306,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res.set_header ('Allow', 'GET, PUT')res.status (405).end ('Method Not Allowed')status: payload.submit ? 'Submitted' : existing.status,updated_at: new Date ().toISOString (),} as GrantApplication;
     write_grant (next)res.status (200).json ({ record: next })return;
   }
+<<<<<<< HEAD
   res.set_header ('Allow', 'GET, PUT')res.status (405).end ('Method Not Allowed')res.set_header ('AllowGET, PUT')res.status (405).end ('Method Not Allowed')res.setHeader('Allow', 'GET, PUT')res.status(405).end('Method Not Allowed')res.status(405).end('Method Not Allowed')}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -315,3 +329,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT');
   res.status (405).end ('Method Not Allowed');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  res.set_header ('Allow', 'GET, PUT')res.status (405).end ('Method Not Allowed')res.set_header ('AllowGET, PUT')res.status (405).end ('Method Not Allowed')res.setHeader('Allow', 'GET, PUT')res.status(405).end('Method Not Allowed')res.status(405).end('Method Not Allowed')}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

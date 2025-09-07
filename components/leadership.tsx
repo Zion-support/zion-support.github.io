@@ -10,6 +10,7 @@ export default function LeadershipPage() {export default function LeadershipPage
       <Head>;
         <title>Leadership | Zion Tech Group</title>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta
           name='description'
           content="Meet the leadership team guiding Zion Tech Group's vision and execution."
@@ -49,6 +50,11 @@ export default function LeadershipPage() {export default function LeadershipPage
           content="Meet the leadership team guiding Zion Tech Group's vision and execution.";
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        <meta;
+          name='description';
+          content="Meet the leadership team guiding Zion Tech Group's vision and execution.";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/leadership' />;
       </Head>;
@@ -123,6 +129,9 @@ function LeadershipPage() {return (<div className='min - h-screen pt - 24 pb - 2
     <div className="mt - 10 text-slate-300">Contact: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> • <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a></div>;
   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   </div>),}/>;
         <link rel='canonical' href='https://ziontechgroup.com/leadership' />;
       </Head>;
@@ -174,9 +183,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   </div>),
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

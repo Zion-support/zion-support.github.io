@@ -20,6 +20,7 @@ class DependencyMonitor {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
@@ -27,6 +28,9 @@ class DependencyMonitor {}
 =======
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
@@ -51,6 +55,7 @@ class DependencyMonitor {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -58,6 +63,9 @@ class DependencyMonitor {}
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Dependency check passed ✓')) {}
@@ -79,6 +87,7 @@ class DependencyMonitor {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
@@ -86,6 +95,9 @@ class DependencyMonitor {}
 =======
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if ( {})
       console.log('Outdated packages "found": ')) {}
      {}
@@ -115,6 +127,7 @@ class DependencyMonitor {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -122,6 +135,9 @@ class DependencyMonitor {}
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Package integrity check passed ✓')) {}
@@ -164,6 +180,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = DependencyMonitor;
 
@@ -171,3 +188,6 @@ module.exports = DependencyMonitor;
 =======
 module.exports = DependencyMonitor;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = DependencyMonitor;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

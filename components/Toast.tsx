@@ -33,6 +33,7 @@ interface Toast  {id: string;
   )}interface ToastItemProps  {toast: Toast;
   onRemove: (id: string) => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
@@ -119,6 +120,8 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
             {toast.message && (
               <p className={`mt-1 text-sm ${messageColor}`}>{toast.message}</p>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {const [isVisible, setIsVisible] = useState(false)const [isLeaving, setIsLeaving]  = useState(false)useEffect(() => {// Trigger entrance animation;
     const timer = setTimeout(() => setIsVisible(true), 10)return () => clearTimeout(timer)}, [])const handleRemove = () => {setIsLeaving(true)setTimeout(() => onRemove(toast.id), 300)}const getToastStyles = () => {const baseStyles =;
       "max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden transform transition-all duration-300 ease-in-out";if (isLeaving) {return `${baseStyles} translate-x-full opacity-0`;
@@ -139,7 +142,10 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
           <div className="ml-3 w-0 flex-1">;
             <p className={`text-sm font-medium ${titleColor}`}>{toast.title}</p>;
             {toast.message && (<p className={`mt-1 text-sm ${messageColor}`}>{toast.message}</p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             )}
             {toast.action && (<div className="mt-2">;
                 <button;
@@ -155,6 +161,7 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
             <button;
               onClick={handleRemove}
               className={`inline-flex ${titleColor} hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-${toast.type === "success" ? "green" : toast.type === "error" ? "red" : toast.type === "warning" ? "yellow" : "blue"}-50`}
+<<<<<<< HEAD
 <<<<<<< HEAD
             >
               <span className="sr-only">Close</span>
@@ -180,6 +187,8 @@ export const useToastNotifications = () => {
   return {
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >;
               <span className="sr-only">Close</span>;
               <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">;
@@ -204,6 +213,7 @@ export const useToastNotifications = () => {const { addToast }  = useToast()retu
       addToast({ type: "success", title, message, ...options }),error: (title: string, message?: string, options?: Partial<Toast>) =>;
       addToast({ type: "error", title, message, ...options }),warning: (title: string, message?: string, options?: Partial<Toast>) =>;
       addToast({ type: "warning", title, message, ...options }),info: (title: string, message?: string, options?: Partial<Toast>) =>;
+<<<<<<< HEAD
       addToast({ type: "info", title, message, ...options }),}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -218,3 +228,6 @@ export const useToastNotifications = () => {const { addToast }  = useToast()retu
   }
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      addToast({ type: "info", title, message, ...options }),}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

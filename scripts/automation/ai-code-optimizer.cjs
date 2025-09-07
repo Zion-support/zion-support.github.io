@@ -159,6 +159,7 @@ console.log( AI optimization report saved to ${reportPath}")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" AI Code Optimizer "failed")
 
@@ -166,3 +167,6 @@ console.log( AI optimization report saved to ${reportPath}")
 =======
   console.error(" AI Code Optimizer "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" AI Code Optimizer "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -2,7 +2,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 // Authentication utilities;
@@ -25,14 +28,18 @@ export interface User  {id: string;
   if (authHeader.includes('admin')) {return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' }}return { id: 'user-1', email: 'user@zion.os', role: 'user' }ursor/fix-website-loading-errors-and-merge-6662;
 ursor/fix-website-loading-errors-and-merge-6662;
 }try {const user  = parseUserFromRequest(req)ensureAdmin(user)export function parseUserFromRequest (req: NextApiRequest): User {// Mock implementation - replace with actual auth logic;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import type { NextApiRequest, NextApiResponse } from "next";
 
 
 // Authentication utilities
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -76,14 +83,20 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 import { NextApiRequest, NextApiResponse } from 'next';
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 export interface User {
   id: string;
   email: string;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   role: "admin" | "user" | "guest";
 }
 
@@ -128,6 +141,7 @@ export interface User {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function parseUserFromRequest(req: NextApiRequest): User {
 
   // Mock implementation - replace with actual auth logic;
@@ -155,6 +169,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 export function parseUserFromRequest(req: NextApiRequest): User {}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export function parseUserFromRequest(req: NextApiRequest): User {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   try {;
     const user = parseUserFromRequest(req);
@@ -162,6 +179,7 @@ export function parseUserFromRequest(req: NextApiRequest): User {}
 
     ensureAdmin(user);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -184,6 +202,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function parseUserFromRequest (req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
   const auth_header = req.headers.authorization;
@@ -206,6 +226,7 @@ if ( {) {$2;
     throw error;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -278,6 +299,8 @@ export interface User {;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }export function parseUserFromRequest(req: NextApiRequest): User {// Mock implementation - replace with actual auth logic;
   const authHeader = req.headers.authorization;
   if (!authHeader) {return { id: 'guest', email: 'guest@example.com', role: 'guest' }}// Simple mock for admin users;
@@ -306,14 +329,18 @@ export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed
   }
 }// Additional auth utilities for login;export interface DemoUser  {// Additional auth utilities for login;
 export interface DemoUser  {id: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -323,6 +350,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return { id: "guest", email: "guest@example.com", role: "guest" };
@@ -336,6 +365,7 @@ main
   return { id: "user-1", email: "user@zion.os", role: "user" };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return { id: "user-1", email: "user@zion.os", role: "user" };
 =======
   
@@ -347,6 +377,9 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return { id: "user-1", email: "user@zion.os", role: "user" };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 export function ensureAdmin(user: User): void {
@@ -358,11 +391,15 @@ export function ensureAdmin(user: User): void {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ensureAdmin(user);
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    ensureAdmin(user);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export async function ensureAdminFromApi(
   req: NextApiRequest,
@@ -372,13 +409,17 @@ export async function ensureAdminFromApi(
     ensure_admin (user);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   try {
     ensureAdmin(user);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -404,11 +445,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return { allowed: true }
   } catch {
     return { allowed: false }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -442,6 +486,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   role: "admin" | "user" | "guest";
@@ -579,6 +625,7 @@ if (return null) {$2;
     this.statusCode = statusCode;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export function setUserCookie (res: NextApiResponse, user: DemoUser): void {
   res.set_header ('Set - Cookie', `user=${JSON.stringify (user)} Path=/; HttpOnly`);
@@ -597,6 +644,8 @@ if (return null) {
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }export function parseUserFromRequest(req: NextApiRequest): User | null {// Mock implementation: In a real app, this would parse a JWT or session cookie;
   // For now, let's assume an admin user if a specific header is present for testing;
   if (req.headers['x-admin-secret'] === process.env.ADMIN_SECRET) {return { id: 'admin-user', email: 'admin@example.com', role: 'admin', isAdmin: true }}
@@ -609,16 +658,20 @@ main
   return false;
 }export function clearUserCookie() {// Mock implementation;
   res.setHeader('Set-Cookie', 'user=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT')}export function getUserFromRequest(req: NextApiRequest): User | null {return parseUserFromRequest(req)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   try {
     return JSON.parse (decodeURIComponent (match[1]));
   } catch {
     return null;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -643,6 +696,9 @@ main
 <<<<<<< HEAD
 
   }
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 <<<<<<< HEAD
@@ -676,6 +732,7 @@ export function isAuthenticated(session: AuthSession | null): boolean {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -698,6 +755,8 @@ export function hasRole(session: AuthSession | null, role: string): boolean {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 export function isModerator(session: AuthSession | null): boolean {
@@ -705,6 +764,7 @@ export function isModerator(session: AuthSession | null): boolean {
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -803,3 +863,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

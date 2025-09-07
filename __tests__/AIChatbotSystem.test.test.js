@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
@@ -15,6 +16,8 @@
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import '@testing-library/jest-dom';
 import AIChatbotSystem from '../components/AIChatbotSystem.test';
@@ -60,6 +63,7 @@ import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -99,6 +103,13 @@ import React from 'react';
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import { render, screen } from '@testing-library/react';
+=======
+
+
+import { render, screen } from '@testing-library/react';
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -124,6 +135,7 @@ describe('AIChatbotSystemtest', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -138,12 +150,15 @@ describe('AIChatbotSystemtest', () => {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   
   
   test('displays correct content', () => {
     render(<AIChatbotSystemtest />);
   });
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,6 +181,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -179,6 +196,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     render(<AIChatbotSystemtest />);
   });
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,12 +237,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
   
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   test('displays correct content', () => {
     render(<AIChatbotSystemtest />);
   });
   
   test('handles user interactions', () => {
     render(<AIChatbotSystemtest />);
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Add interaction tests based on component functionality
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -266,6 +288,11 @@ main
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  });
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   
   test('applies correct styling', () => {
     render(<AIChatbotSystemtest />);
@@ -284,6 +311,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import AIChatbotSystemtest from '../components/AIChatbotSystem.test'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AIChatbotSystemtest from "./components/AIChatbotSystem.test"; describe('AIChatbotSystemtest', () => { test("renders without crashing",() => { render(<AIChatbotSystemtest />); expect(screen.getByTestId("aichatbotsystem.test")).toBeInTheDocument()}); test("displays correct content",() => { render(<AIChatbotSystemtest />)}); test("handles user interactions",() => { render(<AIChatbotSystemtest />)}); test("applies correct styling"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -320,3 +348,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

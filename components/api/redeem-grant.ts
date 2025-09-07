@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextApiRequest, NextApiResponse } from "next",
 import fs from "fs-extra";
@@ -123,6 +124,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import type { NextApiRequest, NextApiResponse } from "next",import fs from 'fs-extra';
 import path from 'path';
@@ -192,6 +195,7 @@ if ( {) {$2;
   records.push (record)await fs.writeJSON (REDEMPTIONS_FILE, records, { spaces: 2 })await record_request (req, res, auth.partner, auth.api_key, started, 201)return res.status (201).json ({ id: record.id, redeemed_at: now })return res.status (201).json ({ id: record.id, redeemed_at: now })const { studentEmail, grantCode, courseId } = req.body || {}if (!studentEmail || !grantCode || !courseId) {}
 }
 }
+<<<<<<< HEAD
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400)records.push(record)await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 })await recordRequest(req, res, auth.partner, auth.apiKey, started, 201)return res.status(201).json({ id: record.id, redeemedAt: now })
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -320,3 +324,6 @@ redeemed_at: now,
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400)records.push(record)await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 })await recordRequest(req, res, auth.partner, auth.apiKey, started, 201)return res.status(201).json({ id: record.id, redeemedAt: now })
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -36,6 +37,10 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 console.log('⚡ Starting Performance Optimization Automation...')
     '.next': '43.33 MB'
     'node_modules': '782.66 MB'
@@ -57,6 +62,7 @@ console.log('⚡ Starting Performance Optimization Automation...')
       "recommendations"
     "nextSteps"
   console.log('� Performance improvements "created")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -360,3 +366,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

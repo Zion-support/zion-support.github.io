@@ -20,6 +20,7 @@ class SecurityAuditor {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
@@ -27,6 +28,9 @@ class SecurityAuditor {}
 =======
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log('Security Auditor started successfully')};
   async runSecurityCheck() {}
     try {}
@@ -50,6 +54,7 @@ class SecurityAuditor {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -57,6 +62,9 @@ class SecurityAuditor {}
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Security audit passed ✓')) {}
@@ -82,6 +90,7 @@ class SecurityAuditor {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -89,6 +98,9 @@ class SecurityAuditor {}
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Security fix completed ✓')) {}
@@ -130,6 +142,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = SecurityAuditor;
 
@@ -137,3 +150,6 @@ module.exports = SecurityAuditor;
 =======
 module.exports = SecurityAuditor;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = SecurityAuditor;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

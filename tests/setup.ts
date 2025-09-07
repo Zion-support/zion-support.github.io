@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 <<<<<<< HEAD
@@ -50,6 +51,10 @@ import React from 'react';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 
 interface SetupProps {
@@ -65,6 +70,7 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {
@@ -83,6 +89,11 @@ global.ResizeObserver = class ResizeObserver {observe () { /* do nothing */ }
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+// Mock ResizeObserver;
+global.ResizeObserver = class ResizeObserver {
+  observe () { /* do nothing */ }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   unobserve () { /* do nothing */ }
   disconnect () { /* do nothing */ }
 },
@@ -110,6 +121,7 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
   advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
   runAllTimers: vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,6 +156,12 @@ export default function Setup({}: SetupProps) {
 =======
 export default function Setup({ }: SetupProps) {
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+import React from 'react';
+
+
+export default function Setup({ }: SetupProps) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return (
     <div>
       <h1>Setup</h1>
@@ -151,6 +169,7 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -194,3 +213,5 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

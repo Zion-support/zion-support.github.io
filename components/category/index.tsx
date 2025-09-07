@@ -21,6 +21,7 @@ function CategoryIndexPage() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
@@ -54,6 +55,8 @@ export default /**
 function CategoryIndexPage() {
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <div className="container mx-auto px-4 py-10">;
 export default function CategoryIndexPage() {return (<div className="container mx-auto px-4 py-10">;
 export default function CategoryIndexPage() {export default /**;
@@ -88,9 +91,12 @@ function CategoryIndexPage() {return (<div className='container mx-auto px-4 py-
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <div className='container mx-auto px-4 py-10'>
       <h1 className='text-2xl font-semibold'>Categories</h1>
       <p className='mt-2 text-gray-600'>
@@ -105,12 +111,15 @@ function CategoryIndexPage() {return (<div className='container mx-auto px-4 py-
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
   );
@@ -166,6 +175,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 }
+<<<<<<< HEAD
 
 }
 
@@ -179,3 +189,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -61,6 +62,8 @@ import {
   Globe
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import { Brain,Shield,Code,CheckCircle,Zap,ArrowRight,Star,TrendingUp,Users,Lock,Eye,BarChart3,Globe,Award,} from 'lucide-react';
   Shield,Code,CheckCircle,Zap,ArrowRight,Star,TrendingUp,Users,Lock,Eye,BarChart3,Globe,Award,} from 'lucide-react';
@@ -83,7 +86,10 @@ const AICodeReviewSecurityScanner  = null;import { Brain;
   Eye;
   BarChart3;
   Globe;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Award;
  } from 'lucide-react';
   return (<>;
@@ -100,12 +106,15 @@ const AICodeReviewSecurityScanner  = null;import { Brain;
           'DevOps security';
         ]}
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Hero Section */}
         <section className='relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20' />
           <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20'>
             <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Hero Section */}<section className='relative overflow-hidden'>;
           <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20' />;
           <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20'>            <motion&& motion.div;
@@ -217,7 +226,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-white/5'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -281,6 +293,7 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 ho
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -399,6 +412,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}</div>;
           </div>;
         </section>;))}
@@ -447,6 +462,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     'SLA guarantees';
                   ];
                   popular: false;
+<<<<<<< HEAD
 =======
                     'Unlimited developers'
                     'Enterprise security scanning'
@@ -460,6 +476,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ]
                   popular: false
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Transparent Pricing Plans;
               </h2>;
@@ -539,15 +557,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     "Advanced compliance";
                     "API access";
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "Custom integrations";'Unlimited developers','Enterprise security scanning','On-premise deployment','24/7 dedicated support','Custom rule creation','Advanced compliance','API access','Custom integrations','SLA guarantees',],popular: false,},].map((plan, index) => (<motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                     "Custom integrations";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                    "Custom integrations";'Unlimited developers','Enterprise security scanning','On-premise deployment','24/7 dedicated support','Custom rule creation','Advanced compliance','API access','Custom integrations','SLA guarantees',],popular: false,},].map((plan, index) => (<motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
@@ -564,12 +587,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       : 'border-white/10'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${}`}plan.popular;
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10';
 plan.popular;
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10';
                       : 'border-white/10';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     "SLA guarantees";
                   ],popular: false;
                 }
@@ -592,6 +620,7 @@ plan.popular;
                 >;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {plan.popular && (
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                       <span className='bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
@@ -609,6 +638,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <h3 className='text-2xl font-bold text-white mb-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {plan.popular && (<span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">;
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
                       <span className='bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>;
@@ -617,17 +648,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   )}<div className='text-center mb-8'>;
                     <h3 className='text-2xl font-bold text-white mb-2'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 <div className='text-center mb-8'>
                     <h3 className='text-2xl font-bold text-white mb-2'>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {plan.name}
                     </h3>;
                     <div className='flex items - baseline justify - center mb - 4'>;
                       <span className='text - 5xl font - bold text - white'>;
                         {plan.price}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <li
                         key={featureIndex}
@@ -669,6 +704,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   <motion.button
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       <li;
                         key={featureIndex}className='flex items-center text-gray-300'>;
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                        {feature}
@@ -694,12 +731,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
                   </ul>;
                   <motion.button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   </ul>;<motion&& motion.button;
                     whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ scale: 0 && 0.95 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                       plan && plan.popular
@@ -713,6 +754,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
         <section className='py-20 bg-white/5'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
+=======
+                    className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${plan && plan.popular;
+                        ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700';
+                        : 'bg-white/10 text-white border border-white/20 hover:bg-white/20';
+        {/* Benefits Section */}<section className='py-20 bg-white/5'>;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -727,6 +775,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid md:grid-cols-2 gap-12'>;
               <div className='space-y-8'>;
                 {[;
+<<<<<<< HEAD
                   {;
                     icon: <Shield className='w-8 h-8' />,;
                     title: 'Reduce Security Vulnerabilities by 85%',;
@@ -793,6 +842,8 @@ className='text-center mb-16'
             <div className='grid md:grid-cols-2 gap-12'>;
               <div className='space-y-8'>;
                 {[;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {icon: <Shield className='w-8 h-8' />,title: 'Reduce Security Vulnerabilities by 85%',description:;
                       'Our AI algorithms detect security issues that traditional scanners miss, significantly reducing your attack surface.',},{icon: <Zap className='w-8 h-8' />,title: 'Speed Up Code Review Process by 70%',description:;
                       'Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review.',},{icon: <TrendingUp className='w-8 h-8' />,title: 'Improve Code Quality & Maintainability',description:;
@@ -803,10 +854,13 @@ className='text-center mb-16'
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}}
                   <motion&& motion.div;
+<<<<<<< HEAD
 =======
                   }
                   <motion&& motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -822,6 +876,9 @@ className='text-center mb-16'
                       <p className='text-gray-300'>{benefit && benefit.description}</p>                    </div>;
                   </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}className='text-center mb-16';
             >;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -898,7 +955,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     title: 'Ensure Compliance with Security Standards';
                     description:;
                       'Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting.';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   }
                   {icon: <Users className='w-8 h-8' />;
                     title: 'Reduce Technical Debt & Bugs';
@@ -921,6 +981,7 @@ className='flex items-start';
                     <div>;
                       <h3 className='text-xl font-semibold text-white mb-2'>;
                         {benefit.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       </h3>
                       <p className='text-gray-300'>{benefit.description}</p>
@@ -1003,6 +1064,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ].map((useCase, index) => (
                 <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </h3>;
                       <p className='text-gray-300'>{benefit.description}</p>;
                     </div>;
@@ -1138,6 +1201,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>;
               {[;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'Software Development Teams','DevOps & Security Teams','Financial Technology Companies','Healthcare Software Providers','E - commerce Platforms','Government Software Projects','Educational Institutions','Startups & Enterprises',              ].map ((use_case, index) => (                "Software Development Teams";
 =======
                 'Software Development Teams',
@@ -1149,6 +1213,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 'Educational Institutions',
                 'Startups & Enterprises',              ].map ((use_case, index) => (                "Software Development Teams";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                'Software Development Teams','DevOps & Security Teams','Financial Technology Companies','Healthcare Software Providers','E - commerce Platforms','Government Software Projects','Educational Institutions','Startups & Enterprises',              ].map ((use_case, index) => (                "Software Development Teams";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 "DevOps & Security Teams";
                 "Financial Technology Companies";
                 "Healthcare Software Providers";
@@ -1160,6 +1227,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">;
                     <Users className="w-6 h-6" />;
                   </div>;
@@ -1658,6 +1728,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>)}export default AICodeReviewSecurityScanner)}export default AICodeReviewSecurityScanner;export default AICodeReviewSecurityScanner;})}export default AICodeReviewSecurityScanner;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1675,3 +1746,6 @@ export default AICodeReviewSecurityScanner;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </>)}export default AICodeReviewSecurityScanner)}export default AICodeReviewSecurityScanner;export default AICodeReviewSecurityScanner;})}export default AICodeReviewSecurityScanner;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

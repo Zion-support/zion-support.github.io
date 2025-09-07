@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -26,6 +27,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -52,6 +56,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
+<<<<<<< HEAD
 <<<<<<< HEAD
   contact_info: {
     mobile: string;
@@ -90,6 +95,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   contact_info: {mobile: string;
     email: string;address: string,website: string;
   }
@@ -127,14 +134,18 @@ const contact = {mobile: '+1 302 464 0950';email: 'kleber@ziontechgroup && ziont
   contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,12 +172,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   marketAdvantage: string
   capabilities: string[],
   market_advantage: string;
 }
 const contact = {
   mobile: '+1 302 464 0950';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -192,6 +206,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com';
 }
@@ -200,6 +216,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
   // AI & Machine Learning Services;
   {
     id: 'ai - content - generation - platform';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   {;
@@ -212,6 +229,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     name: 'AI Content Generation Platform';
     tagline: 'Create high - quality content at scale with AI';
     price: '$299';
@@ -223,6 +242,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -236,6 +256,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Marketing teams, Content creators, Agencies, E-commerce businesses';
     trialDays: 14;
     setupTime: '1-2 days';
@@ -245,6 +267,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -268,6 +291,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     marketSize: '$8B+ content marketing market';
     growthRate: '180% YoY';
     variant: 'ai-futuristic';
@@ -319,6 +344,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
       '80% faster content creation40% increase in engagementSEO optimization built - in_multi - language support_brand voice consistency';
 <<<<<<< HEAD
+<<<<<<< HEAD
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -361,6 +387,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     capabilities: [;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security';
     marketPosition: 'Advanced zero-trust security platform for modern enterprises',targetAudience: 'Enterprise security teams, Government agencies, Financial institutions';
     trialDays: 30;
@@ -409,15 +437,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     trialDays: 30;
     setupTime: '2-3 weeks';
     category: 'Cybersecurity';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node.js'];
     realService: true,
     technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node && Node.js'];
     integrations: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -446,6 +478,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     competitors: ['Okta, Ping Identity, ForgeRock, CyberArk'];
     market_size: '$25B+ identity and access management market';
     growth_rate: '140% YoY';
@@ -459,6 +493,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 134;
     benefits: [;
       '90% reduction in security incidents60% lower compliance costs_continuous verification_least - privilege access_real - time threat detection';
+<<<<<<< HEAD
 <<<<<<< HEAD
     ];
 <<<<<<< HEAD
@@ -485,6 +520,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];capabilities: [;
       'Identity verification_device trust scoring_application control_network segmentation_continuous monitoring';
     ],market_advantage: 'Comprehensive zero - trust platform with advanced threat detection';
@@ -503,14 +540,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%';
     period: '/month',description: 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.';
     ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     id: 'ai - powered - devops - automation';
     name: 'AI - Powered DevOps Automation';
     tagline: 'Intelligent DevOps automation and optimization';
     price: '$899';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -539,6 +580,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'DevOps teams, Software companies, IT departments, Cloud-native businesses';
     trialDays: 21;
     setupTime: '1-2 weeks';
@@ -591,6 +634,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
       '70% faster deployments50% team productivity increaseAI - powered optimization_automated testing_cost optimization';
 <<<<<<< HEAD
+<<<<<<< HEAD
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -616,6 +660,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];capabilities: [;
       'Intelligent CI / CDAutomated testing_predictive optimization_performance monitoring_infrastructure automation';
     ],market_advantage: 'First AI - powered DevOps platform with predictive optimization';
@@ -634,14 +680,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Reduce latency by 80% and improve operational efficiency by 45%';
     period: '/month',description: 'Advanced IoT edge computing platform that processes data locally, provides real - time analytics, and enables intelligent decision - making at the edge.';
     ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     id: 'iot - edge - intelligence - platform';
     name: 'IoT Edge Intelligence Platform';
     tagline: 'Intelligent IoT edge computing and analytics';
     price: '$599';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -670,6 +720,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Manufacturing companies, Smart cities, Industrial IoT, Energy companies';
     trialDays: 30;
     setupTime: '2-4 weeks';
@@ -722,6 +774,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
       '80% latency reduction45% operational efficiency_real - time processing_local intelligence_cost optimization';
 <<<<<<< HEAD
+<<<<<<< HEAD
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -755,6 +808,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];capabilities: [;
       'Edge data processing_real - time analyticsML at the edge_device management_security features';
     ],market_advantage: 'Advanced edge computing with AI - powered intelligence';
@@ -762,9 +817,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'AI Medical Imaging Analysis';tagline: 'Advanced AI - powered medical image diagnosis',price: '$3, 999';
     period: '/month',description: 'Revolutionary AI platform for medical imaging analysis that provides accurate diagnosis, early detection, and treatment recommendations for various medical conditions.';
     ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     description: 'Revolutionary AI platform for medical imaging analysis that provides accurate diagnosis, early detection, and treatment recommendations for various medical conditions.';
     features: [;
       'Multi - modality image analysisAI - powered diagnosis_early detection algorithms_treatment recommendations_radiologist assistance tools_clinical decision support_patient outcome prediction_research and analytics';
@@ -797,6 +855,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -821,6 +880,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Hospitals, Imaging centers, Radiologists, Research institutions';
     trialDays: 30;
     setupTime: '4-6 weeks';
@@ -856,6 +917,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 52;
     benefits: [;
       '25% diagnostic accuracy improvement60% reading time reduction_early detection capabilities_treatment optimization_research support';
+<<<<<<< HEAD
 <<<<<<< HEAD
     ];
 <<<<<<< HEAD
@@ -909,6 +971,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     description: 'Advanced AI - powered financial risk management platform that provides real - time risk assessment, fraud detection, and compliance monitoring for financial institutions.';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];capabilities: [;
       'Multi - modality analysisAI diagnosis_early detection_treatment recommendations_clinical decision support';
     ],market_advantage: 'Advanced AI medical imaging with proven clinical outcomes';
@@ -1001,16 +1065,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     realService: true,
     technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node && Node.js'];
     integrations: ['Bloomberg, Reuters, Banking systems, Trading platforms, Compliance tools'];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 134;
     rating: 4 && 4.8;
     reviews: 98;
     benefits: [;
       '40% risk loss reduction50% compliance cost savings_real - time monitoringAI - powered detection_regulatory compliance';
+<<<<<<< HEAD
 <<<<<<< HEAD
     ];
 <<<<<<< HEAD
@@ -1037,6 +1105,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];capabilities: [;
       'Real - time risk assessment_fraud detection_compliance monitoring_portfolio analysis_regulatory reporting';
     ],market_advantage: 'Advanced AI risk management with real - time capabilities';
@@ -1046,9 +1116,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     price: '$799';
     period: '/month';
     ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     id: 'ai - personalized - learning - platform';
     name: 'AI Personalized Learning Platform';
@@ -1081,6 +1154,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1105,6 +1179,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Schools, Universities, Corporate training, Online education platforms';
     trialDays: 30;
     setupTime: '2-3 weeks';
@@ -1114,6 +1190,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1137,6 +1214,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'];
     realService: true,
     technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'];
@@ -1146,6 +1225,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1169,6 +1249,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo'];
     market_size: '$15B+ edtech market';
     growth_rate: '200% YoY';
@@ -1182,6 +1264,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 123;
     benefits: [;
       '35% learning outcome improvement50% dropout rate reduction_personalized learning_adaptive content_progress tracking';
+<<<<<<< HEAD
 <<<<<<< HEAD
     ];
 <<<<<<< HEAD
@@ -1235,6 +1318,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     description: 'AI - powered supply chain platform that optimizes inventory, predicts demand, manages logistics, and provides real - time visibility across the entire supply chain.';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];capabilities: [;
       'Personalized learning paths_adaptive content delivery_progress tracking_intelligent tutoring_learning analytics';
     ],market_advantage: 'Advanced AI learning platform with proven educational outcomes';
@@ -1281,15 +1366,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     trialDays: 30;
     setupTime: '3-4 weeks';
     category: 'Supply Chain & Logistics';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node.js'];
     realService: true,
     technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node && Node.js'];
     integrations: ['SAP, Oracle, Salesforce, Shopify, Shipping carriers'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1318,6 +1407,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     competitors: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates'];
     market_size: '$22B+ supply chain management market';
     growth_rate: '160% YoY';
@@ -1331,6 +1422,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 145;
     benefits: [;
       '30% inventory cost reduction40% delivery time improvement_demand forecasting_route optimization_real - time visibility';
+<<<<<<< HEAD
 <<<<<<< HEAD
     ];
 <<<<<<< HEAD
@@ -1364,6 +1456,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];capabilities: [;
       'Demand forecasting_inventory optimization_logistics optimization_supplier management_risk assessment';
     ],market_advantage: 'Advanced AI supply chain platform with comprehensive optimization';
@@ -1381,9 +1475,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tagline: 'Intelligent energy management and sustainability',price: '$1, 299';
     period: '/month',description: 'AI - powered energy optimization platform that manages renewable energy systems, optimizes consumption, and provides sustainability insights for businesses and utilities.';
     ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Utility companies, Energy providers, Manufacturing companies, Smart cities';
     trialDays: 30;
     setupTime: '4-6 weeks';
@@ -1437,6 +1534,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 56;
     benefits: [;
       '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking';
+<<<<<<< HEAD
 <<<<<<< HEAD
     ];
 <<<<<<< HEAD
@@ -1504,6 +1602,8 @@ const contact = {;
 },;
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];import { ServiceVariant } from '../types/service-variants',export interface ComprehensiveInnovativeService  {id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,variant: ServiceVariant,contactInfo: {mobile: string,email: string,address: string,website: string;
   },realImplementation: boolean,implementationDetails: string,launchDate: string,customers: number,rating: number,reviews: number,benefits: string[],capabilities: string[],marketAdvantage: string;
 }const contact = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
@@ -1776,12 +1876,15 @@ export default comprehensiveInnovativeServices;marketAdvantage: string;const con
     }
   ];export default comprehensiveInnovativeServices;
     ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     capabilities: [;
       'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance';
     ],
@@ -1792,6 +1895,7 @@ export default comprehensiveInnovativeServices;
 ;
 export default comprehensiveInnovativeServices;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2974,3 +3078,7 @@ export default comprehensiveInnovativeServices;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+;
+export default comprehensiveInnovativeServices;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

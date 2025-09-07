@@ -5,9 +5,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Performance monitoring utilities;
 export const measurePerformance = (name: string, fn: () => void) => {const start = performance.now()fn()const end = performance.now()console.log(`${name} took ${end - start} milliseconds`)}export const lazyLoadComponent = (importFn: () => Promise<any>) => {return React.lazy(importFn)}// Web Vitals monitoring;
 export const reportWebVitals = (metric: any) => {if (process.env.NODE_ENV === 'production') {// Send to analytics service;
@@ -34,10 +37,13 @@ export const reportWebVitals = (metric: any) => {if (process.env.NODE_ENV === 'p
   scores: {}export const getPerformanceScore = (metrics: PerformanceMetrics): {}
 export const getPerformanceScore  = (metrics: PerformanceMetrics): {}export const getPerformanceScore  = (metrics: PerformanceMetrics): {overall: 'good' | 'needs-improvement' | 'poor';
   scores: {fcp: 'good' | 'needs-improvement' | 'poor';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Performance monitoring utilities
 export const measurePerformance = (name: string, fn: () => void) => {
   const start = performance.now();
@@ -75,6 +81,7 @@ export const measure_performance = (): PerformanceMetrics | null => {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -83,6 +90,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   try {
     const navigation = performance.getEntriesByType ('navigation')[0] as PerformanceNavigationTiming;
     const paint_entries = performance.getEntriesByType ('paint');
@@ -91,6 +100,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const cls = performance.getEntriesByType ('layout - shift').reduce ((acc, entry) => {
       return acc + (entry as any).value;
     }, 0);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,6 +135,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const fid = performance.getEntriesByType ('first - input')[0] as PerformanceEventTiming;
 ;
     return {
@@ -134,6 +146,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       cls: cls,
       ttfb: navigation ? navigation.response_start - navigation.request_start : undefined;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,6 +171,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   } catch (error) {
     console.warn ('Error measuring performance:', error);
     return null;
@@ -168,6 +183,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export const getPerformanceScore = (metrics: PerformanceMetrics): {
   overall: 'good' | 'needs - improvement' | 'poor';
+<<<<<<< HEAD
 <<<<<<< HEAD
   scores: {
 
@@ -204,6 +220,11 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  scores: {};
+
+export const getPerformanceScore = (metrics: PerformanceMetrics): {;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   overall: 'good' | 'needs-improvement' | 'poor';
   scores: {
     fcp: 'good' | 'needs-improvement' | 'poor';
@@ -212,6 +233,7 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
     cls: 'good' | 'needs-improvement' | 'poor';
     ttfb: 'good' | 'needs-improvement' | 'poor';
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 } => {
   const thresholds = {
@@ -230,6 +252,8 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     fcp: { good: 1000, needsImprovement: 2000 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 } => {const thresholds = {export const getPerformanceScore = (metrics: PerformanceMetrics): {overall: 'good' | 'needs - improvement' | 'poor';
   scores: {export const getPerformanceScore = (metrics: PerformanceMetrics): {overall: 'good' | 'needs - improvement' | 'poor';
   scores: {fcp: { good: 1000, needsImprovement: 2000 }
@@ -268,15 +292,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export const getPerformanceScore = (metrics: PerformanceMetrics): {
   overall: 'good' | 'needs - improvement' | 'poor';
   scores: {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const compareValue = reverse ? threshold.good / value : value / threshold.good;
     if (compareValue <= 1) return 'good';
     if (compareValue <= (reverse ? threshold.needsImprovement / threshold.good : threshold.needsImprovement / threshold.good)) return 'needs-improvement';
     return 'poor';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -305,6 +333,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   let overall: 'good' | 'needs-improvement' | 'poor';
   if (poorCount > 0) {
     fcp: 'good' | 'needs - improvement' | 'poor';
@@ -348,6 +378,7 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -371,6 +402,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return { overall, scores };
 };
 
@@ -383,6 +416,7 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -407,6 +441,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   console.group(`🚀 ${label}`);
   if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
   if (metrics.lcp !== undefined) console.log('Largest Contentful Paint:', `${metrics.lcp.toFixed(2)}ms`);
@@ -420,6 +456,7 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 }; export const getPerformanceScore = (metrics: PerformanceMetrics): { overall: 'good' | 'needs-improvement' | 'poor', scores: { loadTime: 'good' | 'needs-improvement' | 'poor', firstContentfulPaint: 'good' | 'needs-improvement' | 'poor', largestContentfulPaint: 'good' | 'needs-improvement' | 'poor', cumulativeLayoutShift: 'good' | 'needs-improvement' | 'poor',
     firstInputDelay: 'good' | 'needs-improvement' | 'poor'}} = > { const thresholds = { loadTime: { good: 2000, needsImprovement: 4000 } firstContentfulPaint: { good: 1000, needsImprovement: 2000 } largestContentfulPaint: { good: 1500, needsImprovement: 3000 } cumulativeLayoutShift: { good: 0 && 0.05, needsImprovement: 0 && 0.1 } firstInputDelay: { good: 50, needsImprovement: 100 } }; const getScore = (value: number, threshold: { good: number,
     needsImprovement: number }, reverse = false) = > { const compareValue = reverse ? threshold && threshold.good / value: value / threshold && threshold.good, if (compareValue < = 1) return 'good', if (compareValue < = (reverse ? threshold && threshold.needsImprovement / threshold && threshold.good: threshold && threshold.needsImprovement / threshold && threshold.good)) return 'needs-improvement'; return 'poor'}; const scores = { loadTime: getScore(metrics && metrics.loadTime, thresholds && thresholds.loadTime) firstContentfulPaint: getScore(metrics && metrics.firstContentfulPaint, thresholds && thresholds.firstContentfulPaint) largestContentfulPaint: getScore(metrics && metrics.largestContentfulPaint, thresholds && thresholds.largestContentfulPaint) cumulativeLayoutShift: getScore(metrics && metrics.cumulativeLayoutShift, thresholds && thresholds.cumulativeLayoutShift, true) firstInputDelay: getScore(metrics && metrics.firstInputDelay, thresholds && thresholds.firstInputDelay) }; const poorCount = Object && Object.values(scores).filter(score = > score = = = 'poor').length; const needsImprovementCount = Object && Object.values(scores).filter(score = > score = = = 'needs-improvement').length; let overall: 'good' | 'needs-improvement' | 'poor'; if (poorCount > 0) { overall = 'poor'} else if (needsImprovementCount > 0) { overall = 'needs-improvement'} else { overall = 'good'} return { overall, scores }}; export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') = > { console && console.group(`🚀 ${label}`); console && console.log('Load Time: ', `${metrics && metrics.loadTime.toFixed(2)}ms`); console && console.log('First Contentful Paint: ', `${metrics && metrics.firstContentfulPaint.toFixed(2)}ms`); console && console.log('Largest Contentful Paint: ', `${metrics && metrics.largestContentfulPaint.toFixed(2)}ms`); console && console.log('Cumulative Layout Shift: ', metrics && metrics.cumulativeLayoutShift.toFixed(4)); console && console.log('First Input Delay: ', `${metrics && metrics.firstInputDelay.toFixed(2)}ms`); console && console.groupEnd()};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -459,6 +496,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return { overall, scores }
 }
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {return { overall, scores }
@@ -474,6 +514,7 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
 }
   if (console.log ('Cumulative Layout Shift:', metrics.cls.to_fixed (4))) {$2;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -497,6 +538,8 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (console.log ('Time to First Byte:', `${metrics.ttfb.to_fixed (2)}ms`)) {$2;
 }
   console.group_end ()}
@@ -510,6 +553,7 @@ export const reportWebVitals = (metric: any) => {if (process.env.NODE_ENV === 'p
 }ursor/automate-test-improve-and-merge-code-646c;
 import { PerformanceMetrics } from '../types'; export const measurePerformance = (): PerformanceMetrics | null = > { if (typeof window = = = 'undefined' || !('performance' in window)) { return null} try { const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming; const paintEntries = performance.getEntriesByType('paint')const fcp = paintEntries.find(entry = > entry.name = = = 'first-contentful-paint')const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry; const cls = performance.getEntriesByType('layout-shift').reduce((acc, entry) = > { return acc + (entry as any).value}, 0)const fid = performance.getEntriesByType('first-input')[0] as PerformanceEventTiming; return { loadTime: navigation.loadEventEnd - navigation.loadEventStart firstContentfulPaint: fcp ? fcp.startTime: 0 largestContentfulPaint: lcp ? lcp.startTime: 0 cumulativeLayoutShift: cls firstInputDelay: fid ? fid.processingStart - fid.startTime: 0 }} catch (error) { console.warn('Error measuring performance: ', error)return null}
 }export const getPerformanceScore = (metrics: PerformanceMetrics): { overall: 'good' | 'needs-improvement' | 'poor', scores: { loadTime: 'good' | 'needs-improvement' | 'poor', firstContentfulPaint: 'good' | 'needs-improvement' | 'poor', largestContentfulPaint: 'good' | 'needs-improvement' | 'poor', cumulativeLayoutShift: 'good' | 'needs-improvement' | 'poor',firstInputDelay: 'good' | 'needs-improvement' | 'poor'}} = > { const thresholds = { loadTime: { good: 2000, needsImprovement: 4000 } firstContentfulPaint: { good: 1000, needsImprovement: 2000 } largestContentfulPaint: { good: 1500, needsImprovement: 3000 } cumulativeLayoutShift: { good: 0.05, needsImprovement: 0.1 } firstInputDelay: { good: 50, needsImprovement: 100 } }const getScore = (value: number, threshold: { good: number,needsImprovement: number }, reverse = false) = > { const compareValue = reverse ? threshold.good / value: value / threshold.good, if (compareValue < = 1) return 'good', if (compareValue < = (reverse ? threshold.needsImprovement / threshold.good: threshold.needsImprovement / threshold.good)) return 'needs-improvement'; return 'poor'}const scores = { loadTime: getScore(metrics.loadTime, thresholds.loadTime) firstContentfulPaint: getScore(metrics.firstContentfulPaint, thresholds.firstContentfulPaint) largestContentfulPaint: getScore(metrics.largestContentfulPaint, thresholds.largestContentfulPaint) cumulativeLayoutShift: getScore(metrics.cumulativeLayoutShift, thresholds.cumulativeLayoutShift, true) firstInputDelay: getScore(metrics.firstInputDelay, thresholds.firstInputDelay) }const poorCount = Object.values(scores).filter(score = > score = = = 'poor').length; const needsImprovementCount = Object.values(scores).filter(score = > score = = = 'needs-improvement').length; let overall: 'good' | 'needs-improvement' | 'poor'; if (poorCount > 0) { overall = 'poor'} else if (needsImprovementCount > 0) { overall = 'needs-improvement'} else { overall = 'good'} return { overall, scores }}export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') = > { console.group(`🚀 ${label}`)console.log('Load Time: ', `${metrics.loadTime.toFixed(2)}ms`)console.log('First Contentful Paint: ', `${metrics.firstContentfulPaint.toFixed(2)}ms`)console.log('Largest Contentful Paint: ', `${metrics.largestContentfulPaint.toFixed(2)}ms`)console.log('Cumulative Layout Shift: ', metrics.cumulativeLayoutShift.toFixed(4))console.log('First Input Delay: ', `${metrics.firstInputDelay.toFixed(2)}ms`)console.groupEnd()}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -517,6 +561,8 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Performance monitoring utilities
 export const measurePerformance = (name: string, fn: () => void) => {
   const start = performance.now();
@@ -536,6 +582,7 @@ export const reportWebVitals = (metric: any) => {
     console.log('Web Vital:', metric);
   }
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -572,3 +619,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

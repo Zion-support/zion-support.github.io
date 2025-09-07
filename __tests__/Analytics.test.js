@@ -43,6 +43,7 @@ ursor/automate-test-improve-and-merge-code-646c;
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 });
 });
@@ -51,6 +52,10 @@ ursor/automate-test-improve-and-merge-code-646c;
 });
 });
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+});
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import _React from 'react'
 ''
 import '@testing-library/jest-dom';'
@@ -90,6 +95,7 @@ describe('Analytics', () => {
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react'
 '
 import '@testing-library/jest-dom';
@@ -104,3 +110,5 @@ describe('Analytics', () => {'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

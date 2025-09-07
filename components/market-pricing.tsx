@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const markets = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 'quantum-computing': {
@@ -34,6 +35,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { TrendingUp, TrendingDown, DollarSign, Target;
@@ -411,6 +415,9 @@ export default function MarketPricing() {const [selectedMarket, setSelectedMarke
           <motion&& motion.div;
             initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             whileInView={{ opacity: 1, y: 0 }}const markets  = null;'quantum-computing': {marketSize: '$8.7B', growthRate: '+45.2%', growthTrend: 'up', description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {];
 pricingAnalysis: {lowEnd: '$0.80 per quantum hour', midRange: '$1.50 per quantum hour', highEnd: '$2.50 per quantum hour', ourPosition: 'Competitive mid-range pricing';
 }'autonomous-systems': {marketSize: '$23.1B', growthRate: '+34.7%', growthTrend: 'up', description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.', competitors: [ {];
@@ -418,6 +425,7 @@ pricingAnalysis: {lowEnd: '$300 per user/month', midRange: '$750 per user/month'
 }'enterprise-it': {marketSize: '$1.2T', growthRate: '+12.3%', growthTrend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {];
 pricingAnalysis: {lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages';
 }}}export default MarketPricing;export default MarketPricing;}
+<<<<<<< HEAD
 =======
             whileInView={{ opacity: 1, y: 0 }}
 'quantum-computing': {
@@ -448,6 +456,8 @@ pricingAnalysis: {
 export default MarketPricing;export default MarketPricing;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 }
 }
@@ -1147,10 +1157,14 @@ pricing_analysis: {low_end: '$0.80 per quantum hour', mid_range: '$1.50 per quan
 pricing_analysis: {low_end: '$300 per user / month', mid_range: '$750 per user / month', high_end: '$1, 200 per user / month', our_position: 'Competitive pricing with AI advantages';
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 'enterprise - it': {market_size: '$1.2T', growth_rate: '+12.3%', growth_trend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {];
 pricing_analysis: {low_end: '$20 per user / month', mid_range: '$40 per user / month', high_end: '$100 per user / month', our_position: 'Competitive pricing with AI advantages';
 }}}
 export default MarketPricing;export default MarketPricing;}lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages';
+<<<<<<< HEAD
 }}}}export default MarketPricing;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1189,3 +1203,6 @@ export default MarketPricing;export default MarketPricing;
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}}}}export default MarketPricing;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

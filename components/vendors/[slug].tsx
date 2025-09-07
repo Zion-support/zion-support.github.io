@@ -1,6 +1,7 @@
 import type { GetServerSideProps } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 type Props = any;
@@ -47,6 +48,8 @@ body: JSON.stringify({ vendorId: vendor.id, title }),
       setLoading(false);
     }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 type Props = { vendor: Vendor | null }type Props = { vendor: Vendor | null }
 type Props = { vendor: Vendor | null }type Props = { vendor: Vendor | null }type Props = { vendor: Vendor | null },export default function VendorProfilePage() {type Props = { vendor: Vendor | null }export default function VendorProfilePage() {type Props = { vendor: Vendor | null }type Props = { vendor: Vendor | null },export default function VendorProfilePage() {type Props = { vendor: Vendor | null }export default function VendorProfilePage() {const [message, setMessage] = useState<string | null>(null)const [loading, setLoading]  = useState(false)import { FormEvent, useState  } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
@@ -157,6 +160,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {sp && sp.imageUrl ? (// eslint-disable-next-line @next/next/no-img-element;
                   <img src={sp && sp.imageUrl} alt={sp && sp.title} className="w-full h-40 object-cover" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ) : (<div className="w-full h-40 bg-gray-100 dark:bg-gray-900" />;
                 )}</div>;
 <h2 className='text-lg font-medium mb-2'>About</h2>;
@@ -169,7 +175,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <h2 className='text-lg font-medium mb-2'>Packages</h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>;
             {vendor.packages.map(p => (<div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={p.id}
                 className='border border-gray-200 dark:border-gray-800 rounded p-4';
               >;
@@ -177,6 +186,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='text-sm text-gray-500'>{p.description}</div>;
                 <div className='mt-2 text-sm'>;
                   ${p.priceUsd} {p.timeframe ? `/ ${p.timeframe}` : ''}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
               </div>
@@ -241,6 +251,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                </div>;
+              </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </div>;
         </div>;
@@ -295,6 +309,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
         </form>
       </div>
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
@@ -310,6 +325,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </form>;
       </div>;
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>;
@@ -329,6 +346,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {con
   return { props: { vendor } }
 }const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } }}}}const vendor = slug ? getVendorBySlug(slug) || null : null;
+<<<<<<< HEAD
   return { props: { vendor } }}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -366,3 +384,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return { props: { vendor } }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

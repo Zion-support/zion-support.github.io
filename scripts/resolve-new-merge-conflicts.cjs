@@ -7,6 +7,7 @@ console.log('🔧 Resolving New Merge Conflicts');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('
 =======
 console.log('=================================');
@@ -32,10 +33,14 @@ function resolveMergeConflicts(content) {
   return content
     .replace(/
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+console.log('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,6 +61,8 @@ function fixCriticalSyntax(content) {
 function fixCriticalSyntax(content) {
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return content
@@ -130,6 +137,7 @@ for (const file of conflictFiles) {
     }
 
     let content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,3 +219,6 @@ console.log('\n🎉 Final critical fix completed!');
     // Check for merge conflict markers
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

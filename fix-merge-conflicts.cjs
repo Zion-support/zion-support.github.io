@@ -3,6 +3,7 @@
 #!/usr/bin/env node
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 
@@ -43,6 +44,8 @@ main
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 const fs = require('fs');
 const path = require('path');
@@ -53,6 +56,7 @@ function resolveMergeConflicts(filePath) {
 function fixMergeConflicts(filePath) {
   try {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
@@ -102,6 +106,8 @@ function fixMergeConflicts(filePath) {
 
     // Remove merge conflict markers and keep the second version (after )
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const lines = content.split('\n');
     const fixedLines = [];
     let inConflict = false;
@@ -109,6 +115,7 @@ function fixMergeConflicts(filePath) {
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,6 +150,9 @@ ursor/integrate-build-improve-and-re-verify-9d47
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // Clean up any remaining conflict markers
     content = content.replace(/<<<<<<< .*?\n?/g, '');
 <<<<<<< HEAD
@@ -160,12 +170,15 @@ ursor/integrate-build-improve-and-re-verify-9d47
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
@@ -187,6 +200,7 @@ ursor/integrate-build-improve-and-re-verify-9d47
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -271,10 +285,15 @@ function findAndFixConflicts(dir) {
     // Check if file has merge conflicts
     if (!content.includes('')) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  let fixedCount = 0;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       return false;
     }
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     
@@ -315,10 +334,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     let keepLines = false;
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         keepVersion = true;
@@ -387,10 +409,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -522,11 +547,18 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+}
+
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   
   scanDirectory(dir);
   return files;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ursor/fix-lint-push-and-merge-to-main-28da
@@ -566,11 +598,14 @@ try {
   process.exit(1);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -597,6 +632,9 @@ main
           const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('')) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             files.push(fullPath);
           }
         } catch (error) {
@@ -604,6 +642,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 
@@ -653,6 +692,9 @@ function findAndFixConflicts(dir) {
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 =======
+=======
+        }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
@@ -688,6 +730,7 @@ ursor/integrate-build-improve-and-re-verify-9d47
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 =======
 
+<<<<<<< HEAD
 
 main
 ursor/integrate-build-improve-and-re-verify-9d47
@@ -717,6 +760,11 @@ ursor/integrate-build-improve-and-re-verify-9d47
       }
     }
   }
+=======
+      }
+    }
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -734,6 +782,9 @@ main
 
 // Main execution
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 console.log('🔍 Scanning for files with merge conflicts...');
 const filesWithConflicts = findFilesWithConflicts(process.cwd());
@@ -742,6 +793,7 @@ console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
 
 let fixedCount = 0;
 for (const file of filesWithConflicts) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 main
@@ -758,11 +810,15 @@ console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
 let fixedCount = 0;
 for (const file of conflictedFiles) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (fixMergeConflicts(file)) {
     fixedCount++;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -788,6 +844,8 @@ console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
 console.log('🎉 Merge conflict resolution complete!');
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return fixedCount;
 }
 
@@ -812,6 +870,7 @@ for (const dir of otherDirs) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1075,3 +1134,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+
+// Main execution
+
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

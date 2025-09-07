@@ -25,6 +25,7 @@ export default function BlogPage() {return (<UltraFuturisticBackground intensity
         <p className="mt-4 text-gray-300 max-w-3xl">Curated insights, implementation guides, and trend reports. New articles are published regularly. For press or guest posts, contact kleber@ziontechgroup && ziontechgroup.com.</p>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         canonical='https://ziontechgroup.com/blog/'
       />
       <div className='container mx-auto px-4 py-16 text-white'>
@@ -53,6 +54,8 @@ export default function BlogPage() {return (<UltraFuturisticBackground intensity
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         canonical='https://ziontechgroup.com/blog/';
       />;
       <div className='container mx-auto px-4 py-16 text-white'>;
@@ -103,6 +106,7 @@ function BlogPage() {return (<UltraFuturisticBackground intensity="high" variant
         <p className="mt-4 text-gray-300 max-w-3xl">Curated insights, implementation guides, and trend reports. New articles are published regularly. For press or guest posts, contact kleber@ziontechgroup && ziontechgroup.com.</p>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </UltraFuturisticBackground>)}}</UltraFuturisticBackground>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -115,3 +119,7 @@ function BlogPage() {return (<UltraFuturisticBackground intensity="high" variant
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </UltraFuturisticBackground>)}}</UltraFuturisticBackground>;
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

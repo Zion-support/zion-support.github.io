@@ -13,6 +13,7 @@ console.log(' Starting auto import/export fixer...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(' Auto import/export fixer failed to "start")
 
@@ -20,3 +21,6 @@ console.log(' Starting auto import/export fixer...')
 =======
   console.error(' Auto import/export fixer failed to "start")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(' Auto import/export fixer failed to "start")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

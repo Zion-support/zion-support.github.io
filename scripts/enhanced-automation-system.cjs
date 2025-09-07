@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const fs = require('fs')
 const path = require('path')
@@ -10,6 +11,10 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process')
 console.log(' Enhanced Automation System Starting...')
         this.logDir = 'automation-reports'
@@ -53,6 +58,7 @@ console.log(' Enhanced Automation System Starting...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error('Automation system "failed")
 
@@ -60,3 +66,6 @@ console.log(' Enhanced Automation System Starting...')
 =======
     console.error('Automation system "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.error('Automation system "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

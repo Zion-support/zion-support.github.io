@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -30,8 +33,11 @@ const MobileDevelopmentChat: NextPage = () => {;
       </Head>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <main>;
         <h1>MobileDevelopmentChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -61,6 +67,7 @@ export default MobileDevelopmentChat;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
@@ -75,6 +82,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 const MobileDevelopmentChat: NextPage = () => {
   return (
@@ -87,6 +96,7 @@ const MobileDevelopmentChat: NextPage = () => {
 
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,6 +128,8 @@ const MobileDevelopmentChat: NextPage = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -173,6 +185,7 @@ export default MobileDevelopmentChat;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -184,6 +197,8 @@ export default MobileDevelopmentChat;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <div>
       <Head>
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>
@@ -200,12 +215,16 @@ export default MobileDevelopmentChat;
 },
 
 export default MobileDevelopmentChat
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>
@@ -233,3 +252,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        <title>MobileDevelopmentChat - Zion Tech Solutions</title>
+        <title>MobileDevelopmentChat - Zion Tech Solutions</title>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

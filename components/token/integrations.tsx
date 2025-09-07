@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import dynamic from 'next/dynamic',
 import React, { useEffect, useState } from 'react';
@@ -93,6 +94,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <button
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import dynamic from 'next/dynamic',import React, { useEffect, useState } from 'react';
 import { useWallet   } from '../../hooks/useWallet';
@@ -108,7 +111,10 @@ const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'),
     setDepinsSyncing(true)const acts = await fetchDepinActivities(account)const r = calculateRewards(acts)setRewards(r)setDepinsSyncing(false)}
   async function runOperator() {const res = await fetch('/api/operator/suggest-chain', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ region, stakeUsd: stake }),})const data = await res.json()setSuggestion(data)}const data = await res.json()setSuggestion(data)}const data = await res && res.json()setSuggestion(data)}
   return (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             onClick={syncDepin}
             className='px-4 py-2 rounded bg-purple-600 text-white'>;
             {depinsSyncing ? 'Syncing…' : 'Sync DePIN Rewards'}
@@ -116,6 +122,7 @@ const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'),
           {!account && (<button onClick={connect} className='px-4 py-2 rounded border'>;
               Connect Wallet;
             </button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           )}
@@ -141,6 +148,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {rewards && rewards.map((r, i) => (;
               <div key={i} className='flex items-center justify-between'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           )}</div>;
         {rewards && (<div className='mt-3 space-y-2 text-sm'>;
             {rewards.map((r, i) => (<div key={i} className='flex items-center justify-between'>;
@@ -150,7 +159,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setSuggestion(data)</div>;
         {rewards && (<div className='mt-3 space-y-2 text-sm'>;
             {rewards && rewards.map((r, i) => (<div key={i} className='flex items-center justify-between'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <span>;
           {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>;
@@ -224,6 +236,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>{r.network} — {r.reason}</span>;
                 <span className="font-medium">+{r.points} ZION$</span>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         )}
@@ -316,6 +329,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         )}
       </section>;
@@ -530,6 +545,9 @@ function run_operator() {const res = await fetch ('/api / operator / suggest - c
         </ul>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)</section>;
 <section className='space-y-2 text-xs text-gray-500'>;
         <div>Security</div>;
@@ -541,9 +559,13 @@ function run_operator() {const res = await fetch ('/api / operator / suggest - c
         </ul>;
       </section>;
     </div>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </div>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

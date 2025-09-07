@@ -1,6 +1,7 @@
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock;
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe;
@@ -55,6 +56,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         );
       default:
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion, AnimatePresence  } from 'framer-motion';
 import {Search;
   Star;
@@ -312,9 +315,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           name='description';
           content="Explore Zion Tech Group's revolutionary 2027 services showcase featuring cutting-edge AI consciousness evolution, quantum computing, autonomous AI civilizations, and practical micro SAAS solutions for businesses.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <meta;
           name='keywords';
@@ -332,6 +338,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <meta name='twitter:card' content='summary_large_image' />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta
           name='twitter:title'
           content='2027 Services Showcase - Zion Tech Group'
@@ -344,6 +351,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <meta;
           name='twitter:title';
           content='2027 Services Showcase - Zion Tech Group';
@@ -489,9 +498,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2">;
                 <DollarSign className="w-5 h-5" />;
                 <span>View Pricing</span>;
@@ -499,6 +511,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </motion && motion.div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       </section>;
@@ -510,6 +523,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </section>;{/* Search and Filters */}<input;
                   type="text";
                   placeholder="Search services...";
@@ -593,14 +608,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {priceRanges.map(range => (<option key={range.id} value={range.id}>;
                       {range.name} ({range.count})</option>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   ))}
               {/* Sort By */}
               <div>;
                 <label className='block text-cyan-400 font-medium mb-2'>;
                   Sort By;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 </label>;
@@ -614,6 +633,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </label>;{/* Sort By */}
               <div>;
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>;
@@ -677,9 +698,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             <AnimatePresence>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Services Grid */}
       <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
         <div className='max - w-7xl mx - auto'>;
@@ -691,6 +715,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                   animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -721,6 +746,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   transition={{ duration: 0.5, delay: index * 0.1 }}exit={{ opacity: 0, y: -30, scale: 0.9 }}
 className='group';
                 >;
@@ -737,6 +764,7 @@ className='group';
                       <div className='text-2xl font-bold text-white'>                        {service.price}</h3>;
                     <p className='text-cyan-300 text-sm mb-4 line-clamp-3'>;
                       {service.description}
+<<<<<<< HEAD
 =======
                   transition={{ duration: 0.5, delay: index * 0.1 }}exit={{ opacity: 0, y: -30, scale: 0.9 }}
 className='group';
@@ -755,6 +783,8 @@ className='group';
                     <p className='text-cyan-300 text-sm mb-4 line-clamp-3'>;
                       {service.description}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </p>;
                     {/* Price */}<div className='mb-4'>;
                       <div className='text-2xl font-bold text-white'>;
@@ -779,9 +809,12 @@ className='group';
                     </div>;
                         {service.features.length > 3 && (<div className="text-cyan-400 text-sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {/* Features */}
 <div className='mb-6'>;
                       <h4 className='text-cyan-400 font-semibold mb-3'>;
@@ -798,6 +831,7 @@ className='group';
                             </span>;
                           </div>;
                         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                         {service.features.length > 3 && (
@@ -821,6 +855,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         {service.features.length > 3 && (<div className='text-cyan-400 text-sm'>;
                             +{service.features.length - 3} more features;
                           </div>;
@@ -838,9 +874,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {/* ROI */}
                     <div className='mb-6 text-center'>;
                       <div className='text-green-400 font-semibold text-lg'>;
@@ -852,6 +891,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                     {/* Actions */}
                     <div className="flex space-x-3">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       <Link
@@ -885,6 +925,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       <Link;
                         href={service && service.link}
                         className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm">;
@@ -960,13 +1002,17 @@ href='/contact';
                   </div>;
                 </motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (<motion&& motion.div;
               initial={{ opacity: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               animate={{ opacity: 1 }}
@@ -996,6 +1042,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               animate={{ opacity: 1 }}onClick={() => {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all')}}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')setSelectedPriceRange('all')className='text-center py-20';
             >;
@@ -1016,9 +1064,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </button>;
             </motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           )}
       {/* Contact Section */}
 <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
@@ -1047,6 +1098,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Link
@@ -1090,6 +1142,8 @@ href='/pricing'
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Link;
                 href='/contact';
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>;
@@ -1443,8 +1497,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </footer>;
     </UltraFuturisticMatrixBackground2027>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 )
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

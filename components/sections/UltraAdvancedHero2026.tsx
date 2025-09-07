@@ -3,10 +3,13 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { motion   } from 'framer-motion';
 import Link from 'next/link';
@@ -30,6 +33,7 @@ import { ArrowRight;
   ArrowRight,Star,TrendingUp,Zap,Brain,Rocket,Globe,Sparkles,CheckCircle,Phone,Mail,MapPin,} from 'lucide-react';
 import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function UltraAdvancedHero2026() {
@@ -174,6 +178,8 @@ duration: 0.8,
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function UltraAdvancedHero2026() {const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
   const contactInfo = {phone: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
@@ -228,10 +234,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
         <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           variants={containerVariants}
           initial='hidden';
           animate='visible';
@@ -268,6 +277,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </span>{' '}
           {/* Service Statistics */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <motion&& motion.div
             variants={itemVariants}
 <<<<<<< HEAD
@@ -284,6 +294,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       },
     },  }        stagger_children: 0.1;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+          <motion&& motion.div;
+            variants={itemVariants}stagger_children: 0.1,},},  }        stagger_children: 0.1;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
     }
   }const item_variants = {hidden: { opacity: 0, coordinate_y: 30 },visible: {opacity: 1,coordinate_y: 0,transition: {duration: 0.8,},},}return (<section className='relative min - h-screen flex items - center justify - center overflow - hidden'>;
@@ -365,11 +379,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate="visible";
           className="space-y-8">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Badge */}className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto';
           >;
             <div className='text-center p-4 bg-gradient-to-br from-purple-800/20 to-purple-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl'>;
               <div className='text-3xl font-bold text-purple-400'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {aiAutonomousServices2026.length}
               </div>;
               <div className='text-gray-300 text-sm'>;
@@ -396,6 +416,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Key Benefits */}
 <motion.div;
             variants={itemVariants}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'
           >
@@ -481,6 +502,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto';
           >;
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl'>;
@@ -516,7 +539,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span className="text-gray-200 font-medium">24/7 Autonomous Operation</span>;
             </div>;
           </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6";
           >;
             <Link;
@@ -571,12 +597,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Get Started Today;
             </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           </motion && motion.div>;
 
           {/* Contact Information */}
 <<<<<<< HEAD
 <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </motion && motion.div>;{/* Contact Information */}className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto";
           >;
             <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>;
@@ -685,7 +714,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
           </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto'>;
             <h3 className='text-2xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
@@ -747,6 +779,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           </motion && motion.div>;
 
           {/* Trust Indicators */}
@@ -800,6 +833,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity
             ease: 'easeInOut'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </motion && motion.div>;{/* Trust Indicators */}<Zap className="w-5 h-5 text-purple-400" />;
 <motion.div;
             variants={itemVariants}
@@ -835,7 +870,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{duration: 8;
             repeat: Infinity;
             ease: 'easeInOut';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }}
           className='absolute bottom - 20 left - 20 text - 6xl opacity - 20';
         >;
@@ -857,6 +895,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity;
             ease: 'easeInOut';
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           transition={{
             duration: 9
@@ -943,6 +982,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
             coordinate_y: [0, -20, 0];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+          className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div;
+          animate={{y: [0, -20, 0];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             rotate: [0, 5, 0];
           }}
           transition={{duration: 6;
@@ -1029,6 +1072,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </section>))})ease: 'easeInOut';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           }}
@@ -1051,6 +1097,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
       </div>;
     </section>;
+<<<<<<< HEAD
 )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1059,3 +1106,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

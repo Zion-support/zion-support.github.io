@@ -5,6 +5,7 @@ interface Service  {id: string;
   name: string;
   tagline: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   price: string,
   description: string;
   features: string[];
@@ -39,6 +40,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   price: string,description: string;
   features: string[];link: string;
 }interface UltraFuturisticServiceShowcase2029Props  {services: Service[];
@@ -49,6 +52,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default function UltraFuturisticServiceShowcase2029() {return (<section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>;
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
 }: UltraFuturisticServiceShowcase2029Props) {return (<section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <motion&& motion.div;
@@ -84,9 +88,12 @@ export default function UltraFuturisticServiceShowcase2029({
 }: UltraFuturisticServiceShowcase2029Props) {
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
           whileInView={{ opacity: 1, y: 0 }}
             {title}
           </h2>;
@@ -102,6 +109,8 @@ export default function UltraFuturisticServiceShowcase2029({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           whileInView={{ opacity: 1, y: 0 }}{title}
           </h2>;
           <p className='text-xl text-gray-300 max-w-3xl mx-auto'>{subtitle}</p>;
@@ -120,13 +129,17 @@ className='text-center mb-16';
         </motion.div>;
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {services.slice(0, 6).map((service, index) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               key={service.id}
           </p>;
         </motion && motion.div>;<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {services && services.slice(0, 6).map((service, index) => (<motion&& motion.div;
               key={service && service.id}
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }}
@@ -153,6 +166,8 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
               </div>
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}
 className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20';
             >;
@@ -167,11 +182,15 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
                 </div>;
               </div>;
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {service.name}
               </h3>;
               <p className='text - gray - 400 text - sm mb - 3'>{service.tagline}</p>;
               <p className='text - gray - 300 mb - 4 line - clamp - 3'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 {service.description}
@@ -179,12 +198,15 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
               <div className='flex items-center justify-between mb-4'>
                 <span className='text-2xl font-bold text-cyan-400'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {service.description}<span className="text-2xl font-bold text-cyan-400">{service.price}</span>;
                 <div className="flex items-center space-x-2">;
                   <Zap className="w-4 h-4 text-yellow-400" />;
                   <Shield className="w-4 h-4 text-green-400" />;
                   <Brain className="w-4 h-4 text-purple-400" />;
               <Link;
+<<<<<<< HEAD
 =======
                 {service.description}
                 <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
@@ -194,6 +216,8 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
                   <Brain className="w-4 h-4 text-purple-400" />
               <Link
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 href={service && service.link}
                 className='inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25'>;
                 Get Started;
@@ -202,6 +226,9 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
                 Get Started;
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </motion && motion.div>;</p>;
               <div className='flex items-center justify-between mb-4'>;
                 <span className='text-2xl font-bold text-cyan-400'>;
@@ -231,12 +258,16 @@ className='inline-flex items-center justify-center w-full bg-gradient-to-r from-
                 <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />;
               </Link>;
             </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           ))}
         <motion.div;
         </div>;<motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.6 }}
 className='text-center mt-12'
@@ -296,6 +327,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{ duration: 0.6, delay: 0.6 }}className='text-center mt-12';
         >;
           <Link;
@@ -335,11 +368,14 @@ className='text-center mt-12';
         </motion.div>;
       </div>;
   )</p>;
+<<<<<<< HEAD
 =======
 
 
               </p>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className='flex items - center justify - between mb - 4'>;
                 <span className='text - 2xl font - bold text - cyan - 400'>;
                   {service.price}
@@ -387,6 +423,7 @@ className='text-center mt-12';
         </motion.div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </section>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -394,3 +431,6 @@ className='text-center mt-12';
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </section>)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

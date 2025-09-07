@@ -132,6 +132,7 @@ function isAuthorized(req: NextApiRequest): boolean {return res.status(401).json
 return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length })}
   const byType: Record<string, number> = {}}const byModule: Record<string, number>  = {}const byModule: Record<string, number>  = {}e => e.status === 'stuck' || e.status === 'laggy';
       ),})}const byModule: Record<string, number> = {}const byType: Record<string, number> = {}return res.status(200).json({entries: entries.slice(-200),byModule,byType,total: entries.length,})}
+<<<<<<< HEAD
 return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -169,3 +170,6 @@ return res.status (200).json ({ entries: entries.slice (-200), by_module, by_typ
   const byModule: Record<string, number> = {};
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

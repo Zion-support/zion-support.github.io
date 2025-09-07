@@ -74,6 +74,7 @@ class AutomatedTestingSuite {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
@@ -81,6 +82,8 @@ class AutomatedTestingSuite {}
 =======
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     try {}
       const testResults = await this.runTests();
       const buildResults = await this.runBuild();
@@ -107,6 +110,7 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = AutomatedTestingSuite;
 
@@ -114,3 +118,5 @@ module.exports = AutomatedTestingSuite;
 =======
 module.exports = AutomatedTestingSuite;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

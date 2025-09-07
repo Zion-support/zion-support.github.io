@@ -29,6 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const vendors = listVendors();
   res.status(200).json({ vendors })
 }
@@ -38,11 +39,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
   const vendors = listVendors();
   res.status(200).json({ vendors })
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -80,6 +84,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { list_vendors } from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
@@ -109,6 +115,7 @@ function handler() {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -121,6 +128,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 import { listVendors } from '../../../utils/vendor-store';
@@ -142,6 +151,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -170,3 +180,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ vendors });
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

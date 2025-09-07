@@ -48,6 +48,7 @@ class SmartDeploymentAutomation {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 
@@ -55,6 +56,9 @@ class SmartDeploymentAutomation {}
 =======
         
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -197,6 +201,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = SmartDeploymentAutomation;
 
@@ -204,3 +209,6 @@ module.exports = SmartDeploymentAutomation;
 =======
 module.exports = SmartDeploymentAutomation;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = SmartDeploymentAutomation;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

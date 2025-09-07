@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
 
@@ -50,6 +51,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(401).json({ error: 'Unauthorized' });
 return;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)}
 function readGrant(id: string): GrantApplication | null {}
@@ -85,6 +88,7 @@ const payload = req.body as StatusUpdatePayload;
   }
 const payload = req.body as StatusUpdatePayload;
   existing.status = payload.status;
+<<<<<<< HEAD
 <<<<<<< HEAD
   existing.updatedAt = new Date().toISOString();
   writeGrant(existing);
@@ -123,3 +127,6 @@ const payload = req.body as StatusUpdatePayload;
   res.status(200).json({ record: existing });
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  existing.updatedAt = new Date().toISOString()writeGrant(existing)res.status(200).json({ record: existing })
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -52,6 +52,7 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error(' Automation suite "failed")
 
@@ -59,3 +60,6 @@ const { execSync } = require('child_process')
 =======
     console.error(' Automation suite "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.error(' Automation suite "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

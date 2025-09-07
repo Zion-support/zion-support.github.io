@@ -10,6 +10,7 @@ export default function PartnersPage() {export default function PartnersPage() {
       <Head>;
         <title>Partners | Zion Tech Group</title>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta
           name='description'
           content='Technology and go-to-market partners powering our customer outcomes.'
@@ -42,6 +43,8 @@ export default function PartnersPage() {export default function PartnersPage() {
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <meta;
           name='description';
           content='Technology and go-to-market partners powering our customer outcomes.';
@@ -145,6 +148,9 @@ function PartnersPage() {
     <div className="pt - 4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>;
   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   </div>),}/>;
         <link rel='canonical' href='https://ziontechgroup.com/partners' />;
       </Head>;
@@ -170,9 +176,13 @@ function PartnersPage() {
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   </div>),
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

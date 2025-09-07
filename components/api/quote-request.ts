@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey =
   process.env.SUPABASE_SERVICE_ROLE_KEY |
@@ -12,6 +13,8 @@ import OpenAI from "openai";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const supabase =
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient  } from '@supabase/supabase-js';
@@ -20,7 +23,10 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey =;
   process.env.SUPABASE_SERVICE_ROLE_KEY |;
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;const supabase =;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 const openaiApiKey = process && process.env.OPENAI_API_KEY;
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
@@ -29,6 +35,7 @@ const supabaseKey =;
 const openaiApiKey = process.env.OPENAI_API_KEY;
   process && process.env.SUPABASE_SERVICE_ROLE_KEY ||;
   process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+<<<<<<< HEAD
 <<<<<<< HEAD
 const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
@@ -96,6 +103,8 @@ input: prompt,
       });
       const text = resp.output_text?.trim() || '';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const supabase =;
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;const openaiApiKey = process.env.OPENAI_API_KEY;
 const openai  = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;export default async function handler() {export default async function handler() {}
@@ -248,6 +257,9 @@ if (throw error) {
       }
       return res;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         .status (200).json ({ ok: true, summary: ai_summary, tags: ai_tags, id: saved?.id })} catch (e: any) {console.error ("quote - request error", e)return res.status (500).json ({ message: "Server error" })}
     return res.status (500).json ({ message: "Server error" })}
 }if (req.method !== 'POST')return res.status(405).json({ message: 'Method not allowed' })const { service, description, timeline, budgetRange, email } = req.body || {}if (!service || !description || !email) {return res.status(400).json({ message: 'Missing required fields' })}try {let aiSummary: string | null = null;
@@ -292,6 +304,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     }return res;
       .status(200).json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id })} catch (e: any) {console.error('quote-request error', e)return res.status(500).json({ message: 'Server error' })}}
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -299,3 +312,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

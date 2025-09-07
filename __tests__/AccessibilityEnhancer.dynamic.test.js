@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,6 +42,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancer from '../components/AccessibilityEnhancer.dynamic'; describe('AccessibilityEnhancer',() => { test('renders without crashing',() => { render(<AccessibilityEnhancer />)expect( screen.getByTestId('accessibilityenhancer') ).toBeInTheDocument()})test('displays correct content',() => { render(<AccessibilityEnhancer />)})test('handles user interactions',() => { render(<AccessibilityEnhancer />)})test('applies correct styling',() => { render(<AccessibilityEnhancer />)})})ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { render, screen, fireEvent  } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -63,10 +70,13 @@ const React from "react"; import { render, screen, fireEvent } from '@testing-li
   })})
 import AccessibilityEnhancerdynamic from '../components/AccessibilityEnhancer.dynamic';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 describe('AccessibilityEnhancerdynamic', () => {
   test('renders without crashing', () => {
     render(<AccessibilityEnhancerdynamic />);
@@ -77,8 +87,11 @@ describe('AccessibilityEnhancerdynamic', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   test('displays correct content', () => {
     render(<AccessibilityEnhancerdynamic />);
   });
@@ -109,6 +122,7 @@ describe('AccessibilityEnhancerdynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityEnhancerdynamic from "./components/AccessibilityEnhancer.dynamic"; describe('AccessibilityEnhancerdynamic', () => { test("renders without crashing",() => { render(<AccessibilityEnhancerdynamic />); expect( screen.getByTestId("accessibilityenhancer.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityEnhancerdynamic />)}); test("handles user interactions",() => { render(<AccessibilityEnhancerdynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
@@ -157,3 +171,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 });
 });
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+});
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

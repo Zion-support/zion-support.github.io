@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   customers: number;
   rating: number;
   reviews: number;
@@ -22,6 +23,8 @@ export interface ComprehensiveService {
 
   real_implementation: boolean;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   customers: number;
   rating: number;
@@ -571,17 +574,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
   website: 'https://ziontechgroup && ziontechgroup.com'};
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     tagline:
       'Automated code quality analysis, security scanning, and best practice recommendations'
     price: '$199'
     period: '/month'
     description:
       'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -658,10 +665,13 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
 
 
+<<<<<<< HEAD
 
       'Automated security vulnerability detection',
       'Code quality scoring and metrics',
@@ -672,6 +682,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Custom rule configuration',
       'Team performance analytics',
       'Automated PR comments',
@@ -680,11 +692,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     icon: '🔍',
 
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    icon: '🔍',
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-code-review-assistant',
@@ -711,6 +728,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     realImplementation: true
     implementationDetails:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       'AI-powered analysis engine with custom rule sets and integration APIs.',
     launchDate: '2025-01-15',
@@ -758,10 +778,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     features: [;
       'AI - powered anomaly detection',
 
+<<<<<<< HEAD
 
 =======
   {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Automated incident classification',
       'Smart escalation routing',
       'Real - time team coordination',
@@ -773,6 +796,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '🚨',
 
     color: 'from - red - 600 to - pink - 700',
@@ -797,12 +823,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     real_implementation: true,
     implementation_details:;
 
+<<<<<<< HEAD
 
 =======
 
     icon: '🚨',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'AI incident detection engine with automated response workflows and team coordination.',
     launch_date: '2025 - 02 - 01',
     customers: 89,
@@ -811,9 +840,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       'Post-quantum cryptographic algorithms',
     id: 'quantum - resistant - cryptography - suite',
@@ -841,6 +873,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '🔐',
 
       'Post-quantum algorithm implementations with hybrid encryption and key management.',
@@ -869,9 +904,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Post - quantum algorithm implementations with hybrid encryption and key management.',
     launch_date: '2025 - 01 - 20',
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 23,
     rating: 4 && 4.9,
     reviews: 18
@@ -879,6 +917,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'autonomous - devops - orchestrator',
     name: 'Autonomous DevOps Orchestrator',
     tagline:;
@@ -905,9 +946,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '🤖',
 
       'AI-powered orchestration engine with autonomous decision-making and self-healing capabilities.',
@@ -948,6 +992,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'edge - ai - inference - platform',
     name: 'Edge AI Inference Platform',
@@ -959,9 +1006,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Platform for deploying, managing, and optimizing AI models at the edge, enabling real - time inference with minimal latency and bandwidth usage.',
     features: [;
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Edge model deployment',
       'Real - time inference optimization',
       'Model versioning and updates',
@@ -974,6 +1024,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '🌐',
 
     color: 'from - cyan - 600 to - blue - 700',
@@ -998,12 +1051,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     real_implementation: true,
     implementation_details:;
 
+<<<<<<< HEAD
 
 =======
 
     icon: '🌐',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Edge deployment framework with model optimization and device management capabilities.',
     launch_date: '2025 - 01 - 25',
     customers: 67,
@@ -1013,6 +1069,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'blockchain - governance - automation',
     name: 'Blockchain Governance Automation',
     tagline:;
@@ -1039,9 +1098,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '⛓️',
 
       'Multi-chain governance engine with automated compliance and risk management.',
@@ -1080,6 +1142,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'ai - powered - customer - success - platform',
     name: 'AI - Powered Customer Success Platform',
@@ -1091,9 +1156,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Intelligent customer success platform that predicts churn risk, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',
     features: [;
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Predictive churn risk scoring',
       'Customer health monitoring',
       'Automated engagement workflows',
@@ -1106,9 +1174,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '🎯',
 
       'AI-powered predictive analytics engine with automated engagement workflows.',
@@ -1147,6 +1218,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'quantum - machine - learning - platform',
     name: 'Quantum Machine Learning Platform',
@@ -1158,9 +1232,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems, drug discovery, financial modeling, and scientific simulations.',
     features: [;
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Quantum algorithm implementations',
       'Hybrid quantum - classical ML',
       'Optimization problem solving',
@@ -1173,9 +1250,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '⚛️',
 
       'Quantum algorithm library with hybrid classical-quantum optimization capabilities.',
@@ -1215,6 +1295,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'intelligent - supply - chain - optimizer',
     name: 'Intelligent Supply Chain Optimizer',
@@ -1225,9 +1308,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Comprehensive supply chain optimization platform that uses AI to predict demand, optimize inventory, manage risks, and improve operational efficiency across the entire supply chain.',
     features: [;
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Demand forecasting and planning',
       'Inventory optimization',
       'Risk assessment and mitigation',
@@ -1240,9 +1326,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '📦',
 
       'AI-powered optimization engine with real-time monitoring and predictive analytics.',
@@ -1281,6 +1370,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       'Real-time threat detection',
     id: 'cybersecurity - threat - intelligence - hub',
@@ -1293,9 +1385,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     features: [;
       'Real - time threat detection',
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Threat intelligence sharing',
       'Automated incident response',
       'Vulnerability assessment',
@@ -1307,9 +1402,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '🛡️',
 
       'AI-powered threat detection engine with automated response and intelligence sharing.',
@@ -1348,6 +1446,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'ai - powered - content - creation - suite',
     name: 'AI - Powered Content Creation Suite',
@@ -1359,9 +1460,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Comprehensive content creation platform that uses AI to generate, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',
     features: [;
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'AI content generation',
       'Multi - channel content optimization',
       'SEO optimization tools',
@@ -1375,9 +1479,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     popular: true,
     icon: '✍️',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
@@ -1397,6 +1504,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     technology: ['AI / ML, NLP, Content Generation'],
     integrations: ['WordPress, HubSpot, Mailchimp, Social media platforms'],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     use_cases: ['Content marketing, SEO optimization, Social media management'],
     roi: 'Increase content production by 300 - 500% and improve engagement by 25 - 40%.',
@@ -1408,9 +1518,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     real_implementation: true,
     implementation_details:;
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'AI content generation engine with optimization and distribution capabilities.',
     launch_date: '2025 - 03 - 01',
     customers: 234,
@@ -1420,6 +1533,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'intelligent - data - governance - platform',
     name: 'Intelligent Data Governance Platform',
     tagline: 'Automated data quality, compliance, and lifecycle management',
@@ -1445,9 +1561,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '📊',
 
       'AI-powered data quality engine with automated compliance and governance workflows.',
@@ -1486,6 +1605,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'quantum - financial - trading - engine',
     name: 'Quantum Financial Trading Engine',
@@ -1497,9 +1619,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior performance.',
     features: [;
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Quantum portfolio optimization',
       'Risk assessment algorithms',
       'Market analysis tools',
@@ -1512,6 +1637,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '💰',
 
     color: 'from - yellow - 600 to - amber - 700',
@@ -1536,12 +1664,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     real_implementation: true,
     implementation_details:;
 
+<<<<<<< HEAD
 
 =======
 
     icon: '💰',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Quantum algorithm implementations for financial optimization and risk management.',
     launch_date: '2025 - 03 - 10',
     customers: 34,
@@ -1550,9 +1681,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       'AI-powered candidate screening',
     id: 'ai - powered - hr - automation - suite',
@@ -1581,6 +1715,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '👥',
 
       'AI-powered HR automation engine with intelligent workflows and analytics.',
@@ -1611,9 +1748,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'AI - powered HR automation engine with intelligent workflows and analytics.',
     launch_date: '2025 - 03 - 15',
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 189,
     rating: 4 && 4.7,
     reviews: 134
@@ -1621,6 +1761,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'intelligent - iot - platform',
     name: 'Intelligent IoT Platform',
     tagline: 'AI - powered IoT device management, analytics, and automation',
@@ -1646,9 +1789,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '🌐',
 
       'IoT device management platform with AI-powered analytics and automation.',
@@ -1687,6 +1833,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       'Quantum-resistant algorithms',
       'Post-quantum cryptography',
@@ -1701,9 +1850,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Quantum - resistant algorithms',
       'Post - quantum cryptography',
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Quantum key distribution',
       'Hybrid encryption systems',
       'Security assessment tools',
@@ -1714,9 +1866,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: '🔒',
 
       'Quantum-resistant cryptographic implementations with hybrid security systems.',
@@ -1756,6 +1911,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'ai - powered - sales - intelligence - platform',
     name: 'AI - Powered Sales Intelligence Platform',
@@ -1817,10 +1975,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     features: [
       'Automated security vulnerability detectionCode quality scoring and metricsBest practice recommendationsIntegration with GitHub/GitLabCustom rule configurationTeam performance analyticsAutomated PR commentsCompliance checking (SOC2, HIPAA)';
       'Performance impact analysis'
@@ -1843,6 +2004,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     launchDate: '2025-01-15', customers: 156,
     rating: 4.8,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Automated security vulnerability detection'
       'Code quality scoring and metrics'
       'Best practice recommendations'
@@ -1854,6 +2018,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Performance impact analysis'
     ]
     popular: true
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1877,6 +2042,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Automated security vulnerability detection',
       'Code quality scoring and metrics',
       'Best practice recommendations',
@@ -1893,6 +2060,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com/ai-code-review-assistant',
     marketPosition:;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -1905,6 +2073,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',
     targetAudience: 'Development teams, DevOps engineers, CTOs',
     trialDays: 14,
@@ -1918,6 +2088,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1926,6 +2097,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     useCases: [
       'Code quality improvement, Security compliance, Team productivity'
     ]
@@ -1933,7 +2106,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     competitors: ['SonarQube, CodeClimate, Snyk']
     marketSize: '$8B code quality tools'
     growthRate: '35% YoY'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     variant: 'ai-futuristic'
     contactInfo: contact
     realImplementation: true
@@ -1978,6 +2154,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automated response playbooks',
       'Post - mortem report generation',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -2019,6 +2196,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Incident timeline tracking',
       'Performance metrics and analytics',
       'Integration with monitoring tools'
@@ -2273,6 +2452,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -2299,6 +2479,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Real-time insights dashboard'
     ];
     popular: true;
@@ -2306,6 +2488,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from-blue-600 to-indigo-700';
     textColor: 'text-blue-400';link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-intelligence-platform',link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-intelligence-platform',marketPosition: 'AI-enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.';
     textColor: 'text-blue-400';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2334,6 +2517,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     marketPosition: 'AI-enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.';
     targetAudience: 'Sales teams, Sales managers, Revenue operations';
     trialDays: 14;
@@ -2626,6 +2811,7 @@ export interface ComprehensiveService  {id: string,name: string,tagline: string,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2637,6 +2823,8 @@ export interface ComprehensiveService  {id: string,name: string,tagline: string,
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 ];
 ;
@@ -3339,12 +3527,15 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     rating: 4.8,
     reviews: 178;
 
@@ -3359,8 +3550,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 ];
 
@@ -3386,6 +3580,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     rating: 4.8,
     reviews: 178;
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 
@@ -3399,10 +3594,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3422,11 +3620,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ServiceVariant } from '../types/service-variants',;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 ];
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface ComprehensiveService {;
   id: string,;
   name: string,;
@@ -4120,6 +4323,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     customers: 234,;
     rating: 4.8;
     reviews: 178;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4921,3 +5125,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

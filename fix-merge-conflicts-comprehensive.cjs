@@ -15,10 +15,14 @@ function fixMergeConflicts(filePath) {
     // Remove merge conflict markers and keep the HEAD version (first part)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const conflictRegex = /
 =======
     const conflictRegex = /\n([\s\S]*?)\n\n([\s\S]*?)\n
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    const conflictRegex = /
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     
     content = content.replace(conflictRegex, (match, headContent, originContent) => {
       modified = true;
@@ -35,6 +39,9 @@ function fixMergeConflicts(filePath) {
 
     // Remove any remaining conflict markers
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     content = content.replace(/
 =======
     content = content.replace(/[^\n]+\n?/g, '');
@@ -148,6 +155,7 @@ try {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('\n✨ Merge conflict resolution script completed!');
 =======
 <<<<<<< HEAD
@@ -169,3 +177,5 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 console.log('\n✨ Merge conflict resolution script completed!');
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

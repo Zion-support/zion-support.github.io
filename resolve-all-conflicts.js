@@ -53,6 +53,7 @@ function resolveMergeConflicts(filePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         content = content.replace(/        
         // Remove any remaining conflict markers
         content = content.replace(/        content = content.replace(/\n/g, '');
@@ -69,10 +70,15 @@ function resolveMergeConflicts(filePath) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+        
+        // Remove any remaining conflict markers
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         
         // Remove any remaining conflict markers
         content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
         content = content.replace(/\n?/g, '');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
@@ -81,6 +87,8 @@ function resolveMergeConflicts(filePath) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

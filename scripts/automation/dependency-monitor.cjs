@@ -147,6 +147,7 @@ const monitor = new DependencyMonitor();
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 monitor.run().catch(console.error);
 
@@ -154,3 +155,6 @@ monitor.run().catch(console.error);
 =======
 monitor.run().catch(console.error);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+monitor.run().catch(console.error);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

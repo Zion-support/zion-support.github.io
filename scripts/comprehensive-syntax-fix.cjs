@@ -14,6 +14,7 @@ console.log(' Comprehensive syntax fix...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2"
 
@@ -21,3 +22,6 @@ console.log(' Comprehensive syntax fix...')
 =======
     content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

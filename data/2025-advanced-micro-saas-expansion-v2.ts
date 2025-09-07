@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,9 @@
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 export const advancedMicroSaasExpansion2025V2 = [;
   {name: 'AI Content Factory Pro',description: 'Advanced AI - powered content creation and management platform',category: 'AI & Data',pricing: '$299 / month','Multi - format content generation','Brand voice customization','Content calendar management','Performance analytics';
@@ -324,9 +328,12 @@ export const advancedMicroSaasExpansion2025V2 = [;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const advancedMicroSaasExpansion2025V2 = [
   {
 
@@ -336,6 +343,7 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$299 / month',
       'Multi - format content generation',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -350,6 +358,8 @@ name: 'AI Content Factory Pro',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Brand voice customization',
       'Content calendar management',
       'Performance analytics'
@@ -574,11 +584,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Real-time monitoring',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     name: 'AI Threat Detection',
     description: 'Advanced AI threat detection system',
     category: 'Cybersecurity',
@@ -810,9 +823,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       'Incident management'
     ]
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
     ]
   }
@@ -1171,6 +1187,7 @@ export const advancedMicroSaasExpansion2025V2 = [;
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
 =======
 
@@ -1178,6 +1195,8 @@ export const advancedMicroSaasExpansion2025V2 = [;
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }}];      'Real - time monitoring_threat intelligence_automated response_incident management';
     ];}
   }
@@ -1307,8 +1326,14 @@ export const advancedMicroSaasExpansion2025V2 = [;
 ];}
 ];
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
+=======
+  }
+];
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export const advancedMicroSaasExpansion2025V2 = [;
   {;
@@ -1481,6 +1506,7 @@ export const advancedMicroSaasExpansion2025V2 = [;
     features: [;
       'Real-time monitoringThreat intelligenceAutomated responseIncident management';
     ];
+<<<<<<< HEAD
 
 export const advancedMicroSaasExpansion2025V2 = [;
   {;
@@ -1879,3 +1905,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

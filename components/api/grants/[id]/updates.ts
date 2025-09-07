@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {v4, as, uuidv4} from 'uuid';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
@@ -148,6 +149,8 @@ if ( {) {
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { v4, as, uuidv4 } from 'uuid';
 const GRANTS_DIR  = path && path.join(process && process.cwd(), 'data', 'grants')function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)}
 function readGrant(id: string): GrantApplication | null {return path.join(GRANTS_DIR, `${id}.json`)function readGrant(id: string): GrantApplication | null {if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true })return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;function writeGrant() {if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })fs && fs.writeFileSync(grantPath(record && record.id),JSON && JSON.stringify(record, null, 2),'utf8';
@@ -193,6 +196,7 @@ if ( {) {$2;
     existing.updates = [...(existing.updates || []), update];
     existing.updated_at = new Date ().toISOString ()write_grant (existing)return res.status (201).json ({ update })}res.set_header ('Allow', 'GET, POST')res.status (405).end ('Method Not Allowed')existing.updates = [...(existing.updates || []), update];
     existing.updated_at = new Date ().toISOString ()write_grant (existing)return res.status (201).json ({ update })}
+<<<<<<< HEAD
   res.set_header ('AllowGET, POST')res.status (405).end ('Method Not Allowed')res.setHeader('Allow', 'GET, POST')res.status(405).end('Method Not Allowed')res.status(405).end('Method Not Allowed')}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -208,3 +212,6 @@ if ( {) {$2;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  res.set_header ('AllowGET, POST')res.status (405).end ('Method Not Allowed')res.setHeader('Allow', 'GET, POST')res.status(405).end('Method Not Allowed')res.status(405).end('Method Not Allowed')}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = null;
 <<<<<<< HEAD
     return res.status(500).json({ error: error?.message || 'Synthesis failed' })
@@ -92,6 +93,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Authorization: `Bearer ${playhtKey}`
             'Content-Type': 'application/json'
 =======
+=======
+const EPISODES_PATH = null;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return res.status(500).json({ error: error?.message || 'Synthesis failed' })}const EPISODES_PATH = path.join(process.cwd()'data';
   'podcast';
   'episodes.json';
@@ -108,13 +112,17 @@ const idx = episodes.findIndex(e => e.id === episodeId)if (idx === -1) return re
       const resp = await axios.post(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,{text,model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',},{{responseType: 'arraybuffer';
           headers: {Authorization: `Bearer ${playhtKey}`;
             'Content-Type': 'application/json';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }
         }
       )fs && fs.writeFileSync(mp3Path, Buffer && Buffer.from(resp && resp.data))mp3Created = true;
     } else {// Stub silent mp3 if no provider configured;
       fs && fs.writeFileSync(mp3Path, Buffer && Buffer.alloc(0))mp3Created = true;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (mp3Created) {
       // Simple placeholders for WAV/MP4; real conversion would use ffmpeg
@@ -157,6 +165,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (mp3Created) {// Simple placeholders for WAV/MP4; real conversion would use ffmpeg;
     const publicBase = '/podcast/' + baseFilename;
     episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))fs.writeFileSync(wavPath, fs.readFileSync(mp3Path))fs.writeFileSync(mp4Path, fs.readFileSync(mp3Path))}const publicBase  = '/podcast/' + baseFilename;fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')return res.status(200).json({ episode })episode.audio = {mp3Url: publicBase + '.mp3',wavUrl: publicBase + '.wav',mp4Url: publicBase + '.mp4',}episodes[idx] = episode;
@@ -188,6 +198,7 @@ if ( {) {$2;
       .status (500).json ({ error: error?.message || 'Synthesis failed' })}    return res.status (200).json ({ episode })} catch (error: any) {console.error (error),return res.status (500).json ({ error: error?.message || 'Synthesis failed' })}
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8').json({ error: error?.message || 'Synthesis failed' })}
 }
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -277,3 +288,6 @@ if ( {) {
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

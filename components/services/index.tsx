@@ -41,6 +41,7 @@ body: JSON.stringify ({
 }
 budgetRange: values.budgetRange;
 }
+<<<<<<< HEAD
 <Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) )
 }</div> </div> </div> </div> <QuoteRequestModal open= {
   modalOpen
@@ -89,6 +90,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 budgetRange: values.budgetRange;
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) )}</div> </div> </div> </div> <QuoteRequestModal open= {modalOpen;
 }onClose= {() => setModalOpen (false)}service= {selected;
 }onSubmit= {handleSubmit;
@@ -122,6 +125,7 @@ const mapLocalToServiceItem = (item: any): ServiceItem => ({slug: item.slug;
   priceRangeUSD: item.priceRangeUSD;
   categories: [item.category];
   rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10})const ServicesPage: NextPage = () => {const [services, setServices] = React.useState<ServiceItem[]>([])const [filtered, setFiltered] = React.useState<ServiceItem[]>([])const [filters, setFilters] = React.useState<Filters>({ categories: [] })const [modalOpen, setModalOpen] = React.useState(false)const [selected, setSelected] = React.useState<ServiceItem | null>(null)export default function ServicesIndexPage() {const all = (enhancedRealMicroSaasServices as unknown[])extraServices as any[];
+<<<<<<< HEAD
 =======
   handleSubmit
 }/> </div>)
@@ -144,6 +148,8 @@ export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
       extraServices as any[];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   'Content - Type': 'application / json';
 }
 body: JSON.stringify ({service: values.service_title, description: values.project_description, timeline: {start: values.timeline_start, end: values.timeline_end;
@@ -246,6 +252,7 @@ export default ServicesPage;export default ServicesPage;<QuoteRequestModal;
         on_submit={handle_submit}
       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)}export default ServicesPage;handleSubmit;
 }/> </div>)}export default ServicesPage;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -256,3 +263,7 @@ export default ServicesPage;export default ServicesPage;<QuoteRequestModal;
 export default ServicesPage;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)}export default ServicesPage;handleSubmit;
+}/> </div>)}export default ServicesPage;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

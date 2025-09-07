@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -31,8 +35,11 @@ main
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+<<<<<<< HEAD
   
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const statusReport = {
     "timestamp": new Date().toISOString(),
     "pm2Processes": [],
@@ -64,6 +71,7 @@ main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 ursor/automate-test-improve-and-merge-code-2480
@@ -84,12 +92,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
 
       const runningProcesses = pm2Data.filter(
         proc => proc.pm2_env && proc.pm2_env.status === 'online'
       );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,6 +133,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     } catch (error) {
       
     } catch (error) {
@@ -129,6 +143,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
     } catch (error) {
       console.log('⚠️  PM2 not available or no processes running');
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     } catch (error) {
       
@@ -186,6 +201,8 @@ main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -237,6 +254,7 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+<<<<<<< HEAD
 
     console.log('📋 Checking automation scripts...');
     const automationScripts = [
@@ -251,6 +269,8 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
@@ -265,6 +285,7 @@ main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'automation/master-orchestrator.cjs',
@@ -303,6 +324,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'automation/health-check.cjs',
       'automation/security-scanner.cjs',
       'automation/code-quality-monitor.cjs',
@@ -335,6 +358,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/automation-improvements-final
@@ -351,6 +375,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         name: script,
         exists,
         path: scriptPath
@@ -379,6 +405,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 main
@@ -389,6 +416,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
         "name": script,
         exists,
@@ -454,6 +483,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 
+<<<<<<< HEAD
 
 
 
@@ -507,12 +537,17 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
@@ -530,6 +565,8 @@ main
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log('📋 Checking system health...');
     try {
       const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
@@ -576,6 +613,7 @@ main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -584,6 +622,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -610,6 +650,7 @@ main
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -621,11 +662,14 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -650,6 +694,8 @@ main
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return statusReport;
@@ -682,6 +728,7 @@ main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 ursor/automate-test-improve-and-merge-code-2480
@@ -700,11 +747,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     statusReport.overallStatus = 'error';
   }
 
   return statusReport;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -738,10 +788,13 @@ if (require.main === module) {
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 // Run if called directly
 
 if (require.main === module) {
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -754,6 +807,8 @@ if (require.main === module) {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   checkAutomationStatus()
@@ -770,6 +825,7 @@ module.exports = { checkAutomationStatus };
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 // Run if called directly
 main
@@ -790,6 +846,8 @@ main
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -839,6 +897,7 @@ module.exports = checkAutomationStatus;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 module.exports = checkAutomationStatus;
@@ -864,3 +923,5 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

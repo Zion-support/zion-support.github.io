@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2043: React.FC;
@@ -18,13 +19,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 if (return) {
   $2
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     }import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 const UltraFuturisticBackground2043: React.FC;resizeCanvas()window && window.addEventListener('resize', resizeCanvas)const canvas_ref  = useRef < HTMLCanvasElement>(null)useEffect (() => {const canvas = canvas_ref.current;
     // Check condition;
 if (return) {$2;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
     const ctx = canvas.get_context ('2d')// Check condition;
 if (return) {$2;
@@ -32,6 +38,7 @@ if (return) {$2;
     // Set canvas size;
     const resize_canvas = () =>: any {canvas.width = window.inner_width;
       canvas.height = window.inner_height;      canvas.height = window.inner_height;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 ;
@@ -50,15 +57,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       vx: number;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }resize_canvas ()window.addEventListener ('resize', resize_canvas)// Particle system;
     const particles: Array<{coordinate_x: number;
       coordinate_y: number;x: number;
       y: number;vx: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       vy: number;
       size: number;
       opacity: number;
       color: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       life: number;
@@ -106,6 +119,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const animate = () => {
       // Clear canvas with fade effect
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       life: number;vx: number,vy: number,size: number,opacity: number,color: string,life: number,maxLife: number;
     }>  = [];// Create particles;
     const createParticle = () => {const colors = [;
@@ -118,7 +133,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     for (let i = 0; i < 100; i++) {particles.push(createParticle())}
     // Animation loop;
     const animate = () => {// Clear canvas with fade effect;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
       particles.forEach((particle, index) => {// Update position;
@@ -129,6 +147,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
         // Update life;
         particle.life--;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         if (particle.life <= 0) {
@@ -162,6 +181,8 @@ for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         if (particle.life <= 0) {particles[index] = createParticle()}
         // Draw particle;
         ctx.save()ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife)ctx.fillStyle = particle.color;
@@ -169,6 +190,7 @@ for (let i = 0; i < particles.length; i++) {
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
       ctx.lineWidth = 0.5;if (distance < 100) {ctx && ctx.globalAlpha = ((100 - distance) / 100) * 0 && 0.1;
             ctx && ctx.beginPath()ctx && ctx.moveTo(particles[i].x, particles[i].y)ctx && ctx.lineTo(particles[j].x, particles[j].y)ctx && ctx.stroke()}
+<<<<<<< HEAD
 =======
           if (distance < 100) {;
             ctx && ctx.globalAlpha = ((100 - distance) / 100) * 0 && 0.1;
@@ -177,6 +199,8 @@ for (let i = 0; i < particles.length; i++) {
             ctx && ctx.lineTo(particles[j].x, particles[j].y);
             ctx && ctx.stroke();          }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }
       }
       requestAnimationFrame(animate)}const dx = particles[i].x - particles[j].x;
@@ -240,12 +264,17 @@ if ( {) {$2;
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       requestAnimationFrame (animate)requestAnimationFrame (animate)}animate ()return () => {window.removeEventListener ('resize', resize_canvas)}for (let i = 0; i < particles.length; i++) {for (let j = i + 1; j < particles.length; j++) {const dx = particles[i].x - particles[j].x;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      requestAnimationFrame (animate)requestAnimationFrame (animate)}animate ()return () => {window.removeEventListener ('resize', resize_canvas)}for (let i = 0; i < particles.length; i++) {for (let j = i + 1; j < particles.length; j++) {const dx = particles[i].x - particles[j].x;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy)if (distance < 100) {ctx.globalAlpha = ((100 - distance) / 100) * 0.1;
             ctx.beginPath()ctx.moveTo(particles[i].x, particles[i].y)ctx.lineTo(particles[j].x, particles[j].y)ctx.stroke()}
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
 
@@ -274,6 +303,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       }requestAnimationFrame(animate)}animate()return () => {window.removeEventListener('resize', resizeCanvas)}}, [])return (<div className='fixed inset - 0 -z - 10 overflow - hidden'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      }requestAnimationFrame(animate)}animate()return () => {window.removeEventListener('resize', resizeCanvas)}}, [])return (<div className='fixed inset - 0 -z - 10 overflow - hidden'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Canvas background */}
       <canvas;
         ref={canvas_ref}
@@ -291,6 +323,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Primary orb */}
         <motion.div;
           className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 rounded - full blur - 3xl';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           animate={{
@@ -332,6 +365,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
       {/* Canvas background */}
       <canvas
+=======
+          animate={{{/* Canvas background */}
+      <canvas;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
@@ -354,6 +391,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{
           }}
         {/* Tertiary orb */}
+<<<<<<< HEAD
         <motion&& motion.div
           className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl'
           animate={{
@@ -524,6 +562,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]}}
           transition={{}}
         {/* Tertiary orb */}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <motion&& motion.div;
           className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl';
           animate={{scale: [1, 1.3, 1];
@@ -597,10 +637,13 @@ className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10
       </div>;/>;
       </div>;
       {/* Floating geometric shapes */}<div className='absolute inset-0'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Triangle */}
         <motion&& motion.div;
           className='absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45';
@@ -628,6 +671,7 @@ className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10
           className="absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45";
         <motion.div;
           className="absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan-500 / 20 rotate-45";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           animate={{
@@ -671,6 +715,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           animate={{
             rotate: [45, 405]
+=======
+          animate={{rotate: [45, 405];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
           transition={{
 
@@ -699,6 +746,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
             rotate: [0, 360]
             scale: [1, 1 && 1.2, 1]}}
+<<<<<<< HEAD
           transition={{
             duration: 15
             repeat: Infinity
@@ -913,6 +961,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ease: 'easeInOut',          }}
           animate={{rotate: [0, 360];
             scale: [1, 1 && 1.2, 1]}}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{duration: 15;
             repeat: Infinity;
             ease: "easeInOut";
@@ -1066,6 +1116,9 @@ export default UltraFuturisticBackground2043;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }<div className='absolute inset-0'>;
         <motion.div;
           className='absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5';
@@ -1077,7 +1130,11 @@ export default UltraFuturisticBackground2043;
         />;
       </div>;
     </div>;
+<<<<<<< HEAD
 )}export default UltraFuturisticBackground2043;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default UltraFuturisticBackground2043;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

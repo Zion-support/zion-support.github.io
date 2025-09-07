@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
@@ -65,6 +66,12 @@ return res.status(400).json({ error: 'email required' });
   return res.status(200).json({ verified });
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { authenticateRequest, enforceRateLimit, recordRequest  } from '../../utils/api/partnerAuth';
 const TALENTS_FILE = null;
   return res.status(200).json({ verified })}import fs from 'fs - extra';
@@ -124,6 +131,7 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400)return 
   if (!email) {await recordRequest(req, res, auth.partner, auth.apiKey, started, 400)return res.status(400).json({ error: 'email required' })}
   const talents = (await fs.pathExists(TALENTS_FILE))? await fs.readJSON(TALENTS_FILE): [];
   const match = talents.find((t: any) =>;
+<<<<<<< HEAD
       t.email === email && (!programTrack |t.programTrack === programTrack))const verified = Boolean(match && match.certificationStatus === 'completed')await recordRequest(req, res, auth.partner, auth.apiKey, started, 200)return res.status(200).json({ verified })
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -254,3 +262,6 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      t.email === email && (!programTrack |t.programTrack === programTrack))const verified = Boolean(match && match.certificationStatus === 'completed')await recordRequest(req, res, auth.partner, auth.apiKey, started, 200)return res.status(200).json({ verified })
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface TextAnalysisResult {
 =======
 interface TextAnalysisResult  {}
@@ -8,14 +9,21 @@ interface TextAnalysisResult  {}
 interface TextAnalysisResult {
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+interface TextAnalysisResult  {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export default async function handler() {}
   try {const { text }  = req && req.body;// Basic statistics;
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
 <<<<<<< HEAD
+<<<<<<< HEAD
     const words = text;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    const words = text;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 text: string;
   statistics: {characters: number;
     charactersNoSpaces: number;
@@ -42,6 +50,7 @@ text: string;
   },keywords: {topWords: Array<{ word: string; count: number; frequency: number }>;
     bigrams: Array<{ phrase: string; count: number }>;
     trigrams: Array<{ phrase: string; count: number }>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 
@@ -153,6 +162,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'superb'
       'marvelous'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }export default async function handler() {if (req.method !== 'POST') {return res.status(405).json({ error: 'Method not allowed' })}
   try {const { text } = req.body;
     if (!text || typeof text !== 'string') {return res.status(400).json({ error: 'Text is required' })}
@@ -192,7 +203,10 @@ const fleschReadingEase = Math.max(0,Math.min(100;
       'outstanding';
       'superb';
       'marvelous';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];
     const negativeWords = [;
       'bad';
@@ -216,6 +230,7 @@ const fleschReadingEase = Math.max(0,Math.min(100;
     else if (sentimentScore <= 1) sentimentLabel = 'neutral';
     else if (sentimentScore <= 3) sentimentLabel = 'positive';
     else sentimentLabel = 'very-positive';
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Keyword analysis
     const wordCounts = new Map<string, number>();
@@ -343,6 +358,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // Keyword analysis;
     const wordCounts  = new Map<string, number>()text;
       .toLowerCase().split(/\s+/).forEach(word => {const cleanWord = word.replace(/[^\w]/g, '')if (cleanWord.length > 2) {wordCounts.set(cleanWord, (wordCounts.get(cleanWord) |0) + 1)}
@@ -381,11 +398,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         label: sentimentLabel;
         positiveWords: textWords.filter(word => positiveWords.includes(word))negativeWords: textWords.filter(word => negativeWords.includes(word))}
       language: {} catch (error) {console && console.error('Text analysis error:', error)res && res.status(500).json({ error: 'Internal server error' })}        score: sentimentScore;
+<<<<<<< HEAD
 =======
     console && console.error('Text analysis error:', error);
     res && res.status(500).json({ error: 'Internal server error' });
   }        score: sentimentScore;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         label: sentimentLabel;
         detectedLanguage;
         confidence;
@@ -403,6 +423,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }console.error('Text analysis error:', error)res.status(500).json({ error: 'Internal server error' })}
     res.status(500).json({ error: 'Internal server error' })}
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -441,3 +462,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

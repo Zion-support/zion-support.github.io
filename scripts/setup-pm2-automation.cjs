@@ -19,6 +19,7 @@ const path = require('path')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log('\n  Useful PM2 "Commands")
 
@@ -26,3 +27,6 @@ const path = require('path')
 =======
     console.log('\n  Useful PM2 "Commands")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.log('\n  Useful PM2 "Commands")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

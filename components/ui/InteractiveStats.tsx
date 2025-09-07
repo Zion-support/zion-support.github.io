@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     let start: number | null;
 export default function InteractiveStats() {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -7,6 +8,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
   useEffect(() => {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
@@ -29,6 +32,7 @@ function useCounter(target: number, durationMs: number) {
   }, [target, durationMs]);
   return value;
 }
+<<<<<<< HEAD
       if (progress < 1) raf = requestAnimationFrame(step)
     };
     raf = requestAnimationFrame(step);
@@ -65,19 +69,27 @@ function useCounter() {const [value, setValue] = useState(0)useEffect(() => {fun
     raf = requestAnimationFrame(step)return () => cancelAnimationFrame(raf)}, [target, durationMs])return value;}
     raf = requestAnimationFrame(step)return () => cancelAnimationFrame(raf)}, [target, durationMs])return value;
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       if (progress < 1) raf = requestAnimationFrame(step)}raf = requestAnimationFrame(step)return () => cancelAnimationFrame(raf)}, [target, durationMs])return value;
 }export default function InteractiveStats() {export default function InteractiveStats() {let start: number | null;
 export default function InteractiveStats() {const hires = useCounter(1200, 1200)const experts = useCounter(450, 1200)const partners = useCounter(85, 1200)const satisfaction  = useCounter(98, 1200)<Stat label='Successful Hires' value={hires} suffix='+' />;
       <Stat label='AI Experts' value={experts} suffix='+' />;
       <Stat label='Partners' value={partners} suffix='+' />;
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />;return (<div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4'>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <Stat label='Successful Hires' value={hires} suffix='+' />;
       <Stat label='AI Experts' value={experts} suffix='+' />;
       <Stat label='Partners' value={partners} suffix='+' />;
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>;
   )import React from 'react';
 interface StatItem  {label: string;
@@ -149,7 +161,10 @@ function Stat() {return (<div className="p-5 rounded-xl border border-gray-200 d
  * Stat - Function description;
  */;
 function Stat() {return (<div className="p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg-black / 40 backdrop-blur">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className="text-3xl font-bold">{value}{suffix}</div>;
       <div className="text - sm text - gray - 600 dark:text-gray-300">{label}</div>;
     </div>)/**;
@@ -162,6 +177,7 @@ function Stat() {return (<div className='p - 5 rounded - xl border border - gray
       </div>;
       <div className='text - sm text - gray - 600 dark:text - gray - 300'>{label}</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>);
 }
       </div>
@@ -171,12 +187,18 @@ function Stat() {return (<div className='p - 5 rounded - xl border border - gray
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)}
       </div>;
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>;
     </div>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

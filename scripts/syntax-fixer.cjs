@@ -12,6 +12,7 @@ const util = require("util")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
 
@@ -19,3 +20,6 @@ const util = require("util")
 =======
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -80,6 +80,7 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error('Advanced testing automation "failed")
 
@@ -87,3 +88,6 @@ const { execSync } = require('child_process')
 =======
     console.error('Advanced testing automation "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.error('Advanced testing automation "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

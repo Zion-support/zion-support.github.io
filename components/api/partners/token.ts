@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextApiRequest, NextApiResponse } from "next";
 import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
@@ -115,6 +116,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { findPartnerByApiKey, signJwt  } from '../../../utils/api/partnerAuth';
@@ -150,6 +153,7 @@ export default async function handler() {if (req.method !== 'POST') {res.setHead
       entity_type: partner.entity_type,useCaseType: partner.useCaseType} as any;
     typeof ttl_seconds === "number" ? Math.max (300, Math.min (86400, ttl_seconds)) : 3600)return res.status (200).json ({ token, partner: { id: partner.id, name: partner.name } })}
   const { partner, apiKey: key } = match;
+<<<<<<< HEAD
   const token = signJwt({.json({ token, partner: { id: partner.id, name: partner.name } })return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -188,3 +192,6 @@ export default async function handler() {if (req.method !== 'POST') {res.setHead
     {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  const token = signJwt({.json({ token, partner: { id: partner.id, name: partner.name } })return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

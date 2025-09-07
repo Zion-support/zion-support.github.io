@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -15,6 +16,8 @@ export default function DemosPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import {
   Mail
@@ -26,6 +29,7 @@ import {
   BarChart3
   Code
   Play;
+<<<<<<< HEAD
 } from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 
 
@@ -230,6 +234,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   BarChart3;
   Code;
   Play;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 } from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play  } from 'lucide-react';
 import React, { useState } from 'react',import Head from 'next/head',import Card from '../components/ui/Card',import Button from '../components/ui/Button',import EmailValidatorDemo from '../components/demos/EmailValidatorDemo',import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo',import UrlShortenerDemo from '../components/demos/UrlShortenerDemo',import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
 import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play   } from 'lucide-react';
@@ -366,12 +372,16 @@ export default function DemosPage() {const [activeDemo, setActiveDemo] = useStat
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>;
             {demos.map(demo => (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={demo && demo.id}
                 onClick={() => setActiveDemo(demo && demo.id)}
                 className={`p-4 rounded-lg border transition-all duration-300 text-left group ${activeDemo === demo && demo.id;
                     ? 'border-blue-500 bg-blue-500/10';
                     : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 }`}
@@ -388,6 +398,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >;
                 <div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                }`}>;
+                <div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo && demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>;
                   {demo && demo.icon}
                 </div>;
@@ -416,14 +430,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ? 'border - blue - 500 bg - blue - 500 / 10';
                     : 'border - gray - 700 bg - gray - 800 / 50 hover:border - gray - 600 hover:bg - gray - 800 / 80';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 }`}>;
 <div;
                   className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}
                 >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                 }`}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {demo.icon}
                 </div>;
                 <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>;
@@ -431,6 +451,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h3>;
                 <p className='text-sm text-gray-400 leading-relaxed'>;
                   {demo.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </p>
                 {activeDemo === demo.id && (
@@ -448,12 +469,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </p>;
                 {activeDemo === demo.id && (<div className='mt-3 flex items-center text-blue-400 text-sm'>;
                     <CheckCircle className='w-4 h-4 mr-2' />;
                     Active Demo;
                   </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 )}
               </button>;
             ))}
@@ -470,6 +496,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>;
       {/* Active Demo */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <section className='py-16 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -495,6 +522,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
 
             </p>;
+=======
+<section className='py-16 bg-black relative overflow-hidden'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
+          <div className='text-center mb-12'>;
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>;
+              <Play className='w-4 h-4 mr-2' />;
+              Live Demo;
+            </div>;
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>;
+              {activeDemoData?.title}</h2>;
+            <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}</p>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
           <div className='animate-fade-in'>{activeDemoData?.component}</div>        </div>;
       </section>;
@@ -510,6 +549,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>;
             <p className="text - lg text - gray - 400 max - w-2xl mx - auto">;
               {activeDemoData?.description}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         </div>
       </section>
@@ -755,6 +795,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {activeDemoData?.description}</h2>;
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>;
               {activeDemoData?.description}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </p>;
           </div>;
 <div className='animate-fade-in'>{activeDemoData?.component}</div>;
@@ -923,8 +965,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
           <div className='animate-fade-in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">;
             {activeDemoData?.component}
@@ -978,6 +1023,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }{/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
@@ -1010,6 +1058,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1018,3 +1067,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

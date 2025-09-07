@@ -3,12 +3,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
   clientUserId: string;
@@ -34,6 +37,7 @@ export type ProjectParticipants = {;
   talentUserId: string;
 }
 export type Project = {  id: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   title: string;
   description?: string;
@@ -64,6 +68,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   title: string;
   description?: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  title: string;
+  description?: string;
+  title: string;
+  description?: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: string;
   description?: string;
   due_date: string;
@@ -87,6 +97,7 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -101,12 +112,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     value === 'Pending' ||
     value === 'In Progress' ||
     value === 'Submitted' ||
     value === 'Approved' ||;
     value === 'Paid';
   );export interface MilestoneAttachment {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,6 +147,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   url: string;
@@ -148,6 +164,7 @@ export interface CreateMilestoneRequest  {uploadedAt: string;
 }
 export interface UpdateMilestoneRequest  {export interface UpdateMilestoneRequest  {export interface UpdateMilestoneRequest  {export interface UpdateMilestoneRequest  {ursor/fix-website-loading-errors-and-merge-6662;
   size: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -181,6 +198,9 @@ export interface CreateMilestoneRequest {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export interface CreateMilestoneRequest {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 export interface CreateMilestoneRequest {;
@@ -197,14 +217,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 export interface UpdateMilestoneRequest {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 export interface UpdateMilestoneRequest {;
 
 export interface UpdateMilestoneRequest {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,11 +252,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title?: string;
   description?: string;
   due_date?: string;
   amount_usd?: number;
   status?: 'pending' | 'completed' | 'cancelled';
+<<<<<<< HEAD
 <<<<<<< HEAD
   attachments?: MilestoneAttachment[];
 <<<<<<< HEAD
@@ -267,6 +294,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   attachments?: MilestoneAttachment[];export function isOverdue(milestone: Milestone): boolean {if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {return false;
   }
   return new Date(milestone.dueDate) < new Date()}export function getDaysUntilDue(milestone: Milestone): number | null {if (!milestone.dueDate) return null;
@@ -285,11 +314,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     value === 'Paid';
   )
   attachments?: MilestoneAttachment[];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 
@@ -316,6 +348,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -354,3 +387,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

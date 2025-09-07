@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react';
 export type FeedbackContext = any;
     onClose(true)
@@ -96,6 +97,8 @@ className={
                 hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { useState  } from 'react';
 export type FeedbackContext = any;
     onClose(true)export default function FeedbackModal({isOpen;
@@ -130,6 +133,7 @@ export type FeedbackContext = any;
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}className={hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -137,6 +141,8 @@ className={
                 hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300'
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               }
               aria-label={`${n} stars`}
             >;
@@ -255,12 +261,15 @@ function submit() {if (return on_close (false)) {$2;
         </div>;
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
         </div>
 <<<<<<< HEAD
         <div className='flex justify-end gap-2'>
           <button
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>;
         </div>;
         <div className='flex justify-end gap-2'>;
@@ -295,10 +304,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>;
   )}<div className='flex justify - end gap - 2'>;
+<<<<<<< HEAD
 =======
 
         <div className='flex justify - end gap - 2'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <button;
             on_click={() => on_close (false)}
             className='px - 3 py - 2 rounded border';
@@ -328,6 +340,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
         <div className="flex justify-end gap-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <button on_click={()=>on_close (false)} className="px-3 py-2 rounded border">Later</button>;}
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -338,3 +351,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+          <button on_click={()=>on_close (false)} className="px-3 py-2 rounded border">Later</button>;}
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

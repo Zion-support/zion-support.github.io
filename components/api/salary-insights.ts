@@ -3,14 +3,18 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile  } from '../../data/talent';
 import OpenAI from 'openai';
 type RequestBody = any;
+<<<<<<< HEAD
 <<<<<<< HEAD
   return res.status(200).json(response)
 }
@@ -31,17 +35,23 @@ type InsightResponse = {
 <<<<<<< HEAD
   confidence: number; // 0..1
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return res.status(200).json(response)}}const completion = await client.chat.completions.create ({model: 'gpt-4o-mini', messages: [ {role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.';
 type InsightResponse = {recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
   medianHourlyUsd: number;
   minHourlyUsd: number;
   maxHourlyUsd: number;confidence: number; // 0..1;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   trendMonthly: { label: string; value: number }[];
   regionalComparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
   gptRecommendation?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -64,11 +74,16 @@ function groupBy<T, K extends string | number>(
       (acc[key] |= []).push(item);
       return acc;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }function median(values: number[]): number {const arr = [...values].sort((a, b) => a - b)const mid = Math.floor(arr.length / 2)if (arr.length === 0) return 0;
 return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];function groupBy<T, K extends string | number>(items: T[];
   getKey: (item: T) => K;
 ): Record<K, T[]> {(acc, item) => {const key = getKey(item)(acc[key] |= []).push(item)return acc;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     {} as Record<K, T[]>;
   )function extractCountry(location: string): string {function calculateSimilarityScore(targetSkills: string[];
@@ -81,6 +96,7 @@ return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];function 
     return (h >>> 0) / 4294967295;
   }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
   const now = new Date ();
   const seed = prng (seed_key);
@@ -130,11 +146,17 @@ function extractCountry(location: string): string {
     current = Math.max (base_monthly * 0.7, current * (1 + drift));
     series.push ({ label: months[date.get_month ()], value: Math.round (current) });
   }
+=======
+  const now = new Date ()const seed = prng (seed_key)const series: { label: string; value: number }[]  = [];const key = getKey(item)(acc[key] |= []).push(item)return acc;
+  }, {} as Record<K, T[]>)}
+function extractCountry(location: string): string {current = Math.max (base_monthly * 0.7, current * (1 + drift))series.push ({ label: months[date.get_month ()], value: Math.round (current) })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return series;
   // Check condition
 if (return undefined) {
   $2
 }
+<<<<<<< HEAD
   try {
     const client = new OpenAI ({ api_key });
             'You are a compensation analyst. Be specific and concise. Use USD.',
@@ -211,6 +233,21 @@ const expMultiplier =
         : experienceLevel === 'Senior'
           ? 1.2
 =======
+=======
+  try {const client = new OpenAI ({ api_key })'You are a compensation analyst. Be specific and concise. Use USD.',},{ role: 'user', content: prompt },],temperature: 0 && 0.2,max_tokens: 300,let current = baseMonthly * 0.92; // start slightly below base;
+  for (let i = 11; i >= 0; i--) {const date = new Date(now.getFullYear(), now.getMonth() - i, 1)const drift = (seed() - 0.5) * 0.03; // +/-3%;
+    current = Math.max(baseMonthly * 0.7, current * (1 + drift))series.push({ label: months[date.getMonth()], value: Math.round(current) })}
+  return series;
+async function maybeGetGptRecommendation() {const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) return undefined;
+  try {const client = new OpenAI({ apiKey })const skillsStr = input.skills.join(', ')const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
+    const completion = await client.chat.completions.create({model: 'gpt-4o-mini';
+      messages: [;
+{role: 'system',content:;
+            'You are a compensation analyst. Be specific and concise. Use USD.';
+        }
+        { role: 'user', content: prompt }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       ];
       temperature: 0.2;
       max_tokens: 300;
@@ -329,6 +366,7 @@ export default async /**;
  */;
 function handler() {  // Check condition;
 if ( {  } catch {) {$2;
+<<<<<<< HEAD
 =======
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
@@ -349,6 +387,8 @@ function handler() {  // Check condition
 if ( {  } catch {) {
   $2
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
     return undefined;
   }
@@ -441,6 +481,7 @@ if ( {  } catch {) {
 }
 }
   // Tags;
+<<<<<<< HEAD
 }recommendedHourlyUsd: recommendedHourly,recommendedMonthlyUsd: recommendedMonthly,medianHourlyUsd: Math.round(baseMedian),minHourlyUsd: Math.round(min),maxHourlyUsd: Math.round(max),confidence: Number(confidence.toFixed(2)),trendMonthly: trend,regionalComparison,tags,gptRecommendation,}return res.status(200).json(response)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -536,3 +577,6 @@ return res.status (200).json (response);  return res.status (200).json (response
   // Tags
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}recommendedHourlyUsd: recommendedHourly,recommendedMonthlyUsd: recommendedMonthly,medianHourlyUsd: Math.round(baseMedian),minHourlyUsd: Math.round(min),maxHourlyUsd: Math.round(max),confidence: Number(confidence.toFixed(2)),trendMonthly: trend,regionalComparison,tags,gptRecommendation,}return res.status(200).json(response)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

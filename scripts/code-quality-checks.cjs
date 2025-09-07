@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
@@ -12,6 +13,11 @@ const fs = require("fs")
 const { execSync } = require("child_process")
 const fs = require("fs")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const { execSync } = require("child_process")
+const fs = require("fs")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "timestamp"
       summary: { passed: 0, "failed": 0, "warnings"}
 // console.log(" Running Code Quality Checks...")
@@ -48,6 +54,7 @@ const fs = require("fs")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(`� Report saved "to"`)
 
@@ -55,3 +62,6 @@ const fs = require("fs")
 =======
     console.log(`� Report saved "to"`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.log(`� Report saved "to"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

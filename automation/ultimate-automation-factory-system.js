@@ -322,6 +322,7 @@ export default UltimateAutomationFactory;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -330,6 +331,8 @@ export default UltimateAutomationFactory;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import fs from 'fs';
 import {execSync} from 'child_process';
 class UltimateAutomationFactory {constructor() {; this.logsDir = path.join(process.cwd(), 'logs'); this.ensureLogsDir()}; ensureLogsDir() {if (!fs.existsSync(this.logsDir)) {; fs.mkdirSync(this.logsDir, { recursive: true })}}; log(message, type = 'info') {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`; console.log(logMessage); const logFile = path.join(this.logsDir, 'ultimate-automation.log'); fs.appendFileSync(logFile, logMessage + '\n')}; async runCommand(command, description) {try {; this.log(`Running: ${description}`); const output = execSync(command, {encoding: 'utf8', cwd: process.cwd(), stdio: 'pipe'}); this.log(`✅ ${description} completed successfully`); return { success: true, output }} catch (error) {this.log(`❌ ${description} failed: ${error.message}`, 'error'); return { success: false, error: error.message }}}; async runAllAutomations() {this.log('🚀 Starting Ultimate Automation Factory...'); const automations = [
@@ -342,12 +345,15 @@ class UltimateAutomationFactory {constructor() {; this.logsDir = path.join(proce
 
 =======
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default UltimateAutomationFactory;
 ;
 class UltimateAutomationFactory {; constructor() {; this.logsDir = path.join(process.cwd(), 'logs'); this.ensureLogsDir()};
@@ -453,6 +459,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
+<<<<<<< HEAD
 
 
 
@@ -464,3 +471,5 @@ export default UltimateAutomationFactory;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

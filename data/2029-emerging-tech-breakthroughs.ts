@@ -4,18 +4,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
   id: string;
 export interface EmergingTechBreakthrough2029  {id: string;name: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -28,6 +32,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export interface EmergingTechBreakthrough2029 {
 id: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   tagline: string;
   price: string;
@@ -150,6 +156,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -166,10 +173,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       "Emerging tech breakthroughs";
       "Innovation platform";
       "Future capabilities";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -202,6 +212,8 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export interface EmergingTechBreakthrough2029 {;
 
@@ -210,6 +222,7 @@ export interface EmergingTechBreakthrough2029 {;
     link: "/services/2029-emerging-tech-breakthrough",
     category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -252,10 +265,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     contactInfo: {}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    contactInfo: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 
 ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -270,6 +287,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ursor/fix-website-loading-errors-and-merge-6662
     }
   }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -277,11 +296,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface EmergingTechBreakthrough2029 {;
+<<<<<<< HEAD
 =======
 
 export interface EmergingTechBreakthrough2029 {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   };
 
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
@@ -317,10 +339,13 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string,name: string,tagline: string,price: string,description: string,features: string[],link: string,category: string,realImplementation: boolean,contactInfo: {mobile: string,email: string,address: string;
   }
 }export interface EmergingTechBreakthrough2029  {export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [;
@@ -339,11 +364,14 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     }
   }
 ];];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string,;
   name: string,;
   tagline: string,;
@@ -379,6 +407,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -395,11 +424,14 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "Expert insights"
     ],
     link: "/services/2029-emerging-tech-breakthrough",
     category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
     contactInfo: {}
   }
@@ -417,6 +449,11 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    contactInfo: {}
+  }
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -424,6 +461,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -469,3 +507,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

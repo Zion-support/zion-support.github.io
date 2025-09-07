@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
 
@@ -53,6 +54,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(401).json({ error: 'Unauthorized' });
 return;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)}
 function readGrant(id: string): GrantApplication | null {}
@@ -63,11 +66,15 @@ function isAuthorized() {return (return path.join(GRANTS_DIR, `${id}.json`)funct
     process && process.env.ZION_ADMIN_TOKEN &&;
     token === process && process.env.ZION_ADMIN_TOKEN;
   )export default function handler() {if (!isAuthorized(req)) {res.status(401).json({ error: 'Unauthorized' })return;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   const { id } = req.query as { id: string }
   if (!id) {res.status(400).json({ error: 'Missing id' })return;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req.method === 'GET') {
     const existing = readGrant(id);
@@ -125,6 +132,8 @@ function handler() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (req.method === 'GET') {const existing = readGrant(id)if (!existing) return res.status(404).json({ error: 'Not found' })return res.status(200).json({ milestones: existing.milestones || [] })}
   if (req.method === 'POST') {const existing = readGrant(id)if (!existing) return res.status(404).json({ error: 'Not found' })const payload = req.body as MilestonesUpdatePayload;
     existing.milestones = payload.milestones |[];
@@ -147,7 +156,10 @@ export default /**;
 function handler() {if () {) {$2;
 }
     res.status (401).json ({ error: 'Unauthorized' })return;    return;writeGrant(existing)return res.status(200).json({ record: existing })}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const { id } = req.query as { id: string }
   // Check condition;
 if ( {) {$2;
@@ -167,6 +179,7 @@ if ( {) {$2;
 }
     const payload = req.body as MilestonesUpdatePayload;
     existing.milestones = payload.milestones || [];
+<<<<<<< HEAD
 <<<<<<< HEAD
     existing.updated_at = new Date ().toISOString ();
     write_grant (existing);
@@ -192,3 +205,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    existing.updated_at = new Date ().toISOString ()write_grant (existing)return res.status (200).json ({ record: existing })}
+  res.set_header ('Allow', 'GET, POST')res.status (405).end ('Method Not Allowed')return res.status (200).json ({ record: existing })}
+  res.set_header ('AllowGET, POST')res.status (405).end ('Method Not Allowed')res.setHeader('Allow', 'GET, POST')}res.status(405).end('Method Not Allowed')res.status(405).end('Method Not Allowed')}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

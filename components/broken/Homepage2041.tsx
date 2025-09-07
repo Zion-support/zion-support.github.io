@@ -1,6 +1,7 @@
 import Layout from './layout/Layout';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { ArrowRight;
   Star;
@@ -42,6 +43,8 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Search;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion  } from 'framer-motion';
 import {ArrowRight;
   Star,ArrowRight,Star,Search,Shield,Globe,TrendingUp,Brain,Atom,Zap,Cpu,Cloud,BarChart3,Lock,Rocket,Eye,Sparkles,Target,Users,ArrowRight;
@@ -49,7 +52,10 @@ import {ArrowRight;
   Star;
 import { ArrowRight;
   Star;Search;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Shield;
   Globe;
   TrendingUp;
@@ -67,6 +73,7 @@ import { ArrowRight;
   Users;
   Award;
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { innovative2041MicroSaasServices  } from '../data/innovative-2041-micro-saas-services';
 import { innovative2041ITServices  } from '../data/innovative-2041-it-services';
@@ -100,6 +107,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago."
       avatar: '👩‍💼'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { innovative2041MicroSaasServices   } from '../data/innovative-2041-micro-saas-services';
 import { innovative2041ITServices   } from '../data/innovative-2041-it-services';
 import { innovative2041AIServices  } from '../data/innovative-2041-ai-services';
@@ -121,12 +130,16 @@ import { innovative2041AIServices  } from '../data/innovative-2041-ai-services';
     }{rating: 5,avatar: "👨‍💻";
     }{name: "Dr. Emily Watson",role: "Research Director, SpaceLabs";
       company: "SpaceLabs",content: "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.",rating: 5,avatar: "👩‍🔬";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   ];name: 'Dr. Emily Watson';
       role: 'Research Director, SpaceLabs';
       company: 'SpaceLabs';
       content:;
+<<<<<<< HEAD
 <<<<<<< HEAD
         "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",
       avatar: '👩‍💼',
@@ -166,6 +179,10 @@ import { innovative2041AIServices  } from '../data/innovative-2041-ai-services';
         "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.",rating: 5,avatar: '👩‍🔬',},];const stats = [;
     { number: '500+', label: 'Revolutionary Services', icon: Rocket },{ number: '50+', label: 'Quantum Solutions', icon: Atom },{ number: '1000x', label: 'Performance Boost', icon: Zap },{ number: '24/7', label: 'AI Operations', icon: Brain },];return (<Layout>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.",rating: 5,avatar: '👩‍🔬',},];const stats = [;
+    { number: '500+', label: 'Revolutionary Services', icon: Rocket },{ number: '50+', label: 'Quantum Solutions', icon: Atom },{ number: '1000x', label: 'Performance Boost', icon: Zap },{ number: '24/7', label: 'AI Operations', icon: Brain },];return (<Layout>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Main Content */}
 <main className='relative z-10'>;
         {/* Hero Section */}
@@ -179,6 +196,7 @@ import { innovative2041AIServices  } from '../data/innovative-2041-ai-services';
             <div className='absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
             <div className='absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>;
             {/* Enhanced particle system */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='absolute inset-0'>
               {[...Array(12)].map((_, i) => (
@@ -300,6 +318,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 mining, we're redefining what's possible.
               </p>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className='absolute inset-0'>;
               {[...Array(12)].map((_, i) => (<motion.div;
                   key={i}
@@ -428,6 +448,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className="w-full px-8 py-6 bg-black/50 border border-cyan-500/50 rounded-3xl text-white placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-cyan-500/30 focus:border-transparent backdrop-blur-sm text-lg";
                   />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <button;
                     type="submit";
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center";
@@ -564,16 +587,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >;
               {stats.map ((stat, index) => (<motion.div;
                   key={stat.label}className='text-center';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 className='text-center'
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 >
@@ -645,6 +672,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 >;
 <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                     <stat.icon className='w-8 h-8 text-white' />;
@@ -710,6 +739,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>;
             </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
             <motion.div;
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}<h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
@@ -723,6 +755,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>;
             <motion.div;
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -731,6 +764,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -745,6 +780,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion && motion.div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               ))}
             </motion.div>
 
@@ -752,6 +788,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='text-center mt-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}</motion && motion.div>;
             <motion&& motion.div;
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion && motion.div;
@@ -765,6 +803,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>;
 <motion.div;
               className='text-center mt-12';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               ))}
@@ -788,10 +827,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               className="text-center mt-12"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
               viewport={{ once: true }}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Link
@@ -838,6 +880,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='grid grid-cols-1 md:grid-cols-3 gap-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Link;
 href='/2041-futuristic-services-showcase';
                 className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105';
@@ -901,6 +945,9 @@ href='/2041-futuristic-services-showcase';
               </p>;
             </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className="grid grid-cols-1 md:grid-cols-3 gap-8";
             <motion.div;
               className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}<h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
@@ -913,6 +960,7 @@ href='/2041-futuristic-services-showcase';
             </motion.div>;
             <motion.div;
               className='grid grid-cols-1 md:grid-cols-3 gap-8';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -921,10 +969,13 @@ href='/2041-futuristic-services-showcase';
               className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             >
               {testimonials.map((testimonial, index) => (
@@ -933,10 +984,13 @@ href='/2041-futuristic-services-showcase';
 <<<<<<< HEAD
 className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >;
               {testimonials.map((testimonial, index) => (<motion.div;
                   key={testimonial.name}className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm";
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
 =======
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}
@@ -944,6 +998,8 @@ className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500
 
               initial={{ opacity: 0, y: 30 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}>;
@@ -960,6 +1016,9 @@ className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500
                   </p>;
                   <div className='flex items-center gap-2 mb-3'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {[...Array(testimonial && testimonial.rating)].map((_, i) => (className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   initial={{ opacity: 0, y: 30 }}
@@ -980,6 +1039,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>;
                   <div className='flex items-center gap-2 mb-3'>;
                     {[...Array(testimonial.rating)].map((_, i) => (<Star;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                         key={i}
                         className='w-5 h-5 text-yellow-400 fill-current';
@@ -1001,11 +1061,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}</div>;
                   <div className='font-semibold text-white'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                        key={i}
+                        className='w-5 h-5 text-yellow-400 fill-current';
+                      />;
+                    ))}</div>;
+                  <div className='font-semibold text-white'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {testimonial.name}
                   </div>;
                   <div className='text-cyan-400'>{testimonial.role}</div>;
                   <div className='text-gray-500 text-sm'>;
                     {testimonial.company}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </div>
                 </motion.div>
@@ -1137,6 +1205,8 @@ Math.random () * 100
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Math.random () * 100 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   </div>;
                 </motion.div>;
               ))}
@@ -1231,7 +1301,10 @@ Math.random () * 100;
       </main>;
     </Layout>;
 )}Math.random () * 100;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }%`;
 top: `$ {Math.random () * 100;
 }%`;
@@ -1241,6 +1314,7 @@ top: `$ {Math.random () * 100;
 }whileInView= {{opacity: 1, y: 0;
 }transition= {{}export default Homepage2041;
 }%`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }/>) );
 }</div> </div> <motion.div initial= {
@@ -1291,6 +1365,8 @@ export default Homepage2041;
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 top: `$ {Math.random () * 100;
 }%`;
 }/>) )}</div> </div> <motion.div initial= {{opacity: 0, coordinate_y: 50;
@@ -1306,6 +1382,7 @@ top: `$ {Math.random () * 100;
 }viewport= {{once: true;
 }> <UltraFuturisticServiceCard2026 service= {service;
 }/> </motion.div>) )}</motion.div> <motion.div > <Link href="/2041-futuristic-services-showcase" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105" > <Eye className="w-5 h-5" /> View All 2041 Services <ArrowRight className="w-5 h-5" /> </a> </motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-6" > Leading the Future </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > See how industry leaders are transforming their businesses with our revolutionary 2041 services. </p> </motion.div> <motion.div > {testimonials.map ( (testimonial, index) => (<motion.div key= {testimonial.name;
+<<<<<<< HEAD
 }</motion.div>) )}</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>)}export default Homepage2041;  )}export default Homepage2041;export default Homepage2041;;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1315,3 +1392,6 @@ export default Homepage2041;
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}</motion.div>) )}</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>)}export default Homepage2041;  )}export default Homepage2041;export default Homepage2041;;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

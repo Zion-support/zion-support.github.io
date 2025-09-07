@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
@@ -51,11 +52,16 @@ export const metadata = {
   description: 'Comprehensive IT services including cloud migration, DevOps, SRE, security, and infrastructure management. Engineered for uptime, efficiency, and scalability.'
 =======
 import Link from "next/link";
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export const metadata = {
   title: "IT Services | Zion Tech Group",
   description: "Comprehensive IT services including cloud migration, DevOps, cybersecurity, and infrastructure management for enterprise-scale solutions.",
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 };
 
 function FeatureItem({ icon, title, description, benefits }: { icon: string; title: string; description: string; benefits: string[] }) {
@@ -88,6 +94,7 @@ function BenefitCard({ icon, title, description }: { icon: string; title: string
 
 export default function ITServicesPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -793,6 +800,17 @@ export default function ITServicesPage() {
           </a>
         </div>
       </section>
+=======
+    <div className="animate-fade-in">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          IT Services
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Comprehensive IT solutions designed to modernize your infrastructure, enhance security, and drive operational efficiency. From cloud migration to DevOps automation, we deliver enterprise-grade IT services.
+        </p>
+      </div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       {/* IT Services Grid */}
       <section className="py-12">
@@ -1438,6 +1456,7 @@ function ContactSection() {
               title="Enterprise Security"
               description="Bank-grade security measures and compliance with industry standards and regulations."
             />
+<<<<<<< HEAD
 =======
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -1468,6 +1487,8 @@ function ContactSection() {
               smoothly.
             </p>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>
         </div>
       </div>
@@ -1475,6 +1496,9 @@ function ContactSection() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

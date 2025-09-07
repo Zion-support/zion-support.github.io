@@ -241,6 +241,7 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
 
@@ -248,3 +249,6 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
 =======
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

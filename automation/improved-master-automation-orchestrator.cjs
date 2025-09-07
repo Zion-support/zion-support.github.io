@@ -19,6 +19,7 @@
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -36,6 +37,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -123,6 +126,7 @@ class ImprovedMasterAutomationOrchestrator {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -147,6 +151,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -223,6 +229,7 @@ const { execSync, spawn } = require('child_process')
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -239,6 +246,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       };
       return this.results.buildTest;
     }
@@ -316,6 +325,7 @@ module.exports = ImprovedMasterAutomationOrchestrator;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -340,6 +350,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.log('\n AUTOMATION REPORT', 'PHASE')
     this.log('=')
     console.log('\n� Phase Results:')
@@ -349,6 +361,7 @@ main
       this.log('⚠  Some automation phases failed. Check the report above.', 'WARNING')
     this.log(' Starting Improved Master Automation Orchestrator', 'PHASE')
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -414,3 +427,9 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

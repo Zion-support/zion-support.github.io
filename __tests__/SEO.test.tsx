@@ -4,15 +4,21 @@ import { render, screen  } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import SEO from '../components/SEO';
 describe("SEO", () => {test("renders without crashing", () => {render(<SEO />)expect(screen.getByTestId('seo')).toBeInTheDocument()})})import React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />)expect(screen.getByRole('main')).toBeInTheDocument()})test('displays correct content',() => { render(<SEO />)expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})})})})})})ursor/automate-test-improve-and-merge-code-646c;
+<<<<<<< HEAD
   });
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   });
 });
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

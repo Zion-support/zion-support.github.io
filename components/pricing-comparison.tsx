@@ -1,5 +1,6 @@
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 export default function PricingComparisonPage() {
 <<<<<<< HEAD
@@ -313,6 +314,8 @@ icon: <DollarSign className='w-6 h-6' />,
       <div className='min-h-screen bg-black'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Check, X, Star, TrendingUp, DollarSign, Zap  } from 'lucide-react';
 export default function PricingComparisonPage() {const serviceComparisons = [;
 starter: '$19/month',professional: '$49/month',enterprise: '$199/month',},competitors: [;
@@ -384,6 +387,7 @@ starter: '$19/month',professional: '$49/month',enterprise: '$199/month',},compet
     {insight: 'Enterprise-grade reliability without enterprise pricing';
       icon: <Star className="w-6 h-6" />;
       color: 'text-yellow-400';
+<<<<<<< HEAD
     <>;
       <Head>;
         <title>Pricing Comparison - Zion Tech Group | How We Stack Up Against the;
@@ -427,13 +431,32 @@ starter: '$19/month',professional: '$49/month',enterprise: '$199/month',},compet
       insight: 'Enterprise-grade reliability without enterprise pricing'
       icon: <Star className="w-6 h-6" />
       color: 'text-yellow-400'
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <>;
       <Head>;
         <title>;
           Pricing Comparison - Zion Tech Group | How We Stack Up Against the;
           Competition;
         </title>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        <meta;
+          name='description';
+          content="See how Zion's micro SaaS services compare to market leaders. Detailed pricing analysis showing significant cost savings and better value.";
+        />;
+        <meta;
+          property='og:title';
+          content='Pricing Comparison - Zion Tech Group';
+        />;
+        <meta;
+          property='og:description';
+          content="Compare Zion's pricing to Jasper AI, Datadog, GitHub Actions and more. Save 30-60% with better features.";
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+      <div className='min-h-screen bg-black'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Hero Section */}
         <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
@@ -452,6 +475,7 @@ starter: '$19/month',professional: '$49/month',enterprise: '$199/month',},compet
               prices.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Button
                 href='#comparison'
@@ -481,6 +505,8 @@ href='/pricing'
           </div>
         </section>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Button;
                 href='#comparison';
                 variant='primary';
@@ -495,8 +521,11 @@ href='/pricing'
 href='/pricing';
                 variant='outline';
                 size='lg';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'>                href="#comparison";
                 variant="primary";
                 size="lg";
@@ -518,6 +547,9 @@ href='/pricing';
                   className="text - center group hover:scale - 105 transition-transform duration-300";
                 >;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white';
               >;
                 View Our Pricing;
@@ -549,10 +581,13 @@ href='/pricing';
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                   >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                   <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {insight.icon}
                   </div>;
                   <p className={`text-lg font-semibold ${insight.color}`}>;
@@ -560,6 +595,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>;
                 </Card>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>
           </div>
@@ -597,6 +633,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </div>;
           </div>;
         </section>;
@@ -623,7 +661,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {serviceComparisons.map((service, serviceIndex) => (<div key={serviceIndex} className='mb-24'>;
                 <div className='text-center mb-16'>;
                   <div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service && service.color} flex items-center justify-center text-4xl mx-auto mb-6`}>;
                     {service && service.icon}
                   </div>;
@@ -681,6 +722,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </span>;
                     </span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <span>;
                       Enterprise:{' '}
 <<<<<<< HEAD
@@ -690,6 +732,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                       </span>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                    <span>Enterprise:{' '}</span>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </span>;
                   </div>;
                 </div>;
@@ -732,6 +777,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               <span className="text-sm">{feature}</span>;
                             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           ))}<span className='text-purple-400 font-semibold'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                         {service.zionPricing.enterprise}
@@ -790,12 +838,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>;
                           <div className='flex items-center justify-center mb-4'>;
                             {[...Array(5)].map((_, i) => (<Star;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                                 key={i}
                                 className={`w-4 h-4 ${i < Math && Math.floor(parseFloat(competitor && competitor.rating))? 'text-yellow-400 fill-current';
                                     : 'text-gray-400';
                                 }`}
                               />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                             ))}
@@ -873,6 +925,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                     <X className='w-3 h-3 text-red-400 mr-2 flex-shrink-0' />
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                             ))}<span className='text-sm text-gray-400 ml-2'>;
                               {competitor.rating}
                             </span>;
@@ -931,6 +985,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                     className='flex items-center';
                                   >;
                                     <X className='w-3 h-3 text-red-400 mr-2 flex-shrink-0' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                               <p className="text-red-400 font-medium mb-1">Cons:</p>
@@ -939,6 +994,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                   <li key={conIndex} className="flex items-center">
                                     <X className="w-3 h-3 text-red-400 mr-2 flex-shrink-0" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                                     {con}
                                   </li>;
                                 ))}
@@ -971,6 +1028,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                               </ul>
                             </div>
                           </div>
@@ -988,6 +1046,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </Card>
                     </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                               </ul>;
                             </div>;
                           </div>;
@@ -1000,11 +1060,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       </Card>;
                     </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   ))}
                 </div>;
               </div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* CTA Section */}
@@ -1077,6 +1141,8 @@ href='/devops-automation'
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* CTA Section */}<section className='py - 24 bg - gradient - to - r from - indigo - 600 to - purple - 600'>;
           <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
             <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
@@ -1138,6 +1204,7 @@ href='/devops-automation';
         </section>;
       </div>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1155,3 +1222,6 @@ href='/devops-automation';
               </Button>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

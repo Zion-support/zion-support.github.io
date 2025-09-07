@@ -252,6 +252,7 @@ this.logError("Code review failed")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const content = fs.readFileSync(filePath, ")
 
@@ -259,3 +260,6 @@ this.logError("Code review failed")
 =======
   const content = fs.readFileSync(filePath, ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  const content = fs.readFileSync(filePath, ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Rocket, Shield, Cpu, Target, Microscope, Users;
@@ -79,6 +80,8 @@ const serviceCategories = [
         name: 'AI Consciousness Evolution'
         href: '/ai-consciousness-evolution-platform'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion  } from 'framer-motion';
   Phone;
   Mail;
@@ -122,7 +125,10 @@ import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
 const contactInfo  = null;services: [;
       {name: 'AI Consciousness Evolution';
         href: '/ai-consciousness-evolution-platform';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
       {name: 'AI Emotional Intelligence';
         href: '/ai-emotion-intelligence-platform';
@@ -130,6 +136,7 @@ const contactInfo  = null;services: [;
       {name: 'AI Creativity Orchestrator';
         href: '/ai-creativity-orchestrator';
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       {
         name: 'Quantum Cloud Infrastructure',
@@ -217,6 +224,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
         name: 'AI HR Management Suite 2030'
         href: '/ai-hr-management-suite-2030'
+=======
+      {name: 'Quantum Cloud Infrastructure',href: '/quantum-cloud-infrastructure',},],},{title: '🧬 Biotech & DNA Computing',services: [;
+      {name: 'DNA Computing Platform',href: '/biotech-dna-computing-platform',},{name: 'Personalized Nutrition',href: '/biotech-personalized-nutrition',},{name: 'Predictive Health Analytics',href: '/ai-predictive-health-analytics',},{ name: 'Research Automation', href: '/advanced-research-automation' },],},{title: '🏙️ Enterprise IT Solutions',services: [;
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },{name: 'Autonomous IT Operations',href: '/autonomous-it-operations-center',},{name: 'AI Enterprise Security',href: '/ai-powered-enterprise-security',},{name: 'Intelligent Data Governance',href: '/intelligent-data-governance',},],},{title: '🌌 Space & Metaverse Tech',services: [;
+      {name: 'Space Mining Automation',href: '/space-mining-automation-platform',},{name: 'Metaverse Digital Reality',href: '/metaverse-digital-reality-platform',},{ name: 'Quantum Research Platform', href: '/quantum-research-platform' },{ name: 'AI Research Assistant', href: '/ai-research-assistant' },],},{title: '🎯 2030 Innovative Micro SAAS',services: [;
+      {name: 'AI Business Intelligence Suite 2030',href: '/ai-business-intelligence-suite-2030',},{name: 'AI HR Management Suite 2030';
+        href: '/ai-hr-management-suite-2030';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
     ]
   },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' }
@@ -352,6 +367,7 @@ const serviceCategories = [;
       { name: 'Predictive Health Analytics', href: '/ai-predictive-health-analytics' },;
       { name: 'Research Automation', href: '/advanced-research-automation' }
     ];
+<<<<<<< HEAD
   };
     title: '🏙️ Enterprise IT Solutions',;
     services: [;
@@ -496,6 +512,8 @@ import {Phone,Mail,MapPin,Globe,Zap,Brain,Atom,Rocket,Shield,Cpu,Target,Microsco
       {name: 'DNA Computing Platform',href: '/biotech-dna-computing-platform',},{name: 'Personalized Nutrition',href: '/biotech-personalized-nutrition',},{name: 'Predictive Health Analytics',href: '/ai-predictive-health-analytics',},{ name: 'Research Automation', href: '/advanced-research-automation' },],},  {title: '🏙️ Enterprise IT Solutions',services: [;
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },      { name: 'DNA Computing Platform', href: '/biotech-dna-computing-platform' },{ name: 'Personalized Nutrition', href: '/biotech-personalized-nutrition' },{ name: 'Predictive Health Analytics', href: '/ai-predictive-health-analytics' },{ name: 'Research Automation', href: '/advanced-research-automation' }
     ];
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }title: '🏙️ Enterprise IT Solutions',services: [;
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },{name: 'Autonomous IT Operations',href: '/autonomous-it-operations-center',},{name: 'AI Enterprise Security',href: '/ai-powered-enterprise-security',},{name: 'Intelligent Data Governance',href: '/intelligent-data-governance',},],},title: '🌌 Space & Metaverse Tech',services: [;
       {name: 'Space Mining Automation',href: '/space-mining-automation-platform',},{name: 'Metaverse Digital Reality',href: '/metaverse-digital-reality-platform',},{ name: 'Quantum Research Platform', href: '/quantum-research-platform' },{ name: 'AI Research Assistant', href: '/ai-research-assistant' },],},{title: '🎯 2030 Innovative Micro SAAS',services: [;
@@ -585,6 +603,9 @@ const socialLinks = [;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Company Info */}{ name: 'Status', href: '/status' },];const socialLinks = [;
   {name: 'LinkedIn',href: 'https://linkedin.com/company/ziontechgroup',icon: Linkedin,},{ name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },{name: 'Facebook',href: 'https://facebook.com/ziontechgroup',icon: Facebook,},{name: 'Instagram',href: 'https://instagram.com/ziontechgroup',icon: Instagram,},{ name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },{ name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },];const certifications = [;
   'ISO 27001 Certified','SOC 2 Type II Compliant','GDPR Compliant','HIPAA Compliant','PCI DSS Level 1','FedRAMP Authorized',];export default function UltraFuturisticFooter2030() {return (<footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>;
@@ -633,6 +654,7 @@ export default function UltraFuturisticFooter2030() {return (<footer className='
                     className='hover:text-purple-400 transition-colors';
                   >;
                     {contactInfo.mobile}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </a>
                 </div>
@@ -695,6 +717,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         <Link
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   </a>;
                 </div>;
                 <div className='flex items-center space-x-3 text-sm text-gray-300'>;
@@ -749,6 +773,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           className='block text-xs text-gray-400 hover:text-purple-300 transition-colors'                          className="block text-xs text-gray-400 hover:text-purple-300 transition-colors">;
                           {service && service.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         </Link>;<div className='space-y-1'>;
                       {category.services.map((service, serviceIndex) => (<Link;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -758,9 +785,12 @@ className='block text-xs text-gray-400 hover:text-purple-300 transition-colors';
                         >;
                           {service.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         </Link>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -770,6 +800,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </div>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             {/* Quick Links */}
@@ -824,6 +855,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>Connect & Trust</span>
               </h4>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Quick Links */}))}
                   <Link;
                     key={index}
@@ -850,7 +883,10 @@ className='block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                     <span>{link.name}</span>;
                   </Link>;
                 ))}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </div>;
 <div className='space-y-2'>;
                 <h5 className='text-sm font-medium text-cyan-300'>Company</h5>;
@@ -874,6 +910,7 @@ className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors';
               </div>;
             </div>;
             {/* Social & Certifications */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -936,6 +973,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='grid grid-cols-1 gap-2'>
                   {certifications.map((cert, index) => (
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <div className='space-y-6'>;
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>;
                 <Users className='w-5 h-5 text-green-400' />;
@@ -978,7 +1017,10 @@ target='_blank';
                   ))}
                 </div>;
               </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {/* Certifications */}
 <div className='space-y-3'>;
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>;
@@ -994,6 +1036,7 @@ target='_blank';
                 </h5>;
                 <div className='grid grid-cols-1 gap-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {certifications && certifications.map((cert, index) => (;
                     <div
                       key={index}
@@ -1004,6 +1047,10 @@ target='_blank';
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                       className='flex items-center space-x-2 text-xs text-gray-400'>;
+=======
+                  {certifications && certifications.map((cert, index) => (<div;
+                      key={index}className='flex items-center space-x-2 text-xs text-gray-400'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       <CheckCircle className='w-3 h-3 text-green-400' />                      <span>{cert}</span>                  <span>Certifications</span>;
                 </h5>;
                 <div className="grid grid-cols-1 gap-2">;
@@ -1012,6 +1059,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <CheckCircle className="w-3 h-3 text-green-400" />;
                       <span>{cert}</span>;
                     </div>;
+<<<<<<< HEAD
               <div className="space-y-3">
                 <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2">
                   <Award className="w-4 h-4" />
@@ -1034,6 +1082,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <CheckCircle className="w-3 h-3 text-green-400" />;
                       <span>{cert}</span>;
                     </div>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className="space-y-3">;
                 <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2">;
                   <Award className="w-4 h-4" />;
@@ -1047,7 +1097,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <CheckCircle className='w-3 h-3 text-green-400' />;
                       <span>{cert}</span>;
                     </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   ))}
                 </div>;
               </div>;
@@ -1098,6 +1151,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Privacy Policy;
                 </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link
                   href='/terms'
 <<<<<<< HEAD
@@ -1131,6 +1185,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </footer>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <Link;
                   href='/terms';
               <div className="flex items-center space-x-4 text-sm text-gray-400">;
@@ -1151,7 +1207,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items-center space-x-2'>;
                   <Star className='w-4 h-4 text-yellow-400' />;
                   <span>5.0/5.0 Rating</span>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </div>;
               </div>;
             </div>;
@@ -1160,10 +1219,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </footer>;
                 </div>;
               </div>;
@@ -1175,6 +1237,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
   )}
+<<<<<<< HEAD
     </footer>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1190,3 +1253,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </footer>)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

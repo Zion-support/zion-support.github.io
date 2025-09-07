@@ -2,6 +2,7 @@ import { useEffect, useState  } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');
@@ -75,6 +76,8 @@ const res = await fetch('/api/partners/usage', {
     const res = await fetch('/api/partners/key', {
       method: 'POST'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function PartnerDashboard() {const [apiKey, setApiKey] = useState('')const [token, setToken] = useState<string | null>(null)import { useEffect, useState  } from 'react';
 export default function PartnerDashboard() {const [apiKey, setApiKey] = useState("")const [token, setToken] = useState<string | null>(null),const [usage, setUsage] = useState<any>(null),export default function PartnerDashboard() {const [apiKey, setApiKey] = useState('')const [token, setToken]  = useState<string | null>(null)const [token, setToken]  = useState<string | null>(null)export default function PartnerDashboard() {const [apiKey, setApiKey] = useState('')const [token, setToken]  = useState<string | null>(null)const [usage, setUsage] = useState<any>(null)const [loading, setLoading] = useState(false)const [usage, setUsage] = useState<any>(null)const [loading, setLoading]  = useState(false)useEffect(() => {const saved = localStorage.getItem("zion_partner_token")if (saved) setToken(saved)}, [])async function getToken() {const res = await fetch("/api/partners/token", {method: "POST";
       headers: { "Content-Type": "application/json" }
@@ -262,6 +265,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (<li key={k}>;
                         {k}: {v as any}
                       </li>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
@@ -274,6 +278,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className="font-medium">By Endpoint</p>
                   <ul className="list-disc ml-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     ))}
                   </ul>;
                 </div>;
@@ -282,6 +288,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
               <p className="text-gray-500 text-sm">No usage yet.</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </ul>
                 </div>
@@ -318,6 +325,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   </ul>;
                 </div>;
               </div>;
@@ -334,14 +343,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </a>;
           <a;
             className='text-blue-600 underline';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             href='/api/partners/sdk?type=graphql'>;
             GraphQL SDK;
           </a>        </div>;
       </div>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   )</div>;
         </div>;
             href='/api/partners/sdk?type=graphql';
@@ -351,6 +366,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -359,3 +375,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

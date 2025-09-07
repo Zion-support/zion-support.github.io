@@ -15,6 +15,7 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "
 
@@ -22,3 +23,6 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
 =======
         "
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

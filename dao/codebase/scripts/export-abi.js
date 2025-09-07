@@ -60,6 +60,7 @@ main()
   console.warn ('Missing artifact for', name)
 }main ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -67,10 +68,13 @@ main()
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function main() {
   const outDir = path.join(__dirname, '../abi')
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir)
   const artifactsDir = path.join(__dirname, '../artifacts/contracts')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,11 +100,14 @@ const path = require('path'),
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function main() {
 
   const outDir = path && path.join(__dirname, '../abi'),
   if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),
   const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,6 +125,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const abis = [
     ['VoteToken.solVoteToken']
     ['ZionDAO.solZionDAO']
@@ -126,6 +135,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ['ConstitutionStorage.solConstitutionStorage']
     ['Treasure/Disbursements.solDisbursements']
     ['Treasure/EpochManager.solEpochManager']]
+<<<<<<< HEAD
 <<<<<<< HEAD
   for (const [rel, name] of abis) {
 <<<<<<< HEAD
@@ -183,6 +193,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   for (const [rel, name] of abis) {} else {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  for (const [rel, name] of abis) {} else {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       console.warn('Missing artifact for', name)
     }
   }
@@ -226,6 +239,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
+<<<<<<< HEAD
 
 }main ();main(),
 
@@ -235,3 +249,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 main();
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}main ();main(),
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

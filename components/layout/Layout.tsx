@@ -33,6 +33,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 =======
 import React from 'react';
+<<<<<<< HEAD
 
 import React, { ReactNode } from 'react';
 
@@ -53,6 +54,8 @@ import Footer from '../Footer';
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Head from 'next/head';
 import React, { ReactNode } from 'react';
 React from;
@@ -60,7 +63,10 @@ React from;
 import Header from 'react';
   './Header';import Footer from 'react';
   './Footer';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import Header from '../Header';
 import Footer from '../Footer';
@@ -149,6 +155,7 @@ interface LayoutProps  {children: React.ReactNode;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -170,6 +177,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -192,6 +201,7 @@ export default function Layout({ children, title = "Zion Tech Group", descriptio
     </>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -247,3 +257,5 @@ main
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

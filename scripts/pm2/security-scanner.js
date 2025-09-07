@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,6 +30,8 @@
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
  ;
 ursor/automate-test-improve-and-merge-code-646c;
 const fs = require('fs')const path = require('path')const { execSync } = require('child_process')class SecurityScanner {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString()const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}async scanDependencies() {try {this.log('🔒 Scanning dependencies for vulnerabilities...')const auditResult = execSync('npm audit --json', {cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'})const audit = JSON.parse(auditResult)return {success: true;
@@ -700,6 +703,7 @@ scanner && scanner.run().catch(error = > {; process && process.exit(1)}));}),);
 =======
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 scanner.run().catch(error = > {process.exit(1)}));}),);
@@ -709,6 +713,8 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -718,6 +724,9 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -1341,6 +1350,7 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1362,6 +1372,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -1402,12 +1414,15 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const scanner = new SecurityScanner ();
 scanner.run ().catch (error = > { process.exit (1)}));}), );
 }), );
@@ -2095,6 +2110,7 @@ scanner.run().catch(error => {,
 module.exports = SecurityScanner;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -2136,3 +2152,5 @@ scanner.run().catch(error = > {; process.exit(1)}));
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -117,6 +117,7 @@ const { execSync } = require("child_process")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   process.on("SIGTERM")
 
@@ -124,3 +125,6 @@ const { execSync } = require("child_process")
 =======
   process.on("SIGTERM")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  process.on("SIGTERM")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

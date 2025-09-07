@@ -67,14 +67,18 @@ type Props = {
   level: string,
   isFree: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         onChange={e => onChange({ category: e.target.value, level, isFree })}
       >
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
   category: string
   level: string
   isFree: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +97,8 @@ type Props = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   onChange: (next: { category: string, level: string, isFree: string }) => void
 }
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
@@ -105,6 +111,9 @@ type Props = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -167,12 +176,15 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 type Props = {
   category: string;
   level: string;
@@ -229,8 +241,11 @@ className='border rounded px-3 py-2 bg-white dark:bg-black';
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
 =======
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   category: string
   level: string
   isFree: string
@@ -269,6 +284,7 @@ class ErrorBoundary extends React.Component {
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value=''>All Categories</option>
 export default function FilterBar({ category, level, isFree, onChange }: Props) {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -279,11 +295,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <option value=''>All Categories</option>
 export default function FilterBar({ category, level, isFree, onChange }: Props) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
       <select
         className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={category}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -297,6 +316,8 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         onChange={(e) => onChange({ category: e.target.value, level, isFree })}
       >
         <option value="">All Categories</option>
@@ -343,6 +364,7 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -352,10 +374,13 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -382,6 +407,8 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   is_free: string;
   on_change: (next: { category: string; level: string; is_free: string }) => void;
 }export default /**;
@@ -456,10 +483,14 @@ function FilterBar() {return (<div className="grid grid - cols - 1 sm:grid - col
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -468,6 +499,8 @@ function FilterBar() {return (<div className="grid grid - cols - 1 sm:grid - col
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         onChange={e => onChange({ category, level: e.target.value, isFree })}
       >;
         <option value=''>All Levels</option>        <option>Beginner</option>        value={level}
@@ -513,6 +546,7 @@ function FilterBar() {return (<div className="grid grid - cols - 1 sm:grid - col
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -533,3 +567,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

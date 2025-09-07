@@ -53,6 +53,9 @@ if (return <div > Loading…</div>) {$2;
         <pre className="whitespace - pre - wrap bg - gray-50 p-3 rounded">{episode.transcript}</pre>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)}
     <div className='space-y-4'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -77,7 +80,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (<div className='space-y-4'>;
       <h1 className='text-2xl font-bold'>{episode.title}</h1>;
       <p className='text-sm text-gray-600'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         Guest: {episode.invitee?.name} ·{' '}
         {new Date(episode.createdAt).toLocaleString()}
       </p>;
@@ -89,6 +95,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <h2 className='text-xl font-semibold'>Transcript</h2>;
         <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>;
           {episode.transcript}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </pre>
       </div>
@@ -106,3 +113,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        </pre>;
+      </div>;
+    </div>;
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

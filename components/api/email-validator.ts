@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     isRoleBased: boolean;
     isFreeProvider: boolean
   }
@@ -89,6 +90,8 @@ interface EmailValidationResult {
     // Calculate score (0-100)
     let score = 100;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 interface EmailValidationResult  {email: string;
   is_valid: boolean;
@@ -123,12 +126,16 @@ export default async function handler() {if (req.method !== 'POST') {return res.
     const freeProviders = [;
       'gmail.com','yahoo.com','hotmail.com','outlook.com','aol.com','icloud.com','protonmail.com','mail.com','yandex.com',];
     const isFreeProvider  = freeProviders.some(provider => domain === provider)// Calculate score (0-100)let score = 100;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (!hasValidFormat) score -= 50;
     if (!hasValidDomain) score -= 20;
     if (isDisposable) score -= 30;
     if (isRoleBased) score -= 15;
     if (isFreeProvider) score -= 10;
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Generate suggestions
     const suggestions: string[] = []
@@ -207,6 +214,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // Generate suggestions;
     const suggestions: string[] = [];
     if (!hasValidFormat) {} catch (error) {console && console.error('Email validation error:', error)res && res.status(500).json({ error: 'Internal server error' })}      email;
@@ -238,5 +247,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     res.status(200).json(result)} catch (error) {console.error('Email validation error:', error)res.status(500).json({ error: 'Internal server error' })}
     res.status(500).json({ error: 'Internal server error' })}
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -8,6 +8,7 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 import React, { useCallback, useEffect, useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import dynamic from 'next/dynamic';
 const isClient = typeof window !== 'undefined';
   }) => void;
@@ -197,6 +198,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {error}
           </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 type Web3LoginModalProps = {isOpen: boolean;
   onClose: () => void;
   onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void;
@@ -265,7 +268,10 @@ const isClient = typeof window !== 'undefined';
     </div>;
   )return <ModalInner {...props} />;        </div>;
         {error && (<div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         )}
         <div className="space-y-3">;
           <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">;
@@ -288,6 +294,7 @@ const isClient = typeof window !== 'undefined';
           </button>;
           <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">;
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -330,6 +337,8 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </button>;
         </div>;
         <div className="mt-4 flex justify-end">;
@@ -342,9 +351,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   return <ModalInner {...props} />;return <ModalInner {...props} />;
   return <ModalInner {...props} />;
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   return <ModalInner {...props} />;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

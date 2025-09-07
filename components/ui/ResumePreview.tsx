@@ -6,6 +6,7 @@ export type ResumeData = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 export type ResumeData = {;
 import React, { forward_ref } from 'react';
 export type ResumeData = {
@@ -15,17 +16,23 @@ export type ResumeData = {
     email?: string;
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 export type ResumeData = {import React, { forward_ref } from 'react';
 export type ResumeData = {name: string;
   contact?: {import React, { forwardRef } from 'react';
 export type ResumeData = any;
   contact?: {email?: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     phone?: string;
     location?: string;
     website?: string;
     linkedin?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     github?: string;
@@ -34,6 +41,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     github?: string;
   }  summary?: string;
+=======
+    github?: string;}  summary?: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   skills?: string[];
   technologies?: string[];
   experience?: Array<{;
@@ -41,6 +51,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     start?: string;
     end?: string;
     location?: string;
+<<<<<<< HEAD
   contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   summary?: string;
@@ -74,6 +85,8 @@ bullets?: string[];
     start?: string;
     end?: string;
     location?: string;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string }}summary?: string;
   skills?: string[];
   technologies?: string[];
@@ -228,7 +241,10 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 )export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {const portfolioItems = (data.portfolio || []).slice(0,Math.max(0, maxPortfolioItems))>;
         <div className='p-8'>;
     const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems))export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {const portfolioItems = (data && data.portfolio || []).slice(0,Math && Math.max(0, maxPortfolioItems)){/* Header */}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <header className='mb-6'>;
             <h1 className='text-3xl font-bold text-gray-900 dark:text-white'>;
               {data && data.name}
@@ -243,6 +259,7 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
           {/* Header */}
           <header className='mb - 6'>;
             <h1 className='text - 3xl font - bold text - gray - 900 dark:text - white'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               {data.name}
@@ -277,6 +294,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {data.name}</h1>;
             <div className='mt - 2 text - sm text - gray - 600 dark:text - gray - 300 space - x-3 flex flex - wrap'>              {data.contact?.email && <span>{data.contact.email}</span>}
               {data.contact?.phone && <span>{data.contact.phone}</span>}
@@ -293,10 +312,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   target='_blank';
                   rel='noreferrer';
                 >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {data.contact.website}
                 </a>)}
               {data.contact?.linkedin && (<a;
@@ -320,6 +342,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </header>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -336,6 +359,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <SectionTitle>Professional Summary</SectionTitle>
               <p className='mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </div>;
           </header>;{/* Summary */}{data.summary && (<section className="mb-5">;
               <SectionTitle>Professional Summary</SectionTitle>;
@@ -354,6 +379,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </section>;
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Skills & Technologies */})}{/* Skills & Technologies */}
           {(data.skills?.length || data.technologies?.length) && (<section className='mb-5'>;
               <SectionTitle>Skills & Technologies</SectionTitle>;
@@ -409,9 +437,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='mt-2 text-sm flex flex-wrap gap-2'>;
                 {data.skills?.map((s, idx) => (<span;
                     key={`skill-${idx}`}className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                    {s}
+<<<<<<< HEAD
 =======
                     className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                    {s}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   </span>;
                 ))}
                 {data && data.technologies?.map((t, idx) => (<span;
@@ -468,6 +499,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     key={`tech-${idx}`}
                     className='px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   >                  <span key={`tech-${idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700">;className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700';
                   >;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -560,7 +594,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </h3>;
                       <div className="text-xs text-gray-600 dark:text-gray-300">;
 <section className='mb-5'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <SectionTitle>Work Experience</SectionTitle>;
               <div className='mt-2 space-y-3'>;
                 {data.experience.map((role, idx) => (<div key={`exp-${idx}`}>;
@@ -647,6 +684,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           {data.education?.length ? (
 <section className='mb-5'>
               <SectionTitle>Education</SectionTitle>
@@ -711,6 +749,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div key={`proj-${idx}`} className='text-sm'>
                     <div className='font-medium text-gray-900 dark:text-white'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {data.education?.length ? (<section className="mb-5">;
               <SectionTitle>Education</SectionTitle>;
               <div className="mt-2 space-y-2">;
@@ -820,6 +860,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             key={`proj-${idx}-t-${tIdx}`}className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                            {t}                    )}
                     {p && p.technologies?.length ? (<div className="mt-1 text-xs flex flex-wrap gap-2">;
                         {p && p.technologies.map((t, tIdx) => (<span key={`proj-${idx}-t-${tIdx}`} className="px-2 py-0 && 0.5 rounded border border-gray-200 dark: border-gray-700">;
+<<<<<<< HEAD
 =======
                             className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                            {t}                    )}
                     {p && p.technologies?.length ? (;
@@ -827,11 +868,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {p && p.technologies.map((t, tIdx) => (;
                           <span key={`proj-${idx}-t-${tIdx}`} className="px-2 py-0 && 0.5 rounded border border-gray-200 dark: border-gray-700">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {p.title}
                       {p.link && (<a className="ml - 2 underline text - blue - 600 dark:text - blue - 400" href={p.link} target="_blank" rel="noreferrer">;
                           link;
                         </a>)}
                     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     {p.description && (className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700';
                           >;
@@ -839,6 +883,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                     {p.description && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                    {p.description && (className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700';
+                          >;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                             {t}
                           </span>;
                         ))}
@@ -851,6 +899,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ) : null}
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     );
   }
@@ -866,6 +915,8 @@ ResumePreview.displayName = 'ResumePreview';
 export default ResumePreview;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     )}
 )export default ResumePreview;ResumePreview.displayName = 'ResumePreview';export default ResumePreview;
                       <p className='text - gray - 700 dark:text - gray - 300'>;
@@ -886,9 +937,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </section>) : null}
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>)}ResumePreview.displayName = 'ResumePreview';export default ResumePreview;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       </div>);
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      </div>)}ResumePreview.displayName = 'ResumePreview';export default ResumePreview;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

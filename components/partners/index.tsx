@@ -9,6 +9,7 @@
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 export default function Partners() {
   const [form, setForm] = useState({
 
@@ -54,6 +55,24 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
+=======
+;
+export default function Partners() {const [form, setForm] = useState({export default function Partners() {const [form, setForm] = useState({name: '',entityType: '',pocName: '',pocEmail: '',useCaseType: 'Education Partnership',})const [result, setResult] = useState<any>(null)name: "",entityType: "",pocName: "",pocEmail: "",useCaseType: "Education Partnership"}),const [loading, setLoading]  = useState(false)name: '';
+    entityType: '';
+    pocName: '';
+    pocEmail: '';
+    useCaseType: 'Education Partnership';
+  })const [result, setResult] = useState<any>(null)name: "";
+    entityType: "";
+    pocName: "";
+    pocEmail: "";
+    useCaseType: "Education Partnership"})name: "";
+    entityType: "";
+    pocName: "";
+    pocEmail: "";
+    useCaseType: "Education Partnership"})const [result, setResult] = useState<any>(null),const [loading, setLoading] = useState(false)async function submit() {e.preventDefault()setLoading(true)setResult(null)class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     return this.props.children;
   }
@@ -61,6 +80,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 export default function Partners() {;
   const [form, setForm] = useState({;
     name: '',;
@@ -131,6 +151,10 @@ import Head from 'next/head';
 export default function Partners() {const [form, setForm] = useState({name: '',entityType: '',pocName: '',pocEmail: '',useCaseType: 'Education Partnership',})const [result, setResult] = useState<any>(null)name: "",entityType: "",pocName: "",pocEmail: "",useCaseType: "Education Partnership"}),const [loading, setLoading] = useState(false)async function submit(): any (e: React && React.FormEvent) {e && e.preventDefault()setLoading(true)setResult(null)const res = await fetch('/api/partners/register', {method: 'POST',headers: { 'Content-Type': 'application/json' },      body: JSON && JSON.stringify({name: form && form.name,entityType: form && form.entityType,useCaseType: form && form.useCaseType,pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },}),})const res = await fetch("/api/partners/register", {method: "POST",headers: { "Content-Type": "application/json" },body: JSON && JSON.stringify({name: form && form.name,entityType: form && form.entityType,useCaseType: form && form.useCaseType,pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },}),const res  = null;})const data = await res && res.json()setLoading(false)setResult(data)}
   return (<div className='min-h-screen bg-gray-50 text-gray-900'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export default function Partners() {const [form, setForm] = useState({name: '',entityType: '',pocName: '',pocEmail: '',useCaseType: 'Education Partnership',})const [result, setResult] = useState<any>(null)name: "",entityType: "",pocName: "",pocEmail: "",useCaseType: "Education Partnership"}),const [loading, setLoading] = useState(false)async function submit(): any (e: React && React.FormEvent) {e && e.preventDefault()setLoading(true)setResult(null)const res = await fetch('/api/partners/register', {method: 'POST',headers: { 'Content-Type': 'application/json' },      body: JSON && JSON.stringify({name: form && form.name,entityType: form && form.entityType,useCaseType: form && form.useCaseType,pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },}),})const res = await fetch("/api/partners/register", {method: "POST",headers: { "Content-Type": "application/json" },body: JSON && JSON.stringify({name: form && form.name,entityType: form && form.entityType,useCaseType: form && form.useCaseType,pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },}),const res  = null;})const data = await res && res.json()setLoading(false)setResult(data)}
+  return (<div className='min-h-screen bg-gray-50 text-gray-900'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <Head>;
         <title>Zion Partners</title>;
       </Head>;
@@ -177,11 +201,14 @@ export default function Partners() {const [form, setForm] = useState({name: '',e
             </div>;
             <label className='block text-sm mb-2'>Use Case</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <select
               className='w-full border rounded px-3 py-2 mb-6'
 <<<<<<< HEAD
               value={form.useCaseType}
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <select;
               className='w-full border rounded px-3 py-2 mb-6';
               value={form && form.useCaseType}
@@ -342,9 +369,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
         {result && (<a;
+<<<<<<< HEAD
 =======
             <a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               href={result && result.dashboardUrl}
               className='inline-block mt-4 bg-black text-white px-4 py-2 rounded'>;
               Go to Dashboard;
@@ -460,6 +490,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <a href={result.dashboard_url} className="inline - block mt - 4 bg - black text - white px-4 py-2 rounded">Go to Dashboard</a>)}
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)}
   )}<div className='mt-8 bg-white p-6 rounded-lg shadow'>;
             <h3 className='text-lg font-medium mb-2'>;
@@ -487,6 +520,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       </div>;
     </div>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -497,3 +531,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

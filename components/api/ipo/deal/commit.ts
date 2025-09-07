@@ -37,6 +37,7 @@ function handler() {if () return) {$2;
 import { requireSuperadminApi  } from '../../../../utils/api/auth';
 export default function handler() {if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const { amount } = req.body || {},const commits = null;
+<<<<<<< HEAD
   res.status(200).json(record)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -89,3 +90,6 @@ function handler() {
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  res.status(200).json(record)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

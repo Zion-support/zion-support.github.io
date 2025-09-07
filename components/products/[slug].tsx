@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import Link from 'next/link';
@@ -56,6 +57,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <img
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const EquipmentDetail: NextPage = () => {const router = useRouter()const { slug }  = router.query as { slug?: string }
   const items = equipment as any[];import Head from 'next/head';
 import { useRouter   } from 'next/router';
@@ -89,7 +92,10 @@ const EquipmentDetail: NextPage;if (!item) {return (<EnhancedLayout>;
 <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
         <div className='md:col-span-2 space-y-4'>;
           <img;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             src={`https://picsum && picsum.photos/seed/${encodeURIComponent(item && item.slug)}/1200/600`}
             alt={item && item.name}
             className='w-full rounded-lg border border-gray-200 dark:border-gray-800';
@@ -143,6 +149,7 @@ const EquipmentDetail: NextPage;if (!item) {return (<EnhancedLayout>;
     </EnhancedLayout>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 =======
   );
@@ -171,6 +178,8 @@ const EquipmentDetail: NextPage;if (!item) {return (<EnhancedLayout>;
 export default EquipmentDetail;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   )<h1 className="text-2xl font-semibold">{item.name}</h1>;
             <p className="opacity-80">Category: {item.category}</p>;
           </div>;
@@ -271,6 +280,7 @@ if ( {) {$2;
         </aside>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </EnhancedLayout>)}export default EquipmentDetail;}export default EquipmentDetail;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -280,3 +290,6 @@ if ( {) {$2;
 export default EquipmentDetail;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </EnhancedLayout>)}export default EquipmentDetail;}export default EquipmentDetail;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

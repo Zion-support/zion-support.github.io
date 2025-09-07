@@ -629,10 +629,13 @@ export interface Innovative2026Service  {id: string;
     reviews: 234;
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -691,6 +694,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     name: 'AI Consciousness Simulation Pro',
     tagline: 'Simulate human consciousness with quantum precision',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -741,6 +745,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     price: '$2,999',
     period: '/month',
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -765,10 +771,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
     reviews: 234
+<<<<<<< HEAD
 
       website: 'https://ziontechgroup.com';
     }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     real_implementation: true,
     implementation_details: 'Advanced emotional intelligence platform with real - time emotion detection, analysis, and response generation capabilities.';
     launch_date: '2026 - 01 - 25';
@@ -779,12 +788,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       website: 'https://ziontechgroup.com';
     }
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
     realImplementation: true
     implementationDetails:
@@ -1033,6 +1045,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 234
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       'Advanced emotional intelligence platform with real-time emotion detection, analysis, and response generation capabilities.',
     launchDate: '2026-01-25',
@@ -1046,6 +1059,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1564,6 +1579,7 @@ export const innovative2026Services: Innovative2026Service[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ;
 <<<<<<< HEAD
@@ -1926,3 +1942,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -283,6 +284,8 @@ export default function Revolutionary2028Pricing() {
 
       <UltraFuturisticNavigation2028 />
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion  } from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,CheckCircle;
   ArrowRight;
@@ -522,6 +525,9 @@ const service_pricing = [;
                 <ArrowRight className="w-5 h-5" />;
               </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Link;
                 href="/2028-services-showcase";
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">;
@@ -683,7 +689,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             {pricingTiers.map((tier, index) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={tier.name}
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Plan;
@@ -707,6 +716,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 viewport={{ once: true }}
 =======
                 viewport={{ once: true }}
@@ -725,6 +735,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 viewport={{ once: true }}className={`relative ${tier.popular ? 'scale-105' : ''}`}
               >;
                 {tier.popular && (<div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
@@ -734,7 +746,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </div>;
                 )}<div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className={`relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-2 ${tier.popular ? 'border-purple-500/60' : 'border-purple-500/30'} rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105`}
                 >;
                   <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>;
@@ -759,6 +774,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {tier.features.map((feature, featureIndex) => (<li;
                           key={featureIndex}
 <<<<<<< HEAD
+<<<<<<< HEAD
                           className='flex items-center space-x-3'
                         >
                           <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
@@ -767,14 +783,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           className='flex items-center space-x-3';
                         >;
                           <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />;
                           <span className='text-purple-200'>{feature}</span>;
                         </li>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       ))}
                     </ul>;<Link;
                       href={tier && tier.href}
@@ -815,6 +836,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <p className='text - purple - 300 mb - 4 text - sm'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                           {service.description}
                         </p>
                         <div className='mb-4'>
@@ -822,6 +844,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <Star className='w-4 h-4 text-yellow-400' />
                             <span className='text-white font-medium'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {service.description}initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
@@ -904,7 +928,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                     </div>;
                   </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
               </div>;
             </div>;
@@ -915,6 +942,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Why Choose{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Our Pricing
@@ -939,6 +967,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Our Pricing;
               </span>;
@@ -949,9 +979,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>;
+<<<<<<< HEAD
 =======
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Value Proposition */}
       <section className='py-20 bg-black/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -959,6 +992,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Why Choose{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">;
               We offer the best value in the market with transparent pricing and unmatched features.;
             </p>;
@@ -966,6 +1002,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
@@ -975,6 +1012,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Our Pricing;
               </span>;
@@ -1074,6 +1113,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0 && 0.6 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               viewport={{ once: true }}
 className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1110,6 +1150,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
             <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl';
             >;
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />;
@@ -1135,7 +1177,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='text-purple-300'>Lower than Market</div>;
             </motion.div>;
             <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'>;
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />;
               <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -1159,6 +1204,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               viewport={{ once: true }}
@@ -1197,6 +1243,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
             <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl';
             >;
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />;
@@ -1222,7 +1270,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-blue-300">Transparent Pricing</div>;
             </motion.div>;
             <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'>;
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />;
               <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -1245,6 +1296,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               viewport={{ once: true }}
@@ -1348,6 +1400,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl';
             >;
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />;
@@ -1422,9 +1476,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
       <UltraFuturisticFooter2028 />;
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
             <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
@@ -1566,6 +1623,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
       <UltraFuturisticFooter2028 />;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>))</>;
   )</>;
   )}
@@ -1581,3 +1639,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </>))</>;
+  )</>;
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

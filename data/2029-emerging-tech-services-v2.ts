@@ -17,6 +17,7 @@ id: string;name: string;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface EmergingTechService2029V2 {;
 export interface EmergingTechService2029V2 {
@@ -49,6 +50,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   description: string;
   category: string[];
@@ -308,6 +312,7 @@ mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://zi
     email: string;
     website: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     address: string
   }
 }
@@ -324,6 +329,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     address: string;
   }
 ;
@@ -388,6 +398,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     compliance: ['FIPS 140 - 2', 'Common Criteria', 'SOC 2', 'ISO 27001'],    scalability: 'Enterprise - grade, global deployment',    roi: '600% within 24 months',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -402,6 +413,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     deployment: 'Hardware appliances, cloud options',
     maintenance: 'Continuous updates, security patches',
     training: 'Quantum security training, certification',
@@ -447,11 +462,14 @@ whiteLabel: 'Available for security providers',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 
 
     security: 'Quantum-safe encryption, zero-trust',
     backup: 'Secure backup, disaster recovery',
     monitoring: 'Real-time security monitoring',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     analytics: 'Security insights, threat intelligence',
     customization: 'Custom security policies, integration',
     whiteLabel: 'Available for security providers', affiliate: '20% commission for referrals',
@@ -622,6 +640,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
 <<<<<<< HEAD
+<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
 <<<<<<< HEAD
@@ -640,6 +659,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     price: '$25,999/month',
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },;
@@ -813,6 +834,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     funding: 'Series A funding, $80M valuation';
     exit: 'Acquisition by major creative platform';
     contact: {];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists';
+<<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1024,6 +1046,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     support: ['24/7 creative supportDesign expertsImplementation help'];
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1554,6 +1578,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -1562,6 +1587,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     deployment: 'Laboratory setup, cloud integration',
     maintenance: 'Continuous optimization, biological monitoring',
     training: 'Biotech training, safety protocols',
@@ -1598,17 +1625,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 export interface EmergingTechService2029V2 {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1624,11 +1655,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
 ];
 
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1797,6 +1831,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
@@ -2039,6 +2075,9 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     funding: 'Series C funding, $500M valuation',
     exit: 'IPO or financial acquisition',
     contact: {
@@ -2109,6 +2148,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -2133,3 +2173,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

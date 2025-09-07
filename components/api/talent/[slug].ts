@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -10,6 +11,10 @@ import { TALENT_PROFILES as LOCAL } from '@/data/talent';
 import { supabase as supabaseClient   } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import { supabase as supabaseClient   } from '@/utils/supabase/client';
+import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import type { TalentProfile } from '@/utils/types/talent';
 const hasSupabase = null;
 function applyTranslations() {if (!lang |!item.translations) return { item, translated: false }
@@ -27,6 +32,7 @@ return {item: { ...item, ...translated },translated: Object.keys(translated).len
         lang;
       )return res.status(200).json({ item, translated })}
     const base = LOCAL.find(t => t.slug === slug) |null;
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!base) return res.status(404).json({ error: 'Not found' });
 <<<<<<< HEAD
@@ -62,12 +68,17 @@ import type { TalentProfile } from '@/utils / types / talent';
 ;
 const has_supabase =;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (!base) return res.status(404).json({ error: 'Not found' })const { item, translated } = applyTranslations(base, lang)return res && res.status(200).json({ item, translated })} catch (e: any) {return res && res.status(500).json({ error: e && e.message })}export default async function handler() {try {if (hasSupabase) {const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single()if (error) throw error;
       const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang)return res && res.status(200).json({ item, translated })}
     const { item, translated } = applyTranslations(base, lang)return res && res.status(200).json({ item, translated })return res.status(200).json({ item, translated })} catch (e: any) {import { supabase, as, supabase_client } from '@/utils / supabase / client';
 import { TALENT_PROFILES, as, LOCAL } from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';const has_supabase =;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
   !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;const has_supabase  = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;/**;
  * apply_translations - Function description;
@@ -108,6 +119,7 @@ if (throw error) {$2;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const { item, translated } = apply_translations (base, lang);
     return res.status (200).json ({ item, translated });
   } catch (e: any) {
@@ -123,3 +135,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    const { item, translated } = apply_translations (base, lang)return res.status (200).json ({ item, translated })} catch (e: any) {return res.status (500).json ({ error: e.message })}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -37,6 +38,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type IntegrationCategory = 'crm' | 'ats';export type IntegrationCategory = 'crm' | 'ats';export type IntegrationCategory = 'crm' | 'ats';ursor/fix-website-loading-errors-and-merge-6662;
 export type IntegrationCategory = 'crm' | 'ats';export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';export type IntegrationProviderId =;
   | 'salesforce';
@@ -48,7 +52,10 @@ export type IntegrationCategory = 'crm' | 'ats';export type IntegrationProviderI
 export type IntegrationCategory = 'crm' | 'ats';
 
 export type IntegrationCategory = 'crm' | 'ats';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type IntegrationProviderId =;
   | 'salesforce';
@@ -57,6 +64,7 @@ export type IntegrationProviderId =;
   | 'pipedrive';
   | 'greenhouse';
   | 'lever';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,6 +89,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   | 'workable';| 'bamboohr';| 'workable';
   | 'bamboohr';
 export interface IntegrationProviderMeta  {id: IntegrationProviderId, name: string,category: IntegrationCategory, description?: string,  oauthScopes?: string[];
@@ -120,11 +130,14 @@ export interface ManualOverride  {job_id: string;
   timestamp: number;payload: Record < string, any>;;
 export interface IntegrationsState  {export interface ManualOverride  {jobId: string;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type IntegrationCategory = 'crm' | 'ats';
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type IntegrationProviderId =
@@ -134,6 +147,7 @@ export type IntegrationProviderId =
   | 'pipedrive'
   | 'greenhouse'
   | 'lever'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,6 +169,8 @@ export type IntegrationProviderId =
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   | 'workable';
 
   | 'bamboohr';
@@ -184,6 +200,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -195,11 +212,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId, name: string,
   category: IntegrationCategory, description?: string,  oauth_scopes?: string[];
   icon?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,6 +234,8 @@ export interface IntegrationProviderMeta {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: IntegrationProviderId, name: string,
   category: IntegrationCategory, description?: string,  oauth_scopes?: string[];
   icon?: string;
@@ -221,6 +243,7 @@ export interface IntegrationProviderMeta {
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
   icon?: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -262,12 +285,15 @@ export type IntegrationCategory = any;
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface SyncRules {
   // CRM rules;
   autoCreateContacts?: boolean;
   pushNotesMode?: 'auto' | 'manual';
   // ATS rules;
   autoSyncApplicants?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -306,10 +332,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   expiresAt?: number;
   connectedAt?: number;
   syncRules?: SyncRules;
   lastSyncAt?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -350,11 +379,14 @@ export interface SyncLogEntry {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   timestamp: number;
   provider_id: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -383,6 +415,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface ManualOverride {
   job_id: string;
   disableCrmSync?: boolean;
@@ -396,6 +430,7 @@ export interface ManualOverride {
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+<<<<<<< HEAD
 ;
 
 export interface ZapierEvent {
@@ -418,12 +453,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface ManualOverride {;
   jobId: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
 
 export interface ZapierEvent {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -445,6 +483,8 @@ export interface ZapierEvent {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   type: 'zion && zion.job.posted' | 'zion && zion.talent.matched';
   timestamp: number;
@@ -453,6 +493,7 @@ export interface ZapierEvent {;
 ;
 
 export interface IntegrationsState {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -477,6 +518,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export interface ManualOverride {;
   jobId: string;
@@ -490,7 +533,10 @@ export interface ManualOverride {;
   overrides: ManualOverride[];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   events: ZapierEvent[];  events: ZapierEvent[];
 }}
 }
@@ -503,8 +549,11 @@ export interface ManualOverride {;
 }export interface SyncLogEntry  {id: string, timestamp: number,providerId: IntegrationProviderId, level: 'info' | 'warn' | 'error',action: string,details?: Record<string, any>;
 }
 export interface ManualOverride  {jobId: string, disableCrmSync?: boolean,disableAtsSync?: boolean;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   events: ZapierEvent[];  events: ZapierEvent[]
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -526,6 +575,7 @@ export interface IntegrationsState {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -548,6 +598,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface SyncLogEntry {
   id: string, timestamp: number,
   providerId: IntegrationProviderId, level: 'info' | 'warn' | 'error',
@@ -565,6 +617,7 @@ export interface IntegrationsState {
   events: ZapierEvent[]
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -600,3 +653,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   events: ZapierEvent[];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

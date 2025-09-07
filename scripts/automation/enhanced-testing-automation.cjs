@@ -176,6 +176,7 @@ ${report.qualityGates ? ` All quality gates passed successfully!" : "`}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Testing automation "failed": ")
 
@@ -183,3 +184,6 @@ ${report.qualityGates ? ` All quality gates passed successfully!" : "`}
 =======
   console.error(" Testing automation "failed": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" Testing automation "failed": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

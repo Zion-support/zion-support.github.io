@@ -9,6 +9,7 @@ export default function InteractiveSearch({
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   placeholder?: string;
 }) {
@@ -52,6 +53,8 @@ import React from "react";
 interface InteractiveSearchProps {;
   placeholder?: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
@@ -141,18 +144,25 @@ function InteractiveSearch() {const handle_submit = (e: React.FormEvent) =>: any
         </button>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </form>)}}
   )}}
   )}}className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500";
       />;
       {value && (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           onClick={() => setValue('')}
 className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300';
         >;
           ✕;
         </button>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </motion.div>
   );
@@ -171,3 +181,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </motion.div>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </motion.div>;
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

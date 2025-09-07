@@ -6,6 +6,7 @@ export {}module.exports = {}module.exports = {}
 // Mock test for utils
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe('Utils', () => {
   it('should work correctly', () => {
     expect(true).toBe(true);
@@ -24,6 +25,14 @@ export {};'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+describe("Utils", () => {
+  it("should work correctly", () => {
+    expect(true).toBe(true);
+  });
+});
+export {};'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export {};
 

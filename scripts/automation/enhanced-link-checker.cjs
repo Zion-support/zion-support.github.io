@@ -175,6 +175,7 @@ console.log(""� Starting Enhanced Link Checker Automation...")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Link checker automation "failed")
 
@@ -182,3 +183,6 @@ console.log(""� Starting Enhanced Link Checker Automation...")
 =======
   console.error(" Link checker automation "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" Link checker automation "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

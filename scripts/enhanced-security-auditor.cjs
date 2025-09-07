@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-security-auditor.cjs
 =======
 :backup-problematic-files/scripts/enhanced-security-auditor.cjs
@@ -373,6 +374,8 @@ auditor;
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:scripts/enhanced-security-auditor.cjs
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -429,6 +432,7 @@ const fs = require("fs")";const path = require("path")""
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-security-auditor.cjs
   .catch(error => {);    console.error(" Security audit "failed":", error.message);"}  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
   .catch(error => {);    console.error(" Security audit "failed":", error.message);"}  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
@@ -469,6 +473,8 @@ auditor
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======

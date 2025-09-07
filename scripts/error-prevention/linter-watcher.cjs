@@ -21,6 +21,7 @@ class LinterWatcher {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
@@ -28,6 +29,9 @@ class LinterWatcher {}
 =======
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
@@ -51,6 +55,7 @@ class LinterWatcher {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -58,6 +63,9 @@ class LinterWatcher {}
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Lint check passed ✓')) {}
@@ -83,6 +91,7 @@ class LinterWatcher {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -90,6 +99,9 @@ class LinterWatcher {}
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Auto-fix completed ✓')) {}
@@ -131,6 +143,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = LinterWatcher;
 
@@ -138,3 +151,6 @@ module.exports = LinterWatcher;
 =======
 module.exports = LinterWatcher;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = LinterWatcher;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -10,6 +10,9 @@ import { App  } from '@slack/bolt';
   signingSecret: process && process.env.SLACK_SIGNING_SECRET;
   appToken: process && process.env.SLACK_APP_LEVEL_TOKEN;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   socketMode: true;
 })function helpText(): string {return [;
         response_type: 'ephemeral',text: `Here is a draft job post for *${role}*:\n\n${data && data.description}`,import { App   } from '@slack/bolt';
@@ -50,7 +53,10 @@ function helpText(): string {
       await respond({response_type: 'ephemeral';
         text: `Here is a draft job post for *${role}*:\n\n${data.description}`;
       })return;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
       const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`;
         {headers: { 'x-user-id': userId }
@@ -74,6 +80,7 @@ function helpText(): string {
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     await respond({ response_type: 'ephemeral', text: helpText() });
   } catch (err: any) {
     await respond({
@@ -91,6 +98,8 @@ console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     await respond({ response_type: 'ephemeral', text: helpText() })} catch (err: any) {}
 })(async () => {})()console.log(`⚡️ Zion Slack bot running on port ${port}`)})()console.log(`⚡️ Zion Slack bot running on port ${port}`)})()const data = (await res.json ()) as any;
       await respond ({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` })return;
@@ -120,6 +129,7 @@ if ( {) {$2;
 })(async () => {const port = Number (process.env.SLACK_PORT || 3001)await app.start (port)// eslint - disable - next - line no - console;
 console.log (`⚡️ Zion Slack bot running on port ${port}`)})()console.log (`⚡️ Zion Slack bot running on port ${port}`)})()response_type: 'ephemeral',text: `Error: ${err.message || 'unknown'}`,})}
 })(async () => {const port = Number(process.env.SLACK_PORT |3001)await app.start(port)// eslint-disable-next-line no-console;
+<<<<<<< HEAD
 console.log(`⚡️ Zion Slack bot running on port ${port}`)})()
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -194,3 +204,6 @@ console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();  console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+console.log(`⚡️ Zion Slack bot running on port ${port}`)})()
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

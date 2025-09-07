@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
       timestamp: this.metrics.timestamp,
       bundleSize: this.metrics.bundleSize,
@@ -29,11 +30,16 @@ class PerformanceMonitor {
       if (fs.existsSync(buildDir)) {
         const stats = fs.statSync(buildDir);
         this.metrics.bundleSize = stats.size;
+=======
+#!/usr/bin/env node;
+const fs = require("fs")const path = require("path")const fs = require('fs')const path  = require('path')class PerformanceMonitor {constructor() {this.metrics = {bundleSize: 0,loadTime: 0,memoryUsage: 0,timestamp: new Date().toISOString(),timestamp: new Date().toISOString()}}async measureBundleSize() {try {const buildDir = path.join(process.cwd(), ".next")const buildDir = path.join(process.cwd(), '.next')if (fs.existsSync(buildDir)) {const stats = fs.statSync(buildDir)this.metrics.bundleSize = stats.size;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
     } catch(error) {
       console.error('Error measuring bundle size:', error);
     }
   }
+<<<<<<< HEAD
 
   async measureMemoryUsage() {
     const usage = process.memoryUsage();
@@ -80,3 +86,6 @@ const fs = require("fs")const path = require("path")const fs = require('fs')cons
 =======
 console.log('Performance report generated:', reportPath);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}const monitor = new PerformanceMonitor()monitor.measureBundleSize()monitor.measureMemoryUsage()const report = monitor.generateReport()const reportPath = path.join(process.cwd(), "performance-report.json")fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))console.log("Performance report generated:", reportPath)const reportPath = path.join(process.cwd(), 'performance-report.json')fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))console.log('Performance report generated:', reportPath)console.log("Performance report generated:", reportPath)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

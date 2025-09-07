@@ -5,6 +5,7 @@ import {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 
 import {;
   Mail,;
@@ -123,6 +124,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import {Mail,Phone,MapPin,Send,CheckCircle,AlertCircle,'use client';
 import React, { useState  } from 'react';
@@ -144,7 +147,10 @@ const ContactForm: React.FC = () => {const [formData, setFormData] = useState({n
   ) => {setFormData({...formData,[e.target.name]: e.target.value,})}const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setIsSubmitting(true)// Simulate API call;
     try {await new Promise(resolve => setTimeout(resolve, 2000))setSubmitStatus('success')setFormData({name: '',email: '',company: '',phone: '',service: '',message: '',})} catch (error) {setSubmitStatus('error')} finally {setIsSubmitting(false)}
     } finally {setIsSubmitting(false)} finally {setIsSubmitting(false)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   const services = [;
 'AI Development','Cloud Architecture','Digital Transformation','IoT Platforms','Blockchain Solutions','Data Analytics','Other',];const contactInfo = [;
@@ -153,6 +159,7 @@ const ContactForm: React.FC = () => {const [formData, setFormData] = useState({n
       {/* Background Elements */}<div className='absolute inset-0'>;
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0 && 0.1),transparent_50%)]' />;
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>;
 
@@ -185,13 +192,18 @@ href: '#',
   return (
     <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>;<div className='relative container mx-auto px-4'>        {/* Section Header */}      <div className="relative container mx-auto px-4">;];const contact_info = [;
     {icon: Mail;
       title: 'Email Us';
       content: 'contact@ziontechgroup.com';
       href: 'mailto:contact@ziontechgroup.com';
       icon: Mail,title: 'Email Us',content: 'contact@ziontechgroup.com',href: 'mailto:contact@ziontechgroup.com',},{icon: Phone,title: 'Call Us',content: '+1 (555) 123-4567',href: 'tel:+15551234567',},{icon: MapPin,title: 'Visit Us',content: '123 Tech Street, Innovation City, IC 12345',href: '#',},];return (<section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Background Elements */}
       <div className='absolute inset-0'>;
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]' />;
@@ -204,6 +216,7 @@ href: '#',
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -270,6 +283,8 @@ className='space-y-8'
               </p>
             </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 className='text-center mb-16';
         >;
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>;
@@ -317,7 +332,10 @@ className='text-center mb-16';
                 needs. Reach out to us today.;
               </p>;
             </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Contact Details */}
 <div className='space-y-6'>;
               {contactInfo.map((info, index) => (<motion.a;
@@ -368,6 +386,7 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                       {info.title}
                     </h4>;
                     <p className='text-gray-300 group-hover:text-blue-400 transition-colors duration-300'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -379,6 +398,8 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                     <h4 className="text-lg font-semibold text-white mb-1">{info.title}</h4>
                     <p className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {info.content}
                     </p>;
                   </div>;
@@ -410,6 +431,7 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               viewport={{ once: true }}
@@ -445,6 +467,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true }}
               className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+              viewport={{ once: true }}className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <h4 className='text-lg font-semibold text-white mb-3'>;
                 Why Choose Zion Tech?;
               </h4>;
@@ -483,6 +508,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </ul>;
             </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </motion && motion.div>;className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6';
             >;
               <h4 className='text-lg font-semibold text-white mb-3'>;
@@ -508,16 +536,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </ul>;
             </motion.div>;
           </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           </motion && motion.div>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Contact Form */}
           <motion&& motion.div;
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             viewport={{ once: true }}
@@ -605,6 +637,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                       value={formData.email}
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             viewport={{ once: true }}className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8';
           >;
             {submitStatus === 'success' ? (<motion.div;
@@ -673,6 +707,7 @@ className='text-center py-12';
                   </div>;
                 </div>;
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors";
+<<<<<<< HEAD
 =======
                   </div>
                 </div>
@@ -682,11 +717,16 @@ className='text-center py-12';
                   </div>
                 </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       placeholder="Enter your email";
                     />;
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       placeholder="Enter your email";
                     />;
                   </div>;
@@ -730,7 +770,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div>;
                     <label;
                       htmlFor='phone';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       className='block text-white font-medium mb-2'>;
                       Phone Number;
                     </label>;
@@ -740,6 +783,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       name='phone';
                       value={formData && formData.phone}
                       onChange={handleChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
@@ -762,6 +806,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                       className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       placeholder="Enter phone number";
                     />;
                   </div>;
@@ -834,13 +881,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </label>;
                   <textarea;
                     id='message';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     name='message'                    value={formData && formData.message}
                     onChange={handleChange}
                     required;
                     rows={5}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none';
                     name='message';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -862,13 +915,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none';
                     placeholder='Tell us about your project or inquiry...';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   />;
                 </div>;
                 {submitStatus === 'error' && (<motion.div;
                   />;
                 </div>;{submitStatus === 'error' && (<motion&& motion.div;
                     initial={{ opacity: 0, y: -10 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     animate={{ opacity: 1, y: 0 }}
@@ -882,16 +939,22 @@ className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-
                     <span>Something went wrong. Please try again.</span>
                   </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     animate={{ opacity: 1, y: 0 }}className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4';
                   >;
                     <AlertCircle className='w-5 h-5' />;
                     <span>Something went wrong. Please try again.</span>;
                   </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 )}
                 <button;
 type='submit';
                   disabled={isSubmitting}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2'
                 >
@@ -928,6 +991,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default ContactForm;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2';
                 >;
                   {isSubmitting ? (<>;
@@ -1040,11 +1105,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </section>)}export default ContactForm)}export default ContactForm;)export default ContactForm;  )}
 export default ContactForm;export default ContactForm;</motion.div>;
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
 )}export default ContactForm;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1063,3 +1132,6 @@ export default ContactForm;
 
 export default ContactForm;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default ContactForm;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

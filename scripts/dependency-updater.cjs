@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -10,6 +11,10 @@ const fs = require('fs')
 #!/usr/bin/env node;
 const fs = require('fs')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process')
 // console.log('� Starting dependency update check...')
     console.log(' Checking for outdated packages...')
@@ -29,6 +34,7 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log('\n "Recommendations")
 
@@ -36,3 +42,6 @@ const { execSync } = require('child_process')
 =======
     console.log('\n "Recommendations")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.log('\n "Recommendations")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

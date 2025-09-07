@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { render } from \'@testing-library/react\'; import { RatingStars } from \'@/components/RatingStars\'; test( \'"rating\": 4.7 shows 4 filled and 1 half star\',() => {\'; const { container } = render(<RatingStars value={4.7} />); const filled = container.querySelectorAll( \'[data-testid=\'star-filled\']\')\'; const half = container.querySelectorAll( \'[data-testid=\'star-half\']\')\'; const outline = container.querySelectorAll( \'[data-testid=\'star-outline\']\')\'; expect(filled).toHaveLength(4); expect(half).toHaveLength(1); expect(filled.length + half.length + outline.length).toBe(5)})
 const { render } from "@testing-library/react"; import { RatingStars } from "@/components/RatingStars"; test( "rating: 4.7 shows 4 filled and 1 half star",() => {"; const { container } = render(<RatingStars value={4.7} />); const filled = container.querySelectorAll( "[data-testid="star-filled"]")"; const half = container.querySelectorAll( "[data-testid="star-half"]")"; const outline = container.querySelectorAll( "[data-testid="star-outline"]")"; expect(filled).toHaveLength(4); expect(half).toHaveLength(1); expect(filled.length + half.length + outline.length).toBe(5)})'"'"
 <<<<<<< HEAD
@@ -32,6 +33,30 @@ ursor/automate-test-improve-and-merge-code-646c;
 }}}ursor/automate-test-improve-and-merge-code-646c;
 import { render } from \'@testing-library/react\'; import { RatingStars } from \'@/components/RatingStars\'; test( \'"rating\": 4.7 shows 4 filled and 1 half star\',() => {\'; const { container } = render(<RatingStars value={4.7} />); const filled = container.querySelectorAll( \'[data-testid=\'star-filled\']\')\'; const half = container.querySelectorAll( \'[data-testid=\'star-half\']\')\'; const outline = container.querySelectorAll( \'[data-testid=\'star-outline\']\')\'; expect(filled).toHaveLength(4); expect(half).toHaveLength(1); expect(filled.length + half.length + outline.length).toBe(5)})
 const { render } from "@testing-library/react"; import { RatingStars } from "@/components/RatingStars"; test( "rating: 4.7 shows 4 filled and 1 half star",() => {"; const { container } = render(<RatingStars value={4.7} />); const filled = container.querySelectorAll( "[data-testid="star-filled"]")"; const half = container.querySelectorAll( "[data-testid="star-half"]")"; const outline = container.querySelectorAll( "[data-testid="star-outline"]")"; expect(filled).toHaveLength(4); expect(half).toHaveLength(1); expect(filled.length + half.length + outline.length).toBe(5)})'"'"
+=======
+import { render } from \'@testing-library/react\'; import { RatingStars } from \'@/components/RatingStars\'; test( \'"rating\": 4.7 shows 4 filled and 1 half star\',() => {\'; const { container } = render(<RatingStars value={4.7} />)const filled = container.querySelectorAll( \'[data-testid=\'star-filled\']\')\'; const half = container.querySelectorAll( \'[data-testid=\'star-half\']\')\'; const outline = container.querySelectorAll( \'[data-testid=\'star-outline\']\')\'; expect(filled).toHaveLength(4)expect(half).toHaveLength(1)expect(filled.length + half.length + outline.length).toBe(5)})const { render } from "@testing-library/react"; import { RatingStars } from "@/components/RatingStars"; test( "rating: 4.7 shows 4 filled and 1 half star",() => {"; const { container } = render(<RatingStars value={4.7} />)const filled = container.querySelectorAll( "[data-testid="star-filled"]")"; const half = container.querySelectorAll( "[data-testid="star-half"]")"; const outline = container.querySelectorAll( "[data-testid="star-outline"]")"; expect(filled).toHaveLength(4)expect(half).toHaveLength(1)expect(filled.length + half.length + outline.length).toBe(5)})'"'";
+const { render } from "@testing-library/react"; import { RatingStars } from "@/components/RatingStars"; test( "rating: 4.7 shows 4 filled and 1 half star",() => {"; const { container } = render(<RatingStars value={4.7} />)const filled = container.querySelectorAll( "[data-testid="star-filled"]")"; const half = container.querySelectorAll( "[data-testid="star-half"]")"; const outline = container.querySelectorAll( "[data-testid="star-outline"]")"; expect(filled).toHaveLength(4)expect(half).toHaveLength(1)expect(filled.length + half.length + outline.length).toBe(5)})'"'";
+:tests/RatingStars.test.tsx;
+const { render } from "@testing-library/react"; import { RatingStars } from "@/components/RatingStars"; test( "rating: 4.7 shows 4 filled and 1 half star",() => {"; const { container } = render(<RatingStars value={4.7} />)const filled = container.querySelectorAll( "[data-testid="star-filled"]")"; const half = container.querySelectorAll( "[data-testid="star-half"]")"; const outline = container.querySelectorAll( "[data-testid="star-outline"]")"; expect(filled).toHaveLength(4)expect(half).toHaveLength(1)expect(filled.length + half.length + outline.length).toBe(5)})'"'";
+const { render } from "@testing-library/react"; import { RatingStars } from "@/components/RatingStars"; test( "rating: 4.7 shows 4 filled and 1 half star",() => {"; const { container } = render(<RatingStars value={4.7} />)const filled = container.querySelectorAll( "[data-testid="star-filled"]")"; const half = container.querySelectorAll( "[data-testid="star-half"]")"; const outline = container.querySelectorAll( "[data-testid="star-outline"]")"; expect(filled).toHaveLength(4)expect(half).toHaveLength(1)expect(filled.length + half.length + outline.length).toBe(5)})'"'";
+ursor/automate-test-improve-and-merge-code-646c;
+const { render } from "@testing-library/react"; import { RatingStars } from "@/components/RatingStars"; test( "rating: 4.7 shows 4 filled and 1 half star",() => {"; const { container } = render(<RatingStars value={4.7} />)const filled = container.querySelectorAll( "[data-testid="star-filled"]")"; const half = container.querySelectorAll( "[data-testid="star-half"]")"; const outline = container.querySelectorAll( "[data-testid="star-outline"]")"; expect(filled).toHaveLength(4)expect(half).toHaveLength(1)expect(filled.length + half.length + outline.length).toBe(5)})'"'";
+import React from 'react';
+interface RatingStars.testProps  {// Add props here as needed;
+}:tests/RatingStars.test.tsx;
+}ursor/automate-test-improve-and-merge-code-646c;
+export default function RatingStars.test() {const { render } from "@testing-library/react"; import { RatingStars } from "@/components/RatingStars"; test( "rating: 4.7 shows 4 filled and 1 half star",() => {"; const { container } = render(<RatingStars value={4.7} />)const filled = container.querySelectorAll( "[data-testid="star-filled"]")"; const half = container.querySelectorAll( "[data-testid="star-half"]")"; const outline = container.querySelectorAll( "[data-testid="star-outline"]")"; expect(filled).toHaveLength(4)expect(half).toHaveLength(1)expect(filled.length + half.length + outline.length).toBe(5)})'"'";
+interface RatingStars.testProps  {// Add props here as needed;
+export default function RatingStars.test() {return (<div>;
+      <h1>RatingStars.test</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  ):tests/RatingStars.test.tsx;
+ursor/automate-test-improve-and-merge-code-646c;
+}}}ursor/automate-test-improve-and-merge-code-646c;
+import { render } from \'@testing-library/react\'; import { RatingStars } from \'@/components/RatingStars\'; test( \'"rating\": 4.7 shows 4 filled and 1 half star\',() => {\'; const { container } = render(<RatingStars value={4.7} />); const filled = container.querySelectorAll( \'[data-testid=\'star-filled\']\')\'; const half = container.querySelectorAll( \'[data-testid=\'star-half\']\')\'; const outline = container.querySelectorAll( \'[data-testid=\'star-outline\']\')\'; expect(filled).toHaveLength(4); expect(half).toHaveLength(1); expect(filled.length + half.length + outline.length).toBe(5)})
+const { render } from "@testing-library/react"; import { RatingStars } from "@/components/RatingStars"; test( "rating: 4.7 shows 4 filled and 1 half star",() => {"; const { container } = render(<RatingStars value={4.7} />); const filled = container.querySelectorAll( "[data-testid="star-filled"]")"; const half = container.querySelectorAll( "[data-testid="star-half"]")"; const outline = container.querySelectorAll( "[data-testid="star-outline"]")"; expect(filled).toHaveLength(4); expect(half).toHaveLength(1); expect(filled.length + half.length + outline.length).toBe(5)})'"'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { render } from "@testing-library/react"; import { RatingStars } from "@/components/RatingStars"; test( "rating: 4.7 shows 4 filled and 1 half star",() => {"; const { container } = render(<RatingStars value={4.7} />); const filled = container.querySelectorAll( "[data-testid="star-filled"]")"; const half = container.querySelectorAll( "[data-testid="star-half"]")"; const outline = container.querySelectorAll( "[data-testid="star-outline"]")"; expect(filled).toHaveLength(4); expect(half).toHaveLength(1); expect(filled.length + half.length + outline.length).toBe(5)})'"'"
 const { render } from "@testing-library/react"; import { RatingStars } from "@/components/RatingStars"; test( "rating: 4.7 shows 4 filled and 1 half star",() => {"; const { container } = render(<RatingStars value={4.7} />); const filled = container.querySelectorAll( "[data-testid="star-filled"]")"; const half = container.querySelectorAll( "[data-testid="star-half"]")"; const outline = container.querySelectorAll( "[data-testid="star-outline"]")"; expect(filled).toHaveLength(4); expect(half).toHaveLength(1); expect(filled.length + half.length + outline.length).toBe(5)})'"'"
 interface RatingStars.testProps {
@@ -47,6 +72,7 @@ export default function RatingStars.test({}: RatingStars.testProps) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -57,3 +83,8 @@ export default function RatingStars.test({}: RatingStars.testProps) {
 
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

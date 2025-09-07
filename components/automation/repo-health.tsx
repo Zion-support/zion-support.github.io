@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -41,6 +42,8 @@ export default function RepoHealth({ report }: Props) {;
 
     <div className="space-y-6">;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import fs from 'fs',import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -53,7 +56,10 @@ type Props = { report: Report | null },export const getStaticProps: GetStaticPro
   } catch {return { props: { report: null }, revalidate: 3600 }
   }
 export default function RepoHealth(): any ({ report }: Props) {}export default function RepoHealth() {export default function RepoHealth() {if (!report) return <div>No report yet. Check back soon.</div>;type Props = any;return (<div className="space-y-6">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <header className="space-y-1">;
         <h1 className="text-3xl font-bold">Repo Health</h1>;
         <p className="text-gray-600 dark:text-gray-300">Automated activity and maintenance snapshot.</p>;
@@ -74,6 +80,7 @@ export default function RepoHealth(): any ({ report }: Props) {}export default f
         <h2 className="font-semibold mb-2">Stale Pages (90d)</h2>;
         <ul className="text-sm space-y-1">;
 <<<<<<< HEAD
+<<<<<<< HEAD
           {report && report.stalePages.map((p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
           ))}
@@ -87,6 +94,8 @@ export default function RepoHealth(): any ({ report }: Props) {}export default f
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {report && report.stalePages.map((p, i) => (<li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
           ))}}export default /**;
  * RepoHealth - Function description;
@@ -118,6 +127,7 @@ if (return <div > No report yet. Check back soon.</div>) {$2;
         </ul>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)</ul>;
       </section>;
     </div>;
@@ -126,3 +136,9 @@ if (return <div > No report yet. Check back soon.</div>) {$2;
 =======
     </div>);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)</ul>;
+      </section>;
+    </div>;
+)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

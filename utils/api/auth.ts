@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,9 @@ export interface User  {id: string;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export interface User  {id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface User {
   id: string;
   email: string;
@@ -54,6 +58,7 @@ export function validateUser(userId: string, role: string): User | null {
   };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -87,15 +92,25 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return null;
   }
   return user;
@@ -113,9 +128,12 @@ export function getUserFromRequest(req: any): User | null {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 export function getUserFromRequest (req: any): User | null {
@@ -128,6 +146,7 @@ export function getUserFromRequest (req: any): User | null {
   return user;
 }ursor/automate-test-improve-and-merge-code-646c;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -162,3 +181,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

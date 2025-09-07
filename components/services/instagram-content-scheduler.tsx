@@ -5,6 +5,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 =======
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;ursor/fix-website-loading-errors-and-merge-6662;
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;//Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;import type { NextPage } from 'next';
@@ -20,7 +23,10 @@ import Head from 'next/head';
 type Props = Record<string, never>;//Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 const ServicePage: NextPage<Props> = () => {return (<> <Head> <title>Instagram Content Scheduler | Services</title> <meta name="description" content="Auto-generate posts from blog feeds and schedule with analytics." /> </Head> <main> <h1>InstagramContentScheduler</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default ServicePage;  return (<>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -38,6 +44,7 @@ const ServicePage: NextPage<Props> = () => {return (<> <Head> <title>Instagram C
 import type { NextPage } from 'next';
 // Using an explicit empty object type for props to satisfy lint rules
 type Props = Record<string, never>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
@@ -62,6 +69,9 @@ type Props = Record<string, never>;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+//Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const ServicePage: NextPage<Props> = () => {
   return (<> <Head> <title>Instagram Content Scheduler | Services</title> <meta name="description" content="Auto-generate posts from blog feeds and schedule with analytics." /> </Head> <main> <h1>InstagramContentScheduler</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default ServicePage;  return (
     <>
@@ -87,6 +97,7 @@ const ServicePage: NextPage<Props> = () => {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -111,6 +122,8 @@ const ServicePage: NextPage<Props> = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
  //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 const ServicePage: NextPage<Props> = () => {;
   return (<> <Head> <title>Instagram Content Scheduler | Services</title> <meta name="description" content="Auto-generate posts from blog feeds and schedule with analytics." /> </Head> <main> <h1>InstagramContentScheduler</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default ServicePage;  return (
@@ -159,9 +172,12 @@ export default ServicePage;
 =======
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record < string never>;
 const ServicePage: NextPage < Props> = () => {
   return (<> <Head> <title > Instagram Content Scheduler | Services</title> <meta name="description" content="Auto - generate posts from blog feeds and schedule with analytics." /> </Head> <main> <h1 > InstagramContentScheduler</h1> <p > Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default ServicePage;  return (
@@ -198,11 +214,15 @@ type Props = any;
 export default ServicePage;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default ServicePage;
 
 
 export default ServicePage;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -210,6 +230,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default ServicePage;
 
 
@@ -233,6 +255,7 @@ export default ServicePage
 
 export default ServicePage;
 export default ServicePage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -271,3 +294,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

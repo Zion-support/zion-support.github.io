@@ -10,6 +10,7 @@
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -34,6 +35,11 @@ export interface InnovativeMicroSaasService2025  {id: string;
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasService2025 {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface InnovativeMicroSaasService2025  {id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -63,6 +69,7 @@ export interface InnovativeMicroSaasService2025 {
   contact_info: {mobile: string;
     email: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     address: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +86,8 @@ export interface InnovativeMicroSaasService2025 {
 
   real_implementation: boolean;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     address: string;website: string;
   }website: string;
   }real_implementation: boolean;
@@ -1009,10 +1018,13 @@ export interface InnovativeMicroSaasService2025  {id: string,name: string,taglin
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'AI content creation',
         'Content strategy optimization',
         'Multi - channel management',
@@ -1025,6 +1037,7 @@ export interface InnovativeMicroSaasService2025  {id: string,name: string,taglin
         'ROI tracking'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1054,6 +1067,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Natural Language Processing',
         'Content Management',
         'SEO Tools',
@@ -1061,6 +1076,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'React',
         'Node && Node.js'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1113,6 +1129,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1126,6 +1144,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.9,
       reviews: 89
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1154,6 +1173,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Predictive analytics',
         'Automated follow - ups',
         'Customer behavior analysis',
@@ -1165,6 +1186,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Integration capabilities'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1194,6 +1216,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Predictive Analytics',
         'CRM Systems',
         'Automation',
@@ -1201,6 +1225,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'React',
         'Node && Node.js'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1250,6 +1275,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1263,6 +1290,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.9,
       reviews: 125
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1370,6 +1398,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'AI product recommendations',
         'Dynamic pricing optimization',
         'Customer behavior analysis',
@@ -1382,6 +1412,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Performance tracking'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1411,6 +1442,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Recommendation Systems',
         'Dynamic Pricing',
         'E - commerce',
@@ -1418,6 +1451,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'React',
         'Node && Node.js'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1470,6 +1504,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1483,6 +1519,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.8,
       reviews: 95
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1521,6 +1558,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'AI recruitment automation',
         'Employee performance tracking',
         'HR analytics and insights',
@@ -1533,6 +1572,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Reporting and dashboards'
       ],
       popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1562,6 +1602,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'HR Management',
         'Automation',
         'Analytics',
@@ -1569,6 +1611,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'React',
         'Node && Node.js'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1617,6 +1660,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1630,6 +1675,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.8,
       reviews: 58
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1836,6 +1882,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'AI campaign optimization',
         'Automated marketing workflows',
         'Customer segmentation',
@@ -1848,6 +1896,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Integration capabilities'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1877,6 +1926,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Marketing Automation',
         'Customer Analytics',
         'Personalization',
@@ -1884,6 +1935,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'React',
         'Node && Node.js'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1935,6 +1987,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1948,6 +2002,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.9,
       reviews: 82
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1973,6 +2028,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       id: 'project - management - intelligence',
       name: 'AI Project Management Intelligence Platform',
       tagline:;
@@ -1996,6 +2053,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       ],
       popular: false,
       icon: '📋',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2074,6 +2132,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
       launch_date: '2025 - 03 - 05',
       customers: 75,
@@ -2086,9 +2146,12 @@ ursor/fix-website-loading-errors-and-merge-6662
   ];    features: [
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface InnovativeMicroSaasService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -2112,6 +2175,7 @@ export interface InnovativeMicroSaasService2025 {
   launchDate: string, customers: number,
   rating: number,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -2126,6 +2190,8 @@ export interface InnovativeMicroSaasService2025 {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   reviews: number
 }
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [
@@ -2139,6 +2205,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     features: [
       'AI content creationContent strategy optimizationMulti-channel managementPerformance analyticsSEO optimizationContent personalizationBrand voice consistencyContent calendar automation';
       'Collaboration toolsROI tracking'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3208,6 +3275,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       period: '/month',
       description:
         'Revolutionary platform that uses AI to optimize project planning, resource allocation, risk management, and performance tracking for improved project success rates.',
+=======
+      id: 'project-management-intelligence'
+      name: 'AI Project Management Intelligence Platform'
+      tagline:
+        'Intelligent project management with AI-powered optimization and insights'
+      price: '$28,000'
+      period: '/month'
+      description:
+        'Revolutionary platform that uses AI to optimize project planning, resource allocation, risk management, and performance tracking for improved project success rates.'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       features: [
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3230,6 +3307,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       color: 'from-indigo-500 to-purple-600'
       textColor: 'text-indigo-400'
       link: 'https://ziontechgroup.com/project-management-intelligence'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3267,6 +3345,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       marketPosition:
         'Leading AI project management platform. Competes with basic project tools but offers intelligent optimization.',
       targetAudience:
@@ -3276,6 +3356,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       category: 'Project Management',
       realService: true,
       technology: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -3293,6 +3374,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
         'Project management tools',
         'Time tracking systems',
@@ -3323,6 +3406,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -3339,12 +3423,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.'
       launchDate: '2025-03-05'
       customers: 75
       rating: 4.8
       reviews: 45
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3376,16 +3463,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
       launchDate: '2025-03-05',
       customers: 75,
       rating: 4.8,
+<<<<<<< HEAD
 <<<<<<< HEAD
       reviews: 45,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       reviews: 45
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     },;
@@ -3451,6 +3543,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3462,6 +3555,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService2025 {;
   id: string,;
@@ -3899,6 +3994,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     launchDate: '2025-03-05',;
     customers: 75,;
     rating: 4.8;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3947,6 +4043,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 45
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     real_implementation: true,
     implementation_details: 'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
@@ -3954,6 +4052,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8,
     reviews: 45;
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3985,13 +4084,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import { ServiceVariant } from '../types/service-variants',;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
   }
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface InnovativeMicroSaasService2025 {;
   id: string,;
   name: string,;
@@ -4431,6 +4535,9 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     rating: 4.8;
     reviews: 45;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];
   }
 <<<<<<< HEAD
@@ -4899,6 +5006,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -4932,3 +5040,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

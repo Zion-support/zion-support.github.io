@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,9 @@
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 export const advancedEmergingTechServices2025 = [;
   {{id: 'space-mining-operations-platform',name: 'SpaceMining Operations',description:;
@@ -1262,13 +1266,17 @@ export const advancedEmergingTechServices2025 = [;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const advancedEmergingTechServices2025 = [
   {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1354,6 +1362,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     features: [
       'Quantum-biological hybrid processing'
       'DNA-based computing'
@@ -1364,6 +1375,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Custom quantum bio algorithms'
       '24/7 platform monitoring'
     ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1745,6 +1757,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       starter: {
+=======
+    pricing: {
+      starter: {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         price: 599
         period: 'month'
         features: [
@@ -2329,6 +2345,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2340,6 +2357,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Quantum Computing',
       'Materials Science',
       'AI Discovery',
@@ -2887,6 +2906,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -2913,6 +2933,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     market_size: '$6.8B',
     target_audience:;
       'Gaming companies, virtual reality firms, entertainment companies, technology startups',
@@ -3146,6 +3168,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -3164,6 +3187,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const advancedEmergingTechServices2025 = [;
   {;
     id: 'space-mining-operations-platform',;
@@ -3397,6 +3422,7 @@ export const advancedEmergingTechServices2025 = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -3437,3 +3463,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -71,6 +71,7 @@ const path = require("path")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Intelligent Predictive Monitor "failed": ")
 
@@ -78,3 +79,6 @@ const path = require("path")
 =======
   console.error(" Intelligent Predictive Monitor "failed": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" Intelligent Predictive Monitor "failed": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

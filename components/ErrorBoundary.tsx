@@ -17,6 +17,7 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -24,6 +25,8 @@ main
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 ursor/automate-test-improve-and-merge-code-646c;
 'use client';import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -306,9 +309,12 @@ ursor/automate-test-improve-and-merge-code-646c;
 }export default ErrorBoundary;</div>;
         ))}return this.props.children;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -318,9 +324,12 @@ interface Props {
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 interface State {
@@ -329,6 +338,7 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
@@ -422,6 +432,14 @@ class ErrorBoundary extends Component<Props, State> {
     this.state = { hasError: false };
   }
 
+=======
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
@@ -433,12 +451,16 @@ class ErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 // Log to external service in production
@@ -447,6 +469,8 @@ class ErrorBoundary extends Component<Props, State> {
       console.error('Production error:', error, errorInfo);
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
@@ -461,6 +485,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error: ', error, errorInfo);
@@ -609,6 +634,8 @@ export default class ErrorBoundary extends Component<Props, State> {
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       return this.props.fallback || (
         <div className="min-h-screen bg-slate-950 flex items-center justify-center">
           <div className="text-center text-white max-w-md mx-auto p-6">
@@ -631,9 +658,12 @@ export default class ErrorBoundary extends Component<Props, State> {
               <button 
                 onClick={() => this.setState({ hasError: false })} 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
               >
                 Try Again
@@ -641,15 +671,19 @@ export default class ErrorBoundary extends Component<Props, State> {
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
                   {this.state.error.stack}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 </pre>
@@ -720,12 +754,20 @@ main
               </details>
             )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                </pre>
+              </details>
+            )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>
         </div>
       );
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return this.props.children;
   }
 }
@@ -849,6 +891,7 @@ export default ErrorBoundary;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -862,12 +905,15 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return this.props.children;
   }
 }
 
 <<<<<<< HEAD
 export default ErrorBoundary;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -888,3 +934,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

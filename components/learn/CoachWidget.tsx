@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 export default function CoachWidget() {
   const [input, setInput] = useState('');
@@ -24,6 +25,8 @@ export default function CoachWidget() {
           placeholder='Ask for help...'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
         body: JSON.stringify({ prompt: input })})const data = await resp.json()setReply(data.text |'')} finally {return (      })const data = await resp.json()setReply(data.text |'')}
   }
@@ -107,6 +110,9 @@ function ask() {
         <input;
           className='flex - 1 border rounded px - 3 py - 2 bg - white dark:bg - black';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           placeholder='Ask for help...';export default function CoachWidget() {const [input, setInput] = useState('')const [reply, setReply] = useState<string | null>(null),const [loading, setLoading] = useState(false)async function ask() {if (!input.trim()) return;
     setLoading(true)try {const resp = null;
       setReply(data.text || '')} finally {setLoading(false)}
@@ -132,6 +138,7 @@ function ask() {
           {loading ? '...' : 'Ask'}
         </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       {reply && (
         <div className='mt - 2 text - sm text - gray - 800 dark:text - gray - 200'>;
           {reply}
@@ -142,12 +149,15 @@ function ask() {
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {reply && (<div className='mt - 2 text - sm text - gray - 800 dark:text - gray - 200'>;
           {reply}</div>)}
     </div>)}
   }</div>;
       )}
     </div>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -161,3 +171,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

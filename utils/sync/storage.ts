@@ -3,15 +3,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 let state: SyncState = { ...defaultState }
 export function readState(): SyncState {return { ...state }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function updateState(updates: Partial<SyncState>): void {
   state = { ...state, ...updates }
@@ -39,6 +44,8 @@ export function updateState(updates: Partial<SyncState>): void {
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function updateState(updates: Partial<SyncState>): void {state = { ...state, ...updates }
 })}return events;export function resetState(): void {state = { ...defaultState }}}export function readState(): SyncState {return { ...state }}export function updateState(updates: Partial<SyncState>): void {state = { ...state, ...updates }}
 export function upsertEvent(state: MultiverseState;
@@ -48,12 +55,15 @@ export function upsertEvent(state: MultiverseState;
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+<<<<<<< HEAD
 =======
 }
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export function readState(): SyncState {;
   return { ...state };
@@ -436,6 +446,7 @@ export function formatDuration(startTime: string, endTime?: string): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -456,6 +467,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -465,6 +478,7 @@ const default_state: SyncState = {
     paused: false;
   },
   lastSyncedAt: new Date ().toISOString ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -481,6 +495,8 @@ const default_state: SyncState = {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
@@ -544,6 +560,7 @@ if ( {) {$2;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -558,10 +575,16 @@ if ( {) {
   // Check condition;
 if ( {) {$2;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    return events.filter (e => e.type === 'proposal' || e.type === 'dao_endorsement')}
+  // Check condition;
+if ( {) {$2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
     return events.filter (e =>;
         e.type === 'token_transfer' ||;
         e.type === 'talent_mobility' ||;
+<<<<<<< HEAD
 <<<<<<< HEAD
         e.type === 'leaderboard_entry');
   }
@@ -591,3 +614,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        e.type === 'leaderboard_entry')}
+  return events;export function reset_state (): void {state = { ...default_state }
+}return events;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

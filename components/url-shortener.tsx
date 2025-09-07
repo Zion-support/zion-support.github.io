@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -119,6 +120,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const getTotalUrls = () => {
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Link;
   Copy;
@@ -144,6 +147,7 @@ export default function URLShortenerPage() {} from 'lucide-react';import { Link,
 export default function URLShortenerPage() {const [longUrl, setLongUrl] = useState('')const [customAlias, setCustomAlias] = useState('')const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),const [isShortening, setIsShortening]  = useState(false)setIsShortening(true)// Simulate API call delay;
     await new Promise(resolve => setTimeout(resolve, 1000))const alias = customAlias.trim() |generateRandomAlias()const shortUrl = `https://zion.tech/${alias}`;
     const newShortUrl = {id: Date.now()longUrl: longUrl.trim()shortUrl;
+<<<<<<< HEAD
 =======
     return shortenedUrls.length;  };    setIsShortening(true);
     // Simulate API call delay
@@ -155,6 +159,8 @@ export default function URLShortenerPage() {const [longUrl, setLongUrl] = useSta
       longUrl: longUrl.trim()
       shortUrl;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       alias;
       clicks: 0;
       createdAt: new Date().toISOString()qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`;
@@ -187,6 +193,9 @@ import {Link,Copy,BarChart3,ArrowRight,RefreshCw,CheckCircle,ExternalLink,QrCode
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     for (let index = 0, i < 6, i++) {result += chars.char_at (Math.floor (Math.random () * chars.length))}return ({/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
@@ -202,7 +211,10 @@ import {Link,Copy,BarChart3,ArrowRight,RefreshCw,CheckCircle,ExternalLink,QrCode
           <p className="text-xl text-orange-200 max-w-4xl mx-auto leading-relaxed">;
             Transform long URLs into short, memorable links with our professional shortening service.;
             Track clicks, generate QR codes, and manage your links efficiently with advanced analytics.;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return shortenedUrls.length;
   }return (<>;
       <Head>;
@@ -218,6 +230,7 @@ import {Link,Copy,BarChart3,ArrowRight,RefreshCw,CheckCircle,ExternalLink,QrCode
         />;
       </Head>;
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className='pt-32 pb-20 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -282,6 +295,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <section className='pt-32 pb-20 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <div className='mb-8'>;
@@ -338,6 +353,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     type="url";
                     value={longUrl}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 >;
                   {isShortening ? (<>;
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />;
@@ -489,10 +507,13 @@ className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-
                   )}
                 </Button>;
                 <Button;
+<<<<<<< HEAD
 =======
 
                 <Button
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   onClick={generateShortUrl}
                   disabled={!longUrl && longUrl.trim() || isShortening}
                   className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'>;
@@ -530,6 +551,9 @@ className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-
                 <div className='grid grid-cols-2 gap-4'>;
                   <div className='text-center p-4 bg-gray-700 rounded-lg'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <div className='text-3xl font-bold text-orange-400 mb-2'>;<div className='text-sm text-gray-400'>;
                   <p>• Professional, branded short URLs</p>;
                   <p>• Click tracking and analytics</p>;
@@ -549,6 +573,7 @@ className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-
                   <div className='text-center p-4 bg-gray-700 rounded-lg'>;
                     <div className='text-3xl font-bold text-orange-400 mb-2'>;
                       {getTotalUrls()}
+<<<<<<< HEAD
 =======
                     <div className='text-3xl font-bold text-orange-400 mb-2'>;
                       {getTotalUrls()}
@@ -559,6 +584,8 @@ className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-
                     <div className='text-3xl font-bold text-red-400 mb-2'>
                       {getTotalClicks()}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </div>;
                     <div className='text-sm text-gray-400'>Total URLs</div>;
                   </div>;
@@ -596,6 +623,9 @@ className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-
                           </div>;
                         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </div>;</div>;
                     <div className='text-sm text-gray-400'>Total Clicks</div>;
                   </div>;
@@ -694,7 +724,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
 <div className='space-y-4'>;
               {shortenedUrls.map(url => (<Card;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   key={url && url.id}
                   className='p-6 bg-gray-700 border border-gray-600'>;
                   <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>;
@@ -720,14 +753,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <span>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                               Created:{' '}
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                               Created:{' '}{url.clicks}
                         </div>;
                         <div className="text-xs text-gray-400">Total Clicks</div>;
                       </div>;
                       <div className="flex space-x-2">;
                         <Button;
+<<<<<<< HEAD
 =======
                               Created:{' '}
                           {url.clicks}
@@ -737,6 +774,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className="flex space-x-2">
                         <Button
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           onClick={() => copyToClipboard(url.shortUrl)}
                           variant="outline";
                           size="sm";
@@ -760,6 +799,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <Copy className='w-4 h-4 mr-2' />                          Copy;
                         </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         <Button;
                           size="sm";
                           className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600";
@@ -789,6 +831,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='flex space-x-2'>;
                         <Button;
                           onClick={() => copyToClipboard(url.shortUrl)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                           variant='outline'
                           size='sm'
@@ -836,6 +879,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           variant='outline';
                           size='sm';
                           className='flex-1 border-gray-600 text-gray-300 hover:bg-gray-600';
@@ -885,6 +930,9 @@ variant='outline';
                       </div>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   </div>;variant='outline';
                           size='sm';
                           className='flex-1 border-gray-600 text-gray-300 hover:bg-gray-600';
@@ -925,16 +973,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Scan this QR code to visit the shortened URL;
                       </p>;
                     </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                   </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   )}
                 </Card>;
               ))}
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       )}
 
@@ -1167,6 +1219,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       )}{/* Features */}<section className='py-20 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
@@ -1344,8 +1398,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <section className='py-20 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
@@ -1442,6 +1499,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }{/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-orange-600 to-red-600'>;
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
@@ -1472,6 +1532,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1480,3 +1541,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

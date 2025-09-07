@@ -10,6 +10,7 @@
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -34,6 +35,11 @@ export interface Innovative2026EmergingTechService  {id: string;
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026EmergingTechService {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface Innovative2026EmergingTechService  {id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -63,6 +69,7 @@ export interface Innovative2026EmergingTechService {
   contact_info: {mobile: string;
     email: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     address: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,6 +87,8 @@ export interface Innovative2026EmergingTechService {
         'Brain-inspired neural architecture',
   real_implementation: boolean;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     address: string;website: string;
   }'Brain-inspired neural architecture',real_implementation: boolean;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -613,6 +622,7 @@ reviews: 25;
         'Spiking neural networks (SNNs)',
         'Ultra - low power consumption',
         'Real - time learning and adaptation',
+<<<<<<< HEAD
 =======
 
         'Spiking neural networks (SNNs)',
@@ -924,6 +934,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Cognitive computing capabilities',
         'Advanced pattern recognition',
         'Neuromorphic hardware integration',
@@ -932,6 +944,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Research collaboration platform'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1027,12 +1040,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Intel Loihi',
         'IBM TrueNorth',
         'BrainChip',
         'SpiNNaker',
         'BrainScaleS'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1064,6 +1080,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1077,6 +1095,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.9,
       reviews: 40
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1426,11 +1445,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         '3D holographic projection',
         'Interactive holographic displays',
         'Real - time 3D rendering',
         'Gesture and touch interaction',
         'Multi - user collaboration',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1473,6 +1495,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Holographic content creation',
         'Augmented reality integration',
         'Mobile holographic apps',
@@ -1480,6 +1504,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Professional installation services'
       ],
       popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1574,12 +1599,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Looking Glass',
         'Light Field Lab',
         'RealView',
         'Hologram USA',
         'HoloLens'
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1611,6 +1639,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1624,6 +1654,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.7,
       reviews: 100
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1687,6 +1718,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Facial recognition technology',
         'Fingerprint and palm scanning',
         'Voice and speech recognition',
@@ -1702,6 +1735,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Enterprise security features'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1779,6 +1813,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'User authentication',
         'Access control',
         'Identity verification',
@@ -1787,6 +1823,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Customer verification'
       ],
       roi: 'Average customer sees 350% ROI within 4 months through improved security and user experience.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1819,6 +1856,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1832,6 +1871,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.8,
       reviews: 175
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1857,6 +1897,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       id: 'quantum - internet - platform - 2026',
       name: 'Quantum Internet Platform 2026',
       tagline: 'Ultra - secure quantum communication network for the future',
@@ -1879,6 +1921,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       ],
       popular: false,
       icon: '🌐',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1961,6 +2004,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
       launch_date: '2026 - 01 - 25',
       customers: 60,
@@ -1976,6 +2021,7 @@ export const getPopularEmergingTechServices = () => {;
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.popular);
 };
 =======
@@ -1984,11 +2030,16 @@ export const getPopularEmergingTechServices = () => {;
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.popular);
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       id: 'quantum-internet-platform-2026'
       name: 'Quantum Internet Platform 2026'
       tagline: 'Ultra-secure quantum communication network for the future'
       price: '$5,999'
       period: '/month'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2021,6 +2072,8 @@ export const getPopularEmergingTechServices = () => {;
       period: '/month',
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       description:
         'Revolutionary quantum internet platform that provides ultra-secure communication, quantum key distribution, and next-generation networking capabilities for government, financial, and critical infrastructure.',
       features: [
@@ -2047,6 +2100,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       color: 'from-cyan-500 to-blue-600'
       textColor: 'text-cyan-400'
       link: 'https://ziontechgroup.com/services/quantum-internet-platform-2026'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2084,6 +2138,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       marketPosition:
         'Competitive with Quantum Xchange ($50,000+/setup), ID Quantique ($30,000+/setup), and Toshiba Quantum ($40,000+/setup). Our advantage: Modern architecture, faster deployment, and 70% cost savings.',
       targetAudience:
@@ -2093,6 +2149,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       category: 'Emerging Technology & Quantum Internet',
       realService: true,
       technology: [
+<<<<<<< HEAD
         'Quantum Key Distribution',
         'Quantum Networks',
         'Quantum Cryptography',
@@ -2174,6 +2231,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        'Quantum Key Distribution'
+        'Quantum Networks'
+        'Quantum Cryptography'
+        'Quantum Repeaters'
+        'Python'
+        'Quantum Algorithms'
+      ]
+      integrations: [
+        'Government networks'
+        'Financial systems'
+        'Defense networks'
+        'Healthcare systems'
+        'Critical infrastructure'
+        'Cloud platforms'
+      ]
+      useCases: [
+        'Secure communications'
+        'Government networks'
+        'Financial transactions'
+        'Defense communications'
+        'Healthcare data'
+        'Critical infrastructure'
+      ]
+      roi: 'Average customer sees 500% ROI within 12 months through improved security and new capabilities.'
+      competitors: [
+  ];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.'
       launchDate: '2026-01-25'
       customers: 60
@@ -2199,6 +2284,7 @@ export const getPopularEmergingTechServices = () => {
 =======
   ];
 export const getPopularEmergingTechServices = () => {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   ];
@@ -2232,6 +2318,10 @@ export const getPopularEmergingTechServices = () => {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return innovative2026EmergingTechServices.filter(service => service.popular);
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // DNA Computing Platform realImplementation: true;
 implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
 launchDate: '2026-01-20';
@@ -2243,6 +2333,7 @@ export const getPopularEmergingTechServices = () =>: any {
 implementation_details: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
 launch_date: '2026 - 01 - 20';
 customers: 45;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2282,6 +2373,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Photonic Computing Platform realImplementation: true;
 implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.';
 launchDate: '2026-02-01';
@@ -2299,6 +2392,7 @@ customers: 120;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2322,6 +2416,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Holographic Display Platform realImplementation: true;
 implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.';
 launchDate: '2026-02-15';
@@ -2339,6 +2435,7 @@ customers: 200;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2362,6 +2459,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Biometric Authentication Platform realImplementation: true;
 implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.';
 launchDate: '2026-03-01';
@@ -2398,6 +2497,7 @@ rating: 4.8;
 reviews: 175;
 }// Quantum Internet Platform realImplementation: true;
 customers: 350;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2459,6 +2559,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Quantum Internet Platform realImplementation: true;
 implementationDetails: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.';
 launchDate: '2026-01-25';
@@ -2467,6 +2569,7 @@ reviews: 175;
 // Quantum Internet Platform real_implementation: true;
 implementation_details: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.';
 launch_date: '2026 - 01 - 25';
+<<<<<<< HEAD
 <<<<<<< HEAD
 customers: 60;
 <<<<<<< HEAD
@@ -2504,6 +2607,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 customers: 60;rating: 4 && 4.9;
 reviews: 30;
 }];
@@ -2585,6 +2690,7 @@ export const getEmergingTechServicesByCategory = (category: string) =>: any {ret
 customers: 60;
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>
     service && service.category.toLowerCase().includes(category && category.toLowerCase())
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 }];
@@ -2593,6 +2699,8 @@ export const getEmergingTechServicesByCategory = (category: string) => {
     service && service.category.toLowerCase().includes(category && category.toLowerCase())
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   );
 };
 
@@ -2600,6 +2708,7 @@ export const getEmergingTechServicesByPriceRange = (
   minPrice: number,
   maxPrice: number
 ) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2637,6 +2746,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service && service.price.replace('$', '').replace(',', ''));
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
+    const price = parseInt(service && service.price.replace('$', '').replace(',', ''));
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return price >= minPrice && price <= maxPrice;
 
 <<<<<<< HEAD
@@ -2967,6 +3080,7 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -2991,6 +3105,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
@@ -3016,6 +3132,7 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
 
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3045,3 +3162,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

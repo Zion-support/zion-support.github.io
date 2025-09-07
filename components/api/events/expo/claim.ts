@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -32,6 +33,8 @@ export default async function handler(
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export default async function handler() {import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const { address, signature } = req.body || {},if (!address || !signature) return res.status(400).json({ error: 'Missing address or signature' })// In production: verify signature, mint or issue POAP;
@@ -53,6 +56,7 @@ function handler() {if (return res.status (405).json ({ error: "Method not allow
   if (return res.status (400).json ({ error: "Missing address or signature" })) {$2;
 }
   // In production: verify signature, mint or issue POAP;
+<<<<<<< HEAD
   console.log ("[NFT Claim] address:",address,"signature:",signature.slice (0, 18) + "…",)return res.status (200).json ({ ok: true })return res.status(200).json({ ok: true })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -93,3 +97,6 @@ function handler() {
   );
   return res.status (200).json ({ ok: true });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.log ("[NFT Claim] address:",address,"signature:",signature.slice (0, 18) + "…",)return res.status (200).json ({ ok: true })return res.status(200).json({ ok: true })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

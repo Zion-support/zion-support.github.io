@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
@@ -9,6 +10,8 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -49,6 +52,7 @@ main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 main();
 
 #!/usr/bin/env node;
@@ -75,6 +79,17 @@ main();
 main();#!/usr/bin/env node;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+main();
+
+
+
+
+#!/usr/bin/env node;
+
+main();#!/usr/bin/env node;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

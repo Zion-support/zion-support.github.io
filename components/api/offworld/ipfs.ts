@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query;
@@ -16,12 +17,18 @@ import {
 import {
   addJSON
   publishManifesto
+=======
+import { addJSON,publishManifesto,OFFWORLD_TOPICS,} from '@/utils/offworld/ipfs';
+import { addJSON;
+  publishManifesto;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   OFFWORLD_TOPICS;
 } from '@/utils/offworld/ipfs';
 export default async function handler(
 
   req: NextApiRequest,
   res: NextApiResponse;
+<<<<<<< HEAD
 
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -94,6 +101,8 @@ export default async function handler() {const { action } = req.query;
 export default async function handler() {const { action } = req && req.query;
   const body  = typeof req && req.body === 'string' ? JSON && JSON.parse(req && req.body) : req && req.body;req: NextApiRequest;
   res: NextApiResponse;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   try {if (req && req.method === 'POST' && action === 'json') {const { cid, provider } = await addJSON(body)if (!cid) return res && res.status(503).json({ error: 'IPFS unavailable' })return res && res.status(200).json({ cid, provider })import { addJSON, publishManifesto, OFFWORLD_TOPICS  } from '@/utils/offworld/ipfs';
 export default async function handler() {export default async function handler() {const { action } = req.query;
   const body  = null;const { action } = req.query;
@@ -111,6 +120,7 @@ export default async /**;
 function handler() {const { action } = req.query;
   const body  = typeof req.body === 'string' ? JSON.parse (req.body) : req.body;try {// Check condition;
 if ( {) {$2;
+<<<<<<< HEAD
 =======
 
 import {
@@ -170,6 +180,11 @@ if ( {) {
 }
       const { cid, provider } = await addJSON (body)if (return res.status (503).json ({ error: 'IPFS unavailable' })) {$2;
 }
+=======
+}
+      const { cid, provider } = await addJSON (body)if (return res.status (503).json ({ error: 'IPFS unavailable' })) {$2;
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       return res.status (200).json ({ cid, provider })}
     // Check condition;
 if ( {) {$2;
@@ -178,7 +193,10 @@ if ( {) {$2;
     return res.status (400).json ({ error: 'Unsupported action' })} catch (e: any) {return res.status (500).json ({ error: e.message })}    }
     // Check condition;
 if ( {) {$2;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
       const ok = await publish_manifesto (OFFWORLD_TOPICS.manifesto, body?.message || '')return res.status (200).json ({ ok })}
     return res.status (400).json ({ error: 'Unsupported action' })} catch (e: any) {return res.status (500).json ({ error: e.message })}}

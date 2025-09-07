@@ -6,6 +6,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -13,6 +14,9 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const express = require('express')
 const pm2 = require('pm2')
 const fs = require('fs')
@@ -24,6 +28,7 @@ const path = require('path')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 "
 
@@ -31,3 +36,6 @@ const path = require('path')
 =======
                 "
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,9 @@ export const JOB_POSTS: Job[] = [
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 ];
@@ -32,6 +36,7 @@ export const JOB_POSTS: Job[] = [
 updated at: "2024-05-05"
 }];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,11 +58,15 @@ updated at: "2024-05-05"
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 created at: "2024 - 05 - 05";
 updated at: "2024 - 05 - 05";
 }];
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
@@ -78,11 +87,19 @@ export const JOB_POSTS: Job[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
 import { Job } from '@/types/jobs';
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -103,6 +120,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     skills: ["React", "TypeScript"],
     budget: { min: 40, max: 50, currency: "USD" },
     deadline: "2024-07-01",
@@ -110,10 +130,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     created_at: "2024-05-10",
     updated_at: "2024-05-10"},
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 id: 'job-2',
@@ -141,6 +160,8 @@ updated at: "2024-05-05"
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: "job-2",
     client_id: "client-2",
     title: "Part-time DevOps Engineer",
@@ -156,8 +177,11 @@ updated at: "2024-05-05"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Job } from "@/types/jobs",;
 export const JOB_POSTS: Job[] = [;
   {;
@@ -186,6 +210,7 @@ export const JOB_POSTS: Job[] = [;
     updated_at: "2024-05-05"}
 ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -271,3 +296,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useEffect, useState, useCallback, useMemo } from 'react',
 import Layout from './layout/Layout';
@@ -12,6 +13,11 @@ import { motion } from 'framer-motion';
 import React, { useEffect, useState, useCallback, useMemo } from 'react',import Layout from './layout/Layout';
 import { motion  } from 'framer-motion';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+;
+import React, { useEffect, useState, useCallback, useMemo } from 'react',import Layout from './layout/Layout';
+import { motion  } from 'framer-motion';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
   ChevronDown, CheckCircle, Users, Award, Clock;
@@ -31,6 +37,7 @@ import { innovativeMicroSaasSolutions2025  } from '../data/2025-innovative-micro
 // Lazy load new components for better performance;
 const ServiceCard = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 </div>);
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -41,6 +48,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 </div>)//Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+</div>)//Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ...revolutionary2044ITServices;
 ...revolutionary2044AIServices ], [])const featuredServices = useMemo ( () => allRevolutionaryServices.slice (0, 6), [allRevolutionaryServices])], [])//Add analytics tracking if (typeof window !== 'undefined' && (window as any) .gtag) {}window.location.href = '/revolutionary-2044-pricing-showcase';
 }, [])const handleWatchDemo = useCallback ( () => {//Add analytics tracking if (typeof window !== 'undefined' && (window as any) .gtag) {}window.location.href = '/services';
@@ -101,6 +111,7 @@ top: `$ {Math.random () * 100;
 }className= {`relative group cursor - pointer $ {index === currentServiceIndex ? 'scale - 105' : 'scale - 100';
 }transition - transform duration - 500`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }on_click= {
   () => handleServiceClick (service);
 }while_hover= {
@@ -135,6 +146,8 @@ top: `$ {Math.random () * 100;
 export default Homepage2044;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }on_click= {() => handleServiceClick (service)}while_hover= {{scale: 1.05;
 }while_tap= {{scale: 0.95;
 }initial= {{}transition= {{duration: 0.5, delay: index * 0.1;
@@ -143,6 +156,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }transition= {{duration: 0.8;
 }viewport= {{once: true;
 }> <h2 className="text - 5xl font - bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 400 mb - 12 max-w-3xl mx-auto" > Join thousands of forward - thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex - col sm:flex - row gap - 6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w - 7 h - 7 ml - 4 group - hover:translate - x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w - 7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>)}once: true;
+<<<<<<< HEAD
 }> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>)}export default Homepage2044;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -151,3 +165,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }> <h2 className="text - 5xl font - bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 400 mb - 12 max-w-3xl mx-auto" > Join thousands of forward - thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex - col sm:flex - row gap - 6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w - 7 h - 7 ml - 4 group - hover:translate - x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w - 7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>)}export default Homepage2044;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

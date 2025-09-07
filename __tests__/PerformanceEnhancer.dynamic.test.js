@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen  } from '@testing-library/react';
 import '@testing-library/jest-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import PerformanceEnhancerdynamic from '../components/PerformanceEnhancer.dynamic';
 
 describe('PerformanceEnhancerdynamic', () => {
@@ -29,10 +30,16 @@ describe('PerformanceEnhancerdynamic', () => {
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import PerformanceEnhancer from '../components/PerformanceEnhancer.dynamic';
 describe("PerformanceEnhancer", () => {test("renders without crashing", () => {render(<PerformanceEnhancer />)expect(screen.getByTestId('performance-enhancer')).toBeInTheDocument()})})import React from 'react';  import '@testing-library/jest-dom'; import PerformanceEnhancer from '../components/PerformanceEnhancer.dynamic'; describe('PerformanceEnhancer',() => { test('renders without crashing',() => { render(<PerformanceEnhancer />)expect( screen.getByTestId('performanceenhancer') ).toBeInTheDocument()})test('displays correct content',() => { render(<PerformanceEnhancer />)})test('handles user interactions',() => { render(<PerformanceEnhancer />)})test('applies correct styling',() => { render(<PerformanceEnhancer />)})})import { render, screen, fireEvent  } from '@testing-library/react';
 describe('PerformanceEnhancer', () => {test('renders without crashing', () => {render(<PerformanceEnhancer />)expect(screen.getByTestId('performanceenhancer')).toBeInTheDocument()})test('displays correct content', () => {render(<PerformanceEnhancer />)// Add specific content tests based on component;
   })test('handles user interactions', () => {render(<PerformanceEnhancer />)// Add interaction tests based on component functionality;
   })test('applies correct styling', () => {render(<PerformanceEnhancer />)// Add styling tests if needed;
+<<<<<<< HEAD
   })})
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  })})
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

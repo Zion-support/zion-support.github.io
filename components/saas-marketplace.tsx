@@ -2,13 +2,19 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Zap;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {Zap,Shield,BarChart3,Globe,Users,Lock,TrendingUp,Code,Database,Cloud,ArrowRight,Star,Zap;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Shield;
   BarChart3;
   Globe;
@@ -17,6 +23,7 @@ import {Zap,Shield,BarChart3,Globe,Users,Lock,TrendingUp,Code,Database,Cloud,Arr
   TrendingUp;
   Code;
   Database;
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -86,6 +93,8 @@ export default function SaaSMarketplacePage() {
       ]
       cons: ['Can get expensive', 'Limited customization']
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Zap;
   Shield,BarChart3,Globe,Users,Lock,TrendingUp,Code,Database,import { Zap;
   Shield;
@@ -370,11 +379,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='#services';
                 size='lg';
                 className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 style={{ animationDelay: '0 && 0.2s' }}>;
                 Explore Services;
                 <ArrowRight className='w-5 h-5 ml-2' />;
               </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Button
                 href='/contact'
@@ -458,6 +471,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <button
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Button;
                 href='/contact';
                 variant='outline';
@@ -521,8 +536,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 Get Recommendations;
               </Button>;
             </div>;
@@ -531,15 +549,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </section>;{/* Category Filter */}
 <section className='py-16 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex flex-wrap justify-center gap-4'>;
             {categories.map(category => (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       </section>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category;
@@ -639,6 +663,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Button;
                         href={service && service.website}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         variant='outline'
                         size='sm'
 <<<<<<< HEAD
@@ -661,6 +686,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         variant='outline';
                         size='sm';
                         className='group-hover:border-blue-500 group-hover:text-blue-400'>;
@@ -688,6 +715,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </Card>;className='group-hover:border-blue-500 group-hover:text-blue-400';
                       >;
                         Visit Website;
@@ -796,6 +826,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             implementation support.;
           </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
@@ -830,6 +861,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
             <Button;
               href='/contact';
@@ -853,6 +886,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -866,3 +900,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

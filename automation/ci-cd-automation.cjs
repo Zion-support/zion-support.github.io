@@ -19,6 +19,7 @@
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -36,6 +37,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node
 /**
  * CI/CD Automation Script
@@ -73,6 +76,7 @@ class CICDAutomation {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -97,6 +101,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
@@ -156,6 +162,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -180,6 +187,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const logMessage = `[${timestamp}] ${message}\n`;`
 console.log(message);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
@@ -216,6 +225,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -232,6 +242,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
   async runLint() {
@@ -282,6 +294,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -306,6 +319,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     };
   };
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
@@ -341,6 +356,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -357,6 +373,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
   async runVerify() {
@@ -429,6 +447,7 @@ if (require.main === module) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -453,6 +472,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     };
   };
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -524,6 +545,7 @@ module.exports = CICDAutomation;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 module.exports = CICDAutomation;
@@ -584,3 +606,9 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+module.exports = CICDAutomation;
+module.exports = CICDAutomation;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

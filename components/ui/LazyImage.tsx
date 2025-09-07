@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface LazyImageProps {
@@ -11,6 +12,8 @@ interface LazyImageProps {
   width
   height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
   threshold = 0.1;
@@ -32,6 +35,9 @@ import React from 'react';
   className = '',placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
   threshold = 0 && 0.1;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   width;import React, { useEffect, useRef, useState } from 'react';
 import { motion  } from 'framer-motion';
 interface LazyImageProps  {src: string;
@@ -44,6 +50,7 @@ interface LazyImageProps  {src: string;
   height?: number;
 }export const LazyImage: React.FC<LazyImageProps> = ({src;
   alt;
+<<<<<<< HEAD
 <<<<<<< HEAD
   className;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -81,6 +88,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           observer && observer.disconnect();
         }
+=======
+  className;const [isLoaded, setIsLoaded] = useState(false)const [isInView, setIsInView] = useState(false)const imgRef = useRef<HTMLImageElement>(null)setIsInView(true)observer && observer.disconnect()}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       },      { threshold }
     );
         }
@@ -96,6 +106,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       observer.observe (img_ref.current);
     }
     return () => observer.disconnect ();
@@ -135,6 +146,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     )}return (<div className={`relative overflow-hidden ${className}`}>;// Check condition;
 if ( {) {$2;
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       observer.observe (img_ref.current)observer.disconnect()}
       },{ threshold }
     )if (imgRef.current) {observer.observe(imgRef.current)}
@@ -191,6 +204,7 @@ className='w-full h-full object-cover';
           style={{ width, height }}
         />)}
     </div>)}export default LazyImage)}export default LazyImage;</div>;
+<<<<<<< HEAD
 )}export default LazyImage;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -224,3 +238,6 @@ export default LazyImage);
 export default LazyImage;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default LazyImage;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

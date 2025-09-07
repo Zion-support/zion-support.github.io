@@ -1,11 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface FraudRecord {
   id: string;
 =======
 
   private records: Map < string, FraudRecord> = new Map ()create_record (record: Omit < FraudRecord, 'id' | 'timestamp'>): FraudRecord {const id = Date.now ().to_string ()const new_record: FraudRecord = {export interface FraudRecord  {id: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  private records: Map < string, FraudRecord> = new Map ()create_record (record: Omit < FraudRecord, 'id' | 'timestamp'>): FraudRecord {const id = Date.now ().to_string ()const new_record: FraudRecord = {export interface FraudRecord  {id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   type: string;
   severity: "low" | "medium" | "high" | "critical";
   description: string;
@@ -26,6 +31,7 @@ export interface FraudRecord {
       ];
     }}
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -100,6 +106,9 @@ export const fraud_store = new FraudStore ();
 export const getFraudStore = () =>: any fraud_store;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export const fraud_store = new FraudStore ()export const getFraudStore  = () =>: any fraud_store;export const fraudStore = new FraudStore()export const getFraudStore = () => fraudStore;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import fs from 'fs-extra';
 import path from 'path';
 import { createClient  } from '@supabase/supabase-js';
@@ -168,6 +177,7 @@ const dataDir = path.resolve(process.cwd(), 'data/fraud')const eventsPath = path
         } catch {return null;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
       })
       .filter(Boolean) as AdminActionRecord[];
   }
@@ -197,3 +207,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      }).filter(Boolean) as AdminActionRecord[];
+  }export function getFraudStore(): FraudStore {return new FraudStore()export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent, 'source'>;
+): FraudEvent {const id = uuidv4()return {id,userId: partial.userId ?? null,source: partial.source,content: partial.content ?? null,metadata: partial.metadata ?? null,ipAddress: partial.ipAddress ?? null,createdAt: partial.createdAt ?? new Date().toISOString()}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

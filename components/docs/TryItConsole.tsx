@@ -3,13 +3,17 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useMemo, useState } from 'react';
 interface TryItProps  {path: string; // full URL or relative;
   requiresAuth: boolean;
 export default function TryItConsole() {const [baseUrl, setBaseUrl] = useState('https://api.zion.os')const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 interface TryItProps  {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',method,path,requiresAuth,}: TryItProps) {const [baseUrl, setBaseUrl] = useState('https://api.zion.os')const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',const [baseUrl, setBaseUrl]  = useState('https://api.zion.os')path: string, // full URL or relative;
   requiresAuth: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function TryItConsole({
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -78,6 +82,10 @@ const headers: Record<string, string> = {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+=======
+}
+export default function TryItConsole() {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   path: string; // full URL or relative;
   requiresAuth: boolean;
 
@@ -100,6 +108,7 @@ export default function TryItConsole(): any ({;
       const res = await fetch(url, {
         method;
         headers;
+<<<<<<< HEAD
         body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),;
       const text = await res && res.text();
       setResponse(text);
@@ -128,6 +137,8 @@ export default function TryItConsole() {method: 'GET' | 'POST' | 'PUT' | 'PATCH'
   const [baseUrl, setBaseUrl]  = useState('https: //api.zion.os'),const [body, setBody] = useState('')const [response, setResponse] = useState<string>(''),const [loading, setLoading]  = useState(false)const headers: Record<string, string> = { 'Content-Type': 'application/json' }if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {method;
         headers;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),const text = await res && res.text()setResponse(text)} catch (e: any) {setResponse(String(e?.message || e))} finally {setLoading(false)const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')const [token, setToken] = useState('')const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')const [body, setBody] = useState('')const [response, setResponse] = useState<string>(''),const [loading, setLoading] = useState(false)return baseUrl.replace(/\/$/, '') + path;
   }, [baseUrl, path])async function onSend() {setLoading(true)setResponse('')try {const headers: Record<string, string> = {'Content-Type': 'application/json',}if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {method;
@@ -215,7 +226,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <label className='block text-sm mb-1'>Request Body (JSON)</label>;
           <textarea;
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             value={body}
       )}
       <button;
@@ -272,6 +286,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <button onClick={onSend} className=&quot;px-3 py-2 rounded bg-high-contrast-accent text-black&quot; disabled={loading}>;
         {loading ? 'Sending…' : 'Send Request'}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </button>
       <div>
         <label className=&quot;block text-sm mb-1&quot;>Response</label>
@@ -282,6 +297,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </button>;
       <div>;
         <label className=&quot;block text-sm mb-1&quot;>Response</label>;
@@ -294,6 +311,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (<div className='space-y-2'>;
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>;
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (<div>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -313,3 +331,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

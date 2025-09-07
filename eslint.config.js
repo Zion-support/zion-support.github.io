@@ -1,20 +1,38 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
+<<<<<<< HEAD
+=======
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
+<<<<<<< HEAD
+=======
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
+  baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all
 });
 
 export default [
   js.configs.recommended,
+  ...compat.extends(
+    'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended'
+  ),
   {
+<<<<<<< HEAD
     languageOptions: {
       globals: {
         console: 'readonly',
@@ -155,11 +173,19 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly'
+=======
+    files: ['app/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2021
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       },
       parser: typescriptParser,
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
@@ -171,21 +197,24 @@ export default [
       'react-hooks': reactHooks
     },
     rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
+<<<<<<< HEAD
       'react/display-name': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+=======
+      'react/prop-types': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/ban-ts-comment': 'off',
-      'no-unused-vars': 'off',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-console': 'warn',
       'prefer-const': 'error',
+<<<<<<< HEAD
       'no-debugger': 'warn',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn'
+=======
+      'no-var': 'error'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     },
     settings: {
       react: {
@@ -194,22 +223,18 @@ export default [
     }
   },
   {
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.jsx'],
     languageOptions: {
       globals: {
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly'
+        ...globals.browser,
+        ...globals.node
       }
+<<<<<<< HEAD
     },
     rules: {
       'no-console': 'off'
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
 ];

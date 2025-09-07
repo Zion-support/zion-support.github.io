@@ -29,6 +29,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
   Activity,
   BarChart3,
   AlertTriangle,
@@ -374,6 +375,8 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Activity,BarChart3,AlertTriangle,Clock,Database,Globe,Lock,Shield,TrendingUp,Users,Zap,ArrowRight,Play,CheckCircle,Star,Server,Cloud,Eye,Bell,Settings,Code,} from 'lucide-react';export default function CloudMonitoringPage() {const features = [;
 export default function CloudMonitoringPage() {const features = [;
 import React from 'react',import Head from 'next/head',import Card from '../components/ui/Card',import Button from '../components/ui/Button';
@@ -510,6 +513,9 @@ export default function CloudMonitoringPage() {const features  = null;{icon: <Ac
               <ArrowRight className="w-5 h-5 ml-2" />;
             </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <Button;
               href="#demo";
               variant="outline";
@@ -639,11 +645,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {features.map((feature, index) => (<Card;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1';
                 style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }}>;
                 <div className='relative'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <div
@@ -654,6 +664,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                   <div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                  <div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
                     {feature && feature.icon}
                   </div>;
@@ -677,6 +690,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {feature.title}
                 </h3>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <p className="text - gray - 400 leading - relaxed">;className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
                   >;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -692,10 +708,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 </h3>;
                 <p className='text-gray-400 leading-relaxed'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                 <p className="text - gray - 400 leading - relaxed">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {feature.description}
                 </p>;
               </Card>;
@@ -704,6 +723,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
       {/* Monitoring Capabilities */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -729,6 +749,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='flex-1'>
                     <h3 className='text-xl font-bold mb-3 text-white group-hover:text-green-400 transition-colors duration-300'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <section className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
           <div className='text-center mb-20'>;
@@ -736,8 +758,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Comprehensive Monitoring;
             </h2>;
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               Monitor every aspect of your infrastructure with detailed metrics;
               and insights;
             </p>;
@@ -796,11 +821,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           className='flex items-center text-sm text-gray-300';
                         >;
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               <Card
                 key={index}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {metric}
                         </div>;
                       ))}
@@ -810,6 +838,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>;
             ))}
       {/* Use Cases Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -831,6 +860,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
               <Card
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <section className='py-24 bg-gray-900 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
           <div className='text-center mb-20'>;
@@ -838,8 +869,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Use Cases;
             </h2>;
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               Trusted by teams across industries for reliable infrastructure;
               monitoring;
             </p>;
@@ -876,6 +910,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>;
                     <div className="grid grid-cols-2 gap-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {useCase && useCase.benefits.map((benefit, benefitIndex) => (<div key={benefitIndex} className="flex items-center text-sm text-gray-300">;
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;<Card;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -903,12 +940,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           className='flex items-center text-sm text-gray-300';
                         >;
                           <TrendingUp className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                       {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">;
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {benefit}
                         </div>;
                       ))}
@@ -917,6 +957,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </div>
@@ -947,6 +988,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingPlans.map((plan, index) => (
               <Card
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         </div>;
       </section>;
@@ -977,6 +1020,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Card;
                 key={index}<section id='pricing' className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -1007,11 +1053,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               <Card
                 key={index}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
@@ -1030,6 +1079,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 <ul className='space-y-4 mb-8'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
@@ -1039,15 +1089,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {plan.features.map((feature, featureIndex) => (<ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (<li;
                       key={featureIndex}className='flex items-center text-gray-300';
                     >;
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {feature}
                     </li>;
                   ))}
@@ -1064,6 +1119,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>;
               </Card>;</li>;
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </ul>
 
@@ -1104,6 +1160,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {integrations.map((integration, index) => (
               <Card
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </ul>;
                 <Button;
                   href="/contact";
@@ -1233,7 +1291,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
               </Card>;
               </Card>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </div>;
         </div>;
@@ -1268,6 +1329,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Button
               href='/contact'
               variant='secondary'
@@ -1290,6 +1352,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <Button;
               href='/contact';
               variant='secondary';
@@ -1302,12 +1366,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href="/contact";
               variant="secondary";
               size="lg";
+<<<<<<< HEAD
 =======
             <Button
               href="/contact"
               variant="secondary"
               size="lg"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl">;
               Start Free Trial;
               <ArrowRight className="w-5 h-5 ml-2" />;
@@ -1331,6 +1398,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 })}
     </>)}className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl';
             >;
@@ -1341,6 +1411,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1351,3 +1422,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

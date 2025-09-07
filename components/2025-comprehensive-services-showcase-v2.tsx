@@ -169,9 +169,12 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
           <motion.div;
             className="flex flex-col sm:flex-row gap-4 justify-center";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -202,6 +205,7 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             transition={{ duration: 0.6 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           >
             Ready to Transform Your Business?
           </motion.h2>
@@ -211,6 +215,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           >;
             Ready to Transform Your Business?;
           </motion.h2>;
@@ -219,13 +225,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <motion.div;
             className='grid md:grid-cols-3 gap-8';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           >
@@ -262,6 +272,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           >;
             <div className="text-center">;
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />;
@@ -308,13 +320,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.h2;
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           >
@@ -326,6 +342,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           >;
             Our Comprehensive Service Portfolio;
           </motion.h2>;
@@ -334,9 +352,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <motion.div;
             className='space-y-20';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             variants={staggerContainer}
             initial="initial";
             whileInView="animate";
@@ -364,12 +385,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.name}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                       </h4>
                       <p className="text-gray-300 mb-4">
                         {service.description}
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </h4>;
                       <p className="text-gray-300 mb-4">;
                         {service.description}</p>;
@@ -444,13 +468,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </a>;
                     </motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   ))}
                 </div>;
               </motion.div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           </motion.div>
@@ -466,6 +494,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </motion.div>;
         </div>;
       </section>;
@@ -478,13 +508,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.h2;
             className='text-4xl md:text-5xl font-bold text-white text-center mb-16';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           >
@@ -496,6 +530,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           >;
             Market Impact & Growth;
           </motion.h2>;
@@ -504,13 +540,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <motion.div;
             className='grid md:grid-cols-2 lg:grid-cols-4 gap-8';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           >
@@ -552,6 +592,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           >;
             <div className="text-center">;
               <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">25+</div>;
@@ -604,13 +646,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.h2;
             className='text-4xl md:text-5xl font-bold text-white mb-6';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           >
@@ -622,6 +668,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           >;
             Ready to Lead the Future?;
           </motion.h2>;
@@ -630,13 +678,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <motion.p;
             className='text-xl text-gray-300 mb-8';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           >
@@ -649,6 +701,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           >;
             Join thousands of businesses already transforming their operations with our cutting-edge solutions.;
           </motion.p>;
@@ -660,13 +714,17 @@ Join thousands of businesses already transforming their operations;
           <motion.div;
             className='flex flex-col sm:flex-row gap-4 justify-center';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           >
@@ -691,6 +749,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           >;
             <a;
               href={`mailto:${contactInfo.email}`}
@@ -732,8 +792,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   )})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   )})}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+  )})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

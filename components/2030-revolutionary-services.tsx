@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
@@ -40,6 +41,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           property='og:title'
           content='2030 Revolutionary Technology Services | Zion Tech Group'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
@@ -47,6 +50,7 @@ import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFoote
 import { innovative2030Services } from '../data/2030-innovative-services';import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin  } from 'lucide-react';
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin  } from 'lucide-react';
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+<<<<<<< HEAD
 =======
 
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
@@ -56,6 +60,8 @@ import { innovative2030Services } from '../data/2030-innovative-services';import
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin  } from 'lucide-react';
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { innovative2030Services  } from '../data/2030-innovative-services';
   }return (ArrowRight,Star,Zap,TrendingUp,Users,Award,Phone,Mail,MapPin,import { motion  } from 'framer-motion';
 import {ArrowRight,Star,Zap,TrendingUp,Users,Award,Phone,Mail,MapPin,} from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
@@ -75,9 +81,12 @@ import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturi
           name='description';
           content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing, we're building tomorrow's solutions today.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <meta;
           name='keywords';
@@ -166,6 +175,7 @@ import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturi
         {/* Structured Data */}
         <script;
           type='application / ld + json';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           dangerouslySetInnerHTML={{
@@ -281,6 +291,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+=======
+          dangerouslySetInnerHTML={{'@type': 'Organization',name: 'Zion Tech Group',description:;
+                'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing',},address: {'@type': 'PostalAddress',street_address: '364 E Main St STE 1008',address_locality: 'Middletown',address_region: 'DE',postal_code: '19709',address_country: 'US',},"address": {"@type": "PostalAddress";
+                "streetAddress": "364 E Main St STE 1008";
+                "addressLocality": "Middletown";
+                "addressRegion": "DE";
+                "postalCode": "19709";
+                "addressCountry": "US";
+              }streetAddress: '364 E Main St STE 1008',addressLocality: 'Middletown',addressRegion: 'DE',postalCode: '19709',addressCountry: 'US',},sameAs: ['https://github.com/Zion-Holdings'],}),}}"sameAs": [;
+                "https://github && github.com/Zion-Holdings";
+              ];
+            })/>;
+      </Head>;
+      {/* Navigation */}
+      <UltraFuturisticNavigation2030 />;
+      {/* Hero Section */}<section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
+        <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div;
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             transition={{ duration: 0 && 0.8 }}      <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion&& motion.div;
@@ -335,6 +365,7 @@ className='text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-ti
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 =======
           dangerouslySetInnerHTML={{'@type': 'Organization',name: 'Zion Tech Group',description:;
                 'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing',},address: {'@type': 'PostalAddress',street_address: '364 E Main St STE 1008',address_locality: 'Middletown',address_region: 'DE',postal_code: '19709',address_country: 'US',},"address": {"@type": "PostalAddress";
@@ -409,6 +440,8 @@ className='text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-ti
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             transition={{ duration: 0.8, delay: 0.6 }}<button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group">;
               Schedule Consultation;
               <ArrowRight className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" />;
@@ -461,6 +494,7 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center';
             transition={{ duration: 0 && 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             viewport={{ once: true }}
 className='text-center mb-20'
           >
@@ -494,6 +528,8 @@ className='group cursor-pointer'
               >
                 <div className='p-8 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             viewport={{ once: true }}className='text-center mb-20';
           >;
             <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>;
@@ -580,10 +616,13 @@ className='group cursor-pointer'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                   </p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                   </p>;
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {/* Features */}
                   <div className='grid grid-cols-2 gap-3 mb-6'>;
                     {service && service.features;
@@ -595,6 +634,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       ))}
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   </div>
@@ -618,6 +658,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   </div>;
                   {/* Description */}
                   {/* Features */}
@@ -702,9 +744,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <TrendingUp className='w-4 h-4 text-green-400' />;
                       <span className='text-gray-300'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         {service.growthRate}
                       </span>;
                     </div>;
@@ -723,6 +768,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                       <div className='text-gray-400 text-sm'>;
                         {service.period}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       </div>
@@ -768,6 +814,8 @@ className='text-center'
         </div>
       </section>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </div>;
                     </div>;
                     <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group'>;
@@ -782,6 +830,7 @@ className='text-center'
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
 =======
                       </div>;
                     </div>;
@@ -798,6 +847,8 @@ className='text-center'
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             viewport={{ once: true }}initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -878,6 +929,7 @@ className='text-center';
                 {' '}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 2030 Technology?
               </span>
             </h2>
@@ -918,6 +970,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 2030 Technology?;
               </span>;
             </h2>;
@@ -1007,6 +1061,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       </section>;
 
       {/* Footer */}
@@ -1017,6 +1072,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </section>;{/* Footer */}<UltraFuturisticFooter2030 />;
     </UltraFuturisticBackground2030>;
   ))</motion.div>;
@@ -1100,8 +1157,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </UltraFuturisticBackground2030>))}<UltraFuturisticFooter2030 />;
     </UltraFuturisticBackground2030>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 )
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

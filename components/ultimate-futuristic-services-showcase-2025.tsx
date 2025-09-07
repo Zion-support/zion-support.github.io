@@ -1,6 +1,7 @@
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, TrendingUp, Users, Award, Clock, Heart;
   Brain, Atom, Shield, Rocket, Zap, Globe;
@@ -61,6 +62,8 @@ import {
   Zap as ZapIcon
   Brain as BrainIcon
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Star, TrendingUp, Users, Award, Clock, Heart;
   Brain, Atom, Shield, Rocket, Zap, Globe;import {Star;
@@ -113,6 +116,7 @@ import { Star, TrendingUp, Users, Award, Clock, Heart;
   Sparkles as SparklesIcon;
   Zap as ZapIcon;
   Brain as BrainIcon;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   Play as PlayIcon;
  } from 'lucide-react';
@@ -196,13 +200,21 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   CheckCircle, ArrowRight, Search, Filter;
 =======
+=======
+  Play as PlayIcon;
+ } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import { Star, TrendingUp, Users, Award, Clock, Heart;
   Brain, Atom, Shield, Rocket, Zap, Globe;
   Star,TrendingUp,Users,Award,Clock,Heart,Brain,Atom,Shield,Rocket,Zap,Globe,CheckCircle,ArrowRight,Search,Filter,ChevronDown,ChevronUp,Eye,Play,Sparkles,Target,Microscope,Lock,Cloud,BarChart3,Settings,Cpu,Database,Network,Server,ShieldCheck,GlobeIcon,StarIcon,TrendingUpIcon,UsersIcon,CheckCircleIcon,ArrowRightIcon,CpuIcon,DollarSign,Phone,Mail,MapPin,Dna,Target as TargetIcon,Shield as ShieldIcon,BookOpen,Sparkles as SparklesIcon,Zap as ZapIcon,Brain as BrainIcon,Play as PlayIcon,} from 'lucide-react';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import { Star, TrendingUp, Users, Award, Clock, Heart,Brain, Atom, Shield, Rocket, Zap, Globe,Brain as BrainIcon,Play as PlayIcon,} from 'lucide-react';
 import { ultimateFuturisticServices2025  } from '../data/2025-ultimate-futuristic-services';
 const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',}CheckCircle, ArrowRight, Search, Filter;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ChevronDown, ChevronUp, Eye, Play, Sparkles;
   Target, Microscope, Lock, Cloud, BarChart3;
   Settings, Cpu, Database, Network, Server;
@@ -212,11 +224,15 @@ const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com'
   Dna, Target as TargetIcon, Shield as ShieldIcon;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
   Brain as BrainIcon, Play as PlayIcon
 =======
   BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;export default function UltimateFuturisticServicesShowcase2025() {export default function UltimateFuturisticServicesShowcase2025() {export default function UltimateFuturisticServicesShowcase2025() {Brain as BrainIcon, Play as PlayIcon;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;export default function UltimateFuturisticServicesShowcase2025() {export default function UltimateFuturisticServicesShowcase2025() {export default function UltimateFuturisticServicesShowcase2025() {Brain as BrainIcon, Play as PlayIcon;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
  } from 'lucide-react';
 const contactInfo = null;
 visible: {opacity: 1, transition: {staggerChildren: 0.1;
@@ -225,6 +241,7 @@ const itemVariants = {hidden: {y: 20, opacity: 0;
 }
 visible: {y: 0, opacity: 1, transition: {duration: 0.5;
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 const stats = [
   {
@@ -447,6 +464,8 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
                   <div className='text-left'>
                     <div className='text-2xl font-bold text-white'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const stats = [;
   {number: '15+',label: 'Revolutionary Services',icon: Star,color: 'text-cyan-400',},{number: '1000%+',label: 'Average ROI',icon: TrendingUp,color: 'text-purple-400',},{number: '99.9%',label: 'Success Rate',icon: Award,color: 'text-green-400',},{number: '24/7',label: 'Expert Support',icon: Clock,color: 'text-pink-400',},];export default function UltimateFuturisticServicesShowcase2025() {const [searchTerm, setSearchTerm] = useState('')const [selectedCategory, setSelectedCategory] = useState('all')const [sortBy, setSortBy] = useState('popular')const [viewMode, setViewMode]  = useState('grid')return (parseFloat(a && a.price.replace(/[^0-9.]/g, '')) -;
           parseFloat(b && b.price.replace(/[^0-9.]/g, ''))const filteredServices = ultimateFuturisticServices2025.filter(service => {const matchesSearch =;
@@ -592,6 +611,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             </div>;
@@ -604,6 +624,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Search and Filter Section */}
 <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -617,6 +639,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='relative flex-1 max-w-md'>;
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <input
                 type='text'
                 placeholder='Search futuristic services...'
@@ -627,17 +650,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               />
             </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <input;
                 type='text';
                 placeholder='Search futuristic services...';
                 value={searchTerm}<input;
                 type="text";
                 placeholder="Search futuristic services...";
+<<<<<<< HEAD
 =======
               <input
                 type="text"
                 placeholder="Search futuristic services..."
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 value={searchTerm}
             {/* Category Filter */}
             <div className='flex flex-wrap gap-3'>;
@@ -660,6 +688,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";
               >;
                 <option value="all">All Categories</option>;
@@ -667,12 +698,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
               />;
             </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Category Filter */}
 <div className='flex flex-wrap gap-3'>;
               <select;
                 value={selectedCategory}
                 onChange={e => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
               >
@@ -698,6 +733,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {category.title} ({category.count})
                   </option>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
               >;
                 <option value='all'>All Categories</option>;
@@ -707,7 +744,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             {/* Category Filter */}<option key={category.title} value={category.title}>;
                     {category.title} ({category.count})</option>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
               </select>;
               {/* Sort Options */}
@@ -730,6 +770,7 @@ onChange={e => setSortBy(e.target.value)}
                 ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* View Mode Toggle */}
               <div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'>
                 <button
@@ -739,6 +780,9 @@ onChange={e => setSortBy(e.target.value)}
               {/* View Mode Toggle */}
               <div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'>                <button
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+              {/* View Mode Toggle */}<div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'>                <button;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400'}`}
                 <option value="popular">Most Popular</option>;
@@ -748,6 +792,9 @@ onChange={e => setSortBy(e.target.value)}
                 <option value="customers">Most Customers</option>;
               </select>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 >              >;
                 <option value="popular">Most Popular</option>;
                 <option value="price-low">Price: Low to High</option>;
@@ -804,8 +851,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </button>;
               </div>;
             </div>;
@@ -814,6 +864,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
             variants={containerVariants}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial="hidden";
             animate="visible";
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}{/* Services Grid */}
@@ -854,6 +907,7 @@ viewMode === 'grid'
           >;
           >;
             {sortedServices.map((service, index) => (<motion.div;
+<<<<<<< HEAD
 =======
 
                   viewMode === 'grid'                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'                  viewMode === 'grid'
@@ -864,6 +918,8 @@ viewMode === 'grid'
             {sortedServices.map((service, index) => (
               <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Services Grid */}
       <section className='py - 16'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
@@ -887,6 +943,7 @@ viewMode === 'grid'
                     ? 'bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 6 hover:border - purple - 500 / 50 transition - all duration - 300 hover:scale - 105';
                     : 'bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 8 hover:border - purple - 500 / 50 transition - all duration - 300';
                 }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
               >;viewMode === 'grid';
                     ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105';
@@ -923,6 +980,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 {service.popular && (<div className='absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              >;viewMode === 'grid';
+                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105';
+                    : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300';
+                }`}
+              >;
+                {/* Popular Badge */}
+                {service.popular && (<div className='absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     Popular;
                   </div>;
                 )}
@@ -954,6 +1020,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className='text - 3xl font - bold text - white'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         {service.price}
                       </span>
                       <span className='text-gray-400'>{service.period}</span>
@@ -964,10 +1031,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+=======
+                        {service.price}</div>;
+                  </div>;
+                  <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>;
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {service.name}
                     </h3>
                     <p className="text-gray-300 text-sm mb-3">{service.tagline}</p>
                     {/* Price */}
+<<<<<<< HEAD
                     <div className="flex items-center justify-center space-x-2 mb-4">
                       <span className="text-3xl font-bold text-white">{service.price}</span>
                       <span className="text-gray-400">{service.period}</span>
@@ -990,6 +1064,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </h3>;
                     <p className="text-gray-300 text-sm mb-3">{service.tagline}</p>;
                     {/* Price */}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <div className="flex items-center justify-center space-x-2 mb-4">;
                       <span className="text-3xl font-bold text-white">{service.price}</span>;
                       <span className="text-gray-400">{service.period}</span>;
@@ -1001,6 +1077,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Description */}<p className='text-gray-300 mb-6 leading-relaxed'>;
                   {service.description}
                 </p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -1009,6 +1086,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {/* Features */}
                 <div className='mb-6'>;
                   <h4 className='text-white font-semibold mb-3 flex items-center'>;
@@ -1016,6 +1095,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Key Features;
                   </h4>;
                   <div className='grid grid-cols-1 gap-2'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     {service && service.features.slice(0, 4).map((feature, idx) => (;
                       <div
@@ -1030,12 +1110,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                         className='flex items-center text-sm text-gray-300'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                    {service && service.features.slice(0, 4).map((feature, idx) => (<div;
+                        key={idx}className='flex items-center text-sm text-gray-300'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                        {feature}
                       </div>;
                     ))}
                         {feature}
                       </div>))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {service.features.length > 4 && ({service.features.length > 4 && (<div className='text-sm text-purple-400 mt-2'>                        +{service.features.length - 4} more features;
                         className='flex items-center text-sm text-gray-300';
                       >;
@@ -1055,6 +1142,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                   </div>;
                 </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                     {service.features.length > 4 && (
@@ -1063,6 +1151,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='text-sm text-purple-400 mt-2'>                        +{service.features.length - 4} more features
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {/* Service Details */}
 <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>;
                   <div className='text-gray-400'>;
@@ -1083,6 +1173,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className='text-white font-medium mr-1'>;
                         {service.rating}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       </span>
                       <Star className='w-4 h-4 text-yellow-400 fill-current' />
                     </div>
@@ -1101,6 +1192,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='text-gray-300 mb-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </span>;
                       <Star className='w-4 h-4 text-yellow-400 fill-current' />;
                     </div>;
@@ -1174,6 +1267,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Market Size:;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                       </span>{' '}
                       {service.marketSize}
 =======
@@ -1186,6 +1280,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </span>{' '}<div className="text-sm">;
                     <div className="text-gray-300 mb-2">;
                       <span className="font-semibold text-white">ROI: </span> {service.roi}
@@ -1215,6 +1311,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='text-center text-sm text-gray-400'>;
                     <p>Contact us for custom pricing and implementation</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <div className='flex items-center justify-center space-x-4 mt-2'>;{service.marketSize}
                     </div>;
                   </div>;
@@ -1249,12 +1348,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p>Contact us for custom pricing and implementation</p>;
                     <div className='flex items-center justify-center space-x-4 mt-2'>;
                       <a;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         href={`tel:${contactInfo && contactInfo.mobile}`}
                         className='flex items-center text-purple-400 hover:text-purple-300'>;
                         <Phone className='w-4 h-4 mr-1' />;
                         {contactInfo && contactInfo.mobile}
                       </a>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       <a
@@ -1301,6 +1404,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                       <a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                      <a;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         href={`mailto:${contactInfo && contactInfo.email}`}
                         className='flex items-center text-purple-400 hover:text-purple-300'>;
                         <Mail className='w-4 h-4 mr-1' />                        {contactInfo && contactInfo.email}                    <p>Contact us for custom pricing and implementation</p>;
@@ -1317,6 +1423,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </motion && motion.div>;href={`mailto:${contactInfo.email}`}
                         className='flex items-center text-purple-400 hover:text-purple-300';
                       >;
@@ -1343,6 +1452,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </button>;
             </div>;className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300';
                   setSelectedCategory('all')}}
+<<<<<<< HEAD
 =======
               </motion && motion.div>;
                       </a>
@@ -1370,6 +1480,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300";
               >;
                 Clear Filters;
@@ -1388,6 +1500,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           >
@@ -1425,6 +1538,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+          >;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">;
@@ -1662,6 +1778,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </Layout>)}<h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Experience the Future?;
             </h2>;
@@ -1688,9 +1807,13 @@ href='/pricing';
         </div>;
       </section>;
     </Layout>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </Layout>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

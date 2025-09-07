@@ -5,6 +5,9 @@ function fixMergeConflicts(filePath) {
   try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Check if file has merge conflict markers
     if (
@@ -12,6 +15,7 @@ function fixMergeConflicts(filePath) {
     ) {
       console.log(`Fixing merge conflicts: in: ${filePath}`);
 
+<<<<<<< HEAD
 =======
     const content = fs.readFileSync(filePath, 'utf8');
     
@@ -28,6 +32,8 @@ ursor/fix-lint-push-and-merge-to-main-28da
       // Remove merge conflict markers and keep the content after 
 ursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       const lines = content.split('\n');
       const fixedLines = [];
       let inConflict = false;
@@ -36,6 +42,7 @@ ursor/fix-lint-push-and-merge-to-main-28da
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         if (line.includes('
@@ -56,11 +63,14 @@ ursor/fix-lint-push-and-merge-to-main-28da
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           inConflict = true;
           keepContent = false;
           continue;
         }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         if (line.includes('>>>>>>>')) {
@@ -68,6 +78,8 @@ ursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           inConflict = false;
           keepContent = false;
           continue;

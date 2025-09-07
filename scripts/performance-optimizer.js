@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 
 <<<<<<< HEAD
@@ -33,6 +34,8 @@ class PerformanceOptimizer {
 
 import fs from 'fs';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 ursor/automate-test-improve-and-merge-code-646c;
 #!/usr/bin/env node const fs = require('fs')const path = require('path')class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json')if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
@@ -105,7 +108,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
         optimized = optimized.replace(rule, newRule)changes++;}
     })return totalSize;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   generateReport() {const report = {timestamp: new Date().toISOString(),metrics: this.metrics,recommendations: this.generateRecommendations()}fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2))console.log('Performance report generated')}
   generateRecommendations() {const recommendations = [];
@@ -117,6 +123,7 @@ const fs = require('fs')const path = require('path')class PerformanceOptimizer {
   async analyzeBundle() {const buildDir = path.join(process.cwd(), '.next')if (fs.existsSync(buildDir)) {const stats = this.getDirectorySize(buildDir)this.metrics.bundleSize = stats;
       console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`)}
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -139,6 +146,11 @@ const fs = require('fs')const path = require('path')class PerformanceOptimizer {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  getDirectorySize(dirPath) {let totalSize = 0;
+    const files = fs.readdirSync(dirPath)files.forEach(file => {const filePath = path.join(dirPath, file)const stats = fs.statSync(filePath)if (stats.isDirectory()) {totalSize += this.getDirectorySize(filePath)} else {totalSize += stats.size;
+#!/usr/bin/env node
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 #!/usr/bin/env node
@@ -781,6 +793,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -812,6 +825,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       recommendations: [;
         'Consider implementing code splitting for large components','Use React.memo for expensive components','Optimize images to WebP/AVIF format','Implement lazy loading for non-critical components','Use CSS-in-JS libraries for better tree shaking';
       ];
@@ -861,11 +876,14 @@ module.exports = PerformanceOptimizer;#!/usr/bin/env node const fs = require('fs
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export default PerformanceMonitor;";
     const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js');

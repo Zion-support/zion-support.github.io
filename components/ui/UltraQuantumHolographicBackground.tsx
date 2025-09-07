@@ -30,11 +30,15 @@ vx: number;
 =======
             ease: "easeInOut";
 useEffect ( () => {const updateDimensions = () => {setDimensions ({const updateDimensions = () => {setDimensions ({updateDimensions ()vx: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 vy: number;
 size: number;
 color: string;
 life: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   children
   intensity = 'high'
@@ -100,11 +104,16 @@ overlay: 'rgba(0, 0, 0, 0.28)',
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground(): any ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   children;
   intensity = 'high';
   colorScheme = 'quantum';
   particleCount = 300;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   animationSpeed = 1.5;
   className = '';
 }: UltraQuantumHolographicBackgroundProps) {children,intensity = 'high',colorScheme = 'quantum',particleCount = 300,animationSpeed = 1.5,className = '',}: UltraQuantumHolographicBackgroundProps) {const canvasRef  = useRef<HTMLCanvasElement>(null)const [dimensions, setDimensions] = useState({ width: 0, height: 0 })const [isVisible, setIsVisible] = useState(false)export default function UltraQuantumHolographicBackground(): any ({children;
@@ -175,12 +184,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         this.type = ['quantum', 'holographic', 'energy', 'matrix'][;
           Math.floor(Math.random() * 4)] as any;
       }update() {this.x += this.vx;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.y += this.vy;
         this.life--;
         // Bounce off edges;
         if (this.x <= 0 |this.x >= dimensions.width) this.vx *= -1;
         if (this.y <= 0 |this.y >= dimensions.height) this.vy *= -1;
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Quantum tunneling effect
         if (Math.random() < 0.001 * intensityMultiplier) {
@@ -191,6 +204,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 this.y = Math.random() * dimensions.height;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         // Quantum tunneling effect;
         if (Math.random() < 0.001 * intensityMultiplier) {this.x = Math.random() * dimensions.width;this.y = Math.random() * dimensions.height;
         }// Holographic flicker;
@@ -201,6 +216,7 @@ this.y = Math.random() * dimensions.height;
         if (this.type === 'matrix') {this.vy += 0.1;
           if (this.y > dimensions.height) {this.y = -10;this.vy = Math.random() * 2 + 1;
 this.vy = Math.random() * 2 + 1;}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         }
       }this.vy = Math.random() * 2 + 1;          }}
@@ -272,6 +288,11 @@ ctx.stroke();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             }
 =======
+=======
+        }
+      }this.vy = Math.random() * 2 + 1;          }}
+        }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }draw() {if (this.life <= 0) return;
         const alpha = this.life / this.maxLife;
         ctx.save()ctx.globalAlpha = alpha;
@@ -283,7 +304,10 @@ ctx.stroke();
             for () {ctx.beginPath()ctx.arc(this.x, this.y, this.size * i, 0, Math.PI * 2)ctx.strokeStyle = this.color;
               ctx.lineWidth = 0.5;
               ctx.globalAlpha = alpha * (0.3 / i)ctx.stroke()}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             break;
           case 'holographic':;
             // Holographic projection;
@@ -291,6 +315,7 @@ ctx.stroke();
             ctx.fill()// Holographic grid;
             ctx.strokeStyle = this.color;
             ctx.lineWidth = 0.5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             ctx.globalAlpha = alpha * 0.5;
@@ -335,6 +360,8 @@ break;
         ctx.restore();
       }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ctx.globalAlpha = alpha * 0.5;ctx.strokeRect(this.x - this.size,this.y - this.size,this.size * 2,this.size * 2;
             )break;
           case 'energy':;
@@ -382,11 +409,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }
 =======
           const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2)if (distance < 100 && p1.life > 0 && p2.life > 0) {ctx.beginPath()ctx.moveTo(p1.x, p1.y)ctx.lineTo(p2.x, p2.y)ctx.stroke()}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }
       }// Draw holographic grid;
       ctx.strokeStyle = colors.secondary;
       ctx.lineWidth = 0.3;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       ctx.globalAlpha = 0.2;
@@ -509,6 +540,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             (_, i) => (
               <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       ctx.globalAlpha = 0.2;const gridSize = 50;
       for (let x = 0; x < dimensions && dimensions.width; x += gridSize) {ctx && ctx.beginPath()ctx && ctx.moveTo(x, 0)ctx && ctx.lineTo(x, dimensions && dimensions.height)ctx && ctx.stroke()const gridSize = 50;
       for (let x = 0; x < dimensions.width; x += gridSize) {ctx.beginPath()ctx.moveTo(x, 0)ctx.lineTo(x, dimensions.height)ctx.stroke()}
@@ -735,14 +768,18 @@ className='absolute inset-0';
         />;
       </div>;
       {/* Content Layer */}<div className='relative z - 20'>{children}</div>;<div className='relative z-20'>{children}</div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       <div className='relative z - 20'>{children}</div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Quantum Noise Effect */}
       <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>;
         <motion.div;
           className='absolute inset - 0';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           animate={{
@@ -784,6 +821,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           animate={{background: [;
               `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,`url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,],          }}
           transition={{duration: 4;
@@ -804,6 +843,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
 ))}
     </div>;
+<<<<<<< HEAD
 )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -812,3 +852,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

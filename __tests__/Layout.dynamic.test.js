@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,6 +42,11 @@ import React from 'react';  import '@testing-library/jest-dom'; import Layout fr
 import { render, screen, fireEvent  } from '@testing-library/react';
 import _React from 'react';  import '@testing-library/jest-dom'; import Layoutdynamic from '../components/Layout.dynamic'; describe('Layoutdynamic',() => { test('renders without crashing',() => { render(<Layoutdynamic />); expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Layoutdynamic />)}); test('handles user interactions',() => { render(<Layoutdynamic />)}); test('applies correct styling',() => { render(<Layoutdynamic />)})});
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import React from 'react';  import '@testing-library/jest-dom'; import Layout from '../components/Layout.dynamic'; describe('Layout',() => { test('renders without crashing',() => { render(<Layout />)expect(screen.getByTestId('layout')).toBeInTheDocument()})test('displays correct content',() => { render(<Layout />)})test('handles user interactions',() => { render(<Layout />)})test('applies correct styling',() => { render(<Layout />)})})import React from 'react';
+import { render, screen, fireEvent  } from '@testing-library/react';
+import _React from 'react';  import '@testing-library/jest-dom'; import Layoutdynamic from '../components/Layout.dynamic'; describe('Layoutdynamic',() => { test('renders without crashing',() => { render(<Layoutdynamic />); expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Layoutdynamic />)}); test('handles user interactions',() => { render(<Layoutdynamic />)}); test('applies correct styling',() => { render(<Layoutdynamic />)})});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -55,10 +61,13 @@ describe('Layoutdynamic', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 });
 
 
@@ -115,6 +124,7 @@ describe('Layout', () => {test('renders without crashing', () => {render(<Layout
     // Test styling;
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import Layoutdynamic from '../components/Layout.dynamic'; describe('Layoutdynamic',() => { test('renders without crashing',() => { render(<Layoutdynamic />); expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Layoutdynamic />)}); test('handles user interactions',() => { render(<Layoutdynamic />)}); test('applies correct styling',() => { render(<Layoutdynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import Layoutdynamic from '../components/Layout.dynamic'; describe('Layoutdynamic',() => { test('renders without crashing',() => { render(<Layoutdynamic />); expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Layoutdynamic />)}); test('handles user interactions',() => { render(<Layoutdynamic />)}); test('applies correct styling',() => { render(<Layoutdynamic />)})});
 <<<<<<< HEAD
@@ -154,3 +164,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -26,10 +26,14 @@ function resolveMergeConflicts(filePath) {
     // Clean up any remaining conflict markers
     resolvedContent = resolvedContent.replace(/
 <<<<<<< HEAD
+<<<<<<< HEAD
     resolvedContent = resolvedContent.replace(//g, '');
 =======
     resolvedContent = resolvedContent.replace(/[\s\S]*?/g, '');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    resolvedContent = resolvedContent.replace(//g, '');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Write the resolved content
     fs.writeFileSync(filePath, resolvedContent, 'utf8');

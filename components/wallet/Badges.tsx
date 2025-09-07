@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 export type Badge = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -14,6 +15,8 @@ import React from 'react';
 label: string;
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 import React from 'react';
@@ -32,6 +35,7 @@ threshold: number, //token balance threshold;
           key={b.id}
           className={`px - 3 py - 1 rounded - full text - xs border ${balance >= b.threshold;
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
+<<<<<<< HEAD
 <<<<<<< HEAD
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'          }`}  let current: Badge | null = null,
 
@@ -64,6 +68,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               : 'bg-gray-100 border-gray-200 text-gray-500'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'          }`}  let current: Badge | null = null,for (const b of BADGES) {// Check condition;
 if (current = b) {$2;
 }return current;export default function Badges(): any ({ balance }: { balance: number }) {const active = currentBadge(balance)return (export default function Badges(): any ({ balance }: { balance: number }) {const active = currentBadge(balance)return (<div className='flex gap-2 items-center flex-wrap'>;
@@ -103,6 +109,9 @@ function Badges() {const active = current_badge (balance)return (<div className=
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'              ? "bg - yellow - 100 border - yellow - 300 text - yellow - 800";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               : "bg - gray - 100 border - gray - 200 text - gray - 500";export default function Badges() {export default function Badges() {const active  = currentBadge(balance)return (<div className='flex gap-2 items-center flex-wrap'>;
       {BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">;
       {BADGES.map((b) => (export default function Badges() {const active = currentBadge(balance)return (<div className='flex gap-2 items-center flex-wrap'>;
@@ -111,6 +120,7 @@ function Badges() {const active = current_badge (balance)return (<div className=
           className={`px-3 py-1 rounded-full text-xs border ${balance >= b.threshold;
 ? 'bg-yellow-100 border-yellow-300 text-yellow-800';
               : 'bg-gray-100 border-gray-200 text-gray-500';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               : "bg - gray - 100 border - gray - 200 text - gray - 500";
@@ -130,6 +140,8 @@ export default function Badges({ balance }: { balance: number }) {
             balance >= b.threshold
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }`}
           title={`Requires ${b.threshold} ZION$`}
         >;
@@ -137,9 +149,12 @@ export default function Badges({ balance }: { balance: number }) {
         </span>))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {active && (
 <span className='ml-2 text-xs text-green-600'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {active && ()}
   )<span className='ml - 2 text - xs text - green - 600'>;
           Current: {active.label}<span className='ml - 2 text - xs text - green - 600'>;
@@ -147,6 +162,7 @@ export default function Badges({ balance }: { balance: number }) {
         </span>)}
     </div>)<span className="ml - 2 text - xs text-green-600">Current: {active.label}</span>)}
     </div>)}<span className='ml-2 text-xs text-green-600'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           Current: {active.label}
         </span>;
@@ -176,3 +192,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+          Current: {active.label}
+        </span>;
+      )}
+    </div>;
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

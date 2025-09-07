@@ -4,24 +4,33 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Rocket;
 =======
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Rocket;
   DollarSign,Users,BarChart3,Mail,Calendar,Shield,import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Rocket,DollarSign,Users,BarChart3,Mail,Calendar,Shield,Globe,ArrowRight,Star,Check,ExternalLink,TrendingUp,Zap,Target,Lightbulb,BookOpen,} from 'lucide-react';import {Rocket;
   DollarSign,Users,BarChart3,Mail,Calendar,Shield,import { Rocket;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import {Rocket,DollarSign,Users,BarChart3,Mail,Calendar,Shield,Globe,ArrowRight,Star,Check,ExternalLink,TrendingUp,Zap,Target,Lightbulb,BookOpen,} from 'lucide-react';import {Rocket;
+  DollarSign,Users,BarChart3,Mail,Calendar,Shield,import { Rocket;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   DollarSign;
   Users;
   BarChart3;
   Mail;
   Calendar;
+<<<<<<< HEAD
 <<<<<<< HEAD
   Shield;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -56,6 +65,9 @@ import {
 =======
   Shield;Globe;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  Shield;Globe;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ArrowRight;
   Star;
   Check;
@@ -63,6 +75,7 @@ import {
   TrendingUp;
   Zap;
   Target;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Lightbulb;
@@ -430,6 +443,8 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
         />
         <meta name='twitter:card' content='summary_large_image' />
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Lightbulb;bestFor: 'B2B startups, SaaS companies, marketing teams';
     }BookOpen;
  } from 'lucide-react';
@@ -734,13 +749,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 130M+;
               </div>;
               <div className='text-gray-400 text-sm'>Total Users</div>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </div>;
           </div>;
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </div>;
           </div>;
         </div>;
@@ -749,9 +770,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex flex-wrap justify-center gap-4'>;
             {categories.map(category => (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category;
@@ -759,6 +783,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white';
                 }`}
               >;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 {category}
@@ -1078,6 +1103,8 @@ return (<> <Head> <title>Startup Tools & Resources - Zion Tech Group</title> <me
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {category}Beyond tools, here are additional resources to help your startup;
               succeed.;
             </p>;
@@ -1352,5 +1379,9 @@ return (<> <Head> <title>Startup Tools & Resources - Zion Tech Group</title> <me
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

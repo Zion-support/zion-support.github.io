@@ -128,6 +128,7 @@ process.on("SIGTERM")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Failed to start master error "fixer": ")
 
@@ -135,3 +136,6 @@ process.on("SIGTERM")
 =======
   console.error(" Failed to start master error "fixer": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" Failed to start master error "fixer": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

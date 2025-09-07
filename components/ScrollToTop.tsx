@@ -7,6 +7,7 @@ setIsVisible(true);
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 
 const ScrollToTop: React.FC = () => {
 
@@ -113,6 +114,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               strokeLinejoin='round'
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 const ScrollToTop: React.FC = () => {export default function ScrollToTop() {const [isVisible, setIsVisible]  = useState(false)const ScrollToTop: React.FC = () => {const [isVisible, setIsVisible] = useState(false)useEffect(() => {const toggleVisibility = () => {if (window.pageYOffset > 300) {setIsVisible(true)} else {setIsVisible(false)import React, { useState, useEffect } from 'react';
 setIsVisible(true)} else {setIsVisible(false)}
@@ -142,13 +145,17 @@ setIsVisible(true)} else {setIsVisible(false)}
             <path;
               strokeLinecap='round';
               strokeLinejoin='round';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               strokeWidth={2}
               d='M5 10l7-7m0 0l7 7m-7-7v18';
             />;
           </svg>;
         </button>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </>
@@ -166,6 +173,8 @@ export default ScrollToTop;
 export default ScrollToTop;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </>;
   )}
 }
@@ -222,6 +231,7 @@ if ( {) {$2;
           </svg>;
         </button>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>)}export default ScrollToTop)}export default ScrollToTop;)}export default ScrollToTop;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -233,3 +243,6 @@ export default ScrollToTop);
 ;
 export default ScrollToTop;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </>)}export default ScrollToTop)}export default ScrollToTop;)}export default ScrollToTop;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
@@ -24,6 +25,8 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 #!/usr/bin/env node;
 
@@ -152,6 +155,7 @@ fixer.run().catch(console.error)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
@@ -190,6 +194,8 @@ main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -232,6 +238,7 @@ export const sanitizeHtml = ("html")
   this.log("\\n Fixes "Applied": ")
       this.log("\\n� Final TypeScript fixing completed!")
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -297,3 +304,9 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -60,6 +60,7 @@ module.exports = {}
       "restart_delay": 10000,
       "env": {}
 
+<<<<<<< HEAD
     // AI-Powered Code Analysis & Auto-Fixing
     {
       name: 'ai-code-analyzer',
@@ -80,6 +81,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         AI_ANALYSIS_MODE: 'comprehensive',
         AUTO_FIX: 'true'
@@ -125,6 +128,7 @@ main
       "restart_delay": 15000,
       "env": {}
 
+<<<<<<< HEAD
     // Smart Performance Optimizer
     {
       name: 'smart-performance-optimizer',
@@ -145,6 +149,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         OPTIMIZATION_LEVEL: 'aggressive',
         PERFORMANCE_MONITORING: 'true'
@@ -190,6 +196,7 @@ main
       "restart_delay": 20000,
       "env": {}
 
+<<<<<<< HEAD
     // Intelligent Dependency Manager
     {
       name: 'intelligent-dependency-manager',
@@ -210,6 +217,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         AUTO_UPDATE: 'true',
         SECURITY_FIRST: 'true',
@@ -256,6 +265,7 @@ main
       "restart_delay": 30000,
       "env": {}
 
+<<<<<<< HEAD
     // Smart Deployment Automation
     {
       name: 'smart-deployment-automation',
@@ -276,6 +286,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         AUTO_DEPLOY: 'false', // Set to true for automatic deployment
         ROLLBACK_ENABLED: 'true',
@@ -322,6 +334,7 @@ main
       "restart_delay": 10000,
       "env": {}
 
+<<<<<<< HEAD
     // Intelligent Repository Manager
     {
       name: 'intelligent-repository-manager',
@@ -342,6 +355,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         AUTO_MERGE: 'false', // Set to true for automatic merging
         CONFLICT_RESOLUTION: 'intelligent',
@@ -388,6 +403,7 @@ main
       "restart_delay": 5000,
       "env": {}
 
+<<<<<<< HEAD
     // Advanced Development Workflow
     {
       name: 'advanced-development-workflow',
@@ -408,6 +424,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         WORKFLOW_MODE: 'continuous',
         QUALITY_GATES: 'enabled'
@@ -453,6 +471,7 @@ main
       "restart_delay": 15000,
       "env": {}
 
+<<<<<<< HEAD
     // Intelligent CI/CD Orchestrator
     {
       name: 'intelligent-cicd-orchestrator',
@@ -473,6 +492,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         PIPELINE_MODE: 'intelligent',
         AUTO_DEPLOYMENT: 'false'
@@ -518,6 +539,7 @@ main
       "restart_delay": 10000,
       "env": {}
 
+<<<<<<< HEAD
     // Enhanced CI/CD Automation
     {
       name: 'enhanced-ci-cd-automation',
@@ -538,6 +560,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         QUALITY_GATES: 'strict',
         PARALLEL_JOBS: '4'
@@ -583,6 +607,7 @@ main
       "restart_delay": 20000,
       "env": {}
 
+<<<<<<< HEAD
     // Enhanced Testing Automation
     {
       name: 'enhanced-testing-automation',
@@ -603,6 +628,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         TEST_STRATEGY: 'comprehensive',
         PARALLEL_TESTS: 'true'
@@ -648,6 +675,7 @@ main
       "restart_delay": 25000,
       "env": {}
 
+<<<<<<< HEAD
     // Enhanced Security Automation
     {
       name: 'enhanced-security-automation',
@@ -668,6 +696,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         SECURITY_LEVEL: 'maximum',
         VULNERABILITY_SCANNING: 'true'
@@ -713,6 +743,7 @@ main
       "restart_delay": 5000,
       "env": {}
 
+<<<<<<< HEAD
     // Project Health Monitor
     {
       name: 'project-health-monitor',
@@ -733,6 +764,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         HEALTH_CHECKS: 'comprehensive',
         MONITORING_INTERVAL: '300000'
@@ -778,6 +811,7 @@ main
       "restart_delay": 2000,
       "env": {}
 
+<<<<<<< HEAD
     // PM2 Sync Automation
     {
       name: 'pm2-sync-automation',
@@ -798,6 +832,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         SYNC_MODE: 'continuous',
         PROCESS_MONITORING: 'true'
@@ -843,6 +879,7 @@ main
       "restart_delay": 30000,
       "env": {}
 
+<<<<<<< HEAD
     // Link Checker Automation
     {
       name: 'link-checker-automation',
@@ -863,6 +900,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         CHECK_DEPTH: 'deep',
         EXTERNAL_LINKS: 'true'
@@ -908,6 +947,7 @@ main
       "restart_delay": 5000,
       "env": {}
 
+<<<<<<< HEAD
     // TypeScript Syntax Fixer
     {
       name: 'typescript-syntax-fixer',
@@ -928,6 +968,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         AUTO_FIX: 'true',
         STRICT_MODE: 'true'
@@ -973,6 +1015,7 @@ main
       "restart_delay": 3000,
       "env": {}
 
+<<<<<<< HEAD
     // Console Error Fixer
     {
       name: 'console-error-fixer',
@@ -993,6 +1036,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         ERROR_DETECTION: 'real-time',
         AUTO_FIX: 'true'
@@ -1038,6 +1083,7 @@ main
       "restart_delay": 10000,
       "env": {}
 
+<<<<<<< HEAD
     // Quality Checks
     {
       name: 'quality-checks',
@@ -1058,6 +1104,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         QUALITY_STANDARDS: 'high',
         COVERAGE_THRESHOLD: '80'
@@ -1103,6 +1151,7 @@ main
       "restart_delay": 20000,
       "env": {}
 
+<<<<<<< HEAD
     // Security Audit
     {
       name: 'security-audit',
@@ -1123,6 +1172,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         AUDIT_LEVEL: 'comprehensive',
         VULNERABILITY_ALERTS: 'true'
@@ -1168,6 +1219,7 @@ main
       "restart_delay": 60000,
       "env": {}
 
+<<<<<<< HEAD
     // Continuous Improvement
     {
       name: 'continuous-improvement',
@@ -1188,6 +1240,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         IMPROVEMENT_MODE: 'automatic',
         LEARNING_ENABLED: 'true'
@@ -1233,6 +1287,7 @@ main
       "restart_delay": 120000,
       "env": {}
 
+<<<<<<< HEAD
     // Daily Build Test
     {
       name: 'daily-build-test',
@@ -1253,6 +1308,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         BUILD_STRATEGY: 'comprehensive',
         NOTIFICATION_ENABLED: 'true'
@@ -1298,6 +1355,7 @@ main
       "restart_delay": 5000,
       "env": {}
 
+<<<<<<< HEAD
     // Health Check
     {
       name: 'health-check',
@@ -1318,6 +1376,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         HEALTH_CHECK_INTERVAL: '120000',
         ALERT_THRESHOLD: 'medium'
@@ -1363,6 +1423,7 @@ main
       "restart_delay": 30000,
       "env": {}
 
+<<<<<<< HEAD
     // Security Scanner
     {
       name: 'security-scanner',
@@ -1383,6 +1444,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         SCAN_DEPTH: 'comprehensive',
         REAL_TIME_SCANNING: 'true'
@@ -1428,6 +1491,7 @@ main
       "restart_delay": 5000,
       "env": {}
 
+<<<<<<< HEAD
     // Performance Monitor
     {
       name: 'performance-monitor',
@@ -1448,6 +1512,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'production',
         MONITORING_INTERVAL: '180000',
         PERFORMANCE_ALERTS: 'true'
@@ -1460,6 +1526,7 @@ main
     }
   ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1489,6 +1556,8 @@ main
     production: {}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       user: 'node',
       host: 'your-production-server.com',
       ref: 'origin/main',

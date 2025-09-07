@@ -5,6 +5,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -12,6 +13,9 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs')
   const filePath = './pages/team.tsx'
     console.log(' Team page not found')
@@ -95,6 +99,7 @@ const fs = require('fs')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               "transition"
 
@@ -102,3 +107,6 @@ const fs = require('fs')
 =======
               "transition"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+              "transition"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

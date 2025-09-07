@@ -19,6 +19,7 @@ module.exports = { resolveMergeConflict, findConflictedFiles }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -31,6 +32,8 @@ module.exports = { resolveMergeConflict, findConflictedFiles }
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")

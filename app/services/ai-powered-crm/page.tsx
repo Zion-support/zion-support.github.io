@@ -2,6 +2,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import FeatureCard from '@/components/FeatureCard';
 import PricingTier from '@/components/PricingTier';
@@ -401,6 +402,10 @@ function CaseStudy({ company, industry, result, description, metrics }: {
 import Link from 'next/link';
 
 export const metadata = {
+=======
+
+export const metadata = {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: 'Ai Powered Crm | Zion Tech Group',
   description: 'Professional ai powered crm services for your business needs.',
   keywords: 'ai-powered-crm, services, business, technology',
@@ -447,7 +452,10 @@ export default function ServicePage() {
               run smoothly.
             </p>
           </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>
       </div>
     </div>

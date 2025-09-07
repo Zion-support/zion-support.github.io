@@ -15,6 +15,7 @@ function log(message, level = 'INFO')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     log(` Test suite enhancement "failed"`)
 
@@ -22,3 +23,6 @@ function log(message, level = 'INFO')
 =======
     log(` Test suite enhancement "failed"`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    log(` Test suite enhancement "failed"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

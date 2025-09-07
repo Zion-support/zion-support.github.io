@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head';
 =======
@@ -81,6 +82,8 @@ const matchesCategory =
       icon: BarChart3
       count: allServices.length
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import Head from 'next / head';
 import { motion  } from 'framer-motion';
@@ -499,12 +502,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </label>;
                   <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>                    {categories.map(category => ({categories.map(category => (<div className='grid grid-cols-2 md:grid-cols-4 gap-2'>;
                     {categories.map(category => (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         key={category && category.id}
                         onClick={() => setSelectedCategory(category && category.id)}
                         className={`p-3 rounded-xl text-sm font-medium transition-all duration-300 ${selectedCategory === category && category.id;
                             ? 'bg-cyan-500 text-black';
                             : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                         }`}
@@ -546,6 +553,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       <button
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         }`}>;
 <div className='flex items-center justify-center space-x-2'>;
                           <category.icon className='w-4 h-4' />;
@@ -567,12 +576,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </label>;
                   <div className='space-y-2'>;
                     {priceRanges.map(range => (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         key={range && range.id}
                         onClick={() => setPriceRange(range && range.id)}
                         className={`w-full p-3 rounded-xl text-left transition-all duration-300 ${priceRange === range && range.id;
                             ? 'bg-cyan-500 text-black';
                             : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                         }`}
@@ -582,10 +595,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         }`}>;
 <div className='font-medium'>{range.name}</div>;
                         <div className='text-xs opacity-75'>{range.range}</div>;
                       </button>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                         }`}
@@ -593,6 +609,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     ))}
                   </div>;
                 </div>;
@@ -756,6 +774,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
 className='text-center mb-12'
@@ -770,6 +789,8 @@ className='text-center mb-12'
               </p>
             </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}</motion.div>;
             {/* Market Insights Grid */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>              <motion.div              <h2 className="text-4xl font-bold text-white mb-4">Market Analysis & Competitive Positioning</h2>;
@@ -833,7 +854,10 @@ className='text-center mb-12';
                 evolving technology landscape;
               </p>;
             </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Market Insights Grid */}
 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>;
               <motion.div;
@@ -841,6 +865,7 @@ className='text-center mb-12';
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -923,6 +948,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm';
               >;
                 <div className='text-4xl mb-4'>📊</div>;
@@ -980,7 +1007,10 @@ className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                 className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm';
@@ -1068,6 +1098,7 @@ className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
         </section>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Services Pricing Grid */}
 <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -1076,10 +1107,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
         {/* Services Pricing Grid */}
         <section className='relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8'>;
+=======
+        {/* Services Pricing Grid */}<section className='relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className='max - w-7xl mx - auto'>            <motion.div        <section className="relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
+<<<<<<< HEAD
               whileInView={{ opacity: 1, coordinate_y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               initial={{ opacity: 0, y: 30 }}
@@ -1115,6 +1150,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="max - w-7xl mx - auto">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               whileInView={{ opacity: 1, coordinate_y: 0 }}<section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>;
             <motion.div;
@@ -1138,7 +1175,10 @@ className='text-center mb-12';
             </motion.div>;
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
               {filteredServices.map((service, index) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   key={service.id}
               transition={{ duration: 0 && 0.8 }}
               className='text-center mb-12'>;
@@ -1158,6 +1198,7 @@ className='text-center mb-12';
               {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;
                   key={service && service.id}
                   initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   animate={{ opacity: 1, y: 0 }}
@@ -1193,6 +1234,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}
 className='group';
                 >;
@@ -1207,10 +1250,13 @@ className='group';
                     </div>;
                     {/* Service Title */}<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>;
+<<<<<<< HEAD
 =======
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {/* Tagline */}
                     <p className='text-gray-300 text-sm mb-4'>                      {service.tagline}
                     </p>;
@@ -1269,6 +1315,9 @@ className='group';
                     </div>;
                     {/* Market Position */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </div>;
                     </div>;
                     {/* Market Position */}<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
@@ -1320,12 +1369,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <p className='text-gray-400 text-xs leading-relaxed'>;
                         {service.marketPosition}</p>;
                     </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {/* ROI & Customers */}
 <div className='grid grid-cols-2 gap-4 mb-4'>;
                       <div className='text-center p-3 bg-gray-700/30 rounded-lg'>;
                         <div className='text-lg font-bold text-green-400 mb-1'>;
                           {service.roi.split(' ')[0]}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         </div>
                         <div className='text-gray-400 text-xs'>ROI</div>
@@ -1342,6 +1395,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         </div>;
                         <div className='text-gray-400 text-xs'>ROI</div>;
                       </div>;
@@ -1433,6 +1488,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       <h4 className="text-white font-semibold mb-2 text-sm">Key Features</h4>;
                       <ul className="space-y-1">;
                         {service.features.slice(0, 3).map((feature, idx) => (<li key={idx} className="text-gray-400 text-xs flex items-center">;
@@ -1529,7 +1587,10 @@ className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-s
                     </a>;
                   </div>;
                 </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
             </div>;
                         ))}
@@ -1569,6 +1630,7 @@ className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-s
                 initial={{ opacity: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 animate={{ opacity: 1 }}
 =======
                 animate={{ opacity: 1 }}
@@ -1591,6 +1653,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             )}
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 animate={{ opacity: 1 }}className='text-center py-16';
               >;
                 <div className='text-6xl mb-4'>🔍</div>;
@@ -1603,7 +1667,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>;
             )}</div>;
         </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         </section>;
         {/* Contact Section */}
@@ -1743,6 +1810,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
 className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'
@@ -1800,6 +1868,8 @@ href='/2026-services-showcase'
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}transition={{ duration: 0.8 }}
 className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm';
             >;
@@ -1828,8 +1898,11 @@ className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 bord
                 </div>;
               </div>;
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 Contact our team to discuss pricing, implementation, and how our;
                 revolutionary 2026 services can transform your business with;
                 exceptional ROI;
@@ -1867,12 +1940,16 @@ href='/2026-services-showcase';
                 </a>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </motion.div>;
           </div>;
         </section>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   )className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">;
+<<<<<<< HEAD
 =======
                 <a
 href='/2026-services-showcase'
@@ -1892,6 +1969,8 @@ href='/2026-services-showcase'
 
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   View All Services;
                 </a>;
               </div>;
@@ -1966,6 +2045,7 @@ href='/2026-services-showcase'
         </section>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1973,3 +2053,6 @@ href='/2026-services-showcase'
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </UltraAdvancedFuturisticBackground>)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

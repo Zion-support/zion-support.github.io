@@ -1,5 +1,6 @@
 export const metadata = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'Social Media Management Platform | Zion Tech Group',
   description: 'Build comprehensive social media management tools with scheduling, analytics, and content creation. Professional social media solutions starting at $15k.',
 };
@@ -195,6 +196,9 @@ function Plan({ name, price, duration, features }: {
         Get Started
       </a>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: 'Social Media Management | Zion Tech Group',
   description:
     'Professional social media management services for your business needs.',
@@ -245,7 +249,11 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>
   );
 }
+

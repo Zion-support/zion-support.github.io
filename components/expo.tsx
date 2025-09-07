@@ -16,17 +16,21 @@
 
   return <ExpoPage />;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false }),
 export default function ExpoRoute() {
 const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), {;
   ssr: false,;
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,6 +50,8 @@ const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function ExpoRoute() {;
   return <ExpoPage />;const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false });
 export default function ExpoRoute() {;
@@ -53,6 +59,7 @@ export default function ExpoRoute() {;
 import dynamic from 'next / dynamic';
 ;
   return <ExpoPage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -72,6 +79,8 @@ import dynamic from 'next / dynamic';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import dynamic from 'next/dynamic';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false }),export default function ExpoRoute() {const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), {ssr: false})export default function ExpoRoute() {return <ExpoPage />;const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false })export default function ExpoRoute() {return <ExpoPage />;const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false })export default function ExpoRoute() {return <ExpoPage />;const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false })export default function ExpoRoute() {return <ExpoPage />;
 import dynamic from 'next / dynamic';const ExpoPage = dynamic (() => import ('../components / expo / ExpoPage'), {ssr: false;
   ssr: false;
@@ -84,6 +93,7 @@ function ExpoRoute() {return <ExpoPage />;const ExpoPage = dynamic (() => import
  */;
 function ExpoRoute() {return <ExpoPage />;
 }import dynamic from 'next/dynamic';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const ExpoPage = null;
 export default function ExpoRoute() {return <ExpoPage />;const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false })export default function ExpoRoute() {return <ExpoPage />;
@@ -94,6 +104,12 @@ export default function ExpoRoute() {return <ExpoPage />;const ExpoPage = dynami
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+const ExpoPage = null;
+export default function ExpoRoute() {return <ExpoPage />;const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false })export default function ExpoRoute() {return <ExpoPage />;
+}
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======

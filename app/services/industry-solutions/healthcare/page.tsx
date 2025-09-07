@@ -1,5 +1,6 @@
 export const metadata = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'Healthcare IT Solutions | Zion Tech Group',
   description:
     'HIPAA-compliant healthcare technology solutions including telemedicine platforms, medical imaging systems, patient data management, and healthcare AI applications.',
@@ -542,6 +543,9 @@ function CTASection() {
       <div className="mt-6 text-sm text-gray-600">
         <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: 'Healthcare | Zion Tech Group',
   description: 'Professional healthcare services for your business needs.',
   keywords: 'healthcare, services, business, technology',
@@ -589,8 +593,12 @@ export default function ServicePage() {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>
     </div>
   );
 }
+

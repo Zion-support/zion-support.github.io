@@ -410,6 +410,7 @@ id: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -459,6 +460,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     icon: '⚛️',
     color: 'from - indigo - 500 to - blue - 600',
@@ -469,6 +472,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 89
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -523,12 +527,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Reduce DevOps workload by 90%',
       'Improve system reliability by 99 && 99.9%',
       'Reduce deployment failures by 95%',
       'Optimize costs by 40%',
       'Enable 24 / 7 autonomous operations'
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -558,6 +565,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2025 - 01 - 10',
@@ -566,6 +575,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 234
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -595,6 +605,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - red - 500 to - pink - 600',
     popular: true,
     launch_date: '2025 - 01 - 20',
@@ -603,6 +615,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 156
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -632,6 +645,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 01 - 25',
@@ -640,6 +655,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 8
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -669,6 +685,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - teal - 500 to - cyan - 600',
     popular: true,
     launch_date: '2025 - 01 - 30',
@@ -677,6 +695,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 45
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -706,6 +725,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 02 - 01',
@@ -714,6 +735,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 423
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -743,6 +765,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - orange - 500 to - red - 600',
     popular: true,
     launch_date: '2025 - 02 - 05',
@@ -751,6 +775,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 267
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -780,6 +805,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2025 - 02 - 10',
@@ -788,6 +815,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 134
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -816,6 +844,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     description:
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.'
     category: 'Healthcare & Biotechnology'
@@ -867,6 +897,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI - powered medical diagnostics with 99.9% accuracy for early disease detection',
     description:;
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.',
+<<<<<<< HEAD
 <<<<<<< HEAD
     category: 'Healthcare & Biotechnology',
 <<<<<<< HEAD
@@ -956,6 +987,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    category: 'Healthcare & Biotechnology'
+];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];
     benefits: [
       'First-mover advantage in AI consciousnessEthical AI development complianceBreakthrough research capabilitiesPatent-pending consciousness frameworksIndustry-leading consciousness metrics'
@@ -1175,6 +1211,7 @@ export interface InnovativeAIService  {id: string,name: string,tagline: string,d
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -1183,6 +1220,8 @@ export interface InnovativeAIService  {id: string,name: string,tagline: string,d
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     price: {
       monthly: 1599,
       yearly: 15990,
@@ -1257,6 +1296,7 @@ export interface InnovativeAIService  {id: string,name: string,tagline: string,d
     customers: 350,
     rating: 4 && 4.9,
 <<<<<<< HEAD
+<<<<<<< HEAD
     reviews: 189
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 
@@ -1318,6 +1358,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    reviews: 189
+];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - blue - 500 to - indigo - 600';
     popular: true;
     launch_date: '2025 - 02 - 15';
@@ -1345,6 +1390,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     rating: 4.9,
     reviews: 189;
   }
@@ -1379,6 +1427,7 @@ export interface InnovativeAIService {;
 ];
 export interface InnovativeAIService {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
@@ -1392,6 +1441,8 @@ export interface InnovativeAIService {;
   }
 ];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string,;
   name: string,;
   tagline: string,;
@@ -1870,6 +1921,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     rating: 4.9,
     reviews: 189;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1912,3 +1964,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

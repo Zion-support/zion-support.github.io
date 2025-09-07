@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -18,10 +19,16 @@ import { ProfileData } from '@/types/profile';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       {
 
           'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { ProfileData } from '@/types/profile';
@@ -51,6 +58,13 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      {
+
+          'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'talent-1'
     name: 'Alexandra Chen'
     title: 'Senior AI Engineer & Machine Learning Expert'
@@ -79,6 +93,7 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ProfileData } from '@/types/profile';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -88,6 +103,12 @@ import { ProfileData } from '@/types/profile';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+import { ProfileData } from '@/types/profile';
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { ProfileData } from "@/types/profile";
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
@@ -96,9 +117,13 @@ export const MOCK_TALENTS: ProfileData[] = [
 <<<<<<< HEAD
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         id: 'p1'
         title: 'Facial Recognition System'
         description:
@@ -1231,10 +1256,13 @@ export const MOCK_TALENTS: ProfileData[] = [;
     ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     experience: [;
       {
         id: 'e1',
@@ -1384,6 +1412,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
         'Limited availability for short-term consulting projects and infrastructure assessments.'
       availableHours: [
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1655,6 +1684,9 @@ export const MOCK_TALENTS: ProfileData[] = [;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     experience: [;
       {
         id: 'e1',
@@ -1807,6 +1839,7 @@ export const MOCK_TALENTS: ProfileData[] = [;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -1866,6 +1899,9 @@ current: true
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 hourly_rate: 150;
 contact_email: "alexandra.chen@example.com";
 }
@@ -1882,12 +1918,16 @@ available_hours: [ {
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   day: "Friday", hours: "1:00 PM - 5:00 PM";
 }
 hourly_rate: 135;
@@ -2264,6 +2304,7 @@ contact_email: "david.martinez@example.com";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -2278,15 +2319,25 @@ contact_email: "david.martinez@example.com";
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
 
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
+
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2309,3 +2360,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

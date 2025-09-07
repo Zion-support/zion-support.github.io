@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -12,6 +13,11 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process')
       "status"
         "status"
@@ -48,6 +54,7 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error('Error fixing "failed")
 
@@ -55,3 +62,6 @@ const { execSync } = require('child_process')
 =======
     console.error('Error fixing "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.error('Error fixing "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -11,6 +11,7 @@
 
 =======
 
+<<<<<<< HEAD
     content = content.replace(/<<<<<<< [^\n]*[\s\S]*?[\s\S]*?
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
@@ -23,6 +24,13 @@ ursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+    // Clean up any remaining conflict markers
+    content = content.replace(/^.*$/gm, "");
+    content = content.replace(/^
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // Remove empty lines that might be left behind
     content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
     
@@ -33,6 +41,7 @@ ursor/fix-lint-push-and-merge-to-main-28da
     return false}
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -161,6 +170,8 @@ ursor/automate-test-improve-and-merge-code-59d5
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")

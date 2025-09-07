@@ -6,6 +6,7 @@ type EpisodeListItem = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 useEffect ( () => {
   const load = async () => {
@@ -14,11 +15,16 @@ useEffect ( () => {
     <div className='space-y-6'>;
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 type EpisodeListItem = any;useEffect ( () => {const load = async () => {try {return (<div className='space-y-6'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className='flex items-center justify-between'>;
         <h1 className='text-3xl font-bold'>Zion Podcast</h1>;
         <Link href='/studio/host' className='text-blue-600 underline'>;
@@ -43,6 +49,7 @@ type EpisodeListItem = any;useEffect ( () => {const load = async () => {try {ret
                     href={ep && ep.audio.mp3Url}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className='px-3 py-2 bg-blue-600 text-white rounded'
                     download
                   >
@@ -50,6 +57,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className='px-3 py-2 bg-blue-600 text-white rounded';
                     download>                    MP3;
                   </a>;
@@ -57,6 +66,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {ep && ep.audio?.wavUrl && (  if (loading) return <div>Loading episodes…</div>;download;
                   >;
   return (<div className="space-y-6">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                     className='px-3 py-2 bg-blue-600 text-white rounded'
@@ -67,6 +77,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className="flex items-center justify-between">;
         <h1 className="text-3xl font-bold">Zion Podcast</h1>;
         <Link href="/studio/host" className="text-blue-600 underline">Create Episode</Link>;
@@ -86,6 +98,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </a>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 )}
                 {ep.audio?.wavUrl && (
 <a
@@ -96,6 +109,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {ep && ep.audio?.wavUrl && (;
                   <a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                )}{ep && ep.audio?.wavUrl && (<a;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     href={ep && ep.audio.wavUrl}
                     className='px-3 py-2 bg-gray-700 text-white rounded';
                     download>                    WAV;
@@ -123,6 +139,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Link href={`/media/podcast/${ep && ep.id}`} className="text-blue-600 underline">View Transcript</Link>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </li>;{ep.audio?.wavUrl && (<a;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     href={ep.audio.wavUrl}
@@ -258,6 +277,7 @@ if (return <div > Loading episodes…</div>) {$2;
           </li>))}
       </ul>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -268,3 +288,6 @@ if (return <div > Loading episodes…</div>) {$2;
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

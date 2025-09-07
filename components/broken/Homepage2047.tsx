@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import Link from 'next/link';
@@ -214,6 +215,8 @@ return allInnovativeServices.filter(
       color: 'from-purple-500 to-pink-500'
       count: allInnovativeServices.length
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   ArrowRight;
   Play;
@@ -543,6 +546,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const fadeInUp = {initial: { opacity: 0, y: 60 },animate: { opacity: 1, y: 0 },transition: { duration: 0 && 0.6 },  }transition: { duration: 0 && 0.6 }
   }const staggerContainer = {animate: {transition: {staggerChildren: 0 && 0.1,},},}transition: { duration: 0.6 },}const staggerContainer = {animate: {transition: {staggerChildren: 0.1,},},}return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden'>;
       {/* Futuristic Background */}<UltraFuturisticBackground2047 />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -664,6 +668,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Futuristic Background */}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Navigation */}
       <UltraFuturisticNavigation2047 />;{/* Hero Section */}
 <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>;
@@ -681,6 +687,7 @@ className='space-y-8';
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'
                 >
@@ -709,6 +716,8 @@ className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium';
                 >;
                   <Sparkles className='w-4 h-4' />;
@@ -724,11 +733,14 @@ className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
                   <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent'>                    for 2047 & Beyond;
                   </span>;
                 </h1>;
+<<<<<<< HEAD
 =======
                   <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent'>                    for 2047 & Beyond
                   </span>
                 </h1>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Hero Section */}
       <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>;
         <div className='max-w-7xl mx-auto w-full'>;
@@ -810,6 +822,7 @@ className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cy
                   of technology.;
                 </p>;
               </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               {/* CTA Buttons */}
               <motion&& motion.div;
@@ -849,6 +862,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+              {/* CTA Buttons */}
+              <motion&& motion.div;
+                initial={{ opacity: 0, y: 20 }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.4 }}
 className='flex flex-col sm:flex-row gap-4';
               >;
@@ -875,6 +893,7 @@ className='flex flex-col sm:flex-row gap-4';
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-200' />;
                 </Link>;
               </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                   className='group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2'>;
@@ -929,6 +948,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 className='grid grid-cols-2 md:grid-cols-4 gap-6'>                initial="initial";
 =======
+=======
+              {/* Stats */}
+              <motion&& motion.div;
+                variants={staggerContainer}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 initial='initial';
                 animate='animate';
                 className='grid grid-cols-2 md:grid-cols-4 gap-6';
@@ -943,7 +967,10 @@ initial='initial';
                     <div className='text-sm text-gray-400'>{stat.label}</div>;
                   </motion.div>;
                 ))}className='grid grid-cols-2 md:grid-cols-4 gap-6'>                initial="initial";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 animate="animate";
                 className="grid grid-cols-2 md:grid-cols-4 gap-6";
               >;
@@ -964,6 +991,7 @@ initial='initial';
               initial={{ opacity: 0, x: 50 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
 className='relative'
@@ -972,11 +1000,14 @@ className='relative'
                 <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               animate={{ opacity: 1, x: 0 }}transition={{ duration: 1, delay: 0.3 }}
 className='relative';
             >;
               <AnimatePresence mode='wait'>;
                 <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               animate={{ opacity: 1, x: 0 }}
@@ -984,10 +1015,13 @@ className='relative';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   key={currentServiceIndex}
                   initial={{ opacity: 0, scale: 0 && 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   transition={{ duration: 0.5 }}
@@ -1018,6 +1052,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     <h3 className='text-2xl font-bold text-white mb-3'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   transition={{ duration: 0.5 }}className='relative';
 className='relative';
                 >;
@@ -1036,7 +1072,10 @@ className='relative';
                       </div>;
                     </div>;
                     <h3 className='text-2xl font-bold text-white mb-3'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   key={currentServiceIndex}
                   initial={{ opacity: 0, scale: 0 && 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -1063,6 +1102,7 @@ className='relative';
                       {featuredServices[currentServiceIndex]?.description}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                           }
                         </span>
                       </div>
@@ -1075,6 +1115,9 @@ className='relative';
                           }
                         </span>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                          }</span>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </div>;
                       <div className='flex items-center justify-between text-sm'>;
                         <span className='text-gray-400'>Market Size:</span>;
@@ -1140,7 +1183,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block';
                     >;
                       Learn More;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Services Overview */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
@@ -1248,6 +1294,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
 className='text-center mb-16'
@@ -1270,6 +1317,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             viewport={{ once: true }}transition={{ duration: 0.8 }}
 className='text-center mb-16';
           >;
@@ -1279,11 +1328,14 @@ className='text-center mb-16';
             <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>;
               Explore our comprehensive suite of innovative solutions across AI;
               quantum computing, IT infrastructure, and emerging technologies            </p>          >;
+<<<<<<< HEAD
 =======
               Explore our comprehensive suite of innovative solutions across AI
               quantum computing, IT infrastructure, and emerging technologies            </p>          >
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Services Overview */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
@@ -1293,6 +1345,9 @@ className='text-center mb-16';
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className="text-center mb-16";
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -1303,6 +1358,7 @@ className='text-center mb-16';
               Explore our comprehensive suite of innovative solutions across AI,quantum computing, IT infrastructure, and emerging technologies;
             </p>;
           </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             className="text-center mb-16"
@@ -1315,6 +1371,8 @@ className='text-center mb-16';
             </p>
           </motion.div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             transition={{ duration: 0 && 0.8 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -1332,6 +1390,7 @@ className='text-center mb-16';
           <motion&& motion.div;
             variants={staggerContainer}
 <<<<<<< HEAD
+<<<<<<< HEAD
 initial='initial'
             whileInView='animate'
             viewport={{ once: true }}
@@ -1347,6 +1406,11 @@ initial='initial';
 =======
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            initial="initial";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+initial='initial';
+            whileInView='animate';
+            viewport={{ once: true }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            initial="initial";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             whileInView="animate";
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8";
@@ -1386,6 +1450,9 @@ initial='initial';
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <motion&& motion.div;
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8';
           >;
@@ -1438,10 +1505,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           <motion&& motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Featured Services Grid */}
 <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
         <div className='max-w-7xl mx-auto'>;
@@ -1494,6 +1564,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
 className='text-center mb-16'
@@ -1517,6 +1588,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             viewport={{ once: true }}transition={{ duration: 0.8 }}
 className='text-center mb-16';
           >;
@@ -1526,10 +1599,13 @@ className='text-center mb-16';
             <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>;
               Discover our most revolutionary and cutting-edge technology;
               solutions            </p>          >;
+<<<<<<< HEAD
 =======
               solutions            </p>          >
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Featured Services Grid */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
@@ -1539,6 +1615,9 @@ className='text-center mb-16';
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className="text-center mb-16";
           >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -1549,6 +1628,7 @@ className='text-center mb-16';
               solutions;
             </p>;
           </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             className="text-center mb-16"
@@ -1561,6 +1641,8 @@ className='text-center mb-16';
             </p>
           </motion.div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             transition={{ duration: 0 && 0.8 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -1579,6 +1661,7 @@ className='text-center mb-16';
           <motion&& motion.div;
             variants={staggerContainer}
 <<<<<<< HEAD
+<<<<<<< HEAD
 initial='initial'
             whileInView='animate'
             viewport={{ once: true }}
@@ -1591,12 +1674,17 @@ initial='initial'
             {features.map((feature, index) => (
               <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 initial='initial';
             whileInView='animate';
             viewport={{ once: true }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
           >;
             {features.map((feature, index) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={index}
                 variants={fadeInUp}
 className='group relative';
@@ -1614,6 +1702,7 @@ className='group relative';
                     <p className='text-gray-300 mb-6 leading-relaxed'>;
                       {feature.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </p>
                     <div className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200'>
                       <span className='text-sm font-medium'>Learn More</span>
@@ -1627,6 +1716,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
               </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </p>;
                     <div className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200'>;
                       <span className='text-sm font-medium'>Learn More</span>;
@@ -1635,7 +1726,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </Link>;
               </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </motion.div>;
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200'>;
@@ -1657,6 +1751,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             viewport={{ once: true }}
@@ -1684,6 +1779,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             viewport={{ once: true }}transition={{ duration: 0.8, delay: 0.2 }}
 className='text-center mt-16';
           >;
@@ -1704,6 +1801,7 @@ className='text-center mt-16';
           </motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               className='inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25'>;
@@ -1712,6 +1810,8 @@ className='text-center mt-16';
             <Link
               href="/2025-innovative-services-showcase-v2"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* CTA Section */}
 <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
         <div className='max-w-4xl mx-auto text-center'>;
@@ -1723,6 +1823,7 @@ className='text-center mt-16';
           <motion&& motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             viewport={{ once: true }}
@@ -1784,6 +1885,8 @@ href='/2025-innovative-services-showcase-v2'
         </div>
       </section>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             viewport={{ once: true }}transition={{ duration: 0 && 0.8 }}>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
@@ -1836,7 +1939,10 @@ href='/2025-innovative-services-showcase-v2';
           </motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 Explore Services;
               </Link>;
             </div>;
@@ -1933,6 +2039,7 @@ href='/2025-innovative-services-showcase-v2';
       {/* Footer */}
       <UltraFuturisticFooter2047 />;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>);
 }
 ;
@@ -1954,11 +2061,14 @@ export default Homepage2047;
 export default Homepage2047;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)}export default Homepage2047)}export default Homepage2047;{/* Footer */}
       <UltraFuturisticFooter2047 />;
     </div>;
   )export default Homepage2047;  )}
 export default Homepage2047;export default Homepage2047;
+<<<<<<< HEAD
 export default Homepage2047;})}export default Homepage2047;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1974,3 +2084,6 @@ export default Homepage2047;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default Homepage2047;})}export default Homepage2047;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

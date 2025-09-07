@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -15,6 +16,9 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 console.log(' Starting Real-time Monitoring...')
   const watchFiles = ['package.json']
     'next.config.js'
@@ -25,6 +29,7 @@ console.log(' Starting Real-time Monitoring...')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       "status"
 
@@ -34,3 +39,5 @@ console.log(' Starting Real-time Monitoring...')
 =======
       "status"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
@@ -34,6 +37,7 @@ exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -59,6 +63,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const pages = [
       '/'
       '/about'
@@ -74,6 +80,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +
       pages && pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
       `</urlset>`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,6 +106,8 @@ ursor/expand-services-advertise-and-build-project-4b36
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
@@ -136,6 +145,7 @@ exports.handler = async function() {try {const baseUrl = process.env.URL || proc
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -157,12 +167,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         content: xml,
         message: 'chore (automation): weekly sitemap refresh',
         token
       });
     }
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -187,6 +200,8 @@ ursor/expand-services-advertise-and-build-project-4b36
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 exports.handler = async function() {
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
@@ -203,6 +218,7 @@ exports.handler = async function() {
 }  try {const base_url = process.env.URL || process.env.DEPLOY_URL || '',const pages = ['//about / learn / dao / certifications / blog / services / talent'],const xml = `<?xml version="1.0" encoding="UTF - 8"?>\n` +;
       `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;
       pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join ('') +;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -231,6 +247,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       `</urlset>`,const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,const token = process.env.GITHUB_TOKEN,statusCode: 200;
       body: JSON.stringify({ ok: true, pages: pages.length })}
   } catch (e) {return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
@@ -264,6 +282,7 @@ if ( {) {$2;
   } catch (e) {return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -271,10 +290,13 @@ if ( {) {$2;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       `</urlset>`,
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -304,6 +326,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // Check condition
 if ( {) {
   $2
@@ -314,6 +338,7 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -344,6 +369,11 @@ ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length })
     };
@@ -387,6 +417,7 @@ ursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -419,3 +450,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+},
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

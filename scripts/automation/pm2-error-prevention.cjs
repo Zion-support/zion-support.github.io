@@ -131,6 +131,7 @@ process.on("SIGTERM")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.log("� Received SIGTERM, shutting down gracefully...")
 
@@ -138,3 +139,6 @@ process.on("SIGTERM")
 =======
   console.log("� Received SIGTERM, shutting down gracefully...")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.log("� Received SIGTERM, shutting down gracefully...")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

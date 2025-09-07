@@ -28,7 +28,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const canPrev = page > 1;
 =======
 export default function Pagination() {const totalPages = Math.max(1, Math.ceil(total / pageSize))const canPrev = page > 1;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const canNext = page < totalPages;
   const goTo = (p: number) => {if (p >= 1 && p <= totalPages) onChange(p)}return (<div className='flex items-center justify-between gap-2 mt-4'>;
       <EnhancedButton;
@@ -46,6 +49,7 @@ export default function Pagination() {const totalPages = Math.max(1, Math.ceil(t
         variant='secondary';
         size='md';
         onClick={() => goTo(page + 1)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         disabled={!canNext}
@@ -67,6 +71,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         disabled={!canNext}>        Next;
       </EnhancedButton>;
     </div>;
@@ -75,7 +81,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </EnhancedButton>;
     </div>;
   )}return (<div className="flex items-center justify-between gap-2 mt-4">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>;
         Prev;
       </EnhancedButton>;
@@ -136,6 +145,7 @@ if ( {) {$2;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Pagination;
 =======
       for (let index = 1; i <= total_pages; i++) {
@@ -144,6 +154,8 @@ export default Pagination;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         pages.push (1)// Check condition;
 if ( {) {$2;
 }
@@ -209,6 +221,7 @@ if ( {) {$2;
           <ChevronRight className="w - 4 h-4 ml-1" />;
         </span>)}
     </nav>)})export default Pagination;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -217,3 +230,6 @@ if ( {) {$2;
   );
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

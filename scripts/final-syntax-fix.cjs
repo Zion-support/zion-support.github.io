@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 #!/usr/bin/env node
 
@@ -9,6 +12,7 @@ console.log('🔧 Final Syntax Fix');
 <<<<<<< HEAD
 <<<<<<< HEAD
 console.log('
+<<<<<<< HEAD
 =======
 console.log('==================');
 
@@ -21,6 +25,8 @@ console.log('
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
@@ -84,6 +90,7 @@ let totalFixed = 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -93,6 +100,8 @@ let totalFixed = 0;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
@@ -120,6 +129,7 @@ console.log(`\n✅ Fixed ${totalFixed} files`);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log('🎉 Final syntax fix completed!');
 
@@ -129,3 +139,5 @@ console.log('🎉 Final syntax fix completed!');
 =======
 console.log('🎉 Final syntax fix completed!');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

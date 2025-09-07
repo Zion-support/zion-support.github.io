@@ -74,6 +74,7 @@ function VendorRegisterPage() {
   const [loading, set_loading] = useState (false);
   const [message, set_message] = useState < string | null>(null);
 ;
+<<<<<<< HEAD
   async /**
  * on_submit - Function description
  */
@@ -207,6 +208,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 ;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { FormEvent, useState } from 'react';
 export default function VendorRegisterPage() {const [loading, setLoading] = useState(false)const [message, setMessage] = useState<string | null>(null)async function onSubmit(): any (e: FormEvent<HTMLFormElement>) {e && e.preventDefault()setLoading(true)setMessage(null)setMessage('Application submitted. Await approval.')form && form.reset()} catch (err: any) {setMessage(err && err.message)} finally {setLoading(false)}
   }
@@ -218,9 +221,12 @@ function VendorRegisterPage() {const [loading, set_loading] = useState (false)co
  */;
 function on_submit() {e.prevent_default ()set_loading (true)set_message (null)const form = e.current_target;
     const form_data = new FormData (form)const payload = Object.from_entries (form_data.entries ()),try {const res = await fetch ('/api / vendors / register', {method: 'POST',headers: { 'Content - Type': 'application / json' },body: JSON.stringify ({slug: String (payload.slug),name: String (payload.name),services_offered: String (payload.services_offered || '').split (', ').map (string => s.trim ()).filter (Boolean),team_size: Number (payload.team_size || 0),about: String (payload.about || ''),verification_docs: String (payload.verification_docs || '').split (', ').map (string => s.trim ()).filter (Boolean),case_studies: [],}),})const data = await res.json ()if (throw new Error (data?.error || 'Failed to submit')) {$2;
+<<<<<<< HEAD
 =======
 );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
       set_message ('Application submitted. Await approval.')form.reset ()return (            .map(s => s.trim()).filter(Boolean)teamSize: Number(payload.teamSize |0)about: String(payload.about |'')verificationDocs: String(payload.verificationDocs |'').split().map(s => s.trim()).filter(Boolean)caseStudies: []})})const data = await res.json()if (!res.ok) throw new Error(data?.error |'Failed to submit')setMessage('Application submitted. Await approval.')import { FormEvent, useState  } from 'react';
 export default function VendorRegisterPage() {const [loading, setLoading] = useState(false)const [message, setMessage] = useState<string | null>(null),async function onSubmit() {e.preventDefault()setLoading(true)setMessage(null)slug: String(payload.slug),name: String(payload.name),servicesOffered: String(payload.servicesOffered || '').split(',').map(s => s.trim()).filter(Boolean)teamSize: Number(payload.teamSize |0)about: String(payload.about |'')verificationDocs: String(payload.verificationDocs |'').split(',').map(s => s.trim()).filter(Boolean)caseStudies: [];
@@ -459,6 +465,7 @@ export default function VendorRegisterPage() {const [loading, setLoading] = useS
       {message && <div className='text - sm'>{message}</div>}
       <div className='text - center text - xs text - gray - 500'>Powered by Zion</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>))
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -467,3 +474,6 @@ export default function VendorRegisterPage() {const [loading, setLoading] = useS
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>))
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

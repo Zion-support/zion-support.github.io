@@ -82,6 +82,9 @@ export default function WhitepaperBuilderPage() {
           </a>;
         </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>;import React, { useMemo, useState } from 'react',import Link from 'next/link';
 import { getWhitepaperSections, OPERATOR_PROMPT   } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {const [edition, setEdition] = useState<WhitepaperEdition>('full')const sections = null;
@@ -162,8 +165,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
       </div>;
     </div>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className='rounded border p - 4 bg - gray - 50 dark:bg - gray - 900'>;
         <h2 className='text - xl font - semibold mb - 2'>Operator Prompt</h2>;
         <pre className='whitespace - pre - wrap text - sm text - gray - 700 dark:text - gray - 200'>;
@@ -183,9 +189,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <article className="prose dark:prose - invert max - w-none whitespace-pre-wrap">{s.content_md}</article>))}
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>))}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </div>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

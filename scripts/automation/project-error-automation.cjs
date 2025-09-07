@@ -192,6 +192,7 @@ const glob = require("glob")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error("Automation "failed": ")
 
@@ -199,3 +200,6 @@ const glob = require("glob")
 =======
   console.error("Automation "failed": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error("Automation "failed": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

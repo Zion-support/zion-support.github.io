@@ -3,10 +3,13 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { ApiDocsSpec, Visibility  } from '../../data/api-docs/types';
 interface SidebarProps  {spec: ApiDocsSpec;
@@ -15,6 +18,7 @@ interface SidebarProps  {spec: ApiDocsSpec;
   selectedVersion: string;
   onChangeVersion: (v: string) => void;
   visibilityFilter: Visibility | 'all';
+<<<<<<< HEAD
 <<<<<<< HEAD
   onChangeVisibility: (v: Visibility | 'all') => void
 }
@@ -41,6 +45,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
             >
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   onChangeVisibility: (v: Visibility | 'all') => void;
 }export default function Sidebar() {return (<button;
               key={v}
@@ -100,6 +106,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className='font-mono'>{e.path}</span>;
                     </button>;
                   </li>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -114,6 +121,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 .map((e) => (
                   <li key={e.id}>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
             </ul>;
           </div>;
@@ -194,6 +203,7 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
     </aside>
   );
@@ -207,3 +217,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </aside>;
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

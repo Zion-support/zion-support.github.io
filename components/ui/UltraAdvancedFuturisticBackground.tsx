@@ -130,7 +130,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     const ctx = canvas.getContext('2d')if (!ctx) return;let animationFrameId: number;
     let particles: Array<{x: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       y: number;
   children;
   const canvas_ref = useRef < HTMLCanvasElement>(null)const container_ref  = useRef < HTMLDivElement>(null)useEffect (() => {const canvas = canvas_ref.current;
@@ -147,6 +150,7 @@ if (return) {$2;
       vy: number;
       size: number;
       opacity: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       color: string;
@@ -344,6 +348,8 @@ ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
           }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       color: string;vx: number,vy: number,size: number,opacity: number,color: string,}
     }
     resizeCanvas()type: 'quantum' | 'holographic' | 'neon' | 'fusion';
@@ -428,6 +434,7 @@ if ( {) {$2;
             ctx.stroke_style = `rgba (0, 255, 136, ${0.3 * (1 - distance / 100)})`;
             ctx.line_width = 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
             ctx.move_to (particles[i].x, particles[i].y)ctx.line_to (particles[j].x, particles[j].y)ctx.stroke ()}            ctx.stroke ()ctx.stroke()}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -437,6 +444,9 @@ if ( {) {$2;
 
           }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            ctx.move_to (particles[i].x, particles[i].y)ctx.line_to (particles[j].x, particles[j].y)ctx.stroke ()}            ctx.stroke ()ctx.stroke()}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }
       }
     }
@@ -480,6 +490,7 @@ if ( {) {$2;
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
     };
 
     // Holographic grid effect;
@@ -519,6 +530,8 @@ const nodes = particles.filter(
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }// Holographic grid effect;
     const createHolographicGrid = () => {if (!enableHolographic) return;const gridSize  = 50;const gridSize = 50;
       const offset = (Date.now() * 0.001) % gridSize;
@@ -527,6 +540,7 @@ const nodes = particles.filter(
       for (let x = offset; x < canvas.width; x += gridSize) {ctx.beginPath()ctx.moveTo(x, 0)ctx.lineTo(x, canvas.height)// Horizontal lines;
       for (let y = offset; y < canvas.height; y += gridSize) {ctx.beginPath()ctx.moveTo(0, y)ctx.lineTo(canvas.width, y)const dy = nodes[i].y - nodes[j].y;
           }
+<<<<<<< HEAD
         }
       }ctx.stroke()}
     }// Neural network effect;
@@ -732,6 +746,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - waveRadius / (Math.max(canvas.width, canvas.height) * 2))})`;
           ctx.lineWidth = 2;
           ctx.stroke()
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }
       }
       animationFrameId = requestAnimationFrame(animate)
@@ -827,7 +843,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     enableQuantumEffects;
   ])return (<div ref={containerRef} className='relative w-full h-full overflow-hidden'>;
       <canvas;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none';
         style={{ zIndex: -1 }}
@@ -851,6 +870,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               style={{{children}
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 export default UltraAdvancedFuturisticBackground;
@@ -865,6 +885,11 @@ export default UltraAdvancedFuturisticBackground;return (<div ref={containerRef}
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">;
       <canvas
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+export default UltraAdvancedFuturisticBackground;return (<div ref={containerRef} className="relative w-full h-full overflow-hidden">;
+      <canvas;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none";
         style={{ zIndex: -1 }}
@@ -908,6 +933,7 @@ export default UltraAdvancedFuturisticBackground;
       </div>;
       {children}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)}export default UltraAdvancedFuturisticBackground;{children}
     </div>;
   )}
@@ -927,3 +953,8 @@ export default UltraAdvancedFuturisticBackground;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)}export default UltraAdvancedFuturisticBackground;{children}
+    </div>;
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

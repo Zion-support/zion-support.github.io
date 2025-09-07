@@ -11,6 +11,7 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(`"Dependencies"`)
 
@@ -18,3 +19,6 @@ const { execSync } = require('child_process')
 =======
     console.log(`"Dependencies"`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.log(`"Dependencies"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

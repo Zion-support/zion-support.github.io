@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const technologyTrends = null;
                       AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
   ];
@@ -101,6 +102,8 @@ description:
           </section>
           <section className='mx-auto max-w-7xl'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function TechnologyInsightsPage() {const technologyTrends = [;
     {id: 'quantum-computing';
       title: 'Quantum Computing in 2025';
@@ -112,6 +115,7 @@ export default function TechnologyInsightsPage() {const technologyTrends = [;
       category: 'AI/ML';
       readTime: '12 min read';
       featured: false;
+<<<<<<< HEAD
     }
     {id: 'autonomous-vehicles';
       title: 'Autonomous Vehicle Technology';
@@ -147,6 +151,8 @@ export default function TechnologyInsightsPage() {
       category: 'AI/ML'
       readTime: '12 min read'
       featured: false
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     {
       id: 'autonomous-vehicles'
@@ -274,6 +280,9 @@ export default function TechnologyInsightsPage() {
             </p>;
           </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <section className='mx-auto max-w-7xl'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             {/* Technology Trends */}
@@ -315,7 +324,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       Read More <span className='ml-1'>→</span>;
                     </Link>;
                   </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
               </div>;
             </div>;
@@ -374,6 +386,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p className='text-white/70 mb-4'>{area && area.description}</p>;
                     <ul className='space-y-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {area && area.focus.map((focus, focusIndex) => (;
                         <li
                           key={focusIndex}
@@ -383,10 +396,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span className='text-cyan-400 mr-2'>•</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {area && area.focus.map((focus, focusIndex) => (<li;
                           key={focusIndex}className='text-sm text-white/60 flex items-center';
                         >;
                           <span className='text-cyan-400 mr-2'>•</span>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -395,6 +411,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span className='text-cyan-400 mr-2'>•</span>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {focus}
                         </li>;
                       ))}
@@ -447,6 +465,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             {/* Whitepapers */}
@@ -597,6 +616,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Innovation Lab */}
 <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>;
@@ -682,6 +703,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </main>;
       </div>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -703,3 +725,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

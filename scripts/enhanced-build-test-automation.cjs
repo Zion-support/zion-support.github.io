@@ -51,6 +51,7 @@ const path = require("path")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       return { "success": false, "error"}
 
@@ -58,3 +59,6 @@ const path = require("path")
 =======
       return { "success": false, "error"}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      return { "success": false, "error"}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

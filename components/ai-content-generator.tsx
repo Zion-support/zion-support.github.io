@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -171,6 +172,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
     { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' }
 =======
+=======
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles  } from 'lucide-react';
 export default function AIContentGeneratorPage() {const features = null;
   const pricingPlans = [;
@@ -195,6 +201,7 @@ export default function AIContentGeneratorPage() {const features = null;
         'Write product descriptions, category pages, and promotional content.',icon: '🛍️',examples: [;
         'Product descriptions','Category pages','Promotional emails','FAQ sections',],},];const integrations = [;
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },{name: 'Shopify',icon: '🛒',description: 'E-commerce content automation',},{ name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },{ name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },{ name: 'Slack', icon: '💬', description: 'Team collaboration' },{ name: 'Zapier', icon: '⚡', description: '500+ app integrations' },];
+<<<<<<< HEAD
 =======
 
 
@@ -248,6 +255,8 @@ export default function AIContentGeneratorPage() {const features = null;
     },  ];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const integrations = [;
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },{name: 'Shopify';
@@ -280,6 +289,9 @@ export default function AIContentGeneratorPage() {const features = null;
         'Unlimited words','All templates + custom','Full SEO suite','Dedicated support','Unlimited API access','Advanced analytics','Custom integrations','SLA guarantee',],popular: false,];];{ name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },return (<>;
       <Head>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <title>;{ name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' }
@@ -386,8 +398,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='#demo';
               variant='outline';
               size='lg';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;{/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">;
@@ -416,6 +431,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ArrowRight className="w-5 h-5 ml-2" />;
             </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <Button;
               href="#demo";
               variant="outline";
@@ -492,11 +510,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {features.map((feature, index) => (<Card;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1';
                 style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }}>;
                 <div className='relative'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <div
@@ -505,6 +527,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                   <div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                  <div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
                     {feature && feature.icon}
                   </div>;
@@ -515,6 +540,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className='text-gray-400 leading-relaxed'>                  {feature && feature.description}            {features && features.map((feature, index) => (<Card;
                 key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
@@ -539,12 +567,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className='text-gray-400 leading-relaxed'>;
                   {feature.description}</p>;
               </Card>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </div>;
         </div>;
       </section>;
       {/* Use Cases Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -563,6 +595,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <section className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
           <div className='text-center mb-20'>;
@@ -570,9 +604,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Use Cases;
             </h2>;
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose;
+<<<<<<< HEAD
 =======
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
                 <div className="relative">;
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
@@ -772,6 +809,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className="text - gray-400 leading-relaxed">;
                   {feature.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
@@ -784,6 +824,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {useCases.map((useCase, index) => (<Card;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -794,6 +835,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               <Card
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={index}
                 className='group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
                 <div className='flex items-start space-x-4'>;
@@ -806,6 +849,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {useCase && useCase.description}
                     </p>;
                     <div className='grid grid-cols-2 gap-2'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {useCase && useCase.examples.map((example, exampleIndex) => (;
                         <div
@@ -824,6 +868,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {example}            {useCases && useCases.map((useCase, index) => (;
               <Card
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                      {useCase && useCase.examples.map((example, exampleIndex) => (<div;
+                          key={exampleIndex}className='flex items-center text-sm text-gray-300'>;
+                          <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {example}            {useCases && useCases.map((useCase, index) => (<Card;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={index}
                 className="group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300">;
                 <div className="flex items-start space-x-4">;
@@ -837,16 +886,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>;
                     <div className="grid grid-cols-2 gap-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {useCase && useCase.examples.map((example, exampleIndex) => (<div key={exampleIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;className='flex items-center text-sm text-gray-300';
                         >;
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                       {useCase && useCase.examples.map((example, exampleIndex) => (;
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {example}
                         </div>;
                       ))}
@@ -863,6 +918,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
       {/* Pricing Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <section
@@ -891,6 +947,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingPlans.map((plan, index) => (
               <Card
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <section;
         id='pricing';
         className='py-24 bg-gray-900 relative overflow-hidden'>;
@@ -923,6 +981,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <div className='text-center mb-8'>;
 <section;
         id='pricing';
@@ -959,7 +1020,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
@@ -970,6 +1034,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 <ul className='space-y-4 mb-8'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
@@ -979,15 +1044,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {plan.features.map((feature, featureIndex) => (<ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (<li;
                       key={featureIndex}className='flex items-center text-gray-300';
                     >;
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {feature}
                     </li>;
                   ))}
@@ -1004,6 +1074,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>;
               </Card>;</li>;
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </ul>
 
@@ -1044,6 +1115,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {integrations.map((integration, index) => (
               <Card
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </ul>;
                 <Button;
                   href="/contact";
@@ -1107,6 +1180,9 @@ href='/contact';
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </Card>;<section className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
           <div className='text-center mb-20'>;
@@ -1176,6 +1252,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Button
               href='/contact'
               variant='secondary'
@@ -1232,6 +1309,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <Button;
               href='/contact';
               variant='secondary';
@@ -1269,5 +1348,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
 }}</>)}</>))}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}}</>)}</>))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

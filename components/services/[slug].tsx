@@ -26,6 +26,7 @@
  
 =======
 
+<<<<<<< HEAD
 
 
  
@@ -37,6 +38,8 @@ import Head from 'next/head',
 import Layout from '../../components/layout/Layout';
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
 import React from 'react',import Head from 'next/head',import Layout from '../../components/layout/Layout';
@@ -96,7 +99,10 @@ null;
 }) )fallback: false ;
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Check, Mail, MapPin, Phone, ExternalLink  } from 'lucide-react';
 import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices  } from '../../data/extra-services';
@@ -109,21 +115,27 @@ import { moreRealServices2025  } from '../../data/more-real-services-2025';
 import { verified2025Additions  } from '../../data/verified-2025-additions';
 import { realServicesQ12025  } from '../../data/real-services-q1-2025';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
 type Service = any;
 export default ServiceDetail
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 type Service = typeof enhancedRealMicroSaasServices[number];service.name;
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>;
 
  
  
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }function getAllServices () : Service[] {
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
 }return {
@@ -137,6 +149,7 @@ fallback: false
 }: {
   service: Service
 }) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (<Layout> <Head> <title> {
 <<<<<<< HEAD
@@ -168,6 +181,9 @@ null;
 =======
   return (<Layout> <Head> <title> {}function getAllServices () : Service[] {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  return (<Layout> <Head> <title> {}function getAllServices () : Service[] {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 2) 
@@ -176,6 +192,7 @@ null;
 };
 null;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -195,6 +212,8 @@ null;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   service.name
 }| Zion Tech Group</title>
 }
@@ -215,6 +234,7 @@ null;
 2)
 2) 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
@@ -222,6 +242,9 @@ null;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }/> </Head> </li>) ) 
 }</ul> </div>) ) 
 }</ul> </div> <div>) ) 
@@ -279,6 +302,7 @@ null;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
@@ -313,6 +337,12 @@ null;
 =======
 }<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {}function getAllServices(): any () : Service[] {;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}</p>
+}{
+  service.competitors?.length ? () : null
+}<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {}function getAllServices(): any () : Service[] {;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]) ;
 }return {;
   paths: Array && Array.from (slugs) .map ( (slug) => ({;
@@ -335,6 +365,7 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
 type Service = typeof enhancedRealMicroSaasServices[number];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
@@ -359,6 +390,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  service.name
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export default ServiceDetail
 export default ServiceDetail
@@ -431,6 +467,7 @@ export default ServiceDetail;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -440,6 +477,8 @@ export default ServiceDetail;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 
@@ -464,18 +503,22 @@ export default ServiceDetail
 export default ServiceDetail
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   service.name 
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 };
 export default ServiceDetail 
 export default ServiceDetail
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 ;
@@ -502,6 +545,11 @@ export default ServiceDetail
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+};
+;
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
   return enhancedRealMicroSaasServices .concat (extra_services as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]);
 }return {
@@ -599,6 +647,7 @@ export default ServiceDetail;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -620,3 +669,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

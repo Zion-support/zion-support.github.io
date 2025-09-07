@@ -15,6 +15,7 @@ import fs from 'fs';
 import path from 'path';
 type Outdated = any;
     generatedAt = json.generatedAt || '';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -27,6 +28,8 @@ type Outdated = any;
     generatedAt = json.generatedAt |''
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   } catch {}
   return { props: { outdated, generatedAt } }
 }
@@ -51,6 +54,7 @@ function getServerSideProps() {const file = path.join (process.cwd (), 'datadep 
 function DepRadarPage() {return (<div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {outdated.length === 0 ? (
@@ -79,6 +83,8 @@ function DepRadarPage() {return (<div className="space-y-6">;
                   <td className="p-2">{o.type}</td>
                 </tr>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {outdated.length === 0 ? (<div className="text-sm text-gray-600">All dependencies up to date.</div>;
       ) : (<div className="overflow-auto border rounded">;
           <table className="min-w-full text-sm">;
@@ -97,12 +103,16 @@ function DepRadarPage() {return (<div className="space-y-6">;
                   <td className="p-2">{o.latest}</td>;
                   <td className="p-2">{o.type}</td>;
                 </tr>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
             </tbody>;
           </table>;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
 );
@@ -115,3 +125,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>;
+)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

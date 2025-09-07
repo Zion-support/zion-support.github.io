@@ -48,6 +48,7 @@ export default function Placeholder() {export default function Placeholder() {re
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 export default function Placeholder() {;
@@ -73,6 +74,8 @@ export default function Placeholder() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -140,6 +143,7 @@ export default function Placeholder() {
       </div>;
     </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -171,6 +175,9 @@ export default function Placeholder() {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Head from 'next / head';
 import Link from 'next / link';
 export default /**;
@@ -261,6 +268,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -279,12 +287,17 @@ ursor/fix-website-loading-errors-and-merge-6662;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 export default function Placeholder() {
   return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Head from 'next/head';
 export default function Placeholder() {
   return (
@@ -306,6 +319,7 @@ export default function Placeholder() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -314,6 +328,8 @@ export default function Placeholder() {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <main className="min-h-screen p-8">
       <Head>
         <title>Reports • Seo • Index.html - Placeholder</title>
@@ -328,6 +344,7 @@ export default function Placeholder() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -336,6 +353,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </main>
   );
 }
@@ -353,6 +372,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -387,3 +407,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

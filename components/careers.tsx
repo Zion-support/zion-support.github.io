@@ -269,6 +269,9 @@ export default function Careers() {const [selectedDepartment, setSelectedDepartm
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </motion.div>;
       </div>;
     </Layout>;
@@ -281,7 +284,11 @@ import { Users, Rocket, Brain, Globe, Award, Zap;
   Heart, Star, ArrowRight, CheckCircle, Briefcase;
   } from 'lucide-react';
 export default function Careers() {const [selectedDepartment, setSelectedDepartment] = useState('all')const departments = null;
+<<<<<<< HEAD
 export default CareersPage;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default CareersPage;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

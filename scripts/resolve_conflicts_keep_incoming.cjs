@@ -56,6 +56,7 @@ cursor/website-audit-and-update-with-deployment-76dc;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
@@ -63,3 +64,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

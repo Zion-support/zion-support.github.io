@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -10,10 +11,15 @@ import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
 import { supabase as supabaseClient   } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL   } from '@/data/talent';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import { supabase as supabaseClient   } from '@/utils/supabase/client';
+import { TALENT_PROFILES as LOCAL   } from '@/data/talent';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import type { TalentProfile } from '@/utils/types/talent';
 const hasSupabase =;
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
   !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+<<<<<<< HEAD
 <<<<<<< HEAD
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh')
   .split(',')
@@ -42,6 +48,8 @@ export default async function handler(
       return res.status(500).json({ error: e.message });
     }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh').split(',').map(x => x.trim())export default async function handler() {if (req && req.method === 'GET') {try {if (hasSupabase) {const { data, error } = await supabaseClient;
           .from('talent_profiles').order('created_at', { ascending: false })if (error) throw error;
         return res && res.status(200).json({ items: data as TalentProfile[] })}
@@ -157,6 +165,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       return res.status (201).json ({ slug: item.slug })} catch (e: any) {return res.status (500).json ({ error: e.message })}.end('Method Not Allowed')return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')}
 }}
 return res;
+<<<<<<< HEAD
     .setHeader('Allow', 'GET, POST').status(405).end('Method Not Allowed')
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -164,3 +173,6 @@ return res;
 }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    .setHeader('Allow', 'GET, POST').status(405).end('Method Not Allowed')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

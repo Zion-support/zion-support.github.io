@@ -428,6 +428,7 @@ this.log("Pipeline report "generated": ${reportPath}")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Intelligent Build Pipeline "failed": ")
 
@@ -435,3 +436,6 @@ this.log("Pipeline report "generated": ${reportPath}")
 =======
   console.error(" Intelligent Build Pipeline "failed": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" Intelligent Build Pipeline "failed": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,14 +16,19 @@
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
   website: 'https://ziontechgroup.com';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
   website: 'https://ziontechgroup.com'
@@ -40,10 +46,13 @@ const allServices = [;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {id: 'enterprise';
     name: 'Enterprise Solutions';
     icon: <Building className="w-6 h-6" />;
@@ -70,9 +79,12 @@ import React, { useState, useEffect } from 'react',
   }
   {import React, { useState, useEffect } from 'react',import SEO from '../components/SEO';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
@@ -257,6 +269,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -272,6 +285,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import {
   Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check;
   Brain, Zap, Shield, Building, Globe;
@@ -342,6 +357,7 @@ const categories = [
     icon: <Atom className='w-6 h-6' />,
     color: 'from-violet-500 to-indigo-500',
 <<<<<<< HEAD
+<<<<<<< HEAD
     description: 'Quantum computing solutions',
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -353,6 +369,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 ];
+=======
+    description: 'Quantum computing solutions'}];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
@@ -362,6 +381,7 @@ const getServiceCategory = (service: any) => {
   return 'Other';
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -377,6 +397,8 @@ import { motion, AnimatePresence } from "framer-motion";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   website: 'https://ziontechgroup.com'
 }
 const allServices = [
@@ -434,7 +456,10 @@ main
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 return 'Other';
 }const getServicePricing = (service: any) => {if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
@@ -456,16 +481,21 @@ return 'Contact for pricing';}const getServiceFeatures = (service: any) => {if (
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -567,6 +597,9 @@ const getServicePricing = (service: any) => {
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
   return 'Contact for pricing';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  return 'Contact for pricing';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 };
 
 const getServiceFeatures = (service: any) => {
@@ -587,6 +620,7 @@ export default function AdvancedServicesShowcase() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -594,6 +628,8 @@ export default function AdvancedServicesShowcase() {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
@@ -615,12 +651,15 @@ main
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 return [];
 }export default function AdvancedServicesShowcase() {const [selectedCategory, setSelectedCategory] = useState('all')const [searchTerm, setSearchTerm] = useState('')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')const [filteredServices, setFilteredServices]  = useState(allServices)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { service: any }) => (<motion&& motion.div;
       initial={{ opacity: 0, y: 20 }}
@@ -662,6 +701,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 export default function AdvancedServicesShowcase() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
@@ -673,10 +713,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] = useState(allServices);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -709,6 +753,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   useEffect(() => {
     let filtered = allServices;
@@ -1136,6 +1182,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         
+<<<<<<< HEAD
 =======
   }, [selectedCategory, searchTerm]);
 
@@ -1151,6 +1198,8 @@ ursor/fix-netlify-build-and-merge-to-main-9571
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -1160,12 +1209,15 @@ main
 <<<<<<< HEAD
         
         
+<<<<<<< HEAD
 =======
 ursor/fix-netlify-build-and-merge-to-main-9571
         
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className="flex items-center justify-between">
           <a
             href={service.link}
@@ -1177,6 +1229,7 @@ main
 <<<<<<< HEAD
           
           
+<<<<<<< HEAD
 =======
 ursor/fix-netlify-build-and-merge-to-main-9571
           
@@ -1209,6 +1262,11 @@ main
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          <a
+            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+            className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           >
             Contact
           </a>
@@ -2503,12 +2561,16 @@ if ( {) {$2;
       </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               <a;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               <a;
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+              <a;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <a
                 href={`mailto:${contactInfo && contactInfo.email}?subject=Services Inquiry`}
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300">;
@@ -2748,9 +2810,12 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
             </div>
             <div className="flex items-center gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <a
                 href={`mailto:${contactInfo.email}?subject=Services Inquiry`}
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300";
@@ -2762,9 +2827,12 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                 href={contactInfo.website}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 target="_blank";
                 rel="noopener noreferrer";
                 Visit Website;
@@ -2824,9 +2892,12 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${viewMode === 'grid';
@@ -2873,12 +2944,16 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                 >
                   <LayoutGrid className="w-5 h-5" />
                 </button>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${viewMode === 'list';
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
+<<<<<<< HEAD
 <<<<<<< HEAD
                   }`}
 <<<<<<< HEAD
@@ -2900,6 +2975,8 @@ viewMode === 'list'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   }`}
                 >;
                   <List className="w-5 h-5" />;
@@ -2960,6 +3037,7 @@ ursor/automate-test-improve-and-merge-code-646c;
             <div className='flex flex-wrap gap-3'>;
               {categories.map(category => (<button;
                 >
+<<<<<<< HEAD
                   <List className='w-5 h-5' />
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -3055,17 +3133,23 @@ ursor/automate-test-improve-and-merge-code-646c;
             <div className='flex flex-wrap gap-3'>;
               {categories.map(category => (<button;
                 >
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <List className="w-5 h-5" />
                 </button>
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           
           {/* Category Filters */}
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 {/* Category Filters */}
           <div className='mt-6'>
@@ -3074,6 +3158,8 @@ ursor/automate-test-improve-and-merge-code-646c;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
@@ -3092,6 +3178,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Results Summary */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div className='mb-8'>
           <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>
             <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>
@@ -3106,6 +3193,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className="mb-8">;
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">;
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">;
@@ -3147,6 +3236,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 =======
 >>>>>>> main
@@ -3160,6 +3250,8 @@ main
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
@@ -3173,7 +3265,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   {filteredServices.length} Services Found
                 </h2>
@@ -3183,6 +3278,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                 </p>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               
               
 =======
@@ -3191,6 +3287,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              
+              
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />
@@ -3198,6 +3298,7 @@ main
                 </div>
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4 text-blue-500" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </p>
               </div>
@@ -3211,6 +3312,8 @@ main
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <span>4.8+ Average Rating</span>
                 </div>
               </div>
@@ -3295,9 +3398,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions. 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </p>;
               </div>;
 ursor/fix-netlify-build-and-merge-to-main-9571;
@@ -3313,6 +3419,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                 </p>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -3327,6 +3434,8 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                 </p>;
               </div>;
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className='flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400'>;
                 <div className='flex items-center gap-2'>;
                   <TrendingUp className='w-4 h-4 text-green-500' />;
@@ -3551,10 +3660,13 @@ ursor/automate-test-improve-and-merge-code-646c;
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions. 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -3661,6 +3773,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
@@ -3672,6 +3785,8 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105";
               >;
@@ -3713,6 +3828,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -3738,3 +3854,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -9,6 +9,7 @@ import { ArrowRight, ExternalLink, Star, TrendingUp;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 import {
   ArrowRight,
   ExternalLink,
@@ -67,6 +68,8 @@ import {;
   Globe,;} from 'lucide-react';
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import { ArrowRight,ExternalLink,Star,TrendingUp,Users,Zap,Shield,Clock,Check,Brain,Rocket,Dna,DollarSign,Lock,Globe,} from 'lucide-react';
 import { ArrowRight;
@@ -84,7 +87,10 @@ import { ArrowRight;
   DollarSign;
   Lock;
   Globe; } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe;
 import React, { useState } from 'react';
@@ -106,8 +112,11 @@ interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,T
     icon: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     color: string;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: string;website: string;
     }reviews: number;
   }service: {id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,variant: string,contactInfo: {mobile: string,email: string,address: string,website: string;
@@ -117,7 +126,10 @@ interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,T
     launchDate: string;
     customers: number;
     rating: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     textColor: string;
     link: string;
     marketPosition: string;
@@ -142,6 +154,7 @@ interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,T
     implementationDetails: string;
     launchDate: string;
     customers: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -207,13 +220,18 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   const [isHovered, setIsHovered] = useState(false);
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     rating: number;reviews: number;
   }
 }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {const [isExpanded, setIsExpanded] = useState(false)const [isHovered, setIsHovered]  = useState(false)if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
+<<<<<<< HEAD
 =======
     if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (category.includes('Space')) return <Rocket className="w-4 h-4" />;
     if (category.includes('Biotech') |category.includes('Healthcare')) return <Dna className="w-4 h-4" />;
     if (category.includes('Finance') |category.includes('Trading')) return <DollarSign className="w-4 h-4" />;
@@ -254,6 +272,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         <div className='bg - gray - 900 / 90 backdrop - blur - xl rounded - 2xl p - 6 h - full'>        className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${is_hovered ? 'opacity - 100' : 'opacity - 50';
         }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const getCategoryIcon = null;
@@ -313,7 +334,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }const containerVariants = {hidden: { opacity: 0, y: 20 },visible: {opacity: 1,y: 0,transition: {duration: 0.6,ease: 'easeOut' as const,},},hover: {y: -10;
       transition: {duration: 0.3,ease: 'easeOut' as const,},},}const contentVariants = {hidden: { opacity: 0, height: 0 },visible: {opacity: 1,height: 'auto',transition: {duration: 0.5,ease: 'easeOut' as const,},},}onHoverStart={() => setIsHovered(true)}onHoverStart={() => setIsHovered(true)}onHoverEnd={() => setIsHovered(false)}
     >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Glow Effect */}
 <div;
         className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${isHovered ? 'opacity-100' : 'opacity-50';
@@ -327,6 +351,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     hidden: { opacity: 0, height: 0 },<div;
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${isHovered ? 'shadow-2xl' : 'shadow-lg';
         }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
       >
 <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
@@ -364,6 +389,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      >;
+<div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Header */}
           <div className='flex items - start justify - between mb - 4'>;
             <div className='flex items - center space - x-3'>;
@@ -376,6 +405,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </span>;
                 </div>;
                 <h3 className='text - xl font - bold text - white mt - 1'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   {service.name}
@@ -404,6 +434,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {service.name}<div className="flex items-start justify-between mb-4">;
             <div className="flex items-center space-x-3">;
               <div className="text-3xl">{service.icon}</div>;
@@ -420,10 +452,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             {service.popular && (<motion.div;
         style={{background: `linear-gradient(135deg, ${service && service.color})`;
+<<<<<<< HEAD
 =======
         style={{;
           background: `linear-gradient(135deg, ${service && service.color})`;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transform: isHovered ? 'scale(1 && 1.05)' : 'scale(1)'}}
       />;{/* Main Card */}
       <div;
@@ -462,6 +497,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             {service && service.popular && (<motion&& motion.div;
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold";
                 className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold';
@@ -473,6 +509,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            {service && service.popular && (<motion&& motion.div;
+                className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold";
+                className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >;
@@ -483,6 +524,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Tagline */}
 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>;
             {service.tagline}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </p>
           {/* Price */}
@@ -523,11 +565,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="grid grid-cols-2 gap-3 mb-4">
 
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
+=======
+          </p>;
+          {/* Price */}</div>;
+          </div>;
+          {/* Quick Stats */}<div className="grid grid-cols-2 gap-3 mb-4">;
+                className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 animate={{ scale: [1, 1 && 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}>;
                 POPULAR;
               </motion && motion.div>;
             )}
+<<<<<<< HEAD
             <div className="flex items-center space-x-2 text-sm">
               <Users className="w-4 h-4 text-blue-400" />
               <span className="text-gray-300">{service.customers.toLocaleString()}+ users</span>
@@ -588,6 +638,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 POPULAR;
               </motion && motion.div>;
             )}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className="flex items-center space-x-2 text-sm">;
               <Users className="w-4 h-4 text-blue-400" />;
               <span className="text-gray-300">{service.customers.toLocaleString()}+ users</span>;
@@ -698,6 +750,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span className="text-gray-400">Growth Rate:</span>;
               <span className="text-blue-400 font-semibold">{service && service.growthRate}</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;<div className='flex items-center justify-between text-sm mt-1'>;
               <span className='text-gray-400'>Growth Rate:</span>;
               <span className='text-blue-400 font-semibold'>;
@@ -719,6 +774,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text-gray-300 text-sm leading-relaxed'>;
                     {service.description}</p>;
                 </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           </div>;
@@ -736,10 +792,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                 </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <div>;
                   <h4 className="text-white font-semibold mb-2">Description</h4>;
                   <p className="text-gray-300 text-sm leading-relaxed">;
                   </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>;
 
@@ -785,6 +844,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </div>;{/* Features */}<div>;
                   <div className="grid grid-cols-1 gap-2">;
                     {service.features.slice(0, 6).map((feature, index) => (<div key={index} className="flex items-center space-x-2 text-sm">;
@@ -807,7 +868,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>;
                   <p className='text-gray-300 text-sm'>{service.roi}</p>;
                 </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {/* Contact Info */}
                 <div className='bg-gray-800/50 rounded-lg p-3'>;
                   <h4 className='text-white font-semibold mb-2'>;
@@ -824,6 +888,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className='text-gray-400'>Email:</span>;
                       <span className='text-white'>;
                         {service.contactInfo.email}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       </span>
                     </div>
@@ -857,6 +922,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </span>;
                     </div>;
                     <div className='flex items-center space-x-2'>;
@@ -864,12 +931,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className='text-white text-xs'>;
                         {service.contactInfo.address}</span>                    </div>                </div>;
                 {/* Contact Info */}{/* Contact Info */}
+<<<<<<< HEAD
 =======
                       </span>                    </div>                </div>
                 {/* Contact Info */}
 
                 {/* Contact Info */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <div className="bg-gray-800/50 rounded-lg p-3">;
                   <h4 className="text-white font-semibold mb-2">Contact Information</h4>;
                   <div className="space-y-1 text-sm">;
@@ -888,6 +958,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </motion && motion.div>;</span>;
                     </div>;
                   </div>;
@@ -896,6 +969,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             )}
           {/* Action Buttons */}<div className='flex space-x-3 mt-6'>;
             <motion&& motion.button;
+<<<<<<< HEAD
 =======
               </motion && motion.div>;
             )}
@@ -903,6 +977,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='flex space-x-3 mt-6'>;
             <motion&& motion.button
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'              whileHover={{ scale: 1 && 1.02 }}          <div className="flex space-x-3 mt-6">;
             <motion&& motion.button;
               className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2";
@@ -934,6 +1010,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span>Learn More</span>;
               <ExternalLink className='w-4 h-4' />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </motion && motion.button>;<motion&& motion.button;
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${isExpanded;
                   ? 'border-gray-600 text-gray-400';
@@ -954,6 +1033,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${isExpanded;
                   ? 'border-gray-600 text-gray-400';
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             </motion && motion.button>;
@@ -967,6 +1047,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ? 'border-gray-600 text-gray-400'
                   : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               }`}
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
@@ -977,6 +1059,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='flex justify-center mt-4';
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0.3 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           >
             <ArrowRight className='w-5 h-5 text-gray-400' />
@@ -995,6 +1078,8 @@ className='flex justify-center mt-4';
 export default UltraAdvancedServiceCard;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           >;
             <ArrowRight className='w-5 h-5 text-gray-400' />;
           </motion.div>;
@@ -1054,10 +1139,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default UltraAdvancedServiceCard;</motion.div>;
         </div>;
       </div>;
     </motion.div>;
+<<<<<<< HEAD
 })}export default UltraAdvancedServiceCard;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1073,3 +1162,6 @@ export default UltraAdvancedServiceCard;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+})}export default UltraAdvancedServiceCard;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

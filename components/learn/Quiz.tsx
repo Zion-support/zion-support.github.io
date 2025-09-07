@@ -3,10 +3,13 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useState } from 'react';
 type Question = any;
   question: string;
@@ -15,6 +18,7 @@ type Question = any;
 }
 type Props = {questions: Question[];
   onComplete: (score: number) => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -42,15 +46,21 @@ const score = questions.reduce(
       {questions && questions.map((q, idx) => (;
         <div key={q && q.id} className='border rounded p-3'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }export default function Quiz() {export default function Quiz() {const [answers, setAnswers] = useState<Record<string, number>>({})const [submitted, setSubmitted]  = useState(false)const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0),0;
   )function submit() {setSubmitted(true)onComplete(score)}
   return (<div className='space-y-4'>;
       {questions && questions.map((q, idx) => (<div key={q && q.id} className='border rounded p-3'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className='font-medium'>;
             {idx + 1}. {q && q.question}
           </div>;
           <div className='mt-2 grid gap-2'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {q && q.options.map((opt, i) => (;
               <label key={i} className='flex items-center gap-2'>;
@@ -72,13 +82,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {questions && questions.map((q, idx) => (;
         <div key={q && q.id} className="border rounded p-3">;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {q && q.options.map((opt, i) => (<label key={i} className='flex items-center gap-2'>;
                 <input;
   function submit() {function submit() {setSubmitted(true)type='radio';
     onComplete(score)}
   return (<div className="space-y-4">;
       {questions && questions.map((q, idx) => (<div key={q && q.id} className="border rounded p-3">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className="font-medium">{idx + 1}. {q && q.question}</div>;
           <div className="mt-2 grid gap-2">;
             {q && q.options.map((opt, i) => (<label key={i} className="flex items-center gap-2">;
@@ -102,6 +117,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </label>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
           {submitted && (
 <<<<<<< HEAD
@@ -116,10 +132,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
           {submitted && (<div className='mt-2 text-sm'>;
               {answers[q.id] === q.answerIndex ? (<span className='text-green-600'>Correct</span>;
               ) : (<span className='text-red-600'>Incorrect</span>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -132,6 +151,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <button
 =======
+=======
+              )}
+            </div>;
+          )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>;
       ))})}
   )}<button;
@@ -151,6 +175,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -164,3 +189,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

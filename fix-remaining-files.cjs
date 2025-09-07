@@ -6,6 +6,7 @@ const files = [
     conten: t: `import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -23,6 +24,13 @@ const files = [;
 
 
 <<<<<<< HEAD
+=======
+
+import Link from 'next/link';
+import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -1236,6 +1244,7 @@ files.forEach(file => {
 });
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 main
 
@@ -1244,3 +1253,5 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,6 +42,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import React from 'react';  import '@testing-library/jest-dom'; import EnhancedFooter from '../components/EnhancedFooter.dynamic'; describe('EnhancedFooter',() => { test('renders without crashing',() => { render(<EnhancedFooter />)expect(screen.getByTestId('enhancedfooter')).toBeInTheDocument()})test('displays correct content',() => { render(<EnhancedFooter />)})test('handles user interactions',() => { render(<EnhancedFooter />)})test('applies correct styling',() => { render(<EnhancedFooter />)})})ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { render, screen, fireEvent  } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -63,15 +70,19 @@ const React from "react"; import { render, screen, fireEvent } from '@testing-li
   })})
 import EnhancedFooterdynamic from '../components/EnhancedFooter.dynamic';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 describe('EnhancedFooterdynamic', () => {
   test('renders without crashing', () => {
     render(<EnhancedFooterdynamic />);
     expect(screen.getByTestId('enhancedfooter.dynamic')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,6 +100,8 @@ describe('EnhancedFooterdynamic', () => {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 });
 });
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedFooterdynamic from '../components/EnhancedFooter.dynamic'; describe('EnhancedFooterdynamic',() => { test('renders without crashing',() => { render(<EnhancedFooterdynamic />); expect(screen.getByTestId('enhancedfooter.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedFooterdynamic />)}); test('handles user interactions',() => { render(<EnhancedFooterdynamic />)}); test('applies correct styling',() => { render(<EnhancedFooterdynamic />)})});
@@ -119,6 +132,7 @@ describe('EnhancedFooterdynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedFooterdynamic from "./components/EnhancedFooter.dynamic"; describe('EnhancedFooterdynamic', () => { test("renders without crashing",() => { render(<EnhancedFooterdynamic />); expect(screen.getByTestId("enhancedfooter.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedFooterdynamic />)}); test("handles user interactions",() => { render(<EnhancedFooterdynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
@@ -159,3 +173,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 });
 });
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+});
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

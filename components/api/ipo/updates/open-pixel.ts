@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const id = null;
   res.status(200).send(pixel)
@@ -54,6 +55,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   );
   res && res.status(200).send(pixel);
 }
+=======
+export default function handler() {const id = String(req.query.id |"")export default function handler() {const id = String(req.query.id || "")if (id) {const updates = readJsonFile("updates && updates.json", [] as any[])const idx = updates && updates.findIndex((x: any) => x && x.id === id)if (idx >= 0) {updates[idx].opens = (updates[idx].opens || 0) + 1;
+      writeJsonFile("updates && updates.json", updates)}
+  }"R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==","base64",)res && res.setHeader("Content-Type", "image/gif")res && res.setHeader("Cache-Control","no-store, no-cache, must-revalidate, proxy-revalidate",)res && res.status(200).send(pixel)res && res.setHeader("Content-Typeimage/gif")res && res.setHeader("Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate",)res && res.status(200).send(pixel)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile, writeJsonFile  } from '../../../../utils / api / storage';
 export default /**
@@ -72,6 +78,7 @@ if ( {) {
   $2
 }
       updates[idx].opens = (updates[idx].opens || 0) + 1;
+<<<<<<< HEAD
       writeJsonFile ("updates.json", updates);
     "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
     "base64",
@@ -87,3 +94,7 @@ if ( {) {
     "Cache - Controlno - store, no - cache, must - revalidate, proxy - revalidate",
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      writeJsonFile ("updates.json", updates)"R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==","base64",)res.set_header ("Content - Type", "image / gif")res.set_header ("Cache - Control","no - store, no - cache, must - revalidate, proxy - revalidate",)res.status (200).send (pixel)res.set_header ("Content - Typeimage / gif")res.set_header ("Cache - Controlno - store, no - cache, must - revalidate, proxy - revalidate",)const id = null;
+  res.status(200).send(pixel)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

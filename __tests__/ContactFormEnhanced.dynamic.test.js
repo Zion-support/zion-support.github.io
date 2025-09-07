@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,6 +42,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import React from 'react';  import '@testing-library/jest-dom'; import ContactFormEnhanced from '../components/ContactFormEnhanced.dynamic'; describe('ContactFormEnhanced',() => { test('renders without crashing',() => { render(<ContactFormEnhanced />)expect( screen.getByTestId('contactformenhanced') ).toBeInTheDocument()})test('displays correct content',() => { render(<ContactFormEnhanced />)})test('handles user interactions',() => { render(<ContactFormEnhanced />)})test('applies correct styling',() => { render(<ContactFormEnhanced />)})})ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { render, screen, fireEvent  } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -63,10 +70,13 @@ const React from "react"; import { render, screen, fireEvent } from '@testing-li
   })})
 import ContactFormEnhanceddynamic from '../components/ContactFormEnhanced.dynamic';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 describe('ContactFormEnhanceddynamic', () => {
   test('renders without crashing', () => {
     render(<ContactFormEnhanceddynamic />);
@@ -74,6 +84,7 @@ describe('ContactFormEnhanceddynamic', () => {
       screen.getByTestId('contactformenhanced.dynamic')
     ).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +102,8 @@ describe('ContactFormEnhanceddynamic', () => {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 });
 });
 import _React from 'react';  import '@testing-library/jest-dom'; import ContactFormEnhanceddynamic from '../components/ContactFormEnhanced.dynamic'; describe('ContactFormEnhanceddynamic',() => { test('renders without crashing',() => { render(<ContactFormEnhanceddynamic />); expect( screen.getByTestId('contactformenhanced.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormEnhanceddynamic />)}); test('handles user interactions',() => { render(<ContactFormEnhanceddynamic />)}); test('applies correct styling',() => { render(<ContactFormEnhanceddynamic />)})});
@@ -121,6 +134,7 @@ describe('ContactFormEnhanceddynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ContactFormEnhanceddynamic from "./components/ContactFormEnhanced.dynamic"; describe('ContactFormEnhanceddynamic', () => { test("renders without crashing",() => { render(<ContactFormEnhanceddynamic />); expect( screen.getByTestId("contactformenhanced.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<ContactFormEnhanceddynamic />)}); test("handles user interactions",() => { render(<ContactFormEnhanceddynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
@@ -161,3 +175,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 });
 });
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+});
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

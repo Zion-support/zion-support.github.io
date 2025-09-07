@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.'
@@ -10,6 +11,15 @@
     customers: 89
     rating: 4.7
     reviews: 52
+=======
+
+;
+      'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.';
+    launchDate: '2030-03-01';
+    customers: 89;
+    rating: 4.7;
+    reviews: 52;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
       'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.',
     launchDate: '2030-03-01',
@@ -19,6 +29,7 @@
   },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
+<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -78,6 +89,8 @@ export interface InnovativeMicroSaas2030 {
       'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.',launchDate: '2030-03-01',customers: 89,rating: 4.7,reviews: 52;
   }];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
     }import { ServiceVariant  } from '../types / service - variants';
@@ -88,7 +101,10 @@ export interface InnovativeMicroSaas2030  {{id: 'ai-business-intelligence-2030';
     period: '/month';
     description:;
       'Revolutionary 2030 platform for AI-powered business intelligence, providing real-time insights, predictive analytics, and autonomous decision-making.','AI-powered analytics','Real-time insights',real_implementation: boolean;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   implementation_details: string;
   launch_date: string;
 import { ServiceVariant  } from '../types/service-variants';
@@ -122,6 +138,7 @@ export interface InnovativeMicroSaas2030  {id: string;
     email: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     address: string;
     website: string
   },
@@ -139,6 +156,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }website: string;
   },realImplementation: boolean;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    address: string;website: string;
+  }website: string;
+  },realImplementation: boolean;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   implementationDetails: string;
   launchDate: string;
   customers: number;
@@ -488,6 +510,7 @@ export interface InnovativeMicroSaas2030 {
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
+<<<<<<< HEAD
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
     real_implementation: true,
@@ -745,6 +768,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com',
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       website: 'https://ziontechgroup && ziontechgroup.com'
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     },
@@ -771,6 +796,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -791,6 +817,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -811,6 +839,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     reviews: 52
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -841,6 +870,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -856,21 +887,30 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       
     mobile: string, email: string,
     address: string,
     website: string
   
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 }
 
@@ -880,12 +920,15 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
 
     id: 'ai-business-intelligence-2030', name: 'AI Business Intelligence 2030',
     tagline: 'Next-generation AI-powered business insights',
+<<<<<<< HEAD
     id: 'ai-business-intelligence-2030';
     name: 'AI Business Intelligence 2030';
     tagline: 'Next-generation AI-powered business insights';
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered business intelligence, providing real-time insights, predictive analytics, and autonomous decision-making.',
@@ -948,15 +991,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     variant: 'quantum-futuristic',
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     },
     realImplementation: true, implementationDetails: 'Advanced quantum-secure communication platform with unbreakable encryption and secure communication channels.',
     launchDate: '2030-01-15', customers: 32,
@@ -988,14 +1037,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     variant: 'ai-futuristic',
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     },
     realImplementation: true, implementationDetails: 'Advanced AI customer success automation platform with autonomous customer service and success optimization.',
     launchDate: '2030-02-01', customers: 78,
@@ -1027,9 +1082,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     variant: 'blockchain-futuristic',
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1070,6 +1128,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     variant: 'ai-futuristic',
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1089,6 +1150,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
@@ -1098,6 +1160,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaas2030 {;
   id: string,;
@@ -1365,6 +1429,9 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 
@@ -1394,6 +1461,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
       'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.',
     launchDate: '2030-03-01',
 <<<<<<< HEAD
+<<<<<<< HEAD
     customers: 89,
 <<<<<<< HEAD
     },
@@ -1411,14 +1479,20 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
 
 =======
 
+=======
+    customers: 89
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     },
     realImplementation: true, implementationDetails: 'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.',
     launchDate: '2030-03-01', customers: 89,
     rating: 4.7,
     reviews: 52;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1577,6 +1651,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7,
@@ -1590,6 +1665,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface InnovativeMicroSaas2030 {;
   id: string,;
   name: string,;
@@ -1856,16 +1933,20 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 ];
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1912,3 +1993,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

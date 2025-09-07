@@ -1,6 +1,7 @@
 import Layout from '../components/layout/Layout';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Code, Database, Shield, Zap, Globe, Cpu;
   BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
@@ -21,19 +22,25 @@ export default function APIDocumentation() {;
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion  } from 'framer-motion';
 import { Code, Database, Shield, Zap, Globe, Cpu;
   BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain;
   } from 'lucide-react';
 import {} from 'lucide-react';
 export default function APIDocumentation() {export default function APIDocumentation() {return (<div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <Head>;
         <title>API Documentation | Zion Tech Group</title>;
         <meta;
           name='description';
           content='Explore API docs, references, and code generators.';
         />;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <link
           rel='canonical'
@@ -73,6 +80,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           href='https://ziontechgroup && ziontechgroup.com/api-documentation'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        <link;
+          rel='canonical';
+          href='https://ziontechgroup && ziontechgroup.com/api-documentation';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
       </Head>;
       <div className='max-w-5xl mx-auto space-y-6'>;
@@ -164,6 +176,9 @@ export default function APIDocumentation() {
     </ul>;
   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   </div>),}href='https://ziontechgroup.com/api-documentation';
         />;
       </Head>;
@@ -190,9 +205,13 @@ export default function APIDocumentation() {
         </ul>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   </div>),
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

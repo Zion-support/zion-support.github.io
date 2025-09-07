@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,8 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 import type {;
@@ -54,6 +57,7 @@ const statuses: GrantStatus[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -64,6 +68,8 @@ const statuses: GrantStatus[] = [;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
       .catch(() => setItems([]));  }, [filters]);
@@ -95,11 +101,14 @@ const statuses: GrantStatus[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <EnhancedLayout>;
       <div className='flex items - center justify - between mb - 6'>;
         <h1 className='text - 2xl font - semibold'>Zion Grants & Incubator</h1>;
@@ -160,7 +169,10 @@ import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/g
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 const statuses: GrantStatus[]  = ['DraftSubmittedUnder ReviewApprovedRejected'];GrantApplication;
   GrantCategory;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   GrantStatus;
 } from '../../types/grants';
 const categories: GrantCategory[] = [;
@@ -169,6 +181,7 @@ const categories: GrantCategory[] = [;
   'Regional Expansion';
   'Research Grants';
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 const statuses: GrantStatus[] = [
   'Draft'
@@ -221,6 +234,8 @@ export default function GrantsPage() {;
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const statuses: GrantStatus[] = [;
   'Draft';
   'Submitted';
@@ -244,9 +259,12 @@ export default function GrantsPage() {const categories: GrantCategory[] = ['Ecos
           </Link>;
           <Link href='/incubator'>;
             <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   useEffect(() => {
 
     const params = new URLSearchParams();
@@ -280,6 +298,7 @@ export default function GrantsPage() {;
   }, [filters]);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -295,6 +314,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <EnhancedLayout>
       <div className='flex items-center justify-between mb-6'>
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
@@ -329,8 +350,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onChange={e =>
             setFilters(f => ({ ...f, status: e.target.value |undefined }))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default /**
  * GrantsPage - Function description
  */
@@ -434,11 +458,14 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
         />;
         <select;
           className='border rounded p-2';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }
         >
           <option value=''>All Stages</option>
@@ -456,6 +483,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -467,11 +495,14 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
           value={filters && filters.region || ''}
           onChange={e =>;
             setFilters(f => ({ ...f, region: e && e.target.value || undefined }));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -499,10 +530,13 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }
         />
         <select
           className='border rounded p-2'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -519,6 +553,8 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       <div className='grid md:grid - cols - 4 gap - 4 mb - 6'>;
         <select;
@@ -573,6 +609,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <select
           className='border rounded p-2'
 =======
@@ -581,6 +618,8 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <select;
           className='border rounded p - 2';
           value={filters.program || ''}
@@ -610,6 +649,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 
         <select
           className='border rounded p-2'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -658,11 +698,14 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
           className='border rounded p-2'
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
               <div className='flex gap - 2 items - center'>;
                 {g.program === 'incubator' && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -679,6 +722,8 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
           value={filters && filters.program || ''}
           onChange={e =>;
@@ -708,6 +753,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -723,6 +769,8 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className='grid gap-4'>;
         {items.map(g => (<div;
             key={g.id}
@@ -792,6 +840,7 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -829,6 +878,11 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                  <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
+                    Incubated by Zion
+                  </span>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 )}
                 {g && g.status === 'Approved' && (<span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
                     Grant Winner;
@@ -866,12 +920,16 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>
     </EnhancedLayout>
 );
       </div>;
     </EnhancedLayout>;
   );
+<<<<<<< HEAD
 =======
 
 
@@ -879,12 +937,15 @@ function GrantsPage() {const [items, set_items] = useState < GrantApplication[]>
     </EnhancedLayout>
 );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 
   return (
     <EnhancedLayout>
     <EnhancedLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -899,6 +960,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
                     Incubated by Zion;
                   </span>)}
@@ -926,6 +989,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -948,3 +1012,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

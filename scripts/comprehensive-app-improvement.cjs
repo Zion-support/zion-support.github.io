@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -12,6 +13,11 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process')
 console.log(' Starting Comprehensive App Improvement...')
     execSync(command, { "stdio"})
@@ -34,6 +40,7 @@ console.log('SEO improvements "applied")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.log('\n Comprehensive App Improvement "Summary")
 
@@ -41,3 +48,6 @@ console.log('SEO improvements "applied")
 =======
   console.log('\n Comprehensive App Improvement "Summary")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.log('\n Comprehensive App Improvement "Summary")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

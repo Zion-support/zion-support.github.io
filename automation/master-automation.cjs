@@ -13,6 +13,7 @@
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -26,10 +27,13 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -62,6 +66,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
@@ -70,15 +76,19 @@ const { promisify } = require("util");
 const execAsync = promisify(exec);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,12 +118,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
     this.ensureLogsDir();
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -139,6 +152,10 @@ class MasterAutomation {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  log(message) {
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 class MasterAutomation {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'master-automation.log');
@@ -149,6 +166,7 @@ class MasterAutomation {}
     ];
   };
   log(message) {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -176,6 +194,8 @@ class MasterAutomation {}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
@@ -184,6 +204,7 @@ class MasterAutomation {}
   }
 
   log(message, type = 'info') {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -208,6 +229,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
@@ -255,6 +278,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async runCommand(command, description) {
 =======
 
+<<<<<<< HEAD
   async runCommand(command, description) {
   async runCommand(command, description) {
 
@@ -284,6 +308,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -292,6 +318,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         stdio: 'pipe',
       });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -333,6 +360,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -342,6 +371,7 @@ main
         ...options}
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -366,15 +396,20 @@ class MasterAutomation {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       return { success: true, stdout, stderr };
     } catch (error) {}
       this.log(`Command failed: ${command} - ${error.message}`);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       return { 
         success: false, 
         stdout: error.stdout || "", 
@@ -470,6 +505,7 @@ class MasterAutomation {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       this.log(`✅ ${description} completed successfully`);
@@ -492,6 +528,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async runBuildProcess() {
     this.log('🚀 Starting build process...');
 
@@ -513,6 +551,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -524,6 +563,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
@@ -540,6 +581,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return { success: true, results };
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -572,6 +614,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async performHealthCheck() {
     this.log("Performing health check.");
     // Check if PM2 is running
@@ -580,10 +624,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       this.log("PM2 is not running, attempting to start processes.");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       return {}
         success: false,
@@ -692,6 +739,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     if (!pm2Status) {}
       this.log('PM2 is not running, attempting to start processes...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -704,6 +752,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const processes = await this.monitorProcesses();
     const expectedProcesses = this.pm2Processes.length;
     const runningProcesses = processes.length;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (runningProcesses < expectedProcesses) {
@@ -711,6 +761,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       await this.restartPM2Processes();
     } else {
       this.log("All processes are running normally");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -869,6 +920,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     if (runningProcesses < expectedProcesses) {}
       this.log()
@@ -890,6 +943,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         "lintFixer": await this.getPM2Logs('lint-fixer', 20),
         "buildMonitor": await this.getPM2Logs('build-monitor', 20),
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -981,6 +1035,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       await this.startPM2Processes();
       return;
     }
@@ -990,6 +1047,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const expectedProcesses = this.pm2Processes.length;
     const runningProcesses = processes.length;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1066,6 +1124,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
 
     // Calculate summary
@@ -1086,6 +1146,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     this.log(`📄 Report saved to: ${reportFile}`);
     return report;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1118,6 +1179,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   };
   async start() {}
     this.log('Master Automation started');
@@ -1344,6 +1408,7 @@ if (require.main === module) {}
     case 'start':
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   }
@@ -1397,12 +1462,15 @@ if (require.main === module) {
 =======
       automation.start().catch(error => {})
         console.error('Master Automation "failed": ', error);
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1434,11 +1502,14 @@ if (require.main === module) {
       automation.restartPM2Processes().catch(error => {})
         console.error('Failed to restart "processes": ', error);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1452,11 +1523,14 @@ if (require.main === module) {
       automation.monitorProcesses().catch(error => {})
         console.error('Failed to get "status": ', error);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1470,11 +1544,14 @@ if (require.main === module) {
       automation.generateReport().catch(error => {})
         console.error('Failed to generate report: ', error);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1558,6 +1635,13 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+        process.exit(1);
+      }
+});
+      break;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
@@ -1571,6 +1655,7 @@ main
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1597,6 +1682,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
 
     this.log('✅ Quality checks completed');
@@ -1644,9 +1732,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   async generateReport() {
     this.log('📊 Generating automation report...');
@@ -1663,6 +1754,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       },
     };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1754,6 +1846,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -1777,12 +1871,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // Calculate summary
     if (report.build.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
@@ -1798,6 +1895,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       this.logsDir,
       `automation-report-${Date.now()}.json`
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1850,6 +1948,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report saved to: ${reportFile}`);
@@ -1858,6 +1959,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   async start() {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1883,6 +1985,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.log("Master Automation started");
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, "logs");
@@ -1912,6 +2016,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       this.log("Generating daily report.");
       await this.generateReport();
     }, 24 * 60 * 60 * 1000);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1954,6 +2059,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 
   async status() {
@@ -2005,6 +2113,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2034,6 +2143,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   }
 
@@ -2128,6 +2239,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 // CLI interface
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2166,11 +2278,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
 
   switch (command) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2203,6 +2318,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
@@ -2270,12 +2388,15 @@ module.exports = MasterAutomation;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     case 'start':
       automation
         .start()
@@ -2302,11 +2423,15 @@ module.exports = MasterAutomation;
       break;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     default:
       console.log('Usage: node master-automation.cjs [start|status]');
 
       process.exit(1);
+<<<<<<< HEAD
 =======
 =======
     default:
@@ -2334,10 +2459,13 @@ module.exports = MasterAutomation;
 <<<<<<< HEAD
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = MasterAutomation;
 =======
@@ -2383,6 +2511,10 @@ module.exports = MasterAutomation;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = MasterAutomation;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
@@ -2390,6 +2522,7 @@ module.exports = MasterAutomation;
   };
 };
 module.exports = MasterAutomation;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2452,3 +2585,6 @@ module.exports = MasterAutomation;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -199,6 +199,7 @@ this.log(")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
 
@@ -206,3 +207,6 @@ this.log(")
 =======
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

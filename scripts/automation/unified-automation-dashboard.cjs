@@ -224,6 +224,7 @@ this.log("Dashboard generated successfully at ${htmlPath}")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
 
@@ -231,3 +232,6 @@ this.log("Dashboard generated successfully at ${htmlPath}")
 =======
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function FuturisticHero() {
 
 export default function FuturisticHero() {
@@ -82,6 +83,8 @@ function FuturisticHero() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function FuturisticHero() {export default function FuturisticHero() {return (<section className='relative py-20 sm:py-28'>;
       <AnimatedBackground />;
       <div className='text-center max-w-4xl mx-auto'>;
@@ -151,10 +154,13 @@ function FuturisticHero() {return (<section className='relative py - 20 sm:py - 
         </div>;
       </div>;
   )<div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;
+<<<<<<< HEAD
 =======
 
         <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <p className='text - sm text - gray - 700 dark:text - gray - 300'>;
             Talent marketplace • Project accelerators • Secure contracts •;
             Integrated AI toolchain          </p > export default /**;
@@ -180,6 +186,7 @@ function FuturisticHero() {return (<section className="relative py-20 sm:py-28">
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </section>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -187,3 +194,6 @@ function FuturisticHero() {return (<section className="relative py-20 sm:py-28">
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </section>)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

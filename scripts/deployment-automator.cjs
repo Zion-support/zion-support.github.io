@@ -12,6 +12,7 @@ console.log(' Deployment Automator Starting...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         execSync(step.command, { "stdio"})
 
@@ -19,3 +20,6 @@ console.log(' Deployment Automator Starting...')
 =======
         execSync(step.command, { "stdio"})
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        execSync(step.command, { "stdio"})
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

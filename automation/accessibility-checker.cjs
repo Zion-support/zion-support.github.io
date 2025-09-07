@@ -33,6 +33,7 @@ const { execSync } = require('child_process');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -509,6 +510,10 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -631,6 +636,7 @@ if (require.main === module) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -701,6 +707,8 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -717,6 +725,7 @@ console.log('♿ Accessibility Checker Starting...\n')
 module.exports = AccessibilityChecker;
 ursor/automate-test-improve-and-merge-code-59d5
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
@@ -724,6 +733,8 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
@@ -770,6 +781,7 @@ module.exports = AccessibilityChecker;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -796,3 +808,5 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

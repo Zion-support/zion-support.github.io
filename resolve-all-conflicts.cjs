@@ -7,6 +7,7 @@ const path = require('path');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
@@ -17,6 +18,8 @@ main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 console.log('🔧 Resolving all merge conflicts...');
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 console.log('🔧 Starting comprehensive merge conflict resolution...');
@@ -25,6 +28,7 @@ console.log('🔧 Resolving all merge conflicts...');
 >>>>>>> main
 ursor/integrate-build-improve-and-re-verify-7ffc
 ursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
 =======
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
@@ -34,6 +38,8 @@ console.log('🔧 Resolving all merge conflicts...');
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 // Get list of files with merge conflicts
 const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
@@ -81,6 +87,7 @@ function resolveMergeConflicts(filePath) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     if (!fs.existsSync(filePath)) {
       console.log(`⚠️  File not found: ${filePath}`);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       console.log(`⚠️  File not found: ${filePath}`);
@@ -96,6 +103,10 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      console.log(`⚠️  File not found: ${filePath}`);
+>>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       return false;
     }
@@ -212,6 +223,7 @@ main
     resolvedContent = resolvedContent.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
     resolvedContent = resolvedContent.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
     resolvedContent = resolvedContent.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
+<<<<<<< HEAD
 =======
 
         const parts = match.split('');
@@ -225,6 +237,8 @@ main
           const headPart = parts[0].replace('
     resolvedContent = resolvedContent.replace(/
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Write the resolved content
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
@@ -233,6 +247,9 @@ main
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Check if file has merge conflicts
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
@@ -286,6 +303,7 @@ ursor/integrate-build-improve-and-re-verify-7ffc
 ursor/automate-test-improve-and-merge-code-646c
     if (!content.includes('
         const parts = match.split('
+<<<<<<< HEAD
 =======
       return false;
     }
@@ -376,6 +394,8 @@ main
     // Check if file has merge conflicts
     if (!content.includes('
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return false;
   }
 }
@@ -420,16 +440,20 @@ function findFilesWithConflicts() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function findConflictedFiles() {
   try {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     return result.trim().split('\n').filter(file => file.length > 0);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -440,6 +464,9 @@ main
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   } catch (error) {
     console.error('Error finding conflicted files:', error.message);
@@ -450,10 +477,13 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Main execution
 try {
   const conflictedFiles = findFilesWithConflicts();
@@ -576,6 +606,7 @@ ursor/integrate-build-improve-and-re-verify-7ffc
 ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+<<<<<<< HEAD
 =======
 // Main execution
 try {
@@ -612,3 +643,5 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

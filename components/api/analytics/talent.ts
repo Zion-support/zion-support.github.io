@@ -5,6 +5,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,6 +44,8 @@ supabase
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { createServerClient  } from '../../../utils/supabase/server';
       supabase;
       supabase;
@@ -72,9 +75,12 @@ function handler() {try {const supabase = createServerClient ()const talent_id =
 
 
       supabase
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         .from('profile_views')
         .select('id, talent_id')
         .eq('talent_id', talentId)
@@ -102,6 +108,7 @@ function handler() {try {const supabase = createServerClient ()const talent_id =
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
       ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -162,11 +169,23 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
+=======
+
+    });
+
+
+  }
+
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 
 }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -201,6 +220,10 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -257,6 +280,7 @@ function handler() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -281,3 +305,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

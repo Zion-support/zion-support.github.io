@@ -307,6 +307,7 @@ this.log("Summary report "generated": ${summaryFile}")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
 
@@ -314,3 +315,6 @@ this.log("Summary report "generated": ${summaryFile}")
 =======
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

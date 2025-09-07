@@ -308,6 +308,7 @@ export default Solutions;}}
   } from 'lucide-react';
 const SolutionsPage: React.FC;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Solutions;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -476,3 +477,6 @@ import React from 'react';
 }</div> </div> </section> <motion&& motion.div initial= {
   {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default Solutions;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

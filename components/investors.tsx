@@ -40,6 +40,7 @@ export default function InvestorsPage() {export default function InvestorsPage()
         <div className='pt-4 text-slate-300'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           Contact IR:{' '}
           <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
             kleber@ziontechgroup.com
@@ -50,6 +51,8 @@ export default function InvestorsPage() {export default function InvestorsPage()
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           Contact IR:{' '}<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">;
 			<Head>;
 				<title>Investors | Zion Tech Group</title>;
@@ -65,6 +68,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 					<div className="p-4 rounded-xl bg-black/40 border border-cyan-500/20"><div className="text-2xl font-bold text-white">15+</div><div className="text-slate-400 text-sm">Years experience</div></div>;
 				</div>;
 				<div className="pt-4 text-slate-300">Contact IR: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>;
+<<<<<<< HEAD
 =======
           Contact IR:{' '}
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
@@ -83,6 +87,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				</div>
 				<div className="pt-4 text-slate-300">Contact IR: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Head from 'next / head';
 export default /**;
  * InvestorsPage - Function description;
@@ -142,15 +148,22 @@ function InvestorsPage() {return (<div className='min - h-screen pt - 24 pb - 20
     <div className="pt - 4 text-slate-300">Contact IR: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>;
   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   </div>),}<a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>;
             kleber@ziontechgroup.com;
           </a>;
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   </div>),
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

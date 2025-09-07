@@ -1,12 +1,15 @@
   return <OrgChartPage />;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
 export default function OrgChartGovernancePage() {
   return <OrgChartPage />;
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),export default function OrgChartGovernancePage() {return <OrgChartPage />;}
 import dynamic from 'next / dynamic';const OrgChartPage = dynamic (() => import ('../../components / org / OrgChartPage'),{ ssr: false }
 )export default function OrgChartGovernancePage() {return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),export default function OrgChartGovernancePage() {return <OrgChartPage />;
@@ -19,6 +22,7 @@ function OrgChartGovernancePage() {return <OrgChartPage />;const OrgChartPage = 
  * OrgChartGovernancePage - Function description;
  */;
 function OrgChartGovernancePage() {return <OrgChartPage />;
+<<<<<<< HEAD
 }export default function OrgChartGovernancePage() {return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -58,3 +62,6 @@ export default function OrgChartGovernancePage() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}export default function OrgChartGovernancePage() {return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

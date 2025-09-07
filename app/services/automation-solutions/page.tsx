@@ -2,6 +2,7 @@ export const metadata = {
   title: 'Automation Solutions | Zion Tech Group',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   description:
     'Intelligent automation solutions including RPA, workflow automation, AI-powered automation, and business process optimization. Streamline your operations.',
 };
@@ -317,6 +318,9 @@ function ContactSection() {
       </div>
     </section>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   description: 'Professional automation solutions services for your business needs.',
   keywords: 'automation-solutions, services, business, technology'
 =======
@@ -370,6 +374,10 @@ export default function ServicePage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   );
 }
+

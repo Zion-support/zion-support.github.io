@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -89,6 +90,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       trend: generateSeries(14, 70)
     }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function rand() {return Math.floor(Math.random() * (max - min + 1)) + min;
 }function generateSeries(n: number, base: number, volatility;
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -120,7 +123,10 @@ function generateSeries() {const series: number[] = [];
     {key: 'job_fill_rate';
       label: 'Job fill rate %';
       value: rand(45, 92)trend: generateSeries(14, 70)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ];
   const dao = [;
     {key: 'proposals_created';
@@ -161,6 +167,7 @@ function generateSeries() {const series: number[] = [];
       label: 'Cross-instance token movement';
       value: rand(1_000, 12_000)trend: generateSeries(14, 6_000)}
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const response: any = {
@@ -222,6 +229,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json(response)
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const response: any = {marketplace;
     dao;
     token;
@@ -232,5 +241,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }marketplace: marketplace.map(m => ({...m,value: Math.round(m.value * factor),})),dao: dao.map(m => ({ ...m, value: Math.round(m.value * factor) })),token: token.map(m => ({ ...m, value: Math.round(m.value * factor) })),multiverse: multiverse.map(m => ({...m;
           value: Math.round(m.value * factor)}))}
     }
+<<<<<<< HEAD
   }res.status(200).json(response)multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}}res.status(200).json(response)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }res.status(200).json(response)multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}}res.status(200).json(response)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

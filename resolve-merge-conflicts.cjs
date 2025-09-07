@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -342,6 +343,11 @@ main
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { execSync } = require('child_process');
+=======
+
+
+const { execSync } = require('child_process');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 console.log('Resolving merge conflicts...');
 
@@ -415,6 +421,7 @@ contentConflicts.forEach(file => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 if (resolveMergeConflicts()) {
     console.log('Ready to commit merge resolution');
@@ -442,3 +449,5 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

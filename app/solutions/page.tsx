@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -273,6 +274,9 @@ import Link from "next/link";
 =======
 import React from 'react';
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export const metadata = {
   title: 'Solutions | Zion Tech Group',
@@ -294,6 +298,7 @@ export default function SolutionsPage() {
           </p>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -356,6 +361,8 @@ export default function SolutionsPage() {
           </Link>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="bg-gray-800 rounded-lg p-6 text-center">
             <div className="text-4xl font-bold text-blue-400 mb-2">01</div>
@@ -410,6 +417,7 @@ export default function SolutionsPage() {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className='text-center'>
           <h2 className='text-3xl font-bold text-white mb-6'>
             Ready to Get Started?
@@ -417,6 +425,12 @@ export default function SolutionsPage() {
           <p className='text-gray-300 mb-8 max-w-2xl mx-auto'>
             Let's discuss your project and discover how our solutions can
             accelerate your business growth.
+=======
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let&apos;s discuss your project and discover how our solutions can accelerate your business growth.
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <a
@@ -432,11 +446,15 @@ export default function SolutionsPage() {
               View Services
             </a>
           </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -446,3 +464,6 @@ export default function SolutionsPage() {
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

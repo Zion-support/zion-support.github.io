@@ -38,6 +38,7 @@ if ( {) {$2;
 }
     set ("talent_slug", talent)}
   set ("user_id", role === "guest" ? "" : "test - user")headers["Set - Cookie"] = cookies.join ()res.write_head (302, { ...headers, Location: "/" })res.end ()const { role;
+<<<<<<< HEAD
   res.end()}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -115,3 +116,6 @@ if ( {) {
   res.write_head (302, { ...headers, Location: "/" });
   res.end ();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  res.end()}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

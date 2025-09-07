@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {v4, as, uuidv4} from 'uuid';
 import type { GrantApplication, VotePayload } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
@@ -45,6 +46,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { v4, as, uuidv4 } from 'uuid';
 }
 function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)}import type { GrantApplication, VotePayload } from '../../../types/grants';
@@ -93,6 +96,9 @@ if ( {) {$2;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     res.status(400).json({ error: 'Missing fields' })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const payload = req.body as VotePayload;
@@ -102,6 +108,7 @@ if ( {) {$2;
     choice: payload.choice;
     createdAt: new Date().toISOString()}
   g.votes = [...(g.votes |[]), vote];
+<<<<<<< HEAD
 <<<<<<< HEAD
   g.updatedAt = new Date().toISOString();
   writeGrant(g);
@@ -117,3 +124,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     res.status(400).json({ error: 'Missing fields' });
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  g.updatedAt = new Date().toISOString()writeGrant(g)res.status(200).json({ record: g })res.status(200).json({ record: g })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

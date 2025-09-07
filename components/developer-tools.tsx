@@ -2,18 +2,25 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Code;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {Code,GitBranch,Database,Cloud,Shield,Zap,Star,ExternalLink,CheckCircle,TrendingUp,Code;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   GitBranch;
   Database;
   Cloud;
   Shield;
   Zap;
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -429,6 +436,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {devMarketStats.map((stat, index) => (
               <Card
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Code;
   GitBranch,Database,Cloud,Shield,Zap,import { Code;
   GitBranch;
@@ -540,13 +549,19 @@ export default function DeveloperToolsPage() {const developerTools = null;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               Understanding the developer tools landscape helps you make;
               informed decisions about your development stack.;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>;
             {devMarketStats.map((stat, index) => (<Card;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -607,7 +622,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Developer Tools Grid */}
 <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -646,6 +664,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card;
                 key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
@@ -668,6 +687,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='relative'>
                     <div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className={`card-hover group border-gradient-blue relative ${tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : '';
                 }`}style={{ animationDelay: `${index * 0.1}s` }}
               >;
@@ -680,7 +701,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 )}<div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}
                     >;
                       {tool.icon}
@@ -729,6 +753,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </li>;
                       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </ul>
 
 <div className='flex items-center justify-between'>
@@ -751,15 +776,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className='text-xs text-gray-500'>Direct Link</div>
                         <div className='text-xs text-cursor-blue font-mono'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </ul>;
 <div className='flex items-center justify-between'>;
                       <Button;
                         href={tool && tool.website}
                         variant='primary';
                         size='sm';
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
                         Try Tool;
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -784,6 +814,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </Card>;className='bg-cursor-blue hover:bg-cursor-blue-dark';
                       >;
                         Try Tool;
@@ -792,7 +825,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='text-right'>;
                         <div className='text-xs text-gray-500'>Direct Link</div>;
                         <div className='text-xs text-cursor-blue font-mono'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {tool.website}
                         </div>;
                       </div>;
@@ -801,6 +837,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </div>
@@ -830,6 +867,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
               <Card
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         </div>;
       </section>;
@@ -841,8 +880,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Complete Developer Workflow;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               Build a complete development pipeline with these essential tools;
               that work together seamlessly.;
             </p>;
@@ -873,6 +915,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className="text-gray-400 mb-4">{phase && phase.description}</p>;
                   <div className="space-y-1">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {phase && phase.tools.map((tool, toolIndex) => (<div key={toolIndex} className="text-sm text-cursor-blue font-medium">;<Card;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 key={index}
@@ -897,11 +942,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                         className='text-sm text-cursor-blue font-medium';
                       >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                     {phase && phase.tools.map((tool, toolIndex) => (;
                       <div key={toolIndex} className="text-sm text-cursor-blue font-medium">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         {tool}
                       </div>;
                     ))}
@@ -970,6 +1018,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className='text-gray-500'>;
                       Tools Available:{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <span className='text-white'>{category.tools}</span>
                     </span>
                     <span className='text-cursor-blue font-semibold'>
@@ -989,6 +1038,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </Card>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       <span className='text-white'>{category.tools}</span>;
                     </span>;
                     <span className='text-cursor-blue font-semibold'>;
@@ -1002,7 +1053,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               </Card>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </div>;
         </div>;
@@ -1014,6 +1068,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             existing workflow.;
           </p>;
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
@@ -1057,6 +1112,8 @@ href='/contact'
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor text-center'>;
           <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
@@ -1100,6 +1157,7 @@ href='/contact';
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1116,3 +1174,6 @@ href='/contact';
             </Button>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

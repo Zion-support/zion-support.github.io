@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -12,6 +13,8 @@
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ursor/automate-test-improve-and-merge-code-646c;
 "use client";import React, { useState } from 'react';
@@ -95,6 +98,7 @@ const [loading, setLoading] = useState(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -114,6 +118,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -137,6 +143,7 @@ export default function OSDeployPage() {;
   const [loading, setLoading] = useState(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
@@ -144,6 +151,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -169,6 +178,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Header */}
 =======
 <<<<<<< HEAD
@@ -182,6 +192,8 @@ main
 =======
         {/* Header */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
@@ -204,6 +216,7 @@ ai: 'Advanced AI capabilities and automation',
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Header */}
 =======
 
@@ -216,6 +229,9 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        {/* Header */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
         <div className="text-center mb-12">;
           <h1 className="text-4xl font-bold mb-4">;
@@ -232,6 +248,7 @@ main
           <p className="text-xl text-white/70 max-w-2xl mx-auto">;
             Deploy your custom Zion OS instance with advanced features and configurations;
           </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
@@ -267,6 +284,8 @@ main
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>;<form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">;
@@ -282,9 +301,12 @@ main
                   Instance Name *;
                 </label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">;
@@ -294,6 +316,7 @@ main
             </h2>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <label className="block text-sm font-medium text-white/90">Instance Name *</label>;
@@ -392,6 +415,8 @@ main
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <label className="block text-sm font-medium text-white/90">Instance Name *</label>;ursor/automate-test-improve-and-merge-code-646c;
                 <input;
                   id="instanceName";
@@ -528,10 +553,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                 <label className="block text-sm font-medium text-white/90">
                   Subdomain
                 </label>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <option value="GENERAL">General</option>;
                   <option value="HEALTH">Healthcare</option>;
                   <option value="EDUCATION">Education</option>;
@@ -540,6 +568,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                   <option value="FINANCE">Finance</option>;
                   <option value="TECH">Technology</option>;
                 </select>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -663,6 +692,8 @@ main
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </div>;placeholder="zion && zion.example.com";
                 />;
               </div>;
@@ -754,10 +785,13 @@ ursor/automate-test-improve-and-merge-code-646c;
                   id="paymentGateway";
                   name="paymentGateway";
               </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <input
                   id="subdomain"
                   name="subdomain"
@@ -769,6 +803,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -781,11 +816,14 @@ ursor/automate-test-improve-and-merge-code-646c;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Default Language
                 </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -819,6 +857,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <input
                   id="defaultLanguage"
                   name="defaultLanguage"
@@ -829,6 +869,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -841,11 +882,14 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Region
                 </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -879,6 +923,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <input
                   id="region"
                   name="region"
@@ -890,6 +936,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -911,6 +958,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 />;
               </div>;
             </div>;
@@ -927,10 +976,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
@@ -1022,6 +1074,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             </h2>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
@@ -1050,6 +1103,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                <select
+                  id="tokenSystem"
+                  name="tokenSystem"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
@@ -1111,6 +1169,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 >;
 
 <<<<<<< HEAD
@@ -1146,6 +1205,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 >;<option value="SHARED">ZION$ Shared</option>;
                   <option value="LOCAL">Local Token</option>;
                   <option value="HYBRID">Hybrid System</option>;
@@ -1259,17 +1320,21 @@ main
                   <option value="HYBRID">Hybrid Governance</option>;
                 </select>;
               </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">;
               {FeatureKeys && FeatureKeys.map((k) => (;
                 <label
                   key={k}
                   className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1296,6 +1361,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <input
               <div className="space - y-2">;
                 <label html_for="country" className="block text - sm font - medium text - white / 90">Country</label>;
@@ -1350,6 +1417,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1362,6 +1430,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                   />
                   <div>
@@ -1379,7 +1449,10 @@ main
           {/* Additional Features */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className="glass-effect rounded-2xl p-8">;
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
               <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">;
@@ -1414,7 +1487,10 @@ ursor/automate-test-improve-and-merge-code-646c;
                   </div>;
                 </div>;
               </label>;
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">
@@ -1422,6 +1498,7 @@ ursor/automate-test-improve-and-merge-code-646c;
               </span>
               Additional Features
             </h2>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1498,12 +1575,16 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <input
                   id="treasury"
                   type="checkbox"
                   name="treasury"
                   aria-label="Treasury Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1521,6 +1602,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -1532,6 +1615,7 @@ main
                 </div>
               </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
@@ -1539,6 +1623,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
                 />;
                 <div>;
@@ -1573,6 +1659,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1594,12 +1681,15 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <input
                   id="governance"
                   type="checkbox"
                   name="governance"
                   aria-label="Governance System"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1617,6 +1707,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -1628,6 +1720,7 @@ main
                 </div>
               </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
@@ -1635,6 +1728,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
                 />;
                 <div>;
@@ -1669,6 +1764,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1690,12 +1786,15 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <input
                   id="moderation"
                   type="checkbox"
                   name="moderation"
                   aria-label="Content Moderation"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1713,6 +1812,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -1724,6 +1825,7 @@ main
                 </div>
               </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
@@ -1731,6 +1833,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
                 />;
                 <div>;
@@ -1767,6 +1871,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1788,12 +1893,15 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <input
                   id="partnerships"
                   type="checkbox"
                   name="partnerships"
                   aria-label="Partnership Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1811,6 +1919,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -1833,7 +1943,10 @@ main
               {loading ? "Deploying..." : "Deploy Digital Economy"}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </button>;
               <div;
                 className={`mt-6 p-4 rounded-lg ${messageType === "success";
@@ -1938,7 +2051,10 @@ main
 "use client",import { useState } from "react",import { FeatureKeys } from "@/lib/zod",import LoadingSpinner from "@/app/components/LoadingSpinner",export default function AdminDeployPage() {const [loading, setLoading] = useState(false),const [message, setMessage] = useState<string | null>(null),const [messageType, setMessageType] = useState<'success' | 'error'>('success'),async function onSubmit() {event.preventDefault(),setLoading(true),setMessage(null),const formData = new FormData(event.currentTarget)const formData = new FormData(event.currentTarget)const formData = new FormData(event.currentTarget)const features: Record<string boolean> = {},FeatureKeys.forEach((k) => (features[k] = formData.get(k) === "on")),const payload = {instanceName: String(formData.get("instanceName") || ""),domain: String(formData.get("domain") || "" ) || undefined,subdomain: String(formData.get("subdomain") || "" ) || undefined,vertical: String(formData.get("vertical") || "GENERAL"),defaultLanguage: String(formData.get("defaultLanguage") || "en"),tokenSystem: String(formData.get("tokenSystem") || "SHARED"),governanceType: String(formData.get("governanceType") || "ADMIN"),region: String(formData.get("region") || "") || undefined,country: String(formData.get("country") || "") || undefined,features,addons: {paymentGateway: String(formData.get("paymentGateway") || "") || undefined,sovereignTreasury: formData.get("sovereignTreasury") === "on",dualGovernance: formData.get("dualGovernance") === "on",aiModeration: formData.get("aiModeration") === "on",affiliatePanel: formData.get("affiliatePanel") === "on"}},try {const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) })const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) }),const data = await res.json(),if (!res.ok) {setMessageType('error'),setMessage(data.error || "Deployment failed"),return;
       }setMessageType('success'),setMessage(`✅ Deployment queued successfully! ID: ${data.deploymentId}`),(event.target as HTMLFormElement).reset()} catch (error) {setMessageType('error'),setMessage("Network error occurred. Please try again.")} finally {setLoading(false)}
   }const getVerticalIcon = (vertical: string) => {switch (vertical) {case "HEALTH": return <Shield className="w-5 h-5 text-blue-400" />,case "EDUCATION": return <Building2 className="w-5 h-5 text-green-400" />,case "LAW": return <Shield className="w-5 h-5 text-purple-400" />,case "GOV": return <Users className="w-5 h-5 text-red-400" />,default: return <Globe className="w-5 h-5 text-gray-400" />;
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </button>
 
               <div
@@ -1946,6 +2062,7 @@ main
                   messageType === "success"
                     ? "bg-green-900/20 border border-green-500/20 text-green-400"
                     : "bg-red-900/20 border border-red-500/20 text-red-400"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2084,10 +2201,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </div>;
               </label>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2116,11 +2236,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === 'success'
                     ? 'bg-green-900/20 border border-green-500/20 text-green-400'
                     : 'bg-red-900/20 border border-red-500/20 text-red-400'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2156,6 +2279,10 @@ main
               >
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                }`}
+              >
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 "use client",;
 import { useState } from "react",;
 import { FeatureKeys } from "@/lib/zod",;
@@ -2520,6 +2647,7 @@ export default function AdminDeployPage() {;
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               }`}>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2571,6 +2699,8 @@ export default function AdminDeployPage() {;
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               }`}>;{message}
               </div>;
             )}
@@ -2734,15 +2864,19 @@ ursor/fix-website-loading-errors-and-merge-6662;
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {message}
               </div>;
             )}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2760,6 +2894,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         </form>;
       </div>;
@@ -2774,6 +2910,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-website-loading-errors-and-merge-6662;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2813,3 +2950,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,12 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export type RedemptionType =;
   | "boost_profile";
   | "promote_listing";
   | "premium_support";
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function UseTokensModal({
 <<<<<<< HEAD
@@ -89,6 +93,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='font-semibold'>Use ZION Tokens</div>
           <button
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function UseTokensModal({isOpen;
   onClose;
   serviceId;
@@ -105,9 +111,12 @@ export default function UseTokensModal({isOpen;
     } finally {setIsSubmitting(false)}
   }if (!isOpen) return null;
   return (>;
+<<<<<<< HEAD
 =======
             >;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <option value="boost_profile">Boost profile</option>;
               <option value="promote_listing">Promote listing</option>;
               <option value="premium_support">Get premium support</option>;
@@ -123,6 +132,9 @@ export default function UseTokensModal({isOpen;
                 Connect MetaMask;
               </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <div className='fixed inset-0 z-[60] flex items-end sm:items-center justify-center'>;
       <div className='absolute inset-0 bg-black/40' onClick={onClose} />;
       <div className='relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4'>;
@@ -195,7 +207,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             access premium support.;
           </div>;
           <button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             disabled={!account |isSubmitting |tokens <= 0}
             onClick={redeem}
             className="enhanced-button enhanced-button-primary disabled: opacity-50">;
@@ -259,6 +274,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>)}
@@ -269,3 +285,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

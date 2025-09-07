@@ -4,23 +4,30 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 export type Real2036SpecializedService = {id: string, name: string,tagline: string, description: string,category: string, price: string,export type Real2036SpecializedService = {id: string;
 export type Real2036SpecializedService = any;name: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type Real2036SpecializedService = {
   id: string, name: string,
   tagline: string, description: string,
   category: string, price: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,6 +39,8 @@ export type Real2036SpecializedService = {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type Real2036SpecializedService = {
   id: string;
 =======
@@ -52,6 +61,7 @@ export type Real2036SpecializedService = {
   price: string;
   period?: string;
   features: string[];link: string;
+<<<<<<< HEAD
   launchDate?: string;
   rating?: number;marketSize?: string;
   features: string[];
@@ -82,6 +92,8 @@ export type Real2036SpecializedService = {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
   link: string;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   launchDate?: string;
   rating?: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -90,14 +102,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
   integration?: string[];
   useCases?: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,6 +126,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Space systems';
       'Safety protocols';
       'Training technology';
@@ -263,15 +281,19 @@ technology?: string[];
     period: '/month';
     features: [;
       'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesAdaptive processing algorithmsEdge computing optimizationCustom neural modelsPerformance benchmarkingExpert consultation';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Space systems'
       'Safety protocols'
       'Training technology'
       'Customer management'
     ]
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -761,6 +783,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      'Space systems',
+      'Safety protocols',
+      'Training technology',
+      'Customer management'
+    ]
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   },;
 ];    id: 'neuromorphic-computing-platform';
     name: 'Neuromorphic Computing Platform';
@@ -835,6 +864,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -854,6 +884,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     id: 'synthetic - biology - platform';
     name: 'Synthetic Biology Platform';
@@ -864,6 +896,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -887,6 +920,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     period: '/month';
     features: [;
       'AI - powered DNA design_biological system simulation_automated lab protocols_genetic circuit optimization_safety and compliance tools_real - time monitoring_custom organism design_expert consultation';
@@ -896,6 +931,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -919,6 +955,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Pharmaceutical companies, Biotech firms, Research institutions';
     competitiveAdvantage: 'AI integration, Automated protocols, Safety focus';
     integration: ['Lab automation systemsDNA synthesis platformsSequencing servicesCloud platforms'];
@@ -946,6 +984,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -969,6 +1008,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     period: '/month';
     features: [;
       'Quantum network protocols_interoperability standards_security frameworks_network management tools_performance optimization_compliance certification_custom protocol development_expert consultation';
@@ -978,6 +1019,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1001,6 +1043,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Internet service providers, Government agencies, Research institutions';
     competitiveAdvantage: 'Quantum protocols, Interoperability, Security focus';
     integration: ['Quantum networksInternet infrastructureSecurity systemsCloud platforms'];
@@ -1437,6 +1481,7 @@ export type Real2036SpecializedService = {id: string,name: string,tagline: strin
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1460,6 +1505,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Healthcare providers, Research institutions, Accessibility companies';
     competitiveAdvantage: 'Direct neural interface, Real-time processing, Safety focus';
     integration: ['Medical devicesAccessibility toolsGaming platformsResearch systems'];
@@ -1489,6 +1536,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1512,6 +1560,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     period: '/month';
     features: [;
       '3D world building toolsAI - powered NPCsBlockchain integration_multi - user environmentsVR / AR support_performance optimization_custom development_expert consultation';
@@ -1521,6 +1571,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1544,6 +1595,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Gaming companies, Real estate firms, Educational institutions';
     competitiveAdvantage: '3D tools, AI integration, Blockchain support';
     integration: ['VR headsetsAR devicesBlockchain platforms3D engines'];
@@ -1571,6 +1624,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1594,6 +1648,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     period: '/month';
     features: [;
       'Computer vision systems_sensor fusion algorithms_path planning and navigation_safety and redundancy_real - time processing_performance optimization_custom vehicle integration_expert consultation';
@@ -1603,6 +1659,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1626,6 +1683,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Automotive companies, Transportation firms, Logistics providers';
     competitiveAdvantage: 'Advanced AI, Safety focus, Real-time processing';
     integration: ['Vehicle systemsSensor arraysNavigation systemsCloud platforms'];
@@ -1655,6 +1714,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1678,6 +1738,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     period: '/month';
     features: [;
       'Quantum material simulationAI - powered discovery_property prediction_synthesis optimization_performance testing_custom material design_expert consultation_research collaboration';
@@ -1687,6 +1749,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1710,6 +1773,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Materials companies, Research institutions, Manufacturing firms';
     competitiveAdvantage: 'Quantum simulation, AI discovery, Custom design';
     integration: ['Quantum computersAI platformsLab systemsResearch databases'];
@@ -1739,6 +1804,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1762,6 +1828,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     period: '/month';
     features: [;
       'AI climate models_real - time data analysis_predictive modeling_scenario simulation_data visualization_custom analysis_expert consultation_research collaboration';
@@ -1771,6 +1839,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1794,6 +1863,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Government agencies, Research institutions, Environmental organizations';
     competitiveAdvantage: 'AI modeling, Real-time analysis, Predictive capabilities';
     integration: ['Climate sensorsSatellite dataWeather servicesResearch databases'];
@@ -1823,6 +1894,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1846,6 +1918,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     period: '/month';
     features: [;
       'Quantum neural networks_hybrid quantum - classical AIAdvanced optimization_performance benchmarking_custom model development_expert consultation_research collaboration_training and support';
@@ -1855,6 +1929,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1878,6 +1953,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'AI companies, Research institutions, Technology firms';
     competitiveAdvantage: 'Quantum enhancement, Advanced AI, Performance optimization';
     integration: ['Quantum computersAI frameworksCloud platformsResearch tools'];
@@ -1894,6 +1971,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     price: '$6,999';
     period: '/month';
     features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2109,6 +2187,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Space tourism companies, Aerospace firms, Travel agencies';
     competitiveAdvantage: 'Space expertise, Safety focus, Comprehensive management';
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'];
@@ -2117,6 +2197,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 
+<<<<<<< HEAD
 
 export type Real2036SpecializedService = {;
 <<<<<<< HEAD
@@ -2166,6 +2247,8 @@ export type Real2036SpecializedService = {;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type Real2036SpecializedService = {}
 ];
 ;
@@ -2707,6 +2790,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -3245,3 +3329,5 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
 ];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

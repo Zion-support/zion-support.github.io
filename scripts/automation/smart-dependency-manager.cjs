@@ -138,6 +138,7 @@ console.log(" Applied ${updatesApplied} smart updates")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(` Smart Dependency Manager "failed": "`)
 
@@ -145,3 +146,6 @@ console.log(" Applied ${updatesApplied} smart updates")
 =======
   console.error(` Smart Dependency Manager "failed": "`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(` Smart Dependency Manager "failed": "`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

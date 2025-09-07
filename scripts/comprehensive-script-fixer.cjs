@@ -22,6 +22,7 @@ const path = require('path')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log(`� Script fixing "failed"`)
 
@@ -29,3 +30,6 @@ const path = require('path')
 =======
       this.log(`� Script fixing "failed"`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      this.log(`� Script fixing "failed"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

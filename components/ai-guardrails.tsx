@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
@@ -75,6 +76,8 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Check,Shield,ShieldAlert,Lock,Phone,Mail,import React from 'react',import Head from 'next/head';
 import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink   } from 'lucide-react';
@@ -104,7 +107,10 @@ export default function AIGuardrailsPage() {const contactInfo = {mobile: '+1 302
     'Audit logs, alerting and exportable evidence';
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 }
 import React from 'react';
@@ -112,6 +118,7 @@ import React from 'react';
   return (<UltraAdvancedFuturisticBackground>;
       <Head>;
         <title>AI Guardrails Suite | Zion Tech Group</title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta
           name='description'
@@ -146,6 +153,11 @@ import React from 'react';
           content='Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies.';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        <meta;
+          name='description';
+          content='Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies.';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-guardrails' />;
       </Head>;Safety and governance for LLM apps with minimal integration and;
@@ -199,6 +211,9 @@ import React from 'react';
     </div>;
   </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   </UltraAdvancedFuturisticBackground>)}/>;
         <link rel='canonical' href='https://ziontechgroup.com/ai-guardrails' />;
       </Head>;
@@ -335,9 +350,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
     </UltraAdvancedFuturisticBackground>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   </UltraAdvancedFuturisticBackground>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

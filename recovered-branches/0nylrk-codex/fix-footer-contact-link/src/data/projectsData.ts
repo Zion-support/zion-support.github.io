@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Project } from "@/types/projects";
 export const PROJECTS: Project[] = [
@@ -24,6 +25,10 @@ export const PROJECTS: Project[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
     job: {
@@ -37,9 +42,13 @@ export const PROJECTS: Project[] = [
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: "project-1";
     client_id: "client-1";
     talent_id: "t-001";
@@ -54,6 +63,7 @@ export const PROJECTS: Project[] = [
       title: "AI Dashboard Development";
       description: "Develop dashboards using React and integrate ML models"
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
     talent_profile: {
@@ -86,11 +96,21 @@ export const PROJECTS: Project[] = [
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+    talent_profile: {
+      full_name: "Alexandra Chen";
+
+
+      professional_title: "Senior AI Engineer";
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       professional_title: "Senior AI Engineer"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,11 +128,16 @@ export const PROJECTS: Project[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
 import { Project } from '@/types/projects';
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -143,6 +168,10 @@ export const PROJECTS: Project[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       full_name: 'Alexandra Chen',
       professional_title: 'Senior AI Engineer',
     },
@@ -156,12 +185,16 @@ export const PROJECTS: Project[] = [
       professional_title: "Senior AI Engineer"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       full_name: "Alexandra Chen",
       professional_title: "Senior AI Engineer"
 import { Project } from "@/types/projects",;
@@ -186,14 +219,19 @@ export const PROJECTS: Project[] = [;
       professional_title: "Senior AI Engineer";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
 ];
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -202,10 +240,14 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -214,6 +256,9 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
 ];
@@ -222,6 +267,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 ];
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -239,8 +285,13 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

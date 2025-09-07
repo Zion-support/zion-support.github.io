@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -94,6 +95,8 @@ export interface EnterpriseITService2029V2 {
     integration: ['SIEM systems', 'EDR platforms', 'Security tools'],
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface EnterpriseITService2029V2 {}export interface EnterpriseITService2029V2  {contact: {description:;
       'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.';
     category: [;
@@ -131,7 +134,10 @@ export interface EnterpriseITService2029V2 {}export interface EnterpriseITServic
       'Security';
     ];
     integration: ['SIEM systems', 'EDR platforms', 'Security tools'];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     support: [;
       '24/7 security support';
       'Security experts';
@@ -193,6 +199,7 @@ export interface EnterpriseITService2029V2  {id: string;
 id: string;name: string;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 
 
@@ -219,6 +226,10 @@ export interface EnterpriseITService2029V2 {;
 id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export interface EnterpriseITService2029V2 {;
+  id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   description: string;
   category: string[];
@@ -987,6 +998,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
 <<<<<<< HEAD
+<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
 <<<<<<< HEAD
@@ -1198,6 +1210,8 @@ mobile: '+1 302 464 0950',
     compliance: ['SOC 2', 'ISO 27001', 'ITIL', 'COBIT'],
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },;
@@ -1305,6 +1319,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -1317,10 +1332,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     deployment: 'Cloud-native, hybrid options',
     support: ['24 / 7 operations support', 'IT experts', 'Implementation team'],
     compliance: ['SOC 2', 'ISO 27001', 'ITIL', 'COBIT'],    scalability: 'Enterprise - grade, multi - tenant support',    roi: '450% within 18 months',
     deployment: 'Cloud - native, hybrid options',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1329,6 +1347,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     maintenance: 'Fully autonomous, continuous optimization',
     training: 'IT operations training, certification',
     documentation: 'Operations guides, best practices',
@@ -1366,14 +1386,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: '450% within 18 months'
     deployment: 'Cloud-native, hybrid options';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     maintenance: 'Fully autonomous, continuous optimization',
     training: 'IT operations training, certification',
     documentation: 'Operations guides, best practices'
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1385,12 +1409,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
 ];
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1433,6 +1460,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];      'Enterprise IT operations_data center management_application performance management_infrastructure automation_service desk automationIT service management';
     ];
     market_size: '$28.9B by 2029';
@@ -1487,6 +1516,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
     contact: {
       mobile: '+1 302 464 0950';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -1528,6 +1558,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
@@ -1556,6 +1588,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1577,12 +1610,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export interface EnterpriseITService2029V2 {;
 
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1611,3 +1648,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

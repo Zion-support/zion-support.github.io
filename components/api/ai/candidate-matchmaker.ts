@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -61,6 +62,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ) {const method = (req.method |'POST').toUpperCase()if (method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })export default async function handler() {const method = (req.method |'POST').toUpperCase()) {const method = (req.method || 'POST').toUpperCase()if (method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })export default async function handler() {const method = (req.method || 'POST').toUpperCase()if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const auth = authenticateRequest(req, false)if (!auth.ok) return res.status(401).json({ error: auth.error })const { jobDescription, candidateProfiles } = req.body |{}
   if (!jobDescription |!Array.isArray(candidateProfiles))try {const method = (req && req.method || 'POST').toUpperCase()if (method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })export default async function handler() {try {const method = (req && req.method || 'POST').toUpperCase()if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })import { authenticateRequest  } from '@/utils/auth';
 import { generateText  } from '@/utils/ai';
@@ -94,6 +97,7 @@ function handler() {const method = (req.method || 'POST').toUpperCase ()if (retu
     `Job Description:\n${job_description}\n\n` +;
     `Candidates:\n${candidate_profiles.map ((r: string, index: number) => `#${i}:\n${r}`).join ('\n\n')}`;const text = await generate_text (prompt,'You are a matching engine. Output strictly valid JSON.')return res.status (200).json ({ matches: text })const prompt = `Given a job description and candidate profiles, output JSON with top_matches (array of {index, match_score, rationale}) and gaps for each.\n` +;
     `Job Description:\n${job_description}\n\n` +;
+<<<<<<< HEAD
     `Candidates:\n${candidate_profiles.map ((r: string, index: number) => `#${i}:\n${r}`).join ('\n\n')}`;const text = await generate_text (prompt, 'You are a matching engine. Output strictly valid JSON.')return res.status (200).json ({ matches: text })return res.status(200).json({ matches: text })return res.status(200).json({ matches: text })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -150,3 +154,6 @@ function handler() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    `Candidates:\n${candidate_profiles.map ((r: string, index: number) => `#${i}:\n${r}`).join ('\n\n')}`;const text = await generate_text (prompt, 'You are a matching engine. Output strictly valid JSON.')return res.status (200).json ({ matches: text })return res.status(200).json({ matches: text })return res.status(200).json({ matches: text })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

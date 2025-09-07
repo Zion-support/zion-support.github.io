@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 export default function CybersecuritySuitePage() {
   return (
+<<<<<<< HEAD
     <div className='min-h-screen bg-gray-50'>
       <div className='container mx-auto px-4 py-12'>
         <div className='text-center mb-16'>
@@ -21,6 +22,15 @@ export default function CybersecuritySuitePage() {
             Protect your business with our comprehensive cybersecurity
             solutions. From security assessments to managed security services,
             we've got you covered.
+=======
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-12">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Cybersecurity Suite</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Protect your business with our comprehensive cybersecurity solutions. 
+            From security assessments to managed security services, we&apos;ve got you covered.
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </p>
         </div>
 

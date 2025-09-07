@@ -85,6 +85,7 @@ const { execSync } = require("child_process")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error(" Security audit "failed": ")
 
@@ -92,3 +93,6 @@ const { execSync } = require("child_process")
 =======
     console.error(" Security audit "failed": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.error(" Security audit "failed": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

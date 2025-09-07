@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
 function grantPath(id: string) {
@@ -50,6 +51,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(401).json({ error: 'Unauthorized' });
 return;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const GRANTS_DIR  = path && path.join(process && process.cwd(), 'data', 'grants')function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)}
 function readGrant(id: string): GrantApplication | null {}
 function writeGrant() {if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')}
@@ -88,7 +91,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const existing = readGrant(id)if (!existing) return res.status(404).json({ error: 'Not found' })const ms = existing.milestones || [];
 const idx = ms.findIndex(m => m.id === milestoneId)if (idx === -1) return res.status(404).json({ error: 'Milestone not found' })ms[idx].completed = true;
   ms[idx].completedAt = new Date().toISOString()const tranche = ms[idx].trancheAmount || 0;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   existing && existing.fundsReleased = (existing && existing.fundsReleased || 0) + tranche;
   existing && existing.milestones = ms;
   existing && existing.updatedAt = new Date().toISOString()}res.status(200).json({ record: existing })}
@@ -145,6 +151,7 @@ if ( {) {$2;
   existing.funds_released = (existing.funds_released || 0) + tranche;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   existing.milestones = ms;
   existing.updatedAt = new Date().toISOString();
 
@@ -187,3 +194,13 @@ writeGrant(existing);
   writeGrant(existing);
   res.status(200).json({ record: existing });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  existing.milestones = ms;existing.updated_at = new Date ().toISOString ()write_grant (existing)res.status (200).json ({ record: existing })res.status (200).json ({ record: existing })const tranche = ms[idx].trancheAmount || 0;
+  existing.fundsReleased = (existing.fundsReleased || 0) + tranche,existing.milestones = ms,existing.updatedAt = new Date().toISOString(),writeGrant(existing)res.status(200).json({ record: existing })res.status(200).json({ record: existing })}}
+}
+}
+  writeGrant(existing)res.status(200).json({ record: existing })}
+}
+}
+  writeGrant(existing)res.status(200).json({ record: existing })existing.updatedAt = new Date().toISOString()writeGrant(existing)res.status(200).json({ record: existing })
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

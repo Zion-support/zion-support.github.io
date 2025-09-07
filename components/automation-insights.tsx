@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const automationTrends = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -34,6 +35,21 @@ export default function AutomationInsightsPage() {;
       category: 'Implementation'
       readTime: '12 min read'
       featured: false
+=======
+export default function AutomationInsightsPage() {const automationTrends = [;
+    {id: 'ai-automation-2025';
+      title: 'AI Automation Trends 2025';
+      description:;
+        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',readTime: '8 min read',export default function AutomationInsightsPage() {const automationTrends = [;
+    {id: 'ai-automation-2025',title: 'AI Automation Trends 2025',,description:;
+        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',readTime: '8 min read',featured: true;
+    {id: 'ai - automation - 2025',title: 'AI Automation Trends 2025',}{id: 'autonomous-systems';
+      title: 'Building Autonomous Systems';
+      description: 'Learn how to design and implement truly autonomous systems that operate independently.';
+      category: 'Implementation';
+      readTime: '12 min read';
+      featured: false;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     {
       id: 'automation-roi'
@@ -44,6 +60,7 @@ export default function AutomationInsightsPage() {;
       featured: false
     },      featured: false
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   ];
 
@@ -270,6 +287,8 @@ export default function AutomationInsightsPage() {const automationTrends = [;
 }{metric: '2,960+';
       label: 'Pages Generated',,description: 'Content created autonomously',},{metric: '40%',label: 'Efficiency Gain',label: 'Average improvement across projects',},{metric: '2,960+',label: 'Pages Generated',,description: 'Content created autonomously',},  ],description: 'Content created autonomously',description: 'Successfully deployed and running',},{metric: '99.9%',label: 'Uptime',description: 'Reliable automation performance',    {metric: '99.9%',label: 'Uptime',description: 'Reliable automation performance';
     }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     {metric: '40%',label: 'Efficiency Gain',label: 'Average improvement across projects';
     }
     {metric: '2, 960+';
@@ -335,6 +354,9 @@ export default function AutomationInsightsPage() {const automationTrends = [;
             </p>;
           </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <section className='mx-auto max-w-7xl'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             {/* Success Metrics */}
@@ -359,9 +381,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                     </div>;
                   </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
               </div>;
             </div>;{/* Automation Trends */}{/* Automation Trends */}
@@ -393,6 +418,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p className='text-white/70 mb-4'>{trend && trend.description}</p>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <Link
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
@@ -421,6 +447,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <Link;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
                     <div className="flex items-center justify-between mb-4">;
@@ -442,7 +470,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       Read More <span className='ml-1'>→</span>                    </Link>;
                     </Link>;
                   </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
               </div>;
             </div>;
@@ -546,6 +577,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link
                   href='/case-studies'
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
@@ -562,6 +594,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <Link;
                   href='/case-studies';
                 <Link;
@@ -593,6 +627,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </main>;
       </div>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -623,3 +658,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

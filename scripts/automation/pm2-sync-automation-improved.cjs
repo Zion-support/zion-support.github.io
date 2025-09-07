@@ -460,6 +460,7 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ImprovedPM2SyncAutomation;
 
@@ -467,3 +468,6 @@ module.exports = ImprovedPM2SyncAutomation;
 =======
 module.exports = ImprovedPM2SyncAutomation;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = ImprovedPM2SyncAutomation;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -38,6 +39,8 @@ supabase
             status: 'posted'
             posted_at: '2025-01-01'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { createServerClient  } from '../../../utils/supabase/server';
 export default async function handler() {try {const supabase = null;
   try {const supabase = createServerClient()const clientId = (req.query.clientId as string) |null;
@@ -57,7 +60,10 @@ supabase;
             client_id: 'c1';
             status: 'posted';
             posted_at: '2025-01-01';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }
           {id: 12;
             client_id: 'c1';
@@ -79,6 +85,7 @@ supabase;
           { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }
         ];const jobsPosted = jobsData.length;
     const quotesReceived = quotesData.length;
+<<<<<<< HEAD
 <<<<<<< HEAD
     const filled = jobsData.filter(j => j.status === 'filled');
     const timeToHireDays = filled.length
@@ -123,6 +130,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const filled = jobsData.filter(j => j.status === 'filled')const timeToHireDays = filled.length;
 ? filled.reduce((acc, j) =>;
             acc +;
@@ -146,6 +155,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
 <<<<<<< HEAD
+<<<<<<< HEAD
         { label: 'Hire', value: 2 }]})}{ label: 'Hire', value: 2 }
       ];
     })}
@@ -156,3 +166,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        { label: 'Hire', value: 2 }]})}{ label: 'Hire', value: 2 }
+      ];
+    })}
+        { label: 'Hire', value: 2 }]})}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

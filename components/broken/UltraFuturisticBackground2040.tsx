@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2040: React.FC;
@@ -20,6 +21,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 if (return) {
   $2
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       x: number;import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
@@ -30,7 +33,10 @@ const UltraFuturisticBackground2040: React.FC;
   const canvas_ref  = useRef < HTMLCanvasElement>(null)useEffect (() => {const canvas = canvas_ref.current;
     // Check condition;
 if (return) {$2;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
     const ctx = canvas.get_context ('2d')// Check condition;
 if (return) {$2;
@@ -44,6 +50,7 @@ if (return) {$2;
       size: number;
       color: string;
       opacity: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     }> = [];
@@ -76,12 +83,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       // Clear canvas with fade effect
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }>  = [];vx: number,vy: number,size: number,color: string,opacity: Math.random() * 0.5 + 0.1;
       })// Initialize particles;
     for (let i = 0; i < 100; i++) {particles.push({x: Math.random() * canvas.width,y: Math.random() * canvas.height,vx: (Math.random() - 0.5) * 0.5,vy: (Math.random() - 0.5) * 0.5,size: Math.random() * 2 + 1,color: ['#06b6d4', '#3b82f6', '#8b5cf6', '#ec4899'][;
           Math.floor(Math.random() * 4)],opacity: Math.random() * 0.5 + 0.1,})}
     const animate = () => {time += 0.01;// Clear canvas with fade effect;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
       particles.forEach((particle, index) => {particle.x += particle.vx;
@@ -91,6 +103,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Draw particle with glow effect
         ctx.save();
@@ -144,6 +157,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 const gridSize = 50;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         // Draw particle with glow effect;
         ctx.save()ctx.globalAlpha = particle.opacity;ctx.restore()// Glow effect;
         ctx.shadowColor = particle.color;
@@ -159,7 +174,10 @@ const gridSize = 50;
       }// Draw animated grid;
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;{ x: canvas.width * 0.6, y: canvas.height * 0.2, size: 50, rotation: time * 0.7 }const gridSize = 50;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       const offset = (time * 20) % gridSize;
       for (let x = offset; x < canvas.width; x += gridSize) {ctx.beginPath()ctx.moveTo(x, 0)ctx.lineTo(x, canvas.height)ctx.stroke()}
       for (let y = offset; y < canvas.height; y += gridSize) {ctx.beginPath()ctx.moveTo(0, y)ctx.lineTo(canvas.width, y)ctx.stroke()}// Draw floating geometric shapes;
@@ -169,6 +187,7 @@ const gridSize = 50;
           size: 40;
           rotation: time * -0.3;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         {
           x: canvas.width * 0.6,
@@ -252,6 +271,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const handleResize = () => {
       canvas.width = window.innerWidth;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {x: canvas.width * 0.6,y: canvas.height * 0.2,size: 50,rotation: time * 0.7,},];
       shapes.forEach((shape, index) => {ctx.save()ctx.translate(shape.x, shape.y)ctx.rotate(shape.rotation)ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
         ctx.lineWidth = 2;
@@ -291,6 +312,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80' />;
       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
         for (let x = -100, x < canvas.width + 100, x += 5) {
@@ -584,6 +606,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
             opacity: [0.4, 0.7, 0.4],
 =======
+=======
+      {/* Floating Elements */}
+      <div className='absolute inset-0'>;
+        {/* Animated Grid Pattern */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div;
             className='absolute top-0 left-0 w-full h-full';
             style={{backgroundImage: `;
@@ -727,6 +754,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{y: [0, -15, 0],opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          }}transition={{duration: 4;
             repeat: Infinity;
             ease: 'easeInOut';
+<<<<<<< HEAD
 =======
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          }}
 
@@ -735,6 +763,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity
             ease: 'easeInOut'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             delay: 1,          }}
           }}
           transition={{duration: 3,repeat: Infinity,ease: "easeInOut";
@@ -754,12 +784,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             duration: 5,repeat: Infinity,<style jsx>{`;
         @keyframes gridMove {0% {duration: 5,repeat: Infinity,ease: 'easeInOut',delay: 2,}}
         />;
       </div>;
             ease: "easeInOut",delay: 2;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }}
         />;
       </div>;
@@ -773,6 +809,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
       </div>;
       {/* CSS Animations */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <style jsx>{`
         @keyframes gridMove {
@@ -810,6 +847,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default UltraFuturisticBackground2040;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <style jsx>{`;
         @keyframes gridMove {0% {transform: translate(0, 0)}
           100% {transform: translate(50px, 50px)}
@@ -831,6 +870,7 @@ export default UltraFuturisticBackground2040;50% {opacity: 0.5;
         }
       `}</style>;
     </div>;
+<<<<<<< HEAD
 )}export default UltraFuturisticBackground2040;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -856,3 +896,6 @@ export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default UltraFuturisticBackground2040;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

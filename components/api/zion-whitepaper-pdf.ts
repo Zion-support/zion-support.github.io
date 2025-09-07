@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.addPage();
@@ -147,6 +148,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   getWhitepaperSections,OPERATOR_PROMPT,} from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT  } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection() {doc && doc.addPage(),doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true })doc && doc.moveDown()doc && doc.fontSize(11).fillColor('#222222').text(content, {getWhitepaperSections,OPERATOR_PROMPT,} from '../../utils / whitepaper / zion_whitepaper';import { getWhitepaperSections, OPERATOR_PROMPT  } from '../../utils / whitepaper / zion_whitepaper';
 /**;
@@ -196,6 +199,7 @@ function handler() {const edition_param = (req.query.edition as string) || 'full
     .font_size (10).fill_color ('#666666').text ('Operator Prompt (for maintenance):')doc.move_down (0.5)doc.font_size (9).fill_color ('#666666').text (OPERATOR_PROMPT, { width: 480 })const sections = getWhitepaperSections (edition as any)sections.for_each (string => write_section (doc, s.title, s.content_md))doc.move_down ()doc.font_size (14).fill_color ('#444444').text (`Edition: ${edition.toUpperCase ()}`)doc.move_down ()doc.font_size (10).fill_color ('#666666').text ('Operator Prompt (for maintenance):')doc.move_down (0.5)doc.font_size (9).fill_color ('#666666').text (OPERATOR_PROMPT, { width: 480 })const sections = getWhitepaperSections (edition as any)sections.for_each (string => write_section (doc, s.title, s.content_md))// End;
   doc.add_page ()doc;
     .font_size (10).fill_color ('#444444').text ('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.')doc.end ()// End;
+<<<<<<< HEAD
   doc.add_page ()doc.font_size (10).fill_color ('#444444').text ('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.')doc.end ()sections.forEach(s => writeSection(doc, s.title, s.contentMd))doc.moveDown(0.5)doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 })const sections  = getWhitepaperSections(edition as any)doc.end()doc.end()}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -287,3 +291,6 @@ function handler() {
 
   const sections = getWhitepaperSections(edition as any);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  doc.add_page ()doc.font_size (10).fill_color ('#444444').text ('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.')doc.end ()sections.forEach(s => writeSection(doc, s.title, s.contentMd))doc.moveDown(0.5)doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 })const sections  = getWhitepaperSections(edition as any)doc.end()doc.end()}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

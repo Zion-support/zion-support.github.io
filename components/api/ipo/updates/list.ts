@@ -38,6 +38,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data)
 }
@@ -78,11 +79,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json(data)
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data)
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -90,6 +94,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  const data = readJsonFile('updates.json', [] as any[]);
+  res.status(200).json(data)
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -126,6 +135,7 @@ function handler() {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -138,6 +148,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -155,6 +167,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -189,3 +202,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json(data);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

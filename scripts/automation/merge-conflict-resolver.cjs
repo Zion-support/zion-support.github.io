@@ -91,6 +91,7 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   process.on(")
 
@@ -98,3 +99,6 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
 =======
   process.on(")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  process.on(")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

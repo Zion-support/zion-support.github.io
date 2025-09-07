@@ -37,6 +37,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+<<<<<<< HEAD
 
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
@@ -70,6 +71,14 @@ import React, { createContext, useContext, useEffect, useMemo, useState } from '
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+import React, {createContext,useContext,useEffect,useMemo,useState} from 'react';} from 'react';import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+  createContext,useContext,useEffect,useMemo,useState} from 'react';} from 'react';createContext,useContext,useEffect,useMemo,useState} from 'react';
+export type UserRole = 'client' | 'talent';export type User = {id: string;
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type UserRole = 'client' | 'talent';
 
 export type User = {
@@ -233,6 +242,7 @@ export default UserProvider;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -266,3 +276,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

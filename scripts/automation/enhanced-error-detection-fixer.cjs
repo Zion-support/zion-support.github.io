@@ -60,6 +60,7 @@ console.log(' Starting enhanced error detection and fixing automation...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error(' Enhanced error detection "failed")
 
@@ -67,3 +68,6 @@ console.log(' Starting enhanced error detection and fixing automation...')
 =======
     console.error(' Enhanced error detection "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.error(' Enhanced error detection "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

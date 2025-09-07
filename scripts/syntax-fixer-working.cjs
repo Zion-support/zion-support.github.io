@@ -13,6 +13,7 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log('\n Errors "encountered")
 
@@ -20,3 +21,6 @@ const { execSync } = require('child_process')
 =======
       this.log('\n Errors "encountered")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      this.log('\n Errors "encountered")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -587,6 +587,7 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = CodeQualityAutoEnhancer;
 
@@ -594,3 +595,6 @@ module.exports = CodeQualityAutoEnhancer;
 =======
 module.exports = CodeQualityAutoEnhancer;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = CodeQualityAutoEnhancer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

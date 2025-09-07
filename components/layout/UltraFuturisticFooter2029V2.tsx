@@ -1,6 +1,7 @@
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, ArrowRight;
   Brain, Rocket, Target, Shield, Cpu;
@@ -119,6 +120,8 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Facebook, Twitter, Linkedin, Instagram, Youtube;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion  } from 'framer-motion';
 import {Phone;
   Mail;
@@ -173,7 +176,10 @@ import {Phone;
   Brain, Rocket, Target, Shield, Cpu;
   Phone,Mail,MapPin,Globe,ArrowRight,Brain,Rocket,Target,Shield,Cpu,Facebook,Twitter,Linkedin,Instagram,Youtube,Github,MessageCircle,Star,Zap,Sparkles,Home,Users,Briefcase,BookOpen,TrendingUp,MessageSquare,Calendar,GraduationCap,ShieldCheck,Eye,Code,Wrench,Smartphone,BarChart3,Palette,Camera,Video,Music,Gamepad2,Heart,Leaf,Sun,Moon,Wind,Droplets,Mountain,Globe2,Bot,Crown,Infinity,} from 'lucide-react';import {Phone, Mail, MapPin, Globe, ArrowRight,Brain, Rocket, Target, Shield, Cpu,import { Phone, Mail, MapPin, Globe, ArrowRight;
   Brain, Rocket, Target, Shield, Cpu;Facebook, Twitter, Linkedin, Instagram, Youtube;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Github, MessageCircle, Star, Zap, Sparkles;
   Home, Users, Briefcase, BookOpen, TrendingUp;
   MessageSquare, Calendar;
@@ -181,9 +187,12 @@ import {Phone;
   Smartphone, BarChart3, Palette, Camera, Video;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind;
   Droplets, Mountain, Globe2, Bot, Crown, Infinity
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind;},{name: 'Smart Supply Chain',href: '/services / smart - supply - chain - optimization',Droplets, Mountain, Globe2, Bot, Crown, Infinity;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
  } from 'lucide-react';
@@ -411,6 +420,7 @@ const company = [
 <<<<<<< HEAD
 =======
   { name: 'Webinars', href: '/webinars', icon: Video }, ];  { name: 'Webinars', href: '/webinars', icon: Video }
+<<<<<<< HEAD
 ];
 ;
 const company = [;
@@ -487,6 +497,14 @@ const footerSections = [
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     links: [
+=======
+];const company = [;
+  { name: 'About Us', href: '/about', icon: Users },{ name: 'Our Team', href: '/team', icon: Users },{ name: 'Careers', href: '/careers', icon: GraduationCap },{ name: 'Partners', href: '/partners', icon: Users },{ name: 'Investors', href: '/investors', icon: Star },{ name: 'Press', href: '/press', icon: BookOpen },{ name: 'Legal', href: '/legal', icon: Shield },{ name: 'About Us', href: '/about', icon: Users },{ name: 'Our Team', href: '/team', icon: Users },{ name: 'Careers', href: '/careers', icon: GraduationCap },{ name: 'Partners', href: '/partners', icon: Users },{ name: 'Investors', href: '/investors', icon: Star },{ name: 'Press', href: '/press', icon: BookOpen },{ name: 'Legal', href: '/legal', icon: Shield },{ name: 'Privacy', href: '/privacy', icon: ShieldCheck },];const socialLinks = [;
+  {name: 'LinkedIn',href: 'https://linkedin.com/company/ziontechgroup',icon: Linkedin,color: 'hover:text-blue-500',},{name: 'Twitter',href: 'https://twitter.com/ziontechgroup',icon: Twitter,color: 'hover:text-blue-400',},{name: 'Facebook',href: 'https://facebook.com/ziontechgroup',icon: Facebook,color: 'hover:text-blue-600',},{name: 'Instagram',href: 'https://instagram.com/ziontechgroup',icon: Instagram,color: 'hover:text-pink-500',},{name: 'YouTube',href: 'https://youtube.com/@ziontechgroup',icon: Youtube,color: 'hover:text-red-500',},{name: 'GitHub',href: 'https://github.com/Zion-Holdings',icon: Github,color: 'hover:text-gray-400',},];const footerSections = [;
+  {title: 'Services';
+    links: [;
+    links: [;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       { name: 'Healthcare', href: '/industries/healthcare' }
       { name: 'Finance', href: '/industries/finance' }
       { name: 'Manufacturing', href: '/industries/manufacturing' }
@@ -495,6 +513,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       { name: 'Government', href: '/industries/government' }
     ]
   },  {      { name: 'Government', href: '/industries/government' }
+<<<<<<< HEAD
     ]
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -623,6 +642,8 @@ const resources = [;
       { name: 'Government', href: '/industries/government' }
     ];
   },  {      { name: 'Government', href: '/industries/government' }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];
   }{ name: 'AI & Machine Learning', href: '/services/ai-ml' },{ name: 'Quantum Computing', href: '/services/quantum-computing' },{ name: 'Space Technology', href: '/services/space-technology' },{ name: 'Enterprise IT', href: '/services/enterprise-it' },{ name: 'Micro SAAS', href: '/services/micro-saas' },{ name: 'Cybersecurity', href: '/services/cybersecurity' },],},{title: 'Solutions',links: [;
       { name: 'AI Consciousness', href: '/solutions/ai-consciousness' },{ name: 'Quantum Security', href: '/solutions/quantum-security' },{ name: 'Space Mining', href: '/solutions/space-mining' },{ name: 'Metaverse Platform', href: '/solutions/metaverse' },{name: 'Business Intelligence',href: '/solutions/business-intelligence',},{ name: 'Supply Chain AI', href: '/solutions/supply-chain-ai' },],},{title: 'Industries',links: [;
@@ -798,7 +819,10 @@ function UltraFuturisticFooter2029V2() {
               </div>;
             </motion.div>;
           </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}>;
               <Link href='/' className='flex items-center space-x-3 mb-6 group'>;
                 <div className='relative'>;
@@ -875,6 +899,7 @@ function UltraFuturisticFooter2029V2() {
               initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }}
 =======
               whileInView={{ opacity: 1, y: 0 }}
@@ -884,6 +909,9 @@ function UltraFuturisticFooter2029V2() {
 =======
               whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}
             >;
 <h4 className='text-lg font-semibold text-white mb-6 flex items-center'>;
@@ -899,6 +927,7 @@ function UltraFuturisticFooter2029V2() {
                       <ArrowRight className='w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />;
                       {link.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </Link>
                   </li>
 <<<<<<< HEAD
@@ -909,6 +938,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                    </Link>;
+                  </li>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
               </ul>;
             </motion && motion.div>;
@@ -918,6 +951,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           viewport={{ once: true }}
@@ -934,6 +968,8 @@ className='mt-16 pt-12 border-t border-gray-800'
             {serviceCategories.map((category, index) => (
               <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           viewport={{ once: true }}>;
           <h3 className="text-2xl font-bold text-white text-center mb-8">;
             Featured 2029 Services;
@@ -961,6 +997,9 @@ className='mt-16 pt-12 border-t border-gray-800'
             Featured 2029 Services;
           </h3>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
             {serviceCategories.map((category, index) => (<motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -978,7 +1017,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 className='group';
               >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
@@ -991,11 +1033,14 @@ className='group';
                       <category && category.icon className='w-5 h-5 text-white' />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                           href={service.href}
                           className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block'
                         >
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           href={service.href}className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block";
                         >;className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block';
                         >;
@@ -1015,12 +1060,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Bottom Footer */}
 <div className='border-t border-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Bottom Footer */}<div className='border-t border-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>            {/* Copyright */}      <div className="border-t border-gray-800">;
@@ -1028,6 +1076,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;<div className='border-t border-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       {/* Bottom Footer */}
@@ -1037,11 +1086,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Copyright */}
             <motion&& motion.div;
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               viewport={{ once: true }}
@@ -1072,6 +1124,8 @@ className='text-gray-400 text-sm'
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}className='text-gray-400 text-sm';
             >;
               © 2025 Zion Tech Group. All rights reserved.;
@@ -1092,6 +1146,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Terms of Service;
               </Link>;
             </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             >
@@ -1104,11 +1159,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Social Links */}
             <motion&& motion.div;
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               viewport={{ once: true }}
@@ -1142,6 +1200,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}className='flex items-center space-x-4';
             >;
               {socialLinks.map(social => (<Link;
@@ -1159,7 +1219,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >;
                   <social.icon className='w-4 h-4' />;
                 </Link>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
             </motion.div>;
           </div>;
@@ -1174,6 +1237,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         viewport={{ once: true }}
@@ -1217,6 +1281,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         viewport={{ once: true }}className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20';
       >;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
@@ -1242,7 +1308,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
               />;
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 Subscribe;
               </button>;
             </div>;
@@ -1263,6 +1332,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </motion.div>;
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </footer>
@@ -1291,3 +1361,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </footer>;
+  )})}</footer>;
+  )}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

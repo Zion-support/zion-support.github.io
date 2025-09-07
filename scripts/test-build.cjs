@@ -10,6 +10,7 @@ const problematicFiles = ['components/ContactForm.tsx']
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(' Build "failed")
 
@@ -17,3 +18,6 @@ const problematicFiles = ['components/ContactForm.tsx']
 =======
     console.log(' Build "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.log(' Build "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

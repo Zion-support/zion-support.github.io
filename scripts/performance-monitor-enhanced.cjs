@@ -5,6 +5,7 @@ const path = require('path')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(' Performance metrics collected and saved')
 
@@ -12,3 +13,6 @@ const path = require('path')
 =======
     console.log(' Performance metrics collected and saved')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.log(' Performance metrics collected and saved')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

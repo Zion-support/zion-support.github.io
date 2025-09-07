@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface TestimonialCardProps {
   name: string;
@@ -21,10 +22,16 @@ export default function TestimonialCard({
     <div className='bg-white p-6 rounded-lg shadow-lg border border-gray-200'>
       <div className='flex items-center mb-4'>
         {avatar ? (
-          <img
+          <Image
             src={avatar}
             alt={name || 'User'}
+<<<<<<< HEAD
             className='w-12 h-12 rounded-full mr-4'
+=======
+            width={48}
+            height={48}
+            className="w-12 h-12 rounded-full mr-4"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           />
         ) : (
           <div className='w-12 h-12 bg-gray-300 rounded-full mr-4 flex items-center justify-center'>

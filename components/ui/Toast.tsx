@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
@@ -76,6 +77,8 @@ return <CheckCircle className='w-5 h-5 text-green-400' />;
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   message?: string;
   duration?: number;
@@ -100,12 +103,16 @@ interface ToastProps  {toast: Toast;
 }const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {const [isVisible, setIsVisible] = useState(true)useEffect(() => {const timer = setTimeout(() => {setIsVisible(false)setTimeout(() => onRemove(toast.id), 300)}, toast.duration || 5000)return () => clearTimeout(timer)}, [toast.id, toast.duration, onRemove])const getIcon = () => {switch (toast.type) {case 'success':;
 return <CheckCircle className='w-5 h-5 text-green-400' />;
       case 'error':;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return <AlertCircle className='w-5 h-5 text-red-400' />;
       case 'warning':;
         return <AlertCircle className='w-5 h-5 text-yellow-400' />;
       case 'info':;
         return <Info className='w-5 h-5 text-blue-400' />;
+<<<<<<< HEAD
 <<<<<<< HEAD
       default:
         return <Info className='w-5 h-5 text-blue-400' />;
@@ -138,11 +145,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return <Info className='w-5 h-5 text-blue-400' />;
     }}return <Info className='w-5 h-5 text-blue-400' />;    }}}const getBorderColor = () => {switch (toast.type) {case 'success':;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      default:;
+        return <Info className='w-5 h-5 text-blue-400' />;
+    }}return <Info className='w-5 h-5 text-blue-400' />;    }}}const getBorderColor = () => {switch (toast.type) {case 'success':;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return 'border-green-500/20';
       case 'error':;
         return 'border-red-500/20';
       case 'warning':;
         return 'border-yellow-500/20';
+<<<<<<< HEAD
 <<<<<<< HEAD
       case 'info':
         return 'border-blue-500/20';
@@ -159,6 +172,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     switch (toast && toast.type) {;
       case 'success':;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      case 'info':;
+        return 'border-blue-500/20';const getBorderColor = () => {switch (toast && toast.type) {case 'success':;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return 'border-green-500/20';
       case 'error':;
         return 'border-red-500/20';
@@ -178,6 +195,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return 'bg-blue-500/10';
       default:;
 <<<<<<< HEAD
+<<<<<<< HEAD
         return 'bg-blue-500/10';default:;
         return 'border-blue-500/20';}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -185,11 +203,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return 'bg-blue-500/10';
     }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        return 'bg-blue-500/10';default:;
+        return 'border-blue-500/20';}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return 'bg-green-500/10';
       case 'error':;
         return 'bg-red-500/10';
       case 'warning':;
         return 'bg-yellow-500/10';
+<<<<<<< HEAD
 <<<<<<< HEAD
       case 'info':
         return 'bg-blue-500/10';
@@ -202,6 +225,10 @@ default:
   return (
     <motion&& motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      case 'info':;
+        return 'bg-blue-500/10';return (<motion&& motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       initial={{ opacity: 0, x: 300, scale: 0 && 0.8 }}
       animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 300, scale: isVisible ? 1 : 0 && 0.8 }}
       exit={{ opacity: 0, x: 300, scale: 0 && 0.8 }}
@@ -210,6 +237,9 @@ default:
       <div className="flex items-start space-x-3">;
         <div className="flex-shrink-0 mt-0 && 0.5">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {getIcon()}default:;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         return 'bg-blue-500/10';
@@ -243,7 +273,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
         <button;
           onClick={() => {setIsVisible(false)return (setTimeout(() => onRemove(toast.id), 300)}}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Progress bar */}
       <div className='absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden'>;
         <motion&& motion.div;
@@ -280,6 +313,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             'bg-blue-400';
           }`}
           initial={{ width: '100%' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           animate={{ width: '0%' }}
 
@@ -350,6 +384,8 @@ setToasts(prev => [...prev, newToast]);
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           animate={{ width: '0%' }}<div className='fixed top-4 right-4 z-50 space-y-3'>;
       <AnimatePresence>;
         {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />;
@@ -446,6 +482,9 @@ interface ToastContainerProps {;
         />;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </motion.div>)}{toasts.map(toast => (<ToastItem key={toast.id} toast={toast} onRemove={onRemove} />;
         ))}
       </AnimatePresence>;
@@ -456,9 +495,13 @@ export const useToast = () => {const [toasts, setToasts] = useState<Toast[]>([])
   const showError = (title: string, message?: string) => {addToast({ type: 'error', title, message })}
   const showInfo = (title: string, message?: string) => {addToast({ type: 'info', title, message })}
   const showWarning = (title: string, message?: string) => {addToast({ type: 'warning', title, message })}
+<<<<<<< HEAD
   return {toasts,showSuccess,showError,showInfo,showWarning,removeToast,}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </motion.div>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return {toasts,showSuccess,showError,showInfo,showWarning,removeToast,}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

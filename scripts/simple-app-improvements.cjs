@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
 =======
 <<<<<<< HEAD
@@ -35,6 +36,8 @@
 :scripts/simple-app-improvements.cjs
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -344,6 +347,7 @@ improvements.runImprovements().then(() => {;
   process.exit(1)})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :scripts/simple-app-improvements.cjs
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -353,3 +357,5 @@ improvements.runImprovements().then(() => {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

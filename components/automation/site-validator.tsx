@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -52,6 +53,8 @@ export default function SiteValidator({ report }: Props) {;
   return (
     <div className="space-y-6">;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 import fs from 'fs';
@@ -62,7 +65,10 @@ type Props = { report: Report | null },export const getStaticProps: GetStaticPro
   } catch {return { props: { report: null }, revalidate: 21600 }
   }
 export default function SiteValidator(): any ({ report }: Props) {}export default function SiteValidator() {export default function SiteValidator() {if (!report) return <div>No validation report yet.</div>;import fs from 'fs',type Broken = any;return (<div className="space-y-6">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <header className="space-y-1">;
         <h1 className="text-3xl font-bold">Site Validator</h1>;
         <p className="text-gray-600 dark:text-gray-300">Broken links and Open Graph checks from exported site.</p>;
@@ -117,6 +123,7 @@ if (return <div > No validation report yet.</div>) {$2;
           </ul>;
         </section>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>);
     </div>
 );
@@ -132,3 +139,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)</div>;
+)})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

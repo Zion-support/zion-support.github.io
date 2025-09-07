@@ -267,6 +267,7 @@ process.on("SIGTERM")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Failed to start adaptive test "generator")
 
@@ -274,3 +275,6 @@ process.on("SIGTERM")
 =======
   console.error(" Failed to start adaptive test "generator")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" Failed to start adaptive test "generator")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

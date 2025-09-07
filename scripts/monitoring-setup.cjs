@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -8,6 +9,10 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require("$1")
 const path = require("path")
     console.log("� Setting up error tracking...")
@@ -41,6 +46,7 @@ app.get("/ready")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(" Monitoring setup completed!")
 
@@ -48,3 +54,6 @@ app.get("/ready")
 =======
     console.log(" Monitoring setup completed!")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.log(" Monitoring setup completed!")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

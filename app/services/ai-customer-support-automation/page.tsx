@@ -33,10 +33,14 @@ interface PricingTierProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function PricingTier({ name, price, period, description, features, popular = false, cta }: PricingTierProps) {
   return (
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function PricingTier({
   name,
   price,
@@ -50,7 +54,11 @@ function PricingTier({
     <div
       className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"} shadow-lg`}
     >
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -70,9 +78,13 @@ function PricingTier({
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <svg
               className="w-5 h-5 text-green-500 mr-3"
               fill="currentColor"
@@ -83,7 +95,11 @@ function PricingTier({
                 d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                 clipRule="evenodd"
               />
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </svg>
             <span className="text-gray-700">{feature}</span>
           </li>
@@ -94,12 +110,19 @@ function PricingTier({
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
 <<<<<<< HEAD
+<<<<<<< HEAD
             ? 'bg-blue-600 text-white hover:bg-blue-700'
             : 'bg-gray-900 text-white hover:bg-gray-800'
 =======
             ? "bg-blue-600 text-white hover:bg-blue-700"
             : "bg-gray-900 text-white hover:bg-gray-800"
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+
+            ? "bg-blue-600 text-white hover:bg-blue-700"
+            : "bg-gray-900 text-white hover:bg-gray-800"
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }`}
       >
         {cta}
@@ -139,12 +162,20 @@ export default function AICustomerSupportAutomationPage() {
       <section className="py-12">
         <div className="text-center mb-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-gray-900 mb-4">AI-Powered Support Features</h2>
 =======
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             AI-Powered Support Features
           </h2>
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            AI-Powered Support Features
+          </h2>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive AI solutions to automate and enhance your customer support operations.
           </p>
@@ -215,12 +246,20 @@ export default function AICustomerSupportAutomationPage() {
       <section className="py-12">
         <div className="text-center mb-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
 =======
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             How It Works
           </h2>
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            How It Works
+          </h2>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Simple 4-step process to implement AI-powered customer support automation.
           </p>
@@ -261,12 +300,20 @@ export default function AICustomerSupportAutomationPage() {
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Plans</h2>
 =======
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Pricing Plans
           </h2>
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Pricing Plans
+          </h2>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Choose the plan that fits your customer support needs and budget.
           </p>

@@ -9,6 +9,7 @@
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2066,6 +2067,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 export interface MicroSaasService  {id: string;
   name: string;
@@ -3779,6 +3782,7 @@ category: 'AI & Machine Learning';
 'Cybersecurity';
 'Cloud Computing';
 <<<<<<< HEAD
+<<<<<<< HEAD
 'Data Analytics' ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3799,6 +3803,8 @@ category: 'AI & Machine Learning';
 
 name: string;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 'Data Analytics' ];mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',name: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 tagline: string;
@@ -4036,6 +4042,7 @@ export const serviceCategories = [;
 ];// Combined all services;
 export const allEnhancedRealMicroSaasServices  = enhancedRealMicroSaasServices;;ursor/fix-website-loading-errors-and-merge-6662;
 'Data Analytics' ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4051,6 +4058,8 @@ export const allEnhancedRealMicroSaasServices  = enhancedRealMicroSaasServices;;
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -6278,6 +6287,9 @@ export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const getServicesByCategory = (category: string) => {
   if (category === 'All') return allEnhancedRealMicroSaasServices;
   return allEnhancedRealMicroSaasServices.filter(service => service.category === category)
@@ -6299,6 +6311,7 @@ export const serviceCategories = [
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -6307,6 +6320,8 @@ export const serviceCategories = [
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   
   // Map category names to match service categories
   const categoryMapping: { [key: string]: string[] } = {
@@ -6375,6 +6390,7 @@ export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6409,3 +6425,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -10,6 +10,7 @@
   type: 'energy' | 'data' | 'quantum' | 'neon';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   life: number;
   maxLife: number
 }
@@ -17,18 +18,24 @@
 interface EnergyField {
   x: number;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   life: number;children: React.ReactNode;
   children,}: {children: React.ReactNode;
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null)const particlesRef = useRef<Particle[]>([])const energyFieldsRef = useRef<EnergyField[]>([])const animationRef  = useRef<number | undefined>(undefined)interface EnergyField  {x: number,y: number,radius: number,intensity: number,color: string,pulse: number;
 }export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {export default function UltraFuturisticBackground2029() {maxLife: number;
 }interface EnergyField  {x: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   y: number;
   radius: number;
   intensity: number;
   color: string;
 }) {pulse: number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
   const canvasRef = null;
@@ -70,16 +77,22 @@ const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   useEffect(() => {
     const canvas = canvasRef.current;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function UltraFuturisticBackground2029() {const canvasRef = null;
             ease: "easeInOut";
   const canvasRef = useRef<HTMLCanvasElement>(null)const particlesRef = useRef<Particle[]>([])const energyFieldsRef = useRef<EnergyField[]>([])const animationRef  = useRef<number | undefined>(undefined)const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })vx: number,vy: number,size: number,opacity: number,color: string,type: 'energy' | 'data' | 'quantum' | 'neon',life: number,}
 interface EnergyField  {coordinate_x: number,coordinate_y: number,radius: number,intensity: number,color: string,pulse: number;
 }const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })useEffect(() => {const canvas = canvasRef.current;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (!canvas) return;
     const ctx = canvas.getContext('2d')if (!ctx) return;
     const resizeCanvas = () => {canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
 
@@ -271,6 +284,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         particle.x += particle.vx;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }resizeCanvas()window.addEventListener('resize', resizeCanvas)// Mouse move handler for interactive effects;
     const handleMouseMove = (e: MouseEvent) => {setMousePosition({ x: e.clientX, y: e.clientY })}window.addEventListener('mousemove', handleMouseMove)// Initialize particles with different types;
     const initParticles = () => {const particles: Particle[] = [];
@@ -317,13 +332,17 @@ const fieldColors = [;
           particle.vx += (dx / distance) * force * 0.01;particle.vy += (dy / distance) * force * 0.01;
           particle.vy += (dy / distance) * force * 0.01;
         }particle.x += particle.vx;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         particle.y += particle.vy;
         // Wrap around edges;
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Draw particle with type-specific effects
         ctx.save();
@@ -344,13 +363,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             break;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         // Draw particle with type-specific effects;
         ctx.save()switch (particle.type) {case 'energy':;
             // Energy particles with glow effect;
             ctx.shadowColor = particle.color;
             ctx.shadowBlur = 15;
             ctx.globalCompositeOperation = 'screen';break;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           case 'data':;
             // Data particles with digital effect;
             ctx && ctx.globalCompositeOperation = 'multiply';
@@ -362,6 +386,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ctx && ctx.shadowBlur = 10;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             break;
           case 'neon':
             // Neon particles with bright glow
@@ -370,12 +395,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             // Neon particles with bright glow;case 'neon':;
             // Neon particles with bright glow;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            break;case 'neon':;
+            // Neon particles with bright glow;case 'neon':;
+            // Neon particles with bright glow;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ctx.shadowColor = particle.color;
             ctx.shadowBlur = 20;
             ctx.globalCompositeOperation = 'lighter';
 break;
         }const lifeRatio = particle.life / particle.maxLife;
         const currentOpacity = particle.opacity * lifeRatio;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -441,6 +472,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time + i)})`;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fillStyle =;
           particle.color +;
           Math.floor(currentOpacity * 255).toString(16).padStart(2, '0')ctx.fill()ctx.restore()// Draw connections between nearby particles;
@@ -530,11 +563,15 @@ for (let i = 0; i < 20; i++) {const x1 = Math.random() * canvas.width;
         const x2 = Math.random() * canvas.width;
         const y2  = Math.random() * canvas.height;ctx.moveTo(x1, y1)ctx.lineTo(x2, y2)ctx.stroke()}
       animationRef.current = requestAnimationFrame(animate)ctx.beginPath()ctx.moveTo(x1, y1)ctx.lineTo(x2, y2)ctx.stroke()}animationRef.current = requestAnimationFrame(animate)}animate()return () => {window.removeEventListener('resize', resizeCanvas)window.removeEventListener('mousemove', handleMouseMove)if (animationRef.current) {cancelAnimationFrame(animationRef.current)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }, [mousePosition])return ({/* Animated background canvas */}
       <canvas;
         ref={canvasRef}
+<<<<<<< HEAD
 <<<<<<< HEAD
         className='absolute inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
@@ -590,6 +627,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             duration: 12
             repeat: Infinity
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         className='absolute inset-0 w-full h-full pointer-events-none';
         style={{ zIndex: -1 }}transition={{duration: 8;
             repeat: Infinity;
@@ -618,7 +657,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{duration: 6,repeat: Infinity,ease: 'easeInOut',}}
           transition={{duration: 12;
             repeat: Infinity;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ease: 'easeInOut',          }}
           }}
           transition={{duration: 6,repeat: Infinity,ease: "easeInOut";
@@ -627,6 +669,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
         <motion.div;
           className='absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45';
+<<<<<<< HEAD
 <<<<<<< HEAD
           animate={{
             rotate: [45, 405],
@@ -684,6 +727,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           animate={{rotate: [45, 405],scale: [1, 1.1, 1],          }}
           transition={{duration: 12,repeat: Infinity,ease: 'easeInOut',          }}
         />;
@@ -706,6 +751,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />;
 <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />;
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -721,6 +767,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
       
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Content */}
       <div className='relative z-10'>{children}</div>;
     </div>;
@@ -741,6 +789,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {children}
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>);
 }
       <div className='relative z-10'>{children}</div>
@@ -760,6 +809,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   );
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)}
       <div className='relative z-10'>{children}</div>;
     </div>;
@@ -768,5 +819,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {children}
       </div>;
     </div>;
+<<<<<<< HEAD
   )})
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  )})
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

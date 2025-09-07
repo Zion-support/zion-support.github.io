@@ -3,14 +3,18 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = any;
 }`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 context ? `Context: $ {
   JSON.stringify (context)
@@ -127,6 +131,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res && res.status(500).json({ error: 'Failed to generate analysis' });
   }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 context ? `Context: $ {JSON.stringify (context)}` : undefined] .filter (Boolean) .join ('\n')const completion = await client.chat.completions.create ({model: 'gpt-4o-mini', messages: [ {role: 'system', content: system;
 }
 export type AnalyzeResponse = {analysis: string;}import type { NextApiRequest, NextApiResponse } from 'next';
@@ -154,7 +160,10 @@ export type AnalyzeRequestBody = {operatorPrompt: string,context?: Record<string
       completion.choices?.[0]?.message?.content?.trim() |;
       'No analysis generated.';
     return res.status(200).json({ analysis })} catch (error: any) {console.error('Analyze API error', error?.message |error)return res.status(500).json({ error: 'Failed to generate analysis' })}return res.status(500).json({ error: 'Failed to generate analysis' })console && console.error('Analyze API error', error?.message || error)return res && res.status(500).json({ error: 'Failed to generate analysis' })}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const analysis = completion && completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
     return res && res.status(200).json({ analysis })} catch (error: any) {console && console.error('Analyze API error', error?.message || error)return res && res.status(500).json({ error: 'Failed to generate analysis' })}}
 }const analysis =;
@@ -162,6 +171,7 @@ export type AnalyzeRequestBody = {operatorPrompt: string,context?: Record<string
       'No analysis generated.';
     return res.status (200).json ({ analysis })} catch (error: any) {console.error ('Analyze API error', error?.message || error)return res.status (500).json ({ error: 'Failed to generate analysis' })}
     const analysis = completion.choices?.[0]?.message?.content?.trim () || 'No analysis generated.';
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res.status (200).json ({ analysis });
   } catch (error: any) {
@@ -179,3 +189,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    return res.status (200).json ({ analysis })} catch (error: any) {console.error ('Analyze API error', error?.message || error)return res.status (500).json ({ error: 'Failed to generate analysis' })}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

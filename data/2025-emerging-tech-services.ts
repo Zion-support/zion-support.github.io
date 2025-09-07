@@ -1356,10 +1356,13 @@ export interface EmergingTechService {}export interface EmergingTechService  {ex
   return emergingTechServices2025.filter(service => {const price = parseInt(service.price.monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
   })}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   {
 
@@ -1420,6 +1423,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1435,11 +1439,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       'Comply with future regulations',
       'Enable quantum - safe communications'
     ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1507,6 +1514,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 02 - 25',
@@ -1515,6 +1524,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 145
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1544,6 +1554,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - green - 500 to - teal - 600',
     popular: true,
     launch_date: '2025 - 03 - 01',
@@ -1552,6 +1564,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 56
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1581,6 +1594,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,
     launch_date: '2025 - 03 - 05',
@@ -1589,6 +1604,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 6
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1618,6 +1634,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - cyan - 500 to - blue - 600',
     popular: true,
     launch_date: '2025 - 03 - 10',
@@ -1626,6 +1644,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 23
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1655,6 +1674,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - pink - 500 to - purple - 600',
     popular: true,
     launch_date: '2025 - 03 - 15',
@@ -1663,6 +1684,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 42
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1692,6 +1714,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - indigo - 500 to - purple - 600',
     popular: true,
     launch_date: '2025 - 03 - 20',
@@ -1700,6 +1724,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 98
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1729,6 +1754,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - gray - 500 to - slate - 600',
     popular: true,
     launch_date: '2025 - 03 - 25',
@@ -1737,6 +1764,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 187
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1766,6 +1794,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - teal - 500 to - cyan - 600',
     popular: true,
     launch_date: '2025 - 03 - 30',
@@ -1774,6 +1804,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 67
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1799,6 +1830,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     price: {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
@@ -1919,6 +1952,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1934,6 +1968,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols'
     ],
@@ -1943,6 +1979,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1961,6 +1998,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     target_audience: [;
       'Government agencies',
       'Financial institutions',
@@ -2006,6 +2045,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 150,
     rating: 4 && 4.8,
 <<<<<<< HEAD
+<<<<<<< HEAD
     reviews: 89,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2042,10 +2082,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    reviews: 89
+];
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2551,6 +2597,9 @@ export const getEmergingTechServicesByCategory = (category: string) => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export const getEmergingTechServicesByCategory = (category: string) => {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   );
 };
 
@@ -2584,6 +2633,7 @@ const contact = {mobile: "+1 302 464 0950"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -2604,6 +2654,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -2631,6 +2683,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2650,6 +2703,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -3120,6 +3175,7 @@ const contact = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3143,6 +3199,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -3164,6 +3222,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Expert quantum computing consultation",
       "Training and educational resources" ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3193,10 +3252,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations["IBM Quantum, Google Quantum, AWS Braket, Azure Quantum"],
     use_cases["Drug discovery, Financial modeling, Logistics optimization, Cryptography"],
     roi: "Solve previously intractable problems 1000x faster than classical computers",
     competitors["IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3225,6 +3287,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     variant: "quantum",
     contact_info: contact,
     real_implementation: true,
@@ -3258,6 +3322,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3282,6 +3347,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations["AWS, Azure, GCP, Oracle, SAP, Salesforce"],
     use_cases["Supply chain tracking, Digital identity, Asset tokenization, DeFi protocols"],
     roi: "Reduce transaction costs by 80% and increase transparency by 100%",
@@ -3321,6 +3388,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3345,10 +3413,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations["NASA APIs, ESA data, commercial satellite providers, GIS systems"],
     use_cases["Precision agriculture, Environmental monitoring, Urban planning, Space operations"],
     roi: "Improve agricultural yields by 25% and reduce environmental monitoring costs by 60%",
     competitors["Planet Labs, Maxar Technologies, Airbus Defence and Space, BlackSky"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3377,6 +3448,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 12,
     rating: 4 && 4.9,
     reviews: 9;
@@ -3400,6 +3473,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "API access for third - party integrations",
       "Scalable cloud infrastructure" ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3429,10 +3503,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations["AWS, Azure, GCP, industrial protocols, enterprise systems"],
     use_cases["Industrial monitoring, Smart cities, Asset tracking, Predictive maintenance"],
     roi: "Reduce operational costs by 30% and improve efficiency by 40%",
     competitors["AWS IoT, Azure IoT Hub, Google Cloud IoT, PTC ThingWorx"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3461,6 +3538,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     variant: "default",
     contact_info: contact,
     real_implementation: true,
@@ -3494,6 +3573,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3518,6 +3598,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations["3D modeling software, enterprise systems, social platforms"],
     use_cases["Employee training, Product design, Customer engagement, Remote collaboration"],
     roi: "Reduce training costs by 50% and improve learning retention by 80%",
@@ -3557,6 +3639,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3581,6 +3664,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations["Industrial robots, drones, autonomous vehicles, IoT sensors"],
     use_cases["Industrial automation, Autonomous logistics, Precision agriculture, Research and development"],
     roi: "Increase operational efficiency by 200% and reduce human error by 90%",
@@ -3620,6 +3705,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3644,6 +3730,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations["Laboratory equipment, DNA synthesis services, research databases"],
     use_cases["Drug discovery, Bioengineering, Agricultural biotechnology, Research automation"],
     roi: "Accelerate drug discovery by 10x and reduce research costs by 70%",
@@ -3683,6 +3771,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3707,6 +3796,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations["Smart meters, renewable energy systems, grid infrastructure, IoT sensors"],
     use_cases["Renewable energy optimization, Smart grid management, Energy efficiency, Sustainability reporting"],
     roi: "Reduce energy costs by 25% and improve renewable energy utilization by 40%",
@@ -3746,6 +3837,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3770,6 +3862,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations["Traffic signals, public transportation systems, IoT sensors, automotive systems"],
     use_cases["Traffic optimization, Public transportation, Logistics optimization, Autonomous vehicles"],
     roi: "Reduce traffic congestion by 30% and improve transportation efficiency by 40%",
@@ -3809,6 +3903,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3833,6 +3928,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations["Existing security infrastructure, identity management systems, communication platforms"],
     use_cases["Post - quantum cryptography, Quantum - resistant security, Advanced threat protection, Compliance"],
     roi: "Future - proof security infrastructure and maintain compliance with emerging standards",
@@ -3848,6 +3945,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 7;
 ]}
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface EmergingTechService {
 <<<<<<< HEAD
@@ -3867,6 +3965,9 @@ export interface EmergingTechService {
 =======
 export interface EmergingTechService {})
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export interface EmergingTechService {})
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 export interface EmergingTechService {;
@@ -4364,6 +4465,7 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -4386,6 +4488,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return price >= min_price && price <= max_price;
   });
 }
@@ -4419,6 +4523,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface EmergingTechService {;
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4461,3 +4566,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

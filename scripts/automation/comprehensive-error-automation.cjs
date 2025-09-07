@@ -101,6 +101,7 @@ const logFile = path.join(this.logsDir, ")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.error(")
 
@@ -108,3 +109,6 @@ console.error(")
 =======
 console.error(")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+console.error(")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

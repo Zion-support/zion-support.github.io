@@ -1,5 +1,6 @@
 export const metadata = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'AI Data Analysis Platform | Zion Tech Group',
   description: 'Build AI-powered data analysis platforms with automated insights, predictive analytics, and business intelligence. Professional data AI solutions starting at $18k.',
 };
@@ -195,6 +196,9 @@ function Plan({ name, price, duration, features }: {
         Get Started
       </a>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: 'Ai Data Analysis | Zion Tech Group',
   description:
     'Professional ai data analysis services for your business needs.',
@@ -244,7 +248,11 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>
   );
 }
+

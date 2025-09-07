@@ -2,19 +2,26 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Code;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import {import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
   Code,Database,Globe,Shield,Zap,Bot,BarChart3,Lock,ArrowRight,CheckCircle,Star,ExternalLink,Play,BookOpen,Code;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Database;
   Globe;
   Shield;
   Zap;
   Bot;
   BarChart3;
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -58,6 +65,8 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Lock;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Code;
   Database,Globe,Shield,Zap,Bot,BarChart3,import { Code;
   Database;
@@ -66,13 +75,17 @@ import {
   Zap;
   Bot;
   BarChart3;Lock;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ArrowRight;
   CheckCircle;
   Star;
   ExternalLink;
   Play;
   BookOpen;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Github;
@@ -397,6 +410,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <button
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Github;free: '1,000 operations/month';
         pro: '$119/month';
         enterprise: 'Custom';
@@ -1054,6 +1069,9 @@ function ApiToolsPage() {
           <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">;
             Build faster, scale better, and deliver more with our comprehensive collection of developer APIs. Each tool is designed for performance, reliability, and ease of integration.;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </p>;const filteredTools =;
     selectedCategory === 'All';
       ? apiTools;
@@ -1098,10 +1116,13 @@ function ApiToolsPage() {
           </p>;
           <div className='flex flex-wrap justify-center gap-4 mb-8'>;
             {categories.map(category => (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           </p>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category;
@@ -1151,6 +1172,7 @@ function ApiToolsPage() {
                           <span className='ml - 1 text - sm font - medium'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                             {tool.rating}
 =======
                             {tool.rating}
@@ -1164,12 +1186,18 @@ function ApiToolsPage() {
                         </div>;
                         <span className='px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                            {tool.rating}</span>;
+                        </div>;
+                        <span className='px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {tool.status}
                         </span>;
                       </div>;
                     </div>;
 <p className='text-gray-400 leading-relaxed mb-6'>;
                       {tool.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </p>
                     <div className='grid grid-cols-3 gap-4 mb-6'>
@@ -1178,14 +1206,19 @@ function ApiToolsPage() {
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </p>;
                     <div className='grid grid-cols-3 gap-4 mb-6'>;
                       <div className='text-center p-3 bg-gray-800/50 rounded-lg'>;
                         <div className='text-lg font-bold text-indigo-400'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {tool.users}
                         </div>;
                         <div className='text - xs text - gray - 500'>Users</div>;
@@ -1212,6 +1245,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Button;
                         href={tool && tool.website}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         variant='primary'
                         size='sm'
 <<<<<<< HEAD
@@ -1227,6 +1261,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                        variant='primary';
+                        size='sm';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         className='bg-indigo-600 hover:bg-indigo-700'>;
                         <ExternalLink className='w-4 h-4 mr-2' />                        Visit API;
                       </Button>;
@@ -1255,6 +1293,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Button;
                         href={tool.website}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         variant="primary";
                         size="sm";
                         className='bg-indigo-600 hover:bg-indigo-700';
@@ -1262,6 +1303,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <ExternalLink className='w-4 h-4 mr-2' />;
                         Visit API;
                       </Button>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                         variant="primary"
@@ -1270,10 +1312,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Visit API
                       </Button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         className="bg-indigo-600 hover:bg-indigo-700">;
                         <ExternalLink className="w-4 h-4 mr-2" />;
                         Visit API;
                       </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       <Button
@@ -1282,6 +1327,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                       <Button
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                      <Button;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         href={tool && tool.docs}
                         variant='outline';
                         size='sm';
@@ -1289,6 +1337,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <BookOpen className='w-4 h-4 mr-2' />                        Documentation;
                       </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       <Button;
                         href={tool && tool.github}                        variant="outline";
                         size="sm";
@@ -1298,7 +1349,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Documentation;
                       </Button>;
                       <Button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         href={tool.docs}
 variant='outline';
                         size='sm';
@@ -1321,6 +1375,7 @@ variant='ghost';
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </div>
@@ -1439,6 +1494,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         </div>;
       </section>;
@@ -1505,8 +1562,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -1548,6 +1608,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </>)}{/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
@@ -1580,6 +1643,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1589,3 +1653,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const aiSolutions = null;
   ];
   return (
@@ -35,6 +36,8 @@ import Link from 'next/link';
           <section className='mx-auto max-w-7xl'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function AISolutionsPage() {const aiSolutions = [;
     {'Predictive Analytics';
         'Pattern Recognition';
@@ -144,6 +147,7 @@ export default function AISolutionsPage() {const aiSolutions = [;
             </p>;
           </section>;
           <section className='mx-auto max-w-7xl'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 export default function AISolutionsPage() {
@@ -298,6 +302,8 @@ export default function AISolutionsPage() {
           AI Solutions | Zion Tech Group - Advanced AI & Machine Learning;
         </title>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* AI Solutions Grid */}
             <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>;
@@ -322,6 +328,7 @@ export default function AISolutionsPage() {
                     <p className='text-white/70 mb-4'>{solution && solution.description}</p>;
                     <ul className='space-y-1 mb-4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {solution && solution.features.map((feature, featureIndex) => (;
                         <li
                           key={featureIndex}
@@ -331,6 +338,8 @@ export default function AISolutionsPage() {
                           <span className='text-cyan-400 mr-2'>•</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {solution && solution.features.map((feature, featureIndex) => (<li;
                           key={featureIndex}className='text-sm text-white/60 flex items-center'>;
                           <span className='text-cyan-400 mr-2'>•</span>                          {feature}
@@ -350,6 +359,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* AI Solutions Grid */}className='text-sm text-white/60 flex items-center';
                         >;
                           <span className='text-cyan-400 mr-2'>•</span>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                           className='text-sm text-white/60 flex items-center'>;
@@ -369,6 +379,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <section className="mx-auto max-w-7xl">
             {/* AI Solutions Grid */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {feature}
                         </li>;
                       ))}
@@ -385,6 +397,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p className="text-white/70 mb-4">{solution && solution.description}</p>;
                     <ul className="space-y-1 mb-4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {solution && solution.features.map((feature, featureIndex) => (;
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
                     </ul>
@@ -392,15 +405,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <Link
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {solution && solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="text-sm text-white/60 flex items-center">;
                     </ul>;
                     <Link;
 <Link;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
                     <Link
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       href={`/services#${solution.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors';
                     >;
@@ -456,6 +474,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </h3>;
                     <ul className='space-y-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {useCase && useCase.solutions.map((solution, solutionIndex) => (;
                         <li
                           key={solutionIndex}
@@ -464,6 +483,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         >
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {useCase && useCase.solutions.map((solution, solutionIndex) => (<li;
                           key={solutionIndex}className='text-sm text-white/70'>                          {solution}                {useCases && useCases.map((useCase, index) => (<div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">;
                     <div className="text-4xl mb-4">{useCase && useCase.icon}</div>;
@@ -471,6 +492,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <ul className="space-y-2">;
                       {useCase && useCase.solutions.map((solution, solutionIndex) => (<li key={solutionIndex} className="text-sm text-white/70">;className='text-sm text-white/70';
                         >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                           className='text-sm text-white/70'>                          {solution}                {useCases && useCases.map((useCase, index) => (;
@@ -481,6 +503,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {useCase && useCase.solutions.map((solution, solutionIndex) => (;
                         <li key={solutionIndex} className="text-sm text-white/70">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {solution}
                         </li>;
                       ))}
@@ -488,6 +512,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 ))}
             {/* Technologies */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -505,6 +530,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>;
                 Technologies We Use;
@@ -515,7 +542,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       key={index}className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'                    >;
                       className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20';
                     >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {tech}
                     </span>;
                   ))}
@@ -527,6 +557,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;{tech}
                     </span>;
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Success Stories */}
 <div className='mb-16'>
@@ -663,6 +694,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Success Stories */}<div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>;
                 AI Success Stories;
@@ -772,10 +805,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>)}href='/automation-insights';
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200';
                 >;
+<<<<<<< HEAD
 =======
                   href="/automation-insights"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   Explore Insights;
                 </Link>;
               </div>;
@@ -783,6 +819,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </section>;
         </main>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   )}
@@ -798,3 +835,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </>;
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

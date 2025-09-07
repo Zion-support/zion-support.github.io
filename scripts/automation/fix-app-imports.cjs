@@ -105,6 +105,7 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = AppImportsFixer;
 
@@ -112,3 +113,6 @@ module.exports = AppImportsFixer;
 =======
 module.exports = AppImportsFixer;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = AppImportsFixer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

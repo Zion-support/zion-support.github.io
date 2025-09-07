@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head',
 import Link from 'next/link';
@@ -61,6 +62,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {profiles.length === 0 ? (
         <div className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 8 text - center'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export default function FavoritesPage() {export default function FavoritesPage() {const { favorites, remove } = useFavorites()const profiles = useMemo(() => TALENT_PROFILES.filter(t => favorites.includes(t.slug))[favorites];
   )const profiles  = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites])const storageKey = 'zion_favorites';
@@ -75,6 +78,7 @@ import { TALENT_PROFILES  } from '../data/talent';
       </Head>;
 export default function FavoritesPage() {const { favorites, remove } = useFavorites()const profiles = useMemo(() => TALENT_PROFILES && TALENT_PROFILES.filter(t => favorites && favorites.includes(t && t.slug)),[favorites];
   )const profiles = useMemo(() => TALENT_PROFILES && TALENT_PROFILES.filter((t) => favorites && favorites.includes(t && t.slug)), [favorites])return (<div>;
+<<<<<<< HEAD
 =======
 export default function FavoritesPage() {;
   const { favorites, remove } = useFavorites();
@@ -85,6 +89,8 @@ export default function FavoritesPage() {;
   return (
     <div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <Head>;
         <title>Favorites — Zion AI Marketplace</title>;
       </Head>;
@@ -153,6 +159,9 @@ function FavoritesPage() {const { favorites, remove } = use_favorites ()const pr
         </nav>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <h1 className='text - 2xl font - semibold mb - 4'>Saved Talent</h1>;<div className='mb-6 text-sm text-gray-500 dark:text-gray-400'>;
         <nav aria-label='Breadcrumb'>;
           <ol className='flex items-center gap-2'>;
@@ -173,12 +182,15 @@ function FavoritesPage() {const { favorites, remove } = use_favorites ()const pr
       </div>;
 <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>;
       {profiles.length === 0 ? (<div className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 8 text - center'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       <h1 className='text - 2xl font - semibold mb - 4'>Saved Talent</h1>;
       {profiles.length === 0 ? (
         <div className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 8 text - center'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className='text - gray - 600 dark:text - gray - 300'>;
             You haven't saved any talent yet.;
           </div>;
@@ -189,6 +201,7 @@ function FavoritesPage() {const { favorites, remove } = use_favorites ()const pr
               </a>;
             </Link>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>) : (
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
@@ -203,11 +216,14 @@ function FavoritesPage() {const { favorites, remove } = use_favorites ()const pr
                   <div className='font-medium'>{t.name}</div>
                   <div className='text-sm text-gray-600 dark:text-gray-300'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>) : (<div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {profiles.map (t => (<div;
               key={t.slug}</div>;
   )}</div>;
   )}
+<<<<<<< HEAD
 =======
 
     </div>;
@@ -218,6 +234,8 @@ function FavoritesPage() {const { favorites, remove } = use_favorites ()const pr
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className='mt - 3 text - xs text - gray - 500'>{t.location}</div>;
               <div className='mt - 3 flex flex - wrap gap - 2'>;
                 {t.skills.slice (0, 4).map (string => (<span;
@@ -248,6 +266,9 @@ function FavoritesPage() {const { favorites, remove } = use_favorites ()const pr
             </div>))}
         </div>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)}className='rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40';
             >;
               <div className='flex items-center justify-between'>;
@@ -301,9 +322,13 @@ function FavoritesPage() {const { favorites, remove } = use_favorites ()const pr
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </div>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

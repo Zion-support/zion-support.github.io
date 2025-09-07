@@ -1,6 +1,7 @@
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
@@ -12,6 +13,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 {
   name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion  } from 'framer-motion';
 import {Phone,Mail,MapPin,Globe,ArrowRight,Star,Shield,Brain,DollarSign,Dna,Rocket,Users,Award,Zap,Facebook,Twitter,Linkedin,Instagram,Youtube,Github,} from 'lucide-react';import {Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield,Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github;
@@ -20,6 +23,7 @@ const contactInfo = {mobile: '+1 302 464 0950';
   address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com';
 }import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
+<<<<<<< HEAD
 =======
 import { motion } from 'framer-motion';
 
@@ -275,13 +279,18 @@ import {
   Github,} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github;
   } from 'lucide-react';
 const contactInfo = null;
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.;
 {name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 {name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success';
 }
@@ -395,6 +404,7 @@ const contactInfo = null;
       }
       { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' }
 <<<<<<< HEAD
+<<<<<<< HEAD
       {
         name: 'AI Autonomous Clinical Trials',
         href: '/ai-autonomous-clinical-trials',
@@ -492,6 +502,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </p>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {const serviceCategories = [;
   {title: 'AI & Automation';
     services: [;
@@ -624,7 +636,10 @@ const socialLinks = [;
                 cybersecurity, fintech blockchain, and healthcare biotech;
                 solutions. Transforming businesses with cutting-edge technology.;
               </p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {/* Contact Info */}
               <div className='space-y-3'>;
                 <div className='flex items-center text-gray-300'>;
@@ -678,6 +693,7 @@ const socialLinks = [;
               initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
@@ -685,6 +701,8 @@ const socialLinks = [;
                 {category.title === 'AI & Automation' && (
                   <Brain className='w-5 h-5 mr-2 text-cyan-400' />
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               whileInView={{ opacity: 1, y: 0 }}href={service.href}
                       className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm flex items - center group";
                     >;
@@ -715,6 +733,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group';
                     >;
                       <ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               whileInView={{ opacity: 1, y: 0 }}
@@ -723,11 +742,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >;
                       <ArrowRight className="w - 3 h - 3 mr - 2 group - hover:translate - x-1 transition - transform duration - 300" />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {service.name}
                 ))}
               </ul>;
             </motion && motion.div>;
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Additional Links */}
@@ -741,6 +763,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        {/* Additional Links */}<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Company Links */}
           <motion&& motion.div;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}{/* Company Links */}<motion.div;
@@ -749,6 +774,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
@@ -765,6 +791,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           >;
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
               <Users className='w-5 h-5 mr-2 text-purple-400' />;
@@ -777,6 +805,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <ul className="space-y-2">;
               {companyLinks.map((link, index) => (<li key={index}>;
                   <Link;
+<<<<<<< HEAD
 =======
             </h4>
             <ul className="space-y-2">
@@ -784,6 +813,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li key={index}>
                   <Link
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     href={link.href}
                     className='text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm'                  >              Company;
             </h4>;
@@ -805,6 +836,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
@@ -821,6 +853,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             whileInView={{ opacity: 1, y: 0 }}href={link.href}
                     className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm";
                   >;transition={{ duration: 0.6, delay: 0.3 }}
@@ -848,6 +882,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
 =======
             whileInView={{ opacity: 1, y: 0 }}
@@ -871,6 +906,8 @@ className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: 0.4 }}
           >;
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
@@ -885,10 +922,13 @@ className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
                 >;
                   <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />;
                 </Link>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
             </div>;
           </motion.div>;
@@ -899,6 +939,7 @@ className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
         {/* Newsletter Signup */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           whileInView={{ opacity: 1, y: 0 }}
@@ -934,6 +975,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: 0.5 }}
 className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12';
         >;
@@ -960,6 +1003,7 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
               Be the first to know about breakthrough solutions and industry trends.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
+<<<<<<< HEAD
 =======
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -971,6 +1015,8 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               />;
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>                Subscribe        >;
           <div className="text-center">;
@@ -983,6 +1029,9 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <input;
                 type="email";
                 placeholder="Enter your email";
@@ -996,6 +1045,7 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
             </div>;
           </div>;
         </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               <input
@@ -1011,6 +1061,8 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
         </motion.div>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 Subscribe;
               </button>;
             </div>;
@@ -1021,6 +1073,7 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
         {/* Bottom Bar */}
         <motion.div;
           initial={{ opacity: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           whileInView={{ opacity: 1 }}
@@ -1042,6 +1095,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Link
                 href='/privacy'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           whileInView={{ opacity: 1 }}transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
           className='border-t border-gray-800 pt-8'>;
           <div className='flex flex-col md:flex-row justify-between items-center'>;
@@ -1054,11 +1109,15 @@ className='border-t border-gray-800 pt-8';
               © 2026 Zion Tech Group. All rights reserved.;
               <Link;
                 href='/privacy';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2'>;
                 Privacy Policy;
               </Link>;
               <span className='mx-2'>|</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Link
                 href='/terms'
@@ -1103,6 +1162,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
       </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Link;
                 href='/terms';
           <div className="flex flex-col md: flex-row justify-between items-center">;
@@ -1141,7 +1202,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </footer>;
   )}className='border - t border - gray - 800 pt - 8';
         >;
@@ -1194,6 +1258,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 
 
@@ -1212,3 +1277,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )</footer>;
+  )}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

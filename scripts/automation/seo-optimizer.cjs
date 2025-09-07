@@ -345,6 +345,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = SEOOptimizer;
 
@@ -352,3 +353,6 @@ module.exports = SEOOptimizer;
 =======
 module.exports = SEOOptimizer;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = SEOOptimizer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

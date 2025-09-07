@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 ];
@@ -17,7 +20,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 }{child.badge;
 }</span>)}</a>) )}</motion.div>)}</AnimatePresence> </div>) )}</div> </div> <span>Quick Links</span> </h3> <div className="space-y-2" > <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > Contact Us </div> <div className="text-xs text-gray-500" >Get in touch with our team</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > View Pricing </div> <div className="text-xs text-gray-500" >Explore our pricing plans</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > About Us </div> <div className="text-xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-blue-400" >1000+</div> <div className="text-xs text-gray-400" >Clients</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-purple-400" >24/7</div> <div className="text-xs text-gray-400" >Support</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-green-400" >99.9%</div> <div className="text-xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25" > <span>Get Started Today</span> <ArrowRight className="w-4 h-4 ml-2 inline" /> </a> </div> </div> </motion.aside>)}export default EnhancedSidebar2025;interface SidebarItem  {name: string,href: string,import React, { useState, useEffect } from 'react',import Link from 'next/link';
 import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { X, ChevronRight, Home, Star, Users;
   Settings, HelpCircle, Mail, Phone, MapPin;
   Brain, Atom, Shield, Rocket, DollarSign;
@@ -25,6 +31,7 @@ import { X, ChevronRight, Home, Star, Users;
   TrendingUp, Award, CheckCircle, Clock;
   ArrowRight, Search, Menu, X as CloseIcon;
   Target, BookOpen, Truck, BarChart3;
+<<<<<<< HEAD
 <<<<<<< HEAD
   Sparkles, Eye, Lightbulb, Palette, Code
  } from 'lucide-react';
@@ -71,15 +78,21 @@ interface SidebarItem {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   icon?: React.ReactNode;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Sparkles, Eye, Lightbulb, Palette, Code;
   } from 'lucide-react';
 interface SidebarItem  {name: string;
   href: string;icon?: React.ReactNode;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   description?: string;
   children?: SidebarItem[];
   badge?: string;
   isNew?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   isHot?: boolean
 <<<<<<< HEAD
@@ -180,6 +193,8 @@ const sidebarItems: SidebarItem[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     ]
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   isHot?: boolean;
 import React, { useState, useEffect               } from 'react';
   'react.ts';
@@ -248,7 +263,10 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, Ma
   ' }'        ];
   '';
     ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }
@@ -405,6 +423,7 @@ const sidebar_items: SidebarItem[] = [;
               {expanded_sections.has (section.title) ? (<ChevronDown className="w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition-colors duration-200" />) : (<ChevronRight className="w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition-colors duration-200" />)}
             </button>;
             <AnimatePresence>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               {expanded_sections.has (section.title) && (
                 <motion.div;
@@ -616,6 +635,8 @@ const supportLinks = [
     ]
   }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {expanded_sections.has (section.title) && (<motion.div;
     ];
   }
@@ -635,7 +656,10 @@ const supportLinks = [;
   '          { name: 'Contact Support, href:, /contact-support;
   ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:, /training'}, '          { name: 'Community Forum, href:, /community' },'          { name: 'Knowledge Base, href: ';
   '/knowledge-base' }'        ]'      }]  }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];
   }{name: 'AI & Consciousness',href: '/ai-services',icon: <Brain className="w-5 h-5" />,description: 'Revolutionary AI consciousness and emotional intelligence',badge: 'New',isNew: true,children: [;
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025', description: 'Emotional intelligence and self-awareness' },{ name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network', description: 'Hybrid AI-Quantum computing platform' },{ name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed AI research' },{ name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', description: 'EQ training platform' },{ name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform', description: 'Equipment failure prediction' },{ name: 'AI Content Personalization', href: '/ai-content-personalization-engine', description: 'Personalized content delivery' },{ name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager', description: 'Self-managing AI systems' },{ name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework', description: 'Ethical AI frameworks' },{ name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },{ name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized AI learning' },{ name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics', description: 'Medical AI solutions' },{ name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' },{ name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental AI solutions' },{ name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' }
@@ -969,6 +993,7 @@ const supportLinks = [;
                         <span className="text-gray-300 group-hover:text-white transition-colors duration-200">;
                           {item.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </span>
                       </div>
                       <ChevronRight
@@ -1004,6 +1029,8 @@ document.body.style.overflow =
     <>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         </span>;
                       </div>;
                       <ChevronRight;
@@ -1011,11 +1038,14 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                         }`}/>;
                     </button>;<AnimatePresence>;
                       {expandedCategory === item && item.name && (<motion&& motion.div;
+<<<<<<< HEAD
 =======
                     <AnimatePresence>;
                       {expandedCategory === item && item.name && (;
                         <motion&& motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
@@ -1486,6 +1516,7 @@ className="{"fixed" left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - 
         </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Sidebar */}
       <motion.div
 initial={{ x:, -100%
@@ -1495,6 +1526,8 @@ initial={{ x:, -100%
   { type: 'spring, damping: 25, , stiffness: 200}}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`'
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Sidebar */}damping: 25,'  stiffness: 200 '}}
 className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto}<motion.div;
 initial={{ x:, -100%;
@@ -1502,12 +1535,15 @@ initial={{ x:, -100%;
   '-100% }}';
 , transition = {'';
   { type: 'spring, damping: 25, , stiffness: 200}}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       {/* Sidebar */}
     damping: 25,'  stiffness: 200 '}}
 className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Header */}
         <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6>          <div className="flex items-center justify-between mb-6">"            <div className="flex items-center gap-3>              <div className="relative">"                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center>                  <Zap className="w-6 h-6 text-white" />"                </div>"                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20></div>              </div>"              <div>;
                 <h2 className="text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent>                  Zion Tech Group"                </h2>;
@@ -1860,6 +1896,7 @@ Contact Us";
       </motion && motion.div>;
     </>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ";
 <<<<<<< HEAD
 const contactInfo = null;
@@ -1871,3 +1908,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const contactInfo = null;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+";const contactInfo  = null;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

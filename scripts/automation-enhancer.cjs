@@ -90,6 +90,7 @@ const path = require("path")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     const reportPath = path.join(this.projectRoot, ")
 
@@ -97,3 +98,6 @@ const path = require("path")
 =======
     const reportPath = path.join(this.projectRoot, ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    const reportPath = path.join(this.projectRoot, ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

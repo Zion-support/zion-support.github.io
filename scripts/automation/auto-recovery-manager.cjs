@@ -241,6 +241,7 @@ this.log( Unreadable file "recovered")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
 
@@ -249,3 +250,7 @@ this.log( Unreadable file "recovered")
 
       "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

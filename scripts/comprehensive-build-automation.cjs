@@ -97,6 +97,7 @@ const { execSync, spawn } = require("child_process")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       console.error("\n Build automation "failed": ")
 
@@ -104,3 +105,6 @@ const { execSync, spawn } = require("child_process")
 =======
       console.error("\n Build automation "failed": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      console.error("\n Build automation "failed": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

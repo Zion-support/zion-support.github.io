@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -8,6 +9,10 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs');
 const path = require('path');
 function improveSEO() {}
@@ -80,6 +85,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 
@@ -87,6 +93,9 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;";
 =======
       
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       console.log('SEO improvements completed')} catch (error) {}
       console.error('SEO improvement "failed": ', error.message)};
   };
@@ -94,6 +103,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 improveSEO();
       
@@ -103,3 +113,7 @@ improveSEO();
 improveSEO();
       
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+improveSEO();
+      
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

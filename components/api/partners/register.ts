@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -13,6 +14,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { partner, apiKey } = await createPartner({
       name;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       })} catch (e) {return res && res.status(500).json({ error: "Failed to create partner" })}
 }
@@ -22,7 +25,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status (500).json ({ error: "Failed to create partner" })}export default async function handler() {if (req.method !== "POST") {res.setHeader("Allow", "POST")return res.status(405).json({ error: "Method Not Allowed" })}
   const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {}if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {return res.status(400).json({ error: "Missing required fields" })}
   try {const { partner, apiKey } = await createPartner({name;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       entityType;
       pointOfContact;
       useCaseType;
@@ -31,6 +37,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         status: partner.status;
         entityType: partner.entityType;
         useCaseType: partner.useCaseType;
+<<<<<<< HEAD
 <<<<<<< HEAD
         createdAt: partner.createdAt},
       apiKey: apiKey.key;
@@ -80,3 +87,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status (500).json ({ error: "Failed to create partner" });
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        createdAt: partner.createdAt},apiKey: apiKey.key;
+      dashboardUrl: `/partners/dashboard?pid=${partner.id}`})} catch (e) {return res.status(500).json({ error: "Failed to create partner" })}
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

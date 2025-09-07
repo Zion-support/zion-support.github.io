@@ -6,6 +6,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -13,6 +14,9 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -32,6 +36,7 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             execSync('npm run "lint")
 
@@ -39,3 +44,6 @@ const { execSync } = require('child_process')
 =======
             execSync('npm run "lint")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            execSync('npm run "lint")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

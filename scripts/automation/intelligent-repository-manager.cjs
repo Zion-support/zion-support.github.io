@@ -75,6 +75,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error('Failed to start Intelligent Repository "Manager")
 
@@ -82,3 +83,6 @@
 =======
     console.error('Failed to start Intelligent Repository "Manager")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.error('Failed to start Intelligent Repository "Manager")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

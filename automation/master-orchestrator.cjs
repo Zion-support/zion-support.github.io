@@ -2,11 +2,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Master Automation Orchestrator (clean version)
 const fs = require('fs');
 const path = require('path');
@@ -22,6 +25,7 @@ class MasterOrchestrator {
     try {
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 #!/usr/bin/env node
@@ -41,6 +45,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       fs.mkdirSync(this.logsDir, { "recursive": true });
     } catch {}
   }
@@ -67,12 +73,16 @@ main
 
   async runAllChecks() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     this.log('Starting comprehensive system check...');
 
     const tasks = [['health', 'node automation/health-check.cjs'],
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.log('Starting comprehensive system check.');
     
     const tasks = [
@@ -124,21 +134,28 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+<<<<<<< HEAD
 
     
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const summary = {
       timestamp: new Date().toISOString(),
       durationMs,
       total,
       passed,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "failed": total - passed,
       "status": passed === total
           ? 'HEALTHY'
@@ -354,6 +371,7 @@ main
 =======
 
 
+<<<<<<< HEAD
     this.log(
 main
 
@@ -362,6 +380,8 @@ main
 
     this.log(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
     return passed === total;
@@ -429,6 +449,7 @@ module.exports = MasterOrchestrator;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
@@ -441,6 +462,8 @@ module.exports = MasterOrchestrator;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -610,11 +633,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+<<<<<<< HEAD
 
     };
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    };
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "failed": total - passed,
       "status": passed === total
           ? 'HEALTHY'
@@ -622,6 +650,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             ? 'WARNING'
             : 'CRITICAL'};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -632,6 +661,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     try {
       fs.writeFileSync(
         path.join(this.logsDir, 'master-orchestrator-report.json'),
@@ -639,6 +670,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       );
     } catch {}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
@@ -655,6 +687,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
+    );
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return passed === total;
   }
 }
@@ -680,6 +717,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       console.log('Usage: node automation/master-orchestrator.cjs check');
 =======
 
+<<<<<<< HEAD
     "default": 
     default:
       console.log('Usage: node automation/master-orchestrator.cjs check');
@@ -712,6 +750,11 @@ origin/main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    default:
+      console.log('Usage: node automation/master-orchestrator.cjs check');
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       process.exit(1);
     }
   }
@@ -749,11 +792,14 @@ main
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
+<<<<<<< HEAD
 module.exports = MasterOrchestrator;
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -908,13 +954,18 @@ class MasterAutomationOrchestrator {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
 
+<<<<<<< HEAD
 module.exports = MasterOrchestrator;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -985,3 +1036,5 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

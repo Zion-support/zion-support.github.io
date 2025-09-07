@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs").promises;"const path = require("path");"const { exec } = require("child_process");"const util = require("util");const execAsync = util.promisify(exec);class SimpleMergeResolver { constructor() {" this.projectRoot = path.join(__dirname, "."); this.fixedFiles = []; this.errors = []}" async log(message, level = "INFO") { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async findConflictedFiles() { try {" const { stdout } = await execAsync("git diff --name-only --diff-filter=U", { cwd: this.projectRoot });" return stdout.trim().split("\n").filter(file => file)} catch (error) {""` await this.log(`Error finding conflicted files: ${error.message}`, "ERROR"); return []} } async resolveFileConflicts(filePath) { try {" const content = await fs.readFile(filePath, "utf8"); / Simple conflict resolution - take the first version (HEAD) let resolvedContent = content; / Remove merge conflict markers and keep HEAD version""`"`
 #!/usr/bin/env node
@@ -17,11 +18,17 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 // Fix the specific syntax errors we identified
 const files = [
@@ -34,6 +41,7 @@ const files = [
   'pages/index.tsx'
 ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,6 +59,13 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 files.forEach(file => {
   try {
     if (fs.existsSync(file)) {
@@ -132,9 +147,12 @@ files.forEach(file => {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 });
 
@@ -144,13 +162,17 @@ files.forEach(file => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 });
 }
 });
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   async resolveFileConflicts(filePath) {
     try {
@@ -211,6 +233,8 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 console.log('✅ Syntax fixes completed!');
 console.log('🎉 Ready for merge process!');
 #!/usr/bin/env node;
@@ -225,12 +249,20 @@ const util = require('util')
       await this.log(`Error finding conflicted "files"`)
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+
+
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+
+
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
+<<<<<<< HEAD
 
 
 
@@ -260,3 +292,5 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -201,6 +201,7 @@ const glob = require("glob")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   this.log("Remaining "errors": ")
 
@@ -208,3 +209,6 @@ const glob = require("glob")
 =======
   this.log("Remaining "errors": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  this.log("Remaining "errors": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

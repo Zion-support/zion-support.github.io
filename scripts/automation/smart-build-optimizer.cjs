@@ -209,6 +209,7 @@ const packagePath = path.join(this.projectRoot, "package.json")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error("Smart Build Optimization "failed")
 
@@ -216,3 +217,6 @@ const packagePath = path.join(this.projectRoot, "package.json")
 =======
   console.error("Smart Build Optimization "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error("Smart Build Optimization "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

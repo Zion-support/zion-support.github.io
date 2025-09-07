@@ -1,23 +1,30 @@
 export const metadata = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'Service Name | Zion Tech Group',
   description: 'Service description for the Zion Tech Group service page.',
   keywords: 'service keywords, relevant terms',
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: 'Devops Automation | Zion Tech Group',
 <<<<<<< HEAD
   description: 'Professional devops automation services for your business needs.',
   keywords: 'devops-automation, services, business, technology'
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
   description:
     'Professional devops automation services for your business needs.',
   keywords: 'devops-automation, services, business, technology',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 };
 
 export default function ServicePage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="animate-fade-in">
@@ -78,6 +85,8 @@ export default function ServicePage() {
         </div>
       </section>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -125,7 +134,10 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>
   );
 }

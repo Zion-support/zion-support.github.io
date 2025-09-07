@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React from 'react',
 import SEO from '../components/SEO';
@@ -10,6 +11,10 @@ import SEO from '../components/SEO';
 ;
 import React from 'react',import SEO from '../components/SEO';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+;
+import React from 'react',import SEO from '../components/SEO';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Link from 'next/link';
 export default function RAGEvaluationLabPage() {return (<>;
 			<SEO title;
@@ -19,6 +24,7 @@ export default function RAGEvaluationLabPage() {return (<>;
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>;
 							</div>;
 						))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 					</div>
 <<<<<<< HEAD
@@ -36,6 +42,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 title: 'Grounding & Faithfulness'
                 desc: 'Measure factual consistency, citation quality, and hallucination rate.'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 					</div>;
   return (<>;
       <SEO;
@@ -43,7 +51,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.';
               {title: 'Grounding & Faithfulness';
                 desc: 'Measure factual consistency, citation quality, and hallucination rate.';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               }
               {<div;
                 key={f && f.title}
@@ -51,6 +62,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h3 className='text-lg font-semibold text-white'>{f && f.title}</h3>;
                 <p className='mt-2 text-sm text-gray-300'>{f && f.desc}</p>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             ))}
@@ -92,6 +104,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <p className='mt-4 text-sm text-gray-400'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}/mo;
                   </span>;
                 </p>;
@@ -150,6 +164,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   </>)}</div>;
           <div className='mt-12'>;
             <h2 className='text-2xl font-semibold'>Pricing</h2>;
@@ -269,9 +286,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   </>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

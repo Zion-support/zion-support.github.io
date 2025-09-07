@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export default function AutomationsPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -67,6 +68,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import React from 'react';
 import Link from 'next/link';
@@ -107,6 +110,7 @@ export default function AutomationsPage() {return (<a;
         </div>;
       </div>;
     </main>;
+<<<<<<< HEAD
   )}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -114,3 +118,6 @@ export default function AutomationsPage() {return (<a;
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

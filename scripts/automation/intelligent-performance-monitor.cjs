@@ -254,6 +254,7 @@ this.logError("Performance measurement failed")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     this.logError("Unhandled rejection")
 
@@ -261,3 +262,6 @@ this.logError("Performance measurement failed")
 =======
     this.logError("Unhandled rejection")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    this.logError("Unhandled rejection")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

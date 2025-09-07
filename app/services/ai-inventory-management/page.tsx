@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata = { title: 'AI Inventory Management | Zion Tech Group' };
 
 export default function AIInventoryManagementPage() {
@@ -94,6 +95,9 @@ export default function AIInventoryManagementPage() {
             <p className="text-gray-600">
               Live inventory visibility across all locations
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const metadata = {
   title: 'Ai Inventory Management | Zion Tech Group',
   description:
@@ -141,6 +145,7 @@ export default function ServicePage() {
             <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
             <p className="text-gray-300">
               Round-the-clock support to ensure your ai inventory management solutions run smoothly.
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 
@@ -150,20 +155,26 @@ export default function ServicePage() {
               Round-the-clock support to ensure your ai inventory management
               solutions run smoothly.
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </p>
           </div>
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <PricingSection />
 
       <ContactSection />
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>
   );
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 function FeatureCard({
   title,
   features,
@@ -329,3 +340,5 @@ function ContactSection() {
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

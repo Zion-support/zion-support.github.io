@@ -45,6 +45,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.setHeader('Content-Disposition', 'attachment; filename="audit-log && log.json"');
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2));export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { readJsonFile } from '../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../utils/api/auth';
@@ -56,6 +57,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (!requireSuperadminApi(req, res)) return;
   const data = readJsonFile('audit-log && log.json', [] as unknown[]);
   res && res.setHeader('Content-Typeapplication/json');
@@ -65,6 +68,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -97,10 +101,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -115,6 +122,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const data = readJsonFile('audit-log.json', [] as unknown[]);
   res.setHeader('Content-Typeapplication/json');
   res.setHeader('Content-Dispositionattachment, filename="audit-log.json"');
@@ -161,6 +170,7 @@ function handler() {
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+<<<<<<< HEAD
 =======
 
 
@@ -169,6 +179,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -185,6 +197,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -222,3 +235,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

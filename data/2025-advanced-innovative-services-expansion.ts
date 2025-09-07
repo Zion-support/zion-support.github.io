@@ -10,6 +10,7 @@
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -34,6 +35,11 @@ export interface AdvancedInnovativeService  {id: string;
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedInnovativeService {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface AdvancedInnovativeService  {id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -808,6 +814,7 @@ export interface AdvancedInnovativeService  {id: string,name: string,tagline: st
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -841,11 +848,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -880,6 +890,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -896,6 +908,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -903,6 +916,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'ai-autonomous-devops-orchestrator'
     name: 'AI Autonomous DevOps Orchestrator'
 =======
@@ -1428,6 +1443,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Custom model development'
     ]
     marketAdvantage:
+<<<<<<< HEAD
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },
 ];
@@ -1438,6 +1454,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       'Most advanced AI climate prediction platform with research-grade accuracy'
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      'Most advanced AI climate prediction platform with research-grade accuracy'
+  }
+];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
+    ];
+    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
+  }
+];
+
+      'Most advanced AI climate prediction platform with research-grade accuracy'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   },;
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
     ];
@@ -1956,6 +1983,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2032,6 +2060,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    ];
+    market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       'Most advanced AI climate prediction platform with research-grade accuracy'
   },;
@@ -2039,6 +2072,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2061,6 +2095,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface AdvancedInnovativeService {;
   id: string,;
   name: string,;
@@ -2573,6 +2609,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2700,6 +2737,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     benefits: [;
       '30% improvement in prediction accuracy',
       '50% reduction in modeling time',
@@ -2721,6 +2762,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ];
 ;
@@ -2755,6 +2797,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
   }
 ];
@@ -2762,6 +2806,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -2773,3 +2818,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

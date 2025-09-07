@@ -2,19 +2,26 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Brain;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import {import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
   Brain,MessageSquare,Image,Video,FileText,BarChart3,Users,Zap,ArrowRight,Star,Check,ExternalLink,TrendingUp,Brain;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   MessageSquare;
   Image;
   Video;
   FileText;
   BarChart3;
   Users;
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -55,6 +62,8 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Zap;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Brain;
   MessageSquare,Image,Video,FileText,BarChart3,Users,import { Brain;
   MessageSquare;
@@ -63,12 +72,16 @@ import {
   FileText;
   BarChart3;
   Users;Zap;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ArrowRight;
   Star;
   Check;
   ExternalLink;
   TrendingUp;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Shield;
@@ -534,6 +547,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='Discover the best AI-powered business tools for automation, content creation, and productivity. Expert-curated selection of AI SaaS services.'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Shield;bestFor: 'Content creators, developers, researchers';
     }Globe;
  } from 'lucide-react';
@@ -638,12 +653,16 @@ function AIBusinessToolsPage() {const ai_tools = [;
 <meta;
           name='description';
           content='Discover the best AI-powered business tools for automation, content creation, and productivity. Expert-curated selection of AI SaaS services.';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <meta;
           property='og:title';
           content='AI Business Tools - Zion Tech Group';
         />;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta
           property='og:description'
@@ -738,6 +757,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <button
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <meta;
           property='og:description';
           content='Expert-curated selection of AI-powered business tools and SaaS services.';
@@ -803,13 +824,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 130M+;
               </div>;
               <div className='text-gray-400 text-sm'>Total Users</div>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </div>;
           </div>;
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </div>;
           </div>;
         </div>;
@@ -818,9 +845,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex flex-wrap justify-center gap-4'>;
             {categories.map(category => (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category;
@@ -920,6 +950,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Button;
                         href={tool.website}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         variant='outline'
                         size='sm'
 <<<<<<< HEAD
@@ -934,6 +965,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                         <div className='text-sm text-gray-300 max-w-xs'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         variant='outline';
                         size='sm';
                         className='group-hover:border-green-500 group-hover:text-green-400';
@@ -946,7 +979,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           Use Case:;
                         </div>;
                         <div className='text-sm text-gray-300 max-w-xs'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {tool.useCase}
                         </div>;
                       </div>;
@@ -955,6 +991,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </div>
@@ -1089,6 +1126,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         </div>;
       </section>;
@@ -1176,8 +1215,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         className='group-hover:border-green-500 group-hover:text-green-400'>;
                         Visit Website;
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -1315,6 +1357,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </>)}{/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
@@ -1347,6 +1392,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1356,3 +1402,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

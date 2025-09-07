@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -12,6 +13,11 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process')
 console.log('⚡ Starting Advanced Build Optimization...')
   log(message, type = 'info')
@@ -104,6 +110,7 @@ console.log('⚡ Starting Advanced Build Optimization...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     this.log(' Build Optimization "Summary")
 
@@ -111,3 +118,6 @@ console.log('⚡ Starting Advanced Build Optimization...')
 =======
     this.log(' Build Optimization "Summary")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    this.log(' Build Optimization "Summary")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

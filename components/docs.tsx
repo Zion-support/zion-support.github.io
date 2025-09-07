@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 =======
 
@@ -120,6 +121,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       selectedCategory === 'all' || doc.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
@@ -169,6 +172,7 @@ export default function DocsPage() {const contact = {mobile: '+1 302 464 0950',e
     return matchesSearch && matchesCategory;selectedCategory === 'all' || doc.category === selectedCategory;
     return matchesSearch && matchesCategory;
   })const getDifficultyColor = (difficulty: string) => {switch (difficulty) {case 'Beginner':;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       selectedCategory === 'all' |doc.category === selectedCategory;
@@ -270,10 +274,13 @@ export default function DocsPage() {;
     const matchesCategory = selectedCategory === 'all' || doc && doc.category === selectedCategory;
     return matchesSearch && matchesCategory;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return 'bg-green-500/20 text-green-400';
       case 'Intermediate':;
         return 'bg-yellow-500/20 text-yellow-400';
       case 'Advanced':;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         return 'bg-red-500/20 text-red-400';
@@ -347,6 +354,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Card
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return 'bg-red-500/20 text-red-400';default:;
         return 'bg-gray-500/20 text-gray-400';    }      case 'Beginner': return 'bg-green-500/20 text-green-400';
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
@@ -376,13 +385,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
             {sections.map(s => (<Card;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={s && s.title}
                 className='p-6 bg-black/40 border border-gray-700/50'>;
                 <h2 className='text-xl font-semibold mb-4 text-white'>;
                   {s && s.title}
                 </h2>;
                 <ul className='space-y-2'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {s && s.links.map(l => (;
                     <li key={l && l.name}>;
@@ -392,10 +405,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {s && s.links.map(l => (<li key={l && l.name}>;
                       <a;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  {s && s.links.map(l => (<li key={l && l.name}>;
+                      <a;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         href={l.href}
                         className='text-cyan-400 hover:underline';
                       >;
                         {l.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       </a>
                     </li>
@@ -431,6 +449,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className='text-cyan-400 hover:underline'
                   >
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </a>;
                     </li>;
                   ))}
@@ -447,14 +467,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href={e && e.url}
                     target='_blank';
                     rel='noopener noreferrer';
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className='text-cyan-400 hover:underline'>;
                     {e && e.name}
                   </a>;
                 </li>              ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <Card className="p-6 bg-black/40 border border-gray-700/50">;
             <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>;
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">;
@@ -495,7 +521,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex flex-col sm:flex-row gap-3'>;
               <Button;
                 href='/contact';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='bg-gradient-to-r from-cyan-600 to-blue-600 text-white'>;
                 Contact Support;
               </Button>;
@@ -590,6 +619,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <a className='text - purple - 400' href={`mailto:${contact.email}`}>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {contact.email}
               </a>
             </div>
@@ -606,6 +636,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {contact.email}
               </a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                {contact.email}</a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <h2 className="text - xl font - semibold mb - 4 text - white">Need help?</h2>;
             <div className="flex flex - col sm:flex - row gap - 3">;
               <Button href="/contact" className="bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white">Contact Support</Button>;
@@ -616,6 +649,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </UltraAdvancedFuturisticBackground>)}}))}
             </ul>;
           </Card>;
@@ -625,6 +661,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -639,3 +676,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ul>
           </Card>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

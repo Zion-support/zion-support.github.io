@@ -2,6 +2,7 @@
 import TryItConsole from './TryItConsole';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { EndpointSpec } from '../../data/api-docs/types';
 export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
   return (
@@ -28,6 +29,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div>
         <div className='text-xl font-semibold text-high-contrast'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   endpoint,}: {import { EndpointSpec  } from '../../data/api-docs/types';
 export default function EndpointDetail() {return (<div className="space-y-4">;
 export default function EndpointDetail() {return (<div className='space-y-4'>;
@@ -303,6 +306,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </ul>;
         </div>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -313,3 +317,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

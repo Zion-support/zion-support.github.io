@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Brain, Star  } from 'lucide-react';
@@ -53,6 +54,8 @@ export default function QuantumAIBCIPage() {
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
               <Brain className='w-10 h-10' />
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Phone,Mail,MapPin,Check,ArrowRight,Brain,Star,import React from 'react',import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Brain, Star   } from 'lucide-react';
@@ -209,10 +212,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </UltraAdvancedFuturisticBackground>;
   )}return (<UltraAdvancedFuturisticBackground>;
+<<<<<<< HEAD
 =======
   return (
     <UltraAdvancedFuturisticBackground>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <Head>;
         <title>{service.name} - Zion Tech Group</title>;
         <meta name='description' content={service.description} />;
@@ -295,6 +301,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>)}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -307,3 +314,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </UltraAdvancedFuturisticBackground>)}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

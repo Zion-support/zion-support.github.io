@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export const metadata = {
@@ -185,6 +186,9 @@ function BenefitCard({ title, description }: { title: string; description: strin
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600">{description}</p>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const metadata = {
   title: 'Invoice Automation | Zion Tech Group',
   description:
@@ -235,7 +239,11 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>
   );
 }
+

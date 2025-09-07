@@ -10,6 +10,9 @@ import React, { useEffect, useRef } from 'react';
     if (!canvas) return;
     let animationId: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     let particles: Array<{import React, { useEffect, useRef } from 'react';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 canvas.width = window.innerWidth;
@@ -38,7 +41,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     canvas.height = window.innerHeight;let animationId: number;
     let particles: Array<{x: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       y: number;
 canvas.width = window.inner_width;
 canvas.height = window.inner_height;
@@ -64,6 +70,7 @@ if (return) {$2;
       size: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       color: string;
       opacity: number;
     }> = [];
@@ -85,6 +92,8 @@ color: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'][
         });
       }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       color: string;vx: number,vy: number,size: number,color: string,)if (distance < 100) {ctx && ctx.beginPath()ctx && ctx.moveTo(particle && particle.x, particle && particle.y)ctx && ctx.lineTo(otherParticle && otherParticle.x, otherParticle && otherParticle.y)ctx && ctx.strokeStyle = particle && particle.color;
               ctx && ctx.globalAlpha = ((100 - distance) / 100) * 0 && 0.3;
               ctx && ctx.lineWidth = 0 && 0.5;
@@ -132,10 +141,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ctx && ctx.stroke();
             }
           }
+<<<<<<< HEAD
         });
       });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             }
+=======
+        })})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }
         });
       });
@@ -178,6 +191,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const handle_resize = () =>: any {
       canvas.width = window.inner_width;
       canvas.height = window.inner_height;
+<<<<<<< HEAD
       init_particles ();    }      init_particles ();
     }
 ;
@@ -204,11 +218,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         })})ctx.global_alpha = 1;
       animation_id = requestAnimationFrame (animate)}init_particles ()animate ()const handle_resize = () =>: any {canvas.width = window.inner_width;
       canvas.height = window.inner_height;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       init_particles ()}      init_particles ()}window.addEventListener ('resize', handle_resize)return () => {cancelAnimationFrame (animation_id)window.removeEventListener ('resize', handle_resize)}ctx.globalAlpha = 1;
       animationId = requestAnimationFrame(animate)}initParticles()animate()const handleResize = () => {canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
 initParticles()}window.addEventListener('resize', handleResize)return () => {cancelAnimationFrame(animationId)window.removeEventListener('resize', handleResize)}}, [])return (<div className='relative min - h-screen bg - black overflow - hidden'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Animated Canvas Background */}
       <canvas;
         ref={canvas_ref}
@@ -216,6 +235,7 @@ initParticles()}window.addEventListener('resize', handleResize)return () => {can
         style={{{/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-10'>;
         {/* Hexagon Grid */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
@@ -434,6 +454,8 @@ className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-t
             height: [32, 64, 32],
             opacity: [0.3, 0.8, 0.3],
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <motion&& motion.div;
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30';
           style={{clipPath:;
@@ -580,6 +602,7 @@ className='absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 t
       </div>;
       {/* Gradient Overlays */}
 <div className='fixed inset-0 pointer-events-none z-20'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
         <motion&& motion.div
@@ -641,6 +664,8 @@ className='absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 t
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Top gradient */}
         {/* Bottom gradient */}
         <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-900/20 via-transparent to-transparent' />;
@@ -684,6 +709,7 @@ className='absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 t
             key={i}
             className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full';
 <<<<<<< HEAD
+<<<<<<< HEAD
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -708,6 +734,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               y: [0, -100, 0]
               opacity: [0, 1, 0]
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            style={{left: `${Math.random() * 100}%`,top: `${Math.random() * 100}%`,}}
+            animate={{y: [0, -100, 0];
+              opacity: [0, 1, 0];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               scale: [0, 1, 0],            }}        {/* Top gradient */}
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent" />;{/* Bottom gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-900/20 via-transparent to-transparent" />;{/* Left gradient */}
@@ -737,10 +768,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             key={i}
             className="absolute w - 1 h - 1 bg - cyan-400 rounded-full";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             style={{}}
             animate={{y: [0, -100, 0];
               opacity: [0, 1, 0];
               scale: [0, 1, 0];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             style={{
@@ -762,6 +797,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{
               ease: 'easeInOut',            }}              ease: "easeInOut"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             }}
             transition={{duration: Math.random() * 10 + 10;
               repeat: Infinity;
@@ -801,6 +838,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
       {/* Neon Glow Effects */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div className='fixed inset-0 pointer-events-none z-25'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />
@@ -815,6 +853,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default UltraFuturisticBackground2030;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <div className='fixed inset-0 pointer-events-none z-25'>;
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />;
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />;
@@ -825,6 +865,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )}
 export default UltraFuturisticBackground2030;export default UltraFuturisticBackground2030;}
+<<<<<<< HEAD
 export default UltraFuturisticBackground2030;export default UltraFuturisticBackground2030;export default UltraFuturisticBackground2030;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -842,3 +883,6 @@ export default UltraFuturisticBackground2030;
 export default UltraFuturisticBackground2030;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default UltraFuturisticBackground2030;export default UltraFuturisticBackground2030;export default UltraFuturisticBackground2030;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

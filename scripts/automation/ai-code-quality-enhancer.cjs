@@ -111,6 +111,7 @@ class $1 {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -118,6 +119,9 @@ class $1 {}
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
   async analyzeCodeQuality() {}
@@ -731,6 +735,7 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = AICodeQualityEnhancer;
 
@@ -738,3 +743,6 @@ module.exports = AICodeQualityEnhancer;
 =======
 module.exports = AICodeQualityEnhancer;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = AICodeQualityEnhancer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

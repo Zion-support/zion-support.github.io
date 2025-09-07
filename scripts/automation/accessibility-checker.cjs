@@ -497,6 +497,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = AccessibilityChecker;
 
@@ -504,3 +505,6 @@ module.exports = AccessibilityChecker;
 =======
 module.exports = AccessibilityChecker;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = AccessibilityChecker;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

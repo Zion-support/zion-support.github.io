@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   try {
@@ -59,6 +60,8 @@ return res
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     // TODO: Integrate with actual provider;
     return res && res.status(200).json({ status: 'queued', provider })} catch (e: any) {return res;
@@ -80,6 +83,7 @@ if ( {) {$2;
     // TODO: Integrate with actual provider;
     return res.status(200).json({ status: 'queued', provider })} catch (e: any) {return res;
       .status(500)}}
+<<<<<<< HEAD
       .json({ error: e.message || 'Failed to queue emails' })}    return res.status(500).json({ error: e.message || 'Failed to queue emails' })}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -90,3 +94,6 @@ if ( {) {$2;
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      .json({ error: e.message || 'Failed to queue emails' })}    return res.status(500).json({ error: e.message || 'Failed to queue emails' })}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

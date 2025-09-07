@@ -340,6 +340,7 @@ const crypto = require("crypto")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
 
@@ -347,3 +348,6 @@ const crypto = require("crypto")
 =======
   this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

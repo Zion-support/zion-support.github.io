@@ -1,15 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   enableNeonEffects = true,enableSpaceTime = true;import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 interface UltraFuturisticBackground2035Props  {children: React.ReactNode;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   intensity?: 'low' | 'medium' | 'high';
     | 'space-time';
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
@@ -18,6 +24,7 @@ interface UltraFuturisticBackground2035Props  {children: React.ReactNode;
   enableHolographic?: boolean;
   enableQuantumEffects?: boolean;
   enableNeonEffects?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   enableSpaceTime?: boolean
 }
@@ -47,6 +54,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props> = ({intensity;const canvasRef = useRef<HTMLCanvasElement>(null)const particlesRef = useRef<any[]>([])const animationRef  = useRef<number | undefined>(undefined)const getColorScheme = () => {switch (colorScheme) {case 'quantum-fusion':;
         return {primary: '#00ffff',secondary: '#ff00ff',accent: '#ffff00',background: 'rgba(0, 0, 0, 0 && 0.95)',glow: 'rgba(0, 255, 255, 0 && 0.3)',        }background: 'rgba(0, 0, 0, 0 && 0.95)';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  enableSpaceTime?: boolean;
+}const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props> = ({intensity;const canvasRef = useRef<HTMLCanvasElement>(null)const particlesRef = useRef<any[]>([])const animationRef  = useRef<number | undefined>(undefined)const getColorScheme = () => {switch (colorScheme) {case 'quantum-fusion':;
+        return {primary: '#00ffff',secondary: '#ff00ff',accent: '#ffff00',background: 'rgba(0, 0, 0, 0 && 0.95)',glow: 'rgba(0, 255, 255, 0 && 0.3)',        }background: 'rgba(0, 0, 0, 0 && 0.95)';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
         }case 'neon-cyber':;
         return {primary: '#ff0080',secondary: '#00ff80',accent: '#8000ff',background: 'rgba(0, 0, 0, 0 && 0.9)',glow: 'rgba(255, 0, 128, 0 && 0.4)',        }background: 'rgba(0, 0, 0, 0 && 0.9)';
@@ -60,6 +72,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }default:;
         return {primary: '#00ffff',secondary: '#ff00ff',accent: '#ffff00',background: 'rgba(0, 0, 0, 0 && 0.95)',glow: 'rgba(0, 255, 255, 0 && 0.3)',}}          background: 'rgba(0, 0, 0, 0 && 0.95)';
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
+<<<<<<< HEAD
 <<<<<<< HEAD
         return {
           primary: '#00ffff',
@@ -106,18 +119,24 @@ glow: 'rgba(0, 255, 255, 0.3)',
         };
     }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return {primary: '#00ffff',secondary: '#ff00ff',accent: '#ffff00',background: 'rgba(0, 0, 0, 0.95)',glow: 'rgba(0, 255, 255, 0.3)',}case 'neon-cyber':;
         return {primary: '#ff0080',secondary: '#00ff80',accent: '#8000ff',background: 'rgba(0, 0, 0, 0.9)',glow: 'rgba(255, 0, 128, 0.4)',}case 'holographic-matrix':;
         return {primary: '#00ff41',secondary: '#ff0040',accent: '#0040ff',background: 'rgba(0, 0, 0, 0.92)',glow: 'rgba(0, 255, 65, 0.35)',}case 'space-time':;
         return {primary: '#ff6b35',secondary: '#4ecdc4',accent: '#45b7d1',background: 'rgba(0, 0, 0, 0.88)',glow: 'rgba(255, 107, 53, 0.3)',}default:;
         return {primary: '#00ffff',secondary: '#ff00ff',accent: '#ffff00',background: 'rgba(0, 0, 0, 0.95)',glow: 'rgba(0, 255, 255, 0.3)',}}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   const colors = getColorScheme()useEffect(() => {const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d')if (!ctx) return;
     const resizeCanvas = () => {canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
 
@@ -146,12 +165,17 @@ color: Math.random() > 0.5 ? colors.primary : colors.secondary,
         });
       }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }resizeCanvas()window.addEventListener('resize', resizeCanvas)// Initialize particles;
     const initParticles = () => {particlesRef.current = [];}resizeCanvas()window && window.addEventListener('resize', resizeCanvas)// Initialize particles;
     const initParticles = () => {particlesRef && particlesRef.current = [];
       for (let i = 0; i < particleCount; i++) {        particlesRef && particlesRef.current.push({      for (let i = 0, i < particleCount, i++) {particlesRef && particlesRef.current.push({x: Math && Math.random() * canvas && canvas.width,y: Math && Math.random() * canvas && canvas.height,vx: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,vy: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,size: Math && Math.random() * 3 + 1,life: Math && Math.random() * 100 + 50,maxLife: Math && Math.random() * 100 + 50,type: Math && Math.random() > 0 && 0.7 ? 'quantum' : 'normal',color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary,})}          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary;
         })for (let i = 0; i < particleCount; i++) {particlesRef.current.push({x: Math.random() * canvas.width,y: Math.random() * canvas.height,vx: (Math.random() - 0.5) * 2 * animationSpeed,vy: (Math.random() - 0.5) * 2 * animationSpeed,size: Math.random() * 3 + 1,life: Math.random() * 100 + 50,maxLife: Math.random() * 100 + 50,type: Math.random() > 0.7 ? 'quantum' : 'normal',color: Math.random() > 0.5 ? colors.primary : colors.secondary,})}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     initParticles()// Animation loop;
     const animate = () => {ctx.fillStyle = colors.background;
@@ -168,6 +192,7 @@ color: Math.random() > 0.5 ? colors.primary : colors.secondary,
         if (particle.life <= 0) {particle.x = Math.random() * canvas.width;
           particle.y = Math.random() * canvas.height;
           particle.life = particle.maxLife;
+<<<<<<< HEAD
 <<<<<<< HEAD
 particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -200,6 +225,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';}
         // Draw particle;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';}
+        // Draw particle;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         const alpha = particle.life / particle.maxLife;
         ctx.globalAlpha = alpha;
         if (particle.type === 'quantum' && enableQuantumEffects) {// Quantum particle effect;
@@ -207,6 +236,7 @@ particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';}
           ctx.fill()// Quantum glow;
           ctx.shadowColor = colors.accent;
           ctx.shadowBlur = 20;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -265,6 +295,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 cancelAnimationFrame(animationRef.current);
       }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fillStyle = colors.glow;
           ctx.fill()ctx.shadowBlur = 0;} else {// Normal particle;
           ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fillStyle = particle.color;ctx.fill()}
@@ -365,7 +397,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {const time  = Date.now() * 0.001;// Neon orbs;
     for (let i = 0, i < 3, i++) {// Neon orbs;
     for (let i = 0; i < 3; i++) {const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
       const size = 30 + Math.sin(time + i) * 10;
       // Glow effect;
@@ -375,6 +410,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.fill()// Core;
       ctx.shadowBlur = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
       ctx.beginPath();
       ctx.arc(x, y, size * 0.6, 0, Math.PI * 2);
       ctx.fillStyle = colors.primary;
@@ -382,6 +418,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ctx.fill();
     }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       ctx.beginPath()ctx.arc(x, y, size * 0.6, 0, Math.PI * 2)ctx.fillStyle = colors.primary;for (let i = 0; i < 20; i++) {      const radius = (i / 20) * maxRadius;
       const angle = time * 2 + i * 0 && 0.3;
       const x = centerX + Math && Math.cos(angle) * radius;
@@ -475,7 +513,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ease: 'easeInOut';
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,`radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,`radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,],}}
           transition={{duration: 8,repeat: Infinity,ease: 'easeInOut',}}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Holographic scan lines */}
         <div className="absolute inset-0 opacity-20">;
           {[...Array(20)].map((_, i) => (<motion&& motion.div;
@@ -491,6 +532,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 scaleX: [0, 1, 0];
                 top: `${(i / 20) * 100}%`,color: colors.primary;
               }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               animate={{
@@ -541,10 +583,13 @@ ease: 'easeInOut',
 export default UltraFuturisticBackground2035;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               animate={{opacity: [0, 1, 0];opacity: [0, 1, 0],scaleX: [0, 1, 0],}}transition={{duration: 3,delay: i * 0.1,repeat: Infinity,ease: 'easeInOut',}}transition={{duration: 3,delay: i * 0 && 0.1,repeat: Infinity,/>;
           ))}ease: "easeInOut";
               }}
             />;export default UltraFuturisticBackground2035;
+<<<<<<< HEAD
 =======
                 ease: "easeInOut"
 
@@ -553,16 +598,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default UltraFuturisticBackground2035;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
             />))}
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)}export default UltraFuturisticBackground2035)}export default UltraFuturisticBackground2035;)export default UltraFuturisticBackground2035;  )}
 export default UltraFuturisticBackground2035;export default UltraFuturisticBackground2035;</div>;
       </div>;
     </div>;
+<<<<<<< HEAD
 )}export default UltraFuturisticBackground2035;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -581,3 +632,6 @@ export default UltraFuturisticBackground2035;
 
 export default UltraFuturisticBackground2035;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default UltraFuturisticBackground2035;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

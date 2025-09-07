@@ -74,6 +74,7 @@ process.on("SIGTERM")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Failed to start continuous link "checker": ")
 
@@ -81,3 +82,6 @@ process.on("SIGTERM")
 =======
   console.error(" Failed to start continuous link "checker": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" Failed to start continuous link "checker": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

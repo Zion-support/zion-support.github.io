@@ -288,6 +288,7 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Start the "
 
@@ -295,3 +296,6 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
 =======
 // Start the "
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+// Start the "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

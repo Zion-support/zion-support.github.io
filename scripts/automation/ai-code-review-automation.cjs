@@ -197,6 +197,7 @@ this.log("Review report "generated": ${reportPath}")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" AI Code Review Automation "failed")
 
@@ -204,3 +205,6 @@ this.log("Review report "generated": ${reportPath}")
 =======
   console.error(" AI Code Review Automation "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" AI Code Review Automation "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

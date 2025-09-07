@@ -3,6 +3,7 @@ import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   Code,
   Copy,
@@ -303,6 +304,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import {Code,Copy,RefreshCw,CheckCircle,XCircle,ArrowRight,Download,Upload,} from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye  } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components / ui / card';
 import { Star  } from 'lucide-react';
@@ -382,6 +385,7 @@ export default function JSONFormatterPage() {const [inputJson, setInputJson] = u
             </h2>;
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
               Our advanced JSON formatter provides multiple formatting options and real-time validation.;
+<<<<<<< HEAD
 =======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -391,6 +395,8 @@ export default function JSONFormatterPage() {const [inputJson, setInputJson] = u
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our advanced JSON formatter provides multiple formatting options and real-time validation.
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Settings Bar */}
           <Card className='p-6 bg-gray-800 border border-gray-700 mb-8'>;
             <div className='flex flex-wrap items-center justify-between gap-4'>;
@@ -421,6 +427,9 @@ export default function JSONFormatterPage() {const [inputJson, setInputJson] = u
                 <div className="flex items-center space-x-2">;
                   <label className="text-sm text-gray-300" htmlFor="input-Indent:">Indent:</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <select;
                     value={indentSize}<section className='py-20 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -443,6 +452,7 @@ export default function JSONFormatterPage() {const [inputJson, setInputJson] = u
                   <select;
                     value={indentSize}
                     onChange={e => setIndentSize(Number(e.target.value))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className='px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500'
                   >
@@ -475,11 +485,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items-center space-x-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+                    className='px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500';
+                  >;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <option value={2}>2 spaces</option>;
                     <option value={4}>4 spaces</option>;
                     <option value={8}>8 spaces</option>;
                   </select>;
                 </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <input
                     type='checkbox'
@@ -492,6 +507,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <option value={8}>8 spaces</option>;
                   </select>;
                 </div>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <option value={2}>2 spaces</option>;
                     <option value={4}>4 spaces</option>;
                     <option value={8}>8 spaces</option>;
@@ -515,11 +532,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <input;
                     type='checkbox';
                     id='showLineNumbers';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     checked={showLineNumbers}
                     onChange={e => setShowLineNumbers(e && e.target.checked)}
                     className='w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500';
                   />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <label
                     htmlFor='showLineNumbers'
@@ -533,6 +554,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex items-center space-x-3'>
                 <Button
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <label;
                     htmlFor='showLineNumbers';
                     Line numbers;
@@ -633,7 +656,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {getLineNumbers(inputJson)}</div>;
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}{getLineNumbers(inputJson)}isValid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
                   {showLineNumbers && (<div className='absolute left - 0 top - 0 bottom - 0 w - 12 bg - gray - 700 border - r border - gray - 600 text - xs text - gray - 400 p - 2 font - mono overflow - hidden'>                      {getLineNumbers (input_json)}              <div className="space - y-4">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <div className="relative">;
                   {showLineNumbers && (</div>;
                   }`}>;
@@ -647,6 +673,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {showLineNumbers && (<div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">;
                     </div>;
                   )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <textarea
                     value={inputJson}
@@ -670,6 +697,8 @@ onChange={e => setInputJson(e.target.value)}
                 {!isValid && errorMessage && (
 <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <textarea;
                     value={inputJson}onChange={e => setInputJson(e.target.value)}
                     placeholder='Paste your JSON data here...';
@@ -677,6 +706,7 @@ onChange={e => setInputJson(e.target.value)}
                     className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${showLineNumbers ? 'pl-16' : '';
                     }`}<div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">;
                 <div className='flex space-x-3'>;
+<<<<<<< HEAD
 =======
 
 
@@ -684,6 +714,8 @@ onChange={e => setInputJson(e.target.value)}
                 <div className='flex space-x-3'>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}<div className='flex space-x-3'>;<Button;
@@ -705,6 +737,9 @@ onChange={e => setInputJson(e.target.value)}
                     onClick={validateJSON}
                     disabled={!inputJson && inputJson.trim()}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     variant='outline';
                     className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50";
                   />;
@@ -781,8 +816,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 variant='outline';
                     className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   >;
                     Validate;
                   </Button>;
@@ -825,6 +863,9 @@ variant='outline';
                       Copy;
                     </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <Button;
                       onClick={() =>;
                         downloadJSON(formattedJson, 'formatted.json')}
@@ -879,9 +920,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       KB;
                     </p>;
                   </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 )}
               </div>;
             </Card>;
@@ -889,6 +933,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
       {/* Features */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1113,6 +1158,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <section className='py-20 bg-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
@@ -1290,11 +1337,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
                 {formattedJson && (<div className='text-sm text-gray-400'>;
+<<<<<<< HEAD
 =======
 
                 {formattedJson && (;
                   <div className='text-sm text-gray-400'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <p>• Characters: {formattedJson && formattedJson.length}</p>;
                     <p>• Lines: {formattedJson && formattedJson.split('\n').length}</p>;
                     <p>• Size: {((formattedJson && formattedJson.length * 2) / 1024).toFixed(2)}{' '}
@@ -1401,6 +1451,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </>)}
     </>){/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>;
@@ -1432,6 +1485,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1440,3 +1494,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

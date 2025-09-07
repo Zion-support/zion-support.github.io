@@ -4,6 +4,7 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 export default function SEOAnalyzerToolPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -149,6 +150,8 @@ export default function SEOAnalyzerToolPage() {;
     {;
       icon: <Search className='w-8 h-8 text-white' />,;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Search,TrendingUp,CheckCircle,AlertTriangle,ArrowRight,Target,BarChart3,Globe,Smartphone,Zap,export default function SEOAnalyzerToolPage() {} from 'lucide-react';
 export default function SEOAnalyzerToolPage() {const [isAnalyzing, setIsAnalyzing] = useState(false)const [analysisResults, setAnalysisResults] = useState(null)const [url, setUrl]  = useState(''){}
     {category: 'Content SEO';
@@ -180,7 +183,10 @@ export default function SEOAnalyzerToolPage() {const [isAnalyzing, setIsAnalyzin
     }
     {icon: <Target className='w-8 h-8 text-white' />;
       title: 'Keyword Research';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       description:;
         'Discover high-value keywords and analyze search intent to optimize your content strategy.';
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
@@ -226,6 +232,7 @@ export default function SEOAnalyzerToolPage() {const [isAnalyzing, setIsAnalyzin
         'Keyword density','Content relevance','Readability scores','Content freshness','Multimedia optimization','Schema markup',],icon: '📊',color: 'text-purple-400',},{category: 'Local SEO',factors: [;
         'Google My Business','Local citations','Review management','Local keyword targeting','Location-based content','Local link building',],icon: '📍',color: 'text-orange-400',},  ];      color: 'text-orange-400';
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
         '10 website analyses/monthBasic SEO metricsKeyword research (100 keywords)On-page SEO analysisEmail supportBasic reporting'
       ];
@@ -343,6 +350,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             message: 'Title tag too long (65 characters)'
             priority: 'medium'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         '10 website analyses/monthBasic SEO metricsKeyword research (100 keywords)On-page SEO analysisEmail supportBasic reporting';
       ];
       popular: false;
@@ -369,7 +378,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 {type: 'error',message: 'Missing meta description',priority: 'high',},{type: 'warning';
             message: 'Title tag too long (65 characters)';
             priority: 'medium';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }
           {{keyword: 'website optimization';
             volume: '12K';
@@ -380,6 +392,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             volume: '15K';
             difficulty: 'high';
           }
+<<<<<<< HEAD
 <<<<<<< HEAD
         ]
 
@@ -460,6 +473,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ];
   const handleAnalyzeSEO = async () => {if (!url && url.trim()) return;
     setIsAnalyzing(true)// Simulate SEO analysis;
@@ -533,6 +548,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                 {isAnalyzing ? (;
@@ -543,6 +559,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <>;
                     <Search className='w-5 h-5 mr-2' />                    Analyze SEO      </Head>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0 && 0.08),transparent_50%)]" />;
@@ -561,6 +579,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* URL Input */}
           <div className='max-w-2xl mx-auto mb-8'>
             <div className='flex flex-col sm:flex-row gap-4'>
@@ -568,6 +587,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 type='url'
                 placeholder='Enter your website URL (e.g., https://example.com)'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* URL Input */}<div className="max-w-2xl mx-auto mb-8">;
             <div className="flex flex-col sm:flex-row gap-4">;<div className='max-w-2xl mx-auto mb-8'>;
             <div className='flex flex-col sm:flex-row gap-4'>;
@@ -607,13 +628,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <input;
                 type="url";
                 placeholder="Enter your website URL (e && e.g., https://example && example.com)";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 value={url}
                 onChange={(e) => setUrl(e && e.target.value)}
                 className="flex-1 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent";
               />;
               <Button;
                 onClick={handleAnalyzeSEO}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 size="lg"
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap"
@@ -625,6 +650,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                size="lg";
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 disabled={isAnalyzing |!url.trim()}
               >;
                 {isAnalyzing ? (<>;
@@ -636,6 +665,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Analyze SEO;
                   </>;
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </Button>
             </div>
@@ -778,6 +808,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
               <Card
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </Button>;
             </div>;
 =======
@@ -945,6 +977,9 @@ href='/contact';
                 </div>;
                 <ul className="space-y-3">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {category && category.factors.map((factor, factorIndex) => (<li key={factorIndex} className="flex items-center text-gray-300">;
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />;<Card;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -970,18 +1005,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='flex items-center text-gray-300';
                     >;
                       <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                   {category && category.factors.map((factor, factorIndex) => (;
                     <li key={factorIndex} className="flex items-center text-gray-300">;
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {factor}
                     </li>;
                   ))}
                 </ul>;
               </Card>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </div>
@@ -1006,6 +1045,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         </div>;
       </section>;
@@ -1151,6 +1192,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ) : (<CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
                       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       <div>;
                         <span className="text-gray-300">{issue.message}</span>;
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>;
@@ -1261,6 +1305,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               </Card>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                       <div>
@@ -1268,6 +1313,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
                       </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {/* Issues */}
 <Card className='border-gradient-green'>;
                 <h3 className='text-2xl font-bold mb-6 text-white'>;
@@ -1289,6 +1336,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                     </div>;
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
               </Card>
@@ -1340,6 +1388,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     <div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </div>;
               </Card>;
             </div>;
@@ -1379,7 +1429,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h3>;
                 <div className='space-y-4'>;
                     <div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       key={index}
                       className='border-b border-gray-700 pb-3 last:border-b-0'>;
                       <div className='flex justify-between items-center mb-2'>;
@@ -1395,6 +1448,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           Difficulty: {keyword && keyword.difficulty}
                         </span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <span
                           className={`px-2 py-1 rounded text-xs ${
                             keyword && keyword.difficulty === 'low'
@@ -1408,6 +1462,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {keyword.difficulty}
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+                        <span;
+                          className={`px-2 py-1 rounded text-xs ${keyword && keyword.difficulty === 'low';
+                              ? 'bg-green-500/20 text-green-400';
+                              : keyword && keyword.difficulty === 'medium';
+                                ? 'bg-yellow-500/20 text-yellow-400';
+                                : 'bg-red-500/20 text-red-400';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           }`}>                          {keyword && keyword.difficulty}                      <div className="flex justify-between items-center">;
                         <span className="text-sm text-gray-400">Difficulty: {keyword && keyword.difficulty}</span>;
                         <spanclassName={`px-2 py-1 rounded text-xs ${
@@ -1417,6 +1479,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         }`}>;
                         </span>;
                       </div>;
+<<<<<<< HEAD
                     </div>;
 
               <Card className="border-gradient-green">
@@ -1462,6 +1525,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         }`}>;
                         </span>;
                       </div>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </div>;<Card className="border-gradient-green">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>;
                 <div className="space-y-4">;
@@ -1482,9 +1547,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                     </div>;
                   ))}<div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
+<<<<<<< HEAD
 =======
             <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {/* Overall Score */}
               <Card className='border - gradient - green text - center'>;
                 <h3 className='text - 2xl font - bold mb - 6 text - white'>;
@@ -1699,6 +1767,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </section>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       )}
@@ -1733,13 +1804,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;
                     <span className='text - 4xl font - bold text - white'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       {plan.price}
@@ -1762,6 +1837,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {plan.price}</span>;
                     <span className='text-gray-400'>{plan.period}</span>;
                   </div>;
@@ -1773,6 +1850,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='flex items-center text-gray-300';
                     >;
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -1800,6 +1878,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </Card>
 =======
+=======
+                      {feature}
+                    </li>;
+                  ))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <Button;
 href='/contact';
                   size='lg';
@@ -1812,7 +1895,10 @@ href='/contact';
                   <ArrowRight className='w-5 h-5 ml-2' />;
                 </Button>;
               </Card>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </div>;
         </div>;
@@ -1856,6 +1942,7 @@ href='/contact';
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Button
               href='/contact'
               size='lg'
@@ -1876,6 +1963,8 @@ href='/contact';
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <Button;
               href='/contact';
               size='lg';
@@ -1905,8 +1994,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </>;
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

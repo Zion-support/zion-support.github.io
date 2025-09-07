@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react',
 import EnhancedNavigation from './EnhancedNavigation',
 import EnhancedFooter from './EnhancedFooter',
@@ -74,6 +75,8 @@ document.documentElement.setAttribute('lang', lng);
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 }
 export default function EnhancedLayout() {useEffect(() => {const lng = i18n.resolvedLanguage |i18n.language;
@@ -101,11 +104,14 @@ export type EnhancedLayoutProps = {children: React.ReactNode;
 import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 export type EnhancedLayoutProps = any;export default function EnhancedLayout() {useEffect(() => {const lng = i18n.resolvedLanguage || i18n.language;
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr')document.documentElement.setAttribute('lang', lng)}, [])</main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
+<<<<<<< HEAD
 =======
 
 
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <footer>;
         <EnhancedFooter />;
       </footer>;
@@ -146,6 +152,7 @@ export type EnhancedLayoutProps = any;export default function EnhancedLayout() {
         <EnhancedFooter />;
       </footer>;
     </div>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -157,3 +164,6 @@ export type EnhancedLayoutProps = any;export default function EnhancedLayout() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

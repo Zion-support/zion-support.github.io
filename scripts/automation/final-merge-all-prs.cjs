@@ -110,6 +110,7 @@ this.log(" Resolved conflicts "in")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       "successRate"
 
@@ -118,3 +119,7 @@ this.log(" Resolved conflicts "in")
 
       "successRate"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+      "successRate"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

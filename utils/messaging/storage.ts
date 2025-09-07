@@ -28,10 +28,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
   recipient_id: string;body: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   body: string;
   link_url?: string;
   attachmentBase64?: string;
@@ -45,6 +48,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   is_deleted: boolean;
   deletedAtIso?: string;
   replyToId?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   reactions: Array<{
 <<<<<<< HEAD
@@ -64,6 +68,8 @@ export interface Conversation {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   reactions: Array<{export interface Conversation  {userId: string;
     emoji: string;createdAt: string;
   }>;
@@ -96,6 +102,7 @@ export interface Conversation {;
 export interface Conversation {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export interface Conversation {
@@ -122,6 +129,8 @@ export interface Conversation {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -153,6 +162,7 @@ export interface MessageSearchResult  {updatedAtIso: string;
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     tags?: string[]
   }
@@ -168,10 +178,13 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -181,6 +194,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface MessageThread {;
 
 
@@ -192,6 +207,7 @@ export interface MessageThread {
   messages: string[]; // message IDs;
   createdAtIso: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -217,6 +233,9 @@ export interface MessageSearchResult {
 =======
 export interface MessageSearchResult {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export interface MessageSearchResult {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export interface MessageSearchResult {;
 
@@ -249,6 +268,7 @@ class MessagingStorage {
   private conversationMessages: Map<string, Set<string>> = new Map(); // conversationId -> messageIds
   // Message methods
   async createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const newMessage: Message = {
 <<<<<<< HEAD
@@ -304,11 +324,15 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     const newMessage: Message = {}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    const newMessage: Message = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
 
     if (!message) return null
     const updatedMessage = { ...message, ...updates }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -326,6 +350,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.messages.set(id, updatedMessage);
     const message = this && this.messages.get(id);
     if (!message) return null,
@@ -337,6 +363,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   async deleteMessage(id: string): Promise<boolean> {
     const message = this && this.messages.get(id);
     if (!message) return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -365,6 +392,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.messages.set(id, message);
 
     message && message.isDeleted = true;
@@ -373,6 +402,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return true;
   }
   async markAsRead(id: string): Promise<boolean> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -401,6 +431,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.messages.set(id, message);
     const message = this && this.messages.get(id);
     if (!message || message && message.isRead) return false;
@@ -411,6 +443,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return true;
   }
   async markAsUnread(id: string): Promise<boolean> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -439,6 +472,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.messages.set(id, message);
     const message = this && this.messages.get(id);
     if (!message || !message && message.isRead) return false;
@@ -452,6 +487,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const message = this && this.messages.get(messageId);
     if (!message) return false;
     // Remove existing reaction from this user
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -492,11 +528,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return true;
   }
   async removeReaction(messageId: string, userId: string): Promise<boolean> {
     const message = this && this.messages.get(messageId);
     if (!message) return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -525,6 +564,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.messages.set(messageId, message);
     message && message.reactions = message && message.reactions.filter(r => r && r.userId !== userId),
     this && this.messages.set(messageId, message);
@@ -532,6 +573,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   // Conversation methods
   async createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const newConversation: Conversation = {
 <<<<<<< HEAD
@@ -598,17 +640,23 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const newConversation: Conversation = {}
     return newConversation;
   }
   async getConversation(id: string): Promise<Conversation | null> {}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
 
     const conversation = this && this.conversations.get(id);
     if (!conversation) return null,
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -628,11 +676,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (!conversation) return null
     const updatedConversation = {
       ...conversation
       ...updates
       updatedAtIso: new Date().toISOString()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -672,11 +723,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // Remove from user conversations
     for (const participantId of conversation && conversation.participants) {
       this && this.removeFromUserConversations(participantId, id);
     }
     // Delete all messages in this conversation
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -734,10 +788,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    for (const messageId of messageIds) {
+      this && this.messages.delete(messageId);
+    }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   async archiveConversation(id: string): Promise<boolean> {
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -765,6 +825,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.conversations.set(id, conversation);
 
     conversation && conversation.isArchived = true;
@@ -780,6 +842,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -803,6 +866,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.conversations.set(id, conversation);
 
     conversation && conversation.isArchived = false;
@@ -818,6 +883,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -841,6 +907,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.conversations.set(id, conversation);
 
     conversation && conversation.isMuted = true;
@@ -856,6 +924,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -879,6 +948,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.conversations.set(id, conversation);
 
     conversation && conversation.isMuted = false;
@@ -888,6 +959,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   // Query methods
   async getMessagesByConversation(conversationId: string, limit: number = 50, offset: number = 0): Promise<Message[]> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -916,6 +988,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const sortedIds = Array.from(messageIds).sort((a, b) => {
       const msgA = this.messages.get(a);
       const msgB = this.messages.get(b);
@@ -927,6 +1001,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       .map(id => this && this.messages.get(id))
       .filter((msg): msg is Message => msg !== undefined);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   async getConversationsByUser(userId: string, includeArchived: boolean = false): Promise<Conversation[]> {
 <<<<<<< HEAD
@@ -963,6 +1038,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
   async getConversationsByUser(userId: string, includeArchived: boolean = false): Promise<Conversation[]> {}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  async getConversationsByUser(userId: string, includeArchived: boolean = false): Promise<Conversation[]> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return conversations.sort((a, b) =>
       new Date(b.lastMessageAtIso).getTime() - new Date(a.lastMessageAtIso).getTime()
       return conversations && conversations.filter(conv => !conv && conv.isArchived)
@@ -973,6 +1051,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     );
   }
   async getUnreadMessageCount(userId: string): Promise<number> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1007,16 +1086,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       const messageIds = this && this.conversationMessages.get(conversationId) || new Set();
       for (const messageId of messageIds) {
         const message = this && this.messages.get(messageId);
         if (message && message.recipientId === userId && !message && message.isRead) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   relevance_score: number
 =======
 
   relevance_score: number,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  relevance_score: number
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 class MessagingStorage {
   private messages: Map < string, Message> = new Map ();
@@ -1214,6 +1299,7 @@ if ( {) {$2;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           count++,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1233,6 +1319,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           count++;
           count++}
       }
@@ -1383,17 +1471,21 @@ ursor/fix-website-loading-errors-and-merge-6662;
 // Utility functions;
 export function generateMessageId(): string {return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
           count++
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           count++,
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }
       }
     }
     return count;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1427,6 +1519,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }
       }
     }
@@ -1436,6 +1530,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   // Search methods
   async searchMessages(query: string, userId: string, limit: number = 20): Promise<MessageSearchResult[]> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1471,6 +1566,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         if (body.includes(queryLower)) {
           const highlights = this.generateHighlights(message.body, query);
           const relevanceScore = this.calculateRelevanceScore(message.body, query);
@@ -1482,6 +1579,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         }
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1548,15 +1646,21 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     return true;
   }
   async getThread(threadId: string): Promise<MessageThread | null> {}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async getThreadMessages(threadId: string): Promise<Message[]> {
 
     if (!thread) return []
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1574,6 +1678,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return thread.messages
       .map(id => this.messages.get(id))
     const thread = this && this.threads.get(threadId);
@@ -1588,6 +1694,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   private async updateConversationLastMessage(conversationId: string, messageId: string): Promise<void> {
     const conversation = this && this.conversations.get(conversationId);
     if (!conversation) return;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1616,6 +1723,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.conversations.set(conversationId, conversation);
 
     conversation && conversation.lastMessageId = messageId;
@@ -1632,6 +1741,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   private removeFromUserConversations(userId: string, conversationId: string): void {
     const userConversations = this && this.userConversations.get(userId);
     if (userConversations) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1665,6 +1775,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       userConversations && userConversations.delete(conversationId),
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      userConversations && userConversations.delete(conversationId)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
   private addToConversationMessages(conversationId: string, messageId: string): void {
@@ -1678,6 +1791,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const textLower = text && text.toLowerCase();
     const highlights: string[] = [];
     let index = textLower && textLower.indexOf(queryLower),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1708,6 +1822,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     while (index !== -1) {
       const start = Math && Math.max(0, index - 20);
       const end = Math && Math.min(text && text.length, index + query && query.length + 20);
@@ -1717,6 +1833,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return highlights;
   }
   private calculateRelevanceScore(text: string, query: string): number {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1856,12 +1973,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       score += matches * (word.length / query.length);
       const matches = (textLower && textLower.match(new RegExp(word, 'g')) || []).length;
       score += matches * (word && word.length / query && query.length);
     }
     return score;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1899,11 +2019,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 }
 // Singleton instance
 export const messagingStorage = new MessagingStorage();
 // Main functions for external use
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1916,6 +2039,8 @@ export async function createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 
   return messagingStorage.createMessage(message);
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
   return messagingStorage && messagingStorage.updateMessage(id, updates);
@@ -1960,6 +2085,7 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
   return messagingStorage.updateMessage(id, updates);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export async function deleteMessage(id: string): Promise<boolean> {
   return messagingStorage && messagingStorage.deleteMessage(id)
@@ -1980,6 +2106,8 @@ export async function markAsRead(id: string): Promise<boolean> {
 =======
 =======
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export async function deleteMessage(id: string): Promise<boolean> {
 
@@ -2007,15 +2135,21 @@ export async function markAsRead(id: string): Promise<boolean> {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
   return messagingStorage && messagingStorage.markAsRead(id)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
   return messagingStorage && messagingStorage.createConversation(conversation);
 }
 export async function getConversation(id: string): Promise<Conversation | null> {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return messagingStorage && messagingStorage.getConversation(id),
 =======
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -2039,6 +2173,7 @@ export async function getConversation(id: string): Promise<Conversation | null> 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return messagingStorage && messagingStorage.getConversation(id),
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2056,6 +2191,9 @@ export async function getConversation(id: string): Promise<Conversation | null> 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return messagingStorage && messagingStorage.getConversation(id)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
   return messagingStorage && messagingStorage.updateConversation(id, updates);
@@ -2107,6 +2245,7 @@ export async function getUnreadMessageCount(userId: string): Promise<number> {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return messagingStorage && messagingStorage.getUnreadMessageCount(userId),
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2133,6 +2272,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   return messagingStorage && messagingStorage.getUnreadMessageCount(userId),
 
 
+=======
+  return messagingStorage && messagingStorage.getUnreadMessageCount(userId)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
   return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
@@ -2178,11 +2320,14 @@ export async function searchMessages(query: string, userId: string, limit?: numb
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 // Utility functions
 export function createMessageData(
@@ -2308,6 +2453,7 @@ export function createConversationData(
     ...additionalData
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (changed) writeJson(MESSAGES_FILE, messages);
 
   // Update conversation unreadBy
@@ -2347,12 +2493,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 // Utility functions
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 }
 // Utility functions
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export function generateMessageId(): string {
   return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -2381,6 +2532,7 @@ export function formatMessageTime(isoString: string): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2391,6 +2543,8 @@ export function formatMessageTime(isoString: string): string {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
@@ -2449,11 +2603,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   } else if (diffInHours < 24) {
 =======
   if (diffInHours < 1) {} else if (diffInHours < 24) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return `${Math.floor(diffInHours)}h ago`;
   } else if (diffInHours < 168) { // 7 days
     return `${Math.floor(diffInHours / 24)}d ago`;
   } else {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2481,6 +2639,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
@@ -2514,8 +2674,11 @@ export function formatMessageTime(isoString: string): string {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   // Cleanup methods;
   async clear_all (): Promise < void> {this.messages.clear ()this.conversations.clear ()this.threads.clear ()this.user_conversations.clear ()this.conversation_messages.clear ()}
@@ -2592,6 +2755,7 @@ if ( { // 7 days) {$2;
     return date.toLocaleDateString ();
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2726,3 +2890,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

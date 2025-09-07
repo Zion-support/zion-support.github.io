@@ -38,6 +38,7 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
 
@@ -45,3 +46,6 @@ const { execSync } = require('child_process')
 =======
     optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

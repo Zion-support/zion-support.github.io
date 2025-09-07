@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 
@@ -17,6 +18,9 @@ console.log('======================');
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
@@ -143,9 +147,9 @@ try {
 } catch (error) {
   console.log('⚠️  Failed to push syntax fixes:', error.message);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+
+<<<<<<< HEAD
 =======
 
 
@@ -157,3 +161,6 @@ console.log('\n🎉 Ultimate syntax fix completed!');
 
 console.log('\n🎉 Ultimate syntax fix completed!');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+console.log('\n🎉 Ultimate syntax fix completed!');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

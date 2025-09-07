@@ -86,6 +86,7 @@ const glob = require("glob")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Failed to start TypeScript error "fixer")
 
@@ -93,3 +94,6 @@ const glob = require("glob")
 =======
   console.error(" Failed to start TypeScript error "fixer")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" Failed to start TypeScript error "fixer")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -135,6 +135,7 @@ this.log(" Found ${branches.length} cursor branches to process")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Auto merge conflict resolution "failed": ")
 
@@ -142,3 +143,6 @@ this.log(" Found ${branches.length} cursor branches to process")
 =======
   console.error(" Auto merge conflict resolution "failed": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" Auto merge conflict resolution "failed": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

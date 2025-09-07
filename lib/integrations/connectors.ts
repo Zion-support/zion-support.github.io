@@ -29,6 +29,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -64,10 +65,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
@@ -90,6 +94,11 @@ import { v4 as uuidv4 } from "uuid";
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 async function mockProviderCall<T>(
   connection: ProviderConnection
   action: string
@@ -109,6 +118,7 @@ async function mockProviderCall<T>(
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 =======
@@ -151,6 +161,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async syncContact(
     connection: ProviderConnection
     contact: Record<string, any>
@@ -177,6 +189,7 @@ export const ats = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -185,6 +198,8 @@ export const ats = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const log: SyncLogEntry = {
     id: uuidv4(),
     timestamp: Date.now(),
@@ -261,6 +276,7 @@ export const crm = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -302,12 +318,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 
 };
 
 // ATS actions
 export const ats = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -322,6 +344,8 @@ export const ats = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   async pushApplicant($2) {
     return simulateAction($3);
@@ -333,6 +357,7 @@ export const ats = {
     return simulateAction(connection, 'ats.updateStatus', { change })
   }};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -379,6 +404,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async updateStatus(
     connection: ProviderConnection
     status: Record<string, any>
@@ -433,6 +460,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return mockProviderCall (connection, "add_project_note", { note });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
 <<<<<<< HEAD
 =======
@@ -473,6 +501,8 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
@@ -487,6 +517,7 @@ export const ats = {
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -499,6 +530,8 @@ export const ats = {
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 ;
 // ATS actions;
@@ -511,6 +544,7 @@ export const ats = {
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
@@ -529,6 +563,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   async createCandidate(
     connection: ProviderConnection,
@@ -538,6 +574,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -566,6 +603,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Email actions
 export const email = {
   async sendNotification(
@@ -576,6 +615,7 @@ export const email = {
   }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -617,3 +657,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

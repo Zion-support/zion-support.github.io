@@ -3,6 +3,7 @@ const path = require('path');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function fixFile(filePath) {
 
 =======
@@ -23,6 +24,9 @@ const filesToFix = [
     'src/components/talent/TalentCard.jsx'
 
 ];
+=======
+function fixFile(filePath) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Function to fix remaining syntax errors in a file;
@@ -160,6 +164,7 @@ function fixFilesInDirectory(dirPath) {}
         // Handle hire request logic here
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -268,3 +273,6 @@ console.log('Remaining syntax error fixing completed!');
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

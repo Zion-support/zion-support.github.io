@@ -1,5 +1,6 @@
 export const metadata = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'E-commerce Platform Development | Zion Tech Group',
   description: 'Build powerful e-commerce platforms with payment processing, inventory management, and customer features. Professional e-commerce solutions starting at $25k.',
 };
@@ -195,6 +196,9 @@ function Plan({ name, price, duration, features }: {
         Get Started
       </a>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: 'Ecommerce Platform | Zion Tech Group',
   description:
     'Professional ecommerce platform services for your business needs.',
@@ -244,7 +248,11 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>
   );
 }
+

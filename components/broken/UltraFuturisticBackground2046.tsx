@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2046: React.FC;
@@ -27,6 +28,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 if (return) {
   $2
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     }resizeCanvas()window && window.addEventListener('resize', resizeCanvas)x: number;import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
@@ -36,7 +39,10 @@ const UltraFuturisticBackground2046: React.FC;
   const canvas_ref = useRef < HTMLCanvasElement>(null)const particles_ref = useRef < any[]>([])const animation_ref  = useRef < number>()useEffect (() => {const canvas = canvas_ref.current;
     // Check condition;
 if (return) {$2;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
     const ctx = canvas.get_context ('2d')// Check condition;
 if (return) {$2;
@@ -53,9 +59,12 @@ if (return) {$2;
       color: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       life: number;
       maxLife: number;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       life: number;vx: number,vy: number,size: number,color: string,life: number,maxLife: number;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       type: 'quantum' | 'neural' | 'data' | 'energy';
@@ -85,12 +94,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
         switch (this.type) {case 'quantum':;
             this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;break;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           case 'neural':;
             this && this.color = `hsl(${280 + Math && Math.random() * 40}, 80%, 70%)`;
             break;
           case 'data':;
             this && this.color = `hsl(${200 + Math && Math.random() * 40}, 90%, 80%)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             break;
@@ -113,18 +126,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       update() {
         this.x += this.vx;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             break;case 'energy':;
             this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
             break;        }            break;
             break;        }case 'energy':;
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
 break;}}update() {this.x += this.vx;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.y += this.vy;
         this.life--;
         // Bounce off edges;
         if (this.x <= 0 |this.x >= canvas.width) this.vx *= -1;
         if (this.y <= 0 |this.y >= canvas.height) this.vy *= -1;
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Add some quantum randomness
         if (Math.random() < 0.01) {
@@ -476,6 +495,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx.stroke();
       }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         // Add some quantum randomness;
         if (Math.random() < 0.01) {this.vx += (Math.random() - 0.5) * 0.5;this.vy += (Math.random() - 0.5) * 0.5;
 this.vy += (Math.random() - 0.5) * 0.5;}// Limit velocity;
@@ -690,7 +711,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     initParticles()animate()// Cleanup;
     return () => {window.removeEventListener('resize', resizeCanvas)if (animationRef.current) {cancelAnimationFrame(animationRef.current)}
     }}, [])return (<div className='fixed inset-0 pointer-events-none z-0'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Animated gradient background */}
       <motion&& motion.div;
         className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black';
@@ -836,6 +860,7 @@ if ( {) {$2;
             }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             transition={{
               duration: Math.random() * 6 + 4,
               repeat: Infinity,
@@ -852,6 +877,8 @@ if ( {) {$2;
 export default UltraFuturisticBackground2046;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             transition={{))}
       </div>;
     </div>;
@@ -872,6 +899,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
       </div>;
     </div>;
+<<<<<<< HEAD
 )}export default UltraFuturisticBackground2046;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -916,3 +944,6 @@ export default UltraFuturisticBackground2046);
 export default UltraFuturisticBackground2046;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default UltraFuturisticBackground2046;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Brain,MessageSquare,Image,Video,Code,FileText,Zap,Star,ExternalLink,CheckCircle,Brain;
   MessageSquare;
@@ -12,7 +15,10 @@ import React from 'react';
   Zap;
   Brain;
   MessageSquare,Image,Video,Code,FileText,Zap,import React from 'react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -22,6 +28,7 @@ import { Brain;
   Video;
   Code;
   FileText;
+<<<<<<< HEAD
 <<<<<<< HEAD
   Zap;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -166,6 +173,16 @@ category: 'Video Generation',
       features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+  Zap;Star;
+  ExternalLink;
+  CheckCircle;
+  TrendingUp;'Advanced reasoning & analysis';
+        'Web browsing & real-time info';
+        'Plugin ecosystem access';
+        'Code generation & debugging';
+        'Professional writing assistance';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
       ];
       pricing: '$20/month'
@@ -194,6 +211,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description: 'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
       features: [;
         'Advanced reasoning abilitiesDocument analysisCode generationCreative writingResearch assistance';
+<<<<<<< HEAD
       ];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Advanced reasoning abilities',
@@ -246,6 +264,18 @@ description: 'Global AI market value in 2024',
       icon: <MessageSquare className="w - 8 h - 8 text - white" />,
       title: 'Claude Pro',
       description: 'Anthropic's advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
+=======
+      ];],pricing: '$20/month',marketPrice: '$20/month',website: 'https://chat.openai.com',color: 'bg-gradient-to-br from-green-500 to-emerald-600',textColor: 'text-green-400',gradient: 'from-green-400 to-emerald-500',popular: true,category: 'Conversational AI',},{icon: <Image className='w-8 h-8 text-white' />,title: 'Midjourney',description:;
+        'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.',features: [;
+        'High-quality image generation','Artistic style control','Commercial usage rights','Community features','Advanced prompting system',],pricing: '$10-30/month',marketPrice: '$10-30/month',website: 'https://midjourney.com',color: 'bg-gradient-to-br from-purple-500 to-pink-600',textColor: 'text-purple-400',gradient: 'from-purple-400 to-pink-500',popular: true,category: 'Image Generation',},{icon: <Code className='w-8 h-8 text-white' />,title: 'GitHub Copilot',description:;
+        'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',features: [;
+        'Intelligent code completion','Multi-language support','IDE integration','Code explanation','Security vulnerability detection',],pricing: '$10/month',marketPrice: '$10-20/month',website: 'https://github.com/features/copilot',color: 'bg-gradient-to-br from-gray-500 to-black',textColor: 'text-gray-400',gradient: 'from-gray-400 to-black',popular: true,category: 'Code Generation',},{icon: <Video className='w-8 h-8 text-white' />,title: 'Runway ML',description:;
+        'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',features: [;
+        'AI video generation','Video editing tools','Motion tracking','Green screen removal','Professional workflows',],pricing: '$12-76/month',marketPrice: '$15-100/month',website: 'https://runwayml.com',color: 'bg-gradient-to-br from-blue-500 to-indigo-600',textColor: 'text-blue-400',gradient: 'from-blue-400 to-indigo-500',popular: false,category: 'Video Generation',},{icon: <MessageSquare className='w-8 h-8 text-white' />,title: 'Claude Pro',description:;
+        'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.';
+      features: [;
+        'Advanced reasoning abilities','Document analysis','Code generation','Creative writing','Research assistance',],      pricing: '$20 / month',    {icon: <MessageSquare className="w - 8 h - 8 text - white" />,title: 'Claude Pro',description: 'Anthropic's advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       features: [;
         'Advanced reasoning abilities_document analysis_code generation_creative writing_research assistance';
       ];
@@ -298,6 +328,7 @@ description: 'Global AI market value in 2024',
   ];
 
   const aiCategories = [;
+<<<<<<< HEAD
     {;
       name: 'Conversational AI',;
       description: 'Chatbots, virtual assistants, and language models',;
@@ -504,6 +535,8 @@ export default function AiToolsPage() {const aiTools = null;
   const aiMarketStats = [;
     {title: 'AI Market Size',value: '$136.6B',growth: '+37% YoY',description: 'Global AI market value in 2024',},{title: 'AI Adoption Rate',value: '35%',growth: '+12% YoY',description: 'Businesses actively using AI tools',},{title: 'AI Investment',value: '$93.5B',growth: '+28% YoY',description: 'Global AI investment in 2024',},{title: 'AI Productivity Gain',value: '40%',growth: '+15% YoY',description: 'Average productivity improvement',},];
   const aiCategories = [;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     {name: 'Conversational AI',description: 'Chatbots, virtual assistants, and language models',tools: 3,avgPrice: '$20/month',},{name: 'Image Generation',description: 'AI-powered art, design, and visual content creation',tools: 1,avgPrice: '$20/month',},{name: 'Code Generation',description: 'AI-assisted programming and development tools',tools: 1,avgPrice: '$10/month',},{name: 'Video Generation',description: 'AI video creation and editing tools',tools: 1,avgPrice: '$44/month',},{name: 'Content Creation',description: 'AI-powered writing and content generation',tools: 1,avgPrice: '$82/month',},];
   return (<>;
       <Head>;
@@ -614,7 +647,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* AI Tools Grid */}
 <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -653,6 +689,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card;
                 key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
@@ -672,6 +709,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='relative'>
                     <div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className={`card-hover group border-gradient-blue relative ${tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : '';
                 }`}<Button;
                         href={tool && tool.website}
@@ -714,6 +753,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </Card>;style={{ animationDelay: `${index * 0.1}s` }}
               >;
                 {tool.popular && (<div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>;
@@ -776,6 +818,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           className='flex items-center text-gray-300';
                         >;
                           <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                           {feature}
                         </li>;
@@ -786,6 +829,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex items-center justify-between'>
                       <Button
 =======
+=======
+                          {feature}
+                        </li>;
+                      ))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </ul>;
                         variant="primary";
                         size="sm";
@@ -799,7 +847,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="text-xs text-cursor-blue font-mono">{tool.website}</div>;
 <div className='flex items-center justify-between'>;
                       <Button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         href={tool.website}
                         variant='primary';
                         size='sm';
@@ -812,6 +863,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className='text-xs text-gray-500'>Direct Link</div>;
                         <div className='text-xs text-cursor-blue font-mono'>;
                           {tool.website}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -860,6 +912,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
               <Card
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         </div>;
                       </div>;
                     </div>;
@@ -867,8 +921,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         </div>;
       </section>;
@@ -956,6 +1013,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
             </h2>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;<Card;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 key={index}
@@ -985,10 +1045,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               </Card>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
               Understanding the different types of AI tools helps you build a;
               comprehensive toolkit for your needs.;
@@ -1004,6 +1067,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Practical advice for implementing AI tools in your workflow and maximizing their value.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1128,6 +1192,8 @@ href='/contact'
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             <Card className="card-hover border-gradient-blue">;
               <div className="p-6">;
@@ -1238,6 +1304,7 @@ href='/contact';
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1259,3 +1326,6 @@ href='/contact';
             </Button>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

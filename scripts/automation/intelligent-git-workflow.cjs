@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -18,6 +19,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 ;#!/usr/bin/env node;
 /**
@@ -45,6 +48,7 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -56,6 +60,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           conflictType = 'separator';
           continue;
         } else if (line.startsWith('>>>>>>')) {
@@ -496,6 +502,7 @@ class IntelligentGitWorkflow {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
@@ -553,6 +560,17 @@ main
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+      // Write resolved content
+      await fs.writeFile(file, resolvedLines.join('\n'));
+      
+      // Add resolved file to git
+      await this.runGitCommand(`git add ${file}`);
+      
+      return { resolved: true, method: 'auto_merge' };
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     } catch (error) {
       console.log(
         `❌ Failed to resolve conflict in ${filePath}:`,
@@ -928,6 +946,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -980,6 +999,9 @@ main
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
 
     errors.push(errorLog);
@@ -990,6 +1012,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 ;
 // Run the workflow;      await fs.mkdir(path.join(this.projectRoot, 'logs')
@@ -1075,6 +1098,8 @@ ursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }
       }
 
@@ -1437,9 +1462,12 @@ ursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
+<<<<<<< HEAD
         } else if (line.startsWith('')) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           conflictType = 'theirs';
           inConflict = false;
           conflictType = '';
@@ -1512,6 +1540,7 @@ ursor/fix-lint-push-and-merge-to-main-28da
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       await fs.mkdir(path.join(this.projectRoot, 'logs')
 =======
 
@@ -1545,6 +1574,10 @@ module.exports = IntelligentGitWorkflow;
 // Run the workflow;      await fs.mkdir(path.join(this.projectRoot, 'logs')
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      await fs.mkdir(path.join(this.projectRoot, 'logs')
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
     fs.appendFile(this.logFile, logMessage + '\n')
@@ -1566,6 +1599,7 @@ module.exports = IntelligentGitWorkflow;
         await this.runGitCommand('git config user.name "AI Git Workflow")
         await this.runGitCommand('git config user.email "ai-workflow@example.com")
 
+<<<<<<< HEAD
 
 // Run the workflow
 const workflow = new IntelligentGitWorkflow();
@@ -1590,3 +1624,5 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

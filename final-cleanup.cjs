@@ -3,6 +3,7 @@ const path = require('path');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     .replace(/<<<<<<< [^\n]+[\s\S]*?
     .replace(/^<<<<<<< [^\n]+$/gm, '')
     .replace(/^
@@ -22,6 +23,10 @@ function cleanMergeConflicts(content) {
     .replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?
     .replace(/^<<<<<<< [^\n]+$/gm, '')
     .replace(/^$/gm, '')
+=======
+    .replace(/<<<<<<< [^\n]+[\s\S]*?
+    .replace(/^<<<<<<< [^\n]+$/gm, '')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     .replace(/^
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
@@ -60,6 +65,9 @@ function processFile(filePath) {
     cleaned = cleanSyntaxErrors(cleaned);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   for (const file of files) {
     const filePath = path.join(dir, file);
@@ -67,6 +75,7 @@ function processFile(filePath) {
 
   content = content.replace(/
   content = content.replace(/
+<<<<<<< HEAD
 =======
     
     if (cleaned !== content) {
@@ -117,6 +126,8 @@ function findConflictedFiles(dir, conflictedFiles = []) {
   content = content.replace(/origin\/[^\n]+\n?/g, '');
   content = content.replace(/ursor\/[^\n]+\n?/g, '');
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   
   // Clean up any remaining artifacts
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -124,6 +135,7 @@ function findConflictedFiles(dir, conflictedFiles = []) {
   
   // Remove any remaining conflict markers
 
+<<<<<<< HEAD
 =======
     for (const item of items) {
       const fullPath = path.join(dirPath, item);
@@ -160,3 +172,5 @@ console.log(`✅ Final cleanup completed!`);
 console.log(`📁 Processed ${processedFiles} files`);
 console.log(`⏱️  Took ${endTime - startTime}ms`);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

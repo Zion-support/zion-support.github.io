@@ -70,6 +70,7 @@ function $1() {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 
@@ -77,6 +78,9 @@ function $1() {}
 =======
   
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 } catch (e) {}
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
@@ -87,6 +91,7 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   main()};
 
@@ -94,3 +99,6 @@ if (require.main === module) {}
 =======
   main()};
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  main()};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

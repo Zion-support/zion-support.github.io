@@ -11,23 +11,31 @@ export default function Cache.test() {export default function Cache.test() {retu
   )}
 <:corrupted_backup/PostJob.jsx;
 :src.pages.disabled/PostJob.jsx;
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
->
+
 
 
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
+<<<<<<< HEAD
 
 
 
@@ -39,6 +47,8 @@ export default function Cache.test() {export default function Cache.test() {retu
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 :corrupted_backup/PostJob.jsx;
 }
 }}

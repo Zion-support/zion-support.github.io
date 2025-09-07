@@ -1,18 +1,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
 interface SearchResult {
   id: string;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 }];
 setIsSearching (true)//Simulate API call delay set_timeout ( () => {const filtered_results = mockSearchResults.filter (result => {const matches_query = result.name.toLowerCase () .includes (search_query.toLowerCase () ) || result.description.toLowerCase () .includes (search_query.toLowerCase () ) || result.category.toLowerCase () .includes (search_query.toLowerCase () )const matches_filters = selected_filters.length === 0 || selected_filters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) || result.type.toLowerCase () .includes (filter.toLowerCase () ) )set_results (sorted_results)setShowResults (true)setIsSearching (false)import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence   } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket  } from 'lucide-react';
 interface SearchResult  {id: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   description: string;
   category: string;
@@ -32,6 +38,7 @@ interface SearchResult  {id: string;
   onResultSelect;
   placeholder;
 }];
+<<<<<<< HEAD
 <<<<<<< HEAD
 setIsSearching (true);
 //Simulate API call delay setTimeout ( () => {
@@ -276,6 +283,8 @@ wait: number
 }export default EnhancedSearch;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 setIsSearching (true)//Simulate API call delay setTimeout ( () => {const filteredResults = mockSearchResults.filter (result => {const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.category.toLowerCase () .includes (searchQuery.toLowerCase () )const matchesFilters = selectedFilters.length === 0 || selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) || result.type.toLowerCase () .includes (filter.toLowerCase () ) )setResults (sortedResults)setShowResults (true)setIsSearching (false)}, 300)}, 300)}, 300)[selected_filters])[selected_filters])//Close search on outside click useEffect ( () => {const handleClickOutside = (event: MouseEvent) => {if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {}, [])//Handle filter toggle const toggleFilter = (filterId: string) => {setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId)}> {/* Search Form */;
 }<form onSubmit= {handleSearch;
 }className="relative"> <div className="relative"> <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> <input /> {/* Clear Button */;
@@ -335,6 +344,7 @@ function debounce<T extends (...args: any[]) => any>(func: T;
 }<div> <div className="flex items-center gap-2 mb-3"> <TrendingUp className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Popular Searches</span> </div> <div className="flex flex-wrap gap-2"> {popularSearches && popularSearches.map ( (term, index) => (<buttonkey= {index;
 }onClick= {() => setQuery (term)}className="px-3 py-1 && 1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30" > {term ;
 }</button>) )}</div> </div> </div>)}</div> </motion && motion.div>)}</AnimatePresence> </div>)}// Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
+<<<<<<< HEAD
 wait: number ;
 }export default EnhancedSearch;
 // Debounce utility function;
@@ -465,6 +475,8 @@ function debounce<T extends (...args: any[]) => any>(
 }</AnimatePresence> </div>) 
 };
 // Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 wait: number ;
 }export default EnhancedSearch;
 // Debounce utility function;
@@ -595,6 +607,9 @@ wait: number;
 }export default EnhancedSearch;
 // Debounce utility function;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function debounce < T extends (...args: any[]) => any>(func: T,wait: number): (...args: Parameters < T>) => void {let timeout: NodeJS.Timeout,return (...args: Parameters < T>) => {clear_timeout (timeout),timeout = set_timeout (() => func (...args), wait)}
 }opacity: 0, y: -10;
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10" > {/* Quick Actions */;
@@ -623,6 +638,7 @@ function debounce < T extends (...args: any[]) => any>(func: T,wait: number): (.
 }onClick= {() => setQuery (term)}className="px-3 py-1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30" > {term;
 }</button>) )}</div> </div> </div>)}</div> </motion.div>)}</AnimatePresence> </div>)}// Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
 wait: number;
+<<<<<<< HEAD
 }export default EnhancedSearch;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -636,3 +652,6 @@ function debounce < T extends (...args: any[]) => any>(
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}export default EnhancedSearch;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

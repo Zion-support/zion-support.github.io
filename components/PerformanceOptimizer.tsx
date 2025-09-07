@@ -3,14 +3,18 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion   } from 'framer-motion';
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network  } from 'lucide-react';
 import { motion  } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -60,6 +64,8 @@ interface PerformanceMetrics {;
 interface PerformanceMetrics {
   load_time: number;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Zap;
   Clock;
   TrendingUp;
@@ -76,11 +82,15 @@ interface PerformanceMetrics  {load_time: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;interface PerformanceMetrics  {loadTime: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   className = '',
@@ -193,6 +203,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           if (!img.sizes) {
             img.sizes =
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 //Add responsive sizes if not present // Check condition;
 if ( {) {$2;
 }
@@ -219,9 +231,12 @@ timeToInteractive:;
   const optimizeImages = useCallback(async () => {setIsOptimizing(true)setOptimizationStatus('Optimizing images...')try {const images = document.querySelectorAll('img')let optimizedCount = 0;
       for (const img of Array.from(images)) {if (img.complete && img.naturalWidth > 0) {// Add lazy loading;
           img.loading  = 'lazy';}
+<<<<<<< HEAD
 =======
           }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           optimized_count++;        }
       }
       setOptimizationStatus (`Optimized ${optimized_count} images`)// Add responsive sizes if not present;
@@ -233,13 +248,19 @@ if ( {) {$2;
           optimized_count++;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
       }// Add responsive sizes if not present;
           if (!img.sizes) {img.sizes =;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      }// Add responsive sizes if not present;
+          if (!img.sizes) {img.sizes =;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
           }optimizedCount++;
         }
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       setOptimizationStatus(`Optimized ${optimizedCount} images`);
 // Simulate optimization delay
@@ -358,6 +379,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       preload_links.for_each (link_attrs => {
 import React, { useEffect } from 'react;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       setOptimizationStatus(`Optimized ${optimizedCount} images`)// Simulate optimization delay;
       await new Promise(resolve => setTimeout(resolve, 1000))setOptimizationStatus('Image optimization complete')} catch (error) {setOptimizationStatus ('Image optimization failed')console.error ('Image optimization error:', error)} finally {setIsOptimizing (false)}
   }, [])font-display: swap;        }          font-family: 'Orbitron',font-display: swap;
@@ -386,13 +409,17 @@ import React, { useEffect } from 'react;
         {rel: 'preload',href: '/fonts / inter - var.woff2',as: 'font',type: 'font / woff2',crossorigin: 'anonymous',},{rel: 'preload',href: '/fonts / jetbrains - mono - var.woff2',as: 'font',type: 'font / woff2',crossorigin: 'anonymous',},      ];        { rel: 'preload', href: '/fonts / inter - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' },{ rel: 'preload', href: '/fonts / jetbrains - mono - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' }// Add resource hints for critical resources;
       const preloadLinks = [;
 {rel: 'preload',href: '/fonts/inter-var.woff2',as: 'font',type: 'font/woff2',crossorigin: 'anonymous',},{rel: 'preload',href: '/fonts/jetbrains-mono-var.woff2',as: 'font',type: 'font/woff2',crossorigin: 'anonymous',},];preload_links.for_each (link_attrs => {import React, { useEffect } from 'react;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Head from 'next / head;
 interface PerformanceOptimizerProps {preload_images?: string[];
   preload_fonts?: string[];
   criticalCSS?: string;
 }
     // Performance monitoring;
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {;
         for (const entry of list && list.getEntries()) {;
@@ -573,6 +600,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <span className='text-white/70'>Performance Score</span>
           <span className='text-2xl font-bold text-cyan-400'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {for (const entry of list && list.getEntries()) {if (entry && entry.entryType === 'largest-contentful-paint') {'            console && console.log('LCP: ', entry && entry.startTime)'          }'          if (entry && entry.entryType === 'first-input') {'            console && console.log('FID: ', entry && entry.processingStart - entry && entry.startTime)'          }'          if (entry && entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console && console.log('CLS: ', (entry as any).value)'            }'          }}
       })'      } catch (e) {'        // Fallback for browsers that don&apos;t support all entry types;
         console && console.log('Performance monitoring not fully supported')'      }';
@@ -649,6 +678,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <span className='text-sm text-white/60'>{performanceScore}/100</span>;
         </div>;
       </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
@@ -656,10 +686,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ width: `${performanceScore}%` }}
             transition={{ duration: 1, ease: "easeOut" }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Metrics Display */}
       {showMetrics && (<motion&& motion.div;
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           exit={{ opacity: 0, height: 0 }}
@@ -781,6 +814,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 hover:scale-105'
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           exit={{ opacity: 0, height: 0 }}className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6';
         >;
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
@@ -871,8 +906,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${isOptimizing;
               ? 'bg-gray-600 cursor-not-allowed';
               : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 hover:scale-105';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>;
         <h4 className='text-sm font-semibold text-white/80 mb-3'>;
@@ -909,6 +947,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <ul className="text-xs text-white/60 space-y-1">;
       {/* Performance Tips */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className="mt-6 pt-4 border-t border-white/10">;
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>;
         <ul className="text-xs text-white/60 space-y-1">;
@@ -936,6 +977,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {optimizationStatus !== 'idle' && (<div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
             <div className='text-sm text-white/80'>{optimizationStatus}</div>;
           </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       <div className="mt-6 pt-4 border-t border-white/10">
@@ -984,6 +1026,11 @@ export default PerformanceOptimizer;
 interface PerformanceMetrics {
   fcp: number;
 =======
+=======
+        )}
+      </div>;
+      {/* Performance Tips */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <div className='mt-6 pt-4 border-t border-white/10'>;
         <h4 className='text-sm font-semibold text-white/80 mb-3'>;
           Performance Tips;
@@ -1183,6 +1230,7 @@ if ( {'              window.addEventListener ('load', function () {'            
 '                  })'                  .catch (function (registration_error) {console.log ('SW registration failed: ', registration_error)'                  })'              })}
           ``        }}/>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Head>)}
   )})}export default PerformanceOptimizer;interface PerformanceMetrics  {fcp: number;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -1197,6 +1245,10 @@ export default PerformanceOptimizer;
 interface PerformanceMetrics {
   fcp: number;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </Head>)}
+  )})}export default PerformanceOptimizer;interface PerformanceMetrics  {fcp: number;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   lcp: number;
   fid: number;
   cls: number;
@@ -1209,6 +1261,7 @@ interface PerformanceMetrics {
 interface PerformanceOptimizerProps  {onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enable_reporting?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
       measureWebVitals();
     } else {;
@@ -1229,3 +1282,7 @@ export default PerformanceOptimizer;)
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      measureWebVitals()} else {window && window.addEventListener('load', measureWebVitals)}
+export default PerformanceOptimizer;)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

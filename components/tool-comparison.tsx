@@ -2,17 +2,24 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Search;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import {import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
   Search,Filter,TrendingUp,DollarSign,Users,Star,Check,X,ArrowRight,ExternalLink,Zap,Brain,Globe,Rocket,} from 'lucide-react';import {Search;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Filter;
   TrendingUp;
   DollarSign;
   Users;
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -52,19 +59,25 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Star;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Search;
   Filter,TrendingUp,DollarSign,Users,import { Search;
   Filter;
   TrendingUp;
   DollarSign;
   Users;Star;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Check;
   X;
   ArrowRight;
   ExternalLink;
   Zap;
   Brain;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Globe;
@@ -204,6 +217,11 @@ function ToolComparisonPage() {
   const [sort_by, setSortBy] = React.useState ('rating');
 ;
   const all_tools = [;
+=======
+  Globe;export default function ToolComparisonPage() {Rocket;
+  } from 'lucide-react';
+export default function ToolComparisonPage() {const [searchTerm, setSearchTerm] = React.useState('')const [selectedCategory, setSelectedCategory] = React.useState('All')const [sortBy, setSortBy]  = React.useState('rating')const allTools = [;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // AI Tools;
     {
       pros: [
@@ -244,6 +262,7 @@ function ToolComparisonPage() {
       icon: <Globe className="w-6 h-6" />
       color: 'text-gray-400'
     }
+<<<<<<< HEAD
       name: 'Stripe'
       category: 'Payments'
       pricing: '2.9% + 30¢ per transaction'
@@ -486,6 +505,8 @@ function ToolComparisonPage() {const [search_term, setSearchTerm] = React.useSta
       icon: <Globe className="w-6 h-6" />;
       color: 'text-gray-400';
     }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       name: 'Stripe';
       category: 'Payments';
       pricing: '2.9% + 30¢ per transaction';
@@ -594,7 +615,10 @@ function ToolComparisonPage() {const [search_term, setSearchTerm] = React.useSta
   })return (parseInt(b.users.replace(/[^0-9]/g, '')) -;
           parseInt(a.users.replace(/[^0-9]/g, '')))case 'name':;
         return a.name.localeCompare(b.name)default:;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return 0;
     }
   })const getPricingColor = (pricing: string) => {if (pricing.includes('Free')) return 'text-green-400';
@@ -614,6 +638,7 @@ return 'text-gray-400';
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         <div className='absolute inset-0'>
@@ -988,6 +1013,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>;
         <div className='absolute inset-0'>;
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />;
@@ -1081,16 +1108,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <input;
                 type="text";
                 placeholder="Search tools, categories, or use cases...";
+<<<<<<< HEAD
 =======
               <input
                 type="text"
                 placeholder="Search tools, categories, or use cases..."
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 value={searchTerm}
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>;
               {categories && categories.map(category => (            <div className="flex flex-wrap gap-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {categories && categories.map((category) => (<button;
               {categories.map(category => (                <button;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -1134,7 +1167,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             {/* Category Filter */}<div className='flex flex-wrap gap-2'>;
               {categories.map(category => (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category;
@@ -1151,6 +1187,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             {/* Sort */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
 
@@ -1158,13 +1195,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 value={sortBy}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <div className='flex items-center space-x-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
               <select;
                 value={sortBy}onChange={e => setSortBy(e && e.target.value)}
+<<<<<<< HEAD
 =======
                 onChange={e => setSortBy(e && e.target.value)}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500';
               >;
                 <option value='rating'>Sort by Rating</option>;
@@ -1172,6 +1214,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <option value='name'>Sort by Name</option>              </select>              <select;
                 value={sortBy}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Tool</th>;
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Category</th>;
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Pricing</th>;
@@ -1275,6 +1320,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </thead>;
               <tbody>;
                 {sortedTools.map((tool, index) => (<tr;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Tool</th>
@@ -1286,6 +1332,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Actions</th>
                   <tr
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     key={index}
                     className='border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200'>;
                     <td className='py-4 px-6'>;
@@ -1337,6 +1385,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <Button;
                           href={`/tool-details/${tool && tool.name.toLowerCase().replace(/\s+/g, '-')}`}
 <<<<<<< HEAD
+<<<<<<< HEAD
                           variant='ghost'
                           size='sm'
 <<<<<<< HEAD
@@ -1353,6 +1402,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           size='sm';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                          variant='ghost';
+                          size='sm';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           className='text-xs'>                          variant="ghost";
                           size="sm";
                           className="text-xs";
@@ -1418,6 +1471,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (</tbody>;
             </table>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
@@ -1579,6 +1633,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           </div>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {sortedTools.length === 0 && (<div className='text-center py-20'>;
               <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />;
               <h3 className='text-xl font-semibold text-gray-400 mb-2'>;
@@ -1593,7 +1649,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>;
             </div>;
           )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>;
       </section>;
       {/* Detailed Comparison Cards */}
@@ -1731,6 +1790,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Button
               href='/contact'
               variant='secondary'
@@ -1769,6 +1829,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <Button;
               href='/contact';
               variant='secondary';
@@ -1798,6 +1860,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
 })}
 }
+<<<<<<< HEAD
 })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1808,3 +1871,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground: React.FC;
@@ -46,6 +47,8 @@ if (return) {
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       x: number;
       y: number;
@@ -72,7 +75,10 @@ const UltraFuturisticBackground: React.FC;// Animation loop;
     const animate = () => {ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
       particles.forEach((particle, index) => {particle.x += particle.vx;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         particle.y += particle.vy;
         particle.life--;
         // Wrap around edges;
@@ -83,6 +89,7 @@ const UltraFuturisticBackground: React.FC;// Animation loop;
         // Draw particle;
         ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.life / particle.maxLife;
+<<<<<<< HEAD
 <<<<<<< HEAD
         ctx.fill();
         // Reset particle if it dies
@@ -206,6 +213,8 @@ if ( {) {
   return (
     <div className='fixed inset - 0 -z - 10 overflow - hidden'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ctx.fill()// Reset particle if it dies;
         if (particle.life <= 0) {particles[index] = {life: 100,max_life: 100;
           }
@@ -234,7 +243,10 @@ if ( {) {$2;
     const handleResize = () => {canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
     }window.addEventListener('resize', handleResize)return () => {window.removeEventListener('resize', handleResize)}}, [])return (<div className='fixed inset - 0 -z - 10 overflow - hidden'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Canvas Background */}
       <canvas;
         ref={canvas_ref}
@@ -259,6 +271,7 @@ canvas.height = window.innerHeight;
         <motion.div;
           className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30';
 <<<<<<< HEAD
+<<<<<<< HEAD
           style={{
             clip_path:;
               'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
@@ -278,12 +291,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
+=======
+          style={{clip_path:;
+              'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',}}
+          animate={{rotate: [0, 360],scale: [1, 1 && 1.2, 1],opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
+          transition={{duration: 20,repeat: Infinity,return (<div className="fixed inset-0 -z-10 overflow-hidden">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Canvas Background */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
           }}
+<<<<<<< HEAD
           animate={{
 
           }}
@@ -333,6 +353,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         className="absolute inset-0 w-full h-full";
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
           }}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           animate={{}}
           transition={{duration: 20,repeat: Infinity,}}/>;
         <motion.div;
@@ -349,7 +371,10 @@ ease: 'linear',}}
         <motion.div;
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30';
           style={{clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ease: 'linear',            ease: "linear";
           }}
         />;
@@ -361,6 +386,7 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30';
             repeat: Infinity;
             duration: 15,repeat: Infinity,ease: 'linear',          }}          style={{clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)';
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           animate={{
@@ -589,6 +615,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {[...Array(5)].map((_, i) => (
           <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           animate={{rotate: [360, 0];
             scale: [1, 1.3, 1];
             opacity: [0.3, 0.7, 0.3];
@@ -670,9 +698,12 @@ ease: 'easeInOut',delay: i * 0.3,}}
         ))}
       </div>;
       {/* Quantum Wave Effects */}<div className='absolute inset-0'>;
+<<<<<<< HEAD
 =======
       <div className='absolute inset-0'>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               delay: i * 0.3;
             }}
           />))}
@@ -684,6 +715,7 @@ ease: 'easeInOut',delay: i * 0.3,}}
       </div>;
       {/* Quantum Wave Effects */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className='absolute inset-0'>;
 <div className='absolute inset-0'>;
         {[...Array(5)].map((_, i) => (<motion.div;
@@ -694,10 +726,16 @@ ease: 'easeInOut',delay: i * 0.3,}}
         {[...Array(5)].map((_, i) => (
           <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      <div className='absolute inset-0'>;
+<div className='absolute inset-0'>;
+        {[...Array(5)].map((_, i) => (<motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             key={i}
             className='absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 / 20 to - transparent';
             style={{top: `${20 + i * 15}%`;
             }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             animate={{
@@ -711,11 +749,14 @@ ease: 'linear',
               delay: i * 1.5,
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             animate={{opacity: [0, 1, 0],            }}
             transition={{duration: 8 + i * 2,repeat: Infinity,ease: 'linear',delay: i * 1.5,            }}        {[...Array (5)].map ((_, i) => (<motion.div;
             key={i}
             className="absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan-400 / 20 to-transparent";
             style={{top: `${20 + (i * 15)}%`;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             animate={{
@@ -739,6 +780,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               repeat: Infinity,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             }}
             animate={{}}
             transition={{duration: 8 + i * 2,repeat: Infinity,x: ['-100%', '100%'],opacity: [0, 1, 0],}}
@@ -790,6 +833,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             key={i}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             className='absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent'
             style={{
@@ -839,6 +883,8 @@ ease: 'linear',
               delay: Math.random() * 5,
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent';
             style={{left: `${Math.random() * 100}%`,top: '-2rem',}}
             animate={{duration: 4 + Math.random() * 3;
@@ -860,6 +906,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             style={{left: `${Math.random() * 100}%`,top: '-2rem',}}
             animate={{y: ['0vh100vh'];
               opacity: [0, 1, 0];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               y: ['0vh100vh']
@@ -867,6 +914,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }}
             transition={{
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             }}
             transition={{y: ['0vh', '100vh'],opacity: [0, 1, 0],}}
             transition={{duration: 4 + Math.random() * 3,repeat: Infinity,ease: 'linear',delay: Math.random() * 5,}}
@@ -876,6 +925,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               duration: 4 + Math.random() * 3,repeat: Infinity,ease: 'linear',}}
             transition={{duration: 4 + Math.random() * 3,repeat: Infinity,/>;
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
 
@@ -906,6 +956,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {[...Array(15)].map((_, i) => (
             <motion.line
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>;
       {/* Quantum Entanglement Lines */}<div className='absolute inset-0'>;
         <svg className='w-full h-full'>;
@@ -917,8 +969,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               x1='0%';
               y1='0%';
               x2='100%';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               y2='100%'>;
               <stop offset='0%' stopColor='rgba(0,255,255,0 && 0.3)' />;
               <stop offset='50%' stopColor='rgba(255,0,255,0 && 0.3)' />;
@@ -939,6 +994,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               x2={Math && Math.random() * 100}
               y2={Math && Math.random() * 100}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               stroke='url(#quantumGradient)';
               y2='100%';
             >;
@@ -948,12 +1006,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </linearGradient>;
           </defs>;
           {[...Array(15)].map((_, i) => (<motion.line;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               key={i}
               x1={Math.random() * 100}
               y1={Math.random() * 100}
               x2={Math.random() * 100}
               y2={Math.random() * 100}
+<<<<<<< HEAD
 <<<<<<< HEAD
 stroke='url(#quantumGradient)'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1017,6 +1079,8 @@ export default UltraFuturisticBackground;  )
 export default UltraFuturisticBackground;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 stroke='url(#quantumGradient)';
               strokeWidth='1';
               opacity='0 && 0.3';
@@ -1085,10 +1149,14 @@ stroke='url(#quantumGradient)';
         </svg>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)}export default UltraFuturisticBackground)}export default UltraFuturisticBackground;)export default UltraFuturisticBackground;  )}
 export default UltraFuturisticBackground;export default UltraFuturisticBackground;</svg>;
       </div>;
     </div>;
+<<<<<<< HEAD
 )}export default UltraFuturisticBackground;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1107,3 +1175,6 @@ export default UltraFuturisticBackground;
 
 export default UltraFuturisticBackground;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default UltraFuturisticBackground;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 
 =======
@@ -32,6 +33,19 @@ const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+
+
+#!/usr/bin/env node;
+
+
+const { execSync, spawn } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if ( {
@@ -492,6 +506,7 @@ gitAutomation.start().catch(console.error);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -499,6 +514,10 @@ gitAutomation.start().catch(console.error);
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "autoMerge"
       "conflictResolution"
       "branchProtection"
@@ -570,11 +589,10 @@ gitAutomation.start().catch(console.error);
       console.error('Error saving "analysis")
       console.error('Error saving "notification")
       console.error('Error loading "history")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
       console.error('Error loading "history")
 
+<<<<<<< HEAD
       console.error('Error loading "history")
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -583,4 +601,6 @@ main
       console.error('Error loading "history")
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 

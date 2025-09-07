@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   Facebook,
   Twitter,
@@ -246,6 +247,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Brain,Mail,Phone,MapPin,Globe,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
 import React from 'react';
@@ -621,9 +624,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               <div className="flex items-center space-x-4">;
                 {socialLinks.map(social => (<a;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     key={social.name}
                     href={social.href}
                     target="_blank";
@@ -634,6 +640,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                     <social.icon className="w-5 h-5" />;
                   </a>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               </div>
@@ -650,6 +657,8 @@ export default EnhancedFooter;
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </div>;
             </div>;
           </div>;
@@ -701,9 +710,12 @@ export default EnhancedFooter;
       </div>;
     </footer>)}export default EnhancedFooter)})}export default EnhancedFooter;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from './react';
   FileText,HelpCircle} from './lucide-react';
 export default /**;
@@ -889,6 +901,7 @@ company updates.;
         aria-label="Scroll to top">";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <ArrowUp className="w-5 h-5"  />;
       </button>
     </footer>
@@ -897,6 +910,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <ArrowUp className="w-5 h-5"  />;</button>,</footer>,)}"';<div className="border - t border - gray - 800 pt - 8">";
           <div className="flex flex - col md: flex - row justify - between items - center">";
             <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">,© {current_year} Zion Tech Group. All rights reserved.;
@@ -923,6 +938,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </footer>;
   )}"';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       {/* Scroll to Top Button */}
       <button;
@@ -943,6 +959,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       <button;
         onClick={scrollToTop}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+      {/* Scroll to Top Button */}
+      <button;
+        onClick={scrollToTop}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50";
         aria-label="Scroll to top";
       >;
@@ -950,8 +971,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       </button>;
     </footer>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   )}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

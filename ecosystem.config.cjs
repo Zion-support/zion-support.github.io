@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -18,6 +19,8 @@ module.exports = {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       name: 'auto-fix',
@@ -66,6 +69,7 @@ module.exports = {
       name: 'bolt-zion-app',
 =======
 
+<<<<<<< HEAD
 
 
 
@@ -92,6 +96,10 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      name: 'bolt-zion-app',
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       script: 'npm',
       args: 'run build',
       cwd: '/workspace',
@@ -101,6 +109,7 @@ main
       max_memory_restart: '1G',
       env: {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -119,6 +128,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
@@ -133,6 +144,7 @@ main
       log_file: './logs/ci-cd-combined.log',
       time: true,    },
     {
+<<<<<<< HEAD
 =======
         NODE_ENV: 'production'
 
@@ -166,6 +178,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
         NODE_ENV: 'production',
       },
@@ -184,12 +198,15 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+<<<<<<< HEAD
       name: 'continuous-automation',
 
 
       name: 'continuous-automation',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       script: 'node',
       args: 'scripts/automation/automation-orchestrator.cjs',
       cwd: '/workspace',
@@ -201,6 +218,7 @@ main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -215,17 +233,22 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false',
 
+<<<<<<< HEAD
         NODE_ENV: 'production'
 <<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       },
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/automation-error.log',
@@ -233,6 +256,9 @@ main
       log_file: './logs/automation-combined.log',
       time: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     },
     {
 
@@ -248,6 +274,7 @@ main
       script: 'node',
       args: 'scripts/automation/automation-orchestrator.cjs',
       cwd: '/workspace',
+<<<<<<< HEAD
       instances: 1,
       autorestart: true,
       watch: false,
@@ -512,32 +539,61 @@ main
       script: 'node',
       args: 'scripts/automation/comprehensive-continuous-automation.cjs',
       cwd: '/workspace',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
         NODE_ENV: 'production',
       },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      error_file: './logs/comprehensive-automation-error.log',
-      out_file: './logs/comprehensive-automation-out.log',
-      log_file: './logs/comprehensive-automation-combined.log',
-      time: true,
-    },
-    {
-        NODE_ENV: 'production',      },
+=======
+
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'auto-commit-fixes',
+        COMMIT_FREQUENCY: 'hourly',
+        AUTO_PUSH: 'false',
+
+      },
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/automation-error.log',
       out_file: './logs/automation-out.log',
       log_file: './logs/automation-combined.log',
-      time: true,    },
+      time: true
+    },
     {
-      name: 'comprehensive-automation',
-      script: 'node',
-      args: 'scripts/automation/comprehensive-continuous-automation.cjs',
-      cwd: '/workspace',
 
+        PM2_PROCESS_NAME: 'code-quality-monitor',
+        QUALITY_THRESHOLD: '80',
+        AUTO_FIX_CRITICAL: 'true',
+      },
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      log_file: 'logs/pm2/code-quality-monitor.log',
+      error_file: 'logs/pm2/code-quality-monitor-error.log',
+      out_file: 'logs/pm2/code-quality-monitor-out.log',
+
+    },
+    {
+      name: 'auto-commit-fixes',
+      script: 'scripts/pm2/auto-commit-fixes.js',
+
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+
+};
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/comprehensive-automation-error.log',
+      out_file: './logs/comprehensive-automation-out.log',
+      log_file: './logs/comprehensive-automation-combined.log',
+
+<<<<<<< HEAD
       instances: 1,
       autorestart: true,
       watch: false,
@@ -973,6 +1029,8 @@ module.exports = {}
       time: true
     },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     {
       name: 'marketing-automation',
       script: 'node',
@@ -984,16 +1042,21 @@ module.exports = {}
       max_memory_restart: '1G',
       env: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         NODE_ENV: 'production',      },
 
 =======
         NODE_ENV: 'production'
       },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       cron_restart: '0 */12 * * *', // Every 12 hours
       error_file: './logs/marketing-automation-error.log',
       out_file: './logs/marketing-automation-out.log',
       log_file: './logs/marketing-automation-combined.log',
+<<<<<<< HEAD
 <<<<<<< HEAD
       time: true,    },
     {
@@ -1011,13 +1074,19 @@ main
     },
     {
       name: 'security-audit',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       script: 'npm',
       args: 'audit',
       cwd: '/workspace',
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       instances: 1,
       autorestart: true,
       watch: false,
@@ -1077,6 +1146,7 @@ main
       args: 'run lint',
       cwd: '/workspace',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -1132,6 +1202,15 @@ main
         NODE_ENV: 'production'
       },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '500M',
+      env: {
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       cron_restart: '0 */2 * * *', // Every 2 hours
       error_file: './logs/lint-checker-error.log',
       out_file: './logs/lint-checker-out.log',
@@ -1145,6 +1224,7 @@ main
       interpreter: "none",
       cwd: __dirname,
 
+<<<<<<< HEAD
         NODE_ENV: 'production',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
@@ -1161,6 +1241,8 @@ main
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       watch: false,
       autorestart: true,
       max_restarts: 10,
@@ -1211,6 +1293,7 @@ main
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
       time: true
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1299,4 +1382,6 @@ main
   ];};
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 

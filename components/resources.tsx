@@ -3,6 +3,7 @@ import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function ResourcesPage() {
   return (
 <<<<<<< HEAD
@@ -53,6 +54,10 @@ class ErrorBoundary extends React.Component {
     }
     
     return this.props.children;
+=======
+export default function ResourcesPage() {return (class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 }
 import React from 'react';
@@ -143,12 +148,16 @@ export default ResourcesPage;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </UltraFuturisticBackground>))}export default ResourcesPage;<div className='mt-3 text-cyan-300'>Open →</div>;
             </Link>;
           ))}
         </div>;
       </div>;
     </UltraFuturisticBackground>;
+<<<<<<< HEAD
 )export default ResourcesPage;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -158,3 +167,6 @@ export default ResourcesPage;
 export default ResourcesPage;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)export default ResourcesPage;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

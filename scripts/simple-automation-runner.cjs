@@ -122,6 +122,7 @@ const path = require('path')
       await this.applyImprovements();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 <<<<<<< HEAD
@@ -130,6 +131,8 @@ const fs = require('fs')
 const path = require('path')
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
@@ -179,9 +182,12 @@ module.exports = { runSimpleAutomation }) {
 module.exports = { runSimpleAutomation }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
     "overallStatus"

@@ -6,6 +6,7 @@ const { execSync } = require('child_process');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('🔧 Resolving Final Conflicts');
 console.log('
 }
@@ -47,6 +48,11 @@ console.log('====');
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+console.log('🔧 Resolving Final Conflicts');
+console.log('
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
@@ -129,6 +135,7 @@ for (const file of filesToFix) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -207,3 +214,6 @@ console.log('\n🎉 Final build fix completed!');
     // Check for merge conflict markers
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -29,6 +29,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 let particles: Array< {const UltraAdvancedFuturisticBackgroundV2: React.FC<;
   UltraAdvancedFuturisticBackgroundV2Props;
 > = ({ children, className = '' }) => {const canvasRef  = useRef<HTMLCanvasElement>(null)useEffect(() => {const canvas = canvasRef.current;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     if (!canvas) return;
     const ctx = canvas.getContext('2d')if (!ctx) return;
@@ -76,6 +77,11 @@ if (return) {
     let particles: Array<{
       coordinate_x: number;
 =======
+=======
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d')if (!ctx) return;
+    canvas.width = window.innerWidth;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     canvas.height = window.innerHeight;canvas.width = window.inner_width;
 canvas.height = window.inner_height;
 let animationFrameId: number;
@@ -92,7 +98,10 @@ if (return) {$2;
 }
     canvas.width = window.inner_width;
     canvas.height = window.inner_height;let animationFrameId: number;let animationFrameId: number;let particles: Array<{coordinate_x: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       coordinate_y: number;
       vx: number;
       vy: number;
@@ -100,9 +109,12 @@ if (return) {$2;
       color: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       life: number;
       maxLife: number;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       life: number;Math.pow(particle.y - otherParticle.y, 2)maxLife: number;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }> = [];
@@ -164,9 +176,12 @@ ctx.stroke();
                 Math.pow(particle.y - otherParticle.y, 2))if (distance < 100) {ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
               ctx.lineWidth = 1;
               ctx.beginPath()ctx.moveTo(particle.x, particle.y)ctx.lineTo(otherParticle.x, otherParticle.y)ease: 'easeInOut',          }}
+<<<<<<< HEAD
 =======
             ease: 'easeInOut',          }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <motion.div;
           className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink-400 opacity-20";
@@ -183,6 +198,9 @@ ctx.stroke();
         <motion.div;
           className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green-400 opacity-20";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           animate={{duration: 7;
             repeat: Infinity;
             ease: 'easeInOut',            ease: "easeInOut";
@@ -305,7 +323,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{rotate: [360, 0],scale: [1, 0.9, 1],opacity: [0.1, 0.3, 0.1],}}
           transition={{duration: 7,repeat: Infinity,ease: 'easeInOut',}}
           transition={{duration: 7,repeat: Infinity,}}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Quantum Energy Particles */}
       <div className='fixed inset-0 pointer-events-none z-20'>;
         {[...Array(20)].map((_, i) => (<motion&& motion.div;
@@ -327,6 +348,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             animate={{
               y: [0, -100, 0],
               opacity: [0, 1, 0],
@@ -339,10 +361,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             animate={{y: [0, -100, 0];
               opacity: [0, 1, 0];
               scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (<div className='fixed inset - 0 pointer - events - none z - 20'>;
         {[...Array (20)].map ((_, i) => (<motion.div;
+<<<<<<< HEAD
             key={i}
             className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
             style={{<motion.div;
@@ -356,6 +381,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='fixed inset - 0 pointer - events - none z - 20'>;
         {[...Array (20)].map ((_, i) => (
           <motion.div;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             key={i}
             className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
             style={{
@@ -363,6 +390,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
             }}
+<<<<<<< HEAD
             animate={{
               coordinate_y: [0, -100, 0],
               opacity: [0, 1, 0],
@@ -391,6 +419,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               opacity: [0, 1, 0];
               scale: [0, 1, 0];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            animate={{y: [0, -100, 0];
+              opacity: [0, 1, 0];
+              scale: [0, 1, 0];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             }}
             transition={{duration: 3 + Math.random() * 2;
               repeat: Infinity;
@@ -402,6 +435,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
             transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut',            }}/>;
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
 
@@ -431,6 +465,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {[...Array(15)].map((_, i) => (
             <motion.line
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>;
       {/* Neural Network Connections */}<div className='fixed inset-0 pointer-events-none z-30'>;
         <svg className='w-full h-full'>;
@@ -442,8 +478,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               x1='0%';
               y1='0%';
               x2='100%';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               y2='100%'>;
               <stop offset='0%' stopColor='#00ffff' stopOpacity='0 && 0.3' />;
               <stop offset='100%' stopColor='#ff00ff' stopOpacity='0 && 0.3' />            </linearGradient>      <div className="fixed inset-0 pointer-events-none z-30">;
@@ -460,6 +499,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               x2={Math && Math.random() * 100}
               y2={Math && Math.random() * 100}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               stroke='url(#neuralGradient)';
               y2='100%';
             >;
@@ -468,12 +510,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </linearGradient>;
           </defs>;
           {[...Array(15)].map((_, i) => (<motion.line;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               key={i}
               x1={Math.random() * 100}
               y1={Math.random() * 100}
               x2={Math.random() * 100}
               y2={Math.random() * 100}
+<<<<<<< HEAD
 <<<<<<< HEAD
 stroke='url(#neuralGradient)'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -536,6 +582,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default UltraAdvancedFuturisticBackgroundV2;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 stroke='url(#neuralGradient)';
               strokeWidth='1';
               opacity='0 && 0.1';
@@ -577,6 +625,7 @@ stroke='url(#neuralGradient)';
       {/* Content */}
       <div className='relative z - 40'>{children}</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)}export default UltraAdvancedFuturisticBackgroundV2;    </div>)}export default UltraAdvancedFuturisticBackgroundV2;
 }}export default UltraAdvancedFuturisticBackgroundV2;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -591,3 +640,7 @@ export default UltraAdvancedFuturisticBackgroundV2
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)}export default UltraAdvancedFuturisticBackgroundV2;    </div>)}export default UltraAdvancedFuturisticBackgroundV2;
+}}export default UltraAdvancedFuturisticBackgroundV2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

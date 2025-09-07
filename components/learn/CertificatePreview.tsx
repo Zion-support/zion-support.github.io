@@ -9,6 +9,7 @@ export default function CertificatePreview({
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
   courseId,
   userId = "demo-user",
 }: {;
@@ -67,6 +68,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   courseId,userId = "demo-user";
 }: {courseId,userId = "demo-user";
 }: {import React from 'react';
@@ -149,9 +152,13 @@ function CertificatePreview() {const url = `/api / learn / certificates/${course
         Download PDF;
       </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </div>);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

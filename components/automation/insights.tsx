@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import Head from 'next/head',
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -7,6 +8,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
  return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
 }</ul> </div> </div>) 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
@@ -14,6 +17,7 @@ return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 }</pre>)
 }</section> </div>) import { useEffect, useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 
 import Head from 'next/head';
 
@@ -41,6 +45,11 @@ import { useEffect, useState   } from 'react';
 import Head from 'next/head',export default function AutomationInsightsPage() {const [intel, setIntel] = useState<any>(null)const [talentMd, setTalentMd] = useState<string>('')useEffect(() => {fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {})fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})return (<div> <Head><title > Automation Insights — Zion</title></Head>) )}</ul> </div> </div>)}</section>) : (<pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800" > {talent_md;
 }</pre>)}</section> </div>) import { useEffect, useState  } from 'react';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import { useEffect, useState   } from 'react';
+import Head from 'next/head',export default function AutomationInsightsPage() {const [intel, setIntel] = useState<any>(null)const [talentMd, setTalentMd] = useState<string>('')useEffect(() => {fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {})fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})return (<div> <Head><title > Automation Insights — Zion</title></Head>) )}</ul> </div> </div>)}</section>) : (<pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800" > {talent_md;
+}</pre>)}</section> </div>) import { useEffect, useState  } from 'react';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Head from 'next / head';
 export default /**;
  * AutomationInsightsPage - Function description;
@@ -50,6 +59,7 @@ function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(nu
       <h1 className="text - 2xl font - semibold mb - 4">Automation Insights</h1>;
       <section className="mb - 8">;
         <h2 className="font - medium">Market Intelligence</h2>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {!intel ? (
@@ -69,6 +79,9 @@ function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(nu
           <div className="text - sm text - gray - 500">Loading…</div>) : (
           <div className="mt - 3 text - sm">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        {!intel ? (<div className="text - sm text - gray - 500">Loading…</div>) : (<div className="mt - 3 text - sm">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className="text - xs text - gray - 500">Generated at {intel.generated_at}</div>;
             <div className="mt - 3">;
               <h3 className="font - medium">Top Keywords</h3>;
@@ -134,6 +147,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       </section>;
     </div>;
+<<<<<<< HEAD
 )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -143,3 +157,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
     </div>);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

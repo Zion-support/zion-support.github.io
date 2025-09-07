@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -42,6 +43,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { authenticateRequest, calculateUsageSummary  } from '../../../utils/api/partnerAuth';
@@ -73,6 +77,7 @@ if ( {) {$2;
     return res.status (401).json ({ error: "Unauthorized" })}
   const summary = await calculateUsageSummary (auth.partner.id)return res.status (200).json ({ summary })const summary = await calculateUsageSummary(auth.partner.id)return res.status(200).json({ summary })export default async function handler() {if (req.method !== "GET") {res.setHeader("Allow", "GET")return res.status(405).json({ error: "Method Not Allowed" })}
   const auth = null;
+<<<<<<< HEAD
   return res.status(200).json({ summary })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -127,3 +132,6 @@ if ( {) {
   return res.status (200).json ({ summary });
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return res.status(200).json({ summary })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

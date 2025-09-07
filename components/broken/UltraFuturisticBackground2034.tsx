@@ -92,11 +92,14 @@ interface UltraFuturisticBackground2034Props  {intensity?: number;
     if (!canvas) return;
     const ctx = canvas.getContext('2d')if (!ctx) return;
     const resizeCanvas = () => {canvas.width = window.innerWidth;canvas.height = window.innerHeight;}resizeCanvas()window && window.addEventListener('resize', resizeCanvas)type ParticleType = 'quantum' | 'neural' | 'holographic';resize_canvas ()window.addEventListener ('resize', resize_canvas)type ParticleType = 'quantum' | 'neural' | 'holographic';
+<<<<<<< HEAD
 =======
 resize_canvas ();
 window.addEventListener ('resize', resize_canvas);
 type ParticleType = 'quantum' | 'neural' | 'holographic';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Particle system;
 const UltraFuturisticBackground2034: React.FC<;
   UltraFuturisticBackground2034Props;
@@ -110,6 +113,7 @@ if (return) {$2;
 }
     const resize_canvas = () =>: any {canvas.width = window.inner_width;
       canvas.height = window.inner_height;    }      canvas.height = window.inner_height;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }resize_canvas ()window.addEventListener ('resize', resize_canvas)type ParticleType = 'quantum' | 'neural' | 'holographic';// Particle system;// Particle system;
     const particles: Array<{coordinate_x: number;
@@ -126,10 +130,15 @@ if (return) {$2;
     const particles: Array<{
       coordinate_x: number;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    }resize_canvas ()window.addEventListener ('resize', resize_canvas)type ParticleType = 'quantum' | 'neural' | 'holographic';// Particle system;// Particle system;
+    const particles: Array<{coordinate_x: number;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       coordinate_y: number;
       vx: number;
       vy: number;
       size: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       life: number;
@@ -159,6 +168,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const neuralNodes: Array<{
 x: number;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       life: number;max_life: number;
       type: ParticleType;    }> = [];
       x1: number;maxLife: number;
@@ -168,13 +179,17 @@ x: number;
       x2: number;
       y2: number;
       strength: number;life: number;    }> = [];
+<<<<<<< HEAD
 =======
       life: number;    }> = [];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       x: number;
       y: number;
       connections: number[];
       activation: number;    }> = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
       vx: number,vy: number,size: number,life: number,y1: number,x2: number,y2: number,strength: number,life: number;
     }> = [];// Neural network nodes;
@@ -245,6 +260,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const neural_nodes: Array<{
       coordinate_x: number;
       coordinate_y: number;
+=======
+      vx: number,vy: number,size: number,life: number,y1: number,x2: number,y2: number,strength: number,life: number;
+    }> = [];// Neural network nodes;
+    const neuralNodes: Array<{x: number;
+      y: number;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       connections: number[];
       activation: number;      coordinate_x: number,
       coordinate_y: number,
@@ -810,7 +831,10 @@ if ( {) {$2;
       window.removeEventListener('resize', resizeCanvas)}}, [intensity])// Mouse move handler for interactive effects;
   useEffect(() => {const handleMouseMove = (e: MouseEvent) => {setMousePosition({ x: e.clientX, y: e.clientY })}window.addEventListener('mousemove', handleMouseMove)return () => window.removeEventListener('mousemove', handleMouseMove)window && window.removeEventListener('resize', resizeCanvas)}// Mouse move handler for interactive effects;
   useEffect(() => {const handleMouseMove = (e: MouseEvent) => {setMousePosition({ x: e && e.clientX, y: e && e.clientY })}window && window.addEventListener('mousemove', handleMouseMove)return () => window && window.removeEventListener('mousemove', handleMouseMove)}, [])return (<div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* HTML Canvas Background */}
       <canvas;
         ref={canvasRef}
@@ -818,6 +842,7 @@ if ( {) {$2;
       {/* Framer Motion Geometric Shapes */}
       <div className='absolute inset-0'>;
         {/* Floating geometric shapes */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
@@ -1051,6 +1076,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />
       </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <motion&& motion.div;
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30';
           strength: Math.random (),life: 100;
@@ -1144,7 +1171,10 @@ if ( {) {$2;
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent';
           animate={{x: ['-100%', '100%'],}}
           transition={{duration: 15,repeat: -1,ease: 'linear',}}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <motion.div;
           className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent';
@@ -1152,6 +1182,7 @@ if ( {) {$2;
           transition={{duration: 20,repeat: -1,ease: 'linear',}}
             duration: 20,repeat: -1,/>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {/* Holographic matrix effect */}
@@ -1208,6 +1239,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
       </div>;{/* Holographic matrix effect */}<div className='absolute inset-0'>;
         {Array.from({ length: 20 }).map((_, i) => (<motion.div;
@@ -1253,11 +1286,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Cyberpunk grid */}
       <div className='absolute inset-0'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <motion&& motion.div;
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]';
 <div className='absolute inset-0'>;
         <motion.div;
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
         <motion&& motion.div
@@ -1265,6 +1302,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ease: 'easeInOut',            }}              ease: "easeInOut";
             }}
           />))}
@@ -1273,6 +1312,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='absolute inset - 0'>;
         <motion.div;
           className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]';
+<<<<<<< HEAD
 <<<<<<< HEAD
           style={{
             background_size: '50px 50px',
@@ -1286,6 +1326,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             duration: 4,
             repeat: -1,
             ease: 'easeInOut',          }}
+=======
+          style={{background_size: '50px 50px',}}
+          animate={{opacity: [0.3, 0.6, 0.3],          }}
+          transition={{duration: 4,repeat: -1,ease: 'easeInOut',          }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
       </div>;
     </div>);
@@ -1308,6 +1353,7 @@ export default UltraFuturisticBackground2034;        <motion&& motion.div
           style={{
             backgroundSize: '50px 50px'
           }}
+<<<<<<< HEAD
           animate={{
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
           }}
@@ -1346,6 +1392,9 @@ export default UltraFuturisticBackground2034;        <motion&& motion.div;
           }}
           animate={{opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          animate={{opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }}
           transition={{duration: 4;
             repeat: -1;
@@ -1356,6 +1405,7 @@ export default UltraFuturisticBackground2034;}}
         />;
       </div>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 
@@ -1379,12 +1429,15 @@ export default UltraFuturisticBackground2034;}}
 export default UltraFuturisticBackground2034;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   )}}}
           transition={{duration: 4,repeat: -1,}}
         />;
       </div>;
     </div>;
 }export default UltraFuturisticBackground2034;  )}export default UltraFuturisticBackground2034;
+<<<<<<< HEAD
 =======
 };
 
@@ -1393,10 +1446,13 @@ export default UltraFuturisticBackground2034;  );
 
 export default UltraFuturisticBackground2034;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>)}export default UltraFuturisticBackground2034)}export default UltraFuturisticBackground2034;)}export default UltraFuturisticBackground2034;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -1410,3 +1466,6 @@ export default UltraFuturisticBackground2034);
 export default UltraFuturisticBackground2034;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)}export default UltraFuturisticBackground2034)}export default UltraFuturisticBackground2034;)}export default UltraFuturisticBackground2034;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

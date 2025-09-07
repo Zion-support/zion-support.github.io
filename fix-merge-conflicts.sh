@@ -3,11 +3,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> main
+<<<<<<< HEAD
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
@@ -22,6 +26,56 @@ files_with_conflicts=$(find /workspace/app -name "*.tsx" -o -name "*.ts" | xargs
 =======
 files_with_conflicts=$(find /workspace/app -name "*.tsx" -o -name "*.ts" | xargs grep -l "" 2>/dev/null)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+# Script to automatically resolve merge conflicts by choosing the main branch version
+# This script removes everything from <<<<<<< HEAD to ======= and keeps everything after =======
+
+echo "Fixing merge conflicts in source files..."
+
+<<<<<<< HEAD
+# Find all files with merge conflicts in src and app directories
+find src app -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.css" | while read file; do
+  if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
+    echo "Fixing conflicts in: $file"
+=======
+echo "Found files with conflicts:"
+echo "$files_with_conflicts"
+
+# For each file, resolve conflicts by keeping our version (HEAD)
+for file in $files_with_conflicts; do
+    if [ -f "$file" ]; then
+        echo "Fixing conflicts in: $file"
+
+        # Use sed to remove merge conflict markers and keep HEAD version
+        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+        sed -i '/^>>>>>>> /d' "$file"
+
+        # Remove any remaining conflict markers
+        sed -i '/^<<<<<<< /d' "$file"
+        sed -i '/^=======/d' "$file"
+        sed -i '/^>>>>>>> /d' "$file"
+    fi
+done
+
+echo "Merge conflicts fixed!"
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+# Script to fix merge conflicts by keeping HEAD version
+echo "Fixing merge conflicts in all files..."
+
+# Find all files with merge conflicts
+files_with_conflicts=$(find /workspace/app -name "*.tsx" -o -name "*.ts" | xargs grep -l "" 2>/dev/null)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 for file in $files_with_conflicts; do
     echo "Fixing merge conflicts in: $file"
@@ -29,6 +83,7 @@ for file in $files_with_conflicts; do
 >>>>>>> main
 =======
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+<<<<<<< HEAD
 =======
 
 # Script to automatically resolve merge conflicts by choosing HEAD version
@@ -46,11 +101,16 @@ files_with_conflicts=$(grep -r "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.
 for file in $files_with_conflicts; do
     echo "Fixing merge conflicts in: $file"
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     
-    # Create a backup
-    cp "$file" "$file.backup"
+    # Create a temporary file
+    temp_file=$(mktemp)
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     # Process the file to resolve conflicts
     awk '
 <<<<<<< HEAD
@@ -75,11 +135,14 @@ for file in $files_with_conflicts; do
     # Replace the original file
     mv "$temp_file" "$file"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     # Remove merge conflict markers and keep the HEAD version
     sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
     sed -i '/>>>>>>> /d' "$file"
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     
     echo "Fixed: $file"
 done
@@ -87,6 +150,9 @@ done
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 echo "Merge conflicts fixed!"
 =======
 <<<<<<< HEAD
@@ -144,6 +210,7 @@ echo "Merge conflicts fixed!"
 =======
 echo "All merge conflicts have been resolved!"
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+<<<<<<< HEAD
 =======
 done
 
@@ -152,3 +219,5 @@ echo "Merge conflicts resolved in all files."
 =======
 echo "Merge conflicts fixed!"
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

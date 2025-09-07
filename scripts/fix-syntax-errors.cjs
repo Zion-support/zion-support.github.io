@@ -14,6 +14,7 @@ const path = require('path')
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -26,6 +27,8 @@ main
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 
   log(message) {
@@ -140,6 +143,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
     
     // Fix merge conflict markers
 <<<<<<< HEAD
+<<<<<<< HEAD
     content = content.replace(/
 
 =======
@@ -152,6 +156,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 
     
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    content = content.replace(/
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     
@@ -235,6 +243,9 @@ if (require.main === module) {
 
 module.exports = SyntaxErrorFixer;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   log(message, level = 'INFO')
     this.log(' Starting syntax error fixing...')

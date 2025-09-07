@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -109,6 +110,10 @@ interface AccessibilitySettings  {highContrast: boolean;
   useEffect(() => {const savedSettings = localStorage.getItem('accessibility-settings')if (savedSettings) {try {const parsed = JSON.parse(savedSettings)setSettings(parsed)applyAccessibilitySettings(parsed)} catch (error) {console.warn('Failed to load accessibility settings:', error)}
     }
 =======
+=======
+import React, { useEffect, useState } from 'react';
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -256,7 +261,10 @@ interface AccessibilitySettings  {highContrast: boolean;
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}// Load settings from localStorage on mount;
   useEffect(() => {const savedSettings = localStorage.getItem('accessibility-settings')if (savedSettings) {try {const parsed = JSON.parse(savedSettings)setSettings(parsed)applyAccessibilitySettings(parsed)} catch (error) {console.warn('Failed to load accessibility settings:', error)}
     }
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }, [])return (<div className="accessibility-panel fixed top-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 z-50">;
       <h3 className="font-bold text-lg mb-3">Accessibility Settings</h3>;
       <div className="space-y-3">;

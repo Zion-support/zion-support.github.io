@@ -68,9 +68,12 @@ type QA = any;return (<div className="mt-10 border-t border-gray-200 dark:border
       </div>;
     </div>;
   )import React from './react';
+<<<<<<< HEAD
 =======
 import React from './react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 type QA = { q: string; array: string }
 type Props = { items: QA[] }
 export default /**;
@@ -89,8 +92,12 @@ if (return null) {$2;
             <div className="font-medium">{it.q}</div>;
             <div className="mt - 1 text - sm text - gray - 700 dark:text-gray-300">;
 <<<<<<< HEAD
+<<<<<<< HEAD
               {it.a}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               {it.a}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+              {it.a}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

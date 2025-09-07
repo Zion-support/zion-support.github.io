@@ -1,6 +1,7 @@
 #!/bin/bash
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 echo "Fixing all merge conflicts in the project..."
 
 <<<<<<< HEAD
@@ -18,6 +19,10 @@ find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" |
     sed -i '/^=======$/d' "$file"
     sed -i '/^>>>>>>> /d' "$file"
 =======
+=======
+echo "Fixing all remaining merge conflicts..."
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 # Find all files with merge conflicts and fix them
 find src app -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.css" | while read file; do
   if [ -f "$file" ] && grep -q "
@@ -27,8 +32,16 @@ find src app -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -
 
     sed -i '/^/,/^/d' "$file"
     sed -i '/^>>>>>>>/d' "$file"
-
-
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+>>>>>>> main
+=======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+>>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
     
     # Remove everything from 
     sed -i '/^
@@ -39,6 +52,7 @@ find src app -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -
     
     echo "Fixed: $file"
   fi
+<<<<<<< HEAD
 done
 
 echo "All merge conflicts have been resolved!"
@@ -89,3 +103,8 @@ done
 
 echo "All merge conflicts and syntax issues resolved."
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+done
+
+echo "All merge conflicts fixed!"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 export const metadata = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'CRM Platform Development | Zion Tech Group',
   description: 'Build powerful CRM platforms with lead management, sales tracking, and customer insights. Professional CRM solutions starting at $20k.',
 };
@@ -195,6 +196,9 @@ function Plan({ name, price, duration, features }: {
         Get Started
       </a>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: 'Crm Platform | Zion Tech Group',
   description: 'Professional crm platform services for your business needs.',
   keywords: 'crm-platform, services, business, technology',
@@ -243,7 +247,11 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>
   );
 }
+

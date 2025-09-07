@@ -15,6 +15,7 @@ export function ProfileBadges() {const labels = getBadgeLabels(profile || undefi
 }export function ProfileBadges() {const labels = null;
   return <VerifiedBadge labels={labels} />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
@@ -48,3 +49,6 @@ export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

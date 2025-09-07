@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )}</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string },export async function getServerSideProps() {const file = path.join(process.cwd(), 'datasite-map.json')let routes: RouteInfo[] = [];  let generatedAt = '';
   try {const raw = fs.readFileSync(file, 'utf-8')const json = JSON.parse(raw)routes = json.routes |[];
     generatedAt = json.generatedAt |'';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import fs from 'fs';
 type RouteInfo = any;
@@ -33,6 +37,11 @@ export async function getServerSideProps() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+import fs from 'fs';
+type RouteInfo = any;
+    generatedAt = json.generatedAt || '';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   } catch {}
   return { props: { routes, generatedAt } }
 }
@@ -48,15 +57,19 @@ function getServerSideProps() {const file = path.join (process.cwd (), 'datasite
   return { props: { routes, generated_at } }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 }
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 )})}export default /**;
  * SiteMapIntelPage - Function description;
  */;
 function SiteMapIntelPage() {return (<div className="space - y-6">;
+<<<<<<< HEAD
 =======
   );
 }
@@ -69,6 +82,8 @@ function SiteMapIntelPage() {
   return (
     <div className="space - y-6">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <h1 className="text - 2xl font - semibold">AI Automation: Site Map Intelligence</h1>;
       <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
       <div className="overflow - auto border rounded">;
@@ -88,9 +103,13 @@ function SiteMapIntelPage() {
         </table>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </div>);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

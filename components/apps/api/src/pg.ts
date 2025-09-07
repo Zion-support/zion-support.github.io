@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Pool, PoolClient } from 'pg';
 let pool: Pool | null;
     throw err
@@ -30,6 +31,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 }return pool;
 import { Pool, PoolClient  } from 'pg';
@@ -40,6 +43,7 @@ export async function withUser<T>(userId: string;
 ): Promise<T> {const client = await getPool().connect()try {await client.query('BEGIN')await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [;
       userId;
     ])const result = await fn(client)await client.query('COMMIT')return result;
+<<<<<<< HEAD
   } catch (err) {await client.query('ROLLBACK')throw err;} finally {client.release ()}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -50,3 +54,6 @@ export async function withUser<T>(userId: string;
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  } catch (err) {await client.query('ROLLBACK')throw err;} finally {client.release ()}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

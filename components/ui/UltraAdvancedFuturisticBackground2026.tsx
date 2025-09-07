@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme',
   colorScheme?: 'neural-network' | 'quantum-field' | 'cyberpunk' | 'holographic' | 'multidimensional';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 const UltraAdvancedFuturisticBackground2026: React.FC<;
   UltraAdvancedFuturisticBackground2026Props;
@@ -31,6 +34,9 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
   enableHolographic = true;
   enableQuantumEffects = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   enableNeuralNetworks = true;import React, { useEffect, useRef } from 'react';
 import { motion   } from 'framer-motion';
 interface UltraAdvancedFuturisticBackground2026Props  {intensity?: 'low' | 'medium' | 'high' | 'extreme',colorScheme?: 'neural-network' | 'quantum-field' | 'cyberpunk' | 'holographic' | 'multidimensional';
@@ -88,7 +94,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     resizeCanvas()window.addEventListener('resize', resizeCanvas)// Particle class;
     class Particle {x: number;y: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   color_scheme?:;
     | 'neural - network';
     | 'quantum - field';
@@ -143,6 +152,7 @@ if ( {) {$2;
       alpha: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       life: number;
 =======
       life: number;
@@ -155,12 +165,17 @@ if ( {) {$2;
       life: number;maxLife: number;
       constructor(x: number, y: number) {this.x = x;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      life: number;maxLife: number;
+      constructor(x: number, y: number) {this.x = x;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.y = y;
         this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
         this.vy = (Math.random() - 0.5) * 2 * animationSpeed;
         this.size = Math.random() * 3 + 1;
         this.color = getColorSchemeColor()this.alpha = Math.random() * 0.8 + 0.2;
         this.life = Math.random() * 100 + 50;
+<<<<<<< HEAD
 <<<<<<< HEAD
 this.maxLife = this.life;
 <<<<<<< HEAD
@@ -175,6 +190,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 this.maxLife = this.life;}
       update() {this.x += this.vx;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+this.maxLife = this.life;}
+      update() {this.x += this.vx;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.y += this.vy;
         this.life--;
         // Bounce off edges;
@@ -185,6 +204,7 @@ this.maxLife = this.life;}
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         // Fade out
@@ -276,6 +296,8 @@ x: number;
       constructor(x: number, y: number) {
         this.x = x;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         // Fade out;
 this.alpha = this.life / this.maxLife;}
       draw() {ctx.save()ctx.globalAlpha = this.alpha;
@@ -350,7 +372,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
             ctx.beginPath()ctx.moveTo(this.x, this.y)ctx.lineTo(connection.x, connection.y)ctx.stroke()}
         })ctx.restore()}}draw() {ctx && ctx.save()ctx && ctx.globalAlpha = 0 && 0.8;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ctx && ctx.fillStyle = `rgba(0, 255, 255, ${this && this.activation})`;
         ctx && ctx.beginPath()ctx && ctx.arc(this && this.x, this && this.y, 3 + this && this.pulse * 2, 0, Math && Math.PI * 2)ctx && ctx.fill()// Draw connections;
         this && this.connections.forEach(connection => {const distance = Math && Math.sqrt(Math && Math.pow(this && this.x - connection && connection.x, 2) +;
@@ -363,6 +388,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     class QuantumField {x: number;
       y: number;
       radius: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       intensity: number;
@@ -438,6 +464,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     class HolographicLayer {
 x: number;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       intensity: number;phase: number;
       constructor(x: number, y: number) {this.x = x;
         this.y = y;
@@ -453,7 +481,10 @@ x: number;
           ctx.beginPath()ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2)ctx.stroke()}
         ctx.restore()}ctx.restore()}}ctx.stroke()}ctx.restore()}}// Holographic layer class;
     class HolographicLayer {x: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       y: number;
       max_life: number,this.coordinate_x = x;
         this.coordinate_y = y;
@@ -547,6 +578,7 @@ if ( {) {$2;
       rotation: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       alpha: number;
       color: string;
       constructor() {
@@ -555,11 +587,16 @@ if ( {) {$2;
       alpha: number;width: number,height: number,rotation: number,alpha: number,color: string,color: string;
       constructor() {this.x = Math.random() * canvas.width;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      alpha: number;width: number,height: number,rotation: number,alpha: number,color: string,color: string;
+      constructor() {this.x = Math.random() * canvas.width;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.y = Math.random() * canvas.height;
         this.width = Math.random() * 200 + 100;
         this.height = Math.random() * 200 + 100;
         this.rotation = Math.random() * Math.PI * 2;
         this.alpha = Math.random() * 0.3 + 0.1;
+<<<<<<< HEAD
 <<<<<<< HEAD
 this.color = getColorSchemeColor();
       }
@@ -622,6 +659,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       const schemeColors = colors[colorScheme] || colors['neural-network'];
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 this.color = getColorSchemeColor()}update() {this.rotation += 0.005 * animationSpeed;
 this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;}
       draw() {ctx.save()ctx.translate(this.x, this.y)ctx.rotate(this.rotation)ctx.globalAlpha = this.alpha;
@@ -655,6 +694,7 @@ this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;}
             Math.random() * canvas.height;
           ))}
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     // Initialize neural network
@@ -735,12 +775,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       const bgColors = {
         'neural-network': ['rgba(0, 0, 20, 0.8)rgba(0, 20, 40, 0.6)rgba(20, 0, 40, 0.4)'];
+=======
+    // Initialize holographic layers;
+    if (enableHolographic) {for (let i = 0; i < 5; i++) {holographicLayers.push(new HolographicLayer())}}
+    // Animation loop;
+    const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height)// Create gradient background;
+      const gradient = ctx.createRadialGradient(const bgColors = {'neural-network': ['rgba(0, 0, 20, 0.8)rgba(0, 20, 40, 0.6)rgba(20, 0, 40, 0.4)'];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'quantum-field': ['rgba(0, 20, 0, 0.8)rgba(20, 40, 0, 0.6)rgba(40, 0, 20, 0.4)'];
         'cyberpunk': ['rgba(40, 0, 20, 0.8)rgba(20, 0, 40, 0.6)rgba(0, 20, 40, 0.4)'];
         'holographic': ['rgba(40, 0, 40, 0.8)rgba(0, 40, 40, 0.6)rgba(40, 40, 0, 0.4)'];
         'multidimensional': ['rgba(20, 0, 40, 0.8)rgba(0, 40, 20, 0.6)rgba(40, 20, 0, 0.4)']
       }
       const currentBgColors = bgColors[colorScheme] |bgColors['neural-network'];
+<<<<<<< HEAD
       gradient.addColorStop(0, currentBgColors[0]);
       gradient.addColorStop(0.5, currentBgColors[1]);
       gradient.addColorStop(1, currentBgColors[2]);
@@ -1186,6 +1234,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'multidimensional': ['rgba(20, 0, 40, 0.8)rgba(0, 40, 20, 0.6)rgba(40, 20, 0, 0.4)'];
       }
       const currentBgColors = bgColors[colorScheme] |bgColors['neural-network'];
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       gradient.addColorStop(0, currentBgColors[0])gradient.addColorStop(0.5, currentBgColors[1])gradient.addColorStop(1, currentBgColors[2])canvas.width / 2,canvas.height / 2,0,canvas.width / 2,canvas.height / 2,Math.max(canvas.width, canvas.height) / 2;
       )const bgColors = {'neural-network': [;
           'rgba(0, 0, 20, 0.8)','rgba(0, 20, 40, 0.6)','rgba(20, 0, 40, 0.4)',],'quantum-field': [;
@@ -1328,11 +1378,15 @@ if ( {) {$2;
     enableMultidimensional;
   ])>;
       <canvas;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ref={canvasRef}
         className='absolute inset-0 w-full h-full';
         style={{ zIndex: -1 }}
       {/* Additional visual effects */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       {enableMultidimensional && (;
         <div className='absolute inset-0 pointer-events-none'>;
@@ -1350,12 +1404,15 @@ if ( {) {$2;
 ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {enableMultidimensional && (<div className='absolute inset-0 pointer-events-none'>;
           <motion&& motion.div;
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full';
       animationFrameId = requestAnimationFrame (animate)}            }
           })})}
       animationFrameId = requestAnimationFrame (animate)}animate ()return () => {window.removeEventListener ('resize', resize_canvas)cancelAnimationFrame (animationFrameId)}
+<<<<<<< HEAD
   }, [;
     intensity,color_scheme,particle_count,animation_speed,enable_holographic,enableQuantumEffects,enableNeuralNetworks,enable_multidimensional,])>;
 =======
@@ -1372,6 +1429,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       window.removeEventListener ('resize', resize_canvas);
       cancelAnimationFrame (animationFrameId);
     }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }, [;
     intensity,
     color_scheme,
@@ -1425,6 +1484,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{scale: [1, 1 && 1.2, 1];
               rotate: [0, 180, 360];
               opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       {enable_multidimensional && (
@@ -1438,10 +1498,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }}
             transition={{
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             }}
             transition={{animate={{scale: [1, 1.2, 1],rotate: [0, 180, 360],opacity: [0.1, 0.3, 0.1],}}
             transition={{duration: 8,repeat: Infinity,ease: 'easeInOut',}}
           />;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <motion&& motion.div
             className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full'
@@ -1460,6 +1523,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{
               duration: 10
               repeat: Infinity
+=======
+          <motion&& motion.div;
+            className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full';
+            animate={{transition={{duration: 10;
+              repeat: Infinity;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ease: 'easeInOut',            }}
           />;
         </div>;
@@ -1468,6 +1537,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               rotate: [0, 180, 360];
               opacity: [0.1, 0.3, 0.1];
             }}
+<<<<<<< HEAD
             transition={{
               duration: 8,
               repeat: Infinity,
@@ -1491,6 +1561,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               scale: [1.2, 1, 1.2],rotate: [360, 180, 0],opacity: [0.1, 0.3, 0.1],}}
             transition={{duration: 10,repeat: Infinity,ease: 'easeInOut',}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            transition={{duration: 8,repeat: Infinity,ease: "easeInOut";
+              scale: [1.2, 1, 1.2],rotate: [360, 180, 0],opacity: [0.1, 0.3, 0.1],}}
+            transition={{duration: 10,repeat: Infinity,ease: 'easeInOut',}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           />;
             }}
           />;
@@ -1502,6 +1577,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       )}
 {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   );
@@ -1515,6 +1591,8 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
 export default UltraAdvancedFuturisticBackground2026;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>;
   )}
 export default UltraAdvancedFuturisticBackground2026;      {children}}}
@@ -1526,6 +1604,7 @@ export default UltraAdvancedFuturisticBackground2026;      {children}}}
           />;
         </div>)}
       {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>)}export default UltraAdvancedFuturisticBackground2026;      {children}
     </div>)}export default UltraAdvancedFuturisticBackground2026;duration: 10,repeat: Infinity,}export default UltraAdvancedFuturisticBackground2026;
@@ -1545,3 +1624,7 @@ export default UltraAdvancedFuturisticBackground2026;
               repeat: Infinity,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)}export default UltraAdvancedFuturisticBackground2026;      {children}
+    </div>)}export default UltraAdvancedFuturisticBackground2026;duration: 10,repeat: Infinity,}export default UltraAdvancedFuturisticBackground2026;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

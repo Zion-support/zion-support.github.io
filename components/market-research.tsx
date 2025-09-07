@@ -49,6 +49,7 @@ export default function MarketResearchPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 
 
 export default function MarketResearchPage() {
@@ -229,6 +230,109 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ];
       color: 'from-teal-500 to-cyan-600'
       icon: <Users className="w-8 h-8 text-white" />
+=======
+;
+export default function MarketResearchPage() {const marketSegments = [;
+    {name: 'AI & Machine Learning';
+      marketSize: '$15.7B';
+      growthRate: '23.4% CAGR';
+      keyTrends: [;
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { TrendingUp,BarChart3,DollarSign,Users,Globe,Target,Clock,Award,ArrowRight,ExternalLink,PieChart,LineChart,Activity,Zap,} from 'lucide-react';
+export default function MarketResearchPage() {'Generative AI adoption accelerating','AI-powered automation increasing','Natural language processing growth','Computer vision applications expanding',],topPlayers: ['OpenAI', 'Anthropic', 'Google AI', 'Microsoft Azure AI'],opportunities: [;
+        'AI content generation tools','Predictive analytics platforms','Automated customer service','Intelligent process automation',],color: 'from-fuchsia-500 to-purple-600',icon: <Zap className='w-8 h-8 text-white' />,},{name: 'Database & Analytics';
+      marketSize: '$8.9B';
+      growthRate: '18.7% CAGR';
+      keyTrends: [;
+      opportunities: [;
+        'Database performance monitoring';
+        'Real-time analytics dashboards';
+        'Data visualization tools';
+        'Query optimization platforms';
+      ];
+      color: 'from-cyan-500 to-blue-600';
+      icon: <BarChart3 className='w-8 h-8 text-white' />;
+    },    {      opportunities: [;
+        'Database performance monitoringReal-time analytics dashboardsData visualization toolsQuery optimization platforms';
+      ];
+      color: 'from-cyan-500 to-blue-600';
+      icon: <BarChart3 className="w-8 h-8 text-white" />;
+'Real-time analytics demand','Cloud database migration','Data privacy regulations','Performance optimization focus',],topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],opportunities: [;
+        'Database performance monitoring','Real-time analytics dashboards','Data visualization tools','Query optimization platforms',],color: 'from-cyan-500 to-blue-600',icon: <BarChart3 className='w-8 h-8 text-white' />,},{name: 'Security & Identity';
+      marketSize: '$12.3B';
+      growthRate: '21.2% CAGR';
+      keyTrends: [;
+      opportunities: [;
+        'Identity verification platforms';
+        'API security gateways';
+        'Compliance monitoring tools';
+        'Threat detection systems';
+      ];
+      color: 'from-green-500 to-emerald-600';
+      icon: <Target className='w-8 h-8 text-white' />;
+    },    {      opportunities: [;
+        'Identity verification platformsAPI security gatewaysCompliance monitoring toolsThreat detection systems';
+      ];
+      color: 'from-green-500 to-emerald-600';
+      icon: <Target className="w-8 h-8 text-white" />;
+'Zero-trust security adoption','Multi-factor authentication growth','API security concerns','Compliance requirements increasing',],topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],opportunities: [;
+        'Identity verification platforms','API security gateways','Compliance monitoring tools','Threat detection systems',],color: 'from-green-500 to-emerald-600',icon: <Target className='w-8 h-8 text-white' />,},{name: 'Business Intelligence';
+      marketSize: '$22.1B';
+      growthRate: '19.8% CAGR';
+      keyTrends: [;
+      opportunities: [;
+        'Custom dashboard builders';
+        'Data integration platforms';
+        'Mobile analytics solutions';
+        'Predictive modeling tools';
+      ];
+      color: 'from-orange-500 to-red-600';
+      icon: <Activity className='w-8 h-8 text-white' />;
+    },    {      opportunities: [;
+        'Custom dashboard buildersData integration platformsMobile analytics solutionsPredictive modeling tools';
+      ];
+      color: 'from-orange-500 to-red-600';
+      icon: <Activity className="w-8 h-8 text-white" />;
+'Self-service BI adoption','Real-time data integration','Mobile BI growth','Predictive analytics demand',],topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],opportunities: [;
+        'Custom dashboard builders','Data integration platforms','Mobile analytics solutions','Predictive modeling tools',],color: 'from-orange-500 to-red-600',icon: <Activity className='w-8 h-8 text-white' />,},{name: 'API Management';
+      marketSize: '$6.8B';
+      growthRate: '24.1% CAGR';
+      keyTrends: [;
+      opportunities: [;
+        'API rate limiting services';
+        'Developer portal platforms';
+        'API analytics tools';
+        'Webhook management systems';
+      ];
+      color: 'from-indigo-500 to-purple-600';
+      icon: <Globe className='w-8 h-8 text-white' />;
+    },    {      opportunities: [;
+        'API rate limiting servicesDeveloper portal platformsAPI analytics toolsWebhook management systems';
+      ];
+      color: 'from-indigo-500 to-purple-600';
+      icon: <Globe className="w-8 h-8 text-white" />;
+'Microservices architecture growth','API-first development','Rate limiting importance','Developer experience focus',],topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],opportunities: [;
+        'API rate limiting services','Developer portal platforms','API analytics tools','Webhook management systems',],color: 'from-indigo-500 to-purple-600',icon: <Globe className='w-8 h-8 text-white' />,},{name: 'User Experience Analytics';
+      marketSize: '$9.4B';
+      growthRate: '20.5% CAGR';
+      keyTrends: [;
+      opportunities: [;
+        'Heatmap and session recording';
+        'A/B testing platforms';
+        'User journey mapping tools';
+        'Conversion funnel analytics';
+      ];
+      color: 'from-teal-500 to-cyan-600';
+      icon: <Users className='w-8 h-8 text-white' />;
+    },  ];      opportunities: [;
+        'Heatmap and session recordingA/B testing platformsUser journey mapping toolsConversion funnel analytics';
+      ];
+      color: 'from-teal-500 to-cyan-600';
+      icon: <Users className="w-8 h-8 text-white" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
         'AI content generation tools',
         'Predictive analytics platforms',
@@ -240,6 +344,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },    {      opportunities: [
         'AI content generation toolsPredictive analytics platformsAutomated customer serviceIntelligent process automation';
       ];
+<<<<<<< HEAD
       color: 'from-fuchsia-500 to-purple-600',
       icon: <Zap className="w-8 h-8 text-white" />
     };
@@ -745,6 +850,8 @@ export default function MarketResearchPage() {'Generative AI adoption accelerati
         'AI content generation tools','Predictive analytics platforms','Automated customer service','Intelligent process automation',],color: 'from-fuchsia-500 to-purple-600',icon: <Zap className='w-8 h-8 text-white' />,},    {      opportunities: [;
         'AI content generation toolsPredictive analytics platformsAutomated customer serviceIntelligent process automation';
       ];
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       color: 'from-fuchsia-500 to-purple-600',icon: <Zap className="w-8 h-8 text-white" />;
     }{name: 'Database & Analytics',marketSize: '$8.9B',growthRate: '18.7% CAGR',keyTrends: [;
         'Real-time analytics demand','Cloud database migration','Data privacy regulations','Performance optimization focus',],topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],opportunities: [;
@@ -962,6 +1069,9 @@ import { Zap } from 'lucide-react';
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className='space-y-8'>;
             {marketSegments.map((segment, index) => (<Card;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -999,6 +1109,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div className="space-y-8">;
             {marketSegments.map((segment, index) => (className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment && segment.color} shadow-xl mx-auto lg:mx-0 mb-6`}>;
+<<<<<<< HEAD
 =======
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -1009,6 +1120,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {marketSegments.map((segment, index) => (
                           className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment && segment.color} shadow-xl mx-auto lg:mx-0 mb-6`}>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {segment && segment.icon}
                         </div>;
                         <h3 className='text-2xl font-bold mb-3 text-white'>;
@@ -1053,6 +1166,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </h4>;
                           <ul className="space-y-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                             {segment && segment.topPlayers.map((player, playerIndex) => (<li key={playerIndex} className="flex items-start text-gray-300 text-sm">;
                                 <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />;</h3>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -1111,12 +1227,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 className='flex items-start text-gray-300 text-sm';
                               >;
                                 <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                             {segment && segment.topPlayers.map((player, playerIndex) => (;
                               <li key={playerIndex} className="flex items-start text-gray-300 text-sm">;
                                 <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                                 {player}
                               </li>;
                             ))}
@@ -1133,6 +1252,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               >;
                                 <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />;
                                 {opportunity}
+<<<<<<< HEAD
 <<<<<<< HEAD
                               </div>
                             )
@@ -1160,6 +1280,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </Card>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                               </div>;
                             ))}                        </div>                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
                           {segment.opportunities.map((opportunity, oppIndex) => (<div key={oppIndex} className="flex items-start text-gray-300 text-sm">;
@@ -1174,7 +1296,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               </Card>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </div>;
         </div>;
@@ -1213,6 +1338,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='text - white font - semibold'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         {analysis.pricing}
                       </div>
                     </div>
@@ -1233,6 +1359,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </ul>
                   </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         {analysis.pricing}</h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Understanding the competitive landscape and positioning strategies for different types of SaaS companies.;
@@ -1240,6 +1368,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {competitiveAnalysis.map((analysis, index) => (<Card;
+<<<<<<< HEAD
 =======
                         {analysis.pricing}
             </h2>
@@ -1251,6 +1380,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {competitiveAnalysis.map((analysis, index) => (
               <Card
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={index}
                 className="card-hover border-gradient-blue";
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -1347,6 +1478,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>;
                     <ul className="space-y-1 text-xs text-gray-300">;
                       {analysis.strengths.map((strength, strengthIndex) => (<li key={strengthIndex} className="flex items-start">;
@@ -1381,6 +1515,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                         </li>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>
@@ -1394,6 +1529,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       ))}
                   {/* Weaknesses */}
                   <div>;
@@ -1415,6 +1552,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
       {/* Market Trends */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
@@ -1435,6 +1573,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
               <Card
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -1442,8 +1582,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Emerging Market Trends;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               Key trends shaping the micro SaaS landscape and creating new;
               opportunities for innovation and growth.;
             </p>;
@@ -1466,6 +1609,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="card-hover border-gradient-blue";
                 style={{ animationDelay: `${index * 0.1}s` }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                 <div className="p-6">;
                   <div className="flex items-start justify-between mb-4">;
@@ -1584,7 +1730,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               </Card>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </div>;
         </div>;
@@ -1695,6 +1844,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className='text - xl font - bold text - white mb - 3'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {strategy.strategy}
                   </h3>
                   <p className='text-gray-300 mb-6'>{strategy.description}</p>
@@ -1711,6 +1861,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                         </li>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {strategy.strategy}</h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Analysis of different pricing strategies used in the micro SaaS market and their implications for business success.;
@@ -1718,6 +1870,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {pricingStrategies.map((strategy, index) => (<Card;
+<<<<<<< HEAD
 =======
                     {strategy.strategy}
             </h2>
@@ -1729,6 +1882,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingStrategies.map((strategy, index) => (
               <Card
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={index}
                 className="card-hover border-gradient-blue";
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -1771,6 +1926,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </Card>;</h3>;
                   <p className='text-gray-300 mb-6'>{strategy.description}</p>;
                   {/* Pros */}
@@ -1782,11 +1940,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {strategy.pros.map((pro, proIndex) => (<li key={proIndex} className='flex items-start'>;
                           <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />;
                           {pro}</li>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               </Card>;
                         </li>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       ))}
                     </ul>;
                   </div>;
@@ -1804,6 +1965,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </ul>;
                   </div>;
                   {/* Best For */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <div>
@@ -1824,6 +1986,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Pricing Strategies */}
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <div>;
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>;
                     <p className="text-xs text-gray-300">{strategy.bestFor}</p>;
@@ -1835,7 +1999,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </Card>;
             ))}{/* Pricing Strategies */}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -1910,6 +2077,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
       {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-dots opacity-10' />
         <div className='container-cursor text-center relative z-10'>
@@ -1973,6 +2141,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-dots opacity-10' />;
         <div className='container-cursor text-center relative z-10'>;
@@ -2023,5 +2193,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

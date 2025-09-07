@@ -159,6 +159,7 @@ this.log(`� Report "generated"`)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log("� Config Error Fixer completed!")
 
@@ -167,3 +168,7 @@ this.log(`� Report "generated"`)
 
       this.log("� Config Error Fixer completed!")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+      this.log("� Config Error Fixer completed!")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

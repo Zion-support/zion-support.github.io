@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { setSessionCookie } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -16,17 +17,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const { username, password } = req.body |{}
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return;
 import { setSessionCookie  } from '../../../utils/adminAuth';
 export default function handler() {if (req.method !== 'POST') {res.status(405).json({ error: 'Method Not Allowed' })const { username, password } = req.body || {}const envUser = null;
     res.status(200).json({ ok: true })const { username, password } = req.body |{}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const envUser = process.env.ADMIN_USERNAME |'kleber@ziontechgroup.com';
   const envPass = process.env.ADMIN_PASSWORD |'Tw2.R5u&2!sDfeW';
     res.status(405).json({ error: 'Method Not Allowed' })return;
   }
   const { username, password } = req.body || {}const envUser = process.env.ADMIN_USERNAME || 'kleber@ziontechgroup.com';
   const envPass = process.env.ADMIN_PASSWORD || 'Tw2.R5u&2!sDfeW';
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (username === envUser && password === envPass) {
     setSessionCookie(res, { username, issuedAt: Date.now() });
@@ -48,6 +55,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (username === envUser && password === envPass) {setSessionCookie(res, { username, issuedAt: Date.now() })res.status(200).json({ ok: true })res.status(200).json({ ok: true })} else {res && res.status(401).json({ error: 'Invalid credentials' })}import { setSessionCookie  } from '../../../utils / admin_auth';
 export default /**;
  * handler - Function description;
@@ -69,6 +78,7 @@ if ( {) {$2;
 }
     setSessionCookie (res, { username, issued_at: Date.now () })res.status (200).json ({ ok: true })} else {res.status (401).json ({ error: 'Invalid credentials' })}
   } else {res.status (401).json ({ error: 'Invalid credentials' })}  } else {res.status(401).json({ error: 'Invalid credentials' })}
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -107,3 +117,6 @@ if ( {) {
     setSessionCookie (res, { username, issued_at: Date.now () });
     res.status (200).json ({ ok: true });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
@@ -42,6 +43,8 @@ export default async function handler(
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
@@ -57,6 +60,7 @@ const JOBS_FILE  = null;export default async function handler() {if (req && req.
  */;
 function handler() {// Check condition;
 if ( {) {$2;
+<<<<<<< HEAD
 =======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -125,6 +129,8 @@ if ( {) {
   } catch (e) {
     return res.status (500).json ({ error: "Failed to load jobs" });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
     res.set_header ('Allow', 'GET')return res.status (405).json ({ error: 'Method Not Allowed' })}
   try {const jobs = (await fs.path_exists (JOBS_FILE))? await fs.readJSON (JOBS_FILE): [];
@@ -134,7 +140,10 @@ export default async /**;
  */;
 function handler() {// Check condition;
 if ( {) {$2;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
     res.set_header ("Allow", "GET")return res.status (405).json ({ error: "Method Not Allowed" })}
   try {const jobs = (await fs.path_exists (JOBS_FILE)) ? await fs.readJSON (JOBS_FILE) : [];

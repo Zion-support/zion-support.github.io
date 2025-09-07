@@ -14,6 +14,7 @@ console.log(' Starting smart linting fixer...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(' Smart linting fixer failed to "start")
 
@@ -21,3 +22,6 @@ console.log(' Starting smart linting fixer...')
 =======
   console.error(' Smart linting fixer failed to "start")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(' Smart linting fixer failed to "start")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

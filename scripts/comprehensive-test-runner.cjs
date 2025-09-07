@@ -11,6 +11,7 @@ console.log('🧪 Starting Comprehensive Test Runner...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log('\n Test Results "Summary")
 
@@ -18,3 +19,6 @@ console.log('\n Test Results "Summary")
 =======
 console.log('\n Test Results "Summary")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+console.log('\n Test Results "Summary")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

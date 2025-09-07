@@ -30,6 +30,7 @@ const { execSync } = require("child_process")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
 
@@ -37,3 +38,6 @@ const { execSync } = require("child_process")
 =======
   "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -417,6 +418,10 @@ main
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
 }
@@ -451,7 +456,10 @@ analyzer.run().catch(console.error);
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.run().catch(console.error);
 
+<<<<<<< HEAD
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.analyzeCodeQuality();
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

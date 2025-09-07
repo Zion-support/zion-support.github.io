@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,6 +44,12 @@ describe('InteractiveElementsdynamic', () => {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});
 =======
+=======
+import React from 'react';  import '@testing-library/jest-dom'; import InteractiveElements from '../components/InteractiveElements.dynamic'; describe('InteractiveElements',() => { test('renders without crashing',() => { render(<InteractiveElements />)expect( screen.getByTestId('interactiveelements') ).toBeInTheDocument()})test('displays correct content',() => { render(<InteractiveElements />)})test('handles user interactions',() => { render(<InteractiveElements />)})test('applies correct styling',() => { render(<InteractiveElements />)})})ursor/fix-syntax-push-and-merge-to-main-40de;
+import React from 'react';
+import { render, screen, fireEvent  } from '@testing-library/react';
+import '@testing-library/jest-dom';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import InteractiveElements from '../components/InteractiveElements.dynamic';
 describe('InteractiveElements', () => {test('renders without crashing', () => {render(<InteractiveElements />)expect(screen.getByTestId('interactiveelements')).toBeInTheDocument()})test('displays correct content', () => {render(<InteractiveElements />)})test('handles user interactions', () => {render(<InteractiveElements />)})test('applies correct styling', () => {render(<InteractiveElements />)})})const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import InteractiveElements from "./components/InteractiveElements.dynamic"; describe('InteractiveElements', () => { test('renders without crashing', () => { render(<InteractiveElements />)expect( screen.getByTestId("interactiveelements.dynamic") ).toBeInTheDocument()})test('displays correct content', () => { render(<InteractiveElements />)})test('handles user interactions', () => { render(<InteractiveElements />)})test('applies correct styling', () => { render(<InteractiveElements />)})})''";
 ursor/fix-syntax-push-and-merge-to-main-40de;
@@ -62,7 +69,10 @@ ursor/automate-test-improve-and-merge-code-646c;
   })test('handles user interactions', () => {render(<InteractiveElements />)// Add interaction tests based on component functionality;
   })test('applies correct styling', () => {render(<InteractiveElements />)// Add styling tests if needed;
   })})
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});
 
 
@@ -79,6 +89,7 @@ describe('InteractiveElementsdynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import InteractiveElementsdynamic from "./components/InteractiveElements.dynamic"; describe('InteractiveElementsdynamic', () => { test("renders without crashing",() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId("interactiveelements.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<InteractiveElementsdynamic />)}); test("handles user interactions",() => { render(<InteractiveElementsdynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});
@@ -115,3 +126,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

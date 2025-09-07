@@ -739,8 +739,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<UltraFuturisticFooter2029 /> </>)/* Footer */;
 }<UltraFuturisticFooter2029 /> </>)/* Footer */;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }<UltraFuturisticFooter2029 /> </>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 }<UltraFuturisticFooter2029 /> </>)}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+}<UltraFuturisticFooter2029 /> </>)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import { Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ArrowRight,Star,TrendingUp,Users,CheckCircle,} from 'lucide-react';
   Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ArrowRight,Star,TrendingUp,Users,CheckCircle,} from 'lucide-react';
@@ -30,7 +33,10 @@ export default function UltraFuturisticHero2027() {const features = [import { Ro
 export default function UltraFuturisticHero2027() {const features = [;
 import React from 'react',import Link from 'next/link';
 import { motion  } from 'framer-motion';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Target, Cpu, Database, Cloud, Lock, ArrowRight;
   Star, TrendingUp, Users, CheckCircle;
@@ -45,6 +51,7 @@ export default function UltraFuturisticHero2027() {const features = null;
       text: 'Digital Reality';
       color: 'from-green-400 to-emerald-400';
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -121,12 +128,18 @@ export default function UltraFuturisticHero2027() {
       text: 'Enterprise Security';
       color: 'from-red-400 to-orange-400';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    {icon: Shield;
+      text: 'Enterprise Security';
+      color: 'from-red-400 to-orange-400';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   ];
       icon: Shield,text: 'Enterprise Security',color: 'from-red-400 to-orange-400',},];return this.props.children;
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -190,6 +203,8 @@ import { motion } from 'framer-motion';
   return (
     <section className='relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       color: 'from-red-400 to-orange-400',},];const stats = [;
     {icon: Brain,text: 'AI Consciousness Evolution',color: 'from - purple - 400 to - pink - 400',},{icon: Atom,text: 'Quantum Computing',color: 'from - blue - 400 to - cyan - 400',},{icon: Globe,text: 'Digital Reality',color: 'from - green - 400 to - emerald - 400',},{icon: Shield,text: 'Enterprise Security',color: 'from - red - 400 to - orange - 400',},];;
   const stats = [;
@@ -231,6 +246,9 @@ import { motion } from 'framer-motion';
         <div className="text-center">;
           }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         {/* Grid Pattern */}{/* Main Heading */}{/* Main Heading */}duration: 12,repeat: Infinity,return (<section className='relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -355,7 +373,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>;
         />;{/* Grid Pattern */}          className="absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl";
           animate={{y: [0, -30, 0];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             scale: [1, 1 && 1.1, 1];
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4];
           transition={{duration: 12,repeat: Infinity,ease: 'easeInOut',            ease: "easeInOut";
@@ -410,6 +431,7 @@ className='flex flex-col sm:flex-row gap-6 justify-center mb-16';
             initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
@@ -423,6 +445,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            animate={{ opacity: 1, y: 0 }}transition={{ duration: 0 && 0.8 }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='mb-8'>;
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -462,10 +487,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion&& motion.div;
             initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.6 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
           >;
             {features.map((feature, index) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             animate={{ opacity: 1, y: 0 }}
@@ -475,6 +504,8 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
             {features.map((feature, index) => (
               <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             opacity: [0.4, 0.7, 0.4];
           transition={{duration: 12,repeat: Infinity,ease: 'easeInOut',            ease: "easeInOut";
           }}
@@ -496,6 +527,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
                 key={feature.text}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
@@ -529,6 +561,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}className='group';
 className='group';
               >;
@@ -542,13 +576,17 @@ className='group';
                     {feature.text}</h3>;
                 </div>;
               </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </motion.div>;
             ))}
           {/* Stats */}
           <motion&& motion.div;
             initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}
@@ -563,11 +601,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {stats.map((stat, index) => (
               <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 1.0 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16';
           >;
             {stats.map((stat, index) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='group';
               >;
                 <div className='bg - black / 40 backdrop - blur - xl border border - cyan - 500 / 30 rounded - 2xl p - 6 hover:border - cyan - 400 / 50 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30'>;
@@ -599,6 +642,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16';
                 animate={{ opacity: 1, scale: 1 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
 className='text-center group'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -610,6 +654,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
                 className='text - center group';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}className='text - center group';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                 <div;
                   className={`text - 4xl md:text - 5xl font - bold mb - 2 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300 ${stat.color}`}
@@ -627,10 +674,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="text - cyan - 300 font - medium group - hover:text - cyan - 400 transition - colors duration - 300">;
                   {stat.label}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='text-center group';
 className='text-center group';
               >;
                 <div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                 className='text-center group'
@@ -655,11 +706,19 @@ className='text-center group';
                 </div>;
                 <div className='text-cyan-300 font-medium group-hover:text-cyan-400 transition-colors duration-300'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}
+                >;
+                  {stat.number}
+                </div>;
+                <div className='text-cyan-300 font-medium group-hover:text-cyan-400 transition-colors duration-300'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {stat.label}
                 </div>;
                 <div className='flex justify-center mt-2'>;
                   <stat.icon;
                     className={`w-5 h-5 ${stat.color} group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   />
                 </div>
@@ -673,10 +732,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                  />;
+                </div>;
+              </motion.div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           {/* Trust Indicators */}
           <motion&& motion.div;
             initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}
@@ -758,6 +823,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 1.4 }}
 className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto';
           >;
@@ -802,7 +869,10 @@ className='text-center';
                   </div>;
                   <div className='text-cyan-300 font-medium'>{trust}</div>;
                 </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none" />;
     </section>;
@@ -875,6 +945,7 @@ className='text-center';
       </div>;
       {/* Bottom Glow */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none' />
     </section>
   );
@@ -899,3 +970,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+<div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none' />;
+    </section>;
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

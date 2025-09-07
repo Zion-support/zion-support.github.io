@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function CloudAutomationsPage() {
 
 export default function CloudAutomationsPage() {;
@@ -27,6 +28,8 @@ export default function CloudAutomationsPage() {
         {items.map(([key, value]: any) => (
           <div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function CloudAutomationsPage() {export default function CloudAutomationsPage() {const [data, setData] = useState<any>(null)useEffect(() => {fetch('/api/cloud-automations-status').then(r => r && r.json()).then(setData).catch(() => setData({ ok: false }))}, []).then((r) => r && r.json()).then(setData).catch(() => setData({ ok: false }))export default function CloudAutomationsPage() {const [data, setData] = useState<any>(null)useEffect(() => {fetch('/api/cloud-automations-status').then((r) => r.json()).then(setData).catch(() => setData({ ok: false }))}, [])const items  = data?.data ? Object && Object.entries(data && data.data) : [];const items = null;
   return (<div className='space-y-6'>;
       <h1 className='text-3xl font-bold'>Cloud Automations</h1>;
@@ -101,6 +104,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>)</div>;
     </div>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -110,3 +114,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

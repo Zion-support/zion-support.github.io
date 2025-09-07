@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata = { title: 'CRM Solution | Zion Tech Group' };
 
 export default function CRMSolutionPage() {
@@ -260,6 +261,9 @@ function ContactSection() {
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
       </div>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const metadata = {
   title: 'Crm Solution | Zion Tech Group',
   description: 'Professional crm solution services for your business needs.',
@@ -309,7 +313,11 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>
   );
 }
+

@@ -7,8 +7,11 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Rocket;
   Brain;
   Atom;
@@ -33,6 +36,7 @@ import {Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,Microscope, Star, Arro
   Phone, Mail, MapPin;
  } from 'lucide-react';
 const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
+<<<<<<< HEAD
 =======
   Rocket
   Brain
@@ -84,6 +88,8 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 const heroStats = [;
   {number: '1000+';
@@ -127,17 +133,24 @@ const heroStats = [;
 function UltraFuturisticHero2032() {return (<section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>    href: '/quantum - internet - security - gateway';
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];export default /**;
  * UltraFuturisticHero2032 - Function description;
  */;
 function UltraFuturisticHero2032() {return (<section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>;import { motion   } from 'framer-motion';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Link from 'next/link';
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin;
   } from 'lucide-react';
 const contactInfo = null;
+<<<<<<< HEAD
 <<<<<<< HEAD
           space technology, and emerging tech solutions. Transform your business with 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -154,6 +167,9 @@ function UltraFuturisticHero2032() {
   return (
     <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+          space technology, and emerging tech solutions. Transform your business with;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Animated Background Elements */}
       <div className='absolute inset - 0'>;
         {/* Floating Particles */}
@@ -161,6 +177,7 @@ function UltraFuturisticHero2032() {
           {[...Array (50)].map ((_, i) => (<motion.div;
               key={i}
               className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               style={{
@@ -185,6 +202,8 @@ function UltraFuturisticHero2032() {
                 y: [0, -20, 0]
                 opacity: [0.3, 0.8, 0.3]
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               style={{))}
         </div>;
           ))}
@@ -204,6 +223,9 @@ function UltraFuturisticHero2032() {
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow' />;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         >;
           <Sparkles className="w-5 h-5 text-purple-400" />;
           <span className="text-purple-300 font-medium">🚀 2032 Revolutionary Technology</span>;
@@ -252,6 +274,7 @@ className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           </span>;
           <Sparkles className='w-5 h-5 text-cyan-400' />;
         </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {/* Main Heading */}
         <motion&& motion.h1;
@@ -298,6 +321,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         </motion.h1>
 =======
+=======
+        {/* Main Heading */}
+        <motion&& motion.h1;
+          initial={{ opacity: 0, y: 30 }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.2 }}
 className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight';
         >;
@@ -316,7 +344,10 @@ className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-ti
           <span className="text-white">Technology is Here</span>;
           <span className='text-white'>Technology is Here</span>;
         </motion.h1>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
           className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'>;
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -343,6 +374,7 @@ className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-ti
           technologies that were once science fiction.;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.4 }}
 className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'
         >
@@ -355,6 +387,8 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-rel
 origin/cursor/automate-test-improve-and-merge-code-2533
           technologies that were once science fiction.
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{ duration: 0.8, delay: 0.4 }}className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed";
         >;
           Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with;
@@ -369,6 +403,7 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-rel
           fiction.;
         </motion.p>;
           technologies that were once science fiction.;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {/* CTA Buttons */}
         <motion&& motion.div;
@@ -414,6 +449,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+        {/* CTA Buttons */}
+        <motion&& motion.div;
+          initial={{ opacity: 0, y: 30 }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.6 }}
 className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16';
         >;
@@ -443,6 +483,9 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16';
             <span>Call {contactInfo && contactInfo.mobile}</span>;
           </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </motion && motion.div>;href={`tel:${contactInfo.mobile}`}
             className='group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300';
           >;
@@ -450,6 +493,7 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16';
             <span>Call {contactInfo.mobile}</span>;
           </Link>;
         </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {/* Stats Grid */}
         <motion&& motion.div;
@@ -483,13 +527,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 delay: Math.random () * 2,
               }}            />                delay: Math.random () * 2}}
 =======
+=======
+        {/* Stats Grid */}
+        <motion&& motion.div;
+          initial={{ opacity: 0, y: 30 }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.8 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
         >;
           {heroStats.map((stat, index) => (<motion.div;
                 left: `${Math.random () * 100}%`,top: `${Math.random () * 100}%`,}}              animate={{coordinate_y: [0, -20, 0],opacity: [0.3, 0.8, 0.3],}}
               transition={{duration: 3 + Math.random () * 2,repeat: Infinity,delay: Math.random () * 2,}}            />                delay: Math.random () * 2}}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             />))}
         </div>;
         {/* Gradient Orbs */}
@@ -539,16 +591,20 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
               animate={{ opacity: 1, scale: 1 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
 className='text-center group'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}</motion && motion.div>;className='text-center group';
 className='text-center group';
             >;
               <div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}
               >;
@@ -577,22 +633,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             >
               <div
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}
               >
                 <stat.icon className='w-8 h-8 text-white' />
               </div>
               <div className='text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2'>
                 {stat.number}
+<<<<<<< HEAD
               </div>
 
               <div className='text-gray-400 text-sm'>{stat.label}</div>
             </motion.div>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+              </div>;
+              <div className='text-gray-400 text-sm'>{stat.label}</div>;
+            </motion.div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           ))}
         {/* Featured Services */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }}
@@ -624,6 +689,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               >
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 1.2 }}
 className='mb-16';
         >;
@@ -638,7 +705,10 @@ className='mb-16';
                 transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}className='group';
 className='group';
               >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{ duration: 0 && 0.8, delay: 1 && 1.2 }}
           className='mb-16'>;
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>;
@@ -660,8 +730,11 @@ className='group';
                   className='block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <div;
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -701,7 +774,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />;
                 </Link>;
               </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </div>;
         </motion.div>;
@@ -728,6 +804,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.6 }}
 className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'
@@ -744,6 +821,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex items-center space-x-3 text-gray-300'>
               <Phone className='w-5 h-5 text-cyan-400' />
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 1.6 }}
 className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto';
         >;
@@ -753,7 +832,10 @@ className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl b
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>;
             <div className='flex items-center space-x-3 text-gray-300'>;
               <Phone className='w-5 h-5 text-cyan-400' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{ duration: 0 && 0.8, delay: 1 && 1.6 }}
           className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'>;
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>;
@@ -771,8 +853,11 @@ className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl b
               <Mail className='w-5 h-5 text-purple-400' />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <a;
           <h3 className="text-2xl font-bold text-white mb-6 text-center">;
             Ready to Transform Your Business?;
@@ -877,7 +962,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='hover:text-purple-400 transition-colors'>;
                 {contactInfo && contactInfo.email}
@@ -1031,6 +1119,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         initial={{ opacity: 0, scale: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 2 }}
 className='fixed bottom-8 right-8 z-50'
@@ -1056,6 +1145,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           href={`tel:${contactInfo && contactInfo.mobile}`}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        animate={{ opacity: 1, scale: 1 }}}href={`tel:${contactInfo && contactInfo.mobile}`}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           className='group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40'>;
           <Phone className='w-7 h-7 text-white group-hover:rotate-12 transition-transform' />;
         </Link>;
@@ -1080,6 +1172,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Link>;
       </motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </section>)}
         className='fixed bottom-8 right-8 z-50';
         transition={{ duration: 0.8, delay: 2 }}
@@ -1094,6 +1189,7 @@ className='fixed bottom-8 right-8 z-50';
       </motion.div>;
   )>;
         <Link;
+<<<<<<< HEAD
 =======
     </section>);
 }
@@ -1111,6 +1207,8 @@ className='fixed bottom-8 right-8 z-50';
   );      >
         <Link
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           href={`tel:${contactInfo.mobile}`}
           className="group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover: shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40";
         >;
@@ -1122,6 +1220,7 @@ className='fixed bottom-8 right-8 z-50';
     </section>;
   ))</section>;
   )</section>;
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -1135,3 +1234,6 @@ className='fixed bottom-8 right-8 z-50';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export interface InnovativeAIAutomationService {
 id: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+  id: string;
+export interface InnovativeAIAutomationService  {id: string;name: string;
+  id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   tagline: string;
   price: string;
@@ -74,10 +81,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   rating: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   reviews: number
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   reviews: number;
 }reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =;
@@ -409,6 +419,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     launchDate: '2025-03-01', customers: 35;
     rating: 4.9;
     reviews: 28;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -416,6 +427,8 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
@@ -1303,7 +1316,16 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       realImplementation: true,
       implementationDetails:
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
+      launchDate: '2025-03-01'
+      customers: 35
+      rating: 4.9
+      reviews: 28
+    }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
       launchDate: '2025-03-01',
       customers: 35,
@@ -1346,6 +1368,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 28
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -1371,10 +1394,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
   }
 ];
 export interface InnovativeAIAutomationService {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1388,6 +1414,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string,;
   name: string,;
   tagline: string,;
@@ -1651,6 +1679,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1658,6 +1687,8 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 ];
 ;
@@ -1681,6 +1712,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     reviews: 28;
   }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1719,3 +1751,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

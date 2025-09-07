@@ -1,5 +1,6 @@
 export const metadata = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'Financial Services Technology | Zion Tech Group',
   description:
     'Secure financial technology solutions including trading platforms, payment processing, fraud detection, risk management, and regulatory compliance systems.',
@@ -605,6 +606,9 @@ function CTASection() {
       <div className="mt-6 text-sm text-gray-600">
         <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: 'Finance | Zion Tech Group',
   description: 'Professional finance services for your business needs.',
   keywords: 'finance, services, business, technology',
@@ -652,8 +656,12 @@ export default function ServicePage() {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>
     </div>
   );
 }
+

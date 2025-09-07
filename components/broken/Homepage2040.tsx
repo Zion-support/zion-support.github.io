@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense, lazy, useState, useEffect } from 'react',
 import Layout from './layout/Layout',
 import Link from 'next/link';
@@ -105,6 +106,8 @@ import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-
 const LazyServiceCard = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 import React from 'react';
@@ -156,6 +159,7 @@ const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026')
       y: 0;
       transition: {duration: 0.6;
         ease: "easeOut" as const;
+<<<<<<< HEAD
 =======
 const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
 const Homepage2040: React.FC = () => {
@@ -169,6 +173,8 @@ const Homepage2040: React.FC = () => {
         duration: 0.6
         ease: "easeOut" as const
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
     }
   }
@@ -510,6 +516,9 @@ const Homepage2040: React.FC = () => {
               <motion.div;
                 variants={itemVariants}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className="flex items-center justify-center gap-8 text-sm text-gray-400";
               >;
                 <div className="flex items-center gap-2">;
@@ -530,6 +539,7 @@ const Homepage2040: React.FC = () => {
         </section>;
       </main>;
     </Layout>;
+<<<<<<< HEAD
   )}export default Homepage2040;const LazyServiceCard  = null;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -559,3 +569,6 @@ const Homepage2040: React.FC = () => {
 export default Homepage2040;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}export default Homepage2040;const LazyServiceCard  = null;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

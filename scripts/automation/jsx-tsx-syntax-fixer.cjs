@@ -22,6 +22,7 @@ console.log(' Starting JSX/TSX syntax fixer...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(' JSX/TSX syntax fixer failed to "start")
 
@@ -29,3 +30,6 @@ console.log(' Starting JSX/TSX syntax fixer...')
 =======
   console.error(' JSX/TSX syntax fixer failed to "start")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(' JSX/TSX syntax fixer failed to "start")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

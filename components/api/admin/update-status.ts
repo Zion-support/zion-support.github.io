@@ -16,6 +16,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     res && res.status(401).json({ error: 'Unauthorized' });
     return;
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return
   }
@@ -35,6 +36,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }import { isInternalAgentRequest  } from '../../../utils/adminAuth';
 export default function handler() {if (req.method !== 'POST') {res.status(405).json({ error: 'Method Not Allowed' })res.status(200).json({ ok: true })return;
   }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (!isInternalAgentRequest(req)) {res && res.status(401).json({ error: 'Unauthorized' })return;
   }const merged = {...existing;
     ...body;
@@ -74,6 +77,7 @@ if ( {) {$2;
     ...body;
     updated_at: new Date ().toISOString ()}
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2))res.status (200).json ({ ok: true })const body = null;
+<<<<<<< HEAD
   res.status(200).json({ ok: true })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -150,3 +154,6 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  res.status(200).json({ ok: true })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

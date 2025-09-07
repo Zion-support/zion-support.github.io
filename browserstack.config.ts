@@ -36,10 +36,13 @@ export default defineConfig({testDir:'tests/e2e';
 import { defineConfig, devices } from '@playwright/test',export default defineConfig({testDir:'tests/e2e',use:{baseURL:process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';
     trace:'on-first-retry'}export default defineConfig({testDir:'tests/e2e',use:{baseURL:process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',trace:'on-first-retry'},projects:[;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { defineConfig, devices } from '@playwright/test',;
 ;
 export default defineConfig({;
@@ -51,6 +54,9 @@ export default defineConfig({;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default defineConfig({;
   testDir:'tests/e2e',;
   use:{;
@@ -60,9 +66,12 @@ export default defineConfig({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -128,6 +137,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -182,17 +192,23 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         browserName: 'webkit',
         ...devices['iPhone 12']
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ]
   ]
         browserName: "webkit",
         ...devices["iPhone 12"]
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
     }
   ],
   reporter: [
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
+<<<<<<< HEAD
 <<<<<<< HEAD
     {name:'Mobile Chrome';
       use:{;
@@ -222,6 +238,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 =======
   ]});        browserName: 'chromium';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  ]});        browserName: 'chromium';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         channel: 'chrome'}
     };
     {
@@ -239,6 +258,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
       use: {
         browserName: 'chromium';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     trace: 'on-first-retry'
   }
   projects: [
@@ -272,6 +294,7 @@ export default define_config ({
       use:{
         browser_name:'chromium',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -281,6 +304,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ...devices['Pixel 5']}
     },
     {
@@ -293,6 +318,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   reporter:[;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ]
 
@@ -300,6 +326,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ]
   testDir: 'tests/e2e',;
   use: {;
@@ -403,9 +431,12 @@ import { define_config, devices } from '@playwright / test',export default defin
   reporter: [;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ['list'];
 
     {
@@ -416,11 +447,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         channel: 'chrome';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ['list'];
     ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
 })import { defineConfig, devices  } from '@playwright/test';
@@ -467,6 +501,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         browserName: 'chromium'
@@ -496,11 +531,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         channel: 'chrome'
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        browserName: 'chromium'
+        channel: 'chrome'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
     }
     {
       name: "Desktop Firefox"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -514,6 +554,8 @@ export default defineConfig({
   projects: [
     {
       name: 'Desktop Chrome';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       use: {
 <<<<<<< HEAD
 =======
@@ -549,6 +591,7 @@ export default defineConfig({
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]],
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       use: {
 <<<<<<< HEAD
@@ -614,6 +657,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+      use: {
+        browser_name: 'firefox';
+        browser_name: 'firefox';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
     }
     {
@@ -621,6 +670,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       name: "Desktop Safari"
 
       use: {
+<<<<<<< HEAD
 <<<<<<< HEAD
         browser_name: 'webkit';
         browser_name: 'webkit';
@@ -636,6 +686,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        browser_name: 'webkit';
+        browser_name: 'webkit';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
     }
     {
@@ -679,6 +733,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         browserName: 'chromium'
         ...devices['Pixel 5']
@@ -706,12 +761,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         ...devices['Pixel 5']
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
     }
     {
       name: "Mobile Safari"
       use: {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -724,6 +782,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         ...devices['i_phone 12'];
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        browser_name: 'webkit',
+        ...devices['i_phone 12'];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -757,6 +819,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -772,11 +835,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ],
   reporter: [;
     ['list'],
     ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -795,6 +861,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         browserName: 'webkit'
         ...devices['iPhone 12']
       }
@@ -850,6 +918,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 ];
   ]
   reporter: [
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -922,3 +991,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
+});
+ursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

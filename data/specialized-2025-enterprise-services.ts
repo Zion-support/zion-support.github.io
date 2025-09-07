@@ -10,6 +10,7 @@
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -34,6 +35,11 @@ export interface SpecializedEnterpriseService  {id: string;
 import { ServiceVariant } from '../types/service-variants';
 export interface SpecializedEnterpriseService {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface SpecializedEnterpriseService  {id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -398,6 +404,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -432,11 +439,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -471,6 +481,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -482,6 +494,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -538,11 +551,14 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
   {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -560,6 +576,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
       'Emotional intelligence algorithms',
@@ -572,6 +590,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Expert consultation services'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -618,6 +637,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     marketPosition:
       'Leading AI consciousness research platform for scientific institutions'
     targetAudience:
@@ -648,6 +669,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     icon: '🧠',
@@ -668,6 +690,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - consciousness - research',
@@ -701,6 +725,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -720,6 +745,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Advanced research platform with custom AI models and collaborative research tools',
     launch_date: '2024 - 11 - 01',
     customers: 23,
@@ -730,6 +757,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -753,6 +781,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Quantum optimization solvers',
       'Hybrid quantum - classical computing',
       'Quantum feature selection',
@@ -764,6 +794,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Expert quantum consulting'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -833,6 +864,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Multivariate cryptography',
       'Quantum key distribution',
       'Hybrid encryption systems',
@@ -841,6 +874,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Expert security consulting'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -902,6 +936,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Autonomous satellite operations',
       'Constellation optimization',
       'AI - powered mission planning',
@@ -914,6 +950,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Expert space consulting'
     ],
     popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -975,6 +1012,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Neural signal processing',
       'Brain - computer communication',
       'Cognitive enhancement tools',
@@ -987,6 +1026,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Clinical trial support'
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1048,6 +1088,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Autonomous device management',
       'Self - healing networks',
       'AI - powered optimization',
@@ -1060,6 +1102,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Expert IoT consultation'
     ],
     popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1109,6 +1152,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'predictive - analytics - engine',
     name: 'Predictive Analytics Engine',
     tagline: 'AI - powered predictive insights and forecasting',
@@ -1118,6 +1163,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.',
     features: [;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1133,6 +1179,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'predictive-analytics-engine'
     name: 'Predictive Analytics Engine'
     tagline: 'AI-powered predictive insights and forecasting'
@@ -1141,6 +1189,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     description:
       'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.'
     features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1160,6 +1209,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Advanced ML algorithms',
       'Predictive modeling',
       'Time series forecasting',
@@ -1173,6 +1224,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '📊',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1206,10 +1258,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Businesses, Financial services, Retail companies, Manufacturing companies',
     trial_days: 21,
     setup_time: '2 - 3 weeks',
     category: 'Advanced Analytics & AI',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1226,6 +1281,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations: [
       'Data warehouses, Business intelligence tools, CRM systems, ERP platforms'
     ]
@@ -1240,6 +1297,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1309,18 +1367,30 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    customers: 189,
+    rating: 4 && 4.8,
+    reviews: 145
+];
+export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     benefits: [;
       '60% decision accuracy improvement',
       '35% operational cost reduction',
       'Advanced ML algorithms',
       'Real - time predictions',
+<<<<<<< HEAD
       'Custom model development',
+=======
+      'Custom model development'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ],
     capabilities: [;
       'Predictive modeling',
       'Time series forecasting',
       'Trend analysis',
       'Anomaly detection',
+<<<<<<< HEAD
       'Scenario modeling',
     ],
     market_advantage:;
@@ -1340,6 +1410,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Advanced predictive analytics platform with custom ML model development',
+=======
+      'Scenario modeling'
+    ],
+    market_advantage:;
+      'Advanced predictive analytics platform with custom ML model development'
+  },
+      'Advanced predictive analytics platform with custom ML model development'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   },;
 
 
@@ -1350,13 +1428,18 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       '35% operational cost reduction',
       'Advanced ML algorithms',
       'Real - time predictions',
+<<<<<<< HEAD
       'Custom model development',
+=======
+      'Custom model development'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ],
     capabilities: [;
       'Predictive modeling',
       'Time series forecasting',
       'Trend analysis',
       'Anomaly detection',
+<<<<<<< HEAD
       'Scenario modeling',
     ],
     market_advantage:;
@@ -1476,6 +1559,8 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Time series forecasting',
       'Trend analysis',
       'Anomaly detection',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Scenario modeling'
     ],
     market_advantage:;
@@ -1483,11 +1568,14 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
   },
       'Advanced predictive analytics platform with custom ML model development'
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];
 ;
 export default specializedEnterpriseServices;    id: 'quantum - machine - learning - platform';
@@ -1499,6 +1587,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selectionQuantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction';
       'Research and development toolsExpert quantum consulting';
     description: 'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1528,6 +1617,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     features: [
       'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selectionQuantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction';
       'Research and development toolsExpert quantum consulting'
@@ -1584,6 +1675,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1607,6 +1699,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     id: 'quantum - resistant - cryptography';
     name: 'Quantum - Resistant Cryptography Platform';
@@ -1618,6 +1712,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Post - quantum cryptographic algorithms_lattice - based cryptography_hash - based signatures_code - based cryptography_multivariate cryptography_quantum key distribution_hybrid encryption systems_migration tools and services';
       'Compliance and certification_expert security consulting';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
     popular: true;
 <<<<<<< HEAD
@@ -1633,6 +1728,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     color: 'from - red - 600 to - orange - 600';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     popular: true;icon: '🔒';color: 'from - red - 600 to - orange - 600';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     text_color: 'text - red - 400';
@@ -1655,11 +1752,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     setup_time: '3 - 4 weeks';category: 'Advanced Cybersecurity';
     popular: true;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: 'Advanced Cybersecurity';
     real_service: true;
     technology: ['Post - quantum algorithms, Lattice cryptography, Hash functions, Python, C++, Rust'];
@@ -1690,6 +1790,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1714,6 +1815,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'satellite - ai - orchestration';
     name: 'Satellite AI Orchestration Platform';
     tagline: 'Intelligent satellite constellation management';
@@ -1724,6 +1827,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Autonomous satellite operations_constellation optimizationAI - powered mission planning_real - time data processing_orbital mechanics optimization_collision avoidance systems_payload management_ground station coordination';
       'Mission analytics dashboard_expert space consulting';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
     popular: false;
 <<<<<<< HEAD
@@ -1739,6 +1843,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     color: 'from - indigo - 600 to - purple - 600';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     popular: false;icon: '🛰️';color: 'from - indigo - 600 to - purple - 600';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     text_color: 'text - indigo - 400';
@@ -1761,11 +1867,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     setup_time: '8 - 12 weeks';category: 'Space Technology';
     popular: false;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: 'Space Technology';
     real_service: true;
     technology: ['AI / ML, Orbital mechanics, Satellite protocols, Python, C++, Space systems'];
@@ -1796,6 +1905,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1819,6 +1929,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     id: 'brain - computer - interface - platform';
     name: 'Brain - Computer Interface Platform';
@@ -1830,6 +1942,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Neural signal processing_brain - computer communication_cognitive enhancement tools_medical rehabilitation support_research and development tools_real - time neural monitoring_custom interface development_safety and compliance tools';
       'Expert neural consultation_clinical trial support';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
     popular: true;
 <<<<<<< HEAD
@@ -1845,6 +1958,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     color: 'from - pink - 600 to - rose - 600';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     popular: true;icon: '🧬';color: 'from - pink - 600 to - rose - 600';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     text_color: 'text - pink - 400';
@@ -1867,11 +1982,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     setup_time: '12 - 16 weeks';category: 'Neural Technology & BCI';
     popular: true;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: 'Neural Technology & BCI';
     real_service: true;
     technology: ['Neural signal processing, Machine learning, Neuroscience, Python, C++, Neural hardware'];
@@ -1902,6 +2020,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1925,6 +2044,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     id: 'autonomous - iot - ecosystem';
     name: 'Autonomous IoT Ecosystem Platform';
@@ -1936,6 +2057,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Autonomous device management_self - healing networksAI - powered optimization_predictive maintenance_security automation_scalable deployment_real - time monitoring_data analytics and insights';
       'Custom IoT applications_expert IoT consultation';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
     popular: false;
 <<<<<<< HEAD
@@ -1951,6 +2073,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     color: 'from - teal - 600 to - cyan - 600';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     popular: false;icon: '🌐';color: 'from - teal - 600 to - cyan - 600';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     text_color: 'text - teal - 400';
@@ -1973,11 +2097,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     setup_time: '4 - 6 weeks';category: 'Advanced IoT & Edge Computing';
     popular: false;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: 'Advanced IoT & Edge Computing';
     real_service: true;
     technology: ['AI / ML, IoT protocols, Edge computing, Python, Kubernetes, Docker'];
@@ -2008,6 +2135,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2031,6 +2159,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     id: 'predictive - analytics - engine';
     name: 'Predictive Analytics Engine';
@@ -2042,6 +2172,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Advanced ML algorithms_predictive modeling_time series forecasting_trend analysis_anomaly detection_scenario modeling_real - time predictions_custom model development';
       'Performance analytics_expert data consultation';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
     popular: true;
 <<<<<<< HEAD
@@ -2057,6 +2188,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     color: 'from - green - 600 to - emerald - 600';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     popular: true;icon: '📊';color: 'from - green - 600 to - emerald - 600';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     text_color: 'text - green - 400';
@@ -2082,11 +2215,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     technology: ['Python, TensorFlow, PyTorch, Scikit - learn, React, Node.js'];integrations: ['Data warehouses, Business intelligence tools, CRM systems, ERP platforms'];
     popular: true;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations: ['Data warehouses, Business intelligence tools, CRM systems, ERP platforms'];
     use_cases: ['Sales forecasting, Demand prediction, Risk assessment, Performance optimization'];
     roi: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%';
@@ -2131,6 +2267,7 @@ export default specializedEnterpriseServices;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default specializedEnterpriseServices;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2177,3 +2314,5 @@ export default specializedEnterpriseServices;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

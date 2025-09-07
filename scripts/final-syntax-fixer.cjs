@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -12,6 +13,11 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   console.log(' Starting Final Syntax Fixer...')
     const files = findCodeFiles('.;')
         const originalContent = fs.readFileSync(file, 'utf8')
@@ -28,6 +34,7 @@ const path = require('path')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error(' Final syntax fixer "failed")
 
@@ -35,3 +42,6 @@ const path = require('path')
 =======
     console.error(' Final syntax fixer "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.error(' Final syntax fixer "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

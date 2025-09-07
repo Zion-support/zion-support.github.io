@@ -3,11 +3,14 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 ;
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence   } from 'framer-motion';
 import Link from 'next/link';
@@ -24,6 +27,7 @@ import { ArrowRight;
   MapPin;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   ArrowUpRight
  } from 'lucide-react';
 import Head from 'next/head',
@@ -36,14 +40,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ArrowUpRight;
   } from 'lucide-react';
 import Head from 'next/head',// Import our enhanced components;
 import EnhancedNavigation from './layout/EnhancedNavigation',import EnhancedServiceCard from './ui/EnhancedServiceCard',import PerformanceMonitor from './PerformanceMonitor',//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -58,6 +67,7 @@ import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 ...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
 ...innovative2025AIAutonomousServices ];opacity: 0;
 import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -103,6 +113,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 interface EnhancedHomepageProps  {className?: string;
 }const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {return (<div className={className || ''}>;
       <h1>EnhancedHomepage</h1>;
@@ -448,8 +460,12 @@ import { innovativeAIServicesExpansion2025V3   } from '../data/2025-innovative-a
 import { innovative2025ITInfrastructureServices   } from '../data/2025-innovative-it-infrastructure-services';
 import { innovative2025AIAutonomousServices  } from '../data/2025-innovative-ai-autonomous-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EnhancedHomepage: React.FC;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 const EnhancedHomepage: React.FC;
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+const EnhancedHomepage: React.FC;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

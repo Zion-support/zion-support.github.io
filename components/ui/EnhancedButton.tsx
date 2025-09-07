@@ -5,6 +5,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -45,6 +46,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }}
@@ -129,6 +132,7 @@ function EnhancedButton() {return (<button;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,6 +148,8 @@ function EnhancedButton() {return (<button;
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   };
 
@@ -177,8 +183,11 @@ export default function EnhancedButton(): any ({;
     <button
       className={clsx(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: 'primary' | 'secondary' | 'ghost';
@@ -231,6 +240,7 @@ export default function EnhancedButton({
   fullWidth
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import clsx from 'clsx';
 export type EnhancedButtonProps = any;
@@ -239,11 +249,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ...props
 }: EnhancedButtonProps) {
   return (
     <button
 className={clsx(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -267,6 +280,8 @@ className={clsx(
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         baseStyles
         sizeStyles[size]
         variantStyles[variant]
@@ -274,6 +289,7 @@ className={clsx(
         className
       )}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -346,10 +362,18 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+}
+
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     />;
 );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     />;
@@ -396,6 +420,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     />;
 );
 }
@@ -410,6 +436,7 @@ const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
 };
 
 export default EnhancedButton;
+<<<<<<< HEAD
 
 
 }
@@ -420,3 +447,7 @@ export default EnhancedButton;
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function SiteHealth() {
 
@@ -61,6 +62,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 desc: 'WCAG checks with actionable fixes and reports.'
                 href: '/reports/seo'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 export default function SiteHealth() {return (<div className="hidden gap-6 md:flex text-white/80">;
             <Link href="/"><a>Home</a></Link>;
@@ -108,7 +111,10 @@ export default function SiteHealth() {return (<div className="hidden gap-6 md:fl
               {title: 'Accessibility';
                 desc: 'WCAG checks with actionable fixes and reports.';
                 href: '/reports/seo';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               }
               {title: 'Performance';
                 desc: 'Core Web Vitals and performance budgets.';
@@ -118,6 +124,7 @@ export default function SiteHealth() {return (<div className="hidden gap-6 md:fl
                 desc: 'Broken links identified and prevented.';
                 href: '/reports/links';
               }
+<<<<<<< HEAD
 <<<<<<< HEAD
             ].map(card => (
               <Link key={card.title} href={card.href}>
@@ -195,6 +202,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ].map(card => (<Link key={card.title} href={card.href}>;
                 <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30'>;
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
@@ -246,8 +255,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/site-health';
                 target='_blank';
                 rel='noopener';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <section className='mx - auto max - w-7xl px - 6 pb - 24'>;
           <div className='animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop - blur - xl'>;
             <h3 className='text - 2xl font - bold'>;
@@ -281,6 +293,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10';
               >;
                 View Pipelines;
@@ -290,9 +305,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </main>;
     </div>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </div>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

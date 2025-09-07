@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
@@ -55,6 +58,7 @@ module.exports = {
       },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -68,6 +72,8 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
@@ -129,6 +135,7 @@ module.exports = {
       "merge_logs": true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
     },
@@ -164,11 +171,15 @@ module.exports = {
         "AUTO_FIX_ENABLED": 'true'
       },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "cron_restart": '0 */15 * * *', // Restart every 15 minutes
       "log_file": './automation/logs/typescript-error-auto-fixer.log',
       "error_file": './automation/logs/typescript-error-auto-fixer-error.log',
       "out_file": './automation/logs/typescript-error-auto-fixer-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -206,11 +217,15 @@ module.exports = {
         "AUTO_FIX_ENABLED": 'true'
       },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "cron_restart": '0 */10 * * *', // Restart every 10 minutes
       "log_file": './automation/logs/eslint-error-auto-fixer.log',
       "error_file": './automation/logs/eslint-error-auto-fixer-error.log',
       "out_file": './automation/logs/eslint-error-auto-fixer-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -248,11 +263,15 @@ module.exports = {
         "AUTO_UPDATE_ENABLED": 'true'
       },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "cron_restart": '0 */30 * * *', // Restart every 30 minutes
       "log_file": './automation/logs/dependency-error-resolver.log',
       "error_file": './automation/logs/dependency-error-resolver-error.log',
       "out_file": './automation/logs/dependency-error-resolver-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -322,11 +341,15 @@ module.exports = {
         "AUTO_FIX_ENABLED": 'true'
       },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "cron_restart": '0 */20 * * *', // Restart every 20 minutes
       "log_file": './automation/logs/build-error-auto-fixer.log',
       "error_file": './automation/logs/build-error-auto-fixer-error.log',
       "out_file": './automation/logs/build-error-auto-fixer-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -390,11 +413,15 @@ module.exports = {
         "AUTO_ENHANCE_ENABLED": 'true'
       },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "cron_restart": '0 */60 * * *', // Restart every hour
       "log_file": './automation/logs/code-quality-auto-enhancer.log',
       "error_file": './automation/logs/code-quality-auto-enhancer-error.log',
       "out_file": './automation/logs/code-quality-auto-enhancer-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -432,11 +459,15 @@ module.exports = {
         "PREVENTIVE_ACTIONS_ENABLED": 'true'
       },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "cron_restart": '0 */15 * * *', // Restart every 15 minutes
       "log_file": './automation/logs/error-prevention-monitor.log',
       "error_file": './automation/logs/error-prevention-monitor-error.log',
       "out_file": './automation/logs/error-prevention-monitor-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -506,11 +537,15 @@ module.exports = {
         "ANALYTICS_ENABLED": 'true'
       },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "cron_restart": '0 */10 * * *', // Restart every 10 minutes
       "log_file": './automation/logs/error-analytics-dashboard.log',
       "error_file": './automation/logs/error-analytics-dashboard-error.log',
       "out_file": './automation/logs/error-analytics-dashboard-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -784,11 +819,15 @@ module.exports = {
         "INTELLIGENT_FIXING_ENABLED": 'true'
       },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "cron_restart": '0 */10 * * *', // Restart every 10 minutes
       "log_file": './automation/logs/intelligent-error-orchestrator.log',
       "error_file": './automation/logs/intelligent-error-orchestrator-error.log',
       "out_file": './automation/logs/intelligent-error-orchestrator-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -814,6 +853,9 @@ module.exports = {
       "ref": 'origin/main',
       "repo": 'git@github.com:your-username/zion-tech-group.git',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "path": '/var/www/zion-tech-group',
       'pre-deploy-local': '',
       'post-deploy': 'npm install --legacy-peer-deps && pm2 reload ecosystem.error-automation.config.cjs --env production',

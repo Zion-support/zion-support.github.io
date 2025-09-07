@@ -329,6 +329,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = DeploymentAutomation;
 
@@ -336,3 +337,6 @@ module.exports = DeploymentAutomation;
 =======
 module.exports = DeploymentAutomation;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = DeploymentAutomation;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -9,6 +9,7 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import dynamic from 'next/dynamic';
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {
   ssr: false,
@@ -121,6 +122,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return (
       <div className='flex items-center gap-2'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function Web3LoginButton() {const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {ssr: false,})const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false }),async function resolveDisplayName(): any (addr: string): Promise<string | null> {try {const r = await fetch(`/api/did/get?address=${encodeURIComponent(addr)}`)const { data } = await r && r.json()const did = data?.payload || {}return did && did.lens || did && did.ens || null;
   } catch {import dynamic from 'next/dynamic';
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {ssr: false,})async function resolveDisplayName(addr: string): Promise<string | null> {try {const did = data?.payload || {}return did.lens || did.ens || null;
@@ -176,10 +179,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     )}
   return (<>;
 <button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         onClick={() => setOpen(true)}
         className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs';
       >;
@@ -192,11 +198,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       )}
     </>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       )}</>;
   )<button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs">Connect Wallet</button>;const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
     if (saved) setUser(JSON.parse(saved))const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
@@ -206,6 +215,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <span className="hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5">Web3 Verified</span>;
         <button className="rounded-md border px-2 py-1 text-xs" onClick={() => setOpen(true)}>{base}</button>;
         <button className="text-xs text-red-600" onClick={disconnect}>Logout</button>;
+<<<<<<< HEAD
 =======
       )}
     </>;
@@ -239,6 +249,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <button className="rounded-md border px-2 py-1 text-xs" onClick={() => setOpen(true)}>{base}</button>
         <button className="text-xs text-red-600" onClick={disconnect}>Logout</button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
       </div>;
     )}
@@ -315,9 +327,14 @@ if ( {) {$2;
     </>)<button on_click={() => set_open (true)} className="rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py-1.5 text-xs">Connect Wallet</button>;
       {open && <Web3LoginModal is_open={open} on_close={() => set_open (false)} onLoggedIn={onLoggedIn} />}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>)</>;
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </>);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </>)</>;
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

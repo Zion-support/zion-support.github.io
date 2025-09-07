@@ -1,6 +1,7 @@
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
@@ -228,6 +229,8 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   BookOpen, MessageCircle, Star, TrendingUp, Target;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion, AnimatePresence  } from 'framer-motion';
 import {Menu;
   X;
@@ -337,12 +340,16 @@ import {Menu;
   Menu,X,ChevronDown,Search,Phone,Mail,MapPin,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Microscope,DollarSign,Home,Users,Briefcase,BookOpen,MessageCircle,Star,TrendingUp,Target,Layers,Cpu,Database,Cloud,Lock,ShieldCheck,Earth,Factory,Car,Building,GraduationCap,Scale,Palette,Camera,Video,Music,Gamepad2,Heart,Leaf,Sun,Moon,Wind,Droplets,Mountain,Code,Wrench,Smartphone,BarChart3,Eye,Network,Server,HardDrive,Monitor,Laptop,Watch,Headphones,Speaker,Mic,Keyboard,Mouse,CpuIcon,DatabaseIcon,CloudIcon,LockIcon,ShieldIcon,GlobeIcon,ZapIcon,SparklesIcon,BrainIcon,AtomIcon,HeartIcon,RocketIcon,ShieldIcon as ShieldIcon2,TargetIcon,MicroscopeIcon,StarIcon,ArrowRight,Infinity,Crown,Gem,Sparkles as SparklesIcon2,ShoppingCart,UserCheck,FileText,BarChart,PaletteIcon,VideoIcon,LockIcon as LockIcon2,GlobeIcon as GlobeIcon2,CpuIcon as CpuIcon2,Handshake,LifeBuoy,Activity,Linkedin,Twitter,Facebook,Instagram,Youtube,Github,} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin,Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,Microscope, DollarSign, Home, Users, Briefcase,import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;BookOpen, MessageCircle, Star, TrendingUp, Target;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
   Palette, Camera, Video, Music, Gamepad2, Heart;
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Network, Server, HardDrive, Monitor;
@@ -361,6 +368,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Network, Server, HardDrive, Monitor;Laptop, Watch, Headphones, Speaker, Mic;
   Keyboard, Mouse, CpuIcon, DatabaseIcon;CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  Network, Server, HardDrive, Monitor;Laptop, Watch, Headphones, Speaker, Mic;
+  Keyboard, Mouse, CpuIcon, DatabaseIcon;CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon;
   HeartIcon, RocketIcon, ShieldIcon as ShieldIcon2;
   TargetIcon, MicroscopeIcon, StarIcon, ArrowRight;
@@ -368,6 +379,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ShoppingCart, UserCheck, FileText, BarChart;
   PaletteIcon, VideoIcon, LockIcon as LockIcon2;
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Handshake, LifeBuoy, Activity;
@@ -437,6 +449,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         description: 'Decentralized AI for the future'
         price: '$899/month'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Handshake, LifeBuoy, Activity;services: [;
       {name: 'Quantum Machine Learning',href: '/quantum - machine - learning - platform',description: 'Harness quantum computing for ML',price: '$1, 999 / month',Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   } from 'lucide-react';
@@ -491,6 +505,9 @@ const quickLinks = [
     ];
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   { name: 'Home', href: '/', icon: Home },{ name: 'Services', href: '/services', icon: Briefcase },{ name: 'Solutions', href: '/solutions', icon: Target },{ name: 'Pricing', href: '/pricing - 2034', icon: DollarSign },{ name: 'Resources', href: '/resources', icon: BookOpen },{ name: 'Case Studies', href: '/case - studies', icon: FileText },{ name: 'Blog', href: '/blog', icon: MessageCircle },name: 'AI Drug Discovery Platform',href: '/ai-drug-discovery-platform',description: 'Accelerate drug discovery with AI',price: '$3,999/month',},],},{title: '⚛️ Quantum & Emerging Tech',icon: AtomIcon,color: 'from-indigo-600 via-blue-600 to-cyan-600',description: 'Quantum computing and beyond',services: [;
 {name: 'Quantum Machine Learning',href: '/quantum-machine-learning-platform',description: 'Harness quantum computing for ML',price: '$1,999/month',},{name: 'Blockchain AI Platform';
         href: '/blockchain-ai-platform';
@@ -547,6 +564,7 @@ const quickLinks = [
         description: 'Build immersive virtual worlds';
         price: '$2,999/month';
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       {
         name: 'Holographic Event Platform',
@@ -671,6 +689,18 @@ const quickLinks = [;
   { name: 'Case Studies', href: '/case-studies', icon: FileText },;
   { name: 'Blog', href: '/blog', icon: MessageCircle },;
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+=======
+      {name: 'Holographic Event Platform',href: '/holographic-event-platform',description: 'Immersive holographic experiences',price: '$2,999/month',},],},];const quickLinks = [;
+  { name: 'Home', href: '/', icon: Home },{ name: 'Services', href: '/services', icon: Briefcase },{ name: 'Solutions', href: '/solutions', icon: Target },{ name: 'Pricing', href: '/pricing-2034', icon: DollarSign },{ name: 'Resources', href: '/resources', icon: BookOpen },{ name: 'Case Studies', href: '/case-studies', icon: FileText },{ name: 'Blog', href: '/blog', icon: MessageCircle },{ name: 'Contact', href: '/contact', icon: MessageCircle },];
+const companyLinks = [;
+  { name: 'About Us', href: '/about', icon: Users },{ name: 'Careers', href: '/careers', icon: Briefcase },{ name: 'News', href: '/news', icon: FileText },{ name: 'Partners', href: '/partners', icon: Handshake },{ name: 'Support', href: '/support', icon: LifeBuoy },{ name: 'Status', href: '/status', icon: Activity }
+];export default function UltraFuturisticNavigation2034() {{ name: 'Status', href: '/status', icon: Activity },];const socialLinks = [;
+  {name: 'LinkedIn',href: 'https://linkedin.com/company/ziontechgroup',icon: Linkedin,},{ name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },{name: 'Instagram',href: 'https://instagram.com/ziontechgroup',icon: Instagram,},{name: 'YouTube',href: 'https://youtube.com/@ziontechgroup',icon: Youtube,},{ name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },];const certifications = [;
+  'ISO 27001 Certified','SOC 2 Type II Compliant','GDPR Compliant','HIPAA Compliant','PCI DSS Level 1','FedRAMP Authorized','Quantum Security Certified','AI Ethics Compliant',];
+export default function UltraFuturisticNavigation2034() {const [isOpen, setIsOpen] = useState(false)const [activeDropdown, setActiveDropdown] = useState<string | null>(null)const [isScrolled, setIsScrolled] = useState(false)useEffect(() => {const handleScroll = () => {window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const toggleDropdown = (category: string) => {setActiveDropdown(activeDropdown === category ? null : category)}
+  const closeDropdown = () => {setActiveDropdown(null)const quickLinks = [;
+  { name: 'Home', href: '/', icon: Home },{ name: 'Services', href: '/services', icon: Briefcase },{ name: 'Solutions', href: '/solutions', icon: Target },{ name: 'Pricing', href: '/pricing-2034', icon: DollarSign },{ name: 'Resources', href: '/resources', icon: BookOpen },{ name: 'Case Studies', href: '/case-studies', icon: FileText },{ name: 'Blog', href: '/blog', icon: MessageCircle },{ name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];
 const companyLinks = [;
   { name: 'About Us', href: '/about', icon: Users },;
@@ -715,6 +745,7 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
 ];
+<<<<<<< HEAD
 export default function UltraFuturisticNavigation2034() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -835,6 +866,8 @@ const certifications = [;
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },{ name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },{ name: 'Instagram', href: 'https://instagram && instagram.com/ziontechgroup', icon: Instagram },{ name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },{ name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
 ];
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function UltraFuturisticNavigation2034() {const [isOpen, setIsOpen] = useState(false)const [activeDropdown, setActiveDropdown] = useState<string | null>(null)const [isScrolled, setIsScrolled] = useState(false)useEffect(() => {const handleScroll = () => {setIsScrolled(window && window.scrollY > 50)}window && window.addEventListener('scroll', handleScroll)return () => window && window.removeEventListener('scroll', handleScroll)}, [])}const closeDropdown = () => {setActiveDropdown(null)}}window && window.addEventListener('scroll', handleScroll)return () => window && window.removeEventListener('scroll', handleScroll)}, [])setIsScrolled(window.scrollY > 50)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const toggleDropdown = (category: string) => {setActiveDropdown(activeDropdown === category ? null : category)}
   const closeDropdown = () => {setActiveDropdown(null)}return (<>;
       {/* Top Contact Bar */}
@@ -966,11 +999,17 @@ export default function UltraFuturisticNavigation2034() {const [isOpen, setIsOpe
       </div>;
       {/* Main Navigation */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <nav;
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled;
             ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20';
             : 'bg-transparent';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }`}
       >;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -980,6 +1019,7 @@ export default function UltraFuturisticNavigation2034() {const [isOpen, setIsOpe
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className='flex items-center space-x-3'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1009,6 +1049,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 className='flex items-center space-x-3';
             >;
               <div className='relative'>;
@@ -1275,6 +1317,9 @@ function UltraFuturisticNavigation2034() {const [is_open, setIsOpen] = useState 
                               href={service.href}
                               className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                             >;</p>;
               </div>;
             </motion.div>;
@@ -1331,6 +1376,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     ))}
                   </div>
 <div className='mt-4 pt-4 border-t border-cyan-500/20'>
@@ -1367,6 +1413,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='lg:hidden'>
               <button
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     ))}<Link;
                       href='/services';
                       className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
@@ -1389,8 +1437,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Link;
 href='/contact';
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                 Get Started;
               </Link>;
@@ -1414,6 +1465,9 @@ href='/contact';
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>;{/* Mobile Menu Button */}
 <div className='lg:hidden'>;
               <button;
@@ -1435,16 +1489,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
         </div>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (<motion&& motion.div;
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               exit={{ opacity: 0, height: 0 }}
@@ -1455,6 +1513,8 @@ className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
                 {quickLinks.map(link => (
                   <Link
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               exit={{ opacity: 0, height: 0 }}transition={{ duration: 0.3 }}
 className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20';
             >;
@@ -1499,7 +1559,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </button>;
                     <AnimatePresence>;
                       {activeDropdown === category.title && (<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <AnimatePresence>;
           {is_open && (<motion.div;
               initial={{ opacity: 0, height: 0 }}
@@ -1513,12 +1576,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           exit={{ opacity: 0, height: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                           transition={{ duration: 0.2 }}
 className='mt-3 ml-4 space-y-2'
                         >
                           {category.services.map(service => (
                             <Link
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           transition={{ duration: 0.2 }}className='mt-3 ml-4 space-y-2';
                         >;
                           {category.services.map(service => (<Link;
@@ -1534,17 +1600,21 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors';
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                             </Link>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                           transition={{ duration: 0.2 }}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           ))}
                         </motion && motion.div>;
                       )}
                     </AnimatePresence>;
                   </div>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <Link
                   href='/contact'
@@ -1557,14 +1627,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <Link;
                   href='/contact';
                   onClick={() => setIsOpen(false)}className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link;
                   href="/contact";
+<<<<<<< HEAD
 =======
                   className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link
                   href="/contact"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   onClick={() => setIsOpen(false)}
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center";
                           className='mt - 3 ml - 4 space - y-2';
@@ -1610,6 +1685,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Spacer for fixed navigation */}
       <div className='h - 20'></div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </>)<div className="h - 20"></div>;
     </>)}className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center';
                 >;
@@ -1630,6 +1708,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <div className='h-20'></div>;
     </>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1638,3 +1717,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

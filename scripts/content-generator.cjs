@@ -30,6 +30,7 @@ const path = require("path")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(`� Report saved "to"`)
 
@@ -37,3 +38,6 @@ const path = require("path")
 =======
     console.log(`� Report saved "to"`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.log(`� Report saved "to"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight  } from 'lucide-react';
@@ -65,6 +66,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className="text-gray-400 text-sm">{t.desc}</p>
             </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) )}</div>) )}</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) )}</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) )}</div> </div> </section> <motion.div initial= {opacity: 0, y: 20;
@@ -96,7 +99,10 @@ export default function AIServices() {}</div> </div> </section> <motion.div init
               <h3 className="text-white font-semibold mb-2">{t.title}</h3>;
               <p className="text-gray-400 text-sm">{t.desc}</p>;
             </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           ))}
         </div>;
         <div className="max-w-6xl mx-auto mb-20">;
@@ -275,6 +281,7 @@ function AIServices() {return (<QuantumHolographicMatrixBackground intensity={1.
               animate={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -292,6 +299,9 @@ function AIServices() {return (<QuantumHolographicMatrixBackground intensity={1.
 
             >;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+              transition={{ duration: 0.8, delay: 0.4 }}>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <h2 className="text - 4xl md:text - 5xl font - bold text-white mb-6">;
                 Ready to Transform Your Business with AI?;
               </h2>;
@@ -319,6 +329,9 @@ function AIServices() {return (<QuantumHolographicMatrixBackground intensity={1.
         </section>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </>),>;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 Ready to Transform Your Business with AI?;
@@ -366,5 +379,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </div>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

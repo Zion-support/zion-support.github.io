@@ -235,6 +235,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = LinkCheckerAutomation;
 
@@ -242,3 +243,6 @@ module.exports = LinkCheckerAutomation;
 =======
 module.exports = LinkCheckerAutomation;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = LinkCheckerAutomation;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

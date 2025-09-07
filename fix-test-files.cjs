@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 
 
 
@@ -15,6 +16,10 @@ function fixTestFile(filePath) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+function fixTestFile(filePath) {
+  try {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}

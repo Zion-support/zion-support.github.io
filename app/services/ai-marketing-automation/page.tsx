@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import React from 'react';
@@ -9,6 +10,10 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+import React from 'react';
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const metadata = {
 <<<<<<< HEAD
   title: 'AI Marketing Automation | Zion Tech Group',
@@ -28,6 +33,7 @@ export default function AIMarketingAutomationPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Marketing Automation
@@ -108,6 +114,8 @@ export default function AIMarketingAutomationPage() {
         </div>
       </section>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             AI Marketing Automation
           </h1>
@@ -466,7 +474,10 @@ function CaseStudy({ company, industry, result, description, metrics }: {
               Email Us
             </a>
           </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>
       </div>
     </div>

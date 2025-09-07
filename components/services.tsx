@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 =======
@@ -9,6 +10,10 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 ;
 import { motion, AnimatePresence, Variants  } from 'framer-motion';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+;
+import { motion, AnimatePresence, Variants  } from 'framer-motion';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Search, Filter, Star, Users, TrendingUp;
   DollarSign, Clock, CheckCircle, ArrowRight;
   Brain, Rocket, Dna, Globe, Shield, Wifi;
@@ -112,6 +117,7 @@ import { innovativeLogisticsServices2025  } from '../data/2025-innovative-logist
 // Import existing services for comprehensive coverage;
 import { innovativeMicroSaasServices  } from '../data/innovative-micro-saas-services';
 import { quantumSpaceServices  } from '../data/quantum-space-services';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { enterpriseITServices } from '../data/enterprise-it-services';
 const allServices = null;
@@ -278,6 +284,9 @@ import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-servi
 import { quantumSpaceServices } from '../data/quantum-space-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
 const allServices = [
+=======
+const allServices = [;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ...realMicroSaasServices2025;
   ...innovativeAIServices2025;
   ...innovativeITServices2025;
@@ -797,6 +806,9 @@ and micro SAAS services designed to transform your business and drive innovation
                 <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>;
                 <p className="text-gray-400">Try adjusting your search criteria or browse all services</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <button;
                   onClick={() => {setSearchTerm('')/* Enhanced CTA Section */;
 }<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)setSelectedCategory('All')}}
@@ -805,6 +817,7 @@ and micro SAAS services designed to transform your business and drive innovation
                   Clear Filters;
                 </button>;
               </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                 <button
@@ -817,6 +830,8 @@ and micro SAAS services designed to transform your business and drive innovation
                 </button>
               </motion.div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             )}
                       {/* Enhanced Price */}
                       <div className="mb-6 relative z-10">;
@@ -1182,6 +1197,7 @@ and micro SAAS services designed to transform your business and drive innovation
                     animate={{ opacity: 1, scale: 1 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     transition={{ duration: 1, delay: 1.4 }}
 =======
                     transition={{ duration: 1, delay: 1.4 }}
@@ -1207,6 +1223,8 @@ and micro SAAS services designed to transform your business and drive innovation
                     <motion.a
                       href="/contact"
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     transition={{ duration: 1, delay: 1.4 }}className="mb-8";
                   >;
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6">;
@@ -1225,7 +1243,10 @@ and micro SAAS services designed to transform your business and drive innovation
                   <div className="flex flex-col sm:flex-row gap-6 justify-center">;
                     <motion.a;
                       href="/contact";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40";
@@ -1236,6 +1257,7 @@ and micro SAAS services designed to transform your business and drive innovation
                       href="/pricing";
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover: border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm"
                     >
@@ -1258,6 +1280,8 @@ and micro SAAS services designed to transform your business and drive innovation
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover: border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm";
                     >;
                       💰 View Pricing;
@@ -1274,7 +1298,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>;
       <UltraFuturisticFooter2029 />;
     </UltraFuturisticBackground2029>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

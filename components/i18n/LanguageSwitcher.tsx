@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const localeToFlag: Record<string, string> = {
   en: 'us';
@@ -63,6 +64,8 @@ setOpen(false);
       <button
         aria-haspopup='listbox'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 const localeToFlag: Record<string, string> = {en: 'us',pt: 'br',es: 'es',en: 'us';
   pt: 'br';
@@ -84,7 +87,10 @@ export default function LanguageSwitcher() {const { t } = useTranslation()const 
   const changeLanguage = async (lng: string) => {await i18n.changeLanguage(lng)localStorage.setItem('preferredLanguage', lng)document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr')document.documentElement.setAttribute('lang', lng)setOpen(false)}return (<div className='relative'>;
       <button;
         aria-haspopup='listbox';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         aria-expanded={open}
         className='flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800';
         onClick={() => setOpen(v => !v)}
@@ -105,6 +111,7 @@ export default function LanguageSwitcher() {const { t } = useTranslation()const 
           role='listbox';
           className='absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded shadow-lg z-50'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           {supportedLocales && supportedLocales.map(lng => (;
             <li key={lng}>;
               <button
@@ -124,6 +131,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <button
         aria-haspopup="listbox"
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {supportedLocales && supportedLocales.map(lng => (<li key={lng}>;
               <button;
                 role='option';
@@ -132,7 +141,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (<div className="relative">;
       <button;
         aria-haspopup="listbox";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         aria-expanded={open}
         className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800";
         onClick={() => setOpen((v) => !v)}
@@ -151,6 +163,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
 =======
     </div>
@@ -162,6 +175,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>;
 )}
   )}
@@ -227,8 +242,12 @@ function LanguageSwitcher() {const { t } = use_translation ()const [open, set_op
             </li>))}
         </ul>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>))}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </div>);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

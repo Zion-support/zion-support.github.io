@@ -1,6 +1,7 @@
 import Layout from './layout/Layout';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -148,6 +149,8 @@ import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-
 const LoadingFallback = null;
     <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion, AnimatePresence  } from 'framer-motion';
 import {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
@@ -223,11 +226,14 @@ import { innovative2040ITServices  } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
 // Loading fallback component;
 const LoadingFallback = () => (<div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion.div;
+<<<<<<< HEAD
 =======
 
 const LoadingFallback = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
@@ -273,6 +279,9 @@ if ( {) {$2;
           })}
         { threshold: 0.3, root_margin: '-100px' }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       )const sections = document.querySelectorAll ('section[id]')sections.for_each (section => observer.observe (section))return () => observer.disconnect ()sections.for_each ((section) => observer.observe (section))return () => observer.disconnect ()}
   }, [])const fadeInUp = {initial: { opacity: 0, coordinate_y: 60 },animate: { opacity: 1, coordinate_y: 0 },transition: { duration: 0.6, ease: 'ease_out' },  }    transition: { duration: 0.6, ease: "ease_out" }
   }const stagger_container = {animate: {transition: {return (const LoadingFallback = null;
@@ -353,7 +362,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     )}return (<Layout>;
       <div className='min-h-screen bg-black text-white relative overflow-x-hidden'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Hero Section */}
         <section;
           id='hero';
@@ -381,6 +393,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               }}duration: 6,animate={{rotate: [45, 405];
                 scale: [1, 1.15, 1];
                 opacity: [0.3, 0.5, 0.3]}}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{
                 duration: 10,
@@ -459,6 +472,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.p>
             </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               transition={{duration: 10,repeat: Infinity,ease: 'easeInOut',}}
             />;
           </div>;
@@ -497,7 +512,10 @@ className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto';
                 technologies. Leading the future of technology innovation.;
               </motion.p>;
             </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
                 Transform your business with Zion Tech Group's revolutionary AI;
@@ -509,6 +527,7 @@ className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto';
             </motion && motion.div>;{/* CTA Buttons */}
             <motion&& motion.div;
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               animate={{ opacity: 1, y: 0 }}
@@ -530,6 +549,8 @@ href='/services'
             </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               animate={{ opacity: 1, y: 0 }}className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105">;
                 Explore Services;
               </Link>;
@@ -549,6 +570,7 @@ href='/services';
                 Explore Services;
               </Link>;
             </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             {/* Stats */}
             <motion&& motion.div;
@@ -661,6 +683,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
 =======
+=======
+            {/* Stats */}
+            <motion&& motion.div;
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.8 }}
 className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8';
             >;
@@ -850,6 +877,9 @@ className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8';
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               whileInView={{ opacity: 1, coordinate_y: 0 }}technology.;
               </p>;
             </motion.div>;
@@ -969,9 +999,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}className='text - center mb - 16';
+<<<<<<< HEAD
 =======
               className='text - center mb - 16';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >;
               <h2 className='text - 4xl md:text - 5xl font - bold mb - 6'>;
                 <span className='bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent'>;
@@ -1036,6 +1069,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}className='text-center mb-16';
             >;
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
@@ -1060,6 +1096,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 standards in technology innovation.;
               </p>;
             </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               viewport={{ once: true }}
@@ -1087,6 +1124,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
                 <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
@@ -1109,6 +1148,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion && motion.div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* Featured New Services */}
 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               {revolutionary2043AdvancedServices
@@ -1116,6 +1156,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 .map((service, index) => (
                   <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Featured New Services */}</div>;
                         </div>;
                       </div>;
@@ -1173,6 +1215,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
+<<<<<<< HEAD
               viewport={{ once: true }}
 <<<<<<< HEAD
 className='text-center mt-12'
@@ -1190,6 +1233,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
 
+=======
+              viewport={{ once: true }}</motion.div>;
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105">;
                 View All Services;
                 <ArrowRight className="ml-2 w-5 h-5" />;
@@ -1199,6 +1247,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
   );
   {
   opacity: 0, y: 30
@@ -1239,6 +1288,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </div>;
     </Layout>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ){opacity: 0, y: 30;
 }whileInView= {{opacity: 1, y: 0;
 }transition= {{className='text-center mt-12';
@@ -1258,11 +1309,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section id='contact-cta' className='py-20 relative'>;
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
             <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             >
@@ -1344,6 +1399,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default Homepage2045;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >;
               <p className="text-xl text-gray-300 mb-8">;
                 Let's discuss how our revolutionary technology solutions can drive your business into the future.;
@@ -1461,6 +1518,9 @@ href='tel:+1 302 464 0950';
         </section>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </Layout>))animate: {transition: {}/* CTA Buttons */;
 }<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {/* Stats */;
 }<motion.div > <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2" >500+</div> <div className="text-gray-400" >Innovative Services</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2" >4.9/5</div> <div className="text-gray-400" >Customer Rating</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2" >1000+</div> <div className="text-gray-400" >Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) )}</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Latest Innovations </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>)}</div> </div> <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors" > <span className="mr-2 text-sm" >Learn More</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> </div> </div> </div> </a> </motion.div>) )}</div> {/* View All Services CTA */;
@@ -1472,6 +1532,7 @@ href='tel:+1 302 464 0950';
   once: true;
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)}export default Homepage2045;export default Homepage2045;
 }export default Homepage2045;once: true;
+<<<<<<< HEAD
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)}export default Homepage2045;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1518,3 +1579,6 @@ export default Homepage2045;
 };export default Homepage2045;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)}export default Homepage2045;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

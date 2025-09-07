@@ -25,6 +25,7 @@ export default function EnhancedCard(): any ({children,className = "",}: {childr
 export default function EnhancedCard() {return (<div className={["card-base p-4", className].join(' ')}>;
       {children}
   return (<div className={["card - base p - 4", class_name].join (" ")}>{children}</div>)return (<div className={["card - base p - 4", class_name].join (" ")}>{children}</div>)}export default function EnhancedCard() {export default function EnhancedCard() {return (<div className={["card-base p-4", className].join(" ")}>{children}</div>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -54,3 +55,6 @@ export default function EnhancedCard({ children, className = '' }: { children: R
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

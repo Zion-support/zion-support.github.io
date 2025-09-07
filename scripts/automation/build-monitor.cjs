@@ -50,6 +50,7 @@ setupSignalHandlers() {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
@@ -61,6 +62,11 @@ setupSignalHandlers() {}
     console.log(message);
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
   async runCommand(command, options = {}) {}
@@ -269,6 +275,7 @@ monitor.start().catch(error => {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 });
 
@@ -276,3 +283,6 @@ monitor.start().catch(error => {})
 =======
 });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

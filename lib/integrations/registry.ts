@@ -7,6 +7,7 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+<<<<<<< HEAD
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
 
@@ -36,6 +37,8 @@ import { IntegrationProviderMeta  } from './types';
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import { IntegrationProviderMeta  } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [;
@@ -70,9 +73,12 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     id: "salesforce"
     name: "Salesforce"
@@ -91,6 +97,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     category: "crm";
     description: "Sales pipeline CRM";
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,6 +126,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
     id: "pipedrive"
     name: "PipeDrive"
@@ -162,6 +171,7 @@ export function getProviderById(id: string): IntegrationProviderMeta | undefined
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -173,6 +183,8 @@ export function getProviderById(id: string): IntegrationProviderMeta | undefined
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: "bamboohr"
     name: "BambooHR"
     category: "ats"
@@ -180,6 +192,7 @@ export function getProviderById(id: string): IntegrationProviderMeta | undefined
   }
 ];
 export function getProviderById(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -212,6 +225,11 @@ import { IntegrationProviderMeta } from './types';
 
 import { IntegrationProviderMeta  } from './types';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+}
+import { IntegrationProviderMeta } from './types';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
@@ -241,6 +259,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
@@ -248,12 +267,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 export function getProviderById (
   id: string,
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find ((p) => p.id === id);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -279,6 +301,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: "bamboohr",
     name: "BambooHR",
@@ -295,6 +319,7 @@ export function getProviderById(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -306,12 +331,15 @@ export function getProviderById(
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ): IntegrationProviderMeta | undefined {;
   return PROVIDERS.find((p) => p.id === id);
 }
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -347,3 +375,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

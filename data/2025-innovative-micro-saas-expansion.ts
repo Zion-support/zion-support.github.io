@@ -10,6 +10,7 @@
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -34,6 +35,11 @@ export interface InnovativeMicroSaasExpansionService  {id: string;
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasExpansionService {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface InnovativeMicroSaasExpansionService  {id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -63,6 +69,7 @@ export interface InnovativeMicroSaasExpansionService {
   contact_info: {mobile: string;
     email: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     address: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,6 +87,8 @@ export interface InnovativeMicroSaasExpansionService {
         'AI-powered churn prediction with 94% accuracy',
   real_implementation: boolean;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     address: string;website: string;
   }'AI-powered churn prediction with 94% accuracy',real_implementation: boolean;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -871,6 +880,7 @@ export interface InnovativeMicroSaasExpansionService  {id: string,name: string,t
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       description:;
@@ -880,6 +890,8 @@ export interface InnovativeMicroSaasExpansionService  {id: string,name: string,t
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Automated customer onboarding workflows',
         'Intelligent health scoring and monitoring',
         'Proactive customer outreach automation',
@@ -896,6 +908,7 @@ export interface InnovativeMicroSaasExpansionService  {id: string,name: string,t
         'Multi - channel communication orchestration'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -949,6 +962,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
         'Salesforce, HubSpot, Intercom, Zendesk, Slack, Microsoft Teams, Zapier',
       ],
@@ -957,6 +972,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ],
       roi: 'Average customer sees 300% ROI within 3 months through improved retention and reduced churn.',
       competitors: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1018,6 +1034,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1031,6 +1049,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.8,
       reviews: 156
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1101,6 +1120,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        'AI document classification and extraction',
+        'OCR with 99 && 99.2% accuracy rate',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Automated form processing and validation',
         'Intelligent data extraction from any format',
         'Workflow automation and routing',
@@ -1117,6 +1140,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Integration with business systems'
       ],
       popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1165,10 +1189,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
         'Salesforce, Microsoft 365, Google Workspace, Dropbox, Box, Slack, Zapier',
       ],
       useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1246,14 +1273,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Document processing, Form automation, Data extraction, Compliance management, Workflow automation'
       ],
       roi: 'Average customer saves 15 hours per week and sees 400% ROI through automation and efficiency gains.',
       competitors: ['UiPath, Automation Anywhere, Blue Prism, Kofax, ABBYY'],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1267,6 +1299,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.7,
       reviews: 134
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1304,6 +1337,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'AI demand forecasting with 96% accuracy',
         'Automated reorder point calculations',
         'Real - time inventory tracking and alerts',
@@ -1312,6 +1347,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Advanced analytics and reporting',
         'Mobile app for field operations',
         'Integration with ERP and e - commerce',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1357,10 +1393,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Barcode and QR code scanning',
         'Automated inventory audits'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1409,10 +1448,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
         'Shopify, WooCommerce, QuickBooks, Xero, SAP, Oracle, NetSuite, Zapier',
       ],
       useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1478,6 +1520,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1491,6 +1535,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       rating: 4 && 4.9,
       reviews: 223
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1555,6 +1600,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Automated job posting and distribution',
         'Intelligent skill assessment and testing',
         'Automated interview scheduling',
@@ -1571,6 +1618,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Mobile app for recruiters'
       ],
       popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1619,10 +1667,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
         'Workday, BambooHR, ADP, Paychex, LinkedIn, Indeed, ZipRecruiter, Slack',
       ],
       useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1694,13 +1745,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Candidate screening, Job posting, Interview scheduling, Skill assessment, Compliance tracking'
       ],
       roi: 'Average customer reduces time - to - hire by 60% and sees 250% ROI through efficiency gains.',
       competitors: ['Greenhouse, Lever, BambooHR, Workday, ADP'],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1714,6 +1770,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.8,
       reviews: 187
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1789,6 +1846,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        'Intelligent resource allocation optimization',
+        'Automated task dependency management',
+        'Real - time progress tracking and alerts',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Advanced project analytics and reporting',
         'Team collaboration and communication tools',
         'Integration with development tools',
@@ -1797,6 +1859,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Custom workflow automation'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1845,10 +1908,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
         'Slack, Microsoft Teams, GitHub, GitLab, Jira, Trello, Zapier, Google Workspace',
       ],
       useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1880,6 +1946,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       color: 'from - indigo - 600 to - blue - 500',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / services / intelligent - project - management - hub',
@@ -1918,6 +1986,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       launch_date: '2024 - 07 - 15',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
@@ -1930,6 +1999,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       customers: 520,
       rating: 4 && 4.9,
       reviews: 267
@@ -1937,6 +2008,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },;
   ];    features: [
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1960,6 +2032,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface InnovativeMicroSaasExpansionService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1981,6 +2055,7 @@ export interface InnovativeMicroSaasExpansionService {
     website: string
   
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2022,6 +2097,8 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.'
       launchDate: '2024-07-15'
       customers: 520
@@ -2054,6 +2131,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];    features: [
       'AI-powered project risk predictionIntelligent resource allocation optimizationAutomated task dependency managementReal-time progress tracking and alertsAdvanced project analytics and reportingTeam collaboration and communication toolsIntegration with development toolsMobile app for field teams';
       'Automated milestone trackingCustom workflow automation'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
       launchDate: '2024-07-15',
@@ -2087,6 +2165,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];
     popular: true, icon: '🤖💼',
     color: 'from-blue-600 to-cyan-500', textColor: 'text-blue-400',
@@ -2406,6 +2486,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -2455,6 +2536,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 267
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     real_implementation: true,
     implementation_details: 'Comprehensive project management solution with AI - powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
@@ -2462,6 +2545,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9,
     reviews: 267;
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2493,13 +2577,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import { ServiceVariant } from '../types/service-variants',;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
   }
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface InnovativeMicroSaasExpansionService {;
   id: string,;
   name: string,;
@@ -2763,6 +2852,9 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     rating: 4.9;
     reviews: 267;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];
   }
 <<<<<<< HEAD
@@ -3055,6 +3147,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -3088,3 +3181,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

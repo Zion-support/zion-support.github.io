@@ -434,6 +434,7 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ESLintErrorFixer;
 
@@ -441,3 +442,6 @@ module.exports = ESLintErrorFixer;
 =======
 module.exports = ESLintErrorFixer;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = ESLintErrorFixer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

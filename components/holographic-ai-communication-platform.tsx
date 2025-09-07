@@ -4,6 +4,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const contactInfo = null;
   return (
     <UltraAdvancedFuturisticBackground>
@@ -67,6 +68,8 @@ export default function HolographicAICommunicationPage() {;
           name='description'
           content='AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control.'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function HolographicAICommunicationPage() {const contactInfo = {mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -97,7 +100,10 @@ export default function HolographicAICommunicationPage() {const contactInfo = {m
 <meta;
           name='description';
           content='AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control.';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <link;
           rel='canonical';
@@ -137,6 +143,7 @@ export default function HolographicAICommunicationPage() {const contactInfo = {m
                 30-day free trial • Setup: 1 week;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Button
                 href='/contact'
                 variant='quantum'
@@ -172,12 +179,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Button;
                 href='/contact';
                 variant='quantum';
                 size='lg';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='w-full mt-4'>;
                 Start Free Trial;
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -228,6 +240,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {features.map((feat) => (<li key={feat} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-fuchsia-400 mt-0.5" /><span>{feat}</span></li>;
                 ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit">;
@@ -269,6 +284,7 @@ import Button from '../components / ui / Button';
 export default /**;
  * HolographicAICommunicationPage - Function description;
  */;
+<<<<<<< HEAD
 function HolographicAICommunicationPage() {const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',}})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -306,3 +322,6 @@ function HolographicAICommunicationPage() {
 ;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+function HolographicAICommunicationPage() {const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',}})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

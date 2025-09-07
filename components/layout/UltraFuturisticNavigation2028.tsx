@@ -1,6 +1,7 @@
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
@@ -593,6 +594,8 @@ setActiveCategory(categoryTitle);
   return (
 <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion, AnimatePresence  } from 'framer-motion';
 import {Menu;
   X;
@@ -821,7 +824,10 @@ const resourceLinks = [;
     category.services.filter(service =>;
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchQuery.toLowerCase())))return (<nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Top Contact Bar */}
       <div className='bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-500/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -843,6 +849,7 @@ const resourceLinks = [;
             <div className='flex items-center space-x-4'>;
               <a;
                 href={contactInfo.website}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-purple-300 hover:text-white transition-colors'
               >
@@ -894,12 +901,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex items-center space-x-4">
               <a href={contactInfo.website} className="text-purple-300 hover:text-white transition-colors">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                className='text-purple-300 hover:text-white transition-colors';
+              >;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {contactInfo.website}
               </a>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {/* Main Navigation */}
@@ -926,6 +938,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Link>
           </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </a>;
             </div>;
           </div>;
@@ -948,10 +962,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className='text-xs text-purple-300'>;
                   2028 Future Technology;<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='flex items-center justify-between h-20'>;
+<<<<<<< HEAD
 =======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Logo */}
           <div className='flex items-center'>;
             <Link href='/' className='flex items-center space-x-3 group'>;
@@ -968,6 +985,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className='text-xs text-purple-300'>;
                   2028 Future Technology;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </p>;
               </div>;
             </Link>;
@@ -991,9 +1011,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>Services</span>;
                 <ChevronDown className='w-4 h-4' />;
               </button>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {/* Mega Menu */}
               <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>;
                 <div className='p-6'>;
@@ -1012,6 +1035,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </p>;
                         <div className='space-y-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                           {category && category.services.slice(0, 2).map(service => (;
                             <Link
 <<<<<<< HEAD
@@ -1025,6 +1049,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <ChevronDown className="w-4 h-4" />
               </button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                          {category && category.services.slice(0, 2).map(service => (<Link;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className="relative group">;
               <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">;
                 <Sparkles className="w-5 h-5" />;
@@ -1048,6 +1075,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <p className="text-sm text-purple-300">{category && category.description}</p>;
                         <div className="space-y-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {category && category.services.slice(0, 2).map((service) => (<Link;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                               key={service.name}
@@ -1122,7 +1152,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30';
                       >;
                         View All Services;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </Link>;
                     </div>;
                   </div>;
@@ -1144,6 +1177,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* Company Links */}
 {companyLinks.slice(1, 5).map(link => (
 =======
@@ -1152,6 +1186,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               <Link
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Company Links */}{companyLinks.slice(1, 5).map((link) => (<Link;
                 key={link.name}
                 href={link.href}
@@ -1184,6 +1220,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>;{companyLinks.slice(1, 5).map(link => (<Link;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 key={link.name}
@@ -1237,16 +1276,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       </div>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (<motion&& motion.div;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             exit={{ opacity: 0, height: 0 }}
@@ -1306,6 +1349,8 @@ className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transiti
                         >
                           <h4 className='text-sm font-medium text-white'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             exit={{ opacity: 0, height: 0 }}className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30';
           >;
             <div className='px-4 py-6 space-y-6'>;
@@ -1362,6 +1407,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                           </span>;
                         </Link>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -1369,6 +1415,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </Link>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       ))}
                     </div>;
                   </div>;
@@ -1392,6 +1440,7 @@ className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-
                     </Link>;
                   ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div>
               </div>
               {/* Mobile CTA */}
@@ -1400,6 +1449,8 @@ className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-
                 <Link
                   href='/contact'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </div>;
               </div>;
               {/* Mobile CTA */}<div className='pt-4 border-t border-purple-500/30'>;
@@ -1431,6 +1482,7 @@ className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       </AnimatePresence>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               <div className='pt-4 border-t border-purple-500/30'>
@@ -1450,6 +1502,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (<div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>;
           <div className='p-4'>;
@@ -1511,6 +1565,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       )}
     </nav>
 =======
@@ -1521,6 +1576,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       )}}
   )}
           </motion.div>)}
@@ -1562,6 +1619,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </nav>)}</nav>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -1569,3 +1627,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </nav>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </nav>)}</nav>;
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

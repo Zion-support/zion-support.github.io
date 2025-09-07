@@ -10,6 +10,7 @@
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -34,6 +35,11 @@ export interface InnovativeMicroSaasService  {id: string;
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasService {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface InnovativeMicroSaasService  {id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -1260,6 +1266,7 @@ export interface InnovativeMicroSaasService  {id: string,name: string,tagline: s
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -1295,6 +1302,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ];    features: [
 
 export interface InnovativeMicroSaasService {
@@ -1675,6 +1684,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1684,12 +1694,15 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management'
       launchDate: '2023-10-01'
       customers: 34
       rating: 4.9
       reviews: 28
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1724,15 +1737,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management',
       launchDate: '2023-10-01',
       customers: 34,
       rating: 4.9,
 <<<<<<< HEAD
+<<<<<<< HEAD
       reviews: 28,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      reviews: 28
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     },;
   ];    features: [
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
@@ -1945,6 +1964,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1964,12 +1984,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
       'API integration capabilities'
   ];    features: [;
       'Autonomous warehouse robotsAI - powered route optimization_real - time inventory tracking_predictive maintenance_multi - robot coordination_safety and collision avoidance_performance analytics_scalable deployment';
       'API integration capabilities';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1999,6 +2022,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     color: 'from - gray - 600 to - slate - 700', text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / autonomous - supply - chain - robotics',
     market_position: 'Leading - edge platform competing with Amazon Robotics, Fetch Robotics, and Locus Robotics',
@@ -2014,6 +2039,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'autonomous - robotics - enterprise', contact_info: contact,
     real_implementation: true, implementation_details: 'Robotics - grade platform with AI - powered autonomy and comprehensive logistics management',
     launch_date: '2023 - 10 - 01', customers: 34,
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.9,
 <<<<<<< HEAD
@@ -2455,11 +2481,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     rating: 4.9
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 
   }
@@ -2467,6 +2496,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     marketSize: '$28B+ Warehouse Robotics market', growthRate: '35% YoY'
     variant: 'autonomous-robotics-enterprise', contactInfo: contact
     realImplementation: true, implementationDetails: 'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management'
@@ -3999,6 +4030,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -4033,3 +4065,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

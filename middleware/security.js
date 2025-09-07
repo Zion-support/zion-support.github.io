@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,8 @@
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-website-loading-errors-and-merge-6662;
@@ -59,11 +62,15 @@ export function securityMiddleware() {const response  = NextResponse.next()// Ad
   if (request.nextUrl.protocol === 'https:') {response.headers.set('Strict-Transport-Security','max-age=31536000; includeSubDomains; preload';
     )}return response;
 }ursor/automate-test-improve-and-merge-code-646c;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -119,6 +126,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
@@ -145,6 +154,7 @@ export function securityMiddleware(request) {
   }
   
   return response;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -178,6 +188,11 @@ origin/main
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
+=======
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function securityMiddleware(request) {;
 
 
@@ -191,6 +206,7 @@ export function securityMiddleware(request) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const response = NextResponse && NextResponse.next();
   const response = NextResponse.next();
+<<<<<<< HEAD
   const response = NextResponse && NextResponse.next();
   const response = NextResponse.next();
 <<<<<<< HEAD
@@ -221,12 +237,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // Add security headers
   const headers = getSecurityHeaders();
   headers && headers.forEach(({ key, value }) => {
     response && response.headers.set(key, value);
   });
   // Add HSTS header for HTTPS
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -281,6 +300,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return response;// Security headers middleware
 // Security headers middleware
 
@@ -317,6 +338,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+<<<<<<< HEAD
   return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
@@ -325,6 +347,14 @@ export function securityHeaders(req, res, next) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+  return response;// Security headers middleware
+export function securityHeaders(req, res, next) {
+  Object.entries({
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode=block',
@@ -369,6 +399,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -407,6 +438,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 }
@@ -437,6 +470,7 @@ function security_headers() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -444,11 +478,14 @@ function security_headers() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 }
 }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -500,6 +537,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function securityMiddleware(request) {
   const response = NextResponse.next();
   
@@ -519,6 +558,7 @@ export function securityMiddleware(request) {
   
   return response;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -579,3 +619,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -12,6 +12,7 @@ console.log(' Fixing line breaks in className attributes...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log('✨ Line break fixes completed!')
 
@@ -19,3 +20,6 @@ console.log('✨ Line break fixes completed!')
 =======
 console.log('✨ Line break fixes completed!')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+console.log('✨ Line break fixes completed!')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

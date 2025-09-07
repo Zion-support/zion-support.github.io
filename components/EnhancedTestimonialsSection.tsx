@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
 import {
@@ -28,6 +29,11 @@ import React from 'react';
 ;
 import React from 'react';
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+
+;
+import React from 'react';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Star, Quote, Users, Award, TrendingUp, CheckCircle  } from 'lucide-react';
 import { Star;
   Quote;
@@ -44,15 +50,19 @@ interface Testimonial  {interface Testimonial  {id: string;
   avatar: string;category: string;
 }const EnhancedTestimonialsSection: React.FC;category: string;  id: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   title: string;
   company: string;
   content: string;
   rating: number;
   avatar: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   category: string
@@ -160,6 +170,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section className='py-24 px-6 relative overflow-hidden'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   category: string;
   category: string;  id: string,name: string,title: string,company: string,content: string,rating: number,avatar: string,}
 const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimonial[] = [;
@@ -173,6 +185,7 @@ const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimo
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle },{ number: '50+', label: 'Enterprise Clients', icon: Users },{ number: '99.9%', label: 'Client Satisfaction', icon: Award },{ number: '4.9/5', label: 'Average Rating', icon: Star },];
   const renderStars = (rating: number) => {return Array.from({ length: 5 }, (_, i) => (<Star;
         key={i}
+<<<<<<< HEAD
 =======
   category: string;
   category: string;  id: string,name: string,title: string,company: string,content: string,rating: number,avatar: string,}
@@ -188,6 +201,8 @@ const EnhancedTestimonialsSection: React.FC = () => {const testimonials: Testimo
   const renderStars = (rating: number) => {return Array.from({ length: 5 }, (_, i) => (<Star;
         key={i}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         className={`w - 4 h - 4 ${i < rating ? 'text - yellow - 400 fill - current' : 'text - gray - 400';
         }`}{/* Stats Section */}
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>  }
@@ -283,11 +298,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {testimonials.map(testimonial => (<div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {testimonials.map(testimonial => (<div;
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
             >;
@@ -296,6 +314,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Quote className='w-8 h-8' />;
               </div>;
               {/* Content */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <div className='p-8'>
@@ -311,6 +330,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   "{testimonial.content}"
                 </p>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className='p-8'>;
                 {/* Rating */}<div className='flex items-center gap-1 mb-4'>                  {renderStars(testimonial.rating)}
                 </div>;
@@ -319,6 +340,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>;
                 {/* Author Info */}<div className='flex items-center gap-1 mb-4'>;
                   {renderStars(testimonial.rating)}
+<<<<<<< HEAD
 =======
               <div className='p-8'>;
                 {/* Rating */}<div className='flex items-center gap-1 mb-4'>                  {renderStars(testimonial.rating)}
@@ -329,14 +351,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Author Info */}<div className='flex items-center gap-1 mb-4'>;
                   {renderStars(testimonial.rating)}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </div>;
                 {/* Testimonial Text */}<p className='text-white/80 text-sm leading-relaxed mb-6'>;
                   "{testimonial.content}";
                 </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {/* Author Info */}
 <div className='flex items-center gap-4'>;
                   <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>;
@@ -397,6 +424,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* Hover Effect */}
 <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
             </div>
@@ -404,6 +432,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {/* Hover Effect */}{/* CTA Section */}
         <div className='text-center mt-16'>;
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>;
@@ -417,6 +447,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;<div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           ))}
@@ -485,6 +516,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
         {/* CTA Section */}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+          ))}
+        </div>;
+        {/* CTA Section */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <div className='text-center mt-16'>;
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>;
             <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -555,8 +591,12 @@ export default EnhancedTestimonialsSection;export default EnhancedTestimonialsSe
       </div>;
     </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 )}export default EnhancedTestimonialsSection;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 )}export default EnhancedTestimonialsSection;
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+)}export default EnhancedTestimonialsSection;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

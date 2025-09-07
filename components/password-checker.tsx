@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -33,6 +34,8 @@ export default function PasswordCheckerPage() {;
   const [checks, setChecks] = useState({
     length: false;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Lock,Shield,Eye,EyeOff,Copy,RefreshCw,CheckCircle,XCircle,} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight  } from 'lucide-react';
 import { import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight  } from 'lucide-react';
@@ -41,12 +44,16 @@ import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, Alert
 export default function PasswordCheckerPage() {const [password, setPassword] = useState('')const [showPassword, setShowPassword] = useState(false)const [strength, setStrength] = useState(0)const [strengthText, setStrengthText] = useState('')const [strengthColor, setStrengthColor]  = useState('')}
   AlertTriangle,ArrowRight,} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight  } from 'lucide-react';
 export default function PasswordCheckerPage() {const [password, setPassword] = useState('')const [showPassword, setShowPassword] = useState(false)const [strength, setStrength] = useState(0)const [strengthText, setStrengthText] = useState('')const [strengthColor, setStrengthColor]  = useState('')analyzePassword(password)const [checks, setChecks] = useState({length: false;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     uppercase: false;
     lowercase: false;
     numbers: false;
     symbols: false;
     noCommon: false;
+<<<<<<< HEAD
 <<<<<<< HEAD
     noSequential: false
   });
@@ -105,6 +112,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   })const [suggestions, setSuggestions] = useState<string[]>([]),const [generatedPassword, setGeneratedPassword] = useState('')useEffect(() => {if (password) {analyzePassword(password)} else {resetAnalysis()}
   }, [password])length: pass.length >= 8,uppercase: /[A-Z]/.test(pass),lowercase: /[a-z]/.test(pass),numbers: /\d/.test(pass),symbols: /[!@#$%^&*()_+\-=\[\]{}':"\\|,.<>\/?]/.test(pass),noCommon: !isCommonPassword(pass),noSequential: !hasSequentialChars(pass),}setChecks(newChecks)// Calculate strength score;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    noSequential: false;
+  })const [suggestions, setSuggestions] = useState<string[]>([]),const [generatedPassword, setGeneratedPassword] = useState('')useEffect(() => {if (password) {analyzePassword(password)} else {resetAnalysis()}
+  }, [password])length: pass.length >= 8,uppercase: /[A-Z]/.test(pass),lowercase: /[a-z]/.test(pass),numbers: /\d/.test(pass),symbols: /[!@#$%^&*()_+\-=\[\]{}':"\\|,.<>\/?]/.test(pass),noCommon: !isCommonPassword(pass),noSequential: !hasSequentialChars(pass),}setChecks(newChecks)// Calculate strength score;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     let score = 0;
     score += newChecks.length ? 15 : 0;
     score += newChecks.uppercase ? 15 : 0;
@@ -116,6 +128,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Bonus for length;
     if (pass.length >= 12) score += 10;
     if (pass.length >= 16) score += 5;
+<<<<<<< HEAD
 <<<<<<< HEAD
     setStrength(score);
     // Set strength text and color
@@ -221,6 +234,8 @@ noSequential: false,
     const length = 16;
 const charset =
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     setStrength(score)// Set strength text and color;
     if (score >= 90) {setStrengthText('Very Strong')setStrengthColor('text-green-400')} else if (score >= 70) {setStrengthText('Strong')setStrengthColor('text-green-400')} else if (score >= 50) {setStrengthText('Moderate')setStrengthColor('text-yellow-400')} else if (score >= 30) {setStrengthText('Weak')setStrengthColor('text-orange-400')} else {setStrengthText('Very Weak')setStrengthColor('text-red-400')}if (!checks.noCommon) suggestions.push('Avoid common passwords like "password" or "123456"')if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"')if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security')if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters')setSuggestions(suggestions)// Generate suggestions;
     generateSuggestions(newChecks, pass)}const isCommonPassword = (pass: string) => {const commonPasswords = [;
@@ -245,7 +260,10 @@ if (!checks.length)suggestions.push('Make your password at least 8 characters lo
     for (let i = 4, i < length, i++) {result += charset[Math.floor(Math.random() * charset.length)];
     }length: false,uppercase: false,lowercase: false,numbers: false,symbols: false,noCommon: false,noSequential: false,})setSuggestions([])}const generateStrongPassword = () => {const length = 16;
 const charset =;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
     let result = '';
     // Ensure at least one of each required character type;
@@ -256,6 +274,7 @@ const charset =;
     // Fill the rest randomly;
     for (let i = 4; i < length; i++) {result += charset[Math.floor(Math.random() * charset.length)];
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Shuffle the password
     result = result
@@ -415,6 +434,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // Shuffle the password;
     result = result;
       .split('').sort(() => Math.random() - 0.5).join('')setGeneratedPassword(result)setPassword(result)}
@@ -635,6 +656,9 @@ if (return 'bg - orange - 400') {$2;
                     Enter Password;
                   </label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <div className="relative">;<section className='py-20 bg-gray-900'>;
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
@@ -722,9 +746,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>;
                   <Button;
                     onClick={generateStrongPassword}className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'>;
+<<<<<<< HEAD
 =======
                     className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <RefreshCw className='w-5 h-5 mr-2' />                    Generate Strong Password                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold";
                   >;
                     <RefreshCw className="w-5 h-5 mr-2" />;
@@ -754,17 +781,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </Button>;
                     </div>;
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                 </div>;
 
                 {/* Generated Password Display */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {generatedPassword}
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}{generatedPassword}</div>;
                   </div>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 )}
@@ -837,6 +868,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 )}<div className='text-sm text-gray-400'>;
                   <p>• Real-time strength analysis</p>;
                   <p>• Multiple security criteria</p>;
@@ -867,7 +900,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h3>;
               {password ? (<div className='space-y-6'>;
                   {/* Strength Score */}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <div>;
                     <div className='flex items-center justify-between mb-2'>;
                       <span className='text-sm text-gray-300'>;
@@ -905,6 +941,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {Object.entries(checks).map(([key, passed]) => (<div key={key} className='flex items-center space-x-3'>;
                           {getCheckIcon(passed)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                           <span
                             className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}
 <<<<<<< HEAD
@@ -917,6 +954,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries(checks).map(([key, passed]) => (
                         <div key={key} className="flex items-center space-x-3">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                          <span;
+                            className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>                            {key === 'length' && 'At least 8 characters'}                      {Object.entries(checks).map(([key, passed]) => (<div key={key} className="flex items-center space-x-3">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {getCheckIcon(passed)}
                           <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>;
                           >                            {key === 'length' && 'At least 8 characters'}{/* Security Checks */}
@@ -1045,15 +1086,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries (checks).map (([key, passed]) => (<div key={key} className="flex items - center space - x-3">;
                           {getCheckIcon (passed)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                           <span className={`text - sm ${passed ? 'text - green - 400' : 'text - red - 400'}`}>;>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                           <span className={`text - sm ${passed ? 'text - green - 400' : 'text - red - 400'}`}>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                          <span className={`text - sm ${passed ? 'text - green - 400' : 'text - red - 400'}`}>;>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
                             {key === 'numbers' && 'Contains number'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                             {key === 'symbols' && 'Contains special character'}
@@ -1075,6 +1121,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {suggestions.map((suggestion, index) => (
                           <div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                             {key === 'symbols' && 'Contains special character'}</div>;
                   </div>;{/* Suggestions */}
                             </span>                          </div>;
@@ -1108,6 +1156,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                             </span>;
                           </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                             {key === 'symbols' && 'Contains special character'}
@@ -1121,6 +1170,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         ))}
                       </div>;
                     </div>;
@@ -1158,6 +1209,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         ))}
                       </div>;
                     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   )}
 
@@ -1374,6 +1426,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   )}{/* Features */}<section className="py-20 bg-gray-800">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="text-center mb-16">;
@@ -1519,8 +1573,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               Follow these guidelines to create and maintain strong, secure;
               passwords for all your accounts.;
             </p>;
@@ -1536,6 +1593,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </section>;{/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-indigo-600 to-purple-600'>;
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
@@ -1554,6 +1614,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               variant='outline';
               size='lg';
   )}
+<<<<<<< HEAD
 =======
       </section>;
           </h2>
@@ -1574,6 +1635,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
   )}
               View Pricing;
@@ -1582,6 +1645,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   )}
     </>)}className='border-white text-white hover:bg-white hover:text-indigo-600';
             >;
@@ -1591,6 +1657,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
     </>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1599,3 +1666,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

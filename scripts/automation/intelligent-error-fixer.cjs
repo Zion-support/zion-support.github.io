@@ -112,6 +112,7 @@ console.log("🤖 Starting intelligent error fixer...")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const sourceDirs = ["src", "components", "pages"]
 
@@ -119,3 +120,6 @@ console.log("🤖 Starting intelligent error fixer...")
 =======
   const sourceDirs = ["src", "components", "pages"]
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  const sourceDirs = ["src", "components", "pages"]
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

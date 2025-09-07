@@ -6,6 +6,7 @@ type Props = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 type Props = {;
   room: Room | null;
   onLeave: () => void;
@@ -90,6 +91,8 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       <button
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 type Props = {room: Room | null;
   onLeave: () => void;import React from 'react';
@@ -109,7 +112,10 @@ type Props = any;export default function Controls() {const [micEnabled, setMicEn
   }return (<div className='flex items-center gap-3'>;
   return (<div className='flex items-center gap-3'>;
       <button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         onClick={toggleMic}
         className={`px-4 py-2 rounded ${accentClass} text-white`}
       >;
@@ -128,6 +134,7 @@ type Props = any;export default function Controls() {const [micEnabled, setMicEn
       </button>;
       <button;
         onClick={onLeave}
+<<<<<<< HEAD
 <<<<<<< HEAD
         className='px-4 py-2 rounded bg-red-600 text-white'
       >
@@ -158,6 +165,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         className='px-4 py-2 rounded bg-red-600 text-white'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        className='px-4 py-2 rounded bg-red-600 text-white';
+      >;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         Leave;
       </button>;
     </div>;
@@ -209,9 +220,13 @@ if (return) {$2;
         Leave;
       </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)})
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </div>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)})
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

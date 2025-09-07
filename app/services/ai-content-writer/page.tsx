@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export const metadata = {
   title: 'AI Content Writer | Zion Tech Group',
@@ -72,6 +73,10 @@ export default function AIContentWriterPage() {
           </a>
 =======
 export const metadata = {
+=======
+
+export const metadata = {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: 'Ai Content Writer | Zion Tech Group',
   description:
     'Professional ai content writer services for your business needs.',
@@ -119,30 +124,25 @@ export default function ServicePage() {
               run smoothly.
             </p>
           </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
-function FeatureCard({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-600">
-        {details.map((detail, index) => (
-          <li key={index} className="flex items-center">
-            <span className="text-indigo-500 mr-2">•</span> {detail}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
 }
 
+<<<<<<< HEAD
 function PricingSection() {
   return (
     <div className="mb-12">
@@ -230,3 +230,5 @@ function PricingPlan({
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

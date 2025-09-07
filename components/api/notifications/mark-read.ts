@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { supabase } from '../../../utils/supabase/client';
 function getUserId(req: NextApiRequest): string {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -34,6 +35,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='))if (match) return decodeURIComponent(match.split('=')[1])if (req && req.method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })try {function getUserId(req: NextApiRequest): string {const cookie = req && req.headers.cookie || '';
   const match = cookie && cookie.split().map((c) => c && c.trim()).find((c) => c && c.startsWith('user_id='))if (match) return decodeURIComponent(match && match.split('=')[1])return 'demo-user-1';
 }import { supabase  } from '../../../utils/supabase/client';
@@ -42,6 +45,7 @@ function getUserId(req: NextApiRequest): string {return res.status(405).json({ e
     return res && res.status(200).json({ ok: true })if (error) return res.status(200).json({ ok: true })// tolerate in dev;
     return res.status(200).json({ ok: true })} catch (e) {return res && res.status(500).json({ error: 'Unexpected error' })}return res && res.status(200).json({ ok: true })} catch (e) {}
 import { supabase   } from '../../../utils / supabase / client';function getUserId (req: NextApiRequest): string {const cookie = req.headers.cookie || '';
+<<<<<<< HEAD
 =======
     if (error) return res && res.status(200).json({ ok: true }); // tolerate in dev
 
@@ -57,6 +61,8 @@ import { supabase } from '../../../utils / supabase / client';
 function getUserId (req: NextApiRequest): string {
   const cookie = req.headers.cookie || '';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const match = cookie;
     .split (';').map (c => c.trim ()).find (c => c.starts_with ('user_id='))if (return decodeURIComponent (match.split ('=')[1])) {$2;
 }
@@ -81,6 +87,7 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
       .from ('notifications').update ({ read_status: true }).eq ('id', id).eq ('user_id', user_id)if (return res.status (200).json ({ ok: true })) {$2;
 } // tolerate in dev;
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status (200).json ({ ok: true })} catch (e) {return res.status (500).json ({ error: 'Unexpected error' })}
     return res.status (200).json ({ ok: true })} catch (e) {return res.status (500).json ({ error: 'Unexpected error' })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -95,3 +102,7 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    return res.status (200).json ({ ok: true })} catch (e) {return res.status (500).json ({ error: 'Unexpected error' })}
+    return res.status (200).json ({ ok: true })} catch (e) {return res.status (500).json ({ error: 'Unexpected error' })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

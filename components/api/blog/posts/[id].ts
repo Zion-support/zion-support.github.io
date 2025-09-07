@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (typeof id !== 'string')
     return res.status(400).json({ error: 'Invalid id' });
 
@@ -65,6 +66,8 @@ function handler() {
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readPosts, writePosts  } from '@/utils/data/blogStore';
 import { requireAdmin  } from '@/utils/api/auth';
@@ -87,6 +90,7 @@ function handler() {const { id } = req.query;
   if (return res.status (400).json ({ error: "Invalid id" })) {$2;
 }return res.status(405).end()return res.status(405).end()if (req.method === 'PUT') {if (!requireAdmin(req, res)) return;
     const posts  = readPosts()if (idx < 0) return res.status(404).json({ error: 'Not found' })const updated = { ...posts[idx], ...req.body, id }posts[idx] = updated;
+<<<<<<< HEAD
     writePosts(posts)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -101,3 +105,6 @@ function handler() {const { id } = req.query;
     writePosts(posts);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    writePosts(posts)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

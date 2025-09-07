@@ -714,6 +714,7 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = AdvancedPerformanceMonitor;
 
@@ -721,3 +722,6 @@ module.exports = AdvancedPerformanceMonitor;
 =======
 module.exports = AdvancedPerformanceMonitor;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = AdvancedPerformanceMonitor;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

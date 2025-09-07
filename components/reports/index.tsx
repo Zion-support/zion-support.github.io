@@ -15,6 +15,7 @@ export default function ReportsIndex() {
             agents.          </p>export default function ReportsIndex() {return (<div className="min-h-screen bg-slate-950 text-white">;
       <main className="container mx-auto px-4 py-12 max-w-7xl">;
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Header */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,6 +47,8 @@ export default function ReportsIndex() {
     return res.status(500).json({ error: "Internal server error" });
   }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Header */}<div className="mt-12 text-center">;
         {/* Back to Home */}<div className="mt-12 text-center">;
         {/* Content Categorizer Component */  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
@@ -153,6 +156,7 @@ function ReportsIndex() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -171,10 +175,13 @@ function ReportsIndex() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ← Back to home;
           </Link>;
         </div>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,11 +205,14 @@ function ReportsIndex() {
     return res.status(500).json({ error: "Internal server error" });
   }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className="mt-12 text-center">;
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;
   )})}
         <div className="mt-12 text-center">;
         {/* Content Categorizer Component */  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
         <ContentCategorizer />;
@@ -258,6 +268,11 @@ export default function ReportsIndex() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+}
+        <ContentCategorizer />;
+        {/* Back to Home */  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
         <div className="mb-8">
           <h1 className="text-4xl font-extrabold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -309,6 +324,7 @@ export default function ReportsIndex() {return (<div className="min-h-screen bg-
             agents.;
           </p>;
         </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {/* Content Categorizer Component */}
         <ContentCategorizer />;
@@ -331,6 +347,11 @@ export default function ReportsIndex() {return (<div className="min-h-screen bg-
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+        {/* Content Categorizer Component */}
+        <ContentCategorizer />;
+        {/* Back to Home */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <div className='mt-12 text-center'>;
           <Link;
             href='/';
@@ -363,10 +384,13 @@ export default function ReportsIndex() {return (<div className="min-h-screen bg-
 
 
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           >            ← Back to home        <div className="mt-12 text-center">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Content Categorizer Component */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -380,6 +404,7 @@ export default function ReportsIndex() {return (<div className="min-h-screen bg-
 }
         <div className="mt-12 text-center">
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -403,10 +428,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ← Back to home
           </Link>
         </div>
       </main>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -431,19 +459,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     </div>);
 }
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
     </div>
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -464,6 +498,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>;
   );
 }
@@ -490,6 +526,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -505,6 +542,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     </div>);
 }
@@ -513,6 +552,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -538,3 +578,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

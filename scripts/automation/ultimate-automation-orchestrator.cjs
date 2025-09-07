@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -12,6 +13,11 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process')
     this.logFile = path.join(this.projectRoot, 'automation', 'logs', 'ultimate-automation.log')
     const dirs = ['automation/logs', 'test-results', 'deployment-reports', 'automation/reports']
@@ -53,6 +59,7 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log(`Ultimate Automation Orchestrator "failed"`)
 
@@ -60,3 +67,6 @@ const { execSync } = require('child_process')
 =======
       this.log(`Ultimate Automation Orchestrator "failed"`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      this.log(`Ultimate Automation Orchestrator "failed"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -21,6 +21,7 @@ class HealthMonitor {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 new HealthMonitor().runChecks();
 
@@ -28,3 +29,6 @@ new HealthMonitor().runChecks();
 =======
 new HealthMonitor().runChecks();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+new HealthMonitor().runChecks();
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

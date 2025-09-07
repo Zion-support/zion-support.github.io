@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -27,6 +28,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export interface InnovativeMicroSaas {
 id: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+  id: string;
+export interface InnovativeMicroSaas  {id: string;name: string;
+  id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   tagline: string;
   price: string;
@@ -291,6 +298,7 @@ export interface InnovativeMicroSaas  {export interface InnovativeMicroSaas  {}]
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -402,6 +410,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Visual smart contract builder',
       'Multi - blockchain support',
 =======
@@ -429,6 +439,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
     icon: '⚡',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -484,6 +495,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Blockchain',
       'Smart Contracts',
       'Solidity',
@@ -498,6 +511,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Ethereum',
       'Polygon'
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -540,6 +554,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Legal agreements',
       'Real estate transactions',
       'Insurance claims',
@@ -549,6 +565,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     roi: 'Average customer sees 400% ROI within 6 months through reduced costs and improved efficiency.',
     competitors: ['OpenLaw', 'Clause', 'Agrello', 'Lexon', 'Monax'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -580,6 +597,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -598,6 +617,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -610,6 +630,9 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
 
       'AI-powered sentiment analysis',
@@ -625,6 +648,7 @@ origin/cursor/automate-test-improve-and-merge-code-382a
       'AI - powered sentiment analysis',
       'Multi - channel feedback collection',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -680,6 +704,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      'Automatic categorization',
+      'Trend identification',
+      'Real - time alerts',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Custom dashboards',
       'Integration with CRM',
       'Export capabilities',
@@ -688,6 +717,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     popular: true,
     icon: '💬',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -739,6 +769,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Natural Language Processing',
       'Machine Learning',
       'Sentiment Analysis',
@@ -753,6 +785,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'MongoDB',
       'AWS'
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -806,6 +839,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     competitors: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Qualtrics',
       'SurveyMonkey',
       'Typeform',
@@ -833,11 +868,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
 
       'AI-powered scheduling',
@@ -851,6 +889,7 @@ origin/cursor/automate-test-improve-and-merge-code-382a
     features: [;
       'AI - powered scheduling',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -898,6 +937,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      'Content generation suggestions',
+      'Multi - platform support',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Analytics and insights',
       'Team collaboration',
       'Content calendar',
@@ -949,6 +992,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Node && Node.js',
       'Python',
       'PostgreSQL',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1066,6 +1110,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       'AI-powered planning',
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  {
+
+      'AI-powered planning',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'intelligent - project - management',
     name: 'Intelligent Project Management',
     tagline: 'AI - powered project planning and execution',
@@ -1076,6 +1125,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     features: [;
       'AI - powered planning',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1130,6 +1180,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Resource optimization',
       'Timeline prediction',
       'Risk assessment',
@@ -1183,6 +1235,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Project Management',
       'React',
       'Node && Node.js',
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     color: 'from-orange-500 to-yellow-600',
@@ -1205,11 +1258,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Python',
       'PostgreSQL',
       'Redis',
       'AWS'
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1249,6 +1305,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     use_cases: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Project planning',
       'Resource management',
       'Team collaboration',
@@ -1340,6 +1398,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1351,6 +1410,8 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'
     launchDate: '2024-01-30'
     customers: 3200
@@ -1392,6 +1453,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1411,6 +1473,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -1423,6 +1487,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 export interface InnovativeMicroSaas {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1461,6 +1526,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string,;
   name: string,;
   tagline: string,;
@@ -1719,6 +1786,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1726,6 +1794,8 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 
 ];
@@ -1769,6 +1839,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
   reviews: number;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1825,3 +1896,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

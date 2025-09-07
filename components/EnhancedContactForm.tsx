@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -87,6 +88,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       newErrors.name = 'Name must be at least 2 characters long'
 =======
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
  setErrors (newErrors)}
 setIsSubmitting (true)const handleInputBlur = (name: keyof FormData) => {//Validate individual field on blur if (formData[name] && errors[name]) {}> <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center" > <CheckCircle className="w-10 h-10 text-green-400" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Message Sent Successfully!</h3> <p className="text-white/70 mb-6" > Thank you for reaching out. We'll get back to you within 24 hours. </p> <button;
@@ -117,6 +121,7 @@ const EnhancedContactForm: React.FC = () => {const [formData, setFormData] = use
     } else if (formData.name.trim().length < 2) {newErrors.name = 'Name must be at least 2 characters long';
     }if (!formData.email.trim()) {newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {newErrors.email = 'Please enter a valid email address';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
@@ -273,6 +278,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }const containerVariants = {hidden: { opacity: 0 },visible: {opacity: 1,transition: {staggerChildren: 0.1,delayChildren: 0.2,},},}const itemVariants = {hidden: { opacity: 0, y: 30 },visible: {opacity: 1,y: 0,transition: { duration: 0.6 },},}if (isSubmitted) {return (<motion&& motion.div;
         initial={{ opacity: 0, scale: 0 && 0.9 }}
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     if (!formData.message.trim()) {newErrors.message = 'Message is required';
     } else if (formData.message.trim().length < 10) {newErrors.message = 'Message must be at least 10 characters long';
@@ -451,9 +458,12 @@ const EnhancedContactForm: React.FC;<section className="py-20 bg-gradient-to-br 
       <div className="container mx-auto px-4">;
         <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           variants={containerVariants}
           initial="hidden";
           whileInView="visible";
@@ -787,6 +797,7 @@ const EnhancedContactForm: React.FC;<section className="py-20 bg-gradient-to-br 
                   By submitting this form, you agree to our{' '}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Link
                     href="/privacy"
                     className="text-blue-600 hover: text-blue-700 underline"
@@ -808,6 +819,8 @@ export default EnhancedContactForm;
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <Link;
                     href="/privacy";
                     className="text-blue-600 hover: text-blue-700 underline";
@@ -822,8 +835,12 @@ export default EnhancedContactForm;
       </div>;
     </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   )}export default EnhancedContactForm;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   )}export default EnhancedContactForm;
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+  )}export default EnhancedContactForm;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

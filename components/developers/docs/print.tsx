@@ -139,13 +139,17 @@ export type Section = {id: string,title: string,html?: string;
 }export const getStaticProps: GetStaticProps<PageProps> = async () => {return {props: {docs: content as DocsContent}}
     return () => clearTimeout(id)import React, { useEffect } from 'react';
 export type Section = any;}, [])return (<div className='p-8 max-w-4xl mx-auto'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <h1 className='text-3xl font-bold mb-6'>{docs && docs.title}</h1>;
       <div className='space-y-8'>;
         {docs && docs.sections.map(s => (<section key={s && s.id}>;
             <h2 className='text-2xl font-semibold mb-2'>{s && s.title}</h2>;
             {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} />}
             {s && s.code &&;
+<<<<<<< HEAD
 <<<<<<< HEAD
               s && s.code.map((c, i) => (;
                 <pre
@@ -173,6 +177,8 @@ export default function PrintDocs({ docs }: PageProps) {
   return (
     <div className="p-8 max-w-4xl mx-auto">;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               s && s.code.map((c, i) => (<pre;
                   key={i}className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'>;
                   {c && c.content}
@@ -182,7 +188,10 @@ export default function PrintDocs({ docs }: PageProps) {
                   {c.content}
                 </pre>;
               ))}return (<div className="p-8 max-w-4xl mx-auto">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <h1 className="text-3xl font-bold mb-6">{docs && docs.title}</h1>;
       <div className="space-y-8">;
         {docs && docs.sections.map((s) => (<section key={s && s.id}>;
@@ -219,6 +228,7 @@ function PrintDocs() {useEffect (() => {const id = set_timeout (() => window.pri
           </section>;
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>
     </div>
 <<<<<<< HEAD
@@ -238,3 +248,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      </div>;
+    </div>;
+  )})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { getServiceById  } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail',
@@ -56,11 +57,14 @@ if (!id || typeof id !== 'string') {
         <meta
           property='og:title'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { useRouter   } from 'next/router';
 import { getServiceById   } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail',import Button from '../../components/ui/Button';
 export default function ServiceDetailPage() {export default function ServiceDetailPage() {export default function ServiceDetailPage() {const router = useRouter()const { id }  = router.query;import { ArrowLeft, ExternalLink } from 'lucide-react';
 export default function ServiceDetailPage() {if (!id || typeof id !== 'string') {return (<div className='min-h-screen bg-black flex items-center justify-center'>;
+<<<<<<< HEAD
 =======
   const router = useRouter();
   const { id } = router.query;
@@ -73,6 +77,8 @@ export default function ServiceDetailPage() {
     return (
       <div className='min-h-screen bg-black flex items-center justify-center'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className='text-center'>;
           <h1 className='text-2xl font-bold text-white mb-4'>;
             Service Not Found;
@@ -91,6 +97,9 @@ export default function ServiceDetailPage() {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     )}
   const service  = getServiceById(id)if (!service) {return (if (!id || typeof id !== 'string') {return (<div className='min-h-screen bg-black flex items-center justify-center'>;
         <div className='text-center'>;
@@ -191,7 +200,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Back to Services;
               </Button>;
               <Button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 href={service.website}
 variant='primary';
                 size='sm';
@@ -238,6 +250,7 @@ variant='primary';
                 size='lg';
         {/* Related Services CTA */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
@@ -270,6 +283,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 Get Custom Solution
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <section className='py-16 bg-gray-900/50'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
             <h2 className='text-3xl font-bold text-white mb-6'>;
@@ -294,13 +309,17 @@ href='/contact';
                 className='border-white/20 text-white hover:border-white/40';
               >;
                 Get Custom Solution;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </Button>;
             </div>;
           </div>;
         </section>;
       </div>;
     </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -311,6 +330,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   )}<Button;
 import Head from 'next / head';
 import { use_router } from 'next / router';
@@ -465,6 +486,7 @@ if ( {) {$2;
         </section>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -472,3 +494,6 @@ if ( {) {$2;
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </>)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

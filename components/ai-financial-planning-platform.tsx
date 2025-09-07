@@ -1,15 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   DollarSign,TrendingUp,Shield,Zap,Target,BarChart3,CheckCircle,Star,Globe,Lock,Smartphone,Monitor,Award,MessageCircle,Calculator,} from 'lucide-react';import {MessageCircle,Calculator,} from 'lucide-react';import {DollarSign, TrendingUp, Shield, Zap, Target, BarChart3,CheckCircle, Star, Globe, Lock, Smartphone, Monitor,Award, MessageCircle, Calculator;
 export default function AIFinancialPlanningPlatform() {const features = [;
     {'Live financial data, market analysis, and personalized recommendations updated in real-time.',},import React from 'react',import Head from 'next/head';
 import { motion  } from 'framer-motion';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { DollarSign, TrendingUp, Shield, Zap, Target, BarChart3;
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor;
   Award, MessageCircle, Calculator;
@@ -39,6 +45,7 @@ export default function AIFinancialPlanningPlatform() {const features = null;
         'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.';
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     {
       icon: <BarChart3 className='w-6 h-6' />
       title: 'Real-Time Financial Insights'
@@ -47,6 +54,8 @@ export default function AIFinancialPlanningPlatform() {const features = null;
     }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     {icon: <BarChart3 className='w-6 h-6' />;
       title: 'Real-Time Financial Insights';
       description:;
@@ -61,6 +70,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     'Improve financial goal achievement by 50%';
     'Reduce financial planning costs by 60%';
     'Gain professional-grade financial insights';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   DollarSign,
@@ -94,6 +104,8 @@ export default function AIFinancialPlanningPlatform() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ];
   <div className='mt-12'>;
     <h2 className='text-2xl font-semibold'>Pricing</h2>;
@@ -143,6 +155,7 @@ export default function AIFinancialPlanningPlatform() {
       </a>;
       ,{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <a
         className='underline hover:text-cyan-300'
         href='https://pigment && pigment.com/pricing'
@@ -188,12 +201,17 @@ export default function AIFinancialPlanningPlatform() {
       </Head>
       <div className='min-h-screen bg-black text-white'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <a;
         className='underline hover:text-cyan-300';
         href='https://pigment && pigment.com/pricing';
         target='_blank';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         rel='noreferrer'>;
 import React from 'react';
 import Head from 'next / head';
@@ -279,6 +297,9 @@ function AIFinancialPlanningPlatform() {const features = [;
                 Get personalized plans, portfolio optimization, and risk;
                 management that drives financial success.;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </p>;rel='noreferrer';
       >;
         Pigment;
@@ -426,7 +447,10 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
                     {feature.description}</p>                </motion.div>;
                   </p>;
                 </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
             </div>;
           </div>;
@@ -444,6 +468,7 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
                 wealth management solutions.;
               </p>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Benefits Section */}
@@ -497,6 +522,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {benefits.map((benefit, index) => (
                 <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Benefits Section */}<section className='py-20 bg-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -532,7 +559,10 @@ className='text-center mb-16';
             </motion.div>;
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
               {benefits.map((benefit, index) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -555,6 +585,7 @@ className='text-center mb-16';
             </motion && motion.div>;
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   whileInView={{ opacity: 1, y: 0 }}
@@ -633,6 +664,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {useCases.map((useCase, index) => (
                 <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   whileInView={{ opacity: 1, y: 0 }}</div>;
           </div>;
         </section>;{/* Use Cases Section */}
@@ -686,7 +719,10 @@ className='text-center mb-16';
             </motion.div>;
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6'>;
               {useCases.map((useCase, index) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -706,6 +742,7 @@ className='text-center mb-16';
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -728,6 +765,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   transition={{ duration: 0.8, delay: index * 0.1 }}>;
                   <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">;
                     <Calculator className="w-6 h-6 text-yellow-400" />;
@@ -742,7 +781,10 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
                     {useCase}
                   </span>;
                 </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>;
@@ -759,10 +801,13 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
         {/* CTA Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
         {/* CTA Section */}
@@ -875,10 +920,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </div>;
     </>;
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Transform Your Financial Planning?;
@@ -947,9 +995,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>))}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </>))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

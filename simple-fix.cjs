@@ -9,6 +9,7 @@ function fixFile(filePath) {
     // Remove merge conflict markers
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     content = content.replace(/
     content = content.replace(/
 =======
@@ -18,6 +19,10 @@ function fixFile(filePath) {
     content = content.replace(/[\s\S]*?
     content = content.replace(/[\s\S]*?
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    content = content.replace(/
+    content = content.replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     
     // Fix common syntax issues
     content = content.replace(/\{_/g, '{');

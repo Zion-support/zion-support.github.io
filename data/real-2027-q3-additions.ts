@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 export const real2027Q3Additions = [;
@@ -331,12 +334,15 @@ export const real2027Q3Additions = [
     tagline: 'Agentless network-wide discovery and enrichment'
     price: '$149'
     period: '/month'
+<<<<<<< HEAD
 id: 'it-asset-discovery-agent',
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network-wide discovery and enrichment',
     price: '$149',
     period: '/month',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     description:
       'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
     features: [
@@ -736,6 +742,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: '/api-security-scanner',
     realService: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     roi: 'Prevent high-severity API incidents and cut MTTR.',
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -745,6 +752,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    roi: 'Prevent high-severity API incidents and cut MTTR.'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   },;
 ];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
@@ -758,6 +768,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -773,6 +784,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export const real2027Q3Additions = [
   {
@@ -783,6 +796,7 @@ export const real2027Q3Additions = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -801,6 +815,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const real2027Q3Additions = [;
   {
     id: 'it - asset - discovery - agent',
@@ -1122,11 +1138,14 @@ export const real2027Q3Additions = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports';
     ],;
     category: 'Security & Identity',;
@@ -1178,6 +1197,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 ;
 
+<<<<<<< HEAD
 =======
 
 
@@ -1196,6 +1216,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const real2027Q3Additions = [;
   {;
     id: 'it-asset-discovery-agent',;
@@ -1454,6 +1476,7 @@ export const real2027Q3Additions = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1495,3 +1518,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

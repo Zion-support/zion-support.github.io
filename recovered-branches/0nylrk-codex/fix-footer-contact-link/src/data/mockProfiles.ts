@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -34,6 +35,12 @@ origin/cursor/automate-test-improve-and-merge-code-382a
           'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      {
+
+          'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         id: 'p3',
         title: 'Supply Chain Optimization',
         description:;
@@ -58,9 +65,13 @@ origin/cursor/automate-test-improve-and-merge-code-382a
     hourlyRate: 150,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {
 
           'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
@@ -103,6 +114,7 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -116,6 +128,10 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { ProfileData } from '@/types/profile';
 export const MOCK_PROFILES: Record<string, ProfileData> = {
   'service-provider-1': {
@@ -217,6 +233,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     profileType: 'talent' as 'service' | 'talent'
     hourlyRate: 150
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -295,12 +312,17 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         current: true,
       },
       {
@@ -315,10 +337,13 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         end_date: 'Feb 2021',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
         description:;
           'Developed and deployed ML models for product recommendation systems.',
@@ -330,12 +355,16 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600',
     bio: 'Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.',
     location: 'San Francisco, CA',
@@ -372,6 +401,7 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
         date: "Oct 2023"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -379,6 +409,9 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       },
       {
         id: 'e3',
@@ -401,11 +434,17 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       status: "limited",
       nextAvailable: "Jun 15, 2024",
       message: "Currently booked for the next 3 weeks. Available for new projects starting mid-June.",
@@ -495,6 +534,7 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
       message: "Open to new projects starting immediately. Prefer projects with 3+ month engagement.",
       availableHours: [
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -686,14 +726,21 @@ export const MOCK_PROFILES: Record<string ProfileData> = {;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import { ProfileData } from "@/types/profile";
 export const MOCK_PROFILES: Record<string, ProfileData> = {
@@ -702,6 +749,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     name: "TechSolutions Inc.";
     title: "Enterprise AI Integration Services";
     avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -713,3 +761,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

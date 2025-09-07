@@ -1,6 +1,7 @@
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
@@ -208,6 +209,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         description: 'Real-time solar system communication'
         price: '$75,999/month'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion, AnimatePresence  } from 'framer-motion';
 import {Menu;
   X;
@@ -388,7 +391,10 @@ const mainNavItems = [
 =======
       {name: 'Corporate Intelligence Platform',href: '/corporate-intelligence-platform',description: 'AI-powered business intelligence',price: '$7,999/month',},],},];const mainNavItems = [;
   { name: 'Home', href: '/', icon: Home },{ name: 'Services', href: '/services', icon: Briefcase },{ name: 'Solutions', href: '/solutions', icon: Target },{ name: 'Pricing', href: '/pricing', icon: DollarSign },{ name: 'Resources', href: '/resources', icon: BookOpen },{ name: 'News', href: '/news', icon: TrendingUp },{ name: 'Support', href: '/support', icon: MessageCircle },{ name: 'Contact', href: '/contact', icon: Phone },];const mainNavItems = [;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     services: [;
       {name: 'AI Personalized Medicine Platform',href: '/ai-personalized-medicine-platform',description: 'AI-powered personalized treatment',price: '$8,999/month',},{name: 'AI Healthcare Diagnosis Platform',href: '/ai-healthcare-diagnosis-platform',description: 'Revolutionary medical diagnosis',price: '$3,999/month',},{name: 'Biotech Research Automation',href: '/biotech-research-automation',description: 'Automated biotechnology research',price: '$4,999/month',},],},  {      { name: 'AI Personalized Medicine Platform', href: '/ai-personalized-medicine-platform', description: 'AI-powered personalized treatment', price: '$8,999/month' }title: '🏥 Healthcare & Biotech Innovation',icon: Heart,color: 'from - pink - 600 to - rose - 600',description: 'Advanced healthcare solutions',{ name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform', description: 'Revolutionary medical diagnosis', price: '$3,999/month' }{ name: 'Biotech Research Automation', href: '/biotech-research-automation', description: 'Automated biotechnology research', price: '$4,999/month' }
     ];
@@ -402,6 +408,7 @@ const mainNavItems = [
       {name: 'Enterprise AI Operations Center',href: '/enterprise-ai-operations-center',description: 'Centralized AI operations',price: '$15,999/month',},{name: 'Business Process Automation',href: '/business-process-automation',description: 'End-to-end process automation',price: '$4,999/month',},{name: 'Corporate Intelligence Platform',href: '/corporate-intelligence-platform',description: 'AI-powered business intelligence',price: '$7,999/month',},],},];      { name: 'Enterprise AI Operations Center', href: '/enterprise-ai-operations-center', description: 'Centralized AI operations', price: '$15,999/month' }title: '💼 Enterprise & Business Solutions',icon: Briefcase,color: 'from - emerald - 600 to - blue - 600',description: 'Corporate and business automation',{ name: 'Business Process Automation', href: '/business-process-automation', description: 'End-to-end process automation', price: '$4,999/month' }{ name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/month' }
     ];
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -459,11 +466,16 @@ export default function UltraFuturisticNavigation2029() {;
   return (
     <>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   { name: 'Home', href: '/', icon: Home },{ name: 'Services', href: '/services', icon: Briefcase },{ name: 'Solutions', href: '/solutions', icon: Target },{ name: 'Pricing', href: '/pricing', icon: DollarSign },{ name: 'Resources', href: '/resources', icon: BookOpen },{ name: 'News', href: '/news', icon: TrendingUp },{ name: 'Support', href: '/support', icon: MessageCircle },const [isOpen, setIsOpen] = useState(false)const [activeCategory, setActiveCategory] = useState<string | null>(null)const [scrolled, setScrolled] = useState(false)useEffect(() => {const handleScroll = () => {const mainNavItems = [;
   { name: 'Home', href: '/', icon: Home },{ name: 'Services', href: '/services', icon: Briefcase },{ name: 'Solutions', href: '/solutions', icon: Target },{ name: 'Pricing', href: '/pricing', icon: DollarSign },{ name: 'Resources', href: '/resources', icon: BookOpen },{ name: 'News', href: '/news', icon: TrendingUp },{ name: 'Support', href: '/support', icon: MessageCircle },{ name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
 ];
 ];export default function UltraFuturisticNavigation2029() {const [isOpen, setIsOpen] = useState(false)const [activeCategory, setActiveCategory] = useState<string | null>(null)const [scrolled, setScrolled] = useState(false)useEffect(() => {const handleScroll = () => {setScrolled(window && window.scrollY > 50)}window && window.addEventListener('scroll', handleScroll)return () => window && window.removeEventListener('scroll', handleScroll)}, [])setScrolled(window && window.scrollY > 50)}window && window.addEventListener('scroll', handleScroll)return () => window && window.removeEventListener('scroll', handleScroll)const toggleMenu = () => setIsOpen(!isOpen)const closeMenu  = () => setIsOpen(false)setScrolled(window.scrollY > 50)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const toggleMenu = () => setIsOpen(!isOpen)const closeMenu  = () => setIsOpen(false)return (<>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Top Contact Bar */}
 <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>;
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
@@ -487,6 +499,7 @@ export default function UltraFuturisticNavigation2029() {;
             </a>;
             <a;
               href={`mailto:${contactInfo.email}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
             >
@@ -519,6 +532,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors';
             >;
               <Mail size={14} />;
@@ -602,6 +617,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>;
               </div>;
             </motion.div>;
+<<<<<<< HEAD
 =======
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -620,6 +636,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </motion.div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className='flex items-center space-x-3'>;
               <div className='relative'>;
                 <div className='w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center'>;
@@ -636,6 +654,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>              </div>;
             </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 >;
                   <div className="flex items-center space-x-2">;
                     <item.icon size={16} className="group-hover:text-cyan-400 transition-colors" />;
@@ -680,12 +701,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='relative group'>;
                 <button className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>;
                   <Briefcase;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     size={16}
                     className='group-hover:text-cyan-400 transition-colors';
                   />;
                   <ChevronDown;
                     size={14}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className='group-hover:rotate-180 transition-transform duration-200'
                   />
@@ -721,6 +746,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       >
                         <div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className='group-hover:rotate-180 transition-transform duration-200';
                   />;
                 </button>;
@@ -736,7 +763,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='group';
                       >;
                         <div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           className={`p-4 rounded-lg bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>;
                           <div className='flex items-center space-x-3 mb-3'>;
                             <category&& category.icon;
@@ -752,6 +782,7 @@ className='group';
                           </p>;
                           <div className='space-y-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                             {category && category.services.slice(0, 3).map(service => (;
                               <Link
 <<<<<<< HEAD
@@ -760,6 +791,9 @@ className='group';
                             {category && category.services.slice(0, 3).map(service => (<Link;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                            {category && category.services.slice(0, 3).map(service => (<Link;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                                 key={service && service.name}
                                 href={service && service.href}
                                 className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200 group'>;
@@ -801,6 +835,9 @@ className='group';
                         initial={{ opacity: 0, coordinate_y: 20 }}
                         animate={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         transition={{ delay: index * 0.1 }}key={service.name}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                                 href={service.href}
@@ -823,10 +860,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                                 </p>;
                               </Link>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                         transition={{ delay: index * 0.1 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                             ))}
                           </div>;
                         </div>;
@@ -835,6 +875,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* CTA Button */}
               <motion.button;
                 whileHover={{ scale: 1.05 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 whileTap={{ scale: 0.95 }}
@@ -851,16 +892,22 @@ className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rou
             </div>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 whileTap={{ scale: 0.95 }}className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40';
               >;
                 Get Started;
               </motion.button>;
             </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Mobile Menu Button */}
 <div className='lg:hidden'>;
               <button;
                 onClick={toggleMenu}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-gray-300 hover:text-white transition-colors'
               >
@@ -879,6 +926,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='text-gray-300 hover:text-white transition-colors';
               >;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                className='text-gray-300 hover:text-white transition-colors';
+              >;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>;
             </div>;
@@ -895,6 +946,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {isOpen && (<motion&& motion.div;
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             exit={{ opacity: 0, x: '100%' }}
@@ -958,6 +1010,8 @@ className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-w
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             exit={{ opacity: 0, x: '100%' }}className='fixed inset-0 z-50 lg:hidden';
           >;
             <div;
@@ -1010,6 +1064,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </button>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {/* Mobile Navigation Items */}
 <div className='space-y-4'>;
                   {mainNavItems.map(item => (<Link;
@@ -1022,6 +1079,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>;
                   ))}
                 </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                     <Link
@@ -1037,6 +1095,8 @@ className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-w
                   ))}
                 </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {/* Mobile Services */}
 <div className='mt-8'>;
                   <h3 className='text-lg font-semibold text-white mb-4'>;
@@ -1064,6 +1124,7 @@ className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all dur
                                 <span className='text-sm text-gray-300'>;
                                   {service.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 </span>
                                 <span className='text-xs text-cyan-400 font-mono'>
                                   {service.price}
@@ -1083,6 +1144,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                             </Link>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                                 </span>;
                                 <span className='text-xs text-cyan-400 font-mono'>;
                                   {service.price}</span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200";
@@ -1093,7 +1156,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 </span>;
                               </div>;
                             </Link>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   ))}
                 {/* Mobile Services */}
                 <div className='mt-8'>;
@@ -1142,6 +1208,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       </div>;
                     ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 {/* Mobile CTA */}
@@ -1198,6 +1265,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {/* Mobile CTA */}<div className='mt-8'>;
                   <motion&& motion.button;
                     whileHover={{ scale: 1 && 1.02 }}
@@ -1368,6 +1437,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Spacer for fixed navigation */}
       <div className='h - 20' />;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>)<div className="h - 20" />;
     </>)}<div className='h-20' />;
     </>;
@@ -1379,3 +1449,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </>)<div className="h - 20" />;
+    </>)}<div className='h-20' />;
+    </>;
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

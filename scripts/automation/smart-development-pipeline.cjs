@@ -864,6 +864,7 @@ module.exports = {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   main};
 
@@ -871,3 +872,6 @@ module.exports = {}
 =======
   main};
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  main};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

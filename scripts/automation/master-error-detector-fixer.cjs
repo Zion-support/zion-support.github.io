@@ -177,6 +177,7 @@ const { promisify } = require("util")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(""Error": ")
 
@@ -184,3 +185,6 @@ const { promisify } = require("util")
 =======
   console.error(""Error": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(""Error": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

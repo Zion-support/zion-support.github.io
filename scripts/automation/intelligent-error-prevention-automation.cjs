@@ -55,6 +55,7 @@ const { execSync, spawn } = require("child_process")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
 
@@ -62,3 +63,6 @@ const { execSync, spawn } = require("child_process")
 =======
     automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   return (return (}<div className="py - 10">;
       <h1 className="text - 2xl font - semibold text - white">Autodocs</h1>;
@@ -41,7 +44,10 @@
       <p className="text - white / 70 mt - 2">This runs daily and auto - PRs updates.</p>;
     </div>);
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -62,6 +68,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   return (
@@ -92,3 +99,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return (
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -218,6 +218,7 @@ process.on("SIGTERM")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Failed to start intelligent code "refactorer")
 
@@ -225,3 +226,6 @@ process.on("SIGTERM")
 =======
   console.error(" Failed to start intelligent code "refactorer")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" Failed to start intelligent code "refactorer")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -50,6 +50,7 @@ function fixFile(filePath) {
     let modified = false;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
@@ -64,6 +65,8 @@ function fixFile(filePath) {
       {
         pattern: /[\s\S]*?[\s\S]*?
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         replacement: ''
       },
       // Fix malformed function declarations
@@ -147,6 +150,7 @@ function walkDirectory(dir) {
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -175,6 +179,9 @@ function walkDirectory(dir) {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
     }
 
@@ -185,6 +192,7 @@ function walkDirectory(dir) {
   } catch (error) {
     console.error(`Error reading directory ${dir}:`, error.message);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,6 +236,9 @@ console.log('🎯 Syntax error fixing complete!');
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return fixedCount;
 }
 
@@ -235,6 +246,7 @@ console.log('Starting syntax error fixes...');
 <<<<<<< HEAD
 const fixedCount = walkDirectory('/workspace');
 console.log(`Fixed ${fixedCount} files`);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 =======
@@ -242,3 +254,6 @@ const apiDir = '/workspace/pages/api';
 const fixedCount = findAndFixApiFiles(apiDir);
 console.log(`Fixed ${fixedCount} files`);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

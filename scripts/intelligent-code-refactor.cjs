@@ -6,6 +6,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -13,6 +14,9 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -48,6 +52,7 @@ interface ButtonProps extends Omit<MuiButtonProps, 'variant'
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error('Intelligent Code Refactor "failed")
 
@@ -55,3 +60,6 @@ interface ButtonProps extends Omit<MuiButtonProps, 'variant'
 =======
     console.error('Intelligent Code Refactor "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.error('Intelligent Code Refactor "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

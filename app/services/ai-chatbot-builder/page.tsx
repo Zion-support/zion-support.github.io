@@ -1,4 +1,6 @@
+
 export const metadata = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   title: 'AI Chatbot Builder | Zion Tech Group',
   description: 'Build intelligent chatbots with no-code platform. Custom AI assistants for customer support, sales, and engagement.',
@@ -109,6 +111,8 @@ export default function ServicePage() {
             View All Services
           </a>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: 'Ai Chatbot Builder | Zion Tech Group',
   description:
     'Professional ai chatbot builder services for your business needs.',
@@ -156,11 +160,16 @@ export default function ServicePage() {
               solutions run smoothly.
             </p>
           </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -170,3 +179,8 @@ export default function ServicePage() {
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

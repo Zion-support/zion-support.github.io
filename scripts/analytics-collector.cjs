@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -12,6 +13,11 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 console.log(' Starting Analytics Collection...')
   fs.writeFileSync('analytics-report.json')
   console.log(' Analytics collected and saved to analytics-report.json')
@@ -24,6 +30,7 @@ console.log(' Starting Analytics Collection...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     'next.config.js'
 
@@ -31,3 +38,6 @@ console.log(' Starting Analytics Collection...')
 =======
     'next.config.js'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    'next.config.js'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

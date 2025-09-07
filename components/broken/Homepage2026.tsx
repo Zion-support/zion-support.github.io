@@ -1,6 +1,7 @@
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { ArrowRight, Star;
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
@@ -16,6 +17,10 @@ import {
 const Homepage2026: React.FC = () => {;
   return (
     <Layout>;
+=======
+import { motion  } from 'framer-motion';
+import {const Homepage2026: React.FC = () => {return (<Layout>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Main Content */}
       <main className='relative z-10'>;
         {/* Hero Section */}
@@ -42,6 +47,7 @@ import {
   CheckCircle,
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
   Users, Building, Rocket, CheckCircle, Phone, Mail;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const Homepage2026: React.FC = () => {
   return (
@@ -77,6 +83,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className='min - h-screen flex items - center justify - center px - 4 relative overflow - hidden'>;
           {/* Background Elements */}
           <div className='absolute inset - 0 pointer - events - none'>;
+=======
+  } from 'lucide-react';
+const Homepage2026: React.FC;const Homepage2026: React.FC = () => {return (<Layout>;
+      {/* Main Content */}<main className='relative z-10'>;
+<main className='relative z-10'>;
+        {/* Hero Section */}
+        <section className='min - h-screen flex items - center justify - center px - 4 relative overflow - hidden'>;
+          {/* Background Elements */}<div className='absolute inset - 0 pointer - events - none'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 20 rounded - lg animate - pulse'></div>;
             <div className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full animate - pulse delay - 1000'></div>;
             <div className='absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45 animate - pulse delay - 2000'></div>;
@@ -97,6 +112,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               {/* Company Badge */}
@@ -229,6 +245,8 @@ const Homepage2026: React.FC;const Homepage2026: React.FC = () => {return (<Layo
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               transition={{ duration: 0.8 }}<div className='absolute inset-0 pointer-events-none'>;
             <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>;
             <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>;
@@ -310,8 +328,11 @@ className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cy
                   </button>;
                 </a>;
               </div>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium'>;
                 <Star className='w-4 h-4' />;
                 <span>Innovation Leader 2026</span>;
@@ -417,6 +438,9 @@ className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cy
                   </button>;
                 </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </div>;{/* Trust Indicators */}
               <motion&& motion.div;
                 initial={{ opacity: 0, y: 20 }}
@@ -833,7 +857,10 @@ className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blu
                   </button>;
                 </Link>;
               </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'>;
                 <div className='text-5xl mb-6'>🤖</div>;
@@ -1027,6 +1054,7 @@ className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blu
                 initial={{ opacity: 0, x: 20 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
 className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'
@@ -1066,6 +1094,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
               </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6, delay: 0.2 }}
 className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300';
               >;
@@ -1098,7 +1128,10 @@ className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-g
                   </button>;
                 </Link>;
               </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'>;
                 <div className='text-5xl mb-6'>🏗️</div>;
@@ -1156,6 +1189,7 @@ className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-g
                 initial={{ opacity: 0, x: -20 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'
@@ -1197,6 +1231,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6, delay: 0.3 }}
 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300';
               >;
@@ -1229,7 +1265,10 @@ className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-pur
                   </button>;
                 </Link>;
               </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'>;
                 <div className='text-5xl mb-6'>🚀</div>;
@@ -1357,6 +1396,7 @@ className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-pur
                 initial={{ opacity: 0, x: 20 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
 className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'
@@ -1417,6 +1457,8 @@ className='space-y-6'
               </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6, delay: 0.4 }}
 className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300';
               >;
@@ -1452,8 +1494,11 @@ className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-oran
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1478,12 +1523,15 @@ className='space-y-6';
                 Get in touch with our team to discuss how our innovative;
                 services can drive your success;
               </p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {/* Contact Information */}
               <div className='bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8'>;
                 <h3 className='text-2xl font-semibold text-cyan-400 mb-6'>;
@@ -1494,6 +1542,7 @@ className='space-y-6';
                     <Globe className='w-5 h-5 text-blue-400' />;
                     <div>;
                       <div className='text-sm text-gray-400'>Website</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       <a
@@ -1581,6 +1630,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default Homepage2026;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       <a;
                     <Mail className="w-5 h-5 text-yellow-400" />;
                     <div>;
@@ -1630,8 +1681,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         364 E Main St STE 1008;
                         <br />;
                         Middletown DE 19709;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </div>;
                     </div>;
                   </div>;
@@ -1671,6 +1725,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </Layout>)}export default Homepage2026)}export default Homepage2026;)export default Homepage2026;  )}
 export default Homepage2026;export default Homepage2026;<div className='flex flex-col sm:flex-row gap-4 justify-center'>;
                 <a;
@@ -1692,6 +1749,7 @@ export default Homepage2026;export default Homepage2026;<div className='flex fle
         </section>;
       </main>;
     </Layout>;
+<<<<<<< HEAD
 )}export default Homepage2026;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1710,3 +1768,6 @@ export default Homepage2026;
 
 export default Homepage2026;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default Homepage2026;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

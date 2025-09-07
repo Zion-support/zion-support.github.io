@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require("child_process");
@@ -10,6 +11,10 @@ const fs = require("child_process");
 #!/usr/bin/env node;
 const fs = require("child_process");
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const fs = require("child_process");
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const path = require("path");
 class ErrorDetector {}
   constructor() {}
@@ -31,6 +36,7 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ErrorDetector;
 
@@ -38,3 +44,6 @@ module.exports = ErrorDetector;
 =======
 module.exports = ErrorDetector;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = ErrorDetector;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

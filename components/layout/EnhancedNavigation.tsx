@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-48f3
   const [servicesOpen, setServicesOpen] = useState(false)
   const [solutionsOpen, setSolutionsOpen] = useState(false)
@@ -8,6 +9,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
       <div className='container mx-auto px-4'>
         <div className='flex justify-between items-center py-4'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Menu,X,ChevronDown,Search,User,Settings,LogOut,Bell,Globe,Zap,Brain,Rocket,Dna,DollarSign,Lock,Wifi,Truck,Gamepad2,Bot,Factory,Car,} from "lucide-react";
 import Link from 'next/link';
 interface EnhancedNavigationProps  {className?: string;
@@ -263,7 +266,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         {name: "AI & Machine Learning";
           href: "/services?category=ai-ml";
           icon: <Brain className="w-4 h-4" />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }
         {name: "Quantum Computing";
           href: "/services?category=quantum";

@@ -5,6 +5,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,6 +51,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { agendaItems  } from '../../../../data/expo/agenda';
 export default async function handler() {const { id } = req.query as { id?: string }const item = null;
 export default async function handler() {const { id } = req.query as { id?: string }
@@ -75,6 +78,7 @@ export default async function handler(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -89,6 +93,8 @@ export default async function handler(
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const item = agendaItems.find(i => i.id === id);
   if (!item) return res.status(404).send('Not found');
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
@@ -96,6 +102,7 @@ export default async function handler(
 
   res.status(200).send(transcript)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,6 +126,8 @@ export default async function handler(
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   try {
   const { id } = req && req.query as { id?: string };
   const item = agendaItems && agendaItems.find(i => i && i.id === id);
@@ -135,6 +144,7 @@ export default async function handler(
   res && res.status(200).send(transcript)
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,6 +170,8 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { agenda_items } from '../../../../data / expo / agenda';
 ;
 export default async /**
@@ -185,6 +197,7 @@ function handler() {const { id } = req.query as { id?: string }
 }}res.status(200).send(transcript)res.status(200).send(transcript)}
   res.set_header ('Content - Typetext / plain'),
   res.status (200).send (transcript);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,12 +247,15 @@ function handler() {const { id } = req.query as { id?: string }
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 }
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -254,6 +270,8 @@ function handler() {const { id } = req.query as { id?: string }
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 }
 
@@ -263,6 +281,7 @@ function handler() {const { id } = req.query as { id?: string }
 }
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -283,5 +302,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).send(transcript);
   res.status(200).send(transcript)
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

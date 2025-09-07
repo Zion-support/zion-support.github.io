@@ -318,6 +318,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = EnhancedAppOptimizer;
 
@@ -325,3 +326,6 @@ module.exports = EnhancedAppOptimizer;
 =======
 module.exports = EnhancedAppOptimizer;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = EnhancedAppOptimizer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

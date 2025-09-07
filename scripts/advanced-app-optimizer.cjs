@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 
@@ -12,6 +13,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 ;const fs = require('fs');
 const path = require('path');
@@ -360,6 +363,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')
       this.log(` Total "optimizations"`)
       this.log(` Advanced App Optimization "failed"`)
     console.error('Advanced App Optimization "failed")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1253,6 +1257,8 @@ if (require.main === module) {
   optimizer.run().catch(console.error),,
 }
 module.exports = AdvancedAppOptimizer
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 main
 

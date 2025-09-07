@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
@@ -52,6 +53,8 @@ const directories = [
 <<<<<<< HEAD
 let totalFiles = 0;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;"";
 #!/usr/bin/env node];import { glob } from "glob;"";
 ursor/automate-test-improve-and-merge-code-646c;
@@ -157,6 +160,7 @@ main().catch(console.error)export { cleanConsoleLogs, processFile }
 #!/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -165,3 +169,5 @@ main().catch(console.error)export { cleanConsoleLogs, processFile }
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

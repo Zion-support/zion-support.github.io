@@ -5,6 +5,7 @@ type Props = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 import React from 'react';
 type Props = any;
 
@@ -73,6 +74,8 @@ export default function InviteBanner(): any ({ message, onJoin, canJoin = true }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 =======
 
@@ -110,9 +113,13 @@ export default function InviteBanner() {return (<div className="w-full bg-gray-9
     </div>;
   )}type Props = {message: string,on_join?: () => void;
   can_join?: boolean;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

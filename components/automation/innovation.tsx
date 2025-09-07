@@ -82,7 +82,10 @@ type Item = any;export default function InnovationDigest() {return (<div classNa
         <p className="text-gray-600 dark:text-gray-300">Latest AI research and tools—auto-curated.</p>;
       </header>;
       {items.length === 0 && (<div className="text-gray-600 dark:text-gray-400">No entries yet. The automation will populate this feed shortly.</div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       )}
       <ul className="space-y-4">;
         {items.map((it, idx) => (<li key={idx} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">;
@@ -95,18 +98,22 @@ type Item = any;export default function InnovationDigest() {return (<div classNa
           </li>;
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </ul>
 );
 }
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </ul>;
 )})}}
 </header> {items.length === 0 && (<div className="text - gray - 600 dark:text - gray - 400" >No entries yet. The automation will populate this feed shortly.</div>)}</li>) )}</ul> </div>)export default /**;
  * InnovationDigest - Function description;
  */;
 function InnovationDigest() {return (<div className="space - y-6">;
+<<<<<<< HEAD
 =======
   );
 }
@@ -124,6 +131,8 @@ function InnovationDigest() {
   return (
     <div className="space - y-6">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <header className="space - y-2">;
         <h1 className="text - 3xl font - bold">Innovation Digest</h1>;
         <p className="text - gray - 600 dark:text - gray - 300">Latest AI research and tools—auto - curated.</p>;
@@ -140,9 +149,13 @@ function InnovationDigest() {
           </li>))}
       </ul>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </div>);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

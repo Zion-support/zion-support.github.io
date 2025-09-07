@@ -1,5 +1,6 @@
 export const metadata = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'Digital Transformation Services | Zion Tech Group',
   description:
     'Complete digital transformation solutions including process automation, legacy modernization, and digital strategy consulting. Transform your business for the digital age.',
@@ -364,6 +365,9 @@ function ContactSection() {
       </div>
     </section>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: 'Digital Transformation | Zion Tech Group',
   description:
     'Professional digital transformation services for your business needs.',
@@ -415,6 +419,10 @@ export default function ServicePage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   );
 }
+

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
@@ -139,12 +140,17 @@ export default function ServicePage() {
 <<<<<<< HEAD
 =======
 import Link from "next/link";
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export const metadata = {
   title: "Data Analytics & BI | Zion Tech Group",
   description: "Advanced data analytics, business intelligence, and machine learning solutions to transform raw data into actionable insights.",
   keywords: 'data-analytics, services, business, technology'
 };
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

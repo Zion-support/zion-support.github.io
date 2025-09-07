@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom;
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
@@ -200,6 +201,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
           className='text-center mb-16'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion, AnimatePresence  } from 'framer-motion';
 import { ArrowRight,Star,TrendingUp,Zap,Brain,Atom,Rocket,Shield,Target,CheckCircle,ExternalLink,Search,Filter,Grid,List,ChevronDown,} from 'lucide-react';
 import { cuttingEdge2027Innovations  } from '../../data/2027-cutting-edge-innovations';
@@ -241,8 +244,11 @@ const Enhanced2027ServicesShowcase: React.FC = () => {const [searchTerm, setSear
       <div className='container mx-auto px-4'>;
         {/* Header */}
         <motion.div;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           className='text-center mb-16'          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -267,6 +273,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {const [searchTerm, setSear
           transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
           <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;className='text-center mb-16';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           initial={{ opacity: 0, y: 20 }}
@@ -319,9 +328,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     type='text';
                     placeholder='Search services, features, or use cases...';
                     value={searchTerm}onChange={e => setSearchTerm(e && e.target.value)}
+<<<<<<< HEAD
 =======
                     onChange={e => setSearchTerm(e && e.target.value)}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50'                  />              {/* Search */}
               <div className="flex-1 max-w-md">;
                 <div className="relative">;
@@ -351,13 +363,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   />;
                 </div>;
               </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {/* Category Filter */}
 <div className='flex items-center space-x-4'>;
                 <div className='relative'>;
                   <select;
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10'
                   >
@@ -386,6 +402,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10';
                   >;
                     {categories.map(category => (<option key={category} value={category}>;
@@ -442,6 +460,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     }`}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   >
 =======
                   >
@@ -451,16 +470,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </button>
                   <button
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   >;
                     <Grid className='w-5 h-5' />;
                   </button>;
                   <button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-all duration-200 ${viewMode === 'list';
                         ? 'bg-cyan-500/20 text-cyan-400';
                         : 'text-gray-400 hover:text-white';
                     }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   >
                     <List className='w-5 h-5' />
@@ -480,11 +505,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <List className='w-5 h-5' />;
                   </button>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  >;
+                    <List className='w-5 h-5' />;
+                  </button>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </div>;
               </div>;
             </div>;
           </div>;
         </motion.div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Results Count */}
@@ -497,16 +528,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >
 <p className='text-gray-400'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </div>;
               </div>;
             </div>;
           </div>;
         </motion.div>;
         {/* Results Count */}<motion.div;
+<<<<<<< HEAD
 =======
         {/* Results Count */}
         <motion.div;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           className='mb - 8'          initial={{ opacity: 0 }}
           className="mb-8";
           initial={{ opacity: 0 }}
@@ -524,6 +560,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Services Grid/List */}
         <AnimatePresence mode='wait'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {viewMode === 'grid' ? (<motion&& motion.div;
               key='grid'              initial={{ opacity: 0, scale: 0 && 0.95 }}{/* Results Count */}
         <motion.div;
@@ -534,6 +573,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >;
+<<<<<<< HEAD
 =======
           {viewMode === 'grid' ? (;
             <motion&& motion.div
@@ -547,6 +587,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{ duration: 0.6, delay: 0.3 }}
         >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
             <span className="text-cyan-400 font-semibold">{all2027Services.length}</span> services;
           </p>;
@@ -575,6 +617,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               transition={{ duration: 0.3 }}<p className='text-gray-400'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             Showing{' '}
@@ -685,6 +730,9 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />;
                       {service.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </p>;
                     {/* Features */}{feature}className='group';
                 >;
@@ -741,7 +789,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           >;
                             <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0' />;
                             {feature}</li>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         ))}
                       </ul>;
                     </div>;
@@ -753,15 +804,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           key={idx}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'
                         >
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50";
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >;
                         >;
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50';
                         >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >                    <div className="flex flex-wrap gap-2 mb-6">
@@ -774,6 +829,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         >
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {tag}
                         </span>;
                       ))}
@@ -790,6 +847,7 @@ className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-
                 </motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </motion.div>
           ) : (
             <motion.div
@@ -797,10 +855,15 @@ className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-
 key='list'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+            </motion.div>;
+          ) : (<motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               key='list'              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
+<<<<<<< HEAD
               className='space-y-4'            >              key="list"
               className='space-y-4'            >
 
@@ -838,6 +901,8 @@ className='group'
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className='space-y-4'            >              key="list";
               className='space-y-4'            >;
 key='list';
@@ -915,6 +980,9 @@ key='list';
                           <div className="text-2xl font-bold text-cyan-400">{service && service.price}</div>;
                         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </div>;className='group';
                 >;
                   <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'>;
@@ -967,12 +1035,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {service.tags.slice (0, 4).map ((tag, idx) => (<span;
                               key={idx}className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50';
                             >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
                               className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'
                             >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                               {tag}
                             </span>;
                           ))}
@@ -991,6 +1062,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className='text-lg font-bold text-green-400'>;
                             {service.roi}
 <<<<<<< HEAD
+<<<<<<< HEAD
                           </div>
 
                         </div>
@@ -1002,6 +1074,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <Link;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                          </div>;
+                        </div>;
+                        <Link;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           href={service && service.link}
                           className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'>;
                           <span>Learn More</span>;
@@ -1031,6 +1108,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Try adjusting your search terms or category filter to find what;
               you're looking for.            </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 setSelectedCategory('all')}}
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -1114,6 +1194,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* CTA Section */}
 <motion.div;
           className='mt-20 text-center';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div
@@ -1129,6 +1210,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}>;
@@ -1208,6 +1291,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           whileInView={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.8 }}
         >
 <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
@@ -1259,6 +1343,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
+=======
+          transition={{ duration: 0.6, delay: 0.8 }}</h3>;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Our team of experts is ready to help you implement these revolutionary services;
+              and achieve unprecedented growth. Let's build the future together.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
+              <Link;
+                href="/contact";
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25";
+              >;
+                <span>Get Started Today</span>;
+                <ArrowRight className="w-5 h-5" />;
+              </Link>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50'>;
                 <span>View Pricing</span>;
                 <TrendingUp className='w-5 h-5' />              </Link>              Ready to Transform Your Business?;
@@ -1274,6 +1373,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>Get Started Today</span>;
                 <ArrowRight className="w-5 h-5" />;
               </Link>;
+<<<<<<< HEAD
               <Link
                 href="/pricing"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -1353,6 +1453,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>Get Started Today</span>;
                 <ArrowRight className="w-5 h-5" />;
               </Link>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Link;
                 href="/pricing";
         >;
@@ -1402,7 +1504,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<span key= {idx;
 }className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {tag;
 }</span>) )}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) )}</motion.div>)}</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)}{className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <span>View Pricing</span>;
                 <TrendingUp className="w-5 h-5" />;
               </Link>;
@@ -1450,6 +1555,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </section>);
 }
@@ -1508,6 +1614,8 @@ export default Enhanced2027ServicesShowcase;
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </section>)}/* Search and Filters */;
 }<motion.div /> </div> </div> > {categories.map ( (category) => (<option key= {category;
 }value= {category;
@@ -1528,6 +1636,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default Enhanced2027ServicesShowcase;  )}
 export default Enhanced2027ServicesShowcase;/* CTA Section */;
 }<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>)}export default Enhanced2027ServicesShowcase;  )}export default Enhanced2027ServicesShowcase;
+<<<<<<< HEAD
 export default Enhanced2027ServicesShowcase;;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1545,3 +1654,6 @@ export default Enhanced2027ServicesShowcase;
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default Enhanced2027ServicesShowcase;;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

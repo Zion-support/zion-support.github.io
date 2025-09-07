@@ -52,6 +52,7 @@ const { execSync } = require("child_process")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(` Git status "clean"`)
 
@@ -59,3 +60,6 @@ const { execSync } = require("child_process")
 =======
     console.log(` Git status "clean"`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.log(` Git status "clean"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

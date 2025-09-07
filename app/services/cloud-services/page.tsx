@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'Cloud Services | Zion Tech Group',
 <<<<<<< HEAD
+<<<<<<< HEAD
   description:
     'Comprehensive cloud solutions including migration, architecture, optimization, and management. AWS, Azure, GCP expertise with cost optimization and security.',
 };
@@ -364,6 +365,9 @@ function ContactSection() {
       </div>
     </section>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   description: 'Professional cloud services services for your business needs.',
   keywords: 'cloud-services, services, business, technology',
 };
@@ -412,6 +416,10 @@ export default function ServicePage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   );
 }
+

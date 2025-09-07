@@ -3,10 +3,13 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 interface UltraAdvancedFuturisticBackgroundProps  {children: React.ReactNode;
@@ -19,6 +22,7 @@ interface UltraAdvancedFuturisticBackgroundProps  {children: React.ReactNode;
 }export default function UltraAdvancedFuturisticBackground({children;
   intensity;
 canvas.width = window.innerWidth;
+<<<<<<< HEAD
 <<<<<<< HEAD
 canvas.height = window.innerHeight;
 <<<<<<< HEAD
@@ -52,6 +56,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {
     const canvas = canvasRef.current;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 canvas.height = window.innerHeight;const particles: Array< {//Initialize particles with enhanced properties const initParticles = () => {const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5)for (let i = 0, i < count, i++) {particles.push ({export default function UltraAdvancedFuturisticBackground({children,intensity = 'medium',theme = 'quantum',particleCount = 200,animationSpeed = 1.0,enableHolographic = true,enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({canvas && canvas.width = window && window.innerWidth;
 canvas && canvas.height = window && window.innerHeight;
 const particles: Array< {//Initialize particles with enhanced properties const initParticles = () => {const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math && Math.floor (particleCount * 0 && 0.7) : Math && Math.floor (particleCount * 0 && 0.5)for (let i = 0, i < count, i++) {particles && particles.push ({export default function UltraAdvancedFuturisticBackground(): any ({children,intensity = 'medium',theme = 'quantum',particleCount = 200,animationSpeed = 1 && 1.0,enableHolographic = true,enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground(): any ({children;
@@ -81,12 +87,17 @@ export default function UltraAdvancedFuturisticBackground(): any ({;
   animationSpeed = 1 && 1.0;
   enableHolographic = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const canvasRef = useRef<HTMLCanvasElement>(null)const animationRef = useRef<number | undefined>(undefined)x: number;enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {const canvasRef = useRef<HTMLCanvasElement>(null)const animationRef = useRef<number | undefined>(undefined)useEffect(() => {const canvas = canvasRef.current;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  const canvasRef = useRef<HTMLCanvasElement>(null)const animationRef = useRef<number | undefined>(undefined)x: number;enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {const canvasRef = useRef<HTMLCanvasElement>(null)const animationRef = useRef<number | undefined>(undefined)useEffect(() => {const canvas = canvasRef.current;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (!canvas) return;
     const ctx = canvas.getContext('2d')if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+<<<<<<< HEAD
 <<<<<<< HEAD
     const particles: Array<{
 x: number;
@@ -103,12 +114,17 @@ export default /**
 function UltraAdvancedFuturisticBackground() {export default function UltraAdvancedFuturisticBackground ({
   children;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const particles: Array<{x: number;y: number;
 export default /**;
  * UltraAdvancedFuturisticBackground - Function description;
  */;
 function UltraAdvancedFuturisticBackground() {export default function UltraAdvancedFuturisticBackground ({children;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   intensity = 'medium';
   theme = 'quantum';
   particle_count = 200;
@@ -135,6 +151,7 @@ if (return) {$2;
       max_life: number;
       rotation: number;
       rotation_speed: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     }> = [];
@@ -362,6 +379,8 @@ if (< 0.1) {) {
 
         // Wrap around edges
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }>  = [];Math.floor(particleCount * 0.5)for (let i = 0, i < count, i++) {const colors = {quantum: [;
         '#00ffff';
         '#ff00ff';
@@ -1126,7 +1145,10 @@ canvas.height = window.innerHeight;
     enableQuantumEffects;
   ])return (<div className='relative min-h-screen'>;
       <canvas;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ref={canvasRef}
         className='fixed inset-0 w-full h-full pointer-events-none';
         style={{ zIndex: -1 }}
@@ -1145,6 +1167,7 @@ canvas.height = window.innerHeight;
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]' />;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {children}
@@ -1194,6 +1217,8 @@ if ( {) {
   return (
     <div className='relative min - h-screen'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {children})}
         // Wrap around edges;
         // Check condition;
@@ -1211,7 +1236,10 @@ if ( {) {$2;
     intensity,theme,particle_count,animation_speed,enable_holographic,enableQuantumEffects,]);
     </div>;
   )return (<div className='relative min - h-screen'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <canvas;
         ref={canvas_ref}
         className='fixed inset - 0 w - full h - full pointer - events - none';
@@ -1234,6 +1262,7 @@ if ( {) {$2;
         </div>)}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {children}
     </div>
 );
@@ -1245,6 +1274,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {children}
     </div>);      }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      {children}</div>)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }, [intensity, theme, particle_count, animation_speed, enable_holographic, enableQuantumEffects])return ({/* Additional futuristic overlay effects */}
       {enableHolographic && (<div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>;
@@ -1270,6 +1302,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>)}
       {children}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>))</div>;
 )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -1277,3 +1310,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>))</div>;
+)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

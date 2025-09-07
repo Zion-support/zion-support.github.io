@@ -3,14 +3,18 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { motion   } from 'framer-motion';
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket  } from 'lucide-react';
 import { motion  } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -28,6 +32,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Shield
   Globe
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { ArrowRight;
   Star;
   Users;
@@ -35,7 +41,10 @@ import { ArrowRight;
   Zap;
   Shield;
   Globe;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Rocket;
   ArrowRight,Star,Users,TrendingUp,Zap,Shield,Globe,Rocket,} from 'lucide-react';
 interface ServiceCardProps  {service: {import {ArrowRight,Star,Users,TrendingUp,Zap,Shield,Globe,Rocket,} from 'lucide-react';
@@ -45,10 +54,13 @@ interface ServiceCardProps  {service: {id: string;
     description: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     category: string;
     price: {
       monthly: number;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: string;price: {monthly: number;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       yearly: number;
@@ -74,12 +86,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     integrations: string[];
 =======
     useCases: string[];integrations: string[];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     support: string;
     compliance: string[];
     link: string;
     icon: string;
     color: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     popular: boolean;
@@ -90,6 +106,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     popular: boolean;
         return <Zap className='w-5 h-5' />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    popular: boolean;return <Zap className='w-5 h-5' />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       case 'quantum & emerging tech':;
         return <Rocket className='w-5 h-5' />;
       case 'enterprise it':;
@@ -105,13 +124,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return <Globe className="w-5 h-5" />;
       case 'micro saas':;
 <<<<<<< HEAD
+<<<<<<< HEAD
         return <TrendingUp className="w-5 h-5" />;default:;
         return <Zap className='w-5 h-5' />;    }launchDate: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        return <TrendingUp className="w-5 h-5" />;default:;
+        return <Zap className='w-5 h-5' />;    }launchDate: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: number;
     rating: number;
     reviews: number;
     marketSize?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
         return <Zap className='w-5 h-5' />;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -141,11 +166,14 @@ return color;
     >
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return <Zap className='w-5 h-5' />;}}const getGradientClass = (color: string) => {if (color.includes('from-') && color.includes('to-')) {}return color;
     }
     return 'from-cyan-500 to-blue-500';
   }
     >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -153,10 +181,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Glow effect */}
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>;
       {/* Main card */}
       <div className='relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Background pattern */}
@@ -170,6 +201,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Background pattern */}
     return 'from-cyan-500 to-blue-500'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        {/* Background pattern */}return 'from-cyan-500 to-blue-500';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
         <div className='absolute inset-0 opacity-5'>;
           <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>;
@@ -199,6 +233,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="flex items - center space - x-2">;
                   {getCategoryIcon (service.category)}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <span className="text - xs font - medium text - gray - 400 uppercase tracking - wider">;<div className='absolute inset-0 opacity-5'>;
           <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>;
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]'></div>;
@@ -319,7 +356,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             <div className='text-center'>;
               <div className='text-2xl font-bold text-purple-400'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {service.customers.toLocaleString()}
               </div>;
               <div className='text-xs text-gray-400'>Customers</div>;
@@ -339,6 +379,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='text - 2xl font - bold text - pink - 400'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {service.reviews}
               </div>
               <div className='text-xs text-gray-400'>Reviews</div>
@@ -356,6 +397,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {service.reviews}<div className="text-center">;
               <div className="text-2xl font-bold text-purple-400">{service.customers.toLocaleString()}</div>;
               <div className="text-xs text-gray-400">Customers</div>;
@@ -403,7 +446,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Pricing */}
 <div className='relative z-10 mb-6'>;
           <div className='bg-gray-800/50 rounded-xl p-4 border border-gray-600/30'>;
@@ -494,7 +540,10 @@ className='flex items-center space-x-2 text-sm';
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>;
                 <span className='text-gray-300'>{feature}</span>;
               </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
             {service.features.length > 3 && (<div className='text-xs text-gray-500 mt-2'>;
                 +{service.features.length - 3} more features;
@@ -552,6 +601,7 @@ className='flex items-center space-x-2 text-sm';
             {service.features.length > 3 && (</div>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
         </div>
         {/* Benefits */}
@@ -570,6 +620,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         </div>;
         {/* Benefits */}<div className="relative z-10 mb-6">;
@@ -604,6 +656,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ delay: 0.8 + idx * 0.1 }}
         {/* Benefits */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className='relative z-10 mb-6'>;
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>;
             Key Benefits;
@@ -614,6 +669,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </h4>;
           <div className='space-y-2'>;
             {service.benefits.slice(0, 2).map((benefit, idx) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
         <div className='relative z-10 mb-6'>
@@ -623,10 +679,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8 + idx * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className='flex items-center space-x-2 text-sm'
               >
@@ -658,6 +717,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='text-gray-400'>Market Size</span>
                 <span className='text-cyan-400 font-medium'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 className='flex items-center space-x-2 text-sm';
               >;
                 <div className='w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full'></div>;
@@ -719,7 +780,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
             ))}{/* Market info */}
         {service && service.marketSize && service && service.growthRate && (<div className='relative z-10 mb-6'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'>;
               <div className='flex items-center justify-between text-xs'>;
                 <span className='text-gray-400'>Market Size</span>;
@@ -742,6 +806,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="text-green-400 font-medium">{service && service.growthRate}</span>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         )}
@@ -781,6 +846,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         <div className='relative z-10'>          <motion&& motion.a
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         )}{/* CTA Button */}
 <div className='relative z-10'>;
           <motion.a;
@@ -803,7 +870,10 @@ className='group/btn relative w-full inline-flex items-center justify-center px-
           </motion.a>;
         </div>;
         <div className='relative z-10'>          <motion&& motion.a;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             href={service && service.link}
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }}
@@ -833,6 +903,7 @@ className='group/btn relative w-full inline-flex items-center justify-center px-
           initial={{ opacity: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           whileHover={{ opacity: 1 }}
 className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -848,6 +919,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default UltraFuturisticServiceCardV2;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           whileHover={{ opacity: 1 }}export default UltraFuturisticServiceCardV2;
                 className='flex items - center space - x-2 text - sm';
               >;
@@ -918,6 +991,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </motion.div>)}export default UltraFuturisticServiceCardV2;        />;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </motion.div>)}export default UltraFuturisticServiceCardV2;className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none';
         />;
       </div>;
@@ -927,6 +1003,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </motion.div>;
   )}
 export default UltraFuturisticServiceCardV2;export default UltraFuturisticServiceCardV2;
+<<<<<<< HEAD
 export default UltraFuturisticServiceCardV2;}}export default UltraFuturisticServiceCardV2;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -956,3 +1033,6 @@ export default UltraFuturisticServiceCardV2;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default UltraFuturisticServiceCardV2;}}export default UltraFuturisticServiceCardV2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

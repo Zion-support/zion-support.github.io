@@ -77,6 +77,7 @@ export default function ModerationModal(): any ({;
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -84,12 +85,15 @@ export default function ModerationModal(): any ({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   flag,
   onClose,
   onAction
 }: ModerationModalProps) {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,6 +119,8 @@ export default function ModerationModal(): any ({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   flag,
   onClose,
   onAction
@@ -150,6 +156,7 @@ export type ModerationModalProps = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -166,6 +173,8 @@ export type ModerationModalProps = {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -176,6 +185,7 @@ export type ModerationModalProps = {
           <div className='font-semibold'>Review Flag — {flag && flag.id}</div>;
           <button
             onClick={onClose}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -193,6 +203,9 @@ export type ModerationModalProps = {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='text-gray-500 hover:text-gray-700'>;
             ✕;
           </button>;
@@ -452,17 +465,21 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
 =======
 
 
+<<<<<<< HEAD
 
 
   );
 }        <div className="p-4 border-t flex items-center justify-end gap-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -487,6 +504,10 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
   );
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  );
+);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
   on_close: () => void;
   on_action: (action: 'approve' | 'remove' | 'warn' | 'ban',admin_notes?: string) => Promise < void>;export default /**;
@@ -629,6 +650,7 @@ export default function ModerationModal() {flag,onClose,onAction;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -640,6 +662,8 @@ export default function ModerationModal() {flag,onClose,onAction;
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   );
 
@@ -647,6 +671,7 @@ export type ModerationModalProps = {;
 
 export type ModerationModalProps = {
   flag: any | null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -660,6 +685,8 @@ import React, { useState } from 'react';
 export type ModerationModalProps = any;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   onClose: () => void;
   onAction: (
     action: 'approve' | 'remove' | 'warn' | 'ban'
@@ -681,7 +708,10 @@ export default function ModerationModal({
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
@@ -816,6 +846,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -839,3 +870,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const metadata = {
   title: 'Ai Meeting Assistant | Zion Tech Group',
   description:
@@ -13,6 +16,7 @@ export const metadata = {
 
 export default function ServicePage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="space-y-16">
@@ -60,6 +64,8 @@ export default function ServicePage() {
             <p className="text-gray-600">
               Get instant, accurate transcription of all your meetings with 95% accuracy in multiple languages.
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -83,6 +89,7 @@ export default function ServicePage() {
             <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
             <p className="text-gray-300">
               Tailored ai meeting assistant solutions designed for your specific business requirements.
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 
@@ -95,6 +102,8 @@ export default function ServicePage() {
               Tailored ai meeting assistant solutions designed for your specific
               business requirements.
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </p>
           </div>
 
@@ -116,6 +125,7 @@ export default function ServicePage() {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </section>
 
@@ -187,6 +197,9 @@ export default function ServicePage() {
 =======
       </div>
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+      </div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>
   );
 }

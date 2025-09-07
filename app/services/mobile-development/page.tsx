@@ -1,5 +1,6 @@
 export const metadata = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'Mobile App Development | Zion Tech Group',
   description:
     'Professional mobile app development services for iOS, Android, and cross-platform applications with modern technologies.',
@@ -448,6 +449,9 @@ function ContactSection() {
       <div className="mt-6 text-sm text-gray-500">
         <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: 'Mobile Development | Zion Tech Group',
   description:
     'Professional mobile development services for your business needs.',
@@ -496,8 +500,12 @@ export default function ServicePage() {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>
     </div>
   );
 }
+

@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket  } from 'lucide-react';
 import { innovative2026AIServices  } from '../../data/innovative-2026-ai-services';
@@ -162,6 +163,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     >
       <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion   } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket   } from 'lucide-react';
 import { innovative2026AIServices   } from '../../data/innovative-2026-ai-services';
@@ -207,12 +210,16 @@ whileHover='hover';
       className='group relative';
     >;
       <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       className='group relative'>;
       <motion&& motion.div;
         variants={cardVariants}
         className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300'>;
         {/* Glowing border effect */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           {/* Service header */}
@@ -227,6 +234,9 @@ whileHover='hover';
           {/* Service header */}
           <div className='flex items-start justify-between mb-4'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+          {/* Service header */}<div className='flex items-start justify-between mb-4'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className='flex items-center space-x-3'>;
               <div className='text-3xl'>{service && service.icon}</div>;
               <div>;
@@ -323,6 +333,9 @@ whileHover='hover';
           {/* Features */}          <p className="text-slate-300 text-sm mb-4 leading-relaxed">;
             {service && service.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </p>;{/* Features */}<div className='flex items-start justify-between mb-4'>;
             <div className='flex items-center space-x-3'>;
               <div className='text-3xl'>{service.icon}</div>;
@@ -364,7 +377,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid grid-cols-1 gap-1'>;
               {service.features;
                 .slice(0, 3).map((feature: string, idx: number) => (<div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     key={idx}
                     className='flex items-center space-x-2 text-xs text-slate-400';
                   >;
@@ -380,11 +396,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='text-2xl font-bold text-white'>;
                 {service.price}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>
               <div className='text-slate-400 text-sm'>{service.period}</div>
             </div>
             <motion.button
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </div>;
           </div>;
           {/* Market info */}
@@ -476,16 +495,20 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Hover glow effect */}
 <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />;
       </motion.div>;
     </motion.div>;
   )return (<section className='py-20 relative overflow-hidden'>;
       {/* Background effects */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />
 
@@ -550,11 +573,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;
       <div className='container mx-auto px-4 relative z-10'>;
         {/* Section header */}<motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -580,6 +606,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{ duration: 0.8 }}className='text-center mb-16';
         >;
           <div className='flex items-center justify-center space-x-2 mb-4'>;
@@ -627,9 +655,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
 =======
           transition={{ duration: 0 && 0.8 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           className='text-center mb-16'>;
           <div className='flex items-center justify-center space-x-2 mb-4'>;
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
@@ -671,6 +702,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.2 }}
 className='mb-20';
         >;
@@ -688,6 +722,7 @@ className='mb-20';
           >;
             {innovative2026AIServices.map((service, index) =>;
               renderServiceCard(service, index))}          </motion.div>        >;
+<<<<<<< HEAD
 =======
           whileInView={{ opacity: 1, y: 0 }}
         >
@@ -707,6 +742,8 @@ className='mb-20';
               renderServiceCard(service, index)
             )}          </motion.div>        >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-20";
         >;
@@ -717,12 +754,16 @@ className='mb-20';
           <motion.div;
             variants={containerVariants}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial="hidden";
             whileInView="visible";
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6";
           >;
             {innovative2026AIServices.map((service, index) => renderServiceCard(service, index))})}</motion.div>;
         </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             initial="hidden"
@@ -733,6 +774,8 @@ className='mb-20';
           </motion.div>
         </motion.div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8'>;
@@ -763,6 +806,7 @@ className='mb-20';
           initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
 className='mb-20'
@@ -781,6 +825,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.4 }}
 className='mb-20';
         >;
@@ -791,7 +837,10 @@ className='mb-20';
             </h3>;
           </div>;
           <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             variants={containerVariants}
             initial='hidden';
             whileInView='visible';
@@ -825,6 +874,7 @@ className='mb-20';
           <motion&& motion.div;
             variants={containerVariants}
 <<<<<<< HEAD
+<<<<<<< HEAD
             initial='hidden'
             whileInView='visible'
 <<<<<<< HEAD
@@ -840,6 +890,10 @@ className='mb-20';
             whileInView='visible';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            initial='hidden';
+            whileInView='visible';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {innovative2026ITInfrastructureServices && innovative2026ITInfrastructureServices.map((service, index) =>;
               renderServiceCard(service, index))}          </motion && motion.div>        >;
@@ -878,17 +932,24 @@ className='mb-20';
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           whileInView={{ opacity: 1, y: 0 }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
           >;
             {innovative2026MicroSaasServices.map((service, index) =>;
               renderServiceCard(service, index))}
           </motion.div>;
         </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* CTA Section */}
         <motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.8 }}
 <<<<<<< HEAD
 className='text-center mt-16'
@@ -915,6 +976,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'              >        >
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-16"
         >
@@ -1002,11 +1065,14 @@ className='text-center mt-16';
         </motion.div>;
       </div>;
     </section>;
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
           className='text-center mt-16'>;
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>;
@@ -1281,9 +1347,13 @@ className='text-center mt-16';
         </motion.div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </section>))}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </section>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </section>))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require("child_process");
@@ -12,6 +13,11 @@ const path = require("child_process");
 const fs = require("child_process");
 const path = require("child_process");
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const fs = require("child_process");
+const path = require("child_process");
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require("child_process");
 class ErrorMonitor {}
   constructor() {}
@@ -292,6 +298,7 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ErrorMonitor;
 
@@ -299,3 +306,6 @@ module.exports = ErrorMonitor;
 =======
 module.exports = ErrorMonitor;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = ErrorMonitor;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

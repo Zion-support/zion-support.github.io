@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -17,6 +18,12 @@ export default function ReportProblemButton() {const query = new URLSearchParams
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+import Link from 'next/link';
+export default function ReportProblemButton() {const query = null;
+export default function ReportProblemButton() {const query = new URLSearchParams({projectId;
+    ...(entityType ? { entityType } : {})...(entityId ? { entityId } : {})})return (})return (<Link href={`/disputes/new?${query && query.toString()}`}>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   projectId
   entityType
   entityId
@@ -28,9 +35,12 @@ export default function ReportProblemButton() {const query = new URLSearchParams
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
@@ -39,6 +49,7 @@ export default function ReportProblemButton() {const query = new URLSearchParams
     projectId
     ...(entityType ? { entityType } : {})
     ...(entityId ? { entityId } : {})
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,6 +65,8 @@ export default function ReportProblemButton() {const query = new URLSearchParams
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export default function ReportProblemButton(): any ({;
   projectId,;
@@ -71,16 +84,20 @@ export default function ReportProblemButton(): any ({;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   });
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   });
 
 <<<<<<< HEAD
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -96,6 +113,8 @@ export default function ReportProblemButton(): any ({;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <Link href={`/disputes/new?${query && query.toString()}`}>;
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;
         {" "}
@@ -176,6 +195,7 @@ export default function ReportProblemButton(): any ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -196,6 +216,8 @@ export default function ReportProblemButton(): any ({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   });
   return (
     <Link href={`/disputes/new?${query && query.toString()}`}>;
@@ -207,12 +229,15 @@ export default function ReportProblemButton(): any ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   );
 }
 =======
@@ -230,6 +255,7 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -237,6 +263,8 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return (
     <Link href={`/disputes/new?${query.toString()}`}>
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm">
@@ -296,6 +324,7 @@ function ReportProblemButton() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -304,6 +333,8 @@ function ReportProblemButton() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 =======
@@ -325,6 +356,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -365,3 +397,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
@@ -34,6 +35,8 @@ export default define_config ({
       on('before:browser:launch', (browser = {}, launchOptions) => {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors;
     setupNodeEvents(on, config) {on('before:browser:launch', (browser = {}, launchOptions) => {import { define_config  } from 'cypress';
@@ -131,6 +134,7 @@ if ( {) {$2;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -166,10 +170,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,14 +218,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     supportFile: 'cypress/support/e2e.ts';
     baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
     supportFile: 'cypress/support/e2e && e2e.ts';
     supportFile: 'cypress/support/e2e.ts';
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
@@ -229,6 +241,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       })
     }
     env: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -261,10 +274,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     defaultCommandTimeout: 10000
   }
   reporter: 'junit'
   reporterOptions: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -312,6 +328,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true
@@ -343,6 +361,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -366,10 +385,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     toConsole: true
   }
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -409,6 +431,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -423,10 +447,13 @@ export default defineConfig({;
         }
         return launchOptions;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     base_url: 'http://localhost:3000', // Standard Next.js port;
     support_file: 'cypress / support / e2e.ts';
@@ -451,6 +478,7 @@ if ( {) {$2;
     to_console: true;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 
 
@@ -468,6 +496,8 @@ if ( {) {$2;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     },env: {CYPRESS_TEST_USER_EMAIL:;
         process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com',CYPRESS_TEST_USER_PASSWORD:;
         process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',CYPRESS_TEST_USER_DISPLAY_NAME:;
@@ -484,7 +514,10 @@ if ( {) {$2;
     to_console: true;
   }
 })ursor/fix-website-loading-errors-and-merge-6662;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       on('before:browser:launch', (browser;
 })
 });
@@ -496,6 +529,7 @@ if ( {) {$2;
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
       on('before:browser:launch', (browser;
 });
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -514,3 +548,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 });
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

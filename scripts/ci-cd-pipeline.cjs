@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -85,6 +86,8 @@ console.log(`   - Failed "Stages"`)
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -228,8 +231,12 @@ if (require.main === module) {
   main();
 }
 
+<<<<<<< HEAD
 module.exports = { main, runCommand, checkGitStatus };
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   console.log('� Application "URL")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = { main, runCommand, checkGitStatus };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

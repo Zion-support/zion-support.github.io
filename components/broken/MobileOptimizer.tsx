@@ -3,10 +3,13 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Smartphone, Tablet, Monitor, RotateCcw;
@@ -26,6 +29,7 @@ interface MobileOptimizerProps  {children: React.ReactNode;
 }const MobileOptimizer: React.FC<MobileOptimizerProps> = ({children;
   showDebugInfo;
 <<<<<<< HEAD
+<<<<<<< HEAD
 setIsMobile (isMobileDevice);
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -41,6 +45,10 @@ if ( {) {
 setIsMobile (isMobileDevice)setIsTablet (isTabletDevice)//Apply mobile - specific optimizations // Check condition;
 if ( {) {$2;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+setIsMobile (isMobileDevice)setIsTablet (isTabletDevice)//Apply mobile - specific optimizations // Check condition;
+if ( {) {$2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
   check_device ()window.addEventListener ('resize', check_device)}, [enableMobileLayout, enablePerformanceMode])//Detect orientation changes check_orientation ()window.addEventListener ('orientationchange', check_orientation)window.addEventListener ('resize', check_orientation)const handleTouchStart = (e: TouchEvent) =>: any {// Check condition;
 if ( {) {$2;
@@ -56,6 +64,7 @@ animationFrameId = requestAnimationFrame (measure_performance)//Monitor memory u
 }, 2000)//Monitor battery level // Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 animationFrameId = requestAnimationFrame (measure_performance);
 //Monitor memory usage;
@@ -91,6 +100,8 @@ style.textContent = `.mobile-optimized * {
   touch-action: manipulation;
 -webkit-tap-highlight-color: transparent
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   (navigator as any) .get_battery () .then ( (battery: unknown) => {const updateBatteryLevel = () =>: any {setPerformanceMetrics (prev => ({updateBatteryLevel ()battery.addEventListener ('levelchange', updateBatteryLevel)}//Monitor network speed updateNetworkSpeed ()connection.addEventListener ('change', updateNetworkSpeed)}//Minimum distance and duration thresholds if (distance < 50 |duration < 100) return null;
 //Determine direction if (Math.abs (deltaX) > Math.abs (deltaY) ) {return {}
 const handleGestureAction = (gesture: TouchGesture) => {switch (gesture.type) {case 'swipe': if (gesture.direction === 'left') {//Navigate forward if (window.history.length > 1) {}break;
@@ -467,6 +478,7 @@ if (return null) {$2;
 }</style> </>)}
 export default MobileOptimizer;
 export default MobileOptimizer;}`;
+<<<<<<< HEAD
 }</style> </>)}export default MobileOptimizer;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1173,3 +1185,6 @@ if (return null) {
 export default MobileOptimizer;
 export default MobileOptimizer;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}</style> </>)}export default MobileOptimizer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -11,6 +12,8 @@
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
         token;
@@ -35,6 +38,7 @@ if (return null) {$2;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const resp = await fetch(;
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`;
+<<<<<<< HEAD
 =======
 
 
@@ -46,6 +50,8 @@ ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     );
     if (!resp && resp.ok) return null;
     const json = await resp && resp.json();
@@ -54,6 +60,7 @@ ursor/expand-services-advertise-and-build-project-4b36
     return null;
   }
 exports && exports.handler = async function () {
+<<<<<<< HEAD
 
 
   try {
@@ -95,6 +102,8 @@ exports && exports.handler = async function () {
 <<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { upsert_file } = require ('./_lib / github');
 const fs = require ('fs');
 const path = require ('path');
@@ -168,7 +177,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         token,
 =======
         token
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       });
     }
     return {}
@@ -191,6 +203,7 @@ if (return null, ) {
     return json.version || null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -210,12 +223,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   } catch (_) {
     return null;
   }
 exports.handler = async function () {try {const pkg_path = path.join (process.cwd (), 'package.json'),const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8')),const deps = { ...(pkg.dependencies || {}), ...(pkg.dev_dependencies || {}) },const entries = [],for (const [name, current] of Object.entries (deps)) {const latest = await get_latest (name),// Check condition;
 if (continue, ) {$2;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 exports.handler = async function() {
@@ -236,6 +252,8 @@ exports.handler = async function() {
     const token = process.env.GITHUB_TOKEN);
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       entries.push ({ name, current, latest, outOfDate: current.replace (/^[^0 - 9]*/, '') !== latest })}
     const report = { updated_at: Date.now (), entries },const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,const token = process.env.GITHUB_TOKEN,// Check condition;
 if ( {) {$2;
@@ -280,6 +298,7 @@ if (continue, ) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -288,6 +307,8 @@ if (continue, ) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   try {
     const pkgPath = path && path.join(process && process.cwd(), 'package && package.json';
     const pkg = JSON && JSON.parse(fs && fs.readFileSync(pkgPath, 'utf-8';
@@ -312,6 +333,7 @@ const path = require ('path';
       await upsert_file ({ owner, repo, path: 'data / reports / deps / weekly - dependencies.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly dependency insights';ursor/expand-services-advertise-and-build-project-4b36;
 }
       await upsert_file ({ owner, repo, path: 'data / reports / deps / weekly - dependencies.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly dependency insights';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -341,3 +363,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

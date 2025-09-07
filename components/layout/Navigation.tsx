@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Home, Brain, Cpu, Rocket;
@@ -32,6 +33,8 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Phone, Mail, MapPin, Globe, ChevronDown
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Menu;
   X;
@@ -45,6 +48,7 @@ import {
   Globe;
   ChevronDown;Globe,ChevronDown,} from 'lucide-react';
 import Link from 'next/link';import {Menu, X, Home, Brain, Cpu, Rocket,Phone, Mail, MapPin, Globe, ChevronDown;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
  } from 'lucide-react';
 import Link from 'next/link';
@@ -103,6 +107,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 } from 'lucide-react';
 import Link from 'next / link';import {
   Menu, X, Home, Brain, Cpu, Rocket,
+=======
+ } from 'lucide-react';
+import Link from 'next/link';
+import { Menu, X, Home, Brain, Cpu, Rocket,import React, { useState, useEffect  } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Menu, X, Home, Brain, Cpu, Rocket;Phone, Mail, MapPin, Globe, ChevronDown;
+  } from 'lucide-react';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Phone, Mail, MapPin, Globe, ChevronDown;
 } from 'lucide-react';
     }
@@ -125,6 +137,7 @@ import Link from 'next / link';import {
       href: '/services',
       icon: Rocket,
       dropdown: [;
+<<<<<<< HEAD
         {
           name: 'AI Services',
           href: '/ai - services',
@@ -223,6 +236,8 @@ const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false)c
       href: '/services';
       icon: Rocket;
       dropdown: [;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Menu,X,Home,Brain,Cpu,Rocket,Phone,Mail,MapPin,Globe,ChevronDown,} from 'lucide-react';
 import Link from 'next / link';import { Menu, X, Home, Brain, Cpu, Rocket,Phone, Mail, MapPin, Globe, ChevronDown;
  } from 'lucide-react';
@@ -248,12 +263,16 @@ import Link from 'next / link';import { Menu, X, Home, Brain, Cpu, Rocket,Phone,
       icon: Phone;
     }name: 'Solutions',href: '/solutions',icon: Cpu,},{name: 'About',href: '/about',icon: Globe,},{name: 'Contact',href: '/contact',icon: Phone,},];
   const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',}return (<>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Navigation Bar */}
       <motion&& motion.nav;
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0 && 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -262,12 +281,15 @@ isScrolled
             : 'bg-transparent'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${Z;
                   </span>;
                 </div>;
                 <div className='hidden sm:block'>;isScrolled;
             ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10';
             : 'bg-transparent';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -276,10 +298,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 <div className='hidden sm:block'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }`}
       >;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex items-center justify-between h-16 lg:h-20">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             {/* Logo */}
@@ -290,11 +315,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Logo */}
             {/* Desktop Navigation */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            {/* Logo */}{/* Desktop Navigation */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className='hidden lg:flex items-center space-x-8'>;
               {navigationItems && navigationItems.map(item => (<div key={item && item.name} className='relative group'>                  {item && item.dropdown ? (<div;
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}            <div className="hidden lg:flex items-center space-x-8">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {navigationItems && navigationItems.map((item) => (<div key={item && item.name} className="relative group">;
                   {item && item.dropdown ? (<motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -477,17 +508,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                     </div>;
                                   </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                                 ))<div className='text-gray-400 text-sm'>;
                                         {dropdownItem.description}
                                       </div>;
                                     </div>;
                                   </Link>;
 )})}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                                 );                                );
                               })}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                             </div>;
                           </motion.div>)}
                       </AnimatePresence>;
@@ -519,6 +556,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ) : (<Link;
                       href={item.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
 className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
                     >
 <<<<<<< HEAD
@@ -527,11 +565,14 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
                     </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group';
                     >;
                       <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />;
                       <span className='font-medium'>{item.name}</span>;
                     </Link>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   )}
                 </div>;
@@ -566,6 +607,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='lg:hidden'>
               <motion.button
 =======
+=======
+                  )}
+                </div>;
+              ))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </div>;
             {/* CTA Button */}
 <div className='hidden lg:block'>;
@@ -579,9 +625,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.a>;
             </div>;
             {/* Mobile Menu Button */}onClick={() => setIsOpen(!isOpen)}
+<<<<<<< HEAD
 =======
                 onClick={() => setIsOpen(!isOpen)}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className="text-gray-300 hover:text-white transition-colors duration-300";
               >;
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -592,6 +641,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </motion && motion.nav>;{/* Mobile Navigation */}
       <AnimatePresence>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {isOpen && (<motion&& motion.div;
 <div className='lg:hidden'>;
               <motion.button;
@@ -616,16 +668,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </motion.nav>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
         {isOpen && (;
           <motion&& motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (<motion.div;
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             exit={{ opacity: 0, x: '100%' }}
@@ -649,6 +705,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             exit={{ opacity: 0, x: '100%' }}transition={{ duration: 0.3 }}
 className='fixed inset-0 z-40 lg:hidden';
           >;
@@ -682,11 +740,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl';
             >;
               <div className='p-6'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {/* Close Button */}
                 <div className='flex justify-end mb-6'>;
                   <motion&& motion.button;
                     whileTap={{ scale: 0 && 0.95 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     onClick={() => setIsOpen(false)}
@@ -703,9 +765,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                     onClick={() => setIsOpen(false)}
                 {/* Close Button */}
+=======
+                    onClick={() => setIsOpen(false)}{/* Close Button */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <div className="flex justify-end mb-6">;
                   <motion&& motion.button
                     whileTap={{ scale: 0 && 0.95 }}
+<<<<<<< HEAD
                     onClick={() => setIsOpen(false)}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       {item.dropdown ? (
@@ -716,6 +782,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="flex justify-end mb-6">;
                   <motion&& motion.button;
                     whileTap={{ scale: 0 && 0.95 }}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     onClick={() => setIsOpen(false)}className='text-gray-300 hover:text-white transition-colors duration-300';
                   >;
                     <X className='w-6 h-6' />;
@@ -726,7 +794,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {navigationItems.map(item => (<div key={item.name}>;
                       {item.dropdown ? (<div className='space-y-2'>;
                           <div className='text-gray-400 font-medium text-sm uppercase tracking-wider'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                             {item.name}
                           </div>;
                           <div className='pl-4 space-y-2'>;
@@ -751,6 +822,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       ) : (<Link;
                           href={item && item.href}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                           onClick={() => setIsOpen(false)}
@@ -811,6 +883,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           onClick={() => setIsOpen(false)}className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
 className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
                         >;
@@ -836,9 +910,12 @@ className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 trans
                       <Phone className='w-4 h-4 text-cyan-400' />;
                       <span>{contactInfo.mobile}</span>;
                         <Link;
+<<<<<<< HEAD
 =======
                         <Link
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           href={item && item.href}
                           onClick={() => setIsOpen(false)}
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
@@ -983,6 +1060,9 @@ className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 trans
           </motion.div>)}
       </AnimatePresence>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </>)}export default Navigation)}export default Navigation;)export default Navigation;  )}
 export default Navigation;export default Navigation;</div>;
                     <div className='flex items-center space-x-2 text-gray-300'>;
@@ -1022,6 +1102,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       </AnimatePresence>;
     </>;
+<<<<<<< HEAD
 )}export default Navigation;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1040,3 +1121,6 @@ export default Navigation;
 
 export default Navigation;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default Navigation;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

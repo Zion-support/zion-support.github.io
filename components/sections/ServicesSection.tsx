@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -157,6 +158,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='relative container mx-auto px-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Brain;
   Cloud;
@@ -224,6 +227,7 @@ const ServicesSection: React.FC = () => {const services = [;
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]' />;
       </div>;
       <div className='relative container mx-auto px-4'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       features: [;
@@ -407,6 +411,8 @@ const ServicesSection: React.FC = () => {;
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">;
       {/* Background Elements */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Section Header */}
       }
     }
@@ -433,6 +439,7 @@ const ServicesSection: React.FC = () => {;
           transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           viewport={{ once: true }}
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -449,10 +456,16 @@ className='text-center mb-16'
         >;
           <motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          viewport={{ once: true }}className='text-center mb-16';
+        >;
+          <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
           >
@@ -482,6 +495,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6';
           >;
             <Zap className='w-5 h-5 text-blue-400' />;
@@ -502,7 +517,10 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
             We deliver cutting-edge technology solutions that drive innovation,efficiency, and growth for businesses across all industries.;
           </p>;
         </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <Zap className='w-5 h-5 text-blue-400' />;
             <span className='text-blue-400 font-medium'>Our Services</span>;
           </motion && motion.div>;
@@ -520,6 +538,7 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
         </motion && motion.div>;{/* Services Grid */}
         <motion&& motion.div;
           variants={containerVariants}
+<<<<<<< HEAD
 <<<<<<< HEAD
 initial='hidden'
           whileInView='visible'
@@ -541,6 +560,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Content */}
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 initial='hidden';
           whileInView='visible';
           viewport={{ once: true }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          initial="hidden";
@@ -605,6 +626,9 @@ className='group relative';
                   <span className='font-medium'>Learn More</span>;
                   <ArrowRight className='w-4 h-4' />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </Link>;<h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   {service.title}
@@ -644,7 +668,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />;
               </div>;
             </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           ))}
         </motion.div>;
                 <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />;
@@ -656,6 +683,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           viewport={{ once: true }}
@@ -692,6 +720,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default ServicesSection;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           viewport={{ once: true }}className='text-center';
         >;
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>;
@@ -704,8 +734,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
             <Link;
               href='/contact';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1'>;
               <span>Get Started Today</span>;
               <ArrowRight className='w-5 h-5' />            </Link>        >;
@@ -782,6 +815,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </section>)}export default ServicesSection)}export default ServicesSection;export default ServicesSection;
   )}className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1';
             >;
@@ -792,6 +828,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
       </div>;
     </section>;
+<<<<<<< HEAD
 )}export default ServicesSection;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -810,3 +847,6 @@ export default ServicesSection;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default ServicesSection;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

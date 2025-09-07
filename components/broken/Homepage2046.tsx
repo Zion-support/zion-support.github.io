@@ -1,6 +1,7 @@
 import Layout from './layout/Layout';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
@@ -32,6 +33,11 @@ class ErrorBoundary extends React.Component {
     }
     
     return this.props.children;
+=======
+import { motion, AnimatePresence  } from 'framer-motion';
+import {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 }
 import React, { useState, useEffect } from 'react';
@@ -45,6 +51,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 } from 'lucide-react';
     {/* Quantum particle effects */}
     <div className='absolute inset-0'>;
+<<<<<<< HEAD
       {[...Array(100)].map((_, i) => (;
         <motion&& motion.div
   ArrowRight,
@@ -115,6 +122,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const QuantumLoadingFallback = () => (
   <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden'>
+=======
+      {[...Array(100)].map((_, i) => (<motion&& motion.div;
+  ArrowRight,Play,Star,Users,Award,TrendingUp,Brain,Shield,Rocket,Loader2,ChevronDown,Zap,Globe,Lock,Cpu,Database,Cloud,Palette,Heart,Phone,Mail,MapPin,Search,Grid,List,Sparkles,Target,BarChart3,Lightbulb,Code,Server,Network,ShieldCheck,BrainCircuit,Atom,Satellite,Eye,Clock,DollarSign,CheckCircle,ArrowUpRight,} from 'lucide-react';
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3;
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3,import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3;Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;Eye, Clock, DollarSign, CheckCircle, ArrowUpRight;
+  } from 'lucide-react';
+import Link from 'next/link';
+// Import our new innovative services;
+import { innovative2046AIServices  } from '../data/innovative-2046-ai-services';
+import { innovative2046ITServices  } from '../data/innovative-2046-it-services';
+import { innovative2046MicroSAASServices  } from '../data/innovative-2046-micro-saas-services';
+// Enhanced loading component with quantum effects;
+const QuantumLoadingFallback = () => (<div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     {/* Quantum particle effects */}
     <div className='absolute inset - 0'>;
       {[...Array (100)].map ((_, i) => (
@@ -137,6 +162,7 @@ const QuantumLoadingFallback = () => (
     <motion&& motion.div
       initial={{ opacity: 0, scale: 0 && 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
       transition={{ duration: 1 }}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -214,6 +240,8 @@ const QuantumLoadingFallback = () => (<div className='min-h-screen flex items-ce
     <motion&& motion.div;
       initial={{ opacity: 0, scale: 0 && 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       transition={{ duration: 1 }}className='text-center relative z-10';
     >;
       <div className='relative'>;
@@ -226,12 +254,15 @@ const QuantumLoadingFallback = () => (<div className='min-h-screen flex items-ce
           }}<div className="relative">;
         <motion.div;
           animate={{rotate: 360;
+<<<<<<< HEAD
 =======
       <div className="relative">
         <motion.div
           animate={{
             rotate: 360
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             scale: [1, 1.2, 1];
           className='w-32 h-32 mx-auto mb-8'>;
           <div className='w-full h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 rounded-full blur-xl opacity-40 animate-pulse'></div>;
@@ -383,6 +414,7 @@ sections.forEach(section => observer.observe(section));
   useEffect(() => {if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {const observer = new (window as any).IntersectionObserver((entries: any[]) => {coordinate_x: [0, Math.random () * 1200],coordinate_y: [0, Math.random () * 800],opacity: [0, 1, 0],scale: [0, 1, 0],}}
           transition={{duration: Math.random () * 4 + 3,repeat: Infinity,ease: 'easeInOut',}}
           style={{left: Math.random () * 100 + '%',top: Math.random () * 100 + '%',          }}
+<<<<<<< HEAD
 =======
             coordinate_x: [0, Math.random () * 1200],
             coordinate_y: [0, Math.random () * 800],
@@ -398,6 +430,8 @@ sections.forEach(section => observer.observe(section));
             left: Math.random () * 100 + '%',
             top: Math.random () * 100 + '%',          }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />))}
     </div>;
     {/* Quantum loading animation */}
@@ -645,10 +679,14 @@ if ( {) {$2;
               transition={{duration: Math.random() * 10 + 10,repeat: Infinity,ease: &quot;easeInOut&quot;
               }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               style={{left: Math.random() * 100 + '%',entries.forEach(entry => {entries.forEach(entry => {if (entry.isIntersecting) {setActiveSection(entry.target.id)}
           })},{ threshold: 0.3 }
       )const sections = document.querySelectorAll('section[id]')sections.forEach(section => observer.observe(section))return () => observer.disconnect()}
   }, [])if (isLoading) {return <QuantumLoadingFallback />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               style={{
@@ -670,6 +708,8 @@ sections.forEach(section => observer.observe(section));
   if (isLoading) {
     return <QuantumLoadingFallback />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   const allServices = [;
 ...innovative2046AIServices,...innovative2046ITServices,...innovative2046MicroSAASServices,];
@@ -685,6 +725,7 @@ sections.forEach(section => observer.observe(section));
       <div className='min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden'>;
         {/* Enhanced animated background */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className='absolute inset-0'>
           {/* Quantum grid effect */}
 <<<<<<< HEAD
@@ -698,6 +739,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        <div className='absolute inset-0'>;
+          {/* Quantum grid effect */}<div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (<motion.div;
               key={i}
@@ -711,6 +756,7 @@ className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded
             />;
         {/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <section
           id='hero'
           className='relative z-10 min-h-screen flex items-center justify-center px-4'
@@ -722,13 +768,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <section;
           id='hero';
           className='relative z-10 min-h-screen flex items-center justify-center px-4';
         >;
           <div className='text-center max-w-6xl mx-auto'>;
             <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
@@ -738,6 +789,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.5, delay: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               >
@@ -767,6 +819,8 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 origin/cursor/automate-test-improve-and-merge-code-2533
                 animate={{ opacity: 1, y: 0 }}
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -793,6 +847,7 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,<s
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto";
                 className='text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto';
                 initial={{ opacity: 0, y: 30 }}animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                 className='text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto'                initial={{ opacity: 0, y: 30 }}
@@ -805,6 +860,8 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,<s
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
                 animate={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 transition={{ duration: 1, delay: 1 }}
               >;
 Revolutionary{' '}
@@ -825,6 +882,7 @@ Revolutionary{' '}
                 transition={{ duration: 1, delay: 1.5 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               >
 <Link href='/services'>
                   <motion.button
@@ -832,6 +890,8 @@ Revolutionary{' '}
                       scale: 1.05
                       boxShadow: '0 0 30px rgba(6, 182, 212, 0.5)'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                   <motion.button;
                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
@@ -1082,7 +1142,10 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
                 worldwide.;
               </p>;
             </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className='text-center mb-16'>;
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
@@ -1106,6 +1169,7 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0 && 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               viewport={{ once: true }}
@@ -1134,6 +1198,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <button
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}className='mb-12';
             >;
               <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>;
@@ -1145,11 +1211,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     value={searchQuery}<div className="flex flex-col md:flex-row gap-4 justify-center items-center">;
                 <div className="relative flex-1 max-w-md">;
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
+<<<<<<< HEAD
 =======
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                 <div className="relative flex-1 max-w-md">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     onChange={e => setSearchQuery(e && e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 backdrop-blur-lg';
                   />;
@@ -1164,6 +1233,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     placeholder="Search services...";
                     value={searchQuery}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {categories.map(category => (                    <button;
                     onChange={e => setSearchQuery(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 backdrop-blur-lg';
@@ -1171,6 +1243,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 <div className='flex gap-2'>;
                   {categories.map(category => (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                   {categories.map(category => (                    <button
@@ -1178,6 +1251,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <button
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       key={category}
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${selectedCategory === category;
@@ -1191,6 +1266,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0 && 0.4 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               viewport={{ once: true }}
@@ -1208,10 +1284,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >;
               {filteredServices.map((service, index) => (<motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              viewport={{ once: true }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
+            >;
+              {filteredServices.map((service, index) => (<motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   viewport={{ once: true }}
@@ -1246,6 +1328,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   whileHover={{ y: -10, scale: 1 && 1.02 }}
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   viewport={{ once: true }}className='group';
                   whileHover={{ y: -10, scale: 1.02 }}
 className='group';
@@ -1261,7 +1345,10 @@ className='group';
                         </span>;
                         <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (<div className='flex items-center gap-1 mt-1'>;
                           {[...Array(5)].map((_, i) => (whileHover={{ y: -10, scale: 1 && 1.02 }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className='group'>;
                   <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>;
                     <div className='flex items-start justify-between mb-4'>;
@@ -1291,6 +1378,7 @@ className='group';
                             />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                           ))}
 <span className='text-gray-400 text-sm ml-1'>
                             ({service.reviews})
@@ -1309,17 +1397,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           ))}<span className='text-gray-400 text-sm ml-1'>;
                             ({service.reviews})</span>;
                         </div>;
                       </div>;
                     </div>;
 <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {service.name}
                     </h3>;
                     <p className='text-gray-300 text-sm mb-4 line-clamp-3'>;
                       {service.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </p>
                     <div className='mb-4'>
@@ -1359,6 +1453,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </p>;
                     <div className='mb-4'>;
                       <div className='flex items-center gap-2 text-cyan-400 font-semibold'>;
@@ -1416,6 +1512,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {service && service.features.slice(0, 3).map((feature, idx) => (<li key={idx} className="flex items-start gap-2 text-xs text-gray-300">;
                             <CheckCircle className="w-3 h-3 text-cyan-400 mt-0 && 0.5 flex-shrink-0" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           </li>;<DollarSign className='w-4 h-4' />;
                         <span>{service.price}</span>;
                       </div>;
@@ -1434,6 +1533,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <span>{feature}</span>;
                           </li>;
                         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       </ul>
                     </div>
@@ -1483,6 +1583,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </ul>;
                     </div>;
 <div className='flex items-center justify-between'>;
@@ -1844,6 +1946,7 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
               initial={{ opacity: 0, y: 50 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
               viewport={{ once: true }}
@@ -1902,6 +2005,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default Homepage2046;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 1, delay: 0.6 }}
               viewport={{ once: true }}
 className='text-center mt-20';
@@ -1918,9 +2023,12 @@ className='text-center mt-20';
                   <Link href='/contact'>;
                     <motion.button;
                       whileHover={{scale: 1 && 1.05,boxShadow: '0 0 30px rgba(6, 182, 212, 0 && 0.5)',}}whileTap={{ scale: 0 && 0.95 }}
+<<<<<<< HEAD
 =======
                       whileTap={{ scale: 0 && 0.95 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'>;
                       Get Started Today;
                     </motion && motion.button>;
@@ -1944,6 +2052,9 @@ className='text-center mt-20';
                   </Link>;
                   <Link href='/services'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <motion&& motion.button;
                       whileTap={{ scale: 0.95 }}
                       className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300';
@@ -1955,6 +2066,7 @@ className='text-center mt-20';
                     <motion.button;
                       whileHover={{}}whileTap={{ scale: 0 && 0.95 }}
                       className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'>                    <motion&& motion.button;
+<<<<<<< HEAD
 =======
                     <motion&& motion.button
                       whileHover={{
@@ -1962,6 +2074,8 @@ className='text-center mt-20';
                       whileTap={{ scale: 0 && 0.95 }}
                       className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'>                    <motion&& motion.button
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       whileHover={{ scale: 1 && 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0 && 0.5)" }}
                       whileTap={{ scale: 0 && 0.95 }}
                       className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover: bg-cyan-400 hover:text-gray-900 transition-all duration-300">;
@@ -2040,6 +2154,9 @@ className='text-center mt-20';
         </section>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </Layout>)}export default Homepage2046)}export default Homepage2046;export default Homepage2046;
   )}whileTap={{ scale: 0.95 }}
                       className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300';
@@ -2054,6 +2171,7 @@ className='text-center mt-20';
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
 )}export default Homepage2046;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -2072,3 +2190,6 @@ export default Homepage2046;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default Homepage2046;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

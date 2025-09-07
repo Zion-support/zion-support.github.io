@@ -1,6 +1,7 @@
 import Layout from '../components/layout/Layout';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Star, Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Lock, Palette, Factory, Database, Cloud;
@@ -63,6 +64,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           'AI platforms'
           'autonomous systems'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion  } from 'framer-motion';
 import { Star,Brain,Atom,Shield,Zap,TrendingUp,Globe,Rocket,Lock,Palette,Factory,Database,Cloud,Cpu,Eye,Target,Users,BarChart3,import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {const categories = [;
@@ -85,12 +88,16 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC;title='2025 Innovati
           'space technology';
           'AI platforms';
           'autonomous systems';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ]}
       />;
       {/* Hero Section */}
       <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>;
         {/* Enhanced Background Elements */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className='absolute inset-0 pointer-events-none'>
           <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>
@@ -105,6 +112,16 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC;title='2025 Innovati
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
         <div className='text-center max-w-6xl mx-auto relative z-10'>          <motion.div
+=======
+        <div className='absolute inset-0 pointer-events-none'>;
+          <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>;
+          <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>;
+          <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>;
+          <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500'></div>;
+          <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500'></div>;
+        </div>;
+        <div className='text-center max-w-6xl mx-auto relative z-10'>          <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -116,6 +133,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             className='space-y-6'            className="space-y-6">;
+<<<<<<< HEAD
     <Layout>
       <SEO 
         title="2025 Innovative Services Showcase | Zion Tech Group"
@@ -230,6 +248,8 @@ className='space-y-6'
             transition={{ duration: 0 && 0.8 }}
             className='space-y-6'            className="space-y-6">;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <Layout>;
       <SEO;
         title="2025 Innovative Services Showcase | Zion Tech Group";
@@ -298,6 +318,7 @@ className='space-y-6'
               initial={{ opacity: 0, scale: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
 className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'
@@ -318,6 +339,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               quantum computing solutions, and autonomous AI platforms
             </p>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               animate={{ opacity: 1, scale: 1 }}transition={{ duration: 0.6, delay: 0.2 }}
 className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm';
             >;
@@ -330,7 +353,10 @@ className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cy
               Pioneering the future with cutting-edge micro SAAS services;
               quantum computing solutions, and autonomous AI platforms;
             </p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'>;
               <Star className='w-5 h-5' />;
@@ -354,6 +380,7 @@ className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cy
             {/* Enhanced Stats */}
             <motion&& motion.div;
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               animate={{ opacity: 1, y: 0 }}
@@ -461,6 +488,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 >
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.4 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto';
             >;
@@ -537,7 +566,10 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto';
           </motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {categories.map((category, index) => {const IconComponent  = category.icon;>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='text-center mb-16'>;
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
               Service Categories;
@@ -561,6 +593,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto';
                           ).length;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         }{' '}
                         Services
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -573,6 +606,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           </div>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         }{' '}<h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
               Service Categories;
             </h2>;
@@ -582,6 +617,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {categories.map((category, index) => {className='inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 400 / 30 rounded - full text - cyan - 400 text - lg font - medium backdrop - blur - sm';
+<<<<<<< HEAD
 =======
                         }{' '}
             <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -595,6 +631,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {categories.map((category, index) => {
               className='inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 400 / 30 rounded - full text - cyan - 400 text - lg font - medium backdrop - blur - sm';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >;
               <Star className='w - 5 h - 5' />;
               <span > Innovation Leader 2025</span>;
@@ -693,6 +731,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className="group relative";
                 >;
                   <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}>;
@@ -709,6 +750,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </motion.div>;
               )})}</div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                   className="group relative"
@@ -730,6 +772,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>;
       </section>;{/* Featured Services */}
       <section className='py-20 px-4'>;
@@ -741,6 +785,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             viewport={{ once: true }}
@@ -767,6 +812,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     <div className='p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             viewport={{ once: true }}className='text-center mb-16';
           >;
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
@@ -781,7 +828,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {innovative2025MicroSaasBatch;
               .filter(service => service.popular).map((service, index) => {const IconComponent = getCategoryIcon(service.category)>;
                     <div className='p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='text-center mb-16'>;
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
               Featured Services;
@@ -818,8 +868,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='flex items-start space-x-4'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>;
               Complete Service Portfolio;
             </h2>;
@@ -832,9 +885,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm'>;
                     <div className='flex items-start space-x-4'>;
                       <div;
+<<<<<<< HEAD
 =======
                       <div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service && service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-2xl flex-shrink-0`}>;
                         {service && service.icon}
                       </div>;
@@ -864,6 +920,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>;
         <div className="max-w-7xl mx-auto relative z-10">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                         className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-2xl flex-shrink-0`}
@@ -946,7 +1005,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               can drive your success;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='space-y-8';
           >;
             <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
@@ -962,6 +1024,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Zap className='w-5 h-5' />;
                 <span>Call Now: +1 302 464 0950</span>;
               </a>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <a
@@ -992,6 +1055,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default Comprehensive2025InnovativeServicesShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <a;
             <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">;
               Complete Service Portfolio;
@@ -1002,6 +1067,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {innovative2025MicroSaasBatch.map((service, index) => {const IconComponent = getCategoryIcon(service.category)return (<motion&& motion.div;
+<<<<<<< HEAD
 =======
               <a
             <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
@@ -1017,6 +1083,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               return (
                 <motion&& motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   key={service && service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1051,6 +1119,7 @@ export default Comprehensive2025InnovativeServicesShowcase;}export default Compr
         </div>;
       </section>;
     </Layout>;
+<<<<<<< HEAD
 )}export default Comprehensive2025InnovativeServicesShowcase;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1065,3 +1134,6 @@ export default Comprehensive2025InnovativeServicesShowcase;
 export default Comprehensive2025InnovativeServicesShowcase;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default Comprehensive2025InnovativeServicesShowcase;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

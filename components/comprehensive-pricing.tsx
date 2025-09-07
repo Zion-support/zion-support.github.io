@@ -25,6 +25,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Check
   Star
@@ -107,6 +108,8 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React, { useState } from 'react';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useState } from 'react',import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond   } from 'lucide-react';
 import Button from '../components/ui/Button',import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
@@ -182,11 +185,15 @@ import { Check;
   ShieldCheck as ShieldCheckIcon;
   Crown;
   Gem;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Diamond;
   Check,Star,Zap,Shield,Users,Globe,ArrowRight,ExternalLink,TrendingUp,Clock,Target,Building,Rocket,Award,DollarSign,ChartBar,Lock,Cpu,Database,Cloud,Smartphone,Palette,Search,MessageSquare,FileText,Calendar,CreditCard,BarChart3,Settings,Zap as ZapIcon,Code,BookOpen,Activity,Database as DatabaseIcon,Play,Mail,Phone,MapPin,Filter,Grid,List,ChevronDown,ChevronUp,Sparkles,FlaskConical,Dna,Car,Leaf,Factory,Truck,Microscope,GraduationCap,ShieldCheck,Brain,Atom,Globe2,Bot,Eye,Trophy,FlaskConical as FlaskIcon,Dna as DnaIcon,Car as CarIcon,Leaf as LeafIcon,Factory as FactoryIcon,Truck as TruckIcon,Microscope as MicroscopeIcon,GraduationCap as GraduationCapIcon,ShieldCheck as ShieldCheckIcon,Crown,Gem,Diamond,} from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
@@ -679,6 +686,8 @@ duration: 0.5,
           />
         </Head>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import {revolutionaryMicroSaasServices,revolutionaryServiceCategories,} from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond  } from 'lucide-react';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories  } from '../data/revolutionary-micro-saas-services';
 import { revolutionaryMicroSaasServices,revolutionaryServiceCategories,} from '../data/revolutionary-micro-saas-services';
@@ -1147,6 +1156,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 services. Choose the perfect plan for your business with;
                 guaranteed ROI and enterprise-grade reliability.;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </motion && motion.p>;Transparent pricing for all our revolutionary micro SaaS;
                 services. Choose the perfect plan for your business with;
                 guaranteed ROI and enterprise-grade reliability.;
@@ -1154,12 +1166,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Market Stats */}
               <motion.div;
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               </motion && motion.p>;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -1167,6 +1182,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {marketStats.map((stat, index) => (<div key={index} className='text-center'>;
                     <div className='text-3xl font-bold text-cyan-400 mb-2'>;
                       {stat.metric}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </div>
                     <div className='text-gray-400 text-sm'>{stat.label}</div>
@@ -1177,6 +1193,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </div>;
                     <div className='text-gray-400 text-sm'>{stat.label}</div>;
                     <div className='text-gray-500 text-xs'>;
@@ -1187,6 +1205,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                     </div>                  </div>                  <div key={index} className="text-center">
@@ -1197,6 +1216,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
               </motion.div>;
                 initial={{ opacity: 0, y: 20 }}
@@ -1216,6 +1237,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* CTA Buttons */}
 <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'
@@ -1226,6 +1248,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* CTA Buttons */}
               <motion&& motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+              {/* CTA Buttons */}<motion&& motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center";
@@ -1235,16 +1260,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
                 transition={{ duration: 0.8, delay: 0.6 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center";
               >;
 <motion.div;
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               >
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -1281,6 +1312,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant="futuristic";
                   size="lg";
                   onClick={() => document.getElementById('services-pricing')?.scrollIntoView({ behavior: 'smooth' })}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 >
                   Browse All Services
@@ -1353,6 +1385,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 >;
                   Browse All Services;
                   <Search className='ml-2 w-5 h-5' />;
@@ -1434,6 +1468,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </UltraFuturisticCard>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </motion && motion.div>;<h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>;
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>;
                   Flexible Pricing;
@@ -1545,7 +1582,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.div>;
               ))}{/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
             <motion&& motion.div;
@@ -1557,20 +1597,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Filters and Controls */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <motion.div
               className='mb-8'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <motion.div;
               className='mb-8'              initial={{ opacity: 0, y: 20 }}initial={{ opacity: 0, y: 20 }}whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
               <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
                 <div className='flex flex-wrap gap-4'>;className='mb-8';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             >
 <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
@@ -1590,11 +1637,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <select
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >;
 <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
                 <div className='flex flex-wrap gap-4'>;
                   <select;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e && e.target.value)}
                     className='px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400';
@@ -1615,6 +1667,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </option>;
                     ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <select
                     <input
                       type='text'
@@ -1622,14 +1675,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       value={searchQuery}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <select;
                     <input;
                       type='text';
                       placeholder='Search services...';
                       value={searchQuery}<button;
+<<<<<<< HEAD
 =======
                     <button
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >;
@@ -1648,6 +1706,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               }
               variants={containerVariants}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               initial="hidden";
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                       onChange={e => setSearchQuery(e.target.value)}
@@ -1743,6 +1804,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='text-center'>;
                         <div className='text-4xl mb-4'>{service.icon}</div>;
                         <h3 className='text-xl font-bold text-white mb-2'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -1750,6 +1812,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className='text-4xl mb-4'>{service.icon}</div>
                         <h3 className='text-xl font-bold text-white mb-2'>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {service.name}
                         </h3>;
                         <p className='text - gray - 300 mb - 4 text - sm'>;
@@ -1779,6 +1843,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {service && service.period}
                         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <div
                               key={idx}
 <<<<<<< HEAD
@@ -1793,6 +1858,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                               className='flex items-center gap-2 text-sm'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                            <div;
+                              key={idx}className='flex items-center gap-2 text-sm'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                               <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
                               <span className='text-gray-300'>{feature}</span>                            </div>;
                              size="sm";
@@ -1819,6 +1888,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                              </Button>;
                         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </div>;className='flex items-center gap-2 text-sm';
                             >;
                               <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
@@ -2037,14 +2109,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button;
                   variant='primary';
                   onClick={() => {setSearchQuery('')setSelectedCategory('All')setPriceRange('All')}}>;
+<<<<<<< HEAD
 =======
                 >;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   Clear Filters;
                 </Button>              </motion && motion.div>                <div className="text-6xl mb-4">🔍</div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                                  <Button;
                    variant="primary";
                    onClick={() => {setSearchQuery('')setSelectedCategory('All')>;
@@ -2117,7 +2195,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button;
                   variant='primary';
                   size='lg';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   onClick={() =>;
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank')}
                 >;
@@ -2128,6 +2209,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant='futuristic';
                   size='lg';
                   onClick={() =>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
                   }
@@ -2142,6 +2224,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />
                   <div className='text-white font-semibold'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank')}</h2>;
               <p className="text-xl text-gray-300 mb-8">;
                 Contact our sales team to discuss pricing, custom plans, and implementation options.;
@@ -2279,8 +2363,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </div>;
     </UltraFuturisticBackground>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           <div className='flex gap - 2'>;
                             <Button;
                               variant='primary';
@@ -2459,6 +2546,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </UltraFuturisticBackground>))}))
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -2467,3 +2555,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </UltraFuturisticBackground>))}))
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

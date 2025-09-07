@@ -9,6 +9,7 @@ import OpenAI from 'openai';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,6 +84,8 @@ export default async function handler(
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const EPISODES_PATH = path && path.join(process && process.cwd(),'data','podcast','episodes && episodes.json';
 )function ensureStorage() {const EPISODES_PATH = null;
     return res.status(500).json({ error: error?.message || 'Unknown error' })}const EPISODES_PATH = path.join(process.cwd()'data';
@@ -153,9 +156,12 @@ function ensure_storage() {const dir = path.dirname (EPISODES_PATH)if () fs.mkdi
   if ()) {$2;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
@@ -166,6 +172,7 @@ function writeEpisodes(episodes: any[]) {
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -191,6 +198,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 
+=======
+
+  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const id = uuidv4();
@@ -200,6 +211,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { persona, invitee, topic, operatorPrompt } = req.body |{}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -241,6 +253,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { persona, invitee, topic, operatorPrompt } = req.body || {};
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -249,6 +266,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -334,6 +352,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     const episode = {      return res && res.status(500).json({ error: 'Failed to generate structured content' });
     const episode = {
@@ -354,6 +374,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   };
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -380,6 +401,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       const completion = await openai && openai.chat.completions && completions.create({
         model: process && process.env.ZION_GPT_MODEL || 'gpt-4o-mini',
         messages: [
@@ -580,9 +604,12 @@ if ( {) {$2;
     const episode = {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       transcript: generated.transcript,
       youtube_description: generated.youtube_description || '',
       spotify_description: generated.spotify_description || '',
@@ -617,6 +644,7 @@ id,createdAt: new Date().toISOString(),persona,invitee,topic,title: generated.ti
       },transcript: generated.transcript,youtubeDescription: generated.youtubeDescription || '',spotifyDescription: generated.spotifyDescription || '',bestQuote: generated.bestQuote || '',audio: {}
     }episodes.unshift(episode)writeEpisodes(episodes)return res.status(200).json({ episode })} catch (error: any) {console.error(error)return res.status(500).json({ error: error?.message || 'Unknown error' })}
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
@@ -686,3 +714,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+    const episode = {}
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -4,18 +4,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 }id: string;
 export interface SpecializedITSolution2026  {id: string;name: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -28,6 +32,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export interface SpecializedITSolution2026 {
 id: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   tagline: string;
   price: string;
@@ -734,6 +740,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -741,6 +748,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
   {
@@ -1334,6 +1343,7 @@ export const getPopularSpecializedITSolutions2026 = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1364,6 +1374,11 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [
+  // Cloud Infrastructure & DevOps
+  {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 ];
@@ -1376,6 +1391,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1405,12 +1421,17 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => {
+    const price = parseInt(solution && solution.price.replace('$', ''));
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
 
   })
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1428,6 +1449,8 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
@@ -1674,6 +1697,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxP
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+<<<<<<< HEAD
   })
 };
 ;
@@ -1715,6 +1739,9 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 export interface SpecializedITSolution2026 {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export interface SpecializedITSolution2026 {;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   })
 };
@@ -1723,7 +1750,10 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>: an
   return specializedITSolutions2026.filter (
     solution => solution.category === category);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export interface SpecializedITSolution2026 {;
   id: string,;
@@ -1799,6 +1829,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1822,3 +1853,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

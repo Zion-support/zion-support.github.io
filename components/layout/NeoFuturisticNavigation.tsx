@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
@@ -12,6 +13,11 @@ import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react',import Link from 'next/link';
 import { useRouter  } from 'next/router';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+;
+import React, { useState, useEffect } from 'react',import Link from 'next/link';
+import { useRouter  } from 'next/router';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Menu;
 	X;
 	ChevronDown;
@@ -76,6 +82,7 @@ export default function NeoFuturisticNavigation() {const [isOpen, setIsOpen] = u
 			<div className="max-w-7xl mx-auto px-4">;
 				<div className="flex items-center justify-between h-20">;
 					{/* Logo */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 					<Link href="/" className="flex items-center space-x-3 group">
 						<div className="relative">
@@ -147,6 +154,8 @@ import {
   Eye
   FlaskConical
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 					<Link href="/" className="flex items-center space-x-3 group">;
 						<div className="relative">;
 							<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
@@ -209,7 +218,10 @@ import {Menu;
   ChevronRight as ChevronRightIcon;
   Eye;
   FlaskConical;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Link as LinkIcon;
   Menu,X,ChevronDown,ChevronRight,Phone,Mail,MapPin,Globe,ArrowRight,Sparkles,Brain,Atom,Shield,DollarSign,FileText,BarChart3,MessageSquare,Truck,Users,Database,Cpu,Cloud,Play,Search,ShieldCheck,TrendingUp,Rocket,Zap,Check,Star,Clock,Target,Building,Award,ChartBar,Lock,Smartphone,Palette,Calendar,CreditCard,Settings,Code,BookOpen,Activity,Bot,ChevronRight as ChevronRightIcon,Eye,FlaskConical,Link as LinkIcon,export default function NeoFuturisticNavigation() {export default function NeoFuturisticNavigation() {const [isOpen, setIsOpen] = useState(false)const [isScrolled, setIsScrolled] = useState(false)const [activeDropdown, setActiveDropdown] = useState<string | null>(null)const router = useRouter()const serviceCategories = [;
     {name: 'Quantum Computing';
@@ -513,6 +525,7 @@ import {Menu;
         <div className='flex items-center justify-between h-20'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Logo */}
           <Link href='/' className='flex items-center space-x-3 group'>
             <div className='relative'>
@@ -531,6 +544,8 @@ import {Menu;
             </div>
           </Link>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Logo */}<Link href='/' className='flex items-center space-x-3 group'>;
             <div className='relative'>;
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
@@ -785,6 +800,7 @@ import {Menu;
                   <ChevronRight;
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   />
                 </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -797,6 +813,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {serviceCategories.map((category, index) => (
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   />;
                 </button>;
                 {activeDropdown === 'mobile-services' && (<div className='ml-4 space-y-3'>;
@@ -866,6 +884,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Button
                     href='/services'
                     variant='quantum'
@@ -928,6 +947,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</nav>)
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <Button;
                     href='/services';
                     variant='quantum';
@@ -936,8 +957,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href='/contact';
                     variant='secondary';
                     size='lg';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className='w-full'>;
                         <ArrowRight className='w - 4 h - 4 ml - 2' />;
                       </Button>;
@@ -1247,6 +1271,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				</div>;
 			)}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		</nav>;
                     className='w-full';
                   >;
@@ -1271,8 +1298,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }/> </button>) )}</div>)}</div> {/* Resources Section */;
 }<div> <span>Resources</span> <ChevronRight className= {`w-5 h-5 transition-transform duration-300 $ {activeDropdown === 'mobile-resources'? 'rotate-90': '';
 }`;
+<<<<<<< HEAD
 }/> </button>) )}</div>)}</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>)}</nav>)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 		</nav>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}/> </button>) )}</div>)}</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>)}</nav>)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

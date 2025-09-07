@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -127,6 +128,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
   Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Zap;
   Globe;
@@ -460,12 +463,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       { name: 'Healthcare Solutions', href: '/healthcare-solutions' },{ name: 'Financial Services', href: '/financial-solutions' },{ name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' },{ name: 'Retail Technology', href: '/retail-technology-solutions' },{ name: 'Education Technology', href: '/education-technology-solutions' },{name: 'Government Solutions',href: '/government-technology-solutions',},{ name: 'Energy & Utilities', href: '/energy-utilities-solutions' },{ name: 'Biotech AI Research', href: '/biotech-ai-research-platform' },],},{title: 'Resources',description: 'Documentation, support, and learning',icon: <BookOpen className='w-5 h-5 text-cyan-400' />,links: [;
       { name: 'Documentation', href: '/docs' },{ name: 'API Reference', href: '/api-documentation' },{ name: 'Case Studies', href: '/case-studies' },{ name: 'Blog & News', href: '/blog' },{ name: 'Support Center', href: '/support' },{ name: 'Developer Portal', href: '/developer' },{ name: 'Training & Certification', href: '/training' },{ name: 'Community Forum', href: '/community' },{ name: 'Market Pricing', href: '/market-pricing' },{ name: 'Services Advertising', href: '/services-advertising' },],},];const socialLinks = [;
   {name: 'Twitter',href: 'https://twitter.com/ziontechgroup',icon: <Twitter className='w-5 h-5' />,},{name: 'LinkedIn',href: 'https://linkedin.com/company/ziontechgroup',icon: <Linkedin className='w-5 h-5' />,},{name: 'Facebook',href: 'https://facebook.com/ziontechgroup',icon: <Facebook className='w-5 h-5' />,},{name: 'Instagram',href: 'https://instagram.com/ziontechgroup',icon: <Instagram className='w-5 h-5' />,},{name: 'YouTube',href: 'https://youtube.com/@ziontechgroup',icon: <Youtube className='w-5 h-5' />,},{name: 'GitHub',href: 'https://github.com/Zion-Holdings',icon: <Github className='w-5 h-5' />,},];const UltraFuturisticFooter2035: React.FC = () => {const scrollToTop = () => {window.scrollTo({ top: 0, behavior: 'smooth' })}return (<footer className="relative bg-black text-white overflow-hidden">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Background Effects */}
       <div className="absolute inset-0">;
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black" />;
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />;
         {/* Animated grid */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion.div
           className="absolute inset-0 opacity-5"
@@ -478,13 +485,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             backgroundSize: '200px 200px',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <motion.div;
           className="absolute inset-0 opacity-5";
           style={{backgroundImage: `;
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px)linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)`;
+<<<<<<< HEAD
 =======
             `;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Main Footer Content */}
         <div className='container mx-auto px-4 py-20'>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8'>;
@@ -499,6 +511,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div;
           className='absolute inset - 0 opacity - 5';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           style={{background_image: `;
               linear - gradient (rgba (0, 255, 255, 0.3) 1px, transparent 1px),linear - gradient (90deg, rgba (0, 255, 255, 0.3) 1px, transparent 1px)`,background_size: '200px 200px',`,backgroundSize: '200px 200px',}}
           animate={{backgroundPosition: ['0px 0px', '200px 200px'],}}
@@ -507,6 +522,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ease: 'linear',          }}/>;
       </div>;
       <div className='relative z-10'>            ease: 'linear';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           style={{
@@ -516,12 +532,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             `,
             background_size: '200px 200px',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }}
           transition={{duration: 20,repeat: Infinity,ease: 'linear',          }}
         />;
       </div>;
       <div className='relative z-10'>            ease: 'linear';
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           transition={{
@@ -555,12 +574,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />
       </div>
       <div className='relative z-10'>
+=======
+        />;
+      </div>;
+      <div className='relative z-10'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
       </div>;
       <div className='relative z - 10'>            ease: 'linear';
           }}
         />;
       </div>;
+<<<<<<< HEAD
       <div className='relative z - 10'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         {/* Main Footer Content */}
@@ -580,6 +605,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />;
       </div>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className='relative z - 10'>;duration: 20,repeat: Infinity,ease: 'linear',}}
         />;
       </div>;
@@ -588,9 +615,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='container mx - auto px - 4 py - 20'>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 8'>;
             {/* Company Info */}Revolutionary Technology Solutions;
+<<<<<<< HEAD
 =======
                       Revolutionary Technology Solutions;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </p>;
                   </div>;
                 </div>;
@@ -647,6 +677,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={section && section.title}
                 initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 whileInView={{ opacity: 1, y: 0 }}>;
                 <div className='flex items-center gap-4'>;
             <div className='lg:col-span-2'>;
@@ -733,6 +766,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Social Links */}>;
                       className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110';
                     >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                       className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110'                    >                <div className="flex items-center gap-4">
@@ -749,6 +783,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {social.icon}
                     </a>;
                   ))}
@@ -774,6 +810,7 @@ className='space-y-4';
                         href={link && link.href}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         className={`text-sm transition-colors duration-200 ${
 link.featured
                             ? 'text-cyan-400 hover:text-cyan-300'
@@ -789,6 +826,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className={`text-sm transition-colors duration-200 ${
                           link && link.featured
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                        className={`text-sm transition-colors duration-200 ${link && link.featured;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                             ? 'text-cyan-400 hover:text-cyan-300'                            : 'text-gray-400 hover:text-white'>;
                 <div className="flex items-center gap-2">;
                   {section && section.icon}
@@ -800,6 +840,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Link;
                         href={link && link.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         className={`text-sm transition-colors duration-200 ${link && link.featured;
                             ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured;
                             ? 'text-cyan-400 hover:text-cyan-300';
@@ -808,6 +851,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 link.featured;
                             ? 'text-cyan-400 hover:text-cyan-300';
                             : 'text-gray-400 hover:text-white';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                         className={`text-sm transition-colors duration-200 ${
@@ -823,6 +867,8 @@ link.featured;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         }`}
                       >;
                         {link.name}
@@ -842,6 +888,7 @@ link.featured;
             initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
 className='mt-16 pt-8 border-t border-gray-800/50'
@@ -857,6 +904,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <div className='flex items-center gap-6 text-sm text-gray-400'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: 0.3 }}
 className='mt-16 pt-8 border-t border-gray-800/50';
           >;
@@ -865,7 +914,10 @@ className='mt-16 pt-8 border-t border-gray-800/50';
                 © 2025 Zion Tech Group. All rights reserved.;
               </div>;
               <div className='flex items-center gap-6 text-sm text-gray-400'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
             className='mt-16 pt-8 border-t border-gray-800/50'>;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
@@ -882,6 +934,7 @@ className='mt-16 pt-8 border-t border-gray-800/50';
                   className='hover:text-white transition-colors duration-200'>;
                   Terms of Service;
                 </Link>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Link
                   href='/cookies'
@@ -907,6 +960,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
               </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <Link;
                   href='/cookies';
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">;
@@ -926,7 +981,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Cookie Policy;
                 </Link>;
               </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className='hover:text-white transition-colors duration-200'>                  Cookie Policy          >;
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">;
               <div className="text-sm text-gray-400">;
@@ -943,6 +1001,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Cookie Policy;
                 </Link>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <button
                 onClick={scrollToTop}
@@ -1004,6 +1063,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   `text-sm transition-colors duration-200 $ {
                 <p className='text - gray - 300 leading - relaxed max - w-md'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <button;
                 onClick={scrollToTop}/* Animated grid */;
   /* Animated grid */;
@@ -1032,7 +1093,10 @@ className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hove
 }<li key= {link && link.name;
 }> <Linkhref= {link && link.href;
 }className= {`text-sm transition-colors duration-200 $ {<p className='text - gray - 300 leading - relaxed max - w-md'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   Leading the future with cutting - edge AI consciousness, quantum;
                   computing, and innovative micro SAAS solutions. Transform your;
                   business with our revolutionary technology.;
@@ -1195,6 +1259,7 @@ className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hove
 }className= {`text - sm transition - colors duration - 200 $ {link.featured ? 'text - cyan - 400 hover:text - cyan - 300' : 'text - gray - 400 hover:text - white';
 }`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }> </li>) );
 }</ul> </motion.div>) );
 }</div> {
@@ -1216,3 +1281,8 @@ export default UltraFuturisticFooter2035)}export default UltraFuturisticFooter20
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}> </li>) )}</ul> </motion.div>) )}</div> {/* Bottom Section */;
+}<motion.div > <div className="flex flex - col md:flex - row items - center justify - between gap - 4" > <div className="text - sm text - gray - 400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items - center gap - 6 text - sm text - gray - 400" > <Link href="/privacy" className="hover:text - white transition - colors duration - 200" > Privacy Policy </a> <Link href="/terms" className="hover:text - white transition - colors duration - 200" > Terms of Service </a> <Link href="/cookies" className="hover:text - white transition - colors duration - 200" > Cookie Policy </a> </div> <button aria - label="Scroll to top" w - 5 h - 5" /> </button> </div> </motion.div> </div> </div> </footer>)}
+export default UltraFuturisticFooter2035)}export default UltraFuturisticFooter2035;;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

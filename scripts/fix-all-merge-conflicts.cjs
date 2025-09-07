@@ -27,6 +27,7 @@ function resolveMergeConflicts(filePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     content = content.replace(/    
@@ -49,6 +50,8 @@ function resolveMergeConflicts(filePath) {
 
     content = content.replace(/
     
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Clean up any double newlines

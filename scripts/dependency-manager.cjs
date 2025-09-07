@@ -143,6 +143,7 @@ if (require.main === module) {const manager = new DependencyManager(),manager.ru
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = DependencyManager;
 
@@ -150,3 +151,6 @@ module.exports = DependencyManager;
 =======
 module.exports = DependencyManager;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = DependencyManager;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

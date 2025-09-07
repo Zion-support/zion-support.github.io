@@ -42,6 +42,7 @@ export default function ContactPage() {
             <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
               Contact Information
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               We're here to help you succeed. Reach out to us through any of
               these channels.
@@ -119,6 +120,18 @@ export default function ContactPage() {
             >
               Call Now
             </a>
+=======
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Let&apos;s discuss how Zion Tech Group can help you achieve your goals.
+            </p>
+            <Link
+              href="/services"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center"
+            >
+              View Our Services
+              <ArrowRightIcon className="h-5 w-5 ml-2" />
+            </Link>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>
         </div>
       </div>

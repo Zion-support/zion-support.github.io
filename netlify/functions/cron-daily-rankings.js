@@ -61,6 +61,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 }}},ursor/fix-website-loading-errors-and-merge-6662;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
       await upsert_file ({
         owner,
         repo,
@@ -81,11 +82,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         content,
         message: 'chore (automation): daily rankings update',
         token
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     return {
 <<<<<<< HEAD
@@ -150,10 +154,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     return {})),
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    return {})),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100),
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -178,12 +186,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
     // Check condition
 if ( {) {
   $2
 }
       await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -199,6 +210,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
   } catch (e) {
@@ -280,6 +293,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
+<<<<<<< HEAD
 },
 },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -314,3 +328,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+}
+
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

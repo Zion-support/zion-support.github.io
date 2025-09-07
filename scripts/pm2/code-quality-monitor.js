@@ -37,6 +37,9 @@ const monitor  = new CodeQualityMonitor()monitor.run().catch(error = > {process.
 const monitor = new CodeQualityMonitor()monitor.run().catch(error = > {process.exit(1)})}}async analyzeFile(filePath) {try {const content = fs.readFileSync(filePath, 'utf8')const stats  = fs.statSync(filePath)const analysis = {file: filePath;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }};
 ; async analyzeFile(filePath) {; try {; const content = fs && fs.readFileSync(filePath, 'utf8'); const stats = fs && fs.statSync(filePath);
 ; const analysis = {; file: filePath, size: stats && stats.size, lines: content && content.split('\n').length,
@@ -53,6 +56,7 @@ const monitor = new CodeQualityMonitor()monitor.run().catch(error = > {process.e
     severity: 'low'})};
 ; // Unused imports (basic check); if (line && line.match(/^import.*from/) && !line && line.includes('//')) {; const importMatch = line && line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content && content.includes(importName)) {; analysis && analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}});
 ; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -72,6 +76,8 @@ const monitor = new CodeQualityMonitor()monitor.run().catch(error = > {process.e
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ; async walkDirectory(dir) {; const analyses = [];
 ; try {; const items = fs && fs.readdirSync(dir);
 ; for (const item of items) {; const fullPath = path && path.join(dir, item); const stat = fs && fs.statSync(fullPath);
@@ -85,12 +91,15 @@ const monitor = new CodeQualityMonitor()monitor.run().catch(error = > {process.e
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ; analyses && analyses.forEach(analysis = > {; analysis && analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue && issue.type] = (issuesByType[issue && issue.type] || 0) + 1;
 ; // Count by severity; issuesBySeverity[issue && issue.severity]++})});
 ; const report = {; timestamp: new Date().toISOString(), summary: {
@@ -127,6 +136,7 @@ const monitor = new CodeQualityMonitor()monitor.run().catch(error = > {process.e
 ; this && this.log('\n💡 Recommendations: '), report && report.recommendations.forEach(rec = > {, this && this.log(` [${rec && rec.priority.toUpperCase()}] ${rec && rec.message}`); this && this.log(` Action: ${rec && rec.action}`)});
 ; // If there are many issues and git is clean, suggest running the lint fixer; if (report && report.summary.totalIssues > 50 && isClean) {; this && this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues')}} else {; this && this.log('✨ Excellent! No code quality issues found!')};
 } catch (error) {; this && this.log(`❌ Error running code quality monitor: ${error && error.message}`); process && process.exit(1)}}};
+<<<<<<< HEAD
 
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
@@ -249,6 +259,8 @@ monitor.run().catch(error = > {; process.exit(1)});
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -883,6 +895,7 @@ monitor.run().catch(error = > {; process.exit(1)});
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   process.exit(1)
@@ -920,3 +933,7 @@ monitor.run().catch(error = > {; process.exit(1)});
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  process.exit(1)
+}),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

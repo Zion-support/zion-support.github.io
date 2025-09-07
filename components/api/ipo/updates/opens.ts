@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -24,6 +25,8 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
   if (!requireSuperadminApi(req, res)) return;const id  = String(req && req.query.id || "")if (!u) return res.status(404).json({ error: 'Not found' })if (!u) return res.status(404).json({ error: 'Not found' })import type { NextApiRequest, NextApiResponse } from 'next';
@@ -57,6 +60,7 @@ function handler() {if () return) {$2;
 
   if (!u) return res.status(404).json({ error: 'Not found' });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,6 +105,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   if (!u) return res.status(404).json({ error: 'Not found' });
 
@@ -111,6 +117,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
  */;
 function handler() {if () return) {$2;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -127,15 +134,20 @@ function handler() {if () return) {$2;
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const id = String (req.query.id || "")const updates = readJsonFile ("updates.json", [] as any[])const u = updates.find ((coordinate_x: any) => x.id === id)if (return res.status (404).json ({ error: "Not found" })) {$2;
 }
   res.status (200).json ({ opens: u.opens || 0 })res.status (200).json ({ opens: u.opens || 0 })}
   if (!u) return res.status(404).json({ error: 'Not found' })const id = null;
   res.status(200).json({ opens: u.opens || 0 })}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -155,6 +167,7 @@ function handler() {
   res.status (200).json ({ opens: u.opens || 0 });
   res.status (200).json ({ opens: u.opens || 0 });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -187,6 +200,11 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
@@ -238,6 +256,7 @@ function handler() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -267,3 +286,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -126,6 +126,7 @@ if (document.readyState === "loading")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error(" App improvement automation "failed": ")
 
@@ -133,3 +134,6 @@ if (document.readyState === "loading")
 =======
     console.error(" App improvement automation "failed": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.error(" App improvement automation "failed": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

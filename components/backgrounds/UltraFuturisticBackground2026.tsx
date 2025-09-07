@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -11,6 +12,8 @@ interface UltraFuturisticBackground2026Props {
 }
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 import React, { useEffect, useRef } from 'react';
@@ -25,6 +28,7 @@ interface UltraFuturisticBackground2026Props  {children: React.ReactNode;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 <<<<<<< HEAD
+<<<<<<< HEAD
     let particles: Array<{
 x: number;
       y: number;
@@ -38,10 +42,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     let particles: Array<{x: number;
       y: number;vx: number;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    let particles: Array<{x: number;
+      y: number;vx: number;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       vy: number;
       size: number;
       color: string;
       alpha: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       life: number;
@@ -71,6 +80,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
           y = -10;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       life: number;maxLife: number;
     }>  = [];const colors = [;
       '#00ffff', // Cyan;
@@ -85,9 +96,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const createParticle = () => {const side = Math.floor(Math.random() * 4)let x, y, vx, vy;
       switch (side) {case 0: // Top;
           x  = Math.random() * canvas.width;const colors = [;
+<<<<<<< HEAD
 =======
     const colors = [;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       '#00ffff', // Cyan;
       '#ff00ff', // Magenta;
       '#ffff00', // Yellow;
@@ -102,6 +116,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         y;
         vx;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         vy;y = -10;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           vx = (Math.random() - 0.5) * 2;
@@ -315,6 +332,7 @@ canvas.height = window.innerHeight;
           transition={{className='fixed inset-0 w-full h-full pointer-events-none z-0';
         style={{background:;
             'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         }}
       />;
@@ -384,11 +402,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ease: 'linear',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+        }}
+      />;
+      {/* Floating Geometric Shapes */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className='fixed inset-0 pointer-events-none z-10'>;
         <motion.div;
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20';
           animate={{rotate: 360,scale: [1, 1.2, 1],opacity: [0.3, 0.6, 0.3],}}
           transition={{duration: 8,repeat: Infinity,ease: 'linear',}}
+<<<<<<< HEAD
 =======
           transition={{
             duration: 12
@@ -404,6 +428,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{
           }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <motion.div;
           className='absolute top-40 right-32 w-24 h-24 border border-pink-400/20 rounded-full';
@@ -420,11 +446,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className="absolute bottom-32 left-32 w-40 h-40 border border-purple-400/20 transform rotate-45";
           animate={{rotate: [0, 180, 360];
             scale: [1, 1 && 1.1, 1];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }}
           transition={{rotate: [0, 180, 360],scale: [1, 1.1, 1],}}
           transition={{duration: 12,repeat: Infinity,ease: 'linear',}}
         />;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion&& motion.div
           className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12'
@@ -442,6 +472,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{
             duration: 10
             repeat: Infinity
+=======
+        <motion&& motion.div;
+          className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12';
+          animate={{transition={{duration: 10;
+            repeat: Infinity;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ease: 'linear',          }}          }}
         />;
         <motion&& motion.div
@@ -451,6 +487,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]
 
           }}
+<<<<<<< HEAD
           transition={{
             duration: 10
             repeat: Infinity
@@ -474,6 +511,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{rotate: [0, -180, -360];
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4];
           }}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{duration: 10;
             repeat: Infinity;
             ease: 'linear',            ease: "linear";
@@ -482,7 +521,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{duration: 10,repeat: Infinity,ease: 'linear',}}
           transition={{/>;
       </div>;{/* Energy Field Effects */}/>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>;
       {/* Energy Field Effects */}
 <div className='fixed inset-0 pointer-events-none z-20'>;
@@ -502,6 +544,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             duration: 10,repeat: Infinity,/>;
       </div>;
       {/* Energy Field Effects */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className='fixed inset-0 pointer-events-none z-20'>
 
@@ -526,11 +569,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             coordinate_x: ['-100%', '100%'],          }}
           transition={{
           className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent"
+=======
+      <div className='fixed inset-0 pointer-events-none z-20'>;
+        <motion.div;
+          className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent';
+          animate={{coordinate_x: ['-100%', '100%'],          }}
+          transition={{className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ease: 'linear',        <motion.div;
           className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent";
           animate={{
             coordinate_x: ['-100%100%'];
           }}
+<<<<<<< HEAD
           transition={{
           animate={{
             coordinate_y: ['-100%100%'];
@@ -596,6 +647,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent";
           animate={{coordinate_x: ['-100%100%'];
           }}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{animate={{coordinate_y: ['-100%100%'];x: ['-100%', '100%'],}}
           transition={{duration: 15,repeat: Infinity,ease: 'linear',}}
         />;
@@ -632,6 +685,9 @@ ease: 'linear',}}}}duration: 20,repeat: Infinity,}}/>;
         <div className="absolute inset - 0 bg - gradient - to - tl from - transparent via - purple - 400 / 2 to - transparent" />;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)}export default UltraFuturisticBackground2026;<div className='relative z-30'>{children}</div>;
       {/* Holographic Overlay */}
       <div className='fixed inset-0 pointer-events-none z-40'>;
@@ -647,6 +703,7 @@ ease: 'linear',}}}}duration: 20,repeat: Infinity,}}/>;
     </div>;
   )}
 export default UltraFuturisticBackground2026;export default UltraFuturisticBackground2026;
+<<<<<<< HEAD
 export default UltraFuturisticBackground2026;}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -681,3 +738,6 @@ export default UltraFuturisticBackground2026;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default UltraFuturisticBackground2026;}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

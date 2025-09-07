@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,11 @@ const ProductManagementChat: NextPage = () => {return (return (<div>;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return (import Link from 'next/link';
+import Seo from '../../components/seo/Seo';
+const ProductManagementChat: NextPage = () => {return (return (<div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -46,6 +52,7 @@ const ProductManagementChat: NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   return (
@@ -71,6 +78,8 @@ import Seo from '../../components/seo/Seo';
 
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <div>
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />
       <main>
@@ -91,6 +100,7 @@ import Seo from '../../components/seo/Seo';
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -115,6 +125,8 @@ import Seo from '../../components/seo/Seo';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <div>;
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
       <main>;
@@ -152,9 +164,12 @@ export default ProductManagementChat;
 =======
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Link from 'next / link';
 import Seo from '../../components / seo / Seo';
   return (<div>;
@@ -181,11 +196,15 @@ const ProductManagementChat: NextPage;
 export default ProductManagementChat;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default ProductManagementChat;
 
 
 export default ProductManagementChat;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -193,6 +212,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default ProductManagementChat;
 
       <main>
@@ -208,6 +229,7 @@ export default ProductManagementChat
 
 export default ProductManagementChat;
 export default ProductManagementChat;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -239,3 +261,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const ProductManagementChat: NextPage;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

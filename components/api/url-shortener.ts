@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ShortUrl {
 id: string;
 =======
@@ -208,6 +209,9 @@ permanent: false,
   };
       permanent: false
     }
+=======
+interface ShortUrl  {for (let i = 0, i < length, i++) {result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))error?: string;  error?: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -303,6 +307,7 @@ if ( {) {
   return {redirect: {destination: shortUrl.originalUrl,permanent: false,},}permanent: false;
     }
 }
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -322,3 +327,6 @@ if ( {) {
   };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -286,6 +286,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ProjectHealthMonitor;
 
@@ -293,3 +294,6 @@ module.exports = ProjectHealthMonitor;
 =======
 module.exports = ProjectHealthMonitor;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = ProjectHealthMonitor;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

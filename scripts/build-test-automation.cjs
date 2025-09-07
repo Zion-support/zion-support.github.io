@@ -22,6 +22,7 @@ class BuildTestAutomation {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
@@ -33,6 +34,11 @@ class BuildTestAutomation {}
     console.log(logMessage);
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
+    console.log(logMessage);
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.report.steps.push({})
       timestamp,
       type,
@@ -157,6 +163,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = BuildTestAutomation;
 
@@ -164,3 +171,6 @@ module.exports = BuildTestAutomation;
 =======
 module.exports = BuildTestAutomation;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = BuildTestAutomation;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

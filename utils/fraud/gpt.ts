@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   try {
       return {
 =======
@@ -31,6 +32,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
   try {return {try {return {try {return {}
@@ -40,7 +43,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         confidence: 0.5;
   try {
       return {}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const confidence =
       typeof parsed && parsed.confidence === 'number'
         ? Math && Math.max(0, Math && Math.min(1, parsed && parsed.confidence))
@@ -89,6 +95,7 @@ export interface GptClassification  {label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -128,12 +135,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
       confidence: 0.5
     }
   }export interface GptResult {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,6 +173,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5
@@ -190,6 +202,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   reasoning: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,6 +241,11 @@ ursor/fix-website-loading-errors-and-merge-6662
   reasoning: string
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  label: string;
+  confidence: number;
+  reasoning: string
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
@@ -254,6 +272,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -297,3 +316,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles  } from 'lucide-react';
@@ -163,6 +164,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             technologies ever created.
             <span className='text-purple-400 font-semibold'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   ArrowRight;
   Star;
@@ -229,7 +232,10 @@ export default function Revolutionary2026ServicesShowcase() {const featuredAISer
             Experience the most advanced AI, quantum computing, and metaverse;
             technologies ever created.;
             <span className='text-purple-400 font-semibold'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           className='text-center mb-20'>;
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>;
             <Sparkles className='w-5 h-5 text-purple-400' />;
@@ -267,6 +273,7 @@ export default function Revolutionary2026ServicesShowcase() {const featuredAISer
             </div>;
             <div className='text - center'>;
               <div className='text - 3xl font - bold text - pink - 400'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 {metaverseDigitalRealityServices2026.length}
@@ -314,6 +321,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
             with our revolutionary solutions.;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {metaverseDigitalRealityServices2026.length}<div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">;
             <Sparkles className="w-5 h-5 text-purple-400" />;
             <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Innovations</span>;
@@ -326,7 +335,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">;
             Experience the most advanced AI, quantum computing, and metaverse technologies ever created.;
             <span className="text-purple-400 font-semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </p>;
           {/* Service Statistics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">;
@@ -413,6 +425,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div;
           variants={containerVariants}
 <<<<<<< HEAD
+<<<<<<< HEAD
 initial='hidden'
           whileInView='visible'
 
@@ -488,6 +501,8 @@ className='group relative'
                       <span className='text-2xl font-bold text-blue-400'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 initial='hidden';
           whileInView='visible';
           viewport={{ once: true }}key={service.id}
@@ -507,6 +522,7 @@ initial='hidden';
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           className='mb-20';
         >;
+<<<<<<< HEAD
 =======
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
@@ -548,6 +564,8 @@ initial='hidden';
           </div>
           className='mb-20'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className='flex items-center space-x-3 mb-12'>;
             <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center'>;
               <Brain className='w-6 h-6 text-white' />;
@@ -562,6 +580,9 @@ initial='hidden';
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {featuredAIServices.map((service, index) => (<motion.div;
                 key={service.id}
@@ -781,6 +802,9 @@ initial='hidden';
                 variants={item_variants}
                 className='group relative'          viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           className="mb-20";
         >;
           <div className="flex items-center space-x-3 mb-12">;
@@ -838,6 +862,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex items-center justify-between mb-4'>;
                     <div>;
                       <span className='text-2xl font-bold text-indigo-400'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           className="mb-20"
@@ -877,6 +902,8 @@ className='group relative'
                     ))}
                   </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         {service.price}
                       </span>;
                       <span className='text - gray - 400'>{service.period}</span>;
@@ -884,6 +911,7 @@ className='group relative'
                     <div className='flex items - center space - x-1'>;
                       <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                       <span className='text - yellow - 400 text - sm'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                         {service.rating}
@@ -945,6 +973,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         {service.rating}<span className="text-2xl font-bold text-indigo-400">{service.price}</span>;
                       <span className="text-gray-400">{service.period}</span>;
                     </div>;
@@ -990,6 +1020,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Link>;
           </div>;
         </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               href="/services?category=quantum-space"
@@ -1046,6 +1077,11 @@ className='group relative'
                     <div>
                       <h4 className='text-xl font-bold text-white'>
 =======
+=======
+        {/* Metaverse & Digital Reality Services Section */}
+        <motion&& motion.div;
+          variants={containerVariants}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 initial='hidden';
           whileInView='visible';
           viewport={{ once: true }}</span>;
@@ -1118,6 +1154,9 @@ initial='hidden';
                 variants={item_variants}
                 className='group relative'          viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           className="mb-20";
         >;
           <div className="flex items-center space-x-3 mb-12">;
@@ -1189,6 +1228,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex items-center justify-between mb-4'>;
                     <div>;
                       <span className='text-2xl font-bold text-pink-400'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           className="mb-20"
@@ -1215,6 +1255,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
                   </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         {service.price}
                       </span>;
                       <span className='text - gray - 400'>{service.period}</span>;
@@ -1222,6 +1264,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='flex items - center space - x-1'>;
                       <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                       <span className='text - yellow - 400 text - sm'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                         {service.rating}
@@ -1283,6 +1326,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         {service.rating}<span className="text-2xl font-bold text-pink-400">{service.price}</span>;
                       <span className="text-gray-400">{service.period}</span>;
                     </div>;
@@ -1329,6 +1374,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Link>;
           </div>;
         </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               href="/services?category=metaverse"
@@ -1344,11 +1390,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion && motion.div>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Call to Action Section */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           viewport={{ once: true }}
@@ -1415,6 +1464,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           viewport={{ once: true }}className='text-center';
         >;
           <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;
@@ -1460,9 +1511,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
       </div>;
     </section>;
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               to start your transformation.;
             </p>;
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
@@ -1596,9 +1650,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </section>)})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </section>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </section>)})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

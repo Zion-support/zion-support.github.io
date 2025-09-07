@@ -6,6 +6,7 @@ const UltraFuturisticBackground2047: React.FC;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+<<<<<<< HEAD
 
 const UltraFuturisticBackground2047: React.FC = () => {
 
@@ -31,13 +32,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <>
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 const UltraFuturisticBackground2047: React.FC = () => {const UltraFuturisticBackground2047: React.FC = () => {const [isClient, setIsClient]  = useState(false)import React, { useEffect, useRef, useState } from 'react';
 import { motion  } from 'framer-motion';
 const UltraFuturisticBackground2047: React.FC;}, [])if (!isClient) {return (<div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
     )}
   return (<>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Background Gradient */}
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
   return (<>;
@@ -62,6 +68,7 @@ const UltraFuturisticBackground2047: React.FC;}, [])if (!isClient) {return (<div
           }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         >
           <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />
         </motion.div>
@@ -73,6 +80,10 @@ const UltraFuturisticBackground2047: React.FC;}, [])if (!isClient) {return (<div
 
           <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />        </motion.div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        >;
+          <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />        </motion.div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }}
         >;
           <div className='w - full h - full bg - gradient - to - r from - purple - 500 to - pink - 500 clip - hexagon' />        </motion.div>;
@@ -93,9 +104,14 @@ const UltraFuturisticBackground2047: React.FC;}, [])if (!isClient) {return (<div
           transition={{repeat: Infinity as any,ease: 'easeInOut',}}>;
           <div className='w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full' />;
 <<<<<<< HEAD
+<<<<<<< HEAD
         </motion && motion.div>;<div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />;
         </motion.div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        </motion && motion.div>;<div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />;
+        </motion.div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Floating Circles */}
         <motion.div;
 className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10';
@@ -106,6 +122,7 @@ className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10';
             repeat: Infinity as any;
             ease: 'easeInOut';
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
         >
           <div className='w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full' />
@@ -140,6 +157,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </svg>
         </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         >;
           <div className='w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full' />;
         </motion.div>;
@@ -174,7 +193,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <rect width='100%' height='100%' fill='url(#grid)' />;
           </svg>;
         </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Floating Data Streams */}
         <motion.div;
 className='absolute top-0 left-0 w-full h-full opacity-20';
@@ -184,6 +206,7 @@ className='absolute top-0 left-0 w-full h-full opacity-20';
             repeat: Infinity as any;
             ease: 'linear';
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
         >
           <div className='flex space-x-8 justify-center'>
@@ -254,6 +277,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         >;
           <div className='flex space-x-8 justify-center'>;
             {[...Array(20)].map((_, i) => (<motion.div;
@@ -325,6 +350,9 @@ ease: 'easeInOut',}}}}/>;
         {/* Pulse Rings */}
         <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4';<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>;
           <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />;
         </div>;
@@ -354,7 +382,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4';
           animate={{scale: [1, 20];
             opacity: [1, 0];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }}
           transition={{className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4';
           animate={{scale: [1, 15];
@@ -364,6 +395,7 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
           animate={{scale: [1, 10];
             opacity: [1, 0];
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -377,6 +409,8 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
             ease: 'easeOut'
             delay: 2
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{scale: [1, 20];
             opacity: [1, 0]}}
           transition={{duration: 4;
@@ -425,6 +459,9 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
       {/* CSS for hexagon clip */}
       <style jsx>{`;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         .clip-hexagon {}}>;
           <div className="w-full h-full border-2 border-purple-400 rounded-full" />;
         </motion && motion.div>;
@@ -492,11 +529,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         .clip - hexagon {clip - path: polygon (50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)}
       `}</style>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </>)}}export default UltraFuturisticBackground2047;        }
       `}</style>;
     </>;
   )}
 export default UltraFuturisticBackground2047;export default UltraFuturisticBackground2047;
+<<<<<<< HEAD
 export default UltraFuturisticBackground2047;}export default UltraFuturisticBackground2047;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -515,3 +556,6 @@ export default UltraFuturisticBackground2047;
 export default UltraFuturisticBackground2047;
 export default UltraFuturisticBackground2047;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default UltraFuturisticBackground2047;}export default UltraFuturisticBackground2047;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

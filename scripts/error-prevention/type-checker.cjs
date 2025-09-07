@@ -20,6 +20,7 @@ class TypeChecker {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
@@ -27,6 +28,9 @@ class TypeChecker {}
 =======
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
@@ -50,6 +54,7 @@ class TypeChecker {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -57,6 +62,9 @@ class TypeChecker {}
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Type check passed ✓')) {}
@@ -79,6 +87,7 @@ class TypeChecker {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
@@ -86,6 +95,9 @@ class TypeChecker {}
 =======
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if ( {})
       console.log('TypeScript errors "found": ')) {}
      {}
@@ -125,6 +137,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = TypeChecker;
 
@@ -132,3 +145,6 @@ module.exports = TypeChecker;
 =======
 module.exports = TypeChecker;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = TypeChecker;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

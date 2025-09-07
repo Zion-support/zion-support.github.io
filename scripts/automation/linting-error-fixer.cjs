@@ -66,6 +66,7 @@ await this.log(" ESLint configuration fixed")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   await this.log(")
 
@@ -73,3 +74,6 @@ await this.log(" ESLint configuration fixed")
 =======
   await this.log(")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  await this.log(")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
   Phone
@@ -81,6 +82,8 @@ const serviceCategories = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import Link from 'next/link';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Phone;
   Mail;
@@ -192,9 +195,14 @@ const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com
   { name: 'Security Center', href: '/security', icon: Shield }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];];const socialLinks = [;
   {name: 'LinkedIn',href: 'https://linkedin && linkedin.com/company/ziontechgroup',icon: Users,},{name: 'Twitter',href: 'https://twitter && twitter.com/ziontechgroup',icon: MessageCircle,},{ name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Video },{ name: 'GitHub', href: 'https://github && github.com/ziontechgroup', icon: Code },];export default function UltraFuturisticFooter2028() {import React from 'react';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+];];const socialLinks = [;
+  {name: 'LinkedIn',href: 'https://linkedin && linkedin.com/company/ziontechgroup',icon: Users,},{name: 'Twitter',href: 'https://twitter && twitter.com/ziontechgroup',icon: MessageCircle,},{ name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Video },{ name: 'GitHub', href: 'https://github && github.com/ziontechgroup', icon: Code },];export default function UltraFuturisticFooter2028() {import React from 'react';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Phone, Mail, MapPin, Globe, Rocket, Brain, Atom;
   Shield, Users, Briefcase, BookOpen, MessageCircle;
   Star, TrendingUp, Target, Layers, Cpu, Database;
@@ -214,6 +222,7 @@ const contactInfo = null;
       {name: 'Autonomous Drone Delivery Network';
         href: '/autonomous-drone-delivery-network';
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       {
         name: 'Autonomous Manufacturing AI',
@@ -407,6 +416,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {name: 'Autonomous Manufacturing AI',href: '/autonomous-manufacturing-ai',},],},{title: '⚛️ Quantum & Advanced Tech',services: [;
       {name: 'Quantum Financial Trading Platform',href: '/quantum-financial-trading-platform',},{name: 'Quantum Machine Learning Platform',href: '/quantum-machine-learning-platform',},{name: 'Quantum Internet Security Gateway',href: '/quantum-internet-security-gateway',},{ name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol' },],},{title: '🤖 AI & Machine Learning',services: [;
       {name: 'AI Customer Service Automation',href: '/ai-customer-service-automation',},{ name: 'AI Education Platform', href: '/ai-education-platform' },{ name: 'AI Content Creation Suite', href: '/ai-content-creation-suite' },{name: 'AI Legal Research Platform',href: '/ai-legal-research-platform',},],},];
@@ -455,7 +466,10 @@ export default function UltraFuturisticFooter2028() {return (<footer className='
                 <MapPin className='w-4 h-4 text-purple-400' />;
                 <span className='text-sm'>{contactInfo.address}</span>;
               </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className='flex items-center space-x-3 text-purple-200'>;
                 <Globe className='w-4 h-4 text-purple-400' />;
                 <a;
@@ -528,6 +542,7 @@ export default function UltraFuturisticFooter2028() {return (<footer className='
                   </h4>;
                   <ul className='space-y-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {category && category.services.map(service => (;
                       <li key={service && service.name}>;
                         <Link
@@ -543,6 +558,10 @@ export default function UltraFuturisticFooter2028() {return (<footer className='
                         <Link;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                    {category && category.services.map(service => (<li key={service && service.name}>;
+                        <Link;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           href={service && service.href}
                           className='text-sm text-purple-200 hover:text-white transition-colors hover:underline'>              🚀 Our Services;
             </h3>;
@@ -565,6 +584,9 @@ export default function UltraFuturisticFooter2028() {return (<footer className='
                         >;
                           {service.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         </Link>;
                       </li>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -572,6 +594,7 @@ export default function UltraFuturisticFooter2028() {return (<footer className='
                   </ul>;
                 </div>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>
           </div>
@@ -585,6 +608,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </h3>
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </div>;
           </div>;
           {/* Quick Links */}
@@ -625,6 +650,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       href={link.href}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                       className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2'
                     >
@@ -657,6 +683,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>
                   </li>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2';
                     >;
                       <link.icon className='w-4 h-4' />                      <span>{link.name}</span>                  <li key={link.name}>;
@@ -669,7 +697,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>{link.name}</span>;
                     </Link>;
                   </li>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
               </ul>;
             </div>;
@@ -722,6 +753,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>;
               <div className='flex space-x-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <input
                   type='email'
                   placeholder='Enter your email'
@@ -737,6 +769,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <input;
                   type='email';
                   placeholder='Enter your email';
@@ -780,7 +814,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex items-center space-x-6 text-sm'>;
               <Link;
                 href='/privacy';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='text-purple-300 hover:text-white transition-colors'>;
                 Privacy Policy;
               </Link>;
@@ -794,6 +831,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='text-purple-300 hover:text-white transition-colors'>;
                 Cookie Policy;
               </Link>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Link
                 href='/security'
@@ -844,6 +882,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Link;
                 href='/security';
             <div className="text-sm text-purple-300">;
@@ -954,6 +994,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl'></div>;
       </div>;
     </footer>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -962,3 +1003,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Background Effects */}
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

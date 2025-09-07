@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -195,6 +196,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import { Menu,ChevronDown,X,Phone,Mail,ArrowRight,Brain,Rocket,Target,Atom,Shield,DollarSign,BarChart3,Globe,Grid,Heart,Database,Cpu,Palette,Cloud,Network,TrendingUp,ShoppingCart,Settings,Building,Monitor,Zap,Eye,Infinity,Sparkles,Users,Lock,Code,Server,Layers,Globe2,Star,Award,Clock,CheckCircle,Zap as ZapIcon,Phone as PhoneIcon,Search,User,Bell,Cog,LogOut,Home,Info,FileText,Users as UsersIcon,Bot,MessageCircle,Linkedin,Twitter,Github,import {Menu,ChevronDown,X,Phone,Mail,ArrowRight,Brain,Rocket,Target,Atom,Shield,DollarSign,BarChart3,Globe,Grid,Heart,Database,Cpu,Palette,Cloud,Network,TrendingUp,ShoppingCart,Settings,Building,Monitor,Zap,Eye,Infinity,Sparkles,Users,Lock,Code,Server,Layers,Globe2,Star,Award,Clock,CheckCircle,Zap as ZapIcon,Phone as PhoneIcon,Search,User,Bell,Cog,LogOut,Home,Info,FileText,Users as UsersIcon,Bot,MessageCircle,Linkedin,Twitter,Github,Youtube,MapPin,} from 'lucide-react';
 import React, { useState, useEffect } from 'react',import Link from 'next/link';
@@ -265,15 +268,22 @@ interface NavigationItem  {name: string;class ErrorBoundary extends React.Compon
 import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ChevronDown,X,Phone,Mail,ArrowRight,Brain,Rocket,Target,Atom,Shield,DollarSign,BarChart3,Globe,Grid,Heart,Database,Cpu,Palette,Cloud,Network,TrendingUp,ShoppingCart,Settings,Building,Monitor,Zap,Eye,Infinity,Sparkles,Users,Lock,Code,Server,Layers,Globe2,Star,Award,Clock,CheckCircle,Zap as ZapIcon,Phone as PhoneIcon,Search,User,Bell,Cog,LogOut,Home,Info,FileText,Users as UsersIcon,Bot,MessageCircle,Linkedin,Twitter,Github,Youtube,MapPin,} from 'lucide-react';
   ChevronDown,X,Phone,Mail,ArrowRight,Brain,Rocket,Target,Atom,Shield,DollarSign,BarChart3,Globe,Grid,Heart,Database,Cpu,Palette,Cloud,Network,TrendingUp,ShoppingCart,Settings,Building,Monitor,Zap,Eye,Infinity,Sparkles,Users,Lock,Code,Server,Layers,Globe2,Star,Award,Clock,CheckCircle,Zap as ZapIcon,Phone as PhoneIcon,Search,User,Bell,Cog,LogOut,Home,Info,FileText,Users as UsersIcon,Bot,MessageCircle,Linkedin,Twitter,Github,Youtube,MapPin,} from 'lucide-react';
 interface NavigationItem  {name: string;
   href: string;  icon?: React.ReactNode;import { href: string;  icon?: React.ReactNode;import {Menu, ChevronDown, X, Phone, Mail, ArrowRight;Brain, Rocket, Target, Atom, Shield;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   DollarSign, BarChart3, Globe, Grid, Heart, Database;
   Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor;
   Zap, Eye, Infinity, Sparkles, Users, Lock, Code, Server, Layers, Globe2;
   Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon;
+<<<<<<< HEAD
 <<<<<<< HEAD
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon;
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin
@@ -288,6 +298,8 @@ interface NavigationItem {
   href: string
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon;Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin;
   } from 'lucide-react';
 interface NavigationItem  {name: string;
@@ -296,6 +308,7 @@ interface NavigationItem  {name: string;
 } from 'lucide-react';
 interface NavigationItem  {name: string;
   href: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 import { motion, AnimatePresence } from 'framer-motion';
@@ -432,11 +445,14 @@ interface NavigationItem {
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   description?: string;
   children?: NavigationItem[];
   badge?: string;
   title?: string;
   featured?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   category?: string;
@@ -662,6 +678,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Link>
           </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   category?: string;color?: string;
 }
   color?: string;
@@ -716,11 +734,15 @@ const UltraFuturisticNavigation2047 = () => {const [isOpen, setIsOpen] = useStat
               </div>;
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">;
               <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 Zion Tech Group;
               </span>;
             </Link>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           {/* Desktop Navigation */}
@@ -729,6 +751,8 @@ const UltraFuturisticNavigation2047 = () => {const [isOpen, setIsOpen] = useStat
               <div key={item.name} className='relative group'>
                 <button
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 Zion Tech Group;
               </span>;
             </Link>;
@@ -783,10 +807,13 @@ className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border
                       <div className='space-y-4'>;
                         {item && item.children?.map(child => (<Link;
                             <div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                               className={`p-2 rounded-lg bg-gradient-to-r ${child.color |'from-gray-500 to-slate-500'}`}
                             >;
                               {child.icon}
@@ -795,6 +822,7 @@ className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border
                               <div className='flex items-center space-x-2'>;
                                 <span className='font-medium text-white'>;
                                   {child.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 </span>
                                 {child.featured && (
@@ -809,13 +837,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </div>
 <p className='text-sm text-gray-400 mt-1'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                                 </span>;
                                 {child.featured && (<span className='px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full'>;
                                     Featured;
                                   </span>;
                                 )}</div>;
 <p className='text-sm text-gray-400 mt-1'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                                 {child.description}
                               </p>;
                             </div>;
@@ -827,6 +860,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </AnimatePresence>;
               </div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           {/* Contact Info & CTA */}
@@ -873,6 +907,8 @@ href='/contact'
             </Link>
           </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Contact Info & CTA */}<div className='hidden lg:flex lg:items-center lg:space-x-4'>;
             <div className='flex items-center space-x-4 text-sm text-gray-400'>;<div className='hidden lg:flex lg:items-center lg:space-x-4'>;
             <div className='flex items-center space-x-4 text-sm text-gray-400'>;
@@ -915,7 +951,10 @@ href='/contact';
               <ArrowRight className='ml-2 w-4 h-4' />;
             </Link>;
           </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Mobile menu button */}
 <div className='lg:hidden'>;
             <button;
@@ -935,6 +974,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span className='sr-only'>Open main menu</span>;
               {isOpen ? (<X className='block h-6 w-6' />;
               ) : (<Menu className='block h-6 w-6' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               href="/contact"
@@ -948,6 +988,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ArrowRight className='ml-2 w-4 h-4' />            </Link>;
           </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               )}
             </button>;
           </div>;
@@ -964,6 +1006,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ opacity: 1, height: 'auto' }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
 className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'
@@ -978,13 +1021,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div key={item.name}>
                   <button
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             exit={{ opacity: 0, height: 0 }}transition={{ duration: 0.3 }}
 className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50';
           >;
             <div className='px-2 pt-2 pb-3 space-y-1'>;
               {navigationItems.map(item => (<div key={item.name}>;
                   <button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     onClick={() => handleDropdownToggle(item && item.name)}
                     className='w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200';
                   >;
@@ -992,6 +1040,7 @@ className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/
                       {item && item.icon}
                       <span>{item && item.name}</span>;
                     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     <ChevronDown
@@ -1007,6 +1056,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                     <ChevronDown
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                    <ChevronDown;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item && item.name ? 'rotate-180' : ''}`}
                     />;
                   </button>          >;
@@ -1014,6 +1066,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {navigationItems && navigationItems.map((item) => (<div key={item && item.name}>;
             transition={{ duration: 0.3 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50";
           >;
             <div className="px-2 pt-2 pb-3 space-y-1">;
@@ -1024,6 +1079,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </button>;
                   <AnimatePresence>;
                     {activeDropdown === item.name && (<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50"
@@ -1036,6 +1092,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {activeDropdown === item.name && (
                       <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     onClick={() => handleDropdownToggle(item && item.name)}
                     className="w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200";
                   >;
@@ -1051,6 +1109,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             transition={{ duration: 0.3 }}
 
@@ -1071,6 +1130,8 @@ className='ml-4 mt-2 space-y-1'
 origin/cursor/automate-test-improve-and-merge-code-2533
                           >
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             transition={{ duration: 0.3 }}transition={{ duration: 0.2 }}className='ml-4 mt-2 space-y-1';
                           <Link;
                             key={child.name}
@@ -1144,12 +1205,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             key={child.name}
                             href={child.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
                             className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200';
                             onClick={closeMenu}>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                           >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                            className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200';
+                            onClick={closeMenu}>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                             {child.name}
                           </Link>;
                         ))}
@@ -1177,6 +1243,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='hover:text-white transition-colors';
                     >;
                       {contactInfo.email}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </a>
                   </div>
@@ -1208,6 +1275,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default UltraFuturisticNavigation2047;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </a>;
                   </div>;
                   <div className='flex items-center space-x-2'>;
@@ -1233,20 +1302,27 @@ export default UltraFuturisticNavigation2047;export default UltraFuturisticNavig
                   >;
                     Get Started;
                     <ArrowRight className='ml-2 w-4 h-4' />;
+<<<<<<< HEAD
 =======
                   <Link
                     href="/contact"
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   </Link>;
                 </div>;
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </motion.div>;
         )}
       </AnimatePresence>;
     </nav>;
+<<<<<<< HEAD
 )}export default UltraFuturisticNavigation2047;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1269,3 +1345,6 @@ export default UltraFuturisticNavigation2047;
 
 export default UltraFuturisticNavigation2047;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default UltraFuturisticNavigation2047;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

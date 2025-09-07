@@ -81,6 +81,7 @@ const path = require("path")"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   process.on(")
 
@@ -88,3 +89,6 @@ const path = require("path")"
 =======
   process.on(")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  process.on(")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

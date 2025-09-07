@@ -12,9 +12,12 @@ class AppEnhancementSuite {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   createPerformanceOptimizations() {
     this.log('⚡ Creating Performance Optimizations');
@@ -36,11 +39,14 @@ class AppEnhancementSuite {
   createSecurityEnhancements() {
     this.log('🔒 Creating Security Enhancements');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Create security headers configuration
     const securityConfig = {
@@ -50,6 +56,7 @@ class AppEnhancementSuite {
         'X-XSS-Protection': '1; mode=block';
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains';
         'Content-Security-Policy':
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -82,12 +89,15 @@ class AppEnhancementSuite {
       },
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "validation": {
         inputSanitization: true,
         "sqlInjectionProtection": true,
         "xssProtection": true}};
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           "default-src 'self'; script-src 'self' 'unsafe-inline'";
@@ -102,6 +112,8 @@ ursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-config.json');
@@ -116,9 +128,12 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const monitoringLines = [
       '#!/usr/bin/env node';
       '';
@@ -189,6 +204,7 @@ ursor/automate-test-improve-and-merge-code-59d5
       'const monitor = new AppMonitor();';
       'monitor.monitorAppHealth().catch(console.error);';
       '';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     const monitoringLines = ['#!/usr/bin/env node',
@@ -264,6 +280,8 @@ ursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     ];
     const monitoringScript = monitoringLines.join('\n');
@@ -281,6 +299,7 @@ ursor/automate-test-improve-and-merge-code-59d5
     this.createMonitoringScripts();
 
     const report = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -307,6 +326,10 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 <<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+    const securityHeaders = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
@@ -316,6 +339,7 @@ ursor/automate-test-improve-and-merge-code-59d5
       'Content-Security-Policy': "default-src 'self''
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
       timestamp: new Date().toISOString();
       enhancements: this.enhancements;
@@ -330,6 +354,8 @@ ursor/automate-test-improve-and-merge-code-59d5
       status: 'completed';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     };
 
     // Write enhancement report
@@ -340,6 +366,7 @@ ursor/automate-test-improve-and-merge-code-59d5
 
     // Security headers are already configured in createSecurityEnhancements
 
+<<<<<<< HEAD
       'Content-Security-Policy': "default-src 'self'"
     };
     this.log(`Security headers configured: ${Object.keys(securityHeaders).join(', ')}`);
@@ -347,6 +374,8 @@ ursor/automate-test-improve-and-merge-code-59d5
 <<<<<<< HEAD
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.enhancements.push('Security headers configuration created');
   }
   createHealthCheck() {
@@ -383,6 +412,7 @@ ursor/automate-test-improve-and-merge-code-59d5
       JSON.stringify(healthCheckConfig, null, 2)
     );
 
+<<<<<<< HEAD
       "timestamp": new Date().toISOString(),
       "status": "healthy",
       "checks": {
@@ -411,6 +441,8 @@ ursor/automate-test-improve-and-merge-code-59d5
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.enhancements.push('Health check endpoint created');
   }
 }

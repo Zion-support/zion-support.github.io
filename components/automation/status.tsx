@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,6 +34,8 @@ export default function AutomationStatusPage() {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)}</div>) import { useEffect, useState  } from 'react';
@@ -47,6 +50,7 @@ export default function AutomationStatusPage() {const [status, setStatus]  = use
 }</div>) import { useEffect, useState } from 'react';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,6 +71,8 @@ export default function AutomationStatusPage() {const [status, setStatus]  = use
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
@@ -83,6 +89,7 @@ export default function AutomationStatusPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }, []);
   return (
 =======
@@ -92,14 +99,19 @@ export default function AutomationStatusPage() {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+<<<<<<< HEAD
 =======
   }, []);
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   useEffect(() => {;
     fetch('/automation/status && status.json');
       .then((r) => r && r.json());
@@ -139,6 +151,7 @@ function AutomationStatusPage() {const [status, set_status]  = useState<{ run_at
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }, []);
   return (
 <<<<<<< HEAD
@@ -162,6 +175,10 @@ function AutomationStatusPage() {const [status, set_status]  = useState<{ run_at
   return (
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }, []);
+  return (
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 </div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);
 }</div>) import { useEffect, useState } from 'react';
 export default /**
@@ -197,6 +214,7 @@ function AutomationStatusPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -215,10 +233,13 @@ function AutomationStatusPage() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -257,3 +278,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
@@ -12,6 +13,11 @@ const fs = require('fs')
 const { execSync } = require('child_process')
 const fs = require('fs')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const { execSync } = require('child_process')
+const fs = require('fs')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 console.log(' Starting Automation Orchestrator...')
     "name"
     "script"
@@ -38,6 +44,7 @@ console.log(' Starting Automation Orchestrator...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error('Orchestrator "failed")
 
@@ -45,3 +52,6 @@ console.log(' Starting Automation Orchestrator...')
 =======
   console.error('Orchestrator "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error('Orchestrator "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

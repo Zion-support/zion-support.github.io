@@ -645,6 +645,7 @@ const monitor = new ErrorPreventionMonitor();
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 monitor.run();
 
@@ -652,3 +653,6 @@ monitor.run();
 =======
 monitor.run();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+monitor.run();
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -37,6 +37,7 @@ function resolveMergeConflictsInFile(filePath) {
     content = content
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       .replace(/
       .replace(/<<<<<<< [^\n]+\n/g, '')
       .replace(/
@@ -52,6 +53,10 @@ function resolveMergeConflictsInFile(filePath) {
       .replace(/
       .replace(/<<<<<<< [^\n]+\n/g, '')
       .replace(/\n/g, '')
+=======
+      .replace(/
+      .replace(/<<<<<<< [^\n]+\n/g, '')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       .replace(/
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 

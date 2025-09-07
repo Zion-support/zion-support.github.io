@@ -7,8 +7,11 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EnhancedLayout from '../layout/EnhancedLayout';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type ProposalForm = {export type ProposalForm = {import EnhancedLayout from '../layout/EnhancedLayout';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
@@ -33,11 +36,15 @@ export type ProposalForm = {
   target_institution: string;
 =======
 export type ProposalForm = {targetInstitution: string;export type ProposalForm = {target_institution: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   type: ProposalType;
   regionalScope: string;
   budgetOrGoals: string;
   supportingMultiverses: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   language?: string;
@@ -70,10 +77,23 @@ export default function ProposalGenerator() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
+=======
+  language?: string;targetInstitution: string,type: ProposalType,regionalScope: string,budgetOrGoals: string,supportingMultiverses: string,language?: string;
+  customPrompt?: string;
+}customPrompt?: string;
+}export default function ProposalGenerator() {const [form, setForm] = useState<ProposalForm>({targetInstitution: 'UNDP';
+    type: 'Workforce Dev';
+    regionalScope: 'Global';
+    budgetOrGoals: '';
+    supportingMultiverses: '';
+    language: 'English';
+    customPrompt:;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   language?: string;
   customPrompt?: string
 }
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
+<<<<<<< HEAD
 export type ProposalForm = {
   targetInstitution: string,
   custom_prompt?: string;}export type ProposalForm = {
@@ -200,6 +220,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   customPrompt?: string;
 }
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}export type ProposalForm = {target_institution: string,type: ProposalType,regional_scope: string,budgetOrGoals: string,supporting_multiverses: string,language?: string;
 }export default function ProposalGenerator() {const [form, setForm] = useState<ProposalForm>({targetInstitution: 'UNDP',type: 'Workforce Dev',regionalScope: 'Global',budgetOrGoals: '',supportingMultiverses: '',language: 'English',customPrompt:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.','Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',})const [isGenerating, setIsGenerating] = useState(false)const [draftMarkdown, setDraftMarkdown] = useState('')const [draftJson, setDraftJson] = useState<any>(null)pdfUrl?: string;
@@ -218,11 +240,15 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
       setStatusMessage('Export failed')}}}}
   async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {}
   }async function handleExport() {setStatusMessage('Exporting to PDF/Markdown/JSON...')try {const res = await fetch('/api/proposals/export', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),})const data = await res && res.json()setExportLinks({pdfUrl: data && data.pdfUrl,jsonUrl: data && data.jsonUrl,mdUrl: data && data.mdUrl,})setStatusMessage('Exported. Files saved.')} catch (e) {console && console.error(e)setStatusMessage('Export failed')}      const data = await res && res.json()setExportLinks({ pdfUrl: data && data.pdfUrl, jsonUrl: data && data.jsonUrl, mdUrl: data && data.mdUrl }),setStatusMessage('Exported. Files saved.')} catch (e) {console && console.error(e)setStatusMessage('Export failed')}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),})const data = await res && res.json()setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
       )} catch (e) {console && console.error(e)setStatusMessage('Submission failed')}
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
@@ -323,6 +349,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
         <div className='space-y-4'>      const data = await res && res.json()setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`)} catch (e) {console && console.error(e)setStatusMessage('Submission failed')} catch (e) {console.error(e)setStatusMessage('Submission failed')setStatusMessage('Submission failed')}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  return (<div className='space-y-4'>      const data = await res.json()setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)} catch (e) {console.error(e)<div className='space-y-4'>      const data = await res.json()setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)} catch (e) {console.error(e)<div className='space-y-6'>;
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+        <div className='space-y-4'>      const data = await res && res.json()setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`)} catch (e) {console && console.error(e)setStatusMessage('Submission failed')} catch (e) {console.error(e)setStatusMessage('Submission failed')setStatusMessage('Submission failed')}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   return (<div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -340,6 +371,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div>;
             <label className='block text-sm font-medium'>Type</label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <select
               className='w-full border rounded px-3 py-2'
@@ -390,6 +422,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <input
               className='w-full border rounded px-3 py-2'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <select;
               className='w-full border rounded px-3 py-2';
               value={form && form.type}
@@ -431,7 +465,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <label className='block text-sm font-medium'>Regional scope</label>;
             <input;
               className='w-full border rounded px-3 py-2';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               value={form && form.regionalScope}
               onChange={e => handleChange('regionalScope', e && e.target.value)}
               placeholder='Global / Africa / LATAM / APAC / EU / ...';
@@ -483,20 +520,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='flex gap-2'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <button;
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input;
             <textarea;
               className="w-full border rounded px-3 py-2 min-h-[80px]";
+<<<<<<< HEAD
 =======
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
             <textarea
               className="w-full border rounded px-3 py-2 min-h-[80px]"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               value={form && form.budgetOrGoals}
               onChange={(e) => handleChange('budgetOrGoals', e && e.target.value)}
               placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc.";
@@ -532,16 +575,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div className="flex gap-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <button;
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             <button
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            <button;
+              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               onClick={handleGenerate}
               disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <button
@@ -570,25 +619,34 @@ className='px-4 py-2 bg-purple-600 text-white rounded'
             <p className='text-sm text-gray-600'>{statusMessage}</p>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <button;
 className='px-4 py-2 bg-emerald-600 text-white rounded';
               onClick={handleExport}
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD)</button>;
             <button;
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               onClick={handleGenerate}
               disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <button;
               onClick={handleExport}
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD)</button>;
             <button;
+<<<<<<< HEAD
 =======
             <button
 
@@ -599,11 +657,16 @@ className='px-4 py-2 bg-emerald-600 text-white rounded';
             <button
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               disabled={!draftMarkdown}>;
               Submit Bridge;
             </button>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {statusMessage && (<p className='text-sm text-gray-600'>{statusMessage}</p>;className='px-4 py-2 bg-purple-600 text-white rounded';
               onClick={handleSubmitBridge}
               disabled={!draftMarkdown}
@@ -612,13 +675,17 @@ className='px-4 py-2 bg-emerald-600 text-white rounded';
             </button>;
           </div>;
 {statusMessage && (<p className='text-sm text-gray-600'>{statusMessage}</p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           )}
           {exportLinks && (<div className='text-sm space-y-1'>;
               {exportLinks && exportLinks.pdfUrl && (<div>;
                   <a;
                     className='text-blue-600 underline';
                     href={exportLinks && exportLinks.pdfUrl}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     target='_blank'
                     rel='noreferrer'
@@ -747,6 +814,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     target='_blank';
                     rel='noreferrer'>;
                     PDF;
@@ -1067,6 +1136,7 @@ function handleSubmitBridge() {setStatusMessage ('Submitting via bridge (email /
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1074,3 +1144,6 @@ function handleSubmitBridge() {setStatusMessage ('Submitting via bridge (email /
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

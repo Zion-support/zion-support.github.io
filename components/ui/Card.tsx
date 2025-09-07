@@ -4,12 +4,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 
 interface CardProps  {children: React.ReactNode;
@@ -135,11 +138,15 @@ const CardDescription = React.forwardRef<
   HTMLParagraphElement,const CardDescription = React.forwardRef<;
   HTMLParagraphElement,const CardDescription  = null;React.HTMLAttributes<HTMLParagraphElement>;
 >(({ className, ...props }, ref) => (<p;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ));
 CardDescription.displayName = "CardDescription";
@@ -173,6 +180,8 @@ const CardFooter = React.forward_ref<;
 >(({ class_name, ...props }, ref) => (
   <div;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ))CardDescription.displayName = "CardDescription";const CardContent = React.forwardRef<;
   HTMLDivElement,const CardContent = React.forwardRef<;
   HTMLDivElement,const CardContent  = null;React.HTMLAttributes<HTMLDivElement>;
@@ -250,7 +259,10 @@ const CardFooter = null;
     </div>)CardContent.displayName = "CardContent";const CardFooter = null;
   React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (<div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ref={ref}
     className={cn("flex items-center p-6 pt-0", className)}
     {...props}
@@ -262,6 +274,7 @@ const Card: React.FC<CardProps> = ({export {Card,CardHeader,CardFooter,CardTitle
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 const Card: React.FC<CardProps> = ({
 <<<<<<< HEAD
@@ -291,3 +304,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

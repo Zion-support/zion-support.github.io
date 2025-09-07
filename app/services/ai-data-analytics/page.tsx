@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export const metadata = {
@@ -147,6 +148,8 @@ export default function AIDataAnalyticsPage() {
               Optimize operations and reduce costs with data-driven process
               improvements
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const metadata = {
   title: 'Ai Data Analytics | Zion Tech Group',
   description:
@@ -193,6 +196,7 @@ export default function ServicePage() {
             <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
             <p className="text-gray-300">
               Round-the-clock support to ensure your ai data analytics solutions run smoothly.
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 
@@ -202,10 +206,13 @@ export default function ServicePage() {
               Round-the-clock support to ensure your ai data analytics solutions
               run smoothly.
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </p>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <div className="text-center">
@@ -637,3 +644,8 @@ function TestimonialCard({ name, role, company, content, avatar }: {
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

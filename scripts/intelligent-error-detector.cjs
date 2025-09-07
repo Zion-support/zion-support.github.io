@@ -69,6 +69,7 @@ const { execSync } = require("child_process")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     this.log("� Error detection completed!", "SUCCESS")
 
@@ -76,3 +77,6 @@ const { execSync } = require("child_process")
 =======
     this.log("� Error detection completed!", "SUCCESS")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    this.log("� Error detection completed!", "SUCCESS")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

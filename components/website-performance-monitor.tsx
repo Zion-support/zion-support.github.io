@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -26,6 +27,8 @@ import {
   Gauge
   BarChart3
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 } from 'lucide-react';import React, { useState } from 'react',import Head from 'next/head',import Card from '../components/ui/Card',import Button from '../components/ui/Button';
 import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock  } from 'lucide-react';
@@ -40,7 +43,10 @@ import {Activity;
   Monitor;
   Gauge;
   BarChart3;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Clock;
 } from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock  } from 'lucide-react';
 export default function WebsitePerformanceMonitorPage() {const [isAnalyzing, setIsAnalyzing] = useState(false)const [analysisResults, setAnalysisResults] = useState(null)const features = [;
@@ -71,6 +77,7 @@ export default function WebsitePerformanceMonitorPage() {const [isAnalyzing, set
       gradient: 'from-purple-400 to-indigo-500';
     }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
   const metrics = [
     {
@@ -372,6 +379,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const metrics = [;
     {name: 'Core Web Vitals';
       description:;
@@ -567,6 +576,9 @@ export default function WebsitePerformanceMonitorPage() {const [isAnalyzing, set
             Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, and AI-powered optimization recommendations. Never let performance issues impact your users again.;
           </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className = "flex flex-col sm:flex-row gap-6 justify-center">;'Optimize images and implement lazy loading','Minimize render-blocking resources','Enable compression and caching','Consider using a CDN for global performance',],})setIsAnalyzing(false)}, 4000)}return (<>;
       <Head>;
 <title>Website Performance Monitor - Zion Tech Group | Real-Time Website;
@@ -632,10 +644,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={handleAnalyzeWebsite}
               size="lg";
               className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white shadow-2xl hover-glow";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               disabled={isAnalyzing}
             >;
               {isAnalyzing ? (<>;
@@ -692,6 +707,7 @@ href='#pricing';
                     <h3 className='text-2xl font-bold mb-4 text-white'>;
                       {feature.title}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </h3>
                     <p className='text-gray-400 leading-relaxed'>
                       {feature.description}
@@ -704,13 +720,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </Card>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </h3>;
                     <p className='text-gray-400 leading-relaxed'>;
                       {feature.description}</p>;
                   </div>;
                 </div>;
               </Card>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
       {/* Metrics Section */}
 <section className='section-padding bg-gradient-cursor'>;
@@ -745,6 +766,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {metric.name}
                 </h3>;
                 <p className='text - gray - 400 text - sm leading - relaxed'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   {metric.description}
@@ -826,6 +848,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {metric.description}</h2>;
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Track all the metrics that matter for your website's performance and user experience.;
@@ -909,10 +933,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {/* Score Card */}
                   <svg;
                     className='w-full h-full transform -rotate-90';
@@ -958,8 +985,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className='text-gray-400'>Page Load Time</span>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <span
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <span;
               </h2>;
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
@@ -967,6 +997,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>;
             </div>;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+<<<<<<< HEAD
 =======
                     <span
               </h2>
@@ -976,6 +1007,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       className={`font-bold ${parseFloat(analysisResults && analysisResults.loadTime) < 2 ? 'text-green-400' : 'text-orange-400'}`}>                      {analysisResults && analysisResults.loadTime}                Performance Analysis Results;
               </h2>;
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
@@ -995,6 +1028,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       strokeWidth="2";
                       strokeDasharray={`${(analysisResults && analysisResults.overallScore / 100) * 100}, 100`}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       className="text-blue-500";
             <Card className="border-gradient-blue mt-8">;
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>;
@@ -1003,6 +1039,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
                     <span className="text-gray-300">{rec}</span>;
                   </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                       className={`font-bold ${parseFloat(analysisResults.loadTime) < 2 ? 'text-green-400' : 'text-orange-400'}`}
                     >;
@@ -1043,6 +1080,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+                      className={`font-bold ${parseFloat(analysisResults.loadTime) < 2 ? 'text-green-400' : 'text-orange-400'}`}
+                    >;
+                      {analysisResults.loadTime}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </span>;
                   </div>;
                 </div>;
@@ -1071,17 +1113,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {analysisResults && analysisResults.recommendations.map((rec, index) => (<div key={index} className="flex items-start space-x-3">;
                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <span className="text-gray-300">{rec}</span>;<span className='text-gray-300'>{rec}</span>;
                   </div>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                     <span className="text-gray-300">{rec}</span>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                    <span className="text-gray-300">{rec}</span>;<span className='text-gray-300'>{rec}</span>;
+                  </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
               </div>;
             </Card>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       )}
@@ -1116,6 +1164,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {pricing.map((plan, index) => (
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       )}Simple Pricing;
       {/* Pricing Section */}
             </h2>;
@@ -1138,7 +1188,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             {pricing.map((plan, index) => (<section id='pricing' className='section-padding bg-gradient-cursor'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
@@ -1153,6 +1206,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
 <<<<<<< HEAD
+<<<<<<< HEAD
             {metrics.map ((metric, index) => (
               <Card;
                 key={index}
@@ -1164,6 +1218,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 className="card - hover border - gradient - blue text - center";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            {metrics.map ((metric, index) => (<Card;
+                key={index}className="card - hover border - gradient - blue text - center";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;
                 <div className="text - 4xl mb - 4">{metric.icon}</div>;
@@ -1336,6 +1394,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               needs.;
             </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;className={`card-hover border-gradient-blue ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -1353,14 +1414,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;
                     <span className='text - 4xl font - bold text - white'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       {plan.price}
@@ -1383,6 +1448,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {plan.price}</span>;
                     <span className='text-gray-400'>{plan.period}</span>;
                   </div>;
@@ -1394,6 +1461,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='flex items-center text-gray-300';
                     >;
                       <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -1421,6 +1489,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </Card>
 =======
+=======
+                      {feature}
+                    </li>;
+                  ))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <Button;
 href='/contact';
                   size='lg';
@@ -1433,7 +1506,10 @@ href='/contact';
                   <ArrowRight className='w-5 h-5 ml-2' />;
                 </Button>;
               </Card>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </div>;
         </div>;
@@ -1477,6 +1553,7 @@ href='/contact';
           </p>;
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Button
               href='/contact'
               size='lg'
@@ -1497,6 +1574,8 @@ href='/contact';
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <Button;
               href='/contact';
               size='lg';
@@ -1526,8 +1605,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </>;
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

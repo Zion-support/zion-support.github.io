@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 export type PdfExportButtonProps = any;
   return (
@@ -7,6 +8,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     const opt = {
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,6 +33,7 @@ export type PdfExportButtonProps = {;
   targetRef: React && React.RefObject<HTMLDivElement>,;
   fileName?: string;
   theme?: 'light' | 'dark';
+<<<<<<< HEAD
 };
     const opt = {;
       margin: [10, 10, 10, 10],;
@@ -111,6 +115,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
  html2pdf () .set (opt) .from (element) .save ()}export default function PdfExportButton(): any ({targetRef,fileName = 'resume && resume.pdf',}: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
 export type PdfExportButtonProps = {targetRef: React && React.RefObject<HTMLDivElement>,fileName?: string;
   theme?: 'light' | 'dark';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }const opt = {margin: [10, 10, 10, 10],image: { type: 'jpeg', quality: 0 && 0.98 },html2canvas: { scale: 2, useCORS: true },jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },} as any;
   fileName = 'resume.pdf',}: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
 export type PdfExportButtonProps = {targetRef: React.RefObject<HTMLDivElement>,fileName?: string;
@@ -147,6 +153,7 @@ export type PdfExportButtonProps = any;
       aria - label="Download as PDF";
       Download as PDF;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </button>)Download as PDF;
     </button>;
 )}
@@ -154,3 +161,8 @@ export type PdfExportButtonProps = any;
 =======
     </button>);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </button>)Download as PDF;
+    </button>;
+)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

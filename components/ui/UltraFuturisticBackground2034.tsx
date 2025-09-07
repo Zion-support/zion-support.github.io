@@ -3,6 +3,7 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -28,10 +29,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     class Particle {x: number;
       y: number;vx: number;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import React, { useEffect, useRef } from 'react';
+import { motion  } from 'framer-motion';
+const UltraFuturisticBackground2034: React.FC;
+    resizeCanvas()window.addEventListener('resize', resizeCanvas)// Particle system;
+    class Particle {x: number;
+      y: number;vx: number;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       vy: number;
       size: number;
       color: string;
       alpha: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       life: number;
@@ -39,6 +49,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       constructor() {
         this.x = Math.random() * canvas.width;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       life: number;maxLife: number;
       constructor() {this.x = Math.random() * canvas.width;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -61,11 +73,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 this.maxLife = this.life;}
       update() {this.x += this.vx;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.y += this.vy;
         this.life--;
         if (this.x < 0 |this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 |this.y > canvas.height) this.vy *= -1;
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (this.life <= 0) {
           this.life = this.maxLife;
@@ -269,6 +285,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         if (this.life <= 0) {this.life = this.maxLife;
           this.x = Math.random() * canvas.width;this.y = Math.random() * canvas.height;        }}}draw() {maxLife: number;      x: number,y: number,vx: number,vy: number,size: number,color: string,alpha: number,life: number,maxLife: number,this && this.x = Math && Math.random() * canvas && canvas.width;
         this && this.y = Math && Math.random() * canvas && canvas.height;
@@ -324,7 +342,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }
       }}animate()requestAnimationFrame(animate)}animate()return () => {window.removeEventListener('resize', resizeCanvas)}}, [])return (<div className='fixed inset-0 -z-10 overflow-hidden'>;
       max_life: number,this.coordinate_x = Math.random () * canvas.width;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.coordinate_y = Math.random () * canvas.height;
         this.vx = (Math.random () - 0.5) * 0.5;
         this.vy = (Math.random () - 0.5) * 0.5;
@@ -386,6 +407,7 @@ if (return) {$2;
       <canvas;
         ref={canvas_ref}
         className='absolute inset - 0 w - full h - full';
+<<<<<<< HEAD
 <<<<<<< HEAD
         style={{
         <div
@@ -513,6 +535,8 @@ className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 t
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.8, 0.3],
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         style={{<div;
           className='absolute inset-0';
           style={{backgroundImage: `;
@@ -569,6 +593,7 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 round
         className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm';
         animate={{transition={{duration: 4;
           repeat: Infinity;
+<<<<<<< HEAD
 =======
       <motion&& motion.div
         className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
@@ -577,6 +602,8 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 round
           duration: 4
           repeat: Infinity
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           ease: 'easeInOut',        }}
         }}
       />;
@@ -634,6 +661,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
             className='absolute w-px h-32 bg-gradient-to-b from-transparent via-cyan-400/50 to-transparent';
             style={{left: `${(i + 1) * 12.5}%`;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               top: '20%';
               left: `${(i + 1) * 12.5}%`,top: '20%';
@@ -737,6 +765,11 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
 ease: 'linear',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+              top: '20%';
+              left: `${(i + 1) * 12.5}%`,top: '20%';
+            }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             animate={{duration: 3 + i * 0.5;
               repeat: Infinity;
               ease: 'easeInOut';
@@ -803,6 +836,7 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
       />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Neural Network Nodes */}
 <div className='absolute inset-0'>
         {[...Array(12)].map((_, i) => (
@@ -817,6 +851,10 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
           rotate: -360,
           scale: [1, 1.2, 1];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      {/* Neural Network Nodes */}<div className='absolute inset - 0'>        className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 border border - purple - 400 / 20 rounded - full";
+        animate={{rotate: -360,scale: [1, 1.2, 1];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           opacity: [0.15, 0.35, 0.15];
         transition={{duration: 25,repeat: Infinity,ease: 'linear',          ease: "linear";
         }}
@@ -830,6 +868,7 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
             transition={{duration: 2 + Math.random () * 2,repeat: Infinity,ease: 'easeInOut',delay: Math.random () * 2,            }}        {[...Array (12)].map ((_, i) => (<motion.div;
             key={i}
             className="absolute w - 3 h - 3 bg - green - 400 rounded - full";
+<<<<<<< HEAD
 <<<<<<< HEAD
             style={{duration: 25,repeat: Infinity,<div className='absolute inset-0'>;
         {[...Array(12)].map((_, i) => (<motion.div;
@@ -885,6 +924,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {[...Array(6)].map((_, i) => (
           <motion.div
+=======
+            style={{duration: 25,repeat: Infinity,<div className='absolute inset-0'>;
+        {[...Array(12)].map((_, i) => (<motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             key={i}
         {[...Array(6)].map((_, i) => (
 
@@ -902,6 +945,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             style={{
               top: '-20px'
             }}
+<<<<<<< HEAD
             animate={{
               y: [0, window && window.innerHeight + 20]
               opacity: [0, 1, 0]
@@ -920,6 +964,8 @@ ease: 'linear',
               delay: i * 1.5,
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             animate={{scale: [1, 1.5, 1],opacity: [0.3, 0.8, 0.3],}}
             transition={{duration: 2 + Math.random() * 2,repeat: Infinity,ease: 'easeInOut',delay: Math.random() * 2,}}/>;
         ))}
@@ -933,10 +979,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             key={i}
             className='absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent';
             style={{top: '-20px';
+<<<<<<< HEAD
 =======
               ease: "linear",
               delay: i * 1.5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             }}
             animate={{y: [0, window && window.innerHeight + 20];
               opacity: [0, 1, 0];
@@ -947,7 +996,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent';
             style={{left: `${(i + 1) * 16.66}%`;
               top: '-20px';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             }}
             animate={{y: [0, window.innerHeight + 20],opacity: [0, 1, 0],}}
             transition={{duration: 8 + i * 0.5,repeat: Infinity,ease: "linear",delay: i * 1.5;
@@ -969,6 +1021,7 @@ ease: 'linear',delay: i * 1.5,}}
 
           />
         ))}
+<<<<<<< HEAD
       </div>
 
 
@@ -1117,6 +1170,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>;
       {/* Quantum Entanglement Effect */}<motion&& motion.div;
         className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full';
@@ -1183,6 +1238,7 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
       />;
       {/* AI Consciousness Waves */}<div className='absolute inset-0'>;
         {[...Array(5)].map((_, i) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -1190,11 +1246,14 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
         {[...Array(5)].map((_, i) => (
           <motion.div
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             key={i}
             className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 border border - pink - 400 / 20 rounded - full';
             style={{width: `${200 + i * 100}px`;
               height: `${200 + i * 100}px`;
             }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             animate={{
@@ -1208,10 +1267,13 @@ ease: 'easeInOut',
               delay: i * 0.8,
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             animate={{key={i}
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-pink-400/20 rounded-full";
             style={{width: `${200 + i * 100}px`;
               height: `${200 + i * 100}px`;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             }}
             animate={{}}
@@ -1285,10 +1347,16 @@ export default UltraFuturisticBackground2034;
               duration: 6 + i * 0 && 0.5,
               repeat: Infinity,
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             }}
           />;
+<<<<<<< HEAD
         ))}
       </div>;
+=======
+        ))}</div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>;
   );
 
@@ -1324,6 +1392,7 @@ export default UltraFuturisticBackground2034;
             }}
           />))}
       </div>;
+<<<<<<< HEAD
     </div>);
 }
 ;
@@ -1333,3 +1402,8 @@ export default UltraFuturisticBackground2034);
 export default UltraFuturisticBackground2034;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)}export default UltraFuturisticBackground2034)}export default UltraFuturisticBackground2034;</div>;
+    </div>;
+)}export default UltraFuturisticBackground2034;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

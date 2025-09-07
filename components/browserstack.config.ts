@@ -72,6 +72,7 @@ default define_config ({test_dir: tests / e2e',  use: {baseURL: process.env.PLAY
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,6 +88,8 @@ default define_config ({
         browser_name: chromium',        channel: chrome'}
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   ];reporter: [;
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
@@ -148,10 +151,13 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     {name: Mobile Safari',      use: {browserName: webkit',        ...devices['iPhone 12']}
     }
   ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 });
   reporter: [;
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
@@ -216,6 +222,7 @@ reporter: [;
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 });
 <<<<<<< HEAD
@@ -276,3 +283,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+});
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

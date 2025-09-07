@@ -11,6 +11,7 @@ import React from 'react';
   glow: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   date?: string;
   category?: string
 }
@@ -18,6 +19,8 @@ import React from 'react';
 const ContentCard: React.FC<ContentCardProps> = ({
   title;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   date?: string;category?: string;
 }const ContentCard: React.FC<ContentCardProps> = ({title;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -55,14 +58,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
         {category && (<span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {category}
           </span>;
         )}
           <span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>            {category}{category}</span>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       </div>
@@ -98,6 +105,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {description}</p>;
       {/* Footer */}
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>;
       {/* Content */}<h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2'>;
         {title}
@@ -200,8 +209,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='absolute inset - 0 bg - gradient - to - br from - cyan - 500 / 5 to - blue - 600 / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500' />;
     </Link>)}export default ContentCard;    </Link>)}export default ContentCard;{description}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </p>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
       </p>;
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+      </p>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

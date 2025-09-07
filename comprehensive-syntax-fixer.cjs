@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       modified = true;
     }
 
@@ -142,6 +145,7 @@ for (const file of files) {
 console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
 console.log('🎯 Comprehensive syntax fixing complete!');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       console.log(`  🔄 Fixing merge conflicts in ${filePath}`);
 main
@@ -150,6 +154,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 class ComprehensiveSyntaxFixer {
   constructor() {
@@ -276,6 +282,7 @@ function findFilesWithErrors(dir) {;
         }
       }
     }
+<<<<<<< HEAD
 
     return files;
   }
@@ -536,6 +543,8 @@ function findFilesWithErrors(dir) {;
         }
       }
     }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   ;
   traverse(dir);
@@ -561,6 +570,7 @@ for (const file of files) {;
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllSyntaxErrors().catch(console.error);
 }
+<<<<<<< HEAD
 =======
   }
 }
@@ -569,6 +579,10 @@ fixer.fixAllSyntaxErrors().catch(console.error);
 
 
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.log(`🎉 Fixed syntax in ${this.fixedFiles} files`);
     if (this.errors.length > 0) {;
   this.log(`⚠️  ${this.errors.length} errors occurred:`);
@@ -668,6 +682,7 @@ console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
 console.log('🎯 Comprehensive syntax fixing complete!');
 main
 
+<<<<<<< HEAD
 fixer.run().catch(console.error);
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -682,3 +697,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

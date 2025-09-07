@@ -4,18 +4,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
   id: string;
 export interface ComprehensiveService  {id: string;name: string;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -28,6 +32,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export interface ComprehensiveService {
 id: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   tagline: string;
   description: string;
@@ -63,6 +69,7 @@ id: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -78,6 +85,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 ];      phone: '+1 302 464 0950';
@@ -92,6 +101,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Average customer sees 600% ROI through operational improvements';
     launch_date: '2024 - 01 - 10';
     customers: 950;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -120,6 +130,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     reviews: 520
   }
 ];
@@ -296,6 +308,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -336,6 +349,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     trialDays: 14, setupTime: '5 minutes',
@@ -596,6 +611,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -612,6 +628,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -619,6 +638,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     trialDays: 60, setupTime: '4-6 weeks',
     competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements',
     launchDate: '2024-01-10', customers: 950,
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.9,
 <<<<<<< HEAD
@@ -634,6 +654,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    rating: 4.9
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1489,6 +1512,7 @@ export interface ComprehensiveService {;
     tagline:
       'Enterprise-grade AI content generation with brand voice consistency'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -1498,6 +1522,8 @@ export interface ComprehensiveService {;
     id: 'ai-customer-success-platform',
     name: 'AI Customer Success Platform',
     tagline: 'Predictive customer success with AI-powered insights',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     description:
       'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',
     price: '$199',
@@ -1572,6 +1598,7 @@ export interface ComprehensiveService {;
     price: '$299',
     period: '/month',
     features: [
+<<<<<<< HEAD
       'Real-time risk assessment and scoring',
       'Automated compliance monitoring',
       'Regulatory reporting automation',
@@ -1661,6 +1688,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     marketSize: '$18.5B',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Automated customer health scoring',
       'Intelligent engagement workflows',
       'Real - time customer sentiment analysis',
@@ -1872,6 +1901,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     period: '/month',
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       'AI-powered product recommendations',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1879,6 +1909,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'AI-powered product recommendations',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Dynamic pricing optimization',
       'Customer behavior analysis',
       'Personalized marketing campaigns',
@@ -1980,12 +2012,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     period: '/month',
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       'AI-powered threat detection with 98% accuracy',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
       'AI-powered threat detection with 98% accuracy',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Automated incident response and remediation',
       'Behavioral analytics and anomaly detection',
       'Vulnerability assessment and management',
@@ -2095,12 +2130,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     category: 'Data & Analytics',
 <<<<<<< HEAD
+<<<<<<< HEAD
     marketSize: '$25.3B',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
     marketSize: '$25.3B',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience:
       'Data teams, analytics professionals, data scientists, enterprises, startups',
     competitiveAdvantage:
@@ -2176,12 +2214,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     period: '/month',
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       'AI-powered candidate matching',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
       'AI-powered candidate matching',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Automated resume screening',
       'Interview scheduling and coordination',
       'Candidate assessment and scoring',
@@ -2273,12 +2314,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     period: '/month',
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       'AI-powered contract analysis and review',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
       'AI-powered contract analysis and review',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Risk identification and assessment',
       'Compliance monitoring and reporting',
       'Contract template management',
@@ -2321,6 +2365,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'CCPA',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Attorney-client privilege',
 =======
       'Attorney - client privilege'
@@ -2355,6 +2400,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       'Attorney - client privilege',
+=======
+      'Attorney - client privilege'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ],
     contact: {
       phone: '+1 302 464 0950',
@@ -2400,12 +2448,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     category: 'Manufacturing & IoT',
 <<<<<<< HEAD
+<<<<<<< HEAD
     marketSize: '$28.9B',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
     marketSize: '$28.9B',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience:
       'Manufacturing companies, industrial facilities, supply chain managers, operations teams',
     competitiveAdvantage:
@@ -2473,6 +2524,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     launch_date: '2024 - 01 - 10';
     customers: 950;
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4.9;
 origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 520
@@ -2499,6 +2551,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9;
     reviews: 520
 
+=======
+    reviews: 520
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 ];
   id: string, name: string,
@@ -2820,6 +2875,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2839,3 +2895,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

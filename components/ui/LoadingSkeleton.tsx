@@ -59,6 +59,9 @@ interface SkeletonProps  {class_name?: string;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>))}interface StatsSkeletonProps  {className?: string;
 }interface StatsSkeletonProps  {class_name?: string;
 }import React from 'react';
@@ -69,6 +72,7 @@ import { motion  } from 'framer-motion';
       </div>;
     </div>;
 }export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {return (<div className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl ${className}`}>;
+<<<<<<< HEAD
 =======
     </div>);
 
@@ -92,6 +96,8 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
   return (
     <div className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl ${className}`}>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className="flex items-center space-x-4 mb-6">;
         <Skeleton className="w-16 h-16 rounded-2xl" />;
         <div className="flex-1">;
@@ -136,8 +142,12 @@ export const StatsSkeleton: React.FC < StatsSkeletonProps> = ({ class_name = '' 
     </div>)}export default Skeleton)}export default Skeleton;interface SkeletonProps  {className?: string;
   height?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   width?: string;)}export default Skeleton;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   width?: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  width?: string;)}export default Skeleton;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

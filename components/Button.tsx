@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline';
@@ -18,6 +19,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <button;
 =======
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
 export default function Button(): any ({children,variant = 'primary',size = 'md',className = '',onClick,type = 'button',disabled = false,}: ButtonProps) {const baseClasses =;
@@ -54,6 +58,7 @@ interface ButtonProps  {variant?: 'primary' | 'secondary' | 'outline';
   type?: 'button' | 'submit' | 'reset',disabled?: boolean;
 }export default function Button({children;
   variant;return (<button;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -94,11 +99,14 @@ interface ButtonProps  {variant?: 'primary' | 'secondary' | 'outline';
 }export default function Button({children;
   variant;return (<button;
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       type={type}
       className={classes}
       on_click={on_click}
       disabled={disabled}
       {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </button>
@@ -108,6 +116,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </button>;
 )}>;
       {children}
@@ -121,8 +131,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {_children}
     </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   )}</button>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   )}</button>)}
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+  )}</button>)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

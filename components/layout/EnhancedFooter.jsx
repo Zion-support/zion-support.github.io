@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear();
               their digital presence with cutting-edge AI, cloud architecture,
@@ -10,6 +11,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const EnhancedFooter = () => {
   return (
     <footer className='bg - gray - 900 text - white'>;
+=======
+const EnhancedFooter = () => {return (<footer className='bg - gray - 900 text - white'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Main Footer Content */}
       <div className='container mx - auto px - 4 py - 16'>;
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8'>;
@@ -25,6 +29,7 @@ const EnhancedFooter = () => {
             </div>;
             <p className='text - gray - 300 mb - 6 max - w-md'>;
               Leading technology solutions provider helping businesses transform;
+<<<<<<< HEAD
               their digital presence with cutting - edge AI, cloud architecture,
               and innovative development services.            </p > const EnhancedFooter = () =>: any {
   const current_year = new Date ().getFullYear (),
@@ -155,6 +160,8 @@ const EnhancedFooter = () => {return (<footer className='bg - gray - 900 text - 
             </div>;
             <p className='text - gray - 300 mb - 6 max - w-md'>;
               Leading technology solutions provider helping businesses transform;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               their digital presence with cutting - edge AI, cloud architecture,and innovative development services.            </p > const EnhancedFooter = () =>: any {const current_year = new Date ().getFullYear (),const currentYear = new Date().getFullYear()their digital presence with cutting-edge AI, cloud architecture,and innovative development services.;
   return (<footer className="bg - gray - 900 text - white">;
       {/* Main Footer Content */}
@@ -256,9 +263,12 @@ const EnhancedFooter = () => {return (<footer className='bg - gray - 900 text - 
         </div>;
       </div>;
       {/* Bottom Footer */}<div className="lg:col - span - 2">;
+<<<<<<< HEAD
 =======
           <div className="lg:col - span - 2">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className="flex items - center space - x-2 mb - 4">;
               <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center">;
                 <span className="text - white font - bold text - xl">Z</span>;
@@ -367,6 +377,7 @@ const EnhancedFooter = () => {return (<footer className='bg - gray - 900 text - 
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </footer>)}
 export default EnhancedFooter;})}export default EnhancedFooter;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -376,3 +387,7 @@ export default EnhancedFooter;})}export default EnhancedFooter;
 export default EnhancedFooter;}
 export default EnhancedFooter;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </footer>)}
+export default EnhancedFooter;})}export default EnhancedFooter;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 export type Trend = any;
@@ -88,6 +89,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
@@ -139,9 +142,13 @@ function AiTrendsPage() {return (<div className="space-y-6">;
           </div>))}
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </div>);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

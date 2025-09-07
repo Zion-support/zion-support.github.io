@@ -1,16 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) ) 
  return (<UltraAdvancedFuturisticBackground> <Head> </li>) ) 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 import Head from 'next/head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Star} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function QuantumAICognitivePage() {;
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive'));
@@ -55,6 +59,8 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumAICognitivePage() {const service  = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive'))return (<UltraAdvancedFuturisticBackground> <Head> </li>) )}</ul> </div> <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 import React from 'react',import { Phone, Mail, MapPin, Check, ArrowRight, Star   } from 'lucide-react';
@@ -71,7 +77,10 @@ export default function QuantumAICognitivePage() {const service = enhancedRealMi
         <div className="max-w-6xl mx-auto">;
           <div className="text-center mb-10">;
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {service.name}
             </h1>;
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>;
@@ -86,6 +95,7 @@ export default function QuantumAICognitivePage() {const service = enhancedRealMi
                     <span>{feat}</span>;
                   </li>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </ul>
             </div>
@@ -131,6 +141,8 @@ export default function QuantumAICognitivePage() {const service = enhancedRealMi
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit">;
@@ -171,11 +183,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </UltraAdvancedFuturisticBackground>;
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) )}</ul> </div> <div className="bg - black / 30 rounded - 2xl border border - purple - 500 / 30 p-6 h-fit" > <div className="flex items - end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w - 5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
+<<<<<<< HEAD
 =======
 
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) );
 }</ul> </div> <div className="bg - black / 30 rounded - 2xl border border - purple - 500 / 30 p-6 h-fit" > <div className="flex items - end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w - 5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Head from 'next / head';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
@@ -250,6 +265,7 @@ if ( {) {$2;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>)})}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -257,3 +273,6 @@ if ( {) {$2;
 }
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </UltraAdvancedFuturisticBackground>)})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

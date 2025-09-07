@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -77,6 +78,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { setVendorApproval, setVendorCommission, suspendVendor  } from '../../../utils/vendor-store';
 import { setVendorApproval;
   setVendorCommission;
@@ -87,6 +90,7 @@ export default function handler() {if (req.method !== 'POST')return res.status(4
 import {try {if (action === 'approve') setVendorApproval(String(vendorId), true)else if (action === 'revoke') setVendorApproval(String(vendorId), false)else if (action === 'suspend') suspendVendor(String(vendorId), true)else if (action === 'unsuspend') suspendVendor(String(vendorId), false)} catch (e: any) {res && res.status(500).json({ error: e && e.message })}}
   setVendorApproval,setVendorCommission,suspendVendor,} from '../../../utils/vendor-store';
 export default function handler() {if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })const { action, vendorId, value } = req.body || {}import { setVendorApproval, setVendorCommission, suspendVendor  } from '../../../utils/vendor-store';
+<<<<<<< HEAD
 export default function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const { action, vendorId, value } = req.body || {},try {if (action === 'approve') setVendorApproval(String(vendorId), true)else if (action === 'revoke') setVendorApproval(String(vendorId), false)else if (action === 'suspend') suspendVendor(String(vendorId), true)else if (action === 'unsuspend') suspendVendor(String(vendorId), false)} catch (e: any) {res && res.status(500).json({ error: e && e.message })}}}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -94,3 +98,6 @@ export default function handler() {if (req.method !== 'POST') return res.status(
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const { action, vendorId, value } = req.body || {},try {if (action === 'approve') setVendorApproval(String(vendorId), true)else if (action === 'revoke') setVendorApproval(String(vendorId), false)else if (action === 'suspend') suspendVendor(String(vendorId), true)else if (action === 'unsuspend') suspendVendor(String(vendorId), false)} catch (e: any) {res && res.status(500).json({ error: e && e.message })}}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

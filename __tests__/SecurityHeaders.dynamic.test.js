@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,6 +22,10 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Security
 import React from 'react';  import '@testing-library/jest-dom'; import SecurityHeaders from '../components/SecurityHeaders.dynamic'; describe('SecurityHeaders',() => { test('renders without crashing',() => { render(<SecurityHeaders />)expect(screen.getByTestId('securityheaders')).toBeInTheDocument()})test('displays correct content',() => { render(<SecurityHeaders />)})test('handles user interactions',() => { render(<SecurityHeaders />)})test('applies correct styling',() => { render(<SecurityHeaders />)})})ursor/automate-test-improve-and-merge-code-646c;
 ursor/automate-test-improve-and-merge-code-646c;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import React from 'react';  import '@testing-library/jest-dom'; import SecurityHeaders from '../components/SecurityHeaders.dynamic'; describe('SecurityHeaders',() => { test('renders without crashing',() => { render(<SecurityHeaders />)expect(screen.getByTestId('securityheaders')).toBeInTheDocument()})test('displays correct content',() => { render(<SecurityHeaders />)})test('handles user interactions',() => { render(<SecurityHeaders />)})test('applies correct styling',() => { render(<SecurityHeaders />)})})ursor/automate-test-improve-and-merge-code-646c;
+ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic'; describe('SecurityHeadersdynamic',() => { test('renders without crashing',() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityHeadersdynamic />)}); test('handles user interactions',() => { render(<SecurityHeadersdynamic />)}); test('applies correct styling',() => { render(<SecurityHeadersdynamic />)})});
 
 
@@ -40,6 +45,7 @@ describe('SecurityHeadersdynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityHeadersdynamic from "./components/SecurityHeaders.dynamic"; describe('SecurityHeadersdynamic', () => { test("renders without crashing",() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId("securityheaders.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityHeadersdynamic />)}); test("handles user interactions",() => { render(<SecurityHeadersdynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,6 +74,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityHeadersdynamic from "./components/SecurityHeaders.dynamic"; describe('SecurityHeadersdynamic', () => { test("renders without crashing",() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId("securityheaders.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityHeadersdynamic />)}); test("handles user interactions",() => { render(<SecurityHeadersdynamic />)}); test("applies correct styling"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityHeadersdynamic from "./components/SecurityHeaders.dynamic"; describe('SecurityHeadersdynamic', () => { test("renders without crashing",() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId("securityheaders.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityHeadersdynamic />)}); test("handles user interactions",() => { render(<SecurityHeadersdynamic />)}); test("applies correct styling"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { render, screen, fireEvent  } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -114,10 +123,13 @@ const React from "react"; import { render, screen, fireEvent } from '@testing-li
   })})
 import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 describe('SecurityHeadersdynamic', () => {
   test('renders without crashing', () => {
     render(<SecurityHeadersdynamic />);
@@ -126,8 +138,11 @@ describe('SecurityHeadersdynamic', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   test('displays correct content', () => {
     render(<SecurityHeadersdynamic />);
   });
@@ -143,6 +158,7 @@ describe('SecurityHeadersdynamic', () => {
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityHeadersdynamic from "./components/SecurityHeaders.dynamic"; describe('SecurityHeadersdynamic', () => { test("renders without crashing",() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId("securityheaders.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityHeadersdynamic />)}); test("handles user interactions",() => { render(<SecurityHeadersdynamic />)}); test("applies correct styling"
@@ -193,3 +209,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityHeadersdynamic from "./components/SecurityHeaders.dynamic"; describe('SecurityHeadersdynamic', () => { test("renders without crashing",() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId("securityheaders.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityHeadersdynamic />)}); test("handles user interactions",() => { render(<SecurityHeadersdynamic />)}); test("applies correct styling"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityHeadersdynamic from "./components/SecurityHeaders.dynamic"; describe('SecurityHeadersdynamic', () => { test("renders without crashing",() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId("securityheaders.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityHeadersdynamic />)}); test("handles user interactions",() => { render(<SecurityHeadersdynamic />)}); test("applies correct styling"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

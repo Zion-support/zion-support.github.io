@@ -5,6 +5,7 @@
   style: { [key: string]: string }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 const badgeVariants = cva(
@@ -122,6 +123,8 @@ export { Badge, badgeVariants };
 <<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }import React from './react';
 import { cva, type VariantProps   } from './class - variance - authority';
 import { cn    } from '../../lib / utils';// Define HTML element types;
@@ -185,9 +188,12 @@ export default function Badge({
     </span>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

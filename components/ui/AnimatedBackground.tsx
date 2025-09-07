@@ -5,6 +5,7 @@ export default function AnimatedBackground() {return (<div className='pointer-ev
             'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)';
         }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             transform: translateY(0px) rotate(0deg);
           }
           50% {;
@@ -20,13 +21,18 @@ export default function AnimatedBackground() {return (<div className='pointer-ev
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             transform: translateY(0px) rotate(0deg)}
           50% {transform: translateY(-20px) rotate(10deg)}
           100% {transform: translateY(0px) rotate(0deg)}
         }`}</style>;
+<<<<<<< HEAD
 =======
       `}</style>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>;
   )return (<div className="fixed inset-0 -z-10 overflow-hidden">;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
@@ -98,11 +104,15 @@ function AnimatedBackground() {return (<div className='pointer - events - none f
         }}
       {/* Grid Pattern */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div;
         className="absolute inset-0 opacity-10";
         style={{backgroundImage: `;
       `}</style>;
     </div>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -111,3 +121,6 @@ function AnimatedBackground() {return (<div className='pointer - events - none f
         style={{
           backgroundImage: `
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -50,6 +50,7 @@ const { execSync } = require("child_process")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       return { "success": false, "error"}
 
@@ -57,3 +58,6 @@ const { execSync } = require("child_process")
 =======
       return { "success": false, "error"}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      return { "success": false, "error"}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

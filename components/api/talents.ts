@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -26,6 +27,8 @@ import {
 import { v4 as uuidv4 } from 'uuid';
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -63,6 +66,7 @@ if ( {) {$2;
   // Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     await record_request (req, res, auth.partner, auth.api_key, started, 400);
     return res.status (400).json ({ error: 'Missing required fields' });
@@ -128,6 +132,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(201).json({ id: record.id });
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     await record_request (req, res, auth.partner, auth.api_key, started, 400)return res.status (400).json ({ error: 'Missing required fields' })}
   await fs.ensure_dir (path.dirname (TALENTS_FILE))const records = (await fs.path_exists (TALENTS_FILE))? await fs.readJSON (TALENTS_FILE): [];
     id: uuidv4(),name,email,skills: skills || [],programTrack: programTrack || null,certificationStatus: certificationStatus || 'pending',partnerId: auth.partner.id,}records && records.push(record)await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 })await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201)return res && res.status(201).json({ id: record && record.id })return res && res.status(201).json({ id: record && record.id })}
@@ -139,6 +145,7 @@ const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")
   const now = new Date().toISOString()const record = {id: uuidv4(), name,email;
     skills: skills || [], programTrack: programTrack || null,certificationStatus: certificationStatus || "pending", partnerId: auth.partner.id,createdAt: now}records.push(record)await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 })await recordRequest(req, res, auth.partner, auth.apiKey, started, 201)return res.status(201).json({ id: record.id })}
     id: uuidv4 (),name,email,skills: skills || [],program_track: program_track || null,certification_status: certification_status || 'pending',partner_id: auth.partner.id,created_at: now,}
+<<<<<<< HEAD
   records.push (record)await fs.writeJSON (TALENTS_FILE, records, { spaces: 2 })await record_request (req, res, auth.partner, auth.api_key, started, 201)return res.status (201).json ({ id: record.id })return res.status (201).json ({ id: record.id })}return res.status(201).json({ id: record.id })
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -160,3 +167,6 @@ created_at: now,
   return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id });
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  records.push (record)await fs.writeJSON (TALENTS_FILE, records, { spaces: 2 })await record_request (req, res, auth.partner, auth.api_key, started, 201)return res.status (201).json ({ id: record.id })return res.status (201).json ({ id: record.id })}return res.status(201).json({ id: record.id })
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

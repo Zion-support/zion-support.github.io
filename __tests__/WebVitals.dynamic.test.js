@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,6 +22,10 @@ import _React from 'react';  import '@testing-library/jest-dom'; import WebVital
 import React from 'react';  import '@testing-library/jest-dom'; import WebVitals from '../components/WebVitals.dynamic'; describe('WebVitals',() => { test('renders without crashing',() => { render(<WebVitals />)expect(screen.getByTestId('webvitals')).toBeInTheDocument()})test('displays correct content',() => { render(<WebVitals />)})test('handles user interactions',() => { render(<WebVitals />)})test('applies correct styling',() => { render(<WebVitals />)})})ursor/automate-test-improve-and-merge-code-646c;
 ursor/automate-test-improve-and-merge-code-646c;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import React from 'react';  import '@testing-library/jest-dom'; import WebVitals from '../components/WebVitals.dynamic'; describe('WebVitals',() => { test('renders without crashing',() => { render(<WebVitals />)expect(screen.getByTestId('webvitals')).toBeInTheDocument()})test('displays correct content',() => { render(<WebVitals />)})test('handles user interactions',() => { render(<WebVitals />)})test('applies correct styling',() => { render(<WebVitals />)})})ursor/automate-test-improve-and-merge-code-646c;
+ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import _React from 'react';  import '@testing-library/jest-dom'; import WebVitalsdynamic from '../components/WebVitals.dynamic'; describe('WebVitalsdynamic',() => { test('renders without crashing',() => { render(<WebVitalsdynamic />); expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<WebVitalsdynamic />)}); test('handles user interactions',() => { render(<WebVitalsdynamic />)}); test('applies correct styling',() => { render(<WebVitalsdynamic />)})});
 
 
@@ -40,6 +45,7 @@ describe('WebVitalsdynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import WebVitalsdynamic from "./components/WebVitals.dynamic"; describe('WebVitalsdynamic', () => { test("renders without crashing",() => { render(<WebVitalsdynamic />); expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<WebVitalsdynamic />)}); test("handles user interactions",() => { render(<WebVitalsdynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,6 +74,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import WebVitalsdynamic from "./components/WebVitals.dynamic"; describe('WebVitalsdynamic', () => { test("renders without crashing",() => { render(<WebVitalsdynamic />); expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<WebVitalsdynamic />)}); test("handles user interactions",() => { render(<WebVitalsdynamic />)}); test("applies correct styling"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import WebVitalsdynamic from "./components/WebVitals.dynamic"; describe('WebVitalsdynamic', () => { test("renders without crashing",() => { render(<WebVitalsdynamic />); expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<WebVitalsdynamic />)}); test("handles user interactions",() => { render(<WebVitalsdynamic />)}); test("applies correct styling"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { render, screen, fireEvent  } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -114,10 +123,13 @@ const React from "react"; import { render, screen, fireEvent } from '@testing-li
   })})
 import WebVitalsdynamic from '../components/WebVitals.dynamic';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 describe('WebVitalsdynamic', () => {
   test('renders without crashing', () => {
     render(<WebVitalsdynamic />);
@@ -126,8 +138,11 @@ describe('WebVitalsdynamic', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   test('displays correct content', () => {
     render(<WebVitalsdynamic />);
   });
@@ -143,6 +158,7 @@ describe('WebVitalsdynamic', () => {
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import WebVitalsdynamic from "./components/WebVitals.dynamic"; describe('WebVitalsdynamic', () => { test("renders without crashing",() => { render(<WebVitalsdynamic />); expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<WebVitalsdynamic />)}); test("handles user interactions",() => { render(<WebVitalsdynamic />)}); test("applies correct styling"
@@ -193,3 +209,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import WebVitalsdynamic from "./components/WebVitals.dynamic"; describe('WebVitalsdynamic', () => { test("renders without crashing",() => { render(<WebVitalsdynamic />); expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<WebVitalsdynamic />)}); test("handles user interactions",() => { render(<WebVitalsdynamic />)}); test("applies correct styling"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import WebVitalsdynamic from "./components/WebVitals.dynamic"; describe('WebVitalsdynamic', () => { test("renders without crashing",() => { render(<WebVitalsdynamic />); expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<WebVitalsdynamic />)}); test("handles user interactions",() => { render(<WebVitalsdynamic />)}); test("applies correct styling"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

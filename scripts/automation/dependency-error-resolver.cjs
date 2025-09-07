@@ -506,6 +506,7 @@ if (require.main === module) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = DependencyErrorResolver
 
@@ -513,3 +514,6 @@ module.exports = DependencyErrorResolver
 =======
 module.exports = DependencyErrorResolver
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = DependencyErrorResolver
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

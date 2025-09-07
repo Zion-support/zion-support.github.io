@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
@@ -9,6 +10,8 @@ main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -47,6 +50,7 @@ main
 // Run the enhanced orchestrator
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 main();
 
@@ -74,6 +78,17 @@ main();
 main();#!/usr/bin/env node;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+main();
+
+
+
+
+#!/usr/bin/env node;
+
+main();#!/usr/bin/env node;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')

@@ -215,7 +215,10 @@ if ( {) {$2;
     )}
   return (<div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
       {items.map ((p) => (<div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           key={p.slug}
           className="rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 p - 4";
         >;
@@ -265,6 +268,7 @@ if ( {) {$2;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     </div>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -272,3 +276,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div className="mt - 3 text - sm">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

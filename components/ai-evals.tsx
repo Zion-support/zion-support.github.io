@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
@@ -54,6 +55,8 @@ export default function AIEvalsPage() {
     'CI quality gates and webhooks'
     'Latency and cost KPIs with budgets'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Check,ShieldCheck,TrendingUp,Clock,Phone,Mail,import React from 'react',import Head from 'next/head';
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink   } from 'lucide-react';
@@ -81,11 +84,15 @@ export default function AIEvalsPage() {const contactInfo = {mobile: '+1 302 464 
     'LLM version comparison reports';
     'CI quality gates and webhooks';
     'Latency and cost KPIs with budgets';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ];
   return (<QuantumHolographicMatrixBackground>;
       <Head>;
         <title>AI Evals & Observability | Zion Tech Group</title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta
           name='description'
@@ -119,6 +126,10 @@ export default function AIEvalsPage() {const contactInfo = {mobile: '+1 302 464 
           name='description';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        <meta;
+          name='description';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-evals' />;
       </Head>;Continuous evaluation, drift detection, and quality gates to ship;
@@ -175,6 +186,9 @@ export default function AIEvalsPage() {const contactInfo = {mobile: '+1 302 464 
     </div>;
   </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   </QuantumHolographicMatrixBackground>)}content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.';
         />;
         <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />;
@@ -317,9 +331,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
     </QuantumHolographicMatrixBackground>;
+<<<<<<< HEAD
   )
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   </QuantumHolographicMatrixBackground>);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

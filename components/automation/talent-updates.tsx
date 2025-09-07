@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import { TALENT_PROFILES } from '../../data/talent';
@@ -67,6 +68,8 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 }</div> </div>) import fs from 'fs';
@@ -103,6 +106,7 @@ type TalentSummary = { slug: string, summary: string },export async /**;
  */;
 function getServerSideProps() {const file = path.join (process.cwd (), 'datatalent_ai.json')let generated_at = '';
   let summaries: TalentSummary[] = [];  try {const raw = fs.readFileSync (file, 'utf - 8')const json = JSON.parse (raw)generated_at = json.generated_at || '';
+<<<<<<< HEAD
 =======
 import {TALENT_PROFILES} from '../../data / talent';
 type TalentSummary = { slug: string, summary: string },
@@ -117,6 +121,8 @@ function getServerSideProps() {
     const json = JSON.parse (raw);
     generated_at = json.generated_at || '';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     summaries = json.summaries || [];
   } catch {}
   return { props: { generated_at, summaries } }
@@ -135,8 +141,12 @@ function TalentUpdatesPage() {const map = new Map (summaries.map (string => [s.s
           </div>))}
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>))}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </div>);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -10,6 +10,7 @@
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -34,6 +35,11 @@ export interface EmergingTechBreakthroughServiceV2  {id: string;
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechBreakthroughServiceV2 {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface EmergingTechBreakthroughServiceV2  {id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -63,6 +69,7 @@ export interface EmergingTechBreakthroughServiceV2 {
   contact_info: {mobile: string;
     email: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     address: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,6 +87,8 @@ export interface EmergingTechBreakthroughServiceV2 {
         'Real-time brain signal interpretation',
   real_implementation: boolean;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     address: string;website: string;
   }'Real-time brain signal interpretation',real_implementation: boolean;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -793,6 +802,7 @@ export interface EmergingTechBreakthroughServiceV2  {id: string,name: string,tag
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         'Direct neural control of applications',
         'Thought - to - text conversion',
+<<<<<<< HEAD
 =======
 
         'Direct neural control of applications',
@@ -1097,12 +1107,15 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Mental command execution',
         'Neural pattern recognition',
         'Custom neural interface development',
         'Enterprise security and privacy',
         'Integration with existing systems',
         'Advanced analytics and insights',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1163,6 +1176,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        '24 / 7 technical support'
+      ],
+      popular: true,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
         'Custom applications, Research platforms, Healthcare systems, Gaming engines, Accessibility tools, Research databases',
       ],
@@ -1177,6 +1195,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       growthRate: '800% annual growth',
       variant: 'space-futuristic',
       contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1232,6 +1251,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1245,6 +1266,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 5 && 5.0,
       reviews: 12
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1282,6 +1304,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Quantum network connectivity',
         'Quantum key distribution',
         'Quantum cloud computing access',
@@ -1294,6 +1318,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         '24 / 7 quantum network support'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1377,6 +1402,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
         'Existing network infrastructure, Cloud platforms, Security systems, Research platforms, Government networks',
       ],
@@ -1391,6 +1418,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       growthRate: '600% annual growth',
       variant: 'quantum-futuristic',
       contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1446,6 +1474,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1459,6 +1489,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.9,
       reviews: 18
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1526,6 +1557,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Biological system design tools',
         'DNA synthesis and assembly',
         'Biological circuit design',
@@ -1538,6 +1571,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Expert consultation and support'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1586,6 +1620,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
         'Lab equipment, Research databases, Manufacturing systems, Quality control systems, Regulatory databases',
       ],
@@ -1600,6 +1636,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       growthRate: '500% annual growth',
       variant: 'biotech-futuristic',
       contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1655,6 +1692,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1668,6 +1707,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.8,
       reviews: 45
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1725,6 +1765,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Plasma confinement optimization',
         'Energy output maximization',
         'Safety system management',
@@ -1741,6 +1783,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Expert consultation services'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1791,6 +1834,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
         'Power grid systems, Fusion reactors, Energy management systems, Safety systems, Industrial control systems',
       ],
@@ -1805,6 +1850,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       growthRate: '700% annual growth',
       variant: 'quantum-energy-revolutionary',
       contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1860,6 +1906,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1873,6 +1921,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 5 && 5.0,
       reviews: 6
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1938,6 +1987,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Automated asteroid identification',
         'Mining robot control systems',
         'Resource extraction automation',
@@ -1947,6 +1998,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Regulatory compliance support',
         'Integration with space systems',
         'Advanced analytics and reporting',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2007,6 +2059,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        '24 / 7 space operations support'
+      ],
+      popular: true,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
         'Space systems, Mining equipment, Transportation systems, Processing facilities, Market platforms',
       ],
@@ -2021,6 +2078,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       growthRate: '1000% annual growth',
       variant: 'space-futuristic',
       contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2076,6 +2134,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2089,6 +2149,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 5 && 5.0,
       reviews: 3
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2165,6 +2226,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        'Quantum consciousness algorithms',
+        'Neural network consciousness',
+        'Self - awareness development',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Emotional intelligence creation',
         'Consciousness testing and validation',
         'Ethical AI development',
@@ -2174,6 +2240,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Expert consultation and support'
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2222,6 +2289,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
         'AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases',
       ],
@@ -2255,6 +2324,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       rating: 5.0
       reviews: 2
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2305,6 +2375,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2312,6 +2384,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       },
       real_implementation: true,
       implementation_details:;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2326,10 +2399,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
       launch_date: '2025 - 06 - 01',
       customers: 3,
       rating: 5 && 5.0,
+<<<<<<< HEAD
 <<<<<<< HEAD
       reviews: 2
   ];    features: [
@@ -2367,6 +2443,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      reviews: 2
+  ];    features: [
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface EmergingTechBreakthroughServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -2388,6 +2469,7 @@ export interface EmergingTechBreakthroughServiceV2 {
     website: string
   
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2426,12 +2508,15 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'
       launchDate: '2025-06-01'
       customers: 3
       rating: 5.0
       reviews: 2
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2466,16 +2551,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
       launchDate: '2025-06-01',
       customers: 3,
       rating: 5.0,
+<<<<<<< HEAD
 <<<<<<< HEAD
       reviews: 2,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       reviews: 2
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     },;
@@ -2547,6 +2637,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2570,6 +2661,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations: ['AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'];
     useCases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'];
     roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.'
@@ -2577,6 +2670,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketSize: '$8B market', growthRate: '900% annual growth'
     variant: 'ai-futuristic'
     contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2593,6 +2687,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -2898,6 +2994,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     launchDate: '2025-06-01',;
     customers: 3,;
     rating: 5.0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2937,6 +3034,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 2
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     real_implementation: true,
     implementation_details: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
@@ -2944,6 +3043,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 5.0,
     reviews: 2;
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2975,13 +3075,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import { ServiceVariant } from '../types/service-variants',;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
   }
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
   name: string,;
@@ -3289,6 +3394,9 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     rating: 5.0;
     reviews: 2;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];
   }
 <<<<<<< HEAD
@@ -3625,6 +3733,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -3658,3 +3767,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

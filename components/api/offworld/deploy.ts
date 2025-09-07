@@ -1,15 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { execSync  } from 'child_process';
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   try {// Ensure export;
     const outDir = path && path.resolve(process && process.cwd(), 'out')try {} catch (e) {// attempt minimal static export;
       try {execSync('next build && next export', { stdio: 'inherit' })}
       return res;
         .status(500).json({ error: 'Export failed, no out/ directory found' })return res && res.status(500).json({ error: 'Export failed, no out/ directory found' })}
     const { cid, provider } = await addDirectory(outDir)return res.status(500).json({ error: error?.message |'Unknown error' })return res.status(500).json({ error: error?.message || 'Unknown error' })}    return res.status(200).json({ cid, provider })import { execSync   } from 'child_process';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import path from 'path';
 import fs from 'fs';
 import { addDirectory  } from '@/utils/offworld/ipfs';
@@ -19,6 +25,7 @@ export default async function handler() {if (req.method !== 'POST') return res.s
     const outDir = path.resolve(process.cwd(), 'out')try {execSync('npm run export', { stdio: 'inherit' })} catch (e) {// attempt minimal static export;
       try {execSync('next build && next export', { stdio: 'inherit' })} catch (e2) {}
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!fs.existsSync(outDir)) {
 return res
@@ -69,6 +76,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   };
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (!fs.existsSync(outDir)) {return res;
         .status(500).json({ error: 'Export failed, no out/ directory found' })}
     const { cid, provider } = await addDirectory(outDir)if (!cid) return res.status(500).json({ error: 'IPFS upload failed' })return res.status(200).json({ cid, provider })} catch (error: any) {return res.status(500).json({ error: error?.message || 'Unknown error' })}} catch (error: any) {return res.status(500).json({ error: error?.message |'Unknown error' })return res.status(200).json({ cid, provider })} catch (error: any) {return res.status(500).json({ error: error?.message |'Unknown error' })return res && res.status(200).json({ cid, provider })} catch (error: any) {return res && res.status(500).json({ error: error?.message || 'Unknown error' })}    return res && res.status(200).json({ cid, provider })} catch (error: any) {return res && res.status(500).json({ error: error?.message || 'Unknown error' })}}
@@ -82,7 +91,10 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
  * handler - Function description;
  */;
 function handler() {if (return res.status (405).json ({ error: 'Method not allowed' })) {$2;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
   try {// Ensure export;
     const out_dir = path.resolve (process.cwd (), 'out')try {exec_sync ('npm run export', { stdio: 'inherit' })} catch (e) {// attempt minimal static export;
@@ -104,6 +116,7 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
     return res.status(500).json({ error: error?.message || 'Unknown error' })}}
 }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -185,3 +198,6 @@ function handler() {
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

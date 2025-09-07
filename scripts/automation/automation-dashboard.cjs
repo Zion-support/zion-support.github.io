@@ -88,6 +88,7 @@ const Table = require("cli-table3")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(chalk.red(" Dashboard "error": ")
 
@@ -95,3 +96,6 @@ const Table = require("cli-table3")
 =======
   console.error(chalk.red(" Dashboard "error": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(chalk.red(" Dashboard "error": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

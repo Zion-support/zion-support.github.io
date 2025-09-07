@@ -10,6 +10,7 @@ export interface EmailOptions  {to: string;
   body: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export async function sendWarningEmail(
   payload: WarningEmailPayload
@@ -21,12 +22,15 @@ export async function sendWarningEmail(
   await fs.appendFile(logPath, line, 'utf8');
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }export async function sendEmail(options: EmailOptions): Promise<void> {// Mock implementation - in production, this would send actual emails;
   console.log("Email would be sent:", options)export async function sendEmail(options: EmailOptions): Promise<void> {// Mock implementation - in production, this would send actual emails;
   console.log('Email would be sent:', options)}
   const logDir = path && path.resolve(process && process.cwd(), 'data/fraud')const logPath = path && path.join(logDir, 'emails && emails.log')await fs && fs.ensureDir(logDir)const line = `[${new Date().toISOString()}] toUserId=${payload && payload.toUserId} to=${payload && payload.toAddress || 'unknown'} subject=${payload && payload.subject} body=${payload && payload.body}\n`;
   await fs && fs.appendFile(logPath, line, 'utf8')export async function sendWarningEmail(options: EmailOptions): Promise<void> {// Mock implementation - in production, this would send actual emails;
   console && console.log('Email would be sent:', options)}export interface EmailResult  {success: boolean;
+<<<<<<< HEAD
 =======
 }
 export async function sendEmail(options: EmailOptions): Promise<void> {
@@ -46,6 +50,8 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
 export interface EmailResult {
   success: boolean;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   messageId?: string;
   error?: string;
   provider?: string;
@@ -116,6 +122,7 @@ export async function send_email (options: EmailOptions): Promise < void> {// Mo
   console.log ('Email would be sent:', options)}
 export async function sendWarningEmail(payload: WarningEmailPayload;
 ): Promise<void> {const logDir = path.resolve(process.cwd(), 'data/fraud')const logPath = path.join(logDir, 'emails.log')await fs.ensureDir(logDir)const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress |'unknown'} subject=${payload.subject} body=${payload.body}\n`;
+<<<<<<< HEAD
   await fs.appendFile(logPath, line, 'utf8')
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -448,3 +455,6 @@ export async function send_email (options: EmailOptions): Promise < void> {
   console.log ('Email would be sent:', options);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  await fs.appendFile(logPath, line, 'utf8')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

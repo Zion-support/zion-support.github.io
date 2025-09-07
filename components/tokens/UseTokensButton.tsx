@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -31,6 +32,11 @@ export default function UseTokensButton() {const [open, setOpen] = useState(fals
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+export default function UseTokensButton() {const [open, setOpen] = useState(false)return (<>;
+      <button;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         onClick={() => setOpen(true)}
         className="enhanced-button enhanced-button-primary";
       >;
@@ -88,6 +94,7 @@ export default function UseTokensButton() {const [open, setOpen] = useState(fals
         defaultType={defaultType}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       />
     </>
   );
@@ -107,6 +114,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [open, setOpen] = useState(false);
   return (
     <>;
+=======
+      />;
+    </>;
+  )const [open, setOpen] = useState(false)return (<>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <button;
         on_click={() => set_open (true)}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -144,9 +156,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         default_type={default_type}
       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>)
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
     </>);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </>)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

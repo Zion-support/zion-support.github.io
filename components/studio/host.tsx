@@ -3,15 +3,19 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useState } from 'react';
 type PersonaConfig = any;
   language: string;
   cloneStyleText?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
@@ -137,6 +141,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <select
               className='mt-1 w-full border rounded p-2'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function StudioHostPage() {const [persona, setPersona] = useState<PersonaConfig>({voice: 'Visionary';
     language: 'English';
     voice: 'Visionary',language: 'English',})const [inviteeName, setInviteeName] = useState('')const [inviteeBio, setInviteeBio] = useState('')const [topic, setTopic]  = useState('')export default function StudioHostPage() {const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),const [inviteeName, setInviteeName] = useState('')const [inviteeBio, setInviteeBio] = useState('')const [topic, setTopic] = useState('')const [operatorPrompt, setOperatorPrompt]  = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.')const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.';
@@ -162,7 +168,10 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
             <label className='block text-sm font-medium'>Voice</label>;
             <select;
               className='mt-1 w-full border rounded p-2';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               value={persona && persona.voice}
               onChange={e =>;
                 setPersona({ ...persona, voice: e && e.target.value as any })set_publishing (false)}
@@ -190,6 +199,7 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
           <div>value={persona && persona.cloneStyleText || ''}
               onChange={e =>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 setPersona({ ...persona, cloneStyleText: e && e.target.value });
               }
 <<<<<<< HEAD
@@ -211,6 +221,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
             />          </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                setPersona({ ...persona, cloneStyleText: e && e.target.value })}/>          </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>;
       </section>;
       <section className='space-y-3'>;
@@ -232,6 +245,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div>;
             <label className='block text-sm font-medium'>Invitee Name</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <input;
               className='mt-1 w-full border rounded p-2';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -239,6 +253,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <input
               className='mt-1 w-full border rounded p-2'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            <input;
+              className='mt-1 w-full border rounded p-2';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               value={inviteeName}
               onChange={e => setInviteeName(e && e.target.value)}
             />;
@@ -271,6 +289,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <button
           className='px-4 py-2 bg-blue-600 text-white rounded'
           onClick={handleGenerate}
@@ -299,12 +318,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        <button;
+          className='px-4 py-2 bg-blue-600 text-white rounded';
+          onClick={handleGenerate}disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <section className="space-y-3">;
         <h2 className="text-xl font-semibold">AI Persona</h2>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
           <div>;
             <label className="block text-sm font-medium" htmlFor="input-Voice">Voice</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <select;
               className="mt-1 w-full border rounded p-2";
           <div>;
@@ -337,6 +364,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div>;
               <h4 className="font-semibold">Questions</h4>;
               <ol className="list-decimal list-inside space-y-1">;
+<<<<<<< HEAD
 =======
             <select
               className="mt-1 w-full border rounded p-2"
@@ -370,6 +398,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h4 className="font-semibold">Questions</h4>
               <ol className="list-decimal list-inside space-y-1">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               value={persona && persona.voice}
               onChange={(e) => setPersona({ ...persona, voice: e && e.target.value as any })}
             >;
@@ -440,6 +470,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {episode.audio.mp4Url && (<a;
                 disabled={publishing}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >                {publishing ? 'Publishing…' : 'Update RSS'}<section className='space-y-4'>;
           <h2 className='text-xl font-semibold'>Episode Draft</h2>;
           <div className='border rounded p-4 space-y-3'>;
@@ -508,7 +541,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             {episode.audio && (<div className='flex gap-3'>;
                 {episode.audio.mp3Url && (<a;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     href={episode.audio.mp3Url}
                     className='text-blue-600 underline';
                   >;
@@ -535,16 +571,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
   );
 }
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>;
   )}{episode.audio && ({publishing ? 'Publishing…' : 'Update RSS'}
               </button>;
             </div>;
+<<<<<<< HEAD
             {episode.audio && (
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -560,3 +600,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {episode.audio && (
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            {episode.audio && (
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

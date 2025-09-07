@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,6 +19,11 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const SORT_OPTIONS = [
   { value: 'relevance', label: 'Relevance' }
   { value: 'rating', label: 'Highest Rating' }
@@ -31,6 +37,7 @@ export const SORT_OPTIONS = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,10 +47,15 @@ export const SORT_OPTIONS = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   { value: 'price-high', label: 'Price: High to Low' }
 
 ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Sort options for talent directory;
 export const SORT_OPTIONS = [;
@@ -64,6 +76,12 @@ export const SORT_OPTIONS = [;
 export const SORT_OPTIONS = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+// Sort options for talent directory;
+export const SORT_OPTIONS = [;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   { value: 'relevance', label: 'Relevance' },
   { value: 'rating', label: 'Highest Rating' },
   { value: 'experience', label: 'Most Experienced' },
@@ -71,6 +89,7 @@ export const SORT_OPTIONS = [;
 
 
   { value: 'price-high', label: 'Price: High to Low' }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +112,11 @@ export const SORT_OPTIONS = [;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   { value: 'relevance', label: 'Relevance' },
   { value: 'rating', label: 'Highest Rating' },
   { value: 'experience', label: 'Most Experienced' },
@@ -103,6 +127,7 @@ export const SORT_OPTIONS = [;
   { value: 'price-low', label: 'Price: Low to High' };
   { value: 'price-high', label: 'Price: High to Low' }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -169,3 +194,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export const SORT_OPTIONS = null;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+
+  { value: 'relevance', label: 'Relevance' },
+  { value: 'rating', label: 'Highest Rating' },
+  { value: 'experience', label: 'Most Experienced' },
+
+
+
+// Sort options for talent directory
+export const SORT_OPTIONS = null;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

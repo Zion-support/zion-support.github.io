@@ -136,6 +136,7 @@ console.log(`� Starting smart dependency fixer automation...``)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.log(" No missing packages found")
 
@@ -143,3 +144,6 @@ console.log(`� Starting smart dependency fixer automation...``)
 =======
   console.log(" No missing packages found")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.log(" No missing packages found")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

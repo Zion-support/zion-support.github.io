@@ -16,6 +16,7 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
 
@@ -23,3 +24,6 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
 =======
     if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

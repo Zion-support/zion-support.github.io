@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = any;
     return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -14,10 +15,13 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
   return (
 
 type Props = {;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   content: string | null;
   content: string | null,
   generated_at: string | null;
 }
+<<<<<<< HEAD
 ;
 export default /**
  * ChangelogPage - Function description
@@ -61,6 +65,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   content: string | null;
   generatedAt: string | null;
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function ChangelogPage() {return (type Props = {content: string | null;
   content: string | null,generated_at: string | null;
 }export default /**;
@@ -84,7 +90,10 @@ type Props = any;
         </div>;
       )}export default function ChangelogPage() {return (</main>;No changelog generated yet.;
         </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       )}
     </main>;
 export default function ChangelogPage(): any ({ content, generatedAt }: Props) {return (<main className='mx-auto max-w-4xl px-4 py-12'>;
@@ -111,6 +120,7 @@ export default function ChangelogPage(): any ({ content, generatedAt }: Props) {
  */;
 function getStaticProps() {export async function getStaticProps() {try {const file = path.join(process.cwd(), 'CHANGELOG.md')const content = fs.readFileSync(file, 'utf8')return {props: { content, generatedAt: new Date().toISOString() },revalidate: 300,}} catch {}    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }return { props: { content: null, generatedAt: null }, revalidate: 300 }}} catch {return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -177,3 +187,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}}
+  } catch {return { props: { content: null, generatedAt: null }, revalidate: 300 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

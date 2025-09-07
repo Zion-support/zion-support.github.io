@@ -23,6 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -61,6 +62,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);
   res.status(200).json({ ok: true })
@@ -74,6 +81,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -98,6 +106,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { clearSessionCookie } from '../../../utils / auth - utils';
 ;
 export default /**
@@ -130,6 +140,7 @@ function handler() {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -142,6 +153,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 import { clearSessionCookie } from '../../../utils/auth-utils';
@@ -187,6 +200,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
@@ -196,3 +210,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.status(200).json({ ok: true });
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

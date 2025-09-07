@@ -20,6 +20,7 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
@@ -27,6 +28,9 @@ class BuildMonitor {}
 =======
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
@@ -50,6 +54,7 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -57,6 +62,9 @@ class BuildMonitor {}
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Build check passed ✓')) {}
@@ -84,6 +92,7 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -91,6 +100,9 @@ class BuildMonitor {}
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       cleanChild.on('close', (code) => {}
         if ( {})
           console.log('Clean completed, retrying build...')) {}
@@ -133,6 +145,7 @@ if ( {})
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = BuildMonitor;
 
@@ -140,3 +153,6 @@ module.exports = BuildMonitor;
 =======
 module.exports = BuildMonitor;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = BuildMonitor;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

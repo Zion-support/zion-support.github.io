@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils/translation';
 };
@@ -13,9 +14,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 export type UseAutoTranslateResult = {
   translations: Record < string, string>;
+=======
+
+;
+export type UseAutoTranslateResult = {translations: Record < string, string>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   loading: boolean;
   error?: string;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
@@ -114,6 +121,8 @@ import { translateTextViaAI  } from '../utils/translation';
 ): UseAutoTranslateResult {const [translations, setTranslations] = useState<Record<string, string>>({})const [loading, setLoading] = useState(false)const [error, setError] = useState<string | undefined>(undefined)setTranslations({})export function useAutoTranslate (text: string,targets: string[],debounce_ms = 600): UseAutoTranslateResult {  const [translations, set_translations] = useState < Record < string, string>>({})export function useAutoTranslate (text: string, targets: string[], debounce_ms = 600): UseAutoTranslateResult {const [translations, set_translations] = useState < Record < string, string>>({})const [loading, set_loading] = useState (false)const [error, set_error]  = useState < string | undefined>(undefined)const key  = useMemo (() => JSON.stringify ({ text, targets }), [text, targets])useEffect (() => {// Check condition;
 if ( {) {$2;
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       set_translations ({})return;    }      return;
 return;}
     let cancelled = false;
@@ -138,9 +147,13 @@ clearTimeout(timer)}}, [key, debounceMs])return { translations, loading, error }
 }
     }
   }, [key, debounce_ms])return { translations, loading, error }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

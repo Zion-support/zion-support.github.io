@@ -62,11 +62,21 @@ export default function ContactForm() {
   return (
     <div className='max-w-4xl mx-auto'>
       {/* Hero Section */}
+<<<<<<< HEAD
       <div className='text-center mb-12'>
         <h1 className='text-4xl font-bold text-gray-900 mb-4'>Get in Touch</h1>
         <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
           Ready to transform your business with cutting-edge technology? Let's
           discuss your project and create a custom solution.
+=======
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          Get in Touch
+        </h1>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          Ready to transform your business with cutting-edge technology? 
+          Let&apos;s discuss your project and create a custom solution.
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </p>
       </div>
 
@@ -142,12 +152,20 @@ export default function ContactForm() {
             </h2>
 
             {submitStatus === 'success' && (
+<<<<<<< HEAD
               <div className='mb-6 p-4 bg-green-50 border border-green-200 rounded-md'>
                 <div className='flex items-center'>
                   <CheckCircleIcon className='w-5 h-5 text-green-600 mr-2' />
                   <p className='text-green-800'>
                     Thank you! Your message has been sent successfully. We'll
                     get back to you within one business day.
+=======
+              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
+                <div className="flex items-center">
+                  <CheckCircleIcon className="w-5 h-5 text-green-600 mr-2" />
+                  <p className="text-green-800">
+                    Thank you! Your message has been sent successfully. We&apos;ll get back to you within one business day.
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   </p>
                 </div>
               </div>

@@ -39,6 +39,7 @@ export type FeedbackRecord = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -73,10 +74,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   type: string;
   message: string;
   rating: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,6 +136,8 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   return rec;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 export interface FeedbackStats {
@@ -150,6 +156,7 @@ export interface FeedbackStats {
   recent: FeedbackRecord[];
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -177,6 +184,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   metadata: Record < string, any>;
   created_at: string;
   ip: string;
@@ -189,6 +198,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export function getAllFeedback (): FeedbackRecord[] {return [...feedback_data];
 }const DATA_DIR = path.join(process.cwd(), 'data', 'runtime')const DB_PATH  = path.join(DATA_DIR, 'feedback.json')function ensureDataFile(): void {if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })if (!fs.existsSync(DB_PATH))fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), 'utf-8')export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {ensureDataFile()const raw = fs.readFileSync(DB_PATH, 'utf-8')const data = JSON.parse(raw || '{}')const items: FeedbackRecord[] = Array.isArray(data.items) ? data.items : [];
@@ -198,6 +208,11 @@ export function getAllFeedback (): FeedbackRecord[] {return [...feedback_data];
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export function getAllFeedback (): FeedbackRecord[] {return [...feedback_data];
+}const DATA_DIR = path.join(process.cwd(), 'data', 'runtime')const DB_PATH  = path.join(DATA_DIR, 'feedback.json')function ensureDataFile(): void {if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })if (!fs.existsSync(DB_PATH))fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), 'utf-8')export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {ensureDataFile()const raw = fs.readFileSync(DB_PATH, 'utf-8')const data = JSON.parse(raw || '{}')const items: FeedbackRecord[] = Array.isArray(data.items) ? data.items : [];
+  items.push(rec)fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), 'utf-8')return rec;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 const feedbackData: FeedbackRecord[] = [];
 
@@ -206,6 +221,7 @@ export async function saveFeedbackFallback(
 ): Promise<void> {
   feedbackData.push(feedback);
   console.log("Feedback saved:", feedback.id);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const feedback_data: FeedbackRecord[] = [];
@@ -220,6 +236,8 @@ main
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 export function writeAll(rows: any[]): void {
@@ -227,13 +245,17 @@ export function writeAll(rows: any[]): void {
   // Implementation would write to database or file
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export function getAllFeedback(): FeedbackRecord[] {
   return [...feedbackData];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -282,3 +304,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

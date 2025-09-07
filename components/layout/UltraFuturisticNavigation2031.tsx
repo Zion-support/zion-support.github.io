@@ -1,6 +1,7 @@
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
@@ -170,6 +171,8 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   BookOpen, MessageCircle, Star, TrendingUp, Target;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion, AnimatePresence  } from 'framer-motion';
 import {Menu;
   X;
@@ -250,12 +253,16 @@ import {Menu;
   Menu,X,ChevronDown,Search,Phone,Mail,MapPin,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Microscope,DollarSign,Home,Users,Briefcase,BookOpen,MessageCircle,Star,TrendingUp,Target,Layers,Cpu,Database,Cloud,Lock,ShieldCheck,Earth,Factory,Car,Building,GraduationCap,Scale,Palette,Camera,Video,Music,Gamepad2,Heart,Leaf,Sun,Moon,Wind,Droplets,Mountain,Code,Wrench,Smartphone,BarChart3,Eye,Network,Server,HardDrive,Monitor,Laptop,Watch,Headphones,Speaker,Mic,Keyboard,Mouse,CpuIcon,DatabaseIcon,CloudIcon,LockIcon,ShieldIcon,GlobeIcon,ZapIcon,SparklesIcon,BrainIcon,AtomIcon,} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin,Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,Microscope, DollarSign, Home, Users, Briefcase,import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;BookOpen, MessageCircle, Star, TrendingUp, Target;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
   Palette, Camera, Video, Music, Gamepad2, Heart;
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Network, Server, HardDrive, Monitor;
@@ -294,6 +301,8 @@ const serviceCategories = [
         description: 'Real-time emotion analysis and response'
         price: '$3,999/month'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Network, Server, HardDrive, Monitor;Laptop, Watch, Headphones, Speaker, Mic;
   Keyboard, Mouse, CpuIcon, DatabaseIcon;
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
@@ -724,7 +733,10 @@ export default function UltraFuturisticNavigation2031() {const [isOpen, setIsOpe
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className='bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm'>;
         <div className='max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0'>;
           <div className='flex items-center space-x-6'>;
@@ -752,6 +764,7 @@ export default function UltraFuturisticNavigation2031() {const [isOpen, setIsOpe
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>;
 
       {/* Main Navigation */}
@@ -762,6 +775,8 @@ export default function UltraFuturisticNavigation2031() {const [isOpen, setIsOpe
             ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20'
             : 'bg-transparent'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>;{/* Main Navigation */}scrolled;
           ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20';
           : 'bg-transparent';
@@ -847,6 +862,9 @@ className='flex items-center space-x-3';
                 </h1>;
                 <p className='text-xs text-gray-400'>2031 Future Technology</p>              </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </motion && motion.div>;<p className='text-xs text-gray-400'>2031 Future Technology</p>;
               </div>;
             </motion.div>;
@@ -870,7 +888,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='relative group';
                 >;
                   <Link;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
             </div>;
                   {/* Hover effect */}
@@ -883,6 +904,7 @@ className='relative group';
                   {/* Hover effect */}
                   <div className="absolute -bottom-1 left-0 w-0 h-0 && 0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full"></div>;
                 </motion && motion.div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               ))}
 
@@ -948,6 +970,8 @@ className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white round
       { name: 'Photonic Computing Infrastructure', href: '/photonic - computing - infrastructure', description: 'Light - speed computing', price: '$699 / month' },
       { name: 'Swarm Robotics Orchestration', href: '/swarm - robotics - orchestration', description: 'Coordinate robot swarms', price: '$449 / month' }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}</div>;{/* CTA Buttons */}<div className='hidden lg:flex items-center space-x-4'>              <motion.button;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -962,7 +986,10 @@ className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white round
               <motion.button;
       {name: 'Neuromorphic Computing Platform',href: '/neuromorphic - computing - platform',description: 'Brain - inspired computing',price: '$899 / month',},{name: 'DNA Computing Platform',href: '/dna - computing - platform',description: 'Molecular computing',price: '$1, 299 / month',},{name: 'Photonic Computing Infrastructure',href: '/photonic - computing - infrastructure',description: 'Light - speed computing',price: '$699 / month',},{name: 'Swarm Robotics Orchestration',href: '/swarm - robotics - orchestration',description: 'Coordinate robot swarms',price: '$449 / month',},],}, ];      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic - computing - platform', description: 'Brain - inspired computing', price: '$899 / month' },{ name: 'DNA Computing Platform', href: '/dna - computing - platform', description: 'Molecular computing', price: '$1, 299 / month' }
       { name: 'Photonic Computing Infrastructure', href: '/photonic - computing - infrastructure', description: 'Light - speed computing', price: '$699 / month' },{ name: 'Swarm Robotics Orchestration', href: '/swarm - robotics - orchestration', description: 'Coordinate robot swarms', price: '$449 / month' }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];
   }
 const main_navigation = [;
@@ -1076,6 +1103,7 @@ function UltraFuturisticNavigation2031() {const [is_open, setIsOpen] = useState 
                 initial={{ opacity: 0, scale: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
 className='px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'
@@ -1090,6 +1118,9 @@ className='px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semi
 
                 animate={{ opacity: 1, scale: 1 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                animate={{ opacity: 1, scale: 1 }}animate={{ opacity: 1, scale: 1 }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.5, delay: 0 && 0.8 }}
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30">;
@@ -1164,9 +1195,12 @@ className='text-gray-300 hover:text-white transition-colors duration-200';
           </div>;
         </div>;
         {/* Service Categories Bar */}<div className='hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm'>;
+<<<<<<< HEAD
 =======
         <div className='hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <div className='flex items-center justify-center space-x-8 py-3'>              {serviceCategories && serviceCategories.map((category, index) => (        <div className="hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1291,6 +1325,9 @@ className='text-gray-300 hover:text-white transition-colors duration-200';
                           <div className='mb - 3'>;
                             <h3 className='text - lg font - semibold text - white mb - 1'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className='relative group';
 <div className='hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -1306,10 +1343,13 @@ className='relative group'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 className='relative group';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
                   className='relative group'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   onMouseEnter={() => setActiveCategory(category.title)}
                   onMouseLeave={() => setActiveCategory(null)}
                 >;
@@ -1337,6 +1377,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl borde
                             <p className='text - sm text - gray - 400'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                               {category.description}
                             </p>
                           </div>
@@ -1360,6 +1401,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               >
                                 <Link
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                               {category.description}transition={{duration: 0.2,delay: service_index * 0.05,</p>;
                           </div>;
                           <div className='space-y-3'>;
@@ -1370,7 +1413,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 transition={{duration: 0.2,delay: serviceIndex * 0.05,}}
                               >;
                                 <Link;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                                   href={service.href}
                                   className='block p - 3 rounded - xl bg - gray - 900 / 50 hover:bg - gradient - to - r hover:from - cyan - 900 / 20 hover:to - purple - 900 / 20 border border - transparent hover:border - cyan - 500 / 30 transition - all duration - 200';
                                 >;
@@ -1387,6 +1433,7 @@ transition={{duration: 0.2,delay: serviceIndex * 0.05,}}
                                       <span className='text - sm font - semibold text - cyan - 400'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         {service.price}
                                       </span>
                                     </div>
@@ -1399,6 +1446,9 @@ transition={{duration: 0.2,delay: serviceIndex * 0.05,}}
                                         {service.price}
                                       </span>                                    </div>                              >;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                                        {service.price}</span>                                    </div>                              >;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                                 <Link;
                                   href={service.href}
                                   className="block p - 3 rounded - xl bg - gray - 900 / 50 hover:bg - gradient - to - r hover:from - cyan - 900 / 20 hover:to - purple - 900 / 20 border border - transparent hover:border - cyan - 500 / 30 transition - all duration - 200";
@@ -1411,6 +1461,9 @@ transition={{duration: 0.2,delay: serviceIndex * 0.05,}}
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </nav>;</span>;
                                     </div>;
                                   </div>;
@@ -1445,6 +1498,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {isOpen && (<motion&& motion.div;
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             exit={{ opacity: 0, x: '100%' }}
@@ -1553,6 +1607,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             exit={{ opacity: 0, x: '100%' }}transition={{ duration: 0.3 }}
 className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 z-50 lg:hidden';
           >;
@@ -1736,6 +1792,7 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
     </>),</>;
   )}<div className='h-32 lg:h-40'></div>;
     </>;
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -1743,3 +1800,6 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

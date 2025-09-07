@@ -20,7 +20,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 let animationFrameId: number;
 =======
 canvas.height = window.innerHeight;let animationFrameId: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 let particles: Particle[] = [];
 let quantumFields: QuantumField[] = [];
 let neuralNetworks: NeuralNetwork[] = [];
@@ -35,6 +38,7 @@ this.size = Math.random () * 3 + 1;
 this.color = `hsl ($ {this.radius = Math.random () * 100 + 50;
 this.intensity = Math.random () * 0.5 + 0.5;
 this.phase = Math.random () * Math.PI * 2;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 this.color = `hsl ($ {
@@ -71,6 +75,9 @@ this.color = `hsl ($ {200 + Math.random () * 60;
 =======
   200 + Math.random () * 60;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+this.color = `hsl ($ {200 + Math.random () * 60;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }, 80%, 60%) `;
 const UltraAdvancedQuantumBackground: React.FC<;
   UltraAdvancedQuantumBackgroundProps;
@@ -93,6 +100,7 @@ if (return) {$2;
 }
     canvas.width = window.inner_width;
 <<<<<<< HEAD
+<<<<<<< HEAD
     canvas.height = window.inner_height;let animationFrameId: number;let animationFrameId: number;let particles: Particle[] = [];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -101,6 +109,9 @@ if (return) {$2;
     let animationFrameId: number;
     let particles: Particle[] = [];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    canvas.height = window.inner_height;let animationFrameId: number;let animationFrameId: number;let particles: Particle[] = [];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     let quantum_fields: QuantumField[] = [];
     let neural_networks: NeuralNetwork[]  = [];class Particle {coordinate_x: number;
       coordinate_y: number;
@@ -110,11 +121,14 @@ if (return) {$2;
       color: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       life: number;
       maxLife: number;
       constructor() {
         this.x = Math.random() * canvas.width;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       life: number;vx: number,vy: number,size: number,color: string,life: number,maxLife: number;
       constructor() {this.x = Math.random() * canvas.width;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -141,11 +155,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 this.maxLife = 100;}
       update() {this.x += this.vx;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.y += this.vy;
         this.life--;
         if (this.x < 0 |this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 |this.y > canvas.height) this.vy *= -1;
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (this.life <= 0) {
           this.life = this.maxLife;
@@ -172,6 +190,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       maxLife: number,;
         this && this.x = Math && Math.random() * canvas && canvas.width;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        if (this.life <= 0) {this.life = this.maxLife;
+          this.x = Math.random() * canvas.width;maxLife: number;      x: number,y: number,vx: number,vy: number,size: number,color: string,life: number,maxLife: number,this && this.x = Math && Math.random() * canvas && canvas.width;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this && this.y = Math && Math.random() * canvas && canvas.height;
         this && this.vx = (Math && Math.random() - 0 && 0.5) * 2;
         this && this.vy = (Math && Math.random() - 0 && 0.5) * 2;
@@ -191,6 +213,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }draw() {this.y = Math.random() * canvas.height;        }this.y = Math.random() * canvas.height;}
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!ctx) return;if (!ctx) return;
         ctx && ctx.save()ctx && ctx.globalAlpha = this && this.life / this && this.maxLife;
 =======
@@ -208,6 +231,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx && ctx.save();
         ctx && ctx.globalAlpha = this && this.life / this && this.maxLife;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        if (!ctx) return;if (!ctx) return;
+        ctx && ctx.save()ctx && ctx.globalAlpha = this && this.life / this && this.maxLife;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ctx && ctx.fillStyle = this && this.color;
         ctx && ctx.beginPath()ctx && ctx.arc(this && this.x, this && this.y, this && this.size, 0, Math && Math.PI * 2)ctx && ctx.fill()ctx && ctx.restore()}
     }
@@ -248,6 +275,7 @@ if (return) {$2;
     class QuantumField {        ctx.restore ()}
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     class QuantumField {coordinate_x: number;
       coordinate_y: number;ctx.save()ctx.globalAlpha = this.life / this.maxLife;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -275,12 +303,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       constructor() {
         this.x = Math.random() * canvas.width;
 =======
+=======
+    class QuantumField {coordinate_x: number;
+      coordinate_y: number;ctx.save()ctx.globalAlpha = this.life / this.maxLife;
+        ctx.fillStyle = this.color;
+        ctx.beginPath()ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)ctx.fill()ctx.restore()}
+    }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     class QuantumField {x: number;
       y: number;radius: number;
       intensity: number;
       phase: number;
       color: string;constructor() {this.x = Math.random() * canvas.width;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.y = Math.random() * canvas.height;
         this.radius = Math.random() * 100 + 50;
         this.intensity = Math.random() * 0.5 + 0.5;
@@ -296,6 +334,7 @@ this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`;
     class NeuralNetwork {nodes: { x: number; y: number; connections: number[] }[];
       connections: { from: number; to: number; weight: number }[];
 <<<<<<< HEAD
+<<<<<<< HEAD
       constructor() {
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -305,10 +344,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       constructor() {this.nodes = [];
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      constructor() {this.nodes = [];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.connections = [];
         // Create neural network structure;
         const layers = [5, 8, 6, 4];
         let nodeIndex = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         layers.forEach((layerSize, layerIndex) => {
@@ -357,6 +400,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         this.nodes.forEach((node, index) => {
           node.x += (Math.random() - 0.5) * 0.5;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         layers.forEach((layerSize, layerIndex) => {for (let i = 0, i < layerSize, i++) {const x = (layerIndex / (layers.length - 1)) * canvas.width;
             const y = (i / (layerSize - 1)) * canvas.height;
             this.nodes.push({ x, y, connections: [] })// Connect to previous layer;
@@ -373,7 +418,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }})}
       update() {// Animate neural network;
         this.nodes.forEach((node, index) => {node.x += (Math.random() - 0.5) * 0.5;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 node.y += (Math.random() - 0.5) * 0.5;
         })}
       draw() {if (!ctx) return;
@@ -382,6 +430,7 @@ node.y += (Math.random() - 0.5) * 0.5;
         ctx.lineWidth = 1;
         this.connections.forEach(connection => {const from = this.nodes[connection.from];
           const to = this.nodes[connection.to];
+<<<<<<< HEAD
 <<<<<<< HEAD
           ctx.beginPath();
           ctx.moveTo(from.x, from.y);
@@ -529,6 +578,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]' />
       </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           ctx.beginPath()ctx.moveTo(from.x, from.y)ctx.lineTo(to.x, to.y)ctx.stroke()})// Draw nodes;
         ctx.fillStyle = 'rgba(100, 200, 255, 0.8)';
         this.nodes.forEach(node => {ctx.beginPath()ctx.arc(node.x, node.y, 3, 0, Math.PI * 2)})ctx.restore()}
@@ -555,9 +606,12 @@ for (let i = 0; i < 100; i++) {particles.push(new Particle())}
 canvas.height = window.innerHeight;
     }window.addEventListener('resize', handleResize)return () => {window.removeEventListener('resize', handleResize)cancelAnimationFrame(animationFrameId)}}, [])return (<div className={`relative min-h-screen overflow-hidden ${className}`}>;
       {/* Quantum Matrix Overlay */}{/* Animated Quantum Grid */}
+<<<<<<< HEAD
 =======
       {/* Animated Quantum Grid */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className='absolute inset-0 opacity-20'>;
         <div className='absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0 && 0.3)_100%)] bg-[length:50px_50px]' />;
         <div className='absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0 && 0.3)_100%)] bg-[length:50px_50px]' />      </div>;
@@ -584,7 +638,10 @@ canvas.height = window.innerHeight;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]' />;
       </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Animated Quantum Grid */}
       <div className='absolute inset-0 opacity-20'>;
         <div className='absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]' />;
@@ -596,6 +653,7 @@ className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-b
         animate={{scale: [1, 1.2, 1];
           opacity: [0.2, 0.4, 0.2];
         }}
+<<<<<<< HEAD
 <<<<<<< HEAD
         transition={{
           duration: 4,
@@ -659,6 +717,8 @@ className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400
           repeat: Infinity
           ease: 'easeInOut'
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         transition={{duration: 4,repeat: Infinity,ease: 'easeInOut',}}
       />;
       <motion.div;
@@ -672,7 +732,10 @@ className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400
         transition={{duration: 5;
           repeat: Infinity;
           ease: 'easeInOut';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           delay: 1,        }}
       <motion&& motion.div;
         className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-20 blur-xl';
@@ -682,6 +745,7 @@ className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400
           ease: 'easeInOut';
           delay: 2,        }}
       {/* Quantum Canvas */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <canvas
         ref={canvasRef}
@@ -694,6 +758,8 @@ className='absolute inset-0 w-full h-full opacity-60'
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <canvas;
         ref={canvasRef}className='absolute inset-0 w-full h-full opacity-60'        style={{ zIndex: 1 }}
       />;
@@ -704,6 +770,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       />;
       {/* Content Layer */}
 <div className='relative z-10'>{children}</div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
         className='absolute inset-0 w-full h-full opacity-60'        style={{ zIndex: 1 }}
@@ -714,6 +781,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='relative z-10'>{children}</div>        className="absolute inset-0 w-full h-full opacity-60";
         style={{ zIndex: 1 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Quantum Energy Waves */}
       <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>;
         <motion&& motion.div;
@@ -737,6 +806,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           transition={{
             duration: 10,
             repeat: Infinity,
@@ -748,10 +818,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             duration: 10
             repeat: Infinity
             ease: 'linear'
+=======
+          transition={{duration: 10;
+            repeat: Infinity;
+            ease: 'linear';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             delay: 2,          }}
         />;
       </div>;
     </div>;
+<<<<<<< HEAD
   );
             delay: 2
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -773,12 +849,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
       </div>;
     </div>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   )delay: 2;
             duration: 10,repeat: Infinity,ease: 'linear',delay: 2,}}
         />;
       </div>;
     </div>;
 )}export default UltraAdvancedQuantumBackground;}export default UltraAdvancedQuantumBackground;  )}export default UltraAdvancedQuantumBackground;}export default UltraAdvancedQuantumBackground;            ease: "linear",delay: 2;
+<<<<<<< HEAD
 =======
 
 
@@ -796,6 +875,8 @@ export default UltraAdvancedQuantumBackground;
 export default UltraAdvancedQuantumBackground;            ease: "linear",;
             delay: 2;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }}
         />;
       </div>;
@@ -821,6 +902,7 @@ export default UltraAdvancedQuantumBackground;            ease: "linear",;
     </div>)}export default UltraAdvancedQuantumBackground)}/>;
       </div>;
     </div>;
+<<<<<<< HEAD
       {/* Content Layer */}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -828,3 +910,6 @@ export default UltraAdvancedQuantumBackground;            ease: "linear",;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      {/* Content Layer */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

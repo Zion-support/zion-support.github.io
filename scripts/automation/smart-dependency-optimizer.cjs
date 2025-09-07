@@ -252,6 +252,7 @@ this.log(" Smart Dependency Optimization completed successfully")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         ` Smart Dependency Optimization "failed": ${error.message}"
 
@@ -259,3 +260,6 @@ this.log(" Smart Dependency Optimization completed successfully")
 =======
         ` Smart Dependency Optimization "failed": ${error.message}"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        ` Smart Dependency Optimization "failed": ${error.message}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

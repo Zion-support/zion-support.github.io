@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Function to fix common syntax errors
@@ -63,6 +64,9 @@ function fixSyntaxErrors(filePath) {
 
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Function to fix common syntax errors
 function fixSyntaxErrors(content, filePath) {
     let fixes = 0;
@@ -120,6 +124,7 @@ function fixSyntaxErrors(content, filePath) {
     );`;
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
@@ -128,6 +133,8 @@ function fixSyntaxErrors(content, filePath) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
@@ -141,6 +148,7 @@ function fixSyntaxErrors(content, filePath) {
     // Fix missing semicolons
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -148,6 +156,8 @@ function fixSyntaxErrors(content, filePath) {
 =======
     content = content.replace(/([^;}])\s*$/gm, '$1;');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Fix malformed object destructuring
     content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
@@ -183,6 +193,7 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     content = content.replace(/([^;}])\s*$/gm, '$1;');
 =======
     // Fix missing semicolons at end of statements
@@ -190,6 +201,9 @@ ursor/automate-test-improve-and-merge-code-59d5
     content = content.replace(/([^;}])\s*$/gm, '$1;');
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Fix missing commas in objects
     content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
@@ -197,6 +211,7 @@ ursor/automate-test-improve-and-merge-code-59d5
     // Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -314,6 +329,8 @@ async function main() {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     fixed = fixed.replace(
@@ -323,6 +340,7 @@ async function main() {
     
     return fixed;
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -433,6 +451,8 @@ ursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     if (openParens > closeParens) {
       const missingParens = openParens - closeParens;
@@ -496,6 +516,7 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 function processDirectory(dirPath) {
@@ -535,3 +556,5 @@ ursor/automate-test-improve-and-merge-code-59d5
 console.log('\n🎯 Syntax error fixing completed!');
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

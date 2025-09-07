@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ const path = require('path')
   // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
   content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"
   content = content.replace(/(\w+):\s*"[^"]*",\s*,/g, '$"1": "$2"
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -21,6 +24,7 @@ const path = require('path')
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -66,6 +70,10 @@ class ComprehensiveSyntaxFixer {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+          content = content.replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 console.log('🔧 Running comprehensive syntax fix...');
 
@@ -322,6 +330,7 @@ for (const fix of fixes) {
 console.log(`✅ Fixed ${fixedCount} files`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/automate-test-improve-and-merge-code-59d5
 =======
@@ -439,3 +448,8 @@ const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+          content = content.replace(/
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

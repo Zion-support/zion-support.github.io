@@ -1,14 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 import { motion  } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
+<<<<<<< HEAD
 =======
 import { motion } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import SEO from '../components/SEO';
 export default function QuantumSecureCloudInfrastructure() {return(<ServiceLanding;
 			title="Quantum-Secure Cloud Infrastructure";
@@ -68,9 +74,13 @@ function QuantumSecureCloudInfrastructure() {return (<ServiceLanding;
     industries={["Financial Services", "Healthcare", "Government"]}
     url="https: //ziontechgroup.com / quantum - secure - cloud - infrastructure";
 <<<<<<< HEAD
+<<<<<<< HEAD
   />)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   />);
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  />)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

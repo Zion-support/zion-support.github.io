@@ -383,6 +383,7 @@ automation.run().catch(error => {automation.log(`Unhandled "error": ${error.mess
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 });
 
@@ -390,3 +391,6 @@ automation.run().catch(error => {automation.log(`Unhandled "error": ${error.mess
 =======
 });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

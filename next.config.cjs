@@ -95,11 +95,15 @@ const nextConfig = {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
@@ -150,6 +154,7 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+<<<<<<< HEAD
 =======
 /** @type {import(
   'next').NextConfig} */
@@ -158,6 +163,8 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   },
   experimental: {
     esmExternals: false,
@@ -216,12 +223,17 @@ module.exports = nextConfig;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -253,6 +265,7 @@ module.exports = nextConfig;
 
 export default nextConfig;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 =======
@@ -262,6 +275,11 @@ export default nextConfig;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 =======
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 =======
   images: {
@@ -290,4 +308,7 @@ export default nextConfig;
 
 module.exports = nextConfig;
 >>>>>>> origin/chore/fix-automation-and-build
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

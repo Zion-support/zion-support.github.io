@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -12,6 +13,11 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process')
 console.log(' Starting Smart Deployment Automation...')
   "environment"
@@ -53,6 +59,7 @@ console.log(' Starting Smart Deployment Automation...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.log('� Application should be running on "http")
 
@@ -60,3 +67,6 @@ console.log(' Starting Smart Deployment Automation...')
 =======
   console.log('� Application should be running on "http")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.log('� Application should be running on "http")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

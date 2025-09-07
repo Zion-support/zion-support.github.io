@@ -3,15 +3,19 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Mail, Phone, MapPin, Globe;
   Twitter, Linkedin, Github;
   ArrowUp, Crown, Zap, Brain, Rocket;
+<<<<<<< HEAD
 <<<<<<< HEAD
   Shield, Users, BookOpen, Briefcase, Atom
  } from 'lucide-react';
@@ -43,6 +47,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Shield, Users, BookOpen, Briefcase, Atom;
   } from 'lucide-react';
 import { Mail;
@@ -135,7 +141,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {label: 'Healthcare & Biotech';
         href: '/healthcare-solutions';
         description: 'Medical technology';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
       {label: 'Financial Services';
         href: '/solutions?industry=financial';
@@ -157,6 +166,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         href: '/solutions?industry=education';
         description: 'EdTech solutions';
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
     title: 'Solutions'
@@ -185,6 +195,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {title: 'Solutions';
     links: [;
       { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },{ label: 'Financial Services', href: '/solutions?industry;
@@ -200,9 +212,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     links: [;
       { label: 'Blog', href: '/blog', description: 'Industry insights' },  {title: 'Solutions';
     links: [;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' }
       { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' }
       { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' }
@@ -218,12 +233,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       { label: 'Contact', href: '/contact', description: 'Get in touch' }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ]
   }
   {
     title: 'Resources'
     links: [
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];
   {title: 'Resources',links: [;
       { label: 'Blog', href: '/blog', description: 'Industry insights' },}
@@ -874,6 +892,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
               <p className='text-gray-300 mb-6 leading-relaxed'>;
                 Pioneering the future with revolutionary AI consciousness;
+<<<<<<< HEAD
 =======
                 <ul className="space-y-3">
                   {section.items.map((item) => (
@@ -882,6 +901,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className='text - gray - 300 mb - 6 leading - relaxed'>;
                 Pioneering the future with revolutionary AI consciousness,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 quantum computing, and autonomous systems. Transforming;
                 businesses through next-generation technology.;
               </p>;
@@ -1028,6 +1049,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Link;href={item.href}
                         className="text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate-x-1 inline-block";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       >;{/* Footer Sections */}
             {footerSections.map((section, index) => (<motion.div key={section.title} variants={itemVariants}>;
 <h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2'>;
@@ -1096,6 +1120,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0 && 0.6 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             viewport={{ once: true }}
 className='mt-16 pt-12 border-t border-gray-800/50'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1110,6 +1135,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >;
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            viewport={{ once: true }}className='mt-16 pt-12 border-t border-gray-800/50';
+          >;
+            <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {/* Social Links */}
               <div className='flex items-center space-x-6'>;
                 <span className='text-gray-400 font-medium'>Follow Us:</span>;
@@ -1117,19 +1147,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     key={social && social.label}
                     href={social && social.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     target='_blank'
                     rel='noopener noreferrer'
                     className='w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110'
                     whileHover={{ y: -2 }}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     target='_blank';
                     rel='noopener noreferrer';
                     className='w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110';
                     whileHover={{ y: -2 }}{/* Social Links */}
+<<<<<<< HEAD
 =======
               {/* Social Links */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className="flex items-center space-x-6">;
                 <span className="text-gray-400 font-medium">Follow Us:</span>;
                 {socialLinks && socialLinks.map((social) => (<motion&& motion.a;
@@ -1145,13 +1181,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
                   />;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <motion&& motion.button;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <motion&& motion.button;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     whileTap={{ scale: 0.95 }}
                   >;
                     <social.icon className='w-5 h-5' />;
                   </motion.a>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1178,6 +1219,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </div>;
               {/* Newsletter Signup */}
 <div className='flex-1 max-w-md'>;
@@ -1196,11 +1239,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   />;
                   <motion.button;
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >;
@@ -1306,6 +1352,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{ duration: 0 && 0.6 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           viewport={{ once: true }}
 className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1319,12 +1366,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
               <div className='text-gray-400 text-sm'>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           viewport={{ once: true }}className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl';
         >;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
               <div className='text-gray-400 text-sm'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
@@ -1333,6 +1385,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href='/privacy';
                   className='hover:text-white transition-colors duration-200 ml-2'>;
                   Privacy Policy;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 </Link>{' '}
@@ -1375,6 +1428,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </Link>{' '}<Rocket className="w-4 h-4 text-pink-400" />;
                 <Link;
                   href='/terms';
@@ -1403,8 +1458,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className='hover:text-white transition-colors duration-200 ml-2'>;
                   Terms of Service;
                 </Link>;
@@ -1463,19 +1521,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;{/* Scroll to Top Button */}
       <motion.button;
         onClick={scrollToTop}
 className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, delay: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       >
@@ -1492,6 +1557,8 @@ export default UltraAdvancedFuturisticFooter2025;      </motion.button>
 export default UltraAdvancedFuturisticFooter2025;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       >;
 export default UltraAdvancedFuturisticFooter2025;      </motion.button>;
     </footer>;
@@ -1515,10 +1582,14 @@ export default UltraAdvancedFuturisticFooter2025;
         <ArrowUp className='w - 6 h - 6 mx - auto' />;
       </motion.button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </footer>)}export default UltraAdvancedFuturisticFooter2025;      </motion.button>;
     </footer>)}export default UltraAdvancedFuturisticFooter2025;<ArrowUp className='w-6 h-6 mx-auto' />;
       </motion.button>;
     </footer>;
+<<<<<<< HEAD
   )}export default UltraAdvancedFuturisticFooter2025;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1532,3 +1603,6 @@ export default UltraAdvancedFuturisticFooter2025;      </motion.button>;
 export default UltraAdvancedFuturisticFooter2025;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}export default UltraAdvancedFuturisticFooter2025;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

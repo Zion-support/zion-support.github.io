@@ -6,6 +6,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -13,6 +14,9 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -43,6 +47,7 @@ const { execSync } = require('child_process')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log(` Fatal "error"`)
 
@@ -50,3 +55,6 @@ const { execSync } = require('child_process')
 =======
       this.log(` Fatal "error"`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      this.log(` Fatal "error"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

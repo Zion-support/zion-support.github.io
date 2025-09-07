@@ -50,6 +50,7 @@ const path = require('path')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
 
@@ -57,3 +58,6 @@ const path = require('path')
 =======
       this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

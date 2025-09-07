@@ -53,7 +53,10 @@ import { enterpriseITServices   } from '../data/enterprise-it-services';
 import { realMarketServices   } from '../data/real-market-services';
 import { newVerifiedServicesQ22025   } from '../data/real-verified-services-q2-2025';
 export default function EnhancedServicesShowcase() {const [selectedCategory, setSelectedCategory] = useState<string>('all')const [searchTerm, setSearchTerm] = useState('')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),const [sortBy, setSortBy] = useState<string>('name'),const contactInfo  = null;//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
 //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
  //Combine all services for comprehensive showcase const allServices  = [ ...nextGenerationAIServices;//Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
@@ -69,6 +72,7 @@ import React from 'react';
 ...realMarketServices;
 ...newVerifiedServicesQ22025 ];
 return filtered;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }, [all_services, selected_category, search_term, sort_by]);
 const container_variants = {
@@ -95,6 +99,8 @@ const container_variants = {
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }, [all_services, selected_category, search_term, sort_by])const container_variants = {hidden: {{opacity: 0, y: 30;
 }animate= {{opacity: 1, y: 0;
 }transition= {{{opacity: 0, y: 30;
@@ -103,6 +109,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }> {children;
 }</button>)}
 // Button component (if not imported)const Button = ({href;
+<<<<<<< HEAD
 =======
   children
 }</button>)
@@ -111,6 +118,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const Button = ({
   href
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   variant = 'primary';
   size = 'md';
   className = '';
@@ -143,6 +152,7 @@ if ( {) {$2;
   return (<button on_click={on_click} className={classes}>;
       {children}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </button>)}children;
 }</button>)}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -151,3 +161,7 @@ if ( {) {$2;
 }
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </button>)}children;
+}</button>)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

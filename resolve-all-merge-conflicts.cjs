@@ -3,6 +3,9 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,8 +94,11 @@ try {
 }
 
 console.log('🎉 Merge conflict resolution completed!');
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 class MergeConflictResolver {
   constructor() {
     this.resolvedFiles = [];
@@ -225,7 +231,10 @@ resolver.resolveMergeConflicts().catch(console.error);
 module.exports = MergeConflictResolver;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
@@ -247,12 +256,17 @@ function resolveMergeConflicts(filePath) {
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 console.log('🚀 Starting comprehensive merge conflict resolution...');
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Function to resolve content conflicts by choosing main branch version
 function resolveContentConflicts() {
   console.log('📝 Resolving content conflicts...');
@@ -431,6 +445,9 @@ main();
 ursor/integrate-build-improve-and-re-verify-7ffc
         content = content.replace(/
           const parts = match.split('
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

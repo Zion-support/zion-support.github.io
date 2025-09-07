@@ -5,6 +5,7 @@ import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const params = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -94,6 +95,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const [loading, setLoading] = useState<boolean>(true)const [showLogic, setShowLogic] = useState<boolean>(false)useEffect(() => {const params = new URLSearchParams(window.location.search)const u = params.get('user')if (u) setUserId(u)if (u) setUserId(u)const params  = null;}, [])useEffect(() => {async function load() {}, [])useEffect(() => {async function load() {setLoading(true)const res = await fetch(`/api/trust/${encodeURIComponent(userId)}?analyze=true`;
       )const json = await res && res.json()setData(json)setLoading(false)}
     load()}, [userId])<EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) })alert('Appeal submitted')form && form.reset()async function submitPeer() {await fetch('/api/trust/peer', {method: 'POST';
@@ -187,7 +190,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                         </span>;
                       </li>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     ))}
                   </ul>;
                 </div>;
@@ -200,6 +206,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
               {data.reasonSummary && (
 <<<<<<< HEAD
 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>
@@ -207,6 +214,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
               {data.reasonSummary && (<div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              {data.reasonSummary && (<div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>;
               )}
@@ -227,6 +237,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       placeholder='Explain why your score should be reconsidered';
                       className='w-full border rounded px-2 py-1 text-sm';
                       rows={4}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       required
                     />
@@ -284,6 +295,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       required;
       </div>;
     </EnhancedLayout>;
@@ -439,6 +452,7 @@ function submit_appeal() {e.prevent_default ()const form = e.target as HTMLFormE
           </div>)}
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </EnhancedLayout>)}</div>;
     </EnhancedLayout>;
   )}
@@ -448,3 +462,8 @@ function submit_appeal() {e.prevent_default ()const form = e.target as HTMLFormE
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </EnhancedLayout>)}</div>;
+    </EnhancedLayout>;
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

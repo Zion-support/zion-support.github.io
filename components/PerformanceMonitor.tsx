@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   memory: {
@@ -18,17 +19,23 @@
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       observer.observe({ entryTypes: ['navigation'] })memory: {used: number;
     total: number;
     limit: number;
   } | null;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useEffect } from 'react';
 interface PerformanceMonitorProps  {onPerformanceData?: (data: any) => void;
 }
 interface Performance  {getEntriesByType (type: string): PerformanceEntry[];
+<<<<<<< HEAD
 =======
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: any) => void;
@@ -127,6 +134,10 @@ interface PerformanceNavigationTiming extends PerformanceEntry {;
 interface Performance {;
   getEntriesByType(type: string): PerformanceEntry[];
 =======
+=======
+  now (): number;
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 interface PerformanceEntry  {interface PerformanceData  {domContentLoaded: number,loadComplete: number,totalLoadTime: number,firstPaint: number,firstContentfulPaint: number,resourceCount: number,memory: {used: number,total: number,limit: number} | null;
 import React, { useEffect, useState } from 'react';
 interface PerformanceMetrics  {import React, { useEffect, useState } from 'react' from 'react'';interface PerformanceMetrics {';
@@ -139,7 +150,10 @@ interface PerformanceMetrics  {import React, { useEffect, useState } from 'react
 declare global  {interface Window  {performance: Performance}interface Performance  {getEntriesByType(type: string): PerformanceEntry[],memory?: {usedJSHeapSize: number, totalJSHeapSize: number,jsHeapSizeLimit: number}}interface PerformanceEntry  {name: string, startTime: number,duration: number}interface PerformanceNavigationTiming extends PerformanceEntry  {domContentLoadedEventStart: number, domContentLoadedEventEnd: number,loadEventStart: number, loadEventEnd: number,fetchStart: number}// Define Performance types if not available;
 interface PerformanceEntry  {name: string,entryType: string,startTime: number,duration: number}interface Performance  {getEntriesByType(type: string): PerformanceEntry[]}interface PerformanceNavigationTiming extends PerformanceEntry  {loadEventEnd: number,loadEventStart: number,domContentLoadedEventEnd: number,domContentLoadedEventStart: number,responseEnd: number,responseStart: number,requestStart: number,navigationStart: number}// Define Performance types if not available;
 interface Performance  {getEntriesByType(type: string): PerformanceEntry[];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   now(): number;
 }interface PerformanceEntry  {name: string;
   entry_type: string;
@@ -174,6 +188,7 @@ interface PerformanceNavigationTiming extends PerformanceEntry  {readonly connec
   readonly unloadEventEnd: number;
   readonly unloadEventStart: number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
@@ -259,6 +274,8 @@ if (return) {
         load_complete: navigation.loadEventEnd - navigation.loadEventStart,
         totalLoadTime: navigation.loadEventEnd - navigation.fetch_start,
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {useEffect(() => {// Only run on client side;
     if (typeof window === 'undefined' |typeof window.performance === 'undefined') return;
     const measurePerformance = () => {const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -272,7 +289,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
         totalLoadTime: navigation.loadEventEnd - navigation.fetchStart;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         // Paint timing;
         firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime |0;
         firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime |0;
@@ -457,7 +477,10 @@ interface PerformanceMetrics {fcp?: number;
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>;
       <div className="mt-3 pt-2 border-t border-gray-200">;
         <button;
@@ -559,16 +582,20 @@ export default PerformanceMonitor;
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: any) => void;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
     // Only run on client side
     if (typeof window === 'undefined' || typeof performance === 'undefined') {
       return;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -621,6 +648,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
 
     const measurePerformance = () => {
@@ -647,6 +676,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           limit: (performance as any).memory.jsHeapSizeLimit
         } : null
       };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -745,6 +775,11 @@ main
       observer.observe({ entryTypes: ['navigation'] });
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+      observer.observe({ entryTypes: ['navigation'] });
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
         console.log('Performance Metrics:', performanceData);
@@ -759,6 +794,7 @@ main
     }
 
     return () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 if (typeof window ===, undefined
   ') return'    // Only show in development or for admin users
@@ -1003,10 +1039,13 @@ if (return 'Needs Improvement) {
       return () => observer.disconnect();
 =======
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       window.removeEventListener('load', measurePerformance);
     };
   }, [onPerformanceData]);
 
+<<<<<<< HEAD
       return () => observer.disconnect();
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -1089,6 +1128,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (!metrics) return null;
 
   return (
@@ -1102,7 +1143,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 
 export default PerformanceMonitor;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

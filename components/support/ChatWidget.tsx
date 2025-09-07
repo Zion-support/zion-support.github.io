@@ -1,16 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 type ChatMessage = any;
 export default function ChatWidget() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 import { X } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system'
   content: string
   timestamp?: number
 }
+<<<<<<< HEAD
 function generateSessionId(): string {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -194,6 +198,8 @@ type ChatMessage = {role: 'user' | 'assistant' | 'system';
   content: string;
   timestamp?: number;
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function generateSessionId(): string {type ChatMessage = any;
 export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false)const [messages, setMessages] = useState<ChatMessage[]>([])const [input, setInput] = useState('')const [isLoading, setIsLoading] = useState(false)const [failedIntents, setFailedIntents] = useState(0)const [showEscalation, setShowEscalation] = useState(false)const sessionIdRef = useRef<string>('')const messagesEndRef  = useRef<HTMLDivElement | null>(null)useEffect(() => {sessionIdRef.current = generateSessionId()}, [])useEffect(() => {if (!isOpen && messages.length === 0) {// Seed greeting;
       setMessages([;
@@ -282,6 +288,9 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
           ?;
         </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       )}} catch (e) {setMessages(prev => [;
         ...prev;
         {role: 'assistant';
@@ -326,6 +335,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
 <div className='flex-1 overflow-y-auto p-3 space-y-3'>;
             {messages.map((m, idx) => (<div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 key={idx}
                 className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right';
@@ -355,6 +365,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
 =======
+=======
+                key={idx}
+                className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right';
+                }>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <div;
                   className={m && m.role === 'assistant';
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (<div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
@@ -364,6 +379,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     m.role === 'assistant';
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800';
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   }
                 >;
@@ -424,6 +440,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex gap-2'>
 
 =======
+=======
+                  }
+                >;
+                  {m.content}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </div>;
               </div>;
             ))})}
@@ -435,8 +456,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {quickReplies && quickReplies.map((q) => (<button;
                     key={q}
                     onClick={() => onSend(q)}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >;
                   >;
@@ -461,6 +485,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           )}className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
                     {q}
                   </button>;
@@ -470,6 +497,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}<div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
 <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (<div className='flex gap-2'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           )}
@@ -479,11 +507,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex gap-2'>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (<div className='flex gap-2'>;
                 <input;
                   value={input}
                   onChange={e => setInput(e && e.target.value)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   onKeyDown={e => {;
                     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
@@ -502,10 +533,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                   placeholder='Ask a question…';
+=======
+                  onKeyDown={e => {if (e && e.key === 'Enter' && !e && e.shiftKey) {e && e.preventDefault()onSend()}
+                  }}placeholder='Ask a question…';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'                />;
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
               <div className="flex gap-2">
                 <input
                   value={input}
@@ -561,6 +597,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button;
                   onClick={() => onSend()}
                   disabled={isLoading}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className="flex gap-2">;
                 <input;
                   value={input}placeholder='Ask a question…';
@@ -605,6 +643,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 useEffect ( () => {// Check condition;
 if ( {) {$2;
 }</div>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -617,3 +656,6 @@ if ( {) {
   $2
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

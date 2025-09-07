@@ -172,6 +172,7 @@
     ]
   },
   "summary": {
+<<<<<<< HEAD
     "totalScripts": 6,
     "successfulScripts": 3,
     "failedScripts": 3,
@@ -180,5 +181,11 @@
     "buildSuccess": false,
     "totalErrors": 12
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    "totalPhases": 6,
+    "successfulPhases": 5,
+    "failedPhases": 1,
+    "overallSuccess": false
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 }

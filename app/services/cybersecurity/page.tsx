@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import { Metadata } from 'next';
@@ -25,10 +26,19 @@ export const metadata = {
   description:
     'Comprehensive cybersecurity solutions including threat detection, compliance management, security audits, and incident response. Protect your business from cyber threats.',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+import { Metadata } from 'next';
+import React from 'react';
+
+export const metadata: Metadata = { 
+  title: 'Cybersecurity Services | Zion Tech Group',
+  description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, security audits, and incident response. Protect your business from cyber threats.'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 };
 
 export default function CybersecurityPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="space-y-16">
@@ -56,6 +66,8 @@ export default function CybersecurityPage() {
         </div>
       </section>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -106,7 +118,10 @@ export default function CybersecurityPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>
   );
 }

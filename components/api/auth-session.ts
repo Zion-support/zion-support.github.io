@@ -5,6 +5,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import {getSessionFromReq,isInternalAgentRequest} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth';
 import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth';
 export default function handler() {const session = null;
@@ -40,13 +43,18 @@ import {
 import {
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   getSessionFromReq,;
   isInternalAgentRequest,;
 
 
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -63,6 +71,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);
   const internal = isInternalAgentRequest(req)
@@ -80,12 +90,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
+<<<<<<< HEAD
 =======
 
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return;
 export default function handler() {const session = getSessionFromReq(req)const internal = isInternalAgentRequest(req)if (!session && !internal) {return;
   }res && res.status(200).json({ message: 'OK' })return;
@@ -107,9 +120,12 @@ export default function handler() {const session = getSessionFromReq(req)const i
 res.status(200).json({ message: 'OK' })return;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   res && res.status(200).json({ message: 'OK' });    return
   }
   res && res.status(200).json({ message: 'OK' });
@@ -143,6 +159,7 @@ res.status(200).json({ message: 'OK' })return;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -159,6 +176,8 @@ res.status(200).json({ message: 'OK' })return;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     res.status(401).json({ error: 'Unauthorized' });
     return
   }
@@ -168,6 +187,7 @@ res.status (200).json ({ message: 'OK' });    return;
   }
   res.status (200).json ({ message: 'OK' });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -193,6 +213,8 @@ res.status (200).json ({ message: 'OK' });    return;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 }
 
@@ -223,6 +245,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
+<<<<<<< HEAD
 res.status(200).json({ message: 'OK' });    return
   }
   res.status(200).json({ message: 'OK' });
@@ -249,10 +272,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return;
 
   }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   res.status(200).json({ message: 'OK' })}
 }
 }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 }
@@ -260,3 +286,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

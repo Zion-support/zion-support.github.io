@@ -29,6 +29,9 @@ import { motion  } from 'framer-motion';
 interface UltraFuturisticBackground2045Props  {children: React && React.ReactNode;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       x: number;import React, { useEffect, useRef } from 'react';
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 canvas.width = window.innerWidth;
@@ -81,7 +84,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Math.random () * 360;
 =======
 ctx.fill ()ctx.restore ()// Remove dead particles and create new ones if (particle.life <= 0) {particles[index] = {x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2, vy: (Math.random () - 0.5) * 2, size: Math.random () * 3 + 1, color: `hsl ($ {Math.random () * 360;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }, 70%, 60%) `;
 alpha: Math.random () * 0.8 + 0.2;
 life: Math.random () * 100 + 50;
@@ -125,6 +131,7 @@ if (return) {$2;
       life: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     }> = [];
     // Create initial particles
     for (let i = 0; i < 100; i++) {
@@ -156,11 +163,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }>  = [];vx: number,vy: number,size: number,color: string,alpha: number,// Create initial particles;
     for (let i = 0; i < 100; i++) {particles.push({x: Math.random() * canvas.width,y: Math.random() * canvas.height,vx: (Math.random() - 0.5) * 2,vy: (Math.random() - 0.5) * 2,size: Math.random() * 3 + 1,color: `hsl(${Math.random() * 360}, 70%, 60%)`,alpha: Math.random() * 0.8 + 0.2,life: Math.random() * 100 + 50,})}// Animation loop;
     const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height)// Update and draw particles;
       particles.forEach((particle, index) => {particle.x += particle.vx;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         particle.y += particle.vy;
         particle.life--;
         // Wrap around edges;
@@ -174,6 +186,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fill()// Add glow effect;
         ctx.shadowColor = particle.color;
         ctx.shadowBlur = 20;
+<<<<<<< HEAD
 <<<<<<< HEAD
         ctx.fill();
         ctx.restore();
@@ -251,6 +264,8 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       }
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ctx.fill()ctx.restore()// Remove dead particles and create new ones;
         if (particle.life <= 0) {particles[index] = {x: Math.random() * canvas.width,y: Math.random() * canvas.height,vx: (Math.random() - 0.5) * 2,vy: (Math.random() - 0.5) * 2,size: Math.random() * 3 + 1,color: `hsl(${Math.random() * 360}, 70%, 60%)`,alpha: Math.random() * 0.8 + 0.2,life: Math.random() * 100 + 50,}}
       })// Draw connecting lines between nearby particles;
@@ -266,7 +281,10 @@ if ( {) {$2;
     const handleResize = () => {canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
     }window.addEventListener('resize', handleResize)return () => {if (animationRef.current) {cancelAnimationFrame(animationRef.current)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-10'>;
         {/* Animated Grid */}
@@ -283,6 +301,7 @@ canvas.height = window.innerHeight;
         {/* Animated Grid */}
         <motion.div;
           className='absolute inset - 0 opacity - 20';
+<<<<<<< HEAD
 <<<<<<< HEAD
           style={{
             background_image: `;
@@ -511,6 +530,8 @@ className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 tr
         />
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           style={{background_image: `;
               linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px),linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`,background_size: '50px 50px',}}
           animate={{background_position: ['0px 0px', '50px 50px'],}}
@@ -741,6 +762,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='fixed inset-0 pointer-events-none z-20'>;
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />;
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
           transition={{
@@ -768,6 +790,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Content */}
       <div className='relative z-30'>{children}</div>;{/* Animated Border Effects */}
       <div className='fixed inset-0 pointer-events-none z-40'>;
@@ -788,6 +812,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='fixed inset - 0 pointer - events - none z - 40'>;
         <motion.div;
           className='absolute inset - 0 border border - transparent';
+<<<<<<< HEAD
 <<<<<<< HEAD
           style={{
             background:;
@@ -811,15 +836,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default UltraFuturisticBackground2045;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           style={{background:;
               'linear - gradient (90deg, transparent, rgba (0, 255, 255, 0.1), transparent)',background_size: '200% 100%',}}
           animate={{background_position: ['-200% 0', '200% 0'],}}
           transition={{duration: 15;
             repeat: Infinity;
+<<<<<<< HEAD
 =======
             duration: 15
             repeat: Infinity
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ease: 'linear',          }}
         />;
       </div>;
@@ -859,6 +889,7 @@ export default UltraFuturisticBackground2045;
         />;
       </div>;
     </div>;
+<<<<<<< HEAD
 )}export default UltraFuturisticBackground2045;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -874,3 +905,6 @@ export default UltraFuturisticBackground2045;
 export default UltraFuturisticBackground2045;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default UltraFuturisticBackground2045;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

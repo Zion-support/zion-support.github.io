@@ -7,9 +7,12 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next',import formidable from 'formidable';
@@ -80,6 +83,7 @@ import formidable from 'formidable';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -110,6 +114,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
@@ -184,6 +190,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     fs && fs.copyFileSync(file && file.filepath, targetPath);
     appendAuditLog({
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -201,6 +208,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   });
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     res.status(200).json({ ok: true })
       type: 'file_upload',
       section,
@@ -209,6 +220,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     res && res.status(200).json({ ok: true });
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,6 +240,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   })
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   })
 
 }
@@ -236,6 +252,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const section = String (fields.section || 'General')const file = files.file as formidable.File | undefined;
     if (return res.status (400).json ({ error: 'File missing' })) {$2;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   })
   })
@@ -263,6 +280,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  })
+  })
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 export const config = { api: { body_parser: false } }
@@ -324,6 +345,7 @@ function handler() {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
@@ -365,3 +387,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+}
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

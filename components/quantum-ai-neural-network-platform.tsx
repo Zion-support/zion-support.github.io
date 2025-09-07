@@ -3,12 +3,16 @@
 =======
 
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { motion   } from 'framer-motion';
 import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network   } from 'lucide-react';
 import SEO from '../components/SEO';
 const QuantumAINeuralNetworkPlatform: React.FC;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {
@@ -28,6 +32,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Globe
   Cpu
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion  } from 'framer-motion';
 import { Atom;
   Brain;
@@ -40,7 +46,10 @@ import { Atom;
   Star;
   Globe;
   Cpu;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Network;
   Atom,Brain,Zap,Shield,Users,Target,ArrowRight,Check,Star,Globe,Cpu,Network,} from 'lucide-react';
 const QuantumAINeuralNetworkPlatform: React.FC = () => {const features = [;
@@ -63,6 +72,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {const features = [;
     'Quantum-secure AI operations';
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const pricing = {;
     starter: '$999/month',;
@@ -84,6 +94,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {const features = [;
 <<<<<<< HEAD
       />
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const pricing = {starter: '$999/month';
     professional: '$1,999/month';
     enterprise: 'Custom pricing';
@@ -232,7 +244,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-gray-900/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
   Atom,Brain,Zap,Shield,Users,Target,ArrowRight,Check,Star,Globe,Cpu,Network,} from 'lucide-react';
@@ -252,6 +267,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {const features = [;
         <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             transition={{ duration: 0.8 }}
@@ -276,6 +292,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0.8 }}
             className='text - center'      <section className="relative py - 20 overflow - hidden">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            transition={{ duration: 0.8 }}className='text - center'      <section className="relative py - 20 overflow - hidden">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className="absolute inset - 0 bg - gradient - to - br from - blue - 900 / 20 via - cyan - 900 / 20 to - indigo - 900 / 20"></div>;
         <div className="absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (6, 182, 212, 0.1), transparent_50%)]"></div>;
         <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -339,6 +358,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             viewport={{ once: true }}className='text-center mb-16';
           >;
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
@@ -350,6 +372,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </motion.div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (          >;
+<<<<<<< HEAD
 =======
             viewport={{ once: true }}
           >
@@ -364,6 +387,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (          >
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Features Section */}
       <section className="py-20 bg-gray-900/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -401,6 +426,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Harness the power of quantum mechanics to revolutionize AI neural network performance and capabilities.;
             </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </motion && motion.div>;<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {features.map((feature, index) => (<motion.div;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -474,6 +502,9 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             viewport={{ once: true }}>;
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">;
                   <Check className="w-6 h-6 text-white" />;
@@ -481,6 +512,7 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
                 <h3 className="text-lg font-semibold mb-2">{feature}</h3>;
                 <h3 className='text-lg font-semibold mb-2'>{feature}</h3>;
               </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
             viewport={{ once: true }}
@@ -493,6 +525,8 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
                 <h3 className="text-lg font-semibold mb-2">{feature}</h3>
               </motion.div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </div>;
         </div>;
@@ -504,6 +538,7 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             transition={{ duration: 0.8 }}
@@ -525,6 +560,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Quantum Advantage Benefits
             </h2>
           </motion.div>
+=======
+            transition={{ duration: 0.8 }}>;
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">;
+              Quantum Advantage Benefits;
+            </h2>;
+          </motion.div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             transition={{ duration: 0 && 0.8 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>              Quantum Advantage Benefits;
@@ -535,6 +577,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className="text-4xl md:text-5xl font-bold mb-6">;
               Quantum Advantage Benefits;
             </h2>;
+<<<<<<< HEAD
           </motion && motion.div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 key={index}
@@ -571,6 +614,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className="text-4xl md:text-5xl font-bold mb-6">;
               Quantum Advantage Benefits;
             </h2>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </motion && motion.div>;className='text-center mb-16';
           >;
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
@@ -590,7 +635,10 @@ className='text-center';
                 </div>;
                 <h3 className='text-xl font-semibold mb-2'>{benefit}</h3>;
               </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </div>;
         </div>;
@@ -629,6 +677,7 @@ className='text-center mb-16';
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 className='text-center mb-16'
@@ -678,6 +727,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {Object.entries(pricing).map(([plan, price], index) => (
               <motion.div
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className="text-center mb-16";
           >;
             <h2 className="text-4xl md:text-5xl font-bold mb-6">;
@@ -690,7 +741,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             {Object.entries(pricing).map(([plan, price], index) => (<motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             transition={{ duration: 0 && 0.8 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
@@ -728,6 +782,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg-gray-800/50 border rounded-xl p-8 ${
 plan === 'professional'
@@ -739,6 +794,9 @@ plan === 'professional'
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className='text - center';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                transition={{ duration: 0.5, delay: index * 0.1 }}className='text - center';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                 <div className='w - 16 h - 16 bg - gradient - to - br from - blue - 500 to - cyan - 500 rounded - full flex items - center justify - center mx - auto mb - 4'>;
                   <Star className='w - 8 h - 8 text - white' />;
@@ -785,6 +843,9 @@ plan === 'professional'
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 viewport={{ once: true }}{/* CTA Section */}
       <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
@@ -830,11 +891,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           >
@@ -889,6 +954,8 @@ export default QuantumAINeuralNetworkPlatform;
 export default QuantumAINeuralNetworkPlatform;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           >;
             <h2 className="text-4xl md:text-5xl font-bold mb-6">;
               Ready for Quantum AI Revolution?;
@@ -1010,6 +1077,7 @@ export default QuantumAINeuralNetworkPlatform;}{/* CTA Section */}
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>)}export default QuantumAINeuralNetworkPlatform)}export default QuantumAINeuralNetworkPlatform;)}export default QuantumAINeuralNetworkPlatform;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -1022,3 +1090,6 @@ export default QuantumAINeuralNetworkPlatform);
 export default QuantumAINeuralNetworkPlatform;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)}export default QuantumAINeuralNetworkPlatform)}export default QuantumAINeuralNetworkPlatform;)}export default QuantumAINeuralNetworkPlatform;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

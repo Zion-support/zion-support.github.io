@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -12,6 +13,11 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 console.log('� Starting Security Enhancement Automation...')
     "file"
     "issue"
@@ -53,6 +59,7 @@ console.log('� Starting Security Enhancement Automation...')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(' Security enhancement automation "failed")
 
@@ -60,3 +67,6 @@ console.log('� Starting Security Enhancement Automation...')
 =======
   console.error(' Security enhancement automation "failed")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(' Security enhancement automation "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

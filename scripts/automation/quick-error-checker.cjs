@@ -69,6 +69,7 @@ const path = require("path")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           "file": "
 
@@ -76,3 +77,6 @@ const path = require("path")
 =======
           "file": "
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+          "file": "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

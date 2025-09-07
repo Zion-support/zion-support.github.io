@@ -1,6 +1,7 @@
 export type SkeletonProps = {className?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type SkeletonProps = {;
 
             transform: translateX(100%);
@@ -13,6 +14,8 @@ export type SkeletonProps = {;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type SkeletonProps = {transform: translateX(100%)}        }
       `}</style>;
     </div>;
@@ -126,12 +129,16 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
     ))}
   </div>"';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 )}</div>;
   )`}</style>;
           }
         }
       `}</style>;
     </div>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -145,3 +152,6 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

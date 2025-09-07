@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 } from '../../../utils/notifications';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function getUserId(req: NextApiRequest): string {
       filter = 'all',
       countOnly,
@@ -123,6 +124,8 @@ return res.status(500).json({ error: 'Unexpected error' });
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function getUserId(req: NextApiRequest): string {const cookie  = req && req.headers.cookie || '';const match = cookie;
     .split(';').map(c => c && c.trim()).find(c => c && c.startsWith('user_id='))if (match) return decodeURIComponent(match && match.split('=')[1])return 'demo-user-1';
 export default async function handler() {filter = 'all',countOnly,limit = '50',offset = '0',} = req.query as Record<string, string>;// If countOnly, return unread count quickly;
@@ -142,6 +145,7 @@ export default async function handler() {filter = 'all',countOnly,limit = '50',o
   }}
       return res.status (200).json ({ notifications: fallback })}
     return res.status (200).json ({ notifications: data as NotificationItem[] })} catch (e) {return res.status (500).json ({ error: 'Unexpected error' })}    return res.status (500).json ({ error: 'Unexpected error' })return res.status(500).json({ error: 'Unexpected error' })}    return res.status(500).json({ error: 'Unexpected error' })}}
+<<<<<<< HEAD
   }}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -150,3 +154,6 @@ export default async function handler() {filter = 'all',countOnly,limit = '50',o
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

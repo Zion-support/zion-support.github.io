@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -90,6 +91,8 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Rocket, Shield, Cpu, Target, Microscope, Users;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion  } from 'framer-motion';
 import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom,Phone;
   Mail;
@@ -128,16 +131,22 @@ import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom,Phone;
   MessageCircle as MessageCircleIcon;
   Star as StarIcon;} from 'lucide-react';import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Phone,Mail,MapPin,Globe,Zap,Brain,Atom,Rocket,Shield,Cpu,Target,Microscope,Users,Facebook,Twitter,Linkedin,Instagram,Youtube,Github,ArrowRight,Heart,Star,Award,CheckCircle,Home,Briefcase,BookOpen,MessageCircle,DollarSign,TrendingUp,Target as TargetIcon,Users as UsersIcon,Briefcase as BriefcaseIcon,BookOpen as BookOpenIcon,MessageCircle as MessageCircleIcon,Star as StarIcon,} from 'lucide-react';import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom,import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;Rocket, Shield, Cpu, Target, Microscope, Users;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
   Home, Briefcase, BookOpen, MessageCircle, DollarSign;
   TrendingUp, Target as TargetIcon, Users as UsersIcon;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon;
   MessageCircle as MessageCircleIcon, Star as StarIcon
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon;{name: 'Home';
     href: '/';
     icon: Home;
@@ -170,13 +179,17 @@ import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom,Phone;
   }
   {];
   }MessageCircle as MessageCircleIcon, Star as StarIcon;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
  } from 'lucide-react';
 const contactInfo = null;
                 and autonomous systems development. Join our community of future technology pioneers.;
     services: [;
       {name: 'AI Consciousness Evolution';
         href: '/ai-consciousness-evolution-platform';
+<<<<<<< HEAD
       }
       {name: 'AI Emotional Intelligence';
         href: '/ai-emotional-intelligence-platform';
@@ -260,6 +273,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {
         name: 'Quantum Financial Trading'
         href: '/quantum-financial-trading-platform'
+=======
+      }
+      {name: 'AI Emotional Intelligence';
+        href: '/ai-emotional-intelligence-platform';
+      }
+      {name: 'Quantum Financial Trading',href: '/quantum-financial-trading-platform',},{ name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' },],},{title: '🏙️ 2032 Enterprise IT Solutions',services: [;
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },{name: 'Zero Trust Architecture',href: '/zero-trust-network-architecture',},{name: 'Edge Computing Orchestration',href: '/edge-computing-orchestration',},{name: 'Quantum Internet Security';
+        href: '/quantum-internet-security-gateway';
+      }
+      {name: 'Quantum Financial Trading';
+        href: '/quantum-financial-trading-platform';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
       { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' }
     ]
@@ -299,6 +324,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
     ]
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     title: '🌌 2032 Space & Metaverse Tech',
@@ -406,6 +432,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   { name: 'Resources', href: '/resources', icon: BookOpen, description: 'Knowledge base and documentation' },
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
+=======
+    name: 'Contact',href: '/contact',icon: MessageCircle,description: 'Get in touch with our team',}, ];  { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },{ name: 'Services', href: '/services', icon: Briefcase, description: 'Our comprehensive service portfolio' },{ name: 'Solutions', href: '/solutions', icon: TargetIcon, description: 'Tailored solutions for your business' },{ name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing and packages' },{ name: 'Resources', href: '/resources', icon: BookOpen, description: 'Knowledge base and documentation' },{ name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },{ name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const service_categories = [;
   {
     title: '🚀 2032 Revolutionary AI Services',
@@ -454,6 +483,7 @@ const service_categories = [;
       { name: 'Quantum Creativity Studio', href: '/quantum - creativity - studio' }
     ];
   }
+<<<<<<< HEAD
     title: '🏙️ 2032 Enterprise IT Solutions',
     services: [;
       { name: 'Autonomous DevOps', href: '/autonomous - devops - platform' },
@@ -685,6 +715,8 @@ const service_categories = [;
       { name: 'Autonomous DevOps', href: '/autonomous - devops - platform' },      { name: 'Quantum DNA Computing', href: '/quantum - dna - computing - platform' },{ name: 'Quantum Internet Security', href: '/quantum - internet - security - gateway' },{ name: 'Quantum Financial Trading', href: '/quantum - financial - trading - platform' },{ name: 'Quantum Creativity Studio', href: '/quantum - creativity - studio' }
     ];
   }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     title: '🏙️ 2032 Enterprise IT Solutions',services: [;
       { name: 'Autonomous DevOps', href: '/autonomous - devops - platform' },{name: 'Zero Trust Architecture',href: '/zero - trust - network - architecture',},{name: 'Edge Computing Orchestration',href: '/edge - computing - orchestration',},{name: 'AI IT Operations Center',href: '/ai - powered - it - operations - center',},],},title: '🌌 2032 Space & Metaverse Tech',services: [;
       {name: 'Space Mining Automation',href: '/space - mining - automation - platform',},{name: 'Metaverse Development',href: '/metaverse - development - platform',},{ name: 'AI Predictive Health', href: '/ai - predictive - health - analytics' },{name: 'AI Autonomous Business',href: '/ai - autonomous - business - manager',},],},{title: '🎯 2032 Innovative Micro SAAS',services: [;
@@ -724,6 +756,7 @@ const footerVariants = {hidden: { opacity: 0, y: 50 }
   visible: {opacity: 1;
     y: 0;
     transition: {duration: 0.8,staggerChildren: 0.1,},},}const itemVariants = {hidden: { opacity: 0, y: 20 },visible: { opacity: 1, y: 0 },}export default function UltraFuturisticFooter2032() {return (<footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   { name: 'Status', href: '/status' }
@@ -1010,6 +1043,8 @@ export default function UltraFuturisticFooter2032() {
   return (
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Animated Background Elements */}
           variants={footerVariants}
           initial='hidden';
@@ -1018,6 +1053,7 @@ export default function UltraFuturisticFooter2032() {
           className='space-y-16'>;
           {/* Main Footer Content */}
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             {/* Company Info */}
@@ -1042,6 +1078,8 @@ export default function UltraFuturisticFooter2032() {
                 challenges.
               </p>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Company Info */}2032 Future Technology;
                   </p>;
                 </div>;
@@ -1278,13 +1316,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             href={service.href}className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform";
 className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform';
                           >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                             {service.name}
                           </Link>;
                         </li>;
                       ))}
                     </ul>;
                   </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 ))}
@@ -1304,6 +1346,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Quick Access
               </h3>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}</div>;
             </motion.div>;
             {/* Quick Links & Company Info */}
@@ -1311,7 +1355,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 Quick Access;
               </h3>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </div>;
             </motion && motion.div>;{/* Quick Links & Company Info */}
             <motion && motion.div variants={itemVariants} className='lg:col-span-1'>;
@@ -1319,6 +1366,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Quick Access;
               </h3>;
               {/* Quick Links */}
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>
@@ -1399,6 +1447,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       >
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className='mb-8'>;
                 <h4 className='text-lg font-medium text-white mb-4'>;
                   Quick Links;
@@ -1479,6 +1529,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Link;
                         href={item.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm";
 className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm';
                       >;
@@ -1487,10 +1538,16 @@ className='text-slate-300 hover:text-purple-300 transition-colors duration-200 t
                         className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm"
                       >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm";
+className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm';
+                      >;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         {item.name}
                       </Link>;
                     </li>;
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </ul>
               </div>
@@ -1515,6 +1572,8 @@ target='_blank'
                     </a>
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </ul>;
               </div>;
               {/* Social Links */}<div>;
@@ -1568,6 +1627,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Newsletter Signup */}
           <motion.div
             variants={itemVariants}
+<<<<<<< HEAD
             className='border-t border-cyan-500/30 pt-12'
           >
             <div className='text-center'>
@@ -1598,6 +1658,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Newsletter Signup */}
           <motion.div;
             variants={itemVariants}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='border-t border-cyan-500/30 pt-12';
           >;
             <div className='text-center'>;
@@ -1624,7 +1686,10 @@ target='_blank';
                     >;
                       <social.icon className='w-5 h-5' />;
                     </a>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   ))}
                 </div>;
               </div>;
@@ -1633,6 +1698,7 @@ target='_blank';
           {/* Newsletter Signup */}
 <motion.div;
             variants={itemVariants}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='border-t border-cyan-500/30 pt-12'
           >
@@ -1657,14 +1723,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='border-t border-cyan-500/30 pt-12';
           >;
             <div className='text-center'>;
               <h3 className='text-2xl font-bold text-white mb-4'>;
                 Stay Ahead with Future Technology;
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Newsletter Signup */}
           <motion.div;
             variants={item_variants}
@@ -1680,6 +1751,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 development. Join our community of future technology pioneers.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </h3>;
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">;
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.;
@@ -1698,6 +1772,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105'>;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
               </h3>
@@ -1707,6 +1782,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 />;
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105'>                  Subscribe                Stay Ahead with Future Technology;
               </h3>;
@@ -1714,6 +1791,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <input
                   type="email"
@@ -1731,6 +1809,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <input;
                   type="email";
                   placeholder="Enter your email address";
@@ -1742,6 +1822,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
           </motion.div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           {/* Bottom Bar */}
 <motion.div;
@@ -1763,6 +1844,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Link
                   href='/privacy'
 =======
+=======
+          {/* Bottom Bar */}
+<motion.div;
+            variants={itemVariants}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='border-t border-cyan-500/30 pt-8';
           >;
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>;
@@ -1774,7 +1860,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex items-center space-x-6 text-sm'>;
                 <Link;
                   href='/privacy';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className='text-slate-400 hover:text-cyan-300 transition-colors'>;
                   Privacy Policy;
                 </Link>;
@@ -1783,6 +1872,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className='text-slate-400 hover:text-cyan-300 transition-colors'>;
                   Terms of Service;
                 </Link>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Link
                   href='/cookies'
@@ -1802,6 +1892,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                <Link;
+                  href='/cookies';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           onClick={() => window && window.scrollTo({ top: 0, behavior: 'smooth' })}
         >;
           <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />;
@@ -1833,6 +1927,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.button>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </footer>)className='text-slate-400 hover:text-cyan-300 transition-colors';
                 >;
                   Cookie Policy;
@@ -1868,5 +1965,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.button>;
       </div>;
     </footer>;
+<<<<<<< HEAD
   )}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -184,6 +184,7 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = AutomationScriptFixer;
 
@@ -191,3 +192,6 @@ module.exports = AutomationScriptFixer;
 =======
 module.exports = AutomationScriptFixer;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = AutomationScriptFixer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

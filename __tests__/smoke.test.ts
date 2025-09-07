@@ -8,12 +8,16 @@ describe('smoke', () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 });''
 
 });
@@ -31,6 +35,10 @@ describe('smoke', () => { it("true is truthy"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+describe('smoke'
+  it('true is truthy'
+describe('smoke', () => { it("true is truthy"
+
 describe('smoke'
   it('true is truthy'
 describe('smoke', () => { it("true is truthy"

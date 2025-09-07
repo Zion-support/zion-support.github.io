@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 
@@ -14,9 +15,12 @@ export const metadata = {
 import Link from 'next/link';
 
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const metadata = {
-  title: 'AI Financial Analytics | Zion Tech Group',
-  description: 'Professional AI financial analytics services for your business needs.',
+  title: 'Ai Financial Analytics | Zion Tech Group',
+  description: 'Professional ai financial analytics services for your business needs.',
   keywords: 'ai-financial-analytics, services, business, technology'
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -437,6 +441,7 @@ function CaseStudy({ company, industry, result, description, metrics }: {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -458,3 +463,6 @@ function SecurityFeature({ icon, title, description }: {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

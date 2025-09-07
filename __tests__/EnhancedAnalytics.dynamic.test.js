@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,6 +42,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import React from 'react';  import '@testing-library/jest-dom'; import EnhancedAnalytics from '../components/EnhancedAnalytics.dynamic'; describe('EnhancedAnalytics',() => { test('renders without crashing',() => { render(<EnhancedAnalytics />)expect(screen.getByTestId('enhancedanalytics')).toBeInTheDocument()})test('displays correct content',() => { render(<EnhancedAnalytics />)})test('handles user interactions',() => { render(<EnhancedAnalytics />)})test('applies correct styling',() => { render(<EnhancedAnalytics />)})})ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { render, screen, fireEvent  } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -63,15 +70,19 @@ const React from "react"; import { render, screen, fireEvent } from '@testing-li
   })})
 import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 describe('EnhancedAnalyticsdynamic', () => {
   test('renders without crashing', () => {
     render(<EnhancedAnalyticsdynamic />);
     expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,6 +100,8 @@ describe('EnhancedAnalyticsdynamic', () => {
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 });
 });
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic'; describe('EnhancedAnalyticsdynamic',() => { test('renders without crashing',() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedAnalyticsdynamic />)}); test('handles user interactions',() => { render(<EnhancedAnalyticsdynamic />)}); test('applies correct styling',() => { render(<EnhancedAnalyticsdynamic />)})});
@@ -119,6 +132,7 @@ describe('EnhancedAnalyticsdynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedAnalyticsdynamic from "./components/EnhancedAnalytics.dynamic"; describe('EnhancedAnalyticsdynamic', () => { test("renders without crashing",() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId("enhancedanalytics.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedAnalyticsdynamic />)}); test("handles user interactions",() => { render(<EnhancedAnalyticsdynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
@@ -159,3 +173,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 });
 });
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+});
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

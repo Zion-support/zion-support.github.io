@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface TokenSet {
 =======
 <<<<<<< HEAD
@@ -33,6 +34,8 @@ export interface TokenSet {;
 export type DesignMapSection = {
   id: string;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ursor/automate-test-improve-and-merge-code-646c;
 export type UIKitKind = "ios" | "android" | "web";
@@ -40,7 +43,10 @@ export type UIKitKind = "ios" | "android" | "web";
 export interface TokenSet  {export interface TokenSet  {export interface TokenSet  {export type UIKitKind = "ios" | "android" | "web";
 export type UIKitKind = "ios" | "android" | "web";
 export interface TokenSet  {export interface TokenSet  {export type DesignMapSection = {id: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: string;
   description?: string;
   items: { id: string; title: string; description?: string }[];
@@ -157,6 +163,7 @@ export type UIKitKind = "ios" | "android" | "web";
 export type UIKitKind = "ios" | "android" | "web";
 export interface TokenSet {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function getZionDesignMap(): DesignMap {
   return {
@@ -417,6 +424,9 @@ export interface TokenSet {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export interface TokenSet {;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   colors: Record<string, string>;
   typography: Record<string, any>;
   spacing: Record<string, number>;
@@ -462,6 +472,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
 <<<<<<< HEAD
+<<<<<<< HEAD
   return {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -499,6 +510,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
   return {}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     
     return this.props.children;
   }
@@ -551,6 +565,7 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
         'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
       'components/Card && Card.tsx':
 <<<<<<< HEAD
+<<<<<<< HEAD
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -565,6 +580,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     };
   }
   if (kind === 'chakra') {
@@ -593,11 +611,14 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
 export interface DesignElement  {id: string;
   } catch {
     return null;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Design mapping utilities
 export interface DesignElement {
   id: string;
@@ -672,6 +693,7 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -690,6 +712,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     };
   };
 }
@@ -704,6 +728,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   const tokens = await buildTokenSet(fileId);
   return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
 
@@ -714,6 +739,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     designSystem.components.push(component);
     designSystem.lastUpdated = new Date();
@@ -913,6 +940,7 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
   return {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
@@ -921,6 +949,8 @@ main
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     colors: {
       primary: "#007AFF",
       secondary: "#5856D6",
@@ -940,6 +970,9 @@ main
       lg: 24,
       xl: 32,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       xl: 32
 }
   };
@@ -974,9 +1007,12 @@ main
   };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export async function buildUIKit(
   fileId: string,
@@ -995,6 +1031,7 @@ export async function buildUIKit(
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           backgroundColor: tokens.colors.primary,
+<<<<<<< HEAD
           padding: tokens.spacing.md,
         },
       },
@@ -1026,12 +1063,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
           backgroundColor: tokens.colors.primary,
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           padding: tokens.spacing.md
         }
       }
     },
     tokens
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return { colors, typography };
@@ -1090,3 +1130,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

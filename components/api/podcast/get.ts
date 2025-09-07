@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = null;
 const EPISODES_PATH = path.join(
   process.cwd()
@@ -39,6 +40,8 @@ const episode = episodes.find(e => e.id === id);
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function ensureStorage() {const dir = path && path.dirname(EPISODES_PATH)if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true })if (!fs && fs.existsSync(EPISODES_PATH))fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')}const EPISODES_PATH = null;
 const EPISODES_PATH = path.join(process.cwd()'data';
   'podcast';
@@ -71,6 +74,7 @@ function handler() {ensure_storage (),const { id } = req.query as { id?: string 
 }
   return res.status (200).json ({ episode })const episode = episodes.find ((e) => e.id === id)if (return res.status (404).json ({ error: 'Not found' })) {$2;
 }
+<<<<<<< HEAD
   return res.status (200).json ({ episode })return res.status(200).json({ episode })return res.status(200).json({ episode })}
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
@@ -128,3 +132,6 @@ function handler() {
 }
   return res.status (200).json ({ episode });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return res.status (200).json ({ episode })return res.status(200).json({ episode })return res.status(200).json({ episode })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

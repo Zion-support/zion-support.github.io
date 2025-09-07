@@ -72,6 +72,7 @@ process.on("SIGTERM")
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Failed to start continuous build and "test": ")
 
@@ -79,3 +80,6 @@ process.on("SIGTERM")
 =======
   console.error(" Failed to start continuous build and "test": ")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" Failed to start continuous build and "test": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
