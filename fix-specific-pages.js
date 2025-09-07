@@ -69,6 +69,7 @@ const path = require($2);
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       if (parts.length > 1) {
+<<<<<<< HEAD
         // Take the content after the conflict resolution
 
 
@@ -86,6 +87,9 @@ const path = require($2);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+        // Take the content after the conflict resolution,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
       }
     }
     // Clean up the content,
@@ -116,6 +120,7 @@ const path = require($2);
     restored: 0,
     failed: 0,
     details: []
+<<<<<<< HEAD
 
 =======
 #!/usr/bin/env node;
@@ -452,6 +457,8 @@ function fixSpecificPages() {
   // // // console.log('🚀 Starting targeted page restoration...'),
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
   },
 
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -495,6 +502,7 @@ function fixSpecificPages() {
       continue;
 
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
@@ -542,6 +550,10 @@ function fixSpecificPages() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+    console.log($2);
+    const result = restorePage($2);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
     if (result.restored) {
       results.restored++
       console.log(`✅ Restored: ${pagePath}`)
@@ -722,12 +734,7 @@ return results;
       ...result;
     });
   }
-  // Generate summary
-  // // // console.log('\n📊 Restoration Summary: '),
-  // // // console.log(`   Total pages: ${results.total}`),
-  // // // console.log(`   Restored: ${results.restored}`),
-  // // // console.log(`   Failed: ${results.failed}`),
-  // // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
+  // Generate summary,
   console.log($2);
   console.log($2);
   console.log($2);

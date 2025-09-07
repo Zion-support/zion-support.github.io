@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -38,11 +39,14 @@ import React from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -64,13 +68,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   it('displays correct content', () => {
-    render(<App />);
-<<<<<<< HEAD
-    expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
 =======
-    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
->>>>>>> origin/chore/fix-lint-and-merge
+  it('has correct structure', () => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
+    render(<App />);
+    // Add more specific tests here
   });
+<<<<<<< HEAD
 
   it('handles user interactions', () => {
     render(<App />);
@@ -120,3 +124,5 @@ ursor/automate-test-improve-and-merge-code-2480
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9

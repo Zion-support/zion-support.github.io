@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 <<<<<<< HEAD
@@ -387,10 +388,39 @@ export default [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   },
   {
+=======
+import js from '@eslint/js';
+import next from 'eslint-config-next';
+
+export default [
+  // Include Next.js recommended flat config
+  ...next,
+  js.configs.recommended,
+  {
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: { jsx: true },
+      },
+      globals: {
+        document: 'readonly',
+        window: 'readonly',
+        console: 'readonly',
+        PerformanceObserver: 'readonly',
+      },
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'off',
+      'prefer-const': 'warn',
+    },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
     ignores: [
       'node_modules/**',
       '.next/**',
       'dist/**',
+<<<<<<< HEAD
       'build/**',
       'out/**',
       'coverage/**',
@@ -644,3 +674,11 @@ origin/automation-improvements-final
 ];
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-5a8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+      'out/**',
+      'coverage/**',
+    ],
+  },
+];
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9

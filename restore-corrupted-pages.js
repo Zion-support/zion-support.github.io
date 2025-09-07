@@ -67,6 +67,7 @@ const path = require($2);
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       if (parts.length > 1) {
+<<<<<<< HEAD
         // Take the content after the conflict resolution
 
 
@@ -162,6 +163,9 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         // Take the content after the conflict resolution;
 
+=======
+        // Take the content after the conflict resolution,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
       }
     }
 <<<<<<< HEAD
@@ -254,6 +258,7 @@ function restoreAllCorruptedPages() {
         }
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
+<<<<<<< HEAD
         
         console.log(`\n🔍 Checking: ${fullPath}`),
 
@@ -402,6 +407,8 @@ function restoreAllCorruptedPages() {
 
         const result = restorePage(fullPath),
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
         console.log($2);
         const result = restorePage($2);
 =======
@@ -495,6 +502,7 @@ function restoreAllCorruptedPages() {
       }
     }
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -581,6 +589,8 @@ function restoreAllCorruptedPages() {
   // // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
 <<<<<<< HEAD
   
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
   console.log($2);
   scanDirectory($2);
   // Generate summary,

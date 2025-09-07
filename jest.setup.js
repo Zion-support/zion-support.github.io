@@ -39,6 +39,7 @@ jest.mock("next/router", () => ({
       pathname: "/",
       query: {},"
       asPath: "/",
+<<<<<<< HEAD
 
 // Jest setup file
 
@@ -71,6 +72,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
       push: jest.fn(),
       pop: jest.fn(),
       reload: jest.fn(),
@@ -83,7 +86,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
       events: {}
         on: jest.fn(),
         off: jest.fn(),
-<<<<<<< HEAD
         emit: jest.fn()
 =======
         emit: jest.fn(),
@@ -126,6 +128,13 @@ jest && jest.mock("next/link", () => {
 });
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+// Mock Next.js Image component
+jest.mock("next/image", () => {
+  return function MockImage({ src, alt, ...props }) {
+    return <img src={src} alt={alt} {...props} />;
+  };
+});
 
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
@@ -365,6 +374,7 @@ beforeEach(() => {
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -486,3 +496,5 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9

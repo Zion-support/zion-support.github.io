@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -55,13 +56,17 @@ import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
 
 <<<<<<< HEAD
 interface LayoutProps {
-  children: ReactNode;
+  children: React.ReactNode,
   title?: string;
   description?: string;
   keywords?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   canonical?: string;
@@ -110,39 +115,12 @@ interface LayoutProps {;
   no_index?: boolean;
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
 }
 
-export default function Layout({ 
-  children, 
-<<<<<<< HEAD
-  title = "Zion Tech Group", 
-  description = "Leading technology solutions provider" 
-}: LayoutProps) {
-  return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
-      </div>
-    </>
-=======
-  title = "Zion Tech Group - Leading AI & Technology Solutions",
-  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation",
-  canonical = "https://ziontechgroup.com",
-  og_title,
-  og_description,
-  og_image = "https://ziontechgroup.com/og-image.jpg",
-  no_index = false
+export default function Layout({
+  children;
 }: LayoutProps) {
   const json_ld = {
     "@context": "https://schema.org",
@@ -168,6 +146,7 @@ export default function Layout({
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-white">
       <Head>
         <title>{title}</title>
@@ -410,8 +389,11 @@ export default function Layout({ children }: LayoutProps) {
   }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+    <div className="min-h-screen bg-gray-50">
+      {children}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
     </div>
->>>>>>> origin/chore/fix-lint-and-merge
   );
 <<<<<<< HEAD
 }

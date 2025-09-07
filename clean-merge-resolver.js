@@ -28,8 +28,9 @@ function fixMergeConflicts() {
   try {
     let content = fs.readFileSync($2);
     const originalContent = $2;
-    // Remove merge conflict markers and keep HEAD version
-    
+    // Remove merge conflict markers and keep HEAD version,
+  content = content.replace($2);
+    content = content.replace($2);
     if (content !== originalContent) {
       fs.writeFileSync($2);
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),
@@ -41,6 +42,7 @@ function fixMergeConflicts() {
     return false
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -260,6 +262,10 @@ function main() {try {// Check if were in a git repository;
       const fullPath = path.join(dir, item),
       const stat = fs.statSync(fullPath),
 // Function to get all files recursively
+=======
+// Function to get all files recursively,
+  function getAllFiles(dir, extensions) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
   let files = $2;
   try {
     const items = fs.readdirSync($2);
@@ -571,6 +577,7 @@ function main() {
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Now scan for and fix any remaining merge conflicts in files;
 
     console.log('🔍 Scanning for merge conflicts in files...');
@@ -603,6 +610,16 @@ function main() {
         const content = fs.readFileSync(file, 'utf8'),;
           if (fixMergeConflicts(file)) {;
 
+=======
+    // Now scan for and fix any remaining merge conflicts in files,
+  console.log($2);
+    const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js.json.md.css']),
+    let fixedCount = $2;
+    for (const file of files) {
+      try {
+        const content = fs.readFileSync($2);
+          if (fixMergeConflicts(file)) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
             fixedCount++;
 <<<<<<< HEAD
 

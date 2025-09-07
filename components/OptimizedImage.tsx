@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useCallback } from 'react';
 =======
 import React from 'react';
@@ -226,12 +227,15 @@ export default OptimizedImage;
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
 return (
     <Image,
   src={src}
       alt={alt}
       width={width}
       height={height}
+<<<<<<< HEAD
 =======
   src, alt,
   width, height,
@@ -260,3 +264,5 @@ export default OptimizedImage;
 export default OptimizedImage;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9

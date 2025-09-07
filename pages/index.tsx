@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -266,10 +267,14 @@ export default function Home() {
 import React from 'react';
 origin/main
 import Link from 'next/link';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
 import Head from 'next/head';
 
 export default function Home() {
   return (
+<<<<<<< HEAD
     <>
       <Head>
         <title>Zion Tech Group - Advanced IT Solutions & AI Services</title>
@@ -3655,3 +3660,33 @@ origin/main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    <div>
+      <Head>
+        <title>Zion Tech Group</title>
+        <meta name="description" content="AI, Micro SaaS & Enterprise IT Solutions" />
+      </Head>
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Welcome to Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Leading provider of AI solutions, micro SaaS development, and enterprise IT services.
+            </p>
+            <div className="space-x-4">
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Get Started
+              </button>
+              <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9

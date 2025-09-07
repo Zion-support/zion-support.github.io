@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-
-#!/usr/bin/env node
-
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-const fs = require('fs');
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node,
   const fs = require('fs');
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const path = require('path');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -71,6 +57,8 @@ class MergeConflictFixer {
           continue;
         }
         if (line.includes('>>>>>>>')) {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
           inConflict = false;
           // Use the last valid content (after )
           fixedLines.push(...lastValidContent);
@@ -164,9 +152,8 @@ class MergeConflictFixer {
       process.exit(1);
     });
 }
-<<<<<<< HEAD
-
 module.exports = MergeConflictFixer;
+<<<<<<< HEAD
 =======
 
 console.log('🔧 Fixing merge conflicts in TypeScript files...');
@@ -457,3 +444,5 @@ try {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9

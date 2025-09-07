@@ -13,24 +13,6 @@
 const { execSync } = require('child_process');
 <<<<<<< HEAD
 const fs = require('fs');
-<<<<<<< HEAD
-<<<<<<< HEAD
-///usr/bin/env node
-const { execSync } = require('child_process')
-const fs = require('fs')
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-#!/usr/bin/env node;
-const { execSync } = require('child_process');
-const fs = require('fs');
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-const fs = require(fs');
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 function sh(cmd) {}
   return execSync(cmd, { "stdio: 'pipe, encoding": utf8' }).trim()}
 function getToken() {}
@@ -52,78 +34,34 @@ async function gh(path, method = 'GET) {}
       Authorization: `token ${token}`,`
 <<<<<<< HEAD
       "Accept": 'application/vnd.github.v3+json',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      'User-Agent': 'force-merge-script'
-=======
-      Accept": 'application/vnd.github.v3+json,
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
-=======
-  let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw: text }}
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
   if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
-  return data}
+  return data};
 function autoResolveConflicts() {}
-  const list = sh(git diff --name-only --diff-filter=U || true');
-  const files = list.split('\n).filter(Boolean);
+  const list = sh('git diff --name-only --diff-filter=U || true');
+  const files = list.split('\n').filter(Boolean);
   for (const file of files) {}
     if (!fs.existsSync(file)) continue;
-    const src = fs.readFileSync(file, utf8');
+    const src = fs.readFileSync(file, 'utf8');
     // Prefer incoming (theirs) content on conflict;
     const resolved = src;
-
     fs.writeFileSync(file, resolved);
-    sh(`git add -- ${file}"`)}
-  const staged = sh(git diff --cached --name-only || true');
-  if (staged.split('\n).filter(Boolean).length) {}
-    sh(git commit -m "chore: auto-resolve conflicts while force-merging PR heads into main"')}
-}
+    sh(`git add -- "${file}"`)};
+  const staged = sh('git diff --cached --name-only || true');
+  if (staged.split('\n').filter(Boolean).length) {}
+    sh('git commit -m ""chore": auto-resolve conflicts while force-merging PR heads into main"')};
+};
 async function main() {}
   const { owner, repo } = getRepo();
-=======
-      'User-Agent': 'force-merge-script'
-=======
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    };
-  }
-});
-  const text = await res.text();
->>>>>>> origin/chore/fix-lint-and-merge
-
+  const startBranch = sh('git rev-parse --abbrev-ref HEAD');
+  sh('git fetch origin');
+  sh('git checkout main');
+  sh('git pull --ff-only origin main');
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
   let mergedCount = 0; let attempted = 0;
   for (const pr of prs) {}
     attempted++;
     const head = pr.head && pr.head.ref;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-"User-Agent": "force-merge-script"
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-
-
-    console.log(`Merging head into "main: PR #${pr.number} (${head})`);
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
     }
 })
   const text = await res.text()
@@ -133,7 +71,6 @@ async function main() {}
     attempted++
     const head = pr.head && pr.head.ref,
   console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       try {}
         sh(`git merge --no-ff --no-edit origin/${head}`)} catch (e) {`}
         console.log('Conflicts detected. Attempting auto-resolution...);

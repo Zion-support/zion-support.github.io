@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 <<<<<<< HEAD
 import '@testing-library/jest-dom';
@@ -49,12 +50,15 @@ import React from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
     render(<AppMinimal />);
     expect(screen.getByRole('main')).toBeInTheDocument();
 >>>>>>> origin/chore/fix-lint-and-merge
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
   it('displays correct content', () => {
     render(<AppMinimal />);
@@ -158,3 +162,5 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9

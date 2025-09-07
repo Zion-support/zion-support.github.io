@@ -1419,6 +1419,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         content.includes('
 =======
         content.includes(
@@ -1584,6 +1585,9 @@ main
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+        content.includes('') ||
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
       );
 
 
@@ -1619,6 +1623,7 @@ content.includes('
     try {
       let content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1879,13 +1884,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
         /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n        '$1'
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
       // Remove merge conflict markers and keep HEAD version,
   content = content.replace(
         /\n(.*?)\n        '$1'
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n        '$1
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
       );
       // Clean up any remaining markers,
   content = content.replace(/
@@ -2282,6 +2285,7 @@ main
       "monitoring": {"
         performanceMetrics: true,"
         "errorTracking": true,
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 
 <<<<<<< HEAD
@@ -2361,6 +2365,9 @@ main
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+        "userAnalytics": true}};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
     fs.writeFileSync(
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -3664,6 +3671,7 @@ main
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
@@ -3916,3 +3924,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+// Run the complete improvement suite,
+  const suite = new CompleteImprovementSuite();
+suite.run().catch(console.error);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9

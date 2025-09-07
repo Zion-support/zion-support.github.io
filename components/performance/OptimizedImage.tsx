@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import Image from 'next/image';
@@ -108,6 +109,8 @@ import Image from next / image';
 
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
 interface OptimizedImageProps {
   src: string,
   alt: string,
@@ -118,22 +121,10 @@ interface OptimizedImageProps {
   sizes?: string;
 }
 
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src;
-  alt;
-  width;
-  height;
-  priority = false;
-  className;
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
-
 import React from "react";
 import Image from "next/image";
-import Image from 'next / image';
-;
-import React from "react;
-import Image from next/image";
-
+import React from 'react';
+import Image from 'next/image';
 
 
 import React from "react";
@@ -143,6 +134,7 @@ import Image from "next/image";
 
 import React from \"react\";"
 
+<<<<<<< HEAD
 import React from \"react\;
 import Image from \"next/image\";
 =======
@@ -159,21 +151,24 @@ export default OptimizedImage;
 export default OptimizedImage;
 >>>>>>> origin/chore/fix-lint-and-merge
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
 interface OptimizedImageProps {
   src: string;
   alt: string;
   width: number;
   height: number;
   className?: string;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
+interface OptimizedImageProps {}
+  width?: number;
+  height?: number;
+  class_name?: string;
   priority?: boolean;
   quality?: number;
   sizes?: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -183,6 +178,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+const "OptimizedImage": React.FC<OptimizedImageProps> = ({
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
   src,
   alt,
   width,
@@ -197,9 +196,18 @@ class_name = '',
   quality = 75,
   sizes = "100vw","
 }) => {
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-
+  // Check condition
+if ( {) {
+  $2
+  priority = false,'
+  sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
+  quality = 85,
+  fill = false,
+  style;
+}) => {}
+  // Check condition;
+if ( {) {}
+  $2;
 }
 <<<<<<< HEAD
   height}
@@ -217,8 +225,20 @@ class_name = '',
         style={style}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
   return (
     <Image
+  src,
+  alt,
+  width,
+  height,
+  className = "",
+  priority = false,
+  quality = 75,
+  sizes = "100vw",
+}) => {
       src={src}
   priority?: boolean;
   quality?: number;
@@ -255,6 +275,7 @@ src={src}
       alt={alt}
       width={width}
       height={height}
+<<<<<<< HEAD
       className={className}
 <<<<<<< HEAD
 =======
@@ -267,11 +288,13 @@ src={src}
       height={height || 600}
       className={class_name}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
       priority={priority}
-<<<<<<< HEAD
       className={className}
       sizes={sizes}
       quality={85}
+<<<<<<< HEAD
       sizes={sizes}
 <<<<<<< HEAD
 =======
@@ -311,22 +334,15 @@ export default OptimizedImage;
 <<<<<<< HEAD
 export default OptimizedImage;
 "
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
 export default OptimizedImage;
 '
-export default OptimizedImage;
-      sizes={sizes}
-      quality={quality}
-    />
-  );
-}
-
-
-
-export default OptimizedImage;
-
   )
-}
+};
+
 export default OptimizedImage;
+<<<<<<< HEAD
 "
 export default OptimizedImage;
 =======
@@ -372,3 +388,7 @@ export default OptimizedImage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+      className={className}
+      priority={priority}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
@@ -566,6 +563,7 @@ const Footer: React.FC = () => {
                 >
                   <span className="text-lg">{social.icon}</span>
                 </a>
+<<<<<<< HEAD
               </div>
               <div className="flex items-center>"
                 <Mail className="w-4 h-4 mr-2 text-blue-400" />"
@@ -765,12 +763,15 @@ origin/automation-improvements-final
                   </ul>;
                 </div>;
               </div>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
               ))}
 <<<<<<< HEAD
             </div>
           </div>
 
           {/* Services */}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -1017,27 +1018,56 @@ origin/automation-improvements-final
                 <li key={link && link.name}>;
                   <Link
           {/* Company */}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
           <div>
-            <h3 className=text-lg font-semibold mb-6">Company</h3>"
-            <ul className="space-y-3>"
-              {company.map((link) => (
+            <h3 className="text-lg font-semibold mb-6">Services</h3>
+            <ul className="space-y-3">
+              {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
 <<<<<<< HEAD
                     className="text-gray-400 hover:text-white transition-colors duration-200"
-=======
-          {/* Services Links */}
-          <motion.div variants={fadeInUp}>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-2 text-gray-300">
+              <div className="flex items-center">
+                <MapPin className="h-4 w-4 mr-2" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              <li><a href="/about" className="text-gray-300 hover:text-white">About</a></li>
+              <li><a href="/services" className="text-gray-300 hover:text-white">Services</a></li>
+              <li><a href="/solutions" className="text-gray-300 hover:text-white">Solutions</a></li>
+              <li><a href="/research" className="text-gray-300 hover:text-white">Research</a></li>
+            </ul>
+          </div>
+
+
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Company</h3>
             <ul className="space-y-3">
-              {footerLinks.services.map((link, index) => (
-                <li key={index}>
-                  <motion.a
+              {footerLinks.company.map((link) => (
+                <li key={link.name}>
+                  <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
-                    whileHover={{ x: 5 }}
->>>>>>> origin/chore/fix-lint-and-merge
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"    />
                     {link.name}
@@ -1045,7 +1075,7 @@ origin/automation-improvements-final
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Company Links */}
           <motion.div variants={fadeInUp}>
@@ -1131,6 +1161,7 @@ origin/automation-improvements-final
               </motion.button>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 Privacy Policy;
@@ -1883,10 +1914,13 @@ origin/automation-improvements-final
 =======
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
         </div>
       </div>
     </footer>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -2054,3 +2088,8 @@ export default Footer;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+};
+
+export default Footer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9

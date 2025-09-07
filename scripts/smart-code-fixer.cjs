@@ -1,150 +1,31 @@
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> origin/chore/fix-lint-and-merge
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-#!/usr/bin/env node
-
-
-
-
-const fs = require('fs');
-const path = require(path');
-const { execSync } = require('child_process');
-console.log('🔧 Smart Code Fixer');
-
-// Function to fix unescaped entities only in JSX content;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const { execSync } = require('child_process')
-// Function to fix unescaped entities only in JSX content
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 #!/usr/bin/env node,
   const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 // Function to fix unescaped entities only in JSX content;
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 function fixUnescapedEntities(content) {
   // Only replace single quotes that are not in import statements or string literals;
   // This regex looks for single quotes that are not preceded by import, from, or within quotes;
 
-<<<<<<< HEAD
     // Only replace if it's likely JSX content (contains spaces or common JSX patterns)
-<<<<<<< HEAD
-    if (content.includes('&') || content.includes('<') || content.includes('>')) {
-      return `&apos;${content}&apos;`;
-    }
-    return match;
-  });
-
-// Function to fix specific linting issues;
-function fixSpecificIssues(content, filePath) {
-  let modified = false;
-
-  // Fix unused imports;
-  if (content.includes("import Image from 'next/image'") && !content.includes('<Image')) {
-
-
-  return { content, modified };
-
-// Function to process a single file;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-}
-=======
-    // Only replace if its likely JSX content (contains spaces or common JSX patterns)
-    if (content.includes('&') || content.includes(<) || content.includes('>')) {}
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-// Function to fix specific linting issues
-function fixSpecificIssues(content, filePath) {
-  let modified = false;
-
-  // Fix unused imports
-  if (content.includes("import Image from next/image") && !content.includes('<Image')) {
-    content = content.replace(/import Image from next\/image/, '// import Image from \'next/image\;);
-    modified = true;
-  }
-
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
     if (content.includes('&') || content.includes('<') || content.includes('>')) {}
 // Function to fix specific linting issues,
   function fixSpecificIssues(content, filePath) {
   let modified = false
   // Fix unused imports,
   if (content.includes("import Image from 'next/image'") && !content.includes('<Image')) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 function processFile(filePath) {
   try {
   // TODO: Implement,
   let modifiedContent = content;
     let hasChanges = false;
-<<<<<<< HEAD
-
-    // Apply fixes;
     const result = fixSpecificIssues(modifiedContent, filePath);
     modifiedContent = result.content;
     hasChanges = result.modified;
-
-<<<<<<< HEAD
-    // Fix unescaped entities
-    // Fix unescaped entities
-=======
-    const result = fixSpecificIssues(modifiedContent, filePath);
-    modifiedContent = result.content;
-    hasChanges = result.modified;
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-    // Fix unescaped entities;
->>>>>>> origin/chore/fix-lint-and-merge
     const originalContent = modifiedContent;
     modifiedContent = fixUnescapedEntities(modifiedContent);
     if (modifiedContent !== originalContent) {
       hasChanges = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-
-    // Write back if modified
-    }
-
-    // Write back if modified
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-
-    // Write back if modified;
->>>>>>> origin/chore/fix-lint-and-merge
     if (hasChanges) {
       return false;
   } catch (error) {`;
@@ -153,40 +34,6 @@ function processFile(filePath) {
     return false;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-return { content, modified }
-// Function to process a single file;function processFile(filePath) {
-  try {
-  // TODO: Implement
-=======
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-  const files = [];
-  
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-
-// Function to find all relevant files;
-
-  const files = [];
->>>>>>> origin/chore/fix-lint-and-merge
-  function traverse(currentDir) {
-  // TODO: Implement
-      const items = fs.readdirSync(currentDir);
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-  // TODO: Implement
-<<<<<<< HEAD
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-          
-<<<<<<< HEAD
-          if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-=======
       return false
   } catch (error) {`
     console.error(`❌ Error processing ${filePath}:`, error.message)
@@ -199,10 +46,6 @@ return { content, modified }
         const fullPath = path.join(currentDir, item)
   // TODO: Implement,
   if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-          if (stat.isDirectory() && !item.startsWith('.') && item !== node_modules) {
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
             traverse(fullPath);
           } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
             files.push(fullPath);
@@ -265,20 +108,4 @@ return { content, modified }
   if (require.main === module) {
   main();
 }
-<<<<<<< HEAD
-
-module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities }
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-          const stat = fs.statSync(fullPath);
-
-            traverse(fullPath);
-          } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-`;
->>>>>>> origin/chore/fix-lint-and-merge

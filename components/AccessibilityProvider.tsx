@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
 }
 const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
@@ -55,6 +58,7 @@ export const useAccessibility = () => {
 
 >>>>>>> origin/chore/fix-lint-and-merge
 interface AccessibilityProviderProps {
+<<<<<<< HEAD
   children: ReactNode;
 =======
 'use client';
@@ -110,9 +114,12 @@ export const useAccessibility = () => {;
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
   }
-  return context
+  "children": ReactNode;
 }
+<<<<<<< HEAD
 
 interface AccessibilityProviderProps {
 <<<<<<< HEAD
@@ -471,3 +478,10 @@ export default AccessibilityProvider;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+  return (
+    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
+      {children}
+    </AccessibilityContext.Provider>
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9

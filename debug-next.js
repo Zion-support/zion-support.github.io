@@ -27,6 +27,7 @@ const problematicFiles = $2;
 const allFiles = getAllFiles($2);
 for (const file of allFiles) {
   try {
+<<<<<<< HEAD
     const content = fs.readFileSync(file, 'utf8');
     if (content.includes('') |content.includes('
 const fs = require('fs'),;
@@ -235,14 +236,15 @@ console.log('✅ Debug completed'),;
       problematicFiles.push(file);
 <<<<<<< HEAD
 
+=======
+    const content = fs.readFileSync($2);
+      problematicFiles.push(file)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
     }
   } catch (error) {
     // Skip files that cant be read;
   }
 }
-
-
-console.log('✅ Debug completed');
 console.log($2);
 if (problematicFiles.length > 0) {
   console.log(Files:, problematicFiles.slice(0, 10))
@@ -266,6 +268,7 @@ if (problematicFiles.length > 0) {
   }
   return files
 }
+<<<<<<< HEAD
 
 console.log('✅ Debug completed');
 =======
@@ -276,3 +279,6 @@ console.log('✅ Debug completed');
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+console.log($2);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9

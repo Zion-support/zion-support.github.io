@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -2172,6 +2173,8 @@ export default Header;
 export default Header;
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
 
 const servicesDropdown = [
   {
@@ -2213,6 +2216,10 @@ const servicesDropdown = [
 ];
 
 const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
+import React, { useState } from 'react';
+import Link from 'next/link';
+
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
@@ -2317,6 +2324,7 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
       </div>
     </header>
   );
+<<<<<<< HEAD
 };
 
 export default Header;
@@ -2353,3 +2361,5 @@ export default Header;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
