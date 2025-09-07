@@ -206,8 +206,4 @@ export default function ContactPage() {
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09

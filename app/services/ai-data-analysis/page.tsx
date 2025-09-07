@@ -178,34 +178,11 @@ export default function AIDataAnalysisPage() {
                 update with new insights.
               </p>
             </div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Coming Soon
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            This service page is under development. Please contact us for more information.
-          </p>
-          <a
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
-          >
-            Contact Us
-          </a>
-        </div>
-      </section>
-    </div>
-  );
-}
-=======
       <Pricing />
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09
