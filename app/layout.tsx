@@ -102,6 +102,7 @@ export default function RootLayout({
 import React from "react";
 import Link from "next/link";
 import "./globals.css";
+<<<<<<< HEAD
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 export const metadata = {
@@ -151,6 +152,30 @@ googleBot: {
       "max-snippet": -1,
     },
   },;
+=======
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Leading AI and Technology Solutions',
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+  keywords: 'AI, artificial intelligence, technology solutions, cloud computing, cybersecurity, data analytics, digital transformation',
+  authors: [{ name: 'Zion Tech Group' }],
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Zion Tech Group - Leading AI and Technology Solutions',
+    description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - Leading AI and Technology Solutions',
+    description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+  },
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
 };
 
 <<<<<<< HEAD
@@ -398,6 +423,7 @@ function Footer() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function RootLayout({}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   children,
@@ -461,12 +487,15 @@ export const metadata: Metadata = {
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 };
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <html lang="en">
@@ -522,3 +551,14 @@ export default function RootLayout({
 =======
 >>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+=======
+    <html lang="en" className={inter.className}>
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63

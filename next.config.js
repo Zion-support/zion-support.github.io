@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
@@ -11,7 +12,10 @@ const nextConfig = {
 =======
 compress: true,
   reactStrictMode: true,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
   compress: true,
+  reactStrictMode: true,
   poweredByHeader: false,
   generateEtags: true,
   // Image optimization
@@ -23,7 +27,7 @@ compress: true,
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
-  reactStrictMode: true,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -32,16 +36,6 @@ compress: true,
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
-  images: {
-    domains: [
-      'localhost',
-      'ziontechgroup.com',
-      'images.unsplash.com',
-    ],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
@@ -77,7 +71,7 @@ compress: true,
           '**/performance-*.sh',
           '**/performance-*.html',
           '**/performance-*.md',
-'**/performance-*.txt'
+          '**/performance-*.txt'
         ],
         poll: 1000,
         aggregateTimeout: 300
@@ -90,12 +84,13 @@ compress: true,
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
-chunks: 'all',
+            chunks: 'all',
           },
         },
       };
     }
     return config;
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 	reactStrictMode: false,
@@ -156,20 +151,14 @@ export default nextConfig;
   // Environment variables
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
   },
   // Redirects
   async redirects() {
     return [
-      {
-        source: '/old-page',
-        destination: '/new-page',
-        permanent: true,
-      },
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
+      { source: '/api-documentation', destination: '/api-docs', permanent: true },
+      { source: '/ai-consciousness-evolution-2025', destination: '/ai-consciousness-evolution-2029', permanent: false }
     ];
   },
   // Headers
@@ -194,18 +183,11 @@ export default nextConfig;
       },
     ];
   },
-  // ESLint and TypeScript configuration
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-
-  },
-  // Trailing slash
-  trailingSlash: false,
 };
 
+<<<<<<< HEAD
 export default nextConfig;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+export default nextConfig;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63

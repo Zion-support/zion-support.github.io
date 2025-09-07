@@ -3,12 +3,15 @@
 =======
 
 
+<<<<<<< HEAD
 // eslint-disable-next-line react-refresh/only-export-components
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
   title: 'Ai Healthcare Assistant - Zion Tech Group',
   description: 'Advanced ai healthcare assistant solutions for modern businesses.',
 };
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
 
 export default function ServicePage() {
   return (

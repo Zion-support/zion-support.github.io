@@ -1,11 +1,6 @@
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: 'Ai Project Manager - Zion Tech Group',
-  description: 'Advanced ai project manager solutions for modern businesses.',
-};
 
 export default function ServicePage() {
   return (

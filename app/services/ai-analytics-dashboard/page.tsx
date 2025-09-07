@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
 <<<<<<< HEAD
@@ -23,6 +24,8 @@ export const metadata = {
   description: 'Advanced ai analytics dashboard solutions for modern businesses.',
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
 
 export default function ServicePage() {
   return (

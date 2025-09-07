@@ -3957,37 +3957,37 @@ function ContactSection() {
             title="Financial Services"
             description="Bank-grade security and compliance for financial institutions"
             solutions={["PCI DSS compliance", "Fraud detection", "High availability", "Disaster recovery"]
-          />
+          /></IndustryCard>
           <IndustryCard
             icon="🏥"
             title="Healthcare"
             description="HIPAA-compliant IT solutions for healthcare providers"
             solutions={["HIPAA compliance", "EHR systems", "Telemedicine", "Data encryption"]
-          />
+          /></IndustryCard>
           <IndustryCard
             icon="🛒"
             title="E-commerce"
             description="Scalable infrastructure for online retail and marketplaces"
             solutions={["Auto-scaling", "CDN optimization", "Payment security", "Inventory systems"]
-          />
+          /></IndustryCard>
           <IndustryCard
             icon="🏭"
             title="Manufacturing"
             description="IoT and industrial automation IT solutions"
             solutions={["IoT integration", "SCADA systems", "Predictive maintenance", "Supply chain"]
-          />
+          /></IndustryCard>
           <IndustryCard
             icon="🎓"
             title="Education"
             description="IT infrastructure for educational institutions and e-learning"
             solutions={["LMS systems", "Student portals", "Virtual classrooms", "Campus networks"]
-          />
+          /></IndustryCard>
           <IndustryCard
             icon="🏠"
             title="Real Estate"
             description="Property management and CRM IT solutions"
             solutions={["CRM systems", "Property databases", "Virtual tours", "Document management"]
-          />
+          /></IndustryCard>
         </div>
       </section>
 

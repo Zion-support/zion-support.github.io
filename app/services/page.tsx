@@ -80,6 +80,7 @@ title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTec
   description:
     "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
 
+<<<<<<< HEAD
 export const metadata = {
   title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
   description: "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
@@ -93,6 +94,9 @@ export const metadata = {
   description: "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
 
 export default function ServicesOverviewPage() {
   return (
@@ -178,6 +182,7 @@ export default function ServicesOverviewPage() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const metadata = {
@@ -185,6 +190,9 @@ export const metadata = {
   description:
     "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
 };
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
 export default function ServicesOverviewPage() {
   return (
     <div className="animate-fade-in">

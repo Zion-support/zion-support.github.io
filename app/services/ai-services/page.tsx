@@ -672,6 +672,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
 export const metadata = {
   title: 'AI Services | Zion Tech Group',
 <<<<<<< HEAD
@@ -689,6 +690,13 @@ export const metadata = {
   description: 'Complete AI services including machine learning, natural language processing, computer vision, and AI automation. Transform your business with cutting-edge artificial intelligence.',
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
+=======
+
+import React from 'react';
+import Link from 'next/link';
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
 
 <<<<<<< HEAD
 interface AIServiceProps {
@@ -2439,37 +2447,37 @@ function AIServiceCard({ icon, title, description, features, price }: {
             title="Financial Services"
             description="AI solutions for fraud detection, risk assessment, and algorithmic trading."
             solutions={["Fraud detection", "Risk modeling", "Algorithmic trading", "Credit scoring"]
-          />
+          /></IndustryCard>
           <IndustryCard
             icon="🛒"
             title="E-commerce"
             description="AI-powered recommendation engines, inventory optimization, and customer analytics."
             solutions={["Recommendation engines", "Inventory optimization", "Customer analytics", "Price optimization"]
-          />
+          /></IndustryCard>
           <IndustryCard
             icon="🏥"
             title="Healthcare"
             description="AI solutions for medical diagnosis, drug discovery, and patient care optimization."
             solutions={["Medical diagnosis", "Drug discovery", "Patient monitoring", "Treatment optimization"]
-          />
+          /></IndustryCard>
           <IndustryCard
             icon="🏭"
             title="Manufacturing"
             description="AI for predictive maintenance, quality control, and supply chain optimization."
             solutions={["Predictive maintenance", "Quality control", "Supply chain optimization", "Process automation"]
-          />
+          /></IndustryCard>
           <IndustryCard
             icon="🎓"
             title="Education"
             description="AI-powered personalized learning, student assessment, and educational content generation."
             solutions={["Personalized learning", "Student assessment", "Content generation", "Learning analytics"]
-          />
+          /></IndustryCard>
           <IndustryCard
             icon="🏠"
             title="Real Estate"
             description="AI solutions for property valuation, market analysis, and investment optimization."
             solutions={["Property valuation", "Market analysis", "Investment optimization", "Property matching"]
-          />
+          /></IndustryCard>
         </div>
       </section>
 
@@ -2856,83 +2864,7 @@ function TechCard({ name, icon }: { name: string; icon: string }) {
       <div className="text-sm font-semibold text-gray-900">{name}</div>
     </div>
   );
-export const metadata = { title: 'AI Services | Zion Tech Group' } export default /**
- * AIPage - Function description
- */
-function AIPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>AI Services</h1> <p style={{margin_top: 8, color: '#374151'}}>Ship AI features with confidence: RAG, agents, fine - tuning, evals and MLOps.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Applied AI" details={["RAG over private data", "Task - specific agents", "Vision + speech", "Personalization"]} /> <Item title="Model Ops" details={["Offline evals", "Safety + guardrails", "Batch + streaming", "Cost controls"]} /> <Item title="Data & MLOps" details={["Pipelines", "Feature stores", "Vector DBs", "Monitoring + drift"]} /> </div> <Pricing /> </section> )} /**
- * Item - Function description
- */
-function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
- * Pricing - Function description
- */
-function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="AI Discovery" price="$5k–$12k" features={["2–3 weeks", "Use - case design", "Tech selection", "Roadmap"]} /> <Plan name="Pilot" price="$15k–$45k" features={["4–8 weeks", "RAG / agent MVP", "Evals + safety", "Dashboards"]} /> <Plan name="Production" price="$50k+" features={["Hardened infra", "Monitoring", "SLAs", "Cost optimization"]} /> </div> )} /**
- * Plan - Function description
- */
-function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
-}
-}
-}
 
-function IndustryCard({ icon, title, description, solutions }: {
-  icon: string;
-  title: string;
-  description: string;
-  solutions: string[];
-}) {
-  return (
-    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {solutions.map((solution, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-            {solution}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function ProcessStep({ step, title, description }: {
-  step: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center">
-      <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-        {step}
-      </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function MetricCard({ number, label, description }: {
-  number: string;
-  label: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center bg-white p-6 rounded-lg shadow-md border border-gray-200">
-      <div className="text-4xl font-bold text-blue-600 mb-2">{number}</div>
-      <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
-      <div className="text-sm text-gray-600">{description}</div>
-    </div>
-  );
-}
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: 'AI Services - Zion Tech Group',
-  description: 'Comprehensive AI services and solutions for modern businesses.',
-};
 
 export default function ServicePage() {
   return (

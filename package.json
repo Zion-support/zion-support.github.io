@@ -6,6 +6,7 @@
   "scripts": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -39,6 +40,8 @@
     "postbuild": "echo \"Build completed\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -89,7 +92,7 @@
     "automation:improvement:dev": "nodemon automation/continuous-automation-improvement-system.js",
     "automation:coordinator": "node automation/master-automation-coordinator.js",
     "automation:coordinator:dev": "nodemon automation/master-automation-coordinator.js",
-    "automation:all": "npm run automation:master",
+    "automation:all": "npm run automation:enhanced && npm run automation:performance && npm run automation:security",
     "automation:status": "node automation/master-automation.cjs status",
     "automation:restart": "node automation/master-automation.cjs restart",
     "automation:enhance": "node automation/enhance-all-automation.js",
@@ -247,10 +250,10 @@
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "npm run clean && npm run build",
     "automation:master": "node automation/master-orchestrator.cjs",
-    "automation:performance": "node automation/performance-optimizer.cjs",
+    "automation:performance": "node scripts/performance-monitor.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
     "automation:health": "node automation/health-check.cjs",
-    "automation:security": "node automation/security-scanner.cjs",
+    "automation:security": "node scripts/security-audit.cjs",
     "pr:merge-open": "node scripts/merge-open-prs.cjs",
     "pr:auto-resolve-and-merge": "node scripts/auto-resolve-merge-prs.cjs",
     "pr:force-merge-heads": "node scripts/force-merge-open-pr-heads-into-main.cjs",
@@ -275,7 +278,7 @@
     "error:prevention:logs": "pm2 logs --lines 100",
     "build:production": "NODE_ENV=production npm run build",
     "error:detect": "node automation/intelligent-error-detector.cjs",
-    "automation:enhanced": "node automation/enhanced-master-automation-orchestrator.cjs",
+    "automation:enhanced": "node scripts/enhanced-automation-suite.cjs",
     "optimize:images": "node scripts/optimize-images.js",
     "analyze:bundle": "npm run build && npx @next/bundle-analyzer",
     "test:accessibility": "npx jest --testPathPatterns=accessibility",
@@ -288,10 +291,6 @@
     "improve:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
     "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
-    "automation:enhanced": "node scripts/enhanced-automation-suite.cjs",
-    "automation:performance": "node scripts/performance-monitor.cjs",
-    "automation:security": "node scripts/security-audit.cjs",
-    "automation:all": "npm run automation:enhanced && npm run automation:performance && npm run automation:security",
     "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs"
   },
   "dependencies": {
@@ -302,6 +301,7 @@
     "@google/generative-ai": "^0.24.1",
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.2.1",
+<<<<<<< HEAD
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
@@ -333,6 +333,14 @@
     "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.0",
+=======
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tanstack/react-query": "^5.85.5",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.17",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "aws-sdk": "^2.1692.0",
@@ -366,6 +374,7 @@
     "react": "^18.3.1",
     "react-datepicker": "^8.4.0",
     "react-day-picker": "^8.9.1",
+<<<<<<< HEAD
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
@@ -381,6 +390,9 @@
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^11.1.0",
     "web-vitals": "^5.1.0"
+=======
+    "react-dom": "^19.1.1"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
   },
   "devDependencies": {
 <<<<<<< HEAD
@@ -443,7 +455,12 @@
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
+<<<<<<< HEAD
     "vite": "^7.1.4"
+=======
+    "vite": "^7.1.4",
+    "web-vitals": "^5.1.0"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
   },
   "engines": {
     "node": ">=18.0.0",
@@ -471,4 +488,7 @@
   "author": "Zion Tech Group",
   "license": "MIT"
 }
+<<<<<<< HEAD
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63

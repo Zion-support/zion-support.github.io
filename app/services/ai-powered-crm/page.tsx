@@ -6,10 +6,13 @@ export const metadata = {
   description: 'Revolutionary CRM with AI-powered lead scoring, automated follow-ups, predictive analytics, and intelligent sales insights. Boost conversion rates by 40% with our smart CRM solution.',
   keywords: 'AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales intelligence'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   description: 'Revolutionary CRM with AI-driven insights, predictive analytics, and automated lead scoring. Boost sales by 40% with intelligent customer relationship management.',
   keywords: 'AI CRM, customer relationship management, sales automation, lead scoring, predictive analytics, sales intelligence'
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
 };
 
 interface FeatureCardProps {
@@ -112,12 +115,18 @@ export default function AIPoweredCRMPage() {
           >
             Get Free Demo
 <<<<<<< HEAD
+<<<<<<< HEAD
           </a>
           <a
             href="tel:+13024640950"
             className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
           >
 =======
+=======
+          </a>
+        </div>
+        <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
           Revolutionize your sales process with intelligent CRM that learns from your data, predicts customer behavior, 
           and automates follow-ups. Boost sales by 40% with AI-driven insights and automation.
         </p>
