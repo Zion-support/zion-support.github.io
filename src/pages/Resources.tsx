@@ -10,33 +10,13 @@ import {
   HelpCircle, 
   ArrowRight, 
   Star, 
-  Calendar, 
-  Clock, 
-  Download, 
-  ExternalLink,
-  Search,
-  Filter,
-  TrendingUp,
-  Lightbulb,
-  Award,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Heart,
-  Leaf,
-  Globe,
-  Building,
-  TrendingDown,
-  Eye,
-  MessageCircle,
-  Play,
-  Headphones,
-  Bookmark,
-  Share2
+  Search
 } from 'lucide-react';
+<<<<<<< HEAD
 import SEO from '@/components/SEO';
+=======
+// import SEO from '@/components/SEO';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9451
 
 export default function Resources() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -214,11 +194,6 @@ export default function Resources() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Resources - Zion Tech Group"
-        description="Access our comprehensive library of resources including blog posts, case studies, white papers, webinars, and documentation to help you stay informed and make better technology decisions."
-        canonical="https://ziontechgroup.com/resources"
-      />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

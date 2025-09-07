@@ -1,9 +1,17 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 
 interface SEOProps {
   title: string;
   description?: string;
+=======
+import { Helmet } from 'react-helmet-async';
+
+interface SEOProps {
+  title: string;
+  description: string;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9451
   keywords?: string;
   image?: string;
   url?: string;
@@ -12,8 +20,13 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   title,
+<<<<<<< HEAD
   description = 'Zion Tech Group - Leading provider of AI-powered solutions, automation tools, and digital transformation services.',
   keywords = 'AI solutions, automation, digital transformation, software development, technology consulting',
+=======
+  description,
+  keywords = '',
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9451
   image = '/og-image.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website'
@@ -24,7 +37,12 @@ const SEO: React.FC<SEOProps> = ({
   const fullImage = image || 'https://ziontechgroup.com/og-image.jpg';
 
   return (
+<<<<<<< HEAD
     <Head>
+=======
+    <Helmet>
+      {/* Basic Meta Tags */}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9451
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -32,24 +50,72 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={fullUrl} />
 
+<<<<<<< HEAD
       {/* Open Graph */}
+=======
+      {/* Open Graph Tags */}
+      <meta property="og:type" content={type} />
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9451
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={fullImage} />
       <meta property="og:url" content={fullUrl} />
+<<<<<<< HEAD
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content="Zion Tech Group" />
 
       {/* Twitter */}
+=======
+      <meta property="og:site_name" content={siteName} />
+
+      {/* Twitter Card Tags */}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9451
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImage} />
 
+<<<<<<< HEAD
       {/* Additional SEO */}
       <meta name="author" content="Zion Tech Group" />
       <meta name="theme-color" content="#000000" />
     </Head>
+=======
+      {/* Additional Meta Tags */}
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="theme-color" content="#1e40af" />
+      <meta name="msapplication-TileColor" content="#1e40af" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content={siteName} />
+
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": siteName,
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "description": description,
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          }
+        })}
+      </script>
+    </Helmet>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9451
   );
 };
 
