@@ -1,4 +1,6 @@
 
+import Link from 'next/link';
+
 interface CardProps {
   title: string;
   href: string;
@@ -272,9 +274,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-=======
       </section>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     </div>
   );
 }

@@ -1,19 +1,33 @@
-=======
-import { Metadata } from 'next';
 import React from 'react';
 
-export const metadata: Metadata = { 
-  title: 'Data Analytics Solutions | Zion Tech Group',
-  description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+export const metadata = {
+  title: 'Data  Analytics | Zion Tech Group',
+  description: 'Professional data  analytics services for your business needs.',
+  keywords: 'data, analytics, services, business, technology'
 };
 
 export default function DataAnalyticsPage() {
   return (
-          </div>
+    <div className="min-h-screen bg-gray-100 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Data  Analytics
+          </h1>
+          <p className="text-xl text-gray-600">
+            Professional data  analytics services for your business needs
+          </p>
+        </div>
+        
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+            Expert Solutions
+          </h2>
+          <p className="text-gray-600">
+            Our data  analytics services provide comprehensive solutions tailored to your specific business requirements and industry standards.
+          </p>
         </div>
       </div>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
     </div>
   );
 }

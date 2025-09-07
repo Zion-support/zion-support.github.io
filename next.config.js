@@ -59,7 +59,6 @@ const nextConfig = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-    unoptimized: true,
     };
 
     return config;

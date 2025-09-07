@@ -16,8 +16,6 @@ export default function SolutionsPage() {
             Comprehensive AI and technology solutions designed to transform your business operations and drive growth.
           </p>
         </div>
-
-        </div>
       </div>
     </div>
   );
