@@ -94,8 +94,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
-<<<<<<< HEAD
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
@@ -138,16 +136,5 @@ const payload = req.body as StatusUpdatePayload;
   existing.status = payload.status;
   existing.updatedAt = new Date().toISOString();
   writeGrant(existing);
-<<<<<<< HEAD
-  res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-}
-=======
-res.status(200).json({ record: existing });
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+res.status(200).json({ record: existing,}
+});

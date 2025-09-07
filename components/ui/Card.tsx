@@ -9,18 +9,11 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
 
-
-<<<<<<< HEAD
-const Card = React.forwardRef<
-  HTMLDivElement;
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm";
-      className
-=======
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;}
+}
+}
 export default function Card() {return (<div className={`bg-white rounded-lg shadow-md p-6 ${className}`} />
 
       {children}
@@ -625,36 +618,9 @@ const CardFooter = null;
     ref={ref}
     className={cn("flex items-center p-6 pt-0", className)}
     {...props}
-  />;
-));
-CardFooter.displayName = "CardFooter";
-
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-  hover?: boolean
-}
-const Card: React.FC<CardProps> = ({
-origin/cursor/automate-test-improve-and-merge-code-2533
-export {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
-  CardContent,
-};
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-<<<<<<< HEAD
-pr-12243
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-import React from 'react';
-
-interface CardProps {
-  children: React.ReactNode;
-  className?: string;
+  />;"
+))CardFooter.displayName = \"CardFooter\";
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }hover?: boolean;
 }
 
 <<<<<<< HEAD

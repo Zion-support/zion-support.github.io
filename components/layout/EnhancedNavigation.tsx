@@ -847,7 +847,130 @@ const EnhancedNavigation: React.FC = () => {
   )
 <<<<<<< HEAD
 
-          {" "}
+const EnhancedNavigation: React.FC<EnhancedNavigationProps /> = ({ className = \"\"}
+  }
+}) => {
+
+ ;
+  const [isOpen, setIsOpen] = useState(false);
+
+const [isScrolled, setIsScrolled] = useState(false);
+
+const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
+  useEffect(() => {
+
+    const handleScroll = (
+      setIsScrolled(window.scrollY > 20);) => {
+  return $3;}
+}
+    }"
+    window.addEventListener(\"scroll\", handleScroll);"
+    return () => window.removeEventListener(\"scroll\", handleScroll);
+  }, []);
+
+const navigationItems = [
+    {"
+      name: \"Services\"
+      href: \"/services\"
+      icon: <Brain className=\"w-4 h-4\" />
+      dropdown: [
+        {"
+          name: \"AI & Machine Learning\"
+          href: \"/services?category=ai-ml\"
+          icon: <Brain className=\"w-4 h-4\" />
+}
+       }
+}"
+        {name: \"Quantum Computing\";"
+          href: \"/services?category=quantum\";}"
+          icon: <Rocket className=\"w-4 h-4\" />;}
+        }"
+        {name: \"Space Technology\";"
+          href: \"/services?category=space\";}"
+          icon: <Globe className=\"w-4 h-4\" />;}
+        }"
+        {name: \"Biotech & Healthcare\";"
+          href: \"/services?category=biotech\";}"
+          icon: <Dna className=\"w-4 h-4\" />;}
+        }"
+        {name: \"Financial Services\";"
+          href: \"/services?category=finance\";}"
+          icon: <DollarSign className=\"w-4 h-4\" />;}
+        }"
+        {name: \"Cybersecurity\";"
+          href: \"/services?category=security\";}"
+          icon: <Lock className=\"w-4 h-4\" />;}
+        }"
+        {name: \"IoT & Smart Devices\";"
+          href: \"/services?category=iot\";}"
+          icon: <Wifi className=\"w-4 h-4\" />;}
+        }"
+        {name: \"Logistics & Supply Chain\";"
+          href: \"/services?category=logistics\";}"
+          icon: <Truck className=\"w-4 h-4\" />;}
+        }"
+        {name: \"Metaverse & Gaming\";"
+          href: \"/services?category=metaverse\";}"
+          icon: <Gamepad2 className=\"w-4 h-4\" />;}
+        }"
+        {name: \"Robotics & Automation\";"
+          href: \"/services?category=robotics\";}"
+          icon: <Bot className=\"w-4 h-4\" />;}
+        }"
+        {name: \"Manufacturing\";"
+          href: \"/services?category=manufacturing\";}"
+          icon: <Factory className=\"w-4 h-4\" />;}
+        }"
+        {name: \"Autonomous Vehicles\";"
+          href: \"/services?category=vehicles\";}"
+          icon: <Car className=\"w-4 h-4\" />;}
+        }
+      ];
+      hasDropdown: true;
+      dropdownItems: [;"
+    {name: \"Solutions\";"
+      href: \"/solutions\";
+      hasDropdown: true;
+      dropdownItems: [;}"
+        { name: \"Enterprise Solutions\", href: \"/solutions?type=enterprise\"}
+}"
+        { name: \"Startup Solutions\", href: \"/solutions?type=startup\"}
+}"
+        { name: \"Government Solutions\", href: \"/solutions?type=government\"}
+}"
+        { name: \"Healthcare Solutions\", href: \"/solutions?type=healthcare\"}
+}"
+        { name: \"Financial Solutions\", href: \"/solutions?type=financial\"}
+}
+      ];
+    }"
+    { name: \"Pricing\", href: \"/pricing\"}
+}"
+    { name: \"Resources\", href: \"/resources\"}
+}"
+    { name: \"Blog\", href: \"/blog\"}
+}"
+    { name: \"Contact\", href: \"/contact\"}
+}
+  ];
+"
+const contactInfo = {mobile: \"+1 302 464 0950\";"
+    email: \"kleber@ziontechgroup.com\";"
+    address: \"364 E Main St STE 1008 Middletown DE 19709\";}"
+    website: \"https://ziontechgroup.com\";}
+  }
+  ]
+];
+
+  return (<nav;
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled;"
+          ? \"bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10\";}"
+          : \"bg-transparent\";}
+      } ${className}`} />
+"
+      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;"
+        <div className=\"flex items-center justify-between h-20\" />;"
+          {\" \"}
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, coordinate_x: -20 }
@@ -1821,15 +1944,7 @@ export default EnhancedNavigation;
 
           </motion.div>)}
       </AnimatePresence>;
-    </nav>);
-}
-export default EnhancedNavigation
-};
-)
-};
-export default EnhancedNavigation;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-"`
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    </nav>)}
+export default EnhancedNavigation;})export default EnhancedNavigation;
+})}
+export default EnhancedNavigation;"

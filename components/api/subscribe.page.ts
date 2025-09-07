@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-export { default } from "./subscribe";
-
-export { default } from "./subscribe";
-export { default } from "./subscribe";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-pr-12243
-export { default } from "./subscribe";
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-;
-export { default } from "./subscribe";export { default } from "./subscribe";
-export { default } from "./subscribe";export { default } from "./subscribe";
-export { default } from "./subscribe";
+export { default } from \"./subscribe\";
+"
+export { default } from \"./subscribe\";
+"
+export { default } from \"./subscribe\";
+"
+export { default } from \"./subscribe\";
+"
+export { default } from \"./subscribe\";
 ursor/fix-website-loading-errors-and-merge-6662;
 export { default } from "./subscribe";
 export { default } from "./subscribe";
@@ -34,12 +24,9 @@ pr-12243
 =======
 export { default } from "./subscribe";
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
-
-
-
+export { default } from \"./subscribe\";
+"
+export { default } from \"./subscribe\";
 export { default } from './subscribe';
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======

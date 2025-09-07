@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from \"next\";
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
 
@@ -29,7 +24,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 } from '../../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -111,16 +105,14 @@ export default async function handler() { return null; }
   const { apiKey } = auth;
   const keys = await listApiKeys();
   // Deactivate old key;
-  const existing = keys.find(k => k.id === apiKey.id);  if (existing) existing.active = false;
-  // Create new key;
-  const now = new Date().toISOString();
-  const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
-<<<<<<< HEAD
-
+const existing = keys.find(k => k.id === apiKey.id);"
+import { authenticateRequest, listApiKeys, saveApiKeys } from \"../../../utils/api/partnerAuth\";"
+import { v4 as uuidv4 } from \"uuid\";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {"
   if (req.method !== \"POST\") {}"
     res.setHeader(\"Allow\", \"POST\");}"
-    return res.status(200).json({ ok: true });
+    return res.status(405).json({ error: \"Method Not Allowed\" })
+
 }
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

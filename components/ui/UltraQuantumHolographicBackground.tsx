@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-
-;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useEffect, useRef, useState } from 'react';
 import { motion  } from 'framer-motion';
 interface UltraQuantumHolographicBackgroundProps  {children: React.ReactNode;
@@ -23,8 +5,10 @@ interface UltraQuantumHolographicBackgroundProps  {children: React.ReactNode;
   colorScheme?: 'quantum' | 'holographic' | 'cyberpunk' | 'neon';
   particleCount?: number;
   animationSpeed?: number;
-  className?: string;
-}export default function UltraQuantumHolographicBackground({children;
+  className?: string;}
+}
+}
+export default function UltraQuantumHolographicBackground({children;
   intensity;
 <<<<<<< HEAD
 
@@ -110,6 +94,7 @@ export default function UltraQuantumHolographicBackground(): any ({;
   // Color schemes
   const colorSchemes = {
     quantum: {
+
       primary: '#00ffff',
       secondary: '#ff00ff',
       tertiary: '#ffff00',
@@ -349,11 +334,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 this.y = Math.random() * dimensions.height;
         // Quantum tunneling effect;
-        if (Math.random() < 0.001 * intensityMultiplier) {this.x = Math.random() * dimensions.width;this.y = Math.random() * dimensions.height;
-        }// Holographic flicker;
-        if (this.type === 'holographic' && Math.random() < 0.1) {this.size *= 0.8;
-        }// Energy pulse;
-        if (this.type === 'energy') {this.size = Math.sin(Date.now() * 0.01) * 2 + 3;}
+if (Math.random() < 0.001 * intensityMultiplier) {
+          this.x = Math.random() * dimensions.width;
+
+this.y = Math.random() * dimensions.height;}
+}
+        }
+      }this.vy = Math.random() * 2 + 1;          }}
+        }
+
+        // Energy pulse;
+if (this.type === 'energy') {}
+this.size = Math.sin(Date.now() * 0.01) * 2 + 3;}
+        }
         // Matrix rain effect;
         if (this.type === 'matrix') {this.vy += 0.1;
           if (this.y > dimensions.height) {this.y = -10;this.vy = Math.random() * 2 + 1;
@@ -855,12 +848,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }
 
-<<<<<<< HEAD
       animationId = requestAnimationFrame(animate)
-=======
-      animationId = requestAnimationFrame(animate);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    };
+};
 
     animate();
 
@@ -1286,25 +1275,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           }}
 
-
-
-
         />
       </div>
         />;
       </div>;
 <<<<<<< HEAD
       {/* Content Layer */}
-        <motion.div;
-className='absolute inset-0';
-          animate={{boxShadow: [;
-              `inset 0 0 100px ${colors.primary}20`,`inset 0 0 200px ${colors.secondary}20`,`inset 0 0 150px ${colors.tertiary}20`,`inset 0 0 100px ${colors.primary}20`,],}}
-          transition={{duration: 6,repeat: Infinity,ease: 'easeInOut',}}/>;
-      </div>;
-        />;
-      </div>;
-      {/* Content Layer */}<div className='relative z - 20'>{children}</div>;<div className='relative z-20'>{children}</div>;
-      <div className='relative z - 20'>{children}</div>;
+
+<div className='relative z-20' />{children}</div>
+
       {/* Quantum Noise Effect */}
       <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>;
         <motion.div;

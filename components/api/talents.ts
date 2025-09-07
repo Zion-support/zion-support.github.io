@@ -1,22 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs-extra";
-import path from "path";
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
-import { v4 as uuidv4 } from "uuid";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
+import type { NextApiRequest, NextApiResponse } from \"next\";"
+import fs from \"fs-extra\";"
+import path from \"path\";"
+import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../utils/api/partnerAuth\";"
+import { v4 as uuidv4 } from \"uuid\";
+"
+const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\");
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
   const started = null;}
   return res.status(200).json({ ok: true });
@@ -48,15 +36,18 @@ import {';
 import { v4 as uuidv4 } from 'uuid';
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 import { authenticateRequest, enforceRateLimit, recordRequest  } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4  } from 'uuid';
-const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")export default async function handler() {const started = null;
-  return res.status(201).json({ id: record.id })}import fs from 'fs - extra';
+"
+const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\")export default async function handler() ;
+  const started = null;
+  return res.status(201).json({ id: record.id }
+}
+import fs from 'fs - extra';
 import {} from '../../utils/api/partnerAuth';
 const TALENTS_FILE = path.join(process.cwd()'data';
   'talents';
@@ -302,19 +293,7 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../uti
 import { v4 as uuidv4 } from \"uuid\";
 "
 const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\");
-
-export default async function handler(req: NextApiRequest;, res: NextApiResponse) {;}
-  const started = null;}
-  return res.status(201).json({ id: record.id ;})
-}
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";"
-import fs from "fs-extra";"
-import path from "path";"
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";"
-import { v4 as uuidv4 } from "uuid";"
-const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {};
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {"
@@ -322,18 +301,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   if (!(await enforceRateLimit(auth.apiKey))) {}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);}"
-    return res.status(200).json({ ok: true });
+    return res.status(429).json({ error: \"Rate limit exceeded\" })
+
 }"
   if (req.method !== \"POST\") {"
     res.setHeader(\"Allow\", \"POST\");}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);}"
-    return res.status(200).json({ ok: true });
+    return res.status(405).json({ error: \"Method Not Allowed\" })
+
 }
 
 const { name, email, skills, programTrack, certificationStatus } = req.body || {};
   if (!name || !email) {}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);}"
-    return res.status(200).json({ ok: true });
+    return res.status(400).json({ error: \"Missing required fields\" })
+
 }
   await fs.ensureDir(path.dirname(TALENTS_FILE));
   const records = (await fs.pathExists(TALENTS_FILE)) ? await fs.readJSON(TALENTS_FILE) : [];

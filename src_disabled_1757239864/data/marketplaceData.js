@@ -1,13 +1,11 @@
-// Marketplace data and search suggestions for Zion Tech Group
-
-export const generateSearchSuggestions = () => [
-  // Services
-  'AI Services', 'Cloud Migration','Cybersecurity', 'Digital Transformation','IT Infrastructure', 'DevOps','Machine Learning', 'Data Analytics','Cloud Computing', 'Network Security','Software Development', 'System Integration','Business Intelligence', 'Automation','IoT Solutions', 'Blockchain','API Development', 'Mobile Development','Web Development', 'Database Management',// Solutions
-  'Manufacturing Solutions', 'Financial Services','Healthcare Solutions', 'Retail Solutions','Education Technology', 'Energy Management','Supply Chain', 'Customer Experience','Employee Productivity', 'Risk Management','Compliance Solutions', 'Performance Optimization','Scalability Solutions', 'Disaster Recovery','Backup Solutions', // Industry Terms
-  'Micro SAAS','Enterprise Software', 'Cloud Native','Serverless', 'Containerization','Kubernetes', 'Docker','AWS', 'Azure','Google Cloud', 'Hybrid Cloud','Multi Cloud', 'Edge Computing','5G Solutions', 'Smart Cities',// Technologies
+// Marketplace data and search suggestions for Zion Tech Group;
+export const generateSearchSuggestions = () => [;
+  // Services;
+  'AI Services', 'Cloud Migration','Cybersecurity', 'Digital Transformation','IT Infrastructure', 'DevOps','Machine Learning', 'Data Analytics','Cloud Computing', 'Network Security','Software Development', 'System Integration','Business Intelligence', 'Automation','IoT Solutions', 'Blockchain','API Development', 'Mobile Development','Web Development', 'Database Management',// Solutions;
+  'Manufacturing Solutions', 'Financial Services','Healthcare Solutions', 'Retail Solutions','Education Technology', 'Energy Management','Supply Chain', 'Customer Experience','Employee Productivity', 'Risk Management','Compliance Solutions', 'Performance Optimization','Scalability Solutions', 'Disaster Recovery','Backup Solutions', // Industry Terms;
+  'Micro SAAS','Enterprise Software', 'Cloud Native','Serverless', 'Containerization','Kubernetes', 'Docker','AWS', 'Azure','Google Cloud', 'Hybrid Cloud','Multi Cloud', 'Edge Computing','5G Solutions', 'Smart Cities',// Technologies;
   'React', 'Node.js','Python', 'Java','JavaScript', 'TypeScript','Angular', 'Vue.js','MongoDB', 'PostgreSQL','Redis', 'Elasticsearch','Kafka', 'RabbitMQ','GraphQL', 'REST API','Microservices', 'Event Driven Architecture','CQRS', 'Event Sourcing'
 ];
-
 export const serviceCategories = [
   {id: 'ai-ml',
   name: 'AI & Machine Learning',description: 'Intelligent solutions powered by artificial intelligence',
@@ -34,7 +32,6 @@ export const serviceCategories = [
 ]
   }
 ];
-
 export const industrySolutions = [
   {id: 'manufacturing',
   name: 'Manufacturing',description: 'Smart factory and Industry 4.0 solutions',
@@ -65,7 +62,6 @@ export const industrySolutions = [
 }
   }
 ];
-
 export const testimonials = [
   {id: 1, name: 'Sarah Johnson',
   title: 'CTO', company: 'TechCorp Industries'
@@ -83,7 +79,6 @@ export const testimonials = [
   content: 'Their digital transformation consulting helped us implement smart manufacturing solutions that increased our production efficiency by 40% and reduced waste by 25%.',rating: 5, avatar: '/avatars/emily.jpg';}
   }
 ];
-
 export const caseStudies = [
   {id: 'cloud-migration-bank',
   title: 'Major Bank Cloud Migration',industry: 'Financial Services',

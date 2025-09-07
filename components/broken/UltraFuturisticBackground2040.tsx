@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-      x: number;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2040: React.FC = $2;
@@ -388,43 +370,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx.stroke()
       }
 
-      // Draw floating geometric shapes
-      const shapes = [
-        { x: canvas.width * 0.2, y: canvas.height * 0.3, size: 60, rotation: time * 0.5 },
-        { x: canvas.width * 0.8, y: canvas.height * 0.7, size: 40, rotation: time * -0.3 },
-        { x: canvas.width * 0.6, y: canvas.height * 0.2, size: 50, rotation: time * 0.7 }
-      ],
-
-      shapes.forEach((shape, index) => {
-        ctx.save($2);
-        ctx.translate($2);
-        ctx.rotate($2);
-        ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`,
-        ctx.lineWidth = $2;
-        if (index === 0) {
-          // Square
-          ctx.strokeRect(-shape.size/2, -shape.size/2, shape.size, shape.size)
-        } else if (index === 1) {
-          // Circle
-          ctx.beginPath($2);
-          ctx.arc($2);
-          ctx.stroke()
-        } else {
-          // Triangle
-          ctx.beginPath($2);
-          ctx.moveTo($2);
-          ctx.lineTo($2);
-          ctx.lineTo($2);
-          ctx.closePath($2);
-          ctx.stroke()
-        }
-        
-        ctx.restore()
-      }),
-
-=======
-        }
-
         ctx.restore();
       });
       // Draw energy waves
@@ -516,12 +461,6 @@ canvas.height = window.innerHeight;
       cancelAnimationFrame(animationFrameId)
     }
   }, []),
-
-  return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden">
-=======
-      animationFrameId = requestAnimationFrame(animate);
-    };
 
     animate();
     const handleResize = () => {
@@ -1545,114 +1484,6 @@ export default UltraFuturisticBackground2040;
         }
       `}</style>
     </div>
-<<<<<<< HEAD
-      <style jsx>{`;
-        @keyframes gridMove {0% {transform: translate(0, 0)}
-          100% {transform: translate(50px, 50px)}
-        }
-        @keyframes pulse {0%;
-          100% {opacity: 0.2;{/* CSS Animations */}
-      <style jsx>{`;
-        @keyframes gridMove {0% {transform: translate(0, 0)}100% {transform: translate(50px, 50px)}
-          50% {opacity: 0 && 0.5;          }
-        }`}</style>;
-    </div>)}export default UltraFuturisticBackground2040;            opacity: 0.5;
-          }
-        }
-      `}</style>;
-    </div>)}  )}export default UltraFuturisticBackground2040;
-export default UltraFuturisticBackground2040;
-<<<<<<< HEAD
-export default UltraFuturisticBackground2040;50% {opacity: 0.5;
-          }
-        }
-      `}</style>;
-    </div>;
-          100% {
-            transform: translate(50px, 50px)
-          }
-          50% {;
-            opacity: 0 && 0.5;          }
-        }
-
-      `}</style>;
-    </div>);
-}export default UltraFuturisticBackground2040;            opacity: 0.5;
-          }
-        }
-      `}</style>;
-    </div>);
-}  );
-}
-;
-export default UltraFuturisticBackground2040;
-export default UltraFuturisticBackground2040;
-export default UltraFuturisticBackground2040;
-;
-)}export default UltraFuturisticBackground2040;
-  )
-},
-
-export default UltraFuturisticBackground2040,
-=======
-<<<<<<< HEAD
-
-=======
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
-// Wrap around edges if (particle.x < 0) particle.x = canvas.width
-if (particle.x > canvas.width) particle.x = 0
-if (particle.y < 0) particle.y = canvas.height
-if (particle.y > canvas.height) particle.y = 0
-// Draw particle with glow effect ctx.save ()
-ctx.globalAlpha = particle.opacity
-// Glow effect ctx.shadowColor = particle.color
-ctx.shadowBlur = 10
-// Draw connecting lines between nearby particles ctx.strokeStyle = 'rgba (6, 182, 212, 0.1) '
-ctx.lineWidth = 0.5
-}
-}// Draw animated grid ctx.strokeStyle = 'rgba (6, 182, 212, 0.05) '
-ctx.lineWidth = 0.5
-ctx.restore () 
-})
-// Draw energy waves 
-}ctx.stroke () 
-}animationFrameId = requestAnimationFrame (animate) 
-}
-animate ()
-window.addEventListener ('resize', handleResize)
-backgroundImage: ` linear-gradient (rgba (6, 182, 212, 0.1) 1px, transparent 1px), linear-gradient (90deg, rgba (6, 182, 212, 0.1) 1px, transparent 1px) `, backgroundSize: '50px 50px', animation: 'gridMove 20s linear infinite' 
-}
-}/> </div> {
-  /* Floating Geometric Elements */ 
-}<motion.div /> {
-  /* Additional Floating Elements */ 
-}<motion.div /> {
-  /* Particle Effects */ 
-}<motion.div /> </div> {
-  /* CSS Animations */ 
-}<style jsx> {
-  ` @keyframes gridMove {
-  0% {
-  
-}` 
-}</style> </div>) 
-}
-export default UltraFuturisticBackground2040
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-);
+)
 };
 export default UltraFuturisticBackground2040;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

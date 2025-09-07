@@ -1,59 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-# Comprehensive Automation Report
-
-## Summary
-- **Timestamp**: 2025-09-07T02:33:22.872Z
-- **Duration**: 1285ms
-- **Successful**: 3
-- **Errors**: 14
-- **Warnings**: 3
-
-## Results
-
-### Successful Operations
-- Pre-automation checks passed
-- performance-monitor.cjs (performance-monitoring) completed
-- security-audit.cjs (security-audit) completed
-
-### Errors
-- comprehensive-error-fixer.cjs failed: Command failed: node scripts/comprehensive-error-fixer.cjs
-/workspace/scripts/comprehensive-error-fixer.cjs:10
-  constructor() {}
-                ^
-
-SyntaxError: Unexpected token '{'
-    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
-    at Module._compile (node:internal/modules/cjs/loader:1704:20)
-    at Object..js (node:internal/modules/cjs/loader:1895:10)
-    at Module.load (node:internal/modules/cjs/loader:1465:32)
-    at Function._load (node:internal/modules/cjs/loader:1282:12)
-    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-    at node:internal/main/run_main_module:36:49
-
-Node.js v22.16.0
-
-- auto-fixer.js failed: Command failed: node scripts/auto-fixer.js
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 # Automation Report
 
-<<<<<<< HEAD
-**Timestamp:** 2025-09-07T05:22:55.964Z
-**Duration:** 28320ms
-=======
-**Timestamp:** 2025-09-07T05:09:16.275Z
-**Duration:** NaNms
->>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
+**Timestamp:** 2025-09-07T03:32:54.596Z
+**Duration:** 695ms
 
 ## Summary
-- ✅ Successful: 3
-- ❌ Errors: 5
+- ✅ Successful: 1
+- ❌ Errors: 7
 - ⚠️ Warnings: 0
 
 ## Successful Operations
@@ -310,75 +262,61 @@ SyntaxError: Invalid or unexpected token
 
 Node.js v22.16.0
 
-- seo-enhancer.js failed: Command failed: node scripts/seo-enhancer.js
-file:///workspace/scripts/seo-enhancer.js:2
-ursor/automate-test-improve-and-merge-code-646c;
-                                           ^^^
-
-SyntaxError: Invalid or unexpected token
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
-
-Node.js v22.16.0
-
-- generate-dynamic-sitemap.js failed: Command failed: node scripts/generate-dynamic-sitemap.js
-file:///workspace/scripts/generate-dynamic-sitemap.js:5
-const __filename = fileURLToPath(import.meta.url;
-                                             ^^^
-
-SyntaxError: missing ) after argument list
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
-
-Node.js v22.16.0
-
-
-### Warnings
-- ESLint had issues: Command failed: npm run lint
-=======
-- scripts/performance-optimizer.js: Command failed: node scripts/performance-optimizer.js
-file:///workspace/scripts/performance-optimizer.js:2
-const fs = require('fs');
-           ^
-
-ReferenceError: require is not defined in ES module scope, you can use import instead
-This file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
-    at file:///workspace/scripts/performance-optimizer.js:2:12
-    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
-    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
-    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
->>>>>>> main
-
-Node.js v22.16.0
-
-- TypeScript: spawnSync /bin/sh ENOBUFS
-=======
-- scripts/advanced-build-optimizer.js: spawnSync /bin/sh ENOBUFS
 - ESLint: Command failed: npm run lint
 <<<<<<< HEAD
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
+node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
 
-- TypeScript: spawnSync /bin/sh ENOBUFS
+Error: Cannot find module '/workspace/node_modules/.bin/eslint'
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v22.16.0
+
+- TypeScript: Command failed: npm run type-check
+npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
+npm warn config `--include=optional` to include them.
+npm warn config
+npm warn config       Default value does install optional deps unless otherwise omitted.
+node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
+
+Error: Cannot find module '/workspace/node_modules/.bin/tsc'
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v22.16.0
+
 - Build: Command failed: npm run build
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
- ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error
-
-> Build error occurred
-ReferenceError: module is not defined in ES module scope
-This file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
-    at <unknown> (next.config.js:58:1)
+sh: 1: next: not found
 
 >>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 

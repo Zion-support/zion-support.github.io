@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React from 'react';
 
 import { Mail, Phone, MapPin, Globe;
@@ -82,8 +60,6 @@ import { AnimatePresence  } from 'framer-motion';
 
 <<<<<<< HEAD
 } from 'lucide-react';
-
-origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link';
 =======
   Mail;
@@ -150,17 +126,6 @@ interface FooterSection {;
   {}
 '
     title: 'Solutions'
-
-<<<<<<< HEAD
-=======
-  {
-
-    title: 'Solutions'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  links: FooterLink[];
-
-  external?: boolean
 
   links: FooterLink[];}
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -308,33 +273,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       { label: 'Contact', href: '/contact', description: 'Get in touch' }
 <<<<<<< HEAD
     ]
-  },  {
-    title: 'Resources'
-    links: [
-      { label: 'Blog', href: '/blog', description: 'Industry insights' },  {
-    title: 'Solutions'
-    links: [
-  {title: 'Solutions';
-    links: [;
-      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },{ label: 'Financial Services', href: '/solutions?industry;
-    links: [;
-      {label: 'About Us';
-        href: '/about';
-        description: 'Our mission and values';
-      }
-      { label: 'Careers', href: '/careers', description: 'Join our team' }
-      { label: 'Contact', href: '/contact', description: 'Get in touch' }
-    ];
-  },  {title: 'Resources';
-    links: [;
-      { label: 'Blog', href: '/blog', description: 'Industry insights' },  {title: 'Solutions';
-    links: [;
-      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' }
-      { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' }
-      { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' }
-      { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' }
-      { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' }
-      { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' }
+
+},  {
+    title: 'Resources',
+  links: [
+      { label: 'Blog'}
+  href: '/blog', description: 'Industry insights'}
+},  {
+    title: 'Solutions',
+  links: [
+
+      { label: 'Healthcare & Biotech'}
+  href: '/healthcare-solutions', description: 'Medical technology'}
+}
+      { label: 'Financial Services'}
+  href: '/solutions?industry=financial', description: 'Fintech solutions'}
+}
+      { label: 'Manufacturing'}
+  href: '/solutions?industry=manufacturing', description: 'Industry 4.0'}
+}
+      { label: 'Retail & E-commerce'}
+  href: '/solutions?industry=retail', description: 'Digital commerce'}
+}
+      { label: 'Government'}
+  href: '/solutions?industry=government', description: 'Public sector'}
+}
+      { label: 'Education'}
+  href: '/solutions?industry=education', description: 'EdTech solutions'}
+}
     ];
   }
   {title: 'Company';
@@ -359,9 +325,8 @@ interface FooterLink {
   external?: boolean
 }
 
-interface FooterSection {
-  title: string,
-  links: FooterLink[]
+    ]
+
 }
 
 const footerSections: FooterSection[] = [
@@ -701,8 +666,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const footerSections = [
+const footerSections = [
     {
 <<<<<<< HEAD
       title: 'Services',
@@ -2637,28 +2601,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     rel='noopener noreferrer''
                     className='w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110'
                     whileHover={{ y: -2 }}
-              {/* Social Links */}"
-              <div className="flex items-center space-x-6">;"
-                <span className="text-gray-400 font-medium">Follow Us:</span>;
-                {socialLinks && socialLinks.map((social) => (;
-                  <motion&& motion.a;
-                    key={social && social.label}
-                    href={social && social.href}"
-                    target="_blank""
-                    rel="noopener noreferrer""
-                    className="w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110"
-                    whileHover={{ y: -2 }}
-                  <input'
-                    type='email''
-                    placeholder='Enter your email''
-                    className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
-                  />;
-<<<<<<< HEAD
-                  <motion&& motion.button
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <social.icon className='w-5 h-5' />
-                  </motion.a>
+
+                    whileTap={{ scale: 0.95 }
+}
+                   />;
+                    <social.icon className='w-5 h-5' />;
+                  </motion.a>;
                 ))}
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -3304,7 +3252,6 @@ export default UltraAdvancedFuturisticFooter2025
     </footer>
   );
 };
-
 export default UltraAdvancedFuturisticFooter2025;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======

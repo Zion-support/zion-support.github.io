@@ -14,6 +14,8 @@ export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: 
 <<<<<<< HEAD
 const fetcher = null;
 
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+export function useProjectDisputeStatus(projectId: string): {
   hasActiveDispute: boolean;
 const fetcher = (url: string) => fetch(url).then(r => r.json())export function useProjectDisputeStatus(projectId: string): {hasActiveDispute: boolean;
   isLoading: boolean;
@@ -90,10 +92,10 @@ if (return null) {$2;
       d && d.projectId === projectId &&;'
       (d && d.status === 'Open' || d && d.status === 'Under Review');
   );
-  return { hasActiveDispute, isLoading: !data && !error };
-
-export default function UnderDisputeBadge(): any ({;
-  projectId,;
+  return { hasActiveDispute, isLoading: !data && !error}
+};
+export default function UnderDisputeBadge(): any ({;}
+  projectId,;}
 }: {;
 
   projectId,

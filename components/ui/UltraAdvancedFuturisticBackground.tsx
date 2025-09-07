@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-;
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }return this.props.children;
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
- let animationFrameId: number;
-let particles: Array< {;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 let animationFrameId: number;
 =======
 let animationFrameId: number
@@ -171,7 +134,14 @@ let particles: Array< {
   resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 //Color schemes Math.random () > 0.5 ? 'holographic' : Math.random () > 0.3 ? 'neon' : 'fusion';
-
+particles.push ({ intensity = 'high',
+  colorScheme = 'quantum-fusion',
+  particleCount = 300,
+  animationSpeed = 1.5,
+  enableHolographic = true,
+  enableQuantumEffects = true,}
+  children,}
+   }) => {
 
   intensity?: 'low' | 'medium' | 'high';
 
@@ -1245,24 +1215,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ctx && ctx.stroke();
         }
       }
-<<<<<<< HEAD
-          ctx.arc(canvas.width / 2, canvas.height / 2, waveRadius, 0, Math.PI * 2);
-=======
-          ctx.arc(canvas.width / 2, canvas.height / 2, waveRadius, 0, Math.PI * 2);`
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-          ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - waveRadius / (Math.max(canvas.width, canvas.height) * 2))})`;
-          ctx.lineWidth = 2;
-          ctx.stroke()
-        }
-      }
+
       animationFrameId = requestAnimationFrame(animate)
 <<<<<<< HEAD
 =======
-
-      animationFrameId = requestAnimationFrame(animate);
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    };
 
     initParticles();
     animate();
@@ -1661,81 +1617,15 @@ export default UltraAdvancedFuturisticBackground;return (<div ref={containerRef}
         )}
         {/* Holographic elements */}
         {enableHolographic && (<>;
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>;
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>;
-          </>;
-        )}
-export default UltraAdvancedFuturisticBackground;
-  return (<div ref={container_ref} className="relative w - full h - full overflow - hidden">;
-      <canvas;
-        ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full pointer - events - none";
-        style={{ z_index: -1 }}
-      />;
-      {/* Additional CSS - based effects */}
-      <div className="absolute inset - 0 pointer - events - none">;
-        {/* Floating geometric shapes */}
-        <div className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 500 / 20 rounded - full animate - pulse"></div>;
-        <div className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 500 / 20 rounded - full animate - pulse delay - 1000"></div>;
-        <div className="absolute bottom - 32 left - 32 w - 28 h - 28 border border - green - 500 / 20 rounded - full animate - pulse delay - 500"></div>;
-        {/* Quantum particles */}
-        {enableQuantumEffects && (<>;
-            <div className="absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - cyan - 400 rounded - full animate - ping"></div>;
-            <div className="absolute top - 3/4 right - 1/4 w - 1 h - 1 bg - purple - 400 rounded - full animate - ping delay - 300"></div>;
-            <div className="absolute bottom - 1/4 right - 1/3 w - 1.5 h - 1.5 bg - green - 400 rounded - full animate - ping delay - 700"></div>;
-          </>)}
-        {/* Holographic elements */}
-        {enable_holographic && (<>;
-            <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 border border - pink - 500 / 10 rounded - full animate - spin" style={{ animation_duration: '20s' }}></div>;
-            <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 48 h - 48 border border - cyan - 500 / 10 rounded - full animate - spin" style={{ animation_duration: '15s', animation_direction: 'reverse' }}></div>;
-          </>)}
-      </div>;
-      {children}
-    </div>);
-}
-;
-export default UltraAdvancedFuturisticBackground;
-;
-=======
-        {/* Holographic elements */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-        {enableHolographic && (
-          <>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
-          </>
-        )}
-      </div>
-<<<<<<< HEAD
-      
-      {children}
-    </div>
-  )
-},
+            <div;
+              className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin';}
+              style={{ animationDuration: '20s' ,}
+} /></div>;
+            <div;
+              className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin';
+              style={{{children}
+    </div />;
 
-    </div>)}export default UltraAdvancedFuturisticBackground;{children}
-    </div>;
-  )}
-export default UltraAdvancedFuturisticBackground,
-=======
-      {children}
-    </div>
-  )
+  );
 }
 export default UltraAdvancedFuturisticBackground;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-};
-
-
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -1,99 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield } from 'lucide-react';
-interface UltraFuturisticNavigationProps {
-  className?: string
-}
-
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-=======
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  Shield;
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,;
-  Shield,;
-} from 'lucide-react';
-<<<<<<< HEAD
-interface UltraFuturisticNavigationProps {
-  className?: string;
-export default function UltraFuturisticNavigation({
-}: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
-=======
-interface UltraFuturisticNavigationProps {}
-  className?: string;
-export default function UltraFuturisticNavigation() { return null; }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-import { motion, AnimatePresence } from 'framer-motion';
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  Search,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Rocket,;
-  Brain,;
-  Atom,;
-<<<<<<< HEAD
-  Shield,;
-} from 'lucide-react';
-
-interface UltraFuturisticNavigationProps {;
-  className?: string;
-
-
-
-
-export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  Shield,;'
-} from 'lucide-react';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-interface UltraFuturisticNavigationProps {;
-  className?: string;
-
-
-
-<<<<<<< HEAD
-
-export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
-
 import React, { useState, useEffect } from 'react',
 =======
 
@@ -151,8 +55,6 @@ return (<nav className= {
   className?: string
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }
-
-<<<<<<< HEAD
 export default function UltraFuturisticNavigation({ className;
   return (
 import Link from 'next/link';
@@ -189,81 +91,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
   const [isScrolled, setIsScrolled] = useState($2);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
-  useEffect(() => {
-    const handleScroll = $2;
-    window.addEventListener($2);
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
-  const navigationItems = $2;
-      href: '/services',
-      hasDropdown: true,
-      dropdownItems: [
-
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Shield;
-  Menu,X,ChevronDown,Search,Phone,Mail,MapPin,Rocket,Brain,Atom,Shield,} from 'lucide-react';
-interface UltraFuturisticNavigationProps  {className?: string;
-export default function UltraFuturisticNavigation({}: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false)import { motion, AnimatePresence  } from 'framer-motion';
-import {Menu,X,ChevronDown,Search,Phone,Mail,MapPin,Rocket,Brain,Atom,Shield,} from 'lucide-react';
-interface UltraFuturisticNavigationProps  {className?: string;export default function UltraFuturisticNavigation() {import React, { useState, useEffect } from 'react',import Link from 'next/link';
-import { motion, AnimatePresence   } from 'framer-motion';
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield  } from 'lucide-react';
-interface UltraFuturisticNavigationProps  {className?: string;
-}export default function UltraFuturisticNavigation({ className;
-  return (const [isOpen, setIsOpen] = useState(false)const [isScrolled, setIsScrolled] = useState(false)const [activeDropdown, setActiveDropdown] = useState<string | null>(null)useEffect(() => {const handleScroll = () => {setIsScrolled(window.scrollY > 20)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const navigationItems = [;
-    {name: 'Services';
-      href: '/services';
-      hasDropdown: true;
-      dropdownItems: [;
-{name: 'AI & Machine Learning',href: '/services/ai-ml',icon: Brain,color: 'from-purple-500 to-pink-600',},{name: 'Quantum Computing';
-          href: '/services/quantum';
-          icon: Atom;
-          color: 'from-cyan-500 to-blue-600';
-        }
-        {name: 'Cybersecurity';
-          href: '/services/cybersecurity';
-          icon: Shield;
-          color: 'from-red-500 to-pink-600';
-        }
-        {name: 'IT Solutions';
-          href: '/services/it-solutions';
-          icon: Rocket;
-          color: 'from-green-500 to-emerald-600';
-        }
-        }
-        {
-          name: 'Cybersecurity'
-          href: '/services/cybersecurity'
-          icon: Shield
-          color: 'from-red-500 to-pink-600'
-        }
-        {
-          name: 'IT Solutions'
-          href: '/services/it-solutions'
-          icon: Rocket
-          color: 'from-green-500 to-emerald-600'
-        }
-        {
-    { name: 'Pricing', href: '/pricing' },  ];        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },
-        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },
-        { name: 'Quantum Computing', href: '/services/quantum', icon: Atom, color: 'from-cyan-500 to-blue-600' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-red-500 to-pink-600' },
-        { name: 'IT Solutions', href: '/services/it-solutions', icon: Rocket, color: 'from-green-500 to-emerald-600' },
-        { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
-      ]
-=======
-
-<<<<<<< HEAD
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -380,7 +207,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 address: '364 E Main St STE 1008 Middletown DE 19709',
   };
 
-  
     >
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>          {/* Logo */}  return (
@@ -1638,8 +1464,6 @@ className='block text-gray-300 hover:text-white transition-colors duration-300 p
                 </div>;
               ))}
 
-<<<<<<< HEAD
-=======
               {/* Mobile Contact Info */}
 <div className='pt-6 border-t border-gray-700/50 space-y-3' />
                 <div className='flex items-center space-x-3 text-gray-300' />

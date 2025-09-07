@@ -1,34 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useState } from 'react';
 
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029  } from '../../data/2029-cutting-edge-innovations';
 type Service = any;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -288,40 +262,75 @@ const category_icons: { [key: string]: any } = {
   'Quantum & Time': Timer;
   'AI & Augmented Reality': Eye;
 }
+
+const UltraFuturistic2029ServiceShowcase: React.FC<
+  UltraFuturistic2029ServiceShowcaseProps;
+> = ({ services;
+title = '2029 Ultra-Futuristic Innovations'
+  subtitle = 'Experience the future of technology with our revolutionary services'
+  maxServices = 12}
+  }
+}) => {
+
+;}
+  const categoryColors: { [key: string]: string}
+} = {;
+  'AI & Consciousness': 'from-purple-600 to-pink-600',;
+  'Quantum & Neuroscience': 'from-indigo-600 to-purple-600',;
+  'Space Colonization': 'from-red-600 to-orange-600',;
+  'Space Mining': 'from-yellow-600 to-orange-600',;
+  'Space Architecture': 'from-green-600 to-teal-600',;
+  'Space Energy': 'from-yellow-500 to-orange-500',;
+  'AI & Business': 'from-blue-600 to-cyan-600',;
+  'Quantum & Time': 'from-green-600 to-emerald-600',;}
+  'AI & Augmented Reality': 'from-orange-600 to-red-600'}
+};
+
+const categoryIcons: { [key: string]: any}
+} = {;
+  'AI & Consciousness': Brain,;
+  'Quantum & Neuroscience': Cpu,;
+  'Space Colonization': Rocket,;
+  'Space Mining': Zap,;
+  'Space Architecture': Globe,;
+  'Space Energy': Sparkles,;
+  'AI & Business': Database,;
+  'Quantum & Time': Timer,;}
+  'AI & Augmented Reality': Eye}
+};
+
+const UltraFuturistic2029ServiceShowcase: React.FC<;
+  UltraFuturistic2029ServiceShowcaseProps;
+> = ({ ;
+  services,;
+  title = '2029 Ultra-Futuristic Innovations',;
+  subtitle = 'Experience the future of technology with our revolutionary services',;}
+  maxServices = 12,;}
+   }) => {
+
 ;
-const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceShowcaseProps> = ({
-  services;
-  title = "2029 Ultra - Futuristic Innovations";
-  subtitle = "Experience the future of technology with our revolutionary services";
-  // Get unique categories
-  const categories = ['all', ...Array.from(new Set(services.map(service = $2;
-  // Filter and sort services
-  const filteredServices = services
-    .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
-=======
-const category_colors: { [key: string]: string } = {'
-  'AI & Consciousness': 'from - purple - 600 to - pink - 600Quantum & Neuroscience': 'from - indigo - 600 to - purple - 600Space Colonization': 'from - red - 600 to - orange - 600Space Mining': 'from - yellow - 600 to - orange - 600Space Architecture': 'from - green - 600 to - teal - 600Space Energy': 'from - yellow - 500 to - orange - 500AI & Business': 'from - blue - 600 to - cyan - 600Quantum & Time': 'from - green - 600 to - emerald - 600AI & Augmented Reality': 'from - orange - 600 to - red - 600';
-}
-;
-const category_icons: { [key: string]: any } = {'
-  'AI & Consciousness': Brain;'
-  'Quantum & Neuroscience': Cpu;'
-  'Space Colonization': Rocket;'
-  'Space Mining': Zap;'
-  'Space Architecture': Globe;'
-  'Space Energy': Sparkles;'
-  'AI & Business': Database;'
-  'Quantum & Time': Timer;'
-  'AI & Augmented Reality': Eye;
-}
-;
-const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceShowcaseProps> = ({}
-  services;
-  title = "2029 Ultra - Futuristic Innovations";"
-  subtitle = "Experience the future of technology with our revolutionary services";
-<<<<<<< HEAD
-  // Filter and sort services
-  const filteredServices = services
+  services: Service[];
+  title?: string;
+  subtitle?: string;
+
+const [selectedCategory, setSelectedCategory] = useState<string />('all');
+
+const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>(;
+    'innovation';
+  );
+
+interface UltraFuturistic2029ServiceShowcaseProps {
+  services: Service[]
+
+  // Get unique categories;
+
+const categories = [
+  'all',;
+    ...Array && Array.from(new Set(services && services.map(service => service && service.category)))
+];
+
+  // Filter and sort services;
+const filteredServices = services;
     .filter(
       service =>
         selectedCategory === 'all' || service.category === selectedCategory
@@ -721,29 +730,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12"
         >
           {/* Category Filter */}
-          <div className="flex items-center space-x-2">
-            <span className="text-gray-300 text-sm font-medium">Filter by:</span>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-          whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: 0.3 }}
-className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12';
-        >;
-          {/* Category Filter */}
-          <div className='flex items-center space-x-2'>;
-            <span className='text-gray-300 text-sm font-medium'>;
-              Filter by:;
-            </span>;
-            <div className='flex flex-wrap gap-2'>;
-              {categories.map(category => (<button;
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    selectedCategory === category
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                      : 'bg-gray-900/50 text-gray-300 hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50'
-                  }`}
-                  {category === 'all' ? 'All Categories' : category}<select;
+          <div className='flex items-center space-x-2' />
+            <span className='text-gray-300 text-sm font-medium' />
+              Filter by:
+            </span>
+            <div className='flex flex-wrap gap-2' />
+              {categories.map(category => (}
+                <button;}
+key={category}
+                  onClick={() = /> setSelectedCategory(category}
+}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${selectedCategory === category;
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg';}
+                      : 'bg-gray-900/50 text-gray-300 hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50';}
+                  }`}>
+
                   {category === 'all' ? 'All Categories' : category}
 
             <select
@@ -851,25 +852,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </motion.div>
 
-<<<<<<< HEAD
-<div className='flex items-center space-x-2'>;
-            <span className='text-gray-300 text-sm font-medium'>Sort by:</span>;
-            <select;
-              value={sortBy}
-              onChange={e => setSortBy(e.target.value as any)}
-              className='px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500';
-            >;
-              <option value='innovation'>Innovation Level</option>;
-              <option value='price'>Price</option>;
-              <option value='rating'>Rating</option>            </select>;
-              <option value='rating'>Rating</option>;
-            </select>;
-          </div>;
-        </motion.div>;
-        {/* Services Grid */}
-        <motion.div
-          variants={containerVariants}
-        {/* Services Grid */}
+        {/* Services Grid *}
+}
         <motion&& motion.div;
           variants={containerVariants}
 initial='hidden';
@@ -1491,8 +1475,6 @@ export default UltraFuturistic2029ServiceShowcase;
 export default UltraFuturistic2029ServiceShowcase;
 
 };
-
-
 export default UltraFuturistic2029ServiceShowcase;
                   services.reduce ((sum, s) => sum + s.rating, 0) /;
                   services.length).to_fixed (1),

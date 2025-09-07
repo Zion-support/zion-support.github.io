@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+'
-  threshold = 0.1
-  width
-  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
-
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
-  threshold = 0.1;
-  width;
-  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',threshold = 0.1,width,height,}) => {export const LazyImage: React.FC<LazyImageProps>  = ({src;
-  alt;
-  className = '';
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true }}
-  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
-  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
- useEffect ( () => {const observer = new IntersectionObserver ( ([entry]) => {if (entry && entry.isIntersecting) {return () => observer && observer.disconnect ()}, [threshold])placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',threshold = 0 && 0.1,width,height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({src;
-  alt;
-  className = '',placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
-  threshold = 0 && 0.1;
-  width;import React, { useEffect, useRef, useState } from 'react';
-import { motion  } from 'framer-motion';
-interface LazyImageProps  {src: string;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface LazyImageProps {
@@ -43,9 +8,10 @@ interface LazyImageProps {
   placeholder?: string;
   threshold?: number;
   width?: number;
-<<<<<<< HEAD
-  height?: number;
-}export const LazyImage: React.FC<LazyImageProps> = ({src;
+  height?: number;}
+}
+}
+export const LazyImage: React.FC<LazyImageProps /> = ({src;
   alt;
 =======
   height?: number
@@ -113,23 +79,6 @@ export const LazyImage: React.FC<LazyImageProps> = ({
     return () => observer.disconnect()
   }, [threshold]),
 
-  const handleLoad = $2;
-  return (
-    <div className={`relative overflow-hidden ${className}`}>
-      {/* Placeholder */}
-      <img
-        src={placeholder}
-          observer && observer.disconnect();
-        }
-  className;const [isLoaded, setIsLoaded] = useState(false)const [isInView, setIsInView] = useState(false)const imgRef = useRef<HTMLImageElement>(null)setIsInView(true)observer && observer.disconnect()}
-      },      { threshold }
-    );
-        }
-      }
-      { threshold }
-    );
-  };
-
   return (
     <div className={`relative overflow-hidden ${className}`}>;
 ;
@@ -167,10 +116,7 @@ alt='';
         }`}
         style={{ width, height }}
       />
-<<<<<<< HEAD
-      
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+
       {/* Actual Image */}
       {isInView && (
         <motion.img
@@ -221,65 +167,6 @@ className='w-full h-full object-cover'
            />
       )}
     </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  );
+)
+};
 export default LazyImage;
-<<<<<<< HEAD
-          className='w - full h - full object - cover';
-          loading='lazy'          style={{ width, height }}
-        />)}
-    </div>);
-}
-;
-export default LazyImage;          className="w - full h - full object - cover";
-          loading="lazy";
-          style={{ width, height }}
-        />)}
-    </div>);
-}
-;
-export default LazyImage);
-}
-;
-export default LazyImage;
-;
-)}export default LazyImage;
-export default LazyImage,
-=======
-<<<<<<< HEAD
-
-=======
-useEffect ( () => {
-  const observer = new IntersectionObserver ( ([entry]) => {
-  if (entry.isIntersecting) {
-  return () => observer.disconnect () 
-}, [threshold])
-return (<div className= {
-  `relative overflow-hidden $ {
-  className 
-}` 
-}> {
-  /* Placeholder */ 
-}<img src= {
-  placeholder 
-}alt="" className= {
-  `absolute inset-0 w-full h-full object-cover transition-opacity duration-500 $ {
-  isLoaded ? 'opacity-0' : 'opacity-100' 
-}` 
-}style= {
-  {
-  width, height 
-}
-}/> {
-  /* Actual Image */ 
-}{
-  isInView && (<motion.img ref= {
-  imgRef 
-}/>) 
-}</div>) 
-}
-export default LazyImage
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

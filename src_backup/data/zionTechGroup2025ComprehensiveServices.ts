@@ -9,6 +9,8 @@ export interface ZionService  {id: string;
    useCases: string[];
    targetAudience: string[];
    contactInfo: {mobile: string;
-   email: string;
-   address: string;
-   website: string} ctaLabel: string href: string external?: boolean } export const zionTechGroup2025Services: ZionService[] = [';';;
+   email: string;}
+   address: string;}
+   website: string} ctaLabel: string href: string external?: boolean
+}
+export const zionTechGroup2025Services: ZionService[] = [';';;"

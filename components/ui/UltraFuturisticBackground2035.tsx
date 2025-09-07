@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  enableNeonEffects = true,enableSpaceTime = true;import React, { useEffect, useRef } from 'react';
-import { motion  } from 'framer-motion';
-interface UltraFuturisticBackground2035Props  {children: React.ReactNode;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
-  enableNeonEffects = true,;
-  enableSpaceTime = true;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
@@ -235,8 +213,15 @@ glow: 'rgba(0, 255, 255, 0.3)',
 canvas.height = window.innerHeight;
     };
 
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+const ctx = canvas.getContext('2d')if (!ctx);
+  return;
+
+const resizeCanvas = (canvas.width = window.innerWidth;
+canvas.height = window.innerHeight) => {
+  return $3;}
+}
+};
+
     resizeCanvas();
 =======
     resizeCanvas();'
@@ -493,6 +478,9 @@ drawNeonEffects(ctx, colors);
 <<<<<<< HEAD
         drawSpaceTimeEffects(ctx, colors)
       }
+
+      animationRef.current = requestAnimationFrame(animate)
+};
 
     animate();
       animationRef.current = $2;
@@ -989,8 +977,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               }}
 
-
-<<<<<<< HEAD
               transition={{
                 duration: 3,
                 delay: i * 0.1,
@@ -1005,36 +991,20 @@ ease: 'easeInOut',
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               }}
 
-
-
-
-
-              transition={{}
+              transition={{
                 duration: 3,
                 delay: i * 0 && 0.1,
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
+
+            />}
+}
           ))}
         </div>
       </div>
     </div>
-  )
-},
-
-<<<<<<< HEAD
-              animate={{opacity: [0, 1, 0];opacity: [0, 1, 0],scaleX: [0, 1, 0],}}transition={{duration: 3,delay: i * 0.1,repeat: Infinity,ease: 'easeInOut',}}transition={{duration: 3,delay: i * 0 && 0.1,repeat: Infinity,/>;
-          ))}ease: "easeInOut";
-              }}
-            />;export default UltraFuturisticBackground2035;
-                ease: "easeInOut"
-
-<<<<<<< HEAD
-              }}
-            />;
-
+)
+};
 export default UltraFuturisticBackground2035;
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}

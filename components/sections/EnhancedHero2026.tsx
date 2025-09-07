@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle  } from 'lucide-react';
@@ -63,16 +55,17 @@ import React from 'react';
 import { motion   } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle   } from 'lucide-react';
 import Button from '../ui/Button';
-
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Shield
-  Globe
-  Brain
-  Rocket
-  CheckCircle;
+import { motion } from 'framer-motion';
+import {
+  ArrowRight;
+Star,
+TrendingUp;
+Zap,
+Shield;
+Globe,
+Brain;
+Rocket}
+CheckCircle;}
 } from 'lucide-react';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -187,9 +180,6 @@ visible: {
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-
 export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
 <<<<<<< HEAD
   const containerVariants = $2;
@@ -559,8 +549,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             }}
 
-
-
           />
 
             }}
@@ -621,27 +609,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           variants={containerVariants}
           initial='hidden';
           animate='visible';
-          className='space-y-8';
-        >;
-              opacity: [0.3, 0.8, 0.3],
-              scale: [1, 1.5, 1]
-            }}
-            transition = $2;
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: Math.random() * 2
-            }}
-          />
-        ))}
-      </div>
+          className='space-y-8' />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="space-y-8"
-        >
           {/* Main Headline */}
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6">
@@ -1012,26 +981,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {/* Enhanced CTA Section */}
 
-<<<<<<< HEAD
-              
-              <Button "
-                href="/contact" 
-
-
-              <Button "
-                href="/contact" 
-"
-                variant="secondary""
-                size="xl""
-                className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
-              >
-              <Button'
-                href='/contact''
-                variant='secondary''
-                size='xl'"
-                  <Shield className="mr-3 w-7 h-7" />
-<<<<<<< HEAD
-=======
               <Button;"
 href=\"/contact\" 
 

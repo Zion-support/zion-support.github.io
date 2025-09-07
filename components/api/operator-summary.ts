@@ -1,16 +1,23 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {}
+    const r = null;}
+    res.status(200).json({ summary, timestamp: new Date().toISOString() })
+export default async function handler(
+  req: NextApiRequest;
+res: NextApiResponse;
+) {}
+    const r = await fetch(}
+      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.hos,}
+}/api/metrics`
     );
     const metrics = await r && r.json();
     const jobs24 =
 
-export default async function handler() {try {const r = null;
-    res.status(200).json({ summary, timestamp: new Date().toISOString() })export default async function handler() {const r = await fetch(`${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`;
-    )const metrics = await r && r.json()const jobs24 =;
-export default async function handler() {try {const r = null;
-    res.status(200).json({ summary, timestamp: new Date().toISOString() })export default async function handler() {const r = await fetch(`${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`;
-    )const metrics = await r && r.json()const jobs24 =;
+const metrics = await r && r.json();
+
+const jobs24 =
+
       metrics?.marketplace?.find((m: any) => m && m.key === 'jobs_24h')?.value || 0;
     const voters =;
       metrics?.dao?.find((m: any) => m && m.key === 'voter_participation')?.value ||;
@@ -165,6 +172,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res.status (200).json ({ summary: [], error: 'Failed to compute summary',}
 });
   }
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

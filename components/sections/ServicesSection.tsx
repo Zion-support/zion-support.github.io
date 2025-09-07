@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Brain
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 'use client';
 
 import React from 'react',
@@ -1720,7 +1710,6 @@ export default ServicesSection;
     </section>
 );
 };
-
 export default ServicesSection;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======

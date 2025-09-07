@@ -10,191 +10,6 @@ import React, { useState, useEffect } from 'react',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
-import {
-  Menu
-  X
-  ChevronDown
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Timer;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Briefcase
-
-import {
-=======
-import Link from 'next/link';'
-import { motion, AnimatePresence } from 'framer-motion';
-
-import {};
-  Menu;
-  X;
-  ChevronDown;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Home;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Eye'
-  Timer;} from 'lucide-react';import {};
-  Menu, X, ChevronDown, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Microscope, DollarSign, Home, Briefcase;
-import {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  Menu,
-  X,
-  ChevronDown,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  DollarSign,
-  Home,
-  Briefcase,
-  BookOpen,
-  MessageCircle,
-  Star,
-  TrendingUp,
-  Target,
-  Layers,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ShieldCheck,
-  Earth,
-  Factory,
-  Car,
-  Building,
-  GraduationCap,
-  Scale,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Mountain,
-  Code,
-  Wrench,
-  Smartphone,
-  BarChart3,
-<<<<<<< HEAD
-
-  Eye,;
-  Timer,;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Briefcase, ;
-=======
-;
-  Eye,;'
-  Timer,;} from 'lucide-react';import {}
-  Menu, X, ChevronDown, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
-  Microscope, DollarSign, Home, Briefcase, ;
 import { Menu, X, ChevronDown, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Briefcase;
@@ -1279,8 +1094,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       {/* Main Navigation */}
 <nav;
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled;
@@ -1309,13 +1122,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>;
                 <span className='text-xs text-gray-400'>;
                   2029 Innovation Hub;
-                </span>;
-              </div>;
-            </motion.div>;
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-=======
-              initial={{ opacity: 0;, x: -20 ;}
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Desktop Navigation *}
 }
               animate={{ opacity: 1;, x: 0 ;}}
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -1819,27 +1630,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
-              >
-                Get Started
-              </motion.button>
-            </div>
-                whileTap={{ scale: 0.95 }}className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40';
-              >;
-                Get Started;
-              </motion.button>;
-            </div>;
-            {/* Mobile Menu Button */}
-<div className='lg:hidden'>;
+            {/* Mobile Menu Button *}
+}
+<div className='lg:hidden' />;
               <button;
                 onClick={toggleMenu}
 
@@ -1856,12 +1649,9 @@ className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rou
         </div>
       </nav>
 
-                className='text-gray-300 hover:text-white transition-colors';
-              >;
-                className='text-gray-300 hover:text-white transition-colors';
-              >;
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>;
+                {isOpen ? <X size={24} /> : <Menu size={24} /
+}
+              </button />;
             </div>;
           </div>;
         </div>;

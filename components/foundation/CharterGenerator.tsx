@@ -8,22 +8,19 @@
 <<<<<<< HEAD
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 import React, { useMemo, useState } from 'react';
-export type LegalStructure = 'Cayman Foundation' | 'Swiss Verein' | 'US 501(c)(6)' | 'DAO-native Wrapper';
-
-export default function CharterGenerator() {
-  const [legalStructure, setLegalStructure] = useState<LegalStructure>('Cayman Foundation');
-  const [protocolName, setProtocolName] = useState('');
-  const [tokenSymbol, setTokenSymbol] = useState('');
-  const [includeContributorRules, setIncludeContributorRules] = useState(false);
-  const [includeGrants, setIncludeGrants] = useState(false);
-  const [includeDAOIntegration, setIncludeDAOIntegration] = useState(false);
-  const charterText = useMemo(() => {
-    const symbol = tokenSymbol || 'PROTOCOL';
-    const name = protocolName || 'Protocol';
-    const header = `# ${name} Foundation Charter\n\n`;
-    const preamble = `This Charter establishes a legally-neutral foundation (the "Foundation") to steward the ${name} Protocol, an open, decentralized AI protocol dedicated to sovereignty, open knowledge, and verifiable trust.`;
-
-    const registry = `1. Legal Neutrality and Registry\n- Structure: ${legalStructure}.\n- Purpose: Maintain global neutrality, operate outside the control of any single jurisdiction, and coordinate public-good infrastructure for the ${name} Protocol.\n- Scope: Non-custodial oversight, standard-setting, and community enablement.`;
+export type LegalStructure =;
+  | 'Cayman Foundation';
+  | 'Swiss Verein';
+  | 'US 501(c)(6)';
+  | 'DAO-native Wrapper';
+export default function CharterGenerator() {const [legalStructure, setLegalStructure] =;
+    useState<LegalStructure />('Cayman Foundation')const [protocolName, setProtocolName] = useState('Zion');
+  const [tokenSymbol, setTokenSymbol] = useState('ZION$');
+  const [includeContributorRules, setIncludeContributorRules] = useState(true);
+  const [includeGrants, setIncludeGrants] = useState(true);
+  const [includeDAOIntegration, setIncludeDAOIntegration]  = useState(true);
+  const charterText = useMemo(() => ;
+  const name = protocolName.trim() || 'Zion';
 
 <<<<<<< HEAD
     const mission = `2. Mission and Scope\n- Protect, evolve, and safeguard the ${name} Protocol as a public good.\n- Champion open knowledge, reproducible research, and transparent governance.\n- Promote sovereignty for users, developers, and nation/community DAOs.`;

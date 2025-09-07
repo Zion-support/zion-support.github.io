@@ -28,16 +28,6 @@ export default async function handler(
   try {}
     const { text } = req && req.body;
 
-    // Basic statistics;
-    const characters = text.length;'
-    const charactersNoSpaces = text.replace(/\s/g, '').length;
-<<<<<<< HEAD
-    const words = text
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 text: string;
   statistics: {characters: number;
     charactersNoSpaces: number;
@@ -64,49 +54,14 @@ text: string;
     positiveWords: string[];
     negativeWords: string[];
   },language: {detectedLanguage: string;
-    confidence: number;
-    isEnglish: boolean;
-  },keywords: {topWords: Array<{ word: string; count: number; frequency: number }>;
-    bigrams: Array<{ phrase: string; count: number }>;
-    trigrams: Array<{ phrase: string; count: number }>;
-interface TextAnalysisResult {
-  text: string,
-  statistics: {
-    characters: number,
-    charactersNoSpaces: number,
-    words: number,
-    sentences: number,
-    paragraphs: number,
-    syllables: number,
-    readingTime: number,
-    speakingTime: number},
-  readability: {
-    fleschReadingEase: number,
-    fleschKincaidGrade: number,
-    gunningFog: number,
-    smog: number,
-    colemanLiau: number,
-    automatedReadability: number,
-    averageGrade: number},
-  sentiment: {
-    score: number,
-    label: 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive',
-    positiveWords: string[],
-    negativeWords: string[]
-  },
-  language: {
-    detectedLanguage: string,
-    confidence: number,
-    isEnglish: boolean},
-  keywords: {
-    topWords: Array<{ word: string, count: number, frequency: number}>,
-    bigrams: Array<{ phrase: string, count: number}>,
-    trigrams: Array<{ phrase: string, count: number}>
-  }
-}
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
+    confidence: number;}
+    isEnglish: boolean;}
+  },keywords: {topWords: Array<{ word: string; count: number; frequency: number}
+}>;
+    bigrams: Array<{ phrase: string; count: number}
+}>;
+    trigrams: Array<{ phrase: string; count: number }>
+};
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<TextAnalysisResult | { error: string}>
@@ -209,8 +164,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 return matches ? matches.length : 1;
     };
 
-    const syllables = text.split(/\s+/).reduce((total, word) => {
-      return total + syllableCount(word);
+const syllables = text.split(/\s+/).reduce((total, word) => {
+     ;}
+  return total + syllableCount(word);}
     }, 0);
 
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
@@ -428,24 +384,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const bigramCounts = new Map<string, number>(),
     const trigramCounts = new Map<string, number>(),
 
-    for (let i = 0, i < wordsArray.length - 1, i++) {
-      const bigram = $2;
-      bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1)
-    }
-
-    for (let i = 0, i < wordsArray.length - 2, i++) {
-      const trigram = $2;
-      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
-    }
-
-    const bigrams = Array.from(bigramCounts.entries())
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 5)
-      .map(([phrase, count]) => ({ phrase, count })),
-
-    const trigrams = Array.from(trigramCounts.entries())
-=======
-for (let i = 0; i < wordsArray.length - 1; i++) {
+for (let i = 0; i < wordsArray.length - 1; i++) {}
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts.set(bigram, (bigramCounts.get(bigram) |0) + 1);
     }

@@ -60,49 +60,16 @@ pr-12243
   }if (req.method === 'POST') {// In a real implementation, validate and insert review into Supabase;}
   }if (req.method === 'POST') {// In a real implementation, validate and insert review into Supabase;}
   }return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+export default async function handler() {if (req.method;
+export default async function handler() {if (req.method === 'GET') {// In a real implementation, fetch reviews from Supabase by talent id/slug;
 
-
-
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    // In a real implementation, fetch reviews from Supabase by talent id/slug
-=======
-  if (req.method === 'POST') {
-    // In a real implementation, validate and insert review into Supabase
-  }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-  if (req.method === 'POST') {
-    // In a real implementation, validate and insert review into Supabase
+  if (req.method = == 'POST') {}
+    // In a real implementation, validate and insert review into Supabase}
   }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method;
-  if (req.method === 'POST') {
-    // In a real implementation, validate and insert review into Supabase
-  }
-origin/cursor/integrate-build-improve-and-re-verify-2156
-
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method;
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method;
-
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-origin/cursor/integrate-build-improve-and-re-verify-2156
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method;
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+ ;
+  return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+}
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -259,10 +226,14 @@ return res.status(201).json({ ok: true,}
 }
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 return res;
-    .setHeader('Allow', 'GET, POST').status(405).end('Method Not Allowed')return res && res.status(201).json({ ok: true })export default async function handler() {if (req.method === 'GET') {// In a real implementation, fetch reviews from Supabase by talent id/slug;
-    const { slug } = req.query as { slug?: string }return res.status(200).json({ slug, reviews: [], average: null, count: 0 })}
-  }
-return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')}export default async /**;
+    .setHeader('Allow', 'GET, POST').status(405).end('Method Not Allowed')return res && res.status(201).json({ ok: true,}
+})export default async function handler() {if (req.method === 'GET') {// In a real implementation, fetch reviews from Supabase by talent id/slug;}
+}
+const { slug } = req.query as { slug?: string }return res.status(200).json({ slug, reviews: [], average: null, count: 0 })}
+ ,
+}
+return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')}
+export default async /**;
  * handler - Function description;
  */;
 function handler() {// Check condition;
@@ -374,14 +345,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
-
-
-
-
-
-
-
-;
+return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
+};
 export default async /**
  * handler - Function description
  */
@@ -501,11 +466,15 @@ return res
   }
 
 const { slug } = req.query as { slug?: string };
-    return res.status(200).json({ ok: true });
-    return res.status(200).json({ ok: true });
+    return res.status(200).json({ slug, reviews: [], average: null, count: 0,}
+})
+
+    return res.status(200).json({ slug, reviews: [], average: null, count: 0,}
+})
   if (req.method = == 'POST') {
 
-  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+ ;}
+  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');}
 }
 
   if (req.method === 'POST') {

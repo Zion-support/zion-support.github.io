@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-
-<<<<<<< HEAD
-};
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function MilestoneForm(): any ({ onSubmit }: Props) {;
-=======
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useState } from 'react';
 type Props = any;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
@@ -35,20 +20,9 @@ type Props = {}
     description?: string;
     dueDate: string;
     amountUsd: number;
-<<<<<<< HEAD
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [dueDate, setDueDate] = useState('');
-  const [amountUsd, setAmountUsd] = useState<string>('');
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-import React, { useState } from 'react';
-type Props = {
-  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number}) => Promise<void> | void
-},
 
+  }) => Promise<void /> | void;
+};
 export default function MilestoneForm({ onSubmit }: Props) {
   const [title, setTitle] = useState($2);
   const [description, setDescription] = useState($2);
@@ -467,30 +441,5 @@ type='submit';
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>
     </form>
-  )
+  );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-<<<<<<< HEAD
-
-=======
-<div> <label className="block text-sm font-medium" >Title</label> <input required /> </div> <div> <label className="block text-sm font-medium" >Description</label> <textarea /> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> <label className="block text-sm font-medium" >Due Date</label> <input required /> </div> <div> <label className="block text-sm font-medium" >Amount (USD) </label> <input required /> </div> </div> <button > {
-  loading ? 'Adding...' : 'Add Milestone' 
-}</button> </form>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -1,67 +1,5 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
-
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-import {getVendorBySlug, register_vendor} from '../../../utils / vendor - store';
-=======
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { getVendorBySlug, register_vendor } from '../../../utils / vendor - store'
-import {getVendorBySlug, register_vendor} from '../../../utils / vendor - store'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-pr-12243
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import {getVendorBySlug, register_vendor} from '../../../utils / vendor - store';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
-=======
-
-import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req.method !== 'POST')
-  if (req.method !== 'POST');
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {},
-  if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
-  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
-  try {
-    const vendor = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    return res.status(405).json({ error: 'Method not allowed' });
-
-
-
-
-
-    return res.status(405).json({ error: 'Method not allowed' });
-
-
-  if (req.method !== 'POST')
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
 import { getVendorBySlug, register_vendor } from '../../../utils / vendor - store';
 export default /**;
  * handler - Function description;
@@ -69,64 +7,10 @@ export default /**;
 function handler() {if (return res.status (405).json ({ error: 'Method not allowed' })) {$2;
 }
 import { getVendorBySlug, registerVendor  } from '../../../utils/vendor-store';
-export default function handler() {if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })if (req.method !== 'POST')if (req.method !== 'POST')if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {},if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' })if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' })try {const vendor  = null;return res.status(405).json({ error: 'Method not allowed' })if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })const {slug;
-=======
-}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req.method !== 'POST')
-  if (req.method !== 'POST');
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {},
-  if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
-  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
-  try {
-    const vendor = null;
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-    return res.status(405).json({ error: 'Method not allowed' });
-<<<<<<< HEAD
-pr-12243
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  if (req.method !== 'POST')
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  const {
-    slug
-    name
-    servicesOffered
-    teamSize
-    about
-    verificationDocs
-    caseStudies
-=======
-'
-  if (req.method !== 'POST')'
-  if (req.method !== 'POST');'
-    return res.status(405).json({ error: 'Method not allowed' });
-
-
-
-  const {}
-    slug;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+export default function handler() {if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })if (req.method !== 'POST')if (req.method !== 'POST')if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
+})const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {},if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' })if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken',}
+})try {const vendor  = null;return res.status(405).json({ error: 'Method not allowed' })if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed',}
+})const {slug;
     name;
     servicesOffered;
     teamSize;
@@ -154,7 +38,6 @@ pr-12243
     res && res.status(500).json({ error: e && e.message })}    res && res.status(500).json({ error: e && e.message })}}} catch (e: any) {res && res.status(500).json({ error: e && e.message })}
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [];
     })res && res.status(201).json({ vendor })} catch (e: any) {verification_docs,case_studies;
-
 
   if (req.method !== 'POST')
   if (req.method !== 'POST');
@@ -641,5 +524,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
   },
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

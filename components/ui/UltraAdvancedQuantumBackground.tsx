@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-;
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 interface UltraAdvancedQuantumBackgroundProps  {children: React.ReactNode;
@@ -119,14 +109,9 @@ const UltraAdvancedQuantumBackground: React.FC<
 > = ({ children, className = '' }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+ ;
+  const canvasRef = useRef<HTMLCanvasElement />(null);
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   useEffect(() => {
 =======
 this.phase = Math.random () * Math.PI * 2;`
@@ -139,61 +124,6 @@ this.color = `hsl ($ {}
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-<<<<<<< HEAD
-<<<<<<< HEAD
-this.color = `hsl ($ {200 + Math.random () * 60;
-  200 + Math.random () * 60;
-this.color = `hsl ($ {200 + Math.random () * 60;
-}, 80%, 60%) `;
-const UltraAdvancedQuantumBackground: React.FC<;
-  UltraAdvancedQuantumBackgroundProps;
-> = ({ children, className = '' }) => {const canvasRef  = useRef<HTMLCanvasElement>(null)useEffect(() => {const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d')if (!ctx) return;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;200 + Math.random () * 60;
-}, 80%, 60%) `;
-const UltraAdvancedQuantumBackground: React.FC<;
-  UltraAdvancedQuantumBackgroundProps;
-> = ({ children, class_name = '' }) => {  const canvas_ref = useRef < HTMLCanvasElement>(null)const UltraAdvancedQuantumBackground: React.FC < UltraAdvancedQuantumBackgroundProps> = ({children;
-  class_name = '';
-}) => {useEffect (() => {const canvas = canvas_ref.current;
-    // Check condition;
-if (return) {$2;
-}
-    const ctx = canvas.get_context ('2d')// Check condition;
-if (return) {$2;
-=======
-  200 + Math.random () * 60;`
-}, 80%, 60%) `;
-const UltraAdvancedQuantumBackground: React.FC<;
-  UltraAdvancedQuantumBackgroundProps;'
-> = ({ children, class_name = '' }) => {  const canvas_ref = useRef < HTMLCanvasElement>(null);const UltraAdvancedQuantumBackground: React.FC < UltraAdvancedQuantumBackgroundProps> = ({}
-  children;'
-  class_name = '';
-}) => {}
-  useEffect (() => {}
-    const canvas = canvas_ref.current;
-    // Check condition;
-if (return) {}
-  $2;
-}'
-    const ctx = canvas.get_context ('2d');
-    // Check condition;
-if (return) {}
-  $2;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-}
-    canvas.width = window.inner_width;
-    canvas.height = window.inner_height;
-;
-    let animationFrameId: number;
-<<<<<<< HEAD
-    let particles: Particle[] = [];
-    canvas.height = window.inner_height;let animationFrameId: number;let animationFrameId: number;let particles: Particle[] = [];
-=======
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 let animationFrameId: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1103,9 +1033,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.restore();
     }
 
-<<<<<<< HEAD
-      animationFrameId = requestAnimationFrame(animate)
-    };
+animationFrameId = requestAnimationFrame(animate)
+};
 
     animate();
 
@@ -1114,13 +1043,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       canvas.height = window.innerHeight
 =======
 animationFrameId = requestAnimationFrame(animate);
-    };
-
-    animate();
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     };
 
     window.addEventListener('resize', handleResize);
@@ -1434,17 +1356,13 @@ className='absolute inset-0 w-full h-full opacity-60'
       {/* Content Layer */}
 <div className='relative z-10'>{children}</div>
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {/* Quantum Energy Waves */}
-=======
-      {/* Quantum Energy Waves */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>;
-        <motion&& motion.div'
-          className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent'
-          animate={{}
-            x: [0, -100, 0]
-      />;
+      {/* Quantum Energy Waves *,}
+}
+      <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden' />;
+        <motion&& motion.div;
+          className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent';
+          animate={{x: [0, -100, 0];}
+      />;}
       {/* Quantum Canvas */}
       <canvas;
         ref={canvas_ref}'
@@ -1586,133 +1504,4 @@ export default UltraAdvancedQuantumBackground;
 
 export default UltraAdvancedQuantumBackground;  );
 };
-
-
 export default UltraAdvancedQuantumBackground;
-
-
-};
-<<<<<<< HEAD
-
-export default UltraAdvancedQuantumBackground;            ease: "linear",;
-            delay: 2;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-"
-export default UltraAdvancedQuantumBackground;            ease: "linear",;
-            delay: 2;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-          }}
-        />;
-      </div>;
-    </div>;
-<<<<<<< HEAD
-  )export default UltraAdvancedQuantumBackground;
-            ease: 'linear',          }}
-        />;
-        <motion.div;
-          className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 500 / 20 to - transparent';
-          animate={{coordinate_x: [0, 100, 0],}}
-          transition={{duration: 10,repeat: Infinity,ease: 'linear',delay: 2,          }}
-        />;
-      </div>;
-    </div>)export default UltraAdvancedQuantumBackground;            ease: "linear",delay: 2;
-          }}
-        />;
-      </div>;
-    </div>;
-  )delay: 2;
-          }}
-        />;
-      </div>;
-    </div>)}export default UltraAdvancedQuantumBackground)}/>;
-      </div>;
-    </div>;
-
-<<<<<<< HEAD
-
-      {/* Content Layer */}
-export default UltraAdvancedQuantumBackground,
-=======
-export default UltraAdvancedQuantumBackground;            ease: "linear",
-            delay: 2
-=======
-  );
-export default UltraAdvancedQuantumBackground;'
-            ease: 'linear',          }}
-        />;
-        <motion.div;'
-          className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 500 / 20 to - transparent';
-          animate={{}
-            coordinate_x: [0, 100, 0],
-          }}
-          transition={{}
-            duration: 10,
-            repeat: Infinity,'
-            ease: 'linear',
-            delay: 2,          }}
-        />;
-      </div>;
-    </div>);"
-export default UltraAdvancedQuantumBackground;            ease: "linear",
-            delay: 2;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-          }}
-        />
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
-}
-export default UltraAdvancedQuantumBackground;  )
-}
-export default UltraAdvancedQuantumBackground;
-<<<<<<< HEAD
-
-=======
-}// Initialize neuralNetworks.push (new NeuralNetwork () )
-}
-}ctx.restore ()
-animationFrameId = requestAnimationFrame (animate) 
-}
-animate ()
-window.addEventListener ('resize', handleResize)
-</div> {
-  /* Floating Quantum Elements */ 
-}<motion.div /> {
-  /* Quantum Canvas */ 
-}<canvas /> </div> </div>) 
-}
-export default UltraAdvancedQuantumBackground
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
-            delay: 2;
-          }}
-        />;
-      </div>;
-    </div>);
-}
-;
-export default UltraAdvancedQuantumBackground);
-}
-;
-        />
-      </div>
-    </div>
-
-      {/* Content Layer */}
-
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

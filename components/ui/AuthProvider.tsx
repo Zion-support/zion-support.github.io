@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState } from 'react';
 type UserRole = $2;
 type AuthContextType = $2;
@@ -66,13 +65,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 type UserRole = any;
   setRole: (role: UserRole) => void;
 }
-const AuthContext = createContext<AuthContextType>({role: 'talent',setRole: () => {},})export function AuthProvider() {const [role, setRoleState] = useState<UserRole>('talent')useEffect(() => {try {const stored = window.localStorage.getItem('userRole') as UserRole | null;
-      if (stored === 'talent' || stored === 'client') {setRoleState(stored)}
-    } catch {}
-  }, [])const setRole = (r: UserRole) => {setRoleState(r)try {window.localStorage.setItem('userRole', r)document.cookie = `userRole=${r}path=/; max-age=${60 * 60 * 24 * 365}`;    } catch {}
-      document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;    } catch {}
-  }
-  return (    try {window.localStorage.setItem('userRole', r)document.cookie = `userRole=${r}, path=/, max-age=${60 * 60 * 24 * 365}`;
+
+const AuthContext = createContext<AuthContextType />({
+  role: 'talent',}
+  setRole: () => ,}
+},
+});
+export function AuthProvider({ children }: { children: React.ReactNode,}
+}) {
+  const [role, setRoleState] = useState<UserRole />('talent');
+  useEffect(() => {
+
+    try {
+      const stored = window.localStorage.getItem('userRole') as UserRole | null;
+      if (stored === 'talent' || stored === 'client') {}
+setRoleState(stored);}
       }
     } catch {}
   }, [])const setRole = (r: UserRole) => {setRoleState(r)} catch {}
@@ -93,32 +100,8 @@ const AuthContext = createContext<AuthContextType>({role: 'talent',setRole: () =
   )export function useAuth() {return useContext(AuthContext)
     </AuthContext.Provider>
   );
-
-export function useAuth() {;
-  return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
-=======
-      const stored = window.localStorage.getItem('userRole') as UserRole | null;
-      if (stored === 'talent' |stored === 'client') {
-        setRoleState(stored);      }        setRoleState(stored)
-      }
-    } catch {}
-  }, [])
-const setRole = (
-    setRoleState(r)
-try {
-      window.localStorage.setItem('userRole', r)
-) => {
-  return $3;}
-
-      document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`
-    } catch {}
-
-  return (<AuthContext.Provider value={{ role, setRole }}    />
-      {children}
-
-    </AuthContext.Provider>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  )
+export function useAuth() {
+  return useContext(AuthContext);
 }
 
 export function useAuth() {;

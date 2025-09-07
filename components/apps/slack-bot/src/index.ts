@@ -1,18 +1,15 @@
-
-<<<<<<< HEAD
-;
-  socketMode: true,})function helpText(): string {return [  token: process && process.env.SLACK_BOT_TOKEN;
-  signingSecret: process && process.env.SLACK_SIGNING_SECRET;
-  appToken: process && process.env.SLACK_APP_LEVEL_TOKEN;
-  socketMode: true;
-})function helpText(): string {return [;
-        response_type: 'ephemeral',text: `Here is a draft job post for *${role}*:\n\n${data && data.description}`,import { App   } from '@slack/bolt';
+import { App  } from '@slack/bolt';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 dotenv.config()const apiBase = null;
-})function helpText(): string {return [;
-'*Zion Assistant Commands*','`/zion post-job [role]` – generate a job post','`/zion suggest-talent [query]` – AI match talent','`/zion track-project [name]` – milestone status','`/zion help` – command list',].join('\n')app.command('/zion', async ({ command, ack, respond }) => {await ack()const text = (command.text |'').trim()const [sub, ...rest] = text.split(' ')const userId = command.user_id;
-  try {if (!sub |sub.toLowerCase() === 'help') {await respond({ response_type: 'ephemeral', text: helpText() })return;
+})function helpText(): string {return [;}
+'*Zion Assistant Commands*','`/zion post-job [role]` – generate a job post','`/zion suggest-talent [query]` – AI match talent','`/zion track-project [name]` – milestone status','`/zion help` – command list',].join('\n')app.command('/zion', async ({ command, ack, respond    }) => {
+
+await ack()const text = (command.text |'').trim()const [sub, ...rest] = text.split(' ';
+  const userId = command.user_id;
+  try {if (!sub |sub.toLowerCase() === 'help') {await respond({ response_type: 'ephemeral',}
+  text: helpText(),}
+})return;
     }
   socketMode: true
 });
@@ -418,10 +415,3 @@ console.log (`⚡️ Zion Slack bot running on port ${port}`);`
   // eslint-disable-next-line no-console
 console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

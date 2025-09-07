@@ -1,91 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import PDFDocument from 'pdfkit';
-<<<<<<< HEAD
-import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
-function writeSection(doc: PDFDocument, title: string, content: string) {
-  doc.addPage($2);
-  doc.fontSize(20).fillColor('#111111').text($2);
-  doc.moveDown($2);
-  doc.fontSize(11).fillColor('#222222').text(content, {
-    width: 480,
-    align: 'left'})
-}
-
-
-  getWhitepaperSections,;
-  OPERATOR_PROMPT,;
-
-} from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
-function writeSection(doc: PDFDocument, title: string, content: string) {
-<<<<<<< HEAD
-
-  doc && doc.addPage(),
-  doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
-  doc && doc.moveDown();
-  doc && doc.fontSize(11).fillColor('#222222').text(content, {
-  getWhitepaperSections,
-  OPERATOR_PROMPT,
-} from '../../utils / whitepaper / zion_whitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils / whitepaper / zion_whitepaper';
-/**
- * write_section - Function description
- */
-function write_section() {
-  doc.add_page (),
-  doc.font_size (20).fill_color ('#111111').text (title, { underline: true });
-  doc.move_down ();
-  doc.font_size (11).fill_color ('#222222').text (content, {
-
-    width: 480,
-    align: 'left',
-  });
-  try {
-  const editionParam = (req && req.query.edition as string) || 'full';
-
-) {;
-  const editionParam = (req.query.edition as string) || 'full';
-
-=======
-  doc.addPage()
-  doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
-  doc.moveDown();
-  doc.fontSize(11).fillColor('#222222').text(content, {
-    width: 480
-    align: 'left'
-=======
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-} from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
-function writeSection(doc: PDFDocument, title: string, content: string) {}
-  doc && doc.addPage(),'
-  doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
-  doc && doc.moveDown();'
-  doc && doc.fontSize(11).fillColor('#222222').text(content, {}
-  getWhitepaperSections,
-  OPERATOR_PROMPT,'
-} from '../../utils / whitepaper / zion_whitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils / whitepaper / zion_whitepaper';
-/**
- * write_section - Function description;
- */
-function write_section() {}
-  doc.add_page (),'
-  doc.font_size (20).fill_color ('#111111').text (title, { underline: true });
-  doc.move_down ();'
-  doc.font_size (11).fill_color ('#222222').text (content, {}
-    width: 480,'
-    align: 'left',
-  });
-  try {'
-  const editionParam = (req && req.query.edition as string) || 'full';
-
-<<<<<<< HEAD
-) {;
-  const editionParam = (req.query.edition as string) || 'full';
-
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.addPage();
@@ -96,9 +10,6 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
 align: 'left',
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   });
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 export default async function handler(
   req: NextApiRequest,
 <<<<<<< HEAD
@@ -130,8 +41,6 @@ const edition =
     'Content-Disposition'}
     `attachment; filename=\"zion-protocol-${edition}.pdf\"`
   );
-
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse

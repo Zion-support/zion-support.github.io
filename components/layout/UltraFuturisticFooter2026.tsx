@@ -2,20 +2,11 @@
 <<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
-import { motion  } from 'framer-motion';
-import {Phone,Mail,MapPin,Globe,ArrowRight,Star,Shield,Brain,DollarSign,Dna,Rocket,Users,Award,Zap,Facebook,Twitter,Linkedin,Instagram,Youtube,Github,} from 'lucide-react';import {Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield,Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
-  Facebook, Twitter, Linkedin, Instagram, Youtube, Github;
-const contactInfo = {mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-}import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
 import { motion } from 'framer-motion';
-
-import {
-=======
-import Link from 'next/link';'
-import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
+  Brain, DollarSign, Dna, Rocket, Users, Award, Zap;}
+  Facebook, Twitter, Linkedin, Instagram, Youtube, Github}
+ } from 'lucide-react';
 
 import {}
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -1372,69 +1363,57 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',}
 {name: 'AI Predictive Enterprise Analytics', href: '/ai - predictive - enterprise - analytics';
 }
-{name: 'AI Autonomous Customer Success', href: '/ai - autonomous - customer - success';
+
+      {
+
+        name: 'AI Autonomous Clinical Trials'}
+  href: '/ai-autonomous-clinical-trials'}
+      }
+    ]
+  }
+];
+
+const companyLinks = [
+    { name: 'About Us'}
+  href: '/about'}
+},
+
+    { name: 'Leadership Team'}
+  href: '/leadership'}
+},
+
+    { name: 'Careers'}
+  href: '/careers'}
+},
+
+    { name: 'News & Press'}
+  href: '/news'}
+},
+
+    { name: 'Partners'}
+  href: '/partners'}
+},
+
+    { name: 'Investors'}
+  href: '/investors'}
+},
+
+    { name: 'Contact Us'}
+  href: '/contact'}
+},
+
+  { name: 'Locations'}
+  href: '/locations'}
 }
 {name: 'AI Autonomous Marketing Orchestrator', href: '/ai - autonomous - marketing - orchestrator';
 }
 {name: 'AI Autonomous Sales Intelligence', href: '/ai - autonomous - sales - intelligence';
 }];
 }
-{title: 'Cybersecurity & Quantum', services: [ {name: 'Quantum Encryption Platform', href: '/quantum - encryption - platform';
-}
-{name: 'AI Autonomous Threat Hunter', href: '/ai - autonomous - threat - hunter';
-}
-{name: 'Quantum Zero Trust Security', href: '/quantum - zero - trust - security';
-}
-{name: 'AI Autonomous Vulnerability Scanner', href: '/ai - autonomous - vulnerability - scanner';
-}
-{name: 'Quantum Secure Communication', href: '/quantum - secure - communication';
-}];
-}
-{title: 'Fintech & Blockchain', services: [ {name: 'Quantum Financial Trading Platform', href: '/quantum - financial - trading - platform';
-}
-{name: 'AI Autonomous Wealth Management', href: '/ai - autonomous - wealth - management';
-}
-{name: 'Quantum Blockchain Finance', href: '/quantum - blockchain - finance';
-}
-{name: 'AI Autonomous Insurance Platform', href: '/ai - autonomous - insurance - platform';
-}
-{name: 'Quantum Payment Processing', href: '/quantum - payment - processing';
-}];
-}
-{title: 'Healthcare & Biotech', services: [ {name: 'AI Autonomous Medical Diagnostics', href: '/ai - autonomous - medical - diagnostics';
-}
-{name: 'Quantum Drug Discovery Platform', href: '/quantum - drug - discovery - platform';
-}
-{name: 'AI Autonomous Patient Care', href: '/ai - autonomous - patient - care';
-}
-{name: 'Quantum Genomic Analysis', href: '/quantum - genomic - analysis';
-}
-{name: 'AI Autonomous Clinical Trials', href: '/ai - autonomous - clinical - trials';
-}];
-}];
-{/* Background Effects */;
-}<div className="absolute inset - 0 overflow - hidden" > <div className="absolute inset - 0 bg-[radial - gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]" ></div> <div className="absolute inset - 0 bg-[radial - gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]" ></div> </div> <motion.div initial= {{title: 'AI & Automation',services: [;
-      {name: 'AI Autonomous Business Processor',href: '/ai - autonomous - business - processor',},{name: 'AI Predictive Enterprise Analytics',href: '/ai - predictive - enterprise - analytics',},{name: 'AI Autonomous Customer Success',href: '/ai - autonomous - customer - success',},{name: 'AI Autonomous Marketing Orchestrator',href: '/ai - autonomous - marketing - orchestrator',},{name: 'AI Autonomous Sales Intelligence',href: '/ai - autonomous - sales - intelligence',},],},{title: 'Cybersecurity & Quantum',services: [;
-      {name: 'Quantum Encryption Platform',href: '/quantum - encryption - platform',},{name: 'AI Autonomous Threat Hunter',href: '/ai - autonomous - threat - hunter',},{name: 'Quantum Zero Trust Security',href: '/quantum - zero - trust - security',},{name: 'AI Autonomous Vulnerability Scanner',href: '/ai - autonomous - vulnerability - scanner',},{name: 'Quantum Secure Communication',href: '/quantum - secure - communication',},],},{title: 'Fintech & Blockchain',services: [;
-      {name: 'Quantum Financial Trading Platform',href: '/quantum - financial - trading - platform',},{name: 'AI Autonomous Wealth Management',href: '/ai - autonomous - wealth - management',},{name: 'Quantum Blockchain Finance',href: '/quantum - blockchain - finance',},{name: 'AI Autonomous Insurance Platform',href: '/ai - autonomous - insurance - platform',},{name: 'Quantum Payment Processing',href: '/quantum - payment - processing',},],},{title: 'Healthcare & Biotech',services: [;
-      {name: 'AI Autonomous Medical Diagnostics',href: '/ai - autonomous - medical - diagnostics',},{name: 'Quantum Drug Discovery Platform',href: '/quantum - drug - discovery - platform',},{name: 'AI Autonomous Patient Care',href: '/ai - autonomous - patient - care',},{ name: 'Quantum Genomic Analysis', href: '/quantum - genomic - analysis' },{name: 'AI Autonomous Clinical Trials',href: '/ai - autonomous - clinical - trials',},],}, ];}const service_categories = [;
-  {title: 'AI & Automation',services: [;
-      { name: 'AI Autonomous Business Processor', href: '/ai - autonomous - business - processor' },{ name: 'AI Predictive Enterprise Analytics', href: '/ai - predictive - enterprise - analytics' },{ name: 'AI Autonomous Customer Success', href: '/ai - autonomous - customer - success' },{ name: 'AI Autonomous Marketing Orchestrator', href: '/ai - autonomous - marketing - orchestrator' },{ name: 'AI Autonomous Sales Intelligence', href: '/ai - autonomous - sales - intelligence' }
-    ];
-  }name: 'AI Autonomous Clinical Trials',href: '/ai-autonomous-clinical-trials',},],},];
-const companyLinks = [;
-  { name: 'About Us', href: '/about' },{ name: 'Leadership Team', href: '/leadership' },{ name: 'Careers', href: '/careers' },{ name: 'News & Press', href: '/news' },{ name: 'Partners', href: '/partners' },{ name: 'Investors', href: '/investors' },{ name: 'Contact Us', href: '/contact' },const resourceLinks = [;
-  { name: 'Locations', href: '/locations' }, ];  { name: 'Locations', href: '/locations' }
-];const resource_links = [;
-  { name: 'Documentation', href: '/docs' },{ name: 'API Reference', href: '/api - documentation' },{ name: 'Case Studies', href: '/case - studies' },{ name: 'Blog & News', href: '/blog' },{ name: 'Support Center', href: '/support' },{ name: 'Training & Certification', href: '/training' },{ name: 'Community Forum', href: '/community' },<div className='lg:col-span-2'>            <motion && motion.div      {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden">;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0 && 0.05),transparent_50%)]"></div>;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.05),transparent_50%)]"></div>;
-      </div>;{ name: 'Locations', href: '/locations' },];
-const resourceLinks = [;
-  { name: 'Documentation', href: '/docs' },{ name: 'API Reference', href: '/api-documentation' },{ name: 'Case Studies', href: '/case-studies' },{ name: 'Blog & News', href: '/blog' },{ name: 'Support Center', href: '/support' },{ name: 'Training & Certification', href: '/training' },{ name: 'Community Forum', href: '/community' },{ name: 'Developer Resources', href: '/developer-resources' },];
-const socialLinks = [;
-  { name: 'Facebook', href: '#', icon: Facebook },{ name: 'Twitter', href: '#', icon: Twitter },{ name: 'LinkedIn', href: '#', icon: Linkedin },{ name: 'Instagram', href: '#', icon: Instagram },{ name: 'YouTube', href: '#', icon: Youtube },{ name: 'GitHub', href: '#', icon: Github },];export default function UltraFuturisticFooter2026() {return (<footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>;
+];
+export default function UltraFuturisticFooter2026() {
+  return (}
+<footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800' />}
       {/* Background Effects */}
       <div className='absolute inset-0 overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]'></div>;
@@ -2416,28 +2395,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )</footer>;
   )}}
 
-
-}
-
-<<<<<<< HEAD
-  )</footer>;
-  )}}
-=======
-  )
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     </footer>
-  )
+  );
 }
-=======
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
+
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

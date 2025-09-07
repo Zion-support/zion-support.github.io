@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Link from 'next/link';
 export type Course = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-
 export type Course = {
 
   id: string;
@@ -158,9 +144,7 @@ export default function CourseCard() {return (<div className='border rounded-lg 
 }
   description?: string;}
 }
-
 export default function CourseCard() {return (<div className='border rounded-lg p-4 hover:shadow-md transition' />;
-
 export default function CourseCard() {return (<div className='border rounded-lg p-4 hover:shadow-md transition' />;}
       <div className='flex items-center justify-between' />;}
         <h3 className='font-semibold text-lg' />{course.title}</h3>;
@@ -224,23 +208,3 @@ export default function CourseCard({ course }: { course: Course}) {
 =======
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-</Link> 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

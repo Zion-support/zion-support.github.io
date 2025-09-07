@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 interface UltraAdvancedFuturisticBackgroundV2Props  {children: React.ReactNode;
@@ -81,32 +70,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-canvas.width = window.inner_width;
-canvas.height = window.inner_height;
-let animationFrameId: number;
-let particles: Array< {}
-const UltraAdvancedFuturisticBackgroundV2: React.FC<;
-  UltraAdvancedFuturisticBackgroundV2Props;'
-> = ({ children, class_name = '' }) => {  const canvas_ref = useRef < HTMLCanvasElement>(null);const UltraAdvancedFuturisticBackgroundV2: React.FC < UltraAdvancedFuturisticBackgroundV2Props> = ({}
-  children;'
-  class_name = '';
-}) => {}
-  useEffect (() => {}
-    const canvas = canvas_ref.current;
-    // Check condition;
-if (return) {}
-  $2;
-}'
-    const ctx = canvas.get_context ('2d');
-    // Check condition;
-if (return) {}
-  $2;
-}
-    canvas.width = window.inner_width;
-    canvas.height = window.inner_height;
-;
-    let animationFrameId: number;
-<<<<<<< HEAD
 
 let animationFrameId: number;
 <<<<<<< HEAD
@@ -1188,7 +1151,6 @@ export default UltraAdvancedFuturisticBackgroundV2;
     </div>
   )
 };
-
 export default UltraAdvancedFuturisticBackgroundV2;
                 delay: Math.random () * 2,'"
                 ease: 'easeInOut',              }}                ease: "easeInOut";

@@ -68,7 +68,9 @@ interface State  {hasError: boolean
                 )}
               </details>
             )}
-          </div>
-        </div>
-      )}return this.props.children
+          </div>;
+        </div>;
+      )}return this.props.children;
+  }
+}
 export default ErrorBoundary;"

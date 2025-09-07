@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 import React from 'react';,
 =======
 import React from 'react',
@@ -13,12 +5,10 @@ import React from 'react',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  ArrowRight, Star, TrendingUp, Users, Award, Play,
-  CheckCircle, DollarSign, Clock, Target, Crown
-} from 'lucide-react',
-
+import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  ArrowRight, Star, TrendingUp, Users, Award, Play;}
+  CheckCircle, DollarSign, Clock, Target, Crown}
+ } from 'lucide-react';
 export default function UltraFuturisticHero2028() {
 import {
   Rocket,

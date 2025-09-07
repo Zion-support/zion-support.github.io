@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-
-;
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useEffect, useRef } from 'react';
 <<<<<<< HEAD
 import { motion  } from 'framer-motion';
@@ -432,8 +419,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }
       }
 
-    };
-<<<<<<< HEAD
+requestAnimationFrame(animate)
+};
+
     animate();
 
   }, []);
@@ -1654,14 +1642,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }}
       />
 
-      <motion.div
-        className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full"
-        animate={{
-          boxShadow: [
-            '0 0 10px rgba(0, 255, 255, 0.5)0 0 30px rgba(0, 255, 255, 0.8)0 0 10px rgba(0, 255, 255, 0.5)'
-          ]
-=======
+      {/* Data Streams */}
 
+<div className='absolute inset-0 overflow-hidden' />
+        {[...Array(6)].map((_, i) => (}
+          <motion.div;}
+key={i}
+            className='absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent'
+            style={{}
+              left: `${(i + 1) * 16.66}%`
+              top: '-20px'
+
+}
+            animate={{
+              y: [0, window.innerHeight + 20]}
+              opacity: [0, 1, 0]}
+            }}
+            transition={{
+              duration: 8 + i * 0.5,
+              repeat: Infinity,
+
+ease: 'linear',
+  delay: i * 1.5}
+}
+            }}
+            animate={{y: [0, window.innerHeight + 20],opacity: [0, 1, 0]}}"
+            transition={{duration: 8 + i * 0.5,repeat: Infinity,ease: \"linear\",delay: i * 1.5;}
+ease: 'linear',
+  delay: i * 1.5}}
+          />;
+        ))}
+      </div>;
+              duration: 8 + i * 0.5,repeat: Infinity,ease: 'linear'}}
+            transition={{duration: 8 + i * 0.5,repeat: Infinity,/>;}
+        ))}
+
+      </div>
 
       {/* Quantum Entanglement Effect */}
       <motion&& motion.div'
@@ -2038,32 +2054,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
       </div>
     </div>
-  )
-},
-
-            }}
-          />;
-        ))}</div>;
-=======
-ease: 'easeInOut',
-              delay: i * 0.8,
-origin/cursor/automate-test-improve-and-merge-code-2533
-            }}
-          />;
-        ))}
-      </div>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    </div>;
-  );
-
-export default UltraFuturisticBackground2034;  )
-}
-export default UltraFuturisticBackground2034;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
+)
+};
 export default UltraFuturisticBackground2034;
 
 }

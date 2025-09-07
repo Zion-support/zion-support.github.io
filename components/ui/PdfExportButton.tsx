@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React from 'react';
 export type PdfExportButtonProps = any;
   return (
@@ -86,8 +78,8 @@ export default function PdfExportButton({ targetRef, fileName = $2;
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
-      >
-      Download as PDF
+    >
+      Download as PDF;
     </button>
   };
       >;

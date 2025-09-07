@@ -1,11 +1,5 @@
-<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react';
 
-<<<<<<< HEAD
-;
-  useEffect(() => {const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;
-    let animationId: number;
-    let particles: Array<{import React, { useEffect, useRef } from 'react';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationId: number;
@@ -47,9 +41,12 @@ import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2030Props {
   children: React.ReactNode;}
 }
-<<<<<<< HEAD
-const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props> = ({ children }) => {
-  const canvasRef = null;
+}
+
+const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props /> = ({ children   }
+}) => {
+
+const canvasRef = null;
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -88,18 +85,17 @@ import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2030Props {}
   children: React.ReactNode;
 }
-const UltraFuturisticBackground2030: React.FC < UltraFuturisticBackground2030Props> = ({ children }) => {}
-  useEffect (() => {}
-    const canvas = canvas_ref.current;
-    // Check condition;
-if (return) {}
-  $2;
-}'
-    const ctx = canvas.get_context ('2d');
-    // Check condition;
-if (return) {}
-  $2;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
+const UltraFuturisticBackground2030: React.FC < UltraFuturisticBackground2030Props> = ({ children   }
+}) => {
+
+useEffect (() => {const canvas = canvas_ref.current;
+    // Check condition;}
+if (return) {$2;}
+}
+
+const ctx = canvas.get_context ('2d')// Check condition;
+if (return) {$2;}
 }
     canvas.width = window.inner_width;
     canvas.height = window.inner_height;
@@ -407,16 +403,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       window.removeEventListener ('resize', handle_resize);
     }
       ctx.globalAlpha = 1;
-      animationId = requestAnimationFrame(animate);
-    };
+      animationId = requestAnimationFrame(animate)
+};
 
     initParticles();
     animate();
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-initParticles();
-    };
+initParticles()) => {
+  return $3;}
+}
+};
 
     window.addEventListener('resize', handleResize);
     return () => {
@@ -1554,77 +1552,24 @@ export default UltraFuturisticBackground2030;`
       </div>;
     </div>);
 }
-;
-export default UltraFuturisticBackground2030;      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2030;
-;
-
-<<<<<<< HEAD
-            transition={{
-=======
-
-
-
-
-
-            transition={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              delay: Math.random() * 10,'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-              ease: 'easeInOut',            }}
-
-          />
-        ))}
-<<<<<<< HEAD
-=======
-      </div>
-
-<<<<<<< HEAD
-      {/* Neon Glow Effects */}
-<div className='fixed inset-0 pointer-events-none z-25'>
-        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />
-        <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />
-=======
-
-
-      {/* Neon Glow Effects */}'
-      <div className='fixed inset-0 pointer-events-none z-25'>'
-        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />'
-        <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      </div>
-
-        <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />
-      </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-    </div>
-  )
-}
-export default UltraFuturisticBackground2030;
-<<<<<<< HEAD
-
 export default UltraFuturisticBackground2030;      </div>
     </div>
+  );
+}
+export default UltraFuturisticBackground2030;transition={{duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 10,ease: 'easeInOut'            }}/>;
+        ))}
+      </div>;
+      {/* Neon Glow Effects */}
+
+<div className='fixed inset-0 pointer-events-none z-25' />
+        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />
+        <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />
+        <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />
+
+      </div>
+    </div>
   )
-}
-export default UltraFuturisticBackground2030;
-
-<<<<<<< HEAD
-=======
-export default UltraFuturisticBackground2030;
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-}
-export default UltraFuturisticBackground2030;
-
+};
 export default UltraFuturisticBackground2030;
 
 <<<<<<< HEAD

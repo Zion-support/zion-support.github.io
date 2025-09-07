@@ -1,99 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Brain;
-  Rocket;
-  Dna;
-  Globe;
-  Shield;
-  Wifi;
-  Package;
-  Bot;
-  Car;
-  Building2;
-  DollarSign;
-  Monitor;
-  Users;
-  Cpu;
-  Zap;
-  Atom;
-  Database;
-  Cloud;
-  Lock;
-  Code;
-<<<<<<< HEAD
-} from 'lucide-react';
-import Link from 'next/link';import { Menu,X,ChevronDown,Search,Phone,Mail,MapPin,Brain,Rocket,Dna,Globe,Shield,Wifi,Package,Bot,Car,Building2,DollarSign,Monitor,Users,Cpu,Zap,Atom,Database,Cloud,Lock,Code,} from 'lucide-react';
-import Link from 'next/link';import {Lock,Code,} from 'lucide-react';
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
-  Bot, Car, Building2, DollarSign, Monitor, Users;import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
-} from 'lucide-react';'
-import Link from 'next/link';import {}
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Brain,
-  Rocket,
-  Dna,
-  Globe,
-  Shield,
-  Wifi,
-  Package,
-  Bot,
-  Car,
-  Building2,
-  DollarSign,
-  Monitor,
-  Users,
-  Cpu,
-  Zap,
-  Atom,
-  Database,
-  Cloud,
-  Lock,
-  Code,';
-} from 'lucide-react';
-'
-import Link from 'next/link';import { ;
-
-
-  Lock,
-  Code,'
-} from 'lucide-react';
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-
-  Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
-  Bot, Car, Building2, DollarSign, Monitor, Users;
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
 <<<<<<< HEAD
@@ -192,18 +98,12 @@ const UltraAdvancedNavigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
-  const navigationItems = $2;
-      href: '/',
-      icon: null},
-    {
-      name: 'AI Services',
-      href: '#',
-      icon: Brain,
-      description: 'Cutting-edge AI solutions',
-      dropdown: [
-=======
+    const handleScroll = (
+setIsScrolled(window.scrollY > 50)) => {
+  return $3;}
+}
+};
 
-<<<<<<< HEAD
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -698,7 +598,6 @@ className='flex items-center';
 address: '364 E Main St STE 1008 Middletown DE 19709',
   };
 
-  
     >
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center h-20'>
@@ -1352,30 +1251,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                 </div>
               ))}
-<<<<<<< HEAD
-                      onClick={() => setIsOpen(false)}{item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>;
-className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3';
-                    >;
-                      {item.icon && <item.icon className='w-5 h-5' />}<span>{item.name}</span>;
-                    </Link>;
-                  )}
-                </div>;
-              ))}{/* Mobile Contact Info */}
-              <div className="pt-6 border-t border-gray-800/50">;
-                <div className="space-y-3 text-sm text-gray-400">;
-                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">;
-                    <Phone className="w-4 h-4" />;
-                    <span>{contactInfo.mobile}</span>;
-                  </a>;
-                  <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">;
-                    <Mail className="w-4 h-4" />;
-                    <span>{contactInfo.email}</span>;
-                  </a>;
-                  <div className="flex items-start space-x-3">;
-                    <MapPin className="w-4 h-4 mt-0.5" />;
-{/* Mobile Contact Info */}
-              <div className='pt-6 border-t border-gray-800/50'>;
-                <div className='space-y-3 text-sm text-gray-400'>;
+
+{/* Mobile Contact Info *}
+}
+              <div className='pt-6 border-t border-gray-800/50' />;
+                <div className='space-y-3 text-sm text-gray-400' />;
                   <a;
                     href={`tel:${contactInfo.mobile}`}
                     className='flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200';
@@ -1732,16 +1612,7 @@ export default UltraAdvancedNavigation;
   );
 
 };
-
-
-      </AnimatePresence>;
-    </nav>;
-)}export default UltraAdvancedNavigation;
-            exit={{ opacity: 0, height: 0}}
-            transition = $2;
-export default UltraAdvancedNavigation,
-=======
-<<<<<<< HEAD
+export default UltraAdvancedNavigation;
 
 "
 =======

@@ -1,31 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ArrowRight,Star,TrendingUp,Users,CheckCircle,} from 'lucide-react';
-  Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ArrowRight,Star,TrendingUp,Users,CheckCircle,} from 'lucide-react';
-import { Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Target;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Users;
-  CheckCircle; } from 'lucide-react';
-export default function UltraFuturisticHero2027() {const features = [import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Target, Cpu, Database, Cloud, Lock, ArrowRight;
-  Star, TrendingUp, Users, CheckCircle;
-export default function UltraFuturisticHero2027() {const features = [;
-import React from 'react',import Link from 'next/link';
-import { motion  } from 'framer-motion';
+import React from 'react';,
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Target, Cpu, Database, Cloud, Lock, ArrowRight;
   Star, TrendingUp, Users, CheckCircle;
@@ -259,40 +234,34 @@ export default function UltraFuturisticHero2027() {}
   }
 }
 import React from 'react';
-;
-  const stats = [;
-  const stats = [
-    {
-      number: '1000+',
-      label: 'Happy Customers',
-      icon: Users,
-      color: 'text - cyan - 400',
-    },
-    {
-      number: '4.9★',
-      label: 'Average Rating',
-      icon: Star,
-      color: 'text - purple - 400',
-    },
-    {
-      number: '99.9%',
-      label: 'Uptime SLA',
-      icon: CheckCircle,
-      color: 'text - green - 400',
-    },
-=======
-    },;
-  ];
-    
-    return this.props.children;
-  }
-}'
-import React from 'react';'
-import Link from 'next/link';'
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 '
       color: 'from-red-400 to-orange-400',;
-    },;
+    }
+];
+
+const stats = [
+    {
+      icon: Brain,
+      text: 'AI Consciousness Evolution'}
+  color: 'from - purple - 400 to - pink - 400'}
+    },
+    {
+      icon: Atom,
+      text: 'Quantum Computing'}
+  color: 'from - blue - 400 to - cyan - 400'}
+    },
+    {
+      icon: Globe,
+      text: 'Digital Reality'}
+  color: 'from - green - 400 to - emerald - 400'}
+    },
+    {
+      icon: Shield,
+      text: 'Enterprise Security'}
+  color: 'from - red - 400 to - orange - 400'}
+    }
   ];
 
 
@@ -1798,72 +1767,9 @@ className='text-center'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
 
-
-
-
-              ))}"
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none" />
-    </section>
-  )
-}
-                </div>;"
-                <div className="flex justify - center mt - 2">;`
-                  <stat.icon className={`w - 5 h - 5 ${stat.color} group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300`} />;
-=======
-                  <div className='text-cyan-300 font-medium' />{trust}</div>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-                </motion.div>
-
-<<<<<<< HEAD
-
-
-
-            animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 1.4 }}
-className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto';
-          >;
-            <h3 className='text-2xl font-bold text-white mb-6'>;
-              Trusted by Industry Leaders;
-            </h3>;
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>;
-              {[;
-                'Fortune 500';
-                'Tech Giants';
-                'Research Labs';
-                'Government';
-              ].map((trust, index) => (                <motion.div          >;
-            transition={{ duration: 0.8, delay: 1.4 }}
-            className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto";
-          >;
-            <h3 className="text-2xl font-bold text-white mb-6">;
-              Trusted by Industry Leaders;
-            </h3>;
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">;
-              {['Fortune 500Tech GiantsResearch LabsGovernment'].map((trust, index) => ('Fortune 500','Tech Giants','Research Labs','Government',].map((trust, index) => (<motion.div;
-                  key={trust}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}transition={{ duration: 0 && 0.8, delay: 1 && 1.4 }}
-            className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto'>;
-            <h3 className='text-2xl font-bold text-white mb-6'>;
-              Trusted by Industry Leaders;
-            </h3>;
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>;
-              {[;
-                'Fortune 500','Tech Giants','Research Labs','Government',].map((trust, index) => (                <motion && motion.div          >;
-            <h3 className="text-2xl font-bold text-white mb-6">;
-              Trusted by Industry Leaders;
-            </h3>;
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">;
-              {['Fortune 500Tech GiantsResearch LabsGovernment'].map((trust, index) => (<motion&& motion.div;
-                  transition={{ duration: 0.5, delay: 1.6 + index * 0.1 }}
-className='text-center';
-                >;
-                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3'>;
-                    <Shield className='w-8 h-8 text-cyan-400' />;
-                  </div>;
-                  <div className='text-cyan-300 font-medium'>{trust}</div>;
-                </motion.div>;
-              ))}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none" />;
+              )
+}"
+      <div className=\"absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none\" />;
     </section>;
   )}
 <<<<<<< HEAD

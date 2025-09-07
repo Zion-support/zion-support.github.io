@@ -1,72 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-=======
-<<<<<<< HEAD
-
-
-
-
-
-import {useState} from 'react';
-
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-pr-12243
-
-import {useState} from 'react';
-
-pr-12243
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useRouter  } from 'next/router';
-=======
-=======
-
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-import {useState} from 'react';
-
-<<<<<<< HEAD
-
-'
-import EnhancedLayout from '../../components/layout/EnhancedLayout';'
-import { useRouter  } from 'next/router';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import type { GrantCategory } from '../../types/grants';
-<<<<<<< HEAD
-
-const categories: GrantCategory[] = ['
-  'Ecosystem Tools','
-  'Talent Development','
-  'Regional Expansion','
-  'Research Grants','
-];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
-<<<<<<< HEAD
-export default function ApplyGrantPage() {;
-
-ursor/fix-website-loading-errors-and-merge-6662
-pr-12243
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
 ;
 import { useState } from 'react';
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+import {useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter   } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
@@ -83,14 +17,14 @@ const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'
 ];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,export default function ApplyGrantPage() {import { useState   } from 'react';
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {import { useState   } from 'react';
   'Research Grants'
 ];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,export default function ApplyGrantPage() {'Research Grants'
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {'Research Grants'
 ];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,export default function ApplyGrantPage() {ursor/fix-website-loading-errors-and-merge-6662;
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {ursor/fix-website-loading-errors-and-merge-6662;
 
 const categories: GrantCategory[] = [;
   'Ecosystem Tools';
@@ -102,9 +36,7 @@ const categories: GrantCategory[] = [;
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
-
 export default function ApplyGrantPage() {const router  = null;
-
 export default function ApplyGrantPage() {const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];
 
@@ -127,7 +59,7 @@ const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'
 ];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,export default /**;
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default /**;
  * ApplyGrantPage - Function description;
  */;
 function ApplyGrantPage() {const router = use_router ()const [program, set_program] = useState<'grant' | 'incubator'>('grant')const [project_name, setProjectName] = useState ('')const [team_info, setTeamInfo] = useState ('')const [proposal_summary, setProposalSummary] = useState ('')const [timeline, set_timeline] = useState ('')const [budget_amount, setBudgetAmount] = useState < number>(0)const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC')const [supporting_links, setSupportingLinks] = useState < string>('')const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC')const [supporting_links, setSupportingLinks] = useState < string>('')const [pitchDeckUrl, setPitchDeckUrl] = useState ('')const [region, set_region] = useState ('')const [sector, set_sector] = useState < string>('')const [loading, set_loading] = useState (false)const [error, set_error]  =;
@@ -262,9 +194,7 @@ const categories: GrantCategory[] = [;
   'Research Grants'
 ];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];,;
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
 export default function ApplyGrantPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -474,36 +404,6 @@ function ApplyGrantPage() {
       set_error (e.message);
     } finally {
 
-
-=======
-<<<<<<< HEAD
-pr-12243
-    } catch (e: any) {
-      set_error (e.message);
-    } finally {
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-    } catch (e: any) {
-      set_error (e.message);
-    } finally {
-
-<<<<<<< HEAD
-=======
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-} catch (e: any) {
-      set_error (e.message);
-    } finally {
-    } catch (e: any) {;}
-      set_error (e.message);}
-    } finally {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -653,6 +553,7 @@ pr-12243
             .split ('\n').map ((s) => s.trim ()).filter (Boolean)pitchDeckUrl;
           region;sector: (sector as any) || undefined;,submit})})const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch (e: any) {setError(e && e.message);} finally {setLoading(false)}}
     }
+
 }<textarea;
             className='mt-1 w-full border rounded p-2';
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -902,7 +803,8 @@ const _save = async (_submit: boolean) => {try {setLoading(true);,setError(null)
           region;
           sector: (sector as any) |undefined;}
           submit;}
-        })})const data = await resp.json()if (!resp.ok) throw new Error(data?.error |'Failed')router.push(`/grants/${data.id}`)} catch (e: any) {setError(e.message);} finally {setLoading(false)}
+        })})const data = await resp.json()if (!resp.ok) throw new Error(data?.error |'Failed')router.push(`/grants/${data.id}`)} catch (e: any) {setError(e.message)} finally {setLoading(false)}
+
 };
   return (<EnhancedLayout />;
 <h1 className='text-2xl font-semibold mb-4' />;
@@ -923,6 +825,7 @@ region,
 sector: (sector as any) |undefined;}
 submit}
         })
+
 });
 
 const data = await resp.json();
@@ -978,22 +881,7 @@ const data = await resp.json();
     }
   }
 
-          <textarea
-            className='mt-1 w-full border rounded p-2'
-            rows={3}
-            value={teamInfo}
-          <textarea
-            className='mt-1 w-full border rounded p-2'
-            rows={6}
-            value={proposalSummary}
-            <input
-              type='number'
-              className='mt-1 w-full border rounded p-2'
-              value={budgetAmount}
-          <textarea
-            className='mt-1 w-full border rounded p-2'
-            rows={3}
-            value={supportingLinks}
+};
 
 <<<<<<< HEAD
         {error && <div className='text-sm text-red-600'>{error}</div>}
@@ -1497,23 +1385,17 @@ pr-12243
   }
     }
 
-
   };
-
 
   return (
 
+        {error && <div className='text-sm text-red-600' />{error}</div>}
+        <div className='flex gap-3' />
+          <button;
+disabled={loading}
+            onClick={() = /> save(false)}
+            className='px-4 py-2 border rounded disabled:opacity-50'>
 
-        {error && <div className='text-sm text-red-600'>{error}</div>}
-        <div className='flex gap-3'>
-          <input
-            className='mt-1 w-full border rounded p-2'
-            value={pitchDeckUrl}
-          <button
-            disabled={loading}
-            onClick={() => save(false)}
-            className='px-4 py-2 border rounded disabled:opacity-50';
-          >;
             Save Draft;
           </button>;
           <button
@@ -1634,15 +1516,6 @@ pr-12243
           <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;
         </label>;
 
-
-
-  );
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
 
   );

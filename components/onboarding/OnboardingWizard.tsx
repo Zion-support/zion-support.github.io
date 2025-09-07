@@ -148,27 +148,14 @@ export default function OnboardingWizard() {
 
   const steps = useMemo(() => {
     if (isClient) {
-      return [
-<<<<<<< HEAD
-  const { user, completeOnboarding, setUser } = useUser()const { addToast } = useToast()const [step, setStep] = useState(0)const isClient  = user?.role === 'client';const steps = useMemo(() => {if (isClient) {return [;
-  const steps = useMemo(() => {if (isClient) {return [;
-        {title: 'Ready to find top IT talent?';
-  const isClient  = null;content: (<div className='space-y-4'>;
-              <p>Post a role or import your job brief to get started.</p>;
-              <Link href='/jobs/post'>;
-                <a className='inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-white/5'>;
-                  Post a job;
-                </a>;
-              </Link>;
-            </div>;
-          )}
-        {title: 'View suggested matches';
-          content: (<p>We will surface the best matches instantly based on your job;
-              brief.;
-            </p>;
-          )}
-        {const steps = useMemo(() => {if (isClient) {return [;
-          title: 'Invite or message talent',content: <p>Send invites or start a conversation to move fast.</p>,},];
+     ;
+  return [
+
+          title: 'Invite or message talent',;}
+          content: <p />Send invites or start a conversation to move fast.</p>,;}
+        }
+];
+
     }
 <<<<<<< HEAD
     return [;

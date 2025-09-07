@@ -10,350 +10,6 @@ import React, { useState, useEffect } from 'react',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
-import {
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Network
-  Server
-  HardDrive
-  Monitor
-  Laptop
-  Watch
-  Headphones
-  Speaker
-  Mic
-  Keyboard
-  Mouse
-  CpuIcon
-  DatabaseIcon
-  CloudIcon
-  LockIcon
-  ShieldIcon
-  GlobeIcon
-  ZapIcon
-  SparklesIcon
-  BrainIcon
-  AtomIcon
-  MenuIcon
-  CloseIcon
-  ChevronRightIcon;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
-
-import {
-=======
-import Link from 'next/link';'
-import { motion, AnimatePresence } from 'framer-motion';
-
-import {};
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Home;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Eye;
-  Network;
-  Server;
-  HardDrive;
-  Monitor;
-  Laptop;
-  Watch;
-  Headphones;
-  Speaker;
-  Mic;
-  Keyboard;
-  Mouse;
-  CpuIcon;
-  DatabaseIcon;
-  CloudIcon;
-  LockIcon;
-  ShieldIcon;
-  GlobeIcon;
-  ZapIcon;
-  SparklesIcon;
-  BrainIcon;
-  AtomIcon;
-  MenuIcon;
-  CloseIcon'
-  ChevronRightIcon;} from 'lucide-react';import {};
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Microscope, DollarSign, Home, Users, Briefcase;
-import {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  DollarSign,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,
-  MessageCircle,
-  Star,
-  TrendingUp,
-  Target,
-  Layers,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ShieldCheck,
-  Earth,
-  Factory,
-  Car,
-  Building,
-  GraduationCap,
-  Scale,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Mountain,
-  Code,
-  Wrench,
-  Smartphone,
-  BarChart3,
-  Eye,
-  Network,
-  Server,
-  HardDrive,
-  Monitor,
-  Laptop,
-  Watch,
-  Headphones,
-  Speaker,
-  Mic,
-  Keyboard,
-  Mouse,
-  CpuIcon,
-  DatabaseIcon,
-  CloudIcon,
-  LockIcon,
-  ShieldIcon,
-  GlobeIcon,
-  ZapIcon,
-  SparklesIcon,
-  BrainIcon,
-  AtomIcon,
-  MenuIcon,
-<<<<<<< HEAD
-
-  CloseIcon,;
-  ChevronRightIcon,;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, ;
-  BookOpen, MessageCircle, Star, TrendingUp, Target;
-import { motion, AnimatePresence  } from 'framer-motion';
-import {Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Home;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Eye;
-  Network;
-  Server;
-  HardDrive;
-  Monitor;
-  Laptop;
-  Watch;
-  Headphones;
-  Speaker;
-  Mic;
-  Keyboard;
-  Mouse;
-  CpuIcon;
-  DatabaseIcon;
-  CloudIcon;
-  LockIcon;
-  ShieldIcon;
-  GlobeIcon;
-  ZapIcon;
-  SparklesIcon;
-  BrainIcon;
-  AtomIcon;
-  MenuIcon;
-  CloseIcon;
-  ChevronRightIcon;} from 'lucide-react';import {Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Microscope, DollarSign, Home, Users, Briefcase;
-  Menu,X,ChevronDown,Search,Phone,Mail,MapPin,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Microscope,DollarSign,Home,Users,Briefcase,BookOpen,MessageCircle,Star,TrendingUp,Target,Layers,Cpu,Database,Cloud,Lock,ShieldCheck,Earth,Factory,Car,Building,GraduationCap,Scale,Palette,Camera,Video,Music,Gamepad2,Heart,Leaf,Sun,Moon,Wind,Droplets,Mountain,Code,Wrench,Smartphone,BarChart3,Eye,Network,Server,HardDrive,Monitor,Laptop,Watch,Headphones,Speaker,Mic,Keyboard,Mouse,CpuIcon,DatabaseIcon,CloudIcon,LockIcon,ShieldIcon,GlobeIcon,ZapIcon,SparklesIcon,BrainIcon,AtomIcon,MenuIcon,CloseIcon,ChevronRightIcon,} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin,Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,Microscope, DollarSign, Home, Users, Briefcase,import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Microscope, DollarSign, Home, Users, Briefcase;BookOpen, MessageCircle, Star, TrendingUp, Target;
-=======
-;
-  CloseIcon,;'
-  ChevronRightIcon,;} from 'lucide-react';import {}
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
-  Microscope, DollarSign, Home, Users, Briefcase, ;
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
@@ -823,14 +479,29 @@ const mainNavigation = [
 { name: 'Contact', href: '/contact', icon: MessageCircle },
 ];
 const companyLinks = [
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News', href: '/news' },
-  { name: 'Partners', href: '/partners' },
-<<<<<<< HEAD
-  { name: 'Support', href: '/support' },
+    { name: 'About Us'}
+  href: '/about'}
+},
+
+    { name: 'Careers'}
+  href: '/careers'}
+},
+
+    { name: 'News'}
+  href: '/news'}
+},
+
+    { name: 'Partners'}
+  href: '/partners'}
+},
+
+    { name: 'Support'}
+  href: '/support'}
+},
+
+  { name: 'Status'}
+  href: '/status'}
+}
 
 { name: 'Status', href: '/status' },
 ];
@@ -2595,6 +2266,11 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                       ))}
+
+                  {/* Contact Info */}
+<div className='pt-4 border-t border-gray-700/50' />
+                    <div className='text-sm font-medium text-gray-400 mb-3' />
+                      Contact;
                     </div>
                   </div>
 
@@ -2615,25 +2291,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='flex items-center space-x-2'>'
                         <Phone className='w-4 h-4 text-cyan-400' />
 
-
-
-
-                        <span>{contactInfo.mobile}</span>
-                      </div>'
-                      <div className='flex items-center space-x-2'>'
-                        <Mail className='w-4 h-4 text-purple-400' />
-                        <span>{contactInfo.email}</span>
-                      </div>'
-                      <div className='flex items-center space-x-2'>'
-                        <MapPin className='w-4 h-4 text-pink-400' />'
-=======
-                  {/* Contact Info */}
-                  <div className="pt-4 border-t border-gray-700/50">
-                    <div className="text-sm font-medium text-gray-400 mb-3">Contact</div>
-                    <div className="space-y-2 text-sm text-gray-400">
-                      <div className="flex items-center space-x-2">
-                        <Phone className="w-4 h-4 text-cyan-400" />
-                        <span>{contactInfo.mobile}</span>
+                        <span />{contactInfo.mobile}</span>
                       </div>
 <<<<<<< HEAD
                         <span className='text-xs'>{contactInfo.address}</span>                      </div>                        <span>{contactInfo.mobile}</span>
@@ -2883,53 +2541,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </motion.div>
-                        </Link>;
-                      ))}{/* Contact Info */}
-<div className='pt-4 border-t border-gray-700/50'>;
-                    <div className='text-sm font-medium text-gray-400 mb-3'>;
-                      Contact;
-                    </div>;
-                    <div className='space-y-2 text-sm text-gray-400'>;
-                      <div className='flex items-center space-x-2'>;
-                        <Phone className='w-4 h-4 text-cyan-400' />;
-                        <span>{contactInfo.mobile}</span>;
-                      </div>;
-                      <div className='flex items-center space-x-2'>;
-                        <Mail className='w-4 h-4 text-purple-400' />;
-                        <span>{contactInfo.email}</span>;
-                      </div>;
-                      <div className='flex items-center space-x-2'>;
-                        <MapPin className='w-4 h-4 text-pink-400' />;
-                        <span className='text-xs'>{contactInfo.address}</span>                      </div>                        <span>{contactInfo.mobile}</span>;
-                        <span>{contactInfo.mobile}</span>;
-                      ))}
-                      </div>;
-                      <div className="flex items-center space-x-2">;
-                        <Mail className="w-4 h-4 text-purple-400" />;
-                        <span>{contactInfo.email}</span>;
-                      </div>;
-                      <div className="flex items-center space-x-2">;
-                        <MapPin className="w-4 h-4 text-pink-400" />;
-                        <span className="text-xs">{contactInfo.address}</span>;
-                        <span className='text-xs'>{contactInfo.address}</span>;
-                      </div>;
-                    </div>;
-                  </div>;
-                  {/* CTA Button */}<div className='pt-4'>;
-                  <div className='pt-4'>;
-                    <Link href='/contact' onClick={closeMenu}>;
-                      <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'>                        Get Started Today                  <div className="pt-4">;
-                    <Link href="/contact" onClick={closeMenu}>;
-                      <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">;
-                        Get Started Today;
-                      </button>;
-                    </Link>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </motion && motion.div>;
-    </>;
+
+}
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
       <div className='h-20' />;

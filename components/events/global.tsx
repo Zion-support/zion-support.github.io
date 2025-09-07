@@ -1,83 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import dynamic from 'next/dynamic';
-const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false }),
-
-<<<<<<< HEAD
-export default function GlobalEventRoute() {
-  return <ExpoPage />
-}
-=======
-
-
-
-
-const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false }),
-export default function GlobalEventRoute() {
-const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), {;
-  ssr: false,;
-});
-
-
-
-
-export default function GlobalEventRoute() {;
-  return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false }),;
-export default function GlobalEventRoute() {;
-  return <ExpoPage />;
-import dynamic from 'next / dynamic';
-;
-const ExpoPage = dynamic (() => import ('../../components / expo / ExpoPage'), {
-  ssr: false,
-});
-;
-export default /**
- * GlobalEventRoute - Function description
- */
-function GlobalEventRoute() {
-  return <ExpoPage />;const ExpoPage = dynamic (() => import ('../../components / expo / ExpoPage'), { ssr: false }),
-export default /**
- * GlobalEventRoute - Function description
- */
-function GlobalEventRoute() {
-  return <ExpoPage />;
-}
-
-
-
-
-import dynamic from 'next/dynamic';
-}const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false }),export default function GlobalEventRoute() {const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), {ssr: false})export default function GlobalEventRoute() {return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false })export default function GlobalEventRoute() {return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false })export default function GlobalEventRoute() {return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false })export default function GlobalEventRoute() {return <ExpoPage />;
-import dynamic from 'next / dynamic';const ExpoPage = dynamic (() => import ('../../components / expo / ExpoPage'), {ssr: false;
-  ssr: false;
-  ssr: false;
-})export default /**;
- * GlobalEventRoute - Function description;
- */;
-function GlobalEventRoute() {return <ExpoPage />;const ExpoPage = dynamic (() => import ('../../components / expo / ExpoPage'), { ssr: false }),export default /**;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-  return <ExpoPage />;
-}
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
-=======
-<<<<<<< HEAD
-=======
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-
-  return <ExpoPage />;
+return <ExpoPage />;
 }
 <<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
@@ -112,13 +33,11 @@ export default function GlobalEventRoute() {;
   const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), {;}
   ssr: false;,;}
 });
-
 export default function GlobalEventRoute() {;
   return <ExpoPage />;
 }
 const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false;,}
 });
-
 export default function GlobalEventRoute() {;
   return <ExpoPage />;
 import dynamic from 'next / dynamic';
@@ -187,11 +106,12 @@ const ExpoPage = dynamic (() => import ('../../components / expo / ExpoPage'), {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
  * GlobalEventRoute - Function description;
  */;
-function GlobalEventRoute() {return <ExpoPage />;
-}import dynamic from 'next/dynamic';
-<<<<<<< HEAD
+function GlobalEventRoute() {return <ExpoPage />;}
+}
+import dynamic from 'next/dynamic';
+
 const ExpoPage = null;
-export default function GlobalEventRoute() {return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false })export default function GlobalEventRoute() {return <ExpoPage />;
+export default function GlobalEventRoute() {return <ExpoPage />;
 }
 <<<<<<< HEAD
 }
@@ -224,20 +144,4 @@ const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: 
 })export default function GlobalEventRoute() ;
   return <ExpoPage />;
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-<<<<<<< HEAD
-pr-12243
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-pr-12243
 }
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-
-
- 
-
-import fs from 'fs';
+import fs from 'fs';,
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Broken = { url: string, page: string, status: number },
@@ -273,44 +268,6 @@ export default function SiteValidator() { return null; }
 )})}
   );
 }
-<<<<<<< HEAD
-;
-export default /**;
- * SiteValidator - Function description;
- */
-function SiteValidator() {}
-  // Check condition;
-if (return <div > No validation report yet.</div>) {}
-  $2;
-}
-<<<<<<< HEAD
-  return (
-    <div className="space-y-6">;
-      <header className="space-y-1">;
-        <h1 className="text-3xl font-bold">Site Validator</h1>;
-        <p className="text - gray - 600 dark:text-gray-300">Broken links and Open Graph checks from exported site.</p>;
-      </header>;
-      <div className="grid sm:grid - cols - 2 lg:grid - cols-4 gap-4">;
-        <div className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800"><div className="text - xs text-gray-500">Pages Scanned</div><div className="text-2xl font-semibold">{report.pages_scanned}</div></div>;
-        <div className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800"><div className="text - xs text-gray-500">Broken Links</div><div className="text-2xl font-semibold">{report.broken_links.length}</div></div>;
-        <div className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800"><div className="text - xs text-gray-500">OG Issues</div><div className="text-2xl font-semibold">{report.pagesWithOgIssues}</div></div>;
-=======
-
-<<<<<<< HEAD
-    </div>)</div>;
-)})}
-    </div>
-  )
-}
-=======
-
-      </div>
-      {report.broken_links.length > 0 && (<section    />;"
-          <h2 className=\"font-semibold mb-2\"    />Broken Links</h2>;}"
-          <ul className=\"text - sm space - y-1 max - h-96 overflow - auto border rounded p - 3 border - gray - 200 dark:border-gray-800\"    />;}"
-            {report.broken_links.slice (0, 500).map ((b, i) => (<li key={i} className=\"flex justify-between gap-4\"    /><span className=\"truncate\"    />{b.page} → {b.url}</span><span className=\"text-gray-500\"    />{b.status}</span></li>))}
-          </ul>
-=======
 export default /**;
  * SiteValidator - Function description;
  */;
@@ -392,32 +349,3 @@ if (return <div  /> No validation report yet.</div>) {$2;}
 <<<<<<< HEAD
 
 "
-=======
-}
-}
-return (<div className="space-y-6" > <header className="space-y-1" > <h1 className="text-3xl font-bold" >Site Validator</h1> <p className="text-gray-600 dark:text-gray-300" >Broken links and Open Graph checks from exported site.</p> </header> </div> {
-  report.brokenLinks.length > 0 && (<section>) ) 
-}</ul> </section>) 
-}) ) 
-}</ul> </section>) 
-}</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-  );
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

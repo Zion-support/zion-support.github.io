@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
 import OpenAI from 'openai';
@@ -80,22 +73,6 @@ type InsightResponse = {
   gptRecommendation?: string
 };
 
-=======
-type InsightResponse = {}
-  recommendedHourlyUsd: number
-  recommendedMonthlyUsd: number
-  medianHourlyUsd: number
-  minHourlyUsd: number
-  maxHourlyUsd: number
-  confidence: number; // 0..1;}
-trendMonthly: { label: string; value: number,}
-}[]
-  regionalComparison: { region: string; medianHourlyUsd: number,}
-}[]
-  tags: string[]
-  gptRecommendation?: string
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);
   const mid = Math.floor(arr.length / 2);
@@ -335,25 +312,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
-
-  const body: RequestBody = req.body;
-  const { roleTitle, skills, region, experienceLevel, remote, employmentType } = body;
-
-  const country = extractCountry(region || 'Global');
-
-<<<<<<< HEAD
-=======
-  const country = extractCountry($2);
-=======
-      ]
-      temperature: 0.2
-max_tokens: 300
-   ,
-})
-    return completion && completion.choices?.[0]?.message?.content || undefined
-  } catch {}
-    return undefined;}
-
 export default async function handler(
   req: NextApiRequest
 res: NextApiResponse<InsightResponse | { error: string }    />
@@ -989,11 +947,3 @@ return res.status (200).json (response);  return res.status (200).json (response
   };
 
   return res.status(200).json(response);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -127,21 +126,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       },
     };
 
-    res.status(200).json(analytics);
-  } catch (error) {
-    console.error('Analytics error:', error);
-    res.status(500).json({ error: 'Failed to fetch analytics' });
   }
-}
-
-function mockIfEmpty<T>(data: T[], mock: T[]): T[] {
-  return data && data.length > 0 ? data : mock;
-}
-
-function groupBy<T>(array: T[], key: keyof T): Record<string, number> {
-  return array.reduce((groups, item) => {
-    const value = String(item[key]);
-    groups[value] = (groups[value] || 0) + 1;
-    return groups;
-  }, {} as Record<string, number>);
-}

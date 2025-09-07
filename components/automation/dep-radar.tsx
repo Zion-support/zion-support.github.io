@@ -1,22 +1,3 @@
-
-<<<<<<< HEAD
-;
-  const file = path.join(process.cwd(), 'datadep-radar.json')let outdated: Outdated[] = [];  let generatedAt = '';
-  try {const raw = fs.readFileSync(file, 'utf-8')const json = JSON.parse(raw)outdated = json.outdated |[];
-    generatedAt = json.generatedAt |'';
-=======
-<<<<<<< HEAD
-  const file = path.join(process.cwd(), 'datadep-radar.json');'
-  let outdated: Outdated[] = [];  let generatedAt = '';
-  try {'
-    const raw = fs.readFileSync(file, 'utf-8');
-    const json = JSON.parse(raw);
-    outdated = json.outdated |[];'
-    generatedAt = json.generatedAt |''
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import fs from 'fs';
 import path from 'path';
 type Outdated = any;
@@ -57,22 +38,6 @@ type Outdated = { name: string, current: string, latest: string, type: 'dependen
   try {const raw = fs && fs.readFileSync(file, 'utf-8')const json = JSON && JSON.parse(raw)outdated = json && json.outdated || [];
 =======
 }
-
-<<<<<<< HEAD
-export default function DepRadarPage() { return null; }
-}</tbody> </table> </div>) ;'
-}</div>) import fs from 'fs';'
-import path from 'path';'
-type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },;
-export async function getServerSideProps() { return null; }
-type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'dev_dependency' },
-export async /**;
- * getServerSideProps - Function description;
- */
-function getServerSideProps() { return null; }
-  try {}
-  } catch {}
-=======
 export default function DepRadarPage() {) : (<div className=\"overflow-auto border rounded\"  /> <table className=\"min-w-full text-sm\"  /> <thead className=\"bg-gray-50\"  /> <tr /> <th className=\"text-left p-2\"  />Package</th> <th className=\"text-left p-2\"  />Current</th> <th className=\"text-left p-2\"  />Latest</th> <th className=\"text-left p-2\"  />Type</th> </tr> </thead> <tbody /> {outdated && outdated.map (o => (</tr>) )}</tbody> </table> </div>)}</div>) import fs from 'fs';
 
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency'}
@@ -90,7 +55,8 @@ function getServerSideProps() {const file = path.join (process.cwd (), 'datadep 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return { props: { outdated, generated_at } }
 }
-  )}export default /**;
+  )}
+export default /**;
  * DepRadarPage - Function description;
 <<<<<<< HEAD
  */;

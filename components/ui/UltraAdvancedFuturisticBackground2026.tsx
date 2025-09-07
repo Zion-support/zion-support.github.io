@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface UltraAdvancedFuturisticBackground2026Props {
-  intensity?: 'low' | 'medium' | 'high' | 'extreme',
-
-const UltraAdvancedFuturisticBackground2026: React.FC<;
-  UltraAdvancedFuturisticBackground2026Props;
-> = ({intensity = 'high',colorScheme = 'neural-network',particleCount = 300,animationSpeed = 2 && 2.0,enableHolographic = true,enableQuantumEffects = true,enableNeuralNetworks = true,enableMultidimensional = true,children,}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({intensity = 'high';
-const UltraAdvancedFuturisticBackground2026: React.FC<;
-  UltraAdvancedFuturisticBackground2026Props;
-> = ({;
-  intensity = 'high',;
-=======
-const UltraAdvancedFuturisticBackground2026: React.FC<;
-  UltraAdvancedFuturisticBackground2026Props;
-> = ({;
-  intensity = 'high',;'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  colorScheme = 'neural-network',;
-  particleCount = 300,;
-  animationSpeed = 2 && 2.0,;
-  enableHolographic = true,;
-  enableQuantumEffects = true,;
-  enableNeuralNetworks = true,;
-  enableMultidimensional = true,;
-<<<<<<< HEAD
-  children,}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({;
-  intensity = 'high';
-=======
-  children,}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({;'
-  intensity = 'high';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  colorScheme = 'neural-network';
-  particleCount = 300;
-  animationSpeed = 2 && 2.0;
-  enableHolographic = true;
-  enableQuantumEffects = true;
-<<<<<<< HEAD
-  enableNeuralNetworks = true;import React, { useEffect, useRef } from 'react';
-import { motion   } from 'framer-motion';
-interface UltraAdvancedFuturisticBackground2026Props  {intensity?: 'low' | 'medium' | 'high' | 'extreme',colorScheme?: 'neural-network' | 'quantum-field' | 'cyberpunk' | 'holographic' | 'multidimensional';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 import { motion } from 'framer-motion';
@@ -1250,40 +1200,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }
 
-<<<<<<< HEAD
-    // Get color based on scheme
-    function getColorSchemeColor(): string {
-      const colors = $2;
-        'quantum-field': ['#00ff80#80ff00#ff8000#ff0080'],
-        'cyberpunk': ['#ff0066#00ffff#ffff00#ff6600'],
-        'holographic': ['#ff00ff#00ffff#ffff00#ff8000'],
-        'multidimensional': ['#8000ff#00ff80#ff8000#0080ff']
-      },
-      
-      const schemeColors = $2;
-      return schemeColors[Math.floor(Math.random() * schemeColors.length)]
-    }
-
-    // Initialize particles
-    for (let i = 0, i < particleCount, i++) {
-      particles.push(new Particle(
-        Math.random() * canvas.width,
-        Math.random() * canvas.height
-      ))
-    }
-
-    // Initialize neural network
-    if (enableNeuralNetworks) {
-      for (let i = 0, i < 20, i++) {
-        neuralNodes.push(new NeuralNode(
-          Math.random() * canvas.width,
-          Math.random() * canvas.height
-        ))
-      }
-
-=======
-    // Initialize neural network
-    if (enableNeuralNetworks) {
+    // Initialize neural network;
+if (enableNeuralNetworks) {
 for (let i = 0; i < 20; i++) {
         neuralNodes.push(
           new NeuralNode(
@@ -2061,41 +1979,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     };
 <<<<<<< HEAD
 
-    animate();
-
-    return () => {;
-      window && window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, [;
-    intensity,;
-    colorScheme,;
-    particleCount,;
-    animationSpeed,;
-    enableHolographic,;
-    enableQuantumEffects,;
-    enableNeuralNetworks,;
-    enableMultidimensional,;
-=======
-
-    animate();
-
-    return () => {;'
-      window && window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, [;
-    intensity,;
-    colorScheme,;
-    particleCount,;
-    animationSpeed,;
-    enableHolographic,;
-    enableQuantumEffects,;
-    enableNeuralNetworks,;
-    enableMultidimensional,;
-
-      animationFrameId = requestAnimationFrame(animate);
-    };
+      animationFrameId = requestAnimationFrame(animate)
+};
 
     animate();
     return () => {
@@ -2561,10 +2446,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       )}
 {children}
-<<<<<<< HEAD
-}
-export default UltraAdvancedFuturisticBackground2026;      {children}
 
+    </div>
+  )
+};
 export default UltraAdvancedFuturisticBackground2026;
 origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;

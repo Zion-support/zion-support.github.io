@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+id: string;
 
 import React from 'react';
     monthly?: number;

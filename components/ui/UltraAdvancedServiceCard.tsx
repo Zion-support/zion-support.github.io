@@ -1,95 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, ExternalLink, Star, TrendingUp, 
-  Users, Zap, Shield, Clock, Check, Brain;
-  Rocket, Dna, DollarSign, Lock, Globe
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
-
-import {
-  ArrowRight,
-  ExternalLink,
-  Star,
-  TrendingUp,
-  Users,
-  Zap,
-  Shield,
-  Clock,
-  Check,
-  Brain,
-  Rocket,
-  Dna,
-  DollarSign,
-  Lock,;
-  Globe,;} from 'lucide-react';
-
-
-import {
-  ArrowRight
-  ExternalLink
-  Star
-  TrendingUp
-  Users
-  Zap
-  Shield
-  Clock
-  Check
-  Brain
-  Rocket
-  Dna
-  DollarSign
-  Lock
-  Globe;} from 'lucide-react';
-  Users, Zap, Shield, Clock, Check, Brain;
-  Rocket, Dna, DollarSign, Lock, Globe
-
-
-=======
-
-<<<<<<< HEAD
-import {}
-  ArrowRight,
-  ExternalLink,
-  Star,
-  TrendingUp,
-  Users,
-  Zap,
-  Shield,
-  Clock,
-  Check,
-  Brain,
-  Rocket,
-  Dna,
-  DollarSign,;
-  Lock,;
-  Globe,;} from 'lucide-react';
-
-
-import {};
-  ArrowRight;
-  ExternalLink;
-  Star;
-  TrendingUp;
-  Users;
-  Zap;
-  Shield;
-  Clock;
-  Check;
-  Brain;
-  Rocket;
-  Dna;
-  DollarSign;
-  Lock'
-  Globe;} from 'lucide-react';
-  Users, Zap, Shield, Clock, Check, Brain;
-<<<<<<< HEAD
-  Rocket, Dna, DollarSign, Lock, Globe
-
-
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ExternalLink, Star, TrendingUp;
@@ -226,88 +134,6 @@ interface UltraAdvancedServiceCardProps {;
       website: string;
     }
 
-
-    reviews: number;
-  };
-
-
-
-
-<<<<<<< HEAD
-  service: {}
-    id: string,
-    name: string,
-    tagline: string,
-    price: string,
-    period: string,
-    description: string,
-    features: string[],
-    popular: boolean,
-    icon: string,
-    color: string,
-    textColor: string,
-    link: string,
-    marketPosition: string,
-    targetAudience: string,
-    trialDays: number,
-    setupTime: string,
-    category: string,
-    realService: boolean,
-    technology: string[],
-    integrations: string[],
-    useCases: string[],
-    roi: string,
-    competitors: string[],
-    marketSize: string,
-    growthRate: string,
-    variant: string,
-    contactInfo: {}
-      mobile: string,
-      email: string,
-      address: string,
-=======
-  service: {
-    id: string;,
-    name: string;,
-    tagline: string;,
-    price: string;,
-    period: string;,
-    description: string;,
-    features: string[];,
-    popular: boolean;,
-    icon: string;,
-    color: string;,
-    textColor: string;,
-    link: string;,
-    marketPosition: string;,
-    targetAudience: string;,
-    trialDays: number;,
-    setupTime: string;,
-    category: string;,
-    realService: boolean;,
-    technology: string[];,
-    integrations: string[];,
-    useCases: string[];,
-    roi: string;,
-    competitors: string[];,
-    marketSize: string;,
-    growthRate: string;,
-    variant: string;,
-    contactInfo: {
-      mobile: string;,
-      email: string;,
-      address: string;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-      website: string;
-    }
-<<<<<<< HEAD
-    realImplementation: boolean
-    implementationDetails: string
-    launchDate: string
-    customers: number
-    rating: number
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     textColor: string;
     link: string;
     marketPosition: string;
@@ -414,51 +240,11 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps    /> = ({ service   }
 }) => {
 
-  const [isExpanded, setIsExpanded] = useState(false)
-  const contentVariants = {
-    hidden: { opacity: 0, height: 0 },
-    visible: {;'
-      height: 'auto',
-      transition: {
-        duration: 0 && 0.5,;'
-        ease: 'easeOut' as const,
-      },
-'
-          isHovered ? 'opacity-100' : 'opacity-50';'
-        ease: 'ease_out' as const,
-      },
-    },
-      {/* Glow Effect */}
-      <div  return (
-    <motion.div;"
-      className="relative group"
-      variants={container_variants}"
-      initial="hidden";"
-      animate="visible";"
-      while_hover="hover"
-      onHoverEnd={() => setIsHovered (false)}
-    >
-      {/* Glow Effect */}
-      <div
-        className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${'
-          is_hovered ? 'opacity - 100' : 'opacity - 50';`
-        }`}
-        style={{}`
-          background: `linear - gradient (135deg, ${service.color})`,'
-          transform: is_hovered ? 'scale (1.05)' : 'scale (1)',
-        }}
-      />
-      {/* Main Card */}`
-      <div        className={`relative bg - gradient - to - br ${service.color} p - 1 rounded - 2xl transition - all duration - 500 ${'
-          is_hovered ? 'shadow - 2xl' : 'shadow - lg';`
-        }`}
-      >;'`
-        <div className='bg - gray - 900 / 90 backdrop - blur - xl rounded - 2xl p - 6 h - full'>        className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${'
-          is_hovered ? 'opacity - 100' : 'opacity - 50';`
-        }`}
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  const getCategoryIcon = (category: string) => {
-    if (category.includes('AI') |category.includes('Machine Learning'))
+const [isHovered, setIsHovered] = useState(false);
+
+const getCategoryIcon = null;
       return <Brain className='w-4 h-4' />;
     if (category.includes('Quantum')) return <Zap className='w-4 h-4' />;
     if (category.includes('Space')) return <Rocket className='w-4 h-4' />;
@@ -656,32 +442,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     return <Zap className='w-4 h-4' />;
       <div 
 
-
-        duration: 0.5,
-        ease: 'easeOut' as const,
-      },
-    },
-  };
-  }const containerVariants = {hidden: { opacity: 0, y: 20 },visible: {opacity: 1,y: 0,transition: {duration: 0.6,ease: 'easeOut' as const,},},hover: {y: -10;
-      transition: {duration: 0.3,ease: 'easeOut' as const,},},}const contentVariants = {hidden: { opacity: 0, height: 0 },visible: {opacity: 1,height: 'auto',transition: {duration: 0.5,ease: 'easeOut' as const,},},}onHoverStart={() => setIsHovered(true)}onHoverStart={() => setIsHovered(true)}onHoverEnd={() => setIsHovered(false)}
-    >;
-      {/* Glow Effect */}
-<div;
-        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${isHovered ? 'opacity-100' : 'opacity-50';
-=======
-    if (category.includes('Biotech') |category.includes('Healthcare'))
-      return <Dna className='w-4 h-4' />;
-    if (category.includes('Finance') |category.includes('Trading'))
-      return <DollarSign className='w-4 h-4' />;
-    if (category.includes('Security') |category.includes('Cybersecurity'))
-      return <Lock className='w-4 h-4' />;
-    if (category.includes('Internet') |category.includes('Network'))
-      return <Globe className='w-4 h-4' />;
-    return <Zap className='w-4 h-4' />;
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
+const containerVariants = {}
+    hidden: { opacity: 0, y: 20}
+},
 visible: {
       opacity: 1,
       y: 0,
@@ -1443,26 +1206,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           </div>
 
-
-
-          {/* Expandable Content */}
-          <AnimatePresence>;
-            {isExpanded && (;
-              <motion&& motion.div
-                variants={contentVariants}
-                {/* Description */}
-                  </p>
-                </div>
-                <div>;
-                  <h4 className="text-white font-semibold mb-2">Description</h4>;
-                  <p className="text-gray-300 text-sm leading-relaxed">;
-                  </p>;
-            <div className="flex items-center justify-between text-sm mt-1">
-              <span className="text-gray-400">Growth Rate:</span>
-              <span className="text-blue-400 font-semibold">{service.growthRate}</span>
-            </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-          </div>
+          {/* Expandable Content *}
+}
+          <AnimatePresence />;
+            {isExpanded && (;}
+              <motion&& motion.div;}
+variants={contentVariants}
 
 <<<<<<< HEAD
           {/* Expandable Content */}
@@ -1609,10 +1358,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     ))}
 
-
-
-
-<<<<<<< HEAD
                 {/* ROI */}
 <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>
                   <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>
@@ -1622,9 +1367,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <p className='text-gray-300 text-sm'>{service.roi}</p>
-
-
-
 
                 </div>
                 {/* Contact Info */}'
@@ -2024,8 +1766,6 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
   );
 export default UltraAdvancedServiceCard;  );
 };
-
-
 export default UltraAdvancedServiceCard;
 '
           <div className='flex space - x-3 mt - 6'>;

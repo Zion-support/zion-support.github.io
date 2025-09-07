@@ -4,21 +4,9 @@ import React from 'react';
 import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038';
 import Link from 'next/link';
-import { motion  } from 'framer-motion';
-import {Brain, Atom, Shield, Zap, TrendingUp, Globe;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react',
-import Layout from './layout/Layout',
-import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-import Link from 'next/link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion } from 'framer-motion';
+import { ArrowRight, Star;
 
-import {
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
 import { motion  } from 'framer-motion';
 import {Brain, Atom, Shield, Zap, TrendingUp, Globe;
@@ -507,7 +495,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-              {/* Trust Indicators */}
+              {/* Trust Indicators *}
+}
               <motion&& motion.div;
 <<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }
@@ -728,65 +717,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 our consciousness evolution and quantum AI platforms
               </p>
             </motion.div>
-<<<<<<< HEAD
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredAI.map((service, index) => (            >
-              className="text-center mb-20"
-            >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                Revolutionary AI Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Experience the next evolution of artificial intelligence with our consciousness evolution and quantum AI platforms
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {featuredAI.map((service, index) => (
-                <motion.div
-              >;
-                <div className='text-5xl font-bold text-purple-400 mb-3 group-hover:text-purple-300 transition-colors'>;
-                  24/7;
-                </div>;
-                <div className='text-gray-300 text-lg'>;
-                  Autonomous Operations;
-                </div>;
-                <div className='text-sm text-purple-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity'>;
-                  Always available;
-                </div>;
-              </motion.div>;
-              <motion.div;
-                className='p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300';
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center";
-            >;
-              <motion.div;
-                className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300";
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="text-5xl font-bold text-cyan-400 mb-3 group-hover:text-cyan-300 transition-colors">100+</div>
-                <div className="text-gray-300 text-lg">AI Services</div>
-                <div className="text-sm text-cyan-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Cutting-edge solutions</div>
-              </motion.div>
-              <motion.div 
-                className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="text-5xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors">200+</div>
-                <div className="text-gray-300 text-lg">Quantum Solutions</div>
-                <div className="text-sm text-blue-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Next-gen computing</div>
-              </motion.div>
-              <motion.div 
-                className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="text-5xl font-bold text-purple-400 mb-3 group-hover:text-purple-300 transition-colors">24/7</div>
-                <div className="text-gray-300 text-lg">Autonomous Operations</div>
-                <div className="text-sm text-purple-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Always available</div>
-              </motion.div>
-              <motion.div 
-                className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                  key={service.id}
-              className='text-center mb-20'>;
-              <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16' />
+              {featuredAI.map((service, index) => (}
+                <motion.div;}
+key={service.id}
+              className='text-center mb-20' />;
+              <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent' />;
                 Revolutionary AI Services;
               </h2>;
 =======
@@ -1072,11 +1009,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 <<<<<<< HEAD
 
-            <div className="text-center">
-            <div className="text-center">
-              <Link href="/ai-services">
-                <motion.button
-                  className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
+<div className='text-center' />
+              <Link href='/ai-services' />
+                <motion.button;
+className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover: bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -1974,31 +1910,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 solutions designed for the future;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </p>
-            </motion.div>'
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredMicroSaas.map((service, index) => (            >"
-              className="text-center mb-20"
-            >"
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
-<<<<<<< HEAD
-                Innovative Micro SAAS
-              </h2>"
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Transform your business with our cutting-edge micro SAAS solutions designed for the future
-              </p>
-            </motion.div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {featuredMicroSaas.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <UltraFuturisticServiceCard2038
-                    service={service}
-                    variant='automation'                  />                    variant="automation"
-=======
+            </motion.div>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16' />
+              {featuredMicroSaas.map((service, index) => (}
+                <motion.div;}
+key={service.id}
+              className='text-center mb-20' />;
+              <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent' />;
                 Innovative Micro SAAS;
               </h2>"
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
@@ -2208,10 +2127,10 @@ className='px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold 
               ))}
             </div>
 
-<div className='text-center'    />
-              <Link href='/it-services'    />
-                <motion.button
-className='px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover: bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'
+<div className='text-center' />
+              <Link href='/services' />
+                <motion.button;
+className='px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl hover: bg-emerald-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }
 
@@ -2635,23 +2554,13 @@ className='text-center mb-20'
                 AI-powered DevOps automation
               </p>
             </motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredIT.map((service, index) => (            >
-              viewport={{ once: true}}
->>>>>>> origin/main
-              className="text-center mb-20"
-            >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
-                Advanced IT Infrastructure
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Build the future with our quantum cloud infrastructure and AI-powered DevOps automation
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              viewport={{ once: true }}className='text-center mb-20';
-            >;
-              <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>;
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16' />
+              {featuredIT.map((service, index) => (}
+                <motion.div;}
+key={service.id}
+              className='text-center mb-20' />;
+              <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent' />;
                 Advanced IT Infrastructure;
               </h2>;
               <p className='text-xl text-gray-300 max-w-4xl mx-auto'>;
@@ -2781,11 +2690,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 <<<<<<< HEAD
 
-            <div className="text-center">
-            <div className="text-center">
-              <Link href="/it-services">
-                <motion.button
-                  className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
+<div className='text-center' />
+              <Link href='/it-services' />
+                <motion.button;
+className='px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover: bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -3287,8 +3195,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </motion.div>
 
-                  </p>;
-                </motion.div>;
               ))}
 <<<<<<< HEAD
             </div>;
@@ -4006,30 +3912,6 @@ export default Homepage2038;
 <<<<<<< HEAD
   )
 };
-
-export default Homepage2038;
-=======
-              <div className = $2;
-export default Homepage2038,
-=======
-<<<<<<< HEAD
-
-"
-=======
-}> <UltraFuturisticServiceCard2038 /> </motion.div>) ) 
-}</div> <div className="text-center" > <Link href="/it-services" > <motion.button > View All IT Services </motion.button> </a> </div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > We're not just building technology - we're shaping the future of human consciousness and computing </p> </motion.div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Join the revolution in AI consciousness, quantum computing, and next-generation technology. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Link href="/contact" > <motion.button > <span className="flex items-center gap-3" > Get Started Today <ArrowRight className="w-6 h-6" /> </span> </motion.button> </a> <Link href="/services" > <motion.button > Explore Our Services </motion.button> </a> </div> </motion.div> </div> </section> </main> </Layout>) 
-}
-export default Homepage2038
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
-);
-};
-
 export default Homepage2038;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======

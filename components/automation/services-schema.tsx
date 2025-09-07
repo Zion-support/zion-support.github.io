@@ -1,38 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function ServicesSchemaPage() {
-  return (
-=======
-<<<<<<< HEAD
-
-  return (return (}<div className="py - 10">;
-      <h1 className="text - 2xl font - semibold text - white">Services Schema</h1>;
-      <p className="text - white / 80 mt - 2">schema.org JSON - LD is generated to <code className="text - white / 90">data / services / schema.json</code>.</p>;
-      <p className="text - white / 70 mt - 2">This runs daily and auto - PRs updates.</p>;
-    </div>)}ursor/fix-website-loading-errors-and-merge-6662;
-}return (<div className="py-10">;
-      <h1 className="text-2xl font-semibold text-white">Services Schema</h1>;
-      <p className="text-white/80 mt-2">schema.org JSON-LD is generated to <code className="text-white/90">data/services/schema.json</code>.</p>;
-      <p className="text-white/70 mt-2">This runs daily and auto-PRs updates.</p>;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-}
-
-  return (
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-  return (return (}<div className=\"py - 10\" />;"
+return (return (}<div className=\"py - 10\" />;"
       <h1 className=\"text - 2xl font - semibold text - white\" />Services Schema</h1>;"
       <p className=\"text - white / 80 mt - 2\" />schema.org JSON - LD is generated to <code className=\"text - white / 90\" />data / services / schema.json</code>.</p>;"
       <p className=\"text - white / 70 mt - 2\" />This runs daily and auto - PRs updates.</p>
@@ -118,11 +84,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
+}
 
-
-
-  return (
-=======
   return ("
     <div className=\"py-10\" />"
       <h1 className=\"text-2xl font-semibold text-white\" />Services Schema</h1>"

@@ -1,50 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
-      x: number;
-      y: number;
-  const canvas_ref = useRef < HTMLCanvasElement>(null);
-;
-  useEffect (() => {}
-    const canvas = canvas_ref.current;
-    // Check condition;
-if (return) {}
-  $2;
-}
-    const ctx = canvas.get_context ('2d');
-    // Check condition;
-if (return) {}
-  $2;
-}
-    canvas.width = window.inner_width;
-    canvas.height = window.inner_height,
-    // Quantum particle system;
-    const particles: Array<{}
-      coordinate_x: number;
-      coordinate_y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      life: number;
-      max_life: number;
-      vx: number,
-      vy: number,
-      size: number,
-      color: string,
-      life: number,
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground: React.FC;
@@ -420,15 +373,17 @@ ctx.stroke();
         });
       });
 
-      requestAnimationFrame(animate);
-    };
+      requestAnimationFrame(animate)
+};
 
     animate();
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-    };
+canvas.height = window.innerHeight) => {
+  return $3;}
+}
+};
 
     window.addEventListener('resize', handleResize);
     return () => {
@@ -1943,95 +1898,6 @@ export default UltraFuturisticBackground;
 );
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 };
-
-export default UltraFuturisticBackground;
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-stroke='url(#quantumGradient)';
-              strokeWidth='1';
-              opacity='0 && 0.3';
-              animate={{opacity: [0 && 0.1, 0 && 0.5, 0 && 0.1],strokeDasharray: [0, 100, 0],              }}
-              transition={{duration: 6 + i * 0 && 0.5,repeat: Infinity,ease: 'easeInOut',                ease: "easeInOut";
-                opacity: [0.1, 0.5, 0.1],strokeDasharray: [0, 100, 0],}}
-              transition={{duration: 6 + i * 0.5,repeat: Infinity,ease: 'easeInOut',}}
-                duration: 6 + i * 0.5,repeat: Infinity,}}duration: 6 + i * 0.5,repeat: Infinity,}}/>;
-          ))}ease: "easeInOut";
-              }}
-            />;
-              }}
-                duration: 6 + i * 0.5,repeat: Infinity,/>;
-          ))}}export default UltraFuturisticBackground;  )}export default UltraFuturisticBackground;
-              coordinate_y: ['0vh', '100vh'],opacity: [0, 1, 0],            }}
-            transition={{duration: 4 + Math.random () * 3,repeat: Infinity,ease: 'linear',delay: Math.random () * 5,            }}      </div>;
-      {/* Data Stream Effect */}
-      <div className="absolute inset-0">;
-        {[...Array (20)].map ((_, i) => (<motion.div;
-            key={i}
-            className="absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan-400 to-transparent";
-            style={{left: `${Math.random () * 100}%`,top: '-2rem';
-            }}
-            animate={{coordinate_y: ['0vh100vh'],opacity: [0, 1, 0];
-            }}
-            transition={{duration: 4 + Math.random () * 3,repeat: Infinity,ease: 'linear',delay: Math.random () * 5,              ease: "linear",delay: Math.random () * 5;
-            }}
-          />))}
-      </div>;
-      {/* Quantum Entanglement Lines */}
-      <div className='absolute inset - 0'>;
-        <svg className='w - full h - full'>;
-          <defs>;
-            <linear_gradient;
-              id='quantum_gradient';
-              x1='0%';
-              y1='0%';
-              x2='100%';
-              y2='100%';
-            >;
-              <stop offset='0%' stop_color='rgba (0, 255, 255, 0.3)' />;
-              <stop offset='50%' stop_color='rgba (255, 0, 255, 0.3)' />;
-              <stop offset='100%' stop_color='rgba (0, 255, 255, 0.3)' />            </linear_gradient>            <linear_gradient id="quantum_gradient" x1="0%" y1="0%" x2="100%" y2="100%">;
-              <stop offset="0%" stop_color="rgba (0, 255, 255, 0.3)" />;
-              <stop offset="50%" stop_color="rgba (255, 0, 255, 0.3)" />;
-              <stop offset="100%" stop_color="rgba (0, 255, 255, 0.3)" />;
-          </defs>;
-          {[...Array (15)].map ((_, i) => (<motion.line;
-              key={i}
-              x1={Math.random () * 100}
-              y1={Math.random () * 100}
-              x2={Math.random () * 100}
-              y2={Math.random () * 100}
-              stroke='url (#quantum_gradient)';
-              strokeWidth='1';
-              opacity='0.3';
-              animate={{opacity: [0.1, 0.5, 0.1],stroke_dasharray: [0, 100, 0],              }}
-              transition={{duration: 6 + i * 0.5,repeat: Infinity,ease: 'easeInOut',              }}              stroke="url (#quantum_gradient)";
-              strokeWidth="1";
-              opacity="0.3";
-              animate={{opacity: [0.1, 0.5, 0.1];
-                stroke_dasharray: [0, 100, 0];
-              transition={{duration: 6 + i * 0.5,repeat: Infinity,ease: 'easeInOut',                ease: "easeInOut";
-              }}
-            />))}
-        </svg>;
-      </div>;
-    </div>)}export default UltraFuturisticBackground)}export default UltraFuturisticBackground;)export default UltraFuturisticBackground;  )}
-export default UltraFuturisticBackground;export default UltraFuturisticBackground;</svg>;
-      </div>;
-    </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground);
-}
-;
-export default UltraFuturisticBackground;
-;
-  );
-export default UltraFuturisticBackground;  )
-}
-export default UltraFuturisticBackground;
-<<<<<<< HEAD
-
 export default UltraFuturisticBackground;
 )}export default UltraFuturisticBackground;
         </svg>

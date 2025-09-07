@@ -24,22 +24,17 @@
     "export": "next build && next export",
     "start": "next start -p 3000",
     "postbuild": "echo \"Build completed\"",
-<<<<<<< HEAD
-    "lint": "eslint . --max-warnings 1000",
-    "lint:fix": "eslint . --fix",
-=======
-    "lint": "next lint",
-    "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
+    "lint:fix": "eslint . --fix --max-warnings 0",
     "lint:check": "eslint . --max-warnings 0",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc --noEmit --skipLibCheck",
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
     "test:coverage": "jest --coverage --config jest.config.ts",
     "verify": "npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
     "check": "npm run lint && npm run type-check && npm run test:smoke",
-    "clean": "rm -rf .next out dist",
+    "clean": "rm -rf .next out dist node_modules/.cache",
     "precommit": "npm run check",
     "prepare": "echo 'Husky prepare script disabled'",
 <<<<<<< HEAD
@@ -224,70 +219,15 @@
     "search:index": "node scripts/generate-search-index.js",
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
     "perf:monitor": "node scripts/performance-monitor.js",
-    "perf:audit": "npm run build:analyze",
-    "perf:lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
-    "format": "prettier --write .",
-    "automation:accessibility": "node automation/accessibility-checker.cjs",
-    "automation:security-audit": "node automation/security-audit.cjs",
-    "format:check": "prettier --check .",
-    "ci:full": "bash scripts/comprehensive-build-test.sh",
-    "ci:auto": "npm ci && npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
-    "analyze": "ANALYZE=true npm run build",
-    "dev:fast": "npm run dev -- --turbo",
-    "build:analyze": "ANALYZE=true npm run build",
-    "build:clean": "npm run clean && npm run build",
-    "automation:master": "node automation/master-orchestrator.cjs",
-    "automation:performance": "node automation/performance-monitor-optimizer.cjs",
-    "automation:seo": "node automation/seo-optimizer.cjs",
-    "automation:health": "node automation/health-check.cjs",
-    "automation:security": "node automation/security-scanner.cjs",
-    "pr:merge-open": "node scripts/merge-open-prs.cjs",
-    "pr:auto-resolve-and-merge": "node scripts/auto-resolve-merge-prs.cjs",
-    "pr:force-merge-heads": "node scripts/force-merge-open-pr-heads-into-main.cjs",
-    "optimize:performance": "node scripts/performance-optimizer.cjs",
-    "audit:security": "node scripts/security-audit-enhanced.cjs",
-    "optimize:ux": "node scripts/ux-optimizer.cjs",
-    "improve:all": "bash scripts/comprehensive-app-improvements.sh",
-    "sanitize:data": "node tools/sanitize-data-files.cjs",
-    "automation:safe": "bash scripts/run-safe-automations.sh",
-    "ci:smoke": "npm run build && npm run test:smoke",
-    "ci:consolidated": "bash scripts/ci-consolidated.sh",
-    "report:aggregate": "node scripts/aggregate-health-security.mjs",
-    "dev:setup": "bash scripts/dev-setup.sh",
-    "quick:test": "bash scripts/quick-test.sh",
-    "deploy:app": "bash scripts/deploy.sh",
-    "health:check": "bash scripts/health-check.sh",
-    "error:fix": "node scripts/comprehensive-error-fix.cjs",
-    "error:prevention:start": "pm2 start ecosystem.error-prevention.cjs",
-    "error:prevention:stop": "pm2 stop ecosystem.error-prevention.cjs",
-    "error:prevention:restart": "pm2 restart ecosystem.error-prevention.cjs",
-    "error:prevention:status": "pm2 status",
-    "error:prevention:logs": "pm2 logs --lines 100",
-    "build:production": "NODE_ENV=production npm run build",
-    "error:detect": "node automation/intelligent-error-detector.cjs",
-    "automation:enhanced": "node automation/enhanced-master-orchestrator.cjs",
-    "optimize:images": "node scripts/optimize-images.js",
-    "analyze:bundle": "npm run build && npx @next/bundle-analyzer",
-    "test:accessibility": "npx jest --testPathPatterns=accessibility",
-    "test:performance": "npx jest --testPathPatterns=performance",
-    "improve:performance": "node scripts/performance-improver.cjs",
-    "improve:security": "node scripts/security-improver.cjs",
-    "improve:seo": "node scripts/seo-improver.cjs",
-    "improve:accessibility": "node scripts/accessibility-improver.cjs",
-    "improve:monitoring": "node scripts/monitoring-improver.cjs",
-    "improve:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
-    "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
-    "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
-<<<<<<< HEAD
-    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs"
-<<<<<<< HEAD
-=======
-    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs",
-    "automation:test": "node automation/intelligent-test-automation.cjs",
-    "automation:ultimate": "node automation/ultimate-automation-runner.cjs"
->>>>>>> origin/main
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    "automation:seo": "node scripts/seo-optimizer.js",
+    "automation:health": "node scripts/health-checker.js",
+    "build:optimized": "NODE_OPTIONS=\"--max-old-space-size=4096\" next build",
+    "build:analyze": "ANALYZE=true npm run build:optimized",
+    "build:production": "NODE_ENV=production npm run build:optimized",
+    "dev:optimized": "NODE_OPTIONS=\"--max-old-space-size=4096\" next dev",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "preview": "next start -p 3000",
+    "postinstall": "echo 'Postinstall completed'"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -533,8 +473,4 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
 }

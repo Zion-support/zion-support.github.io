@@ -40,7 +40,13 @@ const openai = null;
     return res.status(200).json({ ok: true });
   },
 }
-
+export default async function handler(
+  req: NextApiRequest;
+res: NextApiResponse;
+) {
+    res.setHeader('Allow', 'POST');}
+    return res.status(405).json({ error: 'Method Not Allowed',}
+});
   }
   };
 }
@@ -126,35 +132,7 @@ console.error('Assistant API error:', error?.message |error);
     };
     return res.status(200).json({ message });
   } catch (error: any) {
-    console.error('Assistant API error:', error?.message || error);
-    return res.status(500).json({ error: 'Assistant request failed' });
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    console.error('Assistant API error:', error?.message || error);}
+    return res.status(500).json({ error: 'Assistant request failed',}
+});
   }
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-<<<<<<< HEAD
-  try {
-    const { messages } = req.body as { messages?: Array<{ role: 'user' | 'assistant' | 'system', content: string}> },
-
-    const preparedMessages = [
-      { role: 'system' as const, content: SYSTEM_PROMPT},
-      ...(messages || []).slice(-20)
-    ],
-
-    const completion = await openai.chat.completions.create($2);
-    const message = completion.choices?.[0]?.message || { role: 'assistant', content: 'Sorry, I could not respond.' },
-    return res.status(200).json({ message })
-  } catch (error: any) {
-    console.error($2);
-    return res.status(500).json({ error: 'Assistant request failed' })
-  }
-      ...(messages |[]).slice(-20)];
-    const completion = await openai.chat.completions.create({model: 'gpt-4o',temperature: 0.3,messages: preparedMessages,})const message = completion.choices?.[0]?.message || {role: 'assistant',content: 'Sorry, I could not respond.',}return res.status(200).json({ message })} catch (error: any) {console.error('Assistant API error:', error?.message || error)return res.status(500).json({ error: 'Assistant request failed' })}
-}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -1,24 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-export default async function handler(;
-  req: NextApiRequest;
-  res: NextApiResponse;
-) {}
-  if (!isAuthorized(req))
-    return res.status(401).json({ error: "Unauthorized" });
-<<<<<<< HEAD
-  function isAuthorized(req: NextApiRequest): boolean {
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {}
   const token = null;}
     return res.status(200).json({ ok: true });
   }
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse

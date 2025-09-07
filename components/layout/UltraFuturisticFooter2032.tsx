@@ -1,149 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import React from 'react',
-import Link from 'next/link';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
-import {
-  Phone
-  Mail
-  MapPin
-  Globe
-  Zap
-  Brain
-  Atom
-  Rocket
-  Shield
-  Cpu
-  Target
-  Microscope
-  Users
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  ArrowRight
-  Heart
-  Star
-  Award
-  CheckCircle
-  Home
-  Briefcase
-  BookOpen
-  MessageCircle
-  DollarSign
-  TrendingUp
-  Target as TargetIcon
-  Users as UsersIcon
-  Briefcase as BriefcaseIcon
-  BookOpen as BookOpenIcon
-  MessageCircle as MessageCircleIcon
-  Star as StarIcon;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
-
-import {
-=======
-import { motion } from 'framer-motion';
-import {}
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
-import {};
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Zap;
-  Brain;
-  Atom;
-  Rocket;
-  Shield;
-  Cpu;
-  Target;
-  Microscope;
-  Users;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  Youtube;
-  Github;
-  ArrowRight;
-  Heart;
-  Star;
-  Award;
-  CheckCircle;
-  Home;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  DollarSign;
-  TrendingUp;
-  Target as TargetIcon;
-  Users as UsersIcon;
-  Briefcase as BriefcaseIcon;
-  BookOpen as BookOpenIcon;
-  MessageCircle as MessageCircleIcon'
-  Star as StarIcon;} from 'lucide-react';import {};
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
-import {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Zap,
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Cpu,
-  Target,
-  Microscope,
-  Users,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Youtube,
-  Github,
-  ArrowRight,
-  Heart,
-  Star,
-  Award,
-  CheckCircle,
-  Home,
-  Briefcase,
-  BookOpen,
-  MessageCircle,
-  DollarSign,
-  TrendingUp,
-  Target as TargetIcon,
-  Users as UsersIcon,
-  Briefcase as BriefcaseIcon,
-  BookOpen as BookOpenIcon,
-<<<<<<< HEAD
-
-  MessageCircle as MessageCircleIcon,;
-  Star as StarIcon,;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
-
-
-=======
-;
-  MessageCircle as MessageCircleIcon,;'
-  Star as StarIcon,;} from 'lucide-react';import {};
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
-
-
 import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -2085,7 +1940,6 @@ const itemVariants = {
 visible: { opacity: 1, y: 0 },
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 };
-
 export default function UltraFuturisticFooter2032() {
   return (
 <<<<<<< HEAD
@@ -2187,7 +2041,42 @@ export default function UltraFuturisticFooter2032() {}
               </p>
               <div className=\"flex flex-col sm:flex-row gap-4 max-w-md mx-auto\" />
 
-<<<<<<< HEAD
+              {/* Contact Information */}
+              <div className='space-y-3' />;
+                <div className='flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors' />;
+                  <Phone className='w-4 h-4 text-cyan-400' />;
+                  <a;
+                    href={`tel: ${contactInfo.mobile}`}
+                    className='hover:text-cyan-300 transition-colors' />
+
+                    {contactInfo.mobil}
+}
+                  </a>;
+                </div>;
+                <div className='flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors' />;
+                  <Mail className='w-4 h-4 text-cyan-400' />;
+                  <a;
+                    href={`mailto: ${contactInfo.email}`}
+                    className='hover:text-cyan-300 transition-colors' />
+
+                    {contactInfo.emai}
+}
+                  </a>;
+                </div>;
+                <div className='flex items-center space-x-3 text-slate-300' />;
+                  <MapPin className='w-4 h-4 text-cyan-400' />;
+                  <span />{contactInfo.address}</span>;
+                </div>;
+                <div className='flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors' />;
+                  <Globe className='w-4 h-4 text-cyan-400' />;
+                  <a;
+                    href={contactInfo.website}
+
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='hover: text-cyan-300 transition-colors'
+                   />
+                    {contactInfo.website}
 
                     {contactInfo.website}
 
@@ -2644,7 +2533,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </ul>
               </div>
-
 
               {/* Social Links */}
 <<<<<<< HEAD

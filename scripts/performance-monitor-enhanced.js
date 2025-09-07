@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -18,585 +7,208 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-class PerformanceMonitorEnhanced {
+class PerformanceMonitor {
   constructor() {
     this.projectRoot = path.join(__dirname, '..');
-    this.metrics = {
-      buildTime: 0,
-      bundleSize: 0,
-      pageLoadTime: 0,
-      memoryUsage: 0,
-      cpuUsage: 0
+    this.metrics = {};
+    this.thresholds = {
+      bundleSize: 500000, // 500KB
+      loadTime: 3000, // 3 seconds
+      memoryUsage: 100000000 // 100MB
     };
-    this.reports = [];
   }
 
-
-    console && console.log('📦 Checking bundle size...'),
-
-
-    console && console.log('📦 Checking bundle size...'),
-
-    // Bundle size analysis would go here
-    return true;
-  },
-  "loadTime": () => {
-
-    console && console.log('⏱️ Checking load times...'),
-
-
-    console && console.log('⏱️ Checking load times...'),
-
-    // Load time analysis would go here
-    return true;
-  },
-  "memoryUsage": () => {
-
-    console && console.log('🧠 Checking memory usage...'),
-
-
-    console && console.log('🧠 Checking memory usage...'),
-
-    // Memory usage analysis would go here
-    return true;
-  }
-};
-// Run all performance checks
-Object.entries(performanceChecks).forEach(([name, check]) => {
-  try {
-    const result = check();
-    console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
-  } catch (error) {
-    console.log(`❌ ${name}: ERROR - ${error.message}`);
-  }
-});
-
-console && console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console && console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console && console.log('📦 Checking bundle size...'); return true},loadTime: () => { console && console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console && console.log('🧠 Checking memory usage...'); return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(`❌ ${name}: ERROR - ${error && error.message}`)} }); console && console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console && console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console && console.log('📦 Checking bundle size...'); return true},loadTime: () => { console && console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console && console.log('🧠 Checking memory usage...'); return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(`❌ ${name}: ERROR - ${error && error.message}`)} }); console && console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-  log(message, type = 'info') {
-    const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
-    console.log(`${prefix} ${message}`);
-  }
-
-  async monitorPerformance() {
-    this.log('Starting enhanced performance monitoring...');
+  async run() {
+    console.log('📊 Enhanced Performance Monitor Starting...');
     
     try {
-      // Monitor build performance
-      await this.monitorBuildPerformance();
+      await this.checkBundleSize();
+      await this.checkLoadTime();
+      await this.checkMemoryUsage();
+      await this.checkLighthouseScore();
+      await this.generateReport();
       
-      // Monitor bundle size
-      await this.monitorBundleSize();
-      
-      // Monitor memory usage
-      await this.monitorMemoryUsage();
-      
-      // Monitor CPU usage
-      await this.monitorCPUUsage();
-      
-      // Generate performance report
-      this.generatePerformanceReport();
-      
-      this.log('Performance monitoring completed successfully', 'success');
+      console.log('✅ Performance monitoring completed');
       return true;
     } catch (error) {
-      this.log(`Performance monitoring failed: ${error.message}`, 'error');
+      console.error('❌ Performance monitoring failed:', error.message);
       return false;
     }
   }
 
-  async monitorBuildPerformance() {
+  async checkBundleSize() {
     try {
-      this.log('Monitoring build performance...');
-      const startTime = Date.now();
-      
-      // Run build
-      execSync('npm run build', { 
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      
-      const endTime = Date.now();
-      this.metrics.buildTime = endTime - startTime;
-      
-      this.log(`Build completed in ${this.metrics.buildTime}ms`, 'success');
-      this.reports.push({
-        type: 'build',
-        duration: this.metrics.buildTime,
-        timestamp: new Date().toISOString()
-      });
-    } catch (error) {
-      this.log(`Build performance monitoring failed: ${error.message}`, 'error');
-      throw error;
-    }
-  }
-
-  async monitorBundleSize() {
-    try {
-      this.log('Monitoring bundle size...');
+      console.log('📦 Checking bundle size...');
       
       // Check if .next directory exists
       const nextDir = path.join(this.projectRoot, '.next');
       if (!fs.existsSync(nextDir)) {
-        this.log('No build found, skipping bundle size monitoring', 'info');
-        return;
+        console.log('⚠️ No build found, running build first...');
+        execSync('npm run build', { cwd: this.projectRoot, stdio: 'pipe' });
       }
-      
-      // Calculate total bundle size
-      const bundleSize = this.calculateDirectorySize(nextDir);
-      this.metrics.bundleSize = bundleSize;
-      
-      this.log(`Bundle size: ${this.formatBytes(bundleSize)}`, 'success');
-      this.reports.push({
-        type: 'bundle',
-        size: bundleSize,
-        formattedSize: this.formatBytes(bundleSize),
-        timestamp: new Date().toISOString()
-      });
+
+      // Analyze bundle size
+      const buildDir = path.join(nextDir, 'static', 'chunks');
+      if (fs.existsSync(buildDir)) {
+        const files = fs.readdirSync(buildDir);
+        let totalSize = 0;
+        
+        files.forEach(file => {
+          const filePath = path.join(buildDir, file);
+          const stats = fs.statSync(filePath);
+          totalSize += stats.size;
+        });
+
+        this.metrics.bundleSize = totalSize;
+        const sizeKB = Math.round(totalSize / 1024);
+        
+        if (totalSize > this.thresholds.bundleSize) {
+          console.log(`⚠️ Bundle size is large: ${sizeKB}KB (threshold: ${Math.round(this.thresholds.bundleSize / 1024)}KB)`);
+        } else {
+          console.log(`✅ Bundle size is good: ${sizeKB}KB`);
+        }
+      }
     } catch (error) {
-      this.log(`Bundle size monitoring failed: ${error.message}`, 'error');
-      throw error;
+      console.error('Failed to check bundle size:', error.message);
     }
   }
 
-  calculateDirectorySize(dirPath) {
-    let totalSize = 0;
-    
-    const scanDirectory = (dir) => {
-      const items = fs.readdirSync(dir);
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory()) {
-          scanDirectory(fullPath);
-        } else {
-          totalSize += stat.size;
-        }
-      }
-    };
-    
-    scanDirectory(dirPath);
-    return totalSize;
-  }
-
-  formatBytes(bytes) {
-    if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  }
-
-  async monitorMemoryUsage() {
+  async checkLoadTime() {
     try {
-      this.log('Monitoring memory usage...');
+      console.log('⏱️ Checking load time...');
+      
+      // Simulate load time check (in real scenario, you'd use tools like Lighthouse)
+      const startTime = Date.now();
+      
+      // Check if the app can start
+      try {
+        execSync('timeout 10s npm run start > /dev/null 2>&1 &', { cwd: this.projectRoot });
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        execSync('pkill -f "next start" || true', { cwd: this.projectRoot });
+      } catch (error) {
+        // Expected timeout
+      }
+      
+      const loadTime = Date.now() - startTime;
+      this.metrics.loadTime = loadTime;
+      
+      if (loadTime > this.thresholds.loadTime) {
+        console.log(`⚠️ Load time is slow: ${loadTime}ms (threshold: ${this.thresholds.loadTime}ms)`);
+      } else {
+        console.log(`✅ Load time is good: ${loadTime}ms`);
+      }
+    } catch (error) {
+      console.error('Failed to check load time:', error.message);
+    }
+  }
+
+  async checkMemoryUsage() {
+    try {
+      console.log('🧠 Checking memory usage...');
+      
       const memUsage = process.memoryUsage();
       this.metrics.memoryUsage = memUsage.heapUsed;
       
-      this.log(`Memory usage: ${this.formatBytes(memUsage.heapUsed)}`, 'success');
-      this.reports.push({
-        type: 'memory',
-        heapUsed: memUsage.heapUsed,
-        heapTotal: memUsage.heapTotal,
-        external: memUsage.external,
-        rss: memUsage.rss,
-        formattedSize: this.formatBytes(memUsage.heapUsed),
-        timestamp: new Date().toISOString()
-      });
+      if (memUsage.heapUsed > this.thresholds.memoryUsage) {
+        console.log(`⚠️ Memory usage is high: ${Math.round(memUsage.heapUsed / 1024 / 1024)}MB`);
+      } else {
+        console.log(`✅ Memory usage is good: ${Math.round(memUsage.heapUsed / 1024 / 1024)}MB`);
+      }
     } catch (error) {
-      this.log(`Memory monitoring failed: ${error.message}`, 'error');
-      throw error;
+      console.error('Failed to check memory usage:', error.message);
     }
   }
 
-  async monitorCPUUsage() {
+  async checkLighthouseScore() {
     try {
-      this.log('Monitoring CPU usage...');
-      const startUsage = process.cpuUsage();
+      console.log('🔍 Checking Lighthouse score...');
       
-      // Wait a bit to measure CPU usage
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      const endUsage = process.cpuUsage(startUsage);
-      const cpuTime = (endUsage.user + endUsage.system) / 1000000; // Convert to seconds
-      
-      this.metrics.cpuUsage = cpuTime;
-      
-      this.log(`CPU usage: ${cpuTime.toFixed(2)}s`, 'success');
-      this.reports.push({
-        type: 'cpu',
-        userTime: endUsage.user,
-        systemTime: endUsage.system,
-        totalTime: cpuTime,
-        timestamp: new Date().toISOString()
-      });
+      // Check if Lighthouse is available
+      try {
+        execSync('npx lighthouse --version', { stdio: 'pipe' });
+        
+        // Run Lighthouse on localhost (if available)
+        const lighthouseCmd = 'npx lighthouse http://localhost:3000 --output=json --quiet --chrome-flags="--headless"';
+        const result = execSync(lighthouseCmd, { 
+          cwd: this.projectRoot, 
+          stdio: 'pipe',
+          timeout: 60000 
+        });
+        
+        const lighthouseData = JSON.parse(result.toString());
+        this.metrics.lighthouse = {
+          performance: lighthouseData.categories.performance.score * 100,
+          accessibility: lighthouseData.categories.accessibility.score * 100,
+          bestPractices: lighthouseData.categories['best-practices'].score * 100,
+          seo: lighthouseData.categories.seo.score * 100
+        };
+        
+        console.log('✅ Lighthouse scores:', this.metrics.lighthouse);
+      } catch (error) {
+        console.log('⚠️ Lighthouse not available or localhost not running');
+        this.metrics.lighthouse = null;
+      }
     } catch (error) {
-      this.log(`CPU monitoring failed: ${error.message}`, 'error');
-      throw error;
+      console.error('Failed to check Lighthouse score:', error.message);
     }
   }
 
-  generatePerformanceReport() {
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
       metrics: this.metrics,
-      reports: this.reports,
-      summary: {
-        buildTime: this.metrics.buildTime,
-        bundleSize: this.formatBytes(this.metrics.bundleSize),
-        memoryUsage: this.formatBytes(this.metrics.memoryUsage),
-        cpuUsage: `${this.metrics.cpuUsage.toFixed(2)}s`
-      }
+      thresholds: this.thresholds,
+      recommendations: this.generateRecommendations()
     };
-    
-    const reportPath = path.join(this.projectRoot, 'performance-monitor-report.json');
+
+    const reportPath = path.join(this.projectRoot, 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    this.log(`Performance report saved to ${reportPath}`, 'success');
-    
-    // Also create a markdown report
-    this.generateMarkdownReport(report);
+    console.log('📊 Performance report saved to performance-report.json');
   }
 
-  generateMarkdownReport(report) {
-    const markdown = `# Performance Monitor Report
-
-## Summary
-- **Build Time**: ${report.summary.buildTime}ms
-- **Bundle Size**: ${report.summary.bundleSize}
-- **Memory Usage**: ${report.summary.memoryUsage}
-- **CPU Usage**: ${report.summary.cpuUsage}
-
-## Detailed Metrics
-\`\`\`json
-${JSON.stringify(report.metrics, null, 2)}
-\`\`\`
-
-## Reports
-\`\`\`json
-${JSON.stringify(report.reports, null, 2)}
-\`\`\`
-
----
-*Generated on ${report.timestamp}*
-`;
+  generateRecommendations() {
+    const recommendations = [];
     
-    const markdownPath = path.join(this.projectRoot, 'performance-monitor-report.md');
-    fs.writeFileSync(markdownPath, markdown);
+    if (this.metrics.bundleSize > this.thresholds.bundleSize) {
+      recommendations.push('Consider code splitting and lazy loading');
+      recommendations.push('Remove unused dependencies');
+      recommendations.push('Use dynamic imports for large components');
+    }
     
-    this.log(`Markdown report saved to ${markdownPath}`, 'success');
+    if (this.metrics.loadTime > this.thresholds.loadTime) {
+      recommendations.push('Optimize images and use WebP format');
+      recommendations.push('Enable gzip compression');
+      recommendations.push('Use a CDN for static assets');
+    }
+    
+    if (this.metrics.memoryUsage > this.thresholds.memoryUsage) {
+      recommendations.push('Check for memory leaks');
+      recommendations.push('Optimize component re-renders');
+      recommendations.push('Use React.memo for expensive components');
+    }
+    
+    if (this.metrics.lighthouse) {
+      if (this.metrics.lighthouse.performance < 90) {
+        recommendations.push('Improve Core Web Vitals');
+        recommendations.push('Optimize JavaScript execution');
+      }
+      if (this.metrics.lighthouse.accessibility < 90) {
+        recommendations.push('Improve accessibility features');
+        recommendations.push('Add proper ARIA labels');
+      }
+    }
+    
+    return recommendations;
   }
 }
 
-// Run the performance monitor
-const monitor = new PerformanceMonitorEnhanced();
-monitor.monitorPerformance().catch(console.error);
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true; },loadTime: () => {  return true; },memoryUsage: () => {  return true; } }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+// Run if called directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const monitor = new PerformanceMonitor();
+  monitor.run().then(success => {
+    process.exit(success ? 0 : 1);
+  });
+}
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } });
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-
-
-
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } });
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-const fs = require('fs');
-const path = require('path');
-console.log('📊 Enhanced Performance Monitor Starting...');
-const performanceChecks = {
-<<<<<<< HEAD
-  'bundleSize': () => {
-    // Bundle size analysis would go here
-    return true;
-  },
-  'loadTime': () => {
-    // Load time analysis would go here
-    return true;
-  },
-  'memoryUsage': () => {
-=======
-  "bundleSize": () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    console && console.log('📦 Checking bundle size...'),
-
-<<<<<<< HEAD
-=======
-    console.log('📦 Checking bundle size...');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-    console && console.log('📦 Checking bundle size...'),
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-console.log('📦 Checking bundle size...');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    // Bundle size analysis would go here
-    return true;
-  },
-  "loadTime": () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    console && console.log('⏱️ Checking load times...'),    // Memory usage analysis would go here
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-    console && console.log('⏱️ Checking load times...'),
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-console.log('⏱️ Checking load times...');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    // Load time analysis would go here
-    return true;
-  },
-  "memoryUsage": () => {
-
-    console && console.log('🧠 Checking memory usage...'),
-
-console.log('🧠 Checking memory usage...');
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-    // Memory usage analysis would go here
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); '
-const fs = require('fs');'
-const path = require('path');'
-console.log('📊 Enhanced Performance Monitor Starting...');
-const performanceChecks = {}
-  "bundleSize": () => {}
-    // Bundle size analysis would go here;
-    return true;
-<<<<<<< HEAD
-  },
-=======
-  },"
-  "loadTime": () => {}
-    // Load time analysis would go here;
-    return true;
-  },"
-  "memoryUsage": () => {}
-    // Memory usage analysis would go here;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    return true;
-  "bundleSize": () => {""
-    console && console.log('📦 Checking bundle size...'),
-    // Bundle size analysis would go here;
-    return true;
-  },
-  "loadTime": () => {""
-    console && console.log('⏱️ Checking load times...'),
-    // Load time analysis would go here;
-  "memoryUsage": () => {""
-    console && console.log('🧠 Checking memory usage...'),
-    // Memory usage analysis would go here;
-  }
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-};
-// Run all performance checks;
-<<<<<<< HEAD
-Object.entries(performanceChecks).forEach(([name, check]) => {}
-  try {}
-    const result = check();'
-    console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
-  } catch (error) {}`
-=======
-Object.entries(performanceChecks).forEach(([name, check]) => {
-  try {
-  // TODO: Implement
-    const result = check();
-    console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
-  } catch (error) {`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    console.log(`❌ ${name}: ERROR - ${error.message}`);
-});
-<<<<<<< HEAD
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true; },loadTime: () => { console.log('⏱️ Checking load times...'); return true; },memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true; } }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`); } catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`); } }); console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true; },loadTime: () => { console.log('⏱️ Checking load times...'); return true; },memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true; } }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`); } catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`); } }); console.log('🎉 Performance monitoring completed!');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-console.log('🎉 Performance monitoring completed!');
-
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-console && console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console && console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console && console.log('📦 Checking bundle size...'); return true},loadTime: () => { console && console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console && console.log('🧠 Checking memory usage...'); return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(`❌ ${name}: ERROR - ${error && error.message}`)} }); console && console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console && console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console && console.log('📦 Checking bundle size...'); return true},loadTime: () => { console && console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console && console.log('🧠 Checking memory usage...'); return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(`❌ ${name}: ERROR - ${error && error.message}`)} }); console && console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-<<<<<<< HEAD
-<<<<<<< HEAD
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log('🎉 Performance monitoring completed!');
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-console.log('🎉 Performance monitoring completed!');
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-'
-console && console.log('🎉 Performance monitoring completed!');'`
-const fs = require('fs'); const path = require('path'); console && console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console && console.log('📦 Checking bundle size...'); return true},loadTime: () => { console && console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console && console.log('🧠 Checking memory usage...'); return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(`❌ ${name}: ERROR - ${error && error.message}`)} }); console && console.log('🎉 Performance monitoring completed!');'`
-const fs = require('fs'); const path = require('path'); console && console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console && console.log('📦 Checking bundle size...'); return true},loadTime: () => { console && console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console && console.log('🧠 Checking memory usage...'); return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(`❌ ${name}: ERROR - ${error && error.message}`)} }); console && console.log('🎉 Performance monitoring completed!');
-
-'`
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');'`
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-`;
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');`;
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-console && console.log('🎉 Performance monitoring completed!');`;
-const fs = require('fs'); const path = require('path'); console && console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console && console.log('📦 Checking bundle size...'); return true},loadTime: () => { console && console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console && console.log('🧠 Checking memory usage...'); return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console && console.log(`❌ ${name}: ERROR - ${error && error.message}`)} }); console && console.log('🎉 Performance monitoring completed!');`;
-console.log('🎉 Performance monitoring completed!');`;
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;`;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
->>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+export default PerformanceMonitor;

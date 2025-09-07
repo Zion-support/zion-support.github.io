@@ -1,11 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import OpenAI from 'openai';
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json($2);
-  const { moduleTitle, moduleContent } = req.body || {},
-
-=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed'}
+});
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51,7 +48,8 @@ export default async function handler() {if (req.method !== 'POST') return res.s
             'Legacy ERP';
           ];
           answerIndex: 1;
-        }
+
+}
           question: 'What does DAO commonly refer to?';
           options: [;
             'Data Access Object';
@@ -121,99 +119,6 @@ export default async function handler() {if (req.method !== 'POST') return res.s
           options: ['Whitepaper + governance docsNovelRecipe bookNone'],
           answerIndex: 0}]})
   },
-
-  if (!apiKey) return fallback($2);
-  try {
-        {
-          role: 'system',
-=======
-}
-  if (!apiKey) return fallback()
-  try {}
-    const client = new OpenAI({ apiKey })
-    const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-          content: 'You are an expert course designer for founders.',
-        },
-        { role: 'user', content: prompt },
-      ],
-    const client = new OpenAI($2);
-    const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`,
-=======
-=======
-  const fallback = () => {}
-    return res && res.status(200).json({}
-      questions: []
-        {}
-          options: ['
-            'Random Ops''
-            'Zion OS mission''
-            'Unrelated finance''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-            'Legacy ERP'
-          ]
-          answerIndex: 1;
-        }'
-          question: 'What does DAO commonly refer to?'
-          options: ['
-            'Data Access Object''
-            'Decentralized Autonomous Organization''
-            'Digital Asset Option''
-            'Dynamic Allocation Output'
-          ]
-          answerIndex: 1;
-        }
-        {'
-          question: 'What should be configured during deployment?'
-          options: ['
-            'Genesis Deploy Kit & modules''
-            'Only UI colors''
-            'Nothing''
-            'Random plugins'
-          ]
-          answerIndex: 0;
-        }
-        {'
-          question: 'Who are key community roles to hire?'
-          options: ['
-            'Moderators, educators, ambassadors''
-            'Astronauts''
-            'Comedians''
-            'No one'
-          ]
-          answerIndex: 0;
-        }
-        {'
-          question: 'Which docs are needed for launch?'
-          options: ['
-            'Whitepaper + governance docs''
-            'Novel''
-            'Recipe book''
-            'None'
-          ]
-          answerIndex: 0;
-        }
-<<<<<<< HEAD
-      ]
-    })
-};          question: 'Which docs are needed for launch?';
-=======
-      ]'
-    });  };          question: 'Which docs are needed for launch?';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-          options: ['Whitepaper + governance docsNovelRecipe bookNone'];
-          answerIndex: 0}]})
-            'Whitepaper + governance docs',
-            'Novel',
-            'Recipe book',
-            'None',
-          ],
-          answerIndex: 0,
-        },
-      ],
-    });
-origin/cursor/automate-test-improve-and-merge-code-2533
-  };
 
   if (!apiKey) return fallback();
   try {}

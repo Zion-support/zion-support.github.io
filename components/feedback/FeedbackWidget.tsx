@@ -1,87 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}'
-import React, { useMemo, useState } from 'react';'
-import { v4 as uuidv4 } from 'uuid';
-
-  responseId;
-  aiModel'
-}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {};
-  responseId?: string;
-  aiModel?: string;
-}
-export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {}
-  responseId,;
-  aiModel,;'
-}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {;
-  responseId?: string;
-  aiModel?: string;
-};
-
-<<<<<<< HEAD
-export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {;
-export type FeedbackWidgetProps = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const [rating, setRating] = useState<null | 'up' | 'down'>(null);
-  const [comment, setComment] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-const effectiveResponseId = useMemo(
-    () => responseId || uuidv4(),
-    [responseId]
-  const [rating, setRating] = useState<null | 'up' | 'down'>(null);
-  const [comment, setComment] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const effectiveResponseId = useMemo(;
-    () => responseId || uuidv4(),;
-    [responseId];
-  );
-  const submit = async () => {;
-    if (!rating) {;
-      setError('Please choose 👍 or 👎');
-          aiModel})});
-=======
-export default function FeedbackWidget() { return null; }
-          aiModel})});'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      if (!res.ok) throw new Error('Failed to submit feedback');
-      setSubmitted(true)
-    } catch (e: any) {'
-      setError(e?.message |'Something went wrong')
-    } finally {}
-      setSubmitting(false)
-    }
-  }
-  };
-=======
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) ;}
@@ -95,17 +11,7 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-  responseId
-  aiModel
-}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
-  responseId?: string;
-import { v4 as uuidv4 } from 'uuid';
-export type FeedbackWidgetProps = $2;
-  aiModel?: string
-},
+export type FeedbackWidgetProps = any;
 
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
   const [rating, setRating] = useState<null | 'up' | 'down'>(null),
@@ -222,6 +128,7 @@ rating,
               : undefined;}
 aiModel}
         })
+
 });
       if (!res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true);
@@ -318,13 +225,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       )}
-;
-export type FeedbackWidgetProps = {};
-  response_id?: string;
-  ai_model?: string;
+export type FeedbackWidgetProps = {response_id?: string;}
+  ai_model?: string;}
 }
 }
-;
 export default /**;
  * FeedbackWidget - Function description;
  */
@@ -431,28 +335,12 @@ if ( {) {$2;
               : undefined,ai_model,}),})if (throw new Error ('Failed to submit feedback')) {$2;
 }
       set_submitted (true)} catch (e: any) {set_error (e?.message || 'Something went wrong')} finally {set_submitting (false)}
-<<<<<<< HEAD
-  }return (<div className='mt - 6 rounded - lg border p - 4 bg - white / 60 dark:bg - neutral - 900 / 60'>;
-      <div className='text - sm font - medium mb - 2'>Was this answer useful?</div>          comment: comment.trim (),page_path: typeof window !== 'undefined' ? window.location.pathname : undefined,ai_model})})if (throw new Error ('Failed to submit feedback')) {$2;
-}
-      set_submitted (true)} catch (e: any) {set_error (e?.message || 'Something went wrong')} finally {set_submitting (false)}
-  }return (<div className='mt - 6 rounded - lg border p - 4 bg - white / 60 dark:bg - neutral - 900 / 60'>;
-      <div className='text - sm font - medium mb - 2'>Was this answer useful?</div>;
-      {submitted ? (<div className='text - sm text - emerald - 700 dark:text - emerald - 300'>;
-          Thanks for your feedback!;
-        </div>) : (<div className='space - y-3'>;
-          <div className='flex items - center gap - 2'>;
-            <button;
-              type='button'              on_click={() => set_rating (rating === 'up' ? null : 'up')}      {submitted ? (<div className="text - sm text - emerald - 700 dark:text-emerald-300">Thanks for your feedback!</div>) : (<div className="space-y-3">;
-          <div className="flex items-center gap-2">;
-            <button;
-              type="button";
-              on_click={() => set_rating (rating === 'up' ? null : 'up')}
-=======
+
 }return (<div className='mt - 6 rounded - lg border p - 4 bg - white / 60 dark:bg - neutral - 900 / 60' />;
       <div className='text - sm font - medium mb - 2' />Was this answer useful?</div>          comment: comment.trim (),page_path: typeof window !== 'undefined' ? window.location.pathname : undefined,ai_model})})if (throw new Error ('Failed to submit feedback')) {$2;}
 }
       set_submitted (true)} catch (e: any) {set_error (e?.message || 'Something went wrong')} finally {set_submitting (false)}
+
 }return (<div className='mt - 6 rounded - lg border p - 4 bg - white / 60 dark:bg - neutral - 900 / 60' />;
       <div className='text - sm font - medium mb - 2' />Was this answer useful?</div>;
       {submitted ? (<div className='text - sm text - emerald - 700 dark:text - emerald - 300' />;
@@ -622,6 +510,7 @@ if ( {) {$2;
     setError(null),setSubmitting(true),try {const res = await fetch('/api/feedback/submit', {method: 'POST'}
   headers: { 'Content-Type': 'application/json'}
 },body: JSON.stringify({responseId: effectiveResponseId,rating,comment: comment.trim(),pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,aiModel})}),if (!res.ok) throw new Error('Failed to submit feedback'),setSubmitted(true)} catch (e: any) {setError(e?.message || 'Something went wrong')} finally {setSubmitting(false)}
+
 };"
   return (<div className=\"mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60\" />;"
       <div className=\"text-sm font-medium mb-2\" />Was this answer useful?</div>;"

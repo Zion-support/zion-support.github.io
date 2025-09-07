@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 import { ADMIN_TYPES, AdminType, ListParams  } from '../../../utils/admin/types';
 import { v4 as uuidv4  } from 'uuid';
 import { supabase as client  } from '../../../utils/supabase/client';
@@ -96,24 +95,10 @@ return '"' + s.replace(/"/g, '""') + '"';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
 
-    filters
-    format: (format as any) |undefined}
-
-}
-function toCsv(rows: any[]): string {
-
-  if (!rows && rows.length) return '';
-  const headers = Object && Object.keys(rows[0]);
-  const escape = (v: any) => {
-    if (v === null || v === undefined) return '';
-    const s = typeof v === 'string' ? v : JSON && JSON.stringify(v);
-    return '"' + s && s.replace(/"/g, '""') + '"';
-  };
-  const lines = [headers && headers.join(',')].concat(
-    rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(','))
+const lines = [headers.join(',')].concat(
+    rows.map(r => headers.map(h => escape(r[h])).join(','))
   );
   return lines.join('\n');
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse

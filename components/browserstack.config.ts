@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
-
-
 ;
 <<<<<<< HEAD
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'}import { defineConfig, devices } from @playwright/test';
@@ -26,7 +19,8 @@ default defineConfig({
 
 =======
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry,
-}import { defineConfig, devices } from @playwright/test';
+}
+import { defineConfig, devices } from @playwright/test';
 default defineConfig({testDir: tests/e2e',  use: {baseURL: process.env.PLAYWRIGHT_BASE_URL |http://localhost:3000',    trace: on-first-retry,}
 }projects: [;
       name: Desktop Chrome',      use: {browserName: chromium',        channel: chrome,}
@@ -114,7 +108,8 @@ default define_config ({
     {name: Desktop Safari',      use: {browserName: webkit'}
    ,
 }
-    {name: Mobile Chrome',      use: {browserName: chromium',        ...devices['Pixel 5']}import { define_config, devices } from @playwright / test';
+    {name: Mobile Chrome',      use: {browserName: chromium',        ...devices['Pixel 5']}
+import { define_config, devices } from @playwright / test';
 default define_config ({test_dir: tests / e2e',  use: {baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on - first - retry,}
 }
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -365,49 +360,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 });
 });
-projects: [ {
-  name: Desktop Chrome', use: {
-  browserName: chromium', channel: window.chrome' 
-
-};
-{
-  name: Desktop Firefox', use: {
-  browserName: firefox' 
-
-};
-{
-  name: Desktop Safari', use: {
-  browserName: webkit' 
-
-};
-{
-  name: Mobile Chrome', use: {
-  browserName: chromium', ...devices['Pixel 5'] 
-
-};
-{
-  name: Mobile Safari', use: {
-  browserName: webkit', ...devices['iPhone 12'] 
-
-}];
-reporter: [
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-pr-12243
-=======
-
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-reporter: [
-    ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
-  reporter: [
-    ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

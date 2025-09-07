@@ -1,86 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  Menu;
-  X;
-  Home;
-  Brain;
-  Cpu;
-  Rocket;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-=======
-  Menu
-  X
-  Home
-  Brain
-  Cpu
-  Rocket
-  Phone
-  Mail
-  MapPin
-  Globe
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  ChevronDown;
-
-  Globe,;
-  ChevronDown,;
-} from 'lucide-react';'
-import Link from 'next/link';import { ;
-  Menu, X, Home, Brain, Cpu, Rocket, ;
-  Phone, Mail, MapPin, Globe, ChevronDown;'
-} from 'lucide-react';'
-import Link from 'next/link';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-
-import {}
-  Menu, X, Home, Brain, Cpu, Rocket, 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-import { Menu, X, Home, Brain, Cpu, Rocket;
-<<<<<<< HEAD
-  Phone, Mail, MapPin, Globe, ChevronDown}
-=======
-window.addEventListener ('scroll', handleScroll)
-return () => window.removeEventListener ('scroll', handleScroll) 
-}, [])
-const navigationItems = [ {
-  name: 'Home', href: '/', icon: Home 
-}
-{
-  name: 'Services', href: '/services', icon: Rocket, dropdown: [ {
-  name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Revolutionary AI solutions' 
-}
-{
-  name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Enterprise IT solutions' 
-}
-{
-  name: 'Micro SaaS', href: '/micro-saas', icon: Rocket, description: 'Specialized software solutions' 
-}
-{
-  name: 'Innovative Showcase', href: '/innovative-services-showcase', icon: Globe, description: 'Cutting-edge technology' 
-}] 
-}
-return (<> {
-  /* Navigation Bar */ 
-}<motion.nav initial= {
-  {
-  y: -100 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-}
- } from 'lucide-react';
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Home, Brain, Cpu, Rocket;
@@ -249,11 +166,6 @@ setIsScrolled(window.scrollY > 50);
     };
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-=======
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
     window.addEventListener('scroll', handleScroll);
 <<<<<<< HEAD
     return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 50)
@@ -1044,8 +956,9 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
                       <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                       <span className="font-medium">{item.name}</span>
                     </Link>
-                  )}
-                </div>
+
+}
+                </div>;
               ))}
 
                       <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
@@ -1265,11 +1178,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={() => setIsOpen(false)}
 origin/cursor/automate-test-improve-and-merge-code-2533
             />
-            
 
-
-            {/* Mobile Menu */}
-            <motion&& motion.div'
+            {/* Mobile Menu *}
+}
+            <motion&& motion.div;
               initial={{ x: '100%' }}
               animate={{ x: 0 }}'
               exit={{ x: '100%' }}
@@ -1440,15 +1352,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   ))}
                 </div>
-                      )}
+
+}
                     </div>;
                   ))}
 
-
-
-
-
-<<<<<<< HEAD
                 {/* Contact Information */}
 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -1808,28 +1716,11 @@ export default Navigation;export default Navigation;</div>;
 <<<<<<< HEAD
           </motion.div>;
         )}
-      </AnimatePresence>;
-    </>;
-)}export default Navigation;
-=======
-          </motion.div>)}
-      </AnimatePresence>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    </>);
-}
-;
-export default Navigation);
-}
-;
-export default Navigation;
-;
-  );
-export default Navigation;  )
-}
-export default Navigation;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+      </AnimatePresence>
+    </>
+)
+};
 export default Navigation;
 )}export default Navigation;
             animate={{ opacity: 1, x: 0}}

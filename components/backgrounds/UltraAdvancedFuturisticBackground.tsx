@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 interface UltraAdvancedFuturisticBackgroundProps  {children: React.ReactNode;
@@ -28,9 +6,10 @@ interface UltraAdvancedFuturisticBackgroundProps  {children: React.ReactNode;
   particleCount?: number;
   animationSpeed?: number;
   enableHolographic?: boolean;
-<<<<<<< HEAD
-  enableQuantumEffects?: boolean;
-}export default function UltraAdvancedFuturisticBackground({children;
+  enableQuantumEffects?: boolean;}
+}
+}
+export default function UltraAdvancedFuturisticBackground({children;
   intensity;
 <<<<<<< HEAD
 canvas.width = window.innerWidth;
@@ -42,7 +21,6 @@ for (let i = 0, i < count, i++) {
   particles.push ({
 =======
 
-<<<<<<< HEAD
 export default function UltraAdvancedFuturisticBackground({
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -1643,11 +1621,10 @@ for (let i = 0; i < 20; i++) {
         }
       }
       animationRef.current = requestAnimationFrame(animate)
-<<<<<<< HEAD
-=======
-    }
-    // Handle window resize
-    const handleResize = () => {
+};
+
+    // Handle window resize;
+const handleResize = (
       canvas.width = window.innerWidth;
 <<<<<<< HEAD
 canvas.height = window.innerHeight) => {
@@ -1656,30 +1633,6 @@ canvas.height = window.innerHeight) => {
 <<<<<<< HEAD
 };
 
-=======
-      canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
-    }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-          ctx.stroke();
-        }
-      }
-
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    // Handle window resize
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-    };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      animationRef.current = requestAnimationFrame(animate)'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     window.addEventListener('resize', handleResize);
     initParticles();
     animate();
@@ -2049,127 +2002,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
 );
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-  return (
-    <div className="relative min-h-screen">
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: -1 }}
-      />
-      
-      {/* Additional futuristic overlay effects */}
-      {enableHolographic && (
-        <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.03),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.03),transparent_50%)]" />
-        </div>
-      )}
-      
-      {enableQuantumEffects && (
-        <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.02),transparent_70%)]" />
-        </div>
-      )}
-      
-      {children}
-    </div>);
-  );
-    </div>))</div>;
-)}
-    </div>
-  )
-}
-=======
-  ])
-    <div className='relative min - h-screen'>
-      <canvas
-        ref={canvas_ref}
-        className='fixed inset - 0 w - full h - full pointer - events - none'
-        style={{ z_index: -1 ,}
-
-         />
-      {/* Additional futuristic overlay effects */}
-
-          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]' />
-        </div>)}
-      {enableQuantumEffects && (
-        <div;'
-          className='fixed inset - 0 pointer - events - none'
-          style={{ z_index: -1 }}
-        >;'
-          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.02), transparent_70%)]' />
-        </div>)}
-      {children}
-    </div>);      }
-
-  }, [intensity, theme, particle_count, animation_speed, enable_holographic, enableQuantumEffects])
-  return (
-      {/* Additional futuristic overlay effects */}
-      {enableHolographic && (
-        <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>;"
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5" />;"
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0 && 0.03),transparent_50%)]" />;"
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.03),transparent_50%)]" />
-        </div>
-      )}
-          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]' />
-    </div>
-);
-}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-}
-//Enhanced animation loop with quantum effects ctx.fillStyle = gradient
-ctx.fillRect (0, 0, canvas.width, canvas.height)
-//Update and draw particles with enhanced effects //Update position with quantum effects particle.x += particle.vx
-particle.y += particle.vy
-particle.rotation += particle.rotationSpeed
-//Quantum entanglement effect 
-}
-}//Bounce off edges with quantum tunneling if (particle.x <= 0 || particle.x >= canvas.width) {
-  if (enableQuantumEffects && Math.random () < 0.1) {
-  //Quantum tunneling effect 
-}if (particle.y <= 0 || particle.y >= canvas.height) {
-  if (enableQuantumEffects && Math.random () < 0.1) {
-  //Quantum tunneling effect 
-}//Wrap around edges if (particle.x < 0) particle.x = canvas.width
-if (particle.x > canvas.width) particle.x = 0
-if (particle.y < 0) particle.y = canvas.height
-if (particle.y > canvas.height) particle.y = 0
-//Draw particle with enhanced effects ctx.save ()
-ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife)
-ctx.translate (particle.x, particle.y)
-ctx.rotate (particle.rotation)
-ctx.restore () 
-})
-//Add quantum field effects 
-}
-}//Add holographic matrix effect 
-}animationRef.current = requestAnimationFrame (animate) 
-}
-//Handle window resize window.addEventListener ('resize', handleResize)
-initParticles ()
-animate ()
-return (<div className="relative min-h-screen" > <canvas </div>) 
-}{
-  children 
-}</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

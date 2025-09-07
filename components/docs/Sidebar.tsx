@@ -1,6 +1,3 @@
-
-;
-
 import React from 'react';
 <<<<<<< HEAD
 import { ApiDocsSpec, Visibility  } from '../../data/api-docs/types';
@@ -14,27 +11,9 @@ interface SidebarProps  {spec: ApiDocsSpec;
   onChangeVersion: (v: string) => void;
   visibilityFilter: Visibility | 'all';
 
-<<<<<<< HEAD
-  return (
-            <button
-              key={v}
-              onClick={() => onChangeVersion(v)}
-              className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
-  onChangeVisibility: (v: Visibility | 'all') => void;
-}export default function Sidebar() {return (<button;
-              key={v}
-              onClick={() => onChangeVersion(v)}
-              className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}<nav className="space-y-3">;
-        {spec.sections.map((section) => (<div key={section.id}>;
-            <div className="text-sm font-medium mb-1">{section.title}</div>;
-            <ul className="space-y-1">;
-              {section.endpoints;
-                .filter((e) => e.versions.includes(selectedVersion)).filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter).map((e) => (<li key={e.id}>;
-            >;
-              {v}
-=======
-
-
+  onChangeVisibility: (v: Visibility | 'all') => void}
+}
+}
 export default function Sidebar({
   spec;
 activeEndpointId,
@@ -194,44 +173,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   onChangeVersion: (v: string) => void;'
   visibility_filter: Visibility | 'all';'
   onChangeVisibility: (v: Visibility | 'all') => void;
-<<<<<<< HEAD
-;
-export default /**;
- * Sidebar - Function description;
- */
-function Sidebar() {}
-  return ('
-    <aside className='w - 72 shrink - 0 h - full overflow - auto border - r border - high - contrast - secondary p - 3 space - y-4 bg - high - contrast - secondary'>;
-      <div>;'
-        <div className='text - lg font - semibold'>Zion OS API</div>;'
-        <div className='text - xs text - high - contrast - muted'>Version</div>;'
-        <div className='flex gap - 2 mt - 2 flex - wrap'>;
-          {spec.versions.map (v => (
-            <button;
-              key={v}
-              on_click={() => onChangeVersion (v)}'`
-              className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}
-            >;
-<<<<<<< HEAD
-              {v}
-            </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>;
-        <div className="text - xs text - high-contrast-muted">Version</div>;
-        <div className="flex gap - 2 mt-2 flex-wrap">;
-          {spec.versions.map ((v) => (
-=======
-              {v}"
-            </button>          ))}        <div className="text - lg font - semibold">Zion OS API</div>;"
-        <div className="text - xs text - high - contrast - muted">Version</div>;"
-        <div className="flex gap - 2 mt - 2 flex - wrap">;
-          {spec.versions.map ((v) => ('`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-            <button key={v} on_click={() => onChangeVersion (v)} className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}>{v}</button>;
-        </div>;
-      </div>;
-      <div>;'
-        <div className='text - xs text - high - contrast - muted mb - 1'>;
-=======
-
 export default /**;
  * Sidebar - Function description;
  */;

@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 =======
@@ -26,17 +7,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
-<<<<<<< HEAD
-export type StartMode = 'video' | 'audio';
-
-<<<<<<< HEAD
-type Props = {
-  projectId: string,
-=======
-
-=======
 export type StartMode = any;
-<<<<<<< HEAD
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -58,19 +29,6 @@ import { Room;
 <<<<<<< HEAD
   VideoPresets;
   Room,RoomEvent,RemoteParticipant,LocalParticipant,createLocalTracks,VideoPresets,} from 'livekit-client';
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  VideoPresets;
-  Room,
-  RoomEvent,
-  RemoteParticipant,
-  LocalParticipant,
-  createLocalTracks,;
-  VideoPresets,;
-} from 'livekit-client';'
-import ParticipantTile from './ParticipantTile';'
-import Controls from './Controls';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export type StartMode = 'video' | 'audio';
   projectId: string;
   userId: string;
@@ -89,35 +47,6 @@ import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
 
 
-};
-
-export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
-
-
-  const [room, setRoom] = useState<Room | null>(null);
-  const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
-  const [connectedAt, setConnectedAt] = useState<number | null>(null);
-export type StartMode = $2;
-type Props = $2;
->>>>>>> origin/main
-  userId: string,
-  displayName: string,
-  roomName: string,
-  serverUrl: string,
-  token: string,
-  startMode: StartMode,
-  onLeave?: (durationSec: number) => void
-};
-
-export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
-  const [room, setRoom] = useState<Room | null>(null);
-  const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
-  const [connectedAt, setConnectedAt] = useState<number | null>(null);
-
-  const connect = useCallback(async () => {
-    const r = new Room();
-
-=======
 };
 export default function CallRoom(): any ({;
   projectId,;
@@ -332,9 +261,10 @@ const list: Array<RemoteParticipant | LocalParticipant> = [
       r.localParticipant,
       ...Array.from(r.participants.values()),
     ];
-    setParticipants(list);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  };
+    setParticipants(list)) => {
+  return $3;}
+}
+};
 
   useEffect(() => {
     connect();
@@ -454,8 +384,13 @@ const list: Array<RemoteParticipant | LocalParticipant> = [;
     onLeave?.(durationSec)
   };
 
-  const gridCols = useMemo(() => {
-    const count = participants.length || 1;
+const gridCols = useMemo(() => {
+   ;
+  const count = participants.length |1;
+
+const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
+    onLeave?.(durationSec)const gridCols = useMemo(() => ;
+  const count = participants && participants.length || 1;
     if (count <= 1) return 'grid-cols-1';
     if (count === 2) return 'grid-cols-2';
     if (count <= 4) return 'grid-cols-2 md: grid-cols-2',
@@ -1074,15 +1009,4 @@ rebuild (r)
       </div>
     </div>
   );
-<<<<<<< HEAD
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
 }
-<<<<<<< HEAD
-'"`
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

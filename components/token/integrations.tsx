@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import dynamic from 'next/dynamic',
-import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic';,
 import React, { useEffect, useState } from 'react';
 =======
 <<<<<<< HEAD
@@ -69,8 +65,7 @@ const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'),
 export default function TokenIntegrationsPage() {;
 
 );
-export default function TokenIntegrationsPage() {
-origin/cursor/automate-test-improve-and-merge-code-2533
+export default function TokenIntegrationsPage() {}
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
 =======
@@ -501,13 +496,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-gray-500">Alternatives: {suggestion.alternatives.map((a: any) => a.chain.name).join(';, ')}</div>
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-      <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">
-        <h2 className="text-lg font-semibold">Operator AI Actions</h2>
-        <p className="text-sm text-gray-600 dark:text-gray-300">Based on your region and stake, we suggest the best chain for ZION$.</p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <div className="flex flex-col gap-1">
-            <label className="text-xs text-gray-500">Region</label>
-            <input value={region} onChange={(e) => setRegion(e.target.value)} placeholder="e.g., US, EU, APAC" className="border rounded px-3 py-2 bg-white dark:bg-black" />
+<section className='space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800' />
+        <h2 className='text-lg font-semibold' />Operator AI Actions</h2>
+        <p className='text-sm text-gray-600 dark:text-gray-300' />
+          Based on your region and stake, we suggest the best chain for ZION$.
+        </p>
+        <div className='grid grid-cols-1 md: grid-cols-3 gap-3' />
+          <div className='flex flex-col gap-1' />
+            <label className='text-xs text-gray-500' />Region</label>
+            <input;
+value={region}
+              onChange={e = /> setRegion(e.target.value}
+}
+              placeholder='e.g., US, EU, APAC'
+              className='border rounded px-3 py-2 bg-white dark: bg-black'
+            />
           </div>
           <div className="flex flex-col gap-1">
             <label className="text-xs text-gray-500">Stake (USD)</label>

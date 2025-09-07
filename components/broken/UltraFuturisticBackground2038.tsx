@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 =======
@@ -36,9 +26,17 @@ interface UltraFuturisticBackground2038Props {
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'space' | 'consciousness',
   children?: React.ReactNode
 }
-
-<<<<<<< HEAD
-export default function UltraFuturisticBackground2038({ 
+export default function UltraFuturisticBackground2038({ }
+  intensity;}
+import { motion } from 'framer-motion';
+  intensity?: 'low' | 'medium' | 'high';
+  theme?:
+    | 'quantum'
+    | 'neon'
+    | 'holographic'
+    | 'cyberpunk'
+    | 'space'
+    | 'consciousness';
 
 export default function UltraFuturisticBackground2038(): any ({intensity = 'medium',theme = 'consciousness',children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038(): any ({intensity = 'medium';
   theme = 'consciousness';
@@ -46,8 +44,14 @@ export default function UltraFuturisticBackground2038(): any ({intensity = 'medi
 import { motion   } from 'framer-motion';
 interface UltraFuturisticBackground2038Props  {intensity?: 'low' | 'medium' | 'high',theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'space' | 'consciousness';
   children?: React.ReactNode;
-}export default function UltraFuturisticBackground2038() {const canvasRef = useRef<HTMLCanvasElement>(null)const containerRef = useRef<HTMLDivElement>(null)useEffect(() => {const canvas = canvasRef.current;
-    if (!canvas) return;const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)';
+}
+export default function UltraFuturisticBackground2038() {const canvasRef = useRef<HTMLCanvasElement />(null)const containerRef =;
+  useRef<HTMLDivElement />(null;
+  useEffect(() => ;
+  const canvas = canvasRef.current;
+    if (!canvas) return;
+
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)';
     ).matches;
 export default function UltraFuturisticBackground2038(): any ({;
   intensity = 'medium',;
@@ -394,8 +398,48 @@ primary: [
             ]
 origin/cursor/automate-test-improve-and-merge-code-2533
           }
+
+}
+;
+  const colors  = getThemeColors()case 'cyberpunk':;
+          return {primary: [;
+              '#ff0055';
+              '#00ffff';
+              '#ffff00';
+              '#ff00ff';
+              '#8000ff';
+              '#00ff80'
+];
+
+            secondary: [;
+              '#ff8000';
+              '#0080ff';
+              '#ff4080';
+              '#40ffff';
+              '#ffff40';
+              '#ff40ff'
+];
+
+            accent: [;
+              '#ffff40';
+              '#ff40ff';
+              '#ff6b6b';
+              '#4ecdc4';
+              '#45b7d1';
+              '#96ceb4'
+];
+
+            quantum: [;
+              '#8b5cf6';
+              '#06b6d4';
+              '#ec4899';
+              '#10b981';
+              '#f59e0b';
+              '#ef4444'
+];}
+}
           }
-    const colors = getThemeColors();
+
         case 'cyberpunk':
           return {
             primary: [
@@ -1538,12 +1582,8 @@ particle.quantumState = Math.random() * Math.PI * 2;
       });
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      requestAnimationFrame(animate);
-    };
+      requestAnimationFrame(animate)
+};
 
     initParticles();
     animate();
@@ -2230,21 +2270,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   left: `${(i * 12) % 10}
 }%`
-
-                }}
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-                animate={{}
-                  scale: [1, 1.5, 1]
-                  opacity: [0.2, 0.6, 0.2]
-                }}
-                transition={{}
-                  duration: 6 + i * 0.5;
-                  repeat: Infinity;`
-                  top: `${(i * 8) % 100}%`,
 
                 }}
                 animate={{}

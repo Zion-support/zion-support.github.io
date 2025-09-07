@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-  life: number;children: React.ReactNode;
-  children,}: {children: React.ReactNode;
-}) {  const canvasRef = useRef<HTMLCanvasElement>(null)const particlesRef = useRef<Particle[]>([])const energyFieldsRef = useRef<EnergyField[]>([])const animationRef  = useRef<number | undefined>(undefined)interface EnergyField  {x: number,y: number,radius: number,intensity: number,color: string,pulse: number;
-}export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {export default function UltraFuturisticBackground2029() {maxLife: number;
-}interface EnergyField  {x: number;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-interface Particle {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-  x: number;
+x: number;
   y: number;
   vx: number;
   vy: number;
@@ -88,8 +74,11 @@ interface EnergyField {;
   color: string,;
   pulse: number;
 }
-
-export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode}
+}) {
+  const canvasRef = null;
+            ease: \"easeInOut\"
+  const canvasRef = useRef<HTMLCanvasElement />(null);
 
 
 
@@ -129,26 +118,17 @@ interface Particle {
   maxLife: number}
 >>>>>>> origin/main
 
-interface EnergyField {
-  x: number,
-  y: number,
-=======
-
-interface EnergyField {}
-  coordinate_x: number,
-  coordinate_y: number,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  radius: number,
-  intensity: number,
-  color: string,
-<<<<<<< HEAD
-  pulse: number
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    // Mouse move handler for interactive effects;
+const handleMouseMove = (
+) => {
+  return $3;}
 }
 =======
 
 setMousePosition({ x: e.clientX, y: e.clientY });
     };
-
 
     window.addEventListener('mousemove', handleMouseMove);
     // Initialize particles with different types
@@ -313,7 +293,12 @@ type,
       for (let i = 0, i < 8, i++) {
 =======
       particlesRef.current = particles;
-    };
+};
+
+    // Initialize energy fields;
+const initEnergyFields = (
+     ;
+  const fields: EnergyField[] = [];
 
     // Initialize energy fields
     const initEnergyFields = () => {
@@ -356,13 +341,8 @@ pulse: Math.random() * Math.PI * 2,
       }
 
       energyFieldsRef.current = fields;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    };
+};
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      particlesRef.current = particles;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     initParticles();
     initEnergyFields();
 <<<<<<< HEAD
@@ -559,9 +539,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
         // Draw particle with type-specific effects;
-        ctx.save();
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+ctx.save();
 
         switch (particle.type) {
           case 'energy':
@@ -996,7 +974,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
 
       animationRef.current = requestAnimationFrame(animate)
-    };
+};
 
     animate();
 
@@ -1203,28 +1181,9 @@ ease: 'easeInOut',
 
           }}
 
-
             duration: 10,
             repeat: Infinity,
 
-
-            ease: "easeInOut"
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-          }}
-=======
-ease: 'easeInOut',
-origin/cursor/automate-test-improve-and-merge-code-2533
-          }}
-
-
-            duration: 10,
-            repeat: Infinity,
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         />
       </div>
 

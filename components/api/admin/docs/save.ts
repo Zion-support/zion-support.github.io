@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-<<<<<<< HEAD
-const ts = new Date () .toISOString ()
-export default function handler(req: NextApiRequest, res: NextApiResponse) {}
-  if (req && req.method !== 'POST') {';
-    return res && res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next';
-'
-import type { NextApiRequest, NextApiResponse } from 'next';
-'
-import fs from 'fs';'
-import path from 'path';
-function ensureDir(dir: string) {}
-  if (!fs && fs.existsSync(dir)) {}
-    fs && fs.mkdirSync(dir, { recursive: true })
-  }
-}
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -185,22 +162,52 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     res && res.status(500).json({ error: 'Failed to save content' });
 const ts = new Date () .toISOString ();
-export default /**;
+export default /**
  * handler - Function description;
  */
 function handler() {}
   // Check condition;
 if ( {) {}
-  $2;
-}'
-    return res.status (405).json ({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs';'
-import path from 'path';'
-const DOCS_DIR = path.join (process.cwd (), 'datadocs');'
-const CONTENT_PATH = path.join (DOCS_DIR, 'content.json');'
+  $2}
+}
+    return res.status (405).json ({ error: 'Method Not Allowed',}
+});  }
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+const DOCS_DIR = path.join (process.cwd (), 'datadocs');
+
+const CONTENT_PATH = path.join (DOCS_DIR, 'content.json');
+
 const VERSIONS_DIR = path.join (DOCS_DIR, 'versions');
 ;
-/**
+
+const ts = new Date () .toISOString ()export default function handler() {if (req && req.method !== 'POST') ;}
+  return res && res.status(405).json({ error: 'Method Not Allowed' },
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+function ensureDir() {if (!fs && fs.existsSync(dir)) {fs && fs.mkdirSync(dir, { recursive: true })},
+}
+
+    fs.mkdir_sync (dir, { recursive: true,}
+});
+  }
+  } catch (e) {}
+    res.status (500).json ({ error: 'Failed to save content',}
+});
+  }
+
+}
+    return res.status (405).json ({ error: 'Method Not Allowed' },
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+const DOCS_DIR = path.join (process.cwd (), 'datadocs')const CONTENT_PATH = path.join (DOCS_DIR, 'content.json';
+  const VERSIONS_DIR  = path.join (DOCS_DIR, 'versions')/**;
  * ensure_dir - Function description;
  */
 function ensure_dir() {}

@@ -10,64 +10,8 @@ import React from 'react',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
-import {
-  Rocket
-  Brain
-  Atom
-  Zap
-  Sparkles
-  Shield
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Linkedin
-  Twitter
-  Facebook
-  Instagram
-  Youtube
-  Github
-  CheckCircle
-  Award
-  Star
-  Crown
-  Gem
-  Infinity
-  Heart
-  ShieldCheck
-  Users
-  Briefcase
-  BookOpen
-  Target
-  Microscope
-  Cpu
-  Database
-  Cloud
-  Lock
-  Home
-  Building
-  DollarSign
-  FileText
-  MessageSquare
-  MessageCircle
-  Newspaper
-  Handshake
-  LifeBuoy
-  Activity
-  ShoppingCart
-  UserCheck
-  BarChart
-  Palette
-  Video
-  LockIcon
-  GlobeIcon
-  CpuIcon;} from 'lucide-react';import {
-  Rocket, Brain, Atom, Zap, Sparkles, Shield
-=======
-import Link from 'next/link';'
-import { motion } from 'framer-motion';
+import { Rocket, Brain, Atom, Zap, Sparkles, Shield;
+  Phone, Mail, MapPin, Globe, ArrowRight;
 
 import {};
   Rocket;
@@ -732,7 +676,6 @@ const stats = [
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];
-
 export default function UltraFuturisticFooter2034() {
   return (
 <footer className = 'bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden' />
@@ -1245,63 +1188,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-                </div>;
-                {/* Contact Info */}
-<div className='space-y-3'>;
-                  <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>;
-                    <Phone className='w-4 h-4' />;
-                    <span>{contactInfo.mobile}</span>;
-                  </div>;
-                  <div className='flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors'>;
-                    <Mail className='w-4 h-4' />;
-                    <span>{contactInfo.email}</span>;
-                  </div>;
-                  <div className='flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors'>;
-                    <MapPin className='w-4 h-4' />;
-                    <span className='text-sm'>{contactInfo.address}</span>                  </div>                    <span>{contactInfo.mobile}</span>;
-                <div className="grid grid-cols-2 gap-4">;
-                  {stats.map((stat, index) => (<motion.div;
-                      key={stat.label}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10";
-                    >;
-                      <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />;
-                      <div className="text-lg font-bold text-white">{stat.value}</div>;
-                      <div className="text-xs text-gray-400">{stat.label}</div>;
-                    </motion.div>;
-                  ))}
-                </div>;
-                      <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>;
-                    </motion.div>;
-                  ))}
-                </div>;
-                {/* Contact Info */}
-                  </div>;
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">;
-                    <Mail className="w-4 h-4" />;
-                    <span>{contactInfo.email}</span>;
-                  </div>;
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors">;
-                    <MapPin className="w-4 h-4" />;
-                    <span className="text-sm">{contactInfo.address}</span>;
-                    <span className='text-sm'>{contactInfo.address}</span>;
-                  </div>;
-                </div>;
-              </motion.div>;
-            </div>;
-            {/* Services */}
-            <div className="lg:col-span-2">;
-=======
-<<<<<<< HEAD
-            {/* Services */}"
-            <div className="lg:col-span-2">
-<<<<<<< HEAD
-              <motion.div
-=======
             {/* Services *}
 }
             <div className=\"lg:col-span-2\" />;
@@ -1972,54 +1858,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       </Link>
 
-<<<<<<< HEAD
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-
-                <div>;'
-                  <h4 className='text-lg font-semibold text-white mb-4'>;
-                    Company;
-                  </h4>;'
-                  <div className='space-y-2'>;
-                    {companyLinks && companyLinks.map(link => (;
-                      <Link;
-                        key={link && link.name}
-                        href={link && link.href}'
-                        className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'>;'
-                        <link && link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />;'
-                        <span className='text-sm'>{link && link.name}</span>                      </Link>                      <Link;
-                        key={link && link.name}
-                        href={link && link.href}"
-                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group">;"
-                        <link && link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />;"
-                        <span className="text-sm">{link && link.name}</span>;
-                      </Link>;
-                    ))}
-                {/* Social Links */}
-                <div>;'
-                  <h4 className='text-lg font-semibold text-white mb-4'>;
-                    Follow Us;
-                  </h4>;'
-                  <div className='flex space-x-4'>;
-                    {socialLinks && socialLinks.map(social => (;
-                      <Link;
-                        key={social && social.name}
-                        href={social && social.href}'
-                        target='_blank''
-                        rel='noopener noreferrer''
-                        className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'>;'
-                        <social && social.icon className='w-5 h-5' />                      </Link>                      <Link;
-                        key={social && social.name}
-                        href={social && social.href}"
-                        target="_blank""
-                        rel="noopener noreferrer""
-                        className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110">;"
-                        <social && social.icon className="w-5 h-5" />;
-=======
                     )
 }
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -90,8 +90,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   ];
 =======
 const Sidebar: React.FC<SidebarProps /> = ({ isOpen, onClose    }) => {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 const quickLinks = [}
   { name: \"Home\", href: \"/\", icon: Home}"
@@ -486,71 +484,4 @@ const companyLinks = ["
       </motion.div>
     <   />
   )}
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          {/* Contact Info */}"
-          <div className="border-t border-gray-200 pt-6">"
-            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-              Contact Info;
-            </h3>"
-            <div className="space-y-3">"
-              <div className="flex items-center text-gray-600">"
-                <Phone className="h-4 w-4 mr-3 text-blue-500" />"
-                <span className="text-sm">+1 (555) 123-4567</span>
-              </div>"
-              <div className="flex items-center text-gray-600">"
-                <Mail className="h-4 w-4 mr-3 text-blue-500" />"
-                <span className="text-sm">info@ziontechgroup.com</span>
-<<<<<<< HEAD
-              </div>
-              <div className="flex items-center text-gray-600">
-                <MapPin className="h-4 w-4 mr-3 text-blue-500" />
-                <span className="text-sm">
-                  123 Tech Street, Innovation City
-=======
-              </div>"
-              <div className="flex items-center text-gray-600">"
-                <MapPin className="h-4 w-4 mr-3 text-blue-500" />"
-                <span className="text-sm">
-                  123 Tech Street, Innovation City;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Trust Indicators */}"
-          <div className="border-t border-gray-200 pt-6 mt-6">"
-            <div className="grid grid-cols-2 gap-4">"
-              <div className="text-center">"
-                <div className="text-2xl font-bold text-blue-600">500+</div>"
-                <div className="text-xs text-gray-500">Projects</div>
-              </div>"
-              <div className="text-center">"
-                <div className="text-2xl font-bold text-green-600">99%</div>"
-                <div className="text-xs text-gray-500">Satisfaction</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </>
-  )
-<<<<<<< HEAD
-}
-export default Sidebar
-=======
-};
-
-export default Sidebar;
-<<<<<<< HEAD
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 export default Sidebar;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

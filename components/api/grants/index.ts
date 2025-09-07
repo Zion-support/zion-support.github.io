@@ -424,18 +424,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   res.status(405).end('Method Not Allowed')
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-  res.set_header ('AllowGET, POST')res.status (405).end ('Method Not Allowed')}
-  res.setHeader('Allow', 'GET, POST')res.status(405).end('Method Not Allowed')res.status(405).end('Method Not Allowed')} catch (e: any) {res.status(500).json({ error: e?.message || 'Failed to create grant' })}
-    return;
-  }res.status(405).end('Method Not Allowed')}
-  res.setHeader($2);
-  res.status(405).end('Method Not Allowed')
-}
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

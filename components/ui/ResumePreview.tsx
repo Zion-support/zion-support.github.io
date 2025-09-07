@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-
-export type ResumeData = {;
-import React, { forward_ref } from 'react';
-export type ResumeData = {
-  name: string;
-  contact?: {;
+import React, { forwardRef } from 'react';
+export type ResumeData = any;
+  contact?: {
     email?: string;
 
 ;
@@ -70,29 +66,6 @@ export type ResumeData = any;
     technologies?: string[];
   }>;
 }
-};
-
-    {children}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-import React, { forwardRef } from 'react';
-export type ResumeData = any;
-
-export type ResumeData = {
-  name: string;
-  contact?: {
-    email?: string
-    phone?: string
-    location?: string
-    website?: string
-    linkedin?: string
-    github?: string}
-}
 export type ResumePreviewProps = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
@@ -139,21 +112,13 @@ export type ResumePreviewProps = {;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number
 }
-const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">
-};
-
-    technologies?: string[];
-  }>;
-}
-;
-export type ResumePreviewProps = {
-  data: ResumeData,
-  theme?: 'light' | 'dark';
-  maxPortfolioItems?: number;
-}
-;
-const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  </h2>
+);
+export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps />(
+  ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {;
+  const portfolioItems = (data.portfolio || []).slice(
+      0,
+      Math.max(0, maxPortfolioItems)
     );
 
       >
@@ -347,12 +312,8 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                   GitHub
                 </a>
               )}
-            </div>
-          </header>
-<<<<<<< HEAD
-=======
-          {/* Summary */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+            </div>;
+          </header>;
 
           {/* Summary */}
           {data.summary && (
@@ -947,7 +908,6 @@ key={`proj-${idx}-t-${tIdx}`}
 );
 
 ResumePreview.displayName = 'ResumePreview';
-
 export default ResumePreview;
 =======
     );

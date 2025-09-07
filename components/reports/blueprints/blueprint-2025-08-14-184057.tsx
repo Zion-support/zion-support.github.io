@@ -1,27 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+;
 import Head from 'next/head';
-export default function Page(){
-  return (
-=======
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-<<<<<<< HEAD
-
-pr-12243
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import Head from 'next/head';
-<<<<<<< HEAD
-export default function Page() {return (export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;
+export default function Page() {return (export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
       <Head>;
-        <title>Reference Architecture — Autonomous Content Mesh</title>;
+        <title />Reference Architecture — Autonomous Content Mesh</title>;
         <meta;
           name='description';
           content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';
@@ -112,7 +93,7 @@ pr-12243
 <<<<<<< HEAD
 =======
     <div className='min-h-screen bg-slate-950 text-white' />
-      <Head />
+      <Head>
         <title />Reference Architecture — Autonomous Content Mesh</title>
         <meta;
 name='description'
@@ -287,7 +268,7 @@ export default function Page(){
   );  return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />
 
-      <Head />
+      <Head>
         <title />Reference Architecture — Autonomous Content Mesh</title>"
         <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />"
         <meta property=\"og: title\" content=\"Reference Architecture — Autonomous Content Mesh\" />"
@@ -300,6 +281,7 @@ export default function Page(){
       </main>
     </div>
   )
+
 } catch (error) {"
     console.error(\"Error: \";, error);}"
     return res.status(500).json({ error: \"Internal server error\";}
@@ -316,7 +298,7 @@ export default function Page(){
     </div>;
   )return (return (</div>;"
   )return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Reference Architecture — Autonomous Content Mesh</title>;"
         <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />;"
         <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\" />;"
@@ -341,7 +323,7 @@ export default function Page(){
   )return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
   );  return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Reference Architecture — Autonomous Content Mesh</title>;"
         <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />;"
         <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\" />;"
@@ -374,7 +356,7 @@ export default function Page() {return ('<p />Signal source: <a class=\"text-cya
     </div>;
   )return (return (</div>;"
   )return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head />;
+      <Head>;
         <title />Reference Architecture — Autonomous Content Mesh</title>;"
         <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />;"
         <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\" />;"
@@ -389,14 +371,12 @@ export default function Page() {return ('<p />Signal source: <a class=\"text-cya
       </main>;
     </div>;
 import Head from 'next / head';
-
 export default /**;
  * Page - Function description;
  */;
 function Page() {return (<div className='min - h-screen bg - slate - 950 text - white' />;}
   );}
 }
-
 export default function Page(){
   return ("
               '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>'"
@@ -467,7 +447,7 @@ import Head from 'next / head';
 pr-12243
   );  return ("
     <div className=\"min-h-screen bg-slate-950 text-white\" />
-      <Head />
+      <Head>
         <title />Reference Architecture — Autonomous Content Mesh</title>"
         <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />"
         <meta property=\"og: title\" content=\"Reference Architecture — Autonomous Content Mesh\" />"
@@ -492,10 +472,7 @@ pr-12243
 
 
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export default /**;
+export default /**
  * Page - Function description;
  */
 function Page() {}
@@ -513,9 +490,9 @@ export default /**
  */
 function Page() {
   return (
-    <div className='min - h-screen bg - slate - 950 text - white'>;
+    <div className='min - h-screen bg - slate - 950 text - white' />;
       <Head>;
-        <title > Reference Architecture — Autonomous Content Mesh</title>;
+        <title  /> Reference Architecture — Autonomous Content Mesh</title>;
         <meta;
           name='description';
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -643,7 +620,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>)return (<div className=\"min - h-screen bg - slate - 950 text - white\" />;
     </div>);  return ("
     <div className=\"min - h-screen bg - slate - 950 text - white\" />;
-      <Head />;
+      <Head>;
         <title  /> Reference Architecture — Autonomous Content Mesh</title>;"
         <meta name=\"description\" content=\"High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.\" />;"
         <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\" />;"

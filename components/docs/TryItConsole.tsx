@@ -1,49 +1,6 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-;
 import React, { useMemo, useState } from 'react';
 interface TryItProps  {path: string; // full URL or relative;
   requiresAuth: boolean;
-export default function TryItConsole() {const [baseUrl, setBaseUrl] = useState('https://api.zion.os')const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-interface TryItProps  {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',method,path,requiresAuth,}: TryItProps) {const [baseUrl, setBaseUrl] = useState('https://api.zion.os')const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',const [baseUrl, setBaseUrl]  = useState('https://api.zion.os')path: string, // full URL or relative;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useMemo, useState } from 'react';
-interface TryItProps {
-  path: string; // full URL or relative
-  requiresAuth: boolean;
-export default function TryItConsole({
-origin/cursor/automate-test-improve-and-merge-code-2533
-  method
-  path
-  requiresAuth
-}: TryItProps) {
-=======
-  method;
-  path;
-  requiresAuth;
-}: TryItProps) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
-
-interface TryItProps {'
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-
-  method,
-  path,
-  requiresAuth,
-}: TryItProps) {;'
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-<<<<<<< HEAD
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  path: string, // full URL or relative
-  requiresAuth: boolean
-
 export default function TryItConsole() {const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
   const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';}
 }
@@ -51,10 +8,10 @@ interface TryItProps  {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',metho
   const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',const [baseUrl, setBaseUrl]  = useState('https://api.zion.os')path: string, // full URL or relative;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   requiresAuth: boolean;
-
-  method
-  path
-  requiresAuth
+export default function TryItConsole({
+  method;
+path}
+requiresAuth}
 }: TryItProps) {
 =======
 <<<<<<< HEAD
@@ -64,20 +21,10 @@ interface TryItProps  {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',metho
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 
-interface TryItProps {
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-
-  method,
-  path,
-  requiresAuth,
-}: TryItProps) {;
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-import React, { useMemo, useState } from 'react';
-interface TryItProps {
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-  path: string, // full URL or relative
-  requiresAuth: boolean}
-
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
+  path: string, // full URL or relative;}
+requiresAuth: boolean}
+}
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
 <<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState($2);

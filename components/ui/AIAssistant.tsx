@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 export type AIAssistantProps = any;
 
@@ -142,8 +123,11 @@ export type AIAssistantProps = any;}: AIAssistantProps) {buttonLabel = "Generate
                 }
               : {})},body: JSON.stringify({ prompt, system: systemPrompt })})const data = await res.json()if (!res.ok) {throw new Error(data?.error || 'Failed to generate')}
       setOutput(String(data.text || ''))setIsEditing(false)} catch (e: any) {setError(e.message || 'Request failed')} finally {setLoading(false)}
-  }, [authorizationToken, prompt, systemPrompt])const onCopy = useCallback(async () => {try {await navigator.clipboard.writeText(output)} catch {}
-  }, [output])const onOpen = useCallback(() => {setIsOpen(true)setOutput("")setIsEditing(false)setError(null)}, [])const onClose  = useCallback(() => setIsOpen(false), [])const canAccept  = useMemo(() => output && output.trim().length > 0, [output])return (<>;
+
+}, [authorizationToken, prompt, systemPrompt])const onCopy = useCallback(async () => {try {await navigator.clipboard.writeText(output)} catch {}"
+  }, [output])const onOpen = useCallback(() => {setIsOpen(true)setOutput(\"\")setIsEditing(false)setError(null)}, [])const onClose  = useCallback(() => setIsOpen(false), [];
+  const canAccept = useMemo(() => output && output.trim().length > 0, [output];
+  return (<>;
       <button;
 type='button';
         onClick={onOpen}
@@ -374,22 +358,12 @@ onClick={onClos}
                 <label
                   className="block text-xs font-medium mb-1"
                   Output (markdown);
-                </label>;
-                {isEditing ? (;
-                  <textarea
-                    value={output}
-                  className='ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60';
-                >;
-                  Accept;
-                </button>;
-              </div>;
-{error && <div className='text-red-600 text-sm'>{error}</div>}<div>;
-                <label;
-                  className="block text-xs font-medium mb-1";
-                  Output (markdown)</label>;
-                {isEditing ? (<textarea;
-                    value={output}
-                    onChange={(e) => setOutput(e && e.target.value)}
+                </label />;
+                {isEditing ? (;}
+                  <textarea;}
+value={output}
+
+                    onChange={e = /> setOutput(e.target.value)}
                     rows={12}
                 )}
               </div>;

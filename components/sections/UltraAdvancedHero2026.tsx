@@ -1,33 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
-import { motion } from 'framer-motion';
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import React from 'react';
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+import { motion   } from 'framer-motion';
 import Link from 'next/link';
-
-<<<<<<< HEAD
-=======
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, CheckCircle, Phone, Mail, MapPin   } from 'lucide-react';
+import { aiAutonomousServices2026   } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026   } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026  } from '../../data/2026-metaverse-digital-reality-services';
 export default function UltraAdvancedHero2026() {const totalServices = null;
 import { ArrowRight;
   Star;
@@ -44,9 +21,7 @@ import { ArrowRight;
   ArrowRight,Star,TrendingUp,Zap,Brain,Rocket,Globe,Sparkles,CheckCircle,Phone,Mail,MapPin} from 'lucide-react';
 import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
-
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-
 export default function UltraAdvancedHero2026() {
   const totalServices = null;
 <<<<<<< HEAD
@@ -98,10 +73,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function UltraAdvancedHero2026() {
   const totalServices = $2;
   const contactInfo = $2;
@@ -127,8 +98,60 @@ staggerChildren: 0.1,
     },
   };
 
-=======
-<<<<<<< HEAD
+const containerVariants = {}
+    hidden: { opacity: 0 }
+import {motio}
+} from 'framer-motion';
+import Link from 'next / link';
+import {
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+  Globe,
+  Sparkles,
+  CheckCircle}
+  Phone}
+} from 'lucide-react';
+import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
+import { quantumSpaceTechServices2026 } from '../../data / 2026 - quantum - space - tech - services';
+import { metaverseDigitalRealityServices2026 } from '../../data / 2026 - metaverse - digital - reality - services';
+export default /**
+ * UltraAdvancedHero2026 - Function description;
+ */
+function UltraAdvancedHero2026() {
+  const total_services =;
+    aiAutonomousServices2026.length +;
+    quantumSpaceTechServices2026.length +;
+    metaverseDigitalRealityServices2026.length;
+;
+
+const contact_info = {
+    phone: '+1 302 464 0950'}
+  email: 'kleber@ziontechgroup.com'}
+    address: '364 E Main St STE 1008 Middletown DE 19709'  }
+import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
+import { quantumSpaceTechServices2026 } from '../../data / 2026 - quantum - space - tech - services';
+import { metaverseDigitalRealityServices2026 } from '../../data / 2026 - metaverse - digital - reality - services';
+export default /**
+ * UltraAdvancedHero2026 - Function description;
+ */
+function UltraAdvancedHero2026() {
+  const total_services = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
+;
+
+const contact_info = {
+    phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com'}
+    address: '364 E Main St STE 1008 Middletown DE 19709'}
+};
+
+const container_variants = {}
+    hidden: { opacity: 0}
+},
+    visible: {
       opacity: 1;
 transition: {
 =======
@@ -682,29 +705,7 @@ variants={containerVariant}
             <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Technology Solutions</span>
           </motion.div>
 
-          {/* Main Heading */}
-          <motion.h1 
-            variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight"
-          >
-              </span>            </div>
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-              The Future
-            </span>
-            <br />
-            <span className="text-white">
-              is Now
-            </span>
-          </motion.h1>
-
-          {/* Subheading */}
-          <motion.p 
-            variants={itemVariants}
-            className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed"
-          >
-            Experience the most advanced AI, quantum computing, and metaverse technologies ever created. 
-            <span className="text-purple-400 font-semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.
-          </motion.p>
+            className=\"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6\">
 
           {/* Service Statistics */}
           <motion.div 

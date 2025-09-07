@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-  loadTime: number
-import React, { useState, useEffect } from './react'
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
-  firstInputDelay: number;}
-  timeToInteractive: number;}
-
-    return \'text-red-600\'
-                </span>
-              </div>
-=======
-  loadTime: number;
+loadTime: number;
 import React, { useState, useEffect } from './react';
 <<<<<<< HEAD
 ;
@@ -98,22 +85,6 @@ interface PerformanceMetrics  {load_time: number;
       )}
     </div>
   )}
-
-<<<<<<< HEAD
-export default PerformanceDashboard
-              new_metrics.firstContentfulPaint = entry.start_time
-          } else // Check condition
-            new_metrics.cumulativeLayoutShift =
-              (new_metrics.cumulativeLayoutShift || 0) + (entry as any).value
-      <button
-        on_click={() =    /> setIsVisible (!is_visible)}"
-        className=\"bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg hover:bg - blue-700 transition-colors\">
-
-        📊 Performance
-                  className={`text - sm font - mono ${getScoreColor (metrics.load_time, { good: 2000, needs_improvement: 4000 })}`}
-                >
-                  {metrics.load_time.to_fixed (0)}ms
-=======
 export default PerformanceDashboard;
 <<<<<<< HEAD
 const PerformanceDashboard: React.FC = () => {}
@@ -403,7 +374,4 @@ export default PerformanceDashboard;
 '"`
 =======
     </div>)}
-
 export default PerformanceDashboard;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

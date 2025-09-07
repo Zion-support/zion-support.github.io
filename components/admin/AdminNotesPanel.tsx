@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-import React, { useEffect, useMemo, useState } from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback } from 'react';
+;
+export type AdminNotesPanelProps = {targetType: string; // e && e.g., 'user' | 'listing';}
+  targetId: string; // unique identifier for the target;}
+}
 
-<<<<<<< HEAD
-=======
+type Note = {target_type: string; // e.g., 'user' | 'listing';}
+  target_id: string; // unique identifier for the target;}
 import React, { useEffect, useMemo, useState } from 'react';
 export type AdminNotesPanelProps = any;
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
@@ -57,45 +55,11 @@ export type AdminNotesPanelProps = any;targetId: string; // unique identifier fo
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
-type Note = {}
-  id: string;
-  targetType: string;
-  targetId: string;
-  text: string;
-  authorId: string;
-  createdAt: number;
-<<<<<<< HEAD
-}}export default function AdminNotesPanel() {authorId: string;
-  createdAt: number;
-}
-  targetType,
-  targetId,;
-}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
-export type AdminNotesPanelProps = {
-  targetType: string, // e.g., 'user' | 'listing'
-  targetId: string,   // unique identifier for the target
-},
-
-type Note = $2;
-  targetType: string,
-  targetId: string,
-  text: string,
-  authorId: string,
-  createdAt: number},
-
-
-=======
-};
-
-
-
-};
-
-<<<<<<< HEAD
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
-
-  authorId: string;
-  createdAt: number;
+  authorId: string;}
+  createdAt: number;}
+}}
+export default function AdminNotesPanel() {authorId: string;}
+  createdAt: number;}
 }
 export default function AdminNotesPanel({
   targetType,
@@ -126,8 +90,10 @@ export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useStat
           'X-Admin': isAdmin ? 'true' : 'false';
           'X-Admin-User': adminId;
 
-        }
-        body: JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {method: 'POST',headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId,},body: JSON.stringify({ targetType, targetId, text }),})if (!res.ok) {alert('Failed to add note')return;
+}
+        body: JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {method: 'POST'}
+  headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId},body: JSON.stringify({ targetType, targetId, text })})if (!res.ok) {alert('Failed to add note';}
+  return;}
       }
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
   const [isAdmin, setIsAdmin] = useState($2);
@@ -263,18 +229,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
 
-
-<<<<<<< HEAD
-        alert($2);
-        return
-      }
-      setText($2);
-      await fetchNotes()
-=======
-      await fetchNotes();
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    } finally {
-      setAdding(false)
     }
   }
 

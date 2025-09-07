@@ -1,38 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
-  Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
-  Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon;// Import our new revolutionary services;
-import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
-import { revolutionary2044InnovativeServices  } from '../data/revolutionary-2044-innovative-services';
-  const [isVisible, setIsVisible] = useState(false)const [currentServiceIndex, setCurrentServiceIndex] = useState(0)const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0)const [isHovered, setIsHovered]  = useState(false)clearInterval(serviceInterval)clearInterval(testimonialInterval)}
-  }, [])const allRevolutionaryServices  = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];// Get featured services for rotation;
-  const featuredServices = allRevolutionaryServices.slice(0, 6)const features = [;
-import { ArrowRight,Play,Users,TrendingUp,Brain,Shield,Rocket,Globe,Lock,Cpu,Database,Cloud,BarChart3,Atom,Target,Zap,Infinity,Sparkles,Star,Eye,Heart,Code,Palette,Layers,ChevronRight,ChevronLeft,Phone,Mail,MapPin,Clock,Award,CheckCircle,Zap as ZapIcon,ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
-  Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
-  Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon;
-// Import our new revolutionary services;
-import { revolutionary2043AdvancedServices   } from '../data/revolutionary-2043-advanced-services';
-const Homepage2043: React.FC = () => {const [is_visible, setIsVisible] = useState (false)const [currentServiceIndex, setCurrentServiceIndex] = useState (0)const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState (0)const [is_hovered, setIsHovered] = useState (false)useEffect (() => {setIsVisible (true)// Auto - rotate featured services;
-    const service_interval = set_interval (() => {setCurrentServiceIndex ((prev) => (prev + 1) % 6)}, 4000)// Auto - rotate testimonials;
-    const testimonial_interval = set_interval (() => {setCurrentTestimonialIndex ((prev) => (prev + 1) % 3)}, 6000)return () => {clear_interval (service_interval)clear_interval (testimonial_interval)}
-  }, [])// Combine all revolutionary services;
-  const allRevolutionaryServices = [;
-    ...revolutionary2043AdvancedServices,...revolutionary2044InnovativeServices,];  const allRevolutionaryServices  = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];// Get featured services for rotation;
-  const featured_services  = allRevolutionaryServices.slice (0, 6)const features = [;
-    {title: 'AI Consciousness Evolution',description:;
-        'Next - generation AI consciousness with human - level understanding',href: '/quantum - neural - consciousness - platform',color: 'from - purple - 500 to - pink - 500',gradient: 'bg - gradient - to - br from - purple - 500 / 20 to - pink - 500 / 20',},ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
-  Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
-  Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon;
-// Import our new revolutionary services;
-const Homepage2043: React.FC = () => {const [isVisible, setIsVisible] = useState(false)const [currentServiceIndex, setCurrentServiceIndex] = useState(0)const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0)const [isHovered, setIsHovered] = useState(false)setIsVisible(true)// Auto-rotate featured services;
-    const serviceInterval = setInterval(() => {setCurrentServiceIndex((prev) => (prev + 1) % 6)}, 4000)// Auto-rotate testimonials;
-    const testimonialInterval = setInterval(() => {setCurrentTestimonialIndex((prev) => (prev + 1) % 3)}, 6000)return () => {clearInterval(serviceInterval)clearInterval(testimonialInterval)}
-  }, [])// Get featured services for rotation;
-  const featuredServices = allRevolutionaryServices.slice(0, 6)const features = [;
-import React, { useEffect, useState, useCallback } from 'react',import Layout from './layout/Layout';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useEffect, useState, useCallback } from 'react',
+import Layout from './layout/Layout';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon;
@@ -1470,8 +1438,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             </div>;
 
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,
@@ -1939,102 +1905,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
 <<<<<<< HEAD
 
-        {/* Enhanced Features Section */}
-        <section className="py-20 px-4 relative">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Revolutionary Technology
-                <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                  Solutions
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover cutting-edge AI consciousness, quantum computing, and autonomous systems 
-                that are transforming industries and reshaping the future.
-=======
-        {/* Enhanced Features Section */}'
-        <section className='py-20 px-4 relative'>;'"
-          <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 relative">;"
-          <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div;
-        {/* Enhanced Features Section */}"
-        <section className="py-20 px-4 relative">"
-          <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-<section className='py-20 px-4 relative'>
-          <div className='max-w-7xl mx-auto'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <motion.div
-
-=======
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
-
-<<<<<<< HEAD
-className='text-center mb-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
-            >
-=======
-            >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Revolutionary Technology'
-                <span className='block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
-                  Solutions;
-                </span>
-              </h2>'
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Discover cutting-edge AI consciousness, quantum computing, and;
-                autonomous systems that are transforming industries and;
-                reshaping the future.
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-              </p>
-            </motion.div>'
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (            >"
-              className="text-center mb-16"
-            >"
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Revolutionary Technology"
-                <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                  Solutions;
-                </span>
-              </h2>"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover cutting-edge AI consciousness, quantum computing, and autonomous systems;
-                that are transforming industries and reshaping the future.
-              </p>
-            </motion.div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Enhanced Features Section */}<section className='py-20 px-4 relative'>;
-          <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 relative">;
-          <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div;
-        {/* Enhanced Features Section */}
-        <section className="py-20 px-4 relative">;
-          <div className="max-w-7xl mx-auto">;
-<section className='py-20 px-4 relative'>;
-          <div className='max-w-7xl mx-auto'>;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}className='text-center mb-16';
-            >;
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
+              {features.map((feature, index) => (}
+                <motion.div;}
+key={feature.title}
+              className='text-center mb-16' />;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
                 Revolutionary Technology;
                 <span className='block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>;
                   Solutions;
@@ -2346,22 +2222,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
         </section>;
 
-
-
-
-        {/* Enhanced Featured Services Section */}'
-        <section className='py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80'>;'"
-          <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">;"
-          <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div;
-        {/* Enhanced Featured Services Section */}"
-        <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">"
-          <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-<section className='py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80'>
-          <div className='max-w-7xl mx-auto'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <motion.div
+        {/* Enhanced Featured Services Section */}
 
 =======
             <motion.div;
@@ -3868,13 +3729,7 @@ index === currentTestimonialIndex;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-                      index === currentTestimonialIndex 
-                        ? 'bg-emerald-400 w-8' 
-                        : 'bg-white/30 hover:bg-white/50'
-=======
-`
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
                     }`}
                   />
                 ))}
@@ -4127,12 +3982,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 };
 
-export default Homepage2043;
-=======
-Math.random () * 100 
-  Math.random () * 100 
-
-
+  Math.random () * 100;
 }%`;
 top: `$ {
   Math.random () * 100
@@ -4251,80 +4101,15 @@ top: `$ {Math.random () * 100;
 }%`;
 }/>) )}</div> <motion.div initial= {364 E Main St STE 1008;
                     <br />;
-                    Middletown DE 19709;
-                  </p>                </div>                  </div>;
-}initial= {{opacity: 0, y: 30;
-}whileInView= {{opacity: 1, y: 0;
-}transition= {{}viewport= {{once: true;
-}whileHover= {{{opacity: 0, y: 30;
-}whileInView= {{opacity: 1, y: 0;
-}transition= {{}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion && motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion && motion.button> <motion && motion.button > <Phone className="w-6 h-6" /> Contact Us </motion && motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup && ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion && motion.div> </div> </section> </main> </Layout>)}export default Homepage2043;
-                  <h3 className="text - xl font - semibold text - white mb - 2">Call Us</h3>;
-                  <p className="text - cyan - 400">+1 302 464 0950</p>;
-                </div>;
-                <div className="text - center">;
-                  <div className="inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r from - purple - 500 to - pink - 500 mb - 4">;
-                    <Mail className="w - 8 h - 8 text - white" />;
-                  </div>;
-                  <h3 className="text - xl font - semibold text - white mb - 2">Email Us</h3>;
-                  <p className="text - cyan - 400">kleber@ziontechgroup.com</p>;
-                </div>;
-                <div className="text - center">;
-                  <div className="inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r from - emerald - 500 to - teal - 500 mb - 4">;
-                    <MapPin className="w - 8 h - 8 text - white" />;
-                  </div>;
-                  <h3 className="text - xl font - semibold text - white mb - 2">Visit Us</h3>;
-=======
-Math.random () * 100 
-  Math.random () * 100 
-
-
-);
-};
-
-  Math.random () * 100 
-origin/cursor/automate-test-improve-and-merge-code-2533
-}%`;
-top: `$ {
-  Math.random () * 100
-=======
-Math.random () * 100;
-  Math.random () * 100;`
-}%`;`
-top: `$ {}
-  Math.random () * 100;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-}%`
-}/>) )
-}</div> <motion.div initial= {}
-                    364 E Main St STE 1008;
-                    <br />;
-                    Middletown DE 19709;
-                  </p>                </div>                  </div>;
-}initial= {}
-  {}
-  opacity: 0, y: 30;
-}whileInView= {}
-  {}
-  opacity: 1, y: 0;
-}transition= {}
-  {}
-}viewport= {}
-  {}
-  once: true;
-}whileHover= {}
-  {}
-  {}
-  opacity: 0, y: 30;
-}whileInView= {}
-  {}
-  opacity: 1, y: 0;
-}transition= {}
-  {}
-"
-}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion && motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion && motion.button> <motion && motion.button > <Phone className="w-6 h-6" /> Contact Us </motion && motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup && ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion && motion.div> </div> </section> </main> </Layout>) ;
-};
-
+                    Middletown DE 19709;}
+                  </p>                </div>                  </div>;}
+}initial= {{opacity: 0, y: 30;}
+}whileInView= {{opacity: 1, y: 0;}
+}transition= {{}viewport= {{once: true;}
+}whileHover= {{{opacity: 0, y: 30;}
+}whileInView= {{opacity: 1, y: 0;}"
+}transition = {{}> <h2 className=\"text-4xl md:text-5xl font-bold text-white mb-6\"  /> Ready to Experience the <span className=\"block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent\"  /> Future of AI? </span> </h2> <p className=\"text-xl text-gray-300 mb-12 max-w-3xl mx-auto\"  /> Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className=\"flex flex-col sm:flex-row gap-6 justify-center items-center\"  /> <motion && motion.button  /> Start Your Journey <ArrowRight className=\"w-6 h-6\" /> </motion && motion.button> <motion && motion.button  /> <Phone className=\"w-6 h-6\" /> Contact Us </motion && motion.button> </div> <div className=\"text-center\" /> <div className=\"inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4\" /> <Phone className=\"w-8 h-8 text-white\" /> text-xl font-semibold text-white mb-2\">Call Us</h3> <p className=\" text-cyan-400\" />+1 302 464 0950</p> </div> <div className=\" text-center\" /> <div className=\" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4\" /> <Mail className=\" w-8 h-8 text-white\"/> </div> <h3 className=\" text-xl font-semibold text-white mb-2\" />Email Us</h3> <p className=\" text-cyan-400\" />kleber@ziontechgroup && ziontechgroup.com</p> </div> <div className=\" text-center\" /> <div className=\" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4\" /> <MapPin className=\" w-8 h-8 text-white\"/> </div> <h3 className=\" text-xl font-semibold text-white mb-2\" />Visit Us</h3> <p className=\" text-cyan-400\"  />364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion && motion.div> </div> </section> </main> </Layout>;
+}
 export default Homepage2043;"
                   <h3 className="text - xl font - semibold text - white mb - 2">Call Us</h3>;"
                   <p className="text - cyan - 400">+1 302 464 0950</p>;
@@ -4463,156 +4248,9 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
 }
 export default Homepage2043;  )
 }
+export default Homepage2043)
+};
 export default Homepage2043;
 <<<<<<< HEAD
 
 "
-=======
-}whileHover= {
-  {
-  y: -10, scale: 1.02 
-}
-}className= {
-  `group relative p-8 rounded-2xl $ {
-  feature.gradient 
-}border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300` 
-}> > Learn More <ChevronRight className="w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300" /> </a> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Experience our most advanced AI consciousness and quantum computing platforms that are setting new standards in technology. </p> </motion.div> > Get Started <ArrowRight className="w-5 h-5 ml-2" /> </a> </motion.div> </AnimatePresence> {
-  /* Navigation Controls */ 
-}<button > <ChevronLeft className="w-6 h-6" /> </button> <button > <ChevronRight className="w-6 h-6" /> </button> key= {
-  index 
-}onClick= {
-  () => setCurrentServiceIndex (index) 
-}className= {
-  `w-3 h-3 rounded-full transition-all duration-300 $ {
-  index === currentServiceIndex ? 'bg-cyan-400 w-8' : 'bg-white/30 hover:bg-white/50' 
-}` 
-}/>) ) 
-}</div> </div> </div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > What Our <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent" > Clients Say </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover how our revolutionary AI consciousness and quantum computing platforms are transforming industries and driving innovation. </p> </motion.div> <div className="relative" > <AnimatePresence mode="wait" > <motion.div </div> </div> </div>) ) 
-}</div> </motion.div> </AnimatePresence> key= {
-  index 
-}onClick= {
-  () => setCurrentTestimonialIndex (index) 
-}className= {
-  `w-3 h-3 rounded-full transition-all duration-300 $ {
-  index === currentTestimonialIndex ? 'bg-emerald-400 w-8' : 'bg-white/30 hover:bg-white/50' 
-}` 
-}/>) ) 
-}</div> </div> </div> </section> <motion.div initial= {
-  {
-  opacity: 0, y: 30 
-}
-}whileInView= {
-  {
-  opacity: 1, y: 0 
-}
-}transition= {
-  {
-  duration: 0.8 
-}
-}viewport= {
-  {
-  once: true 
-}
-}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion.button> <motion.button > <Phone className="w-6 h-6" /> Contact Us </motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion.div> </div> </section> </main> </Layout>) 
-}
-export default Homepage2043
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
-    </Layout>);
-}
-;
-Math.random () * 100;`
-}%`;`
-top: `$ {}
-  Math.random () * 100;`
-}%`;
-}/>) );
-}</div> <motion.div initial= {}
-  {}
-  opacity: 0, coordinate_y: 30;
-}animate= {}
-  {}
-  opacity: is_visible ? 1 : 0, coordinate_y: is_visible ? 0 : 30;
-}transition= {}
-  {}
-  duration: 0.8;
-}> Revolutionary 2043 Technology </div> {}
-  /* Main Heading */;'"
-}<h1 id="hero - heading" className="text - 5xl md:text - 7xl lg:text - 8xl font - bold mb - 6 bg - gradient - to - r from - white via - cyan - 200 to - blue - 300 bg - clip - text text - transparent leading - tight" > The Future of <span className="block bg - gradient - to - r from - purple - 400 via - pink - 400 to - red - 400 bg - clip - text text - transparent" > AI Consciousness </span> is Here </h1> Experience the world's most advanced AI consciousness platforms, quantum computing solutions;'"
-and autonomous systems that redefine what's possible in technology. </p> > Get Started Today <ArrowRight className="w - 5 h - 5" /> </motion.button> <motion.button > <Play className="w - 5 h - 5" /> Watch Demo </motion.button> </div> </motion.div>) );"
-}</div> </motion.div> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6" > Revolutionary Technology <span className="block bg - gradient - to - r from - cyan - 400 to - blue - 400 bg - clip - text text - transparent" > Solutions </span> </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Discover cutting - edge AI consciousness, quantum computing, and autonomous systems that are transforming industries and reshaping the future. </p> </motion.div> <motion.div key= {}
-  feature.title;
-}initial= {}
-  {}
-  opacity: 0, coordinate_y: 30;
-}whileInView= {}
-  {}
-  opacity: 1, coordinate_y: 0;
-}transition= {}
-  {}
-  duration: 0.6, delay: index * 0.1;
-}viewport= {}
-  {}
-  once: true;
-}while_hover= {}
-  {}
-  coordinate_y: -10, scale: 1.02;
-}className= {}`
-  `group relative p - 8 rounded - 2xl $ {}
-  feature.gradient;`
-}border border - white / 10 backdrop - blur - sm hover:border - white / 20 transition - all duration - 300`;"
-}> > Learn More <ChevronRight className="w - 4 h - 4 ml - 1 group - hover:ml - 2 transition - all duration - 300" /> </a> </motion.div>) );"
-}</div> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6" > Featured <span className="block bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent" > Revolutionary Services </span> </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Experience our most advanced AI consciousness and quantum computing platforms that are setting new standards in technology. </p> </motion.div> > Get Started <ArrowRight className="w - 5 h - 5 ml - 2" /> </a> </motion.div> </AnimatePresence> {}
-  /* Navigation Controls */;"
-}<button > <ChevronLeft className="w - 6 h - 6" /> </button> <button > <ChevronRight className="w - 6 h - 6" /> </button> key= {}
-  index;
-}on_click= {}
-  () => setCurrentServiceIndex (index);
-}className= {}`
-  `w - 3 h - 3 rounded - full transition - all duration - 300 $ {'
-  index === currentServiceIndex ? 'bg - cyan - 400 w - 8' : 'bg - white / 30 hover:bg - white / 50';`
-}`;
-}/>) );"
-}</div> </div> </div> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6" > What Our <span className="block bg - gradient - to - r from - emerald - 400 to - teal - 400 bg - clip - text text - transparent" > Clients Say </span> </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Discover how our revolutionary AI consciousness and quantum computing platforms are transforming industries and driving innovation. </p> </motion.div> <div className="relative" > <AnimatePresence mode="wait" > <motion.div </div> </div> </div>) );
-}</div> </motion.div> </AnimatePresence> key= {}
-  index;
-}on_click= {}
-  () => setCurrentTestimonialIndex (index);
-}className= {}`
-  `w - 3 h - 3 rounded - full transition - all duration - 300 $ {'
-  index === currentTestimonialIndex ? 'bg - emerald - 400 w - 8' : 'bg - white / 30 hover:bg - white / 50';`
-}`;
-}/>) );
-}</div> </div> </div> </section> <motion.div initial= {}
-  {}
-  opacity: 0, coordinate_y: 30;
-}whileInView= {}
-  {}
-  opacity: 1, coordinate_y: 0;
-}transition= {}
-  {}
-  duration: 0.8;
-}viewport= {}
-  {}
-  once: true;"
-}> <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6" > Ready to Experience the <span className="block bg - gradient - to - r from - purple - 400 via - pink - 400 to - red - 400 bg - clip - text text - transparent" > Future of AI? </span> </h2> <p className="text - xl text - gray - 300 mb - 12 max - w-3xl mx - auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex - col sm:flex - row gap - 6 justify - center items - center" > <motion.button > Start Your Journey <ArrowRight className="w - 6 h - 6" /> </motion.button> <motion.button > <Phone className="w - 6 h - 6" /> Contact Us </motion.button> </div> <div className="text - center"> <div className="inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r from - blue - 500 to - cyan - 500 mb - 4"> <Phone className="w - 8 h - 8 text - white" /> text - xl font - semibold text - white mb - 2">Call Us</h3> <p className=" text - cyan - 400">+1 302 464 0950</p> </div> <div className=" text - center"> <div className=" inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r from - purple - 500 to - pink - 500 mb - 4"> <Mail className=" w - 8 h - 8 text - white"/> </div> <h3 className=" text - xl font - semibold text - white mb - 2">Email Us</h3> <p className=" text - cyan - 400">kleber@ziontechgroup.com</p> </div> <div className=" text - center"> <div className=" inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r from - emerald - 500 to - teal - 500 mb - 4"> <MapPin className=" w - 8 h - 8 text - white"/> </div> <h3 className=" text - xl font - semibold text - white mb - 2">Visit Us</h3> <p className=" text - cyan - 400" >364 E Main St STE 1008 < br />Middletown DE 19709</p> </div> </div> </motion.div> </div> </section> </main> </Layout>);
-}
-export default Homepage2043);
-}
-;
-export default Homepage2043;
-;
-
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

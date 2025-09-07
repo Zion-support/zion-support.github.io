@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {'
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-=======
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}static getDerivedStateFromError(error) {return { hasError: true }
@@ -44,7 +13,11 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from 'react';
+import { Milestone } from '../../utils/types/milestones';
 
+type Props = any;
+
+type Props = {
   milestone: Milestone;
 import { Milestone  } from '../../utils/types/milestones';
 type Props = any;
@@ -378,8 +351,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='flex items-center gap-2'>;
           {statusSteps.map((step, idx) => (<div key={step} className='flex items-center'>;
               <div;
-  on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) => Promise < void> | void;
-}const status_steps  = ['PendingIn ProgressSubmittedApprovedPaid'] as const;export default /**;
+on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) = /> Promise < void> | void;
+}
+
+const status_steps  = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
+export default /**;
  * MilestoneCard - Function description;
  */;
 function MilestoneCard() {const [expanded, set_expanded]  = useState (false)const current_index  = status_steps.find_index ((s) => string === milestone.status)const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
@@ -657,18 +633,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       className='text-blue-600 underline'
 
-              <ul className="list-disc ml-5">
-                {milestone.attachments.map((a) => (
-                  <li key={a.id}>"
-                    <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
+<div className='mt-4 flex flex-wrap gap-2' />
         {canClientMarkInProgress && (
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"

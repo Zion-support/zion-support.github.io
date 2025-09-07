@@ -1,38 +1,5 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
+const localeLabelKey: Record<string, string /> = {
 
-const localeLabelKey: Record<string, string> = {
-  en: 'lang.english',
-  pt: 'lang.portuguese',
-  es: 'lang.spanish',
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const localeLabelKey: Record<string, string> = {
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-const localeLabelKey: Record<string, string> = {en: "lang.english",pt: "lang.portuguese",es: "lang.spanish",ar: "lang.arabic";
-  en: "lang.english",pt: "lang.portuguese",es: "lang.spanish",ar: "lang.arabic";
-}export default function LanguageSwitchPrompt() {const { t } = useTranslation()const [suggested, setSuggested] = useState<string | null>(null)useEffect(() => {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }return this.props.children;
-  }
-}
-import React, { useEffect, useState } from 'react';
-import { useTranslation  } from 'react-i18next';
-import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
-const localeLabelKey: Record<string, string> = {en: "lang && lang.english",pt: "lang && lang.portuguese",es: "lang && lang.spanish",ar: "lang && lang.arabic",ar: "lang && lang.arabic";
-}export default function LanguageSwitchPrompt() {const { t } = useTranslation()const [suggested, setSuggested] = useState<string | null>(null)useEffect(() => {const key = "langPromptShown";
-    if (suggestion) setSuggested(suggestion)}, [])if (!suggested) return null;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   en: 'lang.english';
   pt: 'lang.portuguese';
   es: 'lang.spanish';
@@ -267,14 +234,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setSuggested(null);
   }
 
-<<<<<<< HEAD
-  const decline = () => {
-    localStorage.setItem("langPromptShown1", "true");
-    setSuggested(null);
-  };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+const decline = ("
+    localStorage.setItem(\"langPromptShown1\", \"true\");
+    setSuggested(null)) => {
+  return $3;}
+}
+};
 
   return (
     <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">
@@ -633,47 +598,4 @@ if (return null) {}
 =======
     </div>);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-    </div>)
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
-          </button>
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-  );
-}
-<<<<<<< HEAD
-
 "
-=======
-if (!suggested) return null
-return (<div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200" > <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm" > <div> {
-  t ('lang.switch prompt', {
-  language: t (localeLabelKey[suggested]) 
-}) 
-}</div> </div> </div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
-    </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

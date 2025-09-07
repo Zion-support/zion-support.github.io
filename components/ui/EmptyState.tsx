@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-
-
 import React from 'react';,
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
@@ -16,41 +6,36 @@ import React from 'react',
 import Link from 'next/link';
 import EnhancedButton from './EnhancedButton';
 export type EmptyStateProps = any;
-import React from "react";
-import Link from "next/link";
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-import EnhancedButton from "./EnhancedButton";
+import React from \"react\";"
+import Link from \"next/link\";"
+import EnhancedButton from \"./EnhancedButton\";
 export type EmptyStateProps = {
   title: string;
 =======
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-;
-import React from 'react',import Link from 'next/link';
-import EnhancedButton from './EnhancedButton';
-export type EmptyStateProps = any;
-import React from 'react';
-export type EmptyStateProps = {title: string;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-  description?: string;
-  primaryAction?: { label: string; href: string }secondaryAction?: { label: string; href: string }
-}export default function EmptyState(): any ({title,description,icon,primaryAction,secondaryAction,}: EmptyStateProps) {primaryAction?: { label: string; href: string }secondaryAction?: { label: string; href: string }
-}interface EmptyStateProps  {className?: string;
-}const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {return (<div className='w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3'>;
-      <div className='text-3xl opacity-70'>{icon ?? '🧭'}</div>;
-      <h3 className='text-lg font-semibold'>{title}</h3>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {description && (;
-        <p className='text-sm opacity-80 max-w-prose'>{description}</p>;
+  description?: string;}
+  primaryAction?: { label: string; href: string}
+}secondaryAction?: { label: string; href: string }
+}
+export default function EmptyState(): any ({title,description,icon,primaryAction,secondaryAction}: EmptyStateProps) {primaryAction?: { label: string; href: string}
+}secondaryAction?: { label: string; href: string }
+}
+
+interface EmptyStateProps {
+  className?: string;}
+}
+}
+
+const EmptyState: React.FC<EmptyStateProps /> = ({ className   }
+}) => {
+
+}
+return (<div className='w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3' />;}
+      <div className='text-3xl opacity-70' />{icon ?? '🧭'}</div>;
+      <h3 className='text-lg font-semibold' />{title}</h3>;
+
+      {description && (;}
+        <p className='text-sm opacity-80 max-w-prose' />{description}</p>;
       )}
 <<<<<<< HEAD
       {(primaryAction |secondaryAction) && (

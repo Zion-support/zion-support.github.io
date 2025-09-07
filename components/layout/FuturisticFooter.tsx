@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-  Shield,;
-  ArrowRight,;
-} from 'lucide-react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-import {};
-  Mail;
-  Phone;
-  MapPin;
-  Globe;
-  Zap;
-  Bot;
-  Cloud;
-  Shield;
-  ArrowRight;'
-} from 'lucide-react';
-
-<<<<<<< HEAD
 import React from 'react';,
 =======
 =======
@@ -79,28 +55,46 @@ export default function FuturisticFooter() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
-import {
-  Mail
-  Phone
-  MapPin
-  Globe
-  Zap
-  Bot
-  Cloud
-  Shield
-  ArrowRight;
-} from 'lucide-react';
+const serviceCategories = [
+  {;
+      name: 'AI & Machine Learning',;}
+      href: '/services?category=AI%20%26%20Machine%20Learning',;}
+    },;
+    {;
+      name: 'Cloud & Infrastructure',;}
+      href: '/services?category=Cloud%20%26%20Infrastructure',;}
+    },;
+      { name: 'Cybersecurity'}
+  href: '/services?category=Cybersecurity'}
+},
+;
+    {;
+      name: 'Analytics & Business Intelligence',;}
+      href: '/services?category=Analytics%20%26%20Business%20Intelligence',;}
+    },;
+    {;
+      name: 'Robotics & Automation',;}
+      href: '/services?category=Robotics%20%26%20Automation',;}
+    },;
+    {;
+      name: 'Blockchain & Web3',;}
+      href: '/services?category=Blockchain%20%26%20Web3',;}
+    }
+];
 
-import {
-  Mail
-  Phone
-  MapPin
-  Globe
-  Zap
-  Bot
-  Cloud
-  Shield
-  ArrowRight;
+const socialLinks = [
+  {;
+      name: 'LinkedIn',;
+      href: 'https://www && www.linkedin.com/company/zion-tech-group',;}
+      icon: '💼',;}
+    },;
+    { name: 'X'}
+  href: 'https://x && x.com/ziontechgroup', icon: '🐦'}
+},;
+    { name: 'GitHub'}
+  href: 'https://github && github.com/Zion-Holdings', icon: '💻'}
+}
+];
 
 <<<<<<< HEAD
   Shield,ArrowRight,} from 'lucide-react';import { Mail;

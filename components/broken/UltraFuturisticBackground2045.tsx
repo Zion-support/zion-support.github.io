@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-
-;
-ctx.fill ()ctx.restore ()// Remove dead particles and create new ones // Check condition;
-if ( {) {$2;
-}
-  particles[index] = {}
- canvas && canvas.width = window && window.innerWidth;
-canvas && canvas.height = window && window.innerHeight;
-// Particle system const particles: Array< {alpha: Math && Math.random () * 0 && 0.8 + 0 && 0.2;
-life: Math && Math.random () * 100 + 50 ;
-})}// Animation loop // Wrap around edges if (particle && particle.x < 0) particle && particle.x = canvas && canvas.width;
-if (particle && particle.x > canvas && canvas.width) particle && particle.x = 0;
-if (particle && particle.y < 0) particle && particle.y = canvas && canvas.height;
-if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0;
-// Draw particle // Add glow effect ctx && ctx.shadowColor = particle && particle.color;
-ctx && ctx.shadowBlur = 20;
-ctx && ctx.fill ()ctx && ctx.restore ()// Remove dead particles and create new ones if (particle && particle.life <= 0) {particles[index] = {x: Math && Math.random () * canvas && canvas.width, y: Math && Math.random () * canvas && canvas.height, vx: (Math && Math.random () - 0 && 0.5) * 2, vy: (Math && Math.random () - 0 && 0.5) * 2, size: Math && Math.random () * 3 + 1, color: `hsl ($ {Math && Math.random () * 360 ;
-}, 70%, 60%) `;
-alpha: Math && Math.random () * 0 && 0.8 + 0 && 0.2;
-life: Math && Math.random () * 100 + 50 ;
-> = ({ children }) => {  const canvasRef = useRef<HTMLCanvasElement>(null)import React, { useEffect, useRef } from 'react';
-import { motion  } from 'framer-motion';
-interface UltraFuturisticBackground2045Props  {children: React && React.ReactNode;
-}
-      x: number;import React, { useEffect, useRef } from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useRef } from 'react';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 canvas.width = window.innerWidth;
@@ -104,19 +70,24 @@ ctx.restore ();
 alpha: Math.random () * 0.8 + 0.2;
 life: Math.random () * 100 + 50
 const UltraFuturisticBackground2045: React.FC<
-  UltraFuturisticBackground2045Props
-> = ({ children }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+  UltraFuturisticBackground2045Props;
+> = ({ children   ,}
+}) => {
+
+}
+  const canvasRef = useRef<HTMLCanvasElement />(null);}
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2045Props {
   children: React.ReactNode
 }
 <<<<<<< HEAD
 
-const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props> = ({ children }) => {
-  const canvasRef = $2;
-  const animationRef = $2;
+const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props /> = ({ children   ,}
+}) => {
+
+  const canvasRef = null;
+
+const animationRef = useRef<number | undefined />(undefined);
   useEffect(() => {
     const canvas = $2;
     if (!canvas) return,
@@ -163,10 +134,21 @@ life: Math.random () * 100 + 50;
 const UltraFuturisticBackground2045: React.FC<;
 <<<<<<< HEAD
   UltraFuturisticBackground2045Props;
-> = ({ children }) => {const canvasRef = useRef<HTMLCanvasElement>(null)interface UltraFuturisticBackground2045Props  {children: React.ReactNode;
+> = ({ children    }) => {
+
+const canvasRef = useRef<HTMLCanvasElement />(null)interface UltraFuturisticBackground2045Props {
+  children: React.ReactNode;}
 }
-const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props> = ({ children }) => {const canvasRef = null;
-  const animationRef = useRef<number | undefined>(undefined)useEffect(() => {const canvas = canvasRef.current;
+}
+
+const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props /> = ({ children   ,}
+}) => {
+
+const canvasRef = null;
+
+const animationRef = useRef<number | undefined />(undefined;
+  useEffect(() => ;
+  const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d')if (!ctx) return;
     canvas.width = window.innerWidth;
@@ -186,8 +168,20 @@ const UltraFuturisticBackground2045: React.FC < UltraFuturisticBackground2045Pro
     // Check condition;
 if (return) {$2;
 }
-    const ctx = canvas.get_context ('2d')// Check condition;
-if (return) {$2;
+}
+
+const UltraFuturisticBackground2045: React.FC < UltraFuturisticBackground2045Props> = ({ children   ,}
+}) => {
+
+const animation_ref = useRef < number | undefined>(undefined;
+  useEffect (() => ;
+  const canvas = canvas_ref.current;
+    // Check condition;}
+if (return) {$2;}
+}
+
+const ctx = canvas.get_context ('2d')// Check condition;
+if (return) {$2;}
 }
     canvas.width = window.inner_width;
     canvas.height = window.inner_height;// Particle system;
@@ -460,40 +454,14 @@ canvas.height = window.innerHeight;
     }
   }, []),
 
-  return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
-      {/* Animated Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)' }}
-      />
-
-      {/* Floating Geometric Shapes */}
-      <div className="fixed inset-0 pointer-events-none z-10">
-        {/* Animated Grid */}
-        <motion.div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }}
-          animate = $2;
-            repeat: Infinity,
-            ease: 'linear'
-=======
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
     animate();
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-    };
+canvas.height = window.innerHeight) => {
+  return $3;}
+}
+};
 
     window.addEventListener('resize', handleResize);
     return () => {
@@ -1427,112 +1395,6 @@ export default UltraFuturisticBackground2045;
         />
       </div>
     </div>
-<<<<<<< HEAD
-          style={{background:;
-              'linear - gradient (90deg, transparent, rgba (0, 255, 255, 0.1), transparent)',background_size: '200% 100%',}}
-          animate={{background_position: ['-200% 0', '200% 0'],}}
-          transition={{duration: 15;
-            repeat: Infinity;
-            duration: 15
-            repeat: Infinity
-            ease: 'linear',          }}
-        />;
-      </div>;
-    </div>;
-  )
-};export default UltraFuturisticBackground2045;            ease: 'linear';
-          }}
-        />;
-      </div>;
-    </div>;
-  );
-export default UltraFuturisticBackground2045;
-=======
-);
+)
 };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export default UltraFuturisticBackground2045;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-<<<<<<< HEAD
-}
-}
-}
-export default UltraFuturisticBackground2045;
-<<<<<<< HEAD
-            ease: 'linear',          }}
-        />;
-      </div>;
-    </div>);
-}export default UltraFuturisticBackground2045;            ease: 'linear';
-          }}
-        />;
-      </div>;
-    </div>);
-}  );
-}
-;
-export default UltraFuturisticBackground2045;
-;
-)}export default UltraFuturisticBackground2045;
-  )
-},
-
-export default UltraFuturisticBackground2045,
-=======
-<<<<<<< HEAD
-
-=======
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
-// Particle system const particles: Array< {
-  alpha: Math.random () * 0.8 + 0.2
-life: Math.random () * 100 + 50 
-}) 
-}// Animation loop // Wrap around edges if (particle.x < 0) particle.x = canvas.width
-if (particle.x > canvas.width) particle.x = 0
-if (particle.y < 0) particle.y = canvas.height
-if (particle.y > canvas.height) particle.y = 0
-// Draw particle // Add glow effect ctx.shadowColor = particle.color
-ctx.shadowBlur = 20
-ctx.fill ()
-ctx.restore ()
-// Remove dead particles and create new ones if (particle.life <= 0) {
-  particles[index] = {
-  x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2, vy: (Math.random () - 0.5) * 2, size: Math.random () * 3 + 1, color: `hsl ($ {
-  Math.random () * 360 
-}, 70%, 60%) `
-alpha: Math.random () * 0.8 + 0.2
-life: Math.random () * 100 + 50 
-}
-}
-})
-// Draw connecting lines between nearby particles animationRef.current = requestAnimationFrame (animate) 
-}
-animate ()
-// Handle resize window.addEventListener ('resize', handleResize)
-/> {
-  /* Floating Neon Shapes */ 
-}<motion.div /> {
-  /* Additional floating elements */ 
-}<motion.div /> {
-  /* Energy Orbs */ 
-}<motion.div /> </div> </div>) 
-}
-export default UltraFuturisticBackground2045
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-interface UltraFuturisticBackground2045Props {
-  children: React.ReactNode;
-}
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

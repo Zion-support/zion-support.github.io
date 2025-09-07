@@ -1,135 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
-import {}
-  Menu,
-  ChevronDown,
-  X,
-  Phone,
-  Mail,
-  ArrowRight,
-  Brain,
-  Rocket,
-  Target,
-  Atom,
-  Shield,
-  DollarSign,
-  BarChart3,
-  Globe,
-  Grid,
-  Heart,
-  Database,
-  Cpu,
-  Palette,
-  Cloud,
-  Network,
-  TrendingUp,
-  ShoppingCart,
-  Settings,
-  Building,
-  Monitor,
-  Zap,
-  Eye,
-  Infinity,
-  Sparkles,
-  Users,
-  Lock,
-  Code,
-  Server,
-  Layers,
-  Globe2,
-  Star,
-  Award,
-  Clock,
-  CheckCircle,
-  Zap as ZapIcon,
-  Phone as PhoneIcon,
-  Search,
-  User,
-  Bell,
-  Cog,
-  LogOut,
-  Home,
-  Info,
-  FileText,
-  Users as UsersIcon,
-  Bot,
-  MessageCircle,
-  Linkedin,
-  Twitter,
-  Github,
-
-
-import {}
-  Menu,
-  ChevronDown,
-  X,
-  Phone,
-  Mail,
-  ArrowRight,
-  Brain,
-  Rocket,
-  Target,
-  Atom,
-  Shield,
-  DollarSign,
-  BarChart3,
-  Globe,
-  Grid,
-  Heart,
-  Database,
-  Cpu,
-  Palette,
-  Cloud,
-  Network,
-  TrendingUp,
-  ShoppingCart,
-  Settings,
-  Building,
-  Monitor,
-  Zap,
-  Eye,
-  Infinity,
-  Sparkles,
-  Users,
-  Lock,
-  Code,
-  Server,
-  Layers,
-  Globe2,
-  Star,
-  Award,
-  Clock,
-  CheckCircle,
-  Zap as ZapIcon,
-  Phone as PhoneIcon,
-  Search,
-  User,
-  Bell,
-  Cog,
-  LogOut,
-  Home,
-  Info,
-  FileText,
-  Users as UsersIcon,
-  Bot,
-  MessageCircle,
-  Linkedin,
-  Twitter,
-  Github,;
-  Youtube,;
-  MapPin,;
-} from 'lucide-react';
-
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -1182,8 +1050,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-<<<<<<< HEAD
-  };
+const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
+
+const toggleMenu = () => setIsOpen(!isOpen);
+
+const closeMenu = () => setIsOpen(false);
+
+const handleDropdownToggle = (
+setActiveDropdown(activeDropdown === name ? null : name),) => {
+  return $3;}
+}
+};
 
   useEffect(() => {
     const handleResize = () => {
@@ -2515,7 +2392,6 @@ export default UltraFuturisticNavigation2047;
     </nav>
 );
 };
-
 export default UltraFuturisticNavigation2047;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======

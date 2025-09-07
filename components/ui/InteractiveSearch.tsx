@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 export default function InteractiveSearch({ placeholder;
-export default function InteractiveSearch({
-  placeholder = 'Search talent, skills, or jobs...'
-}: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  placeholder?: string;
+export default function InteractiveSearch({}
+  placeholder = 'Search talent, skills, or jobs...'}
+}: {}
+  placeholder?: string;}
 }) {
   const [value, setValue] = useState('');
     >
@@ -185,6 +175,11 @@ className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gr
         >
           ✕
         </button>
+
+}
+    </motion.div>
+  );
+}
 
 <<<<<<< HEAD
 "

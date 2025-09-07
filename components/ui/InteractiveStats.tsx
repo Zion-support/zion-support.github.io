@@ -1,54 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-import { useEffect, useState } from 'react';
-function useCounter(target: number, durationMs: number) {
-  const [value, setValue] = useState($2);
-  useEffect(() => {
-<<<<<<< HEAD
-
-function useCounter(target: number, durationMs: number) {
-  const [value, setValue] = useState(0);
-  useEffect(() => {;
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-    let start: number | null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-    let start: number | null = null;
-    let raf: number;    const step = (ts: number) => {;
-    let start: number | null = null,
-    let raf: number,
-    const step = (ts: number) => {
-      if (start === null) start = ts;
-      if (progress < 1) raf = requestAnimationFrame(step);
-    }
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [target, durationMs]);
-  return value;}
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [target, durationMs]);
-  return value;
-}
-    let start: number | null = $2;
-    let raf: number,
-    const step = $2;
-      const progress = Math.min(1, (ts - start) / durationMs),
-      setValue(Math.floor(progress * target)),
-      if (progress < 1) raf = $2;
-    raf = requestAnimationFrame($2);
-    return () => cancelAnimationFrame(raf)
-  }, [target, durationMs]),
-  return value
-}
-
+let start: number | null;
 export default function InteractiveStats() {
   const hires = useCounter($2);
   const experts = useCounter($2);
@@ -83,10 +33,15 @@ export default function InteractiveStats() {const hires = useCounter(1200, 1200)
 interface StatItem  {label: string;
   value: string | number;
   description?: string;
-}interface InteractiveStatsProps  {stats: StatItem[];
-  className?: string;
-}export default function InteractiveStats() {return (<div className={className}>;
-      {stats.map((stat, index) => (<div;
+}
+
+interface InteractiveStatsProps {
+  stats: StatItem[];
+  className?: string;}
+}
+}
+export default function InteractiveStats() {return (<div className={className} />;
+      {stats.map((stat, index) => (<div;}
           key={index}
           className="text-center p-6 bg-white rounded-lg shadow-md";
         >;

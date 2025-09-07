@@ -1,31 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React from 'react';
 
 import { motion  } from 'framer-motion';
-
-<<<<<<< HEAD
-=======
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
@@ -172,6 +147,11 @@ interface QuantumHolographicCardProps  {service: {id: string;
 <<<<<<< HEAD
       address: string;
 
+    reviews: number;
+
+},
+  className?: string;
+}
 
       website: string;
     }
@@ -252,14 +232,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
     }
   };
 
-  const glowVariants = {
-    initial: { opacity: 0.5, scale: 1 },
-    animate: {
-<<<<<<< HEAD
-      opacity: [0.5, 1, 0.5];
-      scale: [1, 1.05, 1];
-=======
-      }
+    >
 
     };
     hover: {;
@@ -424,58 +397,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>Popular</span>
 
               </motion.div>
-            {service && service.popular && (<motion&& motion.div;
-                className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold';
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}>;
-                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  }return (<motion&& motion.div;
-      className={`relative group cursor-pointer ${className}`}
-      variants={cardVariants}
-      initial="hidden";
-      whileInView="visible";
-      whileHover="hover";
-      viewport={{ once: true, margin: "-50px" }}>;
-      {/* Holographic glow effect */}
-      <motion&& motion.div;
-        className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-xl";
-        variants={glowVariants}
-        initial="initial";
-        animate="animate";
-                className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold";
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}>;
-                <Star className="w-3 h-3 fill-current" />;
-                <span>Popular</span>;
-              </motion && motion.div>;whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >;
-                <Star className='w-3 h-3 fill-current' />;
-                <span>Popular</span>;
-              </motion.div>;
-            )}
+
+}
           </div>;
-            )}
-          </div>;
-            )}
-        <div className="relative z-10">
-          <div className="flex items-start justify-between mb-4">
-            <div className="flex items-center space-x-3">
-              <div className="text-4xl">{service.icon}</div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-1">{service.name}</h3>
-                <p className="text-gray-300 text-sm">{service.tagline}</p>
-              </div>
-            </div>
-            
-            {service.popular && (
-              <motion.div
-                className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Star className="w-3 h-3 fill-current" />
-                <span>Popular</span>
-              </motion.div>
             )}
           </div>
 
@@ -1441,7 +1365,6 @@ export default QuantumHolographicCard;
     </motion.div>
 );
 };
-
 export default QuantumHolographicCard;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 import React from 'react';,
 =======
 import React from 'react',
@@ -191,11 +183,11 @@ const Hero: React.FC<HeroProps> = ({
           <p className='text-xl sm: text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle;}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-  stats}) => {
-  return (
+  return (}
+    <section className;}
+            {subtitle}
 
-<<<<<<< HEAD
-          </p>
+          </p />
           </p>;
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (;'
@@ -242,11 +234,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {primaryAction.text}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-<<<<<<< HEAD
-              )}
-              {secondaryAction && (
-                <Button
-                  href={secondaryAction.href}
+
+}
+              {secondaryAction && (;}
+                <Button;}
+href={secondaryAction.href}
+variant='outline'
+                  size='lg'
+                  className='animate-scale-in border-white/20 hover: border-white/40 hover:bg-white/5'
 
     text: string;
     href: string;
@@ -669,7 +664,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>
   )
 };
-
 export default Hero;
 <<<<<<< HEAD
       />;
@@ -762,44 +756,4 @@ export default Hero;
       {/* Decorative Elements */}
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-        </div>
-      </div>
-
-      {/* Decorative Elements */}
-<<<<<<< HEAD
-
-      {/* Decorative Elements */}
-            <div className = $2;
-export default Hero,
-=======
-export default Hero;
-<<<<<<< HEAD
-
 "
-=======
-{
-  /* Background Elements */ 
-}<div className="absolute inset-0" > <div className="absolute inset-0 bg-[radial-gradient (circle at 50% 50%, rgba (59, 130, 246, 0.1), transparent 50%) ]" /> <div className="absolute inset-0 bg-[radial-gradient (circle at 80% 20%, rgba (59, 130, 246, 0.08), transparent 50%) ]" /> <div className="absolute inset-0 bg-[radial-gradient (circle at 20% 80%, rgba (34, 197, 94, 0.06), transparent 50%) ]" /> </div> <div className="mb-20 animate-fade-in"> <div className="mb-8"> <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-scale-in"> <Zap className="w-4 h-4 mr-2" /> 
-}{
-  secondaryAction && (<Button href= {
-  secondaryAction.href 
-}</Button>) 
-}</div>) 
-}</div> </div> <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> </div> </div> </div>) ) 
-}</div>) 
-}<span>Enterprise Security</span> </div> <div className="flex items-center gap-2" > <Users className="w-4 h-4" /> <span>10, 000+ Developers</span> </div> <div className="flex items-center gap-2" > <Star className="w-4 h-4 text-yellow-400" /> <span>99.9% Uptime</span> </div> </div> </div> </div> </section>) 
-}
-export default Hero
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

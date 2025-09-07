@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-;
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Smartphone, Tablet, Monitor, RotateCcw;
@@ -1137,7 +1122,6 @@ children ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 };
-
 export default MobileOptimizer;
 
 <<<<<<< HEAD

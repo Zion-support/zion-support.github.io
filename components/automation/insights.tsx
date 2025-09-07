@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
- return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
-}</ul> </div> </div>) 
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import { useEffect, useState  } from 'react';
 import Head from 'next/head',
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
@@ -127,7 +113,21 @@ const [talentMd, setTalentMd] = useState<string />('');
 }
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+return (<div /> <Head><title  /> Automation Insights — Zion</title></Head>) );
+}</ul> </div> </div>);
+}</section>) : (<pre className=\"mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800\"  /> {}
+  talent_md;}
+}</pre>);
+}</section> </div>) import { useEffect, useState } from 'react';
+import Head from 'next / head';
+export default /**;
+ * AutomationInsightsPage - Function description;
+ */;
+function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(null)const [talent_md, setTalentMd]  = useState < string>('')useEffect (() => {fetch ('/data / automation / market - intel.json').then ((r) => r.json ()).then (set_intel).catch (() => {})fetch ('/data / automation / talent - highlights.md').then ((r) => r.text ()).then (setTalentMd).catch (() => {})}, [])return (<div />;
+      <Head><title  /> Automation Insights — Zion</title></Head>;"
+      <h1 className=\"text - 2xl font - semibold mb - 4\" />Automation Insights</h1>;"
+      <section className=\"mb - 8\" />;"
+        <h2 className=\"font - medium\" />Market Intelligence</h2>;
 
 =======
 return (<div> <Head><title > Automation Insights — Zion</title></Head>) )

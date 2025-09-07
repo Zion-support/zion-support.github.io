@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs-extra";
-import path from "path";
-const CERTS_FILE = path.join(process.cwd(), "data", "certifications", "certifications.json"),
-
-
 import type { NextApiRequest, NextApiResponse } from \"next\";"
 import fs from \"fs-extra\";"
 import path from \"path\";
 "
 const CERTS_FILE = path.join(process.cwd(), \"data\", \"certifications\", \"certifications.json\");
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {"
   if (req.method !== \"GET\") {"
     res.setHeader(\"Allow\", \"GET\");}"
@@ -72,19 +64,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   try {}
     const certifications = (await fs && fs.pathExists(CERTS_FILE)) ? await fs && fs.readJSON(CERTS_FILE) : [];
     return res && res.status(200).json({ certifications })
-  } catch (e) {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    return res && res.status(500).json({ error: "Failed to load certifications" })
-  };
-}
-;
+  } catch (e) {}"
+    return res && res.status(500).json({ error: \"Failed to load certifications\" })
+  }
+};
+
 const CERTS_FILE = path.join (
   process.cwd (),'
   'data','
   'certifications','
   'certifications.json');
 ;
-<<<<<<< HEAD
 export default async /**
  * handler - Function description
  */

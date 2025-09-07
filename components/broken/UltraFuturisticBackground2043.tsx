@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-    };
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -200,26 +192,9 @@ const UltraFuturisticBackground2043: React.FC = $2;
         maxLife: Math.random() * 100 + 50}
     },
 
-    // Initialize particles
-      life: number;
-      vx: number,
-      vy: number,
-      size: number,
-      opacity: number,
-      color: string,
-      life: number,
-    for (let i = 0, i < 100, i++) {
-      particles.push(createParticle())
-=======
-maxLife: Math.random() * 100 + 50,
-      };
-    };
-
-    // Initialize particles
-    for (let i = 0; i < 100; i++) {
-      particles.push(createParticle());
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    // Initialize particles;
+for (let i = 0; i < 100; i++) {}
+      particles.push(createParticle());}
     }
 
     // Animation loop
@@ -476,14 +451,17 @@ if ( {) {$2;
           const distance = Math.sqrt(dx * dx + dy * dy)if (distance < 100) {ctx.globalAlpha = ((100 - distance) / 100) * 0.1;
             ctx.beginPath()ctx.moveTo(particles[i].x, particles[i].y)ctx.lineTo(particles[j].x, particles[j].y)ctx.stroke()}
         }
-      requestAnimationFrame (animate);      requestAnimationFrame (animate);
-    }
-;
-    animate ();
-;
-    return () => {
-      window.removeEventListener ('resize', resize_canvas);
-    }
+
+      }
+
+requestAnimationFrame(animate)
+};
+
+    animate();
+    return () => {}
+window.removeEventListener('resize', resizeCanvas)}
+};
+
   }, []);
 ;
   return (
@@ -1777,106 +1755,6 @@ className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rou
             ease: "easeInOut";
           }}
 };
-
-    </div>);
-}export default UltraFuturisticBackground2043);
-=======
-            duration: 10
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-        />
-      </div>
-    </div>
-  );
-};export default UltraFuturisticBackground2043;  )
-}
-export default UltraFuturisticBackground2043;
-<<<<<<< HEAD
-
-"
-=======
-resizeCanvas ()
-window.addEventListener ('resize', resizeCanvas)
-// Particle system // Update and draw particles particles.forEach ( (particle, index) => {
-  // Update position particle.x += particle.vx
-particle.y += particle.vy
-// Bounce off edges if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1
-if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1
-// Update life particle.life--
-if (particle.life <= 0) {
-  // Draw particle ctx.save ()
-ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife)
-ctx.fillStyle = particle.color
-ctx.beginPath ()
-ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2)
-ctx.fill ()
-ctx.restore () 
-})
-// Draw connecting lines between nearby particles ctx.strokeStyle = 'rgba (0, 255, 255, 0.1) '
-ctx.lineWidth = 0.5
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-}
-;
-export default UltraFuturisticBackground2043;
-;
-=======
-      {/* Consciousness energy field */}"
-          className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5"
-              coordinate_x: [0, Math.random () * 200 - 100],
-              coordinate_y: [0, Math.random () * 200 - 100],
-              opacity: [0, 1, 0],
-              scale: [0, 1, 0],
-            }}            transition={{}
-              duration: 4 + Math.random () * 4,
-              repeat: Infinity,
-              delay: Math.random () * 4,              coordinate_x: [0, Math.random () * 200 - 100];
-              coordinate_y: [0, Math.random () * 200 - 100];
-              opacity: [0, 1, 0];
-              scale: [0, 1, 0]}}
-              duration: 4 + Math.random () * 4,
-              repeat: Infinity,
-              delay: Math.random () * 4,'
-              ease: 'easeInOut',
-            }}
-            style={{}`
-              left: `${Math.random () * 100}%`,`
-              top: `${Math.random () * 100}%`,"
-            }}          />              ease: "easeInOut";
-            }}
-            style={{}`
-              left: `${Math.random () * 100}%`,`
-              top: `${Math.random () * 100}%`}}
-        ))}
-      </div>;
-      {/* Consciousness energy field */}'
-      <div className='absolute inset - 0'>;
-        <motion.div;'
-          className='absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to - cyan - 500 / 5';
-<<<<<<< HEAD
-          animate={{
-            opacity: [0.3, 0.6, 0.3],        <motion.div;
-          className="absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to-cyan-500 / 5";
-          animate={{
-=======
-          animate={{}
-            opacity: [0.3, 0.6, 0.3],        <motion.div;"
-          className="absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to - cyan - 500 / 5";
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
-          transition={{}
-            duration: 10,
-            repeat: Infinity,"
-            ease: "easeInOut";
-          }}
-};
-
-    </div>);
-}export default UltraFuturisticBackground2043);
-}
-;
-export default UltraFuturisticBackground2043;
-;
 export default UltraFuturisticBackground2043;
 
 }

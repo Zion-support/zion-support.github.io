@@ -1,40 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import React from 'react',
-import Link from 'next/link';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion } from 'framer-motion';
-
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Star
-  Rocket
-  Brain
-  Atom
-  Building
-  Briefcase
-  Microscope
-  Twitter
-  Facebook
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  Zap
-  Sparkles
-  Shield
-  Cpu
-  Database;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight, Star
+import { Phone, Mail, MapPin, Globe, ArrowRight, Star;
+  Rocket, Brain, Atom, Building, Briefcase, Microscope;
+  Twitter, Facebook, Linkedin, Instagram, Youtube;}
+  Github, Zap, Sparkles, Shield, Cpu, Database}
+ } from 'lucide-react';
 
 =======
 import { motion } from 'framer-motion';
@@ -390,44 +359,33 @@ const socialLinks = [
 origin/cursor/automate-test-improve-and-merge-code-2533
 const footerSections = [
   {
-=======
-const footerSections = []
-  {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    title: 'Company'
-    links: ['
-      { name: 'About Us', href: '/about' },'
-      { name: 'Our Mission', href: '/mission' },'
-      { name: 'Leadership Team', href: '/team' },'
-      { name: 'Careers', href: '/careers' },'
-      { name: 'Press & Media', href: '/press' },
-  {'
-    title: 'Solutions',
-    links: [;'
-      { name: 'AI Services', href: '/ai - services' },'
-      { name: 'Quantum Technology', href: '/quantum - technology' },'
-      { name: 'IT Infrastructure', href: '/it - infrastructure' },'
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-  {'
-    title: 'Resources',
-    links: [;'
-      { name: 'Blog', href: '/blog' },'
-      { name: 'Case Studies', href: '/case - studies' },'
-      { name: 'White Papers', href: '/white - papers' },'
-      { name: 'Documentation', href: '/docs' },'
-      { name: 'API Reference', href: '/api' },
-  {'
-    title: 'Legal',
-<<<<<<< HEAD
-    links: [;
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-      { name: 'Data Protection', href: '/data - protection' },
-      { name: 'Accessibility', href: '/accessibility' },
-{ name: 'Partnerships', href: '/partnerships' },
-    ],
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    title: 'Company',
+  links: [
+        { name: 'About Us'}
+  href: '/about'}
+},
+
+        { name: 'Our Mission'}
+  href: '/mission'}
+},
+
+        { name: 'Leadership Team'}
+  href: '/team'}
+},
+
+        { name: 'Careers'}
+  href: '/careers'}
+},
+
+        { name: 'Press & Media'}
+  href: '/press'}
+},
+
+  { name: 'Partnerships'}
+  href: '/partnerships'}
+}
+
+    ]
   },
   {
     title: 'Solutions',
@@ -1737,108 +1695,6 @@ export default UltraFuturisticFooter2029;
     </footer>
 );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-
-      {/* Newsletter Signup */}
-      <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 border-t border-slate-700/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Innovation
-            </h3>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Get the latest insights on AI, quantum computing, and autonomous technology. 
-              Join our newsletter for exclusive updates and industry insights.
-            </p>
-              <Link;
-                href='/cookies';
-            </div>;
-            <div className="flex items-center space-x-6 text-sm text-gray-400">;
-              <Link href="/privacy" className="hover:text-white transition-colors">;
-                Privacy Policy;
-              </Link>;
-              <Link href="/terms" className="hover:text-white transition-colors">;
-                Terms of Service;
-              </Link>;
-              <Link href="/cookies" className="hover:text-white transition-colors">;
-                className='hover:text-white transition-colors';
-              >;
-                Cookie Policy;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Newsletter Signup */}Get the latest insights on AI, quantum computing, and autonomous;
-              technology. Join our newsletter for exclusive updates and industry;
-              insights.;
-            </p>;
-            </h3>;
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">;
-              Get the latest insights on AI, quantum computing, and autonomous technology.;
-              Join our newsletter for exclusive updates and industry insights.;
-            </p>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">;
-              Get the latest insights on AI, quantum computing, and autonomous;
-              technology. Join our newsletter for exclusive updates and industry;
-              insights.;
-            </p>;
-            </h3>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Get the latest insights on AI, quantum computing, and autonomous technology.
-              Join our newsletter for exclusive updates and industry insights.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
-              />;
-              <button className='px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'>                Subscribe              Stay Updated with Innovation;
-            </h3>;
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">;
-              Get the latest insights on AI, quantum computing, and autonomous technology. ;
-              Join our newsletter for exclusive updates and industry insights.;
-            </p>;
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                Subscribe;
-              </button>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>)}export default UltraFuturisticFooter2029)}export default UltraFuturisticFooter2029;)export default UltraFuturisticFooter2029;  )}
-export default UltraFuturisticFooter2029;}
-export default UltraFuturisticFooter2029;<div className='bg-gradient-to-r from-purple-600/10 to-blue-600/10 border-t border-slate-700/50'>;
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>;
-          <div className='text-center'>;
-            <h3 className='text-2xl font-bold text-white mb-4'>;
-              Stay Updated with Innovation;
-            </h3>;
-            <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>;
-              Get the latest insights on AI, quantum computing, and autonomous;
-              technology. Join our newsletter for exclusive updates and industry;
-              insights.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto'>;
-              <input;
-                type='email';
-                placeholder='Enter your email';
-                className='flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
-              />;
-              <button className='px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'>;
-                Subscribe;
-              </button>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>;
-    </footer>);
-}
-;
-export default UltraFuturisticFooter2029);
-}
-;
 export default UltraFuturisticFooter2029;
 ;
   );

@@ -2,37 +2,20 @@
 <<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { getServiceById } from '../../data/micro-saas-services';
-import ServiceDetail from '../../components/sections/ServiceDetail';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
-import Head from 'next/head';'
-import { useRouter  } from 'next/router';'
-import { getServiceById  } from '../../data/micro-saas-services';'
-import ServiceDetail from '../../components/sections/ServiceDetail',';
+import { useRouter  } from 'next/router';
+import { getServiceById  } from '../../data/micro-saas-services';
+import ServiceDetail from '../../components/sections/ServiceDetail';,
 import Button from '../../components/ui/Button';
+export default function ServiceDetailPage() {
 
-export default function ServiceDetailPage() {};
-export default function ServiceDetailPage() { return null; }
-export default function ServiceDetailPage() {};
-  const router = useRouter();
-  const { id } = router.query;
-'
-import {ArrowLeft, ExternalLink} from 'lucide-react';
-export default function ServiceDetailPage() {}
-';
-  if (!id || typeof id !== 'string') {;
+export default function ServiceDetailPage() {;
+export default function ServiceDetailPage() {
 
-    return ('
-      <div className='min-h-screen bg-black flex items-center justify-center'>;'
-        <div className='text-center'>;'
-          <h1 className='text-2xl font-bold text-white mb-4'>;
+if (!id || typeof id !== 'string') {
+    return (
+      <div className='min-h-screen bg-black flex items-center justify-center' />
+        <div className='text-center' />
+          <h1 className='text-2xl font-bold text-white mb-4' />
             Service Not Found;
           </h1>;'
           <p className='text-gray-400 mb-6'>;
@@ -127,18 +110,7 @@ if (!id || typeof id !== 'string') {
 
   return (
     <>
-<<<<<<< HEAD
       <Head>
-        <title>{service.name} | Zion Tech Group - Micro SaaS Services</title>
-import { useRouter   } from 'next/router';
-import { getServiceById   } from '../../data/micro-saas-services';
-import ServiceDetail from '../../components/sections/ServiceDetail',import Button from '../../components/ui/Button';
-export default function ServiceDetailPage() {export default function ServiceDetailPage() {export default function ServiceDetailPage() {const router = useRouter()const { id }  = router.query;import { ArrowLeft, ExternalLink } from 'lucide-react';
-export default function ServiceDetailPage() {if (!id || typeof id !== 'string') {return (<div className='min-h-screen bg-black flex items-center justify-center'>;
-  const router = useRouter();
-  const { id } = router.query;
-=======
-      <Head />
         <title />{service.name} | Zion Tech Group - Micro SaaS Services</title>
 <meta name='description' content={service.description} />
         <meta

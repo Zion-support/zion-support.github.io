@@ -502,8 +502,6 @@ interface LayoutProps {
 =======
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
-
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default function Layout({ 
   children, 
   title = "Zion Tech Group - Leading AI & Technology Solutions",

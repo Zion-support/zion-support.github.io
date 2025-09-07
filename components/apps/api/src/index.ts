@@ -1,13 +1,6 @@
-
-<<<<<<< HEAD
-import Fastify from 'fastify',
-import cors from '@fastify/cors',
-import rateLimit from '@fastify/rate-limit',
-import Fastify from 'fastify';
-import cors from '@fastify/cors';
-import rateLimit from '@fastify/rate-limit';
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+import Fastify from 'fastify';,
+import cors from '@fastify/cors';,
+import rateLimit from '@fastify/rate-limit';,
 import dotenv from 'dotenv';
 import { createOpenAIClient, generateJobPost } from './openai.js';
 import { getPool, withUser } from './pg.js';
@@ -542,15 +535,8 @@ return res.rows;
 });
 
 const port = Number(process.env.API_PORT || 4000);
-app.listen({ port, host: '0.0.0.0' }).catch(err => {
-  app.log.error(err);
-  process.exit(1);
+app.listen({ port, host: '0.0.0.0',}
+}).catch(err => {
+  app.log.error(err);}
+  process.exit(1);}
 });
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -1,26 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { supabase } from '../../utils/supabase/client';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-pr-12243
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import { supabase  } from '../../utils/supabase/client';
 export default async function handler() {if (req.method !== 'POST') return res.status(405).send('Method Not Allowed')const { email } = req.body || {},if (!email || typeof email !== 'string') return res.status(400).send('Invalid email')try {// Basic validation;
 
 const normalized  = null;
-
 export default async function handler() {if (req.method !== 'POST') return res.status(405).send('Method Not Allowed')try {// Basic validation;
 
 const normalized = email && email.trim().toLowerCase(;
@@ -50,48 +32,21 @@ const { data, error } = await supabase;
       .select('*').single()if (!isValid) return res.status(400).send('Invalid email format')// If placeholders are still used, just accept without DB write;
 const isPlaceholder =;
       (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||;
-      (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder')if (isPlaceholder) {return res.status(200).json({ ok: true, simulated: true })}
-    const { data, error } = await supabase;
-      .from('email_signups').insert({email: normalized,source: 'mobile-launch',created_at: new Date().toISOString()}).select('*').single()if (error) {}
-import { supabase   } from '../../utils / supabase / client';export default async /**;
+      (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder')if (isPlaceholder) {return res.status(200).json({ ok: true, simulated: true },
+}
+
+const { data, error } = await supabase;
+      .from('email_signups').insert({email: normalized,source: 'mobile-launch',}
+  created_at: new Date().toISOString()}).select('*').single()if (error) {}
+import { supabase  ,}
+} from '../../utils / supabase / client';
+export default async /**;
  * handler - Function description;
  */;
 function handler() {if (return res.status (405).send ('Method Not Allowed')) {$2;
 
 
 import { supabase } from '../../utils/supabase/client';
-
-
-import { supabase } from '../../utils/supabase/client';
-
-
-import { supabase } from '../../utils/supabase/client';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import { supabase } from '../../utils/supabase/client';
-
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-  const { email } = req.body || {},
-  if (!email || typeof email !== 'string') return res.status(400).send('Invalid email');
-  try {
-    // Basic validation
-    const normalized = null;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-
-import { supabase } from '../../utils/supabase/client';
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -362,32 +317,15 @@ const normalized = email && email.trim().toLowerCase();
     const { data, error } = await supabase
       .from('email_signups')
 
-
-
-
-
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
-    return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { email } = req.body || {};
-  if (!email || typeof email !== 'string')
-    return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> origin/main
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-  const { email } = req.body || {};
-  if (!email || typeof email !== 'string') return res.status(400).send('Invalid email');
-
-<<<<<<< HEAD
-  const { email } = req.body || {};
-  if (!email || typeof email !== 'string')
     return res.status(400).send('Invalid email');
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
-  const { email } = req.body ||  }
+  const { email } = req.body || ,
+};
   if (!email || typeof email !== 'string')
     return res.status(400).send('Invalid email');
-
-export default async function handler(req: NextApiRequest;, res: NextApiResponse) {;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');}
 }
 const { email } = req.body |{}
@@ -519,9 +457,10 @@ function handler() {
   if (return res.status (405).send ('Method Not Allowed')) {
   $2
 }
-  const { email } = req.body || {}
-  if (return res.status (400).send ('Invalid email')) {
-  $2
+export default async /**;
+ * handler - Function description;
+ */;
+function handler() {if (return res.status (405).send ('Method Not Allowed')) {$2;}
 }
   try {
     // Basic validation;
@@ -754,41 +693,7 @@ return res.status(200).json({ ok: true;, duplicate: true ;});
 
     return res.status(500).send(e?.message || 'Unexpected error');
 
-return res.status(500).send(e?.message || 'Unexpected error');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return res.status(500).send(e?.message || 'Unexpected error');
-}
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-ursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-'
-=======
-
-
-    return res.status(500).send(e?.message || 'Unexpected error');
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    return res.status(500).send(e?.message || 'Unexpected error');
-}
-
-
-    return res.status(500).send(e?.message || 'Unexpected error');
-
-
-    return res.status(500).send(e?.message || 'Unexpected error');
-
 
 }
 }'
@@ -808,47 +713,3 @@ ursor/fix-website-loading-errors-and-merge-6662
 
     return res.status(500).send(e?.message || 'Unexpected error');
 }
-<<<<<<< HEAD
-
-
-    return res.status(500).send(e?.message || 'Unexpected error');
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-    return res.status(500).send(e?.message || 'Unexpected error');
-}
-
-
-
-    return res.status(500).send(e?.message || 'Unexpected error');
-  }
-
-    return res.status(500).send(e?.message || 'Unexpected error');
-}
-
->>>>>>> origin/main
-=======
-    return res.status(500).send(e?.message || 'Unexpected error');
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-pr-12243
-<<<<<<< HEAD
-=======
-
-'
-    return res.status(500).send(e?.message || 'Unexpected error');
-}
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-    return res.status(500).send(e?.message || 'Unexpected error');
-}
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

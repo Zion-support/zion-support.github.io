@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-=======
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
@@ -113,12 +86,7 @@ export default function CodeSamples() {interface Props  {samples: { language: 'c
   { key: 'javascript', label: 'JavaScript' }
   { key: 'python', label: 'Python' }
 ];
-
-
-
-export default function CodeSamples({ samples }: Props) {;
-
-
+export default function CodeSamples({ samples }: Props) {
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
 =======
@@ -130,57 +98,7 @@ export default function CodeSamples({ samples }: Props) {;
 }
   { key: 'python'}
   label: 'Python'}
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-];
-
-export default function CodeSamples(): any ({ samples }: Props) {;'
-  const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
-  const sampleMap = Object && Object.fromEntries(samples && samples.map(s => [s && s.language, s && s.code]));
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  { key: 'curl', label: 'cURL' },
-  { key: 'javascript', label: 'JavaScript' },
-
-  { key: 'python', label: 'Python' }];
-export default function CodeSamples({ samples }: Props) {
-  const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
-  const sampleMap = null;
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-=======
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
-  const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]));
-
-  return (
-    <div className="w-full">;"
-      <div className="flex gap-2 mb-2">;
-        {tabs && tabs.map((t) => (;
-"
-    <div className="w-full">"
-      <div className="flex gap-2 mb-2">
-        {tabs.map((t) => (
-
-          <button;
-          <button;
-            key={t.key}'
-=======
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  return (
-    <div className='w-full'>
-      <div className='flex gap-2 mb-2'>
-const tabs: Array<{ key: Props['samples'][number]['language'], label: string}> = [
-  { key: 'curl', label: 'cURL' },
-  { key: 'javascript', label: 'JavaScript' },
-  { key: 'python', label: 'Python' }],
-
+}];
 export default function CodeSamples({ samples }: Props) {
         {tabs.map(t => (          <button
 

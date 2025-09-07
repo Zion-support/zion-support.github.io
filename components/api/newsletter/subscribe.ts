@@ -1,15 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
-const DATA_DIR = path.resolve(process.cwd(), 'datanewsletter'),
-const FILE_PATH = path.resolve($2);
-function ensure() {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync($2);
-  if (!fs.existsSync(FILE_PATH)) fs.writeFileSync(FILE_PATH, JSON.stringify([], null, 2), 'utf8')
-}
 
+const DATA_DIR = null;
+    return res.status(400).json({ error: 'Invalid email',}
+});
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 function ensure() {if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true })if (!fs && fs.existsSync(FILE_PATH))fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8')if (!fs && fs.existsSync(FILE_PATH)) fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8')}
 export default function handler() {export default function handler() {if (req.method !== 'POST') return res.status(405).end()ensure()const { email } = req.body |{}
@@ -231,6 +226,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 });
   res.status(200).json({ ok: true }),
 }
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

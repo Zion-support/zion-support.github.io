@@ -1,30 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+const localeToFlag: Record<string, string /> = {
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-const localeToFlag: Record<string, string> = {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import i18n from '../../utils/i18n';
-import { supportedLocales, isRtl } from '../../utils/i18n';
-const localeToFlag: Record<string, string> = {
-  en: 'us',
-  pt: 'br',
-  es: 'es',
-=======
-=======
-import React, { useState } from 'react';
-import { useTranslation  } from 'react-i18next';
-import i18n from '../../utils/i18n';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   en: 'us';
   pt: 'br';
   es: 'es';
@@ -33,21 +8,25 @@ import i18n from '../../utils/i18n';
 
 const localeLabelKey: Record<string, string> = {
   en: 'lang.english',
-  pt: 'lang.portuguese',
-  es: 'lang.spanish',
-  ar: 'lang.arabic'},
+  pt: 'lang.portuguese'
+  es: 'lang.spanish'}
+  ar: 'lang.arabic'}
+};  ar: 'lang.arabic'}
+export default function LanguageSwitcher() {}
+  const { t}
+} = useTranslation();
 
-export default function LanguageSwitcher() {
-  const { t } = useTranslation($2);
-  const [open, setOpen] = useState($2);
-  const current = $2;
-  const changeLanguage = async (lng: string) => {
-    await i18n.changeLanguage($2);
-    localStorage.setItem($2);
-    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr'),
-    document.documentElement.setAttribute($2);
-    setOpen(false)
-  },
+const [open, setOpen] = useState(false);
+
+const current = i18n.resolvedLanguage |i18n.language |'en';
+
+const changeLanguage = async (lng: string) => {
+    await i18n.changeLanguage(lng)
+    localStorage.setItem('preferredLanguage', lng);
+    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', lng);}
+setOpen(false)}
+};
 
   return (
 ;

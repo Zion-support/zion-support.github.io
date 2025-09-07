@@ -1,259 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Menu,ChevronDown,X,Phone,Mail,MapPin,ArrowRight,Brain,Rocket,Shield,Zap,Target,Atom,BookOpen,Truck,DollarSign,BarChart3,Globe,Users,Star,Sparkles,Cpu,Lock,Cloud,Settings,Eye,Award,Clock,Heart,Lightbulb,Search,Grid,List,TrendingUp,Shield as ShieldIcon,Globe as GlobeIcon,User,ShoppingCart,Bell,HelpCircle,FileText,Video,Headphones,Code,Database,Network,Server,Monitor,Smartphone,Camera,Gamepad2,Palette,Music,Film,BookOpenCheck,Building,MessageCircle,} from 'lucide-react';
-import { Menu;
-=======
-import {}
-  Menu,
-  ChevronDown,
-  X,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Brain,
-  Rocket,
-  Shield,
-  Zap,
-  Target,
-  Atom,
-  BookOpen,
-  Truck,
-  DollarSign,
-  BarChart3,
-  Globe,
-  Users,
-  Star,
-  Sparkles,
-  Cpu,
-  Lock,
-  Cloud,
-  Settings,
-  Eye,
-  Award,
-  Clock,
-  Heart,
-  Lightbulb,
-  Search,
-  Grid,
-  List,
-  TrendingUp,
-  Shield as ShieldIcon,
-  Globe as GlobeIcon,
-  User,
-  ShoppingCart,
-  Bell,
-  HelpCircle,
-  FileText,
-  Video,
-  Headphones,
-  Code,
-  Database,
-  Network,
-  Server,
-  Monitor,
-  Smartphone,
-  Camera,
-  Gamepad2,
-  Palette,
-  Music,
-  Film,
-  BookOpenCheck,;
-  Building,;
-  MessageCircle,;
-} from 'lucide-react';
-
-import {};
-  Menu;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  ChevronDown;
-  X;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
-  Brain;
-  Rocket;
-  Shield;
-  Zap;
-  Target;
-  Atom;
-  BookOpen;
-  Truck;
-  DollarSign;
-  BarChart3;
-  Globe;
-  Users;
-  Star;
-  Sparkles;
-  Cpu;
-  Lock;
-  Cloud;
-  Settings;
-  Eye;
-  Award;
-  Clock;
-  Heart;
-  Lightbulb;
-  Search;
-  Grid;
-  List;
-  TrendingUp;
-  Shield as ShieldIcon;
-  Globe as GlobeIcon;
-  User;
-  ShoppingCart;
-  Bell;
-  HelpCircle;
-  FileText;
-  Video;
-  Headphones;
-  Code;
-  Database;
-  Network;
-  Server;
-  Monitor;
-  Smartphone;
-  Camera;
-  Gamepad2;
-  Palette;
-  Music;
-  Film;
-  BookOpenCheck;
-  Building;
-<<<<<<< HEAD
-  MessageCircle;
- } from 'lucide-react';
-interface NavigationItem  {name: string;href: string;  icon?: React.ReactNode;import {Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
-  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles;
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
-  User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones;
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
-  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles,Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
-  User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones,import {Menu,ChevronDown,X,Phone,Mail,MapPin,ArrowRight,Brain,Rocket,Shield,Zap,Target,Atom,BookOpen,Truck,DollarSign,BarChart3,Globe,Users,Star,Sparkles,Cpu,Lock,Cloud,Settings,Eye,Award,Clock,Heart,Lightbulb,Search,Grid,List,TrendingUp,Shield as ShieldIcon,Globe as GlobeIcon,User,ShoppingCart,Bell,HelpCircle,FileText,Video,Headphones,Code,Database,Network,Server,Monitor,Smartphone,Camera,Gamepad2,Palette,Music,Film,BookOpenCheck,Building,MessageCircle,} from 'lucide-react';interface NavigationItem  {name: string;
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
-  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles,Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
-  User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones,Code, Database, Network, Server, Monitor, Smartphone;
-  Camera, Gamepad2, Palette, Music, Film, BookOpenCheck;
-  Building, MessageCircle;
-} from 'lucide-react';import React, { useState, useEffect } from 'react',import Link from 'next/link';
-import { motion, AnimatePresence  } from 'framer-motion';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-  MessageCircle;'
-} from 'lucide-react';
-interface NavigationItem {}
-  name: string;
-
-
-  href: string;  icon?: React.ReactNode;import { ;
-
-
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
-  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles;
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
-  User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones;
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
-  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles, ;
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
-  User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, ;
-import {}
-  Menu,
-  ChevronDown,
-  X,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Brain,
-  Rocket,
-  Shield,
-  Zap,
-  Target,
-  Atom,
-  BookOpen,
-  Truck,
-  DollarSign,
-  BarChart3,
-  Globe,
-  Users,
-  Star,
-  Sparkles,
-  Cpu,
-  Lock,
-  Cloud,
-  Settings,
-  Eye,
-  Award,
-  Clock,
-  Heart,
-  Lightbulb,
-  Search,
-  Grid,
-  List,
-  TrendingUp,
-  Shield as ShieldIcon,
-  Globe as GlobeIcon,
-  User,
-  ShoppingCart,
-  Bell,
-  HelpCircle,
-  FileText,
-  Video,
-  Headphones,
-  Code,
-  Database,
-  Network,
-  Server,
-  Monitor,
-  Smartphone,
-  Camera,
-  Gamepad2,
-  Palette,
-  Music,
-  Film,
-  BookOpenCheck,
-  Building,
-  MessageCircle,';
-} from 'lucide-react';
-;
-interface NavigationItem {}
-  name: string;
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
-  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles,
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
-  User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones,
-  Code, Database, Network, Server, Monitor, Smartphone;
-  Camera, Gamepad2, Palette, Music, Film, BookOpenCheck;
-  Building, MessageCircle;'
-} from 'lucide-react';
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import { Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles;
@@ -915,7 +662,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       { name: 'Enterprise Solutions', href: '/enterprise-solutions-showcase', description: 'Enterprise-grade solutions' },
       { name: 'Innovative Business Solutions', href: '/innovative-business-solutions', description: 'Business transformation services' }
     ]
-  },
+
+}
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
@@ -1783,11 +1531,12 @@ const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com
       },
       {
         name: 'Invoice Studio',
-        href: '/invoice - studio',
-        description: 'Instant branded invoices and payments',
-      },
-    ],
-  },
+  href: '/invoice-studio'}
+        description: 'Instant branded invoices and payments'}
+      }
+    ]
+
+}
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum - services',
@@ -2077,7 +1826,8 @@ const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com
         description: 'Revolutionary space AI'
       }
     ]
-  }
+
+}
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
@@ -2506,25 +2256,29 @@ const quickActions = [
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 const UltraFuturisticNavigation2035: React.FC = () => {
-=======
-      {'
-        name: 'Documentation''
-        href: '/docs''
-        description: 'Technical documentation'
-      }
-      {}
-      {'
-        name: 'Support Center''
-        href: '/support''
-        description: 'Help and support'
-      }
-      {'
-        name: 'Training''
-        href: '/training''
-        description: 'Learning resources'
-      }'
-      { name: 'Community', href: '/community', description: 'User community' }
-    ]
+ ;
+  const [isOpen, setIsOpen] = useState(false);
+
+const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
+
+const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+
+    const handleScroll = (
+
+setIsScrolled(window.scrollY > 10)) => {
+  return $3;}
+}
+};
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+const toggleDropdown = (
+    setActiveDropdown(activeDropdown === name ? null : name);) => {
+  return $3;}
+}
   }
 ];
 const UltraFuturisticNavigation2035: React.FC = () => {}
@@ -2954,191 +2708,12 @@ const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com
     closeDropdowns()
   };
 
-
-
-            {/* Desktop Navigation */}  };
-
-
-  return (
-    <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled
-        ? 'bg-black/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl'
-            {/* Desktop Navigation */}
-                  <button
-                    onClick={() => toggleDropdown(item && item.name)}
-                    className='flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400'                  >;
-                    {item && item.icon}
-                    <span>{item && item.name}</span>;
-                    {item && item.badge && (            <div className="hidden lg:flex items-center gap-8">;
-              {navigationItems && navigationItems.map((item) => (;
-                <div key={item && item.name} className="relative group">;
-                  <button
-                    onClick={() => toggleDropdown(item && item.name)}
-                    className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400";
-                    {item && item.icon}
-                    <span>{item && item.name}</span>;
-                    {item && item.badge && (;
-                      <span
-                        className={`px-2 py-1 text-xs rounded-full ${
-                          item && item.badge === 'New'
-                            ? 'bg-green-500/20 text-green-400 border border-green-500/30'
-                            : item && item.badge === 'Hot'
-                              ? 'bg-red-500/20 text-red-400 border border-red-500/30'
-                              : item && item.badge === 'Showcase'
-                                ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
-                                : item && item.badge === 'Future'
-                                  ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
-                                  : item && item.badge === 'Enterprise'
-                                    ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
-                                    : item && item.badge === 'Industry'
-                                      ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30'
-                                      : 'bg-gray-500/20 text-gray-400 border border-gray-500/30'
-                        }`}>;
-                        {item && item.badge}
-                      </span>;
-                    )}
-                    <ChevronDown
-                      className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item && item.name ? 'rotate-180' : ''
-                      }`}
-                    />                  </button>                      <spanclassName={`px-2 py-1 text-xs rounded-full ${
-                        item && item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
-                        item && item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :
-                        item && item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' :
-                        item && item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :
-                        item && item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
-                        item && item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
-                  <button
-                    onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
-    setIsOpen($2);
-    closeDropdowns()
-  },
-
-  return (
-    <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-black/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl' 
-        : 'bg-transparent'
-    }`}>
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className={`absolute inset-0 transition-opacity duration-300 ${
-          isScrolled ? 'opacity-100' : 'opacity-0'
-        }`}>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95" />
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />
-        </div>
-      </div>
-
-      <div className="relative z-10">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Zion Tech Group
-                </div>
-                <div className="text-xs text-gray-400">Revolutionary Technology</div>
-              </div>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
-                  <button
-                    onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
-=======
-    setActiveDropdown(activeDropdown === name ? null : name);
-  }
-  const closeDropdowns = () => {
-    setActiveDropdown(null);
-origin/cursor/automate-test-improve-and-merge-code-2533
-  };
-
-  const closeMobileMenu = () => {}
+const closeMobileMenu = (
     setIsOpen(false);
     closeDropdowns()
   };
 
 
-
-            {/* Desktop Navigation */}  };
-
-
-  return ("
-    <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${}
-      isScrolled'
-        ? 'bg-black/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl'
-            {/* Desktop Navigation */}
-                  <button;
-                    onClick={() => toggleDropdown(item && item.name)}'
-                    className='flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400'                  >;
-                    {item && item.icon}
-                    <span>{item && item.name}</span>;"
-                    {item && item.badge && (            <div className="hidden lg:flex items-center gap-8">;
-              {navigationItems && navigationItems.map((item) => (;"
-                <div key={item && item.name} className="relative group">;
-                  <button;
-                    onClick={() => toggleDropdown(item && item.name)}"
-                    className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400";
-                    {item && item.icon}
-                    <span>{item && item.name}</span>;
-                    {item && item.badge && (;
-                      <span;`
-                        className={`px-2 py-1 text-xs rounded-full ${'
-                          item && item.badge === 'New''
-                            ? 'bg-green-500/20 text-green-400 border border-green-500/30''
-                            : item && item.badge === 'Hot''
-                              ? 'bg-red-500/20 text-red-400 border border-red-500/30''
-                              : item && item.badge === 'Showcase''
-                                ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30''
-                                : item && item.badge === 'Future''
-                                  ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30''
-                                  : item && item.badge === 'Enterprise''
-                                    ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30''
-                                    : item && item.badge === 'Industry''
-                                      ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30''
-                                      : 'bg-gray-500/20 text-gray-400 border border-gray-500/30'`
-                        }`}>;
-                        {item && item.badge}
-                      </span>;
-                    )}
-                    <ChevronDown;`
-                      className={`w-4 h-4 transition-transform duration-200 ${'
-                        activeDropdown === item && item.name ? 'rotate-180' : ''`
-                      }`}`
-                    />                  </button>                      <spanclassName={`px-2 py-1 text-xs rounded-full ${'
-                        item && item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :'
-                        item && item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :'
-                        item && item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' :'
-                        item && item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :'
-                        item && item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :'
-                        item && item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
-              {navigationItems.map((item) => ("
-                <div key={item.name} className="relative group">
-                  <button;
-                    onClick={() => toggleDropdown(item.name)}"
-                    className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"'
-                        item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :'
-                        item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :'
-                        item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' :'
-                        item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :'
-                        item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :'
-                        item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
-
-closeDropdowns();
-  };
-
-  
     >
       {/* Background Effects */}
       <div className='absolute inset-0'>
@@ -3390,18 +2965,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
+className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
-                  {/* Dropdown Menu */}
-                  <AnimatePresence>;
-                    {activeDropdown === item && item.name && (<motion&& motion.div;
-                        initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                                className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${child && child.featured;
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50';
-                                }`}
-                      >;
-                        <div className="p-6">;
-                          <div className="flex items-center gap-3 mb-4">;
+                        onMouseLeave={closeDropdown}
+}
+                       />;
+                        <div className='p-6' />;
+                          <div className='flex items-center gap-3 mb-4' />;
                             {item.icon}
                             <div>;
                               <h3 className="font-semibold text-white">{item.title |item.name}</h3>;
@@ -4047,72 +3617,6 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors durati
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
 
-              transition={{ duration: 0.3 }}
-className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50'
-            >
-              <div className='container mx-auto px-4 py-6'>
-                <div className='space-y-6'>
-                  {/* Mobile Navigation Items */}
-                  {navigationItems.map(item => (
-                    <div key={item.name}>
-                      <button
-                        onClick={() => toggleDropdown(item.name)}
-                        className='flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white transition-colors duration-200'
-                      >
-                        <div className='flex items-center gap-3'>
-                          {item.icon}
-                          <span>{item.name}</span>
-                          {item.badge && (
-                            <span
-                              className={`px-2 py-1 text-xs rounded-full ${
-                                item.badge === 'New'
-                                  ? 'bg-green-500/20 text-green-400'
-                                  : item.badge === 'Hot'
-                                    ? 'bg-red-500/20 text-red-400'
-                                    : item.badge === 'Showcase'
-                                      ? 'bg-cyan-500/20 text-cyan-400'
-                                      : 'bg-gray-500/20 text-gray-400'
-                              }`}
-                            >
-                              {item.badge}
-origin/cursor/automate-test-improve-and-merge-code-2533
-                            </span>
-                          )}
-                        </div>
-<<<<<<< HEAD
-<ChevronDown
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item.name ? 'rotate-180' : ''
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-                          }`}
-                        />
-=======
-                        <ChevronDown;`
-                          className={`w-4 h-4 transition-transform duration-200 ${'
-                            activeDropdown === item.name ? 'rotate-180' : ''`
-                          }`}`
-                        />                      </button>                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${'
-                          activeDropdown === item.name ? 'rotate-180' : ''`
-                        }`} />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                      </button>
-`
-                        />                      </button>                        <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${'
-                          activeDropdown === item && item.name ? 'rotate-180' : ''`
-                        }`} />;
-                      </button>;
-<<<<<<< HEAD
-                        />                      </button>                        <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item && item.name ? 'rotate-180' : '';
-                        }`} />;
-                      </button>;{/* Mobile Dropdown */}<AnimatePresence>;
-                        {activeDropdown === item && item.name && (<motion&& motion.div;
-                      <AnimatePresence>;
-                        {activeDropdown === item.name && (<motion.div;
-=======
-
-
-
-
                       {/* Mobile Dropdown */}
                       <AnimatePresence>;
                         {activeDropdown === item && item.name && (;
@@ -4202,9 +3706,6 @@ child.featured
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                                 )}
-
-
-
 
                               </Link>
 <<<<<<< HEAD
@@ -4574,8 +4075,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </nav>
 <<<<<<< HEAD
 )
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
+};
+
 }, [])
 }, []);"
 </div> <div    /> <div className=\"text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent\"     /> Zion Tech Group </div> <div className=\"text - xs text - gray - 400\"     />Revolutionary Technology</div> </div> </a> > {}
@@ -4666,216 +4167,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> </div> </div> </div> </div> </div> </motion.div>)
 }</AnimatePresence> </div> </nav>)
 }
-export default UltraFuturisticNavigation2035;  )
-}
-=======
-);
-};
-
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-}, []);
-}
-;
-}, []);"
-</div> <div> <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Zion Tech Group </div> <div className="text - xs text - gray - 400" >Revolutionary Technology</div> </div> </a> > {}
-  item.icon;
-}<span> {}
-  item.name;
-}</span> {}
-  item.badge && (<span className= {}`
-  `px - 2 py - 1 text - xs rounded - full $ {'
-  item.badge === 'New' ? 'bg - green - 500 / 20 text - green - 400 border border - green - 500 / 30' : item.badge === 'Hot' ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30' : item.badge === 'Showcase' ? 'bg - cyan - 500 / 20 text - cyan - 400 border border - cyan - 500 / 30' : item.badge === 'Future' ? 'bg - purple - 500 / 20 text - purple - 400 border border - purple - 500 / 30' : item.badge === 'Enterprise' ? 'bg - blue - 500 / 20 text - blue - 400 border border - blue - 500 / 30' : item.badge === 'Industry' ? 'bg - orange - 500 / 20 text - orange - 400 border border - orange - 500 / 30' : 'bg - gray - 500 / 20 text - gray - 400 border border - gray - 500 / 30';`
 }`;
-}> {}
-  item.badge;
-}</span>);
-}<ChevronDown className= {}`
-  `w - 4 h - 4 transition - transform duration - 200 $ {'
-  active_dropdown === item.name ? 'rotate - 180' : '';`
+} /> {item.badge;}
+}</span>)}<ChevronDown className= {`w - 4 h - 4 transition - transform duration - 200 $ {active_dropdown === item.name ? 'rotate - 180' : '';}
 }`;
-}/> </button> {}
-  /* Dropdown Menu */;
-}<AnimatePresence> {}
-  active_dropdown === item.name && (<motion.div);
-}</div> </div> <Link key= {}
-  child.name;
-}href= {}
-  child.href;
-}className= {}`
-  `flex items - center gap - 3 p - 3 rounded - xl transition - all duration - 200 $ {'
-  child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';`
+}/> </button> {/* Dropdown Menu */;}
+}<AnimatePresence /> {active_dropdown === item.name && (<motion.div)}</div /> </div> <Link key= {child.name;}
+}href= {child.href;}
+}className= {`flex items - center gap - 3 p - 3 rounded - xl transition - all duration - 200 $ {child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';}
 }`;
-}on_click= {}
-  close_dropdowns;
-}>);"
-}</div> <ArrowRight className="w - 4 h - 4 opacity - 50" /> </a>) );
-}</div> </div> </motion.div>);
-}</AnimatePresence> </div>) );
-}</div> <Link key= {}
-  action.name;
-}href= {}
-  action.href;
-}className= {}`
-  `flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 $ {'
-  action.primary ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover:from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';`
+}on_click= {close_dropdowns;}"
+} />)}</div> <ArrowRight className=\"w - 4 h - 4 opacity - 50\" /> </a>) )}</div> </div> </motion.div>)}</AnimatePresence> </div>) )}</div> <Link key= {action.name;}
+}href= {action.href;}
+}className= {`flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 $ {action.primary ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover:from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';}
 }`;
-}> </a> </div> </div> {}
-  /* Mobile Menu Button */;
-}<button </button> </div> </div> {}
-  /* Mobile Menu */;
-}<AnimatePresence> <span className= {}`
-  `px - 2 py - 1 text - xs rounded - full $ {'
-  item.badge === 'New'? 'bg - green - 500 / 20 text - green - 400': item.badge === 'Hot'? 'bg - red - 500 / 20 text - red - 400': item.badge === 'Showcase'? 'bg - cyan - 500 / 20 text - cyan - 400': 'bg - gray - 500 / 20 text - gray - 400';`
+} /> </a> </div> </div> {/* Mobile Menu Button */;}
+}<button </button /> </div> </div> {/* Mobile Menu */;}
+}<AnimatePresence /> <span className= {`px - 2 py - 1 text - xs rounded - full $ {item.badge === 'New'? 'bg - green - 500 / 20 text - green - 400': item.badge === 'Hot'? 'bg - red - 500 / 20 text - red - 400': item.badge === 'Showcase'? 'bg - cyan - 500 / 20 text - cyan - 400': 'bg - gray - 500 / 20 text - gray - 400';}
 }`;
-}> {}
-  item.badge;
-}</span>);
-}</div> <ChevronDown className= {}`
-  `w - 4 h - 4 transition - transform duration - 200 $ {'
-  active_dropdown === item.name ? 'rotate - 180': '';`
+} /> {item.badge;}
+}</span>)}</div> <ChevronDown className= {`w - 4 h - 4 transition - transform duration - 200 $ {active_dropdown === item.name ? 'rotate - 180': '';}
 }`;
-}/> </button> {}
-  /* Mobile Dropdown */;
-}<AnimatePresence> > {}
-  item.children?.map ( (child) => (<Link key= {}
-  child.name;
-}href= {}
-  child.href;
-}className= {}`
-  `block p - 3 rounded - lg transition - colors duration - 200 $ {'
-  child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 text - cyan - 400': 'text - gray - 400 hover:text - white hover:bg - gray - 800 / 50';`
+}/> </button> {/* Mobile Dropdown */;}
+}<AnimatePresence /> > {item.children?.map ( (child) => (<Link key= {child.name;}
+}href= {child.href;}
+}className= {`block p - 3 rounded - lg transition - colors duration - 200 $ {child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 text - cyan - 400': 'text - gray - 400 hover:text - white hover:bg - gray - 800 / 50';}
 }`;
-}on_click= {}
-  closeMobileMenu;
-}>);
-}</a>) );
-}</motion.div>);
-}</AnimatePresence> </div>) );
-}<Link key= {}
-  action.name;
-}href= {}
-  action.href;
-}className= {}
-}
-export default UltraFuturisticNavigation2035);
-}
-;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+}on_click= {closeMobileMenu;}
+} />)}</a>) )}</motion.div>)}</AnimatePresence> </div>) )}<Link key= {action.name;}
+}href= {action.href;}
+}className = {}
 export default UltraFuturisticNavigation2035;
-<<<<<<< HEAD
-
-export default UltraFuturisticNavigation2035;  )
-};
-
+}
 export default UltraFuturisticNavigation2035;
+export default UltraFuturisticNavigation2035;  )}
 export default UltraFuturisticNavigation2035;
-'"`
-=======
-
-<<<<<<< HEAD
 export default UltraFuturisticNavigation2035;"
-=======
-] 
-}]
-]
-
-return () => window.removeEventListener ('scroll', handleScroll) 
-}, [])
-</div> <div> <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </div> <div className="text-xs text-gray-400" >Revolutionary Technology</div> </div> </a> > {
-  item.icon 
-}<span> {
-  item.name 
-}</span> {
-  item.badge && (<span className= {
-  `px-2 py-1 text-xs rounded-full $ {
-  item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' : item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' : item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' : item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' : item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' : item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' : 'bg-gray-500/20 text-gray-400 border border-gray-500/30' 
-}` 
-}> {
-  item.badge 
-}</span>) 
-}<ChevronDown className= {
-  `w-4 h-4 transition-transform duration-200 $ {
-  activeDropdown === item.name ? 'rotate-180' : '' 
-}` 
-}/> </button> {
-  /* Dropdown Menu */ 
-}<AnimatePresence> {
-  activeDropdown === item.name && (<motion.div) 
-}</div> </div> <Link key= {
-  child.name 
-}href= {
-  child.href 
-}className= {
-  `flex items-center gap-3 p-3 rounded-xl transition-all duration-200 $ {
-  child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20': 'text-gray-300 hover:text-white hover:bg-gray-800/50' 
-}` 
-}onClick= {
-  closeDropdowns 
-}>) 
-}</div> <ArrowRight className="w-4 h-4 opacity-50" /> </a>) ) 
-}</div> </div> </motion.div>) 
-}</AnimatePresence> </div>) ) 
-}</div> <Link key= {
-  action.name 
-}href= {
-  action.href 
-}className= {
-  `flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 $ {
-  action.primary ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25': 'text-gray-300 hover:text-white hover:bg-gray-800/50' 
-}` 
-}> </a> </div> </div> {
-  /* Mobile Menu Button */ 
-}<button </button> </div> </div> {
-  /* Mobile Menu */ 
-}<AnimatePresence> <span className= {
-  `px-2 py-1 text-xs rounded-full $ {
-  item.badge === 'New'? 'bg-green-500/20 text-green-400': item.badge === 'Hot'? 'bg-red-500/20 text-red-400': item.badge === 'Showcase'? 'bg-cyan-500/20 text-cyan-400': 'bg-gray-500/20 text-gray-400' 
-}` 
-}> {
-  item.badge 
-}</span>) 
-}</div> <ChevronDown className= {
-  `w-4 h-4 transition-transform duration-200 $ {
-  activeDropdown === item.name ? 'rotate-180': '' 
-}` 
-}/> </button> {
-  /* Mobile Dropdown */ 
-}<AnimatePresence> > {
-  item.children?.map ( (child) => (<Link key= {
-  child.name 
-}href= {
-  child.href 
-}className= {
-  `block p-3 rounded-lg transition-colors duration-200 $ {
-  child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400': 'text-gray-400 hover:text-white hover:bg-gray-800/50' 
-}` 
-}onClick= {
-  closeMobileMenu 
-}>) 
-}</a>) ) 
-}</motion.div>) 
-}</AnimatePresence> </div>) ) 
-}<Link key= {
-  action.name 
-}href= {
-  action.href 
-}className= {
-  `flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 $ {
-  action.primary ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white': 'text-gray-300 hover:text-white hover:bg-gray-800/50' 
-}` 
-}onClick= {
-  closeMobileMenu 
-}>) ) 
-}</div> </div> </div> </div> </div> </div> </div> </motion.div>) 
-}</AnimatePresence> </div> </nav>) 
-}
-export default UltraFuturisticNavigation2035
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -1,25 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs';
-=======
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>)
-<<<<<<< HEAD
-export default function KnowledgeGraph({ report }: Props) {
-=======
-export default function KnowledgeGraph() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
-export default function KnowledgeGraph({ report }: Props) {};
-  if (!report) return <div>No knowledge graph yet.</div>;
-
-import fs from 'fs',
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+import fs from 'fs';,
 import path from 'path';
 import type { GetStaticProps } from 'next';
 interface Node { id: string, tokens: string[] }

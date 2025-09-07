@@ -1,31 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React from 'react';
 
 import { motion  } from 'framer-motion';
-
-<<<<<<< HEAD
-=======
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
@@ -253,90 +228,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
   }
     >;
 
-
-  };
-
-      {/* Glow effect */}
-      <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>;
-      {/* Main card */}
-      <div className='relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden'>;
-        {/* Background pattern */}return 'from-cyan-500 to-blue-500';
-        {/* Background pattern */}
-    return 'from-cyan-500 to-blue-500'
-        {/* Background pattern */}return 'from-cyan-500 to-blue-500';
-  }
-        <div className='absolute inset-0 opacity-5'>;
-          <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0 && 0.15)_1px,transparent_0)] bg-[length:20px_20px]'></div>;
-        </div>;
-        {/* Header */}
-        <div className='relative z-10 mb-6'>;
-          <div className='flex items-start justify-between mb-4'>;
-            <div className='flex items-center space-x-3'>;
-              <div className='text-3xl'>{service && service.icon}</div>;
-              <div>;
-                <div className='flex items-center space-x-2'>;
-                  {getCategoryIcon(service && service.category)}
-                  <span className='text-xs font-medium text-gray-400 uppercase tracking-wider'>                    {service && service.category}    }
-    return 'from-cyan-500 to-blue-500';
-  }return (<motion&& motion.div;
-      initial={{ opacity: 0, y: 50, scale: 0 && 0.9 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{duration: 0 && 0.6,delay: index * 0 && 0.1,ease: [0 && 0.25, 0 && 0.46, 0 && 0.45, 0 && 0.94];
-        return <Zap className = $2;
-  const getGradientClass = $2;
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 50, scale: 0.9 }}
-      animate={{ opacity: 1, y: 0, scale: 1}}
-      transition = $2;
-        delay: index * 0.1,
-        ease: [0.25, 0.46, 0.45, 0.94]
-      }}
-      whileHover = $2;
-        scale: 1.02,
-        transition: { duration: 0.3 }
-      }}
-      className="group relative"
-    >
-      {/* Glow effect */}
-      <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-      
-      {/* Main card */}
-      <div className="relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length: 20px_20px]"></div>
-        </div>
-
-        {/* Header */}
-                  <span className="text - xs font - medium text - gray - 400 uppercase tracking - wider">;<div className='absolute inset-0 opacity-5'>;
-          <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]'></div>;
-        </div>;
-        {/* Header */}
-        <div className='relative z-10 mb-6'>;
-          <div className='flex items-start justify-between mb-4'>;
-            <div className='flex items-center space-x-3'>;
-              <div className='text-3xl'>{service.icon}</div>;
-              <div>;
-                <div className='flex items-center space-x-2'>;
-                  {getCategoryIcon(service.category)}
-                  <span className="text - xs font - medium text - gray - 400 uppercase tracking - wider">;
-        <div className="relative z-10 mb-6">
-          <div className="flex items-start justify-between mb-4">
-            <div className="flex items-center space-x-3">
-              <div className="text-3xl">{service.icon}</div>
-              <div>
-                <div className="flex items-center space-x-2">
-                  {getCategoryIcon(service.category)}
-                  <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">
-=======
-<<<<<<< HEAD
-
-
-
   };
 
   const getGradientClass = (color: string) => {'
@@ -436,8 +327,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">;
 =======
 
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
             {service.popular && (
               <motion.div
         <div className=\"absolute inset-0 opacity-5\"    />;"
@@ -480,22 +369,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
                 initial={{ scale: 0 }}
-<<<<<<< HEAD
-            
-            {service.popular && (
-              <motion.div
-                initial={{ scale: 0}}
-                animate={{ scale: 1}}
-                transition={{ delay: 0.5, type: "spring", stiffness: 200}}
-                className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full"
+
+                animate={{ scale: 1 }
+}
+
+transition={{ delay: 0.5, type: 'spring'}
+  stiffness: 200 }}
+                className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full'
               >
-                <Star className="w-3 h-3 fill-current" />
-                <span>POPULAR</span>
+                <Star className='w-3 h-3 fill-current' />
+                <span />POPULAR</span>
               </motion.div>
-                animate={{ scale: 1 }}{service.name}
-          </h3>;
-          <p className="text-gray-300 text-sm leading-relaxed">;
-          <p className='text-gray-300 text-sm leading-relaxed'>            {service.tagline}{service.tagline}<h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300">;
+
+}
+          </div>;
+<h3 className='text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300' />;
             {service.name}
           </h3>;
           <p className="text-gray-300 text-sm leading-relaxed">;
@@ -1126,8 +1014,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 <span className='text-gray-300'>{benefit}</span>              </motion.div>
 
-
-
         {/* Market info */}
 
 <<<<<<< HEAD
@@ -1620,71 +1506,6 @@ export default UltraFuturisticServiceCardV2;
 export default UltraFuturisticServiceCardV2;
 
 };
-
-
-export default UltraFuturisticServiceCardV2;}}export default UltraFuturisticServiceCardV2;
-                key={idx}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0}}
-                transition = $2;
-export default UltraFuturisticServiceCardV2,
-=======
-<<<<<<< HEAD
-
-"
-=======
-}const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
-  service, index 
-}) => {
-  const getCategoryIcon = (category: string) => {
-  switch (category.toLowerCase () ) {
-  case 'ai & consciousness': 
-}
-}
-const getGradientClass = (color: string) => {
-  if (color.includes ('from-') && color.includes ('to-') ) {
-  return color
-}return 'from-cyan-500 to-blue-500' 
-}
-{
-  opacity: 0, y: 50, scale: 0.9 
-}
-}animate= {
-  {
-  opacity: 1, y: 0, scale: 1 
-}
-}transition= {
-  {
-  duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] 
-}
-}whileHover= {
-  {
-  y: -10, scale: 1.02, transition: {
-  duration: 0.3 
-}
-}
-}className="group relative" > </span> </div> </div> </div> {
-  service.popular && (<motion.div > <Star className="w-3 h-3 fill-current" /> <span>POPULAR</span> </motion.div>) 
-}</div> </div> </div> </div> </span> <span className="text-xs text-gray-500" > (save 17%) </span> </div> $ {
-  service.price.enterprise 
-}/mo </span> </div>) 
-}</div> </div> + {
-  service.features.length - 3 
-}more features </div>) 
-}</div> </div> </motion.div>) ) 
-}</div> </div> </div> </div> </div>) 
-}> <span className="relative z-10 flex items-center space-x-2" > <span>Learn More</span> <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" /> </span> </motion.a> </div> {
-  /* Hover overlay */ 
-}<motion.div /> </div> </motion.div>) 
-}
-export default UltraFuturisticServiceCardV2
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-
-export default UltraFuturisticServiceCardV2;
 export default UltraFuturisticServiceCardV2;
 
 };

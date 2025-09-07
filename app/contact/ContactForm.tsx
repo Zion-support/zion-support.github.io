@@ -50,11 +50,7 @@ export default function ContactForm() {
     budget: '',
     message: ''
   });
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -69,36 +65,7 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-<<<<<<< HEAD
-    setSubmitStatus('idle');
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      })
-      if (response.ok) {
-        setSubmitStatus('success')
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          service: '',
-          budget: '',
-          message: ''
-        })
-      } else {
-        setSubmitStatus('error')
-      }
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false)
-=======
-    
     // Simulate form submission
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -170,7 +137,7 @@ s discuss your project and create a custom solution.
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               Contact Information
             </h2>
-            
+
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
 <<<<<<< HEAD
@@ -184,7 +151,7 @@ s discuss your project and create a custom solution.
                   <p className="text-gray-600">+1 302 464 0950</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
 <<<<<<< HEAD
 =======
@@ -197,7 +164,7 @@ s discuss your project and create a custom solution.
                   <p className="text-gray-600">kleber@ziontechgroup.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
 <<<<<<< HEAD
                 <div>
@@ -215,7 +182,7 @@ s discuss your project and create a custom solution.
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
 <<<<<<< HEAD
 =======
@@ -339,7 +306,7 @@ className=\"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:o
                     placeholder="Your full name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *

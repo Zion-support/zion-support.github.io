@@ -1,43 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import React from 'react',
-import Link from 'next/link';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion } from 'framer-motion';
-
-  Phone
-  Mail
-  MapPin
-  Globe
-  Zap
-  Brain
-  Atom
-  Rocket
-  Shield
-  Cpu
-  Target
-  Microscope
-  Users
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  ArrowRight
-  Heart
-  Star
-  Award
-  CheckCircle;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
-=======
-import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
+  Rocket, Shield, Cpu, Target, Microscope, Users;
+  Facebook, Twitter, Linkedin, Instagram, Youtube;}
+  Github, ArrowRight, Heart, Star, Award, CheckCircle}
+ } from 'lucide-react';
 
   Phone;
   Mail;
@@ -758,18 +724,39 @@ const quickLinks = [
 ];
 
 const quickLinks = [
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  { name: 'Home', href: '/' },
-  { name: 'Services', href: '/services' },
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Resources', href: '/resources' },
-<<<<<<< HEAD
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' }
-],
+    { name: 'Home'}
+  href: '/'}
+},
+
+    { name: 'Services'}
+  href: '/services'}
+},
+
+    { name: 'Solutions'}
+  href: '/solutions'}
+},
+
+    { name: 'Pricing'}
+  href: '/pricing'}
+},
+
+    { name: 'Resources'}
+  href: '/resources'}
+},
+
+    { name: 'Case Studies'}
+  href: '/case-studies'}
+},
+
+    { name: 'Blog'}
+  href: '/blog'}
+},
+
+  { name: 'Contact'}
+  href: '/contact'}
+}
+
+];
 
 const companyInfo = [
   { name: 'Case Studies', href: '/case - studies' },
@@ -888,7 +875,17 @@ const socialLinks = [;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {/* Company Info */}
 
-<<<<<<< HEAD
+    { name: 'Partners'}
+  href: '/partners'}
+},
+
+    { name: 'Support'}
+  href: '/support'}
+},
+
+  { name: 'Status'}
+  href: '/status'}
+}
 
 { name: 'Status', href: '/status' },
 ];
@@ -922,9 +919,6 @@ const certifications = [
   'PCI DSS Level 1',
   'FedRAMP Authorized',
 ];
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-const certifications = $2;
 export default function UltraFuturisticFooter2030() {
   return (
 <<<<<<< HEAD
@@ -2125,122 +2119,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 <<<<<<< HEAD
 
-    </footer>)}
-  )
-}
-=======
-<<<<<<< HEAD
-
 "
-=======
-const serviceCategories = [ {
-  title: '🚀 AI & Consciousness', services: [ {
-  name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform' 
-}
-{
-  name: 'AI Emotional Intelligence', href: '/ai-emotion-intelligence-platform' 
-}
-{
-  name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator' 
-}
-{
-  name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager' 
-}] 
-}
-{
-  title: '⚛️ Quantum & Emerging Tech', services: [ {
-  name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway' 
-}
-{
-  name: 'Quantum Learning Accelerator', href: '/quantum-learning-accelerator' 
-}
-{
-  name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' 
-}
-{
-  name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' 
-}] 
-}
-{
-  title: '🧬 Biotech & DNA Computing', services: [ {
-  name: 'DNA Computing Platform', href: '/biotech-dna-computing-platform' 
-}
-{
-  name: 'Personalized Nutrition', href: '/biotech-personalized-nutrition' 
-}
-{
-  name: 'Predictive Health Analytics', href: '/ai-predictive-health-analytics' 
-}
-{
-  name: 'Research Automation', href: '/advanced-research-automation' 
-}] 
-}
-{
-  title: '🏙️ Enterprise IT Solutions', services: [ {
-  name: 'Autonomous DevOps', href: '/autonomous-devops-platform' 
-}
-{
-  name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center' 
-}
-{
-  name: 'AI Enterprise Security', href: '/ai-powered-enterprise-security' 
-}
-{
-  name: 'Intelligent Data Governance', href: '/intelligent-data-governance' 
-}] 
-}
-{
-  title: '🌌 Space & Metaverse Tech', services: [ {
-  name: 'Space Mining Automation', href: '/space-mining-automation-platform' 
-}
-{
-  name: 'Metaverse Digital Reality', href: '/metaverse-digital-reality-platform' 
-}
-{
-  name: 'Quantum Research Platform', href: '/quantum-research-platform' 
-}
-{
-  name: 'AI Research Assistant', href: '/ai-research-assistant' 
-}] 
-}
-{
-  title: '🎯 2030 Innovative Micro SAAS', services: [ {
-  name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' 
-}
-{
-  name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' 
-}
-{
-  name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' 
-}
-{
-  name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030' 
-}] 
-}]
-{
-  /* Animated Background */ 
-}<div className="absolute inset-0" > <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5" ></div> <div className="absolute top-0 left-0 w-full h-full" > <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse" ></div> <div className="absolute top-40 right-20 w-1 h-1 bg-cyan-400 rounded-full animate-ping" ></div> <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-purple-300 rounded-full animate-bounce" ></div> <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse" ></div> </div> </div> </div> <div> <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >2030 Future Technology</p> </div> </div> <p className="text-gray-300 text-sm leading-relaxed" > Pioneering the future with cutting-edge AI, quantum computing, and emerging technologies. Transforming businesses through innovative solutions and intelligent automation. </p> </a> </div> </div> </div>) ) 
-}</div> </div>) ) 
-}</div> </div>) ) 
-}</div> </div> > <social.icon className="w-5 h-5" /> </a>) ) 
-}</div> </div> </div>) ) 
-}</div> </div> </div> </div> </div> <div className="border-t border-purple-500/20"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6"> <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0"> <div className="flex items-center space-x-6 text-sm text-gray-400"> <span>&copy, 2024 Zion Tech Group. All rights reserved.</span> <Link href="/privacy" className="hover:text-purple-400 transition-colors">Privacy Policy</Link> <Link href="/terms" className="hover:text-purple-400 transition-colors">Terms of Service</Link> flex items-center space-x-4 text-sm text-gray-400"> <div className=" flex items-center space-x-2"> <Heart className=" w-4 h-4 text-red-400"/> <span>Made with passion for innovation</span> </div> <div className=" flex items-center space-x-2"> <Star className=" w-4 h-4 text-yellow-400" /> <span>5.0/5.0 Rating</span> </div> </div> </div> </div> </div> </div> </footer>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

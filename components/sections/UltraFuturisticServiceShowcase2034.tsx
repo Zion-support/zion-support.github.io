@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -237,8 +219,7 @@ Eye;
 Search}
 Phone;}
 } from 'lucide-react';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
 
 const contactInfo = {
@@ -1337,7 +1318,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
 
-
             ].map((stat, index) => (
               <motion.div;
             ].map((stat, index) => (;
@@ -1822,11 +1802,6 @@ initial='hidden';
 =======
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular
 
-
-              {/* Service Icon */}
-<div className='flex items-center justify-between mb-4'>
-                <div
-
               {/* Service Icon *}
 }
 <div className='flex items-center justify-between mb-4' />;
@@ -1863,7 +1838,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </motion && motion.div>;
 
-
         {/* Services Grid */}
 <<<<<<< HEAD
         <motion&& motion.div
@@ -1873,7 +1847,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div;
 <<<<<<< HEAD
           variants={containerVariants}
-
 
               )}
               {/* Service Icon */}
@@ -2639,34 +2612,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
               </div>;
 
-<<<<<<< HEAD
-              {/* Action Buttons */}'
-              <div className='flex space-x-3'>
-
-                <a;
-                <a;
-                <a;
-                  href={service.link}"
-                  className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group"
-                >
-                  Get Started"
-                  <ArrowRight className="w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform" />
-                </a>"
-                <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-200">"
-                  <Eye className="w-4 h-4" />
-                </button>
-              </div>
-              {/* Trial Info */}'
-              <div className='mt-4 text-center'>;'
-                <div className='text-sm text-gray-400'>;'
-                  <span className='text-cyan-400 font-semibold'>;
-                    {service && service.trialDays} days;'
-                  </span>{' '}"
-                  free trial                </div>              <div className="mt-4 text-center">;"
-                <div className="text-sm text-gray-400">;"
-                  <span className="text-cyan-400 font-semibold">{service && service.trialDays} days</span> free trial;
-                </div>;
-=======
               {/* Action Buttons */}
               <div className='flex space-x-3'>
 
@@ -2779,7 +2724,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
-        </motion.div>
+
+        </motion && motion.div>;
 
         {/* Call to Action */}
 <<<<<<< HEAD

@@ -5,14 +5,6 @@
 <<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import Head from 'next/head';
-=======
-import { useEffect, useState } from "react";
-import Head from "next/head";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-export default function PartnerDashboard() {;
-  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
-import { useEffect, useState } from "react";
-import Head from "next/head";
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState($2);
   const [token, setToken] = useState<string | null>(null),
@@ -31,12 +23,18 @@ export default function PartnerDashboard() {
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
+    const saved = null;}
+    if (saved) setToken(saved);}
+  }, []);
   async function getToken() {
-    const res = await fetch("/api/partners/token", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ apiKey })}),
-    const data = await res.json($2);
+    const res = await fetch('/api/partners/token', {}
+      method: 'POST'}
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ apiKey })
+
+});
+
+const data = await res.json();
     if (data.token) {
       localStorage.setItem($2);
       setToken(data.token)
@@ -173,14 +171,10 @@ export default function PartnerDashboard() {const [apiKey, setApiKey] = useState
 <<<<<<< HEAD
 }
       headers: token ? { Authorization: `Bearer ${token}` } : {}
+
 };
   const data = await res.json()if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)}
-<<<<<<< HEAD
- 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
 }
 =======
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
@@ -192,9 +186,9 @@ export default function PartnerDashboard() {const [apiKey, setApiKey] = useState
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
+<div className='min-h-screen bg-gray-50 text-gray-900' />
       <Head>
-        <title>Zion Partner Dashboard</title>
+        <title />Zion Partner Dashboard</title>
       </Head>
 <<<<<<< HEAD
       <div className="max-w-5xl mx-auto py-12 px-4">

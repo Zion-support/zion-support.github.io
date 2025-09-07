@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useEffect, useRef } from 'react';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -219,12 +204,8 @@ import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2028Props {;
   children: React && React.ReactNode;
 }
-
-
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-export default function UltraFuturisticBackground2028({ children }: UltraFuturisticBackground2028Props) {
-<<<<<<< HEAD
+export default function UltraFuturisticBackground2028({ children}
+}: UltraFuturisticBackground2028Props) {
   const canvasRef = null;
               ease: "easeInOut"
   useEffect(() => {
@@ -240,6 +221,7 @@ export default /**;
  */;
 function UltraFuturisticBackground2028() {  const canvas_ref = useRef < HTMLCanvasElement>(null)import React, { useEffect, useRef } from 'react';
 interface UltraFuturisticBackground2028Props  {children: React.ReactNode;
+}
 }
 export default /**;
  * UltraFuturisticBackground2028 - Function description;
@@ -453,15 +435,11 @@ canvas.height = window.innerHeight;
         })
       }),
 
-      requestAnimationFrame(animate)
-    },
+    window.addEventListener('resize', handleResize);
+    return () => {}
+window.removeEventListener('resize', handleResize)}
+};
 
-    animate($2);
-    // Handle resize
-    const handleResize = $2;
-      canvas.height = $2;
-    window.addEventListener($2);
-    return () => {
   }, []);
       window.removeEventListener('resize', handleResize)
     }
@@ -999,43 +977,6 @@ className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rou
         />;
       </div>;
 
-      {/* Energy Waves */}'
-          className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent'
-          animate={{}
-            y: [0, 1000]
-            opacity: [0, 1, 0],          }}'"
-            ease: 'easeInOut',            ease: "easeInOut";
-          }}
-        />;
-        <motion.div;'
-          className='absolute top - 2/3 right - 1/4 w - 20 h - 20 border border - blue - 400 / 40 rounded - full';
-          animate={{}
-            coordinate_y: [0, 25, 0],"
-            opacity: [0.2, 0.5, 0.2],          className="absolute top - 2/3 right - 1/4 w - 20 h - 20 border border - blue - 400 / 40 rounded - full";
-          animate={{}
-            coordinate_y: [0, 25, 0];
-            opacity: [0.2, 0.5, 0.2];
-          transition={{}
-            duration: 7,
-            repeat: Infinity,'"
-            ease: 'easeInOut',            ease: "easeInOut";
-          }}
-        />;
-        <motion.div;'
-          className='absolute bottom - 1/3 right - 1/3 w - 12 h - 12 border border - cyan - 400 / 40 rounded - full';
-          animate={{}
-            coordinate_y: [0, -15, 0],"
-            opacity: [0.25, 0.55, 0.25],          className="absolute bottom - 1/3 right - 1/3 w - 12 h - 12 border border - cyan - 400 / 40 rounded - full";
-          animate={{}
-            coordinate_y: [0, -15, 0];
-            opacity: [0.25, 0.55, 0.25];
-          transition={{}
-            duration: 5,
-            repeat: Infinity,'"
-            ease: 'easeInOut',            ease: "easeInOut";
-          }}
-        />;
-      </div>;
       {/* Energy Waves */}
       <div;'
         className='absolute inset - 0 pointer - events - none';

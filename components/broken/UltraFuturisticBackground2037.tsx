@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-            }
+}
           })})}return (<div ref={container_ref} className=&quot;fixed inset - 0 w - full h - full pointer - events - none & quot />
 
       <canvas;

@@ -5,20 +5,7 @@ import './globals.css'
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 import type { Metadata } from 'next';
-import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-=======
-import { Inter } from 'next/font/google';
->>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-import './globals.css';
-import PerformanceMonitor from './components/PerformanceMonitor';
+// import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
@@ -109,43 +96,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <body>{children}</body>
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-<<<<<<< HEAD
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" 
-          rel="stylesheet" 
-        />
-      </head>
-      <body className="font-sans antialiased">
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
-<<<<<<< HEAD
-        <PerformanceMonitor />
-=======
-        {/* <PerformanceMonitor /> */}
-=======
-      <body className={inter.className}>
-        {children}
->>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      </body>
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     </html>
   );
 }

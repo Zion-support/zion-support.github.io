@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }return this.props.children;
-  }
-}
 import React, { useState } from 'react';
-export interface TreeNode  {name: string;
-  path: string;type: 'folder' | 'file';
-  exists?: boolean;
-  children?: TreeNode[];
-function NodeItem({node;
-  depth;
-  onDeploy;
-}: {interface TreeProps  {nodes: TreeNode[];
-  onDeploy?: (path: string) => void;function NodeItem(): any ({node,depth,onDeploy,}: {node: TreeNode;
-  depth: number;
+export interface TreeNode {
   name: string;
   path: string;
   type: "folder" | "file";
@@ -38,8 +22,24 @@ function NodeItem({node;
     await fetch(url, {method: 'POST',exists?: boolean;
   children?: TreeNode[];
 }
-import React, { useState } from "react";
+export interface TreeNode {"
+  name: string,path: string,type: \"folder\" | \"file\",name: string;
+  path: string;"
+  type: \"folder\" | \"file\";"
+  name: string,path: string,type: \"folder\" | \"file\",exists?: boolean;
+  children?: TreeNode[];}
+}
+}
 
+const [open, setOpen]  = useState<boolean />(false)const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+"
+const toggle = () => setOpen((v) => !v)\"Content-Type\": \"application/json\";
+        // Expect an admin token in local storage, fall back to prompt;"
+        \"x-admin-token\": localStorage.getItem(\"ADMIN_TOKEN\") |\"\"} as any;
+      body: JSON.stringify({ path: node.path }
+})return (<div className='ml-2' />;
+      <div className='flex items-center gap-2 py-1' />;
+        {hasChildren ? (<button className='text-sm' onClick={toggle} aria-label='Toggle' />;
 export interface TreeNode {
   name: string,
   path: string,
@@ -74,8 +74,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       body: JSON.stringify({ path: node.path })})
   };
 
-  const deploy = () => onDeploy && onDeploy(node.path);
-
+const deploy = () => onDeploy && onDeploy(node.path);
   return (
     <div className="ml-2">
       <div className="flex items-center gap-2 py-1">
@@ -539,7 +538,6 @@ export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
     <div className="w-full">;
       {nodes && nodes.map((n) => (;
 );
-
 export function Tree({ nodes, onDeploy }: TreeProps) {
   return (
     <div className='w-full'>
@@ -720,7 +718,6 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
     </div>
   )
 }
-
 export default Tree;
 =======
     <div className = $2;

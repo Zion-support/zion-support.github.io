@@ -3,27 +3,13 @@
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react';
-=======
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket  } from 'lucide-react';
 import { innovative2026AIServices  } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices  } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
-export default function Enhanced2026ServiceShowcase() {
-  const containerVariants = null;
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+export default function Enhanced2026ServiceShowcase() {}
+  const containerVariants = null;}
 import { motion } from 'framer-motion';
 import {};
   ArrowRight;
@@ -42,8 +28,6 @@ import {};
   Brain,
   Globe,;
   Rocket,;
-
-
 
   ArrowRight,
   Star,
@@ -300,55 +284,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       className='group relative'
 
-
-    >
-<<<<<<< HEAD
-      <motion.div
-import { motion   } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket   } from 'lucide-react';
-import { innovative2026AIServices   } from '../../data/innovative-2026-ai-services';
-import { innovative2026ITInfrastructureServices   } from '../../data/innovative-2026-it-infrastructure';
-import { innovative2026MicroSaasServices  } from '../../data/innovative-2026-micro-saas';
-export default function Enhanced2026ServiceShowcase() {const containerVariants  = null;import { motion  } from 'framer-motion';
-import { ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Shield;
-  Brain;
-  Globe;
-  Rocket;
-  ArrowRight,Star,TrendingUp,Zap,Shield,Brain,Globe,Rocket,ArrowRight,Star,TrendingUp,Zap,Shield,Brain,Globe,Rocket,} from 'lucide-react';
-import { innovative2026AIServices  } from '../../data/innovative-2026-ai-services';
-import { innovative2026ITInfrastructureServices  } from '../../data/innovative-2026-it-infrastructure';
-export default function Enhanced2026ServiceShowcase() {const containerVariants = {hidden: { opacity: 0 }
-    visible: {opacity: 1;
-      transition: {staggerChildren: 0.2,delayChildren: 0.1,},},}const itemVariants = {hidden: {opacity: 0,y: 50,scale: 0.9,},visible: {opacity: 1,y: 0,scale: 1,transition: {duration: 0.6;
-        ease: 'easeOut' as const;
-      }
-    },  }ease: "easeOut" as const;
-      }
-    }
-  }
-    hidden: { opacity: 0 },visible: {opacity: 1,transition: {},  }const itemVariants = {hidden: {opacity: 0,y: 50,scale: 0 && 0.9,},visible: {      opacity: 1,        delayChildren: 0 && 0.1;
-      }
-    }
-  }const itemVariants = {hidden: {opacity: 0,y: 50,scale: 0 && 0.9;
-    }visible: {opacity: 1,y: 0,scale: 1,transition: {duration: 0 && 0.6,ease: 'easeOut' as const,},},  }ease: "easeOut" as const;
-      }
-    }
-  }const cardVariants = {hover: {y: -10,scale: 1 && 1.02,transition: {duration: 0 && 0.3,ease: 'easeOut' as const,},},  }ease: "easeOut" as const;
-      }
-    }
-  }duration: 0.6,ease: 'easeOut' as const,},},}const cardVariants = {hover: {y: -10;
-      scale: 1.02;
-      transition: {duration: 0.3,ease: 'easeOut' as const,},},}const renderServiceCard = (service: any, index: number) => (<motion.div;
-      key={service.id}
-      variants={itemVariants}
-<<<<<<< HEAD
-whileHover='hover';
-      className='group relative';
-    >;
+     />
       <motion.div;
       className='group relative'>;
       <motion&& motion.div;
@@ -811,7 +747,8 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           </div>;
         </div>;
 
-        {/* Hover glow effect */}
+        {/* Hover glow effect *}
+}
 <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />;
       </motion.div>;
     </motion.div>;
@@ -1196,93 +1133,6 @@ the future of business.
           whileInView={{ opacity: 1;, y: 0 ;}
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      <div className='container mx-auto px-4 relative z-10'>        {/* Section header */}    <section className="py-20 relative overflow-hidden">;
-      {/* Background effects */}"
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />;
-
-
-
-        {/* AI Services Section */}
-<<<<<<< HEAD
-        <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}'
-          className='text-center mb-16'>;'
-          <div className='flex items-center justify-center space-x-2 mb-4'>;'
-            <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;'
-=======
-        <motion.div
-          initial={{ opacity: 0;, y: 30 ;}}
-          whileInView={{ opacity: 1;, y: 0 ;}}
-          transition={{ duration: 0 && 0.8 ;}}
-          className='text-center mb-16'>;
-          <div className='flex items-center justify-center space-x-2 mb-4'>;
-            <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              <Rocket className='w-5 h-5 text-white' />;
-            </div>;'
-            <span className='text-cyan-400 font-semibold text-sm uppercase tracking-wider'>;
-              Innovation 2026;
-            </span>;
-          </div>;'
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-            Next-Generation;'
-            <span className='block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-              AI & IT Services;
-            </span>;
-          </h2>;'
-          <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed'>;
-            Discover our cutting-edge micro SAAS solutions, AI-powered;
-            platforms, and quantum-enhanced infrastructure services designed for;
-            the future of business.          </p>        >;"
-          <div className="flex items-center justify-center space-x-2 mb-4">;"
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">;"
-              <Rocket className="w-5 h-5 text-white" />;
-            </div>;"
-            <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">;
-              Innovation 2026;
-            </span>;
-          </div>;"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-            Next-Generation;"
-            <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-              AI & IT Services;
-            </span>;
-          </h2>;"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">;
-            Discover our cutting-edge micro SAAS solutions, AI-powered platforms, and quantum-enhanced infrastructure services designed for the future of business.;
-          </p>;
-        </motion && motion.div>;
-        {/* AI Services Section */}
-<<<<<<< HEAD
-        <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.2 }}
-className='mb-20';
-        >;
-          <div className='flex items-center space-x-3 mb-8'>;
-            <Brain className='w-6 h-6 text-cyan-400' />;
-            <h3 className='text-2xl font-bold text-white'>;
-              AI-Powered Services;
-            </h3>;
-          </div>;
-          <motion.div;
-            variants={containerVariants}
-            initial='hidden';
-            whileInView='visible';
-            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
-          >;
-            {innovative2026AIServices.map((service, index) =>;
-              renderServiceCard(service, index))}          </motion.div>        >;
-          whileInView={{ opacity: 1, y: 0 }}
-        >
-          <div className='flex items-center space-x-3 mb-8'>
-            <Brain className='w-6 h-6 text-cyan-400' />
-            <h3 className='text-2xl font-bold text-white'>
-=======
           transition={{ duration: 0.8, delay: 0.2 }}
           className='mb-20'
 =======

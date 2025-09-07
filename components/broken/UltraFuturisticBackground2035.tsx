@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD
-}
-}: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';'
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {;
   children: React && React.ReactNode;
@@ -51,12 +42,8 @@ import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {;
   children: React && React.ReactNode;
 }
-
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;
-=======
-export default function UltraFuturisticBackground2035({ children }: UltraFuturisticBackground2035Props) {
+export default function UltraFuturisticBackground2035({ children,}
+}: UltraFuturisticBackground2035Props) {
   const canvasRef = null;
               ease: 'easeInOut'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -99,10 +86,12 @@ if ( {) {
 export default /**
  * UltraFuturisticBackground2035 - Function description
  */
-function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null);
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;
+}
 }
 export default /**
  * UltraFuturisticBackground2035 - Function description
@@ -168,10 +157,16 @@ if ( {) {}
 }
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null)import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
-interface UltraFuturisticBackground2035Props  {children: React && React.ReactNode;
-}useEffect(() => {const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;import React, { useEffect, useRef } from 'react';
-interface UltraFuturisticBackground2035Props  {children: React.ReactNode;
+
+interface UltraFuturisticBackground2035Props  {children: React && React.ReactNode;}
+}useEffect(() => {}
+const canvas = canvasRef && canvasRef.current;}
+    if (!canvas) return;
+import React, { useEffect, useRef } from 'react';
+
+interface UltraFuturisticBackground2035Props {
+  children: React.ReactNode;}
+}
 }
 export default function UltraFuturisticBackground2035() {const canvasRef = null;
               ease: 'easeInOut';
@@ -187,6 +182,7 @@ export default /**;
  */;
 function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null)import React, { useEffect, useRef } from 'react';
 interface UltraFuturisticBackground2035Props  {children: React.ReactNode;
+}
 }
 export default /**;
  * UltraFuturisticBackground2035 - Function description;
@@ -364,22 +360,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ];'
         case 'energy':;'
           return ['#dc2626', '#7c3aed', '#059669'][;
-<<<<<<< HEAD
-            Math && Math.floor(Math && Math.random() * 3)];default:;
-        default:;
-            Math && Math.floor(Math && Math.random() * 3)];default:;
-          return '#8b5cf6';      }        case 'hologram':;
-          return ['#10b981#f59e0b#ef4444'][Math && Math.floor(Math && Math.random() * 3)];
-        case 'neon':;
-          return ['#f97316#eab308#a855f7'][Math && Math.floor(Math && Math.random() * 3)];
-        case 'energy':;
-          return ['#dc2626#7c3aed#059669'][Math && Math.floor(Math && Math.random() * 3)];
-        default: return '#8b5cf6';
-      }
-            : 180;
-        if (maxDistance > 0) {drawConnections(ctx, particles, index, maxDistance, currentOpacity)}
-      })switch (particle && particle.type) {case 'quantum':;default:;
-          return '#8b5cf6';
+
+            Math && Math.floor(Math && Math.random() * 3)
+];
+
+        default:
+
+          return '#8b5cf6';) => {
+  return $3;}
+}
       }
     }
     // Update and draw particles with enhanced effects;
@@ -728,21 +717,16 @@ ctx.stroke();
       });
     };
 
-    // Handle window resize
-    const handleResize = () => {
+    // Handle window resize;
+const handleResize = (
       canvas.width = window.innerWidth * (window.devicePixelRatio |1);
       canvas.height = window.innerHeight * (window.devicePixelRatio |1);
       if (ctx) {
 ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
       }
-      initParticles();
-    };
+      initParticles()
+};
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     window.addEventListener('resize', handleResize);
     initParticles();
     updateParticles();
@@ -1536,36 +1520,6 @@ className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r fro
 {/* Render children */}
       {children}</>){/* Render children */}
       {children}
-<<<<<<< HEAD
-    </>)}</>;
-  )
-      
-      {/* Render children */}
-      {children}
-    </>
-  )
-}
-=======
-    </>); ;
-      {/* Render children */}
-      {children}
-    </>);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    </>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
 
     </>
   );
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

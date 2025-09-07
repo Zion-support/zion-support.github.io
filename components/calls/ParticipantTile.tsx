@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-import React, { useEffect, useRef } from 'react';
-
-import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
-type Props = any;
-<<<<<<< HEAD
-import type {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  RemoteParticipant
-  LocalParticipant
-  TrackPublication
-
-;
 import React, { useEffect, useRef } from 'react';
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 type Props = any;
@@ -114,7 +85,52 @@ type Props = {}
   isLocal?: boolean;
   displayName?: string;
 }
-export default function ParticipantTile({ participant, isLocal, displayName }: Props) {};
+}
+}
+export default function ParticipantTile({
+  participant,
+  isLocal}
+  displayName}
+}: Props) {
+  const videoRef = useRef<HTMLVideoElement | null />(null);
+
+const audioRef = useRef<HTMLAudioElement | null />(null);
+  useEffect(() => {
+
+    const handleTrackSubscribed = (
+      if (track.kind === 'video' && videoRef.current) {
+
+track.attach(videoRef.current);) => {
+  return $3;}
+}
+      }
+      if (track.kind === 'audio' && audioRef.current) {}
+        track.attach(audioRef.current);}
+      }
+    };
+
+const handleTrackUnsubscribed = (
+      if (track.kind === 'video' && videoRef.current) {
+track.detach(videoRef.current);) => {
+  return $3;}
+}
+      }
+      if (track.kind === 'audio' && audioRef.current) {}
+        track.detach(audioRef.current);}
+      }
+    };
+
+    participant.tracks.forEach(pub = > {
+     ;
+  const track = pub.track;}
+if (track) handleTrackSubscribed(pub, track);}
+    });
+    participant.on('trackSubscribed', handleTrackSubscribed);
+    participant.on('trackUnsubscribed', handleTrackUnsubscribed);
+    return () => {
+      participant.off('trackSubscribed', handleTrackSubscribed);
+}
+participant.off('trackUnsubscribed', handleTrackUnsubscribed)}
 };
 
 }
@@ -319,8 +335,6 @@ type Props = {participant: RemoteParticipant | LocalParticipant;
   is_local?: boolean;}
   display_name?: string;}
 }
-<<<<<<< HEAD
-;
 export default /**;
  * ParticipantTile - Function description;
  */
@@ -330,7 +344,6 @@ type Props = {}
   is_local?: boolean;
   display_name?: string;
 }
-;
 export default /**;
  * ParticipantTile - Function description;
  */
@@ -587,29 +600,3 @@ if ( {) {$2;
 <<<<<<< HEAD
 
 "
-=======
-useEffect ( () => {
-  const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
-  if (track.kind === 'video' && videoRef.current) {
-  participant.on ('trackSubscribed', handleTrackSubscribed)
-participant.on ('trackUnsubscribed', handleTrackUnsubscribed)
-</div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

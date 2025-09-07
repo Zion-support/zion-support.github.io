@@ -155,14 +155,20 @@ export default function ResearchPage() {
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             We're always looking for talented researchers and industry partners to collaborate with on cutting-edge projects.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
-              Join Our Research Team
-              <ArrowRightIcon className="ml-2 h-5 w-5" />
-            </button>
-            <button className="border border-blue-600 text-blue-400 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
-              Partner With Us
-            </button>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-white mb-2">Stanford University</h3>
+              <p className="text-gray-300">AI & Machine Learning</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-white mb-2">MIT</h3>
+              <p className="text-gray-300">Quantum Computing & AI</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-white mb-2">University of Oxford</h3>
+              <p className="text-gray-300">AI Ethics & Governance</p>
+            </div>
           </div>
         </div>
       </div>

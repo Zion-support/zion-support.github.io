@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-
-;
-{/* Robots Meta */;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-{}
-  /* Robots Meta */
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOProps  {title?: string;
@@ -598,7 +577,27 @@ const SEO: React.FC<SEOProps> = ({'
   author = 'Zion Tech Group';
   section;
   tags = [];
-  structuredData;: `https://ziontechgroup.com${image}`;return (<Head>;
+  structuredData;
+  noindex = false;}
+  nofollow = false;}
+   }) => {
+
+}
+const fullTitle = title.includes('Zion Tech Group')? title;}
+    : `${title} | Zion Tech Group`;
+
+const fullUrl = url.startsWith('http')? url;
+    : `https: //ziontechgroup.com${ur}
+}`;
+
+const fullImage = image.startsWith('http')
+    ? image;
+    : `https: //ziontechgroup.com${imag}
+}`;
+
+  return (
+    <Head>
+
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>;
 <meta name='description' content={description} />;
@@ -1008,127 +1007,6 @@ export default SEO;  )
 <<<<<<< HEAD
 =======
 };
-
-    </Head>
-    </Head>
-
-          __html: JSON.stringify ({'
-            '@context': 'https://schema.org','
-            '@type': 'Organization','
-            name: 'Zion Tech Group','
-            url: 'https://ziontechgroup.com','
-            logo: 'https://ziontechgroup.com / images / zion - tech - group - logo.png',
-            description: description,'
-            founding_date: '2020',
-            same_as: [;'
-              'https://www.linkedin.com / company / zion - tech - group','
-              'https://twitter.com / ziontechgroup','
-              'https://github.com / Zion - Holdings',
-            ],
-            contact_point: {'
-              '@type': 'ContactPoint','
-              telephone: '+1 - 800 - ZION - TECH','
-              contact_type: 'customer service','
-              available_language: 'English',
-            },
-            address: {'
-              '@type': 'PostalAddress','
-              address_country: 'US',
-            },
-            hasOfferCatalog: {'
-              '@type': 'OfferCatalog','
-              name: 'Technology Services',
-              itemListElement: [;
-                {'
-                  '@type': 'Offer',
-                  item_offered: {'
-                    '@type': 'Service','
-                    name: 'AI & Machine Learning Solutions',
-                  },
-                },
-                {'
-                  '@type': 'Offer',
-                  item_offered: {'
-                    '@type': 'Service','
-                    name: 'Quantum Computing Services',
-                  },
-                },
-                {'
-                  '@type': 'Offer',
-                  item_offered: {'
-                    '@type': 'Service','
-                    name: 'Space Technology Solutions',
-                  },
-                },
-              ],
-            },
-          }),
-        }}
-      />;
-      {/* Canonical URL */}'
-      <link rel='canonical' href={full_url} />;
-      {/* Favicon and App Icons */}'
-      <link rel='icon' href='/favicon.ico' />;
-      <link;'
-        rel='apple - touch - icon';'
-        sizes='180x180';'
-        href='/apple - touch - icon.png';
-      />;
-      <link;'
-        rel='icon';'
-        type='image / png';'
-        sizes='32x32';'
-        href='/favicon - 32x32.png';
-      />;
-      <link;'
-        rel='icon';'
-        type='image / png';'
-        sizes='16x16';'
-        href='/favicon - 16x16.png';
-      />;'
-      <link rel='manifest' href='/site.webmanifest' />;
-      {/* Preconnect to external domains for performance */}'
-      <link rel='preconnect' href='https://fonts.googleapis.com' />;
-      <link;'
-        rel='preconnect';'
-        href='https://fonts.gstatic.com';'
-        cross_origin='anonymous';
-      />;'
-      <link rel='preconnect' href='https://www.google - analytics.com' />;
-      {/* Additional Meta Tags for SEO */}'
-      <meta name='google - site - verification' content='your - verification - code' />;'
-      <meta name='msvalidate.01' content='your - bing - verification - code' />;
-      <meta;'
-        name='yandex - verification';'
-        content='your - yandex - verification - code';
-      />;
-      {/* Custom Meta Tags */}
-      {structured_data && (
-        <script;'
-          type='application / ld + json';
-          dangerouslySetInnerHTML={{}
-            __html: JSON.stringify (structured_data),          }}
-        />)}
-    </Head>);
-}
-;
-export default SEO;            __html: JSON.stringify (structured_data);
-          }}
-        />)}
-    </Head>);
-}
-;
-export default SEO);
-}
-;
-export default SEO;
-;
-<<<<<<< HEAD
-    </Head>
-);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-};
-
 export default SEO;
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD

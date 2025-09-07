@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-;
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = any;
@@ -54,21 +46,10 @@ export type AnalyzeRequestBody = {
   analysis: string
 }
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-export type AnalyzeResponse = {
-  analysis: string
-  role: 'system', content: system 
-};
-
-<<<<<<< HEAD
-export type AnalyzeResponse = {;
-  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-export type AnalyzeRequestBody = {
-  operatorPrompt: string,
-  context?: Record<string, unknown>;
-};
+export default async function handler(
+  req: NextApiRequest;
+res: NextApiResponse<AnalyzeResponse | { error: string } />
+) {
 
 export type AnalyzeResponse = {
     return res.status(400).json({ error: 'operatorPrompt is required' })
@@ -339,6 +320,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 }
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

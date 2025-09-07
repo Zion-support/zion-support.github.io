@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-import {;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Send,;
-  CheckCircle,;
-  AlertCircle,;
-<<<<<<< HEAD
-'use client';
-import React, { useState } from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-const ContactForm: React.FC;
-'use client';
-import React, { useState } from 'react';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion } from 'framer-motion';
 import {
   Mail
@@ -296,7 +268,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -526,137 +498,9 @@ href: '#',
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]" />
       </div>
 
-      <div className="relative container mx-auto px-4">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true}}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md: text-6xl font-bold text-white mb-6">
-            Let&apos,s Start a
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Conversation
-            </span>
-          </h2>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your business? Get in touch with our team of experts to discuss 
-            how we can help you achieve your technology goals.
-=======
-className='text-center mb-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
-        >
-=======
-        >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-          <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-            Let&apos;s Start a'
-            <span className='block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
-              Conversation;
-            </span>
-          </h2>'
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
-            Ready to transform your business? Get in touch with our team of;
-            experts to discuss how we can help you achieve your technology;
-            goals.
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-          </p>
-        </motion.div>"
-          <h2 className="text-4xl md: text-6xl font-bold text-white mb-6">
-            Let&apos,s Start a"
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Conversation;
-            </span>
-          </h2>"
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your business? Get in touch with our team of experts to discuss;
-            how we can help you achieve your technology goals.
-          </p>
-        </motion.div>"
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-'
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}
-
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true}}
-            className="space-y-8"
-          >
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-              <p className="text-gray-300 leading-relaxed mb-8">
-                Our team is here to help you navigate the complex world of technology and find 
-                the perfect solutions for your business needs. Reach out to us today.
-              </p>
-            </div>
-className='text-center mb-16';
-        >;
-          <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>;
-            Let&apos;s Start a;
-            <span className='block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>;
-              Conversation;
-            </span>;
-          </h2>;
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>;
-            Ready to transform your business? Get in touch with our team of;
-            experts to discuss how we can help you achieve your technology;
-            goals.;
-          </p>;
-        </motion.div>;
-          <h2 className="text-4xl md: text-6xl font-bold text-white mb-6">;
-            Let&apos,s Start a;
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
-              Conversation;
-            </span>;
-          </h2>;
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;
-            Ready to transform your business? Get in touch with our team of experts to discuss;
-            how we can help you achieve your technology goals.;
-          </p>;
-        </motion.div>;
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">;
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}<div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>;
-          {/* Contact Information */}<motion.div;
-          <motion&& motion.div;
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-            viewport={{ once: true }}Our team is here to help you navigate the complex world of;
-                technology and find the perfect solutions for your business;
-                needs. Reach out to us today.              </p>;
-            </div>;className='space-y-8';
-          >;
-            <div>;
-              <h3 className='text-2xl font-bold text-white mb-6'>;
-                Get in Touch;
-              </h3>;
-              <p className='text-gray-300 leading-relaxed mb-8'>;
-                Our team is here to help you navigate the complex world of;
-                technology and find the perfect solutions for your business;
-                needs. Reach out to us today.;
-              </p>;
-            </div>;
-            {/* Contact Details */}
-<div className='space-y-6'>;
-              {contactInfo.map((info, index) => (<motion.a;
-                  key={info.title}
-                Our team is here to help you navigate the complex world of;
-                technology and find the perfect solutions for your business;
-                needs. Reach out to us today.              </p>;
-            </div>;
-=======
-
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-          {/* Contact Information */}
+        <div className='grid grid-cols-1 lg: grid-cols-2 gap-12 max-w-7xl mx-auto' />
+          {/* Contact Information *}
+}
 
           <motion.div;
           <motion&& motion.div;
@@ -1467,13 +1311,8 @@ className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-
                     <AlertCircle className='w-5 h-5' />
                     <span>Something went wrong. Please try again.</span>
                   </motion.div>
-<<<<<<< HEAD
-                    animate={{ opacity: 1, y: 0 }}className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4';
-                  >;
-                    <AlertCircle className='w-5 h-5' />;
-                    <span>Something went wrong. Please try again.</span>;
-                  </motion.div>;
-                )}
+
+}
                 <button;
 type='submit';
                   disabled={isSubmitting}
@@ -1959,7 +1798,6 @@ export default ContactForm
 =======
 );
 };
-
 export default ContactForm;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======

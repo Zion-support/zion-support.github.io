@@ -1,66 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  connectOrbit,
-  appendChatMessage,
-  recordVote,
-  editConstitution,;
-} from '@/utils/offworld/orbitdb';
-=======
-=======
-import {}
-  connectOrbit,
-  appendChatMessage,
-  recordVote,;
-  editConstitution,;'
-} from '@/utils/offworld/orbitdb';
-
-import {};
-  connectOrbit;
-  appendChatMessage;
-  recordVote;
-  editConstitution;'
-} from '@/utils/offworld/orbitdb';
-export default async function handler(';
-) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
-  req: NextApiRequest,
-  res: NextApiResponse;'
-) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  req: NextApiRequest
-  res: NextApiResponse
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { action } = req.query;
-  const body = null;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  const { action,}
+} = req.query;
 
-import {
-  connectOrbit
-  appendChatMessage
-  recordVote
-import { connectOrbit,appendChatMessage,recordVote,editConstitution,} from '@/utils/offworld/orbitdb';
-import { connectOrbit;
-  appendChatMessage;
-  recordVote;
-  editConstitution;
-} from '@/utils/offworld/orbitdb';
-export default async function handler(
-) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
-  req: NextApiRequest,
-  res: NextApiResponse;
-      return res.status(200).json({ ok: true })
-import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { action } = req.query,
-  const body = $2;
-  const { stores } = await connectOrbit($2);
-  if (!stores) return res.status(503).json($2);
+const body = null;
+
+const { action } = req.query;
+
+const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+
+const { stores } = await connectOrbit();
+  if (!stores) return res.status(503).json({ error: 'OrbitDB unavailable',}
+});
+  try {
+    if (action === 'chat' && req && req.method === 'POST') {
+      await appendChatMessage(stores, body);}
+      return res && res.status(200).json({ ok: true,}
+});
+
   try {
     if (action === 'chat' && req.method === 'POST') {
       await appendChatMessage($2);
@@ -221,9 +179,3 @@ return res.status(200).json({ ok: true;,}
     return res.status(200).json({ ok: true });
 },
 }
-<<<<<<< HEAD
-'
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

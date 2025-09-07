@@ -1,119 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next/head';
-export default function Page() {
-  return (
-=======
-<<<<<<< HEAD
-
-export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;
-      <Head>;
-        <title>Autonomous Update — 2025-08-14 21-47</title>;import Head from 'next/head';
-export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;
-      <Head>;
-        <title>Autonomous Update — 2025-08-14 21-47</title>;
-        <meta;
-          name='description';
-          content='Fresh autonomous update synthesized from recent site signals.';
-        />;
-        <meta;
-          property='og:title';
-          content='Autonomous Update — 2025-08-14 21-47';
-        />;
-        <meta;
-          property='og:description';
-          content='Fresh autonomous update synthesized from recent site signals.';
-
-export default function Page() {;
-
-
-export default function Page() {;
-
-
-
-
-
-
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-export default function Page() {;
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-
-export default function Page() {;
-pr-12243
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>;
-      <Head>;
-        <title>Autonomous Update — 2025-08-14 21-47</title>;
-<<<<<<< HEAD
-import Head from 'next/head';
-export default function Page() {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import Head from 'next/head';
-export default function Page() {
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>
-      <Head>
-        <title>Autonomous Update — 2025-08-14 21-47</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-        <meta
-          name='description'
-=======
-
-
-
-        <meta'
-          name='description''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-          content='Fresh autonomous update synthesized from recent site signals.'
-        />;
-        <meta'
-          property='og:title''
-          content='Autonomous Update — 2025-08-14 21-47'
-        />;
-        <meta'
-          property='og:description''
-=======
-        <meta
-          name='description'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
 export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
-        <title />Autonomous Update — 2025-08-14 21-47</title>;import Head from 'next/head';
-
+      <Head>;
+        <title />Autonomous Update — 2025-08-14 21-47</title>;
+import Head from 'next/head';
 export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
+      <Head>;
         <title />Autonomous Update — 2025-08-14 21-47</title>;
         <meta;
           name='description';
@@ -135,15 +25,11 @@ pr-12243
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <div className='min-h-screen bg-slate-950 text-white'>
-      <Head>
-        <title>Autonomous Update — 2025-08-14 21-47</title>
-
-
-
-
-        <meta
-          name='description'
+    <div className='min-h-screen bg-slate-950 text-white' />;
+      <Head>;
+        <title />Autonomous Update — 2025-08-14 21-47</title>;
+        <meta;
+name='description'
           content='Fresh autonomous update synthesized from recent site signals.'
 <<<<<<< HEAD
         />;
@@ -269,16 +155,11 @@ className='mt-4'
         </p>;
       </main>;
     </div>;
-<<<<<<< HEAD
-  )export default function Page() {'<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>';
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>';
-        <div
-          className='mt-4'
-          dangerouslySetInnerHTML={{
-            __html:
-
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class="text-white/70">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>',;
-
+  );
+export default function Page() {;
+"
+              '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><p class=\"text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>'}
+}
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -381,7 +262,6 @@ pr-12243
   );export default function Page() {
 =======
   );
-
 export default function Page() {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -415,8 +295,6 @@ export default function Page() {
 <<<<<<< HEAD
 =======
   );
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
 export default function Page() {
   return (
 
@@ -520,46 +398,37 @@ export default function Page() {
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
 
-export default function Page() {
-export default function Page() {
-
-
-
-
-  return (
-    <div className="min-h-screen bg-slate-950 text-white">;
+  return ("
+    <div className=\"min-h-screen bg-slate-950 text-white\" />;
       <Head>;
-        <title>Autonomous Update — 2025-08-14 21-47</title>;
-        <meta name="description" content="Fresh autonomous update synthesized from recent site signals." />;
-        <meta property="og:title" content="Autonomous Update — 2025-08-14 21-47" />;
-        <meta property="og:description" content="Fresh autonomous update synthesized from recent site signals." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;
-        <h1 className="text-3xl font-extrabold">Autonomous Update — 2025-08-14 21-47</h1>;
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=\"text-white/70\">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>" }} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Content Factory.</p>;
+        <title />Autonomous Update — 2025-08-14 21-47</title>;"
+        <meta name=\"description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />;"
+        <meta property=\"og:title\" content=\"Autonomous Update — 2025-08-14 21-47\" />;"
+        <meta property=\"og:description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
+      </Head>;"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />;"
+        <h1 className=\"text-3xl font-extrabold\" />Autonomous Update — 2025-08-14 21-47</h1>;"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com/automation</a></p><p class=\"text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / Vi</p>\" }} />;"
+        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Content Factory.</p>;
       </main>;
     </div>;
-}
-}
-
-
   )}
-
-}
-  )}
-  );
-
 import Head from 'next / head';
+export default /**;
+ * Page - Function description;
+ */;
+function Page() {return (<div className='min - h-screen bg - slate - 950 text - white' />;}
+  );}
+}
 export default /**
  * Page - Function description
  */
 function Page() {
   return (
-    <div className='min - h-screen bg - slate - 950 text - white'>;
+    <div className='min - h-screen bg - slate - 950 text - white' />;
       <Head>;
-        <title > Autonomous Update — 2025 - 08 - 14 21 - 47</title>;
+        <title  /> Autonomous Update — 2025 - 08 - 14 21 - 47</title>;
         <meta;
           name='description';
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -604,49 +473,37 @@ function Page() {
           Auto - generated by Cloud Content Factory.;
         </p>;
       </main>;
-    </div>);export default /**;
+    </div>)export default /**;
+ * Page - Function description;
+ */;"
+function Page() {return (<div className=\"min - h-screen bg - slate - 950 text - white\" />;
+    </div>);
+export default /**
  * Page - Function description;
  */
 function Page() {}
   return ("
-    <div className="min - h-screen bg - slate - 950 text - white">;
+    <div className=\"min - h-screen bg - slate - 950 text - white\" />;
       <Head>;
-        <title > Autonomous Update — 2025 - 08 - 14 21 - 47</title>;"
-        <meta name="description" content="Fresh autonomous update synthesized from recent site signals." />;"
-        <meta property="og:title" content="Autonomous Update — 2025 - 08 - 14 21 - 47" />;"
-        <meta property="og:description" content="Fresh autonomous update synthesized from recent site signals." />;"
-        <meta name="twitter:card" content="summary_large_image" />;
+        <title  /> Autonomous Update — 2025 - 08 - 14 21 - 47</title>;"
+        <meta name=\"description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />;"
+        <meta property=\"og:title\" content=\"Autonomous Update — 2025 - 08 - 14 21 - 47\" />;"
+        <meta property=\"og:description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
       </Head>;"
-      <main className="container mx - auto px - 6 py - 12 prose prose - invert">;"
-        <h1 className="text - 3xl font - extrabold">Autonomous Update — 2025 - 08 - 14 21 - 47</h1>;"
-        <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Signal source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><p class="text - white / 70">Automation HubDiscover our autonomous, self - healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>" }} />;"
-        <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Content Factory.</p>;
-=======
-          dangerouslySetInnerHTML={{__html:;"
-              '<p  /> Signal source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / automation</a></p><p class=\"text - white / 70\" />Automation HubDiscover our autonomous, self - healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>';"
-              '<p  /> Signal source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / automation</a></p><p class=\"text - white / 70\" />Automation HubDiscover our autonomous, self - healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-          dangerouslySetInnerHTML={{
-            __html:;
-              '<p > Signal source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><p class="text - white / 70">Automation HubDiscover our autonomous, self - healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>',
-          }}
-        />;
-        <p className='mt - 6 text - white / 60 text - sm'>;
-          Auto - generated by Cloud Content Factory.;
-        </p>;
-      </main>;
-    </div>);export default /**
- * Page - Function description
- */
-function Page() {
-  return (
-    <div className="min - h-screen bg - slate - 950 text - white">;
-      <Head>;
-        <title > Autonomous Update — 2025 - 08 - 14 21 - 47</title>;
-        <meta name="description" content="Fresh autonomous update synthesized from recent site signals." />;
-        <meta property="og:title" content="Autonomous Update — 2025 - 08 - 14 21 - 47" />;
-        <meta property="og:description" content="Fresh autonomous update synthesized from recent site signals." />;
-        <meta name="twitter:card" content="summary_large_image" />;
+      <main className=\"container mx - auto px - 6 py - 12 prose prose - invert\" />;}"
+        <h1 className=\"text - 3xl font - extrabold\" />Autonomous Update — 2025 - 08 - 14 21 - 47</h1>;}"
+        <div className=\"mt - 4\" dangerouslySetInnerHTML={{ __html: \"<p  /> Signal source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com / automation</a></p><p class=\"text - white / 70\" />Automation HubDiscover our autonomous, self - healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>\" }} />;"
+        <p className=\"mt - 6 text - white / 60 text - sm\" />Auto - generated by Cloud Content Factory.</p>;
+      </main>
+    </div>
+  );
+}<Head>;
+        <title />Autonomous Update — 2025-08-14 21-47</title>;
+        <meta name=&quot;description&quot; content=&quot;Fresh autonomous update synthesized from recent site signals.&quot; />;
+        <meta property=&quot;og:title&quot; content=&quot;Autonomous Update — 2025-08-14 21-47&quot; />;
+        <meta property=&quot;og:description&quot; content=&quot;Fresh autonomous update synthesized from recent site signals.&quot; />;
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />;
       </Head>;
 <<<<<<< HEAD
       <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
@@ -672,6 +529,28 @@ function Page() {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       </main>;
+    </div>;
+    </div>;"
+  )export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
+      <Head>;
+        <title />Autonomous Update — 2025-08-14 21-47</title>;"
+        <meta name=\"description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />;"
+        <meta property=\"og:title\" content=\"Autonomous Update — 2025-08-14 21-47\" />;"
+        <meta property=\"og:description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />;"
+        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
+      </Head>;"
+      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />;}"
+        <h1 className=\"text-3xl font-extrabold\" />Autonomous Update — 2025-08-14 21-47</h1>;}"
+        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><p class=\"text-white/70\" />Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / Vi</p>\" }} />;"
+        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Content Factory.</p>;
+      </main>;
+    </div>;
+  )}ursor/fix-website-loading-errors-and-merge-6662;
+    </div>;
+  )}
+    </div>;"
+  )})} catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
+})
     </div>);
 }
 <<<<<<< HEAD
@@ -681,25 +560,7 @@ pr-12243
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
-<<<<<<< HEAD
-=======
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       <Head>
-        <title>Autonomous Update — 2025-08-14 21-47</title>
-
-<<<<<<< HEAD
-=======
-      <Head />
         <title />Autonomous Update — 2025-08-14 21-47</title>
         <meta name=&quot;description&quot; content=&quot;Fresh autonomous update synthesized from recent site signals.&quot; />
         <meta property=&quot;og:title&quot; content=&quot;Autonomous Update — 2025-08-14 21-47&quot; />
@@ -743,46 +604,19 @@ className='mt-4'
 <<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
-  );export default function Page() {}
-  return (
-
-export default function Page() {}
-  return (
-<<<<<<< HEAD
-pr-12243
-=======
-
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    </div>;
   );
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-
-    </div>;
-  );export default function Page() {
+export default function Page() {
   return (
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    <div className="min-h-screen bg-slate-950 text-white">
+
+export default function Page() {
+  return ("
+    <div className=\"min-h-screen bg-slate-950 text-white\" />
       <Head>
-        <title>Autonomous Update — 2025-08-14 21-47</title>"
-        <meta name="description" content="Fresh autonomous update synthesized from recent site signals." />"
-        <meta property="og:title" content="Autonomous Update — 2025-08-14 21-47" />"
-        <meta property="og:description" content="Fresh autonomous update synthesized from recent site signals." />"
-        <meta name="twitter:card" content="summary_large_image" />
+        <title />Autonomous Update — 2025-08-14 21-47</title>"
+        <meta name=\"description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />"
+        <meta property=\"og:title\" content=\"Autonomous Update — 2025-08-14 21-47\" />"
+        <meta property=\"og:description\" content=\"Fresh autonomous update synthesized from recent site signals.\" />"
+        <meta name=\"twitter:card\" content=\"summary_large_image\" />
       </Head>"
       <main className="container mx-auto px-6 py-12 prose prose-invert">"
         <h1 className="text-3xl font-extrabold">Autonomous Update — 2025-08-14 21-47</h1>"

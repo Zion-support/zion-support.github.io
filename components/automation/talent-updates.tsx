@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-
-
-}</div> </div>) import fs from 'fs';
-import fs from 'fs';
-import path from 'path';
- </div>) ) ;
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-import {TALENT_PROFILES} from '../../data/talent';
-</div>) ) 
- </div>) ) 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
 import fs from 'fs';,
 =======
 import fs from 'fs',

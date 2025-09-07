@@ -1,126 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  ArrowRight;
-  Play;
-  TrendingUp;
-  Brain;
-  Shield;
-  Rocket;
-  Globe;
-  Cpu;
-  Database;
-  Atom;
-  Target;
-  Star;
-  Sparkles as SparklesIcon;
-  Brain as BrainIcon;
-  Atom as AtomIcon;
-  Shield as ShieldIcon;
-  Rocket as RocketIcon;
-  Zap;
-  Eye;
-  Heart;
-  Infinity;
-  ChevronRight;
-  ChevronLeft;
-  ExternalLink;
-  Users;
-  Award;
-  Clock;
-  CheckCircle;
-  Zap as ZapIcon;
-  DollarSign;
-  BarChart3;
-  Palette;
-  Cloud;
-  Network;
-  ShoppingCart;
-  Settings;
-  Building;
-  Monitor;
-  Layers;
-  Globe2;
-  Lock;
-  Code;
-  Server;
-  Phone;
-  Search;
-  Filter;
-  Grid;
-  List;
-  Eye as EyeIcon;
-  ArrowUpRight;
-  Star as StarIcon;
-  Sparkles;
-  Target as TargetIcon;} from 'lucide-react';import {';
-import {motion, AnimatePresence} from 'framer-motion';'
-import Link from 'next / link';
-import {';
-import {motion, AnimatePresence} from 'framer-motion';'
-import Link from 'next / link';
-import {}
-  ArrowRight,
-  Play,
-  TrendingUp,
-  Brain,
-  Shield,
-  Rocket,
-  Globe,
-  Cpu,
-  Database,
-  Atom,
-  Target,
-  Star,
-  Sparkles as SparklesIcon,
-  Brain as BrainIcon,
-  Atom as AtomIcon,
-  Shield as ShieldIcon,
-  Rocket as RocketIcon,
-  Zap,
-  Eye,
-  Heart,
-  Infinity,
-  ChevronRight,
-  ChevronLeft,
-  ExternalLink,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  Zap as ZapIcon,
-  DollarSign,
-  BarChart3,
-  Palette,
-  Cloud,
-  Network,
-  ShoppingCart,
-  Settings,
-  Building,
-  Monitor,
-  Layers,
-  Globe2,
-  Lock,
-  Code,
-  Server,
-  Phone,
-  Search,
-  Filter,
-  Grid,
-  List,
-  Eye as EyeIcon,
-  ArrowUpRight,
-  Star as StarIcon,;
-  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -327,36 +204,13 @@ const Homepage2047: React.FC = () => {
     const consciousnessInterval = setInterval(() => {
       setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7)
     }, 100);
-=======
-const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
-  const [consciousnessLevel, setConsciousnessLevel] = useState(0.5);
-  const [scrollY, setScrollY] = useState(0);
-  useEffect(() => {
-    setIsVisible(true);
-    // Auto-rotate featured services
-    const interval = setInterval(() => {
-      setCurrentServiceIndex(prev => (prev + 1) % 6);
-    }, 8000);
-    // Track mouse movement for parallax effects
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    }
-    // Animate consciousness level
-    const consciousnessInterval = setInterval(() => {
-      setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7);
-    }, 100);
-    // Track scroll position
-    const handleScroll = () => {
-setScrollY(window.scrollY);
-    };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    // Track scroll position;
+const handleScroll = (
+setScrollY(window.scrollY)) => {
+  return $3;}
+}
+};
 
-    // Track scroll position
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    };
-    
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('scroll', handleScroll);
     
@@ -1481,10 +1335,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <ArrowUpRight className='w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200' />;
                 </Link>;
 
-
-<<<<<<< HEAD
-                <Link
-                  href='/contact'
+                <Link;
+href='/contact'
 
               {/* CTA Buttons */}
               <motion.div
@@ -3385,19 +3237,7 @@ href='/2025-innovative-services-showcase-v2';
       {/* Footer */}
       <UltraFuturisticFooter2047 />;
     </div>;
-<<<<<<< HEAD
-  )export default Homepage2047;  )}export default Homepage2047;
-                    </p>;
-                    <div className='flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors duration - 200'>;
-                      <span className='text - sm font - medium'>Learn More</span>;
-                      <ArrowRight className='w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform duration - 200' />                    </div>;
-                    <div className="flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors duration - 200">;
-                      <span className="text - sm font - medium">Learn More</span>;
-=======
-  );
-export default Homepage2047;  );
-};
-
+  )export default Homepage2047;  )}
 export default Homepage2047;
                     </p>;'
                     <div className='flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors duration - 200'>;'
@@ -3562,18 +3402,12 @@ export default Homepage2047;  )
 export default Homepage2047;
 <<<<<<< HEAD
 
-export default Homepage2047;
-=======
-    </div>);
-}
-;
-export default Homepage2047);
-}
-;
+    </div>)
+};
+export default Homepage2047)
+};
 export default Homepage2047;
 ;
-
-
 
       {/* Footer */}
       <UltraFuturisticFooter2047 />
@@ -3587,11 +3421,7 @@ export default Homepage2047;
 export default Homepage2047;
 
 };
-
-
-<<<<<<< HEAD
-);
-};
+export default Homepage2047;
 
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export default Homepage2047;

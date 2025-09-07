@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-export type OnboardingStep = {;
-  id: string;
-<<<<<<< HEAD
-  label: string;
-  completed: boolean
-=======
-import React from 'react',
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import React from 'react';,
 import Link from 'next/link';
 import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
-
 export type OnboardingStep = any;
 
 <<<<<<< HEAD
@@ -23,14 +12,8 @@ export type OnboardingProgressCardProps = {;
   highlightColorClass?: string;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 };
-=======
-  highlightColorClass?: string;}
-function computePercentage(steps: OnboardingStep[]): number {}
-  if (!steps |steps.length === 0) return 0;
-  const completedCount = steps.filter(s => s.completed).length;
-
-<<<<<<< HEAD
-export type OnboardingStep = {id: string;import React from 'react',import Link from 'next/link';
+export type OnboardingStep = {id: string;
+import React from 'react';,import Link from 'next/link';}
 import { CheckCircle2, Circle, PartyPopper  } from 'lucide-react';
 export type OnboardingStep = any;label: string;
   completed: boolean;
@@ -89,12 +72,19 @@ export type OnboardingProgressCardProps = {
   highlightColorClass?: string
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }
+export type OnboardingProgressCardProps = {title: string;
+  steps: OnboardingStep[];}
+  highlightColorClass?: string}
+};
 
-  if (!steps || steps.length = == 0)
-  return 0
-const completedCount = steps.filter(s => s.completed).length
-  return Math.round((completedCount / steps.length) * 100)
-  title
+function computePercentage(steps: OnboardingStep[]): number {
+
+  if (!steps || steps.length = == 0);
+  return 0;
+
+const completedCount = steps.filter(s => s.completed).length;
+  return Math.round((completedCount / steps.length) * 100);
+  title;
 steps}
 highlightColorClass = 'from-neon-green to-neon-blue'}
 }: OnboardingProgressCardProps) {

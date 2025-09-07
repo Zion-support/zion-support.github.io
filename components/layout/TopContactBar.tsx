@@ -1,123 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  Calendar,Star,} from 'lucide-react';import {Phone, Mail, MapPin, Globe,Calendar,Star,} from 'lucide-react';import {Phone, Mail, MapPin, Globe,mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',import {Phone,Mail,MapPin,Globe,Clock,ChevronDown,ChevronUp,MessageCircle,Calendar,Star,} from 'lucide-react';import {Phone, Mail, MapPin, Globe,Clock, ChevronDown, ChevronUp;
-  MessageCircle, Calendar, Star;const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com',hours: 'Mon-Fri: 9AM-6PM EST',rating: '4 && 4.9/5 (200+ Reviews)',}const quickActions = [;
-  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },{ name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },{ name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }export default function TopContactBar() {export default function TopContactBar() {const [isExpanded, setIsExpanded]  = useState(false)return (<div className='relative z-40'>;import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe;
-  Clock, ChevronDown, ChevronUp;
-  MessageCircle, Calendar, Star;
-  } from 'lucide-react';
-const contactInfo = null;
-export default function TopContactBar() {const [isExpanded, setIsExpanded] = useState(false)return (<div className='relative z-40'>;
-  Calendar,;
-  Star,;} from 'lucide-react';import { ;
-  Phone, Mail, MapPin, Globe, ;
-  Calendar,
-  Star,;} from 'lucide-react';import { 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  Calendar,;
-  Star,;} from 'lucide-react';import { ;
-  Phone, Mail, MapPin, Globe, ;
-  Calendar,'
-  Star,;} from 'lucide-react';import {}
-  Phone, Mail, MapPin, Globe, '
-  mobile: '+1 302 464 0950','
-  email: 'kleber@ziontechgroup.com','
-  address: '364 E Main St STE 1008 Middletown DE 19709','
-  website: 'https://ziontechgroup.com',;
-import {;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe,;
-  Clock,;
-  ChevronDown,;
-  ChevronUp,;
-  MessageCircle,;
-  Calendar,;'
-  Star,;} from 'lucide-react';import { ;
-  Phone, Mail, MapPin, Globe, ;
-  Clock, ChevronDown, ChevronUp;
-  MessageCircle, Calendar, Star;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-<<<<<<< HEAD
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup && ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup && ziontechgroup.com',;
-  hours: 'Mon-Fri: 9AM-6PM EST',;
-  rating: '4 && 4.9/5 (200+ Reviews)',
-};
-
-<<<<<<< HEAD
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-const quickActions = [;
-  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },;
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },;
-  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
-
-export default function TopContactBar() {;
-
-export default function TopContactBar() {;
-
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  return (
-    <div className='relative z-40'>;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, Globe, 
-  Clock, ChevronDown, ChevronUp,
-  MessageCircle, Calendar, Star
-} from 'lucide-react',
+import { Phone, Mail, MapPin, Globe;
+  Clock, ChevronDown, ChevronUp;}
+  MessageCircle, Calendar, Star;}
+  } from 'lucide-react';
 
-<<<<<<< HEAD
-const contactInfo = $2;
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-  hours: 'Mon-Fri: 9AM-6PM EST',
-  rating: '4.9/5 (200+ Reviews)'
-},
-
-const quickActions = [
-<<<<<<< HEAD
-  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className = $2;
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className = $2;
-  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className = $2;
-=======
-  {
-    name: 'Get Quote'
-    href: '/quote'
-    icon: <MessageCircle className='w-4 h-4' />
-  }
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className='w-4 h-4' /> }
-  {
-    name: 'Live Chat'
-    href: '/chat'
-    icon: <MessageCircle className='w-4 h-4' />
-  },];  rating: '4.9/5 (200+ Reviews)'
-}
-const quickActions = [
-  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> }
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> }
-  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+const contactInfo = null;
 export default function TopContactBar() {
   const [isExpanded, setIsExpanded] = useState($2);
   return (
@@ -365,7 +253,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {/* Center - Business Hours & Rating */}
 <div className='hidden lg:flex items-center space-x-6 text-sm' />;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -480,13 +367,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className="flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30"
 =======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-                  >
+                    className='flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover: text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'
+                   />
+
                     {action.icon}
                     <span>{action.name}</span>
                   </a>
                 ))}
-              </div>
+              </div>;
 
               {/* Expand/Collapse Button */}
 <<<<<<< HEAD
@@ -554,28 +442,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 
-<<<<<<< HEAD
-                    {action.icon}
-                    <span>{action.name}</span>;
-                  </a>;
-                ))}
-              </div>;
-                    {action.icon}</div>;{/* Expand/Collapse Button */}
-              <button;
-                onClick={() => setIsExpanded(!isExpanded)})}{/* Expand/Collapse Button */}
-              <button;
-                onClick={() => setIsExpanded(!isExpanded)}className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30';
-className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30';
-              >;
-                <span>More Info</span>;
-                {isExpanded ? (<ChevronUp className='w-4 h-4' />;
-                ) : (<ChevronDown className='w-4 h-4' />;
-                )}</button>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-                    <span>{action.name}</span>;
+                    <span />{action.nam}
+}</span>;
                   </a>))}
               </div>;
               {/* Expand / Collapse Button */}
@@ -1198,18 +1066,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
-                      View All Services;
-                    </a>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-        )}
-<<<<<<< HEAD
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-        )}
+
+}
       </AnimatePresence>;
     </div>;
   );

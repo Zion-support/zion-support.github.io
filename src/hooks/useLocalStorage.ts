@@ -10,5 +10,4 @@ function useLocalStorage<T />() {const [storedValue, setStoredValue] = useState<
   }return [storedValue, setValue] as const;
 
 }
-
-export default useLocalStorage;"
+export default useLocalStorage;

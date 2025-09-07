@@ -1,16 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
-<<<<<<< HEAD
-import { supabase as supabaseClient   } from '@/utils/supabase/client';
-import { TALENT_PROFILES as LOCAL   } from '@/data/talent';
-import { supabase as supabaseClient   } from '@/utils/supabase/client';
-import { TALENT_PROFILES as LOCAL   } from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
 const hasSupabase =;
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
@@ -25,8 +15,6 @@ const hasSupabase =
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh')
   .split(',')
   .map(x => x.trim());
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -373,12 +361,3 @@ return res;
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

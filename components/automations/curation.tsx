@@ -1,28 +1,6 @@
-<<<<<<< HEAD
-
-
-type Experiment = {
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+import React from \"react\","
+import fs from \"fs\";"
+import path from \"path\";
 
 
 <<<<<<< HEAD
@@ -42,18 +20,11 @@ type Experiment = any;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
 import fs from 'fs';
-
-;
-type Experiment = {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true }}
-  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
-  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}import React from "react",import fs from 'fs';
 import path from 'path';
-type Experiment = any;import React from 'react';
+
+type Experiment = any;
+import React from 'react';
+
 type Experiment = {title: string;
 hypothesis?: string;
 metric?: string;
@@ -69,10 +40,11 @@ type Experiment = $2;
   impact?: number
 },
 
-type Props = $2;
-  items: Experiment[]
-},
+type Props = {
 
+  updatedAt: string | null;}
+items: Experiment[]}
+};
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">
@@ -123,12 +95,9 @@ items: Experiment[];
         <p className='mt-2 text-sm text-gray-600'>Last updated: {updatedAt}</p>;
       ) : (<p className='mt-2 text-sm text-gray-600'>;
           No curated output yet. It will appear here automatically after the;
-          next run.;
-        </p>;
-      )}<div className='mt-6 space-y-4'>;
-        {items.map((exp, idx) => (<div;
-=======
-  impact?: number
+next run.
+        </p>
+
 }
 type Props = {
   updatedAt: string | null,
@@ -501,9 +470,7 @@ export default function CurationPage() {return (<main className="mx-auto max-w-4
         )}
       </div>
     </main>
-  )
-}
-
+  );
 export async function getStaticProps() {
   try {
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json"),

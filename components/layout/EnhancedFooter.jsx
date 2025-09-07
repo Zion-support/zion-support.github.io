@@ -1,48 +1,3 @@
-<<<<<<< HEAD
-const EnhancedFooter = () => {
-  return (
-    <footer className='bg - gray - 900 text - white'>;
-const EnhancedFooter = () => {return (<footer className='bg - gray - 900 text - white'>;
-import React from 'react';
-import Link from 'next/link';
-const EnhancedFooter = () => {
-  const currentYear = new Date().getFullYear($2);
-  return (
-    <footer className="bg-gray-900 text-white">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const EnhancedFooter = () => {}
-  return (
-    <footer className='bg - gray - 900 text - white'>;
-      {/* Main Footer Content */}'
-      <div className='container mx - auto px - 4 py - 16'>;'
-        <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8'>;
-          {/* Company Info */}
-  const currentYear = new Date().getFullYear(),
-'
-          <div className='lg:col - span - 2'>;'
-            <div className='flex items - center space - x-2 mb - 4'>;'
-              <div className='w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center'>;'
-                <span className='text - white font - bold text - xl'>Z</span>;
-              </div>;'
-              <span className='text - xl font - bold'>Zion Tech Group</span>;
-            </div>;'
-            <p className='text - gray - 300 mb - 6 max - w-md'>;
-              Leading technology solutions provider helping businesses transform;
-              their digital presence with cutting - edge AI, cloud architecture,
-              and innovative development services.            </p > const EnhancedFooter = () =>: any {}
-  const current_year = new Date ().getFullYear (),
-=======
-const EnhancedFooter = () => {
-
-
 const EnhancedFooter = (
 
  ;
@@ -620,5 +575,6 @@ export default EnhancedFooter;
 =======
       {/* Bottom Footer */}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+  ),
+};
+export default EnhancedFooter;

@@ -15,7 +15,6 @@ import fse from 'fs - extra';'
 import fs from 'fs';
 import path from 'path';
 import fse from 'fs - extra';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { randomUUID } from 'crypto';
 
 // Lazy import to avoid serverless cold start cost unless needed
@@ -307,7 +306,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
-origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -899,12 +897,3 @@ return res.status(200).json({ ok: true;, id, summary, tags });
     return res.status(500).json({ error: 'Internal server error';,}
 });
   }
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

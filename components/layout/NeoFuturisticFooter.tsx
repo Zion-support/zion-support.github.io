@@ -1,39 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-import {;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe,;
-  Github,;
-  Linkedin,;
-  ExternalLink,;
-
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;'
-  email: 'kleber@ziontechgroup && ziontechgroup.com',;'
-  address: '364 E Main St STE 1008 Middletown DE 19709',;'
-  website: 'https://ziontechgroup && ziontechgroup.com',};
-<<<<<<< HEAD
-export default function NeoFuturisticFooter() {;
-  return (  website: 'https://ziontechgroup && ziontechgroup.com'
-};
-
-export default function NeoFuturisticFooter() {;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-<<<<<<< HEAD
-const contactInfo = $2;
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
 
+const contactInfo = null;
 export default function NeoFuturisticFooter() {
 =======
 <<<<<<< HEAD
@@ -500,27 +469,5 @@ export default function NeoFuturisticFooter() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-</div> <div className="relative container mx-auto px-4 py-12 text-slate-200" > <div className="grid grid-cols-1 md:grid-cols-3 gap-10" > <div> Zion Tech Group </motion.h3> <p className="text-slate-400 text-sm leading-relaxed" > Productized AI, IT and micro SaaS solutions with transparent pricing and fast onboarding. Built for outcomes, delivered with reliability. </p> </div> </div> <div className="space-y-2 text-sm" > <div className="font-semibold text-slate-100 mb-2" >Resources</div> <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/market-pricing" ><ExternalLink className="w-4 h-4" /> Market Pricing</a> <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/services" ><ExternalLink className="w-4 h-4" /> Services</a> <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/contact" ><ExternalLink className="w-4 h-4" /> Contact</a> <div className="flex items-center gap-3 pt-2" > <a aria-label="GitHub" href="https://github.com/Zion-Holdings" className="text-slate-400 hover:text-white" ><Github className="w-5 h-5" /></a> <a aria-label="LinkedIn" href="https://www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white" ><Linkedin className="w-5 h-5" /></a> </div> </div> </div> </div> </div> </div> </footer>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-export default function NeoFuturisticFooter() {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-export default function NeoFuturisticFooter() {}
-  return (
-'";`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

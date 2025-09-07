@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-
 import React from \"react\";
-
-=======
-import React from "react";
-<<<<<<< HEAD
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 export type Badge = any;
 
 =======
@@ -26,35 +11,8 @@ import React from 'react';
 label: string;
 <<<<<<< HEAD
 
-export function currentBadge(balance: number): Badge | null {;
-
-  let current: Badge | null = null;
-threshold: number, //token balance threshold 
-};
-const BADGES: Badge[] = [;'
-  { id: 'starter', label: 'Starter', threshold: 50 },;'
-  { id: 'rising', label: 'Rising Star', threshold: 200 },;'
-  { id: 'pro', label: 'Pro', threshold: 500 },;'
-  { id: 'elite', label: 'Elite', threshold: 1000 },;
-];
-
-import React from "react";
-
-export type Badge = {}
-  id: string,
-  label: string,;
-  threshold: number, // token balance threshold;
-};
-const BADGES: Badge[] = ["
-  { id: "starter", label: "Starter", threshold: 50 },"
-  { id: "rising", label: "Rising Star", threshold: 200 },"
-  { id: "pro", label: "Pro", threshold: 500 },"
-  { id: "elite", label: "Elite", threshold: 1000 }],
-export function currentBadge(balance: number): Badge | null {}
-  let current: Badge | null = null,
-';
+;
 import React from 'react';
-<<<<<<< HEAD
 export type Badge = any;id: string;
 label: string;export function currentBadge(balance: number): Badge | null {let current: Badge | null = null;
 threshold: number, //token balance threshold;
@@ -63,10 +21,34 @@ threshold: number, //token balance threshold;
 }const BADGES: Badge[] = [;
   { id: "starter", label: "Starter", threshold: 50 },{ id: "rising", label: "Rising Star", threshold: 200 },{ id: "pro", label: "Pro", threshold: 500 },{ id: "elite", label: "Elite", threshold: 1000 }],export function currentBadge(balance: number): Badge | null {let current: Badge | null  = null,id: string;
 label: string;
-threshold: number, //token balance threshold;
+export function currentBadge(balance: number): Badge | null {let current: Badge | null = null;}
+threshold: number, //token balance threshold;}
 }
-  return (<div className='flex gap - 2 items - center flex - wrap'>;
-      {BADGES.map (boolean => (        <span;
+
+const BADGES: Badge[] = [;
+  { id: 'starter'}
+  label: 'Starter', threshold: 50}
+},{ id: 'rising'}
+  label: 'Rising Star', threshold: 200}
+},{ id: 'pro'}
+  label: 'Pro', threshold: 500}
+},{ id: 'elite'}
+  label: 'Elite', threshold: 1000}
+}];
+export type Badge = {id: string,label: string,threshold: number, // token balance threshold;}
+}
+
+const BADGES: Badge[] = [;"
+  { id: \"starter\", label: \"Starter\", threshold: 50}"
+},{ id: \"rising\", label: \"Rising Star\", threshold: 200}"
+},{ id: \"pro\", label: \"Pro\", threshold: 500}"
+},{ id: \"elite\", label: \"Elite\", threshold: 1000}
+}],export function currentBadge(balance: number): Badge | null {let current: Badge | null  = null,id: string;
+label: string;}
+threshold: number, //token balance threshold;}
+}
+  return (<div className='flex gap - 2 items - center flex - wrap' />;
+      {BADGES.map (boolean => (        <span;}
           key={b.id}
           className={`px - 3 py - 1 rounded - full text - xs border ${balance >= b.threshold;
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
@@ -93,8 +75,8 @@ if (current = b) {}
 }
 
   return current;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-export default function Badges(): any ({ balance }: { balance: number }) {;
+export default function Badges({ balance }: { balance: number}
+}) {
   const active = currentBadge(balance);
   return (
 

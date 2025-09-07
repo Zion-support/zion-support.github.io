@@ -2,54 +2,8 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
-=======
-
-import Link from 'next/link';
-<<<<<<< HEAD
-'
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-import { motion, AnimatePresence } from 'framer-motion';
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  Search,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Zap,;
-  Brain,;
-  Atom,;
-  Microscope,;
-  Gamepad2,;
-  Shield,;
-  Rocket,;
-  Database,;
-  TestTube,;
-  Car,;
-  Globe,;
-  Code,;
-  Palette,;
-  Cloud,;
-  Server,;
-  Network,;
-<<<<<<< HEAD
-  Cpu,;
-} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
-export default function UltraAdvancedNavigation2026V2() {;
-  const [isOpen, setIsOpen] = useState(false);
-=======
-  Cpu,;'
-} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
-<<<<<<< HEAD
-export default function UltraAdvancedNavigation2026V2() {;
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
-
 export default function UltraAdvancedNavigation2026V2() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [isOpen, setIsOpen] = useState(false);
@@ -349,114 +303,39 @@ export default function UltraAdvancedNavigation2026V2() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
 
-  const navigationItems = []
-    {'
-      name: 'Home','
-      href: '/',"
-      icon: <Zap className="w-4 h-4" />
-    };
-    {'
-      name: 'Services','
-      href: '/services',"
-      icon: <Brain className="w-4 h-4" />,
-      dropdown: ['"
-        { name: 'AI & Machine Learning', href: '/services?category=ai', icon: <Brain className="w-4 h-4" /> },'"
-        { name: 'Quantum & Space Tech', href: '/services?category=quantum', icon: <Atom className="w-4 h-4" /> },'"
-        { name: 'Emerging Technologies', href: '/services?category=emerging', icon: <Microscope className="w-4 h-4" /> },'"
-        { name: 'Micro SaaS', href: '/services?category=micro-saas', icon: <Code className="w-4 h-4" /> },'"
-        { name: 'Metaverse & VR', href: '/services?category=metaverse', icon: <Gamepad2 className="w-4 h-4" /> },'"
-        { name: 'Cybersecurity', href: '/services?category=cybersecurity', icon: <Shield className="w-4 h-4" /> },'"
-        { name: 'Space Technology', href: '/services?category=space', icon: <Rocket className="w-4 h-4" /> },'"
-        { name: 'Biotech & Healthcare', href: '/services?category=biotech', icon: <TestTube className="w-4 h-4" /> },'"
-        { name: 'Blockchain & Web3', href: '/services?category=blockchain', icon: <Database className="w-4 h-4" /> },'"
-        { name: 'Autonomous Vehicles', href: '/services?category=transportation', icon: <Car className="w-4 h-4" /> },'"
-        { name: 'Cloud & Infrastructure', href: '/services?category=cloud', icon: <Cloud className="w-4 h-4" /> },'"
-        { name: 'Edge Computing', href: '/services?category=edge', icon: <Server className="w-4 h-4" /> },'"
-        { name: 'IoT & Connectivity', href: '/services?category=iot', icon: <Network className="w-4 h-4" /> },'"
-        { name: 'Semiconductor Tech', href: '/services?category=semiconductor', icon: <Cpu className="w-4 h-4" /> },'"
-        { name: 'Creative & Design', href: '/services?category=creative', icon: <Palette className="w-4 h-4" /> },'"
-        { name: 'Global Solutions', href: '/services?category=global', icon: <Globe className="w-4 h-4" /> }
-      ]
-    },    {}
-    {'
-      name: 'Showcase','
-      href: '/enhanced-services-showcase-2026-v2',"
-      icon: <Rocket className="w-4 h-4" />
-    };
-    {'
-      name: 'Pricing','
-      href: '/pricing-enhanced-2026',"
-      icon: <Database className="w-4 h-4" />
-    };
-    {'
-      name: 'About','
-      href: '/about',"
-      icon: <Globe className="w-4 h-4" />
-    };
-    {'
-      name: 'Contact','
-      href: '/contact',"
-      icon: <Mail className="w-4 h-4" />
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Brain,
-  Atom,
-  Microscope,
-  Gamepad2,
-  Shield,
-  Rocket,
-  Database,
-  TestTube,
-  Car,
-  Globe,
-  Code,
-  Palette,
-  Cloud,
-<<<<<<< HEAD
-  Server,
   useEffect(() => {
     const handleScroll = null;
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Zap
-  Brain
-  Atom
-  Microscope
-  Gamepad2
-  Shield
-  Rocket
-  Database
-  TestTube
-  Car
-  Globe
-  Code
-  Palette
-  Cloud
-  Server
-  Network
-  Cpu;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  Server,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
-export default function UltraAdvancedNavigation2026V2() { return null; }
+  Menu;
+X,
+ChevronDown;
+Search,
+Phone;
+Mail,
+MapPin;
+Zap,
+Brain;
+Atom,
+Microscope;
+Gamepad2,
+Shield;
+Rocket,
+Database;
+TestTube,
+Car;
+Globe,
+Code;
+Palette,
+Cloud;
+Server,
+Network;}
+Cpu;}
 } from 'lucide-react';
-
-export default function UltraAdvancedNavigation2026V2() {};
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default function UltraAdvancedNavigation2026V2() {;}
+} from 'lucide-react';
+export default function UltraAdvancedNavigation2026V2() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -1350,7 +1229,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 <<<<<<< HEAD
 
-              ))}</div>;
+            </div>;
             {/* CTA Button */}
 <div className='hidden lg:flex items-center space-x-4'>;
               <Link href='/contact'>;
@@ -1980,42 +1859,6 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
                   <Link href='/contact' onClick={() => setIsOpen(false)}>'"
 =======
 
-                <div className='pt-6 border-t border-white/10'>
-                  <Link href='/contact' onClick={() => setIsOpen(false)}>
-<<<<<<< HEAD
-                    <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className="pt-6 border-t border-white/10">
-                    )}
-                  </div>;
-                ))}
-                  <Link href="/contact" onClick={() => setIsOpen(false)}>
-                    <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
-
-                <div className="pt-6 border-t border-white/10">
-                  <Link href="/contact" onClick={() => setIsOpen(false)}>
-                    <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
-                      Get Started
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className="pt-6 border-t border-white/10">
-                    )}
-                  </div>;
-                ))}"
-                  <Link href="/contact" onClick={() => setIsOpen(false)}>"
-                    <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<div className='pt-6 border-t border-white/10'>
-                  <Link href='/contact' onClick={() => setIsOpen(false)}>
-                    <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                      Get Started
-<<<<<<< HEAD
-=======
-                      Get Started;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 <div className='pt-6 border-t border-white/10' />
                   <Link href='/contact' onClick={() = /> setIsOpen(false)}>
                     <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300' />
@@ -2429,18 +2272,8 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden';
     </>);
 }
 
-          className='fixed inset-0 bg-black/50 z-40 lg: hidden'          onClick={() => setIsOpen(false);}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+          className='fixed inset-0 bg-black/50 z-40 lg: hidden'          onClick={() => setIsOpen(false)}
 
-      {/* Overlay */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0}}
-          animate={{ opacity: 1}}
-          exit={{ opacity: 0}}
-          transition={{ duration: 0.3 }}
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
@@ -2529,16 +2362,4 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden';
 }
   );
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

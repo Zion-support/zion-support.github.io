@@ -1,135 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react',
-import Link from 'next/link';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion, AnimatePresence } from 'framer-motion';
-
-import {
-
-
-=======
-
-import { motion, AnimatePresence } from 'framer-motion';
-
-<<<<<<< HEAD
-import {}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Target,
-  CheckCircle,
-  ExternalLink,
-  Search,
-  Filter,
-<<<<<<< HEAD
-  Grid,
-  List,;
-  ChevronDown,;} from 'lucide-react';
-import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
-=======
-  Grid,;
-  List,;'
-  ChevronDown,;} from 'lucide-react';'
-import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Target,
-  CheckCircle,
-  ExternalLink,
-  Search,
-  Filter,
-  Grid,
-<<<<<<< HEAD
-  List,;
-  ChevronDown,;} from 'lucide-react';
-import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
-  ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
-
-
-  Rocket, Shield, Target, CheckCircle, ExternalLink;
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Star, TrendingUp, Zap, Brain, Atom, 
-  Rocket, Shield, Target, CheckCircle, ExternalLink;
-  Search, Filter, Grid, List, ChevronDown
-} from 'lucide-react';
-import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
-
-const Enhanced2027ServicesShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('name');
-
-  // Combine all 2027 services
-  const all2027Services = [
-    ...cuttingEdge2027Innovations;
-    ...practicalMicroSaas2027;
-    ...emergingTech2027Services
-  ];
-
-  // Get unique categories
-  const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category)))];
-
-  // Filter and sort services
-  const filteredServices = all2027Services
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory
-=======
-  List,;'
-  ChevronDown,;} from 'lucide-react';'
-import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';'
-import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';'
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {};
-=======
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom;}
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
-
-
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom;
-  ArrowRight, Star, TrendingUp, Zap, Brain, Atom
-origin/cursor/automate-test-improve-and-merge-code-2533
-  Rocket, Shield, Target, CheckCircle, ExternalLink;
-<<<<<<< HEAD
-  Search, Filter, Grid, List, ChevronDown'
- } from 'lucide-react';'
-import { cuttingEdge2027Innovations  } from '../../data/2027-cutting-edge-innovations';'
-import { practicalMicroSaas2027  } from '../../data/2027-practical-micro-saas';'
+import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
+import {
+  ArrowRight, Star, TrendingUp, Zap, Brain, Atom;
+Rocket, Shield, Target, CheckCircle, ExternalLink;}
+  Search, Filter, Grid, List, ChevronDown}
+ } from 'lucide-react';
+import { cuttingEdge2027Innovations  } from '../../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027  } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
 
 const Enhanced2027ServicesShowcase: React.FC = () => {'
@@ -419,8 +299,9 @@ return (
     );
   };
 
-  const getCategoryIcon = (category: string) => {
-    const icons = {
+const getCategoryIcon = (
+   ;
+  const icons = {
 'AI & Machine Learning': <Brain className='w-5 h-5' />,
       'Quantum Computing': <Atom className='w-5 h-5' />,
       'Emerging Technology': <Rocket className='w-5 h-5' />,
@@ -434,10 +315,9 @@ return (
       'Materials Science': <Atom className='w-5 h-5' />,
       'Environmental Technology': <Rocket className='w-5 h-5' />,
     };
-    return icons[category as keyof typeof icons] || <Zap className='w-5 h-5' />;
-  };
+    return icons[category as keyof typeof icons] || <Zap className='w-5 h-5' />
+};
 
-origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section className='py-20 bg-gray-900'>
 =======
@@ -1252,74 +1132,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ))}
                     </div>
 
-                    {/* CTA */}
-                    <Link
-                      href={service.link}
-                      className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-                    >
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>;
-          ) : (<motion.div;
-              key='list'              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-            </motion.div>
-          ) : (
-            <motion.div
-              key="list"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
+                          className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'
+                         />
 
-className='space-y-4'
-              className="space-y-4"
-            >
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'>
-                    <div className='flex flex-col lg:flex-row items-start lg:items-center gap-6'>
-            </motion.div>;
-          ) : (<motion.div;
-              key='list'              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-              className='space-y-4'            >              key="list";
-              className='space-y-4'            >;
-key='list';
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}className='space-y-4';
-            >;
-              {filteredServices.map((service, index) => (<motion.div;
-                  key={service.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}>;
-                  <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">;
-                    <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">;
-                        ))}
-                    {/* Tags */}
-                    <div className='flex flex-wrap gap-2 mb-6'>;
-                      {service && service.tags.slice(0, 3).map((tag, idx) => (<span;
-                          key={idx}
-                          className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'>                    <div className="flex flex-wrap gap-2 mb-6">;
-                      {service && service.tags.slice(0, 3).map((tag, idx) => (<span;
-                          key={idx}
-                          className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50";
                           {tag}
                         </span>;
                       ))}
@@ -2303,13 +2118,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 };
 
-=======
-//Filter and sort services const filteredServices = all2027Services .filter (service => {
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || case 'name': return a.name.localeCompare (b.name)
-case 'price': 
-}
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
   /* Search and Filters */ 
 origin/cursor/automate-test-improve-and-merge-code-2533
 }<motion.div /> </div> </div> > {
@@ -2406,7 +2214,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;}
     </section>;}
   )}
-
 export default Enhanced2027ServicesShowcase;
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center' />;
               <Link;
@@ -2694,56 +2501,6 @@ export default Enhanced2027ServicesShowcase,
 export default Enhanced2027ServicesShowcase;  )
 }
 export default Enhanced2027ServicesShowcase;
-<<<<<<< HEAD
+export default Enhanced2027ServicesShowcase;
 
-<<<<<<< HEAD
 "
-=======
-  filteredServices.map ( (service, index) => (<motion.div key= {
-  service.id 
-}<span key= {
-  idx 
-}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
-  tag 
-}</span>) ) 
-}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) ) 
-}</motion.div>) 
-}</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>) 
-}{
-  /* CTA Section */ 
-}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
-}
-export default Enhanced2027ServicesShowcase
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
-  /* CTA Section */ '"
-}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
-};
-export default Enhanced2027ServicesShowcase;  )
-};
-
-export default Enhanced2027ServicesShowcase;
-export default Enhanced2027ServicesShowcase;
-
-;
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  Search, Filter, Grid, List, ChevronDown
-  ArrowRight, Star, TrendingUp, Zap, Brain, Atom;
-Rocket, Shield, Target, CheckCircle, ExternalLink;}
-  Search, Filter, Grid, List, ChevronDown}
- } from 'lucide-react';
-import { cuttingEdge2027Innovations  } from '../../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027  } from '../../data/2027-practical-micro-saas';
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import React from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
@@ -177,8 +162,9 @@ interface EnhancedServiceCardProps {;
 =======
 }
 
-<<<<<<< HEAD
-const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {
+const EnhancedServiceCard: React.FC<EnhancedServiceCardProps /> = ({ service   }
+}) => {
+
   const cardVariants = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -416,7 +402,6 @@ ease: 'easeInOut' as const,
     },
   };
 
-  
     >
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Background Glow */}
@@ -453,11 +438,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
       )}
 
-
-
-
-      {/* Card Content */}'
-      <div className='relative p-6'>
+      {/* Card Content */}
 
       {/* Card Content */}'
       <div className='relative p-6'>
@@ -889,9 +870,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
             )}
 
-
-
-<<<<<<< HEAD
         {/* Market Info */}
 <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
           <div className='flex items-center justify-between mb-2'>
@@ -1104,35 +1082,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <span className='text-xs text-yellow-400'>{service && service.roi}</span>          </div>;
         </div>;
 
-        {/* Trial & Setup Info */}          </div>;"
-          <div className="flex items-center justify-between mb-2">;"
-            <span className="text-xs font-semibold text-white">Growth Rate</span>;"
-            <span className="text-xs text-green-400">{service && service.growthRate}</span>;
-          </div>;"
-          <div className="flex items-center justify-between">;"
-            <span className="text-xs font-semibold text-white">ROI</span>;"
-            <span className="text-xs text-yellow-400">{service && service.roi}</span>;
-          </div>;
-        </div>;
-
-        {/* Trial & Setup Info */}'
-        <div className='flex items-center justify-between mb-6 text-sm'>;'
-          <div className='flex items-center gap-2 text-gray-400'>;'
-            <Clock className='w-4 h-4' />;
-            {service && service.trialDays} day trial;
-          </div>;'
-          <div className='flex items-center gap-2 text-gray-400'>;'"
-            <Shield className='w-4 h-4' />            {service && service.setupTime}        <div className="flex items-center justify-between mb-6 text-sm">;"
-          <div className="flex items-center gap-2 text-gray-400">;"
-            <Clock className="w-4 h-4" />;
-            {service && service.trialDays} day trial;
-          </div>;"
-          <div className="flex items-center gap-2 text-gray-400">;"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-            <Shield className="w-4 h-4" />;
-          </div>;
-        </div>;
-=======
         {/* Action Buttons */}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         <div className='flex gap-3'>
@@ -1156,18 +1105,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
             className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center';
             className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center'
-            className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center';
-            whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }}>;
-            <ArrowRight className='w-4 h-4' />          </motion && motion.a>;
-        </div>;{/* Contact Info */}
-        <div className='mt-4 pt-4 border-t border-white/10'>;
-          <div className='text-xs text-gray-500 text-center'>            Contact: {service && service.contactInfo.email}          <motion&& motion.a;
-            href={service && service.link}
-        <div className="flex gap-3">;
-          <motion.a;
-            href={service.link}
-            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2";
+
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >;
@@ -1567,14 +1505,7 @@ export default EnhancedServiceCard;
 ;
 
 };
-
-
-<<<<<<< HEAD
-<div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    </motion.div>
-  );
-};
+export default EnhancedServiceCard;
 
 export default EnhancedServiceCard;
 origin/cursor/automate-test-improve-and-merge-code-2533

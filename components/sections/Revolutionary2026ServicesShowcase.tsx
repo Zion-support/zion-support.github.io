@@ -1,44 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Rocket;
-  Globe;
-  Sparkles;
-} from 'lucide-react';import Link from 'next/link';'
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';'
-import Link from 'next/link';'
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';'
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';'
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';'
-import Link from 'next/link';'
-import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';'
-import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';'
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Rocket,'
-} from 'lucide-react';import Link from 'next/link';'
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';'
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';'
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
@@ -58,121 +17,8 @@ import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } fro
 import Link from 'next/link';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
-origin/cursor/automate-test-improve-and-merge-code-2533
-import Link from 'next/link';
-import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
-=======
-'
-import Link from 'next/link';'
-import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';'
-import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-export default function Revolutionary2026ServicesShowcase() {};
-  const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
-  const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
-  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(
-<<<<<<< HEAD
-    0
-    3
-  );  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, 3);
-  const featuredAIServices = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const containerVariants = {
-    hidden: { opacity: 0 }
-    visible: {
-      opacity: 1
-      transition: {
-staggerChildren: 0.1,
-      },
-    },
-  };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 }
-    visible: {
-      opacity: 1
-      y: 0
-      transition: {
-export default function Revolutionary2026ServicesShowcase() {;
-  // Get featured services from each category;
-  const featuredAIServices = aiAutonomousServices2026 && aiAutonomousServices2026.slice(0, 3);
-  const featuredQuantumServices = quantumSpaceTechServices2026 && quantumSpaceTechServices2026.slice(0, 3);
-  const featuredMetaverseServices = metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.slice(;
-    0,;
-=======
-    0;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    3;
-  );  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, 3);
-  const containerVariants = {}
-    hidden: { opacity: 0 }
-    visible: {}
-      opacity: 1;
-      transition: {}
-  const itemVariants = {}
-    hidden: { opacity: 0, y: 20 }
-    visible: {}
-      opacity: 1;
-      y: 0;
-      transition: {}
-export default function Revolutionary2026ServicesShowcase() { return null; }
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-      },;
-    },  };        staggerChildren: 0 && 0.1;
-      }
-    }
-  };
-
-
-<<<<<<< HEAD
-duration: 0.6,
-      },
-    },
-  };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-=======
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
-      {/* Enhanced Background Effects */}
-  };
-
-      <div className='absolute inset-0'>
-        <div className='absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-cyan-900/30'></div>
-        <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/20 via-transparent to-blue-900/20'></div>
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>
-        <div className='absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
-=======
-
-import Link from 'next/link';
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
-import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Rocket,
-} from 'lucide-react';import Link from 'next/link';
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
-
-<<<<<<< HEAD
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
@@ -1338,130 +1184,6 @@ initial='hidden';
                     <div>;
                       <span className='text-2xl font-bold text-indigo-400'>;
 
-          <div className="text-center mt-8">
-            <Link 
-              href="/services?category=ai-autonomous"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
-            >
-              View All AI Autonomous Services <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
-        </motion.div>
-
-        {/* Quantum Space Tech Services Section */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true}}
-          className="mb-20"
-        >
-          <div className="flex items-center space-x-3 mb-12">
-            <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">
-              <Rocket className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <h3 className="text-3xl font-bold text-white">Quantum Space Technology</h3>
-              <p className="text-indigo-300">Revolutionary quantum-powered space exploration and technology</p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredQuantumServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                variants={itemVariants}
-                className="group relative"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div className="relative bg-black/40 backdrop-blur-xl border border-indigo-500/20 rounded-2xl p-6 hover:border-indigo-500/40 transition-all duration-300 h-full">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="text-3xl">{service.icon}</div>
-                    <div>
-                      <h4 className="text-xl font-bold text-white">{service.name}</h4>
-                      <p className="text-indigo-300 text-sm">{service.tagline}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="space-y-3 mb-6">
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
-                        <span className="text-gray-400 text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                        {service.price}
-                      </span>;
-                      <span className='text - gray - 400'>{service.period}</span>;
-                    </div>;
-                    <div className='flex items - center space - x-1'>;
-                      <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
-                      <span className='text - yellow - 400 text - sm'>;
-                        {service.rating}
-
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <span className="text-2xl font-bold text-indigo-400">{service.price}</span>
-                      <span className="text-gray-400">{service.period}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-yellow-400 text-sm">{service.rating}</span>
-                      <span className="text-gray-400 text-sm">({service.reviews})</span>
-                    </div>
-                  </div>
-
-                  <Link 
-                    href={service.link} 
-                    className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-=======
-href={service.link}
-                    className='inline-flex items-center text-blue-400 hover: text-blue-300 transition-colors text-sm font-medium'
-                   />
-                    Learn More <ArrowRight className='w-4 h-4 ml-2' />
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-<<<<<<< HEAD
-          </div>'
-          className='mb-20'>;'
-          <div className='flex items-center space-x-3 mb-12'>;'
-            <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center'>;'
-=======
-          </div>
-          className='mb-20'>;
-          <div className='flex items-center space-x-3 mb-12'>;
-            <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              <Brain className='w-6 h-6 text-white' />;
-            </div>;
-            <div>;'
-              <h3 className='text-3xl font-bold text-white'>;
-                AI Autonomous Services;
-              </h3>;'
-              <p className='text-blue-300'>;
-                Fully autonomous AI systems that run your business;
-              </p>;
-            </div>;
-          </div>;
-
-<<<<<<< HEAD
-
-<div className='text-center mt-8'>
-            <Link
-              href='/services?category=quantum-space'
-              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
-=======
 <div className='text-center mt-8' />
             <Link;
 href='/services?category=ai-autonomous'
@@ -1543,9 +1265,6 @@ initial='hidden'
               </p>
             </div>
           </div>
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredQuantumServices.map((service;, index) => (
-              <motion.div
-                key={service.id}
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
             {featuredQuantumServices.map((service, index) => (}
@@ -1713,29 +1432,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 <<<<<<< HEAD
 
-<div className='text-center mt-8'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <Link
-              href='/services?category=quantum-space'
-              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
-              View All Quantum Space Services{' '}
-              href="/services?category=quantum-space"
-=======
-            <Link'
-              href='/services?category=quantum-space''
-              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;'
-              View All Quantum Space Services{' '}"
-              href="/services?category=quantum-space""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
-            >"
-              View All Quantum Space Services <ArrowRight className="w-5 h-5 ml-2" />'"
-              <ArrowRight className='w-5 h-5 ml-2' />            </Link>          <div className="text-center mt-8">;
-            <Link"
-              href="/services?category=quantum-space""
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">;"
-              View All Quantum Space Services <ArrowRight className="w-5 h-5 ml-2" />;
-          </div>;
 <div className='text-center mt-8' />
             <Link;
 href='/services?category=quantum-space'
@@ -2259,32 +1955,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<div className='text-center mt-8'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <Link
-              href='/services?category=metaverse'
-              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
-              View All Metaverse Services{' '}
-              href="/services?category=metaverse"
-=======
-            <Link'
-              href='/services?category=metaverse''
-              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;'
-              View All Metaverse Services{' '}"
-              href="/services?category=metaverse""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
-            >"
-              View All Metaverse Services <ArrowRight className="w-5 h-5 ml-2" />'"
-              <ArrowRight className='w-5 h-5 ml-2' />            </Link>          <div className="text-center mt-8">;
-            <Link"
-              href="/services?category=metaverse""
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">;"
-              View All Metaverse Services <ArrowRight className="w-5 h-5 ml-2" />;
-          </div>;
-        </motion && motion.div>;
 <div className='text-center mt-8' />
             <Link;
 href='/services?category=metaverse'

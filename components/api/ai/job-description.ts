@@ -1,16 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const method = (req.method || 'POST').toUpperCase();
-  if (method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  const auth = authenticateRequest(req, false);
-  if (!auth.ok) return res.status(401).json({ error: auth.error });
+  const method = null;
+export default async function handler(
+  req: NextApiRequest;
+res: NextApiResponse;
+) {
+  const method = (req.method |'POST').toUpperCase();
+  if (method !== 'POST')}
+    return res.status(405).json({ error: 'Method not allowed',}
+});
 
   const { title, level, location, skills, responsibilities } = req.body || {};
 
@@ -27,6 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     prompt,
     'You are an expert technical recruiter and compensation analyst.'
   );
-  
-  return res.status(200).json({ jobDescription: text });
+  return res.status(200).json({ jobDescription: text,}
+});
+  return res.status(200).json({ jobDescription: text }),
 }

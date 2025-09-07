@@ -7,42 +7,7 @@
 import React, { useState, useEffect } from 'react',
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Layout from './layout/Layout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion, AnimatePresence } from 'framer-motion';
-
-import {
-
-
-  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
-  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
- } from 'lucide-react';
-import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-=======
-import Layout from './layout/Layout';'
-=======
-
-import Layout from './layout/Layout';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import { motion, AnimatePresence } from 'framer-motion';
-
-<<<<<<< HEAD
-import {
-
-
 import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -84,14 +49,17 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false;}
 };
   }
+
   static getDerivedStateFromError(error) {}
     return { hasError: true;}
 };
   }
+
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary: ';, error, errorInfo);}
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
+
   render() {
 <<<<<<< HEAD
     if (this.state.hasError) {
@@ -102,6 +70,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
+
     return this.props.children;
 import { motion, AnimatePresence  } from 'framer-motion';
 import { import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
@@ -110,17 +79,13 @@ import { import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shiel
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
-<<<<<<< HEAD
-}'
-import React, { useState, useEffect } from 'react';'
-import Layout from './layout / Layout';'
-import { motion, AnimatePresence } from 'framer-motion';
-
-'
-import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';'
-import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';'
-import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';'
-import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';'
+}
+import React, { useState, useEffect } from 'react';
+import Layout from './layout / Layout';
+import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
+import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
+import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
+import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
 import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
 // Loading fallback component;
 const LoadingFallback = () => (;'
@@ -281,60 +246,8 @@ setIsVisible(true);
     return () => clearTimeout(timer);
   }, []);
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-transition: { duration: 0.6, ease: 'easeOut' },
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-delayChildren: 0.2,
-      },
-    },
-  };
-
-  const backgroundVariants = {
-    initial: { opacity: 0, scale: 0.8 },
-animate: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 1.5, ease: 'easeOut' as const },
-    },
-  };
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: <Globe className='w-5 h-5' /> }
-    { id: 'ai', name: 'AI & ML', icon: <Brain className='w-5 h-5' /> }
-    { id: 'it', name: 'IT Enterprise', icon: <Cpu className='w-5 h-5' /> }
-    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className='w-5 h-5' /> }
-    {
-      id: 'space'
-      name: 'Space Tech'
-      icon: <Satellite className='w-5 h-5' />
-    }
-    {
-      id: 'cyber'
-      name: 'Cybersecurity'
-      icon: <Shield className='w-5 h-5' />
-    }
-    {
-      id: 'cloud'
-      name: 'Cloud & DevOps'
-      icon: <Cloud className='w-5 h-5' />
-    }
-    { id: 'fintech', name: 'FinTech', icon: <ChartBar className='w-5 h-5' /> }
-  ];
-  const allServices = [
-    ...innovative2025MicroSaasBatch
-    ...innovative2025ITEnterpriseBatch
-    ...innovative2025AIServicesBatch
-  ];
-  const filteredServices =
-    activeCategory === 'all'
-      ? allServices
+const filteredServices = activeCategory === 'all'
+      ? allServices;
       : allServices.filter(service => {
           if (activeCategory === 'ai')
             return (
@@ -367,10 +280,17 @@ animate: {
             );
           return true;
         });
-  if (isLoading) {
-    return <LoadingFallback />;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  }
+  if (isLoading) {}
+    return <LoadingFallback />}
+};
+
+const stagger_container = {
+    animate: {
+      transition: {
+        stagger_children: 0.1}
+        delay_children: 0.2}
+      }
+    }  }
 ;
   const stagger_container = {}
     animate: {}
@@ -923,7 +843,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className='text-gray-300'>{feature.description}</p>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.div>
-
 
             </div>;
           </div>;
@@ -2506,7 +2425,6 @@ animate: {
   animate: {
 };
 
-
   animate: {
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2
@@ -2937,7 +2855,6 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   scale: 1.05 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
-
 export default Homepage2035;className='text - center' />
 
                   <div className='text - cyan - 400 mb - 2 flex justify - center' />;
@@ -3555,110 +3472,8 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   once: true
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button
 }
-export default Homepage2035;  )
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-
-
-
-<<<<<<< HEAD
-export default Homepage2035)}export default Homepage2035;
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: <Brain className="w-12 h-12" />,
-                  title: 'AI-Powered Solutions',
-                  description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'
-                };
-                {
-                  icon: <Shield className="w-12 h-12" />,
-                  title: 'Enterprise Security',
-                  description: 'Military-grade security protocols and compliance standards to protect your business'
-                };
-                {
-                  icon: <Rocket className="w-12 h-12" />,
-                  title: 'Space Technology',
-                  description: 'Pioneering space tech solutions for the next generation of innovation'
-                };
-                {
-                  icon: <Atom className="w-12 h-12" />,
-                  title: 'Quantum Computing',
-                  description: 'Access to quantum computing power for complex problem-solving'
-                };
-                {
-                  icon: <Cloud className="w-12 h-12" />,
-                  title: 'Cloud-Native',
-                  description: 'Built for the cloud with scalability, reliability, and performance in mind'
-                };
-                {
-                  icon: <Target className="w-12 h-12" />,
-                  title: 'Results-Driven',
-                  description: 'Focused on delivering measurable business outcomes and ROI'
-                }
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group"
-                >
-                  <div className="text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of companies already leveraging our cutting-edge technology solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
-                >
-                  <span>Get Started Today</span>
-                  <ArrowRight className="w-5 h-5" />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
-                >
-                  Schedule a Demo
-                </motion.button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </UltraFuturisticBackground2035>
-    </Layout>
-  )
+export default Homepage2035)
 };
-
 export default Homepage2035;
 =======
               initial={{ opacity: 0, y: 30}}
@@ -3683,9 +3498,4 @@ export default Homepage2035;
 >>>>>>> origin/main
 =======
 
-import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
-import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
-import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+"

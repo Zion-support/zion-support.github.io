@@ -1,26 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import {
-  addJSON,
-  publishManifesto,;
-  OFFWORLD_TOPICS,;
-} from '@/utils/offworld/ipfs';
+import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  const { action,}
+} = req.query;
 
-import {
-  addJSON
-  publishManifesto
-import { addJSON,publishManifesto,OFFWORLD_TOPICS,} from '@/utils/offworld/ipfs';
-import { addJSON;
-  publishManifesto;
-  OFFWORLD_TOPICS;
-} from '@/utils/offworld/ipfs';
-export default async function handler(
-<<<<<<< HEAD
+const body = null;
 
-  req: NextApiRequest,
-  res: NextApiResponse;
+const { action } = req.query;
 
-      if (!cid) return res.status(503).json({ error: 'IPFS unavailable' });
+const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+
+  try {
+    if (req.method = == 'POST' && action === 'json') {}
+     ;}
+  const { cid, provider } = await addJSON(body);
+
+      if (!cid) return res.status(503).json({ error: 'IPFS unavailable',}
+});
 return res.status(200).json({ cid, provider });
 
     }

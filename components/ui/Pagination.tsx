@@ -1,31 +1,17 @@
-<<<<<<< HEAD
-
-;
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
 export type PaginationProps = any;
 export type PaginationProps = {page: number;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-import React from 'react';
-import EnhancedButton from './EnhancedButton';
-export type PaginationProps = any;
-
-export type PaginationProps = {
-  page: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   pageSize: number;
   total: number;
   onChange: (nextPage: number) => void;
 }
-<<<<<<< HEAD
-
-
+export default function Pagination({
+  page,
+  pageSize,
+  total}
+  onChange}
+}: PaginationProps) {
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
 export default function Pagination() {const totalPages = Math.max(1, Math.ceil(total / pageSize))const canPrev = page > 1;
@@ -220,8 +206,7 @@ if ( {) {$2;
     } else {const start_page = Math.max (1, current_page - 2)const end_page = Math.min (total_pages, start_page + maxVisiblePages - 1)// Check condition;
 if ( {) {$2;
 }
-      for (let index = 1; i <= total_pages; i++) {
-        pages.push (i);
+export default Pagination;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
         pages.push (1)// Check condition;

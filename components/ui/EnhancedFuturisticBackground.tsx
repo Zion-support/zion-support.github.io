@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-;
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 interface EnhancedFuturisticBackgroundProps  {children: React.ReactNode;
@@ -110,8 +107,11 @@ const EnhancedFuturisticBackground: React.FC<
   animationSpeed = 1,}
    }) => {
 
-  const canvasRef = useRef<HTMLCanvasElement    />(null)
-const animationRef = useRef<number | undefined    />(undefined)
+ ;
+  const canvasRef = useRef<HTMLCanvasElement />(null);
+
+const animationRef = useRef<number | undefined />(undefined);
+
 const colorSchemes = {
     quantum: {
 
@@ -640,7 +640,14 @@ if ( {) {
 if (> 0.975) {) {
   $2
 }
-            drops[i] = 0;
+        ctx.font = `${fontSize}px monospace`;
+
+for (let i = 0; i < drops.length; i++) {
+          const text =
+            characters[Math.floor(Math.random() * characters.length)];
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {}
+            drops[i] = 0;}
           }
           drops[i]++;
         }
@@ -685,47 +692,14 @@ Math.pow(this.p1.x - this.p2.x, 2) +
           ctx.stroke()
 ctx.restore();}
 
-    let particles: Particle[] = []
-    let connections: Connection[] = []
-// Initialize particles
-  for($2) {}
-      particles.push(new Particle());}
+      return drawMatrix;
+};
 
-    // Matrix rain effect
-const matrixRain = (
-  const characters =
-        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン'
-const fontSize = 12
-const columns = canvas.width / fontSize
-const drops: number[] = []
-  for($2) {
-        drops[i] = 1;) => {
-  return $3;}
-
-const drawMatrix = (
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.06)'
-        ctx.fillRect(0, 0, canvas.width, canvas.height)
-        ctx.fillStyle = colors.primary;) => {
-  return $3;}
-
-        ctx.font = `${fontSize}px monospace`
-  for($2) {
-          const text =
-            characters[Math.floor(Math.random() * characters.length)]
-          ctx.fillText(text, i * fontSize, drops[i] * fontSize)
-          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {}
-            drops[i] = 0;}
-
-          drops[i]++
-      }
-      return drawMatrix
-    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-    const drawMatrix = matrixRain();
-    // Main animation loop
-    const animate = () => {
-      // Clear canvas with fade effect
-      ctx.fillStyle = colors.background;
+const drawMatrix = matrixRain();
+    // Main animation loop;
+const animate = (
+      // Clear canvas with fade effect;
+ctx.fillStyle = colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Draw matrix rain
       drawMatrix();
@@ -1052,75 +1026,4 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0'
     </div>;
   );
 };
-
 export default EnhancedFuturisticBackground;
-<<<<<<< HEAD
-        style={{{/* Content */}
-      <div className='relative z-10'>{children}</div>;
-    </div>;background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`,}}
-      />;
-      {/* Content */}
-      <div className='relative z-10'>{children}</div>;
-    </div>;
-  )}export default EnhancedFuturisticBackground;export default EnhancedFuturisticBackground;background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,}}
-      />;
-{/* Content */}
-      <div className='relative z - 10'>{children}</div>;
-
-
-
-export default EnhancedFuturisticBackground;
-
-          background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
-        }}
-      />;
-{/* Content */}
-      <div className='relative z - 10'>{children}</div>;
-    </div>);
-}
-;
-export default EnhancedFuturisticBackground;
-;
-
-    </div>)}export default EnhancedFuturisticBackground;
-      <div className = $2;
-export default EnhancedFuturisticBackground,
-=======
-<<<<<<< HEAD
-
-=======
-}let particles: Particle[] = []
-let connections: Connection[] = []
-// Initialize particles ctx.fillStyle = colors.primary
-ctx.font = `$ {
-  fontSize 
-}px monospace`
-}
-}
-return drawMatrix 
-}
-// Draw matrix rain drawMatrix ()
-// Update and draw particles particles.forEach (particle => {
-  
-}
-}// Draw connections connections.forEach (connection => connection.draw () )
-// Add floating geometric shapes ctx.save ()
-ctx.globalAlpha = 0.1
-ctx.strokeStyle = colors.accent
-ctx.lineWidth = 1
-if (Math.random () < 0.5) {
-  // Draw triangle ctx.restore () 
-}// Respect reduced motion animate ()
-return (<div className= {
-  `relative min-h-screen $ {
-  className 
-}` 
-}> <canvas /> {
-  /* Overlay gradient */ 
-}<div </div> </div>) 
-}
-export default EnhancedFuturisticBackground
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

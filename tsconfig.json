@@ -2,10 +2,11 @@
   "compilerOptions": {
 <<<<<<< HEAD
     "target": "ES2020",
-=======
-    "target": "es5",
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    "lib": ["dom", "dom.iterable", "es6"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es6"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -32,23 +33,14 @@
       "@/components/*": [
         "./src/components/*"
       ],
-      "@/pages/*": [
-        "./src/pages/*"
+      "@/lib/*": [
+        "./src/lib/*"
       ],
       "@/utils/*": [
         "./src/utils/*"
       ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
       "@/types/*": [
         "./src/types/*"
-      ],
-      "@/styles/*": [
-        "./src/styles/*"
-      ],
-      "@/assets/*": [
-        "./src/assets/*"
       ]
     },
     "allowSyntheticDefaultImports": true,
@@ -117,82 +109,12 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-<<<<<<< HEAD
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/**/*.ts",
-    "data/**/*.tsx",
-    "types/**/*.ts",
-    "types/**/*.tsx",
-    "zion/**/*.ts",
-    "zion/**/*.tsx",
-    "protocol/**/*.ts",
-    "protocol/**/*.tsx",
-    "App.tsx",
-    "middleware.ts",
-    "jest.setup.ts",
-    "vite.config.ts",
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
->>>>>>> ffdc254d0d1f07e2a8e40dc844ef94b60ab93fd8
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "dist",
-    "build",
-    "pages_backup*",
-    "pages.*",
-    "pages-*",
-    "pages_disabled*",
-    "pages.disabled*",
-    "pages.broken*",
-    "pages.corrupted*",
-    "pages.old*",
-    "pages._*",
-    "pages.__*",
-    "backup-pages",
-<<<<<<< HEAD
-    "src.pages.disabled",
-    "lib_backup*",
-    "src_backup*",
-    "corrupted-files-backup*",
-    "performance-reports*",
-    "log-analysis-reports*",
-    "link-reports*",
-    "lint-target*",
-    "monitoring*",
-    "pm2-automation*",
-    "automation/logs*",
-    "automation/backup*",
-    "api-backup",
-    "contracts",
-    "hardhat"
-=======
-    "pages_backup",
-    "pages_backup_conflict",
-    "pages.broken",
-    "pages.corrupted",
-    "pages.old",
-    "pages._",
-    "pages.__",
-    "pages-",
-    "pages_disabled",
-    "pages.disabled",
-    "src.pages.disabled.auto",
-    "components.disabled",
-    "src.disabled",
-    "src.pages.disabled"
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    ".next",
+    "out",
+    "dist"
   ]
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }

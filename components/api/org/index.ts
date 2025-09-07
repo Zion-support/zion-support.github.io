@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { readOrgData, filterOrgData } from '../../../utils/org-data';
-=======
+import {readOrgData, filterOrgData} from '../../../utils/org-data';
+import type { OrgFilters, RoleType } from '../../../types/org';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {}
+    return res.status(405).json({ error: 'Method not allowed',}
+});
   }
 
   };
@@ -274,11 +277,3 @@ teamOnly: req.query.teamOnly === 'true' ? true : undefined }
     teamOnly: req.query.teamOnly === 'true' ? true : undefined}
   const filtered = filterOrgData(data, filters);
   return res.status(200).json(filtered);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

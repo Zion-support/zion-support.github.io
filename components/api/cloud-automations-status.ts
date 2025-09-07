@@ -52,25 +52,3 @@ export default function handler() {const dir = path.resolve(process.cwd(), "data
     // ignore
   }
 res.status(200).json({ ok: true, data });
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-  } catch (e) {}
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
-    // ignore}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  }
-
-<<<<<<< HEAD
-
-res.status(200).json({ ok: true, data })
-    // ignore
-  }
-  res.status(200).json({ ok: true, data })
-}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

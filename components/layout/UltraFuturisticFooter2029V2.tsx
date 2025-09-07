@@ -10,171 +10,6 @@ import React from 'react',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
-import {
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Brain
-  Rocket
-  Target
-  Shield
-  Cpu
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  MessageCircle
-  Star
-  Zap
-  Sparkles
-  Home
-  Users
-  Briefcase
-  BookOpen
-  TrendingUp
-  MessageSquare
-  Calendar
-  GraduationCap
-  ShieldCheck
-  Eye
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Globe2
-  Bot
-  Crown
-  Infinity;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight
-  Brain, Rocket, Target, Shield, Cpu
-=======
-import Link from 'next/link';'
-import { motion } from 'framer-motion';
-
-import {};
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  ArrowRight;
-  Brain;
-  Rocket;
-  Target;
-  Shield;
-  Cpu;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  Youtube;
-  Github;
-  MessageCircle;
-  Star;
-  Zap;
-  Sparkles;
-  Home;
-  Users;
-  Briefcase;
-  BookOpen;
-  TrendingUp;
-  MessageSquare;
-  Calendar;
-  GraduationCap;
-  ShieldCheck;
-  Eye;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Globe2;
-  Bot;
-  Crown'
-  Infinity;} from 'lucide-react';import {};
-  Phone, Mail, MapPin, Globe, ArrowRight;
-  Brain, Rocket, Target, Shield, Cpu;
-import {}
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  ArrowRight,
-  Brain,
-  Rocket,
-  Target,
-  Shield,
-  Cpu,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Youtube,
-  Github,
-  MessageCircle,
-  Star,
-  Zap,
-  Sparkles,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,
-  TrendingUp,
-  MessageSquare,
-  Calendar,
-  GraduationCap,
-  ShieldCheck,
-  Eye,
-  Code,
-  Wrench,
-  Smartphone,
-  BarChart3,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Mountain,
-  Globe2,
-  Bot,
-;
-  Crown,;'
-  Infinity,;} from 'lucide-react';import {}
-  Phone, Mail, MapPin, Globe, ArrowRight, ;
-  Brain, Rocket, Target, Shield, Cpu, ;
 import { Phone, Mail, MapPin, Globe, ArrowRight;
   Brain, Rocket, Target, Shield, Cpu;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1258,21 +1093,31 @@ const footerSections = []
   },
   {
     title: 'Solutions',
-    links: [
-<<<<<<< HEAD
-    links: [
-];const company = [;
-  { name: 'About Us', href: '/about', icon: Users },{ name: 'Our Team', href: '/team', icon: Users },{ name: 'Careers', href: '/careers', icon: GraduationCap },{ name: 'Partners', href: '/partners', icon: Users },{ name: 'Investors', href: '/investors', icon: Star },{ name: 'Press', href: '/press', icon: BookOpen },{ name: 'Legal', href: '/legal', icon: Shield },{ name: 'About Us', href: '/about', icon: Users },{ name: 'Our Team', href: '/team', icon: Users },{ name: 'Careers', href: '/careers', icon: GraduationCap },{ name: 'Partners', href: '/partners', icon: Users },{ name: 'Investors', href: '/investors', icon: Star },{ name: 'Press', href: '/press', icon: BookOpen },{ name: 'Legal', href: '/legal', icon: Shield },{ name: 'Privacy', href: '/privacy', icon: ShieldCheck },];const socialLinks = [;
-  {name: 'LinkedIn',href: 'https://linkedin.com/company/ziontechgroup',icon: Linkedin,color: 'hover:text-blue-500',},{name: 'Twitter',href: 'https://twitter.com/ziontechgroup',icon: Twitter,color: 'hover:text-blue-400',},{name: 'Facebook',href: 'https://facebook.com/ziontechgroup',icon: Facebook,color: 'hover:text-blue-600',},{name: 'Instagram',href: 'https://instagram.com/ziontechgroup',icon: Instagram,color: 'hover:text-pink-500',},{name: 'YouTube',href: 'https://youtube.com/@ziontechgroup',icon: Youtube,color: 'hover:text-red-500',},{name: 'GitHub',href: 'https://github.com/Zion-Holdings',icon: Github,color: 'hover:text-gray-400',},];const footerSections = [;
-  {title: 'Services';
-    links: [;
-    links: [;
-      { name: 'Healthcare', href: '/industries/healthcare' }
-      { name: 'Finance', href: '/industries/finance' }
-      { name: 'Manufacturing', href: '/industries/manufacturing' }
-      { name: 'Retail', href: '/industries/retail' }
-      { name: 'Education', href: '/industries/education' }
-      { name: 'Government', href: '/industries/government' }
+  links: [
+        { name: 'AI Consciousness'}
+  href: '/solutions/ai-consciousness'}
+},
+
+        { name: 'Quantum Security'}
+  href: '/solutions/quantum-security'}
+},
+
+        { name: 'Space Mining'}
+  href: '/solutions/space-mining'}
+},
+
+        { name: 'Metaverse Platform'}
+  href: '/solutions/metaverse'}
+},
+
+{
+        name: 'Business Intelligence'}
+  href: '/solutions/business-intelligence'}
+      },
+        { name: 'Supply Chain AI'}
+  href: '/solutions/supply-chain-ai'}
+}
+
     ]
   },  {      { name: 'Government', href: '/industries/government' }
 =======
@@ -1295,6 +1140,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
   },
   {
+    title: 'Industries',
+  links: [
+        { name: 'Healthcare'}
+  href: '/industries/healthcare'}
+},
+
+        { name: 'Finance'}
+  href: '/industries/finance'}
+},
+
+        { name: 'Manufacturing'}
+  href: '/industries/manufacturing'}
+},
+
+        { name: 'Retail'}
+  href: '/industries/retail'}
+},
+
+        { name: 'Education'}
+  href: '/industries/education'}
+},
+
+  { name: 'Government'}
+  href: '/industries/government'}
+}
 
       { name: 'Business Intelligence', href: '/solutions/business-intelligence' },
       { name: 'Supply Chain AI', href: '/solutions/supply-chain-ai' }
@@ -1363,26 +1233,7 @@ function UltraFuturisticFooter2029V2() {}
       { name: 'Blog', href: '/blog' },
 <<<<<<< HEAD
   }
-  {
-    title: 'Resources',
-    links: [;
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api' },
-      { name: 'Case Studies', href: '/case - studies' },
-      { name: 'White Papers', href: '/white - papers' },
-      { name: 'Blog', href: '/blog' },
-  return (
-    <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>;
-      { name: 'Research', href: '/research' }
-    ]
-  }, ];
-;
-export default /**
- * UltraFuturisticFooter2029V2 - Function description
- */
-function UltraFuturisticFooter2029V2() {
-  },];
-
+];
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg - black / 90 backdrop - blur - xl border - t border - cyan - 500 / 20'>      { name: 'Research', href: '/research' }
@@ -1530,18 +1381,7 @@ export default function UltraFuturisticFooter2029V2() {}
     ];
   }
 ];
-
-export default function UltraFuturisticFooter2029V2() {}
-  return ('
-    <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>
-<<<<<<< HEAD
-;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-];
-
-export default function UltraFuturisticFooter2029V2() {}
+export default function UltraFuturisticFooter2029V2() {
   return (
 <<<<<<< HEAD
 
@@ -1681,8 +1521,8 @@ initial={{ opacity: 0;, y: 20 ;}
 }
               whileInView={{ opacity: 1;, y: 0 ;}}
 
-              transition={{ duration: 0.6 ;}}
-              viewport={{ once: true ;}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }
 }
              />;
 <Link href='/' className='flex items-center space-x-3 mb-6 group' />;
@@ -2542,24 +2382,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </Link>
 
-              viewport={{ once: true }}className='flex items-center space-x-4';
-            >;
-              {socialLinks.map(social => (<Link;
-                  key={social && social.name}
-                  href={social && social.href}
-                  target='_blank';
-                  rel='noopener noreferrer';
-                <Link;
-                  key={social && social.name}
-                  href={social && social.href}
-                  target="_blank";
-                  rel="noopener noreferrer";
-                  <social.icon className='w-4 h-4' />                </Link>;
-                  className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110`}
-                >;
-                  <social.icon className='w-4 h-4' />;
-                </Link>;
-              ))}
+              )
+}
             </motion.div>;
           </div>;
         </div>;
@@ -2776,25 +2600,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 
-}
-<<<<<<< HEAD
-
-    </footer>;
-  )})}</footer>;
-  )}}
-      </motion.div>
-    </footer>
-  )
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

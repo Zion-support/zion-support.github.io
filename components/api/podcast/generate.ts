@@ -101,10 +101,35 @@ const EPISODES_PATH = path && path.join(process && process.cwd(),'data','podcast
     return res.status(500).json({ error: error?.message || 'Unknown error' })}const EPISODES_PATH = path.join(process.cwd()'data';
   'podcast';
   'episodes.json';
-)function ensureStorage() {const dir = path && path.dirname(EPISODES_PATH)if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true })if (!fs && fs.existsSync(EPISODES_PATH))fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json')function ensureStorage() {const dir = path && path.dirname(EPISODES_PATH)if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true })if (!fs && fs.existsSync(EPISODES_PATH))fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')}episodes && episodes.unshift (episode)const dir = path.dirname(EPISODES_PATH)if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })if (!fs.existsSync(EPISODES_PATH))fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')}
-episodes.unshift (episode)writeEpisodes (episodes)function writeEpisodes() {ensureStorage()fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')export default async function handler() {if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })function readEpisodes(): any[] {ensureStorage()return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))}
-function writeEpisodes() {ensureStorage()fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')}const { persona, invitee, topic, operatorPrompt } = req && req.body || {}export default async function handler() {const { persona, invitee, topic, operatorPrompt }  = req && req.body || {}const { persona, invitee, topic, operatorPrompt }  = req && req.body || {}const { persona, invitee, topic, operatorPrompt } = req && req.body || {}const id = uuidv4()const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:;
-export default async function handler() {export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const { persona, invitee, topic, operatorPrompt } = req.body |{}export default async function handler() {const { persona, invitee, topic, operatorPrompt } = req && req.body || {}export default async function handler() {const { persona, invitee, topic, operatorPrompt }  = req && req.body || {}const { persona, invitee, topic, operatorPrompt }  = req.body || {}const id = uuidv4()const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:;
+)function ensureStorage() {const dir = path && path.dirname(EPISODES_PATH)if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true,}
+})if (!fs && fs.existsSync(EPISODES_PATH))fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json')function ensureStorage() {const dir = path && path.dirname(EPISODES_PATH)if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true,}
+})if (!fs && fs.existsSync(EPISODES_PATH))fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')}episodes && episodes.unshift (episode)const dir = path.dirname(EPISODES_PATH)if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true,}
+})if (!fs.existsSync(EPISODES_PATH))fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')}
+episodes.unshift (episode)writeEpisodes (episodes)function writeEpisodes() {ensureStorage()fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')export default async function handler() {if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed',}
+})function readEpisodes(): any[] {ensureStorage(;}
+  return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))}
+function writeEpisodes() {ensureStorage()fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')}
+
+const { persona, invitee, topic, operatorPrompt } = req && req.body || ;
+}
+export default async function handler() {const { persona, invitee, topic, operatorPrompt }  = req && req.body || {}
+
+const { persona, invitee, topic, operatorPrompt }  = req && req.body || {}
+
+const { persona, invitee, topic, operatorPrompt } = req && req.body || ;
+}
+
+const id = uuidv4(;
+  const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:;
+export default async function handler() {export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
+})const { persona, invitee, topic, operatorPrompt } = req.body |{}
+export default async function handler() {const { persona, invitee, topic, operatorPrompt } = req && req.body || {}
+export default async function handler() {const { persona, invitee, topic, operatorPrompt }  = req && req.body || {}
+
+const { persona, invitee, topic, operatorPrompt }  = req.body || {}
+
+const id = uuidv4(;
+  const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:;
 1) 7-10 concise interview questions mixing visionary and technical angles;
 2) Time markers for: Intro, segment transitions, Closing CTA for Zion;
 3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest;
@@ -171,9 +196,6 @@ function ensure_storage() {const dir = path.dirname (EPISODES_PATH)if () fs.mkdi
 }
   if ()) {$2;
 
-
->>>>>>> origin/main
-
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8'))
@@ -195,6 +217,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;}
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
+});
+
+const { persona, invitee, topic, operatorPrompt } = req.body |{}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+}
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 
 
@@ -923,9 +952,12 @@ const completion = await openai.chat.completions.create ({
 const episodes = readEpisodes()
 const episode = {     ;}
   return res.status(500).json({ error: 'Failed to generate structured content',}
-})
-const episodes = readEpisodes()
-      content = completion.choices?.[0]?.message?.content || ''
+});
+    }
+
+const episodes = readEpisodes();
+
+      content = completion.choices?.[0]?.message?.content || '';
       content = JSON.stringify ({}
         title: `Interview with ${invitee?.name || 'Guest'} on ${topic || 'Zion,}
 }`,
@@ -1590,17 +1622,5 @@ pr-12243
 }
 }
 
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
+const episode = {},
 }
-}
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next",
-=======
+import type { NextApiRequest, NextApiResponse } from \"next\","
+import fs from \"fs-extra\";"
+import path from \"path\";"
+import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../utils/api/partnerAuth\";"
+import { v4 as uuidv4 } from \"uuid\";
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import fs from "fs-extra";
-import path from "path";
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
-import { v4 as uuidv4 } from "uuid";
 const REDEMPTIONS_FILE = null;
   return res.status(200).json({ ok: true });
 }
@@ -226,7 +220,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== \"POST\") {"
     res.setHeader(\"Allow\", \"POST\");}
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);}"
-    return res.status(200).json({ ok: true });
+    return res.status(405).json({ error: \"Method Not Allowed\" })
+
 }
 
   const { studentEmail, grantCode, courseId } = req.body || {}

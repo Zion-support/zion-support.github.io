@@ -1,116 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import React from 'react',
-import Link from 'next/link';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import { motion } from 'framer-motion';
-
-  Phone
-  Mail
-  MapPin
-  Star
-  ArrowRight
-  Brain
-  Atom
-  Shield
-  Rocket
-  Target
-  Microscope
-  Zap
-  Globe
-  Database
-  Lock
-  Cloud
-  BarChart3
-  Twitter
-  Linkedin
-  Github
-  Youtube
-  Instagram;} from 'lucide-react';import {
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, Star, ArrowRight,
-  Brain, Atom, Shield, Rocket, Target, Microscope,
-  Zap, Globe, Database, Lock, Cloud, BarChart3,
-  Twitter, Linkedin, Github, Youtube, Instagram
-} from 'lucide-react',
-
-const contactInfo = $2;
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-const serviceCategories = $2;
-    icon: Brain,
-    services: [
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
-      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' },
-      { name: 'Multimodal AI Orchestrator', href: '/multimodal-ai-orchestrator' },
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
-      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }
-    ]
-=======
-import { motion } from 'framer-motion';
-
-  Phone;
-  Mail;
-  MapPin;
-  Star;
-  ArrowRight;
-  Brain;
-  Atom;
-  Shield;
-  Rocket;
-  Target;
-  Microscope;
-  Zap;
-  Globe;
-  Database;
-  Lock;
-  Cloud;
-  BarChart3;
-  Twitter;
-  Linkedin;
-  Github;
-  Youtube'
-  Instagram;} from 'lucide-react';import {}
-import {}
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  ArrowRight,
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  Target,
-  Microscope,
-  Zap,
-  Globe,
-  Database,
-  Lock,
-  Cloud,
-  BarChart3,
-  Twitter,
-  Linkedin,
-  Github,;
-  Youtube,;'
-  Instagram,;} from 'lucide-react';import { ;
-  Phone, Mail, MapPin, Star, ArrowRight;
-  Brain, Atom, Shield, Rocket, Target, Microscope;
-  Zap, Globe, Database, Lock, Cloud, BarChart3;
-<<<<<<< HEAD
-  Twitter, Linkedin, Github, Youtube, Instagram
 import { Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
@@ -822,7 +710,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </motion.div>))}
           </div>;
-<<<<<<< HEAD
+
           {/* Additional Links */}
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 mt - 12 pt - 8 border - t border - gray - 800 / 50'>;
             {/* Company Links */}
@@ -867,8 +755,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   >
 
-<<<<<<< HEAD
-                    key={link.name}
+                    {link.nam}
+}
+                  </Link>;
+                ))}
+              </div>;
+            </div>;
+                    {link.name}
+                  </Link>;
+                ))}
+              </div>;
+            </div>;
+                    {link.name}</div>;"
+            </div>;className=\"block text - gray - 400 hover: text - white transition - colors duration - 200 text - sm\">
+
+                ))}
+
+            {/* Legal Links */}
+
+            <div />
+<h4 className='text-white font-semibold mb-4' />Legal</h4>
+              <div className='space-y-2' />
+                {legalLinks.map(link => (}
+                  <Link;}
+key={link.name}
                     href={link.href}
                     className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
@@ -1155,67 +1065,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
-              
-<<<<<<< HEAD
-              <motion.div
-                  >;
-<social.icon className='w-5 h-5' />;
-                  </a>;
-                ))}
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-                  </Link>))}
-              </div>;
-            </div>;
-            {/* Legal Links */}
-            <div>;
-              <h4 className='text - white font - semibold mb - 4'>Legal</h4>;
-              <div className='space - y-2'>;
-                {legal_links.map (link => (<Link;
-                    key={link.name}
-                    href={link.href}
-                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm'                  >              <h4 className="text - white font - semibold mb - 4">Legal</h4>;
-              <div className="space - y-2">;
-                {legal_links.map ((link) => (<Link;
-                    key={link.name}
-                    href={link.href}
-                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
-                    {link.name}
-                  </Link>))}
-              </div>;
-            </div>;
-                ))}
-            {/* Social Links */}
-            <div></div>;
-            </div>;
-          </div>;
-        </div>;{/* Newsletter Section */}
-<div className='border-t border-gray-800/50'>;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>;
-            <div className='text-center'>;
-              <motion.h3;
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6 }}
-                viewport={{ once: true }}className='text-2xl md:text-3xl font-bold text-white mb-4';
-              >;
-                Stay Ahead of the Future;
-              </motion.h3>;
-              <motion.p;
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
-                viewport={{ once: true }}className='text-gray-400 mb-6 max-w-2xl mx-auto';
-              >;
-                Get the latest insights on AI, quantum computing, and emerging;
-                technologies delivered to your inbox.;
-              </motion.p>;
-                className="text-gray-400 mb-6 max-w-2xl mx-auto";
-              >;
-                Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.;
-              </motion.p>;
+
               <motion.div;
 =======
               <motion.div'
@@ -1470,7 +1320,6 @@ export default EnhancedFooter2025;
     </footer>
 );
 };
-
 export default EnhancedFooter2025;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
