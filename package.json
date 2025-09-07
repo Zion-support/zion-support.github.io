@@ -4,12 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-
     "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
     "start": "next start",
     "export": "next export",
-
-
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.cjs --passWithNoTests",
     "test:watch": "jest --config jest.config.cjs --watch",
@@ -18,13 +15,12 @@
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
-
-    "prepare": "echo \"Husky prepare script disabled\""
-
+    "prepare": "echo \"Husky prepare script disabled\"",
+    "security:audit": "npm audit --audit-level moderate",
+    "security:fix": "npm audit fix"
   },
   "dependencies": {
     "@babel/core": "^7.28.4",
-
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
@@ -65,15 +61,12 @@
     "@radix-ui/react-toggle-group": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.3",
     "@reduxjs/toolkit": "^2.9.0",
-
-
     "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.2",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
-
     "@tanstack/react-query": "^5.85.5",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
@@ -100,13 +93,9 @@
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
     "jszip": "^3.10.1",
-
     "lucide-react": "^0.536.0",
-
     "mongodb": "^6.19.0",
-
     "next": "^15.5.2",
-
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
@@ -130,7 +119,6 @@
     "typescript": "4.9.5",
     "uuid": "^11.1.0",
     "web-vitals": "^5.1.0"
-
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
@@ -168,9 +156,7 @@
     "ts-loader": "^9.5.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
-
     "vite": "^7.1.4"
-
   },
   "engines": {
     "node": ">=18.0.0",
@@ -191,6 +177,4 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
-
 }
-
