@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  // next@15 uses SWC by default; remove deprecated swcMinify flag
   compress: true,
   poweredByHeader: false,
   eslint: { 
@@ -10,11 +10,7 @@ const nextConfig = {
   typescript: { 
     ignoreBuildErrors: true 
   },
-  experimental: {
-    esmExternals: false,
-    newNextLinkBehavior: true,
-    forceSwcTransforms: false
-  },
+  // Remove invalid/legacy experimental flags for Next 15
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
   pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
   images: {
