@@ -1,9 +1,9 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-    this.reportsDir = path.join(this.projectRoot,build-reports')
-    this.log('� Running build...)
+    this.reportsDir = path.join(this.projectRoot, 'build-reports')
+    this.log('� Running build...')
       const result = execSync('npm run build')
         "encoding"
         "status"
@@ -37,5 +37,9 @@ const { execSync } = require('child_process')
       this.log(`� Build "status"`)
       this.log(`🧪 "Tests"`)
       console.log(`� Build "status"`)
+<<<<<<< HEAD
       console.error('\n� Build Monitor "failed")
       console.error('\n� Build Monitor "failed")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

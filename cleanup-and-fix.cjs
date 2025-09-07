@@ -1,16 +1,17 @@
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('🧹 Starting comprehensive cleanup and merge conflict resolution...);
-// Function to remove backup files;
+
+console.log('🧹 Starting comprehensive cleanup and merge conflict resolution...');
+
+// Function to remove backup files
 function removeBackupFiles(dir) {
   let removedCount = 0;
   
   function scanDirectory(currentDir) {
     try {
-  // TODO: Implement
-}
       const items = fs.readdirSync(currentDir);
       
       for (const item of items) {
@@ -18,27 +19,25 @@ function removeBackupFiles(dir) {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          // Skip certain directories;
-          if (![node_modules,.git,dist,build,.next,out].includes(item)) {
+          // Skip certain directories
+          if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
             scanDirectory(fullPath);
           }
         } else if (stat.isFile()) {
-          // Remove backup files;
-          if (item.includes('.backup.) || item.endsWith('.backup') || item.includes('.disabled')) {
+          // Remove backup files
+          if (item.includes('.backup.') || item.endsWith('.backup') || item.includes('.disabled')) {
             try {
-  // TODO: Implement
-}
               fs.unlinkSync(fullPath);
               removedCount++;
-              console.log(`🗑️  Removed: ${fullPath});
+              console.log(`🗑️  Removed: ${fullPath}`);
             } catch (err) {
-              console.log(`⚠️  Could not remove: ${fullPath});
+              console.log(`⚠️  Could not remove: ${fullPath}`);
             }
           }
         }
       }
     } catch (error) {
-      // Skip directories that can't be read;
+      // Skip directories that can't be read
     }
   }
   
@@ -46,31 +45,58 @@ function removeBackupFiles(dir) {
   return removedCount;
 }
 
-// Function to resolve merge conflicts in a file;
+// Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   try {
-  // TODO: Implement
-}
-    let content = fs.readFileSync(filePath,utf8);
-    // Check if file has merge conflicts;
-    if (!content.includes(
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflicts
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (!content.includes('
+=======
+    if (!content.includes('') && !content.includes('') && !content.includes('
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    if (!content.includes('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       return false;
     }
-    )
-    console.log(`📝 Fixing merge conflicts in: ${filePath});
     
-    // Strategy: Keep the newer version (after ) for most cases;
+    console.log(`📝 Fixing merge conflicts in: ${filePath}`);
+    
+    // Strategy: Keep the newer version (after ) for most cases
+<<<<<<< HEAD
+<<<<<<< HEAD
     content = content.replace(/
-      // For version conflicts, prefer the newer version;)
-      if (headContent.includes('"') && newContent.includes('")) {
+=======
+    content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    content = content.replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      // For version conflicts, prefer the newer version
+      if (headContent.includes('"') && newContent.includes('"')) {
         return newContent.trim();
       }
       return newContent.trim();
     });
     
-    // Clean up any remaining conflict markers;
+    // Clean up any remaining conflict markers
+<<<<<<< HEAD
+<<<<<<< HEAD
     content = content.replace(/
-    )
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/[\s\S]*?
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    content = content.replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    
     fs.writeFileSync(filePath, content);
     return true;
   } catch (error) {
@@ -79,14 +105,12 @@ function resolveMergeConflicts(filePath) {
   }
 }
 
-// Function to find all files with merge conflicts;
+// Function to find all files with merge conflicts
 function findConflictedFiles(dir) {
   const conflictedFiles = [];
   
   function scanDirectory(currentDir) {
     try {
-  // TODO: Implement
-}
       const items = fs.readdirSync(currentDir);
       
       for (const item of items) {
@@ -94,26 +118,33 @@ function findConflictedFiles(dir) {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          // Skip certain directories;
-          if (![node_modules,.git,dist,build,.next,out].includes(item)) {
+          // Skip certain directories
+          if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
             scanDirectory(fullPath);
           }
         } else if (stat.isFile()) {
-          // Check for merge conflict markers;
+          // Check for merge conflict markers
           try {
-  // TODO: Implement
-}
-            const content = fs.readFileSync(fullPath,utf8);
-            if (content.includes()
+            const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            if (content.includes('
+=======
+            if (content.includes('') || content.includes('') || content.includes('
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            if (content.includes('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               conflictedFiles.push(fullPath);
             }
           } catch (err) {
-            // Skip files that can't be read;
+            // Skip files that can't be read
           }
         }
       }
     } catch (error) {
-      // Skip directories that can't be read;
+      // Skip directories that can't be read
     }
   }
   
@@ -121,16 +152,15 @@ function findConflictedFiles(dir) {
   return conflictedFiles;
 }
 
-// Main execution;
+// Main execution
 try {
-  // TODO: Implement
-}
-  console.log('🗑️  Removing backup files...);
-  const removedCount = removeBackupFiles('.);
+  console.log('🗑️  Removing backup files...');
+  const removedCount = removeBackupFiles('.');
   console.log(`✅ Removed ${removedCount} backup files`);
-  '
-  console.log('🔍 Scanning for files with merge conflicts...);
-  const conflictedFiles = findConflictedFiles('.);
+  
+  console.log('🔍 Scanning for files with merge conflicts...');
+  const conflictedFiles = findConflictedFiles('.');
+  
   console.log(`📊 Found ${conflictedFiles.length} files with merge conflicts`);
   
   let fixedCount = 0;
@@ -142,21 +172,21 @@ try {
   
   console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
   
-  // Verify no more conflicts;
-  const remainingConflicts = findConflictedFiles('.);
+  // Verify no more conflicts
+  const remainingConflicts = findConflictedFiles('.');
   if (remainingConflicts.length === 0) {
-    console.log('🎉 All merge conflicts resolved!);
+    console.log('🎉 All merge conflicts resolved!');
   } else {
-  // TODO: Implement
-}
     console.log(`⚠️  ${remainingConflicts.length} files still have conflicts:`);
-    remainingConflicts.slice(0, 10).forEach(file => console.log(`   - ${file}));
+    remainingConflicts.slice(0, 10).forEach(file => console.log(`   - ${file}`));
     if (remainingConflicts.length > 10) {
       console.log(`   ... and ${remainingConflicts.length - 10} more`);
     }
   }
   
 } catch (error) {
-  console.error('❌ Error during cleanup: , error);
+  console.error('❌ Error during cleanup:', error);
   process.exit(1);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

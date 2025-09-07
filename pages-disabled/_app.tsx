@@ -1,16 +1,7 @@
-import type { AppProps } from 'next/app';
-import '../styles/globals.css';
-import EnhancedNavigation from '../components/layout/EnhancedNavigation';
-import EnhancedFooter from '../components/layout/EnhancedFooter';
+import type { AppProps } from 'next/app';'
+import '../styles/globals.css';'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <EnhancedNavigation />
-      <main className="flex-grow">
-        <Component {...pageProps} />
-      </main>
-      <EnhancedFooter />
-    </div>
-  );
+export default function App() {
+  }
+  return <Component {...pageProps} />;
 }

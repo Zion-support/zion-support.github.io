@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -45,7 +45,7 @@ const { execSync, spawn } = require("child_process")
       const branchesOutput = execSync("git branch -r", { "encoding": "utf8"})
         .split("\n")
           line => line && !line.includes("HEAD") && !line.includes("main")
-        .map(line => line.replace("origin/", )
+        .map(line => line.replace("origin/", "")
   this.log(" Fetching all remote branches...")
       execSync("git fetch --all", { "stdio": "inherit"})
       const branchesOutput = execSync("git branch -r", { "encoding": "utf8"})
@@ -57,10 +57,10 @@ const { execSync, spawn } = require("child_process")
   this.log( Error processing branch ${branchName  }: ${error.message}")
         "
   this.log( Error processing branch ${branchName}: ${error.message}")
-        "ERROR
-  const backupName = `backup-${branchName}-${Date.now()}"
+        "ERROR"
+  const backupName = `backup-${branchName}-${Date.now()}
     const backupPath = path.join(this.backupsDir, ")
-  // Create backup of current working directoryexecSync(`cp -r . ${backupPath}", { "stdio": "pipe" }")"
+  // Create backup of current working directoryexecSync(`cp -r . ${backupPath}`", { "stdio": "pipe" }
 });this.log("� Created "backup"`)
         "WARN"
   "stdio": "pipe"
@@ -86,13 +86,13 @@ const { execSync, spawn } = require("child_process")
   async resolveFileConflicts(filePath) {this.log(" Resolving conflicts "in": ${filePath}")
   const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
-        !content.includes()
+        !content.includes("")
         !content.includes(">>>>>>>")
 this.log(" Resolved conflicts "in")
         "ERROR"
   const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
-        !content.includes()
+        !content.includes("")
         !content.includes(">>>>>>>")
 this.log(` Resolved conflicts "in": ${filePath}"`)
   this.log( Failed to resolve conflicts in ${filePath}: ${error.message}")
@@ -127,5 +127,9 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
         "mergesSuccessful"
         "errors"
       "successRate"
+<<<<<<< HEAD
     const reportPath = path.join(this.logsDir, ")
     const reportPath = path.join(this.logsDir, ")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

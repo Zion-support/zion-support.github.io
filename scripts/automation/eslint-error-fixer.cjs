@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+#!/""usr/bin/env"" node;
+#!/usr/bin/env node;
+const { execSync, spawn } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+<<<<<<< HEAD
+
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const { execSync, spawn } = require("child_process");
@@ -10,12 +23,20 @@ class $1 {}
       this.projectRoot,"automation/logs/eslint-error-fixer.log";"
     );
     this.errorLogFile = path.join(;)
+<<<<<<< HEAD
       this.projectRoot,"
-      automation/logs/eslint-error-fixer-error.log";"
-    );
+
     this.reportFile = path.join(;)"
       this.projectRoot,eslint-error-fixer-report.json";"
+=======
+      this.projectRoot,
+      ""automation/logs/eslint-error-fixer-error.log""";
     );
+    this.reportFile = path.join(;)
+      this.projectRoot,eslint-error-fixer-report.json";
+    );
+    this.ensureLogsDirectory();
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
     this.ensureLogsDirectory();
 
@@ -30,75 +51,110 @@ class $1 {}
   const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {}"
   fs.mkdirSync(logsDir, { "recursive": true })};"
-  };
 ;"
   log(message, type = "info") {}
   log(message, type = "info") {}"
   const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}\n`;`
+const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}\n`;`;
 
-    fs.appendFileSync(this.logFile, logMessage);"
-    if (type === "error") {}"
+    fs.appendFileSync(this.logFile, logMessage);
+    if (type === "error") {}
   fs.appendFileSync(this.errorLogFile, logMessage)};
-console.log(`[${type.toUpperCase()}] ${message})};
+console.log(`[${type.toUpperCase()}] ${message}`)};
 ;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   async runCommand(command, options = {}) {}
   return new Promise((resolve, reject) => {}
-  const child = spawn(command, options.args || [], {})"
+const child = spawn(command, options.args || [], {});
   "stdio": "pipe",
         "shell": true,
         "cwd": this.projectRoot,"
         ...options}
+<<<<<<< HEAD
 });"
       let stdout = ;
       let stderr = ;
       child.stdout.on("data", data => {})"
+=======
+});
+      let stdout = "";
+      let stderr = "";
+      child.stdout.on("data", data => {})
   async runCommand(command, options = {}) {}
   return new Promise((resolve, reject) => {}
-  const child = spawn(command, options.args || [], {})"
+const child = spawn(command, options.args || [], {});
   "stdio": "pipe",
         "shell": true,
-        "cwd": this.projectRoot,"
+        "cwd": this.projectRoot,
         ...options}
 });
-"
       let stdout = ";
       let stderr = ";
-      child.stdout.on("data", data => {})"
+      child.stdout.on("data", data => {})
   stdout += data.toString()}
 });
-"
-      child.stderr.on("data", data => {})"
+      child.stderr.on("data", data => {})
   stderr += data.toString()}
 });
-"
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+  stdout += data.toString()}
+      child.stderr.on("data", data => {})"
+  stderr += data.toString()}
+<<<<<<< HEAD
       child.on("close", code => {})"
+=======
+});
+
+      child.on("close", code => {})
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   if (code === 0) {}
   resolve({ stdout, stderr, code })} else {}
   reject({ stdout, stderr, code })};
       }
+<<<<<<< HEAD
+
+=======
 });
-"
-      child.on("error", error => {})"
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      child.on("error", error => {})
   reject({ error, stdout, stderr })})})};
 ;
-  async detectESLintErrors() {}"
-  this.log("Detecting ESLint errors...");"
-    try {}"
-  const result = await this.runCommand("npm", { "args": ["run", "lint"] }")
-});"
+  async detectESLintErrors() {}
+  this.log("Detecting ESLint errors...");
+    try {}
+  const result = await this.runCommand("npm", { "args": ["run", "lint"] }
+});
       this.log("No ESLint errors detected");
-      return []} catch (error) {  this.log(`ESLint errors "detected": ${error.stderr  }, "error");"
+      return []} catch (error) {  this.log(`ESLint errors "detected": ${error.stderr  }`, "error");
       return this.parseESLintErrors(error.stderr)};
   };
 ;
   parseESLintErrors(stderr) {}
+  const errors = [];
+    const lines = stderr.split("\n");
+    for (const line of lines) {}
+  if (line.includes("error")) {}
+  const lines = stderr.split("\n");
+<<<<<<< HEAD
+
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    for (const line of lines) {}
+  if (line.includes("error")) {}
+      child.on("error", error => {})"
+  reject({ error, stdout, stderr })})})};
+  async detectESLintErrors() {}"
+  this.log("Detecting ESLint errors...");"
+    try {}"
+  const result = await this.runCommand("npm", { "args": ["run", "lint"] }")
+
+      return this.parseESLintErrors(error.stderr)};
+  parseESLintErrors(stderr) {}
   const errors = [];"
     const lines = stderr.split("\n");"
     for (const line of lines) {}"
-  if (line.includes("error")) {}
-  const lines = stderr.split("\n");"
-    for (const line of lines) {}"
+
   if (line.includes("error")) {}"
   const match = line.match(/(.+\.(jsx?|tsx?)):(\d+):(\d+)/);
         if (match) {}
@@ -110,66 +166,46 @@ console.log(`[${type.toUpperCase()}] ${message})};
             "message": line.split(" - ")[1] || line,
             "rule": ruleMatch ? ruleMatch[1] : null,
             "type": "eslint"})};"
-      };
-    };
-;
     return errors};
-;
+;`;
   async fixESLintErrors(errors) {this.log(`Fixing ${errors.length} ESLint errors...`);
     // First try auto-fix;
-    try {}"
   await this.runCommand("npm", { "args": ["run", "lint", "--", "--fix"] }")
-});"
       this.log("ESLint auto-fix completed");"
       // Check if auto-fix resolved all issues;
       const remainingErrors = await this.detectESLintErrors();
       if (remainingErrors.length === 0) {}"
   this.log("All ESLint errors were auto-fixed");"
         return};
-;"
       this.log(${remainingErrors.length} errors remain after auto-fix, applying manual fixes";)"
-      );
-      errors = remainingErrors} catch (error) {}"
+      errors = remainingErrors} catch (error) {}"`;
   this.log("ESLint auto-fix failed, applying manual fixes", "warn`)};"
-;
     // Apply manual fixes for remaining errors;
     for (const error of errors) {}
   try {}
   // First try auto-fix;
-    try {}"
-  await this.runCommand("npm", { "args": ["run", "lint", "--", "--fix"] }")
-});"
-      this.log("ESLint auto-fix completed");"
+<<<<<<< HEAD
+
+=======
+    try {}
+  await this.runCommand("npm", { "args": ["run", "lint", "--", "--fix"] }
+});
+      this.log("ESLint auto-fix completed");
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Check if auto-fix resolved all issues;
-      const remainingErrors = await this.detectESLintErrors();
-      if (remainingErrors.length === 0) {}"
-  this.log("All ESLint errors were auto-fixed");"
-        return};
-;"
-      this.log(${remainingErrors.length} errors remain after auto-fix, applying manual fixes";)"
-      );
       errors = remainingErrors} catch (error) {}"
   this.log("ESLint auto-fix failed, applying manual fixes", "warn")};"
-;
     // Apply manual fixes for remaining errors;
-    for (const error of errors) {}
-  try {}
   await this.fixESLintError(error);
         this.fixes.applied.push({})
   error,"
           "timestamp": new Date().toISOString()})} catch (fixError) {}"
   this.fixes.failed.push({})
-  error,"
-          "fixError": fixError.message,
+
           "timestamp": new Date().toISOString()})};"
-    };
-  };
-;
-  async fixESLintError(error) {}"
+  async fixESLintError(error) {}"`;
   if (!fs.existsSync(error.file)) {this.log(`File not "found": ${error.file}", "warn");"
-      return};
-;"
-    const content = fs.readFileSync(error.file, "utf8");
+
     const lines = content.split("\n");"
     // Handle different ESLint error types;
     if (;)"
@@ -185,48 +221,74 @@ console.log(`[${type.toUpperCase()}] ${message})};
   await this.fixIndentError(error, lines)} else if (;)"
       error.rule === "no-console" ||;
       error.message.includes("console");"
-    ) {}
   await this.fixConsoleError(error, lines)} else if (;)"
       error.rule === "prefer-const" ||;
-      error.message.includes("prefer const");"
-    ) {}
+<<<<<<< HEAD
   
-} else if (;)"
-      error.rule === "prefer-const" ||;
-      error.message.includes("prefer const");"
+=======
+      error.message.includes("prefer const");
     ) {}
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+} else if (;)
+      error.rule === "prefer-const" ||;
+      error.message.includes("prefer const");
+    ) {}
+      error.message.includes("prefer const");"
+} else if (;)"
+
   await this.fixPreferConstError(error, lines)} else {}
   await this.fixGenericESLintError(error, lines)};
-  };
-;
   async fixUnusedVariableError(error, lines) {}
   if (error.line > lines.length) return;
+<<<<<<< HEAD
 
     const targetLine = lines[error.line - 1];
+const varMatch = error.message.match(;);
+      /[""]([^"]+)["] is defined but never used/    );
+
+    if (varMatch) {}
+  const varName = varMatch[1];
+      // Remove unused variable declaration;
+const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^]+;?`, "g"),`;
+        "";
+
+      // Remove unused variable declaration;
+const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^]+;?`, "g"),`;
+        ";
+      );
     const varMatch = error.message.match(;)"
       /[]([^"]+)["] is defined but never used/    );"
     if (varMatch) {}
   const varName = varMatch[1];
-      // Remove unused variable declaration;"
-      const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^]+;?`, "g"),`
-        ;"
-      // Remove unused variable declaration;"
-      const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^]+;?`, "g"),`
+
         ";"
+=======
+    const targetLine = lines[error.line - 1];
+    const varMatch = error.message.match(;)
+      /[""]([^"]+)["] is defined but never used/    );
+    if (varMatch) {}
+  const varName = varMatch[1];
+      // Remove unused variable declaration;
+      const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^]+;?`, "g"),`
+        "";
+      // Remove unused variable declaration;
+      const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^]+;?`, "g"),`
+        ";
       );
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
       if (fixedLine !== targetLine) {}
   lines[error.line - 1] = fixedLine;"
         fs.writeFileSync(error.file, lines.join("\n"))};"
-    };
-  };
-;
   async fixMissingSemicolonError(error, lines) {}
-  if (error.line > lines.length) return;
+<<<<<<< HEAD
 
-    const targetLine = lines[error.line - 1];"
-    // Add missing semicolon if line doesn"t end with one;"
-    if (;)"
+=======
+  if (error.line > lines.length) return;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    const targetLine = lines[error.line - 1];
+    // Add missing semicolon if line doesn"t end with one;
+    if (;)
       !targetLine.trim().endsWith(";") &&;
       !targetLine.trim().endsWith("{") &&;}
       !targetLine.trim().endsWith("}") &&;
@@ -235,79 +297,105 @@ console.log(`[${type.toUpperCase()}] ${message})};
       !targetLine.trim().endsWith(")") &&;
       !targetLine.trim().endsWith("]") &&;
       !targetLine.trim().endsWith(",") &&;
-      !targetLine.trim().endsWith(":");"
-    ) {}"
-  lines[error.line - 1] = targetLine + ";";      fs.writeFileSync(error.file, lines.join("\n"))};"
+      !targetLine.trim().endsWith(":");
+    ) {}
+  lines[error.line - 1] = targetLine + ";";      fs.writeFileSync(error.file, lines.join("\n"))};
   };
 ;
   async fixQuotesError(error, lines) {}
   if (error.line > lines.length) return;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const targetLine = lines[error.line - 1];
-    // Convert single quotes to double quotes or vice versa;"
-    if (error.message.includes("single quotes")) {}"
-  // Convert single quotes to double quotes or vice versa;"
+    // Convert single quotes to double quotes or vice versa;
     if (error.message.includes("single quotes")) {}
-  const fixedLine = targetLine.replace(/"/g, );"
+  // Convert single quotes to double quotes or vice versa;
+    if (error.message.includes("single quotes")) {}
+  const fixedLine = targetLine.replace(/"/g, "");
       if (fixedLine !== targetLine) {}
-  lines[error.line - 1] = fixedLine;"
+  lines[error.line - 1] = fixedLine;
         fs.writeFileSync(error.file, lines.join("\n"))};
     } else if (error.message.includes("double quotes")) {}
-  const fixedLine = targetLine.replace(//g, ");"
+  const fixedLine = targetLine.replace(//g, """);
       if (fixedLine !== targetLine) {}
-  lines[error.line - 1] = fixedLine;"
-        fs.writeFileSync(error.file, lines.join("\n"))};"
+  lines[error.line - 1] = fixedLine;
+        fs.writeFileSync(error.file, lines.join("\n"))};
     };
   };
 ;
   async fixIndentError(error, lines) {}
   if (error.line > lines.length) return;
+<<<<<<< HEAD
 
+    const targetLine = lines[error.line - 1];"
+    // Add missing semicolon if line doesn"t end with one;"
+
+      !targetLine.trim().endsWith(":");"
+  lines[error.line - 1] = targetLine + ";";      fs.writeFileSync(error.file, lines.join("\n"))};"
+  async fixQuotesError(error, lines) {}
+
+    // Convert single quotes to double quotes or vice versa;"
+    if (error.message.includes("single quotes")) {}"
+  // Convert single quotes to double quotes or vice versa;"
+
+  async fixIndentError(error, lines) {}
+=======
     const targetLine = lines[error.line - 1];
+    const expectedIndent = error.message.match(/Expected (\d+) spaces/);
+    if (expectedIndent) {}
+  const expectedSpaces = parseInt(expectedIndent[1]);
+      const currentIndent = targetLine.match(/^(\s*)/)[1].length;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
     const expectedIndent = error.message.match(/Expected (\d+) spaces/);
 
     if (expectedIndent) {}
   const expectedSpaces = parseInt(expectedIndent[1]);
       const currentIndent = targetLine.match(/^(\s*)/)[1].length;
 
+<<<<<<< HEAD
       if (currentIndent !== expectedSpaces) {}"
   const newIndent = " ".repeat(expectedSpaces);"
         const fixedLine = newIndent + targetLine.trimLeft();
-        lines[error.line - 1] = fixedLine;"
-        fs.writeFileSync(error.file, lines.join("\n"))};"
-    };
-  };
-;
+  async fixConsoleError(error, lines) {}
+
+=======
+      if (currentIndent !== expectedSpaces) {}
+  const newIndent = " ".repeat(expectedSpaces);
+        const fixedLine = newIndent + targetLine.trimLeft();
   async fixConsoleError(error, lines) {}
   if (error.line > lines.length) return;
-
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const targetLine = lines[error.line - 1];
+    // Comment out console statements;
+
     // Comment out console statements;"
     if (targetLine.includes("console.")) {}
   const fixedLine = "// " + targetLine;"
-      lines[error.line - 1] = fixedLine;"
-      fs.writeFileSync(error.file, lines.join("\n"))};"
-  };
-;
   async fixPreferConstError(error, lines) {}
-  if (error.line > lines.length) return;
+<<<<<<< HEAD
 
+=======
+  if (error.line > lines.length) return;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const targetLine = lines[error.line - 1];
+    // Convert let to const;
+
     // Convert let to const;"
     if (targetLine.includes("let ")) {}"
   // Convert let to const;"
     if (targetLine.includes("let ")) {}
   const fixedLine = targetLine.replace(/let /g, "const ");"
-      if (fixedLine !== targetLine) {}
-  lines[error.line - 1] = fixedLine;"
-        fs.writeFileSync(error.file, lines.join("\n"))};"
-    };
-  };
-;
   async fixGenericESLintError(error, lines) {}
-  if (error.line > lines.length) return;
+<<<<<<< HEAD
 
+=======
+  if (error.line > lines.length) return;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const targetLine = lines[error.line - 1];
+
     // Generic fixes for common ESLint issues;
     let fixedLine = targetLine;
     // Remove trailing spaces;"
@@ -317,12 +405,29 @@ console.log(`[${type.toUpperCase()}] ${message})};
     // Fix missing spaces around operators;"
     fixedLine = fixedLine.replace(/([^=!<>])=([^=])/g, "$1 = $2");
     fixedLine = fixedLine.replace(/([^=!<>])==([^=])/g, "$1 == $2");
-    fixedLine = fixedLine.replace(/([^=!<>])===([^=])/g, "$1 === $2");"
+<<<<<<< HEAD
+
+=======
+    fixedLine = fixedLine.replace(/([^=!<>])===([^=])/g, "$1 === $2");
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     if (fixedLine !== targetLine) {}
-  lines[error.line - 1] = fixedLine;"
-      fs.writeFileSync(error.file, lines.join("\n"))};"
+  lines[error.line - 1] = fixedLine;
+      fs.writeFileSync(error.file, lines.join("\n"))};
   };
 ;
+  async updateESLintConfig() {}
+  this.log("Updating ESLint configuration...");
+<<<<<<< HEAD
+
+    const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js");
+
+=======
+    const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js");
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    if (fs.existsSync(eslintConfigPath)) {}
+  let config = fs.readFileSync(eslintConfigPath, "utf8");
+      // Update rules to be less strict for error fixing;
+    fixedLine = fixedLine.replace(/([^=!<>])===([^=])/g, "$1 === $2");"
   async updateESLintConfig() {}"
   this.log("Updating ESLint configuration...");
     const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js");"
@@ -347,8 +452,6 @@ console.log(`[${type.toUpperCase()}] ${message})};
   version: "detect"}}};";"
       fs.writeFileSync(eslintConfigPath, updatedConfig);"
       this.log("Updated ESLint configuration for error fixing")};"
-  };
-;
   generateReport() {}
   const report = {}"
   "timestamp": new Date().toISOString(),
@@ -359,65 +462,118 @@ console.log(`[${type.toUpperCase()}] ${message})};
         "fixesSkipped": this.fixes.skipped.length},
       "errors": this.errors,
       "fixes": this.fixes,
-      "recommendations": this.generateRecommendations()};"
+<<<<<<< HEAD
+
+=======
+      "recommendations": this.generateRecommendations()};
 ;
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    this.log("Report "generated": ${this.reportFile}");
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      "recommendations": this.generateRecommendations()};"
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
     this.log("Report "generated": ${this.reportFile}");"
     return report};
-;
   generateRecommendations() {}
   const recommendations = [];
     if (this.errors.length > 0) {}
   recommendations.push({})"
   "priority": "high",
         "message": "Consider updating ESLint configuration",
-        "action": "Review ESLint rules and update configuration","
+<<<<<<< HEAD
+
+=======
+        "action": "Review ESLint rules and update configuration",
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     if (this.errors.length > 0) {}
-  recommendations.push({})"
+  recommendations.push({})
   "priority": "high",
         "message": "Consider updating ESLint configuration",
+        "action": "Review ESLint rules and update configuration"})};
+;
+        "action": "Review ESLint rules and update configuration","
+
         "action": "Review ESLint rules and update configuration"})};"
-;
     if (this.fixes.failed.length > 0) {}
-  recommendations.push({})"
-  "priority": "medium",
-        "message": "Some ESLint errors could not be automatically fixed",
+
         "action": "Manually review failed fixes and apply corrections"})};"
-;
     return recommendations};
-;
   async run() {}"
   this.log("Starting ESLint Error Fixer...");"
-    try {}
   // Update ESLint configuration;
       await this.updateESLintConfig();
       // Detect ESLint errors;
       this.errors = await this.detectESLintErrors();
-      if (this.errors.length > 0) {}
   // Fix ESLint errors;
+<<<<<<< HEAD
+
+=======
+        await this.fixESLintErrors(this.errors)} else {}
+  this.log("No ESLint errors detected")};
+;
+      const report = this.generateReport();
+      this.log("ESLint Error Fixer completed successfully");
+      this.log("ESLint Error Fixer completed successfully");
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      return report} catch (error) {  this.log("ESLint Error Fixer "failed": ${error.message  }", "error");
         await this.fixESLintErrors(this.errors)} else {}"
   this.log("No ESLint errors detected")};"
-;
       const report = this.generateReport();"
-      this.log("ESLint Error Fixer completed successfully");
-      this.log("ESLint Error Fixer completed successfully");
+
       return report} catch (error) {  this.log("ESLint Error Fixer "failed": ${error.message  }", "error");"
       throw error};
-  };
-};
-;
 // Run the ESLint error fixer;
 if (require.main === module) {}
   const fixer = new ESLintErrorFixer();
   fixer;
     .run();
-    .then(report => {})"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    .then(report => {})
+  console.log("ESLint Error Fixer completed successfully`);
+    .then(report => {})"`;
   console.log("ESLint Error Fixer completed successfully`);"
       process.exit(0)}
-});
     .catch(error => {})"
-  console.error("ESLint Error Fixer "failed": , error);
-      process.exit(1)})};
-;
 
-'
+      process.exit(1)})};
+<<<<<<< HEAD
+module.exports = ESLintErrorFixer;
+=======
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+module.exports = ESLintErrorFixer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+module.exports = ESLintErrorFixer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = ESLintErrorFixer;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+module.exports = ESLintErrorFixer;
+
+module.exports = ESLintErrorFixer;
+<<<<<<< HEAD
+module.exports = ESLintErrorFixer;
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

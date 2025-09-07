@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -8,7 +8,7 @@ class TypeChecker {}
     this.interval = 120000; // 2 minutes;
   };
   async start() {}
-    console.log('Starting Type Checker...);
+    console.log('Starting Type Checker...');
     this.isRunning = true;
     
     // Initial type check;
@@ -17,60 +17,74 @@ class TypeChecker {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
+<<<<<<< HEAD
     
     
-    '
+    
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
-      console.log('Running TypeScript type check...);
-      const child = spawn('npm, [run,type-check], {})
-        "stdio": [pipe,pipe,pipe],
-        "cwd": process.cwd();"
+      console.log('Running TypeScript type check...');
+      
+      const child = spawn('npm', ['run', 'type-check'], {})
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd();
       };);
-"
-      let output = ;;;
-      let errorOutput = ;;;
-      child.stdout.on('data, (data) => {}
+
+      let output = ;';';
+      let errorOutput = ;';';
+
+      child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
-'
-      child.stderr.on('data, (data) => {}
+
+      child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
 
+<<<<<<< HEAD
 
-'
-      child.on('close, (code) => {}
-        if ({})
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+      child.on('close', (code) => {}
+        if ( {})
           console.log('Type check passed ✓')) {}
      {}
           console.log('Type check passed ✓')}} else {}
           console.log('Type check failed ✗');
-          console.log('"Output": , output);
-          console.log('"Errors": , errorOutput);
+          console.log('"Output": ', output);
+          console.log('"Errors": ', errorOutput);
+          
           // Log type errors for manual review;
           this.logTypeErrors(output + errorOutput)};
       })} catch (error) {}
-      console.error('Error running type "check": , error.message)};
+      console.error('Error running type "check": ', error.message)};
   };
   logTypeErrors(errorOutput) {}
     const lines = errorOutput.split('\n';);
     const typeErrors = lines.filter(line => )
       line.includes('error TS') || line.includes('Type error');
    ;);
+<<<<<<< HEAD
     
     
     
-    if ({})
-      console.log('TypeScript errors "found": )) {}
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+    if ( {})
+      console.log('TypeScript errors "found": ')) {}
      {}
-      console.log('TypeScript errors found: )};
+      console.log('TypeScript errors found:')};
       typeErrors.forEach(error => {})
-        console.log(`  ${error})})};
+        console.log(`  ${error}`)})};
   };
   stop() {}
-    console.log('Stopping Type Checker...);
+    console.log('Stopping Type Checker...');
     this.isRunning = false;
     
     if ( {})
@@ -87,17 +101,20 @@ if ( {})
   const checker = new TypeChecker}(;);
   
   // Handle graceful shutdown;
-  process.on('SIGINT, () => {}
+  process.on('SIGINT', () => {}
     checker.stop();
     process.exit(0)}
 });
-  '
-  process.on('SIGTERM, () => {}
+  
+  process.on('SIGTERM', () => {}
     checker.stop();
     process.exit(0)}
 });
   
   checker.start().catch(console.error)};
+<<<<<<< HEAD
 module.exports = TypeChecker;
 module.exports = TypeChecker;
-'
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

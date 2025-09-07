@@ -1,22 +1,31 @@
-// Mock i18n implementation - replace with actual i18next setup
-const supportedLocales = ['en', 'es', 'fr', 'de'];
+export const supportedLocales = ["en", "pt", "es", "ar"] as const;"
 
-const i18n = {
-  isInitialized: false,
-  use: (plugin: any) => i18n,
-  init: (config: any) => {
-    i18n.isInitialized = true;
-    return i18n;
-  },
-  t: (key: string, options?: any) => key,
-  changeLanguage: (lng: string) => Promise.resolve(),
-  language: 'en'
+}
+}
+export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;'
+export function isRtl("locale": string): boolean {
+  }
+  return ["ar", "he", "fa", "ur"].includes(locale);"
+}
+export const i18n = {
+  }
+  "language": "en","
+  "resolvedLanguage": "en","
 };
-
-// Mock plugins
-const Backend = {};
-const LanguageDetector = {};
-const initReactI18next = {};
+}
+}
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import Backend from 'i18next-http-backend';
+export const supportedLocales = $2;
+export type SupportedLocale = $2;
+export const isRtl = (lng?: string) => (lng || i18n.language)?.startsWith($2);
+export const resources: Record<string, { translation: Record<string, string> }> = {
+  en: { translation: {} },
+  pt: { translation: {} },
+  es: { translation: {} },
+  ar: { translation: {} }},
 
 if (!i18n.isInitialized) {
   i18n
@@ -26,13 +35,16 @@ if (!i18n.isInitialized) {
     .init({
       fallbackLng: 'en',
       supportedLngs: supportedLocales as unknown as string[],
-      interpolation: {
-        escapeValue: false
-      },
-      resources: {},
+      interpolation: { escapeValue: false},
+      resources,
+      detection: {
+        order: ['localStoragenavigatorhtmlTagcookiepathsubdomain'],
+        caches: ['localStorage']},
+      react: { useSuspense: false},
+      backend: {
+        loadPath: '/locales/{{lng}}/{{ns}}.json'},
       ns: ['common'],
-      defaultNS: 'common'
-    } as any);
+      defaultNS: 'common'} as any)
 }
 
-export default i18n;
+export default i18n,

@@ -1,8 +1,12 @@
-#!/usr/bin/env
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
-const crypto = require("crypto")
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+#!/""usr/bin/env""
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+const crypto = require("crypto");
       this.projectRoot,logs"
       "smart-build-optimizer.log"
       this.projectRoot,logs"
@@ -60,32 +64,32 @@ const crypto = require("crypto")
       "cpuUsage"
       this.log(Performance "analysis")
       this.log(Performance "analysis": Build=${performance.buildTime}ms, Bundle=${performance.bundleSize}bytes, Install=${performance.installTime}ms")
-      )} catch (error) {  this.log(`Performance analysis "failed": ${error.message  }, "WARN"`)
-  const build = spawn("npm", ["run", "build")]
+      )} catch (error) {  this.log(`Performance analysis "failed": ${error.message  }`, "WARN"`)
+const build = spawn("npm", ["run", "build")];
   "cwd"
         "stdio": "pipe"
       build.on("close")
       build.on("error")
-  const install = spawn("npm", ["install")]
+const install = spawn("npm", ["install")];
   "cwd"
         "stdio": "pipe"
       install.on("close")
   build.on("error")
-  const install = spawn("npm", ["install")]
+const install = spawn("npm", ["install")];
   "cwd"
         "stdio": "pipe"
       install.on("close")
       install.on("error")
-  const rebuild = spawn("npm", ["run", "build")]
+const rebuild = spawn("npm", ["run", "build")];
   "cwd"
         "stdio": "pipe"
       rebuild.on("close")
       rebuild.on("error")
-  const distPath = path.join(this.projectRoot, "dist")
+const distPath = path.join(this.projectRoot, "dist");
       rebuild.on("error")
-  const distPath = path.join(this.projectRoot, "dist")
-      return totalSize} catch (error) {  this.log(`Bundle size measurement "failed": ${error.message  }, "WARN"`)
-  const fullPath = path.join(dir, ")
+const distPath = path.join(this.projectRoot, "dist");
+      return totalSize} catch (error) {  this.log(`Bundle size measurement "failed": ${error.message  }`, "WARN"`)
+const fullPath = path.join(dir, ");
   this.getAllFilesRecursive(fullPath")
   "type": "BUILD_TIME"
         "priority": "HIGH"
@@ -129,15 +133,15 @@ const crypto = require("crypto")
         "config": "tsconfig.json"
             "applied"
             "result"
-      } catch (error) {  this.log(`Failed to apply "optimization": ${error.message  }, "WARN"`)
+      } catch (error) {  this.log(`Failed to apply "optimization": ${error.message  }`, "WARN"`)
   case "BUILD_TIME"
       case "BUNDLE_SIZE"
       case "INSTALL_TIME"
       case "REBUILD_TIME"
       "default"
         return { success: false, "message": "Unknown optimization type"}
-      const viteConfigPath = path.join(this.projectRoot, "vite.config.ts")
-  let config = fs.readFileSync(viteConfigPath, "utf8")
+const viteConfigPath = path.join(this.projectRoot, "vite.config.ts");
+let config = fs.readFileSync(viteConfigPath, "utf8");
         if (!config.includes("build.rollupOptions")
   "build"
   vendor: ["react", "react-dom"]
@@ -150,10 +154,10 @@ const crypto = require("crypto")
       return { "success": true, "message": "Build time optimization applied"}
   return { "success": false, "message"}
   return { "success": false, "message"}
-      const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
-  const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
+const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
+const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8");
           "incremental"
-          "tsBuildInfoFile": "./"node_modules/.cache/.tsbuildinfo
+          "tsBuildInfoFile": "./"node_modules/.cache/.tsbuildinfo""
           "skipLibCheck"
           "removeComments"
   "success"
@@ -161,19 +165,19 @@ const crypto = require("crypto")
       return { "success": true, "message": "Bundle size optimization applied"}
   return { "success": false, "message"}
   return { "success": false, "message"}
-const packagePath = path.join(this.projectRoot, "package.json")
-  const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8")
-        if (!pkg.scripts[install": fast")]
+const packagePath = path.join(this.projectRoot, "package.json");
+const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8");
+        if (!pkg.scripts[""install": fast")]
   pkg.scripts["install:fast"] = "npm ci --prefer-offline --no-audit"
           pkg.scripts["install:clean"] =rm -rf node_modules package-lock.json && npm install"
           return { "success": true, "message": "Fast install scripts added"}
       return { "success": true, "message": "Install time optimization applied"}
   return { "success": false, "message"}
   return { "success": false, "message"}
-      const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
-  const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
+const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
+const config = JSON.parse(fs.readFileSync(tsConfigPath, "utf8");
           "incremental"
-          "tsBuildInfoFile": "./"node_modules/.cache/.tsbuildinfo
+          "tsBuildInfoFile": "./"node_modules/.cache/.tsbuildinfo""
         return { "success": true, "message": "Incremental compilation enabled"}
       return { "success": true, "message": "Rebuild time optimization applied"}
   return { "success": false, "message"}
@@ -188,7 +192,7 @@ const packagePath = path.join(this.projectRoot, "package.json")
   "category": "WORKFLOW"
       "priority": "MEDIUM"
       "suggestion": "Use npm ci for faster, reliable installs"
-      "action": "Run npm ci instead of npm install in CI/CD environments"
+      "action": "Run npm ci instead of npm install in ""CI/CD"" environments"
   "category": "PERFORMANCE"
         "priority": "HIGH"
         "suggestion": "Consider using esbuild for faster builds"
@@ -206,3 +210,41 @@ const packagePath = path.join(this.projectRoot, "package.json")
         "ERROR"
   this.log(")
   console.log("Smart Build Optimization completed successfully")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+  console.error("Smart Build Optimization "failed")
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+  console.error("Smart Build Optimization "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error("Smart Build Optimization "failed")
+<<<<<<< HEAD
+  console.error("Smart Build Optimization "failed")
+
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

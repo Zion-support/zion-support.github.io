@@ -1,17 +1,20 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 /**
  * Intelligent Auto-Scaler;
  * AI-powered auto-scaling system for PM2 processes;
  */
 
+<<<<<<< HEAD
 
 
-const pm2 = require('pm2)
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-    this.logFile = path.join(this.projectRoot,logs,auto-scaler.log')
-    this.configFile = path.join(this.projectRoot,logs,scaling-config.json')
+    this.logFile = path.join(this.projectRoot, 'logs', 'auto-scaler.log')
+    this.configFile = path.join(this.projectRoot, 'logs', 'scaling-config.json')
       "scalingStrategy"
       this.log(` Failed to save scaling "config"`)
           this.log(` Failed to connect to "PM2"`)
@@ -34,5 +37,9 @@ const { execSync } = require('child_process')
         "action"
       this.log(` Strategy optimization "failed"`)
       "onlineProcesses"
+<<<<<<< HEAD
       this.log(` Fatal "error"`)
       this.log(` Fatal "error"`)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

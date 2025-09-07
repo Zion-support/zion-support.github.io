@@ -1,97 +1,119 @@
 
 
-
-
-
-import {Button} from "@/components/ui/button";""
-import {Loader2} from "lucide-react";""
-import {NavigationButtonsProps} from "./types";""
-import {Button} from "@/components/ui/button";""
-import {Loader2} from "lucide-react";""
-import {NavigationButtonsProps} from "./types";"
-export const NavigationButtons = ({;
+import {Button} from "@/components/ui/button";"
+import {Loader2} from "lucide-react";"
+import {NavigationButtonsProps} from "./types";export const NavigationButtons = ({;"
+  }
   onBack;
   onNext;
-  isNextDisabled = false;"
-  backLabel = "Back";""
-  nextLabel = "Next";""
-import { Button } from "@/components/ui/button",""
-import { Loader2 } from "lucide-react",""
+  isNextDisabled = false;
+  backLabel = "Back";"
+  nextLabel = "Next";"
+import { Loader2 } from "lucide-react","
 import { NavigationButtonsProps } from "./types","
-export const NavigationButtons = ({
+
+import { Button } from "@/components/ui/button","
+import { Loader2 } from "lucide-react","
+import { NavigationButtonsProps } from "./types","
+import { Button } from "@/components/ui/button","
+import { Loader2 } from "lucide-react","
+import { NavigationButtonsProps } from "./types","
   onBack,
   onNext,
-  isNextDisabled = false,"
-  backLabel = "Back",""
-  nextLabel = "Next",")
+  isNextDisabled = false,
+  backLabel = "Back","
+  nextLabel = "Next","
   isLoading = false}: NavigationButtonsProps) => {
-  return ("
+}
+return (;
     <div className="flex justify-between">"
-</div>"
-        <Button variant="outline" onClick={onBack}>"
-</Button>"
+      {onBack && (
+        <Button variant="outline" onClick={onBack}>  isLoading = false}: NavigationButtonsProps) => {;"
+}
+return (;
     <div className="flex justify-between">;"
-</div>"
+      {onBack && (;
         <Button variant="outline" onClick={onBack}>;"
-</Button>
+
+          {backLabel}
         </Button>;
+      )}
+
+      {onNext && (;
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
-</Button>"
+  isLoading = false}: NavigationButtonsProps) => {;
+  }
+  return (;
     <div className="flex justify-between">;"
-</div>"
+      {onBack && (;
         <Button variant="outline" onClick={onBack}>;"
-</Button>
+          {backLabel}
         </Button>;
+      )}
+      {onNext && (
         <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
-</Button>
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
-</Button>"
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
-</Loader2>
-
+          {nextLabel}
         </Button>
+      )}
     </div>
-    </div>;
-        </Button>;
+  )
+}
 
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
-</Button>
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
-</Button>"
-          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
-</Loader2>
-        </Button>;
     </div>;
-    </div>;"
-    <div className="flex justify - between">;"
-</div>"
+  );
+          {backLabel}
+        </Button>;
+      )}
+
+      {onNext && (;
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+      {onNext && (
+
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
+
+          {nextLabel}
+        </Button>;
+      )}
+
+    </div>;
+  );
+    </div>;
+  )
+};
+import { Button } from '@/components / ui / button';'
+import { Loader2 } from './lucide-react';'
+import { NavigationButtonsProps } from './types';'
+export const NavigationButtons = ({
+  }
+  on_back;
+  on_next;
+  isNextDisabled = false;
+  back_label = "Back";"
+  next_label = "Next";"
+  is_loading = false}: NavigationButtonsProps) =>: any {
+}
+return (;
+    <div className="flex justify-between">;"
+      {on_back && (
         <Button variant="outline" on_click={on_back}>;"
-</Button>)
+          {back_label}
         </Button>)}
+      {on_next && (
         <Button on_click={on_next} disabled={isNextDisabled || is_loading}>;
-</Button>"
-          {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}"
-</Loader2>
+          {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />}"
+          {next_label}
         </Button>)}
     </div>);
-    </div>;"
-  return (<div className="flex justify-between" > {"
-</div>"
-  onBack && (<Button variant="outline" onClick= {"
-  onBack;
-}> {
-</Button>)
-}</Button>) 
-  onNext && (<Button onClick= {
-  onNext;
-}disabled= {
-  isNextDisabled || isLoading;
-}> {
-</Button>"
-  isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />"
-</Loader2>)
-}</div>) 
-    </div>
-    </div>;
-    </div>;"
-
+}
+;
+import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
+import { NavigationButtonsProps } from "./types";
+export const NavigationButtons = $2;
+  onNext,
+  isNextDisabled = $2;
+  backLabel = $2;
+  nextLabel = $2;
+  isLoading = $2;

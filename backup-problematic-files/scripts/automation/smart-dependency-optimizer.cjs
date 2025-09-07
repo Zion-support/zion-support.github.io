@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -24,8 +24,8 @@ const crypto = require("crypto")
       this.log( Smart Dependency Optimization "completed": ${appliedOpts.length} optimizations applied")
       return { "optimizations"}
   this.log( "Smart Dependency Optimization "failed": ${error.message  }",ERROR")
-  this.log( `Smart Dependency Optimization "failed": ${error.message}",ERROR"`)"
-  this.log(` Analyzing dependency usage patterns...``)"
+  this.log( `Smart Dependency Optimization "failed": ${error.message}",ERROR"`)
+  this.log(` Analyzing dependency usage patterns...``)
   "direct"
       "indirect"
       "unused"
@@ -38,7 +38,7 @@ const crypto = require("crypto")
             "usageCount"
             "files"
             "lastUsed"
-  this.log(`Dependency usage analysis "failed": ${error.message  }, "ERROR"`)
+  this.log(`Dependency usage analysis "failed": ${error.message  }`, "ERROR"`)
   const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
   const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
   const fullPath = path.join(this.projectRoot, ")
@@ -48,7 +48,7 @@ const crypto = require("crypto")
   const content = fs.readFileSync(file, "utf8")
         const lines = content.split("\n")
   if (line.includes("import") && line.includes("from")
-  const importMatch = line.match(/from\s+[]([^]+)[]
+  const importMatch = line.match(/from\s+[""]([^""]+)[""]
               if (packageName && !packageName.startsWith(".")
   "count"
                     "files"
@@ -64,7 +64,7 @@ const crypto = require("crypto")
   "mostUsed"
       "recentlyUsed"
       "rarelyUsed"
-      ([, "a"], [, "b")]
+      (["", "a"], ["", "b")]
     patterns.mostUsed = sortedByUsage.slice(0, 10).map((["pkg", "data")]
   "package"
       "usageCount"
@@ -100,7 +100,7 @@ const crypto = require("crypto")
             "suggestion": "Consider using package resolution to avoid duplicates"
   this.log(Dependency conflict analysis "failed": ${error.message  }")
         "ERROR"
-    const traverse = (deps, path = )
+    const traverse = (deps, path = "")
   const traverse = (deps, path = ")
   Object.keys(deps).forEach(pkg => {const fullPath = path ? "${path}.${pkg}")
           "path"
@@ -115,7 +115,7 @@ const crypto = require("crypto")
   "type": "MISSING_PEER_DEPENDENCY"
               "package"
               "required"
-              "severity": "HIGH","suggestion": `Install ${peerDep}@${requiredVersion} as a dependency;
+              "severity": "HIGH","suggestion": `Install ${peerDep}@${requiredVersion} as a dependency
         "package.json"
         this.projectRoot,node_modules"
         "package.json"
@@ -129,14 +129,14 @@ const crypto = require("crypto")
             "latest"
             "severity": "LOW"
             "suggestion": Consider updating to latest version for security and features"
-  this.log(`Outdated dependency check "failed": ${error.message  }, "ERROR"`)
+  this.log(`Outdated dependency check "failed": ${error.message  }`, "ERROR"`)
   "package"
             "current"
             "latest"
             "severity": "LOW"
             "suggestion": Consider updating to latest version for security and features"
-  this.log(`Outdated dependency check "failed": ${error.message}, "ERROR"`)
-    const versionParts = currentVersion.replace(/^[\^~]/, ).split(".")
+  this.log(`Outdated dependency check "failed": ${error.message}`, "ERROR"`)
+    const versionParts = currentVersion.replace(/^[\^~]/, "").split(".")
   this.log("� Analyzing bundle impact...")
   "totalSize"
       "largestPackages"
@@ -146,12 +146,12 @@ const crypto = require("crypto")
             "severity": "MEDIUM"
             "message": "Bundle size is large"
             "suggestion": Consider code splitting, tree shaking, and removing unused dependencies"
-    } catch (error) {  this.log(`Bundle impact analysis "failed": ${error.message  }, "ERROR"`)
+    } catch (error) {  this.log(`Bundle impact analysis "failed": ${error.message  }`, "ERROR"`)
   "totalSize"
       "largestPackages"
   const distPath = path.join(this.projectRoot, "dist")
   const distPath = path.join(this.projectRoot, "dist")
-    } catch (error) {  this.log(`Bundle size analysis "failed": ${error.message  }, "ERROR"`)
+    } catch (error) {  this.log(`Bundle size analysis "failed": ${error.message  }`, "ERROR"`)
   const fullPath = path.join(directory, ")
     usageAnalysis"
     usageAnalysis"
@@ -204,8 +204,8 @@ const crypto = require("crypto")
   this.log(Safe optimization application "failed": ${error.message  }")
         "
   this.log(Safe optimization application "failed": ${error.message}")
-        "ERROR
-        if (dep.type === `devDependency``)"
+        "ERROR"
+        if (dep.type === `devDependency``)
   try {execSync("npm uninstall ${dep.name}")
   "cwd"
               "stdio": "pipe"
@@ -216,7 +216,7 @@ const crypto = require("crypto")
       "installTimeReduction"
       "buildTimeReduction"
       "dependencyCountReduction"
-  // Measure bundle size before/after
+  // Measure bundle size ""before/after""
       if (fs.existsSync("dist")
         .filter(opt => opt.type === "REMOVE_UNUSED")
   this.log(" Measuring optimization results...")
@@ -249,5 +249,9 @@ this.log(` Optimization Report "generated"`)
 this.log(" Smart Dependency Optimization completed successfully")
       this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
+<<<<<<< HEAD
         ` Smart Dependency Optimization "failed": ${error.message}"
         ` Smart Dependency Optimization "failed": ${error.message}"
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

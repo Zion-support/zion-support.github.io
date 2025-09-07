@@ -1,6 +1,36 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+#!/usr/bin/env node;
+const fs = require("child_process");
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+#!/usr/bin/env node;
+const fs = require("child_process");
+
+#!/usr/bin/env node;
+const fs = require("child_process");
+#!/usr/bin/env node;
+const fs = require("child_process");
+const path = require("path");
+#!/usr/bin/env node;
+const fs = require("child_process");
+#!/usr/bin/env node;
+const fs = require("child_process");
 
 
-const path = require("path");"
+
 class FileRestorer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -15,9 +45,7 @@ class FileRestorer {}
       // Fix common corruption patterns;
       let fixedContent = content;
         // Remove extra semicolons and quotes at end of lines;"
-        .replace(/;"$/gm, );
-        .replace(/;"$/gm, );
-        .replace(/;$/gm, );"
+
         // Fix unterminated strings;"
         .replace(/from "([^"]*);$/gm, "from "$1);
         .replace(/from "([^"]*);$/gm, "from "$1);"
@@ -47,13 +75,7 @@ class FileRestorer {}
       // Only write if content actually changed;
       if (fixedContent !== content) {}"
         fs.writeFileSync(filePath, fixedContent, "utf8");"
-        this.fixedFiles.push(filePath);"
-        this.log(`[SUCCESS] Restored corrupted "file": ${filePath});"
-        return true};
-      return false} catch (error) {}"
-      this.errors.push({ "file": filePath, "error": error.message }")
-});
-      this.log(`[ERROR] Failed to restore ${filePath}: ${error.message});
+
       return false};
   };
   async findCorruptedFiles(dir) {}
@@ -65,7 +87,6 @@ class FileRestorer {}
         const stat = fs.statSync(fullPath);"
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {}
           scanDir(fullPath)} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".jsx") || item.endsWith(".ts") || item.endsWith(".js"))) {}"
-          try {}"
             const content = fs.readFileSync(fullPath, "utf8");"
             // Check for corruption patterns;"
             if (content.includes(";) ||
@@ -76,15 +97,12 @@ class FileRestorer {}
               corruptedFiles.push(fullPath)};
           } catch (error) {}"
             // Skip files that can"t be read};"
-        };
-      };
-    };
     scanDir(dir);
     return corruptedFiles};
   async restoreCorruptedFiles() {}"
     this.log("[INFO] Starting file restoration process");"
     // Find corrupted files;
-    const corruptedFiles = await this.findCorruptedFiles(this.projectRoot);
+    const corruptedFiles = await this.findCorruptedFiles(this.projectRoot);`;
     this.log(`[INFO] Found ${corruptedFiles.length} potentially corrupted files`);
     if (corruptedFiles.length === 0) {}"
       this.log("[INFO] No corrupted files found");"
@@ -101,13 +119,44 @@ class FileRestorer {}
       errors: this.errors};"
     const reportPath = path.join(this.projectRoot, "file-restoration-report.json");"
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));"
-    this.log("[SUCCESS] File restoration completed");
-    this.log(`[INFO] "Summary": ${this.fixedFiles.length} files restored, ${this.errors.length} errors`);"
-    this.log(`[INFO] Report saved to ${reportPath})};
-};
+
 // Main execution;
 if (require.main === module) {}
   const restorer = new FileRestorer();
   restorer.restoreCorruptedFiles().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-"
+module.exports = FileRestorer;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+module.exports = FileRestorer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = FileRestorer;
+<<<<<<< HEAD
+module.exports = FileRestorer;
+
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

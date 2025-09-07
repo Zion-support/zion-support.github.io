@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 /**;
  * Automation Enhancer Script;
  * Enhances existing automation scripts and creates new ones;
@@ -13,7 +13,7 @@ const path = require("path")
     const ecosystemPath = path.join(this.projectRoot, "ecosystem.config.cjs")
       const ecosystem = fs.readFileSync(ecosystemPath, "utf8")
         /"pmx"
-        pmx"
+        ""pmx"
       "health_check_grace_period"
       "health_check_fatal_exceptions"
       "kill_timeout"
@@ -87,5 +87,9 @@ const path = require("path")
       "timestamp"
       "enhancements"
       "totalEnhancements"
+<<<<<<< HEAD
     const reportPath = path.join(this.projectRoot, ")
     const reportPath = path.join(this.projectRoot, ")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

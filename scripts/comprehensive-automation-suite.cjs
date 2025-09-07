@@ -1,8 +1,12 @@
-#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-  console.log(' Starting Comprehensive Automation Suite...)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+  console.log(' Starting Comprehensive Automation Suite...')
     "overallStatus"
       "status"
           "status"
@@ -10,37 +14,37 @@ const { execSync } = require('child_process')
 // console.log(`   - "Successful"`)
     console.log(`   - "Failed"`)
       "name"
-        execSync('npm install, { "stdio"})
+        execSync('npm install', { "stdio"})
       "name"
-        execSync('node automation/health-check.cjs, { "stdio"})
+        execSync('node automation/health-check.cjs', { "stdio"})
         return { "healthStatus"}
       "name"
-        execSync('node automation/security-scanner.cjs, { "stdio"})
+        execSync('node automation/security-scanner.cjs', { "stdio"})
         return { "securityStatus"}
       "name"
-        execSync('node scripts/fix-syntax-errors.cjs, { "stdio"})
+        execSync('node scripts/fix-syntax-errors.cjs', { "stdio"})
       "name"
-        execSync('npx tsc --noEmit, { "stdio"})
+        execSync('npx tsc --noEmit', { "stdio"})
       "name"
-        execSync('npm run lint, { "stdio"})
+        execSync('npm run lint', { "stdio"})
       "name"
-        execSync('node scripts/advanced-app-optimizer.cjs, { "stdio"})
+        execSync('node scripts/advanced-app-optimizer.cjs', { "stdio"})
       "name"
-        execSync('npm run build, { "stdio"})
+        execSync('npm run build', { "stdio"})
       "name"
-          execSync('npm test, { "stdio"})
+          execSync('npm test', { "stdio"})
           return { "testsPassed": false, "message"}
       "name"
-        execSync('node scripts/performance-monitor.cjs, { "stdio"})
+        execSync('node scripts/performance-monitor.cjs', { "stdio"})
       "name"
-        execSync('node scripts/smart-deployment-automation.cjs, { "stdio"})
+        execSync('node scripts/smart-deployment-automation.cjs', { "stdio"})
       "name"
-          execSync('pm2 status, { "stdio"})
+          execSync('pm2 status', { "stdio"})
           return { "pm2ProcessesRunning": false, "message"}
       "name"
-        execSync('node scripts/code-quality-monitor.cjs, { "stdio"})
+        execSync('node scripts/code-quality-monitor.cjs', { "stdio"})
       "name"
-        execSync('node scripts/dependency-updater.cjs, { "stdio"})
+        execSync('node scripts/dependency-updater.cjs', { "stdio"})
       "name"
         "type"
         "type"
@@ -49,3 +53,41 @@ const { execSync } = require('child_process')
         "type"
         "message"
     console.log('\n "Recommendations")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+    console.error(' Automation suite "failed")
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+    console.error(' Automation suite "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    console.error(' Automation suite "failed")
+<<<<<<< HEAD
+    console.error(' Automation suite "failed")
+
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
@@ -7,13 +7,13 @@ const { execSync } = require("child_process")
     this.log(" Analyzing bundle size...")
     const buildDir = path.join(this.projectRoot, ".next")
     const analysis = {"buildExists": fs.existsSync(buildDir),"totalSize": 0,"staticSize"}
-        const totalSizeOutput = execSync(`du -sh ${buildDir}, { "encoding": "utf8"`})
+        const totalSizeOutput = execSync(`du -sh ${buildDir}`, { "encoding": "utf8"`})
         analysis.totalSize = totalSizeOutput.split("\t")
         const staticDir = path.join(buildDir, "static")
-          const staticSizeOutput = execSync(`du -sh ${staticDir}, { "encoding": "utf8"`})
+          const staticSizeOutput = execSync(`du -sh ${staticDir}`, { "encoding": "utf8"`})
           analysis.staticSize = staticSizeOutput.split("\t")
         const serverDir = path.join(buildDir, "server")
-          const serverSizeOutput = execSync(`du -sh ${serverDir}, { "encoding": "utf8"`})
+          const serverSizeOutput = execSync(`du -sh ${serverDir}`, { "encoding": "utf8"`})
           analysis.serverSize = serverSizeOutput.split("\t")
     const staticDir = path.join(buildDir, "static", "chunks")
         if (file.endsWith(".js")
@@ -40,7 +40,7 @@ const { execSync } = require("child_process")
       if (lines > 150 && content.includes("export default") && content.includes("function") || content.includes("const") && content.includes("=")
         analysis.largeComponents.push({"file": path.relative(this.projectRoot, filePath),"lines"}
       if (content.includes("import") && content.includes("from") && !content.includes("import(")
-        const importMatches = content.match(/import\s+.*\s+from\s+[][^]+[)]
+        const importMatches = content.match(/import\s+.*\s+from\s+[""][^""]+["")]
           analysis.potentialSplits.push({"file": path.relative(this.projectRoot, filePath),"imports"}
     this.log(" Generating optimization recommendations...")
         recommendations.push({"type": "bundle-size","priority": "high","message": "Large JavaScript chunks detected. Consider code splitting and lazy loading."})
@@ -66,5 +66,9 @@ const { execSync } = require("child_process")
     console.log(`⚡ Lazy "components"`)
     console.log(` Optimization "recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
+<<<<<<< HEAD
       console.log("\n� High Priority "Optimizations")
       console.log("\n� High Priority "Optimizations")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,0 +1,24 @@
+export default async function handler() {const healthCheck = {"uptime": process.uptime(),"message": OK,"timestamp": Date.now(),"environment": 'process.env.NODE_ENV',"version": process.env.npm_package_version || '1.0.0';
+  }
+  try {// Add any additional health checks here;
+    // e.g., database connectivity, external API calls, etc.;
+    res.status(200).json(healthCheck)} catch {healthCheck.message = 'ERROR';
+    res.status(503).json(healthCheck)}
+export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: 'OK',timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
+export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
+export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
+export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
+export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
+export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
+export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
+export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
+export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
+export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

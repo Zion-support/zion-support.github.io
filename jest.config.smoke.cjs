@@ -1,66 +1,120 @@
 const nextJest = require('next/jest');
+
 const createJestConfig = nextJest({
-  dir: ./,
+  dir: './'
 });
 
-// Add any custom config to be passed to Jest
-const customJestConfig = {
+const config = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
-  testMatch: [
-    '**/__tests__/**/*.(js|jsx|ts|tsx)',
-    '**/*.(test|spec).(js|jsx|ts|tsx)'
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  testMatch: ['**/*.smoke.test.*'],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/$1',
+  },
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+  },
+  collectCoverageFrom: [
+    '**/*.{ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!**/.next/**',
   ],
   testPathIgnorePatterns: [
-    '/node_modules/',
-    '/src_backup/',
-    '/src_backup_temp/',
-    '/backup-problematic-files/',
-    '/src.disabled/',
-    '/pages_backup/',
-    '/corrupted-files-backup/',
-    '/lib_backup/',
-    '/components.disabled/',
-    '/components.disabled_full/',
-    '/pages.disabled/',
-    '/src.pages.disabled/',
-    '/recovered-branches/',
-    '/temp_backup/',
-    '/api.disabled/',
-    '/src.broken/',
-    '/src.corrupted/',
-    '/pages.broken/',
-    '/pages.corrupted/',
-    '/components.broken/',
-    '/components.corrupted/'
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+    '<rootDir>/build/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/temp_exclude/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/temp_backup/',
+    '<rootDir>/temp_components/',
+    '<rootDir>/temp_conflicts/',
+    '<rootDir>/temp_working/',
+    '<rootDir>/backup*/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/temp_*/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-website/',
+    '<rootDir>/zion-ai-assistant/',
+    '<rootDir>/zion_academy/',
+    '<rootDir>/apps/',
+    '<rootDir>/pages_backup*/',
+    '<rootDir>/pages.*/',
+    '<rootDir>/pages-*/',
+    '<rootDir>/pages_disabled*/',
+    '<rootDir>/pages.disabled*/',
+    '<rootDir>/pages.broken*/',
+    '<rootDir>/pages.corrupted*/',
+    '<rootDir>/pages.old*/',
+    '<rootDir>/pages._*/',
+    '<rootDir>/pages.__*/',
+    '<rootDir>/backup-pages/',
+    '<rootDir>/src.pages.disabled/',
+    '<rootDir>/lib_backup*/',
+    '<rootDir>/corrupted-files-backup*/',
+    '<rootDir>/performance-reports*/',
+    '<rootDir>/log-analysis-reports*/',
+    '<rootDir>/link-reports*/',
+    '<rootDir>/lint-target*/',
+    '<rootDir>/monitoring*/',
+    '<rootDir>/pm2-automation*/',
+    '<rootDir>/automation/logs*/',
+    '<rootDir>/automation/backup*/'
   ],
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/**/*.stories.{js,jsx,ts,tsx}',
+  modulePathIgnorePatterns: [
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/temp_exclude/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/temp_backup/',
+    '<rootDir>/temp_components/',
+    '<rootDir>/temp_conflicts/',
+    '<rootDir>/temp_working/',
+    '<rootDir>/backup*/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/temp_*/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-website/',
+    '<rootDir>/zion-ai-assistant/',
+    '<rootDir>/zion_academy/',
+    '<rootDir>/apps/',
+    '<rootDir>/pages_backup*/',
+    '<rootDir>/pages.*/',
+    '<rootDir>/pages-*/',
+    '<rootDir>/pages_disabled*/',
+    '<rootDir>/pages.disabled*/',
+    '<rootDir>/pages.broken*/',
+    '<rootDir>/pages.corrupted*/',
+    '<rootDir>/pages.old*/',
+    '<rootDir>/pages._*/',
+    '<rootDir>/pages.__*/',
+    '<rootDir>/backup-pages/',
+    '<rootDir>/src.pages.disabled/',
+    '<rootDir>/lib_backup*/',
+    '<rootDir>/corrupted-files-backup*/',
+    '<rootDir>/performance-reports*/',
+    '<rootDir>/log-analysis-reports*/',
+    '<rootDir>/link-reports*/',
+    '<rootDir>/lint-target*/',
+    '<rootDir>/monitoring*/',
+    '<rootDir>/pm2-automation*/',
+    '<rootDir>/automation/logs*/',
+    '<rootDir>/automation/backup*/'
   ],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+  coverageThreshold: {
+    global: {
+      branches: 70,
+      functions: 70,
+      lines: 70,
+      statements: 70
+    }
   },
-  testMatch: [<rootDir>/__tests__/**/*.smoke.(js|jsx|ts|tsx),<rootDir>/**/*.smoke.test.(js|jsx|ts|tsx),
-  ],
-  testPathIgnorePatterns: [<rootDir>/node_modules/,<rootDir>/dist/,<rootDir>/build/,<rootDir>/backup-problematic-files/,<rootDir>/temp_exclude/,<rootDir>/src_backup/,<rootDir>/temp_backup/,<rootDir>/temp_components/,<rootDir>/temp_conflicts/,<rootDir>/temp_working/,<rootDir>/backup*/,<rootDir>/corrupted_backup/,<rootDir>/temp_*/,
-  ],
-  collectCoverageFrom: [src/**/*.{js,jsx,ts,tsx},!src/**/*.d.ts,!src/**/*.stories.{js,jsx,ts,tsx},
-  ],
-  coveragePathIgnorePatterns: [<rootDir>/node_modules/,<rootDir>/.next/,<rootDir>/dist/,<rootDir>/build/,
-  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  verbose: true,
+  collectCoverage: false,
+  testTimeout: 30000
 };
 
 module.exports = createJestConfig(config);
-module.exports = {
-  preset: ts-jest,
-  testEnvironment: jsdom,
-  roots: [<rootDir>/src],
-  testMatch: [**/__tests__/**/*.smoke.+(ts|tsx|js),**/*.smoke.(test|spec).+(ts|tsx|js)],
-  transform: {^.+\\.(ts|tsx)$: ts-jest},
-  setupFilesAfterEnv: [<rootDir>/src/setupTests.ts],
-  moduleNameMapping: {^@/(.*)$: <rootDir>/src/$1},
-  testTimeout: 30000,
-  passWithNoTests: true
-};
+

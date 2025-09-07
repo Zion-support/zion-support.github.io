@@ -2,26 +2,25 @@
 const { execSync } = require('child_process');
 const fs = require('fs')
 class HealthMonitor {
-  // TODO: Implement
-}
   constructor() {
-    this.checks = [{ "name": Memory Usage, "command": free -h},
-      { "name": Disk Space, "command": df -h},
-      { "name": Process Status, "command": ps aux | grep node}]
+    this.checks = [{ "name": 'Memory Usage', "command": 'free -h' },
+      { "name": 'Disk Space', "command": 'df -h' },
+      { "name": 'Process Status', "command": 'ps aux | grep node' }
     ]}
   async runChecks() {
     
     for (const check of this.checks) {
       try {
-  // TODO: Implement
-}
-        const result = execSync(check.command, { "encoding": utf8};);
-        const result = execSync(check.command, { encoding: utf8});
-        console.log(`✅ ${check.name}:\n${result})} catch (error) {
-        console.log(`❌ ${check.name}: ${error.message})}
+        const result = execSync(check.command, { "encoding": 'utf8' };);
+        const result = execSync(check.command, { encoding: 'utf8' });
+        console.log(`✅ ${check.name}:\n${result}`)} catch (error) {
+        console.log(`❌ ${check.name}: ${error.message}`)}
     }
   }
 }
+<<<<<<< HEAD
 new HealthMonitor().runChecks();
 new HealthMonitor().runChecks();
-'
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

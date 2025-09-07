@@ -89,8 +89,8 @@ if (document.readyState === "loading")
     return { "success": true, "file": "public/analytics.js"}
     this.log(" Creating error handling system...")
     const errorHandlingScript = "
-  "handleError": (error, context = )
-    console.error("Error "occurred": ", error, Context": ")
+  "handleError": (error, context = "")
+    console.error("Error "occurred": ", error, ""Context": ")
     if (typeof Sentry !== "undefined")
       Sentry.captureException(error, { "extra"})
     this.showErrorMessage("Something went wrong. Please try again.")
@@ -123,5 +123,9 @@ if (document.readyState === "loading")
       this.log(` App Improvement Automation "failed"`)
 // console.log(" App improvement automation completed successfully")
     console.log(" "Report": ")
+<<<<<<< HEAD
     console.error(" App improvement automation "failed": ")
     console.error(" App improvement automation "failed": ")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,10 +1,10 @@
-#!/usr/bin/env
+#!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 console.log(" Starting continuous performance monitoring automation...")
 // Get automation interval from environment variable ("default")
-    console.log(� Building project for performance analysis...")
+    console.log(""� Building project for performance analysis...")
     execSync("npm run build", { "stdio": "inherit"})
 "
     // Build the project first"
@@ -65,12 +65,16 @@ console.log(" Running Lighthouse performance tests...")
             "size"
   // Skip directories that can"
   // Skip directories that can"
-process.on("SIGINT")"
-// console.log(`� Received SIGINT, shutting down gracefully...``)"
+process.on("SIGINT")
+// console.log(`� Received SIGINT, shutting down gracefully...``)
   console.log( Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
   console.error(" Failed to start continuous performance "monitoring")
   console.error(" Failed to start continuous performance "monitoring")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

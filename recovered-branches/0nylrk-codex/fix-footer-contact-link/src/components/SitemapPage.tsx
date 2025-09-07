@@ -1,170 +1,184 @@
-
-import React from "react";""
-import { completeSitemap, dynamicPaths } from "@/config/sitemap";""
-import { Link } from "react-router-dom";""
-import { ChevronRight } from "lucide-react";""
-import { SEO } from "./SEO";""
-import { AppLayout } from "@/layout/AppLayout";"
-export const SitemapPage: React.FC = () => {
-  return (
+import React from './react';'
+import { complete_sitemap, dynamic_paths  } from '@/config / sitemap';'
+import { Link  } from './react-router-dom';'
+import { ChevronRight  } from './lucide-react';'
+import { SEO  } from './SEO';'
+import { AppLayout  } from '@/layout / AppLayout';'
+export const "SitemapPage": React.FC = () => {
+}
+import React from 'react';'
+import {completeSitemap, dynamicPaths} from '@/config/sitemap';'
+import {Link} from 'react-router-dom';'
+import {ChevronRight} from 'lucide-react';'
+import {SEO} from './SEO';'
+import {AppLayout} from '@/layout/AppLayout';'
+import React from 'react','
+import { completeSitemap, dynamicPaths } from '@/config/sitemap','
+import { Link } from 'react-router-dom','
+import { ChevronRight } from 'lucide-react','
+import { SEO } from './SEO','
+import { AppLayout } from '@/layout/AppLayout',  return ('
     <AppLayout>
-</AppLayout>
-      <SEO;"
-        title="Sitemap | Zion AI Marketplace"""
-        description="Complete sitemap of the Zion AI Marketplace"""
-        keywords="sitemap, zion, ai marketplace, navigation"""
-        canonical="https://app.ziontechgroup.com/sitemap-page""
-      />
-</SEO>"
+      <SEO,
+title="Sitemap | Zion AI Marketplace""
+        description="Complete sitemap of the Zion AI Marketplace""
+        keywords="sitemap, zion, ai marketplace, navigation""
+        canonical=""https"://app.ziontechgroup.com/sitemap-page"" />
       <div className="container mx-auto px-4 py-12">"
-</div>"
-        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>""
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"
-</div>"
+        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>"
+        <div className="grid "md":grid-cols-2 "lg":grid-cols-3 gap-8">"
+          {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">"
-</div>"
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">"
-</h2>
-            </h2>"
+              Public Pages
+            </h2>
             <ul className="space-y-2">"
-</ul>
+              {completeSitemap
+                .filter((route) => !route.requiredAuth)
+                .map((route) => (
                   <li key={route.path}>
-</li>
-                    <Link;
-                      to={route.path}"
-                      className="flex items-center hover:text-zion-purple""
+                    <Link,
+to={route.path}
+                      className="flex items-center "hover":text-zion-purple""
                     >
-</Link>"
                       <ChevronRight className="h-4 w-4 mr-2" />"
-</ChevronRight>
-
+                      {route.label}
                     </Link>
                   </li>
+                ))}
             </ul>
-
-          </div>"
+          </div>
+          {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">"
-</div>"
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">"
-</h2>
-            </h2>"
+              Talent Pages
+            </h2>
             <p className="text-sm text-zion-slate mb-4">"
-</p>
-            </p>"
+              Requires talent or creator account
+            </p>
             <ul className="space-y-2">"
-</ul>
+              {completeSitemap
+                .filter(
+                  (route) =>
+                    }
+                    route.requiredRoles?.includes("jobSeeker") ||"
+                    route.requiredRoles?.includes("creator"),"
+                )
+                .map((route) => (
                   <li key={route.path}>
-</li>
-                    <Link;
-                      to={route.path}"
-                      className="flex items-center hover:text-zion-purple""
+                    <Link,
+to={route.path}
+                      className="flex items-center "hover":text-zion-purple""
                     >
-</Link>"
                       <ChevronRight className="h-4 w-4 mr-2" />"
-</ChevronRight>
-
+                      {route.label}
                     </Link>
                   </li>
+                ))}
             </ul>
-
-          </div>"
+          </div>
+          {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">"
-</div>"
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">"
-</h2>
-            </h2>"
+              Client Pages
+            </h2>
             <p className="text-sm text-zion-slate mb-4">"
-</p>
-            </p>"
+              Requires employer or buyer account
+            </p>
             <ul className="space-y-2">"
-</ul>
+              {completeSitemap
+                .filter(
+                  (route) =>
+                    }
+                    route.requiredRoles?.includes("employer") ||"
+                    route.requiredRoles?.includes("buyer"),"
+                )
+                .map((route) => (
                   <li key={route.path}>
-</li>
-                    <Link;
-                      to={route.path}"
-                      className="flex items-center hover:text-zion-purple""
+                    <Link,
+to={route.path}
+                      className="flex items-center "hover":text-zion-purple""
                     >
-</Link>"
                       <ChevronRight className="h-4 w-4 mr-2" />"
-</ChevronRight>
-
+                      {route.label}
                     </Link>
                   </li>
+                ))}
             </ul>
-
-          </div>"
+          </div>
+          {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">"
-</div>"
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">"
-</h2>
-            </h2>"
+              Authenticated User Pages
+            </h2>
             <p className="text-sm text-zion-slate mb-4">"
-</p>
-            </p>"
+              Requires any account type
+            </p>
             <ul className="space-y-2">"
-</ul>
+              {completeSitemap
+                .filter(
+                  (route) =>
+                    }
+                    route.requiredAuth &&
+                    (!route.requiredRoles |route.requiredRoles.length === 0)
+                )
+                .map((route) => (
                   <li key={route.path}>
-</li>
-                    <Link;
-                      to={route.path}"
-                      className="flex items-center hover:text-zion-purple""
+                    <Link,
+to={route.path}
+                      className="flex items-center "hover":text-zion-purple""
                     >
-</Link>"
                       <ChevronRight className="h-4 w-4 mr-2" />"
-</ChevronRight>
-
+                      {route.label}
                     </Link>
                   </li>
+                ))}
             </ul>
-
-          </div>"
+          </div>
+          {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">"
-</div>"
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">"
-</h2>
-            </h2>"
+              Admin Pages
+            </h2>
             <p className="text-sm text-zion-slate mb-4">"
-</p>
-            </p>"
+              Requires admin account
+            </p>
             <ul className="space-y-2">"
-</ul>
+              {completeSitemap
+                .filter((route) => route.requiredRoles?.includes("admin"))"
+                .map((route) => (
                   <li key={route.path}>
-</li>
-                    <Link;
-                      to={route.path}"
-                      className="flex items-center hover:text-zion-purple""
+                    <Link,
+to={route.path}
+                      className="flex items-center "hover":text-zion-purple""
                     >
-</Link>"
                       <ChevronRight className="h-4 w-4 mr-2" />"
-</ChevronRight>
-
+                      {route.label}
                     </Link>
                   </li>
+                ))}
             </ul>
-
-          </div>"
+          </div>
+          {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">"
-</div>"
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">"
-</h2>
-            </h2>"
+              Dynamic Pages
+            </h2>
             <p className="text-sm text-zion-slate mb-4">"
-</p>
-            </p>"
+              Pages with dynamic parameters
+            </p>
             <ul className="space-y-2">"
-</ul>
+              {Object.entries(dynamicPaths).map(([key, path]) => (
                 <li key={key}>
-</li>"
                   <div className="flex items-center text-zion-slate">"
-</div>"
                     <ChevronRight className="h-4 w-4 mr-2" />"
-</ChevronRight>)"
                     {path} <span className="ml-2 text-xs italic">({key})</span>"
                   </div>
                 </li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
-    </AppLayout>"
+              ))}
+            </ul>;
+          </div>;
+        </div>;
+      </div>;  )
+}
+}

@@ -1,23 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const session = getSessionFromReq(req);
-  const isInternal = isInternalAgentRequest(req);
-  
-  const status = {
-    authenticated: !!session,
-    isInternal,
-    timestamp: new Date().toISOString()
-  };
 
-  const insights = {
-    uptime: process.uptime(),
-    memory: process.memoryUsage(),
-    version: process.version
-  };
+import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';'
 
-  res.status(200).json({ status, insights });
+export default function handler() {
+  }
+  const session = null;
+  res.status(200).json({ status, insights })
 }

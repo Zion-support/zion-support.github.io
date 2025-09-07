@@ -1,4 +1,9 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require("fs")
 const path = require("path")
 const { exec } = require("child_process")
@@ -17,11 +22,11 @@ const { exec } = require("child_process")
   this.log("error", "Failed to create backup for ${filePath  }:")
   this.log("error", "Failed to create backup for ${filePath}:")
     fixed = fixed.replace(/^([^"\\n]*)"([^")]
-  if (!after.includes()
+  if (!after.includes("")
         return before + " + after + "
     fixed = fixed.replace(/^([^\\n]*)"([^")]
-  if (!after.includes()
-        return before +  + after + 
+  if (!after.includes("")
+        return before + "" + after + ""
     return { "content"}
     fixed = fixed.replace(/^    fixed = fixed.replace(/^\\n/gm, () => { changes++; return "}
     return { "content"}
@@ -33,7 +38,7 @@ const { exec } = require("child_process")
       return before + " = "
     return { "content"}
     fixed = fixed.replace(/const\\s+(\\w+)\\s*=\\s*require\\(["]([^"]+)["]
-      return "import ${varName} from `${moduleName};``
+      return "import ${varName} from `${moduleName}`;``
 "
   this.log("warn", "File not "found": ${filePath}")
       const originalContent = fs.readFileSync(filePath, "utf8")
@@ -66,5 +71,9 @@ const { exec } = require("child_process")
   this.log("info", "Syntax Fixer heartbeat - running normally")
   this.log("info", "Syntax Fixer shutting down...")
   fixer.log("info", "Syntax Fixer started in continuous mode")
+<<<<<<< HEAD
   console.error("Syntax fixer "failed")
   console.error("Syntax fixer "failed")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

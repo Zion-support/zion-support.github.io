@@ -1,115 +1,138 @@
 #!/usr/bin/env node
+
 const { execSync } = require('child_process');
 const fs = require('fs');
+
 console.log('🚀 Starting PR Resolution and Merge Process...\n');
-// Function to run git commands safely;
+
+// Function to run git commands safely
 function runGitCommand(command, description) {
   try {
-  // TODO: Implement
-}
     console.log(`📝 ${description}...`);
-    const result = execSync(command, {
-      encoding: utf8,
-      stdio: pipe,)
+    const result = execSync(command, { 
+      encoding: 'utf8', 
+      stdio: 'pipe',
       cwd: process.cwd()
     });
     console.log(`✅ ${description} completed successfully`);
     return result;
   } catch (error) {
-    console.log(`❌ ${description} failed: ${error.message});
+    console.log(`❌ ${description} failed: ${error.message}`);
     return null;
   }
 }
 
-// Function to check if we can merge a PR;
+// Function to check if we can merge a PR
 function canMergePR(prNumber) {
   try {
-  // TODO: Implement
-}
-    const result = runGitCommand('
-      `curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}"`,"
-      `Checking PR #${prNumber} status`)
+    const result = runGitCommand(
+      `curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}"`,
+      `Checking PR #${prNumber} status`
     );
     
     if (result) {
       const pr = JSON.parse(result);
       return {
-  // TODO: Implement
-}
         number: pr.number,
         title: pr.title,
         mergeable: pr.mergeable,
         mergeable_state: pr.mergeable_state,
         head: pr.head.ref,
         base: pr.base.ref,
-        draft: pr.draft;
+        draft: pr.draft
       };
     }
   } catch (error) {
-    console.log(`❌ Failed to check PR #${prNumber}: ${error.message});
+    console.log(`❌ Failed to check PR #${prNumber}: ${error.message}`);
   }
   return null;
 }
 
-// Function to resolve merge conflicts;
-function resolveMergeConflicts() {"
+// Function to resolve merge conflicts
+function resolveMergeConflicts() {
   console.log('\n🔧 Resolving merge conflicts...\n');
-  // First, let's check current status;
-  runGitCommand('git status,Checking current git status');
-  // Try to merge the latest changes from main;
-  const mergeResult = runGitCommand('git merge origin/main,Merging latest changes from main');
+  
+  // First, let's check current status
+  runGitCommand('git status', 'Checking current git status');
+  
+  // Try to merge the latest changes from main
+  const mergeResult = runGitCommand('git merge origin/main', 'Merging latest changes from main');
+  
   if (mergeResult && mergeResult.includes('CONFLICT')) {
-    console.log('⚠️  Merge conflicts detected. Attempting to resolve...);
-    // Find files with conflicts;
-    const statusResult = runGitCommand('git status --porcelain,Getting conflicted files');
+    console.log('⚠️  Merge conflicts detected. Attempting to resolve...');
+    
+    // Find files with conflicts
+    const statusResult = runGitCommand('git status --porcelain', 'Getting conflicted files');
     if (statusResult) {
-      const conflictedFiles = statusResult;
+      const conflictedFiles = statusResult
         .split('\n')
         .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
         .map(line => line.split(' ').pop());
+      
       console.log(`Found ${conflictedFiles.length} conflicted files:`, conflictedFiles);
       
-      // Try to resolve conflicts automatically;
+      // Try to resolve conflicts automatically
       for (const file of conflictedFiles) {
         if (fs.existsSync(file)) {
           console.log(`🔧 Resolving conflicts in ${file}...`);
           
           try {
-  // TODO: Implement
-}
-            let content = fs.readFileSync(file,utf8);
-            // Remove conflict markers and keep both versions where possible;
-            content = content;
+            let content = fs.readFileSync(file, 'utf8');
+            
+            // Remove conflict markers and keep both versions where possible
+            content = content
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
               .replace(/
+              .replace(/<<<<<<< [^\n]+\n/g, '')
               .replace(/
+=======
+              .replace(/[^\n]+\n/g, '')
+              .replace(/<<<<<<< [^\n]+\n/g, '')
+              .replace(/=======\n/g, '')
+              .replace(/[^\n]+\n/g, '');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              .replace(/\n/g, '')
+              .replace(/\n/g, '')
               .replace(/
-            )
+              .replace(/<<<<<<< [^\n]+\n/g, '')
+              .replace(/\n/g, '')
+=======
+              .replace(/
+              .replace(/<<<<<<< [^\n]+\n/g, '')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+              .replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            
             fs.writeFileSync(file, content);
-            console.log(`✅ Resolved conflicts in ${file});
+            console.log(`✅ Resolved conflicts in ${file}`);
           } catch (error) {
-            console.log(`❌ Failed to resolve conflicts in ${file}: ${error.message});
+            console.log(`❌ Failed to resolve conflicts in ${file}: ${error.message}`);
           }
         }
       }
       
-      // Add resolved files;
-      runGitCommand('git add .,Adding resolved files');
-      // Commit the merge;
-      runGitCommand('git commit -m "Resolve merge conflicts automatically",Committing merge resolution');
+      // Add resolved files
+      runGitCommand('git add .', 'Adding resolved files');
+      
+      // Commit the merge
+      runGitCommand('git commit -m "Resolve merge conflicts automatically"', 'Committing merge resolution');
     }
   }
 }
 
-// Function to merge a PR;
+// Function to merge a PR
 function mergePR(prNumber, prInfo) {
-  console.log(`\n🔄 Processing PR #${prNumber}: ${prInfo.title});
+  console.log(`\n🔄 Processing PR #${prNumber}: ${prInfo.title}`);
   
   if (prInfo.draft) {
     console.log(`⚠️  PR #${prNumber} is a draft. Converting to ready for review...`);
-    // Convert draft to ready for review;
-    runGitCommand('
-      `curl -X PATCH -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}" -d '{"draft":false}`,
-      `Converting PR #${prNumber} to ready for review`)
+    // Convert draft to ready for review
+    runGitCommand(
+      `curl -X PATCH -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}" -d '{"draft":false}'`,
+      `Converting PR #${prNumber} to ready for review`
     );
   }
   
@@ -118,22 +141,20 @@ function mergePR(prNumber, prInfo) {
     resolveMergeConflicts();
   }
   
-  // Try to merge the PR;
+  // Try to merge the PR
   console.log(`🔄 Attempting to merge PR #${prNumber}...`);
-  const mergeResult = runGitCommand('
-    `curl -X PUT -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}/merge" -d '{"merge_method":"merge"}`,
-    `Merging PR #${prNumber})
+  const mergeResult = runGitCommand(
+    `curl -X PUT -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}/merge" -d '{"merge_method":"merge"}'`,
+    `Merging PR #${prNumber}`
   );
   
   if (mergeResult) {
     const result = JSON.parse(mergeResult);
     if (result.merged) {
-      console.log(`✅ Successfully merged PR #${prNumber});
+      console.log(`✅ Successfully merged PR #${prNumber}`);
       return true;
     } else {
-  // TODO: Implement
-}
-      console.log(`❌ Failed to merge PR #${prNumber}: ${result.message});
+      console.log(`❌ Failed to merge PR #${prNumber}: ${result.message}`);
       return false;
     }
   }
@@ -141,12 +162,14 @@ function mergePR(prNumber, prInfo) {
   return false;
 }
 
-// Main execution;
+// Main execution
 async function main() {
   console.log('📋 Checking open PRs...\n');
-  // Get list of open PRs;
-  const prsResult = runGitCommand('
-    'curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open",Fetching open PRs)
+  
+  // Get list of open PRs
+  const prsResult = runGitCommand(
+    'curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open"',
+    'Fetching open PRs'
   );
   
   if (!prsResult) {
@@ -157,34 +180,33 @@ async function main() {
   const prs = JSON.parse(prsResult);
   console.log(`Found ${prs.length} open PRs\n`);
   
-  // Process each PR;
+  // Process each PR
   for (const pr of prs) {
     const prInfo = canMergePR(pr.number);
     if (prInfo) {
-      console.log(`\n📊 PR #${prInfo.number}: ${prInfo.title});
-      console.log(`   Mergeable: ${prInfo.mergeable});
-      console.log(`   State: ${prInfo.mergeable_state});
-      console.log(`   Draft: ${prInfo.draft});
-      '
-      if (prInfo.mergeable || prInfo.mergeable_state ===clean') {
+      console.log(`\n📊 PR #${prInfo.number}: ${prInfo.title}`);
+      console.log(`   Mergeable: ${prInfo.mergeable}`);
+      console.log(`   State: ${prInfo.mergeable_state}`);
+      console.log(`   Draft: ${prInfo.draft}`);
+      
+      if (prInfo.mergeable || prInfo.mergeable_state === 'clean') {
         const merged = mergePR(pr.number, prInfo);
         if (merged) {
           console.log(`✅ PR #${pr.number} merged successfully`);
         }
       } else {
-  // TODO: Implement
-}
         console.log(`⚠️  PR #${pr.number} cannot be merged automatically`);
       }
     }
   }
   
-  // Update local main branch;
-  console.log('\n🔄 Updating local main branch...);
-  runGitCommand('git checkout main,Switching to main branch');
-  runGitCommand('git pull origin main,Pulling latest changes from main');
-  console.log('\n✅ PR resolution and merge process completed!);
+  // Update local main branch
+  console.log('\n🔄 Updating local main branch...');
+  runGitCommand('git checkout main', 'Switching to main branch');
+  runGitCommand('git pull origin main', 'Pulling latest changes from main');
+  
+  console.log('\n✅ PR resolution and merge process completed!');
 }
 
-// Run the main function;
+// Run the main function
 main().catch(console.error);

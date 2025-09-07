@@ -1,9 +1,9 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 // console.log(' Comprehensive Automation Suite - Zion Tech Group')
-console.log('=)
+console.log('==')
     "name"
     "command"
     "name"
@@ -22,5 +22,4 @@ console.log('=)
     "successful"
     "failed"
   "status"
-console.log('\n� Detailed "Results")
 console.log('\n� Detailed "Results")

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+#!/""usr/bin/env"" node;
 #!/usr/bin/env node;"
 /**;
  * Advanced Performance Monitor - PM2 Automation;
@@ -5,13 +10,31 @@
  */;
 #!/usr/bin/env node
 /**;
- * Advanced Performance Monitor - PM2 Automation;
- * Real-time performance monitoring with bottleneck detection and auto-fixing;
  */;"
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
+<<<<<<< HEAD
+
 const os = require("os");"
+=======
+const os = require("os");
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+const os = require("os");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -20,17 +43,14 @@ class $1 {}
       "advanced-performance-monitor.log";"
     );
     this.performanceLog = path.join(;)"
-      this.projectRoot,logs",
+
       "performance-metrics.json";"
-    );
     this.alertsLog = path.join(;)"
-      this.projectRoot,logs",
+
       "performance-alerts.json";"
-    );
     this.ensureLogsDirectory();
     this.monitoringInterval = 30000; // 30 seconds;
     this.alertThresholds = {}
-  this.monitoringInterval = 30000; // 30 seconds;
     this.alertThresholds = {}"
   "cpu": 80, // 80% CPU usage;
       "memory": 85, // 85% memory usage;
@@ -48,19 +68,24 @@ class $1 {}
       "cpu": ["Reduce concurrent processes, "Optimize build configuration", "Enable incremental compilation, "Use worker threads", ],
       "disk": ["Clean up temporary files, "Remove old build artifacts", "Optimize log rotation, "Clear npm cache", ]};"
   };
-;
   ensureLogsDirectory() {}
   const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {}"
   fs.mkdirSync(logsDir, { "recursive": true })};"
-  };
 ;"
   log(message, level = "INFO") {}
   log(message, level = "INFO") {}"
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message})};
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
+  async startMonitoring() {}
+  this.log("Starting advanced performance monitoring...");
+
   async startMonitoring() {}"
   this.log("Starting advanced performance monitoring...");"
     // Start continuous monitoring;
@@ -69,7 +94,6 @@ class $1 {}
     // Initial metrics collection;
     await this.collectMetrics();"
     this.log("Performance monitoring started successfully")};"
-;
   async collectMetrics() {}
   const metrics = {}"
   "timestamp": new Date().toISOString(),
@@ -82,43 +106,84 @@ class $1 {}
     // Keep only last 100 entries;
     if (this.performanceHistory.length > 100) {}
   this.performanceHistory.shift()};
-;
     // Analyze metrics for issues;
     const issues = await this.analyzeMetrics(metrics);
     // Generate alerts for critical issues;
     if (issues.length > 0) {}
   await this.generateAlerts(issues)};
-;
     // Auto-fix critical issues if enabled;
     if (this.autoFixEnabled) {}
   await this.autoFixCriticalIssues(issues)};
+<<<<<<< HEAD
+
+    // Store metrics in history;
+
+    // Keep only last 100 entries;
+    // Analyze metrics for issues;
+=======
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // Store metrics in history;
+    this.performanceHistory.push(metrics);
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+    // Store metrics in history;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     // Store metrics in history;
     this.performanceHistory.push(metrics);
 
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Keep only last 100 entries;
-    if (this.performanceHistory.length > 100) {}
-  this.performanceHistory.shift()};
-;
     // Analyze metrics for issues;
     const issues = await this.analyzeMetrics(metrics);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Generate alerts for critical issues;
-    if (issues.length > 0) {}
-  await this.generateAlerts(issues)};
-;
     // Auto-fix critical issues if enabled;
-    if (this.autoFixEnabled) {}
-  await this.autoFixCriticalIssues(issues)};
-;
     // Save metrics;
     await this.saveMetrics(metrics);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     return metrics};
-;
   async collectSystemMetrics() {}
-  const metrics = {}"
   "cpu": {}"
   usage: 0,"
         "load": 0,
@@ -130,9 +195,7 @@ class $1 {}
         "usage": 0},
       "disk": {}"
   total: 0,"
-        "free": 0,
-        "used": 0,
-        "usage": 0},
+
       "uptime": os.uptime()};"
     try {}
   // CPU usage;
@@ -143,26 +206,28 @@ class $1 {}
       metrics.memory.usage = (metrics.memory.used / metrics.memory.total) * 100;
       // Disk usage;
       const diskStats = await this.getDiskUsage();
-      metrics.disk = { ...metrics.disk, ...diskStats };"
-    } catch (error) {  this.log(`Failed to collect system "metrics": ${error.message  }, "WARN")};"
+<<<<<<< HEAD
+=======
+      metrics.disk = { ...metrics.disk, ...diskStats };
+    } catch (error) {  this.log(`Failed to collect system "metrics": ${error.message  }`, "WARN")};
 ;
     return metrics};
 ;
   async collectApplicationMetrics() {}
-  const metrics = {}"
-  "pm2": {}"
-  processes: 0,"
+  const metrics = {}
+  "pm2": {}
+  processes: 0,
         "memory": 0,
         "cpu": 0,
         "status": "unknown"},
-      "node": {}"
-  version: process.version,"
+      "node": {}
+  version: process.version,
         "memory": process.memoryUsage(),
         "uptime": process.uptime()},
-      "build": {}"
-  lastBuildTime: 0,"
+      "build": {}
+  lastBuildTime: 0,
         "lastBuildSize": 0,
-        "buildCount": 0}};"
+        "buildCount": 0}};
     try {}
   // PM2 metrics;
       const pm2List = await this.getPM2Status();
@@ -170,11 +235,25 @@ class $1 {}
       // Build metrics;
       const buildMetrics = await this.getBuildMetrics();
       metrics.build = { ...metrics.build, ...buildMetrics };
-    } catch (error) {}"
-  this.log(Failed to collect application "metrics": ${error.message  }")
-        "WARN`;`"
+    } catch (error) {}
+  this.log(Failed to collect application "metrics": ${error.message  }",)
+        "WARN`;`
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   async collectApplicationMetrics() {}
-  const metrics = {}"
   "pm2": {}"
   processes: 0,"
         "memory": 0,
@@ -188,68 +267,117 @@ class $1 {}
   lastBuildTime: 0,"
         "lastBuildSize": 0,
         "buildCount": 0}};"
-;
-    try {}
   // PM2 metrics;
       const pm2List = await this.getPM2Status();
       metrics.pm2 = { ...metrics.pm2, ...pm2List };
-;
       // Build metrics;
       const buildMetrics = await this.getBuildMetrics();
       metrics.build = { ...metrics.build, ...buildMetrics };
     } catch (error) {}"
-  this.log(Failed to collect application "metrics": ${error.message}")
+
+  // PM2 metrics;
+      // Build metrics;
+
         "WARN";"
       )};
-;
-    return metrics};
-;
   async collectBuildMetrics() {}
-  const metrics = {}"
-  "buildTime": 0,
-      "bundleSize": 0,
-      "dependencies": 0,
+
       "optimization": {}"
   treeShaking: false,"
         "codeSplitting": false,
         "minification": true}};"
-    try {}
   // Check build configuration;
       const viteConfig = await this.checkViteConfig();
       metrics.optimization = { ...metrics.optimization, ...viteConfig };
       // Measure bundle size;
       metrics.bundleSize = await this.measureBundleSize();
-      // Count dependencies;"
+      // Count dependencies;"`;
       metrics.dependencies = await this.countDependencies()} catch (error) {  this.log(`Failed to collect build "metrics": ${error.message  }", "WARN")};"
-;
-    return metrics};
-;
   async collectNetworkMetrics() {}
-  const metrics = {}"
+<<<<<<< HEAD
+
+=======
+  const metrics = {}
   "responseTime": 0,
       "throughput": 0,
       "connections": 0,
-      "errors": 0};"
+      "errors": 0};
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     try {}
-  // This would typically involve monitoring actual network requests;"
-      // For now, we"ll use placeholder values;"
-      metrics.responseTime = Math.random() * 1000; // Simulated response time;"
-      metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {  this.log(`Failed to collect network "metrics": ${error.message  }, "WARN");"
-    try {}
-  // This would typically involve monitoring actual network requests;"
-      // For now, we"ll use placeholder values;"
-      metrics.responseTime = Math.random() * 1000; // Simulated response time;"
-      metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {this.log(`Failed to collect network "metrics": ${error.message}, "WARN")};"
+  // This would typically involve monitoring actual network requests;
+      // For now, we"ll use placeholder values;
+      metrics.responseTime = Math.random() * 1000; // Simulated response time;
+<<<<<<< HEAD
+      metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {this.log(`Failed to collect network "metrics": ${error.message}`, "WARN")};
 ;
     return metrics};
 ;
+
+=======
+      metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {  this.log(`Failed to collect network "metrics": ${error.message  }`, "WARN");
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    try {}
+  // This would typically involve monitoring actual network requests;
+      // For now, we"ll use placeholder values;
+      metrics.responseTime = Math.random() * 1000; // Simulated response time;
+      metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {this.log(`Failed to collect network "metrics": ${error.message}`, "WARN")};
+;
+    return metrics};
+;
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      "errors": 0};"
+  // This would typically involve monitoring actual network requests;"
+      // For now, we"ll use placeholder values;"
+
   async getDiskUsage() {}
-  try {}"
-  const result = execSync("df -h .", {})
+  try {}
+const result = execSync("df -h .", {});
   "cwd": this.projectRoot,
         "encoding": "utf8",
         "stdio": "pipe"}"
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      const lines = result.split("\n");
+      const data = lines[1].split(/\s+/);
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+      const lines = result.split("\n");
+      const data = lines[1].split(/\s+/);
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      const lines = result.split("\n");
+      const data = lines[1].split(/\s+/);
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      return {}
 "
       const lines = result.split("\n");"
       const data = lines[1].split(/\s+/);
@@ -259,129 +387,231 @@ class $1 {}
         "used": this.parseSize(data[2]),
         "free": this.parseSize(data[3]),
         "usage": parseInt(data[4].replace("%", "))};"
-    } catch (error) {}"
   return { "total": 0, "used": 0, "free": 0, "usage": 0   };"
-    } catch (error) {}"
   return { "total": 0, "used": 0, "free": 0, "usage": 0 };"
-    };
-  };
-;
   parseSize(sizeStr) {}"
   const units = { "K": 1024, "M": 1024 * 1024, "G": 1024 * 1024 * 1024 };"
     const match = sizeStr.match(/^(\d+(?:\.\d+)?)([KMGT])/);
     if (match) {}
   return Math.round(parseFloat(match[1]) * units[match[2]])};
     return 0};
-;
   async getPM2Status() {}
-  try {}"
-  const result = execSync("pm2 jlist", {})
+<<<<<<< HEAD
+
+=======
+  try {}
+const result = execSync("pm2 jlist", {});
   "cwd": this.projectRoot,
         "encoding": "utf8",
-        "stdio": "pipe"}"
+        "stdio": "pipe"}
 });
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      const processes = JSON.parse(result);
+      let totalMemory = 0;
+      let totalCPU = 0;
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
       const processes = JSON.parse(result);
       let totalMemory = 0;
       let totalCPU = 0;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      const processes = JSON.parse(result);
+      let totalMemory = 0;
+      let totalCPU = 0;
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       processes.forEach(proc => {})
   totalMemory += proc.monit.memory || 0;
         totalCPU += proc.monit.cpu || 0}
-});
+<<<<<<< HEAD
 
-      return {}"
+=======
+});
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      return {}
   "processes": processes.length,
         "memory": totalMemory,
         "cpu": totalCPU,
-        "status": "running"};"
-    } catch (error) {}"
-  return { "processes": 0, "memory": 0, "cpu": 0, "status": "error"   };"
+        "status": "running"};
+    } catch (error) {}
+  return { "processes": 0, "memory": 0, "cpu": 0, "status": "error"   };
     };
   };
 ;
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        "status": "running"};"
+  return { "processes": 0, "memory": 0, "cpu": 0, "status": "error"   };"
   async getBuildMetrics() {}
   try {}
-  const buildLogPath = path.join(;)"
+const buildLogPath = path.join(;);
         this.projectRoot,logs",
-        "build-performance.json";"
+        "build-performance.json";
   async getBuildMetrics() {}
   try {}
-  const buildLogPath = path.join(;)"
+const buildLogPath = path.join(;);
         this.projectRoot,logs",
-        "build-performance.json";"
+        "build-performance.json";
       );
-      if (fs.existsSync(buildLogPath)) {}"
-  const buildData = JSON.parse(fs.readFileSync(buildLogPath, "utf8"));"
-        return {}"
+      if (fs.existsSync(buildLogPath)) {}
+  const buildData = JSON.parse(fs.readFileSync(buildLogPath, "utf8"));
+        return {}
   "lastBuildTime": buildData.currentPerformance?.buildTime || 0,
           "lastBuildSize": buildData.currentPerformance?.bundleSize || 0,
           "buildCount": this.performanceHistory.filter(m => m.build).length,
         this.projectRoot, "logs",
-        "build-performance.json";"
+        "build-performance.json";
       );
-      if (fs.existsSync(buildLogPath)) {}"
-  const buildData = JSON.parse(fs.readFileSync(buildLogPath, "utf8"));"
-        return {}"
+      if (fs.existsSync(buildLogPath)) {}
+  const buildData = JSON.parse(fs.readFileSync(buildLogPath, "utf8"));
+        return {}
   "lastBuildTime": buildData.currentPerformance?.buildTime || 0,
           "lastBuildSize": buildData.currentPerformance?.bundleSize || 0,
-          "buildCount": this.performanceHistory.filter(m => m.build).length};"
-      };"
-    } catch (error) {  this.log(`Failed to get build "metrics": ${error.message  }, "WARN")};"
-;"
-    return { "lastBuildTime": 0, "lastBuildSize": 0, "buildCount": 0 };"
+          "buildCount": this.performanceHistory.filter(m => m.build).length};
+      };
+    } catch (error) {  this.log(`Failed to get build "metrics": ${error.message  }`, "WARN")};
+;
+    return { "lastBuildTime": 0, "lastBuildSize": 0, "buildCount": 0 };
   };
 ;
   async checkViteConfig() {}
-  try {}"
-  const viteConfigPath = path.join(this.projectRoot, "vite.config.ts");"
-      if (fs.existsSync(viteConfigPath)) {}"
-  const config = fs.readFileSync(viteConfigPath, "utf8");"
-        return {}"
+<<<<<<< HEAD
+
+=======
+  try {}
+  const viteConfigPath = path.join(this.projectRoot, "vite.config.ts");
+      if (fs.existsSync(viteConfigPath)) {}
+  const config = fs.readFileSync(viteConfigPath, "utf8");
+        return {}
   "treeShaking": config.includes("treeshake"),
           "codeSplitting": config.includes("manualChunks"),
-          "minification": config.includes("minify")};"
-      };"
-    } catch (error) {  this.log(`Failed to check Vite "config": ${error.message  }, "WARN")};"
-;"
-    return { "treeShaking": false, "codeSplitting": false, "minification": true };"
+          "minification": config.includes("minify")};
+      };
+    } catch (error) {  this.log(`Failed to check Vite "config": ${error.message  }`, "WARN")};
+;
+    return { "treeShaking": false, "codeSplitting": false, "minification": true };
   };
 ;
   async measureBundleSize() {}
-  try {}"
-  const distPath = path.join(this.projectRoot, "dist");"
+  try {}
+  const distPath = path.join(this.projectRoot, "dist");
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+  const viteConfigPath = path.join(this.projectRoot, "vite.config.ts");"
+      if (fs.existsSync(viteConfigPath)) {}"
+  const config = fs.readFileSync(viteConfigPath, "utf8");"
+
+    return { "treeShaking": false, "codeSplitting": false, "minification": true };"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   async measureBundleSize() {}
-  try {}"
   const distPath = path.join(this.projectRoot, "dist");"
       if (!fs.existsSync(distPath)) return 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      let totalSize = 0;
+      const files = this.getAllFilesRecursive(distPath);
+=======
+=======
+
+  async measureBundleSize() {}
+  const distPath = path.join(this.projectRoot, "dist");"
+      if (!fs.existsSync(distPath)) return 0;
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
       let totalSize = 0;
       const files = this.getAllFilesRecursive(distPath);
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      let totalSize = 0;
+      const files = this.getAllFilesRecursive(distPath);
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       for (const file of files) {}
   const stats = fs.statSync(file);
         totalSize += stats.size};
-;
       return totalSize} catch (error) {}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+  
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+  
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 } catch (error) {}
   return 0} catch (error) {}
-  return 0};
-  };
-;
   async countDependencies() {}
-  try {}"
-  const packagePath = path.join(this.projectRoot, "package.json");"
-      if (fs.existsSync(packagePath)) {}"
-  const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8"));"
-        return (;)
+  try {}
+  const packagePath = path.join(this.projectRoot, "package.json");
+      if (fs.existsSync(packagePath)) {}
+  const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8"));
+return (;);
           Object.keys(pkg.dependencies || {}).length +;
           Object.keys(pkg.devDependencies || {}).length;
         )};
     } catch (error) {}
   return 0};
 ;
-        return (;)
+return (;);
           Object.keys(pkg.dependencies || {}).length +;
           Object.keys(pkg.devDependencies || {}).length;
         )};
@@ -392,71 +622,68 @@ class $1 {}
 ;
   getAllFilesRecursive(dir, files = []) {}
   const items = fs.readdirSync(dir);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    for (const item of items) {}
+  const fullPath = path.join(dir, "item);
+      const stat = fs.statSync(fullPath);
+=======
 
     for (const item of items) {}"
   const fullPath = path.join(dir, "item);"
       const stat = fs.statSync(fullPath);
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+    for (const item of items) {}
+  const fullPath = path.join(dir, "item);
+      const stat = fs.statSync(fullPath);
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+      if (stat.isDirectory()) {}
+  this.getAllFilesRecursive(fullPath", files)} else {}
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       if (stat.isDirectory()) {}"
   this.getAllFilesRecursive(fullPath", files)} else {}"
   files.push(fullPath)};
-    };
-;
     return files};
-;
   async analyzeMetrics(metrics) {}
   const issues = [];
     // System performance issues;
     if (metrics.system.cpu.usage > this.alertThresholds.cpu) {}
   issues.push({})"
-  "type": "CPU_HIGH",
-        "severity": "HIGH","description": `CPU usage is ${metrics.system.cpu.usage.toFixed(1)}%`,`
-        "threshold": this.alertThresholds.cpu,
-        "current": metrics.system.cpu.usage,
+
         "category": "SYSTEM"})};"
-;
     if (metrics.system.memory.usage > this.alertThresholds.memory) {}
-  issues.push({})"
-  "type": "MEMORY_HIGH",
-        "severity": "HIGH","description": `Memory usage is ${metrics.system.memory.usage.toFixed(1)}%`,`
-        "threshold": this.alertThresholds.memory,
-        "current": metrics.system.memory.usage,
-        "category": "SYSTEM"})};"
-;
-    if (metrics.system.disk.usage > this.alertThresholds.disk) {}
-  issues.push({})"
-  "type": "DISK_HIGH",
-        "severity": "CRITICAL","description": `Disk usage is ${metrics.system.disk.usage.toFixed(1)}%`,`
-        "threshold": this.alertThresholds.disk,
-        "current": metrics.system.disk.usage,
-        "category": "SYSTEM"})};"
-;
+
     // Application performance issues;
     if (;)
       metrics.application.build.lastBuildTime > this.alertThresholds.buildTime;
     ) {}
-  issues.push({})"
-  "type": "BUILD_SLOW",
-        "severity": "MEDIUM","description": `Build time is ${metrics.application.build.lastBuildTime}ms`,`
-        "threshold": this.alertThresholds.buildTime,
-        "current": metrics.application.build.lastBuildTime,
+
         "category": "APPLICATION"})};"
-;
-    if (;)
       metrics.application.build.lastBuildSize > this.alertThresholds.bundleSize;
-    ) {}
-  issues.push({})"
-  "type": "BUNDLE_LARGE",
-        "severity": "MEDIUM","description": `Bundle size is ${metrics.application.build.lastBuildSize} bytes`,`
-        "threshold": this.alertThresholds.bundleSize,
-        "current": metrics.application.build.lastBuildSize,
-        "category": "APPLICATION"})};"
-;
+
     return issues};
-;
   async generateAlerts(issues) {}
   for (const issue of issues) {}
+<<<<<<< HEAD
   const alert = {}"
+=======
+  const alert = {}
   "timestamp": new Date().toISOString(),
         "type": issue.type,
         "severity": issue.severity,
@@ -464,14 +691,29 @@ class $1 {}
         "category": issue.category,
         "threshold": issue.threshold,
         "current": issue.current,
-        "recommendations": this.getRecommendations(issue)};"
-;"
-      this.alertHistory.push(alert);this.log(`"ALERT": ${issue.type} - ${issue.description}, issue.severity)};"
+        "recommendations": this.getRecommendations(issue)};
 ;
+      this.alertHistory.push(alert);this.log(`"ALERT": ${issue.type} - ${issue.description}`, issue.severity)};
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+  const alert = {}"
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Save alerts;
     await this.saveAlerts()};
-;
   getRecommendations(issue) {}
   const recommendations = [];
     switch (issue.type) {}"
@@ -480,221 +722,236 @@ class $1 {}
         break;"
       case "MEMORY_HIGH":;"
         recommendations.push(...this.optimizationStrategies.memory);
-        break;"
       case "DISK_HIGH":;"
         recommendations.push(...this.optimizationStrategies.disk);
-        break;"
-      case "BUILD_SLOW":;
-        recommendations.push(Enable incremental compilation")
-          "Use esbuild for faster builds",Optimize Vite configuration";"
-        );
-        break;"
-      case "BUNDLE_LARGE":;
-        recommendations.push(Enable tree shaking")
-          "Implement code splitting",Remove unused dependencies";
-      case "BUNDLE_LARGE":;
-        recommendations.push(Enable tree shaking")
+
           "Implement code splitting",Remove unused dependencies";"
-        );
         break};
-;
     return recommendations};
-;
   async autoFixCriticalIssues(issues) {}
+const criticalIssues = issues.filter(;);
+      issue => issue.severity === "CRITICAL";
+    );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
   const criticalIssues = issues.filter(;)"
       issue => issue.severity === "CRITICAL";"
-    );
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     for (const issue of criticalIssues) {}
-  try {}
   const result = await this.applyAutoFix(issue);
-        if (result.success) {}"
-  this.log(Auto-fix applied for ${issue.type}: ${result.message}")
-            "INFO`;`"
+<<<<<<< HEAD
+=======
+        if (result.success) {}
+  this.log(Auto-fix applied for ${issue.type}: ${result.message}",)
+            "INFO`;`
           )};
       } catch (error) {}
-  this.log(Auto-fix failed for ${issue.type  }: ${error.message},`)"
-          "ERROR";"
-        if (result.success) {}"
-  this.log(Auto-fix applied for ${issue.type}: ${result.message}")
-            "INFO";"
+  this.log(Auto-fix failed for ${issue.type  }: ${error.message}`,`)
+          "ERROR";
+        if (result.success) {}
+  this.log(Auto-fix applied for ${issue.type}: ${result.message}",)
+            "INFO";
           )};
-      } catch (error) {}"
-  this.log(Auto-fix failed for ${issue.type}: ${error.message}")
-          "ERROR";"
+      } catch (error) {}
+  this.log(Auto-fix failed for ${issue.type}: ${error.message}",)
+          "ERROR";
         )};
     };
   };
 ;
   async applyAutoFix(issue) {}
-  switch (issue.type) {}"
-  case "DISK_HIGH":;"
-        return await this.fixDiskSpace();"
-      case "MEMORY_HIGH":;"
-        return await this.fixMemoryUsage();"
-      case "CPU_HIGH":;"
-        return await this.fixCPUUsage();"
-      "default": ;"
+  switch (issue.type) {}
+  case "DISK_HIGH":;
+        return await this.fixDiskSpace();
+      case "MEMORY_HIGH":;
+        return await this.fixMemoryUsage();
+      case "CPU_HIGH":;
+        return await this.fixCPUUsage();
+      "default": ;
         return {}
-  success: false,"
-          "message": "No auto-fix available for this issue"};"
+  success: false,
+          "message": "No auto-fix available for this issue"};
     };
   };
 ;
   async fixDiskSpace() {}
   try {}
+  // Clean up temporary files;
+      const tempDirs = ["""node_modules/.cache""", "dist", "build", "logs"];
+      for (const dir of tempDirs) {}
+  const fullPath = path.join(this.projectRoot, "dir);
+        if (fs.existsSync(fullPath)) {execSync(`rm -rf ${fullPath}`", {`})
+  "cwd": this.projectRoot,
+            "stdio": "pipe"})};
+      };
+;
+      // Clear npm cache;
+      execSync("npm cache clean --force", {})
+  "cwd": this.projectRoot,
+        "stdio": "pipe"}
+});
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+      return { "success": true, "message": "Disk space cleaned up successfully" };
+    } catch (error) {}
+  return { "success": false, "message": error.message   };
+    };
+  };
+;
+        if (result.success) {}"
+
+  async applyAutoFix(issue) {}
+        return await this.fixDiskSpace();"
+        return await this.fixMemoryUsage();"
+        return await this.fixCPUUsage();"
+      "default": ;"
+        return {}
+  success: false,"
+          "message": "No auto-fix available for this issue"};"
+  async fixDiskSpace() {}
   // Clean up temporary files;"
       const tempDirs = ["node_modules/.cache", "dist", "build", "logs"];"
       for (const dir of tempDirs) {}"
-  const fullPath = path.join(this.projectRoot, "dir);
-        if (fs.existsSync(fullPath)) {execSync(`rm -rf ${fullPath}", {`})
-  "cwd": this.projectRoot,
+
             "stdio": "pipe"})};"
-      };
-;
       // Clear npm cache;"
-      execSync("npm cache clean --force", {})
-  "cwd": this.projectRoot,
-        "stdio": "pipe"}"
-});
-"
+
       return { "success": true, "message": "Disk space cleaned up successfully" };"
-    } catch (error) {}"
   return { "success": false, "message": error.message   };"
-    };
-  };
-;
   async fixMemoryUsage() {}
-  try {}
   // Force garbage collection if available;
       if (global.gc) {}
   global.gc()};
-;
       // Restart PM2 processes if memory usage is very high;
       const metrics =} catch (error) {}"
   return { "success": false, "message": error.message };"
-    };
-  };
-;
-  async fixMemoryUsage() {}
-  try {}
   // Force garbage collection if available;
-      if (global.gc) {}
-  global.gc()};
-;
       // Restart PM2 processes if memory usage is very high;
       const metrics =;
         this.performanceHistory[this.performanceHistory.length - 1];
       if (metrics.system.memory.usage > 95) {}"
   execSync("pm2 restart all", { "cwd": this.projectRoot, "stdio": "pipe" }")
-});
-        return {}"
-  "success": true,
+
           "message": "PM2 processes restarted to free memory"};"
-      };
-;"
       return { "success": true, "message": "Memory optimization applied" };"
-    } catch (error) {}"
-  return { "success": false, "message": error.message   };"
-    };
-  };
-;
   async fixCPUUsage() {}
-  try {}
   // Reduce concurrent processes if CPU usage is very high;
-      const metrics =} catch (error) {}"
-  return { "success": false, "message": error.message };"
-    };
-  };
-;
-  async fixCPUUsage() {}
-  try {}
   // Reduce concurrent processes if CPU usage is very high;
-      const metrics =;
-        this.performanceHistory[this.performanceHistory.length - 1];
-      const metrics =;
-        this.performanceHistory[this.performanceHistory.length - 1];
 if (metrics.system.cpu.usage > 95) {}"
   execSync("pm2 scale all 1", { "cwd": this.projectRoot, "stdio": "pipe" }")
-});
-        return {}"
-  "success": true,
+
           "message": "PM2 processes scaled down to reduce CPU usage"};"
-      };
-;"
       return { "success": true, "message": "CPU optimization applied" };"
-    } catch (error) {}"
-  return { "success": false, "message": error.message   };"
-        return {}"
-  "success": true,
-          "message": "PM2 processes scaled down to reduce CPU usage"};"
-      };
-;"
-      return { "success": true, "message": "CPU optimization applied" };"
-    } catch (error) {}"
-  return { "success": false, "message": error.message };"
-    };
-  };
-;
-  async saveMetrics(metrics) {}
-  try {}"
-  fs.writeFileSync(this.performanceLog, JSON.stringify(metrics, null, 2))} catch (error) {  this.log(`Failed to save "metrics": ${error.message  }, "ERROR")};"
-  };
-;
+
   async saveAlerts() {}
-  try {}
   fs.writeFileSync(;)
         this.alertsLog,
-        JSON.stringify(this.alertHistory, null, 2);"
-      )} catch (error) {  this.log(`Failed to save "alerts": ${error.message  }, "ERROR")};"
-  };
-;
+
   stopMonitoring() {}
   if (this.monitoringInterval) {}
   clearInterval(this.monitoringInterval);"
       this.log("Performance monitoring stopped")};"
-  };
-;
   getPerformanceSummary() {}
   const recentMetrics = this.performanceHistory.slice(-10);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
-    if (recentMetrics.length === 0) {}"
-  return { "message": "No performance data available" };"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    if (recentMetrics.length === 0) {}
+  return { "message": "No performance data available" };
     };
 ;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    if (recentMetrics.length === 0) {}"
+  return { "message": "No performance data available" };"
     const avgCPU =;
       recentMetrics.reduce((sum, m) => sum + m.system.cpu.usage, 0) /;
       recentMetrics.length;
     const avgMemory =;
       recentMetrics.reduce((sum, m) => sum + m.system.memory.usage, 0) /;
-      recentMetrics.length;
     const avgDisk =;
       recentMetrics.reduce((sum, m) => sum + m.system.disk.usage, 0) /;
-      recentMetrics.length;
+<<<<<<< HEAD
 
-    return {}"
+=======
+      recentMetrics.length;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    return {}
   "timestamp": new Date().toISOString(),
+      "averages": {}
+  cpu: avgCPU.toFixed(1),
+
+
       "averages": {}"
   cpu: avgCPU.toFixed(1),"
         "memory": avgMemory.toFixed(1),
         "disk": avgDisk.toFixed(1)},
       "alerts": this.alertHistory.length,
       "status": this.getOverallStatus(avgCPU, avgMemory, avgDisk)};"
-  };
-;
   getOverallStatus(cpu, memory, disk) {}"
   if (cpu > 90 || memory > 90 || disk > 95) return "CRITICAL";
     if (cpu > 80 || memory > 80 || disk > 90) return "WARNING";
     if (cpu > 70 || memory > 70 || disk > 80) return "ATTENTION";
     return "HEALTHY"};"
-};
-;
 // Main execution;
 if (require.main === module) {}
   const monitor = new AdvancedPerformanceMonitor();
   // Start monitoring;
   monitor;
     .startMonitoring();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    .then(() => {}
+  console.log("Advanced Performance Monitor started successfully");
+      // Keep the process running;
     .then(() => {}"
   console.log("Advanced Performance Monitor started successfully");"
       // Keep the process running;"
@@ -702,10 +959,44 @@ if (require.main === module) {}
   console.log("Stopping performance monitor...");"
         monitor.stopMonitoring();
         process.exit(0)})}
-});
     .catch(error => {})"
   console.error("Advanced Performance Monitor "failed": ", error);"
       process.exit(1)})};
+<<<<<<< HEAD
+module.exports = AdvancedPerformanceMonitor;
+=======
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-"
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+module.exports = AdvancedPerformanceMonitor;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+module.exports = AdvancedPerformanceMonitor;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = AdvancedPerformanceMonitor;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+module.exports = AdvancedPerformanceMonitor;
+
+module.exports = AdvancedPerformanceMonitor;
+<<<<<<< HEAD
+module.exports = AdvancedPerformanceMonitor;
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

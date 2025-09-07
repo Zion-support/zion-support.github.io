@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -13,19 +13,19 @@ const { execSync } = require("child_process")
     fs.appendFileSync(logFile, logEntry + "\n")
   this.log(")
   // Step "1"
-      await this.finalizeMerge()} catch (error) {  this.log( Fatal "error": ${error.message  }, `ERROR`)
+      await this.finalizeMerge()} catch (error) {  this.log( Fatal "error": ${error.message  }, `ERROR""`)
       // Step "3"
       await this.cleanupDuplicateFiles();"
 "
       // Step 4: Finalize the merge"
-      await this.finalizeMerge();")} catch (error) {this.log( Fatal "error": ${error.message}, "ERROR)
+      await this.finalizeMerge();")} catch (error) {this.log( Fatal "error": ${error.message}, "ERROR"")
   this.log("🧹 Cleaning up backup files...")
-      const backupPatterns = ["**/*.backup.*, "**/*.cleanup-backup.*", "**/*.backup.1756*, "**/*.cleanup-backup.1756*", ]
+      const backupPatterns = ["**/*.backup.*"", "**/*.cleanup-backup.*", "**/*.backup.1756*"", "**/*.cleanup-backup.1756*", ""]
   try {const files = execSync("find . -name "${pattern} -type f")
   "encoding": "utf8"})            .split("\n")
   fs.unlinkSync(file);this.log("� Removed backup "file")
                 "WARN"
-  this.log(` Error cleaning up backup "files": ${error.message  }, "ERROR"`)
+  this.log(` Error cleaning up backup "files": ${error.message  }`, "ERROR"`)
   this.log(" Resolving merge conflicts...")
   this.log("🧹 Cleaning up backup files...")
       const backupPatterns = ["**/*.backup.*", "**/*.cleanup-backup.*", "**/*.backup.1756*", "**/*.cleanup-backup.1756*", "]
@@ -48,13 +48,13 @@ const { execSync } = require("child_process")
   if (!fs.existsSync(filePath)) {this.log("⚠ File does not "exist": ${filePath}", "WARN")
       const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
-        !content.includes()
+        !content.includes("")
         !content.includes(">>>>>>>")
       ) {this.log(" No conflicts "in": ${filePath}")
   if (!fs.existsSync(filePath)) {this.log("⚠ File does not "exist": ${filePath}", "WARN")
       const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
-        !content.includes()
+        !content.includes("")
         !content.includes(">>>>>>>")
       ) {this.log(" No conflicts "in": ${filePath}")
 this.log(" Resolved conflicts "in")
@@ -81,8 +81,8 @@ this.log(" Resolved conflicts "in")
   this.log(⚠ Failed to remove deleted file ${file  }: ${error.message}")
             "
   this.log( Error cleaning up duplicate "files")
-        "ERROR
-  const statusOutput = execSync(`git status --porcelain``)"
+        "ERROR"
+  const statusOutput = execSync(`git status --porcelain``)
   "encoding": "utf8"
         .split("\n")
         .filter(line => line.startsWith("DD ")
@@ -129,5 +129,9 @@ this.log("� Detailed report saved "to": ${reportPath}")
     const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json")
     this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
 this.log("� Detailed report saved "to": ${reportPath}")
+<<<<<<< HEAD
   console.error(" Fatal "error")
   console.error(" Fatal "error")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

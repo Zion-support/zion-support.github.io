@@ -1,12 +1,12 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
 const glob = require('glob')
-    this.reportFile = path.join(this.projectRoot,comprehensive-error-fixer-report.json')
+    this.reportFile = path.join(this.projectRoot, 'comprehensive-error-fixer-report.json')
   log(message, level = 'info')
-    this.log('Starting Comprehensive Error Fixer...,info')
-      this.log('Comprehensive Error Fixer completed successfully!,success')
+    this.log('Starting Comprehensive Error Fixer...', 'info')
+      this.log('Comprehensive Error Fixer completed successfully!', 'success')
       this.log(`Error in Comprehensive Error "Fixer"`)
         "encoding"
         "stdio"
@@ -22,8 +22,12 @@ const glob = require('glob')
           'function $1(..."args")
           "type"
           "description"
-      const importRegex = /import\s+.*\s+from\s+["]([^)]
+      const importRegex = /import\s+.*\s+from\s+['"]([^'')]
           "type"
           "description"
+<<<<<<< HEAD
   const backupPath = path.join(this.backupDir, path.basename(filePath) + "
   const backupPath = path.join(this.backupDir, path.basename(filePath) + "
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+#!/""usr/bin/env"" node;
+#!/usr/bin/env node
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const fs = require("fs");
@@ -23,7 +29,6 @@ class $1 {
   "daily": {},
       "weekly": {},
       "monthly": {}}"
-  }
 ;
   ensureDirectories() {"
   ["this.logsPath", "this.reportsPath", "this.errorReportsPath"].forEach(dir => {")
@@ -37,24 +42,15 @@ class $1 {
     console.log("logMessage);
     const logFile = path.join(this.logsPath, "error-analytics-dashboard.log");
     fs.appendFileSync(logFile, logMessage + "\n")}"
-;
   async collectErrorData() {"
   this.log("📊 Collecting error data from various sources...");"
     // Collect from automation reports;
     await this.collectFromAutomationReports();
     // Collect from error reports;
     await this.collectFromErrorReports();"
-  log(message, level = "INFO") {"
   const timestamp = new Date().toISOString();"
-    const logMessage = "[${timestamp}] [${level}] ${message}";
-    console.log("logMessage);
-    const logFile = path.join(this.logsPath, "error-analytics-dashboard.log");
-    fs.appendFileSync(logFile, logMessage + "\n")}"
-;
-  async collectErrorData() {"
-  this.log("📊 Collecting error data from various sources...");"
+
     // Collect from automation reports;
-    await this.collectFromAutomationReports();
     // Collect from error reports;
     await this.collectFromErrorReports();
     // Collect from logs;
@@ -63,7 +59,6 @@ class $1 {
     await this.collectCurrentStatus();"
     this.log(📈 Collected data for ${Object.values(this.errorData).flat().length} total errors";"
     )}
-;
   async collectFromAutomationReports() {
   if (!fs.existsSync(this.reportsPath)) return;
     const files = fs.readdirSync(this.reportsPath);
@@ -71,75 +66,38 @@ class $1 {
   if (file.endsWith(".json")) {"
   try {
   // TODO: Implement
-}
   const content = fs.readFileSync(;)"
             path.join(this.reportsPath, "file)", utf8";"
           );
           const data = JSON.parse(content);
           if (data.timestamp && data.errors) {
   this.processErrorReport(data)}
-    for (const file of files) {"
-  if (file.endsWith(".json")) {"
-  try {
   // TODO: Implement
-}
-  const content = fs.readFileSync(;)"
-            path.join(this.reportsPath, "file)", utf8";
+
             path.join(this.reportsPath, "file)", utf8");"
-          );
-          const data = JSON.parse(content);
-          if (data.timestamp && data.errors) {
-  this.processErrorReport(data)}"
+  this.processErrorReport(data)}"`;
         } catch (error) {  this.log(Failed to parse report ${file  }: ${error.message}, "WARN"`)} catch (error) {this.log(Failed to parse report ${file}: ${error.message}, "WARN"`)}"
-      }
-    }
-  }
-;
   async collectFromErrorReports() {
   if (!fs.existsSync(this.errorReportsPath)) return;
     const files = fs.readdirSync(this.errorReportsPath);
-    for (const file of files) {"
-  if (file.endsWith(".json")) {"
-  try {
   // TODO: Implement
-}
-  const content = fs.readFileSync(;)"
             path.join(this.errorReportsPath, "file)", utf8";"
-    for (const file of files) {"
-  if (file.endsWith(".json")) {"
-  try {
   // TODO: Implement
-}
-  const content = fs.readFileSync(;)"
-            path.join(this.errorReportsPath, "file)", utf8";"
-          );
-          const data = JSON.parse(content);
           if (data.timestamp && data.errorType) {
-  this.processErrorReport(data)}
         } catch (error) {"
-  this.log( "Failed to parse error report ${file  }: ${error.message}",WARN"} catch (error) {
+
   this.log( `Failed to parse error report ${file}: ${error.message}",WARN";")
-          );"
+          );"`;
           this.log( `Failed to parse error report ${file  }: ${error.message}",WARN";")
-          )}
-      }
-    }
-  }
-;
   async collectFromLogs() {
   if (!fs.existsSync(this.logsPath)) return;"
     const logFiles = ["comprehensive-error-fixer.log", "typescript-error-monitor.log, "eslint-error-cleaner.log", "build-error-detector.log, "dependency-error-resolver.log", "config-error-fixer.log, "error-prevention-monitor.log", "auto-recovery-manager.log, "critical-error-alert-system.log", ];"
     for (const logFile of logFiles) {"
   const logFiles = ["comprehensive-error-fixer.log", "typescript-error-monitor.log", "eslint-error-cleaner.log", "build-error-detector.log", "dependency-error-resolver.log", "config-error-fixer.log", "error-prevention-monitor.log", "auto-recovery-manager.log", "critical-error-alert-system.log", "];"
-    for (const logFile of logFiles) {"
   const logPath = path.join(this.logsPath, "logFile);"
       if (fs.existsSync(logPath)) {
   await this.parseLogFile(logPath)}
-    }
-  }
-;
   async parseLogFile(logPath) {
-  try {
   // TODO: Implement
 }"
   const content = fs.readFileSync(logPath", "utf8");
@@ -155,18 +113,7 @@ const fs = require('fs');
 const path = require('path');
 class ErrorAnalyticsDashboard {
   // TODO: Implement
-}
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot,error-reports');
-    this.logsDir = path.join(this.projectRoot,automation/logs');
-    this.dashboardDir = path.join(this.projectRoot,error-dashboard');
-    this.updateInterval = parseInt(process.env.DASHBOARD_UPDATE_INTERVAL) || 300000; // 5 minutes;
-    this.analyticsEnabled = process.env.ANALYTICS_ENABLED ===true;
-    // Ensure directories exist;
-    [this.reportsDir, this.logsDir, this.dashboardDir].forEach(dir => {)
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { "recursive": true })}"
+
     });
     this.analyticsData = {"
       "errorTrends": [],
@@ -176,73 +123,37 @@ class ErrorAnalyticsDashboard {
       "fileDistribution": {}"
     }}"
   log(message, level = 'INFO') {
+<<<<<<< HEAD
+=======
     const timestamp = new Date().toISOString();
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    console.log("[${timestamp}] [${level}] ${message}")}
+
     console.log("[${timestamp}] [${level}] ${message}")}"
   async collectErrorReports() {
-    try {
   // TODO: Implement
-}
       const reports = [];
       const files = fs.readdirSync(this.reportsDir);
-      for (const file of files) {"
-        if (file.endsWith('.json')) {
-          const filePath = path.join(this.reportsDir, file);
-          const content = fs.readFileSync(filePath,utf8);
-          const report = JSON.parse(content);
-          reports.push(report)}
-      }
+
       return reports.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp))} catch (error) {
   this.log("Failed to parse log file ${logPath  }: ${error.message}", "WARN")}"
-  }
-;
   async collectCurrentStatus() {"
   this.log("🔍 Collecting current project status...");"
     // Check TypeScript errors;
-    try {
   // TODO: Implement
-}"
-  execSync("npm run type-check", {
-  "cwd": this.workspacePath,
+
         "stdio": "pipe",")"
         "timeout": 60000})} catch (error) {
   const errorCount = this.countTypeScriptErrors(error.stdout || );"
       this.errorData.typescript.push({)"
-  "timestamp": new Date().toISOString(),
-        "count": errorCount,
-        "source": "current-status",
-        "details": error.stdout || })}"
-;
+
     // Check ESLint errors;
-    try {
   // TODO: Implement
-}"
-  execSync("npm run lint", {
-  "cwd": this.workspacePath,
-        "stdio": "pipe",")"
-        "timeout": 60000})} catch (error) {
-  const errorCount = this.countLintErrors(error.stdout || );"
-      this.errorData.eslint.push({)"
-  "timestamp": new Date().toISOString(),
-        "count": errorCount,
-        "source": "current-status",
-        "details": error.stdout || })}"
-;
+
     // Check build status;
-    try {
   // TODO: Implement
-}"
-  execSync("npm run build", {
-  "cwd": this.workspacePath,
-        "stdio": "pipe",")"
-        "timeout": 300000})} catch (error) {
-  const errorCount = this.countBuildErrors(error.stdout || );"
-      this.errorData.build.push({)"
-  "timestamp": new Date().toISOString(),
-        "count": errorCount,
-        "source": "current-status",
-        "details": error.stdout || })}"
-  }
-;
+
   processErrorReport(data) {
   const timestamp = data.timestamp;
     if (data.errors && Array.isArray(data.errors)) {
@@ -253,89 +164,35 @@ class ErrorAnalyticsDashboard {
           "source": "automation-report",")"
           "details": error.message || error.details || "})})} else if (data.errorType) {"
   this.addErrorData(data.errorType, {
-  timestamp,"
-        "count": data.errorCount || 1,
+
         "source": "error-report",")"
         "details": data.errorMessage || data.details || "})}"
-  }
-;
   processLogLine(line, logFile) {
-  const timestamp = new Date().toISOString();"
-    if (line.includes("TypeScript") || line.includes("tsc")) {
+
   this.addErrorData("typescript", {"
-  timestamp,"
         "count": 1,"source": "log-${logFile}",")"
         "details": line})} else if (line.includes("ESLint") || line.includes("lint")) {
   this.addErrorData("eslint", {"
-  timestamp,"
-        "count": 1,"source": "log-${logFile}",")"
-        "details": line})} else if (line.includes("build") || line.includes("Build")) {
-  this.addErrorData("build", {"
-  timestamp,"
-        "count": 1,"source": "log-${logFile}",")"
-        "details": line})} else if (line.includes("dependency") || line.includes("npm")) {
-  this.addErrorData("dependencies", {"
-  timestamp,"
-        "count": 1,"source": "log-${logFile}",")"
-        "details": line})} else if (line.includes("merge") || line.includes("conflict")) {
-  this.addErrorData("mergeConflicts", {"
-  timestamp,"
-        "count": 1,"source": "log-${logFile}",
-        "details": line,")"
-    if (line.includes("TypeScript") || line.includes("tsc")) {
-  this.addErrorData("typescript", {"
-  timestamp,"
-        "count": 1,"source": "log-${logFile}",")"
-        "details": line})} else if (line.includes("ESLint") || line.includes("lint")) {
-  this.addErrorData("eslint", {"
-  timestamp,"
-        "count": 1,"source": "log-${logFile}",")"
-        "details": line})} else if (line.includes("build") || line.includes("Build")) {
-  this.addErrorData("build", {"
-  timestamp,"
-        "count": 1,"source": "log-${logFile}",")"
-        "details": line})} else if (line.includes("dependency") || line.includes("npm")) {
-  this.addErrorData("dependencies", {"
-  timestamp,"
-        "count": 1,"source": "log-${logFile}",")"
-        "details": line})} else if (line.includes("merge") || line.includes("conflict")) {
-  this.addErrorData("mergeConflicts", {"
-  timestamp,"
-        "count": 1,"source": "log-${logFile}",")"
+
         "details": line})}"
-  }
-;
   addErrorData(type, data) {
   if (this.errorData[type]) {
   this.errorData[type].push(data)} else {
   // TODO: Implement
-}
   this.errorData[type] = [data]}
-  }
-;
   countTypeScriptErrors(output) {
   const errorLines = output;"
       .split("\n");
       .filter(line => line.includes("error TS") || line.includes("warning TS"));"
     return errorLines.length}
-;
   countLintErrors(output) {
-  const errorLines = output;"
-      .split("\n");
+
       .filter(line => line.includes("error") || line.includes("warning"));"
-    return errorLines.length}
-;
   countBuildErrors(output) {
-  const errorLines = output;"
       .split("\n");"
       .filter(;
         line =>;)"
-          line.includes("error") ||;
-          line.includes("Error") ||;
-          line.includes("ERROR");"
-      );
-    return errorLines.length}
-;
+
   analyzeTrends() {"
   this.log("📊 Analyzing error trends...");"
     // Group errors by time periods;
@@ -348,7 +205,6 @@ class ErrorAnalyticsDashboard {
       // Daily trends;
       const dailyErrors = errors.filter(;)
         e => new Date(e.timestamp) >= oneDayAgo;
-      );
       this.trends.daily[errorType] = {"
   "count": dailyErrors.length,
         "totalErrors": dailyErrors.reduce((sum, e) => sum + e.count, 0),
@@ -358,7 +214,6 @@ class ErrorAnalyticsDashboard {
       // Weekly trends;
       const weeklyErrors = errors.filter(;)
         e => new Date(e.timestamp) >= oneWeekAgo;
-      );
       this.trends.weekly[errorType] = {"
   "count": weeklyErrors.length,
         "totalErrors": weeklyErrors.reduce((sum, e) => sum + e.count, 0),
@@ -366,17 +221,14 @@ class ErrorAnalyticsDashboard {
       // Monthly trends;
       const monthlyErrors = errors.filter(;)
         e => new Date(e.timestamp) >= oneMonthAgo;
-      );
       this.trends.monthly[errorType] = {"
   "count": monthlyErrors.length,
         "totalErrors": monthlyErrors.reduce((sum, e) => sum + e.count, 0),
         "sources": [...new Set(monthlyErrors.map(e => e.source))]}"
-    })}
-;
   generateInsights() {"
   this.log("💡 Generating insights and recommendations...");"
     const insights = {"
-  "timestamp": new Date().toISOString(),
+
       "summary": {"
   totalErrors: Object.values(this.errorData).flat().length,"
         "errorTypes": Object.keys(this.errorData),
@@ -385,26 +237,19 @@ class ErrorAnalyticsDashboard {
       "topIssues": this.identifyTopIssues(),
       "recommendations": this.generateRecommendations(),
       "errorPatterns": this.identifyErrorPatterns()}"
-;
     return insights}
-;
   identifyTopIssues() {
   const issueCounts = {}
-;
-    Object.keys(this.errorData).forEach(errorType => {
-  const errors = this.errorData[errorType];
       issueCounts[errorType] = {"
   "totalCount": errors.length,")"
         "totalErrors": errors.reduce((sum, e) => sum + e.count, 0),
         "recentCount": errors.filter(e => {")
   const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
           return new Date(e.timestamp) >= oneDayAgo}).length}
-    });
     return Object.entries(issueCounts);"
       .sort(([", "a"], [", "b"]) => b.totalErrors - a.totalErrors);"
       .slice(0, 5);"
       .map((["type", "data"]) => ({ type, ...data }))}"
-;
   generateRecommendations() {
   const recommendations = [];
     // TypeScript errors;
@@ -414,84 +259,29 @@ class ErrorAnalyticsDashboard {
         "category": "typescript",
         "action": Implement stricter TypeScript configuration and add type guards",")"
         "impact": "Reduce runtime errors and improve code quality"})}"
-;
     // ESLint errors;
     if (this.trends.daily.eslint?.totalErrors > 20) {
-  recommendations.push({"
-  "priority": "medium",
-        "category": "code-quality",
+
         "action": "Set up pre-commit hooks and enforce ESLint rules",")"
         "impact": "Maintain consistent code style and catch issues early"})}"
-;
     // Build errors;
     if (this.trends.daily.build?.totalErrors > 5) {
-  recommendations.push({"
-  "priority": "high",
-        "category": "build-process",
+
         "action": "Implement automated build testing and rollback procedures",")"
         "impact": "Prevent broken builds from reaching production"})}"
-;
     // Dependencies;
     if (this.trends.daily.dependencies?.totalErrors > 3) {
-  recommendations.push({"
-  "priority": "medium",
-        "category": "dependencies",
+
         "action": "Regular dependency audits and automated security updates",")"
         "impact": "Reduce security vulnerabilities and compatibility issues"})}"
-;
     // Merge conflicts;
     if (this.trends.daily.mergeConflicts?.totalErrors > 2) {
-  recommendations.push({"
-  "priority": "low",
-        "category": "git-workflow",
-        "action": "Improve branch management and merge strategies",
-        "impact": "Reduce development friction and merge conflicts","
-    // TypeScript errors;)
-    if (this.trends.daily.typescript?.totalErrors > 10) {
-  recommendations.push({"
-  "priority": "high",
-        "category": "typescript",
-        "action": Implement stricter TypeScript configuration and add type guards",")"
-        "impact": "Reduce runtime errors and improve code quality"})}"
-;
-    // ESLint errors;
-    if (this.trends.daily.eslint?.totalErrors > 20) {
-  recommendations.push({"
-  "priority": "medium",
-        "category": "code-quality",
-        "action": "Set up pre-commit hooks and enforce ESLint rules",")"
-        "impact": "Maintain consistent code style and catch issues early"})}"
-;
-    // Build errors;
-    if (this.trends.daily.build?.totalErrors > 5) {
-  recommendations.push({"
-  "priority": "high",
-        "category": "build-process",
-        "action": "Implement automated build testing and rollback procedures",")"
-        "impact": "Prevent broken builds from reaching production"})}"
-;
-    // Dependencies;
-    if (this.trends.daily.dependencies?.totalErrors > 3) {
-  recommendations.push({"
-  "priority": "medium",
-        "category": "dependencies",
-        "action": "Regular dependency audits and automated security updates",")"
-        "impact": "Reduce security vulnerabilities and compatibility issues"})}"
-;
-    // Merge conflicts;
-    if (this.trends.daily.mergeConflicts?.totalErrors > 2) {
-  recommendations.push({"
-  "priority": "low",
-        "category": "git-workflow",
+
         "action": "Improve branch management and merge strategies",")"
         "impact": "Reduce development friction and merge conflicts"})}"
-;
     return recommendations}
-;
   identifyErrorPatterns() {
   const patterns = {}
-;
-    Object.keys(this.errorData).forEach(errorType => {
   const errors = this.errorData[errorType];)"
       const errorMessages = errors.map(e => e.details).join(" ");"
       // Find common patterns;"
@@ -501,67 +291,34 @@ class ErrorAnalyticsDashboard {
   "name": pattern.name,")"
           "count": (errorMessages.match(pattern.regex) || []).length}))        .filter(p => p.count > 0)});"
     return patterns}
-;
   async generateDashboard() {"
   this.log("📊 Generating error analytics dashboard...");"
     const dashboard = {"
-  "timestamp": new Date().toISOString(),
-      "overview": {"
-  totalErrors: Object.values(this.errorData).flat().length,"
-        "errorTypes": Object.keys(this.errorData),
-        "lastUpdated": new Date().toISOString()},
-      "errorData": this.errorData,
-      "trends": this.trends,
-      "insights": this.generateInsights(),
+
       "charts": {"
   errorTypeDistribution: this.generateErrorTypeDistribution(),"
         "errorTimeline": this.generateErrorTimeline(),
         "sourceBreakdown": this.generateSourceBreakdown()}}"
     const dashboardFile = path.join(;"
       this.reportsPath,error-analytics-dashboard.json";")
-  async generateDashboard() {"
-  this.log("📊 Generating error analytics dashboard...");"
-    const dashboard = {"
-  "timestamp": new Date().toISOString(),
-      "overview": {"
-  totalErrors: Object.values(this.errorData).flat().length,"
-        "errorTypes": Object.keys(this.errorData),
-        "lastUpdated": new Date().toISOString()},
-      "errorData": this.errorData,
-      "trends": this.trends,
-      "insights": this.generateInsights(),
-      "charts": {"
-  errorTypeDistribution: this.generateErrorTypeDistribution(),"
-        "errorTimeline": this.generateErrorTimeline(),
-        "sourceBreakdown": this.generateSourceBreakdown()}}"
-;
-    const dashboardFile = path.join(;"
-      this.reportsPath,error-analytics-dashboard.json";")
-    );
+
     fs.writeFileSync(dashboardFile, JSON.stringify(dashboard, null, 2));"
 this.log("📄 Dashboard "generated": ${dashboardFile}");"
     return dashboard}
-;
   generateErrorTypeDistribution() {
   const distribution = {}
-    Object.keys(this.errorData).forEach(errorType => {
-  const errors = this.errorData[errorType];
       distribution[errorType] = {"
   "count": errors.length,")"
-        "totalErrors": errors.reduce((sum, e) => sum + e.count, 0),
+
         "percentage": 0}"
-    });
     const total = Object.values(distribution).reduce(;)
       (sum, d) => sum + d.totalErrors,
       0;
-    );
     Object.values(distribution).forEach(d => {)
   d.percentage = total > 0 ? Math.round((d.totalErrors / total) * 100) : 0});
     return distribution}
-;
   generateErrorTimeline() {
   const timeline = {}
-    const now = new Date();
     // Last 7 days;
     for (let i = 6; i >= 0; i--) {
   const date = new Date(now.getTime() - i * 24 * 60 * 60 * 1000);"
@@ -573,38 +330,17 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
         "dependencies": 0,
         "system": 0,
         "mergeConflicts": 0}"
-      Object.keys(this.errorData).forEach(errorType => {
   const errors = this.errorData[errorType].filter(e => {)"
   const errorDate = new Date(e.timestamp).toISOString().split("T")[0];"
           return errorDate === dateStr});
         timeline[dateStr][errorType] = errors.reduce(;)
           (sum, e) => sum + e.count,
     // Last 7 days;
-    for (let i = 6; i >= 0; i--) {
-  const date = new Date(now.getTime() - i * 24 * 60 * 60 * 1000);"
-      const dateStr = date.toISOString().split("T")[0];"
-      timeline[dateStr] = {"
-  "typescript": 0,
-        "eslint": 0,
-        "build": 0,
-        "dependencies": 0,
-        "system": 0,
-        "mergeConflicts": 0}"
-;
-      Object.keys(this.errorData).forEach(errorType => {
-  const errors = this.errorData[errorType].filter(e => {)"
-  const errorDate = new Date(e.timestamp).toISOString().split("T")[0];"
-          return errorDate === dateStr});
-        timeline[dateStr][errorType] = errors.reduce(;)
-          (sum, e) => sum + e.count,
-          0;
+
         )})}
-;
     return timeline}
-;
   generateSourceBreakdown() {
   const sources = {}
-;
     Object.values(this.errorData);
       .flat();
       .forEach(error => {)
@@ -614,12 +350,9 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
     return Object.entries(sources);"
       .sort(([", "a"], [", "b"]) => b - a);
       .map((["source", "count"]) => ({ source, count }))}"
-;
   async run() {"
   this.log("🚀 Starting Error Analytics Dashboard...");"
-    try {
   // TODO: Implement
-}
   // Collect error data;
       await this.collectErrorData();
       // Analyze trends;
@@ -628,27 +361,17 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
       const dashboard = await this.generateDashboard();"
       this.log("🎉 Error Analytics Dashboard completed!");
       this.log(📊 Analyzed ${Object.values(this.errorData).flat().length} errors";"
-      );"
       this.log( "📈 Generated trends for ${Object.keys(this.trends).length} time periods`;"
-      );
+      );`;
       this.log(💡 Generated ${dashboard.insights.recommendations.length} recommendations`;)
-      );
       return {
   // TODO: Implement
-}"
   "success": true,"
         dashboard,"
         "errorCount": Object.values(this.errorData).flat().length}"
     } catch (error) {
-  this.log(;)"
-        `💥 Error Analytics Dashboard "failed": ${error.message  },ERROR"} catch (error) {"
-  this.log(;"
-        "💥 Error Analytics Dashboard "failed": ${error.message}",ERROR";")
-      );
-      throw error}"
-      this.log(`Error collecting "reports": ${error.message},ERROR');
+
       return []}
-  }
   analyzeErrorTrends(reports) {
     const trends = [];
     const errorCounts = {};
@@ -656,10 +379,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
       const date = new Date(report.timestamp).toISOString().split('T')[0];
       if (!errorCounts[date]) {
         errorCounts[date] = {
-          "total": 0,
-          "typescript": 0,
-          "eslint": 0,
-          "build": 0,
+
           "dependency": 0;"
         }}
       if (report.totalErrors) {
@@ -673,18 +393,20 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
           errorCounts[date].build += report.checks.Build.count || 0}
         if (report.checks.Dependencies && !report.checks.Dependencies.success) {
           errorCounts[date].dependency += report.checks.Dependencies.count || 0}
-      }
-    }
     for (const [date, counts] of Object.entries(errorCounts)) {
       trends.push({
         date,
         ...counts;)
-      })}
     return trends}
   analyzeFixSuccessRates(reports) {
+<<<<<<< HEAD
     const fixReports = reports.filter(report => 
-      report.fixesApplied !== undefined || report.resolutionsApplied !== undefined;)
+=======
+    const fixReports = reports.filter(report =>
+      report.fixesApplied !== undefined || report.resolutionsApplied !== undefined
     );
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      report.fixesApplied !== undefined || report.resolutionsApplied !== undefined;)
     const successRates = [];
     for (const report of fixReports) {
       const totalIssues = report.initialErrors || report.initialIssues || 0;
@@ -695,68 +417,38 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
           "timestamp": report.timestamp,"
           totalIssues,
           fixesApplied,
-          remainingIssues)"
-          "successRate": ((fixesApplied / totalIssues) * 100).toFixed(2),
-          "type": report.type ||general
-        })}
-    }
-    return successRates}
-  analyzeErrorTypes(reports) {
-    const errorTypes = {
-      "typescript": 0,
-      "eslint": 0,
-      "build": 0,
-      "dependency": 0,
+
       "other": 0;"
     };
-    for (const report of reports) {
-      if (report.checks) {
-        if (report.checks.TypeScript && !report.checks.TypeScript.success) {
           errorTypes.typescript += report.checks.TypeScript.count || 0}
-        if (report.checks.ESLint && !report.checks.ESLint.success) {
           errorTypes.eslint += report.checks.ESLint.count || 0}
-        if (report.checks.Build && !report.checks.Build.success) {
           errorTypes.build += report.checks.Build.count || 0}
-        if (report.checks.Dependencies && !report.checks.Dependencies.success) {
           errorTypes.dependency += report.checks.Dependencies.count || 0}
-      }
-    }
     return errorTypes}
   analyzeTimeDistribution(reports) {
     const timeDistribution = {"
-      '"00": 00-06:00: 0,"06": 00-12:00: 0,"12": 00-18:00: 0,"18": 00-24:00: 0;
-    };
-    for (const report of reports) {
-      const hour = new Date(report.timestamp).getHours();
-      if (hour >= 0 && hour < 6) {
-        timeDistribution["00": 00-06:00]++} else if (hour >= 6 && hour < 12) {
-        timeDistribution["06": 00-12:00]++} else if (hour >= 12 && hour < 18) {
-        timeDistribution["12": 00-18:00]++} else {
-  // TODO: Implement
-}
-        timeDistribution["18": 00-24:00]++}}
+
     return timeDistribution}
   analyzeFileDistribution(reports) {
     const fileDistribution = {};
-    for (const report of reports) {
       if (report.checks && report.checks.TypeScript && report.checks.TypeScript.errors) {
         for (const error of report.checks.TypeScript.errors) {
-          if (error.file && error.file !==unknown') {
+
             const fileName = path.basename(error.file);
             fileDistribution[fileName] = (fileDistribution[fileName] || 0) + 1}
         }
       }
     }
-    // Sort by error count and take top 10;
-    return Object.entries(fileDistribution)
+    // Sort by error count and take top 10
+return Object.entries(fileDistribution);
       .sort(([,a], [,b]) => b - a)
       .slice(0, 10)
       .reduce((obj, [key, value]) => {
         obj[key] = value;
         return obj}, {})}
   generateDashboardHTML(analyticsData) {
-    const html = `
-<!DOCTYPE html>'
+const html = `;
+<!DOCTYPE html>
 <html lang="en">"
 </html>
 <head>
@@ -768,8 +460,66 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
     <title>Error Analytics Dashboard</title>"
     <script src=https": //cdn.jsdelivr.net/npm/chart.js"></script>"
     <style>
+<<<<<<< HEAD
+<<<<<<< HEAD
 </style>
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            "margin": 0;
+            padding: 20px;
+            background-color: #f5f5f5}
+        .container {
+            max-"width": 1200px;
+            margin: 0 auto}
+        .header {
+            "background": linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            "color": white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center}
+        .stats-grid {
+            "display": grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            "gap": 20px;
+            margin-bottom: 30px}
+        .stat-card {
+            "background": white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-"align": center}
+        .stat-number {
+            font-"size": 2.5em;
+            font-weight: bold;
+            color: #667eea}
+        .stat-label {
+            "color": #666;
+            margin-top: 5px}
+        .chart-container {
+            "background": white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-"bottom": 20px}
+        .chart-title {
+            font-"size": 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333}
+        .last-updated {
+            text-"align": center;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 20px}
     </style>
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 </head>
 <body>
 </body>"
@@ -779,51 +529,203 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
 </div>
             <h1>🚨 Error Analytics Dashboard</h1>
             <p>Real-time insights into project error patterns and automation effectiveness</p>
-        </div>"
         <div class="stats-grid">"
-</div>"
             <div class="stat-card">"
-</div>"
-                <div class="stat-number">${analyticsData.totalErrors}</div>
-                <div class="stat-label">Total Errors</div>"
-            </div>"
-            <div class="stat-card">"
-</div>"
-                <div class="stat-number">${analyticsData.fixSuccessRate}%</div>
-                <div class="stat-label">Fix Success Rate</div>"
-            </div>"
-            <div class="stat-card">"
-</div>"
-                <div class="stat-number">${analyticsData.errorTypes.typescript}</div>
-                <div class="stat-label">TypeScript Errors</div>"
-            </div>"
-            <div class="stat-card">"
-</div>"
-                <div class="stat-number">${analyticsData.errorTypes.eslint}</div>
+
                 <div class="stat-label">ESLint Errors</div>"
-            </div>
-        </div>"
         <div class="chart-container">"
-</div>"
-            <div class="chart-title">Error Trends Over Time</div>
-            <canvas id="trendsChart"></canvas>"
-        </div>"
-        <div class="chart-container">"
-</div>"
-            <div class="chart-title">Error Types Distribution</div>
-            <canvas id="typesChart"></canvas>"
-        </div>"
-        <div class="chart-container">"
-</div>"
-            <div class="chart-title">Fix Success Rates</div>
+
             <canvas id="successChart"></canvas>"
-        </div>"
         <div class="last-updated">"
-</div>
-        </div>
-    </div>
     <script>
-</script>
+<<<<<<< HEAD
+      const avgSuccessRate = fixSuccessRates.length > 0 
+=======
+        // Error Trends Chart
+        const trendsCtx = document.getElementById('trendsChart').getContext('2d');
+        new Chart(trendsCtx, {
+            "type": 'line',
+            "data": {
+                labels: ${JSON.stringify(analyticsData.errorTrends.map(t => t.date))},
+                "datasets": [{
+                    label: 'Total Errors',
+                    "data": ${JSON.stringify(analyticsData.errorTrends.map(t => t.total))},
+                    "borderColor": '#667eea',
+                    "backgroundColor": 'rgba(102, 126, 234, 0.1)',
+                    "tension": 0.4
+                }]
+            },
+            "options": {
+                responsive: true,
+                "scales": {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // Error Types Chart
+        const typesCtx = document.getElementById('typesChart').getContext('2d');
+        new Chart(typesCtx, {
+            "type": 'doughnut',
+            "data": {
+                labels: ['TypeScript', 'ESLint', 'Build', 'Dependency'],
+                "datasets": [{
+                    data: [
+                        ${analyticsData.errorTypes.typescript},
+                        ${analyticsData.errorTypes.eslint},
+                        ${analyticsData.errorTypes.build},
+                        ${analyticsData.errorTypes.dependency}
+                    ],
+                    "backgroundColor": ['#667eea',
+                        '#764ba2',
+                        '#f093fb',
+                        '#f5576c'
+                    ]
+                }]
+            },
+            "options": {
+                responsive: true
+            }
+        });
+        // Success Rates Chart
+        const successCtx = document.getElementById('successChart').getContext('2d');
+        new Chart(successCtx, {
+            "type": 'bar',
+            "data": {
+                labels: ${JSON.stringify(analyticsData.fixSuccessRates.map(r => r.timestamp.split('T')[0]))},
+                "datasets": [{
+                    label: 'Success Rate (%)',
+                    "data": ${JSON.stringify(analyticsData.fixSuccessRates.map(r => parseFloat(r.successRate)))},
+                    "backgroundColor": '#667eea'
+                }]
+            },
+            "options": {
+                responsive: true,
+                "scales": {
+                    y: {
+                        beginAtZero: true,
+                        "max": 100
+                    }
+                }
+            }
+        });
     </script>
 </body>
-</html>`;"
+</html>`;
+    return html}
+  async generateAnalyticsReport() {
+    this.log('Generating analytics report...');
+    try {
+      const reports = await this.collectErrorReports();
+      if (reports.length === 0) {
+        this.log('No reports found for analytics', 'INFO');
+        return}
+      // Analyze data
+      const errorTrends = this.analyzeErrorTrends(reports);
+      const fixSuccessRates = this.analyzeFixSuccessRates(reports);
+      const errorTypes = this.analyzeErrorTypes(reports);
+      const timeDistribution = this.analyzeTimeDistribution(reports);
+      const fileDistribution = this.analyzeFileDistribution(reports);
+      // Calculate summary statistics
+      const totalErrors = Object.values(errorTypes).reduce((sum, count) => sum + count, 0);
+const avgSuccessRate = fixSuccessRates.length > 0;
+        ? fixSuccessRates.reduce((sum, rate) => sum + parseFloat(rate.successRate), 0) / fixSuccessRates.length
+        : 0;
+      const analyticsData = {
+        totalErrors,
+        "fixSuccessRate": avgSuccessRate.toFixed(1),
+        errorTypes,
+        timeDistribution,
+        fileDistribution,
+        errorTrends,
+        fixSuccessRates,
+        "lastUpdated": new Date().toISOString()
+      };
+      // Save analytics data
+      const analyticsPath = path.join(this.dashboardDir, 'analytics-data.json');
+      fs.writeFileSync(analyticsPath, JSON.stringify(analyticsData, null, 2));
+      // Generate HTML dashboard
+      const html = this.generateDashboardHTML(analyticsData);
+      const dashboardPath = path.join(this.dashboardDir, 'index.html');
+      fs.writeFileSync(dashboardPath, html);
+      // Update analytics data
+      this.analyticsData = analyticsData;
+      this.log(`Analytics report "generated": ${dashboardPath}`, 'INFO')} catch (error) {
+      this.log(`Failed to generate analytics "report": ${error.message}`, 'ERROR')}
+  }
+  async startDashboard() {
+    this.log('Starting error analytics dashboard...');
+    // Generate initial report
+    await this.generateAnalyticsReport();
+    // Set up periodic updates
+    setInterval(async () => {
+      try {
+        await this.generateAnalyticsReport()} catch (error) {
+        this.log(`Error in periodic analytics "update": ${error.message}`, 'ERROR')}
+    }, this.updateInterval);
+    this.log(`Error analytics dashboard started. Updating every ${this.updateInterval / 1000} seconds.`);
+    this.log(`Dashboard available "at": ${path.join(this.dashboardDir, 'index.html')}`)}
+  getStatus() {
+    return {
+      "running": true,
+      "dashboardPath": path.join(this.dashboardDir, 'index.html'),
+      "updateInterval": this.updateInterval,
+      "analyticsEnabled": this.analyticsEnabled,
+      "lastUpdate": this.analyticsData.lastUpdated
+    }}
+}
+;
+// Run the automation if called directly;
+// Main execution
+if (require.main === module) {
+  const dashboard = new ErrorAnalyticsDashboard();
+  // Handle graceful shutdown
+  process.on('SIGINT', () => {
+    dashboard.log('Shutting down error analytics dashboard...');
+    process.exit(0)});
+  process.on('SIGTERM', () => {
+    dashboard.log('Shutting down error analytics dashboard...');
+    process.exit(0)});
+  // Start dashboard
+  dashboard.startDashboard().catch(error => {
+    dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR');
+    process.exit(1)})}
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+module.exports = ErrorAnalyticsDashboard
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+module.exports = ErrorAnalyticsDashboard
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = ErrorAnalyticsDashboard
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+module.exports = ErrorAnalyticsDashboard
+
+module.exports = ErrorAnalyticsDashboard
+
+<<<<<<< HEAD
+module.exports = ErrorAnalyticsDashboard
+module.exports = ErrorAnalyticsDashboard
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

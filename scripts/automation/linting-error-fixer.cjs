@@ -1,8 +1,12 @@
-#!/usr/bin/env
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-    this.logFile = path.join(this.projectRoot, automation/logs/linting-error-fixer.log)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+#!/""usr/bin/env""
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+    this.logFile = path.join(this.projectRoot, ""automation/logs/linting-error-fixer.log"")
     console.log(")
     await fs.appendFile(this.logFile, logMessage + "\n")
   "cwd"
@@ -16,13 +20,13 @@ const path = require("path")
       return { "success": true, "output"}
   return { "success": false, "output"}
   await this.log(" Fixing ESLint configuration...")
-  const eslintPath = path.join(this.projectRoot, ".eslintrc.js")
-  "extends": [next/core-web-vitals, next/typescript]
-  "rules": {@typescript-"eslint/no-unused-vars: "warn",@typescript-"eslint/no-explicit-any: "warn","react/react-in-jsx-scope: "off","react/prop-types: "off",no-console": "warn",no-unused-vars": "warn",prefer-const": "warn",no-var": "error"}
+const eslintPath = path.join(this.projectRoot, ".eslintrc.js");
+  "extends": [""next/core-web-vitals"", ""next/typescript""]
+  "rules": {@typescript-"eslint/no-unused-vars"": "warn",@typescript-"eslint/no-explicit-any"": "warn","react/react-in-jsx-scope"": "off","react/prop-types"": "off",no-console": "warn",no-unused-vars": "warn",prefer-const": "warn",no-var": "error"}
   "ignorePatterns": ["node_modules/", ".next/", "out/", "dist/", "automation/"]
   const eslintPath = path.join(this.projectRoot, ".eslintrc.js");const fixedConfig = module.exports = {"}
-  "extends": ["next/core-web-vitals", "next/typescript"],"
-  "rules": {@typescript-eslint/no-unused-vars": "warn",@typescript-eslint/no-explicit-any": "warn",react/react-in-jsx-scope": "off",react/prop-types": "off",no-console": "warn",no-unused-vars": "warn",prefer-const": "warn",no-var": "error"}
+  "extends": ["""next/core-web-vitals""", """next/typescript"""],"
+  "rules": {@typescript-""eslint/no-unused-vars""": "warn",@typescript-""eslint/no-explicit-any""": "warn",""react/react-in-jsx-scope""": "off",""react/prop-types""": "off",no-console": "warn",no-unused-vars": "warn",prefer-const": "warn",no-var": "error"}
   "ignorePatterns": ["node_modules/", ".next/", "out/", "dist/", "automation/"]};"
       "
       await fs.writeFile(eslintPath, fixedConfig")
@@ -35,26 +39,26 @@ await this.log(" ESLint configuration fixed")
         "file": ".eslintrc.js"
         "timestamp": new Date().toISOString()})} catch (error) {  await this.log(` Error fixing ESLint "config"`})
   await this.log(" Auto-fixing linting issues...")
-    const fixResult = await this.runCommand("npm run lint -- --fix", { "silent"})
+const fixResult = await this.runCommand("npm run lint -- --fix", { "silent"});
   await this.log(" ESLint auto-fix completed")
   "type": "eslint-auto-fix"
         "action": "npm run lint -- --fix"
         "timestamp"
   await this.log("⚠  ESLint auto-fix had issues")
   await this.log(" Fixing common linting issues...")
-    const jsFiles = require("glob").sync("src/**/*.{js,jsx,ts,tsx}", { "cwd"})
-  const filePath = path.join(this.projectRoot, ")
-        let content = await fs.readFile(filePath", "utf8")
-        const unusedVarPattern = /const\s+(\w+)\s*=\s*([^]+);\s*\/\/\s*unused/g
-        const unusedVarPattern = /const\s+(\w+)\s*=\s*([^]+);\s*\/\/\s*"unused/g"
-        if (content.includes("console.log()
-  content = content.replace(/console\.log\(/g, "// console.log()
+const jsFiles = require("glob").sync("src/**/*.{js,jsx,ts,tsx}", { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+let content = await fs.readFile(filePath", "utf8");
+const unusedVarPattern = /const\s+(\w+)\s*=\s*([^]+);\s*\/\/\s*""unused/g"";
+const unusedVarPattern = /const\s+(\w+)\s*=\s*([^]+);\s*\/\/\s*"unused/g";
+        if (content.includes("console.log("")
+  content = content.replace(/console\.log\(/g, "// console.log("")
         if (content.includes("var ")
   content = content.replace(/var\s+(\w+)/g, "const $1"
   "type": "linting-fix"
             "file"
             "timestamp"
-      } catch (error) {  await this.log( Error fixing ${file  }: ${error.message})
+      } catch (error) {  await this.log( Error fixing ${file  }: ${error.message}"")
   await this.log(" Starting Linting Error Fixer")
   "type": "linting-fix"
             "file"
@@ -62,4 +66,42 @@ await this.log(" ESLint configuration fixed")
   "type": "linting-fix"
             "file": file,"
             "timestamp": new Date().toISOString()")}
-});")}")} catch (error) {await this.log( Error fixing ${file}: ${error.message})
+});")}")} catch (error) {await this.log( Error fixing ${file}: ${error.message}"")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+  await this.log(")
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+  await this.log(")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  await this.log(")
+<<<<<<< HEAD
+  await this.log(")
+
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

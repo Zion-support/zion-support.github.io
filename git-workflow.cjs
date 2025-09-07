@@ -1,60 +1,88 @@
 #!/usr/bin/env node
 const { execSync } = require('child_process')
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+const { execSync } = require('child_process')
+
+
+#!/usr/bin/env node
+const { execSync } = require('child_process')
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+#!/usr/bin/env node
+const { execSync } = require('child_process')
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function run(cmd) {
-  return execSync(cmd, { stdio: inherit})}
+  return execSync(cmd, { stdio: 'inherit' })
+}
 
 function currentBranch() {
-  return execSync('git rev-parse --abbrev-ref HEAD').toString().trim()}
+  return execSync('git rev-parse --abbrev-ref HEAD').toString().trim()
+}
 
 function ensureUpstream() {
   try {
-  // TODO: Implement
-}
-    execSync('git remote get-url origin, { stdio: ignore})} catch (_) {
-    throw new Error('No git remote named origin is configured')}
+    execSync('git remote get-url origin', { stdio: 'ignore' })
+  } catch (_) {
+    throw new Error('No git remote named origin is configured')
+  }
 }
 
 function commitAll(message) {
   run('git add -A')
   try {
-  // TODO: Implement
-}
-    run(`git commit -m ${JSON.stringify(message)})
+    run(`git commit -m ${JSON.stringify(message)}`)
   } catch (_) {
-    // no changes to commit;
+    // no changes to commit
   }
 }
 
 function push(branch) {
   ensureUpstream()
-  run(`git push -u origin ${branch})
+  run(`git push -u origin ${branch}`)
 }
 
 function mergeIntoMain(fromBranch) {
   ensureUpstream()
   const original = currentBranch()
-  if (original !==main') run('git fetch origin main:main')
-  if (currentBranch() !==main') run('git checkout main')
-  run(`git merge --no-ff ${fromBranch})
+  if (original !== 'main') run('git fetch origin main:main')
+  if (currentBranch() !== 'main') run('git checkout main')
+  run(`git merge --no-ff ${fromBranch}`)
   run('git push origin main')
-  if (currentBranch() !== original) run(`git checkout ${original})
+  if (currentBranch() !== original) run(`git checkout ${original}`)
 }
 
 if (require.main === module) {
   const action = process.argv[2]
   switch (action) {
-    case 'commit-push: {
-      const msg = process.argv[3] ||chore: automated fixes
+    case 'commit-push': {
+      const msg = process.argv[3] || 'chore: automated fixes'
       const branch = currentBranch()
       commitAll(msg)
       push(branch)
-      break;
+      break
     }
-    case 'merge-into-main: {
+    case 'merge-into-main': {
       const branch = process.argv[3] || currentBranch()
       mergeIntoMain(branch)
-      break;
+      break
     }
-    default: 
-      console.log('Usage: git-workflow.cjs <commit-push|merge-into-main> [arg])
-</commit>'
+    default:
+      console.log('Usage: git-workflow.cjs <commit-push|merge-into-main> [arg]')
+  }
+}
+
+module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }

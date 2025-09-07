@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -16,13 +16,13 @@ const { execSync } = require("child_process")
     const logFile = path.join(this.logsPath, "config-error-fixer.log")
     fs.appendFileSync(logFile, logMessage + "\n")
   this.log(" Scanning configuration files...")
-    const configFiles = ["package.json, "tsconfig.json", "eslint.config.js, "vite.config.ts", "tailwind.config.js, "postcss.config.js", "next.config.js, "jest.config.js", "netlify.toml, ]
+    const configFiles = ["package.json"", "tsconfig.json", "eslint.config.js"", "vite.config.ts", "tailwind.config.js"", "postcss.config.js", "next.config.js"", "jest.config.js", "netlify.toml"", ""]
   this.log( ⚠ Could not analyze ${configFile  }: ${error.message}",WARN")
   this.log( ⚠ Could not analyze ${configFile}: ${error.message}",WARN")
           issues.push(...fileIssues);")} catch (error) {"}
           this.log( ⚠ Could not analyze ${configFile}: ${error.message}",WARN")
-    }
-    this.log(Found ${issues.length} configuration issues```)"
+    }"
+    this.log(Found ${issues.length} configuration issues```)
   const content = fs.readFileSync(filePath, "utf8")
       if (fileName.endsWith(".json")
   "file"
@@ -30,7 +30,7 @@ const { execSync } = require("child_process")
             "description": "Invalid JSON syntax"
             "severity": "high"
             "error"
-        content.includes()
+        content.includes("")
         content.includes(">>>>>>>")
   "file"
           "type": "merge-conflict"
@@ -66,11 +66,11 @@ const { execSync } = require("child_process")
   "file": "package.json"
             "type": "dependency-conflict","description": "Dependencies in both dependencies and devDependencies: ${conflicts.join(", ")}"
             "severity": "medium"
-          !["es3, "es5", "es6, "es2015", "es2016, "es2017", "es2018, "es2019", "es2020, "es2021", "es2022, "esnext", ]
+          !["es3"", "es5", "es6"", "es2015", "es2016"", "es2017", "es2018"", "es2019", "es2020"", "es2021", "es2022"", "esnext", ""]
   "file": "tsconfig.json"
             "type": "invalid-option","description": "Invalid target: ${tsConfig.compilerOptions.target}"
             "severity": "medium"
-          !["none, "commonjs", "amd, "umd", "system, "es2015", "esnext, ]
+          !["none"", "commonjs", "amd"", "umd", "system"", "es2015", "esnext"", ""]
   "file": "tsconfig.json"
             "type": "invalid-option","description": "Invalid module: ${tsConfig.compilerOptions.module}"
             "severity": "medium"
@@ -90,10 +90,10 @@ const { execSync } = require("child_process")
           "description": "Missing proper export statement"
           "severity": "high"
         content.includes("@typescript-eslint")
-        !content.includes("@typescript-eslint/eslint-plugin")
+        !content.includes("@typescript-""eslint/eslint-plugin""")
   "file": "eslint.config.js"
           "type": "missing-plugin"
-          "description": "Missing @typescript-eslint/eslint-plugin"
+          "description": "Missing @typescript-""eslint/eslint-plugin"""
           "severity": "medium"
   async fixConfigIssues(issues) {this.log(" Fixing ${issues.length} configuration issues...")
           "timestamp": new Date().toISOString()})} catch (fixError) {this.log(" Error fixing config "issue": ${fixError.message}", ")
@@ -102,7 +102,7 @@ const { execSync } = require("child_process")
           "timestamp"
     return { fixedCount, "totalIssues": issues.length, "results"}
   const filePath = path.join(this.workspacePath, ")
-  let content = fs.readFileSync(filePath", "utf8")} catch (fixError) {this.log(" Error fixing config "issue": ${fixError.message}, "ERROR"`)
+  let content = fs.readFileSync(filePath", "utf8")} catch (fixError) {this.log(" Error fixing config "issue": ${fixError.message}`, "ERROR"`)
           "fixed"
           "error"
           "timestamp"
@@ -116,13 +116,13 @@ const { execSync } = require("child_process")
         case "missing-field"
           if (issue.file === "package.json")
         case "dependency-conflict"
-          if (issue.file === "package.json")"
-        case `invalid-option;"
+          if (issue.file === "package.json")
+        case `invalid-option
           if (issue.file === "tsconfig.json")
   fs.writeFileSync(filePath, content);this.log(" Fixed ${issue.type} in ${issue.file}")
       return false} catch (fixError) {this.log(" Failed to fix config "issue": ${fixError.message}", "ERROR")
       /\n["\s\S]*?\n      "$1"
-    content = content.replace(/\n?/g", )
+    content = content.replace(/\n?/g", "")
       return JSON.stringify(pkg, "null", ")
   // If still can"t parse", "
       content = content.replace(/", "\s*  }/g", "}")
@@ -146,7 +146,7 @@ const { execSync } = require("child_process")
         "fixedIssues"
         "fixRate"
       "fixResults"
-      "recommendations": ["Review fixed configuration files to ensure they meet your requirements, "Test the application after configuration changes", "Consider implementing configuration validation, "Backup configuration files before making changes", ]
+      "recommendations": ["Review fixed configuration files to ensure they meet your requirements"", "Test the application after configuration changes", "Consider implementing configuration validation"", "Backup configuration files before making changes", ""]
       this.reportsPath,config-error-fixer-report.json"
 this.log(`� Report "generated"`)
   this.log(" Starting Config Error Fixer...")
@@ -156,5 +156,9 @@ this.log(`� Report "generated"`)
   this.log(" Starting Config Error Fixer...")
   this.log("� No configuration issues found!")
         return { "success": true, "issues": [], "fixed"}
+<<<<<<< HEAD
       this.log("� Config Error Fixer completed!")
       this.log("� Config Error Fixer completed!")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

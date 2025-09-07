@@ -1,109 +1,105 @@
-export interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  type: 'job' | 'project' | 'user' | 'company';
-  score: number;
-  metadata?: any;
+import type { ParsedFilters } from './parser';
+import { TALENT_PROFILES } from '../../data/talent';
+import type { TalentProfile } from '../../data/talent';
+export type AccessLevel = $2;
+export type SearchResult = $2;
+  id: string,
+  slug?: string,
+  title: string,
+  subtitle?: string,
+  location?: string,
+  tags: string[],
+  hourlyRateUsd?: number,
+  availability?: 'full-time' | 'part-time' | 'contract',
+  verified?: boolean,
+  visibility?: AccessLevel,
+  description?: string,
+  relevance: number},
+
+function computeRelevanceScore(text: string, keywords: string[], weight = $2;
+  const lower = text.toLowerCase($2);
+  let score = $2;
+  for (const k of keywords) {
+    if (lower.includes(k.toLowerCase())) score += 1 * weight
+  }
+  return score
 }
 
-export interface SearchFilters {
-  type?: string[];
-  location?: string[];
-  skills?: string[];
-  experience?: string;
-  salary?: {
-    min?: number;
-    max?: number;
-  };
-  dateRange?: {
-    start?: string;
-    end?: string;
-  };
+function computeSkillOverlap(skills: string[], wanted: string[]): number {
+  const set = $2;
+  let score = $2;
+  for (const w of wanted) if (set.has(w.toLowerCase())) score += 2,
+  return score
 }
 
-export function filterSearchResults(results: SearchResult[], filters: SearchFilters): SearchResult[] {
-  return results.filter(result => {
-    // Filter by type
-    if (filters.type && filters.type.length > 0) {
-      if (!filters.type.includes(result.type)) {
-        return false;
-      }
-    }
-
-    // Filter by location (if metadata contains location)
-    if (filters.location && filters.location.length > 0) {
-      const resultLocation = result.metadata?.location;
-      if (!resultLocation || !filters.location.includes(resultLocation)) {
-        return false;
-      }
-    }
-
-    // Filter by skills (if metadata contains skills)
-    if (filters.skills && filters.skills.length > 0) {
-      const resultSkills = result.metadata?.skills || [];
-      const hasMatchingSkill = filters.skills.some(skill => 
-        resultSkills.some((resultSkill: string) => 
-          resultSkill.toLowerCase().includes(skill.toLowerCase())
-        )
-      );
-      if (!hasMatchingSkill) {
-        return false;
-      }
-    }
-
-    // Filter by experience (if metadata contains experience)
-    if (filters.experience) {
-      const resultExperience = result.metadata?.experience;
-      if (!resultExperience || resultExperience !== filters.experience) {
-        return false;
-      }
-    }
-
-    // Filter by salary range (if metadata contains salary)
-    if (filters.salary) {
-      const resultSalary = result.metadata?.salary;
-      if (resultSalary) {
-        if (filters.salary.min && resultSalary < filters.salary.min) {
-          return false;
-        }
-        if (filters.salary.max && resultSalary > filters.salary.max) {
-          return false;
-        }
-      }
-    }
-
-    // Filter by date range (if metadata contains date)
-    if (filters.dateRange) {
-      const resultDate = result.metadata?.date;
-      if (resultDate) {
-        const date = new Date(resultDate);
-        if (filters.dateRange.start && date < new Date(filters.dateRange.start)) {
-          return false;
-        }
-        if (filters.dateRange.end && date > new Date(filters.dateRange.end)) {
-          return false;
-        }
-      }
-    }
-
-    return true;
-  });
+function budgetScore(candidate?: number, min?: number, max?: number): number {
+  if (!candidate) return 0,
+  let score = $2;
+  if (max && candidate <= max) score += 1.5,
+  if (min && candidate >= min) score += 0.5,
+  return score
 }
 
-export function sortSearchResults(results: SearchResult[], sortBy: 'relevance' | 'date' | 'title' = 'relevance'): SearchResult[] {
-  return [...results].sort((a, b) => {
-    switch (sortBy) {
-      case 'relevance':
-        return b.score - a.score;
-      case 'date':
-        const dateA = new Date(a.metadata?.date || 0);
-        const dateB = new Date(b.metadata?.date || 0);
-        return dateB.getTime() - dateA.getTime();
-      case 'title':
-        return a.title.localeCompare(b.title);
-      default:
-        return 0;
-    }
-  });
+function availabilityMatches(candidate?: string, requested?: string): boolean {
+  if (!requested) return true,
+  if (!candidate) return false,
+  return candidate.toLowerCase() === requested.toLowerCase()
+}
+
+function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): boolean {
+  const level = $2;
+  const order: AccessLevel[] = ['publicmemberadmin'],
+  return order.indexOf(access) >= order.indexOf(level)
+}
+
+export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[], talent: SearchResult[], jobs: SearchResult[], projects: SearchResult[] } {
+  const talent: SearchResult[] = TALENT_PROFILES
+    .filter((p) => availabilityMatches(p.availability, filters.availability))
+    .filter((p) => {
+      if (filters.location) return p.location.toLowerCase().includes(filters.location.toLowerCase()),
+      return true
+    })
+    .filter((p) => {
+      if (filters.minBudgetUsd || filters.maxBudgetUsd) {
+        if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false,
+        if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false
+      }
+      return true
+    })
+    .map<SearchResult>((p) => {
+      const skillScore = computeSkillOverlap($2);
+      const textScore = computeRelevanceScore($2);
+      const priceScore = budgetScore($2);
+      const relevance = $2;
+      return {
+        type: 'talent',
+        id: p.slug,
+        slug: p.slug,
+        title: p.name,
+        subtitle: p.title,
+        location: p.location,
+        tags: p.skills,
+        hourlyRateUsd: p.hourlyRateUsd,
+        availability: p.availability,
+        verified: true,
+        visibility: 'public',
+        description: p.bio,
+        relevance}
+    })
+    .filter((r) => passesRls(r.visibility, access))
+    .sort((a, b) => b.relevance - a.relevance),
+
+  const jobs: SearchResult[] = [],
+  const projects: SearchResult[] = [],
+
+  const all = [...talent, ...jobs, ...projects].sort((a, b) => b.relevance - a.relevance),
+  return { all, talent, jobs, projects }
+}
+
+export function suggestDidYouMean(query: string): string | null {
+  // naive suggestion: if user says devops latam -> normalize to "DevOps jobs in LATAM"
+  const q = query.toLowerCase($2);
+  if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM',
+  if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr',
+  return null
 }

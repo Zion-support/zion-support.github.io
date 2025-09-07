@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync, spawn } = require("child_process")
@@ -18,7 +18,7 @@ const { execSync, spawn } = require("child_process")
       this.buildResults.steps.push({name,"status": "failed"})
         "error"
       this.buildResults.errors.push({"step": name,"error"})
-      this.log(`Failed "step": ${name} - ${errorMessage}, "ERROR"`)
+      this.log(`Failed "step": ${name} - ${errorMessage}`, "ERROR"`)
     this.log("Checking dependencies...")
         "Check Node.js version"
         "node --version"
@@ -31,12 +31,12 @@ const { execSync, spawn } = require("child_process")
           { "silent": true, "continueOnError"}
         this.buildResults.metrics.yarnVersion = yarnVersion ? yarnVersion.trim() : "Not installed"
         this.buildResults.metrics.yarnVersion = "Not installed"
-      this.log(`Dependency check "failed": ${error.message}, "ERROR"`)
+      this.log(`Dependency check "failed": ${error.message}`, "ERROR"`)
     this.log("Installing dependencies...")
       if (fs.existsSync(path.join(this.projectRoot, "yarn.lock")
         await this.runStep("Install dependencies with yarn", "yarn install --frozen-lockfile")
         await this.runStep("Install dependencies with npm", "npm ci")
-      this.log(`Dependency installation "failed": ${error.message}, "ERROR"`)
+      this.log(`Dependency installation "failed": ${error.message}`, "ERROR"`)
     this.log("Running linting...")
         "ESLint check"
         "npm run lint"
@@ -57,7 +57,7 @@ const { execSync, spawn } = require("child_process")
     this.log("Running build...")
       await this.runStep("Build application", "npm run build")
       const buildDir = path.join(this.projectRoot, ".next")
-      this.log(`Build "failed": ${error.message}, "ERROR"`)
+      this.log(`Build "failed": ${error.message}`, "ERROR"`)
     this.log("Running security audit...")
         "Security audit"
         "npm audit --audit-level=moderate"
@@ -90,9 +90,13 @@ const { execSync, spawn } = require("child_process")
       this.log(`"Warnings"`)
       this.log(`Total "Duration"`)
       this.log(`"Report"`)
-      this.log(`Build automation "failed": ${error.message}, "ERROR"`)
+      this.log(`Build automation "failed": ${error.message}`, "ERROR"`)
       this.buildResults.overallStatus = "failed"
       console.log("\n Build automation completed")
       process.exit(results.overallStatus === "success")
+<<<<<<< HEAD
       console.error("\n Build automation "failed": ")
       console.error("\n Build automation "failed": ")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

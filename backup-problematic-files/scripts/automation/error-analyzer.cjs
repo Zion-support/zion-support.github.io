@@ -1,8 +1,8 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-// console.log(' Starting comprehensive error analysis...)
+// console.log(' Starting comprehensive error analysis...')
       console.log(' Error analysis completed successfully')
       console.error(' Error during "analysis")
         "encoding"
@@ -38,5 +38,9 @@ const path = require('path')
 // console.log('\nError "Categories")
     console.log('\nPriority "Errors")
     console.log('\"nRecommendations")
+<<<<<<< HEAD
     console.error(' Error analyzer "failed")
     console.error(' Error analyzer "failed")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,68 +1,87 @@
 #!/usr/bin/env node
-// Master Automation Orchestrator (clean version)
+
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
-class MasterOrchestrator {
-  // TODO: Implement
-}
+
+console.log('🚀 Starting Master Automation Orchestrator...');
+
+class MasterAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logsDir = path.join(this.projectRoot,logs');
-    this.logFile = path.join(this.logsDir,master-orchestrator.log');
+    this.logsDir = path.join(this.projectRoot, 'logs');
+    this.logFile = path.join(this.logsDir, 'master-orchestrator.log');
     this.startTime = Date.now();
     this.results = {};
-    try {
-  // TODO: Implement
-}
-      fs.mkdirSync(this.logsDir, { "recursive": true });"
-    } catch {}
+    this.ensureLogDir();
   }
-"
+
+  ensureLogDir() {
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true });
+    }
+  }
+
   log(message, level = 'INFO') {
-    const line = `[${new Date().toISOString()}] [${level}] ${message}\n`;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    console.log(logMessage);
     try {
-  // TODO: Implement
-}
-      fs.appendFileSync(this.logFile, line);
-    } catch {}
-    process.stdout.write(line);
+      fs.appendFileSync(this.logFile, logMessage + '\n');
+    } catch (error) {
+      // Ignore log file errors
+    }
   }
 
   runCmd(cmd) {
     try {
-  // TODO: Implement
-}
-      const out = execSync(cmd, { stdio: pipe, encoding: utf8});
+      const out = execSync(cmd, { stdio: 'pipe', encoding: 'utf8' });
       return { success: true, output: out };
     } catch (e) {
       return {
-  // TODO: Implement
-}
-        "success": false,
-        "error": e.message,
-        "output": e.stdout?.toString?.() || };
+        success: false,
+        error: e.message,
+        output: e.stdout?.toString?.() || ''
+      };
+    }
+  }
+
+  async runCommand(command, description) {
+    try {
+      this.log(`🚀 ${description}`);
+      const result = execSync(command, {
+        encoding: 'utf8',
+        stdio: 'pipe',
+        cwd: this.projectRoot
+      });
+      this.log(`✅ ${description} - Success`);
+      return { success: true, result };
+    } catch (error) {
+      this.log(`❌ ${description} - Failed: ${error.message}`);
+      return { success: false, error: error.message };
     }
   }
 
   async runAllChecks() {
-    this.log('Starting comprehensive system check.);
-    const tasks = []
-      [health,node automation/health-check.cjs],
-      [security,node automation/security-scanner.cjs],
-      [performance,node automation/performance-optimizer.cjs],
-      [codeQuality,node automation/code-quality-monitor.cjs],
-      [build,npm run build],
-      [lint,npm run lint],
-      [typeCheck,npm run type-check],];
+    this.log('Starting comprehensive system check.');
+    
+    const tasks = [
+      ['health', 'node automation/health-check.cjs'],
+      ['security', 'node automation/security-scanner.cjs'],
+      ['performance', 'node automation/performance-optimizer.cjs'],
+      ['codeQuality', 'node automation/code-quality-monitor.cjs'],
+      ['build', 'npm run build'],
+      ['lint', 'npm run lint'],
+      ['typeCheck', 'npm run type-check'],
+    ];
 
     for (const [name, cmd] of tasks) {
-      this.log(`Running: ${name});
+      this.log(`Running: ${name}`);
       const res = this.runCmd(cmd);
       this.results[name] = { success: res.success, error: res.error || null };
-      '
-      if (!res.success && name ===lint') {
-        this.log('Attempting lint auto-fix.);
+      
+      if (!res.success && name === 'lint') {
+        this.log('Attempting lint auto-fix.');
         const fixRes = this.runCmd('npm run lint:fix');
         this.results.lint.autoFixed = fixRes.success;
       }
@@ -71,155 +90,45 @@ class MasterOrchestrator {
     const passed = Object.values(this.results).filter(r => r.success).length;
     const total = Object.keys(this.results).length;
     const durationMs = Date.now() - this.startTime;
+    
+
+    
+
+main
 
     const summary = {
       timestamp: new Date().toISOString(),
       durationMs,
       total,
       passed,
-      "failed": total - passed,
-      "status": passed === total;
-          ? 'HEALTHY
+      failed: total - passed,
+      status: passed === total
+          ? 'HEALTHY'
           : passed >= Math.floor(total * 0.8)
-            ? 'WARNING: CRITICAL};
+            ? 'WARNING'
+            : 'CRITICAL'
+    };
+
     try {
-  // TODO: Implement
-}
-      fs.writeFileSync()
-        path.join(this.logsDir,master-orchestrator-report.json'),
+      fs.writeFileSync(
+        path.join(this.logsDir, 'master-orchestrator-report.json'),
         JSON.stringify({ summary, results: this.results }, null, 2)
       );
-    } catch {}
-      `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`"
-    );
+    } catch (error) {
+      this.log(`Error writing report: ${error.message}`, 'ERROR');
+    }
 
     this.log(`Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`);
     return passed === total;
   }
-}
-
-if (require.main === module) {
-  const orchestrator = new MasterOrchestrator();"
-  const command = process.argv[2] ||check';
-  switch (command) {
-    case 'check: 
-      orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
-      break;
-    default: 
-      console.log('Usage: node automation/master-orchestrator.cjs check');
-      process.exit(1);
-  }
-}
-
-module.exports = MasterOrchestrator;
-#!/usr/bin/env node'
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-console.log('🚀 Starting Master Automation Orchestrator...);
-class MasterAutomationOrchestrator {
-  // TODO: Implement
-}
-  constructor() {
-      fs.mkdirSync(this.logsDir, { "recursive": true });"
-    } catch {}
-  }
-"
-  log(message, level = 'INFO') {
-    const line = `[${new Date().toISOString()}] [${level}] ${message}\n`;
-    try {
-  // TODO: Implement
-}
-      fs.appendFileSync(this.logFile, line);
-    } catch {}
-    process.stdout.write(line);
-  }
-
-  runCmd(cmd) {
-    try {
-  // TODO: Implement
-}
-      const out = execSync(cmd, { stdio: pipe, encoding: utf8});
-      return { success: true, output: out };
-    } catch (e) {
-      return {
-  // TODO: Implement
-}
-        success: false,
-        error: e.message,
-        output: e.stdout?.toString?.() || };
-        "success": false,
-        "error": e.message,
-        "output": e.stdout?.toString?.() || };
-    this.logFile = path.join(
-      __dirname,
-      '..,automation-reports,master-orchestrator.log)
-    );
-    this.ensureLogDir();
-  }
-
-  ensureLogDir() {
-#!/usr/bin/env node
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
-class MasterAutomationOrchestrator {
-  constructor() {
-    this.logFile = path.join(__dirname,..,automation_logs,master-automation.log');
-    this.ensureLogDirectory();
-  }
-
-  ensureLogDirectory() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message};
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage +\n');
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-
-  async runCommand(command, description) {
-    try {
-  // TODO: Implement
-}
-      this.log(`🚀 ${description});
-      const result = execSync(command, {
-        encoding: utf8,
-        stdio: pipe,)
-        cwd: path.join(__dirname,..),});
-      this.log(`✅ ${description} - Success`);
-      return { success: true, result };
-    } catch (error) {
-      this.log(`❌ ${description} - Failed: ${error.message});
-      this.log(`Starting: ${description});
-      const result = execSync(command, { 
-        encoding: utf8, 
-        cwd: /workspace,
-        stdio: pipe});
-      this.log(`Completed: ${description});
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`Error in ${description}: ${error.message});
-      return { success: false, error: error.message };
-    }
-  }
 
   async runLinting() {
-    this.log('🔧 Running linting and code quality checks...);
+    this.log('🔧 Running linting and code quality checks...');
+
     const commands = [
-      { cmd: npm run lint:fix, desc: Fix linting errors},
-      { cmd: npm run type-check, desc: TypeScript type checking},
-      { cmd: npm run test:smoke, desc: Run smoke tests},]
+      { cmd: 'npm run lint:fix', desc: 'Fix linting errors' },
+      { cmd: 'npm run type-check', desc: 'TypeScript type checking' },
+      { cmd: 'npm run test:smoke', desc: 'Run smoke tests' },
     ];
 
     for (const { cmd, desc } of commands) {
@@ -228,26 +137,28 @@ class MasterAutomationOrchestrator {
   }
 
   async runBuildProcess() {
-    this.log('🏗️ Running build process...);
+    this.log('🏗️ Running build process...');
+
     const commands = [
-      { cmd: npm run clean, desc: Clean build artifacts},
-      { cmd: npm run build, desc: Build application},]
+      { cmd: 'npm run clean', desc: 'Clean build artifacts' },
+      { cmd: 'npm run build', desc: 'Build application' },
     ];
 
     for (const { cmd, desc } of commands) {
       const result = await this.runCommand(cmd, desc);
       if (!result.success) {
-        this.log('⚠️ Build failed, attempting to fix...);
+        this.log('⚠️ Build failed, attempting to fix...');
         await this.fixBuildIssues();
       }
     }
   }
 
   async fixBuildIssues() {
-    this.log('🔧 Attempting to fix build issues...);
+    this.log('🔧 Attempting to fix build issues...');
+
     const fixCommands = [
-      { cmd: npm run lint:fix, desc: Fix linting issues},
-      { cmd: node comprehensive-syntax-fix.cjs, desc: Fix syntax issues},]
+      { cmd: 'npm run lint:fix', desc: 'Fix linting issues' },
+      { cmd: 'node automation/comprehensive-syntax-fixer.cjs', desc: 'Fix syntax issues' },
     ];
 
     for (const { cmd, desc } of fixCommands) {
@@ -256,597 +167,88 @@ class MasterAutomationOrchestrator {
   }
 
   async runAutomationScripts() {
-    this.log('🤖 Running automation scripts...);
+    this.log('🤖 Running automation scripts...');
+
     const scripts = [
-      'enhanced-automation-suite.cjs,app-optimizer.cjs,comprehensive-app-improvement-suite.cjs,]
+      'automation/enhanced-automation-suite.cjs',
+      'automation/comprehensive-app-improver.cjs',
     ];
 
     for (const script of scripts) {
-      const scriptPath = path.join(__dirname,.., script);
+      const scriptPath = path.join(this.projectRoot, script);
       if (fs.existsSync(scriptPath)) {
-        await this.runCommand(`node ${script}, `Running ${script});
+        await this.runCommand(`node ${scriptPath}`, `Running ${script}`);
       } else {
-  // TODO: Implement
-}
-        this.log(`⚠️ Script not found: ${script});
+        this.log(`⚠️ Script not found: ${script}`);
       }
     }
   }
 
   async generateReport() {
-    this.log('📊 Generating automation report...);
+    this.log('📊 Generating automation report...');
+
     const report = {
       timestamp: new Date().toISOString(),
-      failed: total - passed,
-      status: passed === total ? 'HEALTHY: passed >= Math.floor(total * 0.8) ? 'WARNING: CRITICAL,
-  status: completed,
-      scripts: {,
-  linting: completed,
-        build: completed,
-        automation: completed,},
-      summary: Master automation orchestrator completed successfully,};
-'
-      "failed": total - passed,
-      "status": passed === total;
-          ? 'HEALTHY
-          : passed >= Math.floor(total * 0.8)
-            ? 'WARNING: CRITICAL};
-    try {
-  // TODO: Implement
-}
-      fs.writeFileSync()
-        path.join(this.logsDir,master-orchestrator-report.json'),
-        JSON.stringify({ summary, results: this.results }, null, 2)
-      );
-    } catch {}
-'
-      `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`"
-    );
-    return passed === total;
-  }
-}
+      status: 'completed',
+      scripts: {
+        linting: 'completed',
+        build: 'completed',
+        automation: 'completed',
+      },
+      summary: 'Master automation orchestrator completed successfully',
+    };
+main
 
-if (require.main === module) {
-  const orchestrator = new MasterOrchestrator();"
-  const command = process.argv[2] ||check';
-  switch (command) {
-    case 'check: 
-      orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
-      break;
-    default: 
-      console.log('Usage: node automation/master-orchestrator.cjs check');
     const reportPath = path.join(
-      __dirname,
-      '..,automation-reports,master-orchestrator-report.json)
+      this.projectRoot,
+      'automation-reports',
+      'master-orchestrator-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath});
+    this.log(`📊 Report saved to: ${reportPath}`);
   }
 
   async run() {
     try {
-  // TODO: Implement
-}
-      this.log('🎯 Starting master automation orchestration...);
+      this.log('🎯 Starting master automation orchestration...');
+
       await this.runLinting();
       await this.runBuildProcess();
       await this.runAutomationScripts();
       await this.generateReport();
-'
-      this.log('🎉 Master automation orchestration completed successfully!);
+
+      this.log('🎉 Master automation orchestration completed successfully!');
     } catch (error) {
-      this.log(`❌ Master automation orchestration failed: ${error.message});
+      this.log(`❌ Master automation orchestration failed: ${error.message}`);
       process.exit(1);
     }
   }
 }
 
-module.exports = MasterOrchestrator;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-console.log('🚀 Starting Master Automation Orchestrator...);
-class MasterAutomationOrchestrator {
-  // TODO: Implement
-}
-  constructor() {
-      fs.mkdirSync(this.logsDir, { "recursive": true });"
-    } catch {}
-  }
-"
-  log(message, level = 'INFO') {
-    const line = `[${new Date().toISOString()}] [${level}] ${message}\n`;
-    try {
-  // TODO: Implement
-}
-      fs.appendFileSync(this.logFile, line);
-    } catch {}
-    process.stdout.write(line);
-  }
-
-  runCmd(cmd) {
-    try {
-  // TODO: Implement
-}
-      const out = execSync(cmd, { stdio: pipe, encoding: utf8});
-      return { success: true, output: out };
-    } catch (e) {
-      return {
-  // TODO: Implement
-}
-        "success": false,
-        "error": e.message,
-        "output": e.stdout?.toString?.() || };
-    this.logFile = path.join(
-      __dirname,
-      '..,automation-reports,master-orchestrator.log)
-    );
-    this.ensureLogDir();
-  }
-
-  ensureLogDir() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message};
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage +\n');
-  }
-
-  async runCommand(command, description) {
-    try {
-  // TODO: Implement
-}
-      this.log(`🚀 ${description});
-      const result = execSync(command, {
-        encoding: utf8,
-        stdio: pipe,)
-        cwd: path.join(__dirname,..)});
-      this.log(`✅ ${description} - Success`);
-      return { success: true, result };
-    } catch (error) {
-      this.log(`❌ ${description} - Failed: ${error.message});
-      return { success: false, error: error.message };
-    }
-  }
-
-  async runLinting() {
-    this.log('🔧 Running linting and code quality checks...);
-    const commands = [
-      { cmd: npm run lint:fix, desc: Fix linting errors},
-      { cmd: npm run type-check, desc: TypeScript type checking},
-      { cmd: npm run test:smoke, desc: Run smoke tests}]
-    ];
-
-    for (const { cmd, desc } of commands) {
-      await this.runCommand(cmd, desc);
-    }
-  }
-
-  async runBuildProcess() {
-    this.log('🏗️ Running build process...);
-    const commands = [
-      { cmd: npm run clean, desc: Clean build artifacts},
-      { cmd: npm run build, desc: Build application}]
-    ];
-
-    for (const { cmd, desc } of commands) {
-      const result = await this.runCommand(cmd, desc);
-      if (!result.success) {
-        this.log('⚠️ Build failed, attempting to fix...);
-        await this.fixBuildIssues();
-      }
-    }
-  }
-
-  async fixBuildIssues() {
-    this.log('🔧 Attempting to fix build issues...);
-    const fixCommands = [
-      { cmd: npm run lint:fix, desc: Fix linting issues},
-      { cmd: node comprehensive-syntax-fix.cjs, desc: Fix syntax issues}]
-    ];
-
-    for (const { cmd, desc } of fixCommands) {
-      await this.runCommand(cmd, desc);
-    }
-  }
-
-  async runAutomationScripts() {
-    this.log('🤖 Running automation scripts...);
-    const scripts = [
-      'enhanced-automation-suite.cjs]
-    ];
-
-    for (const script of scripts) {
-      const scriptPath = path.join(__dirname,.., script);
-      if (fs.existsSync(scriptPath)) {
-        await this.runCommand(`node ${script}, `Running ${script});
-      } else {
-  // TODO: Implement
-}
-        this.log(`⚠️ Script not found: ${script});
-      }
-    }
-  }
-
-  async generateReport() {
-    this.log('📊 Generating automation report...);
-    const report = {
-      timestamp: new Date().toISOString(),
-      status: completed,
-      scripts: {,
-  linting: completed,
-        build: completed,
-        automation: completed
-      },
-      summary: Master automation orchestrator completed successfully,};
-
-
-
-
-    };
-'
-      "failed": total - passed,
-      "status": passed === total;
-          ? 'HEALTHY
-          : passed >= Math.floor(total * 0.8)
-            ? 'WARNING: CRITICAL};
-    try {
-  // TODO: Implement
-}
-      fs.writeFileSync()
-        path.join(this.logsDir,master-orchestrator-report.json'),
-        JSON.stringify({ summary, results: this.results }, null, 2)
-      );
-    } catch {}
-'
-      `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`"
-    );
-
-    return passed === total;
-  }
-}
-
-if (require.main === module) {
-  const orchestrator = new MasterOrchestrator();"
-  const command = process.argv[2] ||check';
-  switch (command) {
-    case 'check: 
-      orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
-      break;
-
-    default: 
-      console.log('Usage: node automation/master-orchestrator.cjs check');
-      process.exit(1);
-    }
-  }
-}
-
-
-
-module.exports = MasterOrchestrator;
-
-
-module.exports = MasterOrchestrator;
-
-
-module.exports = MasterOrchestrator;
-
-
-
-
-
-
-
-'
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-console.log('🚀 Starting Master Automation Orchestrator...);
-class MasterAutomationOrchestrator {
-  // TODO: Implement
-}
-  constructor() {
-    this.logFile = path.join(
-      __dirname,
-      '..,automation-reports,master-orchestrator.log)
-    );
-    this.ensureLogDir();
-  }
-
-  ensureLogDir() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message};
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage +\n');
-  }
-
-  async runCommand(command, description) {
-    try {
-  // TODO: Implement
-}
-      this.log(`🚀 ${description});
-      const result = execSync(command, {
-        encoding: utf8,
-        stdio: pipe,)
-        cwd: path.join(__dirname,..)});
-      this.log(`✅ ${description} - Success`);
-      return { success: true, result };
-    } catch (error) {
-      this.log(`❌ ${description} - Failed: ${error.message});
-      return { success: false, error: error.message };
-    }
-  }
-
-  async runLinting() {
-    this.log('🔧 Running linting and code quality checks...);
-    const commands = [
-      { cmd: npm run lint:fix, desc: Fix linting errors},
-      { cmd: npm run type-check, desc: TypeScript type checking},
-      { cmd: npm run test:smoke, desc: Run smoke tests}]
-    ];
-
-    for (const { cmd, desc } of commands) {
-      await this.runCommand(cmd, desc);
-    }
-  }
-
-  async runBuildProcess() {
-    this.log('🏗️ Running build process...);
-    const commands = [
-      { cmd: npm run clean, desc: Clean build artifacts},
-      { cmd: npm run build, desc: Build application}]
-    ];
-
-    for (const { cmd, desc } of commands) {
-      const result = await this.runCommand(cmd, desc);
-      if (!result.success) {
-        this.log('⚠️ Build failed, attempting to fix...);
-        await this.fixBuildIssues();
-      }
-    }
-  }
-
-  async fixBuildIssues() {
-    this.log('🔧 Attempting to fix build issues...);
-    const fixCommands = [
-      { cmd: npm run lint:fix, desc: Fix linting issues},
-      { cmd: node comprehensive-syntax-fix.cjs, desc: Fix syntax issues}]
-    ];
-
-    for (const { cmd, desc } of fixCommands) {
-      await this.runCommand(cmd, desc);
-    }
-  }
-
-  async runAutomationScripts() {
-    this.log('🤖 Running automation scripts...);
-    const scripts = [
-      'enhanced-automation-suite.cjs]
-    ];
-
-    for (const script of scripts) {
-      const scriptPath = path.join(__dirname,.., script);
-      if (fs.existsSync(scriptPath)) {
-        await this.runCommand(`node ${script}, `Running ${script});
-      } else {
-  // TODO: Implement
-}
-        this.log(`⚠️ Script not found: ${script});
-      }
-    }
-  }
-
-  async generateReport() {
-    this.log('📊 Generating automation report...);
-    const report = {
-      timestamp: new Date().toISOString(),
-      status: completed,
-      scripts: {,
-  linting: completed,
-        build: completed,
-        automation: completed
-      },
-      summary: Master automation orchestrator completed successfully
-    };
-
-    const reportPath = path.join(
-      __dirname,
-      '..,automation-reports,master-orchestrator-report.json)
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath});
-  }
-
-  async run() {
-    try {
-  // TODO: Implement
-}
-      this.log('🎯 Starting master automation orchestration...);
-      await this.runLinting();
-      await this.runBuildProcess();
-      await this.runAutomationScripts();
-      await this.generateReport();
-'
-      this.log('🎉 Master automation orchestration completed successfully!);
-    } catch (error) {
-      this.log(`❌ Master automation orchestration failed: ${error.message});
-      process.exit(1);
-    }
-  }
-}
-
-
-
-
-// Run the orchestrator;
-const orchestrator = new MasterAutomationOrchestrator();
-orchestrator.run().catch(console.error);
-
-module.exports = MasterOrchestrator;
-
-orchestrator.run().catch(console.error);
-
-
-orchestrator.run().catch(console.error);
-
-
-
-
-
-
-
-
-
-
-// Run the orchestrator;
-const orchestrator = new MasterAutomationOrchestrator();
-orchestrator.run().catch(console.error);
-
-
-module.exports = MasterOrchestrator;
-orchestrator.run().catch(console.error);
-
-
-
-
-
-
-
-'
-  async runLinting() {
-    this.log('Running linting checks...);
-    const results = [];
-    
-    // ESLint
-    results.push(await this.runCommand('npm run lint,ESLint check'));
-    
-    // TypeScript check
-    results.push(await this.runCommand('npm run type-check,TypeScript check'));
-    
-    return results;
-  }
-
-  async runTesting() {
-    this.log('Running test suite...);
-    const results = [];
-    
-    // Smoke tests
-    results.push(await this.runCommand('npm run test:smoke,Smoke tests'));
-    
-    // Unit tests
-    results.push(await this.runCommand('npm run test:unit,Unit tests'));
-    
-    return results;
-  }
-
-  async runBuild() {
-    this.log('Running build process...);
-    return await this.runCommand('npm run build,Production build');
-  }
-
-  async runSecurityAudit() {
-    this.log('Running security audit...);
-    return await this.runCommand('npm audit,Security audit');
-  }
-
-  async runPerformanceCheck() {
-    this.log('Running performance checks...);
-    return await this.runCommand('npm run perf:monitor,Performance monitoring');
-  }
-
-  async runAllAutomations() {
-    this.log('🚀 Starting Master Automation Orchestrator...);
-    
-    const results = {
-      linting: await this.runLinting(),
-      testing: await this.runTesting(),
-      build: await this.runBuild(),
-      security: await this.runSecurityAudit(),
-      performance: await this.runPerformanceCheck()
-    };
-
-    // Generate summary report
-    const summary = this.generateSummary(results);
-    this.log(summary);
-
-    // Save results to file
-    const reportFile = path.join(__dirname,..,automation_logs,automation-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(results, null, 2));
-
-    this.log('✅ Master Automation Orchestrator completed!);
-    return results;
-  }
-
-  generateSummary(results) {
-    let summary = '\n📊 AUTOMATION SUMMARY\n';
-    summary +=='.repeat(50) +\n';
-    
-    Object.entries(results).forEach(([category, categoryResults]) => {
-      summary += `\n${category.toUpperCase()}:\n`;
-      if (Array.isArray(categoryResults)) {
-        categoryResults.forEach((result, index) => {
-          summary += `  ${index + 1}. ${result.success ? '✅: ❌} ${result.description ||Task}\n`;
-        });
-      } else {
-        summary += `  ${categoryResults.success ? '✅: ❌} ${categoryResults.description ||Task}\n`;
-      }
-    });
-    
-    summary +=\n' +=.repeat(50) +\n';
-    return summary;
-  }
-}
-
-// CLI interface
 if (require.main === module) {
   const orchestrator = new MasterAutomationOrchestrator();
-  const command = process.argv[2];
-
+  const command = process.argv[2] || 'check';
+  
   switch (command) {
-    case 'start:
-    case 'run:
-      orchestrator.runAllAutomations().catch(console.error);
+    case 'check':
+      orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
       break;
-    case 'status:
-      console.log('Master Automation Orchestrator is ready');
+    case 'run':
+      orchestrator.run().catch(console.error);
       break;
     default:
-      console.log('Usage: node master-orchestrator.cjs [start|run|status]);
+      console.log('Usage: node automation/master-orchestrator.cjs [check|run]');
+      process.exit(1);
   }
 }
+module.exports = MasterOrchestrator;
+
+module.exports = MasterOrchestrator;
+
+module.exports = MasterOrchestrator;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
 
 module.exports = MasterAutomationOrchestrator;

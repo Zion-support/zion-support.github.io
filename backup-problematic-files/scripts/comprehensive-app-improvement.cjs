@@ -1,8 +1,13 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require('child_process')
-console.log(' Starting Comprehensive App Improvement...)
+console.log(' Starting Comprehensive App Improvement...')
     execSync(command, { "stdio"})
   const success = runCommand('npm run "lint")
 console.log('Code quality improvements "applied")
@@ -20,5 +25,9 @@ console.log('Code quality improvements "applied")
     "value"
 // console.log('Performance optimizations "applied")
 console.log('SEO improvements "applied")
+<<<<<<< HEAD
   console.log('\n Comprehensive App Improvement "Summary")
   console.log('\n Comprehensive App Improvement "Summary")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

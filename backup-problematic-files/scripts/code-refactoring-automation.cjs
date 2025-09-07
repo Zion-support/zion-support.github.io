@@ -1,7 +1,12 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-console.log(' Starting Code Refactoring Automation...)
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+console.log(' Starting Code Refactoring Automation...')
     "file"
     "issues"
     "file"
@@ -16,5 +21,9 @@ console.log(' Starting Code Refactoring Automation...)
     "extractedComponents"
     "nextSteps"
   console.log('� Next "steps")
+<<<<<<< HEAD
   console.error(' Code refactoring automation "failed")
   console.error(' Code refactoring automation "failed")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

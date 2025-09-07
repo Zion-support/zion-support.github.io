@@ -1,7 +1,11 @@
-#!/usr/bin/env
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+#!/""usr/bin/env""
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
       this.projectRoot,logs"
       "performance-monitor.log"
       this.projectRoot,logs"
@@ -24,7 +28,7 @@ const { execSync, spawn } = require("child_process")
       "memoryUsage"
       "cpuUsage"
       "errorRate"
-  console.log( Intelligent Performance Monitor Initialized")
+  console.log("" Intelligent Performance Monitor Initialized")
   fs.mkdirSync(logDir, { "recursive"})
   const data = fs.readFileSync(this.performanceHistory, "utf8")
   "totalMeasurements"
@@ -50,9 +54,9 @@ const { execSync, spawn } = require("child_process")
         "performanceTrends"
         "bottlenecks"
         "optimizations"
-// console.log( Starting continuous performance monitoring...")
-  console.log( Measuring application performance...")
-// console.log( Measuring application performance...")
+// console.log("" Starting continuous performance monitoring...")
+  console.log("" Measuring application performance...")
+// console.log("" Measuring application performance...")
     console.log(" Measuring application performance...")
   "timestamp"
       "buildTime"
@@ -112,8 +116,8 @@ this.logError("Performance measurement failed")
   "success"
         "duration"
         "errors"
-  console.log(� Measuring bundle size...")
-      const buildDirs = ["dist", "build", ".next", "out"]
+  console.log(""� Measuring bundle size...")
+const buildDirs = ["dist", "build", ".next", "out"];
   "type": "bundle"
           "severity": "warning`,"message"
           "suggestion": `Consider code splitting, tree shaking, or removing unused dependencies"}"
@@ -123,13 +127,13 @@ this.logError("Performance measurement failed")
           "suggestion": "Consider code splitting, tree shaking, or removing unused dependencies"}"
   console.error("Error measuring bundle "size": ")
   console.error("Error measuring bundle "size": ")
-  const fullPath = path.join(dirPath, ")
-  const fullPath = path.join(dirPath, ")"
-    } catch (error) {  console.error(`Error calculating size for ${dirPath  }:```)"
+const fullPath = path.join(dirPath, ");
+const fullPath = path.join(dirPath, ");
+    } catch (error) {  console.error(`Error calculating size for ${dirPath  }:```)
   if (bytes === 0) return "0 Bytes"
-    const sizes = ["Bytes", "KB", "MB", "GB"]
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " "
-// console.log(⚡ Measuring runtime performance...")
+const sizes = ["Bytes", "KB", "MB", "GB"];
+return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " ";
+// console.log(""⚡ Measuring runtime performance...")
   console.log("⚡ Measuring runtime performance...")
   "type": "memory"
           "severity": "warning","message"
@@ -251,3 +255,41 @@ this.logError("Performance measurement failed")
   console.error("� Uncaught "exception": ")
     this.logError("Uncaught exception")
   console.error("� Unhandled "rejection": ")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+    this.logError("Unhandled rejection")
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+    this.logError("Unhandled rejection")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    this.logError("Unhandled rejection")
+<<<<<<< HEAD
+    this.logError("Unhandled rejection")
+
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

@@ -1,28 +1,28 @@
-
-
-const fs = require("$1")
-const path = require("$1")
-const { execSync, spawn } = require("child_process")
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require("$1");
+const path = require("$1");
+const { execSync, spawn } = require("child_process");
       __dirname,.."
       "logs",pm2-automation-launcher.log"
       __dirname,.."
       "logs",pm2-automation-launcher.log"
-const fs = require("fs")";const path = require("path")";const { execSync, spawn } = require("child_process")
-    this.logFile = path.join();      __dirname,..", logs",pm2-automation-launcher.log);"
+const fs = require("fs")";const path = require("path")";const { execSync, spawn } = require("child_process")"";
+    this.logFile = path.join();      __dirname,..", ""logs",pm2-automation-launcher.log"");"
       fs.mkdirSync(logDir, { "recursive"})
-      fs.mkdirSync(logDir, { recursive"})"
-    const logMessage = `[${timestamp}] ${message}\n`;``"
+      fs.mkdirSync(logDir, { ""recursive"})
+const logMessage = `[${timestamp}] ${message}\n`;``;
       const configPath = path.join(__dirname, "..", "ecosystem.config.cjs");";      if (fs.existsSync(configPath)) {"}
-      throw new Error("ecosystem.config.cjs not found");"} catch (error) {this.log(" Failed to load config": ${error.message}");"
-      const configPath = path.join(__dirname, "..", "ecosystem.config.cjs")
-      const configPath = path.join(__dirname, "..", "ecosystem.config.cjs")
-      throw new Error("ecosystem.config.cjs not found")} catch (error) { this.log(` Failed to load "config"`})
-      const output = execSync("pm2 jlist", { "encoding": "utf8"})
-      return processes.filter(proc => proc.name !== "pm2-logrotate")} catch (error) { this.log(` Failed to get PM2 "status"`})
+      throw new Error("ecosystem.config.cjs not found");"} catch (error) {this.log(" Failed to load ""config": ${error.message}");"
+const configPath = path.join(__dirname, "..", "ecosystem.config.cjs");
+const configPath = path.join(__dirname, "..", "ecosystem.config.cjs");
+      throw new Error("ecosystem.config.cjs not found"),} catch (error) { this.log(` Failed to load "config"`})
+const output = execSync("pm2 jlist", { "encoding": "utf8"});
+      return processes.filter(proc => proc.name !== "pm2-logrotate"),} catch (error) { this.log(` Failed to get PM2 "status"`})
       this.log(" No automation configuration found")
     this.log(" Starting PM2 automation processes...")
-        if (exists) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}, { "stdio": "pipe"`})
-          const scriptPath = path.resolve(__dirname, "..")
+        if (exists) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}`, { "stdio": "pipe"`})
+const scriptPath = path.resolve(__dirname, "..");
               "stdio": "pipe"
               "env"
       this.log(" No automation configuration found")
@@ -32,8 +32,8 @@ const fs = require("fs")";const path = require("path")";const { execSync, spawn 
       this.log(" No automation configuration found");      return false,"
     this.log(" Starting PM2 automation processes...");"
       try {this.log(" Starting ${process.name}...");"
-        if (exists) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}, { "stdio": "pipe"`})
-          const scriptPath = path.resolve(__dirname, "..")
+        if (exists) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}`, { "stdio": "pipe"`})
+const scriptPath = path.resolve(__dirname, "..");
               "stdio": "pipe"
               "env": { ...process.env, ...process.env },}
 });this.log(` Started ${process.name})} else {this.log(` Script not "found"`})
@@ -154,6 +154,41 @@ process.on("SIGINT")
       case "monit":";        await launcher.openMonitoring();"
       case "report":";        await launcher.generateReport();"
       case "help":";      default
-  } catch (error) {launcher.log(` Command failed``})
 
-"
+  } catch (error) {launcher.log(` Command failed``})
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
+<<<<<<< HEAD
+process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
+
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

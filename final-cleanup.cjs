@@ -1,166 +1,176 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
-const glob = require('glob');
 
-class FinalCleanup {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.filesDeleted = 0;
-    this.errors = [];
-    this.startTime = Date.now();
-  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    .replace(/<<<<<<< [^\n]+[\s\S]*?
+    .replace(/^<<<<<<< [^\n]+$/gm, '')
+    .replace(/^
+=======
+    .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?[^\n]+/g, '')
+    .replace(/^<<<<<<< [^\n]+$/gm, '')
+    .replace(/^=======$/gm, '')
+    .replace(/^[^\n]+$/gm, '');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+console.log('🧹 Starting Final Cleanup...');
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄'
-    }[type] || 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
+// Function to clean merge conflict markers
+function cleanMergeConflicts(content) {
+  return content
+    .replace(/[\s\S]*?[\s\S]*?
+    .replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?
+    .replace(/^<<<<<<< [^\n]+$/gm, '')
+    .replace(/^$/gm, '')
+=======
+    .replace(/<<<<<<< [^\n]+[\s\S]*?
+    .replace(/^<<<<<<< [^\n]+$/gm, '')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    .replace(/^
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+}
 
-  isProblematicFile(filePath, content) {
-    // Check for any parsing errors or problematic patterns
-    const problematicPatterns = [
-      /Error: Parsing error/i,
-      /Declaration or statement expected/i,
-      /Property assignment expected/i,
-      /Property or signature expected/i,
-      /Identifier expected/i,
-      /Expression expected/i,
-      /Unterminated string literal/i,
-      /Unterminated regular expression literal/i,
-      /JSX expressions must have one parent element/i,
-      /Expected corresponding JSX closing tag/i,
-      /Merge conflict marker encountered/i,
-      /Unexpected keyword or identifier/i,
-      /Unexpected token/i,
-      /Property destructuring pattern expected/i,
-      /Expression or comma expected/i,
-      /catch or finally expected/i,
-      /case or default expected/i,
-      /<<<<<<< HEAD/,
-      /=======/,
-      />>>>>>> .*/
-    ];
+// Function to clean common syntax errors
+function cleanSyntaxErrors(content) {
+  return content
+    // Remove invalid characters at start of files
+    .replace(/^[^\w\s<]/gm, '')
+    // Fix common parsing issues
+    .replace(/export\s+default\s+export\s+default/g, 'export default')
+    .replace(/import\s+import/g, 'import')
+    .replace(/const\s+const/g, 'const')
+    .replace(/let\s+let/g, 'let')
+    .replace(/var\s+var/g, 'var')
+    // Fix unterminated strings
+    .replace(/"[^"]*$/gm, '"')
+    .replace(/'[^']*$/gm, "'")
+    // Fix unterminated regex
+    .replace(/\/[^\/]*$/gm, '/')
+    // Remove invalid characters
+    .replace(/[^\x20-\x7E\n\r\t]/g, '')
+    // Fix common JSX issues
+    .replace(/<[^>]*$/gm, '')
+    // Fix common TypeScript issues
+    .replace(/:\s*[^=,;{}()[\]]*$/gm, ': any')
+    // Remove empty lines with only special characters
+    .replace(/^[^\w\s]*$/gm, '');
+}
 
-    // Check if file contains any problematic patterns
-    const hasProblematicPattern = problematicPatterns.some(pattern => pattern.test(content));
+// Function to process a file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    let cleaned = cleanMergeConflicts(content);
+    cleaned = cleanSyntaxErrors(cleaned);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+  content = content.replace(/
+  content = content.replace(/
+<<<<<<< HEAD
+=======
     
-    // Check if file is in disabled directories or is likely generated/corrupted
-    const isProblematicLocation = 
-      filePath.includes('src.disabled') || 
-      filePath.includes('components.disabled') || 
-      filePath.includes('pages.disabled') ||
-      filePath.includes('components/reports/') ||
-      filePath.includes('src/reports/') ||
-      filePath.includes('components/broken/');
-
-    // Check if file is very large (likely generated or corrupted)
-    const isLarge = content.length > 100000;
-
-    // Check if file is empty or nearly empty
-    const isEmpty = content.trim().length < 50;
-
-    return hasProblematicPattern || isProblematicLocation || isLarge || isEmpty;
-  }
-
-  async deleteFile(filePath) {
-    try {
-      fs.unlinkSync(filePath);
-      this.filesDeleted++;
-      this.log(`Deleted: ${filePath}`, 'WARNING');
-    } catch (error) {
-      this.log(`Failed to delete ${filePath}: ${error.message}`, 'ERROR');
-      this.errors.push(filePath);
+    if (cleaned !== content) {
+      fs.writeFileSync(filePath, cleaned);
+      return true;
     }
+    return false;
+  } catch (error) {
+    console.log(`Error processing ${filePath}: ${error.message}`);
+    return false;
   }
+}
 
-  async processFile(filePath) {
-    try {
+// Function to recursively process directory
+function processDirectory(dirPath) {
+  let processedCount = 0;
+// Function to recursively find all files with merge conflicts
+function findConflictedFiles(dir, conflictedFiles = []) {
+  const files = fs.readdirSync(dir);
+
+=======
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findConflictedFiles(filePath, conflictedFiles);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
       const content = fs.readFileSync(filePath, 'utf8');
-      
-      if (this.isProblematicFile(filePath, content)) {
-        await this.deleteFile(filePath);
-      }
-    } catch (error) {
-      this.log(`Error processing ${filePath}: ${error.message}`, 'ERROR');
-      this.errors.push(filePath);
-    }
-  }
-
-  async run() {
-    this.log('🚀 Starting Final Cleanup', 'PROGRESS');
-    this.log('='.repeat(60));
-
-    const globPatterns = [
-      'src/**/*.tsx',
-      'src/**/*.ts',
-      'src/**/*.jsx',
-      'src/**/*.js',
-      'components/**/*.tsx',
-      'components/**/*.ts',
-      'components/**/*.jsx',
-      'components/**/*.js',
-      'pages/**/*.tsx',
-      'pages/**/*.ts',
-      'pages/**/*.jsx',
-      'pages/**/*.js'
-    ];
-
-    for (const pattern of globPatterns) {
-      const files = glob.sync(pattern, { 
-        cwd: this.projectRoot, 
-        absolute: true, 
-        ignore: [
-          'node_modules/**',
-          'dist/**',
-          '.next/**',
-          'build/**',
-          'coverage/**'
-        ]
-      });
-
-      this.log(`Processing ${files.length} files matching pattern: ${pattern}`, 'INFO');
-      
-      for (const file of files) {
-        await this.processFile(file);
-      }
-    }
-
-    this.generateReport();
-  }
-
-  generateReport() {
-    const duration = Date.now() - this.startTime;
+  content = content.replace(/
+  content = content.replace(/
+  content = content.replace(/
+  
+  // Clean up any remaining artifacts
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  
+  // Remove any remaining conflict markers
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${Math.round(duration / 1000)}s`,
-      filesDeleted: this.filesDeleted,
-      errors: this.errors.length,
-      failedFiles: this.errors
-    };
+<<<<<<< HEAD
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findConflictedFiles(filePath, conflictedFiles);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      const content = fs.readFileSync(filePath, 'utf8');
+  content = content.replace(/[a-f0-9]+\n?/g, '');
+  content = content.replace(/origin\/[^\n]+\n?/g, '');
+  content = content.replace(/ursor\/[^\n]+\n?/g, '');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  
+  // Clean up any remaining artifacts
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  
+  // Remove any remaining conflict markers
 
-    const reportPath = path.join(this.projectRoot, 'final-cleanup-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log('📊 Final Cleanup Report Generated', 'SUCCESS');
-    this.log(`🗑️ Files Deleted: ${report.filesDeleted}`);
-    this.log(`❌ Errors: ${report.errors}`);
-    this.log(`📄 Report saved to: ${reportPath}`);
+<<<<<<< HEAD
+=======
+    for (const item of items) {
+      const fullPath = path.join(dirPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other problematic directories
+        if (!['node_modules', '.git', '.next', 'dist', 'build', 'coverage'].includes(item)) {
+          processedCount += processDirectory(fullPath);
+        }
+      } else if (stat.isFile()) {
+        // Process specific file types
+        const ext = path.extname(item);
+        if (['.ts', '.tsx', '.js', '.jsx', '.json'].includes(ext)) {
+          if (processFile(fullPath)) {
+            processedCount++;
+          }
+        }
+      }
+    }
+  } catch (error) {
+    console.log(`Error processing directory ${dirPath}: ${error.message}`);
   }
+  
+  return processedCount;
 }
 
-if (require.main === module) {
-  const cleaner = new FinalCleanup();
-  cleaner.run().catch(console.error);
-}
+// Main execution
+const startTime = Date.now();
+const processedFiles = processDirectory('/workspace');
+const endTime = Date.now();
 
-module.exports = FinalCleanup;
+console.log(`✅ Final cleanup completed!`);
+console.log(`📁 Processed ${processedFiles} files`);
+console.log(`⏱️  Took ${endTime - startTime}ms`);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

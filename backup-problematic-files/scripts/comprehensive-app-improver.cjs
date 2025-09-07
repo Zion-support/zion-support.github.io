@@ -1,4 +1,9 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -15,10 +20,10 @@ NEXT_PUBLIC_API_URL="http"
     const testDir = path.join(this.projectRoot, "__tests__")
     const testFiles = this.getAllFiles(testDir, [".js", ".jsx", ".ts", ".tsx")]
         let content = fs.readFileSync(file, "utf8")
-          { "pattern": /password\s*[:=]\s*[][^]+[]/gi, "replacement": "password: process.env.TEST_PASSWORD || "test123}
-          { "pattern": /api[_-]?key\s*[:=]\s*[][^]+[]/gi, "replacement": "apiKey: process.env.TEST_API_KEY || "test-key}
-          { "pattern": /secret\s*[:=]\s*[][^]+[]/gi, "replacement": "secret: process.env.TEST_SECRET || "test-secret}
-          { "pattern": /token\s*[:=]\s*[][^]+[]/gi, "replacement": "token: process.env.TEST_TOKEN || "test-token}
+          { "pattern": /password\s*[:=]\s*[""][^""]+[""]/gi, "replacement": "password: process.env.TEST_PASSWORD || "test123""}
+          { "pattern": /api[_-]?key\s*[:=]\s*[""][^""]+[""]/gi, "replacement": "apiKey: process.env.TEST_API_KEY || "test-key""}
+          { "pattern": /secret\s*[:=]\s*[""][^""]+[""]/gi, "replacement": "secret: process.env.TEST_SECRET || "test-secret""}
+          { "pattern": /token\s*[:=]\s*[""][^""]+[""]/gi, "replacement": "token: process.env.TEST_TOKEN || "test-token""}
         console.warn(`Could not process test "file"`)
     const nextConfigPath = path.join(this.projectRoot, "next.config.cjs")
       configContent = fs.readFileSync(nextConfigPath, "utf8")
@@ -37,7 +42,7 @@ NEXT_PUBLIC_API_URL="http"
     "value": "origin-when-cross-origin"
         "source": "/(.*)"
         "headers"
-  // ... existing config};"
+  // ... existing config,};"
     if (!configContent.includes("securityHeaders")
       if (configContent.includes("module.exports")
           "module.exports = {"}
@@ -45,15 +50,15 @@ NEXT_PUBLIC_API_URL="http"
       this.fixes.push("Added security headers to Next.js config")
     const securityConfig = "
   "csp"
-    "default-src": [self]
-    "script-src": [self", unsafe-inline", unsafe-eval]
-    "style-src": [self", unsafe-inline]
-    "img-src": [self", data": ", https": "]
-    "connect-src": [self", https": "]
-    "font-src": [self", https": "]
-    "object-src": [none]
-    "media-src": [self]
-    "frame-src": [none]
+    "default-src": [""self""]
+    "script-src": [""self", ""unsafe-inline", ""unsafe-eval""]
+    "style-src": [""self", ""unsafe-inline""]
+    "img-src": [""self", ""data": ", ""https": "]
+    "connect-src": [""self", ""https": "]
+    "font-src": [""self", ""https": "]
+    "object-src": [""none""]
+    "media-src": [""self""]
+    "frame-src": [""none""]
   "rateLimit"
     "max"
   "cors"
@@ -83,5 +88,9 @@ NEXT_PUBLIC_API_URL="http"
 // console.log("\n  Fixes "Applied": ")
     console.log("\n New Features "Added": ")
     console.log(`\n� Detailed report saved "to"`)
+<<<<<<< HEAD
   console.error("Fatal "error")
   console.error("Fatal "error")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

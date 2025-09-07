@@ -1,9 +1,102 @@
-
 import React from 'react';'
-  return ('
+  return (
     <ThemeProvider attribute="class" default_theme="light">;"
-</ThemeProvider>
-    </ThemeProvider>;"
-  options?: Omit<RenderOptions, 'wrapper'>;'
-</RenderOptions>)'
+      {children}
+  }
+  "isFallback": false,
+"isLocale": false,
+"isReady": true,
+"defaultLocale": 'en''
+  "domainLocales": []
+  "isPreview": false,
+"on": jest.fn (),
+    "off": jest.fn (),
+    "emit": jest.fn ();
+  },
+  "is_fallback": false,
+  "is_locale": false,
+  "is_ready": true,
+  "default_locale": 'en','
+  "domain_locales": [],
+  "is_preview": false;
 
+  },
+  "isFallback": false,
+  "isLocale": false,
+  "isReady": true,
+  "defaultLocale": 'en','
+  "domainLocales": [],
+  "isPreview": false;
+
+});
+export const createMockProps = (overrides = {}) => ({
+
+
+    </ThemeProvider>;
+  );
+},;
+const customRender = (;
+  "ui": React.ReactElement,;
+  options?: Omit<RenderOptions, 'wrapper'>;'
+) => render(ui, { "wrapper": AllTheProviders, ...options }),;
+export * from '@testing-library/react',;'
+export { customRender as render },;
+export const mockNextRouter = () => ({;
+  }
+  "push": jest.fn(),;
+  "replace": jest.fn(),;
+  "prefetch": jest.fn(),;
+  "back": jest.fn(),;
+  "beforePopState": jest.fn(),;
+  "events": {;
+    }
+    "on": jest.fn(),;
+    "off": jest.fn(),;
+    "emit": jest.fn();
+  },;
+  "isFallback": false,;
+  "isLocale": false,;
+  "isReady": true,;
+  "defaultLocale": 'en',;'
+  "domainLocales": [],;
+  "isPreview": false;
+
+});
+export const createMockProps = (overrides = {}) => ({;
+  ...overrides;
+
+
+
+});
+export const createMockProps = (overrides = {}) => ({;
+
+});
+import React from 'react';
+import { render, RenderOptions } from '@testing-library/react';
+import { ThemeProvider } from 'next-themes';
+const AllTheProviders = $2;
+const customRender = $2;
+  options?: Omit<RenderOptions, 'wrapper'>
+) => render($2);
+export * from '@testing-library/react',
+export { customRender as render },
+
+export const mockNextRouter = () => ({
+  push: jest.fn($2);
+  replace: jest.fn($2);
+  prefetch: jest.fn($2);
+  back: jest.fn($2);
+  beforePopState: jest.fn($2);
+  events: {
+    on: jest.fn($2);
+    off: jest.fn($2);
+    emit: jest.fn()
+  },
+  isFallback: false,
+  isLocale: false,
+  isReady: true,
+  defaultLocale: 'en',
+  domainLocales: [],
+  isPreview: false}),
+
+export const createMockProps = $2;

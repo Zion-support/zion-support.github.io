@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-09-07T02:53:44.975Z",
+  "metrics": {
+    "bundleSize": 0,
+    "loadTime": 0,
+    "memoryUsage": 4937776,
+    "fileCount": 1834
+  },
+  "recommendations": [
+    "Large number of source files. Consider organizing into smaller modules."
+  ],
+  "summary": {
+    "bundleSizeMB": "0.00",
+    "memoryUsageMB": "4.71",
+    "fileCount": 1834,
+    "recommendationsCount": 1
+  }
+}

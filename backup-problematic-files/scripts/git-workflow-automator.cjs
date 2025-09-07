@@ -1,9 +1,9 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-    this.reportsDir = path.join(this.projectRoot,git-workflow-reports')
-    this.log(' Checking git status...)
+    this.reportsDir = path.join(this.projectRoot, 'git-workflow-reports')
+    this.log(' Checking git status...')
       const result = execSync('git status --porcelain')
         "encoding"
         "status"
@@ -39,5 +39,9 @@ const { execSync } = require('child_process')
         "impact"
       this.log(` Current "branch"`)
       console.log(` Current "branch"`)
+<<<<<<< HEAD
       console.error('\n� Git Workflow Automator "failed")
       console.error('\n� Git Workflow Automator "failed")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

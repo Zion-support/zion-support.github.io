@@ -1,13 +1,49 @@
+<<<<<<< HEAD
+=======
 
 
-#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+#!/usr/bin/env node;
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+
+
+
+
+
+
+
+
+
+
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 // console.log(' Comprehensive Code Fixer')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 console.log()
-  console.log('� Fixing common linting issues...)
-  const filesToFix = [components/ContactForm.tsx]
+
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+console.log('')
+  console.log('� Fixing common linting issues...')
+const filesToFix = ['components/ContactForm.tsx'];
     'components/ErrorBoundary.tsx'
     'components/PerformanceMonitor.tsx'
     'components/SearchBar.tsx'
@@ -24,23 +60,31 @@ console.log()
     'pages/pricing.tsx'
     'pages/services.tsx'
     'pages/terms.tsx'
-        let content = fs.readFileSync(filePath,utf8)
-        let content = fs.readFileSync(filePath,utf8)
-        content = content.replace(//g,&apos;)
+let content = fs.readFileSync(filePath, 'utf8');
+let content = fs.readFileSync(filePath, 'utf8');
+        content = content.replace(/'/g, '&apos;')
           content = content.replace(/import Image from 'next\/image')
-          content = content.replace(/import Image from 'next\/image}/,// import Image from \'next/image\';)
+          content = content.replace(/import Image from 'next\/image'}/, '// import Image from \'next/image\';')
           content = content.replace(/import { Mail, Phone, MapPin } from 'lucide-react')
-          content = content.replace(/import { Mail, Phone, MapPin } from 'lucide-react}/,import { Phone, MapPin } from \'lucide-react\';)
+          content = content.replace(/import { Mail, Phone, MapPin } from 'lucide-react'}/, 'import { Phone, MapPin } from \'lucide-react\';')
           content = content.replace(/import { Layers, Zap, Shield, Globe } from 'lucide-react')
-          content = content.replace(/import { Layers, Zap, Shield, Globe } from 'lucide-react}/,import { Zap, Shield, Globe } from \'lucide-react\';)
+          content = content.replace(/import { Layers, Zap, Shield, Globe } from 'lucide-react'}/, 'import { Zap, Shield, Globe } from \'lucide-react\';')
           content = content.replace(/import Link from 'next\/link')
-          content = content.replace(/import Link from 'next\/link}/,// import Link from \'next/link\';)
-        content = content.replace(/} catch \(error\) {/, } catch (error) {}
-        content = content.replace(/} catch \(e\) {/, } catch (e) {}
-          content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/,const "PerformanceMonitor"}
-          content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/,const "PerformanceMonitor"}
-    execSync('npm run "lint": fix, { "stdio"})
-    execSync('npx tsc --noEmit, { "stdio"})
-    execSync('npm run build, { "stdio"})
+          content = content.replace(/import Link from 'next\/link'}/, '// import Link from \'next/link\';')
+        content = content.replace(/} catch \(error\) {/, '} catch (error) {'}
+        content = content.replace(/} catch \(e\) {/, '} catch (e) {'}
+          content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/, 'const "PerformanceMonitor"}
+          content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/, 'const "PerformanceMonitor"}
+    execSync('npm run "lint": fix', { "stdio"})
+    execSync('npx tsc --noEmit', { "stdio"})
+    execSync('npm run build', { "stdio"})
     console.log('\n Final "Report")
     console.error(' Comprehensive Code Fixer "failed")
+<<<<<<< HEAD
+console.log()
+=======
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -15,7 +15,7 @@ const { execSync } = require("child_process")
         "encoding": "utf8"
         "cwd"
         "stdio": options.silent ? "pipe" : "inherit"
-      this.log(`Command "failed": ${command} - ${error.message}, "ERROR"`)
+      this.log(`Command "failed": ${command} - ${error.message}`, "ERROR"`)
       this.results.errors.push({ command, "error"})
     this.log(" Fixing syntax errors...")
     const syntaxCommands = ["node fix-all-syntax-errors.cjs"]
@@ -65,5 +65,9 @@ const { execSync } = require("child_process")
     console.log(`"Errors"`)
     this.log(" Starting Enhanced Automation Orchestrator...")
       this.log(" Enhanced Automation Orchestrator completed!")
-      this.log(` Fatal "error": ${error.message}, "ERROR"`)
-      this.log(` Fatal "error": ${error.message}, "ERROR"`)
+<<<<<<< HEAD
+      this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+      this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

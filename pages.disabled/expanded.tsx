@@ -1,99 +1,109 @@
-import React from 'react';
-import type { NextPage } from 'next';
-import Link from 'next/link';
-import MainLayout from '../../components/layout/MainLayout';
-import { services, getServicesByCategory } from '../../data/services';
-import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import React from 'react';'
+import type { NextPage } from 'next';'
+import Link from 'next/link';'
+import MainLayout from '../../components/layout/MainLayout';'
+import { services, getServicesByCategory } from '../../data/services';'
+import { motion } from 'framer-motion';'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';'
 
+const ExpandedServicesPage: NextPage = () => {
+  const micro = getServicesByCategory('micro-saas');
+  const it = getServicesByCategory('it-services');
+  const ai = getServicesByCategory('ai-services');
 
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+  };
 
-  return (
-    <MainLayout;
-title=\"Expanded Services Catalog - Zion Tech Group\"
-      description=\"Deep catalog of Micro SaaS, IT, and AI solutions with real features, pricing, and direct contact.\"
-     />
-      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16\" />
-        <div className=\"container mx-auto px-4 text-center\" />
-          <motion.h1;
-initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className=\"text-4xl md:text-5xl font-bold mb-4\"
-           />
-            Expanded Services & Solutions;
+return (;
+    <MainLayout,
+title="Expanded Services Catalog - Zion Tech Group""
+      description="Deep catalog of Micro SaaS, IT, and AI solutions with real features, pricing, and direct contact.""
+    >
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16">"
+        <div className="container mx-auto px-4 text-center">"
+          <motion.h1,
+initial={{ "opacity": 0, "y": 20 }}
+            animate={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.6 }}
+            className="text-4xl "md":text-5xl font-bold mb-4""
+          >
+            Expanded Services & Solutions
           </motion.h1>
-          <motion.p;
-initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className=\"text-lg md:text-xl text-gray-200 max-w-3xl mx-auto\"
-           />
-            Explore our full catalog of Micro SaaS products, enterprise IT;
+          <motion.p,
+initial={{ "opacity": 0, "y": 20 }}
+            animate={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.6, "delay": 0.1 }}
+            className="text-lg "md":text-xl text-gray-200 max-w-3xl mx-auto""
+          >
+            Explore our full catalog of Micro SaaS products, enterprise IT,
 services, and AI solutions. All offerings include real features,
             typical pricing ranges, and direct links.
           </motion.p>
-          <div className=\"mt-6 flex flex-col sm:flex-row gap-3 justify-center\" />
-            <Link;
-href=\"/contact\"
-              className=\"bg-white text-blue-700 hover:bg-gray-100 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center\"
-             />
-              Talk to Sales <ArrowRight className=\"ml-2 w-4 h-4\" />
+          <div className="mt-6 flex flex-col "sm":flex-row gap-3 justify-center">"
+            <Link,
+href="/contact""
+              className="bg-white text-blue-700 "hover":bg-gray-100 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center""
+            >
+              Talk to Sales <ArrowRight className="ml-2 w-4 h-4" />"
             </Link>
-            <a;
-href=\"tel:+13024640950\"
-              className=\"bg-transparent border border-white text-white hover:bg-white hover:text-blue-900 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center\"
-             />
-              Call +1 302 464 0950;
+            <a,
+href=""tel":+13024640950""
+              className="bg-transparent border border-white text-white "hover":bg-white "hover":text-blue-900 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center""
+            >
+              Call +1 302 464 0950
             </a>
           </div>
         </div>
       </section>
 
-      <section className=\"py-16 bg-white\" />
-        <div className=\"container mx-auto px-4\" />
-          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\" />Micro SaaS</h2>
-          <div className=\"grid md:grid-cols-2 gap-8\" />
-            {micro.slice(0, 12).map(svc => (}
-              <div;}
+      <section className="py-16 bg-white">"
+        <div className="container mx-auto px-4">"
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Micro SaaS</h2>"
+          <div className="grid "md":grid-cols-2 gap-8">"
+            {micro.slice(0, 12).map(svc => (
+              <div
+}
 key={svc.id}
-                className=\"border rounded-lg p-6 hover:shadow-lg transition-shadow\"
-               />
-                <div className=\"flex items-start justify-between mb-3\" />
-                  <div className=\"text-3xl\" aria-hidden />
+                className="border rounded-lg p-6 "hover":shadow-lg transition-shadow""
+              >
+                <div className="flex items-start justify-between mb-3">"
+                  <div className="text-3xl" aria-hidden>"
                     {svc.icon}
                   </div>
-                  <div className=\"text-right\" />
-                    <div className=\"text-blue-600 font-semibold\" />
+                  <div className="text-right">"
+                    <div className="text-blue-600 font-semibold">"
                       From ${svc.pricing.starter}/
-                      {svc.pricing.currency === 'USD' ? 'mo' : ''}
+                      {svc.pricing.currency === 'USD' ? 'mo' : ''}'
                     </div>
                   </div>
                 </div>
-                <h3 className=\"text-xl font-bold text-gray-900 mb-2\" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">"
                   {svc.name}
                 </h3>
-                <p className=\"text-gray-600 mb-4 text-sm\" />{svc.description}</p>
-                <ul className=\"space-y-1 mb-4 text-sm text-gray-700\" />
-                  {svc.features.slice(0, 5).map((f, i) => (}
-                    <li key={i} className=\"flex items-center\" />
-                      <CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />
+                <p className="text-gray-600 mb-4 text-sm">{svc.description}</p>"
+                <ul className="space-y-1 mb-4 text-sm text-gray-700">"
+                  {svc.features.slice(0, 5).map((f, i) => (
+                    <li key={i} className="flex items-center">"
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />"
                       {f}
                     </li>
                   ))}
                 </ul>
-                <div className=\"flex justify-between items-center\" />
-                  <Link;
+                <div className="flex justify-between items-center">"
+                  <Link,
 href={svc.link}
-                    className=\"text-blue-600 hover:text-blue-700 font-medium inline-flex items-center\"
-                   />
-                    Learn more <ArrowRight className=\"w-4 h-4 ml-1\" />
+                    className="text-blue-600 "hover":text-blue-700 font-medium inline-flex items-center""
+                  >
+                    Learn more <ArrowRight className="w-4 h-4 ml-1" />"
                   </Link>
-                  <Link;
-href=\"/contact\"
-                    className=\"text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium\"
-                   />
-                    Get started;
+                  <Link,
+href="/contact""
+                    className="text-white bg-blue-600 "hover":bg-blue-700 px-4 py-2 rounded-md font-medium""
+                  >
+                    Get started
                   </Link>
                 </div>
               </div>
@@ -102,49 +112,50 @@ href=\"/contact\"
         </div>
       </section>
 
-      <section className=\"py-16 bg-gray-50\" />
-        <div className=\"container mx-auto px-4\" />
-          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\" />IT Services</h2>
-          <div className=\"grid md:grid-cols-2 gap-8\" />
-            {it.slice(0, 12).map(svc => (}
-              <div;}
+      <section className="py-16 bg-gray-50">"
+        <div className="container mx-auto px-4">"
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">IT Services</h2>"
+          <div className="grid "md":grid-cols-2 gap-8">"
+            {it.slice(0, 12).map(svc => (
+              <div
+}
 key={svc.id}
-                className=\"bg-white border rounded-lg p-6 hover:shadow-lg transition-shadow\"
-               />
-                <div className=\"flex items-start justify-between mb-3\" />
-                  <div className=\"text-3xl\" aria-hidden />
+                className="bg-white border rounded-lg p-6 "hover":shadow-lg transition-shadow""
+              >
+                <div className="flex items-start justify-between mb-3">"
+                  <div className="text-3xl" aria-hidden>"
                     {svc.icon}
                   </div>
-                  <div className=\"text-right\" />
-                    <div className=\"text-green-600 font-semibold\" />
+                  <div className="text-right">"
+                    <div className="text-green-600 font-semibold">"
                       Starts at ${svc.pricing.starter.toLocaleString()}
                     </div>
                   </div>
                 </div>
-                <h3 className=\"text-xl font-bold text-gray-900 mb-2\" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">"
                   {svc.name}
                 </h3>
-                <p className=\"text-gray-600 mb-4 text-sm\" />{svc.description}</p>
-                <ul className=\"space-y-1 mb-4 text-sm text-gray-700\" />
-                  {svc.features.slice(0, 6).map((f, i) => (}
-                    <li key={i} className=\"flex items-center\" />
-                      <CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />
+                <p className="text-gray-600 mb-4 text-sm">{svc.description}</p>"
+                <ul className="space-y-1 mb-4 text-sm text-gray-700">"
+                  {svc.features.slice(0, 6).map((f, i) => (
+                    <li key={i} className="flex items-center">"
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />"
                       {f}
                     </li>
                   ))}
                 </ul>
-                <div className=\"flex justify-between items-center\" />
-                  <Link;
+                <div className="flex justify-between items-center">"
+                  <Link,
 href={svc.link}
-                    className=\"text-blue-600 hover:text-blue-700 font-medium inline-flex items-center\"
-                   />
-                    Learn more <ArrowRight className=\"w-4 h-4 ml-1\" />
+                    className="text-blue-600 "hover":text-blue-700 font-medium inline-flex items-center""
+                  >
+                    Learn more <ArrowRight className="w-4 h-4 ml-1" />"
                   </Link>
-                  <Link;
-href=\"/contact\"
-                    className=\"text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium\"
-                   />
-                    Request quote;
+                  <Link,
+href="/contact""
+                    className="text-white bg-blue-600 "hover":bg-blue-700 px-4 py-2 rounded-md font-medium""
+                  >
+                    Request quote
                   </Link>
                 </div>
               </div>
@@ -153,49 +164,50 @@ href=\"/contact\"
         </div>
       </section>
 
-      <section className=\"py-16 bg-white\" />
-        <div className=\"container mx-auto px-4\" />
-          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\" />AI Services</h2>
-          <div className=\"grid md:grid-cols-2 gap-8\" />
-            {ai.slice(0, 12).map(svc => (}
-              <div;}
+      <section className="py-16 bg-white">"
+        <div className="container mx-auto px-4">"
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">AI Services</h2>"
+          <div className="grid "md":grid-cols-2 gap-8">"
+            {ai.slice(0, 12).map(svc => (
+              <div
+}
 key={svc.id}
-                className=\"border rounded-lg p-6 hover:shadow-lg transition-shadow\"
-               />
-                <div className=\"flex items-start justify-between mb-3\" />
-                  <div className=\"text-3xl\" aria-hidden />
+                className="border rounded-lg p-6 "hover":shadow-lg transition-shadow""
+              >
+                <div className="flex items-start justify-between mb-3">"
+                  <div className="text-3xl" aria-hidden>"
                     {svc.icon}
                   </div>
-                  <div className=\"text-right\" />
-                    <div className=\"text-purple-600 font-semibold\" />
+                  <div className="text-right">"
+                    <div className="text-purple-600 font-semibold">"
                       From ${svc.pricing.starter.toLocaleString()}
                     </div>
                   </div>
                 </div>
-                <h3 className=\"text-xl font-bold text-gray-900 mb-2\" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">"
                   {svc.name}
                 </h3>
-                <p className=\"text-gray-600 mb-4 text-sm\" />{svc.description}</p>
-                <ul className=\"space-y-1 mb-4 text-sm text-gray-700\" />
-                  {svc.features.slice(0, 6).map((f, i) => (}
-                    <li key={i} className=\"flex items-center\" />
-                      <CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />
+                <p className="text-gray-600 mb-4 text-sm">{svc.description}</p>"
+                <ul className="space-y-1 mb-4 text-sm text-gray-700">"
+                  {svc.features.slice(0, 6).map((f, i) => (
+                    <li key={i} className="flex items-center">"
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />"
                       {f}
                     </li>
                   ))}
                 </ul>
-                <div className=\"flex justify-between items-center\" />
-                  <Link;
+                <div className="flex justify-between items-center">"
+                  <Link,
 href={svc.link}
-                    className=\"text-blue-600 hover:text-blue-700 font-medium inline-flex items-center\"
-                   />
-                    Learn more <ArrowRight className=\"w-4 h-4 ml-1\" />
+                    className="text-blue-600 "hover":text-blue-700 font-medium inline-flex items-center""
+                  >
+                    Learn more <ArrowRight className="w-4 h-4 ml-1" />"
                   </Link>
-                  <Link;
-href=\"/contact\"
-                    className=\"text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium\"
-                   />
-                    Book consult;
+                  <Link,
+href="/contact""
+                    className="text-white bg-blue-600 "hover":bg-blue-700 px-4 py-2 rounded-md font-medium""
+                  >
+                    Book consult
                   </Link>
                 </div>
               </div>
@@ -204,92 +216,92 @@ href=\"/contact\"
         </div>
       </section>
 
-      <section className=\"py-16 bg-gray-50\" />
-        <div className=\"container mx-auto px-4\" />
-          <div className=\"grid md:grid-cols-3 gap-8\" />
-            <div className=\"bg-white rounded-lg p-6 border\" />
-              <h3 className=\"text-lg font-semibold mb-2\" />Contact</h3>
-              <ul className=\"space-y-2 text-sm text-gray-700\" />
-                <li className=\"flex items-center\" />
-                  <Phone className=\"w-4 h-4 mr-2 text-blue-600\" />
+      <section className="py-16 bg-gray-50">"
+        <div className="container mx-auto px-4">"
+          <div className="grid "md":grid-cols-3 gap-8">"
+            <div className="bg-white rounded-lg p-6 border">"
+              <h3 className="text-lg font-semibold mb-2">Contact</h3>"
+              <ul className="space-y-2 text-sm text-gray-700">"
+                <li className="flex items-center">"
+                  <Phone className="w-4 h-4 mr-2 text-blue-600" />"
                   {contact.phone}
                 </li>
-                <li className=\"flex items-center\" />
-                  <Mail className=\"w-4 h-4 mr-2 text-blue-600\" />
-                  <a;
-href=\"mailto:kleber@ziontechgroup.com\"
-                    className=\"underline\"
-                   />
+                <li className="flex items-center">"
+                  <Mail className="w-4 h-4 mr-2 text-blue-600" />"
+                  <a,
+href=""mailto":kleber@ziontechgroup.com""
+                    className="underline""
+                  >
                     {contact.email}
                   </a>
                 </li>
-                <li className=\"flex items-center\" />
-                  <MapPin className=\"w-4 h-4 mr-2 text-blue-600\" />
+                <li className="flex items-center">"
+                  <MapPin className="w-4 h-4 mr-2 text-blue-600" />"
                   {contact.address}
                 </li>
               </ul>
             </div>
-            <div className=\"bg-white rounded-lg p-6 border\" />
-              <h3 className=\"text-lg font-semibold mb-2\" />Useful Links</h3>
-              <ul className=\"space-y-2 text-sm text-blue-700\" />
-                <li />
-                  <a className=\"underline\" href=\"https://ziontechgroup.com\" />
-                    Website;
+            <div className="bg-white rounded-lg p-6 border">"
+              <h3 className="text-lg font-semibold mb-2">Useful Links</h3>"
+              <ul className="space-y-2 text-sm text-blue-700">"
+                <li>
+                  <a className="underline" href=""https"://ziontechgroup.com">"
+                    Website
                   </a>
                 </li>
-                <li />
-                  <a;
-className=\"underline\"
-                    href=\"https://ziontechgroup.com/services\"
-                   />
-                    All Services;
+                <li>
+                  <a,
+className="underline""
+                    href=""https"://ziontechgroup.com/services""
+                  >
+                    All Services
                   </a>
                 </li>
-                <li />
-                  <a;
-className=\"underline\"
-                    href=\"https://ziontechgroup.com/pricing\"
-                   />
-                    Pricing;
+                <li>
+                  <a,
+className="underline""
+                    href=""https"://ziontechgroup.com/pricing""
+                  >
+                    Pricing
                   </a>
                 </li>
-                <li />
-                  <a;
-className=\"underline\"
-                    href=\"https://ziontechgroup.com/contact\"
-                   />
-                    Contact;
+                <li>
+                  <a,
+className="underline""
+                    href=""https"://ziontechgroup.com/contact""
+                  >
+                    Contact
                   </a>
                 </li>
-                <li />
-                  <a;
-className=\"underline\"
-                    href=\"https://ziontechgroup.com/privacy\"
-                   />
-                    Privacy;
+                <li>
+                  <a,
+className="underline""
+                    href=""https"://ziontechgroup.com/privacy""
+                  >
+                    Privacy
                   </a>
                 </li>
-                <li />
-                  <a;
-className=\"underline\"
-                    href=\"https://ziontechgroup.com/terms\"
-                   />
-                    Terms;
+                <li>
+                  <a,
+className="underline""
+                    href=""https"://ziontechgroup.com/terms""
+                  >
+                    Terms
                   </a>
                 </li>
               </ul>
             </div>
-            <div className=\"bg-white rounded-lg p-6 border\" />
-              <h3 className=\"text-lg font-semibold mb-2\" />
-                Typical Market Pricing;
+            <div className="bg-white rounded-lg p-6 border">"
+              <h3 className="text-lg font-semibold mb-2">"
+                Typical Market Pricing
               </h3>
-              <ul className=\"space-y-2 text-sm text-gray-700\" />
-                <li />Micro SaaS: $12–$299/mo</li>
-                <li />IT Services: $8k–$250k/project</li>
-                <li />AI Solutions: $10k–$2M/project</li>
+              <ul className="space-y-2 text-sm text-gray-700">"
+                <li>Micro "SaaS": $12–$299/mo</li>
+                <li>IT "Services": $8k–$250k/project</li>
+                <li>AI "Solutions": $10k–$2M/project</li>
               </ul>
-              <p className=\"text-xs text-gray-500 mt-2\" />
-                Ranges vary by scope, integrations, data complexity, and;
+              <p className="text-xs text-gray-500 mt-2">"
+                Ranges vary by scope, integrations, data complexity, and,
 compliance requirements.
               </p>
             </div>
@@ -301,92 +313,93 @@ compliance requirements.
 };
 
 export default ExpandedServicesPage;
-  return (
-    <MainLayout;
-title=\"Expanded Services Catalog - Zion Tech Group\"
-      description=\"Deep catalog of Micro SaaS, IT, and AI solutions with real features, pricing, and direct contact.\"
-     />
-      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16\" />
-        <div className=\"container mx-auto px-4 text-center\" />
-          <motion.h1;
-initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className=\"text-4xl md:text-5xl font-bold mb-4\"
-           />
-            Expanded Services & Solutions;
+return (;
+    <MainLayout,
+title="Expanded Services Catalog - Zion Tech Group""
+      description="Deep catalog of Micro SaaS, IT, and AI solutions with real features, pricing, and direct contact.""
+    >
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16">"
+        <div className="container mx-auto px-4 text-center">"
+          <motion.h1,
+initial={{ "opacity": 0, "y": 20 }}
+            animate={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.6 }}
+            className="text-4xl "md":text-5xl font-bold mb-4""
+          >
+            Expanded Services & Solutions
           </motion.h1>
-          <motion.p;
-initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className=\"text-lg md:text-xl text-gray-200 max-w-3xl mx-auto\"
-           />
-            Explore our full catalog of Micro SaaS products, enterprise IT;
+          <motion.p,
+initial={{ "opacity": 0, "y": 20 }}
+            animate={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.6, "delay": 0.1 }}
+            className="text-lg "md":text-xl text-gray-200 max-w-3xl mx-auto""
+          >
+            Explore our full catalog of Micro SaaS products, enterprise IT,
 services, and AI solutions. All offerings include real features,
             typical pricing ranges, and direct links.
           </motion.p>
-          <div className=\"mt-6 flex flex-col sm:flex-row gap-3 justify-center\" />
-            <Link;
-href=\"/contact\"
-              className=\"bg-white text-blue-700 hover:bg-gray-100 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center\"
-             />
-              Talk to Sales <ArrowRight className=\"ml-2 w-4 h-4\" />
+          <div className="mt-6 flex flex-col "sm":flex-row gap-3 justify-center">"
+            <Link,
+href="/contact""
+              className="bg-white text-blue-700 "hover":bg-gray-100 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center""
+            >
+              Talk to Sales <ArrowRight className="ml-2 w-4 h-4" />"
             </Link>
-            <a;
-href=\"tel:+13024640950\"
-              className=\"bg-transparent border border-white text-white hover:bg-white hover:text-blue-900 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center\"
-             />
-              Call +1 302 464 0950;
+            <a,
+href=""tel":+13024640950""
+              className="bg-transparent border border-white text-white "hover":bg-white "hover":text-blue-900 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center""
+            >
+              Call +1 302 464 0950
             </a>
           </div>
         </div>
       </section>
 
-      <section className=\"py-16 bg-white\" />
-        <div className=\"container mx-auto px-4\" />
-          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\" />Micro SaaS</h2>
-          <div className=\"grid md:grid-cols-2 gap-8\" />
-            {micro.slice(0, 12).map(svc => (}
-              <div;}
+      <section className="py-16 bg-white">"
+        <div className="container mx-auto px-4">"
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Micro SaaS</h2>"
+          <div className="grid "md":grid-cols-2 gap-8">"
+            {micro.slice(0, 12).map(svc => (
+              <div
+}
 key={svc.id}
-                className=\"border rounded-lg p-6 hover:shadow-lg transition-shadow\"
-               />
-                <div className=\"flex items-start justify-between mb-3\" />
-                  <div className=\"text-3xl\" aria-hidden />
+                className="border rounded-lg p-6 "hover":shadow-lg transition-shadow""
+              >
+                <div className="flex items-start justify-between mb-3">"
+                  <div className="text-3xl" aria-hidden>"
                     {svc.icon}
                   </div>
-                  <div className=\"text-right\" />
-                    <div className=\"text-blue-600 font-semibold\" />
+                  <div className="text-right">"
+                    <div className="text-blue-600 font-semibold">"
                       From ${svc.pricing.starter}/
-                      {svc.pricing.currency === 'USD' ? 'mo' : ''}
+                      {svc.pricing.currency === 'USD' ? 'mo' : ''}'
                     </div>
                   </div>
                 </div>
-                <h3 className=\"text-xl font-bold text-gray-900 mb-2\" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">"
                   {svc.name}
                 </h3>
-                <p className=\"text-gray-600 mb-4 text-sm\" />{svc.description}</p>
-                <ul className=\"space-y-1 mb-4 text-sm text-gray-700\" />
-                  {svc.features.slice(0, 5).map((f, i) => (}
-                    <li key={i} className=\"flex items-center\" />
-                      <CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />
+                <p className="text-gray-600 mb-4 text-sm">{svc.description}</p>"
+                <ul className="space-y-1 mb-4 text-sm text-gray-700">"
+                  {svc.features.slice(0, 5).map((f, i) => (
+                    <li key={i} className="flex items-center">"
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />"
                       {f}
                     </li>
                   ))}
                 </ul>
-                <div className=\"flex justify-between items-center\" />
-                  <Link;
+                <div className="flex justify-between items-center">"
+                  <Link,
 href={svc.link}
-                    className=\"text-blue-600 hover:text-blue-700 font-medium inline-flex items-center\"
-                   />
-                    Learn more <ArrowRight className=\"w-4 h-4 ml-1\" />
+                    className="text-blue-600 "hover":text-blue-700 font-medium inline-flex items-center""
+                  >
+                    Learn more <ArrowRight className="w-4 h-4 ml-1" />"
                   </Link>
-                  <Link;
-href=\"/contact\"
-                    className=\"text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium\"
-                   />
-                    Get started;
+                  <Link,
+href="/contact""
+                    className="text-white bg-blue-600 "hover":bg-blue-700 px-4 py-2 rounded-md font-medium""
+                  >
+                    Get started
                   </Link>
                 </div>
               </div>
@@ -395,49 +408,50 @@ href=\"/contact\"
         </div>
       </section>
 
-      <section className=\"py-16 bg-gray-50\" />
-        <div className=\"container mx-auto px-4\" />
-          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\" />IT Services</h2>
-          <div className=\"grid md:grid-cols-2 gap-8\" />
-            {it.slice(0, 12).map(svc => (}
-              <div;}
+      <section className="py-16 bg-gray-50">"
+        <div className="container mx-auto px-4">"
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">IT Services</h2>"
+          <div className="grid "md":grid-cols-2 gap-8">"
+            {it.slice(0, 12).map(svc => (
+              <div
+}
 key={svc.id}
-                className=\"bg-white border rounded-lg p-6 hover:shadow-lg transition-shadow\"
-               />
-                <div className=\"flex items-start justify-between mb-3\" />
-                  <div className=\"text-3xl\" aria-hidden />
+                className="bg-white border rounded-lg p-6 "hover":shadow-lg transition-shadow""
+              >
+                <div className="flex items-start justify-between mb-3">"
+                  <div className="text-3xl" aria-hidden>"
                     {svc.icon}
                   </div>
-                  <div className=\"text-right\" />
-                    <div className=\"text-green-600 font-semibold\" />
+                  <div className="text-right">"
+                    <div className="text-green-600 font-semibold">"
                       Starts at ${svc.pricing.starter.toLocaleString()}
                     </div>
                   </div>
                 </div>
-                <h3 className=\"text-xl font-bold text-gray-900 mb-2\" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">"
                   {svc.name}
                 </h3>
-                <p className=\"text-gray-600 mb-4 text-sm\" />{svc.description}</p>
-                <ul className=\"space-y-1 mb-4 text-sm text-gray-700\" />
-                  {svc.features.slice(0, 6).map((f, i) => (}
-                    <li key={i} className=\"flex items-center\" />
-                      <CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />
+                <p className="text-gray-600 mb-4 text-sm">{svc.description}</p>"
+                <ul className="space-y-1 mb-4 text-sm text-gray-700">"
+                  {svc.features.slice(0, 6).map((f, i) => (
+                    <li key={i} className="flex items-center">"
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />"
                       {f}
                     </li>
                   ))}
                 </ul>
-                <div className=\"flex justify-between items-center\" />
-                  <Link;
+                <div className="flex justify-between items-center">"
+                  <Link,
 href={svc.link}
-                    className=\"text-blue-600 hover:text-blue-700 font-medium inline-flex items-center\"
-                   />
-                    Learn more <ArrowRight className=\"w-4 h-4 ml-1\" />
+                    className="text-blue-600 "hover":text-blue-700 font-medium inline-flex items-center""
+                  >
+                    Learn more <ArrowRight className="w-4 h-4 ml-1" />"
                   </Link>
-                  <Link;
-href=\"/contact\"
-                    className=\"text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium\"
-                   />
-                    Request quote;
+                  <Link,
+href="/contact""
+                    className="text-white bg-blue-600 "hover":bg-blue-700 px-4 py-2 rounded-md font-medium""
+                  >
+                    Request quote
                   </Link>
                 </div>
               </div>
@@ -446,49 +460,50 @@ href=\"/contact\"
         </div>
       </section>
 
-      <section className=\"py-16 bg-white\" />
-        <div className=\"container mx-auto px-4\" />
-          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\" />AI Services</h2>
-          <div className=\"grid md:grid-cols-2 gap-8\" />
-            {ai.slice(0, 12).map(svc => (}
-              <div;}
+      <section className="py-16 bg-white">"
+        <div className="container mx-auto px-4">"
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">AI Services</h2>"
+          <div className="grid "md":grid-cols-2 gap-8">"
+            {ai.slice(0, 12).map(svc => (
+              <div
+}
 key={svc.id}
-                className=\"border rounded-lg p-6 hover:shadow-lg transition-shadow\"
-               />
-                <div className=\"flex items-start justify-between mb-3\" />
-                  <div className=\"text-3xl\" aria-hidden />
+                className="border rounded-lg p-6 "hover":shadow-lg transition-shadow""
+              >
+                <div className="flex items-start justify-between mb-3">"
+                  <div className="text-3xl" aria-hidden>"
                     {svc.icon}
                   </div>
-                  <div className=\"text-right\" />
-                    <div className=\"text-purple-600 font-semibold\" />
+                  <div className="text-right">"
+                    <div className="text-purple-600 font-semibold">"
                       From ${svc.pricing.starter.toLocaleString()}
                     </div>
                   </div>
                 </div>
-                <h3 className=\"text-xl font-bold text-gray-900 mb-2\" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">"
                   {svc.name}
                 </h3>
-                <p className=\"text-gray-600 mb-4 text-sm\" />{svc.description}</p>
-                <ul className=\"space-y-1 mb-4 text-sm text-gray-700\" />
-                  {svc.features.slice(0, 6).map((f, i) => (}
-                    <li key={i} className=\"flex items-center\" />
-                      <CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />
+                <p className="text-gray-600 mb-4 text-sm">{svc.description}</p>"
+                <ul className="space-y-1 mb-4 text-sm text-gray-700">"
+                  {svc.features.slice(0, 6).map((f, i) => (
+                    <li key={i} className="flex items-center">"
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />"
                       {f}
                     </li>
                   ))}
                 </ul>
-                <div className=\"flex justify-between items-center\" />
-                  <Link;
+                <div className="flex justify-between items-center">"
+                  <Link,
 href={svc.link}
-                    className=\"text-blue-600 hover:text-blue-700 font-medium inline-flex items-center\"
-                   />
-                    Learn more <ArrowRight className=\"w-4 h-4 ml-1\" />
+                    className="text-blue-600 "hover":text-blue-700 font-medium inline-flex items-center""
+                  >
+                    Learn more <ArrowRight className="w-4 h-4 ml-1" />"
                   </Link>
-                  <Link;
-href=\"/contact\"
-                    className=\"text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium\"
-                   />
-                    Book consult;
+                  <Link,
+href="/contact""
+                    className="text-white bg-blue-600 "hover":bg-blue-700 px-4 py-2 rounded-md font-medium""
+                  >
+                    Book consult
                   </Link>
                 </div>
               </div>
@@ -497,92 +512,92 @@ href=\"/contact\"
         </div>
       </section>
 
-      <section className=\"py-16 bg-gray-50\" />
-        <div className=\"container mx-auto px-4\" />
-          <div className=\"grid md:grid-cols-3 gap-8\" />
-            <div className=\"bg-white rounded-lg p-6 border\" />
-              <h3 className=\"text-lg font-semibold mb-2\" />Contact</h3>
-              <ul className=\"space-y-2 text-sm text-gray-700\" />
-                <li className=\"flex items-center\" />
-                  <Phone className=\"w-4 h-4 mr-2 text-blue-600\" />
+      <section className="py-16 bg-gray-50">"
+        <div className="container mx-auto px-4">"
+          <div className="grid "md":grid-cols-3 gap-8">"
+            <div className="bg-white rounded-lg p-6 border">"
+              <h3 className="text-lg font-semibold mb-2">Contact</h3>"
+              <ul className="space-y-2 text-sm text-gray-700">"
+                <li className="flex items-center">"
+                  <Phone className="w-4 h-4 mr-2 text-blue-600" />"
                   {contact.phone}
                 </li>
-                <li className=\"flex items-center\" />
-                  <Mail className=\"w-4 h-4 mr-2 text-blue-600\" />
-                  <a;
-href=\"mailto:kleber@ziontechgroup.com\"
-                    className=\"underline\"
-                   />
+                <li className="flex items-center">"
+                  <Mail className="w-4 h-4 mr-2 text-blue-600" />"
+                  <a,
+href=""mailto":kleber@ziontechgroup.com""
+                    className="underline""
+                  >
                     {contact.email}
                   </a>
                 </li>
-                <li className=\"flex items-center\" />
-                  <MapPin className=\"w-4 h-4 mr-2 text-blue-600\" />
+                <li className="flex items-center">"
+                  <MapPin className="w-4 h-4 mr-2 text-blue-600" />"
                   {contact.address}
                 </li>
               </ul>
             </div>
-            <div className=\"bg-white rounded-lg p-6 border\" />
-              <h3 className=\"text-lg font-semibold mb-2\" />Useful Links</h3>
-              <ul className=\"space-y-2 text-sm text-blue-700\" />
-                <li />
-                  <a className=\"underline\" href=\"https://ziontechgroup.com\" />
-                    Website;
+            <div className="bg-white rounded-lg p-6 border">"
+              <h3 className="text-lg font-semibold mb-2">Useful Links</h3>"
+              <ul className="space-y-2 text-sm text-blue-700">"
+                <li>
+                  <a className="underline" href=""https"://ziontechgroup.com">"
+                    Website
                   </a>
                 </li>
-                <li />
-                  <a;
-className=\"underline\"
-                    href=\"https://ziontechgroup.com/services\"
-                   />
-                    All Services;
+                <li>
+                  <a,
+className="underline""
+                    href=""https"://ziontechgroup.com/services""
+                  >
+                    All Services
                   </a>
                 </li>
-                <li />
-                  <a;
-className=\"underline\"
-                    href=\"https://ziontechgroup.com/pricing\"
-                   />
-                    Pricing;
+                <li>
+                  <a,
+className="underline""
+                    href=""https"://ziontechgroup.com/pricing""
+                  >
+                    Pricing
                   </a>
                 </li>
-                <li />
-                  <a;
-className=\"underline\"
-                    href=\"https://ziontechgroup.com/contact\"
-                   />
-                    Contact;
+                <li>
+                  <a,
+className="underline""
+                    href=""https"://ziontechgroup.com/contact""
+                  >
+                    Contact
                   </a>
                 </li>
-                <li />
-                  <a;
-className=\"underline\"
-                    href=\"https://ziontechgroup.com/privacy\"
-                   />
-                    Privacy;
+                <li>
+                  <a,
+className="underline""
+                    href=""https"://ziontechgroup.com/privacy""
+                  >
+                    Privacy
                   </a>
                 </li>
-                <li />
-                  <a;
-className=\"underline\"
-                    href=\"https://ziontechgroup.com/terms\"
-                   />
-                    Terms;
+                <li>
+                  <a,
+className="underline""
+                    href=""https"://ziontechgroup.com/terms""
+                  >
+                    Terms
                   </a>
                 </li>
               </ul>
             </div>
-            <div className=\"bg-white rounded-lg p-6 border\" />
-              <h3 className=\"text-lg font-semibold mb-2\" />
-                Typical Market Pricing;
+            <div className="bg-white rounded-lg p-6 border">"
+              <h3 className="text-lg font-semibold mb-2">"
+                Typical Market Pricing
               </h3>
-              <ul className=\"space-y-2 text-sm text-gray-700\" />
-                <li />Micro SaaS: $12–$299/mo</li>
-                <li />IT Services: $8k–$250k/project</li>
-                <li />AI Solutions: $10k–$2M/project</li>
+              <ul className="space-y-2 text-sm text-gray-700">"
+                <li>Micro "SaaS": $12–$299/mo</li>
+                <li>IT "Services": $8k–$250k/project</li>
+                <li>AI "Solutions": $10k–$2M/project</li>
               </ul>
-              <p className=\"text-xs text-gray-500 mt-2\" />
-                Ranges vary by scope, integrations, data complexity, and;
+              <p className="text-xs text-gray-500 mt-2">"
+                Ranges vary by scope, integrations, data complexity, and,
 compliance requirements.
               </p>
             </div>
@@ -594,91 +609,91 @@ compliance requirements.
 };
 
 export default ExpandedServicesPage;
-import { services, getServicesByCategory  } from '../../data/services';
-import { motion  } from 'framer-motion';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin  } from 'lucide-react';
-const ExpandedServicesPage: NextPage = () => {const micro = getServicesByCategory('micro-saas')const it = getServicesByCategory('it-services')const ai  = getServicesByCategory('ai-services')const contact = {phone: '+1 302 464 0950',}
-  email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';}
+import { services, getServicesByCategory  } from '../../data/services';'
+import { motion  } from 'framer-motion';'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin  } from 'lucide-react';'
+const "ExpandedServicesPage": NextPage = () => {const micro = getServicesByCategory('micro-saas')const it = getServicesByCategory('it-services')const ai  = getServicesByCategory('ai-services')const contact = {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709';'
   }return (<MainLayout;
-      title=\"Expanded Services Catalog - Zion Tech Group\";
-      description=\"Deep catalog of Micro SaaS, IT, and AI solutions with real features, pricing, and direct contact.\";
-     />;
-      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16\" />;
-        <div className=\"container mx-auto px-4 text-center\" />;
+      title="Expanded Services Catalog - Zion Tech Group";"
+      description="Deep catalog of Micro SaaS, IT, and AI solutions with real features, pricing, and direct contact.";"
+    >;
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16">;"
+        <div className="container mx-auto px-4 text-center">;"
           <motion.h1;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className=\"text-4xl md:text-5xl font-bold mb-4\";
-           />;
+            initial={{ "opacity": 0, "y": 20 }}
+            animate={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.6 }}
+            className="text-4xl "md":text-5xl font-bold mb-4";"
+          >;
             Expanded Services & Solutions;
           </motion.h1>;
           <motion.p;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className=\"text-lg md:text-xl text-gray-200 max-w-3xl mx-auto\";
-           />;
+            initial={{ "opacity": 0, "y": 20 }}
+            animate={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.6, "delay": 0.1 }}
+            className="text-lg "md":text-xl text-gray-200 max-w-3xl mx-auto";"
+          >;
             Explore our full catalog of Micro SaaS products, enterprise IT;
             services, and AI solutions. All offerings include real features,typical pricing ranges, and direct links.;
           </motion.p>;
-          <div className=\"mt-6 flex flex-col sm:flex-row gap-3 justify-center\" />;
+          <div className="mt-6 flex flex-col "sm":flex-row gap-3 justify-center">;"
             <Link;
-              href=\"/contact\";
-              className=\"bg-white text-blue-700 hover:bg-gray-100 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center\";
-             />;
-              Talk to Sales <ArrowRight className=\"ml-2 w-4 h-4\" />;
+              href="/contact";"
+              className="bg-white text-blue-700 "hover":bg-gray-100 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center";"
+            >;
+              Talk to Sales <ArrowRight className="ml-2 w-4 h-4" />;"
             </Link>;
             <a;
-              href=\"tel:+13024640950\";
-              className=\"bg-transparent border border-white text-white hover:bg-white hover:text-blue-900 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center\";
-             />;
+              href=""tel":+13024640950";"
+              className="bg-transparent border border-white text-white "hover":bg-white "hover":text-blue-900 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center";"
+            >;
               Call +1 302 464 0950;
             </a>;
           </div>;
         </div>;
       </section>;
-      <section className=\"py-16 bg-white\" />;
-        <div className=\"container mx-auto px-4\" />;
-          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\" />Micro SaaS</h2>;
-          <div className=\"grid md:grid-cols-2 gap-8\" />;
-            {micro.slice(0, 12).map(svc => (<div;}
+      <section className="py-16 bg-white">;"
+        <div className="container mx-auto px-4">;"
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Micro SaaS</h2>;"
+          <div className="grid "md":grid-cols-2 gap-8">;"
+            {micro.slice(0, 12).map(svc => { return (<div; }
+                }
                 key={svc.id}
-                className=\"border rounded-lg p-6 hover:shadow-lg transition-shadow\";
-               />;
-                <div className=\"flex items-start justify-between mb-3\" />;
-                  <div className=\"text-3xl\" aria-hidden />;
+                className="border rounded-lg p-6 "hover":shadow-lg transition-shadow";"
+              >;
+                <div className="flex items-start justify-between mb-3">;"
+                  <div className="text-3xl" aria-hidden>;"
                     {svc.icon}
                   </div>;
-                  <div className=\"text-right\" />;
-                    <div className=\"text-blue-600 font-semibold\" />;
+                  <div className="text-right">;"
+                    <div className="text-blue-600 font-semibold">;"
                       From ${svc.pricing.starter}/;
-                      {svc.pricing.currency === 'USD' ? 'mo' : ''}
+                      {svc.pricing.currency === 'USD' ? 'mo' : ''}'
                     </div>;
                   </div>;
                 </div>;
-                <h3 className=\"text-xl font-bold text-gray-900 mb-2\" />;
+                <h3 className="text-xl font-bold text-gray-900 mb-2">;"
                   {svc.name}
                 </h3>;
-                <p className=\"text-gray-600 mb-4 text-sm\" />{svc.description}</p>;
-                <ul className=\"space-y-1 mb-4 text-sm text-gray-700\" />;
-                  {svc.features.slice(0, 5).map((f, i) => (<li key={i} className=\"flex items-center\" />;
-                      <CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />;
+                <p className="text-gray-600 mb-4 text-sm">{svc.description}</p>;"
+                <ul className="space-y-1 mb-4 text-sm text-gray-700">;"
+                  {svc.features.slice(0, 5).map((f, i) => (<li key={i} className="flex items-center">;"
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />;"
                       {f}
                     </li>;
                   ))}
                 </ul>;
-                <div className=\"flex justify-between items-center\" />;
+                <div className="flex justify-between items-center">;"
                   <Link;
                     href={svc.link}
-                    className=\"text-blue-600 hover:text-blue-700 font-medium inline-flex items-center\";
-                   />;
-                    Learn more <ArrowRight className=\"w-4 h-4 ml-1\" />;
+                    className="text-blue-600 "hover":text-blue-700 font-medium inline-flex items-center";"
+                  >;
+                    Learn more <ArrowRight className="w-4 h-4 ml-1" />;"
                   </Link>;
                   <Link;
-                    href=\"/contact\";
-                    className=\"text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium\";
-                   />;
+                    href="/contact";"
+                    className="text-white bg-blue-600 "hover":bg-blue-700 px-4 py-2 rounded-md font-medium";"
+                  >;
                     Get started;
                   </Link>;
                 </div>;
@@ -687,46 +702,47 @@ const ExpandedServicesPage: NextPage = () => {const micro = getServicesByCategor
           </div>;
         </div>;
       </section>;
-      <section className=\"py-16 bg-gray-50\" />;
-        <div className=\"container mx-auto px-4\" />;
-          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\" />IT Services</h2>;
-          <div className=\"grid md:grid-cols-2 gap-8\" />;
-            {it.slice(0, 12).map(svc => (<div;}
+      <section className="py-16 bg-gray-50">;"
+        <div className="container mx-auto px-4">;"
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">IT Services</h2>;"
+          <div className="grid "md":grid-cols-2 gap-8">;"
+            {it.slice(0, 12).map(svc => { return (<div; }
+                }
                 key={svc.id}
-                className=\"bg-white border rounded-lg p-6 hover:shadow-lg transition-shadow\";
-               />;
-                <div className=\"flex items-start justify-between mb-3\" />;
-                  <div className=\"text-3xl\" aria-hidden />;
+                className="bg-white border rounded-lg p-6 "hover":shadow-lg transition-shadow";"
+              >;
+                <div className="flex items-start justify-between mb-3">;"
+                  <div className="text-3xl" aria-hidden>;"
                     {svc.icon}
                   </div>;
-                  <div className=\"text-right\" />;
-                    <div className=\"text-green-600 font-semibold\" />;
+                  <div className="text-right">;"
+                    <div className="text-green-600 font-semibold">;"
                       Starts at ${svc.pricing.starter.toLocaleString()}
                     </div>;
                   </div>;
                 </div>;
-                <h3 className=\"text-xl font-bold text-gray-900 mb-2\" />;
+                <h3 className="text-xl font-bold text-gray-900 mb-2">;"
                   {svc.name}
                 </h3>;
-                <p className=\"text-gray-600 mb-4 text-sm\" />{svc.description}</p>;
-                <ul className=\"space-y-1 mb-4 text-sm text-gray-700\" />;
-                  {svc.features.slice(0, 6).map((f, i) => (<li key={i} className=\"flex items-center\" />;
-                      <CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />;
+                <p className="text-gray-600 mb-4 text-sm">{svc.description}</p>;"
+                <ul className="space-y-1 mb-4 text-sm text-gray-700">;"
+                  {svc.features.slice(0, 6).map((f, i) => (<li key={i} className="flex items-center">;"
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />;"
                       {f}
                     </li>;
                   ))}
                 </ul>;
-                <div className=\"flex justify-between items-center\" />;
+                <div className="flex justify-between items-center">;"
                   <Link;
                     href={svc.link}
-                    className=\"text-blue-600 hover:text-blue-700 font-medium inline-flex items-center\";
-                   />;
-                    Learn more <ArrowRight className=\"w-4 h-4 ml-1\" />;
+                    className="text-blue-600 "hover":text-blue-700 font-medium inline-flex items-center";"
+                  >;
+                    Learn more <ArrowRight className="w-4 h-4 ml-1" />;"
                   </Link>;
                   <Link;
-                    href=\"/contact\";
-                    className=\"text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium\";
-                   />;
+                    href="/contact";"
+                    className="text-white bg-blue-600 "hover":bg-blue-700 px-4 py-2 rounded-md font-medium";"
+                  >;
                     Request quote;
                   </Link>;
                 </div>;
@@ -735,46 +751,47 @@ const ExpandedServicesPage: NextPage = () => {const micro = getServicesByCategor
           </div>;
         </div>;
       </section>;
-      <section className=\"py-16 bg-white\" />;
-        <div className=\"container mx-auto px-4\" />;
-          <h2 className=\"text-3xl font-bold text-gray-900 mb-8\" />AI Services</h2>;
-          <div className=\"grid md:grid-cols-2 gap-8\" />;
-            {ai.slice(0, 12).map(svc => (<div;}
+      <section className="py-16 bg-white">;"
+        <div className="container mx-auto px-4">;"
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">AI Services</h2>;"
+          <div className="grid "md":grid-cols-2 gap-8">;"
+            {ai.slice(0, 12).map(svc => { return (<div; }
+                }
                 key={svc.id}
-                className=\"border rounded-lg p-6 hover:shadow-lg transition-shadow\";
-               />;
-                <div className=\"flex items-start justify-between mb-3\" />;
-                  <div className=\"text-3xl\" aria-hidden />;
+                className="border rounded-lg p-6 "hover":shadow-lg transition-shadow";"
+              >;
+                <div className="flex items-start justify-between mb-3">;"
+                  <div className="text-3xl" aria-hidden>;"
                     {svc.icon}
                   </div>;
-                  <div className=\"text-right\" />;
-                    <div className=\"text-purple-600 font-semibold\" />;
+                  <div className="text-right">;"
+                    <div className="text-purple-600 font-semibold">;"
                       From ${svc.pricing.starter.toLocaleString()}
                     </div>;
                   </div>;
                 </div>;
-                <h3 className=\"text-xl font-bold text-gray-900 mb-2\" />;
+                <h3 className="text-xl font-bold text-gray-900 mb-2">;"
                   {svc.name}
                 </h3>;
-                <p className=\"text-gray-600 mb-4 text-sm\" />{svc.description}</p>;
-                <ul className=\"space-y-1 mb-4 text-sm text-gray-700\" />;
-                  {svc.features.slice(0, 6).map((f, i) => (<li key={i} className=\"flex items-center\" />;
-                      <CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />;
+                <p className="text-gray-600 mb-4 text-sm">{svc.description}</p>;"
+                <ul className="space-y-1 mb-4 text-sm text-gray-700">;"
+                  {svc.features.slice(0, 6).map((f, i) => (<li key={i} className="flex items-center">;"
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />;"
                       {f}
                     </li>;
                   ))}
                 </ul>;
-                <div className=\"flex justify-between items-center\" />;
+                <div className="flex justify-between items-center">;"
                   <Link;
                     href={svc.link}
-                    className=\"text-blue-600 hover:text-blue-700 font-medium inline-flex items-center\";
-                   />;
-                    Learn more <ArrowRight className=\"w-4 h-4 ml-1\" />;
+                    className="text-blue-600 "hover":text-blue-700 font-medium inline-flex items-center";"
+                  >;
+                    Learn more <ArrowRight className="w-4 h-4 ml-1" />;"
                   </Link>;
                   <Link;
-                    href=\"/contact\";
-                    className=\"text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium\";
-                   />;
+                    href="/contact";"
+                    className="text-white bg-blue-600 "hover":bg-blue-700 px-4 py-2 rounded-md font-medium";"
+                  >;
                     Book consult;
                   </Link>;
                 </div>;
@@ -783,91 +800,91 @@ const ExpandedServicesPage: NextPage = () => {const micro = getServicesByCategor
           </div>;
         </div>;
       </section>;
-      <section className=\"py-16 bg-gray-50\" />;
-        <div className=\"container mx-auto px-4\" />;
-          <div className=\"grid md:grid-cols-3 gap-8\" />;
-            <div className=\"bg-white rounded-lg p-6 border\" />;
-              <h3 className=\"text-lg font-semibold mb-2\" />Contact</h3>;
-              <ul className=\"space-y-2 text-sm text-gray-700\" />;
-                <li className=\"flex items-center\" />;
-                  <Phone className=\"w-4 h-4 mr-2 text-blue-600\" />;
+      <section className="py-16 bg-gray-50">;"
+        <div className="container mx-auto px-4">;"
+          <div className="grid "md":grid-cols-3 gap-8">;"
+            <div className="bg-white rounded-lg p-6 border">;"
+              <h3 className="text-lg font-semibold mb-2">Contact</h3>;"
+              <ul className="space-y-2 text-sm text-gray-700">;"
+                <li className="flex items-center">;"
+                  <Phone className="w-4 h-4 mr-2 text-blue-600" />;"
                   {contact.phone}
                 </li>;
-                <li className=\"flex items-center\" />;
-                  <Mail className=\"w-4 h-4 mr-2 text-blue-600\" />;
+                <li className="flex items-center">;"
+                  <Mail className="w-4 h-4 mr-2 text-blue-600" />;"
                   <a;
-                    href=\"mailto:kleber@ziontechgroup.com\";
-                    className=\"underline\";
-                   />;
+                    href=""mailto":kleber@ziontechgroup.com";"
+                    className="underline";"
+                  >;
                     {contact.email}
                   </a>;
                 </li>;
-                <li className=\"flex items-center\" />;
-                  <MapPin className=\"w-4 h-4 mr-2 text-blue-600\" />;
+                <li className="flex items-center">;"
+                  <MapPin className="w-4 h-4 mr-2 text-blue-600" />;"
                   {contact.address}
                 </li>;
               </ul>;
             </div>;
-            <div className=\"bg-white rounded-lg p-6 border\" />;
-              <h3 className=\"text-lg font-semibold mb-2\" />Useful Links</h3>;
-              <ul className=\"space-y-2 text-sm text-blue-700\" />;
-                <li />;
-                  <a className=\"underline\" href=\"https://ziontechgroup.com\" />;
+            <div className="bg-white rounded-lg p-6 border">;"
+              <h3 className="text-lg font-semibold mb-2">Useful Links</h3>;"
+              <ul className="space-y-2 text-sm text-blue-700">;"
+                <li>;
+                  <a className="underline" href=""https"://ziontechgroup.com">;"
                     Website;
                   </a>;
                 </li>;
-                <li />;
+                <li>;
                   <a;
-                    className=\"underline\";
-                    href=\"https://ziontechgroup.com/services\";
-                   />;
+                    className="underline";"
+                    href=""https"://ziontechgroup.com/services";"
+                  >;
                     All Services;
                   </a>;
                 </li>;
-                <li />;
+                <li>;
                   <a;
-                    className=\"underline\";
-                    href=\"https://ziontechgroup.com/pricing\";
-                   />;
+                    className="underline";"
+                    href=""https"://ziontechgroup.com/pricing";"
+                  >;
                     Pricing;
                   </a>;
                 </li>;
-                <li />;
+                <li>;
                   <a;
-                    className=\"underline\";
-                    href=\"https://ziontechgroup.com/contact\";
-                   />;
+                    className="underline";"
+                    href=""https"://ziontechgroup.com/contact";"
+                  >;
                     Contact;
                   </a>;
                 </li>;
-                <li />;
+                <li>;
                   <a;
-                    className=\"underline\";
-                    href=\"https://ziontechgroup.com/privacy\";
-                   />;
+                    className="underline";"
+                    href=""https"://ziontechgroup.com/privacy";"
+                  >;
                     Privacy;
                   </a>;
                 </li>;
-                <li />;
+                <li>;
                   <a;
-                    className=\"underline\";
-                    href=\"https://ziontechgroup.com/terms\";
-                   />;
+                    className="underline";"
+                    href=""https"://ziontechgroup.com/terms";"
+                  >;
                     Terms;
                   </a>;
                 </li>;
               </ul>;
             </div>;
-            <div className=\"bg-white rounded-lg p-6 border\" />;
-              <h3 className=\"text-lg font-semibold mb-2\" />;
+            <div className="bg-white rounded-lg p-6 border">;"
+              <h3 className="text-lg font-semibold mb-2">;"
                 Typical Market Pricing;
               </h3>;
-              <ul className=\"space-y-2 text-sm text-gray-700\" />;
-                <li />Micro SaaS: $12–$299/mo</li>;
-                <li />IT Services: $8k–$250k/project</li>;
-                <li />AI Solutions: $10k–$2M/project</li>;
+              <ul className="space-y-2 text-sm text-gray-700">;"
+                <li>Micro "SaaS": $12–$299/mo</li>;
+                <li>IT "Services": $8k–$250k/project</li>;
+                <li>AI "Solutions": $10k–$2M/project</li>;
               </ul>;
-              <p className=\"text-xs text-gray-500 mt-2\" />;
+              <p className="text-xs text-gray-500 mt-2">;"
                 Ranges vary by scope, integrations, data complexity, and;
                 compliance requirements.;
               </p>;
@@ -877,4 +894,13 @@ const ExpandedServicesPage: NextPage = () => {const micro = getServicesByCategor
       </section>;
     </MainLayout>;
   )}export default ExpandedServicesPage;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

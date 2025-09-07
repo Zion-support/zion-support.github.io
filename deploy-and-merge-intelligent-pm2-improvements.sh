@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Deploy and Merge Intelligent PM2 Improvements Script
 # This script commits all PM2 automation improvements and merges them with the main branch
 # Deploy and Merge Intelligent PM2 Improvements Script
@@ -15,7 +14,6 @@
 
 # Deploy and Merge Intelligent PM2 Improvements
 # This script deploys the enhanced PM2 system and merges changes to the main branch
-
 
 set -e
 
@@ -26,7 +24,6 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
-
 NC='\033[0m' # No Color
 
 # Configuration
@@ -374,6 +371,7 @@ show_final_status() {
     echo "  pm2 web                     - Web interface"
     echo "  ./health-check.sh           - Health check"
     echo "  ./maintenance.sh            - Maintenance"
+
 BOLD='\033[1m'
 NC='\033[0m' # No Color
 
@@ -1163,11 +1161,39 @@ show_final_status() {
     echo "  pm2 web                     - Web interface"
     echo "  ./health-check.sh           - Health check"
     echo "  ./maintenance.sh            - Maintenance"
+main
+
 
 }
 
 # Main execution
 main() {
+    print_header "Deploying Enhanced PM2 System"
+    
+    # Pre-flight checks
+    check_git_repo
+    check_git_status
+    
+    # Test the system
+    test_enhanced_system
+    
+    # Git operations
+    create_branch
+    commit_changes
+    push_changes
+    
+    # Create pull request
+    create_pull_request
+    
+    # Merge to main (optional - uncomment if you want automatic merge)
+    # merge_to_main
+    
+    # Create summary
+    create_deployment_summary
+    
+    # Show final status
+    show_final_status
+}
 
     print_header "Deploying Enhanced PM2 System"
     
@@ -1265,7 +1291,6 @@ main() {
 # Trap to handle script interruption
 trap 'echo -e "\n${RED}Script interrupted. Current state preserved.${NC}"; exit 1' INT TERM
 
-
     print_header "Deploying Enhanced PM2 System"
     
     # Pre-flight checks
@@ -1292,6 +1317,9 @@ trap 'echo -e "\n${RED}Script interrupted. Current state preserved.${NC}"; exit 
     # Show final status
     show_final_status
 }
+
+main
+
 
 # Run main function
 main "$@"

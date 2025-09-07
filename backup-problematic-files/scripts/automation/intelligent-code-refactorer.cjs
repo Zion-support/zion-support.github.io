@@ -1,8 +1,8 @@
-#!/usr/bin/env
+#!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log( Starting Intelligent Code Refactorer...")
+console.log("" Starting Intelligent Code Refactorer...")
 // Get automation interval from environment variable ("default")
       "appliedRefactorings"
       "codeQualityScore"
@@ -11,7 +11,7 @@ console.log( Starting Intelligent Code Refactorer...")
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log( Starting Intelligent Code Refactorer...")
+console.log("" Starting Intelligent Code Refactorer...")
 // Get automation interval from environment variable ("default")
 console.log(" Starting Intelligent Code Refactorer...")
       "appliedRefactorings"
@@ -19,8 +19,8 @@ console.log(" Starting Intelligent Code Refactorer...")
       "complexityReduction"
       "refactoringPatterns"
     this.reportDir = path.join(process.cwd(), "refactoring-reports"
-  fs.mkdirSync(this.reportDir, { "recursive"})"
-  console.log(` Running intelligent code refactoring at ${new Date().toISOString()}"
+  fs.mkdirSync(this.reportDir, { "recursive"})
+  console.log(` Running intelligent code refactoring at ${new Date().toISOString()}
       console.log(`" Intelligent code refactoring completed successfully"`)
   console.error(" Intelligent code refactoring "failed": ")
   console.log(" Analyzing code patterns...")
@@ -80,17 +80,17 @@ console.log(" Starting Intelligent Code Refactorer...")
   const filePath = path.join(process.cwd(), "src"
         let content = fs.readFileSync(filePath, "utf8")
   content = constantDeclaration + "\n"
-            // Replace magic number with constantconst regex = new RegExp(\\b${number.value}\\b, "g)
+            // Replace magic number with constantconst regex = new RegExp(\\b${number.value}\\b, "g"")
   "type": "extract_constants"
           "file"
           "timestamp": new Date().toISOString(),"description": "Extracted ${magicNumbers.length} magic numbers"
 // console.log(" Extracted magic numbers from ${pattern.file}")
   console.log("⚠ Failed to extract magic numbers from ${pattern.file  }:")
-// console.log(� Standardizing naming conventions...")
-  console.log(� Standardizing naming conventions...")
-  console.log(" Extracted magic numbers from ${pattern.file}");")} catch (error) {"}"
+// console.log(""� Standardizing naming conventions...")
+  console.log(""� Standardizing naming conventions...")
+  console.log(" Extracted magic numbers from ${pattern.file}");")} catch (error) {"}
         console.log(`⚠ Failed to extract magic numbers from ${pattern.file}:``)
-    }`)}"
+    }`)}
 "
   async standardizeNaming(namingPatterns) {"}
     console.log("� Standardizing naming conventions...")
@@ -103,8 +103,8 @@ console.log(" Starting Intelligent Code Refactorer...")
           "timestamp"
           "description"
         "
-// console.log( Simplifying complex code...")
-  console.log( Simplifying complex code...")
+// console.log("" Simplifying complex code...")
+  console.log("" Simplifying complex code...")
     console.log(" Simplifying complex code...")
   const filePath = path.join(process.cwd(), "src"
         let content = fs.readFileSync(filePath, "utf8")
@@ -116,14 +116,14 @@ console.log(" Starting Intelligent Code Refactorer...")
   "type": "simplify_conditionals"
           "file"
           "timestamp"
-          "description
-// console.log(` Simplified code in ${pattern.file}`)"
+          "description"
+// console.log(` Simplified code in ${pattern.file}``)
   console.log(⚠ Failed to simplify code in ${pattern.file}:")
 console.log(` Simplified code in ${pattern.file}");")} catch (error) {"`}
         console.log(⚠ Failed to simplify code in ${pattern.file}:",")
           error.message"
         "
-  console.log( Generating refactoring suggestions...")
+  console.log("" Generating refactoring suggestions...")
       this.refactoringMetrics.refactoringPatterns.get("patterns")
   "type": "code_review"
         "priority": "high"
@@ -133,18 +133,18 @@ console.log(` Simplified code in ${pattern.file}");")} catch (error) {"`}
         "priority": "medium"
         "description": "Large components detected - consider decomposition"
         "action": "Break down large components into smaller, focused components"
-// console.log( Calculating quality improvements...")
-  console.log( Calculating quality improvements...")
+// console.log("" Calculating quality improvements...")
+  console.log("" Calculating quality improvements...")
       this.refactoringMetrics.refactoringPatterns.get("patterns")
 // console.log( Code quality "score": ${this.refactoringMetrics.codeQualityScore}")
     console.log(")
       this.refactoringMetrics.refactoringPatterns.get("patterns")
     console.log( Code quality "score": ${this.refactoringMetrics.codeQualityScore}")
-       Complexity "reduction
-  console.log(` Generating refactoring report...``)"
+       Complexity "reduction"
+  console.log(` Generating refactoring report...``)
   "timestamp"
       "summary"
-  totalFilesAnalyzed: this.findFiles(path.join(process.cwd(), "src"), [".ts, ".tsx", ".js, ".jsx", ]
+  totalFilesAnalyzed: this.findFiles(path.join(process.cwd(), "src"), [".ts"", ".tsx", ".js"", ".jsx", ""]
         "refactoringSuggestions"
         "appliedRefactorings"
         "codeQualityScore"
@@ -199,7 +199,7 @@ console.log(` Simplified code in ${pattern.file}");")} catch (error) {"`}
               "line"
               "context"
     const lines = content.split("\n")
-      const variableMatches = line.match(/\b[a-zA-Z_][a-zA-Z0-9_]*\b/g)
+      const variableMatches = line.match(/\b[a-zA-Z_][a-zA-Z0-9_]*\""b/g"")
   "type": "camelCase"
               "original"
               "suggested"
@@ -215,5 +215,9 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
   console.error(" Failed to start intelligent code "refactorer")
   console.error(" Failed to start intelligent code "refactorer")
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
