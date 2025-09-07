@@ -4,18 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 console.log('🚀 Comprehensive Merge Conflict Resolver');
-console.log('==');
-
-console.log('==');
-console.log('=====================================');
-main
-
-console.log('==');
-
-console.log('==');
-
-console.log('==');
-
 
     .replace(/
     .replace(/
@@ -32,33 +20,10 @@ main
 function removeMergeConflictMarkers(content) {
   return content
 
-
-
-
-
-
-
     .replace(/
+    .replace(/
+    .replace(/>>>>>>> [a-f0-9]+/g, '');
 }
-
-
-
-
-
-
-
-
-    .replace(/
-}
-
-    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
-    .replace(//g, '')
-    .replace(/}
-
-
-    .replace(/
-    .replace(/
-    .replace(/}
 
 
 
@@ -111,35 +76,6 @@ function processFile(filePath) {
 
     // Check for merge conflict markers
 
-
-
-
-
-
-
-
-
-
-
-            files.push(fullPath);
-          }
-        } catch (error) {
-          // Skip files that can't be read
-        }
-      }
-    }
-  }
-  
-  searchDirectory('/workspace');
-  return files;
-      // Remove any remaining conflict markers;
-      content = content.replace(/\n/g, "")
-      content = content.replace(/\n/g, "")
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content, "utf8")
-        this.resolvedFiles.push(filePath)
-        this.log(`✅ Resolved conflicts in ${filePath}`),,
-}
             files.push(fullPath);
 
     } catch (error) {
@@ -156,10 +92,7 @@ function processFile(filePath) {
       "package-lock.json"]"
     for (const artifact of artifactsToRemove) {
 main
-main
   // TODO: Implement
-
-
 
 
 

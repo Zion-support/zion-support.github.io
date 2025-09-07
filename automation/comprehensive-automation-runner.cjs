@@ -9,10 +9,6 @@ class ComprehensiveAutomationRunner {
   }
 
 
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-console.log('🚀 Starting Comprehensive Automation Runner...');
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
@@ -37,12 +33,6 @@ class ComprehensiveAutomationRunner {
 
   }
 
-
-main
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
   async runAllAutomations() {
     this.log('🚀 Starting Comprehensive Automation Runner...');
 
@@ -51,15 +41,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 
   async runAllAutomations() {
-    this.log('🚀 Starting Comprehensive Automation Runner...');
-    
-
-    const scripts = [
-      { path: 'automation/performance-optimizer.cjs', name: 'Performance Optimizer' },
-      { path: 'automation/security-scanner.cjs', name: 'Security Scanner' },
-      { path: 'automation/seo-optimizer.cjs', name: 'SEO Optimizer' },
-      { path: 'automation/health-check.cjs', name: 'Health Check' },
-      { path: 'automation/code-quality-monitor.cjs', name: 'Code Quality Monitor' }
 
 
     const automations = [
@@ -119,7 +100,6 @@ this.log('🎯 Starting Comprehensive Automation Runner');
       if (fs.existsSync(script.path)) {
         await this.runScript(script.path, script.name);
       } else {
-  }
 
 
   async generateFinalReport() {
@@ -149,8 +129,6 @@ this.log('🎯 Starting Comprehensive Automation Runner');
 const runner = new ComprehensiveAutomationRunner();
 runner.run().catch(console.error);
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
     const automations = [
 
@@ -171,16 +149,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 // Run all automations;
 runner.runAllAutomations().catch(console.error);
-main
 
 
 
     this.log('📋 Running all automation scripts...');
 
-    this.log('🎯 Starting Comprehensive Automation Runner');
-    this.log('📋 Running all automation scripts...');
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const scripts = [
       { path: 'automation/master-orchestrator.cjs', name: 'Master Orchestrator' },
@@ -221,8 +194,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 // Run the automation if this file is executed directly
 if (require.main === module) {
-
-module.exports = ComprehensiveAutomationRunner;
 
 module.exports = ComprehensiveAutomationRunner;
 module.exports = ComprehensiveAutomationRunner;

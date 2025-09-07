@@ -141,8 +141,6 @@ import { execSync, spawn } from;
     const varMatch = message.match(/'(.+?)
     if (line.includes('console.')
       lines[lineIndex] = line.replace(/"/g, ")
-
-      lines[lineIndex] = line.replace(/"/g, ")
       lines[lineIndex] = line.replace(/"/g, ")
 
       lines[lineIndex] = line.replace(/"/g, ")

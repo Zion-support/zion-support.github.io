@@ -7,30 +7,6 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8')
     // Remove all merge conflict markers
     
-    content = content.replace(/    
-:backup-problematic-files/scripts/fix-all-merge-conflicts.cjs
-    content = content.replace(/[^\n]+\n?/g, '');
-    
-:scripts/fix-all-merge-conflicts.cjs
-
-:backup-problematic-files/scripts/fix-all-merge-conflicts.cjs
-:scripts/fix-all-merge-conflicts.cjs
-    content = content.replace(/
-    
-
-    content = content.replace(/    
-
-
-    content = content.replace(/
-    
-
-    // Clean up any double newlines
-    content = content.replace(/\n\n\n+/g, '\n\n');
-    
-    // Write the cleaned content
-    fs.writeFileSync(filePath, content);
-    console.log(`✅ Resolved conflicts in: ${filePath}`);
-    return true;
     // Clean up any remaining conflict markers
     
     // Clean up extra semicolons and syntax issues

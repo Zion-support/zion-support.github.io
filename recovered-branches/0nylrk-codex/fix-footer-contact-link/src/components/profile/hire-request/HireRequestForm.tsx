@@ -17,15 +17,6 @@ export interface HireRequestFormProps {
     name?: string,
     email?: string,
     id?: string
-  initialJobTitle?: string;  onSubmitSuccess?: () => void
-}
-export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
-
-    initialJobTitle;
-    userDetails
-  });    initialJobTitle;
-    userDetails
-  });
   },
   onSubmitSuccess?: () => void
 }
@@ -71,4 +62,3 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     </Form>
   )
 }
-          </Button>

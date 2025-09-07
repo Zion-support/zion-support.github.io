@@ -10,36 +10,6 @@ const path = require('path');
 
 console.log('🏥 Starting enhanced health monitoring...');
 
-
-
-
-
-const fs = require('fs')
-const path = require('path')
-        console.log(' Checking system health...')
-            "status"
-            "status"
-            "message"
-            "status"
-            "message"
-            "status"
-            "message"
-            "status"
-            "message"
-  async run() {
-    console.log('🏥 Running health monitoring...');
-    console.log('✅ Health monitoring completed');
-  }
-}
-
-const monitor = new HealthMonitor();
-monitor.run().catch(console.error);
-
-module.exports = HealthMonitor;
-
-#!/usr/bin/env node
-
-
 // Health Monitor configuration
 const config = {
   outputDir: path.join(__dirname, '..', 'health-reports'),
@@ -109,19 +79,6 @@ function checkDiskSpace() {
   }
 }
 
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-class HealthMonitor {
-  constructor() {
-    this.projectRoot = process.cwd();
-  }
-
-  async run() {
-    console.log('🏥 Running health monitoring...');
-    console.log('✅ Health monitoring completed');
-  }
 // Check application health
 function checkApplicationHealth() {
   const issues = [];
@@ -184,7 +141,6 @@ function runHealthMonitoring() {
 
   return health;
 }
-
 
 // Save health report
 function saveHealthReport(health) {

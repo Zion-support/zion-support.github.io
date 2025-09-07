@@ -392,8 +392,6 @@ if (require.main === module) {}
   };
 };
 module.exports = TypeChecker;
-
-module.exports = TypeChecker;
 module.exports = TypeChecker;
 
 module.exports = TypeChecker;

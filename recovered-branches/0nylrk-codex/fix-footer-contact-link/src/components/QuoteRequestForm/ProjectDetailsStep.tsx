@@ -91,7 +91,6 @@ export function ProjectDetailsStep({
           </div>
 
           <div>
-              value={formData.contactInfo.name}          <div>
             <Label htmlFor="company" className="text-zion-slate-light">
               Company
             </Label>
@@ -149,14 +148,6 @@ export function ProjectDetailsStep({
         </div>
       </div>
     </div>
-              className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
-import { QuoteFormData  } from '@/types / quotes';
-import { Input  } from '@/components / ui / input';
-import { Label  } from '@/components / ui / label';
-import { Textarea  } from '@/components / ui / textarea';
-interface ProjectDetailsStepProps {
-  form_data: QuoteFormData;
-  updateFormData: (data: Partial < QuoteFormData>) => void;}
   )
 }
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
@@ -164,94 +155,6 @@ interface ProjectDetailsStepProps {
           </div>;
         </div>;
       </div>;
-        <h3 className="text - xl font - semibold text - white mb-4">;
-          Contact Information;
-        </h3>;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
-          <div>;
-            <Label html_for="name" className="text - zion - slate-light">;
-              Name;
-            </Label>;
-            <Input;
-              id="name";
-              placeholder="Your name";
-              value={form_data.contact_info.name}
-              on_change={(e) =>;
-                updateFormData ({
-                  contact_info: {
-                    ...form_data.contact_info,
-                    name: e.target.value,
-                  },
-                });
-              }
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
-            />;
-          </div>;
-          <div>;
-            <Label html_for="company" className="text - zion - slate-light">;
-              Company;
-            </Label>;
-            <Input;
-              id="company";
-              placeholder="Your company name";
-              value={form_data.contact_info.company}
-              on_change={(e) =>;
-                updateFormData ({
-                  contact_info: {
-                    ...form_data.contact_info,
-                    company: e.target.value,
-                  },
-                });
-              }
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
-            />;
-          </div>;
-          <div>;
-            <Label html_for="email" className="text - zion - slate-light">;
-              Email;
-            </Label>;
-            <Input;
-              id="email";
-              type="email";
-              placeholder="Your email address";
-              value={form_data.contact_info.email}
-              on_change={(e) =>;
-                updateFormData ({
-                  contact_info: {
-                    ...form_data.contact_info,
-                    email: e.target.value,
-                  },
-                });
-              }
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
-            />;
-          </div>;
-          <div>;
-            <Label html_for="phone" className="text - zion - slate-light">;
-              Phone;
-            </Label>;
-            <Input;
-              id="phone";
-              placeholder="Your phone number";
-              value={form_data.contact_info.phone}
-              on_change={(e) =>;
-                updateFormData ({
-                  contact_info: {
-                    ...form_data.contact_info,
-                    phone: e.target.value,
-                  },
-                });
-              }
-              className="bg - zion - blue border border - zion - blue - light focus: border - zion - purple text-white";
-
-            />;
-          </div>;
-        </div>;
-      </div>;
-
-    </div>);}
-
-  )
     </div>;
   );
 }

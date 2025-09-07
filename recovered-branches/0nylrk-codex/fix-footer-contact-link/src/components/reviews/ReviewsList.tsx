@@ -20,12 +20,6 @@ export function ReviewsList({
             <div
               key={i}
               className="border rounded-lg p-4 bg-card animate-pulse"
-      <div className="space-y-4">;
-        {Array (3);
-          .fill (0);
-          .map ((_, i) => (
-            <div;
-              key={i}              className="border rounded-lg p-4 bg-card animate-pulse"
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-10 w-10 rounded-full bg-muted"></div>
@@ -42,9 +36,6 @@ export function ReviewsList({
             </div>
           ))}
       </div>
-}
-;
-
     )
   }
 import { Review } from "@/types/reviews",;

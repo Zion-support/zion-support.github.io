@@ -343,8 +343,3 @@ function SkillsStep() {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
-
-;
->>>>>>> origin/main

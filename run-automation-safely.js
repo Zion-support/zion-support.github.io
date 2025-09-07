@@ -68,7 +68,6 @@ class SafeAutomationRunner {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log('📊 Automation Report Generated')this.log("✅ "Completed": ${report.summary.completed }")this.log("❌ "Failed": ${report.summary.failed }")this.log("📈 Success "Rate": ${report.summary.successRate }`)}
 }
-}
 // Run the automation;
 if() { const runner = new SafeAutomationRunner;(;);
   runner.runAutomationScripts().catch(error => {

@@ -12,34 +12,10 @@ import {
   FormItem
   FormLabel
   FormMessage
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,;
 } from "@/components/ui/form";
 
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
-  const { control, register, watch, setValue } = form;
-
-  const keywords = watch("keywords");
-  const platform = watch("platform");
-  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" |e.key === ",") {
-      e.preventDefault();
-      const value = e.currentTarget.value.trim();
-  const { control, register, watch, setValue } = form,
-  const keywords = watch("keywords"),
-  const platform = watch("platform"),
-  
-  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" || e.key === ",") {
-      e.preventDefault(),
-      const value = e.currentTarget.value.trim(),
-      
-
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
@@ -86,48 +62,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     Max {platform === "ios" ? "30" : "50"} characters
                   </FormDescription>
                 </FormItem>
-                    <Input ;
-                      placeholder="Brief description of your app";
-                      maxLength={platform === "ios" ? 170 :80}
-                      {...field}
-                    />;
-                  </FormControl>;
-                  <FormDescription>;
-                    Max {platform === "ios" ? "170" : "80"} characters;
-                  </FormDescription>;
-
-            />;
-
-            <FormField
-              control={control}
-              name="longDescription"              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Long Description</FormLabel>;
-                  <FormControl>;
-                    <Textarea
-                      placeholder="Detailed description of your app"
-                      className="min-h-32"                      maxLength={maxDescriptionLength}                </FormItem>)}
-            />;
-            <FormField;
-              control={control}
-              name="long_description";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Long Description</FormLabel>;
-                  <FormControl>;
-                    <Textarea;
-                      placeholder="Detailed description of your app";
-                      className="min-h-32";
-                      max_length={maxDescriptionLength}
-                      {...field}
-                    />;
-                  </FormControl>;
-                  <FormDescription>;
-
-                </FormItem>;
-              )}
-            />;
-            <FormField;
               )}
             />
             <FormField
@@ -155,7 +89,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Long Description</FormLabel>
-                  <FormControl>                      placeholder="Detailed description of your app"
                   <FormControl>
                     <Textarea
                       placeholder="Detailed description of your app"
@@ -177,18 +110,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown={addKeyword}
                 className="mb-2"
-            />              />;
-
-              <div className="flex flex-wrap gap-2 mt-2">;
-                {keywords && keywords.map((keyword, index) => (;
-                  <Badge
-                    key={index}
-                    className="bg-zion-purple/60 hover:bg-zion-purple">;
-                    {keyword}
-
-                    <button 
-
-                      type="button"            <FormField
               />
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
@@ -224,20 +145,5 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
         </Form>
       </CardContent>
     </Card>
-););
-                    <Input 
-                      placeholder="e.g., 1.0.0"
-                      {...field}
-                    />;
-                  </FormControl>;
-                </FormItem>;
-              )}
-            />;
-          </div>;
-        </Form>;
-      </CardContent>;
-    </Card>;
-  )
-};
   )
 },

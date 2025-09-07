@@ -12,14 +12,6 @@ export const suspiciousPhrases = $2;
   "payment link",
   "urgent payment",
   "deal outside"
-// Phrases that might indicate fraud;
-export const suspicious_phrases = [;
-  "throwaway";
-  "fakeemail";
-  "mailinator";
-  "guerrillamail";
-export const suspiciousEmailDomains = [
-  "tempmail",
 ],
 
 // Email domains often used for throwaway accounts

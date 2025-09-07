@@ -1,29 +1,3 @@
-    categoryId: "ai-tools",;    tags: ["machine-learning", "fine-tuning", "gpt"];
-    createdAt: "2025-04-01T12:00:00Z",;
-    updatedAt: "2025-04-01T12:00:00Z",;
-    upvotes: 48,;
-    downvotes: 2,;
-    replyCount: 12,;
-    isAnswered: true,;
-    isFeatured: true
-};
-  {;
-    id: "2",;
-    title: "How to build an effective AI talent profile?",;
-    content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",;
-    authorId: "user2",;
-    authorName: "Sarah Chen",;
-    authorAvatar: "https://i && i.pravatar.cc/150?img=5",;
-    categoryId: "getting-hired",;
-    tags: ["profile", "tips", "hiring"];
-    createdAt: "2025-04-03T09:15:00Z",;
-    updatedAt: "2025-04-03T09:15:00Z",;
-    upvotes: 32,;
-    downvotes: 0,;
-    replyCount: 8,;
-    isPinned: true,;
-    isFeatured: true;
-
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -124,30 +98,6 @@ export default function CommunityPage() {
         title="Community Forum | Zion AI Marketplace"
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
         keywords="community, forum, discussion, AI marketplace, questions, answers"
-      <SEO
-        title="Community Forum | Zion AI Marketplace"
-        description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
-        keywords="community, forum, discussion, AI marketplace, questions, answers"            <TabsTrigger value="categories">Categories</TabsTrigger>;
-            <TabsTrigger value="featured">Featured</TabsTrigger>;
-            <TabsTrigger value="recent">Recent</TabsTrigger>;
-          </TabsList>;
-    </AppLayout>);
-}
-    </AppLayout>);
-}
-    </AppLayout>;
-  ),;}
- }</div> </TabsContent>) ) 
-}</div> </TabsContent> </Tabs> </div> </AppLayout>) 
-}
-    </AppLayout>;
-  );
-}
-;
-}
-;
-    </AppLayout>);
-}
       />
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">

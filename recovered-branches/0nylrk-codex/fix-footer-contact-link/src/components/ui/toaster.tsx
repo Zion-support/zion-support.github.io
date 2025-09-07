@@ -1,28 +1,3 @@
-import { Toaster as SonnerToaster } from "sonner";
-import * as React from "react",
-import { Toaster as SonnerToaster } from "sonner",
-import {Toaster, as, SonnerToaster} from "sonner";
-import * as React from "react",
-import { Toaster as SonnerToaster } from "sonner",
-
-import * as React from "react",
-import { Toaster as SonnerToaster } from "sonner",
-
-import {Toaster, as, SonnerToaster} from "sonner";
-import * as React from "react",
-import { Toaster as SonnerToaster } from "sonner",
-
-export function Toaster() {
-  return (
-
-import {Toaster, as, SonnerToaster} from "sonner";
-export function Toaster() {;
-  return (    <SonnerToaster
-      position="top-right"
-      toastOptions={{
-        className:
-          "bg-zion-blue-dark text-white border border-zion-blue-light shadow-lg shadow-zion-purple/10",
-        style: {
 import * as React from "react";
 import { Toaster as SonnerToaster } from "sonner";
 export function Toaster() {

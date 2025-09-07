@@ -1,7 +1,3 @@
-export function TalentOnboardingSteps() {
-  const { user } = useAuth(),
-  const onboardingStatus = useOnboardingStatus(),
-  
 
 import React from "react";
 import { useAuth } from "@/hooks/useAuth";
@@ -38,7 +34,6 @@ export function TalentOnboardingSteps() {
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
       link: "/talent-dashboard",
-    {
       action: "View Matches"}],
   
   return <OnboardingTracker steps={steps} />

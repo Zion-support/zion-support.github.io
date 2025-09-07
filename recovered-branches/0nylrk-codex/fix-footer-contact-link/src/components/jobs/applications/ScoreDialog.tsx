@@ -65,14 +65,6 @@ export function ScoreDialog({;
           <DialogTitle>Application Match Score</DialogTitle>;
         </DialogHeader>;
         {application && (;
-            application={application}
-            onScoreUpdated={onScoreUpdated}
-          />;
-        )}
-
-      </DialogContent>;
-    </Dialog>;
-  );
           <ApplicationScoreCard;
             application={application}
             onScoreUpdated={onScoreUpdated}
@@ -81,5 +73,4 @@ export function ScoreDialog({;
       </DialogContent>
     </Dialog>
   )
-}
 }

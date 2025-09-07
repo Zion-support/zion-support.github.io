@@ -45,15 +45,6 @@ const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
 const seoFixed = seoContent.split('  );')[0] + '  );';
 fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
 console.log('✅ Fixed SEO.tsx');
-<<<<<<< HEAD:final-comprehensive-fix.cjs
-
-
-
-
-
-
-
-
 
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
@@ -78,12 +69,6 @@ const talentFixed = talentContent
   .replace(/className="text-sm">/g, 'className="text-sm">');
 fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
 
-<<<<<<< HEAD:final-comprehensive-fix.cjs
-
-
-
-
-
 const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
   'components/PerformanceMonitor.tsx',
@@ -95,15 +80,6 @@ const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
 const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
 fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
 console.log('✅ Fixed use-toast.ts');
-<<<<<<< HEAD:final-comprehensive-fix.cjs
-
-
-
-
-
-
-
-
 
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
@@ -119,12 +95,6 @@ const servicesFixed = servicesContent
   .replace(/reviewCount: 156/g, '"reviewCount": 156');
 fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
 
-<<<<<<< HEAD:final-comprehensive-fix.cjs
-
-
-main
-
-
 // Fix useAuth.tsx - fix malformed function
 const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
 const authFixed = authContent
@@ -134,12 +104,6 @@ const authFixed = authContent
   .replace(/useEffect\(\(\) => \{\s*\/\/ Check if user is logged in \(e\.g\., check localStorage, cookies, etc\.\)\s*\/\/ Implementation here\s*\}, \[\]\);/g, 'useEffect(() => {\n    // Check if user is logged in (e.g., check localStorage, cookies, etc.)\n    // Implementation here\n  }, []);');
 fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 
-<<<<<<< HEAD:final-comprehensive-fix.cjs
-
-
-
-
-
 ) {
     ) {
     if (processFile(file)) {
@@ -148,32 +112,10 @@ fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 }
 }
 
-<<<<<<< HEAD:final-comprehensive-fix.cjs
-
-
-
-main
-
-
-
 if ( {
   ) {
      {
 console.log('✨ Final comprehensive fixes completed!');
-
-<<<<<<< HEAD:final-comprehensive-fix.cjs
-  }} else {
-  }
-
-  }} else {
-  }
-
-
-
-
-console.log('✨ Final comprehensive fixes completed!');
-  }} else {
-  }
 
   }} else {
   }
@@ -219,12 +161,3 @@ const fs = require('fs')
   .replace(/reviewCount: 156/g, '"reviewCount")
   .replace(/"isAuthenticated": tru e,/g, '"isAuthenticated")
   .replace(/"isLoading": fals e/g, '"isLoading")
-<<<<<<< HEAD:final-comprehensive-fix.cjs
-  .replace(/"isLoading": fals e/g, '"isLoading")
-
-  .replace(/"isLoading": fals e/g, '"isLoading")
-main
-
-  .replace(/"isLoading": fals e/g, '"isLoading")
-
-

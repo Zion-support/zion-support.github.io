@@ -1,19 +1,13 @@
 const fs = require($2);
 const path = require($2);
 console.log($2);
-// Function to fix merge conflicts in a file
-function fixMergeConflicts(filePath) {
+// Function to fix merge conflicts in a file,
+  function fixMergeConflicts(filePath) {
   try {
-    
-    // Remove merge conflict markers and keep HEAD version
-    
-    
-    // Remove merge conflict markers and keep HEAD version
-    
     let content = fs.readFileSync($2);
     const originalContent = $2;
-    // Remove merge conflict markers and keep HEAD version
-    content = content.replace($2);
+    // Remove merge conflict markers and keep HEAD version,
+  content = content.replace($2);
     content = content.replace($2);
     if (content !== originalContent) {
       fs.writeFileSync($2);
@@ -26,9 +20,8 @@ function fixMergeConflicts(filePath) {
     return false
   }
 }
-
-// Function to get all files recursively
-function getAllFiles(dir, extensions) {
+// Function to get all files recursively,
+  function getAllFiles(dir, extensions) {
   let files = $2;
   try {
     const items = fs.readdirSync($2);
@@ -45,32 +38,15 @@ function getAllFiles(dir, extensions) {
   }
   return files
 }
-async function main() {console.log('🔍 Scanning for merge conflicts...')const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md'])let fixedCount = 0;
-  for (const file of files) {try {const content = fs.readFileSync(file, 'utf8')if (content.includes('') |content.includes(';
-      } else if (extensions.some(ext => item.endsWith(ext))) {}
-    } catch (error) {// Skip files that can't be read;
-    }
-  }
-}let fixedCount = 0;
-  for (const file of files) {try {const content = fs.readFileSync(file, 'utf8'),if (fixMergeConflicts(file)) {if (content.includes('        if (fixMergeConflicts(file)) {fixedCount++;
-
-// Main execution
-async function main() {
+// Main execution,
+  async function main() {
   console.log($2);
   const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js.json.md']),
   let fixedCount = $2;
   for (const file of files) {
     try {
-  let fixedCount = 0;
-  for (const file of files) {;
-    try {;
-      const content = fs.readFileSync(file, 'utf8'),;
-        if (fixMergeConflicts(file)) {;
-        if (fixMergeConflicts(file)) {
-        if (fixMergeConflicts(file)) {
-          fixedCount++;
       const content = fs.readFileSync($2);
-      if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+      if (content.includes('') || content.includes('>>>>>>>')) {
         if (fixMergeConflicts(file)) {
           fixedCount++
         }
@@ -79,11 +55,7 @@ async function main() {
       // Skip files that can't be read;
     }
   }
-  
   console.log($2);
   console.log('🎉 Merge conflict resolution completed!')
 }
-
-
-main().catch(console.error);
 main().catch($2);

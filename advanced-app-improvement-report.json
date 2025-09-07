@@ -1,11 +1,5 @@
 {
 
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   "timestamp": "2025-09-06T01:31:58.924Z",
   "duration": 151,
   "improvements": [
@@ -18,14 +12,7 @@
   "errors": [],
   "success": true
 
-
-
-
-
 }
-}
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   "timestamp": "2025-09-06T10:42:44.767Z",
   "totalDuration": 17470,
   "successfulTasks": 3,

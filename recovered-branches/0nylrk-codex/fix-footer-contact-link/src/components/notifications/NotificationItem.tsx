@@ -1,25 +1,3 @@
-  switch (type) {
-    case 'message':;
-      return <span className="text-blue-500">💬</span>;
-
-export const getTypeIcon = (type: NotificationType) => {
-  switch (type) {
-    case 'message':
-
-export const getTypeIcon = (type: NotificationType) => {;
-  switch (type) {;
-    case 'message':;      return <span className="text-blue-500">💬</span>;
-    case 'quote_request':;
-      return <span className="text-purple-500">📝</span>;
-    case 'booking_confirmation':;
-      return <span className="text-green-500">✅</span>;
-    case 'hire_request':;
-      return <span className="text-zion-purple">🤝</span>;
-    case 'onboarding':;
-      return <span className="text-zion-cyan">🚀</span>;
-  }
-};
-
 import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight  } from '@/components/icons';
@@ -58,14 +36,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   onMarkAsRead
   onDismiss
 }) => {
-interface NotificationItemProps {export const NotificationItem: React.FC<NotificationItemProps> = ({;
-  notification,;
-  onMarkAsRead,;
-  onDismiss;
-}) => {;
-  const navigate = useNavigate(),;
-  const handleClick = () => {;
-    if (!notification.read) {;
   const navigate = useNavigate($2);
   const handleClick = () => {
     if (!notification.read) {
@@ -75,43 +45,6 @@ interface NotificationItemProps {export const NotificationItem: React.FC<Notific
     if (notification.action_url) {
       navigate(notification.action_url)
     }
-      onMarkAsRead(notification.id);    }
-    // If there's an action URL, navigate to it
-    if (notification.action_url) {
-      navigate(notification.action_url)
-    }
-  }
-  },
-
-  },
-  };
-  },
-
-interface NotificationItemProps {;
-  notification: Notification,;
-  onMarkAsRead: (id: string) => Promise<void>,;
-  onDismiss: (id: string) => Promise<void>;
-}
-
-export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
-  notification, ;
-  onMarkAsRead, ;
-  onDismiss ;
-}) => {;
-  const navigate = useNavigate();
-
-  const handleClick = () => {;
-    if (!notification && notification.read) {;
-      onMarkAsRead(notification && notification.id);
-    }
-    // If there's an action URL, navigate to it;
-    if (notification && notification.action_url) {;
-      navigate(notification && notification.action_url);
-    }
-  }
-  return (
-    <div
-      className={cn(
   },
 
   return (
@@ -132,9 +65,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
           <p className="text-sm text-zion-slate-light">{notification.message |"You have a new notification"}</p>
           <div className="flex justify-between items-center mt-1">
             <p className="text-xs text-zion-slate">
-  return (
-    <div
-      className={cn(
               {notification.created_at ? formatDistanceToNow(new Date(notification.created_at), { addSuffix: true}) : "Just now"}
             </p>
             {notification.action_url && notification.action_text && (
@@ -142,25 +72,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
-      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
-        <TooltipProvider>;
-          <Tooltip>;
-            <TooltipTrigger asChild>;
-            </TooltipContent>;
-          </Tooltip>;
-        </TooltipProvider>;
-      </div>
-};
-    </div>);
-}
-
-};
-    </div>);
-}
-;
-    </div>;
-  )
-};
                 onClick={handleClick}
               >
                 {notification.action_text}

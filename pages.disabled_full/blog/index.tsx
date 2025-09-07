@@ -24,7 +24,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 =>;
 interface IndexProps {
   // Add props here as needed
-=>
 }
 export default function Index({ }: IndexProps) {
   return (

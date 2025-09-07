@@ -1,12 +1,3 @@
-import React from 'react';import {useState} from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {ListingScoreCard} from "@/components/ListingScoreCard";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
-import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";import { useState } from "react",
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -101,23 +92,6 @@ export function CategoryListingPage({
           <div className="text-center mb-12">
             <GradientHeading>{title}</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-// Example listing type;
-interface Listing {;
-  id: string,;
-  title: string,,
-  description: string,;
-  category: string,;
-
-import { useState } from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { GradientHeading } from '@/components / GradientHeading';
-import { ListingScoreCard } from '@/components / ListingScoreCard';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
-// Example listing type;
 // Example listing type
 interface Listing {
   id: string,
@@ -159,14 +133,6 @@ interface Listing {;
   reviewCount?: number,;
   price?: number | null,;
   createdAt: string;
-// Example listing type}
-;
-
-}
-;
-
-interface CategoryListingPageProps {;
-  title: string,,
 }
 ;
 interface CategoryListingPageProps {;
@@ -176,14 +142,6 @@ interface CategoryListingPageProps {;
   sortOptions?: { label: string, value: string }[],;
   filterOptions?: { label: string, value: string }[];
 }
-  return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <GradientHeading>{title}</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
 ;
 export function CategoryListingPage({;
   title,;
@@ -309,21 +267,10 @@ export function CategoryListingPage({;
               {searchQuery && ` for "${searchQuery}"`}
             </p>
           </div>
-              {description}
-                </SelectContent>;
-              </Select>;
-            </div>;
-          </div>;
-
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (
-                <ListingScoreCard          {/* Results Count */}
-          <div className="mb-6">;
-            <p className="text-zion-slate-light">;
-              Showing {processedListings && processedListings.length} results;
-              {searchQuery && ` for "${searchQuery}"`}                  title={listing.title}
                 <ListingScoreCard
                   key={listing.id}
                   title={listing.title}
@@ -332,33 +279,6 @@ export function CategoryListingPage({;
                   image={listing.image}
                   tags={listing.tags}
                   author={listing.author}
-            </p>;
-          </div>;
-
-          {/* Listings Grid */}
-          {processedListings && processedListings.length > 0 ? (;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-              {processedListings && processedListings.map((listing) => (;
-                <ListingScoreCard
-                  key={listing && listing.id}
-                  title={listing && listing.title}
-                  description={listing && listing.description}
-                  category={listing && listing.subcategory || listing && listing.category}
-                  image={listing && listing.image}
-                  tags={listing && listing.tags}
-                  author={listing && listing.author}
-                  authorImage={listing && listing.authorImage}
-                  aiScore={listing && listing.aiScore}
-                  rating={listing && listing.rating}
-                  reviewCount={listing && listing.reviewCount}
-                />;
-              ))}
-
-                  setSearchQuery(""),
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-              >
-                Clear all filters
-              </Button>
                   authorImage={listing.authorImage}
                   aiScore={listing.aiScore}
                   rating={listing.rating}
@@ -381,33 +301,6 @@ export function CategoryListingPage({;
                 Clear all filters
               </Button>
             </div>
-            </div>          )}
-        </div>;
-      </div>;
-      <Footer />;
-    </>;
-  );
-                  review_count={listing.review_count}
-                />))}
-            </div>) : (
-            <div className="text - center py-20">;
-              <h3 className="text - xl font - bold text - white mb-2">No listings found</h3>;
-              <p className="text - zion - slate - light mb-6">Try adjusting your filters or search query</p>;
-              <Button;
-                variant="outline";
-                on_click={() => {
-                  setSearchQuery ("");
-                  setSelectedFilter (filter_options[0].value);
-                }}
-                className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
-              >;
-                Clear all filters;
-              </Button>;
-            </div>)}
-        </div>;
-      </div>;
-      <Footer />;
-    </>);
           )}
         </div>
       </div>

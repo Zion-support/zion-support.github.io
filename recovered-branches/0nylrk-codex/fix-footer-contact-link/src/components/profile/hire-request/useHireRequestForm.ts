@@ -2,17 +2,6 @@ import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
-import { useState } from './react';
-import { use_form } from './react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { z } from './zod';
-import { useHireRequest } from '@/hooks / useHireRequest';
-import { TalentProfile } from '@/types / talent';
-interface UseHireRequestFormProps {
-  talent: TalentProfile;
-  on_close: () => void;
-  initialJobTitle?: string;
-  user_details?: {
 import { useHireRequest } from "@/hooks/useHireRequest";
 import { TalentProfile } from "@/types/talent";
 interface UseHireRequestFormProps {
@@ -32,51 +21,6 @@ interface UseHireRequestFormProps {
   }
 }
 export interface FormValues {
-    name?: string;interface UseHireRequestFormProps {
-  talent: TalentProfile,
-  onClose: () => void,
-  initialJobTitle?: string,
-  userDetails?: {  }
-}
-
-export interface FormValues {;
-  requesterName: string;
-  requesterEmail: string;
-  projectOverview: string;
-  timeline: string;
-  budgetMin: number,
-  budgetMax: number
-}
-
-import { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { useHireRequest } from "@/hooks/useHireRequest",;
-import { TalentProfile } from "@/types/talent",;
-interface UseHireRequestFormProps {;
-  talent: TalentProfile,;
-  onClose: () => void,;
-  initialJobTitle?: string,;
-  userDetails?: {;
-    name?: string,;
-    email?: string,;
-
-    email?: string,
-    id?: string;
-
-  }
-}    id?: string;
-  }
-}
-;
-export interface FormValues {;
-  requesterName: string,;
-  requesterEmail: string,;
-  projectOverview: string,;
-  timeline: string,;
-  budgetMin: number,;
-  budgetMax: number;
   requesterName: string,
   requesterEmail: string,
   projectOverview: string,
@@ -89,18 +33,6 @@ export interface FormValues {;
   budgetMax: number
 }
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {
-}    requesterName: z.string().min(2, "Name is required"),
-    requesterEmail: z.string().email("Valid email is required"),
-    projectOverview: z.string().min(10, "Please provide more details about your project"),
-    timeline: z.string().min(5, "Please specify your timeline"),
-    budgetMin: z.number().min(1, "Budget minimum is required"),
-    budgetMax: z.number().min(1, "Budget maximum is required")
-  }).refine(data => data.budgetMax >= data.budgetMin, {
-    message: "Maximum budget must be greater than or equal to minimum budget"
-    path: ["budgetMax"]
-
-  }),
-
   const [isSubmitting, setIsSubmitting] = useState($2);
   const { submitHireRequest } = useHireRequest($2);
   // Define the form schema with validation rules
@@ -126,9 +58,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     }
   }),
 
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema);
-    defaultValues: {          full_name: talent.full_name,
   // Handle form submission
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting($2);
@@ -164,62 +93,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     form;
     isSubmitting;
 
-          budgetMax: values.budgetMax      }
-    } catch (error) {
-      console && console.error("Error submitting hire request:", error)
-          id: talent.id || "";
-          full_name: talent.full_name,
-          professional_title: talent.professional_title}
-        requester: {
-          name: values.requester_name;
-          email: values.requester_email,
-          id: user_details?.id;
-        }
-        project: {
-          overview: values.project_overview;
-          timeline: values.timeline;
-          budget_min: values.budget_min,
-          budget_max: values.budget_max;
-        }
-      }
-;
-      const result = await submitHireRequest (request_data);
-      // Check condition
-if ( {) {
-  $2
-}
-        on_close ();
-      }
-    } catch (error) {
-      console.error ("Error submitting hire request:", error);
-    } finally {
-
-      setIsSubmitting(false)
-
-    } catch (error) {;
-      console.error("Error submitting hire request:", error);
-    } finally {;
-      setIsSubmitting(false);
-    }
-  },;
-  return {;
-    form;
-    isSubmitting;
-    onSubmit;
-  }
-}
-;
-
-  }
-}
-  return {
-    form;
-    is_submitting;
-    on_submit;
-  }
-}  }
-}
-;
     onSubmit
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { Metadata } from 'next';
 
@@ -8,19 +9,18 @@ export const metadata: Metadata = {
   description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
   keywords: 'about, company, mission, AI solutions, micro SaaS, IT services, enterprise technology'
 };
-
 export default function AboutPage() {
-  return (
-    <div className="animate-fade-in">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">
-          About Zion Tech Group
-        </h1>
-        <div className="prose prose-lg max-w-none">
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Zion Tech Group is a leading provider of enterprise-grade AI solutions, 
-            micro SaaS development, and comprehensive IT services. We specialize in 
-            delivering cutting-edge technology solutions that drive real business results.
+}
+return (;
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">"
+      <div className="container mx-auto px-4 py-20">"
+        <div className="text-center mb-16">"
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">"
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+            We are a leading technology company specializing in AI solutions,
+            micro SaaS development, and comprehensive enterprise IT services.
           </p>
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -71,17 +71,15 @@ export default function AboutPage() {
           </div>
         </div>
 
-          <div className="text-center">
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-            >
-              Get in Touch
-              <ArrowRightIcon className="ml-2 h-5 w-5" />
-            </Link>
-          </div>
+        <div className="text-center">
+          <Link 
+            href="/contact" 
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            Get in Touch
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
         </div>
-<<<<<<< HEAD
       </div>
 =======
 <<<<<<< HEAD
@@ -93,3 +91,6 @@ export default function AboutPage() {
     </div>
   );
 }
+=======
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+>>>>>>> 9e52e46f57e53278f6e8f46f78a33c4d92654ea6

@@ -17,7 +17,6 @@ export function ActiveProjectsCard() {
       ).slice(0, 3), // Limit to 3 most recent projects
       setActiveProjects(active)
     }
-    if (isLoading) {
   }, [projects, isLoading]),
   
   if (isLoading) {
@@ -34,20 +33,6 @@ export function ActiveProjectsCard() {
           <div className="space-y-2">
             {[1, 2].map(idx => (
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
-  useEffect(() => {;
-    if (projects && !isLoading) {;
-      const active = projects && projects.filter(p => ;
-        ['offer_acceptedin_progress'].includes(p && p.status);          </div>;
-        </CardContent>;
-      </Card>;
-    );
-  }
-
-  
-
-  if (activeProjects.length === 0) {
-
-  if (activeProjects && activeProjects.length === 0) {;
             ))}
           </div>
         </CardContent>

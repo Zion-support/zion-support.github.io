@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/env node
 
 /**
@@ -11,9 +9,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-async function optimizeImages() {}
-  const publicDir = path.join(process.cwd(), 'public;';);
-  const images = [];
 console.log('🖼️  Starting image optimization...');
 
 // Check if sharp is available

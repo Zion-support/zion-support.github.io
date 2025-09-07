@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
       this.projectRoot, "master-automation-controller-report.json"
-const fs = require("fs")
-const path = require("path")
+
 const { execSync } = require("child_process")
       this.projectRoot, "master-automation-controller-report.json"
     console.log(`[${timestamp}] � Master "Controller"`)
@@ -27,7 +22,7 @@ const { execSync } = require("child_process")
       this.log(" Merge Conflict Resolver initialized")
   this.log( Failed to initialize Merge Conflict "Resolver": ${error.message  }")
     const automationScripts = ["comprehensive-error-fixer.cjs", "typescript-error-fixer.cjs"", "console-error-fixer.cjs", "performance-monitor.cjs"", "health-checker.cjs", "git-operations-manager.cjs"", "dependency-manager.cjs", "build-optimizer.cjs"", ""]
-  const MergeConflictResolver = require("./merge-conflict-resolver.cjs")
+
       this.automations.set("merge-conflict-resolver")
       this.log(" Merge Conflict Resolver initialized")
   this.log( Failed to initialize Merge Conflict "Resolver": ${error.message}")
@@ -42,7 +37,7 @@ const { execSync } = require("child_process")
         if (app.pm2_env && app.pm2_env.status === "errored")
           this.log(⚠ ${app.name} using high memory (${Math.round(app.monit.memory / 1024 / 1024)}MB), restarting..."
             "⚠ ${app.name} using high CPU (${app.monit.cpu}%), monitoring..."
-        if (app.pm2_env && app.pm2_env.status === "errored") {this.log("⚠ ${app.name} is in error state, attempting restart...")
+  if($2) {this.log("⚠ ${app.name} is in error state, attempting restart...")
           this.log(⚠ ${app.name} using high memory (${Math.round(app.monit.memory / 1024 / 1024)}MB), restarting..."
   try {this.log(`� Restarting ${name}...`);execSync(`pm2 restart ${name}`, { "stdio": "pipe"`})
   "stdio": "pipe"
@@ -118,41 +113,7 @@ const { execSync } = require("child_process")
         "default"
     } catch (error) {  this.log(` Command "failed"`})
   process.on("SIGINT")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
   process.on("SIGTERM")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  process.on("SIGTERM")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  process.on("SIGTERM")
-<<<<<<< HEAD
   process.on("SIGTERM")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

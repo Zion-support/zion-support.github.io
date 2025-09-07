@@ -1,10 +1,4 @@
 
-import { Button } from "@/components/ui/button";import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;} from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { 
@@ -20,25 +14,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,import { Badge } from "@/components/ui/badge";
-import { toast } from "@/hooks/use-toast";
-import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";    loadTenants();
-  }, []);
-
-      setIsLoading(true);
-      const { data, error } = await supabase;
-        .from("whitelabel_tenants");
-        .select("*");
-        .order("created_at", { ascending: false });
-
-      if (error) throw error;
-      setTenants(data as WhitelabelTenant[]);
-      });
-    } finally {;
-      setIsLoading(false);
-    }
-
-  };
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
 import { Badge } from '@/components/ui/badge';
 import { toast } from '@/hooks/use-toast';
@@ -102,22 +77,6 @@ export function TenantsList() {
       // In a real implementation, this would verify DNS records
       // For now, we'll just mark it as verified
       const { error } = await supabase
-import {
-  Edit,
-  MoreHorizontal,
-  ExternalLink,
-  Power,
-  PowerOff,
-  Users,
-  const verifyDns = async (tenant: WhitelabelTenant) => {;
-    try {;
-      // In a real implementation, this would verify DNS records;
-      // For now, we'll just mark it as verified;
-      const { error } = await supabase;    }
-
-  },
-
-  return (
         .from('whitelabel_tenants')
         .update({ dns_verified: true})
         .eq($2);

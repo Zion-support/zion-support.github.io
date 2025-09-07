@@ -8,8 +8,6 @@ interface _appProps {
 
 export default function _app({ }: _appProps) {
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-export default function _app({}: _appProps) {
   return (
 origin/cursor/integrate-build-improve-and-re-verify-c7b5ursor/fix-syntax-push-and-merge-to-main-40de;
 import type { AppProps } from \'next/app\' import \'../styles/globals.css\' export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} /> }
@@ -36,4 +34,3 @@ const type { AppProps } from "next/app" import "./styles/globals.css" export def
     </div>
   );
 }
-origin/cursor/integrate-build-improve-and-re-verify-c7b5

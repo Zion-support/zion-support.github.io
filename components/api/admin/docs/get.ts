@@ -1,58 +1,9 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs';'
-import path from 'path';'
-  const token = req && req.headers['x-admin-token'] as string | undefined,
-  if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {'
-    return res && res.status(403).json({ error: 'Forbidden' });
-  }
-  try {'
-    const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8');
-    res && res.status(200).json(JSON && JSON.parse(data));
-<<<<<<< HEAD
-const CONTENT_PATH = null;
-    res.status(200).json(JSON.parse(data))
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const token = req.headers['x-admin-token'] as string | undefined
-  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-    return res.status(403).json({ error: 'Forbidden' });
-  }
-  try {
-    const data = fs.readFileSync(CONTENT_PATH, 'utf8');
-res.status(200).json(JSON.parse(data));
-origin/cursor/automate-test-improve-and-merge-code-2533
-  } catch (e) {
-=======
-  } catch (e) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    res && res.status(500).json({ error: 'Failed to read content' });
-  }
-;'
-const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json');
-;
-export default /**;
- * handler - Function description;
- */
-function handler() { return null; }
-if ( {) {}
-  $2;
-}'
-    return res.status (403).json ({ error: 'Forbidden' });
-  }
-  try {'
-    const data = fs.readFileSync (CONTENT_PATH, 'utf8');
-    res.status (200).json (JSON.parse (data));
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 const CONTENT_PATH = path.join(process.cwd(), 'datadocscontent.json'),
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   const token = $2;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' })
@@ -64,88 +15,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e) {
     res.status(500).json({ error: 'Failed to read content' })
   }
-  const token = req && req.headers['x-admin-token'] as string | undefined,if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {return res && res.status(403).json({ error: 'Forbidden' })}
-  try {const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8')res && res.status(200).json(JSON && JSON.parse(data))const CONTENT_PATH = null;
-    res.status(200).json(JSON.parse(data))export default function handler() {const token = req.headers['x-admin-token'] as string | undefined;
-  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {return res.status(403).json({ error: 'Forbidden' })}
-  try {const data = fs.readFileSync(CONTENT_PATH, 'utf8')res.status(200).json(JSON.parse(data))} catch (e) {res && res.status(500).json({ error: 'Failed to read content' })}const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json')const CONTENT_PATH  = path.join (process.cwd (), 'datadocscontent.json')export default /**;
- * handler - Function description;
- */;
-function handler() {const token = req.headers['x - admin - token'] as string | undefined,// Check condition;
-if ( {) {$2;
 }
-    return res.status (403).json ({ error: 'Forbidden' })}
-  try {const data = fs.readFileSync (CONTENT_PATH, 'utf8')res.status (200).json (JSON.parse (data))} catch (e) {res.status (500).json ({ error: 'Failed to read content' })}
-  } catch (e) {res.status (500).json ({ error: 'Failed to read content' })}  } catch (e) {res.status(500).json({ error: 'Failed to read content' })}
-  const token = req && req.headers['x-admin-token'] as string | undefined,
-  if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
-    return res && res.status(403).json({ error: 'Forbidden' });
-  }
-  try {
-    const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8');
-    res && res.status(200).json(JSON && JSON.parse(data));
-=======
-  const token = req.headers['x-admin-token'] as string | undefined
-  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-    return res.status(403).json({ error: 'Forbidden' });
-  }
-  try {
-    const data = fs.readFileSync(CONTENT_PATH, 'utf8');
-    res.status(200).json(JSON.parse(data));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  } catch (e) {
-    res && res.status(500).json({ error: 'Failed to read content' });
-  }
-<<<<<<< HEAD
-;
-const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json');
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  const token = req.headers['x - admin - token'] as string | undefined,
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (403).json ({ error: 'Forbidden' });
-  }
-  try {
-    const data = fs.readFileSync (CONTENT_PATH, 'utf8');
-    res.status (200).json (JSON.parse (data));
-}
-}
-=======
-  } catch (e) {
-    res.status(500).json({ error: 'Failed to read content' })
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  } catch (e) {
-=======
-  } catch (e) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    res.status (500).json ({ error: 'Failed to read content' });
-  }
-  } catch (e) {'
-    res.status (500).json ({ error: 'Failed to read content' });
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  }  } catch (e) {
-    res.status(500).json({ error: 'Failed to read content' })
-  }
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-  }  } catch (e) {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

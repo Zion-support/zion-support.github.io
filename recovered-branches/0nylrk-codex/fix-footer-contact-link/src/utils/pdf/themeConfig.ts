@@ -1,15 +1,3 @@
-  return theme === 'light' 
-    ? { ;
-
-* Theme configuration for PDF export;
-*/;
-export interface PdfThemeColors {
-  background: string;
-  text: string;
-  heading: string;
-    ? {
-        background: '#ffffff';
-        text: '#000000';
 /**
  * Theme configuration for PDF export
  */
@@ -33,8 +21,6 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
         background: '#1A1F2C';
         text: '#ffffff';
         heading: '#ffffff';
-        heading: '#222222';      }
-}
         subheading: '#cccccc'
 
         accent: '#9b87f5'

@@ -1,15 +1,3 @@
-        <div className="mt-6">
-          <Button
-            onClick={onApply}
-            disabled={!selectedResumeId |isSubmitting}
-
-import React from 'react',
-import { ResumeSelector, ResumeOption } from "../resume-selector",
-import { Button } from "@/components/ui/button",
-
-import React from './react';
-import { ResumeSelector, ResumeOption  } from '../resume - selector';
-import { Button  } from '@/components / ui / button';
 import React from 'react',
 import { ResumeSelector, ResumeOption } from "../resume-selector";
 import { Button } from "@/components/ui/button";
@@ -43,13 +31,5 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
         </div>
       )}
     </div>
-      onSelectResume(resume && resume.id);      {onApply && (
-        <div className="mt-6">
-          <Button 
-            onClick={onApply} 
-            disabled={!selectedResumeId || isSubmitting}          {!selectedResumeId && (
-            <p className="text-sm text-muted-foreground mt-2">
-              Please select a resume to continue
-            </p>}
   )
 }

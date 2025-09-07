@@ -21,11 +21,6 @@ const path = require("path")";const outDir = path.resolve(process.cwd(), "automa
 const manifest = { "functions": [], "generatedAt": new Date().toISOString() };";try {;}
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log("["netlify":manifest] wrote", manifestPath)} catch (e) {  console.log("["netlify":manifest] skipped (write failed)")}";process.exit(0);
-main
-main
-
-
-
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -42,8 +37,4 @@ const manifest = {
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(outFile, JSON.stringify(manifest, null, 2));
 console.log('[netlify:manifest] wrote', outFile);
-
-
-
-
 

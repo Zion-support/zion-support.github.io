@@ -7,32 +7,6 @@ console.log('🚀 Starting comprehensive merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
-    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts in this file
-    }
-    
-    console.log(`Resolving conflicts in: ${filePath}`);
-    
-    // Split content by conflict markers
-    const lines = content.split('\n');
-    const resolvedLines = [];
-    let inConflict = false;
-    let conflictBuffer = [];
-    let conflictType = null; // 'ours' or 'theirs'
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.startsWith('')) {
-        inConflict = true;
-        conflictType = 'ours';
-        conflictBuffer = [];
-        continue;
-      } else if (line.startsWith('')) {
-        conflictType = 'theirs';
-        continue;
-      } else if (line.startsWith('>>>>>>>')) {
-        inConflict = false;
     try {
         console.log(`🔧 Processing: ${filePath}`);
         let content = fs.readFileSync(filePath, 'utf8');

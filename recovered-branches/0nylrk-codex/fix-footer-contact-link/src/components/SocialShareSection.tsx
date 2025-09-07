@@ -28,19 +28,6 @@ export function SocialShareSection() {
           variant: "destructive"
         })
       })
-    const shareLinks = [
-    {
-      name: "Twitter"
-      icon: <Twitter className="h-5 w-5" />
-      color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80"
-      onClick: shareToTwitter    {
-      name: "LinkedIn"
-      icon: <Linkedin className="h-5 w-5" />
-      color: "bg-[#0077B5] hover:bg-[#0077B5]/80"
-      onClick: shareToLinkedIn
-
-    },
-    }],
   },
 
   const shareLinks = $2;
@@ -76,33 +63,6 @@ export function SocialShareSection() {
               <Button
                 key={index}
                 className={`${link.color} text-white`}
-                size="sm"    {;
-      name: "LinkedIn",;
-      icon: <Linkedin className="h-5 w-5" />,;
-      color: "bg-[#0077B5] hover:bg-[#0077B5]/80",;
-      onClick: shareToLinkedIn;    <section className="py - 12 bg - zion-blue">;
-      <div className="container mx - auto px - 4 sm:px - 6 lg:px-8">;
-        <div className="max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p-6">;
-          <div>;
-            <h3 className="text - xl font - bold text - white mb-2">Share Zion with Your Network</h3>;
-            <p className="text - zion - slate-light">Help others discover the future of AI & tech marketplace</p>;
-          </div>;
-          <div className="flex flex - wrap gap-3">;
-            {share_links.map ((link, index) => (
-              <Button;
-                key={index}
-                className={`${link.color} text - white`}
-                size="sm";
-                on_click={link.on_click}
-              >;
-                {link.icon}
-                <span>{link.name}</span>;
-              </Button>))}
-          </div>;
-        </div>;
-      </div>;
-    </section>);
-}
                 size="sm"
                 onClick={link.onClick}
               >

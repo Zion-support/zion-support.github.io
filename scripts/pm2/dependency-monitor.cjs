@@ -33,8 +33,6 @@ const fs = require(,"}),"
       '\n Dependency Monitor "Summary"
   '\n "Recommendations"
       '\n� "CRITICAL"
-
-      '\n� "CRITICAL"
       '\n� "CRITICAL"
 
 

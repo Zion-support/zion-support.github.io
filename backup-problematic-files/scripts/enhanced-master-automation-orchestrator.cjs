@@ -1,5 +1,3 @@
-
-
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -36,11 +34,6 @@
 }
 
 // Run the enhanced orchestrator
-
-main();
-
-#!/usr/bin/env node;
-
 main();#!/usr/bin/env node;
 #!/usr/bin/env node;
 const fs = require('fs')

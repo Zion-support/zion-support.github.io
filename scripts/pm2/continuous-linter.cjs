@@ -224,8 +224,6 @@ this.log('Starting continuous linting automation...')
   };
 };
 module.exports = ContinuousLinter;
-
-module.exports = ContinuousLinter;
 module.exports = ContinuousLinter;
 
 

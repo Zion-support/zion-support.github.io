@@ -93,8 +93,6 @@ const { execSync } = require('child_process')
         "impact"
 
         "impact"
-
-        "impact"
         "encoding"""
         "name"""
         "script"""

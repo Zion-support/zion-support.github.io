@@ -1,4 +1,3 @@
-
 export default function Contact() {;
 
   return (
@@ -10,19 +9,6 @@ export default function Contact() {;
         <h1>Contact Us</h1>;
         <p>Get in touch with our team for your IT and AI service needs.</p>;
       </main>;
-  );
-import React from './react';
-;
-export default function Contact() {return (</div>;
-  )import React from './react';export default /**;
- * Contact - Function description;
- */;
-function Contact() {return (<div>;
-      <main>;
-        <h1 > Contact Us</h1>;
-        <p > Get in touch with our team for your IT and AI service needs.</p>;
-      </main>;
-    </div>)}
     <div>
       <main>
         <h1>Contact Us</h1>

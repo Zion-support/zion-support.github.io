@@ -30,7 +30,6 @@ import React from 'react';
 interface PortfolioBuilderProps {
   // Add props here as needed
 
-
 }
 
 export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
@@ -40,27 +39,7 @@ export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-}
-
-}
-:src.pages.disabled/PortfolioBuilder.jsx
 }
 }
 }
 }
-}
-
-
-
-
-
-
-:src.pages.disabled/PortfolioBuilder.jsx
-}
-}
-}
-}
-}
-:temp_exclude/src.pages.disabled/PortfolioBuilder.jsx;

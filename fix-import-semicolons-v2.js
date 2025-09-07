@@ -10,15 +10,6 @@ files.forEach((file) => {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
     const modified = false;
-    content = content.replace(;
-      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
-
-    content = content.replace(;
-      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
-
-    content = content.replace(;
-      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
-
     // Fix import statements with double punctuation
     content = content.replace(
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g

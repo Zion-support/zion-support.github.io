@@ -7,10 +7,6 @@ interface BundleanalyzerProps {
 
 export default function Bundleanalyzer({ }: BundleanalyzerProps) {
 
-}
-export default function Bundleanalyzer({ }: BundleanalyzerProps) {
-}
-export default function Bundleanalyzer({}: BundleanalyzerProps) {
   return (
     <div>
 </div>
@@ -23,5 +19,3 @@ export default function Bundleanalyzer({}: BundleanalyzerProps) {
 
 }
 
-}
-}

@@ -1,76 +1,3 @@
-
-;
-export type {ShortUrl;
-  UrlAnalytics;
-  ClickEvent;
-  CreateShortUrlRequest;
-} from './urlShortenerService';;export type {PasswordOptions;
-  PasswordStrength;
-  GeneratedPassword;
-} from './passwordGeneratorService';;export type {export type {QRCodeOptions;
-  QRCodeResult;
-  QRCodeTemplate;
-} from './qrCodeService';;export type {export type {ConversionOptions;
-  ConversionResult;
-  SupportedFormat;
-  FileInfo;
-} from './fileConverterService';;export type {export type {// Export all micro SaaS services;
-export type {ShortUrl;
-  UrlAnalytics;
-  ClickEvent;
-  CreateShortUrlRequest;
-} from './urlShortenerService';;export type {export { urlShortenerService } from './urlShortenerService';
-export { passwordGeneratorService } from './passwordGeneratorService';
-export { qrCodeService } from './qrCodeService';
-export { fileConverterService } from './fileConverterService';
-export { textAnalysisService } from './textAnalysisService';ShortUrl;
-// Export service types and interfaces;
-
-export type {
-  ShortUrl;
-  UrlAnalytics;
-  ClickEvent;
-  CreateShortUrlRequest;
-} from './urlShortenerService';
-
-;
-
-export type {
-export { urlShortenerService } from './urlShortenerService';
-export { passwordGeneratorService } from './passwordGeneratorService';
-export { qrCodeService } from './qrCodeService';
-export { fileConverterService } from './fileConverterService';
-export { textAnalysisService } from './textAnalysisService';
-  ShortUrl;
-  UrlAnalytics;
-  ClickEvent;
-  CreateShortUrlRequest;
-} from './urlShortenerService';
-export type {export type {export type {export type {PasswordOptions;
-  PasswordStrength;
-  GeneratedPassword;
-} from './passwordGeneratorService';;export type {export type {export type {export type {export type {QRCodeOptions;
-  QRCodeResult;
-  QRCodeTemplate;
-} from './qrCodeService';;export type {export type {export type {export type {export type {ConversionOptions;
-  ConversionResult;
-  SupportedFormat;
-  FileInfo;
-} from './fileConverterService';;export type {export type {// Export service types and interfaces;
-export type {ShortUrl,UrlAnalytics,ClickEvent,CreateShortUrlRequest;
-} from './urlShortenerService';export type {PasswordOptions,PasswordStrength,GeneratedPassword;
-} from './passwordGeneratorService';export type {QRCodeOptions,QRCodeResult,QRCodeTemplate;
-} from './qrCodeService';export type {ConversionOptions,ConversionResult,SupportedFormat,FileInfo;
-} from './fileConverterService';export type {export type {TextAnalysisResult;
-export type {
-
-
-export type {;
-
-
-
-export type {;
-export type {
 // Export all micro SaaS services
 export { urlShortenerService } from './urlShortenerService',
 export { passwordGeneratorService } from './passwordGeneratorService',
@@ -256,23 +183,6 @@ export const SERVICES_METADATA = $2;
     api_endpoint: '/api / file - converter';
   }
   text_analysis: {
-    features: [
-      'Multiple file formatsBatch conversionQuality settingsMetadata preservationCloud processing'
-    ];
-    pricing: 'Free (Basic) / $9.99/month (Pro)'
-    apiEndpoint: '/api/file-converter'
-  }
-  textAnalysis: {
-    name: 'Text Analysis';
-    description: 'Analyze text for insights and optimization';
-    icon: '📊';
-    category: 'ANALYSIS';
-    features: [;
-      'Readability metrics_sentiment analysis_keyword extraction_entity recognition_language detection';
-    ];
-
-    pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
-
 
     features: [
       'Readability metricsSentiment analysisKeyword extractionEntity recognitionLanguage detection'
@@ -286,8 +196,6 @@ export const SERVICES_METADATA = $2;
 }
 
 export const getServiceStatus = () => {
-
-
   return {
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
@@ -916,7 +824,4 @@ export const getServiceStats = () =>: any {
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178}
     }
   }
-};
-  }
-};
 },

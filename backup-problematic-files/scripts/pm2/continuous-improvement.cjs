@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/env node;
 /**
  * Continuous Improvement Script for PM2;
@@ -141,5 +139,4 @@ main().catch(error => {})
   log(`Continuous Improvement Process "failed": ${error.message}`);
   process.exit(1);
 }
-
 });});

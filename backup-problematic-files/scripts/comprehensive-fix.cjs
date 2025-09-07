@@ -1,13 +1,8 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
 
 console.log('🔧 Comprehensive fix for all files...');
-
 // List of problematic files
 const filesToFix = [
   'pages/about.tsx',
@@ -17,30 +12,22 @@ const filesToFix = [
   'pages/talent.tsx'
 ];
 
+
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
       console.log(`⚠️  File not found: ${filePath}`);
       return false;
     }
+
     let content = fs.readFileSync(filePath, 'utf8');
-    
     // Remove all merge conflict markers
     content = content.replace(/\n?/g, '');
     content = content.replace(/\n?/g, '');
     content = content.replace(/    
-
-
-    let content = fs.readFileSync(filePath, 'utf8');
-    // Remove all merge conflict markers
-
-    content = content.replace(/
     content = content.replace(/\n?/g, '');
     content = content.replace(/\n?/g, '');
-    content = content.replace(/
-    
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
+    content = content.replace(/    
     content = content.replace(/    
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');
@@ -49,22 +36,18 @@ function fixFile(filePath) {
     content = content.replace(/,\s*"description":/g, ',');
     content = content.replace(/,\s*"icon":/g, ',');
     content = content.replace(/,\s*"href":/g, ',');
-    
     // Clean up extra whitespace and newlines
     content = content.replace(/\n\n\n+/g, '\n\n');
     content = content.replace(/\s+$/gm, '');
-    
     // Write the fixed content
     fs.writeFileSync(filePath, content);
     console.log(`✅ Fixed: ${filePath}`);
     return true;
-    
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
-
 // Process all files
 let fixedCount = 0;
 for (const file of filesToFix) {
@@ -72,5 +55,7 @@ for (const file of filesToFix) {
     fixedCount++;
   }
 }
+
+console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
 
 console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);

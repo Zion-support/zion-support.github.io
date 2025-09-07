@@ -94,6 +94,3 @@ const path = require('path')
         "severity"
         "name"
         "severity"
-
-        "severity"
-        "severity"

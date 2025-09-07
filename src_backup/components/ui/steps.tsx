@@ -10,10 +10,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   className?: string
 }
 export function Step({
-  className?: string
-}
-export function Step({
-
 
 status;
   label;
@@ -33,7 +29,6 @@ interface StepProps {"
 
   className}: StepProps) {
 
-  className}: StepProps) {
   return (
     <li
 
@@ -49,10 +44,6 @@ interface StepProps {"
     >
       <div;
         className={cn(
-
-
-          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium"          {
-
 
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
 
@@ -78,7 +69,6 @@ interface StepProps {"
             "bg-zion-blue border-zion-cyan text-white":"
               status === "current",
 
-
             "bg-zion-purple border-zion-purple text-white":
 
               status === "complete"}
@@ -99,7 +89,6 @@ interface StepProps {;"
   description?: string,;
   className?: string;
 }
-
 ;
 export function Step() { return null; }
           "opacity-60": status === "incomplete"},;
@@ -124,14 +113,6 @@ export function Step() { return null; }
         ) : (;
           <span>;
 
-
-
-
-            {/* Step number would go here */}
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
-          </span>;
-
-          </span>
             "text-zion-slate-light": status === "incomplete",
             "text-zion-slate-light": status === "incomplete",
 
@@ -162,7 +143,6 @@ interface StepsProps {
   className?: string
   children: React.ReactNode
 
-
 }
 
 ;
@@ -175,50 +155,17 @@ interface StepsProps {;
 export function Steps({ currentStep, className, children }: StepsProps) {}
   const childrenArray = React.Children.toArray(children),
 
-
-
-  return (
-    <div className={cn("w-full", className)}>
-      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
-        {React.Children.map(childrenArray, (child, index) => {
-
-
-
           if (!React.isValidElement(child)) return null,
           "
           let status: "incomplete" | "current" | "complete" = "incomplete","
           if (index < currentStep) status = "complete","
           if (index === currentStep) status = "current",
-          if (!React.isValidElement(child)) return null,
-          
-          let status: "incomplete" | "current" | "complete" = "incomplete",
-          if (index < currentStep) status = "complete",
-          if (index === currentStep) status = "current",
-          
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
-      className;
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-      className;
-          return React.cloneElement(child as React.ReactElement<StepProps>, {
 
           if (!React.isValidElement(child)) return null,
 
             status})
         })}
       </ol>
-
-
-      
-
-
-
-      <div className="hidden md:flex md:mt-4">
-        <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
-          <div
-            className="h-full bg-zion-purple transition-all"
-            style={{
-
 
 interface StepsProps {;
   currentStep: number,;
@@ -242,42 +189,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
   return (;
 
     <div className={cn("w-full", className)}>;
-        {status === "complete" ? (<CheckIcon className="h-5 w-5" />;
-        ) : (<span>;
-interface StepProps  {status: "incomplete" | "current" | "complete",label: string,description?: string,className?: string;
-}export function Step() {return (<li;
-      className={cn("relative flex items-center",{"opacity-60": status === "incomplete"},className;
-      )}
-    >;
-      <div;
-        className={cn("shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",{"bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":;
-              status === "incomplete","bg-zion-blue border-zion-cyan text-white":;
-              status === "current","bg-zion-purple border-zion-purple text-white":;
-              status === "complete"}
-        )}
-      >;{status === "complete" ? (<CheckIcon className="h-5 w-5" />;
-        ) : (<span>{/* Step number would go here */}</span>;
-          </span>;)}"text-zion-slate-light": status === "incomplete","text-zion-slate-light": status === "incomplete","text-white": status === "current" || status === "complete"})}
-        >;
-      </div>;<div className="ml-4 min-w-0">;
-        <h3;
-          className={cn("text-sm font-medium", {"text-zion-slate-light": status === "incomplete";
-            "text-white": status === "current" || status === "complete"})}>;
-          {label}</h3>;
-        {description && (<p className="text-sm text-zion-slate-light">{description}</p>;
-        )}
-      </div>;
-    </li>;
-  )}interface StepsProps  {currentStep: number;
-  className?: string;
-  children: React.ReactNode;
-}
-export function Steps() {const childrenArray  = React.Children.toArray(children)interface StepsProps  {currentStep: number,className?: string,children: React.ReactNode;
-}export function Steps() {const childrenArray = React.Children.toArray(children),return (<div className={cn("w-full", className)}>;
-      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
-        {React.Children.map(childrenArray, (child, index) => {if (!React.isValidElement(child)) return null,let status: "incomplete" | "current" | "complete" = "incomplete",if (index < currentStep) status = "complete",if (index === currentStep) status = "current",if (!React.isValidElement(child)) return null,let status: "incomplete" | "current" | "complete" = "incomplete",if (index < currentStep) status = "complete",if (index === currentStep) status = "current",className;return React.cloneElement(child as React.ReactElement<StepProps>, {status})})}
-      </ol>;
-      <div className="hidden md:flex md:mt-4">;
 
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
         {React.Children.map(childrenArray, (child, index) => {;
@@ -293,33 +204,8 @@ export function Steps() {const childrenArray  = React.Children.toArray(children)
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
           <div;"
             className="h-full bg-zion-purple transition-all";
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
             style={{;
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
-            style={{interface StepsProps  {currentStep: number,className?: string;
-  children: React && React.ReactNode;
-}export function Steps(): any ({ currentStep, className, children }: StepsProps) {const childrenArray  = React && React.Children.toArray(children)return (}/> </div> </div> </div>)}"};
-export function Steps() {const childrenArray = React.Children.toArray(children),return (<div className={cn("w-full", className)}>;
-      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
-        {React.Children.map(childrenArray, (child, index) => {if (!React.isValidElement(child)) return null,let status: "incomplete" | "current" | "complete" = "incomplete",if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-          return React.cloneElement(child as React.ReactElement<StepProps>, {status})})}
-      </ol>;
-      <div className="hidden md:flex md:mt-4">;
-        <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
-          <div;
-            className="h-full bg-zion-purple transition-all";
-            style={{width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}/>;
-        </div>;
-      </div>;
-    </div>;
-  )}// Check condition;
-if (status = "complete") {$2;
-}
-          // Check condition;
-if (status = "current") {$2;
-}
-interface StepProps  {status: "incomplete" | "current" | "complete",label: string,description?: string;
 
           // Check condition
 if (status = "current") {
@@ -413,15 +299,9 @@ if (status = "current") {}
           />;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
     </div>);
 }/> </div> </div> </div>);"
 }"}
-          />;
-        </div>;
-      </div>;
-    </div>;
-  );
 
 }
 
@@ -432,10 +312,4 @@ if (status = "current") {}
   );
 
 }/> </div> </div> </div>) ;
-    </div>)}/> </div> </div> </div>)}"}
-}/>;
-        </div>;
-      </div>;
-    </div>;
-  )}/> </div> </div> </div>)}";
 }"

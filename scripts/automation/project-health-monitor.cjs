@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 #!/usr/bin/env node
 /**
- * Project Health Monitor Automation;
- * Monitors overall project health and provides insights;
+ * Project Health Monitor Automation
+ * Monitors overall project health and provides insights
  */
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -21,53 +14,32 @@ class ProjectHealthMonitor {}
 
         if () {}
             fs.mkdirSync(logsDir, { "recursive": true })};"
-    };
-    log(message) {}
+    }
+  log($2) {}
         const timestamp = new Date().toISOString() {}
     ) {}"
         const timestamp = new Date().toISOString(})
-});
+})
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         console.log(message)};
     checkProjectStructure() {}
         this.log('Checking project structure...');
         console.log(message)};
-<<<<<<< HEAD
         
-=======
-    checkProjectStructure() {}
-        this.log('Checking project structure...');
-        
-        const requiredFiles = ['package.json',]
-            'next.config.js',
-            'tsconfig.json',
-            'tailwind.config.js'
-        ];
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const optionalFiles = ['README.md',]
             '.gitignore',
             '.env.example',
             'Dockerfile',
             'docker-compose.yml'
         ];
-<<<<<<< HEAD
         
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const structure = {}
             "required": {},
             "optional": {},
             "score": 0;
        };
-<<<<<<< HEAD
         
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     checkProjectStructure() {}"
 
             "score": 0;"
@@ -76,25 +48,20 @@ class ProjectHealthMonitor {}
             const exists = fs.existsSync(path.join(this.projectRoot, file;););
             structure.required[file] = exists;
             if (structure.score += 10};)
-        // Check optional files;
-        for (const file of optionalFiles) {}
+        // Check optional files
+  for($2) {}
             const exists = fs.existsSync(path.join(this.projectRoot, file) {}
-    structure.score += 10};
-        // Check optional files;
+    structure.score += 10}
+        // Check optional files
             const exists = fs.existsSync(path.join(this.projectRoot, file})
-}););
-            structure.optional[file] = exists;
-            if (structure.score += 5};)"`;
+});)
+            structure.optional[file] = exists
+            if (structure.score += 5};)"`
         this.log(`Project structure "score": ${structure.score}/100`)) {`}"
-    structure.score += 5};"`;
+    structure.score += 5};"`
         this.log(`Project structure "score": ${structure.score}/100`)};"
         return structure};
-<<<<<<< HEAD
         
-=======
-    checkCodeQuality() {}
-        this.log('Checking code quality...');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         try {}
             // Run linting;
             execSync('npm run lint', { })
@@ -102,10 +69,7 @@ class ProjectHealthMonitor {}
                 "stdio": 'pipe'
             }
 });
-<<<<<<< HEAD
             
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     checkCodeQuality() {}"
 
             }
@@ -113,27 +77,18 @@ class ProjectHealthMonitor {}
 
                 "error": error.message;"
             }};
-<<<<<<< HEAD
         
-=======
-    };
-    checkTypeScript() {}
-        this.log('Checking TypeScript configuration...');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         try {}
             execSync('npm run type-check', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
             }
 });
-<<<<<<< HEAD
             
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             return {;}
                 "status": 'success',
                 "typeCheck": 'passed',
-                "score": 20;
+                "score": 20
             }} catch (error) {}
             return {;}
                 "status": 'warning',
@@ -144,24 +99,18 @@ class ProjectHealthMonitor {}
     };
     checkBuildHealth() {}
         this.log('Checking build health...');
-<<<<<<< HEAD
         
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         try {}
             execSync('npm run build', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
             }
 });
-<<<<<<< HEAD
             
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             return {;}
                 "status": 'success',
                 "build": 'passed',
-                "score": 20;
+                "score": 20
             }} catch (error) {}
             return {;}
                 "status": 'failed',
@@ -172,7 +121,6 @@ class ProjectHealthMonitor {}
     };
     checkDependencies() {}
         this.log('Checking dependencies health...');
-<<<<<<< HEAD
         
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
@@ -181,22 +129,11 @@ class ProjectHealthMonitor {}
             const totalDeps = Object.keys(packageJson.dependencies || {}).length + 
                              Object.keys(packageJson.devDependencies || {}).lengt;h;
             
-=======
-        try {}
-            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
-            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
-            const totalDeps = Object.keys(packageJson.dependencies || {}).length +
-                             Object.keys(packageJson.devDependencies || {}).lengt;h;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             // Check for outdated packages;
             let outdatedCount = ;0;
             try {}
                 execSync('npm outdated --json', { })
-<<<<<<< HEAD
                     "cwd": this.projectRoot, 
-=======
-                    "cwd": this.projectRoot,
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                     "stdio": 'pipe'
     checkTypeScript() {}"
 
@@ -213,15 +150,12 @@ class ProjectHealthMonitor {}
                         outdatedCount = Object.keys(outdated).length} catch (parseError) {}
                         // No outdated packages;
             const score = Math.max(0, 20 - (outdatedCount * 2;););
-<<<<<<< HEAD
             
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             return {;}
                 "status": 'success',
                 "totalDependencies": totalDeps,
                 "outdatedCount": outdatedCount,
-                "score": score;
+                "score": score
             }} catch (error) {}
             return {;}
                 "status": 'failed',
@@ -231,45 +165,18 @@ class ProjectHealthMonitor {}
     };
     checkSecurity() {}
         this.log('Checking security health...');
-<<<<<<< HEAD
         
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         try {}
             const auditResult = execSync('npm audit --json', { })
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             };);
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
             const score = Math.max(0, 20 - (vulnerabilities * 5;););
-<<<<<<< HEAD
         
-=======
-            };);
-            const auditData = JSON.parse(auditResult;);
-            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-            const score = Math.max(0, 20 - (vulnerabilities * 5;););
-            
-            return {;}
-                "status": 'success',
-                "vulnerabilities": vulnerabilities,
-                "score": score;
-            }} catch (error) {}
-            return {;}
-                "status": 'warning',
-                "score": 10,
-                "error": error.message;
-            }};
-    };
-    generateHealthReport() {}
-        this.log('Generating project health report...');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
         const structure = this.checkProjectStructure(;);
         const codeQuality = this.checkCodeQuality(;);
@@ -277,7 +184,6 @@ class ProjectHealthMonitor {}
         const build = this.checkBuildHealth(;);
         const dependencies = this.checkDependencies(;);
         const security = this.checkSecurity(;);
-<<<<<<< HEAD
         
         const totalScore = structure.score + codeQuality.score + typeScript.score + 
                           build.score + dependencies.score + security.scor;e;
@@ -286,13 +192,6 @@ class ProjectHealthMonitor {}
                            totalScore >= 60 ? 'good' : 
                            totalScore >= 40 ? 'fair' : 'poo;r;';
         
-=======
-        const totalScore = structure.score + codeQuality.score + typeScript.score +
-                          build.score + dependencies.score + security.scor;e;
-        const healthStatus = totalScore >= 80 ? 'excellent' :
-                           totalScore >= 60 ? 'good' :
-                           totalScore >= 40 ? 'fair' : 'poo;r;';
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -311,33 +210,15 @@ class ProjectHealthMonitor {}
                 "typeScript": typeScript,
                 "build": build,
                 "dependencies": dependencies,
-<<<<<<< HEAD
                 "security": security;"
             "recommendations": this.generateHealthRecommendations(totalScore, healthStatus);"
 
-=======
-                "security": security;
-            },
-            "recommendations": this.generateHealthRecommendations(totalScore, healthStatus);
-       };
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Project health report saved to ${this.reportFile}`);
-        this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);
-        return report};
-    generateHealthRecommendations(score, status) {}
-        const recommendations = [];
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
         this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);"
         return report};
     generateHealthRecommendations(score, status) {}
         const recommendations = [];
-<<<<<<< HEAD
         if ( {})"
-=======
-        
-        if ( {})
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             recommendations.push('Project health needs immediate attention')};
 
             recommendations.push('Focus on improving code quality and fixing build issues')};
@@ -346,17 +227,11 @@ class ProjectHealthMonitor {}
         recommendations.push('Implement automated testing');
         recommendations.push('Set up continuous integration');
         recommendations.push('Regularly monitor project health');
-<<<<<<< HEAD
         
         return recommendations};
     async run() {}
         this.log('Project Health Monitor started');
         
-=======
-        return recommendations};
-    async run() {}
-        this.log('Project Health Monitor started');
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         try {}
             const report = this.generateHealthReport(;);
             this.log('Project Health Monitor completed successfully');
@@ -371,39 +246,7 @@ class ProjectHealthMonitor {}
     const monitor = new ProjectHealthMonitor) {}
     const monitor = new ProjectHealthMonitor}(;);
     monitor.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
 module.exports = ProjectHealthMonitor;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-module.exports = ProjectHealthMonitor;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ProjectHealthMonitor;
-<<<<<<< HEAD
 module.exports = ProjectHealthMonitor;
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

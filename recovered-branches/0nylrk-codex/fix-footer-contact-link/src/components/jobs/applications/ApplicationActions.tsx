@@ -6,10 +6,6 @@ import {
   DropdownMenuItem;
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu",
-import { Eye, ChevronDown, Loader2 } from "lucide-react",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-
-interface ApplicationActionsProps {
 import { Button } from "@/components/ui/button";
 import { Eye, ChevronDown, Loader2 } from "lucide-react";
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
@@ -26,7 +22,6 @@ interface ApplicationActionsProps {
 
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
-export function ApplicationActions({;
 export function ApplicationActions({
   application;
   processingId;
@@ -34,18 +29,6 @@ export function ApplicationActions({
 export function ApplicationActions({
   application,
   processingId,
-  onViewApplication,            size="sm"
-            disabled={processingId === application && application.id}>;
-            {processingId === application && application.id ? (;
-              <Loader2 className="h-4 w-4 animate-spin" />;
-            ) : (;
-              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
-            )}              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
-            )}
-
-      <Button 
-        variant="default" 
-
   onViewApplication,
   onStatusChange
 }: ApplicationActionsProps) {
@@ -107,24 +90,5 @@ export function ApplicationActions({
         </Link>
       </Button>
     </div>
-  );
-
-      ;
-      <Button ;
-        variant="default" ;
-        size="sm";
-      <Button;
-        variant="default";
-        size="sm";
-        asChild;
-      >;
-        <Link to={`/messages?talentId=${application.talent_id}`}>;
-          Contact;
-        </Link>;
-      </Button>;
-    </div>;
-  );
-}
-;
   )
 }

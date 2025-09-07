@@ -38,8 +38,6 @@ import { execSync, spawn } from;
         useRef: "
         FC: "
         ReactNode: "
-
-        ReactNode: "
         ReactNode: "
 #!/usr/bin/env node
 import { execSync, spawn } from;

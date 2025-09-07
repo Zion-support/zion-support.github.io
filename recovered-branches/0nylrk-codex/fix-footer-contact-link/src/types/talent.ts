@@ -1,10 +1,4 @@
 export interface TalentProfile {
-    title: string,    description: string;
-  }[];
-}
-export interface TalentProfileFilters {
-  search?: string;
-  skills?: string[];}
   id: string,
   user_id: string,
   full_name: string,

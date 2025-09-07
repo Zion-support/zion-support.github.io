@@ -1,9 +1,4 @@
 :src/components/profile/HireNowCTA.jsx
-
-;
-import React, { useState } from 'react';
-:src/components/profile/HireNowCTA.jsx;
-:src/components/profile/HireNowCTA.jsx
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
 import {Card, CardContent, CardHeader, CardTitle} from "../ui/Card";
@@ -89,21 +84,6 @@ export function HireNowCTA("props": "any) {;
             </div>;
           </form>)"}
       </CardContent>;
-    </Card>)}export default HireNowCTA;import React, { useState } from 'react';
-export function HireNowCTA() {const [isFormOpen, setIsFormOpen] = useState(false)const [formData, setFormData] = useState({projectDescription: '',budget: '',startDate: '',message: '';
-        e.preventDefault():src/components/profile/HireNowCTA.jsx;
-    }
-    )const handleSubmit = (props: any) => {})const handleSubmit = (e) => {        e.preventDefault()if (onHire) {onHire(formData)}
-        // Reset form and close;
-        setFormData({projectDescription: '',budget: '',startDate: '',const handleChange = (e) => {setFormData(prev => ({...prev,[e.target.name]: e.target.value;
-        }))}:src/components/profile/HireNowCTA.jsx;
-            message: ''}
-    )setIsFormOpen(false)}message: '';
-        })setIsFormOpen(false)}const handleChange = (e) => {setFormData(prev => ({...prev,[e.target.name]: e.target.value;
-        }))}return (<Card className="bg-zion-blue-light border-zion-blue-lighter">;
-      <CardHeader>;
-        <CardTitle className="text-white flex items-center gap-2">;
-          <MessageSquare className="h-5 w-5 text-zion-cyan"/>;
     </Card>)}
 ;
 export default HireNowCTA;
@@ -125,15 +105,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     );
     const handleSubmit = (props: any) => {
     });
-        e.preventDefault();
-        if (onHire) {
-            onHire(formData);
-        }
-        // Reset form and close
-        setFormData({
-            projectDescription: '',
-            budget: '',
-            startDate: '',
     const handleSubmit = (e) => {
     );
         setIsFormOpen(false)};
@@ -145,25 +116,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
-:src/components/profile/HireNowCTA.jsx
-            message: ''}
-    );
-        setIsFormOpen(false)};
-            message: ''
-        });
-        setIsFormOpen(false)
-};    const handleChange = (e) => {
-        setFormData(prev => ({
-            ...prev,
-            [e.target.name]: e.target.value
-        }))
-};
-    const handleChange = (e) => {
-        setFormData(prev => ({
-            ...prev,
-            [e.target.name]: e.target.value
-        }));
-    };
 
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>"
@@ -230,5 +182,4 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
           </form>)}
       </CardContent>
     </Card>);
-}
 }

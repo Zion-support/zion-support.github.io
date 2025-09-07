@@ -93,7 +93,6 @@ import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileConversationList } from "../components/messaging/MobileConversationList",;
 import { MobileChatView } from "../components/messaging/MobileChatView",;
-import { MobileChatView } from "../components/messaging/MobileChatView",const mockConversations = [;
 // Mock data for demonstration;
 const mockConversations = [;
   {;
@@ -129,7 +128,6 @@ interface Message {;
   isMe: boolean,;
   status: "read" | "sent" | "delivered";
 }
-;;
 ;
 const mockMessages: Message[] = [;
   {;
@@ -179,7 +177,6 @@ export function MobileMessages() {;
       isMe: true,;
       status: "sent"},;
     setMessages([...messages, newMessage]);
-    id: "4",;  return (
   },;
   const currentContact = mockConversations.find(c => c.id === activeConversation),;
   return (;
@@ -190,40 +187,6 @@ export function MobileMessages() {;
             id: currentContact?.id || "";
             name: currentContact?.name || "";
             status: "Online";
-  return (
-    <div className="min-h-screen flex flex-col">
-      {activeConversation ? (
-        <MobileChatView
-          contact={{
-
-            id: currentContact?.id || "",
-            name: currentContact?.name || "",
-            status: "Online"
-
-              onSelectConversation={handleSelectConversation}
-            />;
-          </main>;
-          <BottomNavigation />;
-        </>;
-      )}
-    </div>;
-  );
-}
-        />) : (
-        <>;
-          <MobileHeader;
-            title="Messages";
-          />;
-          <main className="flex - 1 overflow-y-auto">;
-            <MobileConversationList;
-              conversations={mock_conversations}
-              onSelectConversation={handleSelectConversation}
-            />;
-          </main>;
-          <BottomNavigation />;
-        </>)}
-    </div>);
-}
           }}
           messages={messages}
           onBack={handleBack}

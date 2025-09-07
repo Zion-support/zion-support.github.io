@@ -55,7 +55,6 @@ const path = require('path')
     content = content.replace(/([^;}])\n/g, '$1;\n');
     
     // Fix merge conflict markers
-    content = content.replace(/[\s\S]*?[\s\S]*?
     content = content.replace(/[\s\S]*?[\s\S]*?    
     
     // Fix common JSX issues

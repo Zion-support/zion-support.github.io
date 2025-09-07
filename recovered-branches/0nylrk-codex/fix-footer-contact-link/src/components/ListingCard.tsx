@@ -1,13 +1,3 @@
-import {cn} from "@/lib/utils";
-import {Badge} from "@/components/ui/badge";
-import {Link} from "react-router-dom";
-interface ListingCardProps {;
-interface ListingCardProps {
-  return (
-    <Link
-      to={`/profile/${profileId}`}
-      className={cn(
-        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer"
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
@@ -21,7 +11,6 @@ interface ListingCardProps {
   author?: string,
   authorImage?: string,
   className?: string,
-  profileType?: 'service' | 'talent'        {author && (
   profileType?: 'service' | 'talent'
 }
 export function ListingCard({

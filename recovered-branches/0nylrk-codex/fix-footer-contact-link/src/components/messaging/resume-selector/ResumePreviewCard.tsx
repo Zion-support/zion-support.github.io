@@ -57,11 +57,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             )}
           </div>
         )}
-import { Resume } from "@/types/resume",  return (  return (
-    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
-      <CardContent className="p-4">;
-        <div className="flex justify-between items-start mb-2">;
-          <div>;
       </CardContent>
     </Card>
   )

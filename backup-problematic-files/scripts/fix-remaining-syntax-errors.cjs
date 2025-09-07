@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -34,7 +32,6 @@ function fixHoverSyntax(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-
       console.log(`✅ Fixed syntax errors in ${filePath}`);
       return true;
     }
@@ -101,5 +98,4 @@ try {
 } catch (error) {
   console.error('❌ Error:', error.message);
   process.exit(1);
-
 }}

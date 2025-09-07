@@ -1,60 +1,4 @@
 export interface FilterSidebarProps {
-
-  selected_skills: string[];
-  toggle_skill: (skill: string) => void;
-  selected_availability: string[];
-  toggle_availability: (availability: string) => void;
-  selected_regions: string[];
-  toggle_region: (region: string) => void,
-  price_range: [number, number];
-  setExperienceRange: (range: [number, number]) => void;
-  expanded_sections: {
-    skills: boolean;
-    availability: boolean;
-    region: boolean;
-    experience: boolean;
-    price: boolean
-};
-  toggleSection: (sectionName: string) => void;
-  sortOption: string;
-  setSortOption: (option: string) => void;
-  clearFilters: () => void;
-  isMobileFilterOpen?: boolean;
-}
-    experience: boolean,
-    price: boolean;
-  }
-  toggle_section: (section_name: string) => void;
-  sort_option: string;
-  setSortOption: (option: string) => void;
-  clear_filters: () => void,
-  isMobileFilterOpen?: boolean;
-}
-export interface FilterComponentProps {
-  expanded: boolean;
-  toggleSection: () => void;
-  isMobileFilterOpen?: boolean;
-}
-
-  selectedSkills: string[]
-
-  toggleSkill: (skill: string) => void
-export interface SkillsFilterProps extends FilterComponentProps {
-  selectedSkills: string[];
-  toggleSkill: (skill: string) => void;
-}
-export interface AvailabilityFilterProps extends FilterComponentProps {
-  selectedAvailability: string[];
-  toggleAvailability: (availability: string) => void;
-}
-export interface RegionFilterProps extends FilterComponentProps {
-  selectedRegions: string[];
-  toggleRegion: (region: string) => void;
-}
-
-}
-export interface ExperienceFilterProps extends FilterComponentProps {
-
   searchTerm: string,
   setSearchTerm: (term: string) => void,
   selectedSkills: string[],
@@ -115,29 +59,6 @@ export interface RegionFilterProps extends FilterComponentProps {
   toggleRegion: (region: string) => void
 }
 
-export interface FilterSidebarProps {;
-
-}
-export interface SearchFilterProps {
-  searchTerm: string;
-  setSearchTerm: (term: string) => void;
-}
-
-export interface SortFilterProps {
-  sortOption: string;
-  setSortOption: (option: string) => void;
-}
-export interface SortFilterProps {
-  sort_option: string,
-  setSortOption: (option: string) => void;
-
-}  searchTerm: string
-
-}
-export interface SearchFilterProps {
-
-  search_term: string,
-  setSearchTerm: (term: string) => void;
   selectedRegions: string[]
 
   toggleRegion: (region: string) => void
@@ -164,5 +85,4 @@ export interface SortFilterProps {
   sortOption: string
 
   setSortOption: (option: string) => void
-}
 }

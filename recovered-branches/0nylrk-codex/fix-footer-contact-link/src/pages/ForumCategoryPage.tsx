@@ -20,10 +20,6 @@ import {
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
-    adminOnly: false
-
-    icon: "Briefcase"
-  }    adminOnly: false,
     id: "getting-hired"
     name: "Getting Hired"
     description: "Tips, strategies, and questions about getting hired on the platform.";
@@ -70,11 +66,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 
     icon: "Megaphone"
   }
-    icon: "MessageSquare"    }
-    {
-      id: "6"
-      title: "Portfolio pieces that clients actually care about"
-      content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...";
 },
 
 // Mock data for posts by category
@@ -128,31 +119,6 @@ const postsByCategory: Record<string ForumPost[]> = {
       id: "5",
       title: "How to handle client scope creep?",
       content: "I'm working on a project where the client keeps adding requirements...",
-      id: "7",
-      title: "Comparing different vector embedding models",
-      content: "I've been experimenting with these different embedding models and here are my findings...",
-      author_id: "user7",
-      author_name: "Lisa Park",
-      category_id: "ai - tools",
-      tags: ["embeddings", "vectors", "similarity - search"];
-      created_at: "2025 - 04 - 05T16:40:00Z",
-      updated_at: "2025 - 04 - 05T16:40:00Z",
-      upvotes: 31,
-      downvotes: 0,
-
-      replyCount: 9    {
-      id: "8",
-      title: "Suggestion for improving the jobs matching algorithm",
-      content: "I think the job matching could be improved by considering these additional factors...",
-      author_id: "user8",
-      author_name: "Ryan Mitchell",
-      category_id: "feedback",
-      tags: ["matching", "jobs", "algorithm"];
-      created_at: "2025 - 04 - 04T08:10:00Z",
-      updated_at: "2025 - 04 - 04T08:10:00Z",
-      upvotes: 17,
-      downvotes: 3,
-
       authorId: "user5",
       authorName: "David Lin",
       categoryId: "project-help",
@@ -317,14 +283,6 @@ export default function ForumCategoryPage() {
         <div className="mb-6">
           <div className="relative">
             <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-            <Input
-              placeholder="Search posts in this category..."
-              className="pl-10"
-              value={searchQuery}
-      replyCount: 5  "Briefcase": Briefcase;
-  "MessageSquare": MessageSquare;
-  "Code": Code;
-  "FileText": FileText;              value={searchQuery}
             <Input
               placeholder="Search posts in this category..."
               className="pl-10"
