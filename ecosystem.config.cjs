@@ -86,7 +86,7 @@ module.exports = {
         NODE_ENV: 'production',
         PM2_PROCESS_NAME: 'build-health-monitor'
       },
-      cron_restart: '0 0 * * *', // Restart daily at midnight
+      cron_restart: '0 5 * * *', // Restart daily at 5 AM
       log_file: './logs/build-monitor.log',
       error_file: './logs/build-monitor-error.log',
       out_file: './logs/build-monitor-out.log'
@@ -122,7 +122,7 @@ module.exports = {
         NODE_ENV: 'production',
         PM2_PROCESS_NAME: 'dependency-monitor'
       },
-      cron_restart: '0 12 * * *', // Restart daily at noon
+      cron_restart: '0 7 * * *', // Restart daily at 7 AM
       log_file: './logs/dependency.log',
       error_file: './logs/dependency-error.log',
       out_file: './logs/dependency-out.log'
@@ -140,7 +140,7 @@ module.exports = {
         NODE_ENV: 'production',
         PM2_PROCESS_NAME: 'build-automation'
       },
-      cron_restart: '0 18 * * *', // Restart daily at 6 PM
+      cron_restart: '0 8 * * *', // Restart daily at 8 AM
       log_file: './logs/build-automation.log',
       error_file: './logs/build-automation-error.log',
       out_file: './logs/build-automation-out.log'
@@ -158,7 +158,7 @@ module.exports = {
         NODE_ENV: 'production',
         PM2_PROCESS_NAME: 'file-integrity-monitor'
       },
-      cron_restart: '0 3 * * *', // Restart daily at 3 AM
+      cron_restart: '0 9 * * *', // Restart daily at 9 AM
       log_file: './logs/file-integrity.log',
       error_file: './logs/file-integrity-error.log',
       out_file: './logs/file-integrity-out.log'
