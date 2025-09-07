@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
@@ -13,7 +11,7 @@ interface NotificationSystemProps {
   className?: string;
 }
 
-const NotificationSystem: React.FC<NotificationSystemProps> = ({ 
+const NotificationSystem = ({ 
   notifications, 
   onDismiss, 
   className = '' 
