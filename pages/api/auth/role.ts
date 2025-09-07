@@ -1,19 +1,20 @@
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { getUserFromRequest } from '../../../utils/auth';
 
-;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ ok: true })
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req, res) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
   try {
-  res.status(200).json({ ok: true });
+    const user = getUserFromRequest(req);
+    if (!user) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+
+    res.status(200).json({ role: user.role });
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error getting user role:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
-}
-

@@ -1,218 +1,176 @@
-export const metadata = {
-  title: 'Technology Consulting | Zion Tech Group',
-  description: 'Strategic technology consulting services including digital transformation, technology strategy, architecture design, and digital innovation. Expert guidance for your technology journey.'
-}
 export default function ConsultingPage() {
   return (
-    <div className="animate-fade-in">
-      <section className="text-center py-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Technology Consulting
-        </h1>
-        <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
-          Strategic technology consulting services including digital transformation, technology strategy,
-          architecture design, and digital innovation. Get expert guidance for your technology journey.
-        </p>
-      </section>
-      {/* Consulting Solutions Showcase */}
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Consulting Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ConsultingSolution
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Strategic Technology Consulting
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Partner with our expert consultants to transform your business through 
+            strategic technology adoption, digital transformation, and innovation 
+            acceleration.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <ConsultingService
             title="Digital Transformation"
-            description="Comprehensive digital transformation strategy and implementation to modernize your business operations"
-            features={["Current state assessment", "Digital strategy development", "Technology roadmap", "Change management", "Implementation support"]}
-            pricing="$25k-200k"
-            icon="🔄"
-          />
-          <ConsultingSolution
-            title="Technology Strategy"
-            description="Strategic technology planning and architecture design to align technology with business goals"
-            features={["Technology assessment", "Architecture design", "Vendor evaluation", "Risk analysis", "Implementation planning"]}
-            pricing="$15k-100k"
-            icon="📋"
-          />
-          <ConsultingSolution
-            title="Cloud Strategy & Migration"
-            description="Cloud adoption strategy, migration planning, and optimization for maximum efficiency and cost savings"
-            features={["Cloud readiness assessment", "Migration strategy", "Cost optimization", "Security planning", "Performance tuning"]}
-            pricing="$20k-150k"
-            icon="☁️"
-          />
-          <ConsultingSolution
-            title="AI & Data Strategy"
-            description="AI adoption strategy, data governance, and analytics implementation for data-driven decision making"
-            features={["AI readiness assessment", "Data strategy development", "ML/AI roadmap", "Governance framework", "Implementation support"]}
-            pricing="$30k-250k"
-            icon="🤖"
-          />
-          <ConsultingSolution
-            title="Cybersecurity Consulting"
-            description="Comprehensive security assessment, strategy development, and implementation of security best practices"
-            features={["Security assessment", "Compliance audit", "Security strategy", "Implementation planning", "Training & awareness"]}
-            pricing="$20k-120k"
-            icon="🔒"
-          />
-          <ConsultingSolution
-            title="Technology Due Diligence"
-            description="Technical due diligence for M&A, investments, and partnerships to assess technology risks and opportunities"
-            features={["Technology assessment", "Risk analysis", "Integration planning", "Cost analysis", "Recommendations"]}
-            pricing="$15k-75k"
-            icon="🔍"
-          />
-        </div>
-      </section>
-      {/* Core Consulting Services */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Core Consulting Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <ConsultingServiceItem
-            title="Strategic Planning"
-            details={[
-              "Technology roadmap development",
-              "Digital transformation strategy",
-              "Innovation planning and execution",
-              "Technology investment prioritization",
-              "Competitive analysis and benchmarking",
-              "Future technology trends analysis"
-            ]}
-          />
-          <ConsultingServiceItem
-            title="Architecture & Design"
-            details={[
-              "System architecture design",
-              "Cloud architecture planning",
-              "Integration strategy and design",
-              "Scalability and performance planning",
-              "Security architecture design",
-              "Technology stack recommendations"
-            ]}
-          />
-          <ConsultingServiceItem
-            title="Implementation Support"
-            details={[
-              "Project management and oversight",
-              "Vendor selection and management",
-              "Implementation planning and execution",
-              "Change management and training",
-              "Quality assurance and testing",
-              "Post-implementation support"
-            ]}
-          />
-        </div>
-      </section>
-      {/* Industry Expertise */}
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industry Expertise</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <IndustryCard
-            title="Financial Services"
-            description="Banking, insurance, and fintech technology consulting"
-            icon="🏦"
-          />
-          <IndustryCard
-            title="Healthcare"
-            description="Healthcare IT, telemedicine, and medical device integration"
-            icon="🏥"
-          />
-          <IndustryCard
-            title="Manufacturing"
-            description="Industry 4.0, IoT, and smart manufacturing solutions"
-            icon="🏭"
-          />
-          <IndustryCard
-            title="Retail & E-commerce"
-            description="Omnichannel retail, e-commerce platforms, and customer experience"
-            icon="🛒"
-          />
-        </div>
-      </section>
-      {/* Consulting Process */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Consulting Process</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <ProcessStep
-            step="1"
-            title="Discovery & Assessment"
-            description="Understand your current state, challenges, and objectives"
-            icon="🔍"
-          />
-          <ProcessStep
-            step="2"
-            title="Strategy Development"
-            description="Create a comprehensive technology strategy and roadmap"
-            icon="📋"
-          />
-          <ProcessStep
-            step="3"
-            title="Implementation Planning"
-            description="Develop detailed implementation plans and timelines"
-            icon="⚙️"
-          />
-          <ProcessStep
-            step="4"
-            title="Execution & Support"
-            description="Support implementation and provide ongoing guidance"
+            description="Guide your organization through comprehensive digital transformation"
+            features={["Strategy development", "Technology assessment", "Change management", "Implementation planning"]}
+            pricing="Starting at $5,999/month"
             icon="🚀"
           />
-        </div>
-      </section>
-      {/* Pricing Plans */}
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <ConsultingPricingPlan
-            name="Strategy Workshop"
-            price="$5k–$15k"
-            duration="1–2 weeks"
-            features={[
-              "Current state assessment",
-              "Strategy workshop sessions",
-              "Technology recommendations",
-              "Implementation roadmap",
-              "Executive presentation"
-            ]}
-            popular={false}
+          <ConsultingService
+            title="AI Strategy"
+            description="Develop and implement AI strategies that drive business value"
+            features={["AI readiness assessment", "Use case identification", "ROI analysis", "Implementation roadmap"]}
+            pricing="Starting at $7,999/month"
+            icon="🤖"
           />
-          <ConsultingPricingPlan
-            name="Full Consulting Engagement"
-            price="$25k–$150k"
-            duration="4–16 weeks"
-            features={[
-              "Comprehensive strategy development",
-              "Architecture design",
-              "Implementation planning",
-              "Vendor evaluation",
-              "Ongoing support"
-            ]}
-            popular={true}
-          />
-          <ConsultingPricingPlan
-            name="Retainer Consulting"
-            price="$10k+/mo"
-            duration="Ongoing"
-            features={[
-              "Monthly strategy sessions",
-              "Technology advisory",
-              "Implementation oversight",
-              "Vendor management",
-              "Regular reporting"
-            ]}
-            popular={false}
+          <ConsultingService
+            title="Cloud Migration"
+            description="Plan and execute seamless cloud migration strategies"
+            features={["Cloud assessment", "Migration planning", "Security design", "Cost optimization"]}
+            pricing="Starting at $6,999/month"
+            icon="☁️"
           />
         </div>
-      </section>
-      {/* Contact CTA */}
-      <ContactCTA />
+
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+            Our Consulting Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <ConsultingServiceItem
+              title="Technology Strategy"
+              details={[
+                "Technology roadmap development",
+                "Vendor evaluation and selection",
+                "Architecture design and planning",
+                "Technology risk assessment"
+              ]}
+            />
+            <ConsultingServiceItem
+              title="Process Optimization"
+              details={[
+                "Business process analysis",
+                "Workflow optimization",
+                "Efficiency improvement",
+                "Performance measurement"
+              ]}
+            />
+          </div>
+        </div>
+
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            Industries We Serve
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <IndustryCard
+              title="Healthcare"
+              description="Digital health solutions, telemedicine, and healthcare data analytics"
+              icon="🏥"
+            />
+            <IndustryCard
+              title="Finance"
+              description="Fintech solutions, regulatory compliance, and risk management"
+              icon="💰"
+            />
+            <IndustryCard
+              title="Manufacturing"
+              description="Industry 4.0, smart manufacturing, and supply chain optimization"
+              icon="🏭"
+            />
+            <IndustryCard
+              title="Retail"
+              description="E-commerce transformation, customer experience, and omnichannel strategies"
+              icon="🛍️"
+            />
+          </div>
+        </div>
+
+        <div className="bg-blue-50 rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+            Why Choose Our Consulting Services?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <BenefitCard
+              title="Expert Knowledge"
+              description="Access to industry-leading experts with proven track records"
+              icon="👨‍💼"
+            />
+            <BenefitCard
+              title="Proven Results"
+              description="Deliver measurable business outcomes and ROI improvements"
+              icon="📊"
+            />
+            <BenefitCard
+              title="Ongoing Support"
+              description="Continuous support and guidance throughout your transformation journey"
+              icon="🤝"
+            />
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            Pricing Plans
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <ConsultingPricingPlan
+              name="Starter"
+              price="$5,999"
+              duration="per month"
+              features={[
+                "Basic consulting services",
+                "Up to 20 hours/month",
+                "Email support",
+                "Monthly reports"
+              ]}
+              popular={false}
+            />
+            <ConsultingPricingPlan
+              name="Professional"
+              price="$9,999"
+              duration="per month"
+              features={[
+                "Comprehensive consulting",
+                "Up to 40 hours/month",
+                "Priority support",
+                "Custom solutions",
+                "Weekly check-ins"
+              ]}
+              popular={true}
+            />
+            <ConsultingPricingPlan
+              name="Enterprise"
+              price="$19,999"
+              duration="per month"
+              features={[
+                "Full consulting suite",
+                "Unlimited hours",
+                "24/7 support",
+                "Dedicated team",
+                "Executive advisory"
+              ]}
+              popular={false}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
-function ConsultingSolution({ title, description, features, pricing, icon }: {
-  title: string
-  description: string
-  features: string[]
-  pricing: string
+}
+
+function ConsultingService({ title, description, features, pricing, icon }: {
+  title: string;
+  description: string;
+  features: string[];
+  pricing: string;
   icon: string;
-}) {;
+}) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
@@ -229,10 +187,12 @@ function ConsultingSolution({ title, description, features, pricing, icon }: {
       <div className="text-lg font-bold text-blue-600">{pricing}</div>
     </div>
   );
+}
+
 function ConsultingServiceItem({ title, details }: {
-  title: string
+  title: string;
   details: string[];
-}) {;
+}) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
@@ -246,48 +206,48 @@ function ConsultingServiceItem({ title, details }: {
       </ul>
     </div>
   );
+}
+
 function IndustryCard({ title, description, icon }: {
-  title: string
-  description: string
+  title: string;
+  description: string;
   icon: string;
-}) {;
+}) {
   return (
-    <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
-      <div className="text-3xl mb-3">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+    <div className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
   );
-function ProcessStep({ step, title, description, icon }: {
-  step: string
-  title: string
-  description: string
+}
+
+function BenefitCard({ title, description, icon }: {
+  title: string;
+  description: string;
   icon: string;
-}) {;
+}) {
   return (
-    <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
-      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-        {step}
-      </div>
-      <div className="text-3xl mb-3">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm">{description}</p>
+    <div className="text-center">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
+}
+
 function ConsultingPricingPlan({ name, price, duration, features, popular }: {
-  name: string
-  price: string
-  duration: string
-  features: string[]
+  name: string;
+  price: string;
+  duration: string;
+  features: string[];
   popular: boolean;
-}) {;
+}) {
   return (
-    <div className={`bg-white border-2 rounded-xl p-6 ${popular ? 'border-blue-500 relative' : 'border-gray-200'}`}>
+    <div className={`bg-white border rounded-xl p-6 ${popular ? 'border-blue-500 ring-2 ring-blue-200' : 'border-gray-200'}`}>
       {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-            Most Popular
-          </span>
+        <div className="bg-blue-500 text-white text-sm font-bold py-1 px-3 rounded-full text-center mb-4">
+          Most Popular
         </div>
       )}
       <h3 className="text-xl font-bold text-gray-900 mb-2">{name}</h3>
@@ -301,3 +261,6 @@ function ConsultingPricingPlan({ name, price, duration, features, popular }: {
           </li>
         ))}
       </ul>
+    </div>
+  );
+}

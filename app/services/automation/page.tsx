@@ -1,214 +1,176 @@
-export const metadata = {
-  title: 'Automation Services | Zion Tech Group',
-  description: 'Comprehensive automation services including RPA, workflow automation, AI-powered automation, and business process optimization. Streamline operations and boost efficiency.'
-}
 export default function AutomationPage() {
   return (
-    <div className="animate-fade-in">
-      <section className="text-center py-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Automation Services
-        </h1>
-        <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
-          Comprehensive automation services including RPA, workflow automation, AI-powered automation,
-          and business process optimization. Streamline operations, reduce costs, and boost efficiency with intelligent automation.
-        </p>
-      </section>
-      {/* Automation Solutions Showcase */}
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Automation Solutions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            AI-Powered Automation Solutions
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your business with our cutting-edge automation technologies. 
+            From intelligent process automation to advanced AI systems, we help you 
+            streamline operations and boost productivity.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <AutomationSolution
-            title="Robotic Process Automation (RPA)"
-            description="Automate repetitive tasks and processes using software robots to improve accuracy and efficiency"
-            features={["UI automation", "Data extraction", "Process orchestration", "Exception handling", "Monitoring & reporting"]}
-            pricing="$10k-50k"
+            title="Process Automation"
+            description="Automate repetitive tasks and workflows with intelligent bots"
+            features={["Workflow automation", "Data processing", "Task scheduling", "Error handling"]}
+            pricing="Starting at $2,999/month"
             icon="🤖"
           />
           <AutomationSolution
-            title="Workflow Automation"
-            description="Design and implement automated workflows to streamline business processes and reduce manual work"
-            features={["Process mapping", "Workflow design", "Integration setup", "Approval workflows", "Notification systems"]}
-            pricing="$8k-40k"
-            icon="⚡"
-          />
-          <AutomationSolution
-            title="AI-Powered Automation"
-            description="Intelligent automation solutions that use AI and machine learning to make decisions and adapt to changes"
-            features={["Intelligent document processing", "Predictive automation", "Natural language processing", "Decision automation", "Learning algorithms"]}
-            pricing="$20k-100k"
+            title="AI Integration"
+            description="Integrate AI capabilities into your existing systems"
+            features={["Machine learning", "Natural language processing", "Predictive analytics", "Custom models"]}
+            pricing="Starting at $4,999/month"
             icon="🧠"
           />
           <AutomationSolution
-            title="Data Automation"
-            description="Automate data collection, processing, and analysis to provide real-time insights and reporting"
-            features={["ETL processes", "Data validation", "Real-time processing", "Automated reporting", "Data quality monitoring"]}
-            pricing="$15k-75k"
-            icon="📊"
-          />
-          <AutomationSolution
-            title="Customer Service Automation"
-            description="Automate customer interactions and support processes to improve response times and satisfaction"
-            features={["Chatbot development", "Ticket routing", "Response automation", "Knowledge base integration", "Sentiment analysis"]}
-            pricing="$12k-60k"
-            icon="🎧"
-          />
-          <AutomationSolution
-            title="Marketing Automation"
-            description="Automate marketing campaigns, lead nurturing, and customer engagement processes"
-            features={["Email automation", "Lead scoring", "Campaign management", "Social media automation", "Analytics & reporting"]}
-            pricing="$10k-50k"
-            icon="📧"
+            title="Cloud Automation"
+            description="Automate cloud infrastructure and deployment processes"
+            features={["Auto-scaling", "Deployment automation", "Monitoring", "Cost optimization"]}
+            pricing="Starting at $3,999/month"
+            icon="☁️"
           />
         </div>
-      </section>
-      {/* Core Automation Services */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Core Automation Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <AutomationServiceItem
-            title="Process Analysis & Design"
-            details={[
-              "Current state process mapping",
-              "Gap analysis and optimization opportunities",
-              "Future state process design",
-              "ROI analysis and business case development",
-              "Change management planning",
-              "Performance metrics definition"
-            ]}
-          />
-          <AutomationServiceItem
-            title="Implementation & Integration"
-            details={[
-              "RPA bot development and deployment",
-              "Workflow automation platform setup",
-              "System integration and API development",
-              "Testing and quality assurance",
-              "User training and documentation",
-              "Go-live support and monitoring"
-            ]}
-          />
-          <AutomationServiceItem
-            title="Management & Optimization"
-            details={[
-              "24/7 monitoring and maintenance",
-              "Performance optimization and tuning",
-              "Exception handling and resolution",
-              "Continuous improvement initiatives",
-              "Scalability planning and execution",
-              "Compliance and security management"
-            ]}
-          />
+
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+            Our Automation Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AutomationServiceItem
+              title="Business Process Automation"
+              details={[
+                "Document processing and management",
+                "Customer service automation",
+                "Financial reporting automation",
+                "HR process automation"
+              ]}
+            />
+            <AutomationServiceItem
+              title="IT Infrastructure Automation"
+              details={[
+                "Server provisioning and management",
+                "Database automation",
+                "Security monitoring",
+                "Backup and recovery automation"
+              ]}
+            />
+          </div>
         </div>
-      </section>
-      {/* Industry Applications */}
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industry Applications</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <IndustryCard
-            title="Finance & Banking"
-            description="Automate loan processing, compliance reporting, and fraud detection"
-            icon="🏦"
-          />
-          <IndustryCard
-            title="Healthcare"
-            description="Streamline patient data management, billing, and appointment scheduling"
-            icon="🏥"
-          />
-          <IndustryCard
-            title="Manufacturing"
-            description="Optimize production processes, inventory management, and quality control"
-            icon="🏭"
-          />
-          <IndustryCard
-            title="Retail & E-commerce"
-            description="Automate order processing, inventory management, and customer service"
-            icon="🛒"
-          />
+
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            Industries We Serve
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <IndustryCard
+              title="Healthcare"
+              description="Patient data management, appointment scheduling, and medical record automation"
+              icon="🏥"
+            />
+            <IndustryCard
+              title="Finance"
+              description="Transaction processing, compliance reporting, and risk management automation"
+              icon="💰"
+            />
+            <IndustryCard
+              title="Manufacturing"
+              description="Production line automation, quality control, and supply chain management"
+              icon="🏭"
+            />
+            <IndustryCard
+              title="Retail"
+              description="Inventory management, customer service, and e-commerce automation"
+              icon="🛍️"
+            />
+          </div>
         </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Automation Benefits</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <BenefitCard
-            title="Cost Reduction"
-            description="Reduce operational costs by up to 60% through process automation"
-            icon="💰"
-          />
-          <BenefitCard
-            title="Improved Accuracy"
-            description="Eliminate human errors and ensure consistent, reliable results"
-            icon="🎯"
-          />
-          <BenefitCard
-            title="Faster Processing"
-            description="Process tasks 10x faster than manual operations"
-            icon="⚡"
-          />
-          <BenefitCard
-            title="24/7 Operations"
-            description="Run automated processes around the clock without human intervention"
-            icon="🕐"
-          />
+
+        <div className="bg-blue-50 rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+            Why Choose Our Automation Solutions?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <BenefitCard
+              title="Cost Reduction"
+              description="Reduce operational costs by up to 60% through intelligent automation"
+              icon="💸"
+            />
+            <BenefitCard
+              title="Increased Efficiency"
+              description="Boost productivity by automating time-consuming manual tasks"
+              icon="⚡"
+            />
+            <BenefitCard
+              title="Scalability"
+              description="Scale your automation solutions as your business grows"
+              icon="📈"
+            />
+          </div>
         </div>
-      </section>
-      {/* Pricing Plans */}
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <AutomationPricingPlan
-            name="Process Assessment"
-            price="$5k–$15k"
-            duration="2–4 weeks"
-            features={[
-              "Current process analysis",
-              "Automation opportunity identification",
-              "ROI calculation",
-              "Implementation roadmap",
-              "Technology recommendations"
-            ]}
-            popular={false}
-          />
-          <AutomationPricingPlan
-            name="Automation Implementation"
-            price="$15k–$75k"
-            duration="4–12 weeks"
-            features={[
-              "Process automation development",
-              "System integration",
-              "Testing and deployment",
-              "User training",
-              "3 months support"
-            ]}
-            popular={true}
-          />
-          <AutomationPricingPlan
-            name="Managed Automation"
-            price="$3k+/mo"
-            duration="Ongoing"
-            features={[
-              "24/7 monitoring and maintenance",
-              "Performance optimization",
-              "Exception handling",
-              "Continuous improvement",
-              "Monthly reporting"
-            ]}
-            popular={false}
-          />
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            Pricing Plans
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <AutomationPricingPlan
+              name="Starter"
+              price="$2,999"
+              duration="per month"
+              features={[
+                "Basic process automation",
+                "Up to 5 workflows",
+                "Email support",
+                "Monthly reporting"
+              ]}
+              popular={false}
+            />
+            <AutomationPricingPlan
+              name="Professional"
+              price="$4,999"
+              duration="per month"
+              features={[
+                "Advanced automation features",
+                "Up to 20 workflows",
+                "Priority support",
+                "Custom integrations",
+                "Real-time monitoring"
+              ]}
+              popular={true}
+            />
+            <AutomationPricingPlan
+              name="Enterprise"
+              price="$9,999"
+              duration="per month"
+              features={[
+                "Full automation suite",
+                "Unlimited workflows",
+                "24/7 support",
+                "Custom development",
+                "Dedicated account manager"
+              ]}
+              popular={false}
+            />
+          </div>
         </div>
-      </section>
-      {/* Contact CTA */}
-      <ContactCTA />
+      </div>
     </div>
   );
+}
+
 function AutomationSolution({ title, description, features, pricing, icon }: {
-  title: string
-  description: string
-  features: string[]
-  pricing: string
+  title: string;
+  description: string;
+  features: string[];
+  pricing: string;
   icon: string;
-}) {;
+}) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
@@ -225,10 +187,12 @@ function AutomationSolution({ title, description, features, pricing, icon }: {
       <div className="text-lg font-bold text-blue-600">{pricing}</div>
     </div>
   );
+}
+
 function AutomationServiceItem({ title, details }: {
-  title: string
+  title: string;
   details: string[];
-}) {;
+}) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
@@ -242,44 +206,48 @@ function AutomationServiceItem({ title, details }: {
       </ul>
     </div>
   );
+}
+
 function IndustryCard({ title, description, icon }: {
-  title: string
-  description: string
+  title: string;
+  description: string;
   icon: string;
-}) {;
+}) {
   return (
-    <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
-      <div className="text-3xl mb-3">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+    <div className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
   );
+}
+
 function BenefitCard({ title, description, icon }: {
-  title: string
-  description: string
+  title: string;
+  description: string;
   icon: string;
-}) {;
+}) {
   return (
-    <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
-      <div className="text-3xl mb-3">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm">{description}</p>
+    <div className="text-center">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
+}
+
 function AutomationPricingPlan({ name, price, duration, features, popular }: {
-  name: string
-  price: string
-  duration: string
-  features: string[]
+  name: string;
+  price: string;
+  duration: string;
+  features: string[];
   popular: boolean;
-}) {;
+}) {
   return (
-    <div className={`bg-white border-2 rounded-xl p-6 ${popular ? 'border-blue-500 relative' : 'border-gray-200'}`}>
+    <div className={`bg-white border rounded-xl p-6 ${popular ? 'border-blue-500 ring-2 ring-blue-200' : 'border-gray-200'}`}>
       {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-            Most Popular
-          </span>
+        <div className="bg-blue-500 text-white text-sm font-bold py-1 px-3 rounded-full text-center mb-4">
+          Most Popular
         </div>
       )}
       <h3 className="text-xl font-bold text-gray-900 mb-2">{name}</h3>
@@ -293,3 +261,6 @@ function AutomationPricingPlan({ name, price, duration, features, popular }: {
           </li>
         ))}
       </ul>
+    </div>
+  );
+}

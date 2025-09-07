@@ -1,44 +1,53 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+
+const usersPath = path.join(process.cwd(), 'data', 'learn', 'users.json');
 
 function readUsers() {
-  return JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
+  try {
+    return JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+  } catch {
+    return [];
+  }
 }
 
 function writeUsers(data: any) {
-  fs.writeFileSync(usersPath, JSON.stringify(data, null, 2))
+  const dir = path.dirname(usersPath);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+  fs.writeFileSync(usersPath, JSON.stringify(data, null, 2));
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
   try {
-    const users = readUsers($2);
-    if (req.method = $2;
-      const user = $2;
-      return res.status(200).json({ progress: user ?.progress ?? {} })
+    const { userId } = req.query as { userId?: string };
+    if (!userId) {
+      return res.status(400).json({ error: 'User ID required' });
     }
 
-    if (req.method === 'POST') {
-      const { userId = 'demo-user', courseId, lessonId, percent } = req.body || {},
-      if (!courseId) return res.status(400).json($2);
-      const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} },
-      const courseProgress = user.progress[courseId] || { completedLessons: [], percent: 0, completed: false},
-      if (lessonId && !courseProgress.completedLessons.includes(lessonId)) {
-        courseProgress.completedLessons.push(lessonId)
-      }
-      if (typeof percent === 'number') {
-        courseProgress.percent = Math.max(courseProgress.percent, percent)
-      }
-      user.progress[courseId] = courseProgress,
-      users[userId] = user,
-      writeUsers($2);
-      return res.status(200).json({ ok: true, progress: courseProgress})
+    const users = readUsers();
+    const user = users.find((u: any) => u.id === userId);
+
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
     }
 
-    res.setHeader($2);
-    return res.status(405).end('Method Not Allowed')
-  } catch (e: any) {
-    return res.status(500).json({ error: e ?.message ?? 'Failed to handle progress' })
+    const progress = {
+      userId: user.id,
+      completedCourses: user.completedCourses || [],
+      totalCourses: user.totalCourses || 0,
+      progressPercentage: user.completedCourses ? (user.completedCourses.length / (user.totalCourses || 1)) * 100 : 0
+    };
+
+    res.status(200).json(progress);
+  } catch (error) {
+    console.error('Error fetching progress:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 }

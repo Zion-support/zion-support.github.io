@@ -1,45 +1,65 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
 
-import type { NextApiRequest, NextApiResponse } from 'next',;
+const usersPath = path.join(process.cwd(), 'data', 'learn', 'users.json');
+const coursesPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
 
-import fs from 'fs',;
-import path from 'path',;
-
-const usersPath = path.join(process.cwd(), 'datalearnusers.json')
-const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, 'utf-8'))
+  try {
+    return JSON.parse(fs.readFileSync(p, 'utf-8'));
+  } catch {
+    return [];
+  }
 }
+
 function writeJson(p: string, data: any) {
-  fs.writeFileSync(p, JSON.stringify(data, null, 2))
+  const dir = path.dirname(p);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+  fs.writeFileSync(p, JSON.stringify(data, null, 2));
 }
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST')
-    return res.status(405).end('Method Not Allowed')
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-  const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
-  if (!courseId) return res.status(400).json({ error: 'courseId required' })
+
   try {
+    const { userId, courseId } = req.body || {};
+    if (!userId || !courseId) {
+      return res.status(400).json({ error: 'Missing userId or courseId' });
+    }
 
-/**
- * read_json - Function description
- */
-function read_json() {
-  return JSON.parse (fs.readFileSync (p, 'utf - 8'));
-}
+    const users = readJson(usersPath);
+    const courses = readJson(coursesPath);
+    
+    const course = courses.find((c: any) => c.id === courseId);
+    if (!course) {
+      return res.status(404).json({ error: 'Course not found' });
+    }
 
-/**
- * write_json - Function description
- */
-function write_json() {
-  fs.writeFileSync (p, JSON.stringify (data, null, 2));
-}
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
+    const user = users.find((u: any) => u.id === userId);
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
 
+    // Mark course as completed
+    if (!user.completedCourses) {
+      user.completedCourses = [];
+    }
+    
+    if (!user.completedCourses.includes(courseId)) {
+      user.completedCourses.push(courseId);
+      user.completedAt = user.completedAt || {};
+      user.completedAt[courseId] = new Date().toISOString();
+    }
+
+    writeJson(usersPath, users);
+    res.status(200).json({ success: true, completedCourses: user.completedCourses });
+  } catch (error) {
+    console.error('Error completing course:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+}
