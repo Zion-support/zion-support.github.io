@@ -144,6 +144,8 @@ export default function InnovativeMicroSAASServices2025() {
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                 2025 & Beyond
               </span>
+              <br />
+              <span className="text-white">Services 2025</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business with cutting-edge micro SAAS solutions powered by AI, quantum computing, 
