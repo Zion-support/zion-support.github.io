@@ -1,8 +1,19 @@
 import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout/Layout";
+import { Satellite, CheckCircle, Globe2 } from "@heroicons/react/24/outline";
 
-return (
+const features = [
+  "Mission Control Systems",
+  "Satellite Operations",
+  "Secure Communications",
+  "Earth Observation",
+  "Space Data Analytics",
+  "Mission Planning"
+];
+
+export default function SpaceTech() {
+  return (
   <Layout>
     <Head>
       <title>Space Technology | Zion Tech Group</title>
@@ -64,4 +75,5 @@ return (
       </div>
     </div>
   </Layout>
-);
+  );
+}

@@ -4,8 +4,6 @@ import React, { useState } from 'react';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
 export default function ContactPage() {
 
   return (

@@ -75,9 +75,10 @@ class RunAllAutomations {
     // Define all automation scripts to run
     const automations = [
       { name: 'Install Dependencies', command: 'npm install' },
-      { name: 'Type Check', command: 'npm run type-check' },
-      { name: 'Lint Fix', command: 'npm run lint:fix' },
+      { name: 'Type Check', command: 'npx tsc --noEmit' },
+      { name: 'Lint Fix', command: 'npm run lint' },
       { name: 'Build Application', command: 'npm run build' },
+<<<<<<< HEAD
       { name: 'Test Smoke', command: 'npm run test:smoke' },
       { name: 'Security Audit', command: 'npm audit' },
       { name: 'Performance Monitor', command: 'node scripts/performance-monitor.cjs' },
@@ -89,6 +90,18 @@ class RunAllAutomations {
       { name: 'App Enhancer', command: 'node scripts/app-enhancer.cjs' },
       { name: 'Test Automation', command: 'node scripts/test-automation.cjs' },
       { name: 'Deployment Automation', command: 'node scripts/deployment-automation.cjs' },
+=======
+      { name: 'Comprehensive Test Suite', command: 'node scripts/pm2/comprehensive-test-suite.cjs' },
+      { name: 'Security Audit', command: 'npm audit' },
+      { name: 'Performance Monitor', command: 'node scripts/pm2/performance-monitor.cjs' },
+      { name: 'SEO Optimizer', command: 'node scripts/pm2/seo-accessibility.cjs' },
+      { name: 'Health Check', command: 'node scripts/pm2/healthcheck.cjs' },
+      { name: 'Code Quality', command: 'node scripts/pm2/code-quality-monitor.cjs' },
+      { name: 'Security Scanner', command: 'node scripts/pm2/security-scanner.cjs' },
+      { name: 'App Optimizer', command: 'node scripts/pm2/app-optimizer.cjs' },
+      { name: 'Database Optimizer', command: 'node scripts/pm2/database-optimizer.cjs' },
+      { name: 'API Monitor', command: 'node scripts/pm2/api-monitor.cjs' },
+>>>>>>> pr-12287
       { name: 'Git Status', command: 'git status' },
       { name: 'Git Add', command: 'git add .' },
       { name: 'Git Commit', command: 'git commit -m "Automated improvements and fixes"' },
@@ -155,4 +168,8 @@ if (require.main === module) {
   }
 }
 
+<<<<<<< HEAD
 module.exports = RunAllAutomations;
+=======
+module.exports = RunAllAutomations;
+>>>>>>> pr-12287
