@@ -11,6 +11,10 @@ export default function CookiesPage() {return (<div className="min-h-screen py-2
 export default function CookiesPage() {;
   return (;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <div className="min-h-screen py-20">;
 export default /**
  * CookiesPage - Function description
@@ -20,6 +24,7 @@ function CookiesPage() {
     <div className="min - h-screen py - 20">;
 export default function CookiesPage() {return (;
     <div className="min-h-screen py-20">;
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative mb - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -28,12 +33,33 @@ export default function CookiesPage() {return (;
               Cookie <span className="bg - gradient - to - r from - purple - 400 to - cyan - 400 bg - clip - text text - transparent">Policy</span>;
             </h1>;
             <p className="text - xl text - white / 80 max - w-4xl mx - auto">;
+=======
+    <div className="min-h-screen py-20">;    <div className="min-h-screen py-20">;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+      {/* Hero Section */}
+      <section className="relative mb - 20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+          <div className="text - center">;
+            <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">;
+              Cookie <span className="bg - gradient - to - r from - purple - 400 to - cyan - 400 bg - clip - text text - transparent">Policy</span>;
+            </h1>;
+<<<<<<< HEAD
+            <p className="text - xl text - white / 80 max - w-4xl mx-auto">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+            <p className="text - xl text - white / 80 max - w-4xl mx - auto">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               Information about how we use cookies and similar technologies on our website to enhance your browsing experience.;
             </p>;
           </div>;
         </div>;
       </section>;
       {/* Cookie Content */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="mb - 20">;
         <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="space - y-8">;
@@ -52,6 +78,13 @@ export default function CookiesPage() {return (;
                 Zion Tech Group uses cookies and similar technologies for several purposes:;
               </p>;
               <ul className="text - white / 70 space - y-2 mb - 4">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="mb-20">;
         <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="space-y-8">;
@@ -69,7 +102,16 @@ export default function CookiesPage() {return (;
               <p className="text - white / 80 mb - 4">;
                 Zion Tech Group uses cookies and similar technologies for several purposes:;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <ul className="text - white / 70 space - y-2 mb-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <ul className="text - white / 70 space - y-2 mb - 4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="text - white / 70 space - y-2 mb - 4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• To remember your preferences and settings</li>;
                 <li>• To analyze website traffic and usage patterns</li>;
                 <li>• To provide personalized content and advertisements</li>;
@@ -78,6 +120,10 @@ export default function CookiesPage() {return (;
                 <li>• To understand how visitors interact with our content</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;
               <h2 className="text - 2xl font - bold text - white mb - 4">Types of Cookies We Use</h2>;
               <div className="space - y-6">;
@@ -87,6 +133,13 @@ export default function CookiesPage() {return (;
                     These cookies are necessary for the website to function properly. They enable basic functions like page navigation, access to secure areas, and form submissions.;
                   </p>;
                   <p className="text - white / 60 text - sm">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
               <h2 className="text - 2xl font - bold text - white mb-4">Types of Cookies We Use</h2>;
               <div className="space-y-6">;
@@ -95,71 +148,164 @@ export default function CookiesPage() {return (;
                   <p className="text - white / 70 mb - 2">;
                     These cookies are necessary for the website to function properly. They enable basic functions like page navigation, access to secure areas, and form submissions.;
                   </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <p className="text - white / 60 text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <p className="text - white / 60 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <p className="text - white / 60 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Examples: Authentication cookies, security cookies, session cookies;
                   </p>;
                 </div>;
                 <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <h3 className="text - lg font - semibold text - white mb - 2">Performance Cookies</h3>;
                   <p className="text - white / 70 mb - 2">;
                     These cookies collect information about how visitors use our website, such as which pages are visited most often and if users get error messages.;
                   </p>;
                   <p className="text - white / 60 text - sm">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   <h3 className="text - lg font - semibold text - white mb-2">Performance Cookies</h3>;
                   <p className="text - white / 70 mb-2">;
                     These cookies collect information about how visitors use our website, such as which pages are visited most often and if users get error messages.;
                   </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <p className="text - white / 60 text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <p className="text - white / 60 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <p className="text - white / 60 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Examples: Google Analytics cookies, website performance monitoring;
                   </p>;
                 </div>;
                 <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <h3 className="text - lg font - semibold text - white mb - 2">Functionality Cookies</h3>;
                   <p className="text - white / 70 mb - 2">;
                     These cookies allow the website to remember choices you make and provide enhanced, more personal features.;
                   </p>;
                   <p className="text - white / 60 text - sm">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   <h3 className="text - lg font - semibold text - white mb-2">Functionality Cookies</h3>;
                   <p className="text - white / 70 mb-2">;
                     These cookies allow the website to remember choices you make and provide enhanced, more personal features.;
                   </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <p className="text - white / 60 text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <p className="text - white / 60 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <p className="text - white / 60 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Examples: Language preferences, region settings, user preferences;
                   </p>;
                 </div>;
                 <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <h3 className="text - lg font - semibold text - white mb - 2">Marketing Cookies</h3>;
                   <p className="text - white / 70 mb - 2">;
                     These cookies are used to track visitors across websites to display relevant and engaging advertisements.;
                   </p>;
                   <p className="text - white / 60 text - sm">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   <h3 className="text - lg font - semibold text - white mb-2">Marketing Cookies</h3>;
                   <p className="text - white / 70 mb-2">;
                     These cookies are used to track visitors across websites to display relevant and engaging advertisements.;
                   </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <p className="text - white / 60 text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <p className="text - white / 60 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <p className="text - white / 60 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Examples: Social media cookies, advertising network cookies;
                   </p>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;
               <h2 className="text - 2xl font - bold text - white mb - 4">Third - Party Cookies</h2>;
               <p className="text - white / 80 mb - 4">;
                 Some cookies on our website are set by third - party services that we use to enhance your experience:;
               </p>;
               <ul className="text - white / 70 space - y-2 mb - 4">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
               <h2 className="text - 2xl font - bold text - white mb-4">Third - Party Cookies</h2>;
               <p className="text - white / 80 mb-4">;
                 Some cookies on our website are set by third - party services that we use to enhance your experience:;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <ul className="text - white / 70 space - y-2 mb-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <ul className="text - white / 70 space - y-2 mb - 4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="text - white / 70 space - y-2 mb - 4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• <strong > Google Analytics:</strong> To analyze website traffic and user behavior</li>;
                 <li>• <strong > Social Media Platforms:</strong> To enable social sharing and integration</li>;
                 <li>• <strong > Advertising Networks:</strong> To display relevant advertisements</li>;
                 <li>• <strong > Customer Support Tools:</strong> To provide live chat and support services</li>;
               </ul>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <p className="text - white / 80">;
                 These third - party services have their own privacy policies and cookie practices.;
               </p>;
@@ -170,6 +316,13 @@ export default function CookiesPage() {return (;
                 <div>;
                   <h3 className="text - lg font - semibold text - white mb - 2">Session Cookies</h3>;
                   <p className="text - white / 70">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <p className="text-white / 80">;
                 These third - party services have their own privacy policies and cookie practices.;
               </p>;
@@ -178,38 +331,86 @@ export default function CookiesPage() {return (;
               <h2 className="text - 2xl font - bold text - white mb - 4">Cookie Duration</h2>;
               <div className="space - y-4">;
                 <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <h3 className="text - lg font - semibold text - white mb-2">Session Cookies</h3>;
+                  <p className="text-white / 70">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <h3 className="text - lg font - semibold text - white mb - 2">Session Cookies</h3>;
                   <p className="text - white / 70">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <h3 className="text - lg font - semibold text - white mb - 2">Session Cookies</h3>;
+                  <p className="text - white / 70">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     These cookies are temporary and are deleted when you close your browser. They are used to maintain your session while you browse our website.;
                   </p>;
                 </div>;
                 <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
                   <h3 className="text - lg font - semibold text - white mb - 2">Persistent Cookies</h3>;
                   <p className="text - white / 70">;
+<<<<<<< HEAD
+=======
+=======
+                  <h3 className="text - lg font - semibold text - white mb - 2">Persistent Cookies</h3>;
+                  <p className="text - white / 70">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <h3 className="text - lg font - semibold text - white mb-2">Persistent Cookies</h3>;
                   <p className="text-white / 70">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                  <h3 className="text - lg font - semibold text - white mb-2">Persistent Cookies</h3>;
+                  <p className="text-white / 70">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     These cookies remain on your device for a set period or until you delete them. They help us remember your preferences and settings for future visits.;
                   </p>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;
               <h2 className="text - 2xl font - bold text - white mb - 4">Managing Your Cookie Preferences</h2>;
               <p className="text - white / 80 mb - 4">;
                 You have several options for managing cookies:;
               </p>;
               <ul className="text - white / 70 space - y-2 mb - 4">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
               <h2 className="text - 2xl font - bold text - white mb-4">Managing Your Cookie Preferences</h2>;
               <p className="text - white / 80 mb-4">;
                 You have several options for managing cookies:;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <ul className="text - white / 70 space - y-2 mb-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <ul className="text - white / 70 space - y-2 mb - 4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="text - white / 70 space - y-2 mb - 4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• <strong > Browser Settings:</strong> Most browsers allow you to control cookies through their settings</li>;
                 <li>• <strong > Cookie Consent:</strong> Use our cookie consent banner to manage preferences</li>;
                 <li>• <strong > Third - Party Opt - Out:</strong> Use opt - out tools provided by third - party services</li>;
                 <li>• <strong > Delete Cookies:</strong> Remove existing cookies from your device</li>;
               </ul>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <p className="text - white / 80">;
                 Please note that disabling certain cookies may affect website functionality and your user experience.;
               </p>;
@@ -220,6 +421,13 @@ export default function CookiesPage() {return (;
                 <div>;
                   <h3 className="text - lg font - semibold text - white mb - 2">Chrome</h3>;
                   <p className="text - white / 70 text - sm">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <p className="text-white / 80">;
                 Please note that disabling certain cookies may affect website functionality and your user experience.;
               </p>;
@@ -228,53 +436,127 @@ export default function CookiesPage() {return (;
               <h2 className="text - 2xl font - bold text - white mb - 4">Browser - Specific Instructions</h2>;
               <div className="space - y-4">;
                 <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <h3 className="text - lg font - semibold text - white mb-2">Chrome</h3>;
+                  <p className="text - white / 70 text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <h3 className="text - lg font - semibold text - white mb - 2">Chrome</h3>;
                   <p className="text - white / 70 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <h3 className="text - lg font - semibold text - white mb - 2">Chrome</h3>;
+                  <p className="text - white / 70 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Settings → Privacy and security → Cookies and other site data;
                   </p>;
                 </div>;
                 <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
                   <h3 className="text - lg font - semibold text - white mb - 2">Firefox</h3>;
                   <p className="text - white / 70 text - sm">;
+<<<<<<< HEAD
+=======
+=======
+                  <h3 className="text - lg font - semibold text - white mb - 2">Firefox</h3>;
+                  <p className="text - white / 70 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <h3 className="text - lg font - semibold text - white mb-2">Firefox</h3>;
                   <p className="text - white / 70 text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                  <h3 className="text - lg font - semibold text - white mb-2">Firefox</h3>;
+                  <p className="text - white / 70 text-sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Options → Privacy & Security → Cookies and Site Data;
                   </p>;
                 </div>;
                 <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
                   <h3 className="text - lg font - semibold text - white mb - 2">Safari</h3>;
                   <p className="text - white / 70 text - sm">;
+<<<<<<< HEAD
+=======
+=======
+                  <h3 className="text - lg font - semibold text - white mb - 2">Safari</h3>;
+                  <p className="text - white / 70 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <h3 className="text - lg font - semibold text - white mb-2">Safari</h3>;
                   <p className="text - white / 70 text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                  <h3 className="text - lg font - semibold text - white mb-2">Safari</h3>;
+                  <p className="text - white / 70 text-sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Preferences → Privacy → Manage Website Data;
                   </p>;
                 </div>;
                 <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
                   <h3 className="text - lg font - semibold text - white mb - 2">Edge</h3>;
                   <p className="text - white / 70 text - sm">;
+<<<<<<< HEAD
+=======
+=======
+                  <h3 className="text - lg font - semibold text - white mb - 2">Edge</h3>;
+                  <p className="text - white / 70 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <h3 className="text - lg font - semibold text - white mb-2">Edge</h3>;
                   <p className="text - white / 70 text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                  <h3 className="text - lg font - semibold text - white mb-2">Edge</h3>;
+                  <p className="text - white / 70 text-sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Settings → Cookies and site permissions → Cookies and site data;
                   </p>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;
               <h2 className="text - 2xl font - bold text - white mb - 4">Updates to This Policy</h2>;
               <p className="text - white / 80 mb - 4">;
                 We may update this Cookie Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:;
               </p>;
               <ul className="text - white / 70 space - y-2 mb - 4">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
               <h2 className="text - 2xl font - bold text - white mb-4">Updates to This Policy</h2>;
               <p className="text - white / 80 mb-4">;
                 We may update this Cookie Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <ul className="text - white / 70 space - y-2 mb-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <ul className="text - white / 70 space - y-2 mb - 4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="text - white / 70 space - y-2 mb - 4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Posting the updated policy on our website</li>;
                 <li>• Updating the "Last Updated" date at the top of this policy</li>;
                 <li>• Sending you an email notification for significant changes</li>;
               </ul>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <p className="text - white / 80">;
                 We encourage you to review this policy periodically to stay informed about our cookie practices.;
               </p>;
@@ -285,6 +567,13 @@ export default function CookiesPage() {return (;
                 If you have any questions about our use of cookies or this Cookie Policy, please contact us:;
               </p>;
               <div className="space - y-2 text - white / 70">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <p className="text-white / 80">;
                 We encourage you to review this policy periodically to stay informed about our cookie practices.;
               </p>;
@@ -294,13 +583,33 @@ export default function CookiesPage() {return (;
               <p className="text - white / 80 mb - 4">;
                 If you have any questions about our use of cookies or this Cookie Policy, please contact us:;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <div className="space - y-2 text-white / 70">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <div className="space - y-2 text - white / 70">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <div className="space - y-2 text - white / 70">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <p><strong > Email:</strong> privacy@ziontechgroup.com</p>;
                 <p><strong > Phone:</strong> +1 (302) 464 - 0950</p>;
                 <p><strong > Address:</strong> Zion Tech Group, Global Operations</p>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <p className="text - white / 80 mt - 4">;
+<<<<<<< HEAD
+=======
+=======
+              <p className="text - white / 80 mt - 4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <p className="text - white / 80 mt-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <p className="text - white / 80 mt-4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 We will respond to your inquiry within 30 days of receipt.;
               </p>;
             </div>;
@@ -309,6 +618,10 @@ export default function CookiesPage() {return (;
       </section>;
       {/* CTA Section */}
       <section>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         <div className="max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
           <h2 className="text - 3xl font - bold text - white mb - 6">Need Help with Cookie Settings?</h2>;
           <p className="text - xl text - white / 70 mb - 8">;
@@ -318,6 +631,13 @@ export default function CookiesPage() {return (;
             <a;
               href="/contact";
               className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <div className="max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
           <h2 className="text - 3xl font - bold text - white mb-6">Need Help with Cookie Settings?</h2>;
           <p className="text - xl text - white / 70 mb-8">;
@@ -326,14 +646,34 @@ export default function CookiesPage() {return (;
           <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
             <a;
               href="/contact";
+<<<<<<< HEAD
+<<<<<<< HEAD
+              className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration-200";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             >;
               Contact Us;
             </a>;
             <a;
               href="/privacy";
+<<<<<<< HEAD
+<<<<<<< HEAD
               className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration - 200";
+<<<<<<< HEAD
+=======
+=======
+              className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration - 200";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration-200";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration-200";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             >;
               Privacy Policy;
             </a>;

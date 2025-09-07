@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { CheckCircle  } from 'lucide-react';
 import { Tooltip;
@@ -6,6 +7,52 @@ import { Tooltip;
   TooltipTrigger;
  } from '@/components/ui/tooltip';
 interface VerifiedBadgeProps  {verified: boolean;
+=======
+import { CheckCircle } from 'lucide-react'
+
+import {
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
+} from '@/components/ui/tooltip'
+interface VerifiedBadgeProps {
+  verified: boolean
+  size?: 'sm' | 'md' | 'lg'
+  /** Optional tooltip label to display */
+  label?: string
+export function VerifiedBadge({
+  verified,
+  size = 'sm',
+  label = 'Verified talent',
+}: VerifiedBadgeProps) {
+  if (!verified) return null;
+
+  const sizeClasses = {
+    sm: 'h-3.5 w-3.5'
+    md: 'h-4 w-4'
+    lg: 'h-5 w-5'
+  }
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+interface VerifiedBadgeProps {
+
+
+  return (
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components / ui / tooltip';
+interface VerifiedBadgeProps {
+  verified: boolean;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   size?: 'sm' | 'md' | 'lg';
   /** Optional tooltip label to display */;
   label?: string;
@@ -13,8 +60,103 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/com
 interface VerifiedBadgeProps  {verified: boolean;
   size?: 'sm' | 'md' | 'lg';
   /** Optional tooltip label to display */;
+<<<<<<< HEAD
   label?: string;export function VerifiedBadge() {if (!verified) return null;const sizeClasses = {sm: 'h-3.5 w-3.5';
     md: 'h-4 w-4';
+=======
+  label?: string;
+}
+export /**
+ * VerifiedBadge - Function description
+ */
+function VerifiedBadge() {
+  // Check condition
+if (return null) {
+  $2
+}
+  const size_classes = {
+    sm: 'h - 3.5 w - 3.5',
+    md: 'h - 4 w - 4',
+    lg: 'h - 5 w - 5';
+  }
+
+
+
+
+export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {
+  if (!verified) return null,
+  
+  const sizeClasses = {
+    sm: 'h-3.5 w-3.5',
+    md: 'h-4 w-4',
+    lg: 'h-5 w-5'
+  },
+  
+
+
+  return (
+
+
+
+            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
+          </span>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>{label}</p>
+        </TooltipContent>
+
+
+
+
+      </Tooltip>
+    </TooltipProvider>
+
+
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+interface VerifiedBadgeProps {;
+  verified: boolean;
+  size?: 'sm' | 'md' | 'lg';
+  /** Optional tooltip label to display */;
+  label?: string;
+
+export function VerifiedBadge(): any ({;
+  verified,;
+  size = 'sm',;
+  label = 'Verified talent',;
+}: VerifiedBadgeProps) {;
+  if (!verified) return null;
+
+  const sizeClasses = {;
+    sm: 'h-3 && 3.5 w-3 && 3.5',;
+    md: 'h-4 w-4',;
+    lg: 'h-5 w-5',;
+  };
+
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+
+interface VerifiedBadgeProps {;
+  verified: boolean,;
+  size?: 'sm' | 'md' | 'lg';
+  /** Optional tooltip label to display */;
+  label?: string;
+}
+
+export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {;
+  if (!verified) return null;
+
+  const sizeClasses = {;
+    sm: 'h-3 && 3.5 w-3 && 3.5',;
+    md: 'h-4 w-4',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     lg: 'h-5 w-5';
   }
 interface VerifiedBadgeProps  {sm: 'h-3.5 w-3.5',md: 'h-4 w-4',lg: 'h-5 w-5'}return (<TooltipProvider>;
@@ -77,4 +219,17 @@ interface VerifiedBadgeProps  {verified: boolean;
         <TooltipContent>;
           <p>{label}</p>;
         </TooltipContent>;
+<<<<<<< HEAD
       </Tooltip>;)}</TooltipProvider>)}})}
+=======
+      </Tooltip>;
+
+  );
+}
+
+    </TooltipProvider>);
+}
+
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

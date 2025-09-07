@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 // Marketplace data store utilities;
 export interface Project  {// Marketplace data store utilitiesexport interface Project  {ursor/fix-website-loading-errors-and-merge-6662;
@@ -5,6 +13,38 @@ export interface Project  {// Marketplace data store utilitiesexport interface P
 
 export interface Project {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+
+// Marketplace data store utilitiesexport interface Project {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+// Marketplace data store utilitiesexport interface Project {;
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   title: string;
   summary: string;
@@ -15,6 +55,39 @@ export interface Project {
   status: 'DRAFT' | 'ACTIVE' | 'COMPLETED' | 'CANCELLED' | 'PAUSED';
   timeline: Array<{id: string;
     title: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    description: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+    due_date: string;
+    status: 'pending' | 'in_progress' | 'completed' | 'overdue',
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     description: string;status: 'pending' | 'in_progress' | 'completed' | 'overdue';
     status: 'pending' | 'in_progress' | 'completed' | 'overdue';
     due_date: string;
@@ -32,17 +105,115 @@ export interface Project {
 }}}
 export interface Offer {}export interface Offer  {ursor/fix-website-loading-errors-and-merge-6662;
     description: string;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }>;
   documents: Array<{
     id: string;
     name: string;
     url: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+    uploadedAtIso: string
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }>;
   budget?: {
     total: number;
     currency: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 export interface Offer {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+}
+
+
+export interface Offer {;
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+export interface Offer {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+export interface Offer {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+export interface Offer {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -58,6 +229,37 @@ export interface Offer {
     milestones?: Array<{
       title: string;
       amount: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+      dueDate: string
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }>;
   }
   agreementUrl?: string;
@@ -70,12 +272,62 @@ export interface Application  {due_date: string;
   notes?: string
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
       due_date: string
+=======
+
+      due_date: string,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      due_date: string
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }>;
   }
   agreement_url?: string;
   status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
   expires_at?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  notes?: string,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+}
+export interface Application {
+  notes?: string
+}
+=======
+}
+export interface Application {
+}
+export interface Application {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+export interface Application {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   notes?: string;
 }
 export interface Application  {notes?: string;
@@ -86,6 +338,12 @@ export interface Application  {notes?: string;
   notes?: string
 }
 export interface Application {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   projectId: string;
   talentSlug: string;
@@ -93,10 +351,91 @@ export interface Application {
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';notes?: string;
 }notes?: string;
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+  notes?: string
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   cover_letter?: string;
   proposed_rate?: number;
   proposed_timeline?: string;
   portfolio_items?: string[];
+<<<<<<< HEAD
+<<<<<<< HEAD
+  notes?: string,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+}
+export interface Message {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  notes?: string
+}
+
+
+export interface Message {;
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   notes?: string;
 }
   notes?: string}
@@ -105,6 +444,17 @@ export interface Message  {notes?: string;
   notes?: string
 }
 export interface Message {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+}
+export interface Message {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   conversationId: string;
   senderId: string;
@@ -140,13 +490,102 @@ class MarketplaceStore {private projects: Map<string, Project> = new Map()privat
       ...updates;
       updatedAt: new Date().toISOString()}this && this.projects.set(id, updatedProject)return updatedProject;
   readAtIso?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  is_read: boolean,
+<<<<<<< HEAD
+}
+export interface Conversation {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  is_read: boolean,
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+  isRead: boolean
+
+  is_read: boolean,
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+export interface Conversation {
+  isRead: boolean
+}
+=======
+
+}
+export interface Conversation {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+export interface Conversation {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
   is_read: boolean
 }
 export interface Conversation {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  is_read: boolean
+}
+export interface Conversation {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   participants: string[];
   lastMessageAtIso: string;
   lastMessageId?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+  createdAtIso: string
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 class MarketplaceStore {
   private projects: Map<string, Project> = new Map();
@@ -155,30 +594,171 @@ class MarketplaceStore {
   private messages: Map<string, Message> = new Map();
   private conversations: Map<string, Conversation> = new Map();
   // Project methods
+<<<<<<< HEAD
+<<<<<<< HEAD
+  async createProject(project: Project): Promise<Project> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    this.projects.set(project.id, project);
+    return project;
+  }
+  async getProject(id: string): Promise<Project | null> {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+    return this && this.projects.get(id) || null,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  }
+=======
   async createProject(project: Project): Promise<Project> {}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  async createProject(project: Project): Promise<Project> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
 
     const project = this && this.projects.get(id);
     if (!project) return null,
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (!project) return null
     const updatedProject = {
       ...project
       ...updates
       updatedAt: new Date().toISOString()
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+    };
+
+    this && this.projects.set(id, updatedProject);
+
+    return updatedProject;
+  }
+  async deleteProject(id: string): Promise<boolean> {
+
+    return this.projects.delete(id)
+
+    return this && this.projects.delete(id),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   async getProjectsByClient(clientId: string): Promise<Project[]> {
 
     return Array.from(this.projects.values()).filter(p => p.clientId === clientId)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return Array && Array.from(this && this.projects.values()).filter(p => p && p.clientId === clientId),
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     return Array && Array.from(this && this.projects.values()).filter(p => p && p.clientId === clientId)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    return Array && Array.from(this && this.projects.values()).filter(p => p && p.clientId === clientId),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    return Array && Array.from(this && this.projects.values()).filter(p => p && p.clientId === clientId)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   async getProjectsByTalent(talentSlug: string): Promise<Project[]> {
 
     return Array.from(this.projects.values()).filter(p => p.talentSlug === talentSlug)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return Array && Array.from(this && this.projects.values()).filter(p => p && p.talentSlug === talentSlug),
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     return Array && Array.from(this && this.projects.values()).filter(p => p && p.talentSlug === talentSlug)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    return Array && Array.from(this && this.projects.values()).filter(p => p && p.talentSlug === talentSlug),
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    return Array && Array.from(this && this.projects.values()).filter(p => p && p.talentSlug === talentSlug)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   async getAllProjects(): Promise<Project[]> {
     return Array && Array.from(this && this.projects.values());
@@ -188,12 +768,64 @@ class MarketplaceStore {
     this && this.offers.set(offer && offer.id, offer);
     return offer;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  async getOffer(id: string): Promise<Offer | null> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+    return this.offers.get(id) |null
+
+    return this && this.offers.get(id) || null,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  }
+=======
   async getOffer(id: string): Promise<Offer | null> {}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  async getOffer(id: string): Promise<Offer | null> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
 
     if (!offer) return null
     const updatedOffer = { ...offer, ...updates }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.offers.set(id, updatedOffer);
     const offer = this && this.offers.get(id);
     if (!offer) return null,
@@ -202,18 +834,95 @@ class MarketplaceStore {
     this && this.offers.set(id, updatedOffer);
     return updatedOffer;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  async deleteOffer(id: string): Promise<boolean> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+    return this.offers.delete(id)
+
+    return this && this.offers.delete(id),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  }
+=======
   async deleteOffer(id: string): Promise<boolean> {}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  async deleteOffer(id: string): Promise<boolean> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async getOffersByClient(clientId: string): Promise<Offer[]> {
 
     return Array.from(this.offers.values()).filter(o => o.clientId === clientId)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return Array && Array.from(this && this.offers.values()).filter(o => o && o.clientId === clientId),
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     return Array && Array.from(this && this.offers.values()).filter(o => o && o.clientId === clientId)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    return Array && Array.from(this && this.offers.values()).filter(o => o && o.clientId === clientId),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    return Array && Array.from(this && this.offers.values()).filter(o => o && o.clientId === clientId)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   async getOffersByTalent(talentSlug: string): Promise<Offer[]> {
 
     return Array.from(this.offers.values()).filter(o => o.talentSlug === talentSlug)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return Array && Array.from(this && this.offers.values()).filter(o => o && o.talentSlug === talentSlug),
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     return Array && Array.from(this && this.offers.values()).filter(o => o && o.talentSlug === talentSlug)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    return Array && Array.from(this && this.offers.values()).filter(o => o && o.talentSlug === talentSlug),
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    return Array && Array.from(this && this.offers.values()).filter(o => o && o.talentSlug === talentSlug)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   async getAllOffers(): Promise<Offer[]> {
     return Array && Array.from(this && this.offers.values());
@@ -223,12 +932,64 @@ class MarketplaceStore {
     this && this.applications.set(application && application.id, application);
     return application;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  async getApplication(id: string): Promise<Application | null> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+    return this.applications.get(id) |null
+
+    return this && this.applications.get(id) || null,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  }
+=======
   async getApplication(id: string): Promise<Application | null> {}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  async getApplication(id: string): Promise<Application | null> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
 
     if (!application) return null
     const updatedApplication = { ...application, ...updates }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.applications.set(id, updatedApplication);
     const application = this && this.applications.get(id);
     if (!application) return null,
@@ -237,18 +998,95 @@ class MarketplaceStore {
     this && this.applications.set(id, updatedApplication);
     return updatedApplication;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  async deleteApplication(id: string): Promise<boolean> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+    return this.applications.delete(id)
+
+    return this && this.applications.delete(id),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  }
+=======
   async deleteApplication(id: string): Promise<boolean> {}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  async deleteApplication(id: string): Promise<boolean> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async getApplicationsByProject(projectId: string): Promise<Application[]> {
 
     return Array.from(this.applications.values()).filter(a => a.projectId === projectId)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return Array && Array.from(this && this.applications.values()).filter(a => a && a.projectId === projectId),
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     return Array && Array.from(this && this.applications.values()).filter(a => a && a.projectId === projectId)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    return Array && Array.from(this && this.applications.values()).filter(a => a && a.projectId === projectId),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    return Array && Array.from(this && this.applications.values()).filter(a => a && a.projectId === projectId)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   async getApplicationsByTalent(talentSlug: string): Promise<Application[]> {
 
     return Array.from(this.applications.values()).filter(a => a.talentSlug === talentSlug)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return Array && Array.from(this && this.applications.values()).filter(a => a && a.talentSlug === talentSlug),
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     return Array && Array.from(this && this.applications.values()).filter(a => a && a.talentSlug === talentSlug)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    return Array && Array.from(this && this.applications.values()).filter(a => a && a.talentSlug === talentSlug),
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    return Array && Array.from(this && this.applications.values()).filter(a => a && a.talentSlug === talentSlug)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   async getAllApplications(): Promise<Application[]> {
     return Array && Array.from(this && this.applications.values());
@@ -258,12 +1096,64 @@ class MarketplaceStore {
     this && this.messages.set(message && message.id, message);
     return message;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  async getMessage(id: string): Promise<Message | null> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+    return this.messages.get(id) |null
+
+    return this && this.messages.get(id) || null,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  }
+=======
   async getMessage(id: string): Promise<Message | null> {}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  async getMessage(id: string): Promise<Message | null> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
 
     if (!message) return null
     const updatedMessage = { ...message, ...updates }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.messages.set(id, updatedMessage);
     const message = this && this.messages.get(id);
     if (!message) return null,
@@ -273,14 +1163,85 @@ class MarketplaceStore {
     return updatedMessage;
   }
   async deleteMessage(id: string): Promise<boolean> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return this && this.messages.delete(id),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return this && this.messages.delete(id),
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    return this && this.messages.delete(id),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+    return this && this.messages.delete(id),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     return this && this.messages.delete(id)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    return this && this.messages.delete(id)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   async getMessagesByConversation(conversationId: string): Promise<Message[]> {
     return Array && Array.from(this && this.messages.values())
       .filter(m => m && m.conversationId === conversationId)
       .sort((a, b) => new Date(a && a.sentAtIso).getTime() - new Date(b && b.sentAtIso).getTime());
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  async getMessagesByUser(userId: string): Promise<Message[]> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  }
+=======
   async getMessagesByUser(userId: string): Promise<Message[]> {}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  async getMessagesByUser(userId: string): Promise<Message[]> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async getAllMessages(): Promise<Message[]> {
     return Array && Array.from(this && this.messages.values());
   }
@@ -289,12 +1250,65 @@ class MarketplaceStore {
     this && this.conversations.set(conversation && conversation.id, conversation);
     return conversation;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  async getConversation(id: string): Promise<Conversation | null> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+    return this && this.conversations.get(id) || null,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  }
+=======
   async getConversation(id: string): Promise<Conversation | null> {}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  async getConversation(id: string): Promise<Conversation | null> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
 
     if (!conversation) return null
     const updatedConversation = { ...conversation, ...updates }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.conversations.set(id, updatedConversation);
     const conversation = this && this.conversations.get(id);
     if (!conversation) return null,
@@ -304,7 +1318,44 @@ class MarketplaceStore {
     return updatedConversation;
   }
   async deleteConversation(id: string): Promise<boolean> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return this && this.conversations.delete(id),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return this && this.conversations.delete(id),
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    return this && this.conversations.delete(id),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+    return this && this.conversations.delete(id),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     return this && this.conversations.delete(id)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    return this && this.conversations.delete(id)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   async getConversationsByUser(userId: string): Promise<Conversation[]> {
     return Array && Array.from(this && this.conversations.values())
@@ -317,6 +1368,40 @@ class MarketplaceStore {
   // Utility methods
   async getOrCreateConversation(userId1: string, userId2: string): Promise<Conversation> {
     // Find existing conversation between these two users
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+    for (const conversation of this && this.conversations.values()) {
+      if (conversation && conversation.participants.includes(userId1) && conversation && conversation.participants.includes(userId2)) {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   is_archived: boolean;
   createdAtIso: string
 }
@@ -516,6 +1601,48 @@ if (return null, ) {$2;
   async getOrCreateConversation (userId1: string, userId2: string): Promise < Conversation> {// Find existing conversation between these two users;
     for (const conversation of this.conversations.values ()) {if (&& conversation.participants.includes (userId2)) {) {$2;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        return conversation,
+      }
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+        return conversation,
+origin/cursor/automate-test-improve-and-merge-code-382a
+      }
+    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        return conversation,
+
+      }
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+    return this && this.createConversation(conversation);
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return conversation;
       }
     }return conversation}
@@ -534,10 +1661,47 @@ if (return false) {$2;
         return conversation
       }
     }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   async markMessageAsRead(messageId: string): Promise<boolean> {
     const message = this && this.messages.get(messageId);
     if (!message) return false;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+    message.readAtIso = new Date().toISOString()
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.messages.set(messageId, message);
 
     message && message.isRead = true;
@@ -546,8 +1710,45 @@ if (return false) {$2;
     return true;
   }
   async getUnreadMessageCount(userId: string): Promise<number> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+      .length
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return Array && Array.from(this && this.messages.values())
       .filter(m => m && m.recipientId === userId && !m && m.isRead)
+=======
+    return Array && Array.from(this && this.messages.values())
+      .filter(m => m && m.recipientId === userId && !m && m.isRead)
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    return Array && Array.from(this && this.messages.values())
+      .filter(m => m && m.recipientId === userId && !m && m.isRead)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // Create new conversation;
     const conversation: Conversation = {
       id: `conv_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
@@ -660,12 +1861,93 @@ export function createOfferData(clientId: string;
   async getUnreadMessageCount (user_id: string): Promise < number> {
     return Array.from (this.messages.values ());
       .filter (m => m.recipient_id === user_id && !m.is_read);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      .length,
+=======
+      .length
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+  }
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+      .length,
+origin/cursor/automate-test-improve-and-merge-code-382a
+  }
+
+    )
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
       .length
   }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const lowercaseQuery = query && query.toLowerCase();
     return Array && Array.from(this && this.projects.values()).filter(project =>
       project && project.title.toLowerCase().includes(lowercaseQuery) ||
       project && project.summary.toLowerCase().includes(lowercaseQuery)
+<<<<<<< HEAD
+<<<<<<< HEAD
+    ),
+<<<<<<< HEAD
+=======
+    )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+  }
+  async searchOffers(query: string): Promise<Offer[]> {
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+  }
+  async searchOffers(query: string): Promise<Offer[]> {
+
+    )
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    const lowercaseQuery = query && query.toLowerCase();
+    return Array && Array.from(this && this.offers.values()).filter(offer =>
+      offer && offer.scopeSummary.toLowerCase().includes(lowercaseQuery)
+<<<<<<< HEAD
+    ),
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      .length,
+
+  }
+
+
+    )
+
+  }
+  async searchOffers(query: string): Promise<Offer[]> {
+
+
+    )
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
     )
   }
   async searchOffers(query: string): Promise<Offer[]> {
@@ -673,6 +1955,7 @@ export function createOfferData(clientId: string;
     return Array && Array.from(this && this.offers.values()).filter(offer =>
       offer && offer.scopeSummary.toLowerCase().includes(lowercaseQuery)
     )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   // Cleanup methods
   async clearAll(): Promise<void> {
@@ -688,11 +1971,119 @@ export function createOfferData(clientId: string;
     totalOffers: number;
     totalApplications: number;
     totalMessages: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+  }> {
+    return {
+
+      totalProjects: this && this.projects.size,
+      totalOffers: this && this.offers.size,
+      totalApplications: this && this.applications.size,
+      totalMessages: this && this.messages.size,
+      totalConversations: this && this.conversations.size
+    };
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 }
 // Singleton instance
 export const marketplaceStore = new MarketplaceStore();
 // Main functions for external use
+<<<<<<< HEAD
+<<<<<<< HEAD
+export async function createProject(project: Project): Promise<Project> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+  return marketplaceStore && marketplaceStore.createProject(project),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+}
+export async function getProject(id: string): Promise<Project | null> {
+  return marketplaceStore.getProject(id)
+
+<<<<<<< HEAD
+  return marketplaceStore && marketplaceStore.getProject(id),
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+}
+export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
+  return marketplaceStore && marketplaceStore.updateProject(id, updates);
+<<<<<<< HEAD
+=======
+  return marketplaceStore.getProject(id)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+  return marketplaceStore.getProject(id)
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export async function createProject(project: Project): Promise<Project> {}
 export async function getProject(id: string): Promise<Project | null> {
   return marketplaceStore.getProject(id)
@@ -701,18 +2092,74 @@ export async function getProject(id: string): Promise<Project | null> {
 }
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
   return marketplaceStore && marketplaceStore.updateProject(id, updates);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  return marketplaceStore && marketplaceStore.getProject(id),
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
 
   return marketplaceStore.updateProject(id, updates);
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 export async function deleteProject(id: string): Promise<boolean> {
   return marketplaceStore && marketplaceStore.deleteProject(id)
 }
 export async function createOffer(offer: Offer): Promise<Offer> {
+<<<<<<< HEAD
+  return marketplaceStore && marketplaceStore.createOffer(offer),
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+}
+export async function deleteProject(id: string): Promise<boolean> {
+
+  return marketplaceStore.deleteProject(id)
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return marketplaceStore && marketplaceStore.deleteProject(id),
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+export async function createOffer(offer: Offer): Promise<Offer> {
+
+  return marketplaceStore.createOffer(offer)
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return marketplaceStore && marketplaceStore.createOffer(offer),
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
   return marketplaceStore && marketplaceStore.createOffer(offer)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+export async function deleteProject(id: string): Promise<boolean> {
+<<<<<<< HEAD
+
+
+  return marketplaceStore.deleteProject(id)
+
+}
+export async function createOffer(offer: Offer): Promise<Offer> {
+
+
+  return marketplaceStore.createOffer(offer)
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return marketplaceStore && marketplaceStore.deleteProject(id)
+}
+export async function createOffer(offer: Offer): Promise<Offer> {
+  return marketplaceStore && marketplaceStore.createOffer(offer)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export async function getOffer(id: string): Promise<Offer | null> {
   return marketplaceStore && marketplaceStore.getOffer(id)
@@ -721,22 +2168,93 @@ export async function updateOffer(id: string, updates: Partial<Offer>): Promise<
   return marketplaceStore && marketplaceStore.updateOffer(id, updates);
   return marketplaceStore.getOffer(id)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return marketplaceStore && marketplaceStore.getOffer(id),
+<<<<<<< HEAD
+=======
   return marketplaceStore && marketplaceStore.getOffer(id)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
   return marketplaceStore && marketplaceStore.updateOffer(id, updates);
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+  return marketplaceStore.getOffer(id)
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+  return marketplaceStore && marketplaceStore.getOffer(id),
+
+
+=======
+  return marketplaceStore && marketplaceStore.getOffer(id)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+}
+export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
+  return marketplaceStore && marketplaceStore.updateOffer(id, updates);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
 
   return marketplaceStore.updateOffer(id, updates);
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 export async function deleteOffer(id: string): Promise<boolean> {
   return marketplaceStore && marketplaceStore.deleteOffer(id)
 }
 export async function createApplication(application: Application): Promise<Application> {
+<<<<<<< HEAD
+  return marketplaceStore && marketplaceStore.createApplication(application),
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+}
+export async function deleteOffer(id: string): Promise<boolean> {
+
+  return marketplaceStore.deleteOffer(id)
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return marketplaceStore && marketplaceStore.deleteOffer(id),
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+export async function createApplication(application: Application): Promise<Application> {
+
+  return marketplaceStore.createApplication(application)
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return marketplaceStore && marketplaceStore.createApplication(application),
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
   return marketplaceStore && marketplaceStore.createApplication(application)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+export async function deleteOffer(id: string): Promise<boolean> {
+<<<<<<< HEAD
+
+
+  return marketplaceStore.deleteOffer(id)
+
+}
+export async function createApplication(application: Application): Promise<Application> {
+
+
+  return marketplaceStore.createApplication(application)
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return marketplaceStore && marketplaceStore.deleteOffer(id)
+}
+export async function createApplication(application: Application): Promise<Application> {
+  return marketplaceStore && marketplaceStore.createApplication(application)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export async function getApplication(id: string): Promise<Application | null> {
   return marketplaceStore && marketplaceStore.getApplication(id)
@@ -745,22 +2263,93 @@ export async function updateApplication(id: string, updates: Partial<Application
   return marketplaceStore && marketplaceStore.updateApplication(id, updates);
   return marketplaceStore.getApplication(id)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return marketplaceStore && marketplaceStore.getApplication(id),
+<<<<<<< HEAD
+=======
   return marketplaceStore && marketplaceStore.getApplication(id)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
   return marketplaceStore && marketplaceStore.updateApplication(id, updates);
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+  return marketplaceStore.getApplication(id)
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+  return marketplaceStore && marketplaceStore.getApplication(id),
+
+
+=======
+  return marketplaceStore && marketplaceStore.getApplication(id)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+}
+export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
+  return marketplaceStore && marketplaceStore.updateApplication(id, updates);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
 
   return marketplaceStore.updateApplication(id, updates);
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 export async function deleteApplication(id: string): Promise<boolean> {
   return marketplaceStore && marketplaceStore.deleteApplication(id)
 }
 export async function createMessage(message: Message): Promise<Message> {
+<<<<<<< HEAD
+  return marketplaceStore && marketplaceStore.createMessage(message),
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+}
+export async function deleteApplication(id: string): Promise<boolean> {
+
+  return marketplaceStore.deleteApplication(id)
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return marketplaceStore && marketplaceStore.deleteApplication(id),
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+export async function createMessage(message: Message): Promise<Message> {
+
+  return marketplaceStore.createMessage(message)
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return marketplaceStore && marketplaceStore.createMessage(message),
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
   return marketplaceStore && marketplaceStore.createMessage(message)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+export async function deleteApplication(id: string): Promise<boolean> {
+<<<<<<< HEAD
+
+
+  return marketplaceStore.deleteApplication(id)
+
+}
+export async function createMessage(message: Message): Promise<Message> {
+
+
+  return marketplaceStore.createMessage(message)
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return marketplaceStore && marketplaceStore.deleteApplication(id)
+}
+export async function createMessage(message: Message): Promise<Message> {
+  return marketplaceStore && marketplaceStore.createMessage(message)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export async function getMessage(id: string): Promise<Message | null> {
   return marketplaceStore && marketplaceStore.getMessage(id)
@@ -769,7 +2358,21 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
   return marketplaceStore && marketplaceStore.updateMessage(id, updates);
   return marketplaceStore.getMessage(id)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return marketplaceStore && marketplaceStore.getMessage(id),
+<<<<<<< HEAD
+=======
   return marketplaceStore && marketplaceStore.getMessage(id)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  return marketplaceStore && marketplaceStore.getMessage(id),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return marketplaceStore && marketplaceStore.getMessage(id)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 
@@ -829,6 +2432,10 @@ export function createMessageData(conversationId: string;
     ...additionalData;
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function generateId(prefix: string = 'item'): string {}
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {return marketplaceStore && marketplaceStore.updateMessage(id, updates)return marketplaceStore.getMessage(id)}return marketplaceStore.updateMessage(id, updates)ursor/fix-website-loading-errors-and-merge-6662;
 }
@@ -841,17 +2448,72 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
 
 
 
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+  return marketplaceStore.getMessage(id)
+}
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+  return marketplaceStore.updateMessage(id, updates);
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+export function generateId(prefix: string = 'item'): string {
+
+
+
+
+  return marketplaceStore.updateMessage(id, updates);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export async function deleteMessage(id: string): Promise<boolean> {
 
   return marketplaceStore.deleteMessage(id)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return marketplaceStore && marketplaceStore.deleteMessage(id),
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
   return marketplaceStore && marketplaceStore.deleteMessage(id)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return marketplaceStore && marketplaceStore.deleteMessage(id)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 // Utility functions
 
 
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     conversationId,
     senderId,
     recipientId,
@@ -925,8 +2587,62 @@ export function createMessageData (conversation_id: string,sender_id: string,rec
 }}
 export function generate_id (prefix: string = 'item'): string {return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+}
+export function generate_id (prefix: string = 'item'): string {
+  return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+export function generate_id (prefix: string = 'item'): string {
+  return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+export function generate_id (prefix: string = 'item'): string {
+  return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+import fs from 'fs';
+=======
 export function generate_id (prefix: string = 'item'): string {return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }import fs from 'fs';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export function generate_id (prefix: string = 'item'): string {return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+}import fs from 'fs';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import path from 'path';
 import { MarketplaceDb, Offer, Project  } from './types';
 const DATA_DIR = path.join(process.cwd(), 'data', 'runtime')const DB_PATH  = path.join(DATA_DIR, 'marketplace.json')function ensureDataFile(): void {if (!fs.existsSync(DATA_DIR)) {fs.mkdirSync(DATA_DIR, { recursive: true })}
@@ -939,6 +2655,42 @@ const DATA_DIR = path.join(process.cwd(), 'data', 'runtime')const DB_PATH  = pat
   writeDb(db)return offer;export function getOfferById(id: string): Offer | undefined {const db = readDb()return db.offers.find(o => o.id === id)export function listOffers(params?: {talentSlug?: string;
   clientId?: string;
   status?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}): Offer[] {
+  const db = readDb();
+  let list = db.offers;
+  if (params?.talentSlug)
+    list = list.filter(o => o.talentSlug === params.talentSlug);
+  if (params?.clientId) list = list.filter(o => o.clientId === params.clientId);
+  if (params?.status) list = list.filter(o => o.status === params.status);
+  return list.sort((a, b) => b.createdAtIso.localeCompare(a.createdAtIso));
+
+export function saveProject(project: Project): Project {
+  const db = readDb();
+  const index = db.projects.findIndex(p => p.id === project.id);
+  if (index >= 0) {
+    db.projects[index] = project;
+  } else {
+    db.projects.push(project);
+  }
+  writeDb(db);
+  return project;
+
+export function getProjectById(id: string): Project | undefined {
+  const db = readDb();
+  return db.projects.find(p => p.id === id);
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }): Offer[] {const db = readDb()let list = db.offers;
   if (params?.talentSlug)list = list.filter(o => o.talentSlug === params.talentSlug)if (params?.clientId) list = list.filter(o => o.clientId === params.clientId)if (params?.status) list = list.filter(o => o.status === params.status)return list.sort((a, b) => b.createdAtIso.localeCompare(a.createdAtIso))export function saveProject(project: Project): Project {const db = readDb()const index = db.projects.findIndex(p => p.id === project.id)if (index >= 0) {db.projects[index] = project;
   } else {db.projects.push(project)}
@@ -947,3 +2699,10 @@ const DATA_DIR = path.join(process.cwd(), 'data', 'runtime')const DB_PATH  = pat
 export function generate_id (prefix: string = 'item'): string {
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

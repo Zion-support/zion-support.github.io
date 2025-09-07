@@ -237,9 +237,18 @@ if (require.main === module) {
 <<<<<<< HEAD
   checker.run().catch(console.error)};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
   checker.runHealthChecks().catch(console.error);
 }
 
 module.exports = HealthChecker;
+<<<<<<< HEAD
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
@@ -16,9 +23,22 @@
 const suite = new ComprehensiveTestDeploy();
 suite.runComprehensiveSuite().catch(console.error);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

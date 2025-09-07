@@ -1,4 +1,6 @@
 {
+<<<<<<< HEAD
+=======
 
   "timestamp": "2025-09-05T21:41:32.481Z",
   "build": {
@@ -8165,6 +8167,7 @@
   "dependencies": {
     "status": "warning",
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   "timestamp": "2025-09-01T09:45:49.476Z",
   "build": {
     "status": "failed",
@@ -8185,6 +8188,8 @@
   },
   "trends": {
     "consecutiveFailures": 0,
+<<<<<<< HEAD
+=======
 
     "improvementSinceLastRun": true,
     "degradationSinceLastRun": false
@@ -8198,6 +8203,7 @@
   ]
 }
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     "improvementSinceLastRun": false,
     "degradationSinceLastRun": false
   },

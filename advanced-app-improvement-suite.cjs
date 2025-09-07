@@ -1,12 +1,27 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
 class AdvancedAppImprovementSuite {
   constructor(projectRoot) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    this.projectRoot = projectRoot || process.cwd();
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     this.reportsDir = path.join(this.projectRoot, "improvement-reports");
     this.logFile = path.join(this.reportsDir, "app-improvement.log");
     this.ensureDirectories();
@@ -15,10 +30,47 @@ class AdvancedAppImprovementSuite {
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     }
   }
 
+<<<<<<< HEAD
+=======
+    }  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}`;
+    console.log(logMessage);
+    fs.appendFileSync(this.logFile, logMessage + "\n");
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.startTime = new Date();
+    this.improvements = [];
+    this.errors = [];
+  }
+
+    }
+  }
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    }
+  }
+
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
@@ -28,26 +80,172 @@ class AdvancedAppImprovementSuite {
   }
 
   async runCommand(command, description) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    this.log(`Starting: ${description}`);
+    try {
+      const result = execSync(command, {
+        cwd: this.projectRoot,
+        encoding: "utf8",
+        timeout: 300000 // 5 minutes timeout
+      });
+      this.log(`Completed: ${description}`);
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`Failed: ${description} - ${error.message}`);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+=======
+    try {
+      this.log(`Running: ${description}`);
+      const output = execSync(command, {
+        cwd: this.projectRoot,
+        encoding: "utf8",
+        timeout: 300000
+      });
+      this.log(`Completed: ${description}`);
+      return { success: true, output };
+    } catch (error) {
+      this.log(`Failed: ${description} - ${error.message}`, 'ERROR');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       return { success: false, error: error.message };
     }
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  async optimizeBundleSize() {
+    this.log("Optimizing bundle size...");
+    const optimizations = [
+
+    }  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}`;
+    console.log(logMessage);
+    fs.appendFileSync(this.logFile, logMessage + "\n");
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.startTime = new Date();
+    this.improvements = [];
+    this.errors = [];
+  }
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}`;
+    console.log(logMessage);
+    fs.appendFileSync(this.logFile, logMessage + "\n");
+  }
+
+  async runCommand(command, description) {
+    this.log(`Starting: ${description}`);
+    try {
+      const result = execSync(command, {
+        cwd: this.projectRoot,
+        encoding: "utf8",
+        timeout: 300000 // 5 minutes timeout
+      });
+      this.log(`Completed: ${description}`);
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`Failed: ${description} - ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  }
+  async optimizeBundleSize() {
+    this.log("Optimizing bundle size...");
+    const optimizations = [
+<<<<<<< HEAD
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       { command: "npm run analyze", description: "Bundle Analysis" },
       { command: "npm run build", description: "Production Build" }
     ];
     
     const results = [];
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    for (const task of tasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, ...result });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     for (const optimization of optimizations) {
       const result = await this.runCommand(optimization.command, optimization.description);
       results.push({ ...optimization, result });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    for (const optimization of optimizations) {
+      const result = await this.runCommand(optimization.command, optimization.description);
+      results.push({ ...optimization, result });
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     return results;
   }
 
   async improvePerformance() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    this.log("Improving performance...");
+    const performanceTasks = [
+    this.log("Improving performance...");
+    const performanceTasks = [
+
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    this.log("⚡ Improving performance...");
+    const tasks = [
+
+    this.log("Improving performance...");
+    const performanceTasks = [
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       { command: "npm run lint:fix", description: "Fix Linting Issues" },
       { command: "npm run type-check", description: "TypeScript Type Check" }
@@ -55,15 +253,71 @@ class AdvancedAppImprovementSuite {
     
     const results = [];
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    for (const task of tasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, ...result });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     for (const task of performanceTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    for (const task of performanceTasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, result });
+
+<<<<<<< HEAD
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     return results;
   }
 
   async enhanceSecurity() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    this.log("Enhancing security...");
+    const securityTasks = [
+    this.log("Enhancing security...");
+    const securityTasks = [
+
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    this.log("🔒 Enhancing security...");
+    const tasks = [
+
+    this.log("Enhancing security...");
+    const securityTasks = [
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       { command: "npm audit --audit-level=moderate", description: "Security Audit" },
       { command: "npm audit fix --force", description: "Fix Security Vulnerabilities" }
@@ -71,15 +325,71 @@ class AdvancedAppImprovementSuite {
     
     const results = [];
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    for (const task of tasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, ...result });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     for (const task of securityTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    for (const task of securityTasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, result });
+
+<<<<<<< HEAD
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     return results;
   }
 
   async runTests() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    this.log("Running tests...");
+    const testTasks = [
+    this.log("Running tests...");
+    const testTasks = [
+
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    this.log("🧪 Running tests...");
+    const tasks = [
+
+    this.log("Running tests...");
+    const testTasks = [
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       { command: "npm test", description: "Run Test Suite" },
       { command: "npm run test:coverage", description: "Generate Test Coverage" }
@@ -87,19 +397,90 @@ class AdvancedAppImprovementSuite {
     
     const results = [];
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    for (const task of tasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, ...result });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     for (const task of testTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    for (const task of testTasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, result });
+
+<<<<<<< HEAD
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     return results;
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  async generateReports() {
+    this.log("Generating improvement reports...");
+    const report = {
+      timestamp: new Date().toISOString(),
+  async generateReports() {
+    this.log("Generating improvement reports...");
+    const report = {
+      timestamp: new Date().toISOString(),
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  async generateReport(results) {
+    this.log("📊 Generating improvement reports...");
+    const report = {
+      timestamp: new Date().toISOString(),
+      bundleOptimization: results.bundleOptimization,
+      performanceImprovements: results.performanceImprovements,
+      securityEnhancements: results.securityEnhancements,
+      testResults: results.testResults
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       bundleOptimization: await this.optimizeBundleSize(),
       performanceImprovements: await this.improvePerformance(),
       securityEnhancements: await this.enhanceSecurity(),
       testResults: await this.runTests()
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     };
     
     const reportFile = path.join(this.reportsDir, "advanced-app-improvement-report.json");
@@ -112,7 +493,32 @@ class AdvancedAppImprovementSuite {
     const reportFile = path.join(this.reportsDir, "advanced-app-improvement-report.json");
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportFile}`);
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+  }
+
+  async start() {
+    this.log("🚀 Starting Advanced App Improvement Suite...");
+    
+    try {
+      const results = {
+        bundleOptimization: await this.optimizeBundle(),
+        performanceImprovements: await this.improvePerformance(),
+        securityEnhancements: await this.enhanceSecurity(),
+        testResults: await this.runTests()
+      };
+      
+      await this.generateReport(results);
+      this.log("✅ Advanced App Improvement Suite completed successfully!");
+    } catch (error) {
+      this.log(`❌ Advanced App Improvement Suite failed: ${error.message}`, 'ERROR');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log(`[${timestamp}] ${message}`);
   }
 
@@ -228,6 +634,13 @@ class AdvancedAppImprovementSuite {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.log(`📊 Improvement report saved to: ${reportPath}`);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     return report;
   }
@@ -240,11 +653,67 @@ class AdvancedAppImprovementSuite {
       return results;
     } catch (error) {
       this.log(`Advanced App Improvement Suite failed: ${error.message}`);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+      throw error;    }
+  }
+}
+
+      this.log(`Advanced App Improvement Suite failed: ${error.message}`);
+      throw error;
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      throw error;
+
+
+      this.log(`❌ Fatal error: ${error.message}`);
+      this.errors.push({ type: 'fatal', message: error.message });
+      process.exit(1);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+=======
+if (require.main === module) {
+  const suite = new AdvancedAppImprovementSuite();
+  suite.run().catch(console.error);
+
+}
+
+if (require.main === module) {
+  const suite = new AdvancedAppImprovementSuite();
+  suite.run().catch(console.error);
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+// Run if called directly
+if (require.main === module) {
+  const suite = new AdvancedAppImprovementSuite(process.cwd());
+  suite.start().catch(console.error);
+}
+
+module.exports = AdvancedAppImprovementSuite;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+module.exports = AdvancedAppImprovementSuite;
+main
+=======
 }
 
 module.exports = AdvancedAppImprovementSuite;
@@ -253,7 +722,9 @@ const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
     this.ensureDirectories();,
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
+<<<<<<< HEAD
   ensureDirectories() {;
   if (!fs.existsSync(this.reportsDir)) {;
   fs.mkdirSync(this.reportsDir, { recursive: true });,
@@ -744,3 +1215,8 @@ suite.run();
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

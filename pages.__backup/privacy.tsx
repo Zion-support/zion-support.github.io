@@ -2,6 +2,14 @@ import Head from; \'next/head\'; export default function PrivacyPage() { return 
 import React from 'react';
 interface PrivacyProps {
   // Add props here as needed
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import React from 'react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import * as React from 'react';
 
 ;
@@ -58,6 +66,10 @@ export default function Privacy({}: PrivacyProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
@@ -103,3 +115,9 @@ export default function Privacy(): any ({}: PrivacyProps) {;
 
 }
 }
+<<<<<<< HEAD
+=======
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,16 +1,53 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}'
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ],
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        blue: {
+=======
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        primary: {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+<<<<<<< HEAD
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -25,6 +62,7 @@ export default {
           950: '#172554',
         },
         blue: {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
@@ -36,6 +74,8 @@ export default {
           800: '#1e40af',
           900: '#1e3a8a',
           950: '#172554',
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         },
         gray: {
           50: '#f9fafb',
@@ -48,16 +88,45 @@ export default {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        },
+<<<<<<< HEAD
+        'zion-slate-dark': '#1e293b',
+        'zion-slate': '#334155',
+        'zion-slate-light': '#475569',
+=======
+=======
+          950: '#030712'
+        }
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
           950: '#030712',
         },
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+          950: '#030712'
+        }
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       },
+<<<<<<< HEAD
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-left': 'slideLeft 0.5s ease-out',
         'slide-right': 'slideRight 0.5s ease-out',
@@ -68,31 +137,96 @@ export default {
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        'float': 'float 6s ease-in-out infinite',
+        'wiggle': 'wiggle 1s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           '100%': { opacity: '1' },
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
+<<<<<<< HEAD
+<<<<<<< HEAD
           '100%': { transform: 'translateY(0)', opacity: '1' },
+<<<<<<< HEAD
+        },
+      },
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    },
+  },
+  plugins: [],
+};
+=======
+          '100%': { transform: 'translateY(0px)', opacity: '1' }
+=======
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+=======
+          '100%': { opacity: '1' }
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' }
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+          '100%': { opacity: '1' }
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' }
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
         },
         slideDown: {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' }
         },
         slideLeft: {
           '0%': { transform: 'translateX(20px)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' },
+          '100%': { transform: 'translateX(0px)', opacity: '1' }
         },
         slideRight: {
           '0%': { transform: 'translateX(-20px)', opacity: '0' },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
           '100%': { transform: 'translateX(0)', opacity: '1' },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          '100%': { transform: 'translateX(0px)', opacity: '1' }
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+          '100%': { transform: 'translateX(0px)', opacity: '1' }
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
         },
         scaleIn: {
           '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1)' }
         },
         bounceIn: {
           '0%': { transform: 'scale(0.3)', opacity: '0' },
@@ -103,31 +237,31 @@ export default {
         'gradient-x': {
           '0%, 100%': {
             'background-size': '200% 200%',
-            'background-position': 'left center',
+            'background-position': 'left center'
           },
           '50%': {
             'background-size': '200% 200%',
-            'background-position': 'right center',
+            'background-position': 'right center'
           },
         },
         'gradient-y': {
           '0%, 100%': {
             'background-size': '200% 200%',
-            'background-position': 'center top',
+            'background-position': 'center top'
           },
           '50%': {
             'background-size': '200% 200%',
-            'background-position': 'center bottom',
+            'background-position': 'center bottom'
           },
         },
         'gradient-xy': {
           '0%, 100%': {
             'background-size': '400% 400%',
-            'background-position': 'left center',
+            'background-position': 'left center'
           },
           '50%': {
             'background-size': '400% 400%',
-            'background-position': 'right center',
+            'background-position': 'right center'
           },
         },
       },
@@ -146,11 +280,11 @@ export default {
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
-        '128': '32rem',
+        '128': '32rem'
       },
       borderRadius: {
         '4xl': '2rem',
-        '5xl': '2.5rem',
+        '5xl': '2.5rem'
       },
     },
   },
@@ -159,4 +293,28 @@ export default {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+};
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+      },
+    },
+  },
+  plugins: [],
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-625f
+=======
+};
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55

@@ -60,6 +60,17 @@ function processFile(filePath) {
     return 0}
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -82,7 +93,18 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
 }
 
 function main() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ursor/expand-services-advertise-and-build-project-0033
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
@@ -114,6 +136,16 @@ function main() {
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ursor/expand-services-advertise-and-build-project-0033
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 }
 
@@ -121,4 +153,18 @@ if (require.main === module) {
   main().catch(console.error)}
 
 
+<<<<<<< HEAD
+=======
+
+
 module.exports = { removeConsoleStatements, processFile };
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+module.exports = { removeConsoleStatements, processFile };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = { removeConsoleStatements, processFile };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

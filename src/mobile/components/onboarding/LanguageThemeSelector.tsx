@@ -1,4 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+                )}
+              </CardContent>;
+            </Card>;
+          ))}
+          <Card
+              theme === 'light'
+                ? 'border-primary bg-primary/5'
+                : 'border-border hover:border-primary/40'
+=======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 key={language.code}
               className={`cursor-pointer transition-all ${selectedLanguage === language.code;
                   ? "border-primary bg-primary/5";
@@ -20,6 +33,7 @@ key={language.code}
                   <span className="text-xl mr-2">{language.flag}</span>;
                   <span>{language.name}</span>;
                 </div>;
+<<<<<<< HEAD
                 {selectedLanguage === language.code && (<Check className="h-4 w-4 text-primary" />;import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
 import { useTheme  } from '@/hooks/useTheme';
@@ -69,6 +83,16 @@ export function LanguageThemeSelector() {const { theme, setTheme } = useTheme()c
         <p className='text-muted-foreground'>;
           Select your preferred appearance;
         </p>;<div className='flex gap-3 mt-4'>;</div>;
+=======
+                {selectedLanguage === language.code && (;
+                  <Check className="h-4 w-4 text-primary" />;
+                )}
+              </CardContent>;
+            </Card>;
+          ))}
+
+        </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       </div>;
 <div className='space-y-2'>;
         <h2 className='text-xl font-medium'>Choose theme</h2>;
@@ -76,10 +100,19 @@ export function LanguageThemeSelector() {const { theme, setTheme } = useTheme()c
           Select your preferred appearance;
         </p>;
         <div className='flex gap-3 mt-4'>;
+<<<<<<< HEAD
           <Card;
               theme === 'light';
                 ? 'border-primary bg-primary/5';
                 : 'border-border hover:border-primary/40';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+          <Card
+              theme === 'light'
+                ? 'border-primary bg-primary/5'
+                : 'border-border hover:border-primary/40'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             }`}
             onClick = {() => setTheme('light')}
           >;
@@ -93,7 +126,15 @@ export function LanguageThemeSelector() {const { theme, setTheme } = useTheme()c
                 ? 'border-primary bg-primary/5';
                 : 'border-border hover:border-primary/40';
             }`}
+<<<<<<< HEAD
+<<<<<<< HEAD
+            onClick = {() => setTheme('dark'),}
+=======
             onClick = {() => setTheme('dark')}>;
+=======
+            onClick = {() => setTheme('dark'),}
+          >;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <CardContent className='p-3 flex flex-col items-center justify-center'>;
               <Moon className='h-8 w-8 mb-2' />;
               <span>Dark</span>;
@@ -241,5 +282,16 @@ function LanguageThemeSelector() {const { theme, set_theme } = use_theme ()const
           </Card>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>;
   )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  );
+}
+
+    </div>);
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

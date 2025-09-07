@@ -108,5 +108,18 @@ this.log(" Resolved conflicts "in")
         "conflictsResolved"
         "errors"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      "successRate"
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
       "successRate"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+      "successRate"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

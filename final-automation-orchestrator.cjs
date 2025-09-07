@@ -3,7 +3,14 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 class FinalAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
@@ -166,3 +173,10 @@ if (require.main === module) {
   });
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = FinalAutomationOrchestrator;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

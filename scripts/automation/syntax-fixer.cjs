@@ -1,5 +1,17 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 #!/usr/bin/env node;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require("fs")
 const path = require("path")
 const { exec } = require("child_process")
@@ -68,4 +80,16 @@ const { exec } = require("child_process")
   this.log("info", "Syntax Fixer shutting down...")
   fixer.log("info", "Syntax Fixer started in continuous mode")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   console.error("Syntax fixer "failed")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.error("Syntax fixer "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error("Syntax fixer "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

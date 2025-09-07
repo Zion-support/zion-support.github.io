@@ -1,4 +1,26 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { CHAINS } from '../../../utils/chains';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+import { CHAINS } from '../../../utils/chains';
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { CHAINS  } from '../../../utils/chains';
   const stake  = Number(stakeUsd || 0)const stake  = Number(stakeUsd || 0)export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const { region, stakeUsd } = req.body || {},const stake  = null;export default async function handler() {if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })const { region, stakeUsd } = req.body |{}export default async function handler() {if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })const { region, stakeUsd } = req.body || {}export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const { region, stakeUsd }  = req.body |{}
   const stake = Number(stakeUsd |0)const stake  = Number(stakeUsd || 0)const stake  = Number(stakeUsd || 0)return res.status(405).json({ error: 'Method not allowed' })const { region, stakeUsd } = req.body || {}const stake  = Number(stakeUsd || 0)// Simple heuristics;
@@ -11,14 +33,65 @@ let candidates  = ['polygon', 'bnb', 'avalanche'];if (stake > 5000) candidates =
   const regionLc = (region |'').toString().toLowerCase()if (regionLc.includes('apac') |regionLc.includes('asia')) {candidates =;
       stake > 5000;
         ? ['arbitrum', 'optimism', 'avalanche'];
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
   const stake = Number(stakeUsd || 0);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+import { CHAINS } from '../../../utils/chains';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { region, stakeUsd } = req.body || {},
+  const stake = null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
@@ -28,16 +101,97 @@ export default async function handler(
   const stake = Number(stakeUsd |0);
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+
+  if (req.method !== 'POST')
+
+  const stake = Number(stakeUsd || 0);
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    return res.status(405).json({ error: 'Method not allowed' });
+  const { region, stakeUsd } = req.body || {};
+  const stake = Number(stakeUsd || 0);
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
   // - Region hints (very rough):
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+  let candidates = ['polygon', 'bnb', 'avalanche'];
+<<<<<<< HEAD
+<<<<<<< HEAD
+let candidates = ['polygon', 'bnb', 'avalanche'];
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+let candidates = ['polygon', 'bnb', 'avalanche'];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
 
 
   let candidates = ['polygon', 'bnb', 'avalanche'];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];
   const regionLc = (region |'').toString().toLowerCase();
   if (regionLc.includes('apac') |regionLc.includes('asia')) {
@@ -58,6 +212,18 @@ export default async function handler(
   }
   let candidates = ['polygonbnbavalanche'];
   if (stake > 5000) candidates = ['arbitrumoptimismethereum'];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k] }))res;
     .status(200).json({ recommendation: ranked[0], alternatives: ranked && ranked.slice(1) })const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k] }))res;
     .status(200).json({ recommendation: ranked[0], alternatives: ranked && ranked.slice(1) })const regionLc = (region || '').toString().toLowerCase()if (regionLc && regionLc.includes('apac') || regionLc && regionLc.includes('asia')) {candidates = stake > 5000 ? ['arbitrumoptimismavalanche'] : ['bnbavalanchepolygon'];
@@ -72,10 +238,25 @@ function handler() {if (return res.status (405).json ({ error: 'Method not allow
  * handler - Function description;
  */;
 function handler() {if (return res.status (405).json ({ error: 'Method not allowed' })) {$2;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k] }));
   res
     .status(200)
     .json({ recommendation: ranked[0], alternatives: ranked && ranked.slice(1) });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const regionLc = (region || '').toString().toLowerCase();
   if (regionLc && regionLc.includes('apac') || regionLc && regionLc.includes('asia')) {
     candidates = stake > 5000 ? ['arbitrumoptimismavalanche'] : ['bnbavalanchepolygon']
@@ -133,3 +314,46 @@ if (||) {$2;
   const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k] }));
   res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1) });
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    .json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
+  res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+  const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k] }));
+  res
+    .status(200)
+
+
+    .json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
+  res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+    .json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
+  res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

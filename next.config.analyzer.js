@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 const { BundleAnalyzerPlugin }  = require('webpack-bundle-analyzer')module.exports = {webpack: (config, { isServer }) => {if (!isServer) {config.plugins.push(new BundleAnalyzerPlugin({analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html';
         }))}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
@@ -7,6 +12,10 @@ module.exports = {
     if (!isServer) {
       config.plugins.push(
         new BundleAnalyzerPlugin({
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           analyzerMode: 'static',
           openAnalyzer: false,
           reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'
@@ -20,6 +29,13 @@ module.exports = {
 }// Next.config.analyzer utility;
 export const Next.config.analyzer = () => {// Implementation here;
   return null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 ursor/automate-test-improve-and-merge-code-646c;
 }}}}}
 }}}
@@ -65,6 +81,7 @@ origin/automation-improvements-final;
 },const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config}}}
 
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 
 ,;
@@ -79,6 +96,11 @@ origin/automation-improvements-final;
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -87,6 +109,10 @@ origin/automation-improvements-final;
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 ;}
 }
@@ -125,7 +151,14 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && m
 ,;
 ;};
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -134,8 +167,16 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && m
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 ;}
 }
@@ -198,6 +239,11 @@ module.exports = {
     if ( {
       config.plugins.push(
         new BundleAnalyzerPlugin({
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
@@ -205,6 +251,10 @@ module.exports = {
     if (!isServer) {
       config.plugins.push(
         new BundleAnalyzerPlugin({
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           analyzerMode: 'static',
           openAnalyzer: false,
           reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'
@@ -223,7 +273,13 @@ module.exports = {
           "openAnalyzer": false,
           "reportFilename": isServer ? '../analyze/server.html' : './analyze/client.html'})
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    return config}},
+=======
     return config}}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config}}};
     return config}}};
@@ -231,31 +287,79 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config}}};
     return config}}};
+<<<<<<< HEAD
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+    return config}},
+=======
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config}}};
     return config}}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && module.exports = { webpack: (config,{ isServer }) => { if ( { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html'}) )} return config) { { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html'}) )} return config}}};
     return config}}};
+<<<<<<< HEAD
+<<<<<<< HEAD
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};    return config}},
+=======
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};    return config}},
+    return config}},
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config}}};
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config}}};    return config}},
     return config}}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config}}};
     return config}}};
+<<<<<<< HEAD
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+<<<<<<< HEAD
+};
+,
+};
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+    return config}}};
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+    return config}},
+};
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && module.exports = { webpack: (config,{ isServer }) => { if ( { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config) { { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config}},};
+    return config}}};
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};    return config}},
+};
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+    return config}}};
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config}}};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 };
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 };
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 };
@@ -265,6 +369,11 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 
 };
 ,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ursor/fix-lint-push-and-merge-to-main-ae4e
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -275,7 +384,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 };
 ,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},}
+=======
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config}}}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return config}}
 }
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html'}) )} return config}}}
@@ -299,6 +413,14 @@ const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer')module.e
 const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer'); module.exports = { webpack: (config, { is_server }) => { if ()} return config) { { config.plugins.push ( new BundleAnalyzerPlugin ({ analyzer_mode: 'static', open_analyzer: false, report_filename: is_server ? '../analyze / server.html' : './analyze / client.html' }) )} return config}} }) {
   $2
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+},;
+,;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 ;
 ,;

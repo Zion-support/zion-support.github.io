@@ -1,5 +1,24 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 
 ;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       name: 'Test User'
     }
   }
@@ -12,20 +31,73 @@ export function assertTalentOrClientForOffer(
   offer: { clientId: string; talentSlug: string },
 
 
+<<<<<<< HEAD
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
   if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u;
   if (
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Marketplace authentication utilities
 export interface MarketplaceUser {
   id: string;
@@ -58,16 +130,59 @@ export interface AuthContext {
   permissions: string[];
   sessionId?: string;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  err && err.statusCode = 403;
+  throw err;export function requireAuth(req: any): User {
+
+  const user = getUserFromRequest(req);
+  if (!user) {
+
+    throw new Error('Authentication required')
+
+  }
+  return user;
+}
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function getUserFromRequest (req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session;
   const auth_header = req.headers.authorization;
   if () {) {
   $2
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
     return null;
   }
@@ -151,7 +266,50 @@ if ( {) {$2;
 }throw new Error ('Authentication required')}
   return user;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  err.statusCode = 403;
+  throw err;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  err.statusCode = 403;
+  throw err;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     throw new Error ('Authentication required')}
   return user;
 }err.statusCode = 403;
   throw err;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  err.statusCode = 403;
+  throw err;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

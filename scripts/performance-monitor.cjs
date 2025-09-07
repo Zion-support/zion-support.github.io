@@ -1,5 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -58,15 +71,79 @@ const { execSync } = require('child_process')
     if (this.metrics.performanceScore < 60) grade = 'F'
     this.log(' Starting Performance Monitor', 'PERFORMANCE')
       this.log(`Error during performance monitoring: ${error.message}`, 'ERROR'`)
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 #!/usr/bin/env node
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+#!/usr/bin/env node
+
+
+main
+
+#!/usr/bin/env node
+
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+class PerformanceMonitor {
+  constructor() {
+    this.metrics = {
+      bundleSize: '0',
+      memoryUsage: '0',
+      timestamp: new Date().toISOString()
+    };
+  }
+
+  async run() {
+    console.log('📊 Running performance monitoring...');
+    console.log('✅ Performance monitoring completed');
+  }
+}
+
+const monitor = new PerformanceMonitor();
+monitor.run().catch(console.error);
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 console.log('⚡ Starting performance monitoring...');
 
 const performanceMetrics = {
@@ -193,6 +270,29 @@ if (performanceMetrics.recommendations.length > 0) {
 } else {
   console.log('\n✅ No performance issues detected');
 }
+<<<<<<< HEAD
+=======
+class PerformanceMonitor {
+  constructor() {
+    this.metrics = {
+      bundleSize: '0',
+      memoryUsage: '0',
+      timestamp: new Date().toISOString()
+    };
+  }
+
+  async run() {
+    console.log('📊 Running performance monitoring...');
+    console.log('✅ Performance monitoring completed');
+  }
+}
+
+const monitor = new PerformanceMonitor();
+monitor.run().catch(console.error);
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 // Save report
 fs.writeFileSync('performance-metrics.json', JSON.stringify(performanceMetrics, null, 2));
@@ -202,6 +302,20 @@ console.log('\n📄 Performance report saved to performance-metrics.json');
 setTimeout(() => {
   process.exit(0);
 }, 1000);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+=======
+ursor/automate-test-improve-and-merge-code-59d5
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+console.log('⚡ Performance Monitor');
+console.log('=====================');
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 =======
 class PerformanceMonitor {
@@ -433,4 +547,15 @@ if (require.main === module) {
 }
 
 module.exports = PerformanceMonitor;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

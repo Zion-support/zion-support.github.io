@@ -35,6 +35,21 @@ export default defineConfig({
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react"],
           router: ["react-router-dom"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+        },
+=======
+        }
+      }
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+      },
+    },
+=======
         }
       }
 <<<<<<< HEAD
@@ -57,6 +72,7 @@ export default defineConfig({
 });
 =======
     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']

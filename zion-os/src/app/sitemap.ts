@@ -13,6 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
   const allRoutes  = [;...routes,...aiServices,...quantumServices,...networkServices,...complianceServices];
   return allRoutes.map((route) => ({url: `${baseUrl}${route}`,lastModified: new Date()changeFrequency: 'weekly';const base_url = 'https: //ziontechgroup.com';
   const allRoutes = [;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     ...routes,;
     ...aiServices,;
@@ -25,6 +29,11 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
     lastModified: new Date();
     changeFrequency: 'weekly';
 export default function sitemap (): MetadataRoute.Sitemap {
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const base_url = 'https: //ziontechgroup.com';
   const routes = [;
     '','/about / services / ai - services / quantum - services / cybersecurity / enterprise - it / research - development / space - tech','/case - studies / news / events / webinars / white - papers / docs / contact / privacy','/terms / cookies / accessibility / multiverse / launch / admin / instances / admin / os - deploy'];
@@ -55,8 +64,17 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
     '/ai-compliance-automation/ai-computer-vision-platform/ai-consciousness-evolution-2025/ai-consciousness-evolution-2029/ai-consciousness-evolution-platform/ai-consciousness-evolution/ai-consciousness-simulation-platform/ai-consciousness-simulation';
     '/ai-consciousness-simulator/ai-content-creation-revolution/ai-content-creation/ai-content-factory/ai-content-generation-automation-2033/ai-content-generation-pro-2029/ai-content-generator/ai-content-marketing-automation';
     '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant';
+<<<<<<< HEAD
+<<<<<<< HEAD
     '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub';
     '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
+=======
+    '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub';    '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub';
+    '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const quantumServices = [;
     '/quantum-neural-network-platform/quantum-cloud-infrastructure/quantum-financial-trading/quantum-network-optimization/quantum-private-network-solutions/quantum-private-network-solutions-2026'];
   const networkServices = [;
@@ -72,8 +90,17 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
   return allRoutes.map((route) => ({url: `${baseUrl}${route}`;    lastModified: new Date()changeFrequency: 'weekly';
     priority: route === '' ? 1 : 0.8}))}
   return allRoutes.map((route) => ({;
+<<<<<<< HEAD
+<<<<<<< HEAD
     url: `${baseUrl}${route}`;
     lastModified: new Date();
+=======
+    url: `${baseUrl}${route}`;    lastModified: new Date();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    url: `${baseUrl}${route}`;
+    lastModified: new Date();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     changeFrequency: 'weekly';
     priority: route === '' ? 1 : 0.8}));
 }

@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared/types.js';
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY |process.env.OPENAI_API_TOKEN;
 async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {if (!OPENAI_API_KEY) return null;
   const system  = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key \"milestones\": [...]`;const user = {scopeOfWork: input.scopeOfWork;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const user = {;
     scopeOfWork: input.scopeOfWork;
     startDateIso: input.startDateIso;
@@ -29,8 +36,18 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
     return milestones.map((m) => ({title: String(m.title).slice(0, 120)description: String(m.description |"").slice(0, 2000)title: String(m.title).slice(0, 120),description: String(m.description |"").slice(0, 2000)suggestedDueDateIso: String(m.suggestedDueDateIso)estimatedEffortHours: Math.max(1, parseInt(String(m.estimatedEffortHours), 10) |8)tags: ["AI Suggested"];
     }))} catch {return null;
     return milestones.map((m) => ({;
+<<<<<<< HEAD
+<<<<<<< HEAD
       title: String(m.title).slice(0, 120);
       description: String(m.description |"").slice(0, 2000);
+=======
+      title: String(m.title).slice(0, 120),
+  description: String(m.description |"").slice(0, 2000);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      title: String(m.title).slice(0, 120);
+      description: String(m.description |"").slice(0, 2000);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       suggestedDueDateIso: String(m.suggestedDueDateIso);
       estimatedEffortHours: Math.max(1, parseInt(String(m.estimatedEffortHours), 10) |8);
       tags: ["AI Suggested"];
@@ -54,6 +71,9 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
       description;
       suggestedDueDateIso: due.toISOString()estimatedEffortHours;
       tags: ["AI Suggested"];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     })phaseStart = due;
   }
   return milestones;
@@ -77,6 +97,7 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
 }export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {const ai = await callOpenAI(input)const milestones  = ai && ai.length ? ai : createHeuristicPlan(input)const milestones = ai && ai.length ? ai : createHeuristicPlan(input)import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem   } from '../shared / types.js';
     })const milestones = ai && ai.length ? ai : createHeuristicPlan(input)const milestones = ai && ai.length ? ai : createHeuristicPlan(input)const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,async function callOpenAI (input: MilestoneSuggestionInput): Promise < SuggestedMilestoneItem[] | null> {// Check condition;
 if (return null, ) {$2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     });
     phaseStart = due;
   }
@@ -176,6 +197,12 @@ export async function generateMilestones(input: MilestoneSuggestionInput): Promi
 
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared / types.js';,
+<<<<<<< HEAD
+=======
+    });  const milestones = ai && ai.length ? ai : createHeuristicPlan(input);  const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,
 async function callOpenAI (input: MilestoneSuggestionInput): Promise < SuggestedMilestoneItem[] | null> {
   // Check condition
@@ -228,6 +255,10 @@ if (return null, ) {$2;
     }))} catch {return null;
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 function createHeuristicPlan (input: MilestoneSuggestionInput): SuggestedMilestoneItem[] {
   const start = new Date (input.startDateIso),
   const end = new Date (input.endDateIso),
@@ -259,6 +290,13 @@ function createHeuristicPlan (input: MilestoneSuggestionInput): SuggestedMilesto
       tags: ["AI Suggested"];
     }),
     phase_start = due;
+<<<<<<< HEAD
+=======
+  return milestones;
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   return milestones;
 }

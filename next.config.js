@@ -1,5 +1,4 @@
-
-// Memory optimization settings
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   eslint: {

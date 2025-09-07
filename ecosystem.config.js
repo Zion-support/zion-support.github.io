@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 export default {apps: [;
     {name: 'bolt-zion-app',export default {apps: [;
     {name: 'bolt-zion-app',ursor/fix-website-loading-errors-and-merge-6662;
@@ -15,6 +17,7 @@ module.exports = {module && module.exports = {apps:[;module.exports = {apps:[;ur
       },error_file:'./logs/code-quality-error && error.log',out_file:'./logs/code-quality-out && out.log',log_file:'./logs/code-quality-combined && combined.log',error_file:'./logs/code-quality-error.log',out_file:'./logs/code-quality-out.log',log_file:'./logs/code-quality-combined.log',error_file:'./logs/code-quality-error && error.log',out_file:'./logs/code-quality-out && out.log',log_file:'./logs/code-quality-combined && combined.log',time:true;
     },{name:'performance-optimizer',script:'automation/performance-optimizer && optimizer.cjs',script:'automation/performance-optimizer.cjs',script:'automation/performance-optimizer && optimizer.cjs',instances:1,autorestart:true,watch:false,max_memory_restart:'512M',env:{NODE_ENV:'production';
       },error_file:'./logs/performance-error && error.log',out_file:'./logs/performance-out && out.log',log_file:'./logs/performance-combined && combined.log',error_file:'./logs/performance-error.log',out_file:'./logs/performance-out.log',log_file:'./logs/performance-combined.log',module.exports = {apps:[;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -154,7 +157,11 @@ module.exports = {
     {
       name: 'automation-dashboard',
       script: 'automation/automation-dashboard.cjs',
+<<<<<<< HEAD
+      args: 'start',
+=======
       args: 'start'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
     env_production: {NODE_ENV: "production";
       PORT: 3000;
@@ -623,6 +630,11 @@ export default {
       name: 'code-quality-monitor',
       script: 'automation/code-quality-monitor.cjs',
       instances: 1,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       log_file: 'logs/pm2/preview.log',
       error_file: 'logs/pm2/preview-error.log',
       out_file: 'logs/pm2/preview-out.log'
@@ -631,17 +643,29 @@ export default {
       name: 'auto-fix',
       script: 'node',
       args: 'scripts/pm2/auto-fix.js',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       cron_restart: '0 */6 * * *',
+<<<<<<< HEAD
+      cron_restart: '0 */6 * * *',
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production'
+<<<<<<< HEAD
+=======
         NODE_ENV: 'production'
       },
       log_file: 'logs/pm2/auto-fix.log',
       error_file: 'logs/pm2/auto-fix-error.log',
+<<<<<<< HEAD
+      out_file: 'logs/pm2/auto-fix-out.log',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
       out_file: 'logs/pm2/auto-fix-out.log'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     },
     {
       name: 'healthcheck',
@@ -1110,6 +1134,11 @@ module.exports = {;
     }
   ];
 },;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -1136,7 +1165,12 @@ export default {
       },
       log_file: 'logs / pm2 / preview.log',
       error_file: 'logs / pm2 / preview - error.log',
+<<<<<<< HEAD
+      out_file: 'logs / pm2 / preview - out.log',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
       out_file: 'logs / pm2 / preview - out.log'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     },
     {
       name: 'performance-optimizer',

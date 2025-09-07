@@ -1,4 +1,58 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import { agendaItems } from '../../../../data/expo/agenda';
+
+import { agendaItems } from '../../../../data/expo/agenda';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query as { id?: string };
+  const item = null;
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+) {
+  const { id } = req.query as { id?: string }
+) {;
+  const { id } = req.query as { id?: string };
+  const item = agendaItems.find(i => i.id === id);
+  if (!item) return res.status(404).send('Not found');
+  const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00:00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
+  res.setHeader('Content-Type', 'text/plain');
+
+<<<<<<< HEAD
+  res.status(200).send(transcript);export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query as { id?: string }
+  res.status(200).send(transcript);export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const { id } = req.query as { id?: string };
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { agendaItems  } from '../../../../data/expo/agenda';
 export default async function handler() {const { id } = req.query as { id?: string }const item = null;
 export default async function handler() {const { id } = req.query as { id?: string }
@@ -15,10 +69,32 @@ function handler() {const { id } = req.query as { id?: string }
   const item = agenda_items.find (index => i.id === id)if (return res.status (404).send ('Not found')) {$2;
 
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const item = agendaItems.find(i => i.id === id);
   if (!item) return res.status(404).send('Not found');
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
@@ -26,6 +102,32 @@ export default async function handler(
 
   res.status(200).send(transcript)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   try {
   const { id } = req && req.query as { id?: string };
   const item = agendaItems && agendaItems.find(i => i && i.id === id);
@@ -42,6 +144,34 @@ export default async function handler(
   res && res.status(200).send(transcript)
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { agenda_items } from '../../../../data / expo / agenda';
 ;
 export default async /**
@@ -67,12 +197,81 @@ function handler() {const { id } = req.query as { id?: string }
 }}res.status(200).send(transcript)res.status(200).send(transcript)}
   res.set_header ('Content - Typetext / plain'),
   res.status (200).send (transcript);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+}
+
+
+
+<<<<<<< HEAD
+}
+}
+
+}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 }
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  res.status(200).send(transcript);
+  res.status(200).send(transcript)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 }
 
@@ -82,4 +281,28 @@ function handler() {const { id } = req.query as { id?: string }
 }
 
 
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  res.status(200).send(transcript);
+  res.status(200).send(transcript)
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  res.status(200).send(transcript);
+  res.status(200).send(transcript)
+}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -41,8 +41,21 @@ ursor/automate-test-improve-and-merge-code-646c;
   test('applies correct styling', () => {'}
     render(<AccessibilityManager />);
   });
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 });
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+});
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+});
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import _React from 'react'
 ''
 import '@testing-library/jest-dom';'
@@ -80,3 +93,22 @@ describe('AccessibilityManager', () => {
 });
 });
 });
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import _React from 'react'
+'
+import '@testing-library/jest-dom';
+import AccessibilityManager from '../components/AccessibilityManager';
+describe('AccessibilityManager', () => {'
+  test('renders without crashing', () => {'
+    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();
+  test('displays correct content', () => {'
+  test('handles user interactions', () => {'
+  test('applies correct styling', () => {'
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

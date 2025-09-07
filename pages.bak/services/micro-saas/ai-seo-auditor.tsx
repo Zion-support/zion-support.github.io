@@ -11,9 +11,19 @@ import React from 'react';
 interface AiseoauditorProps {
   // Add props here as needed
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import React from 'react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import React from 'react';
+=======
 
 
 interface AiseoauditorProps  {// Add props here as needed;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import * as React from 'react';
 interface AiseoauditorProps  {// Add props here as needed;
 }export default function Aiseoauditor() {export default function AISEOAuditor() { return ( <Article title=\"AI SEO Auditor\" subtitle=\"Automated technical SEO and content insights with prioritized fixes\" price=\"from $199/mo\" bullets={[\'Crawls site maps and pages; flags Core Web Vitals and indexability issues\',\'NLP-driven content gap analysis vs. competitors with keyword clusters\',\'One-click Github PRs for meta,schema,and sitemap fixes\',\'Weekly executive report and anomaly alerts via Slack/Email\' ]} links={{ \"website\": \'https: contact: \'mailto:kleber@ziontechgroup.com\' }} /> ) } function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }
@@ -28,10 +38,21 @@ export default function Aiseoauditor({}: AiseoauditorProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+}
+}
+export default function Aiseoauditor({ }: AiseoauditorProps) {
+=======
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 }
 }
 }
 export default function Aiseoauditor({}: AiseoauditorProps) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,6 +79,9 @@ export default function Aiseoauditor() {return (<div>;
       <h1>Aiseoauditor</h1>;
       <p>This component is currently under development.</p>;
     </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   )}
 }}
 }export default function Aiseoauditor() {ursor/automate-test-improve-and-merge-code-646c;
@@ -94,7 +118,14 @@ export default function Aiseoauditor(): any ({}: AiseoauditorProps) {return (<di
 }
 }
   )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   );
 }
 }
 }
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

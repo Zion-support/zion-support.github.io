@@ -10,6 +10,10 @@ export default function AboutPage() {return (<div className="min-h-screen bg-whi
 export default function AboutPage() {;
   return (;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <div className="min-h-screen bg-white">;
 export default /**
  * AboutPage - Function description
@@ -19,6 +23,7 @@ function AboutPage() {
     <div className="min - h-screen bg - white">;
 export default function AboutPage() {return (;
     <div className="min-h-screen bg-white">;
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - blue - 600 to - indigo - 700 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -26,11 +31,31 @@ export default function AboutPage() {return (;
             About Zion Tech Group;
           </h1>;
           <p className="text - xl md:text - 2xl text - blue - 100 max - w-3xl mx - auto">;
+=======
+    <div className="min-h-screen bg-white">;    <div className="min-h-screen bg-white">;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+      {/* Hero Section */}
+      <section className="bg - gradient - to - r from - blue - 600 to - indigo - 700 text - white py - 20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+          <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+            About Zion Tech Group;
+          </h1>;
+<<<<<<< HEAD
+          <p className="text - xl md:text - 2xl text - blue - 100 max - w-3xl mx-auto">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          <p className="text - xl md:text - 2xl text - blue - 100 max - w-3xl mx - auto">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             Pioneering the future of AI - powered technology solutions and autonomous business operations.;
           </p>;
         </div>;
       </section>;
       {/* Company Overview */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
@@ -81,6 +106,13 @@ export default function AboutPage() {return (;
                   <div>;
                     <h3 className="font - semibold text - gray - 900">Customer Success</h3>;
                     <p className="text - gray - 600">Dedicated support and success teams</p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py-20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items-center">;
@@ -129,8 +161,19 @@ export default function AboutPage() {return (;
                     </svg>;
                   </div>;
                   <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    <h3 className="font - semibold text - gray-900">Customer Success</h3>;
+                    <p className="text - gray-600">Dedicated support and success teams</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                     <h3 className="font - semibold text - gray - 900">Customer Success</h3>;
                     <p className="text - gray - 600">Dedicated support and success teams</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <h3 className="font - semibold text - gray - 900">Customer Success</h3>;
+                    <p className="text - gray - 600">Dedicated support and success teams</p>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                 </div>;
               </div>;
@@ -139,6 +182,10 @@ export default function AboutPage() {return (;
         </div>;
       </section>;
       {/* Mission & Values */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center mb - 16">;
@@ -180,6 +227,13 @@ export default function AboutPage() {return (;
               </div>;
               <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Collaboration</h3>;
               <p className="text - gray - 600">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - gray-50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
@@ -219,8 +273,19 @@ export default function AboutPage() {return (;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M17 20h5v - 2a3 3 0 00 - 5.356 - 1.857M17 20H7m10 0v - 2c0-.656-.126 - 1.283-.356 - 1.857M7 20H2v - 2a3 3 0 015.356 - 1.857M7 20v - 2c0-.656.126 - 1.283.356 - 1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11 - 6 0 3 3 0 016 0zm6 3a2 2 0 11 - 4 0 2 2 0 014 0zM7 10a2 2 0 11 - 4 0 2 2 0 014 0z" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <h3 className="text - xl font - semibold text - gray - 900 mb-4">Collaboration</h3>;
+              <p className="text - gray-600">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Collaboration</h3>;
               <p className="text - gray - 600">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Collaboration</h3>;
+              <p className="text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Working together with clients, partners, and communities to create lasting impact.;
               </p>;
             </div>;
@@ -228,6 +293,10 @@ export default function AboutPage() {return (;
         </div>;
       </section>;
       {/* Company Stats */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - white">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center mb - 16">;
@@ -251,6 +320,13 @@ export default function AboutPage() {return (;
             <div>;
               <div className="text - 4xl font - bold text - blue - 600 mb - 2">$50M+</div>;
               <div className="text - gray - 600">Revenue Generated</div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg-white">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
@@ -272,13 +348,28 @@ export default function AboutPage() {return (;
               <div className="text - gray - 600">Countries Served</div>;
             </div>;
             <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <div className="text - 4xl font - bold text - blue - 600 mb-2">$50M+</div>;
+              <div className="text - gray-600">Revenue Generated</div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <div className="text - 4xl font - bold text - blue - 600 mb - 2">$50M+</div>;
               <div className="text - gray - 600">Revenue Generated</div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <div className="text - 4xl font - bold text - blue - 600 mb - 2">$50M+</div>;
+              <div className="text - gray - 600">Revenue Generated</div>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Leadership Team */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center mb - 16">;
@@ -311,6 +402,13 @@ export default function AboutPage() {return (;
               <h3 className="text - xl font - semibold text - gray - 900 text - center mb - 2">Dr. James Kim</h3>;
               <p className="text - blue - 600 text - center mb - 4">Chief Research Officer</p>;
               <p className="text - gray - 600 text - center">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - gray-50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
@@ -338,11 +436,26 @@ export default function AboutPage() {return (;
                 Quantum computing expert with 15+ years in advanced technology development;
               </p>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <div className="bg - white p - 8 rounded - xl shadow-sm">;
+              <div className="w - 24 h - 24 bg - gray - 200 rounded - full mx - auto mb-6"></div>;
+              <h3 className="text - xl font - semibold text - gray - 900 text - center mb-2">Dr. James Kim</h3>;
+              <p className="text - blue - 600 text - center mb-4">Chief Research Officer</p>;
+              <p className="text - gray - 600 text-center">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - white p - 8 rounded - xl shadow - sm">;
               <div className="w - 24 h - 24 bg - gray - 200 rounded - full mx - auto mb - 6"></div>;
               <h3 className="text - xl font - semibold text - gray - 900 text - center mb - 2">Dr. James Kim</h3>;
               <p className="text - blue - 600 text - center mb - 4">Chief Research Officer</p>;
               <p className="text - gray - 600 text - center">;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Leading researcher in autonomous systems and AI consciousness evolution;
               </p>;
             </div>;
@@ -350,6 +463,10 @@ export default function AboutPage() {return (;
         </div>;
       </section>;
       {/* CTA Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - blue - 600 text - white">;
         <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
           <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
@@ -363,6 +480,13 @@ export default function AboutPage() {return (;
               Get in Touch;
             </a>;
             <a href="/careers" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - blue - 600 text-white">;
         <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
           <h2 className="text - 3xl md:text - 4xl font - bold mb-6">;
@@ -375,7 +499,16 @@ export default function AboutPage() {return (;
             <a href="/contact" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - gray - 100 transition - colors">;
               Get in Touch;
             </a>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <a href="/careers" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - blue - 600 transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
             <a href="/careers" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <a href="/careers" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               View Careers;
             </a>;
           </div>;

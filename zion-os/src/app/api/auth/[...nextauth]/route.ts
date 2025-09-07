@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ;
 import NextAuth from './next - auth';,import CredentialsProvider from './next - auth / providers / credentials';,import { PrismaAdapter  } from '@auth / prisma - adapter';,import { prisma  } from '@/lib / prisma';,import bcrypt from './bcryptjs';,const handler = NextAuth ({adapter: PrismaAdapter (prisma),providers: [;
@@ -5,6 +9,11 @@ import NextAuth from './next - auth';,import CredentialsProvider from './next - 
       },async authorize (credentials) {// Check condition;
 if ( {) {$2;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import NextAuth from './next - auth';,
 import CredentialsProvider from './next - auth / providers / credentials';,
 import { PrismaAdapter  } from '@auth / prisma - adapter';,
@@ -12,6 +21,10 @@ import { prisma  } from '@/lib / prisma';,
 import bcrypt from './bcryptjs';,
 const handler = NextAuth ({
   adapter: PrismaAdapter (prisma),
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 import NextAuth from "next-auth",;
 import CredentialsProvider from "next-auth/providers/credentials",;
@@ -21,6 +34,11 @@ import bcrypt from "bcryptjs",;
 const handler = NextAuth({;
   adapter: PrismaAdapter(prisma),;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   providers: [;
     CredentialsProvider ({
       name: "credentials",
@@ -67,7 +85,14 @@ import NextAuth from "next-auth",import CredentialsProvider from "next-auth/prov
     CredentialsProvider({name: "credentials";
       credentials: {email: { label: "Email", type: "email" }
       return session;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   providers: [;
     CredentialsProvider({;
       name: "credentials";
@@ -99,6 +124,10 @@ import NextAuth from "next-auth",import CredentialsProvider from "next-auth/prov
     async session({ session, token }) {if (token) {session.user.id = token.sub!;
         session.user.role = token.role;
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return session;
 
     }},;
@@ -110,3 +139,9 @@ export { handler as GET, handler as POST };
 
 
 
+<<<<<<< HEAD
+=======
+      return session;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

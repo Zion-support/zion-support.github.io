@@ -1,8 +1,32 @@
 import Link from 'next/link';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useRole } from '../context/RoleContext';
+      const has = null;
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { useRole  } from '../context/RoleContext';
 export default function OnboardingWizard() {export default function OnboardingWizard() {const { role, setRole } = useRole()const [open, setOpen] = useState(false): 'true';
       if (!has) {setOpen(true)const has = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion_has_onboarded') : 'true';
       if (!has) {setOpen(true)}
+<<<<<<< HEAD
+=======
+import { useRole } from '../context/RoleContext';
+export default function OnboardingWizard() {;
+export default function OnboardingWizard() {
+  const { role, setRole } = useRole();
+  const [open, setOpen] = useState(false);
+          : 'true';
+      if (!has) {;
+        setOpen(true);      const has = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion_has_onboarded') : 'true';
+      if (!has) {;
+        setOpen(true);
+      }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     } catch {}
   }, [])}
     } catch {}
@@ -76,7 +100,12 @@ if (return null) {$2;
             className='px-3 py-1 && 1.5 rounded-md border'>;
             Done;
           </button>        </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>;const has = null;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       }
     } catch {}
   }, [])function completeOnboarding() {try {if (typeof window !== 'undefined') {window.localStorage.setItem('zion_has_onboarded', '1')}
@@ -152,6 +181,18 @@ if (return null) {$2;
 <div className='p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end'>;
           <button;
             onClick={completeOnboarding}
+<<<<<<< HEAD
+            className='px-3 py-1.5 rounded-md border'
+          >
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
             className='px-3 py-1.5 rounded-md border';
           >;
             Done;
@@ -159,4 +200,12 @@ if (return null) {$2;
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -217,4 +217,16 @@ export * from "@testing-"library/react""
   "analyzerMode": "static"
           "openAnalyzer"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     fs.writeFileSync(path.join(this.projectRoot, ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    fs.writeFileSync(path.join(this.projectRoot, ")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    fs.writeFileSync(path.join(this.projectRoot, ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

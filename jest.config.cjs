@@ -1,7 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  dir: './',
+})
+
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom',
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 module.exports = {
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+module.exports = {
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
@@ -15,6 +35,10 @@ module.exports = {
       ]
     }]
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   testMatch: [
     '<rootDir>/__tests__/**/*.(js|jsx|ts|tsx)',
     '<rootDir>/**/*.(test|spec).(js|jsx|ts|tsx)'
@@ -146,6 +170,15 @@ module.exports = {
   }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = createJestConfig(customJestConfig)
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
 =======
 module.exports = {
   preset: "ts-jest",
@@ -188,3 +221,4 @@ module.exports = {
   ]
 };
 >>>>>>> origin/chore/fix-automation-and-build
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

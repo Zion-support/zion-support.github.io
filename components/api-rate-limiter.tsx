@@ -1,3 +1,131 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button';
+import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  Shield
+  Zap
+  BarChart3
+  Code
+  ArrowRight
+  Copy
+  RefreshCw
+  CheckCircle
+  AlertTriangle;
+} from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+export default function APIRateLimiterPage() {
+  Shield,
+  Zap,
+  BarChart3,
+  Code,
+  ArrowRight,
+  Copy,
+  RefreshCw,
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+  CheckCircle,;
+  AlertTriangle,;
+} from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+
+import {
+import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+
+export default function APIRateLimiterPage() {;
+} from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+
+export default function APIRateLimiterPage() {;
+  const [endpoint, setEndpoint] = useState('');
+  const [rateLimit, setRateLimit] = useState('100');
+  const [timeWindow, setTimeWindow] = useState('1m');
+  const [testResults, setTestResults] = useState<any[]>([]),
+  const [isTesting, setIsTesting] = useState(false);
+  const [apiKey, setApiKey] = useState('');
+<<<<<<< HEAD
+  const timeWindows = null;
+  ];
+  const rateLimits = [
+    { value: '10', label: '10 requests', description: 'Very strict' },
+    { value: '100', label: '100 requests', description: 'Standard' },
+    { value: '1000', label: '1000 requests', description: 'High volume' },
+{ value: '10000', label: '10000 requests', description: 'Enterprise' },
+  ];
+  const generateApiKey = () => {
+    const key =
+      'zt_' +
+      Math.random().toString(36).substr(2, 9) +
+      '_' +
+      Date.now().toString(36);
+    setApiKey(key);
+  };
+
+  const testRateLimiting = async () => {
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+setIsTesting(true);
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+    { value: '10', label: '10 requests', description: 'Very strict' },
+    { value: '100', label: '100 requests', description: 'Standard' },
+    { value: '1000', label: '1000 requests', description: 'High volume' },
+
+    { value: '10000', label: '10000 requests', description: 'Enterprise' }
+  ];
+
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+    { value: '10000', label: '10000 requests', description: 'Enterprise' }
+  ];
+
+  const generateApiKey = () => {
+    const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
+    setApiKey(key)
+  }
+  const timeWindows = [;
+    { value: '1s', label: '1 Second', description: 'Per second rate limiting' },;
+    { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' },;
+    { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' },;
+    { value: '1d', label: '1 Day', description: 'Per day rate limiting' },  ];    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
+  ];
+
+    setIsTesting(true);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    setTestResults([]);
+    const limit = parseInt(rateLimit);
+    const results = [];
+      await new Promise(resolve => setTimeout(resolve, 100));
+      const isAllowed = i <= limit;
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Shield;
   Zap;
@@ -36,10 +164,30 @@ export default function APIRateLimiterPage() {const [endpoint, setEndpoint] = us
       Date.now().toString(36)setApiKey(key)}const testRateLimiting = async () => {if (!endpoint.trim() || !rateLimit || !timeWindow) return;
 setIsTesting(true)setTestResults([])const limit = parseInt(rateLimit)const results = [];
       await new Promise(resolve => setTimeout(resolve, 100))const isAllowed = i <= limit;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       const status = isAllowed ? 'success' : 'rate_limited';
       const statusCode = isAllowed ? 200 : 429;
       })if (!isAllowed) break;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    setTestResults(results);
+    setIsTesting(false);
+<<<<<<< HEAD
+  }
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);
+  };
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'success':
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     setTestResults(results)setIsTesting(false)'X-RateLimit-Limit': limit;
           'X-RateLimit-Remaining': Math && Math.max(0, limit - i)'X-RateLimit-Reset': new Date(Date && Date.now() + 60000).toISOString()}
       })}const testRateLimiting = async () => {if (!endpoint.trim() || !rateLimit || !timeWindow) return;
@@ -73,9 +221,193 @@ if (break) {$2;
     }
     setTestResults (results)setIsTesting (false)}const copyToClipboard = (text: string) =>: any {navigator.clipboard.write_text (text)}const getStatusIcon = (status: string) =>: any {switch (status) {return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }}
   const copyToClipboard = (text: string) => {navigator.clipboard.writeText(text)}const getStatusIcon = (status: string) => {switch (status) {case 'success':;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 return <CheckCircle className='w-5 h-5 text-green-400' />;
       case 'rate_limited':;
         return <AlertTriangle className='w-5 h-5 text-red-400' />;
+<<<<<<< HEAD
+      default:
+        return <AlertTriangle className='w-5 h-5 text-yellow-400' />;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          'X-RateLimit-Limit': limit;
+          'X-RateLimit-Remaining': Math && Math.max(0, limit - i);
+          'X-RateLimit-Reset': new Date(Date && Date.now() + 60000).toISOString();
+        }
+      })
+};
+  const testRateLimiting = async () => {
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+    setIsTesting(true);
+    setTestResults([]);
+    const limit = parseInt(rateLimit);
+;
+  const rate_limits = [;
+    { value: '10', label: '10 requests', description: 'Very strict' },
+    { value: '100', label: '100 requests', description: 'Standard' },
+    { value: '1000', label: '1000 requests', description: 'High volume' },
+    { value: '10000', label: '10000 requests', description: 'Enterprise' },
+  ];
+;
+  const generateApiKey = () =>: any {
+    const key =;
+      'zt_' +;
+      Math.random ().to_string (36).substr (2, 9) +;
+      '_' +;
+      Date.now ().to_string (36);
+    setApiKey (key);  }
+;
+  const testRateLimiting = async () => {
+    if (|| !rate_limit || !time_window) return) {
+  $2
+}
+    { value: '10000', label: '10000 requests', description: 'Enterprise' }
+  ];
+;
+  const generateApiKey = () =>: any {
+    const key = 'zt_' + Math.random ().to_string (36).substr (2, 9) + '_' + Date.now ().to_string (36);
+    setApiKey (key);
+  }
+;
+  const testRateLimiting = async () => {
+    if (|| !rate_limit || !time_window) return) {
+  $2
+}
+    setIsTesting (true);
+    setTestResults ([]);
+;
+    const limit = parse_int (rate_limit);
+    const results = [];
+;
+    // Simulate API calls to test rate limiting;
+    for (let index = 1; i <= limit + 5; i++) {
+      await new Promise (resolve => set_timeout (resolve, 100));
+;
+      const is_allowed = i <= limit;
+      const status = is_allowed ? 'success' : 'rate_limited';
+      const status_code = is_allowed ? 200 : 429;
+;
+      results.push ({
+        request: i,
+        timestamp: new Date ().toLocaleTimeString (),
+        status,
+        status_code,
+        response_time: Math.random () * 100 + 50,
+        headers: {
+          'X - RateLimit - Limit': limit,
+          'X - RateLimit - Remaining': Math.max (0, limit - i),
+          'X - RateLimit - Reset': new Date (Date.now () + 60000).toISOString (),
+        },
+      });
+;
+      // Check condition
+if (break) {
+  $2
+}
+    }
+    setTestResults (results);
+    setIsTesting (false);
+  }
+;
+  const copyToClipboard = (text: string) =>: any {
+    navigator.clipboard.write_text (text);  }    setIsTesting (true);
+    setTestResults ([]);
+;
+    const limit = parse_int (rate_limit);
+
+    const results = [];
+;
+    // Simulate API calls to test rate limiting;
+    for (let index = 1, i <= limit + 5, i++) {
+      await new Promise (resolve => set_timeout (resolve, 100));
+;
+      const is_allowed = i <= limit;
+      const status = is_allowed ? 'success' : 'rate_limited';
+      const status_code = is_allowed ? 200 : 429;
+;
+      results.push ({
+        request: i,
+        timestamp: new Date ().toLocaleTimeString (),
+        status;
+        status_code;
+        response_time: Math.random () * 100 + 50,
+        headers: {
+          'X - RateLimit - Limit': limit;
+          'X - RateLimit - Remaining': Math.max (0, limit - i);
+          'X - RateLimit - Reset': new Date (Date.now () + 60000).toISOString ();
+        }
+      });
+;
+      // Check condition
+if (break) {
+  $2
+}
+    }
+    setTestResults (results);
+    setIsTesting (false);
+  }
+;
+  const copyToClipboard = (text: string) =>: any {
+    navigator.clipboard.write_text (text);
+  }
+;
+  const getStatusIcon = (status: string) =>: any {
+    switch (status) {
+        return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    }
+
+  };
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'success':
+        return 'text-green-400';
+      case 'rate_limited':
+        return 'text-red-400'
+      default:
+<<<<<<< HEAD
+return 'text-yellow-400';
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  const getStatusColor = (status: string) => {;
+    switch (status) {;
+      case 'success':;
+        return 'text-green-400';
+=======
+return <CheckCircle className='w-5 h-5 text-green-400' />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      case 'rate_limited':;
+        return 'text-red-400',;
+      default:;
+        return 'text-yellow-400';    }        return 'text-yellow-400';
+    }
+  }
+        return 'text-yellow-400';    }        return 'text-yellow-400'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    }
+  }
+
+  };
+
+  return (
+<<<<<<< HEAD
+    <>
+      <Head>
+        <title>API Rate Limiter - Zion Tech Group</title>
+<meta
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    <>;
+      <Head>;
+        <title>API Rate Limiter - Zion Tech Group</title>;
+        <meta
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          name='description'
+          content='Protect your APIs with intelligent rate limiting. Prevent abuse, ensure fair usage, and maintain optimal performance for all users.'
+=======
       default:;
         return <AlertTriangle className='w-5 h-5 text-yellow-400' />;}}const getStatusColor = (status: string) => {switch (status) {case 'success':;
         return 'text-green-400';
@@ -101,11 +433,88 @@ return 'text-yellow-400';}
 <meta;
           name='description';
           content='Protect your APIs with intelligent rate limiting. Prevent abuse, ensure fair usage, and maintain optimal performance for all users.';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <meta;
           property='og:title';
           content='API Rate Limiter - Zion Tech Group';
         />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <meta
+          property='og:description'
+          content='Protect your APIs with intelligent rate limiting and prevent abuse.'
+<<<<<<< HEAD
+        />
+      </Head>
+      {/* Hero Section */}
+      <section className='pt-32 pb-20 bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='mb-8'>
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-sm font-medium mb-6'>
+              <Shield className='w-4 h-4 mr-2' />
+              API Protection & Security
+            </div>
+          </div>
+          <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
+            API Rate Limiter
+          </h1>
+          <p className='text-xl text-green-200 max-w-4xl mx-auto leading-relaxed'>
+            Protect your APIs from abuse with intelligent rate limiting. Ensure
+            fair usage, prevent DDoS attacks, and maintain optimal performance
+            for all your users with our enterprise-grade rate limiting solution.
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-sm font-medium mb-6">
+              <Shield className="w-4 h-4 mr-2" />
+              API Protection & Security
+            </div>
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+            API Rate Limiter
+          </h1>
+          <p className="text-xl text-green-200 max-w-4xl mx-auto leading-relaxed">
+            Protect your APIs from abuse with intelligent rate limiting. Ensure fair usage, prevent DDoS attacks, and maintain optimal performance for all your users with our enterprise-grade rate limiting solution.
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          </p>
+        </div>
+      </section>
+      {/* Rate Limiter Configuration */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+<section className='py-20 bg-gray-900'>
+        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+              Configure Your Rate Limiting
+            </h2>
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+              Set up intelligent rate limiting rules to protect your APIs and
+              ensure fair usage across all users.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {/* Configuration Form */}
+            <Card className='p-8 bg-gray-800 border border-gray-700'>
+              <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>
+                <Code className='w-6 h-6 mr-3 text-green-400' />
+                Rate Limiting Rules
+              </h3>
+              <div className='space-y-6'>
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <meta;
           property='og:description';
           content='Protect your APIs with intelligent rate limiting and prevent abuse.';
@@ -163,14 +572,58 @@ return 'text-yellow-400';}
                 Rate Limiting Rules;
               </h3>;
               <div className='space-y-6'>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {/* API Endpoint */}
                 <div>;
                   <label className='block text-sm font-medium text-gray-300 mb-2'>;
                     API Endpoint;
                   </label>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <input
+                    type='text'
+                    value={endpoint}
+<<<<<<< HEAD
+                    onChange={e => setEndpoint(e.target.value)}
+                    placeholder='e.g., /api/users, /api/data, /api/analytics'
+                    className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'
+                  />
+                </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
                   <input;
                     type='text';
                     value={endpoint}</h2>;
+=======
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Set up intelligent rate limiting rules to protect your APIs and ensure fair usage across all users.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Configuration Form */}
+            <Card className="p-8 bg-gray-800 border border-gray-700">
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                <Code className="w-6 h-6 mr-3 text-green-400" />
+                Rate Limiting Rules
+              </h3>
+              <div className="space-y-6">
+                    onChange={e => setEndpoint(e && e.target.value)}
+                    placeholder='e && e.g., /api/users, /api/data, /api/analytics';
+                    className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'                  />              Configure Your Rate Limiting;
+            </h2>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                  <input;
+                    type='text';
+                    value={endpoint}</h2>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
               Set up intelligent rate limiting rules to protect your APIs and ensure fair usage across all users.;
             </p>;
@@ -204,6 +657,10 @@ return 'text-yellow-400';}
                   ">;
                     API Endpoint;
                   </label>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <input;
                     type="text";
                     value={endpoint}onChange={e => setEndpoint(e.target.value)}
@@ -211,6 +668,15 @@ return 'text-yellow-400';}
                     className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent';
                   />;
                 </div>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <input
+                    type="text"
+                    value={endpoint}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {/* Rate Limit */}
                         key={limit.value}
                         on_click={() => setRateLimit (limit.value)}
@@ -219,6 +685,25 @@ return 'text-yellow-400';}
                             : 'border - gray - 600 hover:border - gray - 500 text - gray - 300 hover:text - white';
                         }`}
                 {/* Time Window */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <div>
+<label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Rate Limit
+=======
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Time Window
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                  </label>
+                  <div className='grid grid-cols-2 gap-3'>
+                    {rateLimits.map(limit => (
+                      <button
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <div>;
                   <label className='block text-sm font-medium text-gray-300 mb-3'>;
                     Time Window;
@@ -274,6 +759,10 @@ return 'text-yellow-400';}
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />;
                         key={limit.value}
                         onClick={() => setRateLimit(limit.value)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         className={`p-3 rounded-lg border text-left transition-all ${rateLimit === limit.value;
                             ? 'border-green-500 bg-green-500/10 text-green-300';
 <label className='block text-sm font-medium text-gray-300 mb-3'>;
@@ -281,6 +770,15 @@ return 'text-yellow-400';}
                   </label>;
                   <div className='grid grid-cols-2 gap-3'>;
                     {rateLimits.map(limit => (<button;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                        className={`p-3 rounded-lg border text-left transition-all ${
+                          rateLimit === limit.value
+                            ? 'border-green-500 bg-green-500/10 text-green-300'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         key={limit.value}
                         onClick={() => setRateLimit(limit.value)}
                         className={`p-3 rounded-lg border text-left transition-all ${rateLimit === limit.value;
@@ -294,12 +792,35 @@ return 'text-yellow-400';}
                         </div>;
                       </button>;
                 {/* Time Window */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <div>
+<label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Time Window
+                  </label>
+                  <div className='grid grid-cols-2 gap-3'>
+<<<<<<< HEAD
+                    {timeWindows.map(window => (
+                      <button
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <div>;
 <label className='block text-sm font-medium text-gray-300 mb-3'>;
                     Time Window;
                   </label>;
                   <div className='grid grid-cols-2 gap-3'>;
                     {timeWindows.map(window => (<button;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+                    {timeWindows.map(window => (
+                      <button
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         key={window.value}
                         onClick={() => setTimeWindow(window.value)}
                         className={`p-3 rounded-lg border text-left transition-all ${timeWindow === window.value;
@@ -321,6 +842,25 @@ return 'text-yellow-400';}
                     <input;
                       type='text';
                       value={apiKey}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      readOnly
+                      placeholder='Generate an API key to test rate limiting'
+                      className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400'
+                    />
+                    <Button
+                      onClick={generateApiKey}
+<<<<<<< HEAD
+                      className='px-6 py-3 bg-green-600 hover:bg-green-700 text-white'
+                    >
+                      Generate
+                    </Button>
+                  </div>
+                </div>
+                <Button
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       readOnly;
                       placeholder='Generate an API key to test rate limiting';
                       className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400';
@@ -344,6 +884,7 @@ return 'text-yellow-400';}
                   </div>;
                 </div>;
                 <Button;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   onClick={testRateLimiting}
 disabled={!endpoint.trim() || !rateLimit || !timeWindow || isTesting;
                   }
@@ -358,6 +899,58 @@ disabled={!endpoint.trim() || !rateLimit || !timeWindow || isTesting;
                       Test Rate Limiting;
                     </>;
                   )}
+<<<<<<< HEAD
+                </Button>
+              </div>
+            </Card>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                      className='px-6 py-3 bg-green-600 hover:bg-green-700 text-white'                    >                    API Key
+                  </label>
+                  <div className="flex space-x-2">
+                    <input
+                      type="text"
+                      value={apiKey}
+                      readOnly
+                      placeholder="Generate an API key to test rate limiting"
+                      className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400"
+                    />
+                    <Button
+                      onClick={generateApiKey}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            {/* Test Results */}
+<Card className='p-8 bg-gray-800 border border-gray-700'>
+              <div className='flex items-center justify-between mb-6'>
+                <h3 className='text-2xl font-bold text-white flex items-center'>
+<<<<<<< HEAD
+                  <BarChart3 className='w-6 h-6 mr-3 text-blue-400' />
+=======
+                  <BarChart3 className='w-6 h-6 mr-3 text-blue-400' />                  Test Results            <Card className="p-8 bg-gray-800 border border-gray-700">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-white flex items-center">
+                  <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                  Test Results
+origin/cursor/automate-test-improve-and-merge-code-2533
+                </h3>
+                {testResults.length > 0 && (
+                  <Button
+                    onClick={() => setTestResults([])}
+variant='outline'
+                    size='sm'
+                    className='border-gray-600 text-gray-300 hover:bg-gray-700'
+origin/cursor/automate-test-improve-and-merge-code-2533
+                  >
+                    Clear Results
+                  </Button>
+                )}
+              </div>
+              {testResults.length > 0 ? (
+<div className='space-y-3 max-h-96 overflow-y-auto'>
+                  {testResults.map((result, index) => (
+                    <div
+=======
                 </Button>;
               </div>;
             </Card>;
@@ -410,6 +1003,10 @@ disabled={!endpoint.trim() || !rateLimit || !timeWindow || isTesting;
                               ? 'OK';
                               : 'Too Many Requests'}
             {/* Test Results */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className="flex items-center justify-between mb-6">;
                 <h3 className="text-2xl font-bold text-white flex items-center">;
                   <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />;
@@ -435,6 +1032,7 @@ variant='outline';
                           <span className={`font-medium ${getStatusColor(result.status)}`}>;
                             Request #{result.request}{testResults.length > 0 ? (<div className='space-y-3 max-h-96 overflow-y-auto'>;
                   {testResults.map((result, index) => (<div;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                       key={index}
                       className={`p-4 rounded-lg border ${result.status === 'success';
                           ? 'border-green-500/30 bg-green-500/10';
@@ -448,6 +1046,267 @@ variant='outline';
                             className={`font-medium ${getStatusColor(result.status)}`}
                           >;
                             Request #{result.request}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                          </span>
+                        </div>
+                        <span className='text-sm text-gray-400'>
+=======
+                          </span>;
+                        </div>;
+                        <span className='text-sm text-gray-400'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+                          {result.timestamp}
+                        </span>
+                      </div>
+                      <div className='grid grid-cols-2 gap-4 text-sm'>
+                        <div>
+                          <span className='text-gray-400'>Status:</span>
+                          <span
+                            className={`ml-2 font-medium ${getStatusColor(result.status)}`}
+                          >
+                            {result.statusCode}{' '}
+                            {result.status === 'success'
+                              ? 'OK'
+                              : 'Too Many Requests'}
+                          </span>
+                        </div>
+                        <div>
+                          <span className='text-gray-400'>Response Time:</span>
+                          <span className='ml-2 text-white'>
+                            {result.responseTime.toFixed(0)}ms
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-white flex items-center">
+                  <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />
+                </h3>
+                {testResults.length > 0 && (
+                  <Button
+                    onClick={() => setTestResults([])}
+                    variant="outline"
+                    size="sm"
+                    className="border-gray-600 text-gray-300 hover:bg-gray-700"
+                  >
+                    Clear Results
+                  </Button>
+                )}
+              </div>
+                      }`}
+
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center space-x-3">
+                          {getStatusIcon(result.status)}
+                          <span className={`font-medium ${getStatusColor(result.status)}`}>
+                            Request #{result.request}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                          </span>
+                        </div>
+                      </div>
+                      {result.status === 'rate_limited' && (
+<<<<<<< HEAD
+<div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>
+                          <strong>Rate Limited:</strong> Request exceeded the
+                          limit of {rateLimit} requests per {timeWindow}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                          </span>;
+                        </div>;
+                        <div>;
+                          <span className='text-gray-400'>Response Time:</span>;
+                          <span className='ml-2 text-white'>;
+                            {result && result.responseTime.toFixed(0)}ms;
+                          </span>                        </div>;
+                      </div>;
+                      {result && result.status === 'rate_limited' && (;
+                        <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>;
+                          <strong>Rate Limited:</strong> Request exceeded the;
+                          limit of {rateLimit} requests per {timeWindow}                        </div>                      }`}
+                    >;
+                      <div className="flex items-center justify-between mb-2">;
+                        <div className="flex items-center space-x-3">;
+                          {getStatusIcon(result && result.status)}
+                          <span className={`font-medium ${getStatusColor(result && result.status)}`}>;
+                            Request #{result && result.request}
+                          </span>;
+                        </div>;
+                        <span className="text-sm text-gray-400">{result && result.timestamp}</span>;
+                      </div>;
+                      <div className="grid grid-cols-2 gap-4 text-sm">;
+                        <div>;
+                          <span className="text-gray-400">Status:</span>;
+                          <span className={`ml-2 font-medium ${getStatusColor(result && result.status)}`}>;
+                            {result && result.statusCode} {result && result.status === 'success' ? 'OK' : 'Too Many Requests'}
+                          </span>;
+                        </div>;
+                        <div>;
+                          <span className="text-gray-400">Response Time:</span>;
+                          <span className="ml-2 text-white">{result && result.responseTime.toFixed(0)}ms</span>;
+                        </div>;
+                      </div>;
+                      {result && result.status === 'rate_limited' && (;
+                        <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>;
+                          <strong>Rate Limited:</strong> Request exceeded the;
+                          limit of {rateLimit} requests per {timeWindow}                        <div className="mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">;
+
+                          <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}
+                        </div>;
+<<<<<<< HEAD
+
+                        <div className="mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
+                          <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                        </div>
+
+                        </div>
+
+                      )}
+                    </div>;
+                  ))}
+
+                </div>
+              ) : (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+<div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
+                  <div className='text-6xl mb-4'>📊</div>
+                  <p className='text-gray-400'>
+                    Test results will appear here. Configure your settings and
+                    click "Test Rate Limiting" to see how it works.
+                  </p>
+                </div>
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              )}
+
+      {/* Features */}
+<section className='py-20 bg-gray-800'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+
+              Advanced Rate Limiting Features
+            </h2>
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+              Enterprise-grade rate limiting with intelligent algorithms and
+              comprehensive monitoring.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
+              <div className='text-4xl mb-4'>🛡️</div>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                DDoS Protection
+              </h3>
+              <p className='text-gray-400'>
+                Advanced algorithms detect and prevent distributed denial of
+                service attacks in real-time.
+              </p>
+            </Card>
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
+              <div className='text-4xl mb-4'>⚡</div>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                High Performance
+              </h3>
+              <p className='text-gray-400'>
+                Built on Redis and optimized for high-throughput applications
+                with minimal latency.
+              </p>
+            </Card>
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
+              <div className='text-4xl mb-4'>🎯</div>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                Flexible Rules
+              </h3>
+              <p className='text-gray-400'>
+                Configure different limits for different endpoints, users, or IP
+                addresses.
+              </p>
+            </Card>
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
+              <div className='text-4xl mb-4'>📊</div>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                Real-time Analytics
+              </h3>
+              <p className='text-gray-400'>
+                Monitor API usage, identify patterns, and optimize your rate
+                limiting strategy.
+              </p>
+            </Card>
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
+              <div className='text-4xl mb-4'>🔧</div>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                Easy Integration
+              </h3>
+              <p className='text-gray-400'>
+                Simple REST API and SDKs for Node.js, Python, Go, and other
+                popular languages.
+              </p>
+            </Card>
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
+              <div className='text-4xl mb-4'>🌍</div>
+              <h3 className='text-xl font-bold text-white mb-4'>
+                Global Distribution
+              </h3>
+              <p className='text-gray-400'>
+                Edge locations worldwide ensure consistent performance and low
+<<<<<<< HEAD
+                latency for all users.
+              </p>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                latency for all users.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+              )}
+              <div className="text-4xl mb-4">🌍</div>
+              <h3 className="text-xl font-bold text-white mb-4">Global Distribution</h3>
+              <p className="text-gray-400">
+                Edge locations worldwide ensure consistent performance and low latency for all users.
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            </Card>
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+      {/* Code Examples */}
+<section className='py-20 bg-gray-900'>
+        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+              Quick Integration Examples
+            </h2>
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+              Get started with our rate limiting service in just a few lines of
+              code.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            <Card className='p-6 bg-gray-800 border border-gray-700'>
+              <h3 className='text-xl font-bold text-white mb-4 flex items-center'>
+                <Code className='w-5 h-5 mr-2 text-green-400' />
+                Node.js Example
+              </h3>
+              <div className='bg-gray-900 p-4 rounded-lg overflow-x-auto'>
+                <pre className='text-sm text-gray-300'>
+                  {`const axios = require('axios');
+
+const apiKey = '${apiKey || 'your_api_key_here'}';
+const endpoint = '${endpoint || '/api/users'}';
+
+// Make API request with rate limiting
+const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
+  headers: {
+'Authorization': \`Bearer \${apiKey}\`,
+    'X-RateLimit-Limit': '${rateLimit}',
+    'X-RateLimit-Window': '${timeWindow}'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
                           </span>;
                         </div>;
                         <span className='text-sm text-gray-400'>;
@@ -514,6 +1373,8 @@ variant='outline';
                           <strong>Rate Limited:</strong> Request exceeded the;
                           limit of {rateLimit} requests per {timeWindow}</div>;
                         </div>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       )}
                     </div>;
                   ))}</div>;
@@ -633,10 +1494,32 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {headers
               Quick Integration Examples;
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
+<<<<<<< HEAD
+=======
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Get started with our rate limiting service in just a few lines of code.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <Card className="p-6 bg-gray-800 border border-gray-700">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                <Code className="w-5 h-5 mr-2 text-green-400" />
+                Node.js Example
+              </h3>
+              <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
+                <pre className="text-sm text-gray-300">
+{`const axios = require('axios');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               Get started with our rate limiting service in just a few lines of;
               code.;
             </p>;
           </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             <Card className='p-6 bg-gray-800 border border-gray-700'>;
               <h3 className='text-xl font-bold text-white mb-4 flex items-center'>;
@@ -648,10 +1531,167 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {headers
                   {`const axios  = require('axios')const apiKey = '${apiKey || 'your_api_key_here'}';
 const endpoint  = '${endpoint || '/api/users'}';// Make API request with rate limiting;
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {headers: {'Authorization': \`Bearer \${apiKey}\`,'X-RateLimit-Limit': '${rateLimit}','X-RateLimit-Window': '${timeWindow}';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 })})`}
                 </pre>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <Button
+                onClick={() =>
+                  copyToClipboard(`const axios = require('axios');
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+// Make API request with rate limiting
+const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
+  headers: {
+    'Authorization': \`Bearer \${apiKey}\`;
+    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
+  }
+});
+});`}
+                </pre>;
+              </div>;
+              <Button
+                onClick={() =>;
+                  copyToClipboard(`const axios = require('axios');}),`}
+                </pre>;
+              </div>;
+              <Button
+                onClick={() => copyToClipboard(`const axios = require('axios');
+}),`}
+                </pre>
+              </div>
+              <Button
+                onClick={() => copyToClipboard(`const axios = require('axios');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+const apiKey = '${apiKey || 'your_api_key_here'}';
+const endpoint = '${endpoint || '/api/users'}';
+
+// Make API request with rate limiting
+const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
+  headers: {
+<<<<<<< HEAD
+'Authorization': \`Bearer \${apiKey}\`,
+    'X-RateLimit-Limit': '${rateLimit}',
+    'X-RateLimit-Window': '${timeWindow}'
+origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+});
+                }
+                variant='outline'
+                size='sm'
+                className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700'
+              >
+                <Copy className='w-4 h-4 mr-2' />
+                Copy Code
+              </Button>
+            </Card>
+
+<Card className='p-6 bg-gray-800 border border-gray-700'>
+              <h3 className='text-xl font-bold text-white mb-4 flex items-center'>
+                <Code className='w-5 h-5 mr-2 text-blue-400' />
+                Python Example
+              </h3>
+              <div className='bg-gray-900 p-4 rounded-lg overflow-x-auto'>
+                <pre className='text-sm text-gray-300'>
+                  {`import requests
+
+api_key = '${apiKey || 'your_api_key_here'}'
+endpoint = '${endpoint || '/api/users'}'
+
+# Make API request with rate limiting
+headers = {
+'Authorization': f'Bearer {api_key}',
+    'X-RateLimit-Limit': '${rateLimit}',
+    'X-RateLimit-Window': '${timeWindow}'
+response = requests.get(
+    f'https://api.zion.tech{endpoint}',
+    headers=headers
+)
+print('Response:', response.json())
+print('Rate Limit Info:', {
+'limit': response.headers.get('x-ratelimit-limit'),
+    'remaining': response.headers.get('x-ratelimit-remaining'),
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    'Authorization': \`Bearer \${apiKey}\`,
+    'X-RateLimit-Limit': '${rateLimit}',
+    'X-RateLimit-Window': '${timeWindow}'  }
+
+    'Authorization': \`Bearer \${apiKey}\`,
+    'X-RateLimit-Limit': '${rateLimit}',
+    'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
+    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
+    'X-RateLimit-Window': '${timeWindow}'  }
+
+  }
+});
+                }
+                variant='outline';
+=======
+              <Button;
+                onClick={() =>;
+                  copyToClipboard(`const axios = require('axios')}),`}
+                </pre>;
+              </div>;
+              <Button;
+                onClick={() => copyToClipboard(`const axios = require('axios')}),`}
+                </pre>;
+              </div>;
+              <Button;
+                onClick={() => copyToClipboard(`const axios  = require('axios')onClick={() =>;
+                  copyToClipboard(`const axios  = require('axios')const apiKey = '${apiKey || 'your_api_key_here'}';
+const endpoint  = '${endpoint || '/api/users'}';// Make API request with rate limiting;
+const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {headers: {'Authorization': \`Bearer \${apiKey}\`,'X-RateLimit-Limit': '${rateLimit}','X-RateLimit-Window': '${timeWindow}'  }'Authorization': \`Bearer \${apiKey}\`,'X-RateLimit-Limit': '${rateLimit}','X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
+    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
+    'X-RateLimit-Window': '${timeWindow}'  }'Authorization': \`Bearer \${apiKey}\`,'X-RateLimit-Limit': '${rateLimit}','X-RateLimit-Window': '${timeWindow}';
+  }
+})}variant='outline';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+                size='sm';
+                className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700';
+              >;
+                <Copy className='w-4 h-4 mr-2' />                Copy Code;
+              </Button>;
+            </Card>;
+}),`)}
+<<<<<<< HEAD
+            <Card className="p-6 bg-gray-800 border border-gray-700">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                <Code className="w-5 h-5 mr-2 text-blue-400" />
+                Python Example
+              </h3>
+              <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
+                <pre className="text-sm text-gray-300">
+{`import requests
+    'X-RateLimit-Window': '${timeWindow}'
+response = requests.get(
+    f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
+}
+
+response = requests.get(;
+
+    f'https://api.zion.tech{endpoint}';
+
+    headers=headers
+
+)
+print('Response:', response.json())
+print('Rate Limit Info:', {
+
+    'limit': response.headers.get('x-ratelimit-limit');
+
+    'remaining': response.headers.get('x-ratelimit-remaining');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    'reset': response.headers.get('x-ratelimit-reset')
+                variant="outline";
+=======
               <Button;
                 onClick={() =>;
                   copyToClipboard(`const axios = require('axios')}),`}
@@ -677,6 +1717,8 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {headers
               </Button>;
             </Card>;
 }),`)}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <Card className="p-6 bg-gray-800 border border-gray-700">;
               <h3 className="text-xl font-bold text-white mb-4 flex items-center">;
                 <Code className="w-5 h-5 mr-2 text-blue-400" />;
@@ -710,6 +1752,10 @@ endpoint = '${endpoint || '/api/users'}';
 headers = {'Authorization': f'Bearer {api_key}','X-RateLimit-Limit': '${rateLimit}','X-RateLimit-Window': '${timeWindow}';
 response = requests.get(f'https://api.zion.tech{endpoint}',headers=headers;
 )print('Response:', response.json())print('Rate Limit Info:', {'limit': response.headers.get('x-ratelimit-limit'),'remaining': response.headers.get('x-ratelimit-remaining'),'reset': response.headers.get('x-ratelimit-reset')variant="outline";
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 size="sm";
                 className="mt-4 border-gray-600 text-gray-300 hover: bg-gray-700";
               >;
@@ -735,20 +1781,106 @@ response = requests.get(f'https://api.zion.tech{endpoint}',headers=headers;
 api_key = '${apiKey || 'your_api_key_here'}';
 endpoint = '${endpoint || '/api/users'}';
 # Make API request with rate limiting;
+<<<<<<< HEAD
+<<<<<<< HEAD
+headers = {;
+    'Authorization': f'Bearer {api_key}',;
+    'X-RateLimit-Limit': '${rateLimit}',;
+    'X-RateLimit-Window': '${timeWindow}';
+print('Response:', response && response.json());
+print('Rate Limit Info:', {;
+    'limit': response && response.headers.get('x-ratelimit-limit'),;
+    'remaining': response && response.headers.get('x-ratelimit-remaining'),    'reset': response && response.headers.get('x-ratelimit-reset')    'limit': response && response.headers.get('x-ratelimit-limit');
+    'remaining': response && response.headers.get('x-ratelimit-remaining');
+    'reset': response && response.headers.get('x-ratelimit-reset');
+})`}
+<<<<<<< HEAD
+                </pre>
+              </div>
+              <Button
+onClick={() =>
+                  copyToClipboard(`import requests
+
+api_key = '${apiKey || 'your_api_key_here'}'
+endpoint = '${endpoint || '/api/users'}'
+
+# Make API request with rate limiting
+headers = {
+'Authorization': f'Bearer {api_key}',
+    'X-RateLimit-Limit': '${rateLimit}',
+    'X-RateLimit-Window': '${timeWindow}'
+response = requests.get(
+    f'https://api.zion.tech{endpoint}',
+    headers=headers
+)
+print('Response:', response.json())
+print('Rate Limit Info:', {
+'limit': response.headers.get('x-ratelimit-limit'),
+    'remaining': response.headers.get('x-ratelimit-remaining'),
+    'reset': response.headers.get('x-ratelimit-reset')
+})`)
+                }
+                variant='outline'
+                size='sm'
+                className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700'
+              >
+                <Copy className='w-4 h-4 mr-2' />
+                Copy Code
+              </Button>
+            </Card>
+          </div>
+        </div>
+      </section>
+=======
 headers = {'Authorization': f'Bearer {api_key}','X-RateLimit-Limit': '${rateLimit}','X-RateLimit-Window': '${timeWindow}';
 print('Response:', response && response.json())print('Rate Limit Info:', {'limit': response && response.headers.get('x-ratelimit-limit'),'remaining': response && response.headers.get('x-ratelimit-remaining'),    'reset': response && response.headers.get('x-ratelimit-reset')    'limit': response && response.headers.get('x-ratelimit-limit')'remaining': response && response.headers.get('x-ratelimit-remaining')'reset': response && response.headers.get('x-ratelimit-reset')})`}f'https://api.zion.tech{endpoint}';headers=headers;
 )print('Response:', response.json())print('Rate Limit Info:', {onClick={() =>;
+=======
+    f'https://api.zion.tech{endpoint}';
+
+    headers=headers
+
+)
+print('Response:', response.json())
+print('Rate Limit Info:', {
+
+                onClick={() =>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+headers = {'Authorization': f'Bearer {api_key}','X-RateLimit-Limit': '${rateLimit}','X-RateLimit-Window': '${timeWindow}';
+print('Response:', response && response.json())print('Rate Limit Info:', {'limit': response && response.headers.get('x-ratelimit-limit'),'remaining': response && response.headers.get('x-ratelimit-remaining'),    'reset': response && response.headers.get('x-ratelimit-reset')    'limit': response && response.headers.get('x-ratelimit-limit')'remaining': response && response.headers.get('x-ratelimit-remaining')'reset': response && response.headers.get('x-ratelimit-reset')})`}f'https://api.zion.tech{endpoint}';headers=headers;
+)print('Response:', response.json())print('Rate Limit Info:', {onClick={() =>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   copyToClipboard(`import requests                onClick={() => copyToClipboard(`import requests;
 api_key = '${apiKey || 'your_api_key_here'}';
 endpoint = '${endpoint || '/api/users'}';
 # Make API request with rate limiting;
+<<<<<<< HEAD
 headers = {'Authorization': f'Bearer {api_key}','X-RateLimit-Limit': '${rateLimit}','X-RateLimit-Window': '${timeWindow}';
 print('Response:', response && response.json())print('Rate Limit Info:', {'limit': response && response.headers.get('x-ratelimit-limit'),'remaining': response && response.headers.get('x-ratelimit-remaining'),'reset': response && response.headers.get('x-ratelimit-reset')})`)}
+=======
+headers = {;
+    'Authorization': f'Bearer {api_key}',;
+    'X-RateLimit-Limit': '${rateLimit}',;
+    'X-RateLimit-Window': '${timeWindow}';
+print('Response:', response && response.json());
+print('Rate Limit Info:', {;
+    'limit': response && response.headers.get('x-ratelimit-limit'),;
+    'remaining': response && response.headers.get('x-ratelimit-remaining'),;
+    'reset': response && response.headers.get('x-ratelimit-reset');
+})`);
+                }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 variant='outline';
                 size='sm';
                 className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700';
               >;
+<<<<<<< HEAD
                 <Copy className='w-4 h-4 mr-2' />                Copy Code    'reset': response && response.headers.get('x-ratelimit-reset')})`)}
+=======
+                <Copy className='w-4 h-4 mr-2' />                Copy Code    'reset': response && response.headers.get('x-ratelimit-reset');
+})`)}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           </h2>;
           <p className='text - xl text - green - 100 mb - 8'>;
             Join thousands of developers and companies who trust our rate;
@@ -776,6 +1908,10 @@ print('Response:', response && response.json())print('Rate Limit Info:', {'limit
         </div>;
       </section>;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   )}
     </>)</>)}</pre>;
               </div>;
@@ -799,6 +1935,7 @@ response = requests.get(f'https://api.zion.tech{endpoint}',headers=headers;
           </div>;
         </div>;
       </section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-green-600 to-blue-600'>;
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
@@ -829,4 +1966,19 @@ response = requests.get(f'https://api.zion.tech{endpoint}',headers=headers;
         </div>;
       </section>;
 </>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
   )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  );
+}
+    </>);    </>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

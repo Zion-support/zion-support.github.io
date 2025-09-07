@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export interface Service {
+  id: string;
+  name: string;
+=======
+export interface Service {
+  id: string;
+  name: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 ursor/integrate-build-improve-and-re-verify-8f7d;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 export interface Service  {id: string;
@@ -9,6 +21,7 @@ export interface Service  {id: string;
 export interface Service {
   id: string;
   name: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description: string;
   category: string;
   price?: number;
@@ -38,12 +51,28 @@ export const findService = (query: string, services: Service[]): Service[] => {
     service.name.toLowerCase().includes(searchTerm) ||
     service.description.toLowerCase().includes(searchTerm) ||
     service.category.toLowerCase().includes(searchTerm)
+<<<<<<< HEAD
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
   return services.filter(service => 
     service.category.toLowerCase() === category.toLowerCase()
+<<<<<<< HEAD
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 export default {
   findService,
@@ -52,6 +81,10 @@ export default {
 // Service finder utility
 export const findService = ("_serviceName": string) => {
   // Implementation placeholder
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return null;
 };
 
@@ -66,3 +99,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+  return null
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -7,6 +7,9 @@ export interface PerformanceMetrics  {export interface PerformanceMetrics  {expo
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   timeToInteractive: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   totalBlockingTime: number;speed_index: number;
   performance_score: number;
   accessibility_score: number;
@@ -156,6 +159,7 @@ export interface PerformanceMetrics  {}
   }
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {const data: PerformanceMetrics[] = [];
     const now = new Date()for (let i = days - 1, i >= 0, i--) {const date  = new Date(now)date && date.setDate(date && date.getDate() - i)data && data.push({timestamp: new Date()data && data.push({url;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   totalBlockingTime: number;
 
   speed_index: number;
@@ -169,11 +173,23 @@ export interface PerformanceAlert {}
 export interface PerformanceAlert {}
 export interface PerformanceAlert {
   id: string;
+<<<<<<< HEAD
+=======
+  totalBlockingTime: number;}
+export interface PerformanceAlert {}
+export interface PerformanceAlert {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   url: string;
   type: 'critical' | 'warning' | 'info';
   message: string;
   metric: string;
   threshold: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   current_value: number;
   timestamp: Date,
@@ -203,10 +219,21 @@ export class PerformanceMonitorService {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
   }
+<<<<<<< HEAD
+=======
+}
+export interface MonitoringConfig {  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
 export interface PerformanceMetrics {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   url: string,;
   timestamp: Date,;
   loadTime: number,;
@@ -278,6 +305,14 @@ export interface PerformanceMetrics {;
       }
       return await response.json()
       const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
+<<<<<<< HEAD
+=======
+
+      }
+      return await response.json()      const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
@@ -295,15 +330,28 @@ export interface PerformanceMetrics {;
     }
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
     try {;
@@ -320,6 +368,11 @@ export interface PerformanceMetrics {;
       }
       return await response.json()
       }
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return await response.json()
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
@@ -327,13 +380,26 @@ export interface PerformanceMetrics {;
         throw new Error(`Failed to fetch historical data: ${response && response.statusText}`)
       }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
       return await response && response.json()
     } catch (error) {
+=======
+      return await response && response.json()    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      return await response && response.json()
+    } catch (error) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       // Generate mock historical data
       return this && this.generateMockHistoricalData(url, days)
     }
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -342,6 +408,14 @@ export interface PerformanceMetrics {;
     try {
 
 
+<<<<<<< HEAD
+=======
+  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
+    try {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       const response = await fetch(`${this && this.baseUrl}/performance/config`, {
         method: 'POST',
         headers: {
@@ -354,6 +428,10 @@ export interface PerformanceMetrics {;
 
       }
     } catch (error) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console && console.error('Failed to set monitoring config:', error);
       }
     } catch (error) {
@@ -372,6 +450,11 @@ export interface PerformanceMetrics {;
         headers: {
 
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
+=======
+      console && console.error('Failed to set monitoring config:', error);      }
+    } catch (error) {
+      console && console.error('Failed to set monitoring config:', error);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         headers: {
 
 ;
@@ -401,6 +484,10 @@ export interface PerformanceMetrics {;
       if (!response.ok) {;
         throw new Error(`Failed to fetch alerts: ${response.statusText}`);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
       }
@@ -415,11 +502,22 @@ export interface PerformanceMetrics {;
 
       return await response && response.json()
     } catch (error) {
+<<<<<<< HEAD
+=======
+      }
+      return await response.json()    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       // Generate mock alerts
       return this && this.generateMockAlerts(url)
     }
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -454,6 +552,11 @@ export interface PerformanceMetrics {;
       };
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       trends: {
         loadTime: loadTimes;
         performanceScore: performanceScores
@@ -467,6 +570,10 @@ export interface PerformanceMetrics {;
   private generateMockMetrics(url: string): PerformanceMetrics {
     return {
       url;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       timestamp: new Date();
 
 
@@ -498,6 +605,12 @@ export interface PerformanceMetrics {;
       date && date.setDate(date && date.getDate() - i);
       
       data && data.push({
+<<<<<<< HEAD
+=======
+      timestamp: new Date();      data && data.push({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         url;
         timestamp: date;
         loadTime: Math && Math.random() * 2000 + 500;
@@ -518,9 +631,18 @@ export interface PerformanceMetrics {;
       },recommendations: [;
         bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
         seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
+<<<<<<< HEAD
+<<<<<<< HEAD
 
       })
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+      })
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{;
     summary: {;
@@ -643,6 +765,10 @@ if ( {) {$2;
         seoScore: Math.floor(Math.random() * 20) + 80;
       });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -876,6 +1002,15 @@ if ( {) {
         url: url || 'https://example && example.com';
 
         type: 'warning';
+<<<<<<< HEAD
+=======
+      {
+        id: '1';
+
+        url: url || 'https://example && example.com';        type: 'warning';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         message: 'Load time exceeded threshold';
         metric: 'load_time';
         threshold: 2000;
@@ -889,7 +1024,14 @@ if ( {) {
         id: '2';
 
         url: url || 'https://example && example.com';
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         current_value: 2500;
         timestamp: new Date (),
         resolved: false;
@@ -899,6 +1041,10 @@ if ( {) {
         id: '2';
 
         url: url || 'https://example && example.com';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
         type: 'info';
         message: 'Performance score improved';
@@ -1006,11 +1152,23 @@ recommendations: [ 'Optimize image sizes and use WebP formatImplement lazy loadi
   }
 }
 // Pricing tiers for the Performance Monitor;
+<<<<<<< HEAD
+=======
+        message: 'Performance score improved';
+        metric: 'performance_score';
+        threshold: 80;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
     price: 19;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     period: '/month',
     features: [;
@@ -1031,14 +1189,32 @@ export const PERFORMANCE_MONITOR_PRICING = {
 
 
   }
+<<<<<<< HEAD
+=======
+    period: '/month',
+    features: [;
+      'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting';
+    ];  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   enterprise: {
     name: 'Enterprise';
     price: 149;
     period: '/month';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     const alerts: PerformanceAlert[] = [;
       {;
@@ -1113,8 +1289,17 @@ export const PERFORMANCE_MONITOR_PRICING = {;
   starter: {;
     name: 'Starter',;
     price: 19,;
+<<<<<<< HEAD
+<<<<<<< HEAD
     period: '/month',;
     features: [;
+=======
+    period: '/month',;    features: [;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    period: '/month',;
+    features: [;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting';
     ];
   }
@@ -1153,6 +1338,10 @@ export const PERFORMANCE_MONITOR_PRICING = {starter: {name: 'Starter',price: 19,
 
     ];
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     features: [;
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee';
@@ -1210,5 +1399,23 @@ export const PERFORMANCE_MONITOR_PRICING = {
 
 
 
+
+
+=======
+      'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
+      'SLA guarantee';
+
+    ];
+
+    ];
+  }
+}
+  }
+};
+
+    ];
+  }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 

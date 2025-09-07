@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
 export: {}"";
 "export": {}"";
 ursor/automate-test-improve-and-merge-code-646c;
@@ -21,6 +25,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 export: {}"";
 "export": {}"";
 ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -28,21 +33,39 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export: {} ;""
 "export": {} ;""
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export: {} ;""
 "export": {} ;""
 export: {} ;""
 "export": {} ;""
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 ursor/add-new-services-and-deploy-updates-0462
@@ -55,3 +78,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

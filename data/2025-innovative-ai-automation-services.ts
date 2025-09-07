@@ -1,6 +1,31 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+import { ServiceVariant } from '../types/service-variants';
+export interface InnovativeAIAutomationService {
+  id: string;
+=======
 
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeAIAutomationService  {id: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import { ServiceVariant  } from '../types/service-variants';
+export interface InnovativeAIAutomationService  {id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   tagline: string;
   price: string;
@@ -26,15 +51,43 @@ export interface InnovativeAIAutomationService  {id: string;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
+<<<<<<< HEAD
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string
+  },
+  realImplementation: boolean;
+=======
   contactInfo: {mobile: string;
     email: string;
     address: string;
     website: string;
   },realImplementation: boolean;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  reviews: number
+}
+
+const contact = null;
+realImplementation: true;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   reviews: number;
 }const contact = null;
 realImplementation: true;implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
@@ -48,17 +101,75 @@ implementation_details: 'Complete security monitoring platform with AI capabilit
 launch_date: '2025 - 01 - 25';customers: 156;rating: 4 && 4.7;
 reviews: 89;
 }// Autonomous Data Analytics Platform realImplementation: true;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
 real_implementation: true;
 implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launch_date: '2025 - 01 - 25';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
+launchDate: '2025-01-25';
+real_implementation: true;
+implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
+launch_date: '2025 - 01 - 25';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 customers: 156;
 
 rating: 4 && 4.7;
 reviews: 89 
 };
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Autonomous Data Analytics Platform realImplementation: true;
 implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
 launchDate: '2025-01-28';
@@ -67,6 +178,77 @@ reviews: 89;
 // Autonomous Data Analytics Platform real_implementation: true;
 implementation_details: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
 launch_date: '2025 - 01 - 28';
+<<<<<<< HEAD
+<<<<<<< HEAD
+customers: 234;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+rating: 4 && 4.8;
+reviews: 167 
+
+}];    features: [
+
+import { ServiceVariant } from '../types/service-variants';
+export interface InnovativeAIAutomationService {
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+  contactInfo: {
+    mobile: string, email: string,
+    address: string,
+    website: string
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+}
+const contact = {
+  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
+  {
+    id: 'ai-autonomous-code-review', name: 'AI Autonomous Code Review',
+    tagline: 'Automated code quality analysis with AI-powered insights and security scanning', price: '$199',
+    period: '/month',
+    description: 'Advanced AI-powered code review system that automatically analyzes code quality, security vulnerabilities, and performance issues across multiple programming languages.',
+    features: [
+
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 customers: 234;rating: 4 && 4.8;
 reviews: 167;
 }];    features: [;
@@ -79,12 +261,59 @@ const contact = {mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',ad
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';
       'Compliance and best practices enforcement';
 customers: 234;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';
       'Compliance and best practices enforcement'
 reviews: 167;
 }];    features: [;
       'Multi - language support (Python, JavaScript, Go, Rust, Java)AI - powered security vulnerability detection_performance optimization recommendations_code quality scoring and metrics_integration with GitHub, GitLab, BitbucketCustom rule engine and policies_real - time feedback and suggestions_team collaboration and review workflows';
       'Compliance and best practices enforcement';
+<<<<<<< HEAD
+<<<<<<< HEAD
+    ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+    ];
+
+    popular: true, icon: '🤖',
+
+    ];
+
+    popular: false, icon: '⚡',
+
+    ];
+
+    popular: false, icon: '📊',
+
+    ];
+
+    popular: true, icon: '🛡️',
+
+    ];
+
+    popular: false, icon: '📈',
+
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];popular: true, icon: '🔍';
     ];popular: true, icon: '🤖';
     ];popular: false, icon: '⚡';
@@ -97,6 +326,7 @@ reviews: 167;
     ];popular: false, icon: '📊';
     ];popular: true, icon: '🛡️';
     ];popular: false, icon: '📈';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 ];color: 'from - teal - 600 to - cyan - 700';
     text_color: 'text - teal - 400';
@@ -107,8 +337,27 @@ reviews: 167;
     setup_time: '2 weeks';
     category: 'AI & Analytics';
     real_service: true;
+<<<<<<< HEAD
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'];
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'];integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'];
     ];
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'];
     use_cases: ['Business intelligence, Performance tracking, Customer analytics, Financial reporting, Operational insights'];
     roi: 'Organizations achieve 400% ROI through faster insights and reduced analyst workload.';
@@ -122,12 +371,61 @@ reviews: 167;
     competitors: ['Splunk, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'];market_size: '$15.8B+ security monitoring market';
     growth_rate: '95% YoY';variant: 'default';
     competitors: ['Splunk, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     variant: 'default';
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Real - time security monitoring platform with AI - powered threat detection and automated response capabilities.';
     launch_date: '2025 - 02 - 05';
+<<<<<<< HEAD
+<<<<<<< HEAD
+    customers: 112;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+    rating: 4.9;
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 112;rating: 4.9;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 78;
     color: 'from - amber - 600 to - orange - 700';
     text_color: 'text - amber - 400';
@@ -138,8 +436,29 @@ reviews: 167;
     setup_time: '1 - 3 weeks';
     category: 'HR AI';
     real_service: true;
+<<<<<<< HEAD
+    technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Mobile SDKs'];
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Mobile SDKs'];integrations: ['Workday, BambooHR, ADP, QuickBooks, Slack, Microsoft Teams, Zoom'];
     customers: 112;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations: ['Workday, BambooHR, ADP, QuickBooks, Slack, Microsoft Teams, Zoom'];
     use_cases: ['Recruitment automation, Employee management, Performance tracking, Compliance monitoring, Benefits administration'];
     roi: 'HR teams see 300% ROI through improved efficiency and better hiring decisions.';
@@ -156,6 +475,37 @@ reviews: 167;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     realImplementation: true;
     implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
     launchDate: '2025-01-28';
@@ -164,6 +514,37 @@ reviews: 167;
     reviews: 167;
 ursor/fix-website-loading-errors-and-merge-6662;
     reviews: 167
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -202,10 +583,52 @@ import { ServiceVariant } from '../types/service-variants',export interface Inno
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 ];
 ;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  }
+];
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+  }
+];
+;
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIAutomationService {;
   id: string,;
@@ -639,5 +1062,48 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     customers: 234,;
     rating: 4.8;
     reviews: 167;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+rating: 4.8;
+reviews: 167 
+}];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  }
+];
+
+
+rating: 4.8;
+reviews: 167 
+}];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+];
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -14,7 +14,13 @@ interface PricingGuidePageProps  {// Add props here as needed;
 interface PricingGuidePageProps {
   // Add props here as needed
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export default function PricingGuidePage({}: PricingGuidePageProps) {
@@ -25,10 +31,20 @@ export default function PricingGuidePage({}: PricingGuidePageProps) {
     </div>
   );
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 }
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 :src.pages.disabled/PricingGuidePage.jsx
 }
 }
@@ -37,6 +53,10 @@ export default function PricingGuidePage({}: PricingGuidePageProps) {
 }
 }:src.pages.disabled/PricingGuidePage.jsx;
 :temp_exclude/src.pages.disabled/PricingGuidePage.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 
@@ -50,4 +70,9 @@ export default function PricingGuidePage({}: PricingGuidePageProps) {
 }
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 :temp_exclude/src.pages.disabled/PricingGuidePage.jsx;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

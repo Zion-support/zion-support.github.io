@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ;
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';export interface CompanyUsageLimits  {monthlyJobPosts: number;
@@ -61,6 +65,18 @@ export interface CompanyUsageLimits {;
 
 }
 export interface CompanyRecord {id: string;
+=======
+export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
+export interface CompanyUsageLimits {
+  monthlyJobPosts: number,
+  budgetCapUsd: number;    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export interface CompanyRecord {;
+  id: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   name: string;
   slug: string, // e.g. acme;
   logoUrl?: string;
@@ -68,6 +84,9 @@ export interface CompanyRecord {id: string;
   plan: CompanyPlan;
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   invoices: InvoiceRecord[];export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',export interface CompanyUsageLimits  {monthlyJobPosts: number,budgetCapUsd: number;} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}}
 export interface CompanyPlan  {tier: 'teams' | 'business' | 'enterprise - custom',seats_purchased: number,seats_used: number,usage_limits: CompanyUsageLimits;
 }
@@ -84,6 +103,7 @@ export interface CompanyRecord {id: string;
   logoUrl?: string;
   brandColor?: string;
   plan: CompanyPlan;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   invoices: InvoiceRecord[];
 
 
@@ -147,6 +167,12 @@ export interface CompanyRecord {
 
 }
   logoUrl?: string,;
+<<<<<<< HEAD
+=======
+  invoices: InvoiceRecord[];  logoUrl?: string,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   brandColor?: string,;
   plan: CompanyPlan,;
   members: CompanyMember[];

@@ -24,10 +24,25 @@
   // Check if file has merge conflicts
   hasMergeConflicts(content) {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    return content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>');
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
     return content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>');
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 
   // Check if file has syntax errors
@@ -53,6 +68,13 @@
     let fixed = content;
     
     // Fix merge conflicts by keeping the HEAD version
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     fixed = fixed.replace(/
     
@@ -72,121 +94,18 @@
     
     return fixed;
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-  // Process a single file
-  async processFile(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      
-      if (this.hasMergeConflicts(content)) {
-        this.mergeConflictFiles.push(filePath);
-        this.log(`Found merge conflicts in: ${filePath}`);
-      }
-      
-      if (this.hasSyntaxErrors(content)) {
-        this.syntaxErrorFiles.push(filePath);
-        this.log(`Found syntax errors in: ${filePath}`);
-        
-        const fixedContent = this.fixSyntaxErrors(content);
-        if (fixedContent !== content) {
-          fs.writeFileSync(filePath, fixedContent);
-          this.fixedFiles.push(filePath);
-          this.log(`Fixed syntax errors in: ${filePath}`);
-        }
-      }
-      
-      return true;
-    } catch (error) {
-      this.corruptedFiles.push(filePath);
-      this.log(`Error processing file ${filePath}: ${error.message}`);
-      return false;
-    }
-  }
 
-  // Get all files to process
-  async getAllFiles() {
-    const files = [];
-    const directories = [
-      'pages',
-      'src',
-      'components',
-      'lib',
-      'hooks',
-      'utils',
-      'types',
-      'services',
-      'store',
-      'context',
-      'data',
-      'config',
-      'routes',
-      'layout',
-      'integrations',
-      'tests'
-    ];
 
-    for (const dir of directories) {
-      if (fs.existsSync(dir)) {
-        const dirFiles = await this.getFilesInDirectory(dir);
-        files.push(...dirFiles);
-      }
-    }
 
-    return files;
-  }
 
-  // Get files in directory recursively
-  async getFilesInDirectory(dir) {
-    const files = [];
-    
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        const subFiles = await this.getFilesInDirectory(fullPath);
-        files.push(...subFiles);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
-        files.push(fullPath);
-      }
-    }
-    
-    return files;
-  }
 
-  // Clean up corrupted directories
-  async cleanCorruptedDirectories() {
-    const corruptedDirs = [
-      'pages.disabled',
-      'pages.disabled_auto',
-      'pages.corrupted.1756905863',
-      'pages.disabled.full',
-      'pages.broken',
-      'pages.blog.disabled',
-      'pages._archive_corrupted',
-      'pages._quarantine',
-      'pages-disabled',
-      'pages-quarantine',
-      'pages.__backup',
-      'src.pages.disabled',
-      'temp_broken_files',
-      'temp-backup',
-      'temp_working'
-    ];
 
-    for (const dir of corruptedDirs) {
-      if (fs.existsSync(dir)) {
-        try {
-          await this.runCommand(`rm -rf ${dir}`);
-          this.log(`Removed corrupted directory: ${dir}`);
-        } catch (error) {
-          this.log(`Failed to remove directory ${dir}: ${error.message}`);
-#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
+main
 
+<<<<<<< HEAD
 class ComprehensiveSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd()
@@ -481,12 +400,23 @@ if (require.main === module) {
   }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

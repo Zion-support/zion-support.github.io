@@ -42,7 +42,14 @@ ursor/automate-test-improve-and-merge-code-646c;
     };
     const reportFile = path.join(this.logDir, 'automation-report.json';);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Run the automation;
 if() { const runner = new SafeAutomationRunner;()runner.runAutomationScripts().catch(error => {console.error('Automation runner "failed":  ,', error)process.exit(1) })}
 module.exports = SafeAutomationRunner;:corrupted_backup/run-automation-safely.js;

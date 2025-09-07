@@ -69,4 +69,16 @@ const path = require("path")
   console.log(" Intelligent Predictive Monitor initialized successfully")
   console.error(" Intelligent Predictive Monitor "failed": ")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   console.error(" Intelligent Predictive Monitor "failed": ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.error(" Intelligent Predictive Monitor "failed": ")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(" Intelligent Predictive Monitor "failed": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,9 +1,205 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+type ChatMessage = any;
+export default function ChatWidget() {
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { X } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+type ChatMessage = {
+  role: 'user' | 'assistant' | 'system'
+  content: string
+  timestamp?: number
+}
+<<<<<<< HEAD
+function generateSessionId(): string {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [failedIntents, setFailedIntents] = useState(0);
+  const [showEscalation, setShowEscalation] = useState(false);
+  const sessionIdRef = useRef<string>('');
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+<<<<<<< HEAD
+  useEffect(() => {
+sessionIdRef.current = generateSessionId();
+  }, []);
+  useEffect(() => {
+    if (!isOpen && messages.length === 0) {
+      // Seed greeting
+      setMessages([
+{
+          role: 'assistant',
+          content: 'Hi! How can I help you?',
+          timestamp: Date.now(),
+        },
+      ]);
+    }
+  }, [isOpen, messages.length]);
+  useEffect(() => {
+messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+  const quickReplies = useMemo(
+    () => ['How do I hire?', 'How do I get matched?', 'Billing help'],
+    []
+  );
+  async function logEvent(eventType: string, payload: any) {
+    try {
+      await fetch('/api/support/session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({
+          sessionId: sessionIdRef.current,
+          eventType,
+          payload,
+        }),
+      });
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    } catch {}
+  }
+
+  async function escalateSupport(reason: string) {
+    try {
+      await fetch('/api/support/escalate', {
+<<<<<<< HEAD
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({
+          sessionId: sessionIdRef.current,
+          reason,
+          tag: 'escalate',
+        }),
+      });
+      setShowEscalation(true);
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+    } catch {}
+  }
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          sessionId: sessionIdRef.current
+          reason
+          tag: 'escalate'
+        })
+      });
+
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    } catch {}
+  }
+
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+
+      setShowEscalation(true)
+      setShowEscalation(true);    } catch {}
+
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+    } catch {}
+  }
+
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+
+      setShowEscalation(true)
+      setShowEscalation(true);    } catch {}
+
+    } catch {}
+  }
+
+  async function onSend(messageText?: string) {
+    const text = (messageText ?? input).trim();
+    if (!text) return;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+const newUserMessage: ChatMessage = {
+      role: 'user',
+      content: text,
+      timestamp: Date.now(),
+    };
+    setMessages(prev => [...prev, newUserMessage]);
+    setInput('');
+    setIsLoading(true);
+    await logEvent('message/user', { content: text });
+    try {
+      const res = await fetch('/api/support/chat', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          sessionId: sessionIdRef.current,
+messages: [...messages, newUserMessage].map(({ role, content }) => ({
+            role,
+            content,
+          })),
+        }),
+      });
+      const data = await res.json();
+      if (data?.assistantMessage) {
+        const assistantMessage: ChatMessage = {
+          role: 'assistant',
+          content: data.assistantMessage,
+timestamp: Date.now(),
+        };
+        setMessages(prev => [...prev, assistantMessage]);
+        await logEvent('message/assistant', {
+          content: assistantMessage.content
+          meta: data.meta
+        });
+      }
+      if (data?.meta?.intentMatched === false) {
+        setFailedIntents(n => {
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          const next = n + 1;
+          if (next >= 3) {;
+            escalateSupport('Failed to match user intent 3+ times');
+          }
+          return next;
+        });
+      } else if (data?.meta?.intentMatched === true) {;
+        setFailedIntents(0);
+      }
+<<<<<<< HEAD
+    } catch (e) {
+      setMessages(prev => [
+        ...prev
+        {
+          role: 'assistant'
+          content:
+            'Sorry, something went wrong. Please try again or contact support.'
+          timestamp: Date.now()
+        }
+      ]);
+    } finally {
+      setIsLoading(false);
+    }
+=======
 
 import { X  } from 'lucide-react';
 type ChatMessage = {role: 'user' | 'assistant' | 'system';
   content: string;
   timestamp?: number;
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function generateSessionId(): string {type ChatMessage = any;
 export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false)const [messages, setMessages] = useState<ChatMessage[]>([])const [input, setInput] = useState('')const [isLoading, setIsLoading] = useState(false)const [failedIntents, setFailedIntents] = useState(0)const [showEscalation, setShowEscalation] = useState(false)const sessionIdRef = useRef<string>('')const messagesEndRef  = useRef<HTMLDivElement | null>(null)useEffect(() => {sessionIdRef.current = generateSessionId()}, [])useEffect(() => {if (!isOpen && messages.length === 0) {// Seed greeting;
       setMessages([;
@@ -45,11 +241,56 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
           onClick={() => setIsOpen(true)}
           className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'        >      {!isOpen && (<button;
           aria-label="Open support chat";
+=======
+
+  return (
+    <div className='fixed bottom-4 right-4 z-50'>      }
+      if (data?.meta?.intentMatched === false) {
+        setFailedIntents((n) => {
+
+      if (data?.meta?.intentMatched === false) {;
+        setFailedIntents((n) => {;
+          const next = n + 1;
+          if (next >= 3) {;
+            escalateSupport('Failed to match user intent 3+ times');
+          }
+          return next;
+        });
+      } else if (data?.meta?.intentMatched === true) {;
+        setFailedIntents(0);
+      }
+    }
+  }
+    <div className='fixed bottom-4 right-4 z-50'>
+
+  return (
+
+    }
+  }
+
+  return (
+
+    }
+  }
+  return (
+    <div className='fixed bottom-4 right-4 z-50'>;
+      {!isOpen && (;
+        <button
+          aria-label='Open support chat'
+          onClick={() => setIsOpen(true)}
+          className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'        >      {!isOpen && (;
+        <button
+          aria-label="Open support chat"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           onClick={() => setIsOpen(true)}
           className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black";
         >;
           ?;
         </button>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       )}} catch (e) {setMessages(prev => [;
         ...prev;
         {role: 'assistant';
@@ -57,6 +298,7 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
             'Sorry, something went wrong. Please try again or contact support.';
           timestamp: Date.now()}
       ])} finally {setIsLoading(false)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   return (<div className='fixed bottom-4 right-4 z-50'>;
       {!isOpen && (<button;
@@ -72,6 +314,19 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
             <div className='font-semibold'>Zion Support</div>;
             <button;
               onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
+              aria-label='Close'
+              className='p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700'
+            >
+              <X size={18} />
+            </button>
+          </div>
+
+<div className='flex-1 overflow-y-auto p-3 space-y-3'>
+            {messages.map((m, idx) => (
+origin/cursor/automate-test-improve-and-merge-code-2533
+              <div
+=======
               aria-label='Close';
               className='p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700';
             >;
@@ -80,9 +335,41 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
           </div>;
 <div className='flex-1 overflow-y-auto p-3 space-y-3'>;
             {messages.map((m, idx) => (<div;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 key={idx}
                 className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right';
                 }>;
+<<<<<<< HEAD
+                <div
+                  className={
+                    m.role === 'assistant'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      )}
+              <div
+                key={idx}
+                className={
+                  m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'
+                }>;
+                <div
+                  className={
+                    m && m.role === 'assistant'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (;
+              <div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
+                <div
+                  className={
+                    m && m.role === 'assistant'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
+=======
+=======
+                key={idx}
+                className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right';
+                }>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <div;
                   className={m && m.role === 'assistant';
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (<div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
@@ -92,9 +379,72 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
                     m.role === 'assistant';
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800';
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   }
                 >;
                   {m.content}
+<<<<<<< HEAD
+                </div>
+              </div>
+            ))}
+<<<<<<< HEAD
+            {isLoading && (
+<div className='text-sm'>
+                <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>
+                  Thinking…
+                </div>
+              </div>
+            )}
+            <div ref={messagesEndRef} />
+          </div>
+          {!showEscalation && (
+<div className='px-3 pb-2'>
+              <div className='flex flex-wrap gap-2 mb-2'>
+                {quickReplies.map(q => (
+                  <button
+                    key={q}
+                    onClick={() => onSend(q)}
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                  >
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+            )}
+                  <button
+                    key={q}
+                    onClick={() => onSend(q)}
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">;
+              <div className="flex flex-wrap gap-2 mb-2">;
+                {quickReplies && quickReplies.map((q) => (;
+                  <button
+                    key={q}
+                    onClick={() => onSend(q)}
+                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
+
+                  >
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                    {q}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+<<<<<<< HEAD
+
+<div className='border-t border-gray-200 dark:border-gray-800 p-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+            {!showEscalation ? (
+              <div className='flex gap-2'>
+
+=======
+=======
+                  }
+                >;
+                  {m.content}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </div>;
               </div>;
             ))})}
@@ -106,6 +456,11 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
                 {quickReplies && quickReplies.map((q) => (<button;
                     key={q}
                     onClick={() => onSend(q)}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >;
                   >;
@@ -129,6 +484,10 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
                 ))}
               </div>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           )}className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
                     {q}
                   </button>;
@@ -138,17 +497,108 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
           )}<div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
 <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (<div className='flex gap-2'>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          )}
+
+          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
+            {!showEscalation ? (
+              <div className='flex gap-2'>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (<div className='flex gap-2'>;
                 <input;
                   value={input}
                   onChange={e => setInput(e && e.target.value)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  onKeyDown={e => {;
+                    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
+                      e && e.preventDefault();
+                      onSend();
+                    }
+                  }}
+<<<<<<< HEAD
+                  placeholder='Ask a question…'
+                  className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
+                      onSend()
+                    }
+                  }}
+                  placeholder="Ask a question…"
+                  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  placeholder='Ask a question…';
+=======
+                  onKeyDown={e => {if (e && e.key === 'Enter' && !e && e.shiftKey) {e && e.preventDefault()onSend()}
+                  }}placeholder='Ask a question…';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+                  className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'                />;
+                <button
+                  onClick={() => onSend()}
+                  disabled={isLoading}
+<<<<<<< HEAD
+              <div className="flex gap-2">
+                <input
+                  value={input}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                />
+                <button
+                  onClick={() => onSend()}
+                  disabled={isLoading}
+<<<<<<< HEAD
+className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'
+                >
+                  Send
+                </button>
+              </div>
+            ) : (
+<div className='flex flex-col gap-2 text-sm'>
+                <div className='text-gray-700 dark:text-gray-300'>
+                  We can escalate this to our team:
+                </div>
+                <div className='flex gap-2'>
+                  <a
+                    href='mailto:support@zion.ai'
+                    className='rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                  >
+                    Email Support
+                  </a>
+                  <a
+                    href='/contact'
+                    className='rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                  >
+                    Chat with Live Agent
+                  </a>
+                </div>
+              </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                    }
+                  }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            )}
+          </div>;
+        </div>;
+      )}
+<<<<<<< HEAD
+    </div>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
                   onKeyDown={e => {if (e && e.key === 'Enter' && !e && e.shiftKey) {e && e.preventDefault()onSend()}
                   }}placeholder='Ask a question…';
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'                />;
                 <button;
                   onClick={() => onSend()}
                   disabled={isLoading}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className="flex gap-2">;
                 <input;
                   value={input}placeholder='Ask a question…';
@@ -193,4 +643,19 @@ export default function ChatWidget() {const [isOpen, setIsOpen] = useState(false
 useEffect ( () => {// Check condition;
 if ( {) {$2;
 }</div>;
+<<<<<<< HEAD
   )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+  );
+}
+useEffect ( () => {
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -343,4 +343,16 @@ if ( {})
     const optimizer = new SEOOptimizer}(;);
     optimizer.run().catch(console.error)};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = SEOOptimizer;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = SEOOptimizer;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = SEOOptimizer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

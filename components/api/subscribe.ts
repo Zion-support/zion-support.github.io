@@ -1,4 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { supabase  } from '../../utils/supabase/client';
 export default async function handler() {if (req.method !== 'POST') return res.status(405).send('Method Not Allowed')const { email } = req.body || {},if (!email || typeof email !== 'string') return res.status(400).send('Invalid email')try {// Basic validation;
     const normalized  = null;export default async function handler() {if (req.method !== 'POST') return res.status(405).send('Method Not Allowed')try {// Basic validation;
@@ -28,16 +43,56 @@ import { supabase   } from '../../utils / supabase / client';export default asyn
  * handler - Function description;
  */;
 function handler() {if (return res.status (405).send ('Method Not Allowed')) {$2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import { supabase } from '../../utils/supabase/client';
+
+<<<<<<< HEAD
+=======
 
 import { supabase } from '../../utils/supabase/client';
 
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+import { supabase } from '../../utils/supabase/client';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+  const { email } = req.body || {},
+  if (!email || typeof email !== 'string') return res.status(400).send('Invalid email');
+  try {
+    // Basic validation
+    const normalized = null;
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {;
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   try {
     // Basic validation
     const normalized = email && email.trim().toLowerCase();
@@ -50,6 +105,13 @@ export default async function handler(
 
     const { data, error } = await supabase
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (isPlaceholder) {
       return res && res.status(200).json({ ok: true, simulated: true })
     }
@@ -57,6 +119,23 @@ export default async function handler(
       .from('email_signups')
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
     return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -66,18 +145,43 @@ export default async function handler(
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
   const { email } = req.body |{}
   if (!email |typeof email !== 'string') return res.status(400).send('Invalid email');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const { email } = req.body || {};
+  if (!email || typeof email !== 'string')
+    return res.status(400).send('Invalid email');
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  const { email } = req.body || {};
+  if (!email || typeof email !== 'string')
+    return res.status(400).send('Invalid email');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   try {
     // Basic validation
     const normalized = email && email.trim().toLowerCase();
     const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const isPlaceholder =
       (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
       (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
     if (isPlaceholder) {
       return res && res.status(200).json({ ok: true, simulated: true });    }
     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+<<<<<<< HEAD
     const { data, error } = await supabase
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
     if (isPlaceholder) {
@@ -90,10 +194,92 @@ export default async function handler(
         source: 'mobile-launch'
         created_at: new Date().toISOString()
       })      .select('*')      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      .select('*')
+      .single();
+
+=======
+
+
+      .select('*')
+      .single();
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    if (!isValid) return res.status(400).send('Invalid email format');
+    // If placeholders are still used, just accept without DB write
+const isPlaceholder =
+      (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
+      (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
+    if (isPlaceholder) {
+      return res.status(200).json({ ok: true, simulated: true });
+    }
+    const { data, error } = await supabase
+      .from('email_signups')
+.insert({
+        email: normalized,
+        source: 'mobile-launch',
+        created_at: new Date().toISOString(),
+      })
+      .select('*')
+      .single();
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+    if (error) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+    if (error) {
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+}
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       .select('*')
       .single();
 
     if (error) {}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { supabase } from '../../utils / supabase / client';
 ;
 export default async /**
@@ -161,8 +347,67 @@ if ( {) {$2;
     }
     return res.status (200).json ({ ok: true, data });
   } catch (e: any) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      if (error.message && error.message.includes('duplicate')) {
+return res.status(200).json({ ok: true, duplicate: true });
+      }
+      return res.status(500).send(error.message |'Database error');
+    }
+    return res.status(200).json({ ok: true, data });
+  } catch (e: any) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return res.status(500).send(e?.message |'Unexpected error');
     return res.status(500).send(e?.message || 'Unexpected error');
+=======
+    return res.status(500).send(e?.message |'Unexpected error');
+    return res.status(500).send(e?.message || 'Unexpected error');
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+    return res.status(500).send(e?.message |'Unexpected error');
+    return res.status(500).send(e?.message || 'Unexpected error');
+  }      }
+      return res.status(500).send(error.message |'Database error')
+    }
+    return res.status(200).json({ ok: true, data })
+  } catch (e: any) {
+    return res.status(500).send(e?.message |'Unexpected error')
+      return res && res.status(500).send(error && error.message || 'Database error');
+    }
+    return res && res.status(200).json({ ok: true, data });
+  } catch (e: any) {
+    return res && res.status(500).send(e?.message || 'Unexpected error');
+  }      }
+      return res && res.status(500).send(error && error.message || 'Database error')
+    }
+    return res && res.status(200).json({ ok: true, data })
+  } catch (e: any) {
+    return res && res.status(500).send(e?.message || 'Unexpected error')
+  };
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    return res.status(500).send(e?.message |'Unexpected error');
+    return res.status(500).send(e?.message || 'Unexpected error');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return res.status (500).send (e?.message || 'Unexpected error');
   }      }
       return res.status (500).send (error.message || 'Database error');
@@ -172,10 +417,50 @@ if ( {) {$2;
     return res.status (500).send (e?.message || 'Unexpected error');
 }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return res.status(500).send(e?.message || 'Unexpected error');
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+    return res.status(500).send(e?.message || 'Unexpected error');
+
+=======
+=======
+    return res.status(500).send(e?.message || 'Unexpected error');
+}
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     return res.status(500).send(e?.message || 'Unexpected error');
 
 
+<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+    return res.status(500).send(e?.message || 'Unexpected error');
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return res.status(500).send(e?.message || 'Unexpected error');
 
 
@@ -184,5 +469,46 @@ if ( {) {$2;
     return res.status(500).send(e?.message || 'Unexpected error');
   }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(500).send(e?.message || 'Unexpected error');
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    return res.status(500).send(e?.message || 'Unexpected error');
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+    return res.status(500).send(e?.message || 'Unexpected error');
+}
+
+
+    return res.status(500).send(e?.message || 'Unexpected error');
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+    return res.status(500).send(e?.message || 'Unexpected error');
+}
+
+
+
+    return res.status(500).send(e?.message || 'Unexpected error');
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    return res.status(500).send(e?.message || 'Unexpected error');
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -24,6 +24,10 @@ interface FeatureCardProps {
   href: string,
   is_active: boolean,
   on_click: () => void;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -36,6 +40,12 @@ interface FeatureCardProps {id: number;
   isActive: boolean;
   onClick: () => void;
 }
+<<<<<<< HEAD
+=======
+=======}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export /**
  * FeatureCard - Function description
  */
@@ -57,8 +67,17 @@ if ( {) {$2;
 }
           e.prevent_default ()on_click ()e.preventDefault()onClick()}
           e.prevent_default ();
+<<<<<<< HEAD
+<<<<<<< HEAD
           on_click ();
           e.preventDefault();
+=======
+          on_click ();          e.preventDefault();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          on_click ();
+          e.preventDefault();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           onClick();
         }
       }}
@@ -67,6 +86,10 @@ if ( {) {$2;
       aria - pressed={is_active}
       aria - label={`${title} - ${description}`}
     >;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="w - 12 h - 12 rounded - lg flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration - 200">;
         {icon}
       </div>;
@@ -80,6 +103,13 @@ if ( {) {$2;
         <Link;
           href={href}
           className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 rounded";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="w - 12 h - 12 rounded - lg flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration-200">;
         {icon}
       </div>;
@@ -92,7 +122,16 @@ if ( {) {$2;
       <div className="mt - 4 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 200">;
         <Link;
           href={href}
+<<<<<<< HEAD
+<<<<<<< HEAD
+          className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue-500 rounded";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
           className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 rounded";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 rounded";
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           on_click={(e) => e.stop_propagation ()}
         >;
           Learn more →;

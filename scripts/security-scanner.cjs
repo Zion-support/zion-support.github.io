@@ -24,4 +24,16 @@ const { execSync } = require('child_process')
         pattern: /password\s*=\s*['"][^'']
         pattern: /api[_-]?key\s*=\s*['"][^'']
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
         pattern: /secret\s*=\s*['"][^'']
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        pattern: /secret\s*=\s*['"][^'']
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        pattern: /secret\s*=\s*['"][^'']
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

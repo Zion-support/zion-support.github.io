@@ -52,10 +52,19 @@ function restorePage() {try {const currentContent = fs.readFileSync(pagePath, 'u
 
       if (parts.length > 1) {
         // Take the content after the conflict resolution
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       }
     }
     // Clean up the content
@@ -136,20 +145,38 @@ function fixSpecificPages() {
     restored: 0
     failed: 0
     details: []
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
   }
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   },
   
   console.log('🚀 Starting targeted page restoration...'),
   console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
   
   // // // console.log('🚀 Starting targeted page restoration...'),
+<<<<<<< HEAD
+  // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`)
 
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   },
 
@@ -174,10 +201,23 @@ function fixSpecificPages() {
       })
       continue
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    console.log(`\n🔍 Checking: ${pagePath}`)
+    const result = restorePage(pagePath)
+    console.log(`\n🔍 Checking: ${pagePath}`)
+    const result = restorePage(pagePath)
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
     console.log(`\n🔍 Checking: ${pagePath}`)
     const result = restorePage(pagePath)
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
     
@@ -202,7 +242,14 @@ function fixSpecificPages() {
       console.log(`   Used backup: ${result.backupUsed}`)
       console.log(`   Corrupted backup: ${result.corruptedBackup}`)
     } else {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console.log(`   Reason: ${result.reason}`)
     }
     results.details.push({
@@ -211,7 +258,14 @@ function fixSpecificPages() {
     })
   }
   // Generate summary
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
       results.failed++,
 
@@ -260,6 +314,11 @@ function fixSpecificPages() {const results = {total: corruptedPages.length;
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),;
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
   return results;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   console.log('\n📊 Restoration Summary: ')
   console.log(`   Total pages: ${results.total}`)
@@ -338,6 +397,10 @@ function fixSpecificPages() {;
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),;
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
   return results;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 // Run the restoration if this script is executed directly
 if ({
@@ -444,10 +507,24 @@ module.exports = {restorePage,fixSpecificPages,findBestBackup;
 }}main;
   fixSpecificPages ();
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 }
 
 
+<<<<<<< HEAD
+=======
+
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 module.exports = {;
   restorePage,;
@@ -462,9 +539,18 @@ module.exports = {
   restore_page,
   fixSpecificPages,
   findBestBackup;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 main

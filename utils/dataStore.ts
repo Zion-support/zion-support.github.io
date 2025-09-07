@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 // Data store utilities;
 export const dataStore = {// Add data store functionality here;
   getData: () => [],setData: (data: any) => null,updateData: (id: string, data: any) => null,deleteData: (id: string) => null;
@@ -13,10 +19,15 @@ export const dataStore = {// Add data store functionality here;
 }  id: string;
   title: string,description: string;
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   getData: () => []
   setData: (data: any) => null
   updateData: (id: string, data: any) => null
   deleteData: (id: string) => null
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 
@@ -35,6 +46,13 @@ export const dataStore = {// Add data store functionality here;
 interface Project {
   id: string;
   title: string;
+<<<<<<< HEAD
+=======
+}  id: string;
+  title: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description: string;
   status: string;
   createdAt: Date;
@@ -78,7 +96,14 @@ class DataStore {
     return this.projects.find((project) => project.id === id);
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
   createProject(data: Partial<Project>): Project {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  createProject(data: Partial<Project>): Project {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     const project: Project = {
       id: Math.random().toString(36).substr(2, 9),
       title: data.title || "",
@@ -90,7 +115,15 @@ class DataStore {
     this.projects.push(project);
     return project;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   // Review methods
   hasExistingReview(
     projectId: string,
@@ -104,6 +137,10 @@ class DataStore {
         review.fromId === fromId,
     );
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   upsertReview(data: Partial<Review>): Review {
     const existingIndex = this.reviews.findIndex(
@@ -176,6 +213,12 @@ export const data_store = {
     };
     this.projects.push(project);
     return project;
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 
   // Review methods
@@ -262,6 +305,10 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 const store = new DataStore();
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export const findProjectById = (id: string) => store && store.findProjectById(id);
 export const createProject = (data: Partial<Project>) => store && store.createProject(data);
 export const hasExistingReview = (projectId: string, fromRole: string, fromId: string) => store && store.hasExistingReview(projectId, fromRole, fromId);
@@ -304,3 +351,8 @@ export const counterpartRole = (role: "client" | "talent") =>
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

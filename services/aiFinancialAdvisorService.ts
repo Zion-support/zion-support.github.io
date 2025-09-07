@@ -4,6 +4,10 @@ export interface InvestmentPortfolio  {export interface InvestmentPortfolio  {id
   userId: string;
   name: string;
   totalValue: number;
+<<<<<<< HEAD
+  currency: string;
+<<<<<<< HEAD
+=======
   currency: string;risk_tolerance: 'conservative' | 'moderate' | 'aggressive',investment_horizon: number, // in years;
   target_return: number;assets: PortfolioAsset[];
   last_rebalanced: Date;
@@ -13,6 +17,7 @@ export interface InvestmentPortfolio  {export interface InvestmentPortfolio  {id
 }
   riskTolerance: 'conservative' | 'moderate' | 'aggressive';
   currency: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   investment_horizon: number, // in years;
@@ -56,6 +61,15 @@ export interface PortfolioAsset  {export interface PortfolioAsset  {export inter
 export interface PortfolioPerformance  {total_return: number;
 export interface PortfolioAsset {
 
+<<<<<<< HEAD
+=======
+  assets: PortfolioAsset[];
+  last_rebalanced: Date;
+  performance: PortfolioPerformance;
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   riskTolerance: 'conservative' | 'moderate' | 'aggressive'
 
   assets: PortfolioAsset[];
@@ -65,12 +79,24 @@ export interface PortfolioAsset {
 export interface PortfolioAsset {
 
 export interface PortfolioAsset {;
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 export interface PortfolioAsset {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+export interface PortfolioAsset {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string;
   symbol: string;
   name: string;
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   quantity: number;
 
   current_price: number;
@@ -115,7 +141,17 @@ export interface PortfolioPerformance {
 }
 export interface InvestmentRecommendation {
   id: string;
+=======
+  quantity: number;  id: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   user_id: string;
+<<<<<<< HEAD
+  currentPrice: number;
+
+  marketValue: number
+
+  allocation: number, // percentage of portfolio
+=======
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
   asset: {symbol: string;
     name: string;}
@@ -220,6 +256,7 @@ export interface FinancialPlan  {id: string;
   user_id: string;
   currentPrice: number;marketValue: number;
   allocation: number, // percentage of portfolio;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   purchasePrice: number;
   purchaseDate: Date;
   performance: {dailyReturn: number;
@@ -240,8 +277,12 @@ export interface PortfolioPerformance  {export interface PortfolioPerformance  {
 }
 export interface InvestmentRecommendation  {export interface InvestmentRecommendation  {id: string;
   userId: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   asset: {symbol: string;
     name: string;  insurance: {life: boolean;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
   asset: {
     symbol: string;
@@ -367,6 +408,14 @@ export interface FinancialPlan {
 
   }
   insurance: {
+<<<<<<< HEAD
+=======
+  asset: {
+    symbol: string;
+    name: string;  insurance: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     life: boolean;
     health: boolean;
     disability: boolean;property: boolean,recommendations: string[];
@@ -383,7 +432,14 @@ export interface FinancialPlan {
     property: boolean,recommendations: string[];
   created_at: Date,
   updated_at: Date;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     property: boolean,
     recommendations: string[];
   }
@@ -472,20 +528,36 @@ export interface FinancialResponse  {success: boolean;
   parameters: Record<string, any>;
 
   preferences?: Record<string, any>
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 export interface FinancialRequest {
+=======
+}export interface FinancialRequest {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+export interface FinancialRequest {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   user_id: string;
   request_type: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
   parameters: Record < string, any>;
   preferences?: Record < string, any>;
 
+<<<<<<< HEAD
 }
 export interface FinancialResponse {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
 
   preferences?: Record<string, any>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 }
@@ -531,12 +603,30 @@ export class AIFinancialAdvisorService {
     } catch (error) {
       console && console.error('Error analyzing portfolio:', error);
       throw error
+<<<<<<< HEAD
+=======
+}  }
+  async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
+    try {
+      const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
+        headers: {      throw error
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
   }
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       const response = await fetch(`${this && this.baseUrl}/api/financial/recommendations`, {
         method: 'POST',
         headers: {
@@ -552,8 +642,17 @@ export class AIFinancialAdvisorService {
       return data && data.recommendations || []
 
     } catch (error) {
+<<<<<<< HEAD
+<<<<<<< HEAD
       console && console.error('Error getting investment recommendations:', error);
       if (!response && response.ok) {
+=======
+      console && console.error('Error getting investment recommendations:', error);      if (!response && response.ok) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      console && console.error('Error getting investment recommendations:', error);
+      if (!response && response.ok) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
 
@@ -575,12 +674,24 @@ export class AIFinancialAdvisorService {
       return data.recommendations |[]
     } catch (error) {
       console.error('Error getting investment recommendations:', error);
+<<<<<<< HEAD
+<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error getting investment recommendations:', error);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    } catch (error) {
+      console && console.error('Error getting investment recommendations:', error);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       throw error
     }
   }
   async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     try {
 
       const response = await fetch(`${this && this.baseUrl}/api/financial/plan`, {
@@ -600,6 +711,12 @@ export class AIFinancialAdvisorService {
     } catch (error) {
       console && console.error('Error creating financial plan:', error);
     } catch (error) {
+<<<<<<< HEAD
+=======
+    try {    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console && console.error('Error creating financial plan:', error);
       throw error
     }
@@ -609,6 +726,10 @@ export class AIFinancialAdvisorService {
       const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {
         headers: {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -621,14 +742,29 @@ export class AIFinancialAdvisorService {
     } catch (error) {
       console && console.error('Error tracking financial goals:', error);
     } catch (error) {
+<<<<<<< HEAD
+=======
+          'Authorization': `Bearer ${this && this.apiKey}`}});    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console && console.error('Error tracking financial goals:', error);
       throw error
     }
   }
   async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
       const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {
         headers: {
+=======
+      const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {        headers: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {
+        headers: {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
@@ -640,6 +776,10 @@ export class AIFinancialAdvisorService {
       return data && data.analysis
 
     } catch (error) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console && console.error('Error getting market analysis:', error);
     } catch (error) {
       console && console.error('Error getting market analysis:', error);
@@ -662,6 +802,10 @@ export class AIFinancialAdvisorService {
       return data && data.analysis
 
     } catch (error) {
+=======
+      console && console.error('Error getting market analysis:', error);    } catch (error) {
+      console && console.error('Error getting market analysis:', error);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error getting market analysis:', error);
       throw error
     }
@@ -702,13 +846,24 @@ export class AIFinancialAdvisorService {
   }> {
     try {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
         body: JSON && JSON.stringify({ targetAllocation })});
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
@@ -720,6 +875,9 @@ export class AIFinancialAdvisorService {
     } catch (error) {
       console && console.error('Error rebalancing portfolio:', error);
     } catch (error) {
+=======
+      console && console.error('Error rebalancing portfolio:', error);    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error rebalancing portfolio:', error);
     } catch (error) {
       console && console.error('Error rebalancing portfolio:', error);
@@ -760,14 +918,26 @@ if ( {) {$2;
     recommendations: string[]
   }> {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       const response = await fetch(`${this && this.baseUrl}/api/financial/retirement-calculator`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
         body: JSON && JSON.stringify({ userId, targetAge, desiredIncome })});
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
@@ -781,10 +951,14 @@ if ( {) {$2;
     } catch (error) {
       console && console.error('Error calculating retirement needs:', error);
     } catch (error) {
+=======
+      console && console.error('Error calculating retirement needs:', error);    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error calculating retirement needs:', error);
       throw error
     }
   }
+<<<<<<< HEAD
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
     analysis?: MarketAnalysis,
     goals?: FinancialGoal[];
@@ -927,6 +1101,9 @@ if ( {) {
     } catch (error) {
       console && console.error('Error getting tax optimization strategies:', error);
     } catch (error) {
+=======
+  async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error getting tax optimization strategies:', error);
       throw error
     }
@@ -1112,14 +1289,26 @@ if ( {) {$2;
     nextSteps: string[]
   }> {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       const response = await fetch(`${this && this.baseUrl}/api/financial/report`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
         body: JSON && JSON.stringify({ userId, reportType })});
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
@@ -1133,16 +1322,28 @@ if ( {) {$2;
     } catch (error) {
       console && console.error('Error generating financial report:', error);
     } catch (error) {
+=======
+      console && console.error('Error generating financial report:', error);    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error generating financial report:', error);
       throw error
     }
   }
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string,;
   userId: string,;
   name: string,;
@@ -1155,6 +1356,10 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process &
   lastRebalanced: Date,;
   performance: PortfolioPerformance,;
   createdAt: Date,;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   updatedAt: Date;
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
@@ -1754,3 +1959,9 @@ export class AIFinancialAdvisorService {;
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+<<<<<<< HEAD
+=======
+  updatedAt: Date;export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

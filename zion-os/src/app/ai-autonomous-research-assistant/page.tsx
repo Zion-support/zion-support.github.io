@@ -10,6 +10,10 @@ export default function AIAutonomousResearchAssistantPage() {return (<div classN
 export default function AIAutonomousResearchAssistantPage() {;
   return (;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <div className="min-h-screen bg-white">;
 export default /**
  * AIAutonomousResearchAssistantPage - Function description
@@ -19,6 +23,7 @@ function AIAutonomousResearchAssistantPage() {
     <div className="min - h-screen bg - white">;
 export default function AIAutonomousResearchAssistantPage() {return (;
     <div className="min-h-screen bg-white">;
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - red - 600 to - pink - 600 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -26,11 +31,31 @@ export default function AIAutonomousResearchAssistantPage() {return (;
             AI Autonomous Research Assistant;
           </h1>;
           <p className="text - xl md:text - 2xl text - red - 100 max - w-3xl mx - auto">;
+=======
+    <div className="min-h-screen bg-white">;    <div className="min-h-screen bg-white">;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+      {/* Hero Section */}
+      <section className="bg - gradient - to - r from - red - 600 to - pink - 600 text - white py - 20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+          <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+            AI Autonomous Research Assistant;
+          </h1>;
+<<<<<<< HEAD
+          <p className="text - xl md:text - 2xl text - red - 100 max - w-3xl mx-auto">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          <p className="text - xl md:text - 2xl text - red - 100 max - w-3xl mx - auto">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             Revolutionize your research capabilities with our intelligent, autonomous AI research platform that works 24 / 7 to accelerate discovery and innovation.;
           </p>;
         </div>;
       </section>;
       {/* Overview Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
@@ -81,6 +106,13 @@ export default function AIAutonomousResearchAssistantPage() {return (;
                   <div>;
                     <h3 className="font - semibold text - gray - 900">Multi - Domain</h3>;
                     <p className="text - gray - 600">Works across all research fields</p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py-20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items-center">;
@@ -129,8 +161,19 @@ export default function AIAutonomousResearchAssistantPage() {return (;
                     </svg>;
                   </div>;
                   <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    <h3 className="font - semibold text - gray-900">Multi - Domain</h3>;
+                    <p className="text - gray-600">Works across all research fields</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                     <h3 className="font - semibold text - gray - 900">Multi - Domain</h3>;
                     <p className="text - gray - 600">Works across all research fields</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <h3 className="font - semibold text - gray - 900">Multi - Domain</h3>;
+                    <p className="text - gray - 600">Works across all research fields</p>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;
                 </div>;
               </div>;
@@ -139,6 +182,10 @@ export default function AIAutonomousResearchAssistantPage() {return (;
         </div>;
       </section>;
       {/* Key Features */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center mb - 16">;
@@ -213,6 +260,13 @@ export default function AIAutonomousResearchAssistantPage() {return (;
               </div>;
               <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Report Generation</h3>;
               <p className="text - gray - 600">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - gray-50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
@@ -285,8 +339,19 @@ export default function AIAutonomousResearchAssistantPage() {return (;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M12 6.253v13m0 - 13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0 - 13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c - 1.746 0 - 3.332.477 - 4.5 1.253" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <h3 className="text - xl font - semibold text - gray - 900 mb-4">Report Generation</h3>;
+              <p className="text - gray-600">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Report Generation</h3>;
               <p className="text - gray - 600">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Report Generation</h3>;
+              <p className="text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Automatically generates comprehensive research reports, including methodology, results, conclusions, and recommendations.;
               </p>;
             </div>;
@@ -294,6 +359,10 @@ export default function AIAutonomousResearchAssistantPage() {return (;
         </div>;
       </section>;
       {/* Use Cases */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - white">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center mb - 16">;
@@ -311,6 +380,13 @@ export default function AIAutonomousResearchAssistantPage() {return (;
                 Accelerate drug discovery by analyzing molecular structures, predicting drug interactions, and identifying potential therapeutic targets.;
               </p>;
               <ul className="space - y-2 text - gray - 600">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg-white">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
@@ -327,61 +403,130 @@ export default function AIAutonomousResearchAssistantPage() {return (;
               <p className="text - gray - 600 mb - 4">;
                 Accelerate drug discovery by analyzing molecular structures, predicting drug interactions, and identifying potential therapeutic targets.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <ul className="space - y-2 text - gray-600">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <ul className="space - y-2 text - gray - 600">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Drug repurposing analysis</li>;
                 <li>• Clinical trial optimization</li>;
                 <li>• Adverse effect prediction</li>;
                 <li>• Biomarker identification</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="border border - gray - 200 rounded - xl p - 8">;
               <h3 className="text - 2xl font - bold text - gray - 900 mb - 4">Materials Science</h3>;
               <p className="text - gray - 600 mb - 4">;
                 Discover new materials with desired properties through computational modeling and experimental design optimization.;
               </p>;
               <ul className="space - y-2 text - gray - 600">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="border border - gray - 200 rounded - xl p-8">;
               <h3 className="text - 2xl font - bold text - gray - 900 mb-4">Materials Science</h3>;
               <p className="text - gray - 600 mb-4">;
                 Discover new materials with desired properties through computational modeling and experimental design optimization.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <ul className="space - y-2 text - gray-600">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <ul className="space - y-2 text - gray - 600">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Novel material discovery</li>;
                 <li>• Property optimization</li>;
                 <li>• Manufacturing process design</li>;
                 <li>• Sustainability analysis</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="border border - gray - 200 rounded - xl p - 8">;
               <h3 className="text - 2xl font - bold text - gray - 900 mb - 4">Financial Research</h3>;
               <p className="text - gray - 600 mb - 4">;
                 Develop advanced trading strategies, risk models, and market analysis through pattern recognition and predictive modeling.;
               </p>;
               <ul className="space - y-2 text - gray - 600">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="border border - gray - 200 rounded - xl p-8">;
               <h3 className="text - 2xl font - bold text - gray - 900 mb-4">Financial Research</h3>;
               <p className="text - gray - 600 mb-4">;
                 Develop advanced trading strategies, risk models, and market analysis through pattern recognition and predictive modeling.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <ul className="space - y-2 text - gray-600">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <ul className="space - y-2 text - gray - 600">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Market trend analysis</li>;
                 <li>• Risk assessment models</li>;
                 <li>• Algorithmic trading strategies</li>;
                 <li>• Portfolio optimization</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="border border - gray - 200 rounded - xl p - 8">;
               <h3 className="text - 2xl font - bold text - gray - 900 mb - 4">Climate Science</h3>;
               <p className="text - gray - 600 mb - 4">;
                 Model complex climate systems, predict environmental changes, and develop sustainable solutions through advanced data analysis.;
               </p>;
               <ul className="space - y-2 text - gray - 600">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="border border - gray - 200 rounded - xl p-8">;
               <h3 className="text - 2xl font - bold text - gray - 900 mb-4">Climate Science</h3>;
               <p className="text - gray - 600 mb-4">;
                 Model complex climate systems, predict environmental changes, and develop sustainable solutions through advanced data analysis.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <ul className="space - y-2 text - gray-600">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <ul className="space - y-2 text - gray - 600">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="space - y-2 text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Climate modeling</li>;
                 <li>• Impact assessment</li>;
                 <li>• Adaptation strategies</li>;
@@ -392,6 +537,10 @@ export default function AIAutonomousResearchAssistantPage() {return (;
         </div>;
       </section>;
       {/* Technical Specifications */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="text - center mb - 16">;
@@ -433,6 +582,13 @@ export default function AIAutonomousResearchAssistantPage() {return (;
               </div>;
               <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Enterprise Security</h3>;
               <p className="text - gray - 600">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - gray-50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="text - center mb-16">;
@@ -472,8 +628,19 @@ export default function AIAutonomousResearchAssistantPage() {return (;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M12 15v2m - 6 4h12a2 2 0 002 - 2v - 6a2 2 0 00 - 2-2H6a2 2 0 00 - 2 2v6a2 2 0 002 2zm10 - 10V7a4 4 0 00 - 8 0v4h8z" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <h3 className="text - xl font - semibold text - gray - 900 mb-4">Enterprise Security</h3>;
+              <p className="text - gray-600">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Enterprise Security</h3>;
               <p className="text - gray - 600">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Enterprise Security</h3>;
+              <p className="text - gray - 600">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 SOC2 compliant with end - to - end encryption, role - based access control, and comprehensive audit logging for enterprise use.;
               </p>;
             </div>;
@@ -481,6 +648,10 @@ export default function AIAutonomousResearchAssistantPage() {return (;
         </div>;
       </section>;
       {/* CTA Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - red - 600 text - white">;
         <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
           <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
@@ -494,6 +665,13 @@ export default function AIAutonomousResearchAssistantPage() {return (;
               Schedule a Demo;
             </a>;
               <a href="/contact" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - red - 600 transition - colors">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - red - 600 text-white">;
         <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
           <h2 className="text - 3xl md:text - 4xl font - bold mb-6">;
@@ -506,7 +684,16 @@ export default function AIAutonomousResearchAssistantPage() {return (;
             <a href="/contact" className="bg - white text - red - 600 px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - gray - 100 transition - colors">;
               Schedule a Demo;
             </a>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <a href="/contact" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - red - 600 transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <a href="/contact" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - red - 600 transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <a href="/contact" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - red - 600 transition - colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               Get Started Today;
             </a>;
           </div>;

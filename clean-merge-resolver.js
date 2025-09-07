@@ -19,7 +19,15 @@ function fixMergeConflicts(filePath) {
     const originalContent = content;
     
     // Remove merge conflict markers and keep HEAD version
+<<<<<<< HEAD
+<<<<<<< HEAD
+    content = content.replace(/    content = content.replace(/    
+=======
     
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
@@ -55,9 +63,18 @@ function fixMergeConflicts() {try {let content  = fs.readFileSync(filePath, 'utf
     // Remove merge conflict markers and keep HEAD version;const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;content = content.replace(/    content = content.replace(/    if (content !== originalContent) {fs.writeFileSync(filePath, content, 'utf8'),console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),return true;
         files.push (full_path);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require('child_process'),;
 const fs = require('fs');
 const path = require('path'),;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
@@ -65,6 +82,14 @@ function fixMergeConflicts(filePath) {;
     let content = fs.readFileSync(filePath, 'utf8'),;
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const originalContent = content;
+    // Remove merge conflict markers and keep HEAD version;
+    content = content.replace(/    content = content.replace(/    if (content !== originalContent) {;
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     const originalContent = content,;
     // Remove merge conflict markers and keep HEAD version;
     content = content.replace(/[\s\S]*?
@@ -72,6 +97,10 @@ function fixMergeConflicts(filePath) {;
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
     if (content !== originalContent) {;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
       return true;
@@ -106,12 +135,21 @@ function main() {try {// Check if we're in a git repository;
 ;
 // Function to get all files recursively;
 function getAllFiles(dir, extensions) {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   let files = [],;
   try {;
     const items = fs.readdirSync(dir),;
     for (const item of items) {;
       const fullPath = path.join(dir, item),;
       const stat = fs.statSync(fullPath),;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Function to get all files recursively
 function getAllFiles(dir, extensions) {
   let files = [];
@@ -229,7 +267,68 @@ async function main() {
       try {;
         const content = fs.readFileSync(file, 'utf8'),;
           if (fixMergeConflicts(file)) {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            fixedCount++;
+          }
+        }
+      } catch (error) {;
+        // Skip files that can't be read;
+      }
+    }
+;
+;
+    if (fixedCount > 0) {;
+      console.log(`✅ Fixed merge conflicts in ${fixedCount} files`),;
+      execSync('git add .'),;
+      execSync('git commit -m "fix: resolve remaining merge conflicts in files\n\n- Fixed merge conflict markers in source files\n- Ensured clean codebase without conflicts"');
+    }
+;
+    // Get all branches;
+    console.log('🌿 Getting all branches...'),;
+    const branches = execSync('git branch -r', { encoding: 'utf8' }),;
+    const branchList = branches.split('\n');
+      .map(branch => branch.trim());
+      .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+    console.log(`Found ${branchList.length} branches to merge: `),;
+    branchList.forEach(branch => console.log(`  - ${branch}`)),;
+    // Merge each branch;
+    for (const branch of branchList) {;
+      try {;
+        const branchName = branch.replace('origin/', ''),;
+        console.log(`\n🔄 Merging branch: ${branchName}`),;
+        // Checkout the branch;
+        execSync(`git checkout ${branchName}`),;
+        // Merge into main;
+        execSync('git checkout main'),;
+        execSync(`git merge ${branchName} --no-ff -m "feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`),;
+        console.log(`✅ Successfully merged ${branchName}`);
+      } catch (error) {;
+        console.log(`⚠️  Error merging ${branch}: ${error.message}`),;
+        // Continue with other branches;
+      }
+    }
+;
+    // Push all changes;
+    console.log('📤 Pushing all changes to main...'),;
+    execSync('git push origin main'),;
+    console.log('🎉 All merge operations completed successfully!'),;
+    console.log('✅ All PRs have been merged into main branch'),;
+    console.log('✅ All merge conflicts have been resolved'),;
+    console.log('✅ Repository is now clean and up to date');
+  } catch (error) {;
+    console.error('❌ Error during merge process:', error.message),;
+    process.exit(1);
+  }
+}
+;
+main().catch(console.error),;
+=======
           if (fixMergeConflicts(file)) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+          if (fixMergeConflicts(file)) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             fixedCount++;
           }
         }

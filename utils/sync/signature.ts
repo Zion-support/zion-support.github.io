@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import crypto from "crypto";
 
 ;
@@ -9,6 +13,15 @@ export function getSyncSecret(): string | null {const raw = process.env.ZION_SYN
 
 }
 export function getSyncSecret(): string | null {
+<<<<<<< HEAD
+=======
+
+
+}
+=======export function getSyncSecret(): string | null {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
 }
@@ -54,18 +67,38 @@ export function verifySignature(
 }
 
 export function generateNonce(): string {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return crypto.randomBytes(16).toString("hex");
 
 export function generateNonce(): string {
   return crypto.randomBytes(16).toString("hex");
   verify: (signature: string, message: string, address: string) => false,
+<<<<<<< HEAD
+=======
+  return crypto.randomBytes(16).toString("hex");  verify: (signature: string, message: string, address: string) => false,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   sign: (message: string, private_key: string) => '',
   recover: (signature: string, message: string) => '';
 }
 
 export function hashData(data: string): string {
   return crypto.createHash("sha256").update(data).digest("hex");
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 };
 
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

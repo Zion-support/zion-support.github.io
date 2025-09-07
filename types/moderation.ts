@@ -4,6 +4,12 @@ export interface ModerationResult  {id: string;
   status: 'approved' | 'rejected' | 'pending';
   reason?: string;moderatedBy?: string;
   moderatedAt: Date;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
   flagId: string;
   action: ModerationStatus;
   adminNotes?: string;
@@ -11,6 +17,7 @@ export interface ModerationResult  {id: string;
   reason?: string;
   createdAt: string;export type ModerationStatus  = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';export interface ModerationAction  {id: string;
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 export interface ModerationAction {
   id: string;
@@ -20,8 +27,15 @@ export interface ModerationAction {
   adminId: string;
   reason?: string;
   createdAt: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
   created_at: string;
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 }
 export interface ModerationFlag  {export interface ModerationFlag  {id: string;

@@ -1,0 +1,84 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+export default function LeadEnrichment() {}; return null} } ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {}; return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {}; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
+import React from 'react';
+interface LeadenrichmentProps {
+  // Add props here as needed
+}
+export default function Leadenrichment({}: LeadenrichmentProps) {
+
+
+
+export default function Leadenrichment({}: LeadenrichmentProps) {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+export default function LeadEnrichment() {}; return null} } ; function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {}; return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {}; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links && links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup && ziontechgroup.com</a> · \"Email\": <a href={links && links.contact}>kleber@ziontechgroup && ziontechgroup.com></div> ></div> ></div> );} ;
+export default function LeadEnrichment() {}; return null} } ; function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string, price: string, bullets: string[], links: { website: string, contact: string } }) {}; return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {}; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links && links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup && ziontechgroup.com</a> · \"Email\": <a href={links && links.contact}>kleber@ziontechgroup && ziontechgroup.com></div> ></div> ></div> );} ;
+interface LeadenrichmentProps {;
+  // Add props here as needed;
+}
+export default function Leadenrichment(): any ({}: LeadenrichmentProps) {;
+  return (
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+    <div>
+      <h1>Leadenrichment</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+;
+ursor/fix-website-loading-errors-and-merge-6662;
+ursor/automate-test-improve-and-merge-code-646c;
+export default function LeadEnrichment() {}return null} }function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {}return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {}<li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> )}import React from 'react';
+interface LeadenrichmentProps  {// Add props here as needed;
+}
+export default function Leadenrichment() {ursor/automate-test-improve-and-merge-code-646c;
+export default function Leadenrichment() {export default function Leadenrichment() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+  static getDerivedStateFromError(error) {return { hasError: true }}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+export default function LeadEnrichment() {}return null} }function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {}return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {}<li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links && links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup && ziontechgroup.com</a> · \"Email\": <a href={links && links.contact}>kleber@ziontechgroup && ziontechgroup.com></div> ></div> ></div> )}export default function LeadEnrichment() {}return null} }function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string, price: string, bullets: string[], links: { website: string, contact: string } }) {}return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {}<li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links && links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup && ziontechgroup.com</a> · \"Email\": <a href={links && links.contact}>kleber@ziontechgroup && ziontechgroup.com></div> ></div> ></div> )}interface LeadenrichmentProps  {// Add props here as needed;
+}
+export default function Leadenrichment(): any ({}: LeadenrichmentProps) {ursor/automate-test-improve-and-merge-code-646c;
+interface LeadenrichmentProps  {// Add props here as needed;
+}
+export default function Leadenrichment(): any ({}: LeadenrichmentProps) {return (<div>;
+      <h1>Leadenrichment</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )}}}}ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;

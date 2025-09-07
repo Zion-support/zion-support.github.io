@@ -34,7 +34,6 @@ class $1 {}
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
-    
 
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")};
@@ -370,4 +369,16 @@ security.run().catch(error => {})
     process.exit(1)})};
 ;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = SecurityAutomation;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = SecurityAutomation;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = SecurityAutomation;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

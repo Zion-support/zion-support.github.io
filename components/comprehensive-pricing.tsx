@@ -1,3 +1,104 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react',
+import Head from 'next/head';
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond  } from 'lucide-react';
+import Button from '../components/ui/Button',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { revolutionaryMicroSaasServices, revolutionaryServiceCategories  } from '../data/revolutionary-micro-saas-services';
+import { enhancedMicroSaasServices  } from '../data/enhanced-micro-saas-services';
+import {
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Trophy
+  FlaskConical as FlaskIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon
+  Crown
+  Gem
+<<<<<<< HEAD
+=======
 
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
@@ -7,6 +108,8 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React, { useState } from 'react';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useState } from 'react',import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond   } from 'lucide-react';
 import Button from '../components/ui/Button',import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
@@ -82,10 +185,509 @@ import { Check;
   ShieldCheck as ShieldCheckIcon;
   Crown;
   Gem;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Diamond;
   Check,Star,Zap,Shield,Users,Globe,ArrowRight,ExternalLink,TrendingUp,Clock,Target,Building,Rocket,Award,DollarSign,ChartBar,Lock,Cpu,Database,Cloud,Smartphone,Palette,Search,MessageSquare,FileText,Calendar,CreditCard,BarChart3,Settings,Zap as ZapIcon,Code,BookOpen,Activity,Database as DatabaseIcon,Play,Mail,Phone,MapPin,Filter,Grid,List,ChevronDown,ChevronUp,Sparkles,FlaskConical,Dna,Car,Leaf,Factory,Truck,Microscope,GraduationCap,ShieldCheck,Brain,Atom,Globe2,Bot,Eye,Trophy,FlaskConical as FlaskIcon,Dna as DnaIcon,Car as CarIcon,Leaf as LeafIcon,Factory as FactoryIcon,Truck as TruckIcon,Microscope as MicroscopeIcon,GraduationCap as GraduationCapIcon,ShieldCheck as ShieldCheckIcon,Crown,Gem,Diamond,} from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import {
+  revolutionaryMicroSaasServices,
+  revolutionaryServiceCategories,;
+} from '../data/revolutionary-micro-saas-services';
+import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
+import { motion, AnimatePresence } from 'framer-motion';
+export default function ComprehensivePricingPage() {
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  Diamond;
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Trophy,
+  FlaskConical as FlaskIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Crown,
+  Gem,;
+  Diamond,;
+
+} from 'lucide-react';
+import Button from '../components/ui/Button';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+
+import {;
+  revolutionaryMicroSaasServices,;
+  revolutionaryServiceCategories,;
+
+} from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
+import Button from '../components/ui/Button';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [priceRange, setPriceRange] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('price');
+
+<<<<<<< HEAD
+const allServices = [
+    ...revolutionaryMicroSaasServices,
+    ...enhancedMicroSaasServices,
+  ];
+
+  const priceRanges = [
+    { value: 'All', label: 'All Prices' },
+    { value: '0-100', label: '$0 - $100' },
+    { value: '101-500', label: '$101 - $500' },
+{ value: '501-1000', label: '$501 - $1,000' },
+    { value: '1001-2500', label: '$1,001 - $2,500' },
+    { value: '2501-5000', label: '$2,501 - $5,000' },
+    { value: '5001+', label: '$5,001+' },
+  ];
+
+  const sortOptions = [
+    { value: 'price', label: 'Price Low-High' },
+    { value: 'name', label: 'Name A-Z' },
+    { value: 'popularity', label: 'Most Popular' },
+    { value: 'category', label: 'Category' },
+{ value: 'roi', label: 'Highest ROI' },
+  ];
+  // Filter and sort services
+  let filteredServices = allServices;
+  // Category filter
+  if (selectedCategory !== 'All') {
+filteredServices = filteredServices.filter(
+      service => service.category === selectedCategory
+    );
+  }
+  // Price range filter
+  if (priceRange !== 'All') {
+const [min, max] = priceRange
+      .split('-')
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = filteredServices.filter(service => {
+      const price = parseFloat(service.price.replace('$', '').replace(',', ''));
+      return price >= min && (max === Infinity || price <= max);
+    });
+  }
+
+  // Search filter
+  if (searchQuery) {
+filteredServices = filteredServices.filter(
+      service =>
+        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.category.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    filteredServices = filteredServices.filter(service => {
+      const price = parseFloat(service.price.replace('$', '').replace(, ''));
+      return price >= min && (max === Infinity |price <= max)
+    })
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  }
+  // Sort services
+  filteredServices.sort((a, b) => {
+    switch (sortBy) {
+      case 'price':
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+return (
+          parseFloat(a.price.replace('$', '').replace(',', '')) -
+          parseFloat(b.price.replace('$', '').replace(',', ''))
+        );
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      case 'category':
+        return a.category.localeCompare(b.category);
+      case 'roi':
+        return bRoi - aRoi;
+<<<<<<< HEAD
+default:
+        return a.name.localeCompare(b.name);
+    }
+  });
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+website: 'https://ziontechgroup.com',
+  };
+
+  // Pricing tiers
+  const pricingTiers = [
+    {
+      name: 'Starter'
+      price: '$49'
+      period: '/month'
+      description: 'Perfect for small businesses and startups'
+      features: [
+'Basic service access',
+        'Email support',
+        'Standard features',
+        'Community forum access',
+        'Basic analytics',
+      ],
+      icon: <Star className='w-6 h-6' />,
+      color: 'from-blue-500 to-cyan-600',
+      popular: false,
+    },
+    {
+      name: 'Professional',
+      price: '$199',
+      period: '/month',
+      description: 'Ideal for growing businesses and teams',
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      default:;
+        return a && a.name.localeCompare(b && b.name);    }      default: return a && a.name.localeCompare(b && b.name);
+    }
+  });
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  }
+        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
+        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
+        return bRoi - aRoi;
+      default: return a.name.localeCompare(b.name)
+;
+  // Filter and sort services;
+  let filtered_services = all_services;
+;
+  // Category filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    filtered_services = filtered_services.filter (
+      service => service.category === selected_category);  }
+  // Price range filter;
+  if ( {    filtered_services = filtered_services.filter (service => service.category === selected_category)) {
+  $2
+}
+  }
+  // Price range filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    const [min, max] = price_range;
+      .split ('-');
+      .map (p => (p === '+' ? Infinity : parse_int (p)));
+    filtered_services = filtered_services.filter (service => {
+      const price = parse_float (service.price.replace ('$', '').replace (', ', ''));
+      return price >= min && (max === Infinity || price <= max);
+    });  }
+  // Search filter;
+  if ( {    const [min, max] = price_range.split ('-').map (p => p === '+' ? Infinity : parse_int (p))) {
+  $2
+}
+    filtered_services = filtered_services.filter (service => {
+      const price = parse_float (service.price.replace ('$', '').replace (, ''));
+      return price >= min && (max === Infinity || price <= max);
+    });
+  // Search filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    filtered_services = filtered_services.filter (
+      service =>;
+        service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.category.toLowerCase ().includes (search_query.toLowerCase ())    );    filtered_services = filtered_services.filter (service =>;
+      service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.category.toLowerCase ().includes (search_query.toLowerCase ());
+  }
+  // Sort services;
+  filtered_services.sort ((a, b) => {
+    switch (sort_by) {
+      case 'price':;
+        return (
+          parse_float (a.price.replace ('$', '').replace (', ', '')) -;
+          parse_float (b.price.replace ('$', '').replace (', ', '')));      case 'popularity':        return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, ''));
+      case 'popularity':;
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      case 'category':;
+        return a.category.locale_compare (b.category);
+      case 'roi':;
+        const a_roi = parse_float (a.roi.match (/\d+/)?.[0] || '0');
+        const b_roi = parse_float (b.roi.match (/\d+/)?.[0] || '0');
+        return b_roi - a_roi;
+      default:;
+        return a.name.locale_compare (b.name);    }      default: return a.name.locale_compare (b.name);
+    }
+  });
+;
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
+
+
+
+        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
+      ];
+      icon: <Star className="w-6 h-6" />,
+      color: 'from-blue-500 to-cyan-600',
+      popular: false
+    },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
+      ];
+      icon: <Star className="w-6 h-6" />
+      color: 'from-blue-500 to-cyan-600'
+      popular: false
+    }
+      name: 'Professional'
+      price: '$199'
+      period: '/month'
+      description: 'Ideal for growing businesses and teams'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      features: [
+'Advanced service access',
+        'Priority support',
+        'Advanced features',
+        'API access',
+        'Advanced analytics',
+        'Custom integrations',
+      ],
+      icon: <Gem className='w-6 h-6' />,
+      color: 'from-purple-500 to-pink-600',
+      popular: true,
+    },
+    {
+      name: 'Enterprise',
+      price: '$499',
+      period: '/month',
+      description: 'For large organizations and enterprises',
+      features: [
+<<<<<<< HEAD
+'Full service access',
+        '24/7 dedicated support',
+        'All features',
+        'Custom development',
+        'Enterprise analytics',
+        'White-label options',
+        'SLA guarantees',
+      ],
+      icon: <Crown className='w-6 h-6' />,
+      color: 'from-yellow-500 to-orange-600',
+      popular: false,
+    },
+  ];
+
+  // Market statistics
+  const marketStats = [
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        'Full service access'
+        '24/7 dedicated support'
+        'All features'
+        'Custom development'
+        'Enterprise analytics'
+        'White-label options'
+        'SLA guarantees'
+      ]
+      icon: <Crown className="w-6 h-6" />
+      color: 'from-yellow-500 to-orange-600'
+      popular: false
+    },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
+      ];
+      icon: <Crown className="w-6 h-6" />
+      color: 'from-yellow-500 to-orange-600'
+      popular: false
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    {
+      metric: '$15.2B',
+      label: 'Total Market Size',
+      description: 'Combined market value of all services',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+icon: <ChartBar className='w-6 h-6' />,
+    },
+    {
+      metric: '400+',
+      label: 'Services Available',
+      description: 'Comprehensive micro SaaS portfolio',
+icon: <Database className='w-6 h-6' />,
+    },
+    {
+      metric: '99.99%',
+      label: 'Uptime Guarantee',
+      description: 'Enterprise-grade reliability',
+icon: <Shield className='w-6 h-6' />,
+    },
+    {
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
+icon: <TrendingUp className='w-6 h-6' />,
+    },
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  ];
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+<<<<<<< HEAD
+staggerChildren: 0.1,
+      },
+    },
+  };
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        staggerChildren: 0.1
+      }
+    },  };        staggerChildren: 0.1
+      }
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 }
+    visible: {
+      y: 0
+      opacity: 1
+      transition: {
+<<<<<<< HEAD
+duration: 0.5,
+      },
+    },
+  };
+
+  return (
+    <UltraFuturisticBackground variant='holographic' intensity='high'>
+      <div className='min-h-screen'>
+        <Head>
+          <title>
+            Comprehensive Pricing | Zion Tech Group - Micro SaaS Services
+            Pricing & Plans
+          </title>
+          <meta
+            name='description'
+            content='Explore comprehensive pricing for all Zion Tech Group micro SaaS services. Transparent pricing, market analysis, ROI guarantees, and flexible plans for every business size.'
+          />
+          <meta
+            name='keywords'
+            content='micro SaaS pricing, service pricing, business pricing, ROI guarantees, market analysis, transparent pricing, enterprise pricing'
+          />
+          <meta name='author' content='Zion Tech Group' />
+          <meta
+            property='og:title'
+            content='Comprehensive Pricing | Zion Tech Group'
+          />
+          <meta
+            property='og:description'
+            content='Transparent pricing for all micro SaaS services with market analysis and ROI guarantees.'
+          />
+          <meta
+            property='og:url'
+            content='https://ziontechgroup.com/comprehensive-pricing'
+          />
+          <meta property='og:type' content='website' />
+          <link
+            rel='canonical'
+            href='https://ziontechgroup.com/comprehensive-pricing'
+          />
+        </Head>
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import {revolutionaryMicroSaasServices,revolutionaryServiceCategories,} from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond  } from 'lucide-react';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories  } from '../data/revolutionary-micro-saas-services';
 import { revolutionaryMicroSaasServices,revolutionaryServiceCategories,} from '../data/revolutionary-micro-saas-services';
@@ -291,6 +893,7 @@ duration: 0.5,},},}return (<UltraFuturisticBackground variant='holographic' inte
             href='https://ziontechgroup.com/comprehensive-pricing';
           />;
         </Head>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {/* Hero Section */}
         <section className='relative py-20 overflow-hidden'>;
           <div className='container mx-auto px-4 text-center'>;
@@ -300,6 +903,226 @@ duration: 0.5,},},}return (<UltraFuturisticBackground variant='holographic' inte
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+              >
+<span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                  Comprehensive
+                </span>
+                <br />
+                <span className='text-white'>Pricing & Plans</span>
+              </motion.h1>
+              <motion.p
+                className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        duration: 0.5,
+      },
+    },
+
+  return (
+    <UltraFuturisticBackground variant='holographic' intensity='high'>;
+      <div className='min - h-screen'>;
+
+  const contactInfo = {;
+    mobile: '+1 302 464 0950',;
+    email: 'kleber@ziontechgroup && ziontechgroup.com',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
+  };
+
+  // Pricing tiers;
+  const pricingTiers = [;
+    {;
+      name: 'Starter',;
+      price: '$49',;
+      period: '/month',;
+      description: 'Perfect for small businesses and startups',;
+      features: [;
+        'Basic service access',;
+        'Email support',;
+        'Standard features',;
+        'Community forum access',;
+        'Basic analytics',;
+      ],;
+      icon: <Star className="w-6 h-6" />,;
+      color: 'from-blue-500 to-cyan-600',;
+      popular: false,;
+    },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics';
+      ];
+      icon: <Star className="w-6 h-6" />,;
+      color: 'from-blue-500 to-cyan-600',;
+      popular: false;
+    };
+      name: 'Professional',;
+      price: '$199',;
+      period: '/month',;
+      description: 'Ideal for growing businesses and teams',;
+      features: [;
+        'Advanced service access',;
+        'Priority support',;
+        'Advanced features',;
+        'API access',;
+        'Advanced analytics',;
+        'Custom integrations',;
+      ],;
+      icon: <Gem className="w-6 h-6" />,;
+      color: 'from-purple-500 to-pink-600',;
+      popular: true,;
+    },    {        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations';
+      ];
+      icon: <Gem className="w-6 h-6" />,;
+      color: 'from-purple-500 to-pink-600',;
+      popular: true;
+    };
+      name: 'Enterprise',;
+      price: '$499',;
+      period: '/month',;
+      description: 'For large organizations and enterprises',;
+      features: [;
+        'Full service access',;
+        '24/7 dedicated support',;
+        'All features',;
+        'Custom development',;
+        'Enterprise analytics',;
+        'White-label options',;
+        'SLA guarantees',;
+      ],;
+      icon: <Crown className="w-6 h-6" />,;
+      color: 'from-yellow-500 to-orange-600',;
+      popular: false,;
+    },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees';
+      ];
+      icon: <Crown className="w-6 h-6" />,;
+      color: 'from-yellow-500 to-orange-600',;
+      popular: false;
+    }
+
+  // Market statistics;
+  const marketStats = [;
+    {;
+      metric: '$15 && 15.2B',;
+      label: 'Total Market Size',;
+      description: 'Combined market value of all services',;
+      icon: <ChartBar className='w-6 h-6' />,;
+    },    {;
+      metric: '400+',;
+      label: 'Services Available',;
+      description: 'Comprehensive micro SaaS portfolio',;
+      icon: <Database className='w-6 h-6' />,;
+    },    {;
+      metric: '99 && 99.99%',;
+      label: 'Uptime Guarantee',;
+      description: 'Enterprise-grade reliability',;
+      icon: <Shield className='w-6 h-6' />,;
+    },    {;
+      metric: '2000%+',;
+      label: 'Average ROI',;
+      description: 'Proven business value',;
+      icon: <TrendingUp className='w-6 h-6' />,;
+    },  ];      icon: <ChartBar className="w-6 h-6" />;
+    };
+    {;
+      metric: '400+',;
+      label: 'Services Available',;
+      description: 'Comprehensive micro SaaS portfolio',;
+      icon: <Database className='w-6 h-6' />,;
+    },      icon: <Database className="w-6 h-6" />;
+    };
+    {;
+      metric: '99 && 99.99%',;
+      label: 'Uptime Guarantee',;
+      description: 'Enterprise-grade reliability',;
+      icon: <Shield className='w-6 h-6' />,;
+    },      icon: <Shield className="w-6 h-6" />;
+    };
+    {;
+      metric: '2000%+',;
+      label: 'Average ROI',;
+      description: 'Proven business value',;
+      icon: <TrendingUp className='w-6 h-6' />,;
+    },      icon: <TrendingUp className="w-6 h-6" />;
+    }
+  ];
+
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };        staggerChildren: 0 && 0.1;
+      }
+    }
+  };
+
+  const itemVariants = {;
+    hidden: { y: 20, opacity: 0 },;
+    visible: {;
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0 && 0.5,;
+      },;
+    },;
+
+  return (
+    <UltraFuturisticBackground variant='holographic' intensity='high'>;
+      <div className='min-h-screen'>;
+      icon: <TrendingUp className='w - 6 h - 6' />,
+    },      icon: <TrendingUp className="w - 6 h - 6" />;
+    }
+  ];
+;
+  const container_variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        stagger_children: 0.1,
+      },
+    },  }        stagger_children: 0.1;
+      }
+    }
+  }
+;
+  const item_variants = {
+    hidden: { coordinate_y: 20, opacity: 0 },
+    visible: {
+      coordinate_y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+        <Head>;
+          <title>;
+            Comprehensive Pricing | Zion Tech Group - Micro SaaS Services;
+            Pricing & Plans;
+          </title>;
+                </span>
+                <br />
+                <span className="text-white">Pricing & Plans</span>
+              </motion.h1>
+              <motion.p
+                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+<<<<<<< HEAD
+Transparent pricing for all our revolutionary micro SaaS
+                services. Choose the perfect plan for your business with
+                guaranteed ROI and enterprise-grade reliability.
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              </motion.p>
+              {/* Market Stats */}
+              <motion.div
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
               >;
 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                   Comprehensive;
@@ -332,6 +1155,10 @@ duration: 0.5,},},}return (<UltraFuturisticBackground variant='holographic' inte
                 Transparent pricing for all our revolutionary micro SaaS;
                 services. Choose the perfect plan for your business with;
                 guaranteed ROI and enterprise-grade reliability.;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </motion && motion.p>;Transparent pricing for all our revolutionary micro SaaS;
                 services. Choose the perfect plan for your business with;
                 guaranteed ROI and enterprise-grade reliability.;
@@ -339,6 +1166,15 @@ duration: 0.5,},},}return (<UltraFuturisticBackground variant='holographic' inte
               {/* Market Stats */}
               <motion.div;
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              </motion && motion.p>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -346,6 +1182,19 @@ duration: 0.5,},},}return (<UltraFuturisticBackground variant='holographic' inte
                 {marketStats.map((stat, index) => (<div key={index} className='text-center'>;
                     <div className='text-3xl font-bold text-cyan-400 mb-2'>;
                       {stat.metric}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    </div>
+                    <div className='text-gray-400 text-sm'>{stat.label}</div>
+                    <div className='text-gray-500 text-xs'>
+                      {stat.description}
+<<<<<<< HEAD
+                    </div>
+                  </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </div>;
                     <div className='text-gray-400 text-sm'>{stat.label}</div>;
                     <div className='text-gray-500 text-xs'>;
@@ -356,6 +1205,19 @@ duration: 0.5,},},}return (<UltraFuturisticBackground variant='holographic' inte
                   </div>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    </div>                  </div>                  <div key={index} className="text-center">
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
+                    <div className="text-gray-400 text-sm">{stat.label}</div>
+                    <div className="text-gray-500 text-xs">{stat.description}</div>
+
+                  </div>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
               </motion.div>;
                 initial={{ opacity: 0, y: 20 }}
@@ -373,7 +1235,22 @@ duration: 0.5,},},}return (<UltraFuturisticBackground variant='holographic' inte
                     <div className="text-gray-400 text-sm">{stat && stat.label}</div>;
                     <div className="text-gray-500 text-xs">{stat && stat.description}</div>;
                 ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              {/* CTA Buttons */}
+<motion.div
+                className='flex flex-col sm:flex-row gap-4 justify-center items-center'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
               {/* CTA Buttons */}<motion&& motion.div;
+=======
+              {/* CTA Buttons */}
+              <motion&& motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+              {/* CTA Buttons */}<motion&& motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center";
@@ -382,10 +1259,23 @@ duration: 0.5,},},}return (<UltraFuturisticBackground variant='holographic' inte
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
                 transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center";
               >;
 <motion.div;
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              >
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -422,6 +1312,81 @@ duration: 0.5,},},}return (<UltraFuturisticBackground variant='holographic' inte
                   variant="futuristic";
                   size="lg";
                   onClick={() => document.getElementById('services-pricing')?.scrollIntoView({ behavior: 'smooth' })}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                >
+                  Browse All Services
+<<<<<<< HEAD
+                  <Search className='ml-2 w-5 h-5' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+                  <Search className='ml-2 w-5 h-5' />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                </Button>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+        {/* Contact Information Banner */}
+<<<<<<< HEAD
+<section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20'>
+          <div className='container mx-auto px-4'>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
+              <div className='flex items-center gap-4'>
+                <Phone className='w-5 h-5 text-cyan-400' />
+                <span className='text-white'>{contactInfo.mobile}</span>
+                <Mail className='w-5 h-5 text-purple-400' />
+                <span className='text-white'>{contactInfo.email}</span>
+              </div>
+              <div className='flex items-center gap-4'>
+                <MapPin className='w-5 h-5 text-green-400' />
+                <span className='text-white'>{contactInfo.address}</span>
+                <Globe className='w-5 h-5 text-blue-400' />
+                <span className='text-white'>{contactInfo.website}</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Pricing Tiers */}
+<section id='pricing-tiers' className='py-20'>
+          <div className='container mx-auto px-4'>
+            <motion.div
+              className='text-center mb-16'
+              initial={{ opacity: 0, y: 20 }}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                <MapPin className="w-5 h-5 text-green-400" />
+                <span className="text-white">{contactInfo.address}</span>
+                <Globe className="w-5 h-5 text-blue-400" />
+                <span className="text-white">{contactInfo.website}</span>
+
+              initial={{ opacity: 0, y: 20 }}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+<<<<<<< HEAD
+<h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
+                <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
+                  Flexible Pricing
+                </span>
+                <br />
+                <span className='text-white'>for Every Business</span>
+              </h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Choose the perfect plan that scales with your business. All
+                plans include our 21-day free trial and ROI guarantee.
+              </p>
+            </motion.div>
+            <motion.div
+              className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 >;
                   Browse All Services;
                   <Search className='ml-2 w-5 h-5' />;
@@ -465,6 +1430,12 @@ duration: 0.5,},},}return (<UltraFuturisticBackground variant='holographic' inte
               variants={containerVariants}
               initial='hidden';
               whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing;
+=======
+              className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'
+              variants={containerVariants}
+              initial='hidden'
+              whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </span>;
                 <br />;
                 <span className="text-white">for Every Business</span>;
@@ -472,12 +1443,23 @@ duration: 0.5,},},}return (<UltraFuturisticBackground variant='holographic' inte
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.;
               </p>;
+<<<<<<< HEAD
             </motion && motion.div>;<motion&& motion.div;
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto";
               variants={containerVariants}
               initial="hidden";
               whileInView="visible";
                          size="md";
+=======
+            </motion && motion.div>;
+
+            <motion&& motion.div 
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+                         size="md"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                          onClick={() => window && window.open('https://ziontechgroup && ziontechgroup.com/contact_blank')}
                          className="w-full";
                        >;
@@ -485,6 +1467,10 @@ duration: 0.5,},},}return (<UltraFuturisticBackground variant='holographic' inte
                         <ArrowRight className="ml-2 w-4 h-4" />;
                     </div>;
                   </UltraFuturisticCard>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </motion && motion.div>;<h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>;
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>;
                   Flexible Pricing;
@@ -499,6 +1485,7 @@ duration: 0.5,},},}return (<UltraFuturisticBackground variant='holographic' inte
             </motion.div>;
             <motion.div;
               className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               variants={containerVariants}
               initial='hidden';
               whileInView='visible';
@@ -550,6 +1537,36 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
 <div className='text-center'>;
                       <Button;
                         variant={tier.popular ? 'futuristic' : 'primary'}
+<<<<<<< HEAD
+                        size='md'
+                        onClick={() =>
+                          window.open(
+                            'https://ziontechgroup.com/contact'
+                            '_blank'
+                          )
+                        }
+                        className='w-full'
+                      >
+                        Get Started
+                        <ArrowRight className='ml-2 w-4 h-4' />
+                      </Button>
+                    </div>
+                  </UltraFuturisticCard>
+                </motion.div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                </motion && motion.div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              ))}
+
+
+        {/* Services Pricing Grid */}
+        <section id="services-pricing" className="py-20">
+          <div className="container mx-auto px-4">
+            {/* Filters and Controls */}
+            <motion&& motion.div
+              className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">;
+=======
                         size='md';
                         onClick={() =>;
                           window.open('https://ziontechgroup.com/contact';
@@ -565,6 +1582,10 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                 </motion.div>;
               ))}{/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
             <motion&& motion.div;
@@ -574,20 +1595,58 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
 <section id='services-pricing' className='py-20'>;
           <div className='container mx-auto px-4'>;
             {/* Filters and Controls */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <motion.div
+              className='mb-8'
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <motion.div;
               className='mb-8'              initial={{ opacity: 0, y: 20 }}initial={{ opacity: 0, y: 20 }}whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
               <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
                 <div className='flex flex-wrap gap-4'>;className='mb-8';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+            >
+<div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+                <div className='flex flex-wrap gap-4'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            <motion.div
+              className='mb-8'              initial={{ opacity: 0, y: 20 }}
+
+              initial={{ opacity: 0, y: 20 }}
+
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0 && 0.6 }}>;
+              <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
+                <div className='flex flex-wrap gap-4'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                  <select
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >;
 <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
                 <div className='flex flex-wrap gap-4'>;
                   <select;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e && e.target.value)}
                     className='px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400';
@@ -607,11 +1666,28 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                         {range && range.label}
                       </option>;
                     ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <select
+                    <input
+                      type='text'
+                      placeholder='Search services...'
+                      value={searchQuery}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <select;
                     <input;
                       type='text';
                       placeholder='Search services...';
                       value={searchQuery}<button;
+<<<<<<< HEAD
+=======
+                    <button
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >;
@@ -629,7 +1705,12 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                 : "space-y-6";
               }
               variants={containerVariants}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               initial="hidden";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                       onChange={e => setSearchQuery(e.target.value)}
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
                     />;
@@ -658,6 +1739,53 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                   : 'space-y-6';
               }
               variants={containerVariants}
+<<<<<<< HEAD
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true }}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              initial="hidden"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            >
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  variants={itemVariants}
+                  whileHover={{ y: -5 }}>;
+                  <UltraFuturisticCard
+<<<<<<< HEAD
+variant={(service.variant as any) || 'quantum-advanced'}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+
+                    variant={service.variant as any || 'quantum-advanced'}
+
+
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                    size={viewMode === 'grid' ? 'large' : 'medium'}
+                    className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
+                  >
+                    {viewMode === 'grid' ? (
+                      // Grid View
+<<<<<<< HEAD
+<div className='text-center'>
+                        <div className='text-4xl mb-4'>{service.icon}</div>
+                        <h3 className='text-xl font-bold text-white mb-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
               initial='hidden';
               whileInView='visible';
               viewport={{ once: true }}>;
@@ -676,6 +1804,16 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
 <div className='text-center'>;
                         <div className='text-4xl mb-4'>{service.icon}</div>;
                         <h3 className='text-xl font-bold text-white mb-2'>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+<div className='text-center'>
+                        <div className='text-4xl mb-4'>{service.icon}</div>
+                        <h3 className='text-xl font-bold text-white mb-2'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {service.name}
                         </h3>;
                         <p className='text - gray - 300 mb - 4 text - sm'>;
@@ -704,8 +1842,26 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                         <div className='text-sm text-gray-400 mb-4'>;
                           {service && service.period}
                         </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                            <div
+                              key={idx}
+<<<<<<< HEAD
+                              className='flex items-center gap-2 text-sm'
+                            >
+                              <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
+                              <span className='text-gray-300'>{feature}</span>
+                            </div>
+=======
                             <div;
                               key={idx}className='flex items-center gap-2 text-sm'>;
+=======
+                              className='flex items-center gap-2 text-sm'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                            <div;
+                              key={idx}className='flex items-center gap-2 text-sm'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                               <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
                               <span className='text-gray-300'>{feature}</span>                            </div>;
                              size="sm";
@@ -731,11 +1887,16 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                                <DollarSign className="ml-2 w-4 h-4" />;
                              </Button>;
                         </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </div>;className='flex items-center gap-2 text-sm';
                             >;
                               <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
                               <span className='text-gray-300'>{feature}</span>;
                             </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                           ))}
                         </div>;
 <div className='text-center space-y-2'>;
@@ -821,6 +1982,84 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                                 <div>;
                                   <span className='text-gray-400'>Growth:</span>{' '}
                                   {service.growthRate}
+<<<<<<< HEAD
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className='flex gap-2'>
+                            <Button
+                              variant='primary'
+                              size='sm'
+                              onClick={() =>
+                                window.open(service.link, '_blank')
+                              }
+                            >
+                              Learn More
+                              <ExternalLink className='ml-2 w-4 h-4' />
+                            </Button>
+                            <Button
+                              variant='futuristic'
+                              size='sm'
+                              onClick={() =>
+                                window.open(
+                                  'https://ziontechgroup.com/contact'
+                                  '_blank'
+                                )
+                              }
+                            >
+                              Get Pricing
+                              <DollarSign className='ml-2 w-4 h-4' />
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                      </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                    )}
+                  </UltraFuturisticCard>;
+                </motion && motion.div>;
+              ))}
+<<<<<<< HEAD
+            </motion.div>
+            {filteredServices.length === 0 && (
+<motion.div
+                className='text-center py-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                className="text-center py-16"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+<div className='text-6xl mb-4'>🔍</div>
+                <h3 className='text-2xl font-bold text-white mb-2'>
+                  No Services Found
+                </h3>
+                <p className='text-gray-400 mb-6'>
+                  Try adjusting your search criteria or filters.
+                </p>
+                <Button
+                  variant='primary'
+                  onClick={() => {;
+                    setSearchQuery('');
+                    setSelectedCategory('All');
+                    setPriceRange('All');
+                  }}
+<<<<<<< HEAD
+                >
+                  Clear Filters
+                </Button>
+              </motion.div>
+                     setPriceRange('All')
+                   }}
+                 >
+                   Clear Filters
+                 </Button>
+=======
                                 </div>;
                               </div>;
                             </div>;
@@ -870,10 +2109,20 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                 <Button;
                   variant='primary';
                   onClick={() => {setSearchQuery('')setSelectedCategory('All')setPriceRange('All')}}>;
+<<<<<<< HEAD
+=======
+                >;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   Clear Filters;
                 </Button>              </motion && motion.div>                <div className="text-6xl mb-4">🔍</div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                                  <Button;
                    variant="primary";
                    onClick={() => {setSearchQuery('')setSelectedCategory('All')>;
@@ -884,10 +2133,49 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                  >;
                    Clear Filters;
                  </Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             )}
           </div>;
         </section>;
         {/* Contact Section */}
+<<<<<<< HEAD
+<section className='py-20'>
+          <div className='container mx-auto px-4 text-center'>
+            <motion.div
+              className='max-w-4xl mx-auto'
+              initial={{ opacity: 0, y: 20 }}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                                 <Button
+                   variant="primary"
+                   onClick={() => {;
+                     setSearchQuery('');
+                     setSelectedCategory('All');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                Ready to Get Started?
+              </h2>
+              <p className='text-xl text-gray-300 mb-8'>
+                Contact our sales team to discuss pricing, custom plans, and
+                implementation options.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                <Button
+                  variant='primary'
+                  size='lg'
+=======
 <section className='py-20'>;
           <div className='container mx-auto px-4 text-center'>;
             <motion.div;
@@ -907,6 +2195,10 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                 <Button;
                   variant='primary';
                   size='lg';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   onClick={() =>;
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank')}
                 >;
@@ -917,6 +2209,23 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                   variant='futuristic';
                   size='lg';
                   onClick={() =>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
+                  }
+<<<<<<< HEAD
+                >
+                  Schedule Demo
+                  <Calendar className='ml-2 w-5 h-5' />
+                </Button>
+              </div>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
+                <div>
+                  <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />
+                  <div className='text-white font-semibold'>
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank')}</h2>;
               <p className="text-xl text-gray-300 mb-8">;
                 Contact our sales team to discuss pricing, custom plans, and implementation options.;
@@ -967,6 +2276,7 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                 <div>;
                   <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
                   <div className='text-white font-semibold'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     {contactInfo.mobile}
                   </div>;
                   <div className='text-gray-400 text-sm'>Call us anytime</div>;
@@ -982,6 +2292,68 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                   <MapPin className='w-8 h-8 text-green-400 mx-auto mb-2' />;
                   <div className='text-white font-semibold'>;
                     {contactInfo.address}
+<<<<<<< HEAD
+                  </div>
+                  <div className='text-gray-400 text-sm'>Visit our office</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our sales team to discuss pricing, custom plans, and implementation options.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+                >
+                  Contact Sales
+                  <Mail className="ml-2 w-5 h-5" />
+                </Button>
+                <Button
+                  variant="futuristic"
+                  size="lg"
+                  onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+                >
+                  Schedule Demo
+                  <Calendar className="ml-2 w-5 h-5" />
+                </Button>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{contactInfo.mobile}</div>
+                  <div className="text-gray-400 text-sm">Call us anytime</div>
+                </div>
+                <div>
+                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{contactInfo.email}</div>
+                  <div className="text-gray-400 text-sm">Email us 24/7</div>
+                </div>
+                <div>
+                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{contactInfo.address}</div>
+                  <div className="text-gray-400 text-sm">Visit our office</div>
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                </div>
+
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </UltraFuturisticBackground>
+<<<<<<< HEAD
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
                   </div>;
                   <div className='text-gray-400 text-sm'>Visit our office</div>;
                 </div>;
@@ -991,6 +2363,11 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
         </section>;
       </div>;
     </UltraFuturisticBackground>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           <div className='flex gap - 2'>;
                             <Button;
                               variant='primary';
@@ -1168,4 +2545,16 @@ variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced';
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
     </UltraFuturisticBackground>))}))
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </UltraFuturisticBackground>));
+}
+
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </UltraFuturisticBackground>))}))
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,4 +1,97 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+function rand(min: number, max: number) {
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+function generateSeries(n: number, base: number, volatility;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+function generateSeries(n: number, base: number, volatility = 0.15) {
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  const series: number[] = [];
+  let last = base;
+  for (let i = 0; i < n; i++) {
+    const change = (Math && Math.random() - 0 && 0.5) * 2 * volatility * base;
+    last = Math && Math.max(0, Math && Math.round(last + change));
+    series && series.push(last);
+  }
+  return series;
+
+function generateSeries(n: number, base: number, volatility = 0.15) {
+  const series: number[] = []; let last = base,
+  for (let i = 0, i < n, i++) {
+    const change = (Math.random() - 0.5) * 2 * volatility * base;
+    last = Math.max(0, Math.round(last + change));
+    series.push(last)
+  }
+  return series;
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    const d = new Date(now);
+    d.setDate(d.getDate() - (13 - i));
+<<<<<<< HEAD
+return `${d.getMonth() + 1}/${d.getDate()}`;
+  });
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+    const d = new Date(now);
+    d && d.setDate(d && d.getDate() - (13 - i));
+    return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
+    return `${d.getMonth() + 1}/${d.getDate()}`
+  });
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  const marketplace = [
+    {
+      key: 'jobs_24h'
+      label: 'Jobs posted (24h)'
+      value: rand(15, 60)
+      trend: generateSeries(14, 40)
+    }
+    {
+      key: 'jobs_7d'
+      label: 'Jobs posted (7d)'
+      value: rand(120, 360)
+      trend: generateSeries(14, 260)
+    }
+    {
+      key: 'jobs_total'
+      label: 'Jobs posted (total)'
+      value: rand(5000, 15000)
+    }
+    {
+      key: 'talent_onboarded'
+      label: 'Talent onboarded'
+      value: rand(50, 200)
+      trend: generateSeries(14, 120)
+    }
+    {
+      key: 'proposal_conversions'
+      label: 'Proposal conversions'
+      value: rand(30, 120)
+      trend: generateSeries(14, 80)
+    }
+    {
+      key: 'job_fill_rate'
+      label: 'Job fill rate %'
+      value: rand(45, 92)
+      trend: generateSeries(14, 70)
+    }
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function rand() {return Math.floor(Math.random() * (max - min + 1)) + min;
 }function generateSeries(n: number, base: number, volatility;
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -30,6 +123,10 @@ function generateSeries() {const series: number[] = [];
     {key: 'job_fill_rate';
       label: 'Job fill rate %';
       value: rand(45, 92)trend: generateSeries(14, 70)}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ];
   const dao = [;
     {key: 'proposals_created';
@@ -70,6 +167,70 @@ function generateSeries() {const series: number[] = [];
       label: 'Cross-instance token movement';
       value: rand(1_000, 12_000)trend: generateSeries(14, 6_000)}
   ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const response: any = {
+=======
+  const response: any = {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    marketplace
+    dao
+    token
+    multiverse
+    timestamp: now.toISOString()
+    labels
+    history: {
+      marketplace: marketplace.map(m => m.trend || generateSeries(14, m.value)),
+      dao: dao.map(m => m.trend || generateSeries(14, m.value)),
+      token: token.map(m => m.trend || generateSeries(14, m.value)),
+      multiverse: multiverse.map(m => m.trend || generateSeries(14, m.value)),
+    },
+  };
+
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  if (req.query.compare === 'quarter') {
+    const factor = 0.8 + Math.random() * 0.4;
+    response.compare = {
+      prevQuarter: {
+<<<<<<< HEAD
+marketplace: marketplace.map(m => ({
+          ...m,
+          value: Math.round(m.value * factor),
+        })),
+        dao: dao.map(m => ({ ...m, value: Math.round(m.value * factor) })),
+        token: token.map(m => ({ ...m, value: Math.round(m.value * factor) })),
+        multiverse: multiverse.map(m => ({
+          ...m
+          value: Math.round(m.value * factor)
+        }))
+      }
+    }
+  }
+
+  res.status(200).json(response);
+        multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+        })),
+      },
+    }
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  }
+
+
+
+  res.status(200).json(response)
+}
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const response: any = {marketplace;
     dao;
     token;
@@ -80,4 +241,9 @@ function generateSeries() {const series: number[] = [];
   }marketplace: marketplace.map(m => ({...m,value: Math.round(m.value * factor),})),dao: dao.map(m => ({ ...m, value: Math.round(m.value * factor) })),token: token.map(m => ({ ...m, value: Math.round(m.value * factor) })),multiverse: multiverse.map(m => ({...m;
           value: Math.round(m.value * factor)}))}
     }
+<<<<<<< HEAD
   }res.status(200).json(response)multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}}res.status(200).json(response)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }res.status(200).json(response)multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}}res.status(200).json(response)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

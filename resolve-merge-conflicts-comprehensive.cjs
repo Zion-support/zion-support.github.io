@@ -10,6 +10,8 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
+<<<<<<< HEAD
+=======
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts in this file
     }
@@ -32,6 +34,7 @@ function resolveMergeConflicts(filePath) {
         conflictBuffer = [];
         continue;
       } else if (line.startsWith('')) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         conflictType = 'theirs';
         continue;
       } else if (line.startsWith('>>>>>>>')) {

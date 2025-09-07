@@ -17,8 +17,12 @@ export interface InstanceConfig {instanceId: string;
   paused: boolean;
   scope: SyncScope;
   peers: Peer[];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   secretConfigured: boolean;}  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }export interface ProposalVoteEntry  {voterId: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   secretConfigured: boolean;
 
 export type SyncScope = "full" | "dao" | "marketplace",
@@ -47,6 +51,12 @@ export type SyncEventType =;
   | "talent_mobility";
   | "dao_endorsement";
   } catch (error) {
+<<<<<<< HEAD
+=======
+  secretConfigured: boolean;}  } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -71,7 +81,13 @@ export interface ProposalVoteEntry {
 export interface TokenTransferPayload extends BaseEventPayload {;
   txId: string;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   token: string;
   amount: number;
   fromSubnet: string;
@@ -115,6 +131,13 @@ export interface MultiverseState  {config: InstanceConfig,lastSyncedAt: number,s
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
@@ -128,11 +151,22 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
   | TalentMobilityPayload;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   | DaoEndorsementPayload;
   originInstanceId: string;
   version: number;
@@ -161,3 +195,9 @@ export interface MultiverseState {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+  | DaoEndorsementPayload;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

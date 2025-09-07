@@ -296,4 +296,16 @@ monitor.start().catch(error => {})
   console.error("Failed to start Error "Monitor": ", error);
   process.exit(1)}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 });
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+});
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

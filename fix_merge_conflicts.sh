@@ -2,6 +2,9 @@
 
 # Find all files with merge conflicts
 find ./app -name "*.tsx" -o -name "*.ts" | while read file; do
+<<<<<<< HEAD
+    awk '
+=======
   if grep -q "" "$file"; then
     echo "Fixing merge conflicts in: $file"
     
@@ -12,6 +15,7 @@ find ./app -name "*.tsx" -o -name "*.ts" | while read file; do
     awk '
     /^/ { in_old=1; next }
     /^/ { in_old=0; in_new=1; next }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     /^>>>>>>>/ { in_new=0; next }
     in_old { next }
     { print }

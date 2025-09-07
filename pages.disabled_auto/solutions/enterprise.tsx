@@ -14,8 +14,14 @@ export default function Enterprise() {export default function Enterprise() {retu
 ursor/automate-test-improve-and-merge-code-646c;
 interface EnterpriseProps  {// Add props here as needed;
 interface EnterpriseProps {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // Add props here as needed
+export default function Enterprise({ }: EnterpriseProps) {
+=======
   // Add props here as needed
 export default function Enterprise({}: EnterpriseProps) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return (
     <div>;
       <h1>Enterprise</h1>;
@@ -24,3 +30,9 @@ export default function Enterprise({}: EnterpriseProps) {
   );
 
 
+<<<<<<< HEAD
+=======
+  // Add props here as needed
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

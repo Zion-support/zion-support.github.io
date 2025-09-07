@@ -1,3 +1,98 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { motion } from 'framer-motion';
+import { 
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
+import {
+  Phone
+  Mail
+  MapPin
+  Globe
+  Zap
+  Brain
+  Atom
+  Rocket
+  Shield
+  Cpu
+  Target
+  Microscope
+  Users
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Youtube
+  Github
+  ArrowRight
+  Heart
+  Star
+  Award
+  CheckCircle
+  Home
+  Briefcase
+  BookOpen
+  MessageCircle
+  DollarSign
+  TrendingUp
+  Target as TargetIcon
+  Users as UsersIcon
+  Briefcase as BriefcaseIcon
+  BookOpen as BookOpenIcon
+  MessageCircle as MessageCircleIcon
+  Star as StarIcon;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
+
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cpu,
+  Target,
+  Microscope,
+  Users,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  ArrowRight,
+  Heart,
+  Star,
+  Award,
+  CheckCircle,
+  Home,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  DollarSign,
+  TrendingUp,
+  Target as TargetIcon,
+  Users as UsersIcon,
+  Briefcase as BriefcaseIcon,
+  BookOpen as BookOpenIcon,
+
+  MessageCircle as MessageCircleIcon,;
+  Star as StarIcon,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  Rocket, Shield, Cpu, Target, Microscope, Users;
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion  } from 'framer-motion';
 import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom,Phone;
   Mail;
@@ -36,10 +131,22 @@ import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom,Phone;
   MessageCircle as MessageCircleIcon;
   Star as StarIcon;} from 'lucide-react';import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Phone,Mail,MapPin,Globe,Zap,Brain,Atom,Rocket,Shield,Cpu,Target,Microscope,Users,Facebook,Twitter,Linkedin,Instagram,Youtube,Github,ArrowRight,Heart,Star,Award,CheckCircle,Home,Briefcase,BookOpen,MessageCircle,DollarSign,TrendingUp,Target as TargetIcon,Users as UsersIcon,Briefcase as BriefcaseIcon,BookOpen as BookOpenIcon,MessageCircle as MessageCircleIcon,Star as StarIcon,} from 'lucide-react';import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom,import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;Rocket, Shield, Cpu, Target, Microscope, Users;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
   Home, Briefcase, BookOpen, MessageCircle, DollarSign;
   TrendingUp, Target as TargetIcon, Users as UsersIcon;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon;
+  MessageCircle as MessageCircleIcon, Star as StarIcon
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon;{name: 'Home';
     href: '/';
     icon: Home;
@@ -72,16 +179,487 @@ import {Phone, Mail, MapPin, Globe, Zap, Brain, Atom,Phone;
   }
   {];
   }MessageCircle as MessageCircleIcon, Star as StarIcon;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
  } from 'lucide-react';
 const contactInfo = null;
                 and autonomous systems development. Join our community of future technology pioneers.;
     services: [;
       {name: 'AI Consciousness Evolution';
         href: '/ai-consciousness-evolution-platform';
+<<<<<<< HEAD
       }
       {name: 'AI Emotional Intelligence';
         href: '/ai-emotional-intelligence-platform';
       }
+<<<<<<< HEAD
+      {
+        name: 'Quantum Financial Trading',
+        href: '/quantum-financial-trading-platform',
+      },
+      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' },
+    ],
+  },
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon;
+  {
+    name: 'Home'
+    href: '/'
+    icon: Home
+    description: 'Welcome to Zion Tech Group'
+  }
+  {
+    name: 'Services'
+    href: '/services'
+    icon: Briefcase
+    description: 'Our comprehensive service portfolio'
+  }
+  {
+    name: 'Solutions'
+    href: '/solutions'
+    icon: TargetIcon
+    description: 'Tailored solutions for your business'
+  }
+  {
+    name: 'Pricing'
+    href: '/pricing'
+    icon: DollarSign
+    description: 'Transparent pricing and packages'
+  }
+  {
+    name: 'Resources'
+    href: '/resources'
+    icon: BookOpen
+    description: 'Knowledge base and documentation'
+  }
+  {
+  {
+    name: 'Blog'
+    href: '/blog'
+    icon: MessageCircle
+    description: 'Latest insights and updates'
+  }
+  {
+    ]
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  {
+    title: '🏙️ 2032 Enterprise IT Solutions',
+    services: [
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },
+{
+        name: 'Zero Trust Architecture',
+        href: '/zero-trust-network-architecture',
+      },
+      {
+        name: 'Edge Computing Orchestration',
+        href: '/edge-computing-orchestration',
+      },
+      {
+<<<<<<< HEAD
+        name: 'AI IT Operations Center',
+        href: '/ai-powered-it-operations-center',
+      },
+    ],
+  },
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        name: 'Quantum Internet Security'
+        href: '/quantum-internet-security-gateway'
+      }
+      {
+        name: 'Quantum Financial Trading'
+        href: '/quantum-financial-trading-platform'
+=======
+      }
+      {name: 'AI Emotional Intelligence';
+        href: '/ai-emotional-intelligence-platform';
+      }
+      {name: 'Quantum Financial Trading',href: '/quantum-financial-trading-platform',},{ name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' },],},{title: '🏙️ 2032 Enterprise IT Solutions',services: [;
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },{name: 'Zero Trust Architecture',href: '/zero-trust-network-architecture',},{name: 'Edge Computing Orchestration',href: '/edge-computing-orchestration',},{name: 'Quantum Internet Security';
+        href: '/quantum-internet-security-gateway';
+      }
+      {name: 'Quantum Financial Trading';
+        href: '/quantum-financial-trading-platform';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      }
+      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' }
+    ]
+    ]
+  }
+    title: '🏙️ 2032 Enterprise IT Solutions'
+    services: [
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' }
+      {
+        name: 'Zero Trust Architecture'
+        href: '/zero-trust-network-architecture'
+      }
+      {
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration'
+      }
+      {
+        name: 'AI IT Operations Center'
+        href: '/ai-powered-it-operations-center'
+      }
+    ]
+  }
+    title: '🌌 2032 Space & Metaverse Tech'
+    services: [
+      {
+        name: 'Space Mining Automation'
+        href: '/space-mining-automation-platform'
+      }
+      {
+        name: 'Metaverse Development'
+        href: '/metaverse-development-platform'
+      }
+      { name: 'AI Predictive Health', href: '/ai-predictive-health-analytics' }
+      {
+        name: 'AI Autonomous Business'
+        href: '/ai-autonomous-business-manager'
+      }
+    ]
+  }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  {
+    title: '🌌 2032 Space & Metaverse Tech',
+    services: [
+      {
+        name: 'Space Mining Automation',
+        href: '/space-mining-automation-platform',
+      },
+      {
+        name: 'Metaverse Development',
+        href: '/metaverse-development-platform',
+      },
+      { name: 'AI Predictive Health', href: '/ai-predictive-health-analytics' },
+      {
+        name: 'AI Autonomous Business',
+        href: '/ai-autonomous-business-manager',
+      },
+    ],
+  },
+  {
+    title: '🎯 2032 Innovative Micro SAAS',
+    services: [
+      {
+        name: 'AI Business Intelligence',
+        href: '/ai-business-intelligence-suite',
+      },
+      {
+        name: 'Quantum-Secure Communication',
+        href: '/quantum-secure-communication-platform',
+      },
+      { name: 'AI Customer Success', href: '/ai-customer-success-automation' },
+      {
+        name: 'Blockchain Supply Chain',
+        href: '/blockchain-supply-chain-transparency',
+      },
+    ],
+  },
+  {
+    title: '🔬 2032 Research & Development',
+    services: [
+      {
+        name: 'Neuromorphic Computing',
+        href: '/neuromorphic-computing-platform',
+      },
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform' },
+      {
+        name: 'Photonic Computing',
+        href: '/photonic-computing-infrastructure',
+      },
+      { name: 'Swarm Robotics', href: '/swarm-robotics-orchestration' },
+    ],
+  },
+];
+
+const quickLinks = [
+  {
+    name: '2032 Services',
+    href: '/2032-futuristic-services-showcase',
+    icon: Star,
+    description: 'Revolutionary 2032 services',
+  },
+  {
+    name: 'Enhanced Pricing',
+    href: '/enhanced-market-pricing-2032',
+    icon: DollarSign,
+    description: 'Comprehensive pricing analysis',
+  },
+  {
+    name: 'Market Pricing',
+    href: '/market-pricing',
+    icon: DollarSign,
+    description: 'Competitive pricing references',
+  },
+  {
+    name: 'Enhanced Services',
+    href: '/enhanced-services-showcase',
+    icon: Star,
+    description: 'Premium service showcase',
+  },
+  {
+    name: 'Revolutionary 2026',
+    href: '/revolutionary-2026-services',
+    icon: TrendingUp,
+    description: '2026 breakthrough services',
+  },
+  {
+<<<<<<< HEAD
+    name: 'Ultimate 2026',
+    href: '/ultimate-2026-services-showcase',
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    name: 'Ultimate 2026'
+    href: '/ultimate-2026-services-showcase'
+    icon: Target
+    description: 'Ultimate service portfolio'
+  }
+    name: 'Contact',
+    href: '/contact',
+    icon: MessageCircle,
+    description: 'Get in touch with our team',
+  }, ];  { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
+  { name: 'Services', href: '/services', icon: Briefcase, description: 'Our comprehensive service portfolio' },
+  { name: 'Solutions', href: '/solutions', icon: TargetIcon, description: 'Tailored solutions for your business' },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing and packages' },
+  { name: 'Resources', href: '/resources', icon: BookOpen, description: 'Knowledge base and documentation' },
+  { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },
+  { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
+=======
+    name: 'Contact',href: '/contact',icon: MessageCircle,description: 'Get in touch with our team',}, ];  { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },{ name: 'Services', href: '/services', icon: Briefcase, description: 'Our comprehensive service portfolio' },{ name: 'Solutions', href: '/solutions', icon: TargetIcon, description: 'Tailored solutions for your business' },{ name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing and packages' },{ name: 'Resources', href: '/resources', icon: BookOpen, description: 'Knowledge base and documentation' },{ name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },{ name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+const service_categories = [;
+  {
+    title: '🚀 2032 Revolutionary AI Services',
+    services: [;
+      {
+        name: 'AI Consciousness Evolution',
+        href: '/ai - consciousness - evolution - platform',
+      },
+      {
+        name: 'AI Emotional Intelligence',
+        href: '/ai - emotional - intelligence - platform',
+      },
+      {
+        name: 'AI Creativity Orchestrator',
+        href: '/ai - creativity - orchestrator',
+      },
+      {
+        name: 'AI Autonomous Business Manager',
+        href: '/ai - autonomous - business - manager',
+      },
+    ],
+  },
+  {
+    title: '⚛️ 2032 Quantum & Emerging Tech',
+    services: [;
+      {
+        name: 'Quantum DNA Computing',
+        href: '/quantum - dna - computing - platform',
+      },
+      {
+        name: 'Quantum Internet Security',
+        href: '/quantum - internet - security - gateway',
+      },
+      {
+        name: 'Quantum Financial Trading',
+        href: '/quantum - financial - trading - platform',
+      },
+      { name: 'Quantum Creativity Studio', href: '/quantum - creativity - studio' },
+    ],
+  },  {
+    title: '🏙️ 2032 Enterprise IT Solutions',
+    services: [;
+      { name: 'Autonomous DevOps', href: '/autonomous - devops - platform' },      { name: 'Quantum DNA Computing', href: '/quantum - dna - computing - platform' },
+      { name: 'Quantum Internet Security', href: '/quantum - internet - security - gateway' },
+      { name: 'Quantum Financial Trading', href: '/quantum - financial - trading - platform' },
+      { name: 'Quantum Creativity Studio', href: '/quantum - creativity - studio' }
+    ];
+  }
+<<<<<<< HEAD
+    title: '🏙️ 2032 Enterprise IT Solutions',
+    services: [;
+      { name: 'Autonomous DevOps', href: '/autonomous - devops - platform' },
+      {
+        name: 'Zero Trust Architecture',
+        href: '/zero - trust - network - architecture',
+      },
+      {
+        name: 'Edge Computing Orchestration',
+        href: '/edge - computing - orchestration',
+      },
+      {
+        name: 'AI IT Operations Center',
+        href: '/ai - powered - it - operations - center',
+      },
+    ],
+  },
+    title: '🌌 2032 Space & Metaverse Tech',
+    services: [;
+      {
+        name: 'Space Mining Automation',
+        href: '/space - mining - automation - platform',
+      },
+      {
+        name: 'Metaverse Development',
+        href: '/metaverse - development - platform',
+      },
+      { name: 'AI Predictive Health', href: '/ai - predictive - health - analytics' },
+      {
+        name: 'AI Autonomous Business',
+        href: '/ai - autonomous - business - manager',
+      },
+    ],
+  },
+  {
+    title: '🎯 2032 Innovative Micro SAAS',
+    services: [;
+      {
+        name: 'AI Business Intelligence',
+        href: '/ai - business - intelligence - suite',
+      },
+      {
+        name: 'Quantum - Secure Communication',
+        href: '/quantum - secure - communication - platform',
+      },
+      { name: 'AI Customer Success', href: '/ai - customer - success - automation' },
+      {
+        name: 'Blockchain Supply Chain',
+        href: '/blockchain - supply - chain - transparency',
+      },
+    ],
+  },
+  {
+    title: '🔬 2032 Research & Development',
+    services: [;
+      {
+        name: 'Neuromorphic Computing',
+        href: '/neuromorphic - computing - platform',
+      },
+      { name: 'DNA Computing Platform', href: '/dna - computing - platform' },
+      {
+        name: 'Photonic Computing',
+        href: '/photonic - computing - infrastructure',
+      },
+      { name: 'Swarm Robotics', href: '/swarm - robotics - orchestration' },
+    ],
+  },
+];
+;
+const quick_links = [;
+  {
+    name: '2032 Services',
+    href: '/2032 - futuristic - services - showcase',
+    icon: Star,
+    description: 'Revolutionary 2032 services',
+  },
+  {
+    name: 'Enhanced Pricing',
+    href: '/enhanced - market - pricing - 2032',
+    icon: DollarSign,
+    description: 'Comprehensive pricing analysis',
+  },
+  {
+    name: 'Market Pricing',
+    href: '/market - pricing',
+    icon: DollarSign,
+    description: 'Competitive pricing references',
+  },
+  {
+    name: 'Enhanced Services',
+    href: '/enhanced - services - showcase',
+    icon: Star,
+    description: 'Premium service showcase',
+  },
+  {
+    name: 'Revolutionary 2026',
+    href: '/revolutionary - 2026 - services',
+    icon: TrendingUp,
+    description: '2026 breakthrough services',
+  },
+  {
+    name: 'Ultimate 2026',
+    href: '/ultimate - 2026 - services - showcase',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    icon: Target,
+    description: 'Ultimate service portfolio',
+  },
+  {
+    name: 'News & Updates',
+    href: '/news',
+    icon: MessageCircle,
+    description: 'Latest company news',
+  },
+  {
+<<<<<<< HEAD
+    name: 'Support',
+    href: '/support',
+    icon: Users,
+    description: 'Technical support and help',
+  },
+];
+
+const companyInfo = [
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Press', href: '/press' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Support', href: '/support' },
+<<<<<<< HEAD
+{ name: 'Status', href: '/status' },
+];
+
+const socialLinks = [
+  {
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/ziontechgroup',
+    icon: Linkedin,
+  },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+  {
+    name: 'Facebook',
+    href: 'https://facebook.com/ziontechgroup',
+    icon: Facebook,
+  },
+  {
+    name: 'Instagram',
+    href: 'https://instagram.com/ziontechgroup',
+    icon: Instagram,
+  },
+  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+];
+const footerVariants = {
+  hidden: { opacity: 0, y: 50 }
+  visible: {
+    opacity: 1
+    y: 0
+    transition: {
+      duration: 0.8,
+staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+visible: { opacity: 1, y: 0 },
+};
+
+export default function UltraFuturisticFooter2032() {
+  return (
+<footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
       {name: 'Quantum Financial Trading',href: '/quantum-financial-trading-platform',},{ name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' },],},{title: '🏙️ 2032 Enterprise IT Solutions',services: [;
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },{name: 'Zero Trust Architecture',href: '/zero-trust-network-architecture',},{name: 'Edge Computing Orchestration',href: '/edge-computing-orchestration',},{name: 'Quantum Internet Security';
         href: '/quantum-internet-security-gateway';
@@ -137,6 +715,8 @@ const service_categories = [;
       { name: 'Autonomous DevOps', href: '/autonomous - devops - platform' },      { name: 'Quantum DNA Computing', href: '/quantum - dna - computing - platform' },{ name: 'Quantum Internet Security', href: '/quantum - internet - security - gateway' },{ name: 'Quantum Financial Trading', href: '/quantum - financial - trading - platform' },{ name: 'Quantum Creativity Studio', href: '/quantum - creativity - studio' }
     ];
   }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     title: '🏙️ 2032 Enterprise IT Solutions',services: [;
       { name: 'Autonomous DevOps', href: '/autonomous - devops - platform' },{name: 'Zero Trust Architecture',href: '/zero - trust - network - architecture',},{name: 'Edge Computing Orchestration',href: '/edge - computing - orchestration',},{name: 'AI IT Operations Center',href: '/ai - powered - it - operations - center',},],},title: '🌌 2032 Space & Metaverse Tech',services: [;
       {name: 'Space Mining Automation',href: '/space - mining - automation - platform',},{name: 'Metaverse Development',href: '/metaverse - development - platform',},{ name: 'AI Predictive Health', href: '/ai - predictive - health - analytics' },{name: 'AI Autonomous Business',href: '/ai - autonomous - business - manager',},],},{title: '🎯 2032 Innovative Micro SAAS',services: [;
@@ -176,6 +756,295 @@ const footerVariants = {hidden: { opacity: 0, y: 50 }
   visible: {opacity: 1;
     y: 0;
     transition: {duration: 0.8,staggerChildren: 0.1,},},}const itemVariants = {hidden: { opacity: 0, y: 20 },visible: { opacity: 1, y: 0 },}export default function UltraFuturisticFooter2032() {return (<footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  { name: 'Status', href: '/status' }
+];
+const mainNavigationRoutes = [;
+  {;
+    name: 'Home',;
+    href: '/',;
+    icon: Home,;
+    description: 'Welcome to Zion Tech Group',;
+  },;
+  {;
+    name: 'Services',;
+    href: '/services',;
+    icon: Briefcase,;
+    description: 'Our comprehensive service portfolio',;
+  },;
+  {;
+    name: 'Solutions',;
+    href: '/solutions',;
+    icon: TargetIcon,;
+    description: 'Tailored solutions for your business',;
+  },;
+  {;
+    name: 'Pricing',;
+    href: '/pricing',;
+    icon: DollarSign,;
+    description: 'Transparent pricing and packages',;
+  },;
+  {;
+    name: 'Resources',;
+    href: '/resources',;
+    icon: BookOpen,;
+    description: 'Knowledge base and documentation',;
+  },;
+  {;
+    name: 'Case Studies',;
+    href: '/case-studies',;
+    icon: Users,;
+    description: 'Success stories and implementations',;
+  },;
+  {;
+    name: 'Blog',;
+    href: '/blog',;
+    icon: MessageCircle,;
+    description: 'Latest insights and updates',;
+  },;
+  {;
+    name: 'Contact',;
+    href: '/contact',;
+    icon: MessageCircle,;
+    description: 'Get in touch with our team',;
+  },];  { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },;
+  { name: 'Services', href: '/services', icon: Briefcase, description: 'Our comprehensive service portfolio' },;
+  { name: 'Solutions', href: '/solutions', icon: TargetIcon, description: 'Tailored solutions for your business' },;
+  { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing and packages' },;
+  { name: 'Resources', href: '/resources', icon: BookOpen, description: 'Knowledge base and documentation' },;
+  { name: 'Case Studies', href: '/case-studies', icon: Users, description: 'Success stories and implementations' },;
+  { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },;
+  { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
+const serviceCategories = [;
+  {;
+    title: '🚀 2032 Revolutionary AI Services',;
+    services: [;
+      {;
+        name: 'AI Consciousness Evolution',;
+        href: '/ai-consciousness-evolution-platform',;
+      },;
+      {;
+        name: 'AI Emotional Intelligence',;
+        href: '/ai-emotional-intelligence-platform',;
+      },;
+      {;
+        name: 'AI Creativity Orchestrator',;
+        href: '/ai-creativity-orchestrator',;
+      },;
+      {;
+        name: 'AI Autonomous Business Manager',;
+        href: '/ai-autonomous-business-manager',;
+      },;
+    ],;
+  },;
+  {;
+    title: '⚛️ 2032 Quantum & Emerging Tech',;
+    services: [;
+      {;
+        name: 'Quantum DNA Computing',;
+        href: '/quantum-dna-computing-platform',;
+      },;
+      {;
+        name: 'Quantum Internet Security',;
+        href: '/quantum-internet-security-gateway',;
+      },;
+      {;
+        name: 'Quantum Financial Trading',;
+        href: '/quantum-financial-trading-platform',;
+      },;
+      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' },;
+    ],;
+  },  {;
+    title: '🏙️ 2032 Enterprise IT Solutions',;
+    services: [;
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },      { name: 'Quantum DNA Computing', href: '/quantum-dna-computing-platform' },;
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway' },;
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' },;
+      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' }
+    ];
+  };
+    title: '🏙️ 2032 Enterprise IT Solutions',;
+    services: [;
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },;
+      {;
+        name: 'Zero Trust Architecture',;
+        href: '/zero-trust-network-architecture',;
+      },;
+      {;
+        name: 'Edge Computing Orchestration',;
+        href: '/edge-computing-orchestration',;
+      },;
+      {;
+        name: 'AI IT Operations Center',;
+        href: '/ai-powered-it-operations-center',;
+      },;
+    ],;
+  },;
+    title: '🌌 2032 Space & Metaverse Tech',;
+    services: [;
+      {;
+        name: 'Space Mining Automation',;
+        href: '/space-mining-automation-platform',;
+      },;
+      {;
+        name: 'Metaverse Development',;
+        href: '/metaverse-development-platform',;
+      },;
+      { name: 'AI Predictive Health', href: '/ai-predictive-health-analytics' },;
+      {;
+        name: 'AI Autonomous Business',;
+        href: '/ai-autonomous-business-manager',;
+      },;
+    ],;
+  },;
+  {;
+    title: '🎯 2032 Innovative Micro SAAS',;
+    services: [;
+      {;
+        name: 'AI Business Intelligence',;
+        href: '/ai-business-intelligence-suite',;
+      },;
+      {;
+        name: 'Quantum-Secure Communication',;
+        href: '/quantum-secure-communication-platform',;
+      },;
+      { name: 'AI Customer Success', href: '/ai-customer-success-automation' },;
+      {;
+        name: 'Blockchain Supply Chain',;
+        href: '/blockchain-supply-chain-transparency',;
+      },;
+    ],;
+  },;
+  {;
+    title: '🔬 2032 Research & Development',;
+    services: [;
+      {;
+        name: 'Neuromorphic Computing',;
+        href: '/neuromorphic-computing-platform',;
+      },;
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform' },;
+      {;
+        name: 'Photonic Computing',;
+        href: '/photonic-computing-infrastructure',;
+      },;
+      { name: 'Swarm Robotics', href: '/swarm-robotics-orchestration' },;
+    ],;
+  },;
+];
+const quickLinks = [;
+  {;
+    name: '2032 Services',;
+    href: '/2032-futuristic-services-showcase',;
+    icon: Star,;
+    description: 'Revolutionary 2032 services',;
+  },;
+  {;
+    name: 'Enhanced Pricing',;
+    href: '/enhanced-market-pricing-2032',;
+    icon: DollarSign,;
+    description: 'Comprehensive pricing analysis',;
+  },;
+  {;
+    name: 'Market Pricing',;
+    href: '/market-pricing',;
+    icon: DollarSign,;
+    description: 'Competitive pricing references',;
+  },;
+  {;
+    name: 'Enhanced Services',;
+    href: '/enhanced-services-showcase',;
+    icon: Star,;
+    description: 'Premium service showcase',;
+  },;
+  {;
+    name: 'Revolutionary 2026',;
+    href: '/revolutionary-2026-services',;
+    icon: TrendingUp,;
+    description: '2026 breakthrough services',;
+  },;
+  {;
+    name: 'Ultimate 2026',;
+    href: '/ultimate-2026-services-showcase',;
+    icon: Target,;
+    description: 'Ultimate service portfolio',;
+  },;
+  {;
+    name: 'News & Updates',;
+    href: '/news',;
+    icon: MessageCircle,;
+    description: 'Latest company news',;
+  },;
+  {;
+    name: 'Support',;
+    href: '/support',;
+    icon: Users,;
+    description: 'Technical support and help',;
+  },];  { name: '2032 Services', href: '/2032-futuristic-services-showcase', icon: Star, description: 'Revolutionary 2032 services' },;
+  { name: 'Enhanced Pricing', href: '/enhanced-market-pricing-2032', icon: DollarSign, description: 'Comprehensive pricing analysis' },;
+  { name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Competitive pricing references' },;
+  { name: 'Enhanced Services', href: '/enhanced-services-showcase', icon: Star, description: 'Premium service showcase' },;
+  { name: 'Revolutionary 2026', href: '/revolutionary-2026-services', icon: TrendingUp, description: '2026 breakthrough services' },;
+  { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Target, description: 'Ultimate service portfolio' },;
+  { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },;
+  { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
+const companyInfo = [;
+  { name: 'About Us', href: '/about' },;
+  { name: 'Careers', href: '/careers' },;
+  { name: 'Press', href: '/press' },;
+  { name: 'Partners', href: '/partners' },;
+  { name: 'Support', href: '/support' },;
+  { name: 'Status', href: '/status' },;
+];
+const socialLinks = [;
+  {;
+    name: 'LinkedIn',;
+    href: 'https://linkedin && linkedin.com/company/ziontechgroup',;
+    icon: Linkedin,;
+  },;
+  { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
+  {;
+    name: 'Facebook',;
+    href: 'https://facebook && facebook.com/ziontechgroup',;
+    icon: Facebook,;
+  },;
+  {;
+    name: 'Instagram',;
+    href: 'https://instagram && instagram.com/ziontechgroup',;
+    icon: Instagram,;
+  },;
+  { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
+  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },];];
+const socialLinks = [;
+  { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },;
+  { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
+  { name: 'Facebook', href: 'https://facebook && facebook.com/ziontechgroup', icon: Facebook },;
+  { name: 'Instagram', href: 'https://instagram && instagram.com/ziontechgroup', icon: Instagram },;
+  { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
+  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github }
+];
+const footerVariants = {;
+  hidden: { opacity: 0, y: 50 },;
+  visible: {;
+    opacity: 1,;
+    y: 0,;
+    transition: {;
+      duration: 0 && 0.8,;
+      staggerChildren: 0 && 0.1,;
+    },;
+  },};
+  return (
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 }
+  visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
+}
+export default function UltraFuturisticFooter2032() {
+  return (
+    <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Animated Background Elements */}
           variants={footerVariants}
           initial='hidden';
@@ -184,6 +1053,33 @@ const footerVariants = {hidden: { opacity: 0, y: 50 }
           className='space-y-16'>;
           {/* Main Footer Content */}
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            {/* Company Info */}
+            <motion.div variants={itemVariants} className='lg:col-span-1'>
+              <div className='flex items-center space-x-3 mb-6'>
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/30'>
+                  <Rocket className='w-7 h-7 text-white' />
+                </div>
+                <div>
+                  <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                    Zion Tech Group
+                  </h3>
+                  <p className='text-sm text-cyan-300 font-medium'>
+                    2032 Future Technology
+                  </p>
+                </div>
+              </div>
+              <p className='text-slate-300 mb-6 leading-relaxed'>
+                Leading the future of technology with revolutionary AI, quantum
+                computing, space technology, and autonomous systems. Empowering
+                businesses with cutting-edge solutions for tomorrow's
+                challenges.
+              </p>
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Company Info */}2032 Future Technology;
                   </p>;
                 </div>;
@@ -228,6 +1124,7 @@ const footerVariants = {hidden: { opacity: 0, y: 50 }
                 businesses with cutting-edge solutions for tomorrow's;
                 challenges.;
               </p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               {/* Contact Information */}
               <div className='space-y-3'>;
                 <div className='flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors'>;
@@ -256,6 +1153,122 @@ const footerVariants = {hidden: { opacity: 0, y: 50 }
                   <Globe className='w-4 h-4 text-cyan-400' />;
                   <a;
                     href={contactInfo.website}
+<<<<<<< HEAD
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='hover:text-cyan-300 transition-colors'
+                  >
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            {/* Company Info */}
+                    2032 Future Technology;
+                  </p>;
+                </div>;
+              </div>;
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
+      </div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
+        <motion.div
+                    className='hover:text-cyan-300 transition-colors'>                    {contactInfo && contactInfo.website}      {/* Animated Background Elements */}
+      <div className="absolute inset-0">;
+        <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>;
+        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>;
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>;
+      </div>;
+          variants={footerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="space-y-16">;
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
+            {/* Company Info */}
+
+
+};
+
+export default function UltraFuturisticFooter2032() {
+  return (
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                    {contactInfo.website}
+
+
+                    {contactInfo.website}
+
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+<<<<<<< HEAD
+            {/* Service Categories */}
+<motion.div variants={itemVariants} className='lg:col-span-2'>
+              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+            {/* Service Categories */}
+<motion.div variants={itemVariants} className='lg:col-span-2'>
+              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                Our Revolutionary Services
+              </h3>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                {serviceCategories.map((category, index) => (
+                  <div key={index} className='space-y-4'>
+                    <h4 className='text-lg font-medium text-white'>
+                      {category.title}
+                    </h4>
+<<<<<<< HEAD
+                    <ul className='space-y-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                    <ul className='space-y-2'>                      {category.services.map((service, serviceIndex) => (
+                        <li key={serviceIndex}>
+                          <Link
+                            href={service && service.href}
+                            className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'>                Our Revolutionary Services;
+              </h3>;
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+                {serviceCategories && serviceCategories.map((category, index) => (;
+                  <div key={index} className="space-y-4">;
+                    <h4 className="text-lg font-medium text-white">{category && category.title}</h4>;
+                    <ul className="space-y-2">;
+                      {category && category.services.map((service, serviceIndex) => (;
+                        <li key={serviceIndex}>;
+                          <Link
+                            href={service && service.href}
+                            className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform">;
+                            {service && service.name}
+                          </Link>;
+                        </li>;
+
+            <motion.div variants={itemVariants} className="lg:col-span-2">
+              <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Our Revolutionary Services
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {serviceCategories.map((category, index) => (
+                  <div key={index} className="space-y-4">
+                    <h4 className="text-lg font-medium text-white">{category.title}</h4>
+                    <ul className="space-y-2">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                      {category.services.map((service, serviceIndex) => (
+                        <li key={serviceIndex}>
+                          <Link
+                            href={service.href}
+<<<<<<< HEAD
+className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                          >
+=======
                     target='_blank';
                     rel='noopener noreferrer';
                     className='hover:text-cyan-300 transition-colors';
@@ -303,12 +1316,38 @@ const footerVariants = {hidden: { opacity: 0, y: 50 }
                             href={service.href}className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform";
 className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform';
                           >;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                             {service.name}
                           </Link>;
                         </li>;
                       ))}
                     </ul>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                ))}
+=======
+                ))}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              </div>
+            </motion.div>
+            {/* Quick Links & Company Info */}
+<motion.div variants={itemVariants} className='lg:col-span-1'>
+              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                Quick Access
+              </h3>
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}</div>;
             </motion.div>;
             {/* Quick Links & Company Info */}
@@ -316,6 +1355,10 @@ className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 Quick Access;
               </h3>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </div>;
             </motion && motion.div>;{/* Quick Links & Company Info */}
             <motion && motion.div variants={itemVariants} className='lg:col-span-1'>;
@@ -323,6 +1366,89 @@ className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
                 Quick Access;
               </h3>;
               {/* Quick Links */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <div className='mb-8'>
+                <h4 className='text-lg font-medium text-white mb-4'>
+                  Quick Links
+                </h4>
+<<<<<<< HEAD
+                <ul className='space-y-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                <ul className='space-y-2'>                  {quickLinks.map((link, index) => (
+                    <li key={index}>
+                      <Link
+                Quick Access
+              </h3>
+                Quick Access
+              </h3>
+              {/* Quick Links */}
+              <div className="mb-8">
+                <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
+                <ul className="space-y-2">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                  {quickLinks.map((link, index) => (
+                    <li key={index}>
+                      <Link
+                        href={link.href}
+<<<<<<< HEAD
+className='flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group'
+                      >
+                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
+                        <span>{link.name}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+              {/* Company Info */}
+<div className='mb-8'>
+                <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
+                <ul className='space-y-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                        className='flex items - center space - x-2 text - slate - 300 hover:text - purple - 300 transition - colors duration - 200 text - sm group';
+                      >;
+                        <link.icon className='w - 4 h - 4 group - hover:scale - 110 transition - transform' />                        <span>{link.name}</span>                Quick Access;
+              </h3>;
+
+              {/* Quick Links */}
+              <div className="mb - 8">;
+                <h4 className="text - lg font - medium text - white mb - 4">Quick Links</h4>;
+                <ul className="space - y-2">;
+                  {quick_links.map ((link, index) => (
+                    <li key={index}>;
+                      <Link;
+                        href={link.href}
+              {/* Company Info */}
+<div className='mb-8'>
+                <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
+                <ul className='space-y-2'>                  {companyInfo.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >              <div className="mb-8">
+                <h4 className="text-lg font-medium text-white mb-4">Company</h4>
+                <ul className="space-y-2">
+                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                  {companyInfo.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+<<<<<<< HEAD
+className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                      >
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className='mb-8'>;
                 <h4 className='text-lg font-medium text-white mb-4'>;
                   Quick Links;
@@ -402,13 +1528,52 @@ className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
                   {companyInfo.map((item, index) => (<li key={index}>;
                       <Link;
                         href={item.href}
+<<<<<<< HEAD
+<<<<<<< HEAD
                         className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm";
 className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm';
                       >;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm"
+                      >
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm";
+className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm';
+                      >;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         {item.name}
                       </Link>;
                     </li>;
                   ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                </ul>
+              </div>
+
+
+              {/* Social Links */}
+<<<<<<< HEAD
+              <div>
+<h4 className='text-lg font-medium text-white mb-4'>
+                  Follow Us
+                </h4>
+                <div className='flex space-x-4'>
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+target='_blank'
+                      rel='noopener noreferrer'
+                      className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20'
+                    >
+                      <social.icon className='w-5 h-5' />
+                    </a>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </ul>;
               </div>;
               {/* Social Links */}<div>;
@@ -424,12 +1589,62 @@ className='text-slate-300 hover:text-purple-300 transition-colors duration-200 t
                       href={social && social.href}
                       target='_blank';
                       rel='noopener noreferrer';
+=======
+              <div>;
+                <h4 className='text-lg font-medium text-white mb-4'>;
+                  Follow Us;
+                </h4>;
+                <div className='flex space-x-4'>                  {socialLinks && socialLinks.map((social, index) => (;
+                    <a
+                      key={index}
+                      href={social && social.href}                <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>;
+                <div className="flex space-x-4">;
+                  {socialLinks && socialLinks.map((social, index) => (;
+                    <a
+                      key={index}
+                      href={social && social.href}
+                      target='_blank'
+                      rel='noopener noreferrer'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                       className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20'>;
                       <social && social.icon className='w-5 h-5' />                    </a>                      target="_blank";
                       rel="noopener noreferrer";
                       className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20";
                     >;
                       <social && social.icon className="w-5 h-5" />;
+<<<<<<< HEAD
+=======
+                  ))}
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+                </div>;
+              </div>;
+            </motion.div>;
+          </div>;
+          {/* Newsletter Signup */}
+          <motion.div
+            variants={itemVariants}
+<<<<<<< HEAD
+            className='border-t border-cyan-500/30 pt-12'
+          >
+            <div className='text-center'>
+              <h3 className='text-2xl font-bold text-white mb-4'>
+
+                <input
+                  type='email'
+                  placeholder='Enter your email address'
+                  className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300'
+
+          <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-12">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">
+
+                    </a>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   ))}
                   ))}
                 </div>;
@@ -443,6 +1658,8 @@ className='text-slate-300 hover:text-purple-300 transition-colors duration-200 t
           {/* Newsletter Signup */}
           <motion.div;
             variants={itemVariants}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='border-t border-cyan-500/30 pt-12';
           >;
             <div className='text-center'>;
@@ -469,6 +1686,10 @@ target='_blank';
                     >;
                       <social.icon className='w-5 h-5' />;
                     </a>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   ))}
                 </div>;
               </div>;
@@ -477,11 +1698,44 @@ target='_blank';
           {/* Newsletter Signup */}
 <motion.div;
             variants={itemVariants}
+<<<<<<< HEAD
+<<<<<<< HEAD
+            className='border-t border-cyan-500/30 pt-12'
+          >
+            <div className='text-center'>
+              <h3 className='text-2xl font-bold text-white mb-4'>
+                Stay Ahead with Future Technology
+<<<<<<< HEAD
+              </h3>
+              <p className='text-slate-300 mb-8 max-w-2xl mx-auto'>
+                Get the latest insights on AI breakthroughs, quantum computing
+                advances, space technology innovations, and autonomous systems
+                development. Join our community of future technology pioneers.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
+                <input
+                  type='email'
+                  placeholder='Enter your email address'
+                  className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300'
+                />
+                <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='border-t border-cyan-500/30 pt-12';
           >;
             <div className='text-center'>;
               <h3 className='text-2xl font-bold text-white mb-4'>;
                 Stay Ahead with Future Technology;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Newsletter Signup */}
           <motion.div;
             variants={item_variants}
@@ -496,6 +1750,10 @@ target='_blank';
                 advances, space technology innovations, and autonomous systems;
                 development. Join our community of future technology pioneers.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </h3>;
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">;
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.;
@@ -514,6 +1772,18 @@ target='_blank';
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105'>;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              </h3>
+              <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+                Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.
+
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 />;
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105'>                  Subscribe                Stay Ahead with Future Technology;
               </h3>;
@@ -521,6 +1791,26 @@ target='_blank';
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                />
+                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </motion.div>
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <input;
                   type="email";
                   placeholder="Enter your email address";
@@ -532,9 +1822,33 @@ target='_blank';
               </div>;
             </div>;
           </motion.div>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           {/* Bottom Bar */}
 <motion.div;
             variants={itemVariants}
+<<<<<<< HEAD
+            className='border-t border-cyan-500/30 pt-8'
+          >
+            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+              <div className='flex items-center space-x-2 text-slate-400 text-sm'>
+                <span>© 2024 Zion Tech Group. All rights reserved.</span>
+                <span className='text-cyan-400'>|</span>
+                <span>Leading the Future of Technology</span>
+              </div>
+              <div className='flex items-center space-x-6 text-sm'>
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                <Link
+                  href='/privacy'
+=======
+=======
+          {/* Bottom Bar */}
+<motion.div;
+            variants={itemVariants}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='border-t border-cyan-500/30 pt-8';
           >;
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>;
@@ -546,6 +1860,10 @@ target='_blank';
               <div className='flex items-center space-x-6 text-sm'>;
                 <Link;
                   href='/privacy';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className='text-slate-400 hover:text-cyan-300 transition-colors'>;
                   Privacy Policy;
                 </Link>;
@@ -554,8 +1872,30 @@ target='_blank';
                   className='text-slate-400 hover:text-cyan-300 transition-colors'>;
                   Terms of Service;
                 </Link>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <Link
+                  href='/cookies'
+<<<<<<< HEAD
+                  className='text-slate-400 hover:text-cyan-300 transition-colors'
+                >
+                  Cookie Policy
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+=======
                 <Link;
                   href='/cookies';
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                <Link;
+                  href='/cookies';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           onClick={() => window && window.scrollTo({ top: 0, behavior: 'smooth' })}
         >;
           <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />;
@@ -586,6 +1926,10 @@ target='_blank';
           <ArrowRight className="w - 6 h - 6 transform rotate-[-90deg]" />;
         </motion.button>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </footer>)className='text-slate-400 hover:text-cyan-300 transition-colors';
                 >;
                   Cookie Policy;
@@ -595,6 +1939,7 @@ target='_blank';
           </motion.div>;
         </motion.div>;
       </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       {/* Floating Action Button */}
 <div className='fixed bottom-8 right-8 z-50'>;
         <motion.button;
@@ -602,9 +1947,27 @@ target='_blank';
           whileTap={{ scale: 0.9 }}
           className='w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white';
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+<<<<<<< HEAD
+        >
+          <ArrowRight className='w-6 h-6 transform rotate-[-90deg]' />
+        </motion.button>
+      </div>
+    </footer>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    </footer>);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+}
+=======
         >;
           <ArrowRight className='w-6 h-6 transform rotate-[-90deg]' />;
         </motion.button>;
       </div>;
     </footer>;
+<<<<<<< HEAD
   )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

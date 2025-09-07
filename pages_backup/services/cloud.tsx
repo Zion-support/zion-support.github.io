@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { motion  } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap  } from 'lucide-react';
@@ -32,3 +34,4 @@ import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight  } from '
         </section>;
       </div>;
     </Layout>;  )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

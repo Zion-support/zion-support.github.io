@@ -1,9 +1,21 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',const prompts: Array<{ prompt: string, region?: string, service?: string }>  = [;const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',const prompts: Array<{ prompt: string, region?: string, service?: string }>  = [;/* eslint - disable no - console */;
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 /* eslint - disable no - console */;
 import fs from 'fs';
 import path from 'path';
@@ -21,6 +33,11 @@ const HOST = process.env.SELF_HOST || 'http: //localhost:3000',const prompts: Ar
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];})})req && req.on('error', reject)req && req.write(data)req && req.end()})}
 async function main() {continue;
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
       method: 'POST',
       headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
@@ -31,6 +48,10 @@ async function main() {continue;
       res && res.on('end', () => {
         try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       })
     });
     req && req.on('error', reject);
@@ -71,6 +92,13 @@ main ().catch ((e) => {
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 

@@ -4,6 +4,33 @@
 
 <<<<<<< HEAD
 @layer base {
+<<<<<<< HEAD
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200;
+  }
+  
+  .hero {
+    @apply min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900;
+  }
+  
+=======
   :root {
     --font-size: 16px;
   }
@@ -131,6 +158,7 @@
   }
   50% {
     transform: translateY(-20px);
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 /* Basic styles */
 body {
@@ -193,8 +221,22 @@ code {
 }
 
 @media (min-width: 640px) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   .cta-buttons {
     flex-direction: row;
 >>>>>>> cursor/expand-services-advertise-and-build-project-e77d
   }
+<<<<<<< HEAD
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent;
+  }
+  
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }

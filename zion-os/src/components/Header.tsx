@@ -68,7 +68,14 @@ function Header() {const [isMenuOpen, setIsMenuOpen] = useState (false),const [i
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Services menu"
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               >
                 Services
                 <svg className=&quot;ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;>
@@ -90,8 +97,18 @@ function Header() {const [isMenuOpen, setIsMenuOpen] = useState (false),const [i
                 aria - label=&quot;Services menu & quot;
               >;
                 Services;
+<<<<<<< HEAD
+<<<<<<< HEAD
                 <svg className=&quot;ml - 1 w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot; aria - hidden=&quot;true & quot;>;
                   <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M19 9l - 7 7 - 7-7 & quot; />;
+=======
+                <svg className=&quot;ml - 1 w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot; aria - hidden=&quot;true & quot;>;
+                  <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M19 9l - 7 7 - 7-7 & quot; />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                <svg className=&quot;ml - 1 w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot; aria - hidden=&quot;true & quot;>;
+                  <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M19 9l - 7 7 - 7-7 & quot; />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 </svg>;
               </button>;
               <div className=&quot;absolute top - full left - 0 mt - 2 w - 80 bg - black / 95 backdrop - blur - xl border border - white / 20 rounded - xl shadow - 2xl opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0 & quot;>;
@@ -104,20 +121,45 @@ function Header() {const [isMenuOpen, setIsMenuOpen] = useState (false),const [i
                     >;
                       <div className=&quot;flex items - center justify - between & quot;>;
                         <span>{service.name}</span>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                         <svg className=&quot;w - 4 h - 4 opacity - 0 group - hover / item:opacity - 100 transition - opacity duration - 200 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;
                           <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M9 5l7 7 - 7 7 & quot; />;
                         </svg>;
                       </div>;
                     </Link>))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 role=&quot;banner&quot;
       aria-label=&quot;Main navigation&quot;    >;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex justify-between items-center py-4">;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       role="banner"
       aria-label="Main navigation"
 role=&quot;banner&quot;
       aria-label=&quot;Main navigation&quot;
     >
+<<<<<<< HEAD
+=======
+                        <svg className=&quot;w - 4 h - 4 opacity - 0 group - hover / item:opacity - 100 transition - opacity duration - 200 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot;>;
+                          <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M9 5l7 7 - 7 7 & quot; />;
+                        </svg>;
+                      </div>;
+                    </Link>))}
+=======role=&quot;banner&quot;
+      aria-label=&quot;Main navigation&quot;    >
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -149,6 +191,12 @@ role=&quot;banner&quot;
                 className=&quot;text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group&quot;
                 aria-expanded=&quot;false&quot;
                 aria-haspopup=&quot;true&quot;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 aria-label=&quot;Services menu&quot;              </Link>;
             ))}{/* Services Dropdown */}
             <div className="relative group">              <button;
@@ -165,6 +213,10 @@ role=&quot;banner&quot;
               <div className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
                 <div className="p-6 grid grid-cols-1 gap-3">;
                   {services.map((service) => (<Link;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 aria-label=&quot;Services menu&quot;
               </Link>
             ))}
@@ -173,6 +225,16 @@ role=&quot;banner&quot;
             <div className="relative group">
 <div className=&quot;relative group&quot;>
               <button 
+<<<<<<< HEAD
+=======
+                aria-label=&quot;Services menu&quot;              </Link>
+            ))}
+;
+            {/* Services Dropdown */}
+            <div className="relative group">              <button 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
                 aria-expanded="false"
                 aria-haspopup="true"
@@ -204,6 +266,12 @@ role=&quot;banner&quot;
               </div>;
             </div>;
           </nav>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           {/* CTA Button */}{isMenuOpen ? (<path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (<path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}{/* CTA Button */}            <Link;
               href="/contact";
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl";
@@ -212,6 +280,10 @@ role=&quot;banner&quot;
               Get Started;
             </Link>;
           </div>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           {/* CTA Button */}
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -223,6 +295,12 @@ role=&quot;banner&quot;
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
 <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
             <Link
+<<<<<<< HEAD
+=======
+          {/* CTA Button */}            <Link
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               aria-label="Get started with Zion Tech Group"
@@ -233,8 +311,17 @@ role=&quot;banner&quot;
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+<<<<<<< HEAD
+<<<<<<< HEAD
 className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
             aria-expanded={isMenuOpen}
+=======
+className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;            aria-expanded={isMenuOpen}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
+            aria-expanded={isMenuOpen}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-controls="mobile-menu";
           >;
@@ -252,8 +339,18 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               {isMenuOpen ? (
+<<<<<<< HEAD
+<<<<<<< HEAD
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
+=======
+                <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
+                <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
+                <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -294,6 +391,19 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                 <div className="text-gray-400 text-sm font-medium mb-2">Services</div>;
                 {services.map((service) => (<Link;
                   {item.name}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+                </Link>;
+              ))}
+
+              <div className="px-3 py-2">
+                <div className="text-gray-400 text-sm font-medium mb-2">Services</div>
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 {services.map((service) => (
                   <Link
                     key={service.name}

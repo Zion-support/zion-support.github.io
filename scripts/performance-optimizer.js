@@ -1,3 +1,41 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+
+<<<<<<< HEAD
+
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+class PerformanceOptimizer {
+  constructor() {
+    this.metrics = {};
+  }
+  async analyzeBundle() {
+    const buildDir = path.join(process.cwd(), '.next');
+    if (fs.existsSync(buildDir)) {
+      const stats = this.getDirectorySize(buildDir);
+      this.metrics.bundleSize = stats;
+      console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
+    }
+  }
+  getDirectorySize(dirPath) {
+    let totalSize = 0;
+    const files = fs.readdirSync(dirPath);
+    files.forEach(file => {
+      const filePath = path.join(dirPath, file);
+      const stats = fs.statSync(filePath);
+      if (stats.isDirectory()) {
+        totalSize += this.getDirectorySize(filePath);
+      } else {
+        totalSize += stats.size;
+
+import fs from 'fs';
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 ursor/automate-test-improve-and-merge-code-646c;
 #!/usr/bin/env node const fs = require('fs')const path = require('path')class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json')if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
@@ -10,6 +48,7 @@ const fs = require('fs')const path = require('path')class PerformanceOptimizer {
   }
   getDirectorySize(dirPath) {let totalSize = 0;
     const files = fs.readdirSync(dirPath)files.forEach(file => {const filePath = path.join(dirPath, file)const stats = fs.statSync(filePath)if (stats.isDirectory()) {totalSize += this.getDirectorySize(filePath)} else {totalSize += stats.size;import fs from 'fs';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import path from 'path';
 import { glob  } from 'glob';
 // Performance optimization configurations;
@@ -53,8 +92,26 @@ function optimizeCSS() {let optimized = content;
     const rules  = optimized.match(ruleRegex) || [];rules.forEach(rule => {const properties = rule.match(/([^:]+):\s*([^;]+)/g) || [];
       const uniqueProperties  = [...new Set(properties)];if (uniqueProperties.length !== properties.length) {const selector = rule.match(/([^{]+)\s*{/)?.[1];
         const newRule = `${selector} {\n  ${uniqueProperties.join('\n  ')}\n}`;
+<<<<<<< HEAD
+        optimized = optimized.replace(rule, newRule);
+        changes++;
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+#!/usr/bin/env node
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      }
+    });
+    return totalSize;
+=======
         optimized = optimized.replace(rule, newRule)changes++;}
     })return totalSize;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   generateReport() {const report = {timestamp: new Date().toISOString(),metrics: this.metrics,recommendations: this.generateRecommendations()}fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2))console.log('Performance report generated')}
   generateRecommendations() {const recommendations = [];
@@ -66,9 +123,34 @@ const fs = require('fs')const path = require('path')class PerformanceOptimizer {
   async analyzeBundle() {const buildDir = path.join(process.cwd(), '.next')if (fs.existsSync(buildDir)) {const stats = this.getDirectorySize(buildDir)this.metrics.bundleSize = stats;
       console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`)}
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+#!/usr/bin/env node
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
   getDirectorySize(dirPath) {let totalSize = 0;
     const files = fs.readdirSync(dirPath)files.forEach(file => {const filePath = path.join(dirPath, file)const stats = fs.statSync(filePath)if (stats.isDirectory()) {totalSize += this.getDirectorySize(filePath)} else {totalSize += stats.size;
 #!/usr/bin/env node
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  getDirectorySize(dirPath) {let totalSize = 0;
+    const files = fs.readdirSync(dirPath)files.forEach(file => {const filePath = path.join(dirPath, file)const stats = fs.statSync(filePath)if (stats.isDirectory()) {totalSize += this.getDirectorySize(filePath)} else {totalSize += stats.size;
+#!/usr/bin/env node
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 #!/usr/bin/env node
@@ -121,7 +203,14 @@ if (require.main === module) {
   optimizer.analyzeBundle();
   optimizer.generateReport();
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 module && module.exports = PerformanceOptimizer;
 
 module.exports = PerformanceOptimizer;
@@ -175,9 +264,19 @@ const path = // // require('path');
 const glob = // // require('glob');
 class PerformanceOptimizer {
   constructor() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    this.ensureDirectories();
+=======
     this.projectRoot = process.cwd();
     this.srcDir = path.join(this.projectRoot, 'src');
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    this.projectRoot = process.cwd();
+    this.srcDir = path.join(this.projectRoot, 'src');
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
     this.ensureDirectories();
@@ -193,8 +292,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -216,6 +323,12 @@ ursor/automate-test-improve-and-merge-code-646c;
     }for (const file of files) {const filePath = path.join(this.srcDir, file)try {const content = fs.readFileSync(filePath, 'utf8')let newContent = content;
   log(message) {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+<<<<<<< HEAD
+    console.log(`[${timestamp}] ${message}`);
+  }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
     console.log(`[${timestamp}] ${message}`);
@@ -223,6 +336,18 @@ ursor/automate-test-improve-and-merge-code-646c;
 
     console.log(`[${timestamp}] ${message}`);
   }
+<<<<<<< HEAD
+=======
+
+
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+    console.log(`[${timestamp}] ${message}`);
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log(`[${timestamp}] ${message}`);
   }
     console.log(`[${timestamp}] ${message}`);
@@ -244,8 +369,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       "optimizations": 0,
       "errors": []
     };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     for (const file of files) {
       const filePath = path.join(this.srcDir, file);
       try {
@@ -268,10 +401,19 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 
     
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             fileOptimizations++;
           }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
     
@@ -340,6 +482,11 @@ ursor/automate-test-improve-and-merge-code-646c;
           }
         });
         // Add performance optimizations for React components
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
           // Add React.memo import if not present
           if (newContent.includes('React.memo') && !newContent.includes("import React, { memo }")) {
@@ -351,13 +498,25 @@ ursor/automate-test-improve-and-merge-code-646c;
           if (newContent && newContent.includes('React && React.memo') && !newContent && newContent.includes("import React, { memo }")) {
             newContent = newContent ;/g,
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               "import React, { memo, useCallback, useMemo } from 'react';"
             );
             fileOptimizations++;
           }
         }
         if (newContent !== content) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+          this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
+=======
           fs.writeFileSync(filePath, newContent, 'utf8');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+          fs.writeFileSync(filePath, newContent, 'utf8');
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
           this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
@@ -373,8 +532,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         results.errors.push({ file, error: error.message });
         this.log(`❌ Error optimizing ${file}: ${error.message}`);
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -427,10 +594,25 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
         "optimizationsApplied": results.optimizations,
         "errors": results.errors.length
       },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      "details": results
+    };
+<<<<<<< HEAD
+=======
+    const reportPath = path.join(this.reportsDir, 'performance-optimization-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
       "details": results
     };
     const reportPath = path.join(this.reportsDir, 'performance-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -439,11 +621,20 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     this.log(`✅ Performance optimization completed: ${results.optimizations} optimizations applied to ${results.processed} files`);
     return report;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     this.log(`📊 Report "generated": ${reportPath}`);
     this.log(`✅ Performance optimization "completed": ${results.optimizations} optimizations applied to ${results.processed} files`);
     return report}
@@ -454,7 +645,14 @@ const fs = // // require('fs');
 const path = // // require('path');
 class PerformanceMonitor {
   constructor() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     this.metrics = {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    this.metrics = {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
     this && this.metrics = {
@@ -483,8 +681,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   startMonitoring() {
     if (typeof window !== 'undefined') {
       // Monitor page load time
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       window.addEventListener('load', () => {
         this.metrics.pageLoadTime = performance.now();
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+      window.addEventListener('load', () => {
+        this.metrics.pageLoadTime = performance.now();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
         this.reportMetrics();
       });
@@ -519,6 +725,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/automate-test-improve-and-merge-code-646c;
         });
+<<<<<<< HEAD
+<<<<<<< HEAD
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
+      }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
@@ -526,6 +738,18 @@ ursor/automate-test-improve-and-merge-code-646c;
 
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
       }
+<<<<<<< HEAD
+=======
+
+
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
+      }
+
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
+      }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
       }
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
@@ -564,6 +788,45 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
           "event_category": 'Performance',"value": Math.round(value),"non_interaction": true;
         })})}
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      recommendations: [
+        'Consider implementing code splitting for large components',
+        'Use React.memo for expensive components',
+        'Optimize images to WebP/AVIF format',
+        'Implement lazy loading for non-critical components',
+        'Use CSS-in-JS libraries for better tree shaking',
+      ],
+    },
+  };
+
+  fs.writeFileSync(
+    'performance-optimization-report.json',
+    JSON.stringify(report, null, 2)
+  );
+  console.log(
+    '📊 Performance report generated: performance-optimization-report.json'
+  );
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       recommendations: [;
         'Consider implementing code splitting for large components','Use React.memo for expensive components','Optimize images to WebP/AVIF format','Implement lazy loading for non-critical components','Use CSS-in-JS libraries for better tree shaking';
       ];
@@ -613,6 +876,14 @@ module.exports = PerformanceOptimizer;#!/usr/bin/env node const fs = require('fs
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export default PerformanceMonitor;";
     const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js');
@@ -624,10 +895,25 @@ export default PerformanceMonitor;";
 }
 
 export default PerformanceMonitor;";
+<<<<<<< HEAD
+<<<<<<< HEAD
+      fs.mkdirSync(utilsDir, { recursive: true });
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
       fs.mkdirSync(utilsDir, { recursive: true });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const scriptPath = path && path.join(this && this.srcDir, 'utils', 'PerformanceMonitor && PerformanceMonitor.js');
     const utilsDir = path && path.dirname(scriptPath);
     if (!fs && fs.existsSync(utilsDir)) {
@@ -638,8 +924,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script created: ${scriptPath}`);
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -654,6 +948,11 @@ if (require.main === module) {
   optimizer.optimizePerformance()
     .then(() => optimizer.createPerformanceMonitoringScript())
     .then(() => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console.log('🎉 Performance optimization completed successfully');
       process.exit(0);
     })
@@ -662,6 +961,8 @@ if (require.main === module) {
       process.exit(1);
     });
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       console.error('❌ Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
@@ -674,6 +975,64 @@ module.exports = PerformanceOptimizer;
       console.error(' Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
+<<<<<<< HEAD
+      console.log('🎉 Performance optimization completed successfully');
+      process.exit(0);
+    })
+    .catch((error) => {
+      console.error('❌ Performance optimization failed:', error);
+      process.exit(1);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  const patterns = [
+    'src/**/*.{tsx,jsx,ts,js}',
+    'pages/**/*.{tsx,jsx,ts,js}',
+    'components/**/*.{tsx,jsx,ts,js}',
+    'styles/**/*.{css,scss}',
+  ];
+
+  const excludeDirs = [
+    'node_modules',
+    '.next',
+    'build',
+    'dist',
+    'scripts',
+    'automation',
+    'automation_backup',
+    'src.disabled',
+    'pages.disabled',
+    'components.disabled',
+  ];
+
+  for (const pattern of patterns) {
+    const files = await glob(pattern, {
+      ignore: excludeDirs.map(dir => `**/${dir}/**`),
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    });
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+      console.error('❌ Performance optimization "failed": ', error);
+      process.exit(1)})}
+module.exports = PerformanceOptimizer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+      console.error('❌ Performance optimization failed:', error);
+      process.exit(1);
+    });
+}
+module.exports = PerformanceOptimizer;
+      console.error(' Performance optimization "failed": ', error);
+      process.exit(1)})}
+module.exports = PerformanceOptimizer;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     console && console.log('🎉 Performance optimization completed successfully'),
     process && process.exit(0)

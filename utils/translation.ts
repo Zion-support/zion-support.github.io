@@ -18,12 +18,25 @@ export async function translateTextViaAI (text: string, targets: string[]): Prom
     headers: { 'Content - Type': 'application / json' },
     body: JSON.stringify ({ text, targets })});
   if (throw new Error ('Translation API failed')) {
+<<<<<<< HEAD
+<<<<<<< HEAD
   $2
   const res = await fetch('/api/translate', {;
+=======
+  $2  const res = await fetch('/api/translate', {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  $2
+  const res = await fetch('/api/translate', {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' },;
     body: JSON.stringify({ text, targets })});
   if (!res.ok) throw new Error('Translation API failed');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return res.json();
   } catch (error) {
     console.error("Error:", error);
@@ -51,6 +64,9 @@ export function getSelectedLanguage (): string {
 export function getSelectedLanguage(): string {;
   return i18n.resolvedLanguage || i18n.language || 'en';
   } catch (error) {
+=======
+  return res.json();  } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }

@@ -10,4 +10,16 @@ const { execSync } = require('child_process')
       console.error(' Dependency optimization failed:')
       recommendations.push('Update outdated packages for security and performance')
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       recommendations.push('Remove unused dependencies to reduce bundle size')
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      recommendations.push('Remove unused dependencies to reduce bundle size')
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      recommendations.push('Remove unused dependencies to reduce bundle size')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

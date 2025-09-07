@@ -1,3 +1,283 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react',
+import Head from 'next/head';
+import { motion  } from 'framer-motion';
+import { Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
+ } from 'lucide-react';
+} from 'lucide-react';
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+} from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+import { motion } from 'framer-motion';
+import {
+  Check
+  Zap
+  Shield
+  Brain
+  Atom
+  Target
+  Rocket
+  Star
+  TrendingUp
+  Award
+  Users
+  ArrowRight
+  ExternalLink
+  Phone
+  Mail
+  MapPin;} from 'lucide-react';import {
+import { motion } from 'framer-motion';
+import {;
+  Check,;
+  Zap,;
+  Shield,;
+  Brain,;
+  Atom,;
+  Target,;
+  Rocket,;
+  Star,;
+  TrendingUp,;
+  Award,;
+  Users,;
+  ArrowRight,;
+  ExternalLink,;
+  Phone,;
+  Mail,;
+  MapPin,;} from 'lucide-react';import { ;
+  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin;
+<<<<<<< HEAD
+import { 
+  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
+} from 'lucide-react';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+<<<<<<< HEAD
+const contactInfo = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+  Check,
+  Zap,
+  Shield,
+  Brain,
+  Atom,
+  Target,
+  Rocket,
+  Star,
+  TrendingUp,
+  Award,
+  Users,
+  ArrowRight,
+  ExternalLink,
+  Phone,
+  Mail,;
+  MapPin,;} from 'lucide-react';import { 
+  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1
+}
+const itemVariants = {
+  hidden: {
+  y: 20, opacity: 0
+}
+visible: {
+  y: 0, opacity: 1, transition: {
+  duration: 0.5
+}
+const pricingTiers = [
+  {
+    name: 'Starter'
+    price: 99
+    period: 'month'
+    description: 'Perfect for small businesses and startups'
+    features: [
+      'Up to 5 team membersBasic AI content generationStandard supportCore integrationsBasic analyticsEmail support'
+    ]
+    icon: <Target className="w-6 h-6" />
+    color: 'from-blue-500 to-cyan-500'
+    cta: 'Start Free Trial'
+    ctaLink: '/contact'
+    popular: false
+  }
+  {
+    name: 'Professional'
+    price: 299
+    period: 'month'
+    description: 'Ideal for growing businesses and teams'
+    features: [
+      'Up to 25 team membersAdvanced AI featuresPriority supportAdvanced integrationsAdvanced analyticsPhone & email supportCustom brandingAPI access'
+    ]
+    icon: <Zap className="w-6 h-6" />
+    color: 'from-purple-500 to-pink-500'
+    cta: 'Start Free Trial'
+    ctaLink: '/contact'
+    popular: true
+  }
+  {
+    name: 'Enterprise'
+    price: 999
+    period: 'month'
+    description: 'For large organizations with complex needs'
+    features: [
+      'Unlimited team membersFull AI suite access24/7 dedicated supportCustom integrationsAdvanced analytics & reportingDedicated account managerCustom developmentSLA guarantees';
+      'On-premise optionsCompliance certifications'
+    ]
+    icon: <Shield className="w-6 h-6" />
+    color: 'from-green-500 to-emerald-500'
+    cta: 'Contact Sales'
+    ctaLink: '/contact'
+    popular: false
+  }
+const serviceCategories = [
+  {
+    name: 'AI & Consciousness Services'
+    icon: <Brain className='w-8 h-8' />
+    services: cuttingEdgeAIServices2025.slice(0, 6)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    description:
+      'Revolutionary AI platforms with consciousness and emotional intelligence'
+  }
+  {
+    name: 'Quantum & Emerging Tech'
+    icon: <Atom className='w-8 h-8' />
+    color: 'from-purple-500 to-pink-500'
+    services: cuttingEdgeQuantumServices2025.slice(0, 6)
+    description:
+      'Breakthrough quantum computing and space technology solutions'
+  }
+  {
+    name: 'Enterprise IT Solutions',
+    icon: <Shield className='w-8 h-8' />,
+    color: 'from-blue-500 to-cyan-500',
+    services: cuttingEdgeEnterpriseITServices2025.slice(0, 6),
+    description: 'Advanced enterprise infrastructure and security solutions',
+  },
+  {
+    name: 'Micro SAAS Solutions',
+    icon: <Rocket className='w-8 h-8' />,
+    color: 'from-teal-500 to-emerald-500',
+    services: cuttingEdgeMicroSaasServices2025.slice(0, 6),
+    description: 'Innovative business solutions for modern enterprises',
+  },
+];
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+const stats = [
+  {
+    number: '25+',
+    label: 'Cutting-Edge Services',
+    icon: Star,
+    color: 'text-cyan-400',
+  },
+  {
+    number: '$500B+',
+    label: 'Market Coverage',
+    icon: TrendingUp,
+    color: 'text-purple-400',
+  },
+  {
+    number: '99.9%',
+    label: 'Success Rate',
+    icon: Award,
+    color: 'text-green-400',
+  },
+  {
+    number: '24/7',
+    label: 'Expert Support',
+    icon: Users,
+    color: 'text-pink-400',
+  },
+];
+
+export default function CuttingEdgePricing2025() {
+
+
+export default function CuttingEdgePricing2025() {;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const allServices = [
+...cuttingEdgeAIServices2025,
+    ...cuttingEdgeQuantumServices2025,
+    ...cuttingEdgeEnterpriseITServices2025,
+    ...cuttingEdgeMicroSaasServices2025,
+  ];
+  const filteredServices =
+    selectedCategory === 'all'
+      ? allServices
+      : allServices.filter(service => service.category === selectedCategory);
+
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+duration: 0.5,
+      },
+    },
+  };
+
+  return (
+    <>
+      <Head>
+<title>
+  return (
+    <>
+      <Head>
+        <title>
+          Cutting-Edge Pricing 2025 - Zion Tech Group | Future Technology
+          Solutions
+        </title>
+        <meta
+          name='description'
+          content='Discover competitive pricing for our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions.'
+        />
+        <meta
+          name='keywords'
+          content='cutting-edge pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SAAS pricing'
+        />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+
+      <Layout>
+=======
 
 } from 'lucide-react';import { motion  } from 'framer-motion';
 import {Check;
@@ -33,6 +313,23 @@ import { cuttingEdgeMicroSaasServices2025  } from '../data/2025-cutting-edge-mic
   address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com';
 }
+=======
+ } from 'lucide-react';
+import React, { useState } from 'react',import Head from 'next/head';
+import { motion   } from 'framer-motion';
+import { Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin;
+  } from 'lucide-react';
+} from 'lucide-react';import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025   } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025   } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025   } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeMicroSaasServices2025  } from '../data/2025-cutting-edge-micro-saas';
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Check,Zap,Shield,Brain,Atom,Target,Rocket,Star,TrendingUp,Award,Users,ArrowRight,ExternalLink,Phone,Mail,MapPin,} from 'lucide-react';import { Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin;
  } from 'lucide-react';
 import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
@@ -235,6 +532,7 @@ const stats = [;
         <link rel='icon' href='/favicon.ico' />;
       </Head>;
       <Layout>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {/* Hero Section */}
 <section className='relative overflow-hidden'>;
           <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>;
@@ -250,6 +548,17 @@ className='text-center';
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
+<<<<<<< HEAD
+              >
+                Cutting-Edge
+<span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>
+                  Pricing 2025
+                </span>
+              </motion.h1>
+              <motion.p
+                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
               >;
                 Cutting-Edge;
 <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>;
@@ -258,6 +567,115 @@ className='text-center';
               </motion.h1>;
               <motion.p;
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1
+}
+const itemVariants = {
+  hidden: {
+  y: 20, opacity: 0
+}
+visible: {
+  y: 0, opacity: 1, transition: {
+  duration: 0.5
+}
+const pricingTiers = [
+  {
+    name: 'Starter'
+    price: 99
+    period: 'month'
+    description: 'Perfect for small businesses and startups'
+    features: [
+      'Up to 5 team membersBasic AI content generationStandard supportCore integrationsBasic analyticsEmail support'
+    ]
+    icon: <Target className="w-6 h-6" />
+    color: 'from-blue-500 to-cyan-500'
+    cta: 'Start Free Trial'
+    ctaLink: '/contact'
+    popular: false
+  }
+  {
+    name: 'Professional'
+    price: 299
+    period: 'month'
+    description: 'Ideal for growing businesses and teams'
+    features: [
+      'Up to 25 team membersAdvanced AI featuresPriority supportAdvanced integrationsAdvanced analyticsPhone & email supportCustom brandingAPI access'
+    ]
+    icon: <Zap className="w-6 h-6" />
+    color: 'from-purple-500 to-pink-500'
+    cta: 'Start Free Trial'
+    ctaLink: '/contact'
+    popular: true
+  }
+  {
+    name: 'Enterprise'
+    price: 999
+    period: 'month'
+    description: 'For large organizations with complex needs'
+    features: [
+      'Unlimited team membersFull AI suite access24/7 dedicated supportCustom integrationsAdvanced analytics & reportingDedicated account managerCustom developmentSLA guarantees';
+      'On-premise optionsCompliance certifications'
+    ]
+    icon: <Shield className="w-6 h-6" />
+    color: 'from-green-500 to-emerald-500'
+    cta: 'Contact Sales'
+    ctaLink: '/contact'
+    popular: false
+  }
+const serviceCategories = [
+  {
+    name: 'AI & Consciousness Services'
+    icon: <Brain className='w-8 h-8' />
+    services: cuttingEdgeAIServices2025.slice(0, 6)
+    description:
+      'Revolutionary AI platforms with consciousness and emotional intelligence'
+  }
+  {
+    name: 'Quantum & Emerging Tech'
+    icon: <Atom className='w-8 h-8' />
+    color: 'from-purple-500 to-pink-500'
+    services: cuttingEdgeQuantumServices2025.slice(0, 6)
+    description:
+      'Breakthrough quantum computing and space technology solutions'
+  }
+  {
+    name: 'Enterprise IT Solutions'
+    icon: <Shield className='w-8 h-8' />
+    color: 'from-blue-500 to-cyan-500'
+    services: cuttingEdgeEnterpriseITServices2025.slice(0, 6)
+    description: 'Advanced enterprise infrastructure and security solutions'
+  }
+  {
+    name: 'Micro SAAS Solutions'
+    icon: <Rocket className='w-8 h-8' />
+    color: 'from-teal-500 to-emerald-500'
+    services: cuttingEdgeMicroSaasServices2025.slice(0, 6)
+    description: 'Innovative business solutions for modern enterprises'
+  }
+];
+
+import { motion } from 'framer-motion';
+
+
+} from 'lucide-react';
+
+import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -267,6 +685,24 @@ Experience revolutionary technology at competitive prices. Our;
                 advantage while maintaining affordability and value.;
               </motion.p>;
               {/* Hero Stats */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <motion.div
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you
+                a competitive advantage while maintaining affordability and value.
+              </motion.p>
+{/* Hero Stats */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              <motion.div
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'
+                initial={{ opacity: 0, y: 20 }}
+origin/cursor/automate-test-improve-and-merge-code-2533
+                animate={{ opacity: 1, y: 0 }}
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <motion.div;
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you;
                 a competitive advantage while maintaining affordability and value.;
@@ -307,11 +743,26 @@ Experience revolutionary technology at competitive prices. Our;
                 advantage while maintaining affordability and value.;
               </motion && motion.p>;
               {/* Hero Stats */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <motion&& motion.div;
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you;
                 a competitive advantage while maintaining affordability and value.;
               </motion && motion.p>;className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12';
                 initial={{ opacity: 0, y: 20 }}animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <motion&& motion.div
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
+                a competitive advantage while maintaining affordability and value.
+              </motion && motion.p>;
+                animate={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 transition={{ duration: 0.8, delay: 0.6 }}
               >;
                 {stats.map((stat, index) => (<div key={index} className='text-center'>;
@@ -322,6 +773,52 @@ Experience revolutionary technology at competitive prices. Our;
                     </div>;
                     <div className='text-2xl md:text-3xl font-bold text-white mb-1'>;
                       {stat.number}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    </div>
+                    <div className='text-sm text-white/70'>{stat.label}</div>
+                  </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                    </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+        {/* Pricing Tiers Section */}
+<section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}
+className='text-center mb-16'
+            >
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
+                  Flexible
+                </span>{' '}
+                Pricing Plans
+              </h2>
+<p className='text-xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
+                Choose the perfect plan for your business needs. All plans
+                include our cutting-edge technology and world-class support to
+                ensure your success.
+              </p>
+            </motion.div>
+
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
+              {pricingTiers.map((tier, index) => (
+                <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </div>;
                 ))}</motion && motion.div>;
             </motion && motion.div>;
@@ -350,6 +847,10 @@ Experience revolutionary technology at competitive prices. Our;
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <motion&& motion.div;
                     <div className='text-sm text-white/70'>{stat.label}</div>;
                   </div>;
@@ -367,6 +868,26 @@ Experience revolutionary technology at competitive prices. Our;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}Pricing Plans;
+<<<<<<< HEAD
+=======
+            <motion&& motion.div
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+        {/* Pricing Tiers Section */}
+        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}
+                Pricing Plans;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </h2>;
               <p className='text-xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
                 Choose the perfect plan for your business needs. All plans;
@@ -378,6 +899,10 @@ Experience revolutionary technology at competitive prices. Our;
                 Choose the perfect plan for your business needs. All plans include our cutting-edge technology ;
                 and world-class support to ensure your success.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </motion && motion.div>;className='text-center mb-16';
             >;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -394,12 +919,33 @@ Experience revolutionary technology at competitive prices. Our;
             </motion.div>;
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>;
               {pricingTiers.map((tier, index) => (<motion.div;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            </motion && motion.div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  className={`relative group ${
+=======
+                  className={`relative group ${
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                    tier.popular ? 'scale-105' : ''
+=======
                   className={`relative group ${tier.popular ? 'scale-105' : '';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  className={`relative group ${tier.popular ? 'scale-105' : '';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   }`}
                 >;
                   {tier.popular && (<div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
@@ -428,6 +974,26 @@ Experience revolutionary technology at competitive prices. Our;
                         ${tier.price}
                         <span className='text-lg font-normal text-white/60'>;
                           /{tier.period}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        </span>
+                      </div>
+                    </div>
+                    <ul className='space-y-4 mb-8'>
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className='flex items-start'>
+                          <Check className='w-5 h-5 text-cyan-400 mt-0.5 mr-3 flex-shrink-0' />
+                          <span className='text-white/80'>{feature}</span>
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                        </li>
+
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         </span>;
                       </div>;
                     </div>;
@@ -436,6 +1002,10 @@ Experience revolutionary technology at competitive prices. Our;
                           <Check className='w-5 h-5 text-cyan-400 mt-0.5 mr-3 flex-shrink-0' />;
                           <span className='text-white/80'>{feature}</span>;
                         </li>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       ))}
                     </ul>;
                         </li>;
@@ -443,6 +1013,16 @@ Experience revolutionary technology at competitive prices. Our;
                     </ul>;
                     <a;
                       href={tier && tier.ctaLink}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+                        tier && tier.popular
+                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
+                          : 'border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10'
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${tier && tier.popular;
                           ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25';
                           : 'border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10';
@@ -450,16 +1030,82 @@ Experience revolutionary technology at competitive prices. Our;
                   </div>;
                 </motion.div>;
               ))}</div>;
+<<<<<<< HEAD
+=======
+
+
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+
+            </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         </section>;))}
         {/* Service Categories Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <motion&& motion.div;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+                      }`}
+                    >;
+                      {tier.cta}
+<<<<<<< HEAD
+<ArrowRight className='ml-2 w-4 h-4' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            <motion&& motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Service Categories Section */}
+<<<<<<< HEAD
+<section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}
+<<<<<<< HEAD
+className='text-center mb-16'
+            >
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
+                  Service
+                </span>{' '}
+                Categories
+              </h2>
+<p className='text-xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
+                Explore our comprehensive range of cutting-edge services across
+                multiple technology domains. Each category offers specialized
+                solutions for different business needs.
+              </p>
+            </motion.div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
             <motion&& motion.div;
                       }`}
                     >;
                       {tier.cta}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 <ArrowRight className='ml-2 w-4 h-4' />;
                     </a>;
                   </div>;
@@ -494,6 +1140,17 @@ Experience revolutionary technology at competitive prices. Our;
                 solutions for different business needs.;
               </p>;
             </motion.div>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            {/* Category Filter */}
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>              <buttonclassName="text-center mb-16">;
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">;
+                </span>{' '}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {/* Category Filter */}
 <div className='flex flex-wrap justify-center gap-4 mb-12'>;
               <button;
@@ -501,9 +1158,35 @@ Experience revolutionary technology at competitive prices. Our;
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === 'all';
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                     : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                }`}
+              >
+                All Categories ({allServices.length})
+              </button>
+{serviceCategories.map(category => (
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                }`}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                <button
+
+
+
+
+
+=======
                 }`}>;
                 All Categories ({allServices.length})</button>;
 {serviceCategories.map(category => (<button;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                }`}>;
+                All Categories ({allServices.length})</button>;
+{serviceCategories.map(category => (<button;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category.name;
@@ -521,6 +1204,51 @@ Experience revolutionary technology at competitive prices. Our;
               ))}{/* Services Grid */}
             <motion&& motion.div;
               variants={containerVariants}
+<<<<<<< HEAD
+<<<<<<< HEAD
+initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true }}
+<<<<<<< HEAD
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+            >
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  variants={itemVariants}
+className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20'
+                >
+                  <div className='p-6'>
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='flex-1'>
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              initial="hidden";
+              whileInView="visible";
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
+              {filteredServices && filteredServices.map((service, index) => (;
+                <motion&& motion.div
+                  key={service && service.id}
+                  variants={itemVariants}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                          {service.name}
+                        </h3>;
+                        <p className='text - white / 70 text - sm leading - relaxed mb - 4'>;
+                          {service.description}
+<<<<<<< HEAD
+                        </p>
+                      </div>
+                      <div className='ml-4'>
+                        <div className='w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center'>
+                          <Star className='w-6 h-6 text-cyan-400' />
+                        </div>
+                      </div>
+                    </div>
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 initial='hidden';
               whileInView='visible';
               viewport={{ once: true }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              initial="hidden";
@@ -547,6 +1275,15 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                     <div className="flex items-start justify-between mb-4">;
                       <div className="flex-1">;
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">;
+<<<<<<< HEAD
+=======
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         </p>;
                       </div>;
                       <div className='ml - 4'>;
@@ -559,6 +1296,10 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                           {service.name}
                         </h3>;
                         <p className="text - white / 70 text - sm leading - relaxed mb - 4">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {service.description}className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >;
                         >;
                         </p>;
@@ -569,18 +1310,58 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                         </div>;
                       </div>;
                     </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     {/* Tags */}
 <div className='flex flex-wrap gap-2 mb-4'>;
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (<span;
                           key={tagIndex}
+<<<<<<< HEAD
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'
+                        >
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20';
                         >;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                          {service.description}
+
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
+
+                        >
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {tag}
                         </span>;
                       ))}
                     </div>;
                     {/* Market Info */}<div className='flex items-center justify-between text-sm text-white/60 mb-4'>;
                     {/* Market Info */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<div className='flex items-center justify-between text-sm text-white/60 mb-4'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                    <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
+
+                    {/* Market Info */}
+                    <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                      <span>Market: {service.marketSize}</span>
+                      <span className='text-cyan-400'>{service.category}</span>
+                    </div>
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
+
+                        >
+
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>;
 <div className='flex items-center justify-between text-sm text-white/60 mb-4'>;
                       <span>Market: {service.marketSize}</span>;
@@ -588,6 +1369,10 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                     </div>;
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >;
                         >;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {tag}
                         </span>;
                       ))}
@@ -623,7 +1408,22 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                       <div className='text - 2xl font - bold text - white'>;
                         ${service.pricing.starter.price}
                         <span className='text - sm font - normal text - white / 60'>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                          /{service.pricing.starter.period}
+                        </span>
+                      </div>
+                    </div>
+=======
                           /{service.pricing.starter.period}</span>                      </div>;
+=======
+                          /{service.pricing.starter.period}
+                        </span>                      </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                          /{service.pricing.starter.period}</span>                      </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </div>;
                     {/* CTA */}
                     <div className='flex items - center justify - between'>                      <span > Market: {service.market_size}</span>;
@@ -649,10 +1449,32 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                     </div>;</span>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {/* CTA */}
 <div className='flex items-center justify-between'>;
                       <a;
                         href={service.website}
+<<<<<<< HEAD
+                        className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'
+                      >
+                        Learn More
+                        <ExternalLink className='ml-1 w-4 h-4' />
+                      </a>
+                      <a
+                        href='/contact'
+                        className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
+                      >
+                        Get Started
+                        <ArrowRight className='ml-2 w-4 h-4' />
+                      </a>
+                    </div>
+                  </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
                         className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium';
                       >;
                         Learn More;
@@ -667,6 +1489,10 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                       </a>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {/* Hover Effect Overlay */}
 <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />;
                 </motion.div>;
@@ -675,11 +1501,74 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
           </div>;
         </section>;
               ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Contact CTA Section */}
+<section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>
+          <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  {/* Hover Effect Overlay */}
+<div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />
+                </motion.div>
+
+
+
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+              ))}
+        {/* Contact CTA Section */}
+        <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
+=======
+        {/* Contact CTA Section */}<section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+          <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
+            <motion&& motion.div
+        {/* Contact CTA Section */}
+<<<<<<< HEAD
+        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            <motion.div
+
+
+
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+<h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+                Ready to Get Started?
+              </h2>
+              <p className='text-xl text-white/80 mb-8 leading-relaxed'>
+                Our team of experts is ready to help you choose the perfect plan
+                and get you started with our cutting-edge technology solutions.
+                Contact us today for a personalized consultation.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                <a
+                  href='/contact'
+=======
         {/* Contact CTA Section */}<section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div;
         {/* Contact CTA Section */}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
 <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
@@ -700,10 +1589,21 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
                 <a;
                   href='/contact';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'>;
                   Start Your Journey;
                   <ArrowRight className='ml-2 w-5 h-5' />;
                 </a>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <a
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <a;
               </h2>;
               <p className="text-xl text-white/80 mb-8 leading-relaxed">;
@@ -711,6 +1611,19 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                 cutting-edge technology solutions. Contact us today for a personalized consultation.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
+<<<<<<< HEAD
+=======
+                <a
+
+              </h2>
+              <p className="text-xl text-white/80 mb-8 leading-relaxed">
+                Our team of experts is ready to help you choose the perfect plan and get you started with our
+                cutting-edge technology solutions. Contact us today for a personalized consultation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   href={`tel:${contactInfo && contactInfo.mobile}`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'>;
                   <Phone className='mr-2 w-5 h-5' />                  Call Now                Ready to Get Started?;
@@ -729,11 +1642,16 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                   <div className="text-white font-semibold">Phone</div>;
                   <a href={`tel:${contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">;
                     {contactInfo.mobile}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   </a>;
                 </div>;
                 <div className="flex flex-col items-center">;
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">;
                     <Mail className="w-6 h-6 text-cyan-400" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   href={`tel:${contactInfo.mobile}`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105';
                 >;
@@ -765,6 +1683,37 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                     className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300';
                   >;
                     {contactInfo.email}
+<<<<<<< HEAD
+                  </a>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <div className='w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3'>
+                    <MapPin className='w-6 h-6 text-cyan-400' />
+                  </div>
+                  <div className='text-white font-semibold'>Address</div>
+                  <div className='text-white/70 text-sm'>
+                    {contactInfo.address}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  </a>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">
+                    <Mail className="w-6 h-6 text-cyan-400" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </Layout>
+    </>
+<<<<<<< HEAD
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
                   </a>;
                 </div>;
                 <div className='flex flex-col items-center'>;
@@ -781,6 +1730,12 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
         </section>;
       </Layout>;
     </>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     href={`mailto:${contactInfo && contactInfo.email}`}
                     className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300'>;
                     {contactInfo && contactInfo.email}
@@ -975,4 +1930,14 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
           </div>;
         </section>;
       </Layout>;
+<<<<<<< HEAD
+<<<<<<< HEAD
     </>)})}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </>)})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

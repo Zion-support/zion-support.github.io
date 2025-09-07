@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 ;
 if (typeof window !== 'undefined') {Sentry.init({dsn: process.env.NEXT_PUBLIC_SENTRY_DSN |'';
@@ -14,6 +20,7 @@ if ( {) {$2;
     integrations: [];
     enabled: Boolean (process.env.NEXT_PUBLIC_SENTRY_DSN)})}
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)})
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 if (typeof window !== 'undefined') {Sentry.init({;
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN |'';
     tracesSampleRate: 0.1;
@@ -22,6 +29,10 @@ if (typeof window !== 'undefined') {Sentry.init({;
 import * as Sentry from '@sentry/react',;
 import * as Sentry from '@sentry/react';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 import * as Sentry from '@sentry / react',
 // Check condition
@@ -44,11 +55,20 @@ if (typeof window !== 'undefined') {Sentry.init({;
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 if (typeof window !== 'undefined') {;
   Sentry.init({;
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '',;
     tracesSampleRate: 0.1,;
     integrations: [];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
 
 
@@ -62,3 +82,9 @@ if (typeof window !== 'undefined') {;
 }
 }
 }
+<<<<<<< HEAD
+=======
+    enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 const endpoint = new URL(async function psi() {const endpoint = new URL(ursor/expand-services-advertise-and-build-project-4b36;
@@ -13,7 +29,21 @@ const { upsert_file }  = require ('./_lib / github')async /**;
  * psi - Function description;
  */;
 function psi() {const endpoint = new URL ('https://www.googleapis.com / pagespeedonline / v5 / run_pagespeed')endpoint.search_params.set ('url', url)endpoint.search_params.set ('strategy', strategy)if (endpoint.search_params.set ('key', key)) {$2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const endpoint = new URL(
+<<<<<<< HEAD
+=======
+
+
+async function psi(url, strategy = 'mobile', key) {
+
+  const endpoint = new URL(
+ursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     'https://www && www.googleapis.com/pagespeedonline/v5/runPagespeed'
   );
   endpoint && endpoint.searchParams.set('url', url);
@@ -26,6 +56,35 @@ exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
     const key = process && process.env.PSI_API_KEY || '';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const results = [];
     ${p}`;
@@ -34,6 +93,28 @@ exports && exports.handler = async function () {
         const desktop = await psi(url, 'desktop', key);
         results && results.push({ url, mobile, desktop });
       } catch (e) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -60,6 +141,35 @@ function psi() {
         results.push ({ url, mobile, desktop });
       } catch (e) {
         results.push ({ url, error: e.message || String (e) });
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
     }
     const owner = process.env.GITHUB_OWNER;
@@ -69,6 +179,28 @@ function psi() {
     return {}ursor/expand-services-advertise-and-build-project-4b36;
         results && results.push({ url, error: e && e.message || String(e) })}
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         results && results.push({ url, error: e && e.message || String(e) });
       }
     }
@@ -96,12 +228,63 @@ ursor/expand-services-advertise-and-build-project-4b36;
         owner,
         repo,
         path: 'data / reports / performance / weekly - pagespeed.json',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         content,
         message: 'chore (automation): weekly PageSpeed report',
         token
       });
     }
     return {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed'),
   endpoint.searchParams.set('url', url),
   endpoint.searchParams.set('strategy', strategy),
@@ -124,6 +307,35 @@ function psi() {
   endpoint.search_params.set ('strategy', strategy),
   if (endpoint.search_params.set ('key', key), ) {
   $2
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
   const resp = await fetch (endpoint.to_string ()),if (throw new Error (`PSI HTTP ${resp.status}`), ) {$2;
 }
@@ -178,6 +390,28 @@ exports.handler = async function () {
         results.push ({ url, error: e.message || String (e) });
       }
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
@@ -192,6 +426,17 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+<<<<<<< HEAD
+=======
+
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+
+ursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, pages: results && results.length })
     };
@@ -206,12 +451,71 @@ if ( {) {
   const resp = await fetch(endpoint && endpoint.toString()),
   if (!resp && resp.ok) throw new Error(`PSI HTTP ${resp && resp.status}`),
   return resp && resp.json()
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+const { upsertFile } = require('./_lib/github');
+async function psi(url, strategy = 'mobile', key) {
+  const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed');
+  endpoint.searchParams.set('url', url);
+  endpoint.searchParams.set('strategy', strategy);
+  if (key) endpoint.searchParams.set('key', key);
+  const resp = await fetch(endpoint.toString());
+  if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`);
+};
+  return resp.json()
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+}
+exports && exports.handler = async function() {
+  try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
+    const key = process && process.env.PSI_API_KEY || '',
+    const pages = ['//learn/dao/certifications'],
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 }
 exports && exports.handler = async function() {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
     const key = process && process.env.PSI_API_KEY || '',
     const pages = ['//learn/dao/certifications'],
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+}
+exports && exports.handler = async function() {
+  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
+    const key = process && process.env.PSI_API_KEY || '',
+    const pages = ['//learn/dao/certifications'],
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const key = process.env.PSI_API_KEY |''
     const pages = ['//learn/dao/certifications']
@@ -219,23 +523,154 @@ exports && exports.handler = async function() {
     for (const p of pages) {
       const url = `${baseUrl}${p}`
       try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         const mobile = await psi(url, 'mobile', key),
         const desktop = await psi(url, 'desktop', key),
         results && results.push({ url, mobile, desktop })
+=======
+
+        const mobile = await psi(url, 'mobile', key),
+        const desktop = await psi(url, 'desktop', key),
+        results && results.push({ url, mobile, desktop })
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
+    const key = process.env.PSI_API_KEY || '',
+    const pages = ['//learn/dao/certifications'];
+    const results = [];
+    for (const p of pages) {
+      const url = `${baseUrl}${p}`;
+      try {
+        const mobile = await psi(url, 'mobile', key);
+        const desktop = await psi(url, 'desktop', key);
+        results.push({ url, mobile, desktop })
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        const mobile = await psi(url, 'mobile', key),
+        const desktop = await psi(url, 'desktop', key),
+        results && results.push({ url, mobile, desktop })
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        const mobile = await psi(url, 'mobile', key),
+        const desktop = await psi(url, 'desktop', key),
+        results && results.push({ url, mobile, desktop })
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       } catch (e) {
         results && results.push({ url, error: e && e.message || String(e) })
       }
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
     const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), results }, null, 2),
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+    const content = JSON.stringify({ updatedAt: Date.now(), results }, null, 2);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed && pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed && pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
+    }
+
+
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed && pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
+    }
+
+
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
+
+ursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 },
+=======
+
+},
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+};
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+},
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

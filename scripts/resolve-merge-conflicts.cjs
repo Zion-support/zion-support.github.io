@@ -1,6 +1,18 @@
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -16,10 +28,27 @@ function resolveMergeConflicts(filePath) {
     
     // Check if file has merge conflicts
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (!content.includes('
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (!content.includes('
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         conflictType = 'incoming';
         continue;
       }
@@ -67,7 +96,24 @@ function findConflictedFiles(dir) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+          if (content.includes('
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           if (content.includes('
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

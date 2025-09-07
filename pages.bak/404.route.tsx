@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
+<<<<<<< HEAD
+module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
+export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
+=======
+module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 ;
 export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\";
@@ -13,14 +22,24 @@ module.exports = default function NotFound(){return (<main style={{ padding: ""4
 export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
 module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
 export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
 import React from 'react';
 interface 404.routeProps {
   // Add props here as needed
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+export default function 404.route({ }: 404.routeProps) {
+=======
 
 
 export default function 404.route({}: 404.routeProps) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -123,6 +142,17 @@ export default function 404.route({}: 404.routeProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 }
+=======
+}}
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

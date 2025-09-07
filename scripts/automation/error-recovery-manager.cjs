@@ -78,4 +78,16 @@ const path = require('path')
       return { "success": false, "reason"}
       "ignore"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     console.error(' Error recovery manager "failed")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    console.error(' Error recovery manager "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.error(' Error recovery manager "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

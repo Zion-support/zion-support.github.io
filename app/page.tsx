@@ -1,36 +1,5 @@
-import React from "react";
-import Link from "next/link";
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Enterprise AI & IT Solutions | Micro SaaS Development',
-  description: 'Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services. 500+ services including AI automation, blockchain solutions, and cloud infrastructure.',
-  keywords: 'AI solutions, micro SaaS, IT services, enterprise software, blockchain, cloud computing, automation, machine learning, software development',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Zion Tech Group',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+import Link from 'next/link';
 
 interface CardProps {
   title: string;
@@ -270,73 +239,6 @@ export default function HomePage() {
         </div>
       </section>
 
-          {/* Contact Information Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 rounded-2xl relative overflow-hidden" aria-labelledby="contact-heading">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-blue-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-purple-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
-        </div>
-        
-        <div className="relative z-10">
-          <div className="text-center mb-16">
-            <h2 id="contact-heading" className="text-5xl font-bold bg-gradient-to-r from-gray-900 to-blue-600 bg-clip-text text-transparent mb-8 animate-fade-in">
-              Get In Touch With Us
-            </h2>
-            <p className="text-2xl text-gray-700 max-w-4xl mx-auto animate-slide-up font-medium">
-              Ready to transform your business? Contact our expert team today.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group border border-white/20">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                <span className="text-3xl">📞</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
-                Phone
-              </h3>
-              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-lg font-medium">
-                +1 302 464 0950
-              </p>
-              <p className="text-gray-500 text-sm mt-2">
-                Available 24/7 for urgent matters
-              </p>
-            </div>
-
-            <div className="text-center p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group border border-white/20">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500" style={{ animationDelay: '0.5s' }}>
-                <span className="text-3xl">✉️</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300">
-                Email
-              </h3>
-              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-lg font-medium">
-                kleber@ziontechgroup.com
-              </p>
-              <p className="text-gray-500 text-sm mt-2">
-                We respond within 2 hours
-              </p>
-            </div>
-
-            <div className="text-center p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group border border-white/20">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500" style={{ animationDelay: '1s' }}>
-                <span className="text-3xl">📍</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors duration-300">
-                Address
-              </h3>
-              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-lg font-medium">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709
-              </p>
-              <p className="text-gray-500 text-sm mt-2">
-                Visit us for consultations
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="text-center py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-lg relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
         {/* Animated background elements */}
@@ -353,7 +255,7 @@ export default function HomePage() {
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto animate-slide-up">
             Let&apos;s discuss your project and create a custom solution that drives
             real business value. Our team has delivered 1000+ successful
-            projects across various industries. Contact us today for a free consultation.
+            projects across various industries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <Link
@@ -373,61 +275,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Contact Information Section */}
-      <section className="py-16 bg-gray-50 rounded-lg" aria-labelledby="contact-heading">
-        <div className="text-center mb-12">
-          <h2 id="contact-heading" className="text-3xl font-bold text-gray-900 mb-4">
-            Get In Touch
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ready to start your next project? Contact our team of experts for a free consultation.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <ContactCard
-            icon="📞"
-            title="Phone"
-            content="+1 302 464 0950"
-            description="Call us for immediate assistance"
-            href="tel:+13024640950"
-          />
-          <ContactCard
-            icon="📧"
-            title="Email"
-            content="kleber@ziontechgroup.com"
-            description="Send us your project details"
-            href="mailto:kleber@ziontechgroup.com"
-          />
-          <ContactCard
-            icon="📍"
-            title="Address"
-            content="364 E Main St STE 1008"
-            description="Middletown, DE 19709"
-            href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-          />
-        </div>
-      </section>
     </div>
-  );
-}
-
-function ContactCard({ icon, title, content, description, href }: {
-  icon: string;
-  title: string;
-  content: string;
-  description: string;
-  href: string;
-}) {
-  return (
-    <a
-      href={href}
-      className="group p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 text-center"
-    >
-      <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">{title}</h3>
-      <p className="text-lg font-medium text-gray-700 mb-2 group-hover:text-gray-900 transition-colors duration-300">{content}</p>
-      <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{description}</p>
-    </a>
   );
 }

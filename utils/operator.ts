@@ -37,21 +37,43 @@ export const operator = {// Add operator functionality here;
 export const getSupportEvents  = () => operatorManager.getSupportEvents()
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 // Operator utilities
 export const operator = {
   // Add operator functionality here
   logEvent: (event: any) => null
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   getEvents: () => []
   getEventById: (id: string) => null
 }
 
   logEvent: (event: any) => null,
   getEvents: () => [],
+<<<<<<< HEAD
+<<<<<<< HEAD
   getEventById: (id: string) => null;
 };
 
 
+=======
+  getEventById: (id: string) => null
+};
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  getEventById: (id: string) => null;
+};
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   tagOperatorSession(sessionId: string, tag: string): void {
     // Simple implementation - in a real app this would update a database
     console.log(`Tagging session ${sessionId} with tag: ${tag}`);
@@ -80,6 +102,16 @@ export const logSupportEventToOperator = (event: SupportEvent) =>
   operatorManager.logSupportEvent(event);
 
 export const getOperatorSessions = () => operatorManager.getOperatorSessions();
+<<<<<<< HEAD
+<<<<<<< HEAD
 export const getSupportEvents = () => operatorManager.getSupportEvents();
 export const getOperatorSessions = () => operatorManager.getOperatorSessions();
 export const getSupportEvents = () => operatorManager.getSupportEvents();
+=======
+export const getSupportEvents = () => operatorManager.getSupportEvents();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+export const getSupportEvents = () => operatorManager.getSupportEvents();
+export const getOperatorSessions = () => operatorManager.getOperatorSessions();
+export const getSupportEvents = () => operatorManager.getSupportEvents();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

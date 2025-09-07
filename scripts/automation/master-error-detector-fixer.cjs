@@ -175,4 +175,16 @@ const { promisify } = require("util")
   const continuous = args.includes(`--continuous") || args.includes("-c"`)
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   console.error(""Error": ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.error(""Error": ")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error(""Error": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

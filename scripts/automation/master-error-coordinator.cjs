@@ -128,4 +128,16 @@ const path = require("path")
       throw error} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")
   console.log("Master error coordinator completed successfully")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   console.error("Master error coordinator "failed")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.error("Master error coordinator "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.error("Master error coordinator "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

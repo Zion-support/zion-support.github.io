@@ -1,4 +1,121 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+          this.log(`Fixing merge conflicts in ${file}`);
+          
+          // Simple merge conflict resolution - keep the HEAD version
+          const lines = content.split("\n");
+          const newLines = [];
+          let inConflict = false;
+          
+          for (const line of lines) {
+<<<<<<< HEAD
+            if (line.includes("
+=======
+              continue;
+            } else if (line.includes("")) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+              inConflict = false;
+              continue;
+            } else if (!inConflict) {
+              newLines.push(line);
+            }
+          }
+          
+          fs.writeFileSync(file, newLines.join("\n"));
+          this.fixesApplied.push({
+            type: "merge_conflict",
+            file: file,
+            description: "Resolved merge conflicts"
+          });
+        }
+      } catch (error) {
+        this.log(`Could not fix merge conflicts in ${file}: ${error.message}`, "error");
+      }
+    }
+  }
+
+  getTypeScriptFiles() {
+    const files = [];
+    const srcDir = path.join(process.cwd(), "src");
+    
+    function walkDir(dir) {
+      if (!fs.existsSync(dir)) return;
+      const items = fs.readdirSync(dir);
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        if (stat.isDirectory()) {
+          walkDir(fullPath);
+        } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {
+          files.push(fullPath);
+        }
+      }
+    }
+    
+    walkDir(srcDir);
+    return files;
+  }
+
+  async generateReport() {
+    const duration = Date.now() - this.startTime;
+    const report = {
+      timestamp: new Date().toISOString(),
+      duration: `${duration}ms`,
+      fixesApplied: this.fixesApplied,
+      summary: {
+        totalFixes: this.fixesApplied.length,
+        mergeConflictFixes: this.fixesApplied.filter(f => f.type === "merge_conflict").length
+      }
+    };
+    
+    const reportPath = path.join(this.projectRoot, "error-fixing-report.json");
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log(`Error fixing report saved to: ${reportPath}`);
+    return report;
+  }
+
+  async run() {
+    this.log("Starting Enhanced Error Fixing Automation...");
+    
+    try {
+      // Run all fix operations
+      await this.fixMergeConflicts();
+      
+      // Generate report
+      const report = await this.generateReport();
+      this.log(`Error fixing completed! Applied ${report.summary.totalFixes} fixes.`);
+      
+      return report;
+    } catch (error) {
+      this.log(`Error fixing automation failed: ${error.message}`, "error");
+      throw error;
+    }
+  }
+}
+
+// Run the automation if called directly
+if (require.main === module) {
+  const automation = new EnhancedErrorFixingAutomation();
+  automation.run().catch(console.error);
+}
+
+module.exports = EnhancedErrorFixingAutomation;
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -171,5 +288,20 @@ export default function"
       "summary"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

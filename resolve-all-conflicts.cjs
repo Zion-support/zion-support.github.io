@@ -4,6 +4,22 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+console.log('🔧 Starting comprehensive merge conflict resolution...');
+
+console.log('🔧 Starting comprehensive merge conflict resolution...');
+console.log('🔧 Resolving all merge conflicts...');
+main
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 console.log('🔧 Resolving all merge conflicts...');
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 console.log('🔧 Starting comprehensive merge conflict resolution...');
@@ -12,6 +28,18 @@ console.log('🔧 Resolving all merge conflicts...');
 >>>>>>> main
 ursor/integrate-build-improve-and-re-verify-7ffc
 ursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
+=======
+console.log('🔧 Starting comprehensive merge conflict resolution...');
+
+console.log('🔧 Starting comprehensive merge conflict resolution...');
+
+console.log('🔧 Resolving all merge conflicts...');
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 // Get list of files with merge conflicts
 const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
@@ -33,6 +61,7 @@ console.log(`Total files to process: ${allConflictFiles.length}`);
 
 // Function to resolve conflicts by choosing incoming changes
 function resolveConflicts(filePath) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   try {
@@ -58,13 +87,33 @@ function resolveMergeConflicts(filePath) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     if (!fs.existsSync(filePath)) {
       console.log(`⚠️  File not found: ${filePath}`);
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+      console.log(`⚠️  File not found: ${filePath}`);
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      console.log(`⚠️  File not found: ${filePath}`);
       console.log(`⚠️  File not found: ${filePath}`);
 >>>>>>> main
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      console.log(`⚠️  File not found: ${filePath}`);
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      console.log(`⚠️  File not found: ${filePath}`);
+>>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       return false;
     }
 
     const content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
+<<<<<<< HEAD
 
     // Check if file has merge conflicts
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
@@ -174,6 +223,22 @@ function resolveMergeConflicts(filePath) {
     resolvedContent = resolvedContent.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
     resolvedContent = resolvedContent.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
     resolvedContent = resolvedContent.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
+<<<<<<< HEAD
+=======
+
+        const parts = match.split('');
+        if (parts.length === 2) {
+          const headPart = parts[0].replace('
+        const parts = match.split('');
+        if (parts.length === 2) {
+          const headPart = parts[0].replace('
+        const parts = match.split('');
+        if (parts.length === 2) {
+          const headPart = parts[0].replace('
+    resolvedContent = resolvedContent.replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Write the resolved content
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
@@ -181,6 +246,10 @@ function resolveMergeConflicts(filePath) {
     return true;
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Check if file has merge conflicts
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
@@ -234,6 +303,99 @@ ursor/integrate-build-improve-and-re-verify-7ffc
 ursor/automate-test-improve-and-merge-code-646c
     if (!content.includes('
         const parts = match.split('
+<<<<<<< HEAD
+=======
+      return false;
+    }
+
+    console.log(`Resolving conflicts in: ${filePath}`);
+
+    // Split by merge conflict markers
+    const lines = content.split('\n');
+    const resolvedLines = [];
+    let inConflict = false;
+    let conflictType = '';
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+
+        conflictType = 'separator';
+        continue;
+      }
+
+      if (line.includes('>>>>>>>')) {
+        inConflict = false;
+        conflictType = '';
+        continue;
+      }
+
+      if (!inConflict) {
+        resolvedLines.push(line);
+      } else if (conflictType === 'head') {
+        // Keep the HEAD version (our changes)
+        resolvedLines.push(line);
+      }
+      // Skip the other branch content
+    }
+
+    // Write the resolved content
+    fs.writeFileSync(filePath, resolvedLines.join('\n'));
+    return true;
+  } catch (error) {
+    console.error(`Error resolving ${filePath}:`, error.message);
+
+    
+    // Check if file has merge conflicts
+        const parts = match.split('=======');
+        if (parts.length === 2) {
+        const parts = match.split('=======');
+        if (parts.length === 2) {
+        const parts = match.split('=======');
+        if (parts.length === 2) {
+
+    // Write the resolved content
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
+    console.log(`✅ Resolved conflicts in: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+
+    // Check if file has merge conflicts
+        conflictType = 'separator';
+        continue;
+      }
+
+      if (line.includes('>>>>>>>')) {
+        inConflict = false;
+        conflictType = '';
+        continue;
+      }
+
+      if (!inConflict) {
+        resolvedLines.push(line);
+      } else if (conflictType === 'head') {
+        // Keep the HEAD version (our changes)
+        resolvedLines.push(line);
+      }
+      // Skip the other branch content
+    }
+
+    // Write the resolved content
+    fs.writeFileSync(filePath, resolvedLines.join('\n'));
+    return true;
+  } catch (error) {
+    console.error(`Error resolving ${filePath}:`, error.message);
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+    // Check if file has merge conflicts
+    if (!content.includes('
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return false;
   }
 }
@@ -246,10 +408,25 @@ for (const file of allConflictFiles) {
   if (fs.existsSync(file)) {
     if (resolveConflicts(file)) {
 // Function to find all files with merge conflicts
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 function findConflictedFiles() {
   try {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     return result.trim().split('\n').filter(file => file.length > 0);
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 function findFilesWithConflicts() {
   try {
@@ -260,11 +437,36 @@ function findFilesWithConflicts() {
       .filter(file => file.length > 0);
     
     return files;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function findConflictedFiles() {
   try {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     return result.trim().split('\n').filter(file => file.length > 0);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 >>>>>>> main
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   } catch (error) {
     console.error('Error finding conflicted files:', error.message);
@@ -272,6 +474,16 @@ function findConflictedFiles() {
   }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Main execution
 try {
   const conflictedFiles = findFilesWithConflicts();
@@ -301,6 +513,7 @@ try {
   console.error('❌ Error during conflict resolution:', error.message);
   process.exit(1);
 }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Main resolution process
 function main() {
   console.log('🔍 Finding files with merge conflicts...');
@@ -345,6 +558,9 @@ function main() {
 
 // Run the resolution
 main();
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 // Main execution
 try {
   const conflictedFiles = findFilesWithConflicts();
@@ -388,4 +604,44 @@ console.log('🎉 Merge conflict resolution completed!');
 >>>>>>> main
 ursor/integrate-build-improve-and-re-verify-7ffc
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+<<<<<<< HEAD
+=======
+// Main execution
+try {
+  const conflictedFiles = findFilesWithConflicts();
+  console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
+
+  let resolvedCount = 0;
+  for (const file of conflictedFiles) {
+    if (resolveMergeConflicts(file)) {
+      resolvedCount++;
+    }
+  }
+
+  console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
+
+  // Add all resolved files
+  if (resolvedCount > 0) {
+    console.log('Adding resolved files to git...');
+    execSync('git add .', { stdio: 'inherit' });
+    
+    console.log('Committing merge resolution...');
+    execSync('git commit -m "Resolve merge conflicts automatically"', { stdio: 'inherit' });
+  }
+
+  console.log('✅ All merge conflicts resolved and committed');
+
+} catch (error) {
+  console.error('❌ Error during conflict resolution:', error.message);
+  process.exit(1);
+}
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -19,7 +19,19 @@ class LinterWatcher {}
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
@@ -41,7 +53,19 @@ class LinterWatcher {}
         errorOutput += data.toString()}
 });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Lint check passed ✓')) {}
@@ -65,7 +89,19 @@ class LinterWatcher {}
         "cwd": process.cwd();
       };);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Auto-fix completed ✓')) {}
@@ -105,4 +141,16 @@ if ( {})
   
   watcher.start().catch(console.error)};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = LinterWatcher;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = LinterWatcher;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = LinterWatcher;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

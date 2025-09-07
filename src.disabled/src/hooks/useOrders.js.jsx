@@ -1,0 +1,45 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery(userId) {; return useQuery({; queryKey["orders",userId],; queryFn: async () => {; if(!userId); return []; const res = await fetch("/api/orders?user_id=me"); if(!res.ok) {; throw new Error("Failed to fetch orders")}; return(await res.json())},; enabled: "!userId",; initialData[]})};'"'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery() {return useQuery({queryKey["orders",userId],queryFn: async () => {if(!userId)return []; const res = await fetch("/api/orders?user_id=me")if(!res.ok) {throw new Error("Failed to fetch orders")}return(await res.json())}enabled: "!userId"; initialData[]})}'"'";
+import { useQuery } from \'@tanstack/react-query\'; export function useGetOrdersQuery() {return useQuery({queryKey[\'orders\',userId],\"queryFn\": async () => {if(!userId)return []; const res = await fetch(\"/api/orders?user_id=me\")if(!res.ok) {throw new Error(\'Failed to fetch orders\')}return(await res.json())}\"enabled\": \'!!userId\',initialData[]})}const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery() {return useQuery({queryKey["orders",userId],queryFn: async () => {if(!userId)return []; const res = await fetch("/api/orders?user_id=me")if(!res.ok) {throw new Error("Failed to fetch orders")}return(await res.json())},enabled: "!userId",initialData[]})}'"'";
+import { useQuery } from \'@tanstack/react-query\'; export function useGetOrdersQuery() {return useQuery({queryKey[\'orders\',userId],\"queryFn\": async () => {if(!userId)return []; const res = await fetch(\"/api/orders?user_id=me\")if(!res && res.ok) {throw new Error(\'Failed to fetch orders\')}return (await res && res.json())},\"enabled\": \'!!userId\',initialData[]})}ursor/automate-test-improve-and-merge-code-646c;
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery() {return useQuery({queryKey["orders",userId],queryFn: async () => {if(!userId)return []; const res = await fetch("/api/orders?user_id=me")if(!res.ok) {throw new Error("Failed to fetch orders")}return(await res.json())},enabled: "!userId",initialData[]})}'"'";
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery() {return useQuery({queryKey["orders",userId],queryFn: async () => {if(!userId)return []; const res = await fetch("/api/orders?user_id=me")if(!res.ok) {throw new Error("Failed to fetch orders")}return(await res.json())},enabled: "!userId",initialData[]})}'"'";
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery() {return useQuery({queryKey["orders",userId],queryFn: async () => {if(!userId)return []; const res = await fetch("/api/orders?user_id=me")if(!res.ok) {throw new Error("Failed to fetch orders")}return(await res.json())},enabled: "!userId",initialData[]})}'"'";
+ursor/automate-test-improve-and-merge-code-646c;
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery() {return useQuery({queryKey["orders",userId],queryFn: async () => {if(!userId)return []; const res = await fetch("/api/orders?user_id=me")if(!res.ok) {throw new Error("Failed to fetch orders")}return(await res.json())},enabled: "!userId",initialData[]})}'"'";
+import { useQuery } from \'@tanstack/react-query\'; export function useGetOrdersQuery() {return useQuery({queryKey[\'orders\',userId],\"queryFn\": async () => {if(!userId)return []; const res = await fetch(\"/api/orders?user_id=me\")if(!res.ok) {throw new Error(\'Failed to fetch orders\')}return(await res.json())},\"enabled\": \'!!userId\',initialData[]})}const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery() {return useQuery({queryKey["orders",userId],queryFn: async () => {if(!userId)return []; const res = await fetch("/api/orders?user_id=me")if(!res.ok) {throw new Error("Failed to fetch orders")}return(await res.json())},enabled: "!userId",initialData[]})}'"'";
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery(userId) {; return useQuery({; queryKey["orders",userId],; queryFn: async () => {; if(!userId); return []; const res = await fetch("/api/orders?user_id=me"); if(!res.ok) {; throw new Error("Failed to fetch orders")}; return(await res.json())}; enabled: "!userId",; initialData[]})};'"'"
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+import { useQuery } from \'@tanstack/react-query\'; export function useGetOrdersQuery(userId) {; return useQuery({; queryKey[\'orders\',userId],; \"queryFn\": async () => {; if(!userId); return []; const res = await fetch(\"/api/orders?user_id=me\"); if(!res && res.ok) {; throw new Error(\'Failed to fetch orders\')}; return (await res && res.json())},; \"enabled\": \'!!userId\',; initialData[]})};
+
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery(userId) {; return useQuery({; queryKey["orders",userId],; queryFn: async () => {; if(!userId); return []; const res = await fetch("/api/orders?user_id=me"); if(!res && res.ok) {; throw new Error("Failed to fetch orders")}; return (await res && res.json())},; enabled: "!userId",; initialData[]})};'"'"
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery(userId) {; return useQuery({; queryKey["orders",userId],; queryFn: async () => {; if(!userId); return []; const res = await fetch("/api/orders?user_id=me"); if(!res.ok) {; throw new Error("Failed to fetch orders")}; return(await res.json())},; enabled: "!userId",; initialData[]})};'"'"
+import { useQuery } from \'@tanstack/react-query\'; export function useGetOrdersQuery(userId) {; return useQuery({; queryKey[\'orders\',userId],; \"queryFn\": async () => {; if(!userId); return []; const res = await fetch(\"/api/orders?user_id=me\"); if(!res.ok) {; throw new Error(\'Failed to fetch orders\')}; return(await res.json())},; \"enabled\": \'!!userId\',; initialData[]})};
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery(userId) {; return useQuery({; queryKey["orders",userId],; queryFn: async () => {; if(!userId); return []; const res = await fetch("/api/orders?user_id=me"); if(!res.ok) {; throw new Error("Failed to fetch orders")}; return(await res.json())},; enabled: "!userId",; initialData[]})};'"'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery(userId) {; return useQuery({; queryKey["orders",userId],; queryFn: async () => {; if(!userId); return []; const res = await fetch("/api/orders?user_id=me"); if(!res.ok) {; throw new Error("Failed to fetch orders")}; return(await res.json())},; enabled: "!userId",; initialData[]})};'"'"
+import { useQuery } from \'@tanstack/react-query\'; export function useGetOrdersQuery(userId) {; return useQuery({; queryKey[\'orders\',userId],; \"queryFn\": async () => {; if(!userId); return []; const res = await fetch(\"/api/orders?user_id=me\"); if(!res.ok) {; throw new Error(\'Failed to fetch orders\')}; return(await res.json())},; \"enabled\": \'!!userId\',; initialData[]})};
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery(userId) {; return useQuery({; queryKey["orders",userId],; queryFn: async () => {; if(!userId); return []; const res = await fetch("/api/orders?user_id=me"); if(!res.ok) {; throw new Error("Failed to fetch orders")}; return(await res.json())},; enabled: "!userId",; initialData[]})};'"'"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery(userId) {; return useQuery({; queryKey["orders",userId],; queryFn: async () => {; if(!userId); return []; const res = await fetch("/api/orders?user_id=me"); if(!res.ok) {; throw new Error("Failed to fetch orders")}; return(await res.json())},; enabled: "!userId",; initialData[]})};'"'"
+import { useQuery } from \'@tanstack/react-query\'; export function useGetOrdersQuery(userId) {; return useQuery({; queryKey[\'orders\',userId],; \"queryFn\": async () => {; if(!userId); return []; const res = await fetch(\"/api/orders?user_id=me\"); if(!res.ok) {; throw new Error(\'Failed to fetch orders\')}; return(await res.json())},; \"enabled\": \'!!userId\',; initialData[]})};
+const { useQuery } from "@tanstack/react-query"; export function useGetOrdersQuery(userId) {; return useQuery({; queryKey["orders",userId],; queryFn: async () => {; if(!userId); return []; const res = await fetch("/api/orders?user_id=me"); if(!res.ok) {; throw new Error("Failed to fetch orders")}; return(await res.json())},; enabled: "!userId",; initialData[]})};'"'"
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

@@ -49,6 +49,24 @@ function fixFile(filePath) {
       fs.writeFileSync(filePath, content, 'utf8');
     let modified = false;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    // Fix common syntax errors
+    const fixes = [
+      // Fix files that start with just a closing brace
+      {
+        pattern: /^[\s\n]*\}\s*$/,
+        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
+      },
+      // Fix merge conflict markers
+      {
+        pattern: /[\s\S]*?[\s\S]*?
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         replacement: ''
       },
       // Fix malformed function declarations
@@ -131,7 +149,39 @@ function walkDirectory(dir) {
     } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+    // Fix merge conflict markers
+      modified = true;
+    }
+
+    // Fix unterminated string literals
+    const lines = content.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Fix unterminated strings
+      if (line.includes('"') && !line.match(/".*"/)) {
+        if (line.includes('"') && !line.includes('\\"')) {
+          lines[i] = line.replace(/"([^"]*)$/, '"$1"');
+          modified = true;
+        }
+      }
+      
+      // Fix unterminated template literals
+      if (line.includes('`') && !line.match(/`.*`/)) {
+        lines[i] = line.replace(/`([^`]*)$/, '`$1`');
+        modified = true;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
     }
 
@@ -142,11 +192,68 @@ function walkDirectory(dir) {
   } catch (error) {
     console.error(`Error reading directory ${dir}:`, error.message);
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  return false;
+}
+
+// Function to fix specific file types
+function fixFile(filePath) {
+  const ext = path.extname(filePath);
+  if (['.ts', '.tsx', '.js', '.jsx'].includes(ext)) {
+    return fixSyntaxErrors(filePath);
+  }
+  return false;
+}
+
+// Get all files with syntax errors
+const files = execSync('find src -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx"', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(file => file.length > 0);
+
+let fixedCount = 0;
+let totalFiles = files.length;
+
+console.log(`Found ${totalFiles} files to check`);
+
+for (const file of files) {
+  if (fs.existsSync(file)) {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  }
+}
+
+console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
+console.log('🎯 Syntax error fixing complete!');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
   
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return fixedCount;
 }
 
 console.log('Starting syntax error fixes...');
+<<<<<<< HEAD
 const fixedCount = walkDirectory('/workspace');
 console.log(`Fixed ${fixedCount} files`);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+const apiDir = '/workspace/pages/api';
+const fixedCount = findAndFixApiFiles(apiDir);
+console.log(`Fixed ${fixedCount} files`);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

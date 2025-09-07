@@ -18,7 +18,19 @@ class BuildMonitor {}
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
@@ -40,7 +52,19 @@ class BuildMonitor {}
         errorOutput += data.toString()}
 });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Build check passed ✓')) {}
@@ -66,7 +90,19 @@ class BuildMonitor {}
         "cwd": process.cwd();
       };);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       cleanChild.on('close', (code) => {}
         if ( {})
           console.log('Clean completed, retrying build...')) {}
@@ -107,4 +143,16 @@ if ( {})
   
   monitor.start().catch(console.error)};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = BuildMonitor;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = BuildMonitor;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = BuildMonitor;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

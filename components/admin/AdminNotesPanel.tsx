@@ -5,20 +5,95 @@ export type AdminNotesPanelProps = {targetType: string; // e && e.g., 'user' | '
 }type Note = {target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
 import React, { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+export type AdminNotesPanelProps = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  targetType: string; // e.g., 'user' | 'listing'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  targetId: string; // unique identifier for the target
+}
+;
+type Note = {
+  id: string;
+=======
   targetType: string; // e.g., 'user' | 'listing';
 export type AdminNotesPanelProps = any;targetId: string; // unique identifier for the target;
 }type Note = {id: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  targetType: string; // e.g., 'user' | 'listing';
+export type AdminNotesPanelProps = any;targetId: string; // unique identifier for the target;
+}type Note = {id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   target_type: string;
   target_id: string;
   text: string;targetType,targetId,}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true)}type Note = {id: string;
   targetType: string;
   targetId: string;
   text: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   authorId: string;
   createdAt: number;
 }}export default function AdminNotesPanel() {authorId: string;
   createdAt: number;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function AdminNotesPanel({
+  targetType,
+  targetId,
+}: AdminNotesPanelProps) {
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  targetType,
+  targetId,;
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
+
+type Note = {
+  id: string
+  targetType: string
+  targetId: string
+  text: string
+  authorId: string
+  createdAt: number
+
+};
+
+
+
+};
+
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [adminId, setAdminId] = useState('admin-demo');
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [adding, setAdding] = useState(false);
+  const [text, setText] = useState('');
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  async function fetchNotes() {
+    try {
+      setLoading(true);
+const res = await fetch(
+        `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,
+        {
+          headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useState(true)const [adminId, setAdminId] = useState('admin-demo')const [notes, setNotes] = useState<Note[]>([])const [loading, setLoading] = useState(false)const [adding, setAdding] = useState(false)const [text, setText]  = useState('')async function fetchNotes() {try {setLoading(true)const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,{headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}
       )if (!res && res.ok) {setNotes([])return;
       }method: 'POST',headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },body: JSON.stringify({ targetType, targetId, text })})const data = await res.json()setNotes(data.notes |[])} finally {setLoading(false)}
@@ -27,9 +102,97 @@ export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useStat
         headers: {'Content-Type': 'application/json';
           'X-Admin': isAdmin ? 'true' : 'false';
           'X-Admin-User': adminId;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         }
         body: JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {method: 'POST',headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId,},body: JSON.stringify({ targetType, targetId, text }),})if (!res.ok) {alert('Failed to add note')return;
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+      const data = await res.json();
+      setNotes(data.notes |[]);
+    } finally {
+      setLoading(false);
+    }
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
+        body: JSON.stringify({ targetType, targetId, text })});
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  useEffect(() => {
+if (isAdmin) fetchNotes();
+  }, [isAdmin, targetType, targetId]);
+  async function addNote() {
+    if (!text.trim()) return;
+    setAdding(true);
+    try {
+      const res = await fetch('/api/admin/notes', {
+<<<<<<< HEAD
+        method: 'POST',
+headers: {
+          'Content-Type': 'application/json',
+          'X-Admin': isAdmin ? 'true' : 'false',
+          'X-Admin-User': adminId,
+        },
+        body: JSON.stringify({ targetType, targetId, text }),
+      });
+      if (!res.ok) {
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        method: 'POST'
+        headers: {
+          'Content-Type': 'application/json'
+          'X-Admin': isAdmin ? 'true' : 'false'
+          'X-Admin-User': adminId
+        }
+        body: JSON.stringify({ targetType, targetId, text })
+    } finally {
+      setAdding(false);    }      if (!res.ok) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+        alert('Failed to add note');
+        return;
+      }
+      setText('');
+<<<<<<< HEAD
+      await fetchNotes();
+    } finally {
+      setAdding(false);
+      await fetchNotes()
+    } finally {
+      setAdding(false)
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      setAdding(false);    }
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    }
+  }
+
+
+    }
+  }
+
+  if (!isAdmin) {
+    return (
+<div className='rounded border p-3'>
+        <div className='flex items-center gap-2 text-sm'>
+          <input
+            id='isAdminToggle'
+            type='checkbox'
+=======
+=======
+        }
+        body: JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {method: 'POST',headers: {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId,},body: JSON.stringify({ targetType, targetId, text }),})if (!res.ok) {alert('Failed to add note')return;
+      }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       setText('')setAdding(false)}await fetchNotes()} finally {setAdding(false)await fetchNotes()} finally {setAdding(false)}
   }}
   }if (!isAdmin) {return (<div className='rounded border p-3'>;
@@ -37,6 +200,10 @@ export default function AdminNotesPanel() {const [isAdmin, setIsAdmin] = useStat
           <input;
             id='isAdminToggle';
             type='checkbox';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
           />;
@@ -199,6 +366,32 @@ if ( {) {$2;
             ))}
           </ul>;
         )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+      </div>
+    </div>
+<<<<<<< HEAD
+  );
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+  target_type: string; // e.g., 'user' | 'listing';
+  target_id: string; // unique identifier for the target;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>;
     </div>;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {target_type: string; // e.g., 'user' | 'listing';
@@ -374,4 +567,14 @@ if ( {) {$2;
               </li>))}
           </ul>)}
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
     </div>)})}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

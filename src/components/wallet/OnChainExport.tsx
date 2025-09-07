@@ -1,3 +1,53 @@
+<<<<<<< HEAD
+}
+
+
+  )
+}
+
+import React, { useState } from './react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/ card';
+import { Button  } from '@/components/ui/ button';
+import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
+import {
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger } from '@/components/ui/ tooltip'; import { use_toast  } from '@/hooks/ use - toast';
+import { use_auth  } from '@/hooks/ use_auth';
+export /**
+ * OnChainExport - Function description
+ */
+function OnChainExport() {
+  const [is_connected, setIsConnected] = useState (false);
+  const [is_exporting, setIsExporting] = useState (false);
+  const [export_status, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
+  const { toast } = use_toast ();
+  const { user } = use_auth ();
+  const handleConnectWallet = async () => {
+    try {
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: "Wallet not detected",
+          description: "Please install MetaMask or another Ethereum wallet to use this feature",
+          variant: "destructive";
+        });
+        return;
+      }
+      // Request accounts;
+      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
+      const address = accounts[0];
+}
+  );
+}
+
+;
+=======
 import React, { useState } from 'react';
 import { Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -18,3 +68,4 @@ setExportStatus ('success')toast ({}catch (error: any) {';
 }> </Button>) ";
 }</div>) : (<div className=" space-y-2"> <p className=" text-sm text-muted-foreground mb-3" > Connect your web3 wallet to export tokens to the blockchain. </p> Connect Wallet </Button> </div>)}</CardContent> </Card>)}'";
   )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

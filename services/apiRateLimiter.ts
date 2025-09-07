@@ -6,6 +6,14 @@ export interface RateLimitRule {export interface RateLimitConfig  {export interf
   requestsPerDay: number;
   burst_limit: number,window_size: number;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface RateLimitRule {
+export interface RateLimitConfig {
+=======
+export interface RateLimitRule {export interface RateLimitConfig {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 export interface RateLimitRule {}
 }
 export interface RateLimitRule  {id: string;
@@ -19,6 +27,7 @@ export interface RateLimitRule  {id: string;
 export interface RateLimitStats  {endpoint: string;
 export interface RateLimitRule {
 export interface RateLimitConfig {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface RateLimitConfig {;
   requestsPerMinute: number;
   requestsPerHour: number;
@@ -31,6 +40,10 @@ export interface RateLimitConfig {
   requestsPerMinute: number;
   requestsPerHour: number;
   requestsPerDay: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 export interface RateLimitRule {
 
@@ -48,6 +61,12 @@ export interface RateLimitRule {
   updated_at: Date;
 
 }
+<<<<<<< HEAD
+=======
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface RateLimitStats {
   endpoint: string;
   method: string;
@@ -55,6 +74,10 @@ export interface RateLimitStats {
   blocked_requests: number;
   averageResponseTime: number;
   last_request: Date;
+<<<<<<< HEAD
+  current_usage: {
+<<<<<<< HEAD
+=======
   current_usage: {minute: number;created_at: Date,updated_at: Date;}
 export interface RateLimitStats  {endpoint: string;
   method: string;
@@ -67,6 +90,7 @@ export interface RateLimitStats  {endpoint: string;
 }
 export interface APIKey  {createdAt: Date;
   current_usage: {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     minute: number;
 
     hour: number,
@@ -113,27 +137,42 @@ export interface RateLimitViolation {
   id: string;
   api_key: string;
   endpoint: string;
+=======
+    minute: number;  endpoint: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   method: string;
   timestamp: Date;
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
 
+<<<<<<< HEAD
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
 export class APIRateLimiterService {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   private apiKey: string;
 
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
   }
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
 
@@ -149,6 +188,10 @@ export class APIRateLimiterService {
       }
 
       return await response && response.json()
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
@@ -189,6 +232,17 @@ if ( {) {
         createdAt: new Date(),
 
         updatedAt: new Date()
+<<<<<<< HEAD
+=======
+  }
+  async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
+    try {
+      // Mock response for demo;
+      return {
+        ...rule;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         updatedAt: new Date()
 export interface RateLimitConfig {;
   requestsPerMinute:number,;
@@ -263,6 +317,10 @@ export class APIRateLimiterService {;
 ;
       if (!response.ok) {;
         throw new Error(`Failed to create rate limit rule:${response.statusText}`),;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         updatedAt: new Date()
       }
     }
@@ -282,6 +340,13 @@ export class APIRateLimiterService {;
 
 
         id: `rule_${Date.now ()}`;
+<<<<<<< HEAD
+=======
+    }
+  }        id: `rule_${Date.now ()}`;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         created_at: new Date (),
         updated_at: new Date ();
       }
@@ -299,6 +364,10 @@ if ( {) {
 }
         throw new Error (`Failed to fetch rate limit rules: ${response.status_text}`);
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return await response.json ();
     } catch (error) {
       // Mock rules for demo;
@@ -322,6 +391,14 @@ if ( {) {
           updated_at: new Date ();
 
 
+<<<<<<< HEAD
+=======
+      return await response.json ();    } catch (error) {
+      // Mock rules for demo;
+      return [;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         }
         {
           id: 'rule_2';
@@ -331,6 +408,10 @@ if ( {) {
           config: {
             requestsPerMinute: 10;
             requestsPerHour: 100;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             requestsPerDay: 1000;
 
 
@@ -342,6 +423,12 @@ if ( {) {
           updated_at: new Date ();
 
         }
+<<<<<<< HEAD
+=======
+            requestsPerDay: 1000;        }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       ];
     }
   }
@@ -513,8 +600,16 @@ if ( {) {$2;
           updatedAt: new Date();
           created_at: new Date (),
           updated_at: new Date ();
+<<<<<<< HEAD
+<<<<<<< HEAD
 
           created_at: new Date (),
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+          created_at: new Date (),
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           updated_at: new Date ();
 
         }
@@ -542,6 +637,12 @@ if ( {) {$2;
 }export interface RateLimitRule  {id: string,name: string,pattern: string,method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL',config: RateLimitConfig,enabled: boolean,createdAt: Date,updatedAt: Date;
 }export interface RateLimitStats  {endpoint: string,method: string,totalRequests: number,blockedRequests: number,averageResponseTime: number,lastRequest: Date,currentUsage: {minute: number,hour: number,day: number;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 }export interface APIKey  {id: string,name: string,key: string,permissions: string[],rateLimit: RateLimitConfig,createdAt: Date,lastUsed: Date,isActive: boolean;
 }export interface RateLimitViolation  {id: string,apiKey: string,endpoint: string,method: string,timestamp: Date,reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded',ipAddress: string,userAgent: string;
 }export class APIRateLimiterService {private apiKey: string,private baseUrl: string,constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {this.apiKey = apiKey,this.baseUrl = baseUrl;
@@ -639,6 +740,7 @@ if ( {) {$2;
         throw new Error (`Failed to fetch rate limit stats: ${response.status_text}`)}
       return await response.json ()} catch (error) {headers: {} catch (error) {// Mock stats for demo;
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'PATCH',
         headers: {
@@ -656,6 +758,10 @@ if ( {) {$2;
       // Mock update for demo
       const existingRule = (await this && this.getRateLimitRules()).find(r => r && r.id === id);
       if (!existingRule) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         throw new Error('Rule not found')
   async updateRateLimitRule (id: string, updates: Partial < RateLimitRule>): Promise < RateLimitRule> {
     try {
@@ -729,16 +835,35 @@ if ( {) {
         throw new Error(`Failed to delete rate limit rule: ${response && response.statusText}`)
 
       }
+<<<<<<< HEAD
+=======
+        throw new Error('Rule not found')      }
+    }
+  }      }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     } catch (error) {
       console && console.error('Failed to delete rate limit rule:', error);
       throw error
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   async getRateLimitStats(endpoint?: string): Promise<RateLimitStats[]> {
     try {
       const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : '';
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/stats${params}`, {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         headers: {
   async deleteRateLimitRule (id: string): Promise < void> {
     try {
@@ -846,6 +971,12 @@ if ( {) {
       }
       return await response.json ();
     } catch (error) {
+<<<<<<< HEAD
+=======
+        headers: {    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       // Mock stats for demo;
       return [;
         {endpoint: '/api / users';
@@ -880,17 +1011,34 @@ if ( {) {$2;
       return {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`Failed to fetch API keys: ${response && response.statusText}`)}return await response && response.json()id: `key_${Date.now ()}`;
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           }
         }
       ]
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
     try {
 
@@ -906,6 +1054,10 @@ if ( {) {$2;
       }
 
       return await response && response.json()
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
   async createAPIKey (name: string, permissions: string[], rate_limit: RateLimitConfig): Promise < APIKey> {
@@ -936,6 +1088,11 @@ if ( {) {
 
       return await response && response.json()
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     } catch (error) {
       // Mock API key creation for demo;
       return {
@@ -999,6 +1156,10 @@ if ( {) {$2;
         created_at: new Date ();
         last_used: new Date (),
         is_active: true;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       }
     }
   }
@@ -1024,6 +1185,14 @@ if ( {) {
       return await response.json ();
     } catch (error) {
       // Mock API keys for demo;
+<<<<<<< HEAD
+=======
+    }
+  }
+  async getAPIKeys (): Promise < APIKey[]> {=======      // Mock API keys for demo;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return [;
     } catch (error) {// Mock API keys for demo;
       return [;return await response.json ()} catch (error) {// Mock API keys for demo;
@@ -1046,19 +1215,36 @@ if ( {) {
           }
           createdAt: new Date()lastUsed: new Date()isActive: true;
           permissions: ['readwrite'];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           rate_limit: {
             requestsPerMinute: 100;
             requestsPerHour: 1000;
             requestsPerDay: 10000;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             burst_limit: 50,
             window_size: 60;
           }
           created_at: new Date ();
           last_used: new Date (),
           is_active: true;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         }
         {id: 'key_2';
           name: 'Mobile App';
@@ -1122,11 +1308,22 @@ if ( {) {$2;
           api_key: 'zion_web123';
           id: 'violation_1';          api_key: 'zion_web123';
           permissions: ['read'];
+<<<<<<< HEAD
+<<<<<<< HEAD
           rate_limit: {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          rate_limit: {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             requestsPerMinute: 50;
             requestsPerHour: 500;
             requestsPerDay: 5000;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
           rateLimit: {
             requestsPerMinute: 50;
@@ -1170,6 +1367,13 @@ if ( {) {$2;
   }
 
 
+<<<<<<< HEAD
+=======
+  }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             burst_limit: 25,
             window_size: 60;
           }
@@ -1177,14 +1381,27 @@ if ( {) {$2;
           last_used: new Date (),
           is_active: true;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         }
       ];
     }
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -1216,10 +1433,19 @@ if ( {) {
         throw new Error (`Failed to fetch violations: ${response.status_text}`);
       }
       return await response.json ();
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     } catch (error) {
       // Mock violations for demo;
       return [;
         {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           id: 'violation_1';
 
 
@@ -1283,6 +1509,12 @@ if ( {) {
           ipAddress: '10 && 10.0.0 && 0.50',
           userAgent: 'ZionMobileApp/1 && 1.0'
           api_key: 'zion_web123';
+<<<<<<< HEAD
+=======
+          id: 'violation_1';          api_key: 'zion_web123';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           endpoint: '/api / users';
           method: 'GET',timestamp: new Date (Date.now () - 1000 * 60 * 30), // 30 minutes ago;
           reason: 'rate_limit_exceeded';
@@ -1361,6 +1593,10 @@ export const API_RATE_LIMITER_PRICING = {starter: {name: 'Starter';
     price: 25;
           ip_address: '192.168.1.100',
           user_agent: 'Mozilla / 5.0 (Windows NT 10.0, Win64, x64) AppleWebKit / 537.36';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
         }
@@ -1415,12 +1651,21 @@ export const API_RATE_LIMITER_PRICING = {starter: {name: 'Starter';
       acc[violation && violation.reason] = (acc[violation && violation.reason] || 0) + 1;
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return acc
     }, {} as Record<string, number>);
     return {
       overview: {
         totalRequests;
         blockedRequests;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
         activeRules: rules && rules.filter(r => r && r.enabled).length,
         activeAPIKeys: apiKeys && apiKeys.filter(k => k && k.isActive).length
@@ -1532,12 +1777,29 @@ export const API_RATE_LIMITER_PRICING = {
     ];
 
   }
+<<<<<<< HEAD
+=======
+    overview: {
+      total_requests: number;
+      blocked_requests: number;
+      active_rules: number,  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   professional: {
     name: 'Professional';
     price: 79;
     period: '/month';
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     features: [;
       'Up to 10 rate limit rulesBasic rate limitingAPI key managementEmail notifications7-day data retentionBasic analytics';
     ];
@@ -1553,11 +1815,21 @@ export const API_RATE_LIMITER_PRICING = {
       'Up to 50 rate limit rulesAdvanced rate limitingUnlimited API keysReal-time monitoringSlack and webhook notifications30-day data retentionAdvanced analyticsCustom dashboards';
       'API access';
     ];
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   enterprise: {name: 'Enterprise';
     price: 199;
+<<<<<<< HEAD
+=======
     period: '/month';;
 // Pricing tiers for the API Rate Limiter service;
 export const API_RATE_LIMITER_PRICING = {starter: {name: 'Starter',price: 25,period: '/month',features: [;
@@ -1656,8 +1928,10 @@ createdAt: new Date ()lastUsed: new Date ()isActive: true;
 }}}}
 }}
 }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     period: '/month';
 
+<<<<<<< HEAD
 
 
 
@@ -2003,3 +2277,10 @@ topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice 
 };
 }
 ;
+<<<<<<< HEAD
+=======
+  }
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

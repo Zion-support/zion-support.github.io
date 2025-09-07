@@ -1,3 +1,44 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const showTagline = router.pathname === '/'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [loginOpen, setLoginOpen] = useState(false)
+  const isMobile = useIsMobile()
+  const { t } = useTranslation()
+  const { user } = useAuth()
+  const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn)
+  const router = useRouter()
+  const showTagline = router.pathname === '/'
+  // Messaging context (unread message count)
+  const { unreadCount } = useMessaging()
+  const openLoginModal = (returnToPath?: string,) => {
+    // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
+    // using router.push with shallow:true before this function is called.
+    // This function's main job is just to open the modal.
+    // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
+    setLoginOpen(true)
+  }
+import React from 'react';
+  const showTagline = router && router.pathname === '/';
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
+  const [loginOpen, setLoginOpen] = useState(false),;
+  const isMobile = useIsMobile(),;
+  const { t } = useTranslation(),;
+  const { user } = useAuth(),;
+  const isLoggedIn = useSelector((state: RootState,) => state && state.auth.isLoggedIn),;
+  const router = useRouter(),;
+  const showTagline = router && router.pathname === '/',;
+
+  // Messaging context (unread message count);
+  const { unreadCount } = useMessaging(),;
+
+  const openLoginModal = (returnToPath?: string,) => {;
+    // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu);
+    // using router && router.push with shallow:true before this function is called.;
+=======
 
 const showTagline = router.pathname === '/';
 import React, { useState } from 'react';
@@ -22,6 +63,7 @@ export function AppHeader() {const [mobileMenuOpen, setMobileMenuOpen] = useStat
   const showTagline = router.pathname === '/';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)const [loginOpen, setLoginOpen] = useState(false)const isMobile = useIsMobile()const { t } = useTranslation()const { user } = useAuth()const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn)const router = useRouter()const showTagline = router.pathname === '/';
   // Messaging context (unread message count)const { unreadCount } = useMessaging()const openLoginModal = (returnToPath?: string,) => {// The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router.push with shallow:true before this function is called.;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     // This function's main job is just to open the modal.;
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.;
     setLoginOpen(true)}
@@ -58,8 +100,25 @@ import React from 'react';
                 href="/auth/login";
                 className="text-sm font-medium text-foreground/70 hover:text-foreground";
                 aria-label={t('auth.login')}
+<<<<<<< HEAD
+                data-testid="login-link"
+                onClick={(e) => {
+
+                  e.preventDefault(),
+                  // For the main login link, we might not have a specific returnTo beyond current page,
+                  // or we could default to dashboard.
+                  // For consistency with how sub-menus now set it:
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
+<<<<<<< HEAD
+                  openLoginModal(router.asPath)
+                onClick={(e,) => {;
+                  e && e.preventDefault(),;
+                  // For the main login link, we might not have a specific returnTo beyond current page,;
+                  // or we could default to dashboard.;
+=======
                 data-testid="login-link";
                 onClick={(e) => {e.preventDefault(),// For the main login link, we might not have a specific returnTo beyond current page,// or we could default to dashboard.;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   // For consistency with how sub-menus now set it:;
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })openLoginModal(router.asPath)onClick={(e,) => {e && e.preventDefault(),// For the main login link, we might not have a specific returnTo beyond current page,// or we could default to dashboard.;
                   // For consistency with how sub-menus now set it:;
@@ -107,6 +166,9 @@ import React from 'react';
         </div>;
       )}
       {/* Mobile Bottom Navigation */}
+<<<<<<< HEAD
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+=======
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}const show_tagline = router.pathname === '/';
   const [mobileMenuOpen, setMobileMenuOpen] = useState (false),const [login_open, setLoginOpen] = useState (false),const is_mobile = useIsMobile (),const { t } = use_translation (),const { user } = use_auth (),const isLoggedIn = use_selector ((state: RootState, ) => state.auth.isLoggedIn),const router = use_router (),const show_tagline = router.pathname === '/',// Messaging context (unread message count)const { unread_count } = use_messaging (),const openLoginModal = (returnToPath?: string, ) =>: any {// The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)// using router.push with shallow:true before this function is called.;
     // This function's main job is just to open the modal.;
@@ -1125,3 +1187,7 @@ import React from 'react';
 }onOpenChange= {setLoginOpen ;
 }/> </>)'";
 }'"'";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

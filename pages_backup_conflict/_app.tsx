@@ -19,4 +19,13 @@ const React from "react"; import type { AppProps } from "next/app"; import "./sr
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 const React from "react"; import type { AppProps } from "next/app"; import "./src/index.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"
+<<<<<<< HEAD
+import _React from 'react'; import type { AppProps } from 'next/app'; import '../src/index.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

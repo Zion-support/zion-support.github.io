@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -345,3 +347,4 @@ const ServicesIndex: NextPage = () => {const services = [;
       </div>;
     </>;
   )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

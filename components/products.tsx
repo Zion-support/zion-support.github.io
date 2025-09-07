@@ -17,10 +17,47 @@ export default function Placeholder() {export default function Placeholder() {ex
   )export default function Placeholder() {export default function Placeholder() {export default function Placeholder() {export default function Placeholder() {export default function Placeholder() {export default function Placeholder() {export default function Placeholder() {export default function Placeholder() {export default function Placeholder() {ursor/fix-website-loading-errors-and-merge-6662;
 export default function Placeholder() {export default function Placeholder() {export default function Placeholder() {export default function Placeholder() {return (<main className='min-h-screen p-8'>;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function Placeholder() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+export default function Placeholder() {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function Placeholder() {
 
 
 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+export default function Placeholder() {
+
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -38,10 +75,61 @@ export default function Placeholder() {
         </Link>
       </div>
   );export default function Placeholder() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function Placeholder() {;
+export default function Placeholder() {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export default function Placeholder() {;
 export default function Placeholder() {
 export default function Placeholder() {;
 export default function Placeholder() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+export default function Placeholder() {;
+export default function Placeholder() {
+
+export default function Placeholder() {;
+export default function Placeholder() {
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export default function Placeholder() {;
+export default function Placeholder() {
+<<<<<<< HEAD
+
+export default function Placeholder() {;
+export default function Placeholder() {
+
+
+export default function Placeholder() {;
+export default function Placeholder() {
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default function Placeholder() {;
+export default function Placeholder() {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return (
     <main className='min-h-screen p-8'>;
       <Head>;
@@ -71,9 +159,55 @@ export default function Placeholder() {
     </main>;
   )}}}
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 }
 
+
+<<<<<<< HEAD
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+
+}
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Head from 'next / head';
 import Link from 'next / link';
 export default /**;
@@ -121,11 +255,44 @@ function Placeholder() {return (<main className="min - h-screen p - 8">;
   )}import Head from 'next/head';
     </main>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 }
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 }
 
@@ -178,6 +345,11 @@ export default function Placeholder() {return (<main className='min-h-screen p-8
 }}
   )
     </main>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   );export default function Placeholder() {
   return (
     <main className="min-h-screen p-8">
@@ -194,5 +366,35 @@ export default function Placeholder() {return (<main className='min-h-screen p-8
   );
 }
 }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

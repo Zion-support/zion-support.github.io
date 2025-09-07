@@ -16,6 +16,13 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer")module.export
 // Next.config.analyze utility;
 export const Next.config.analyze = () => {// Implementation here;
   return null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 ursor/automate-test-improve-and-merge-code-646c;
 }}}}}
 }const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer")module && module.exports = {"webpack": (config, { isServer }) => {if (!isServer) {config && config.plugins.push(new BundleAnalyzerPlugin({}}}}}
@@ -28,6 +35,7 @@ origin/automation-improvements-final;
 },const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer")}}
 
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 
 ,;
@@ -42,6 +50,11 @@ origin/automation-improvements-final;
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -50,6 +63,10 @@ origin/automation-improvements-final;
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer")module.exports = {"webpack": (config, { isServer }) => {if (!isServer) {config.plugins.push(new BundleAnalyzerPlugin({}new BundleAnalyzerPlugin({}new BundleAnalyzerPlugin({}},const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer")module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(new BundleAnalyzerPlugin({ analyzerMode: "static"; openAnalyzer: 'false'; reportFilename: "bundle-analysis.html";}))} return config} }
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer")module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html"}))} return config} }const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer")module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html"}))} return config} }
@@ -106,7 +123,14 @@ module && module.exports = {
 ,;
 ;};
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -115,8 +139,16 @@ module && module.exports = {
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 ;}
 }
@@ -161,8 +193,17 @@ module.exports = {
   "webpack": (config, { isServer }) => {
   if (!isServer) {
   config.plugins.push(;
+<<<<<<< HEAD
+        new BundleAnalyzerPlugin({
+<<<<<<< HEAD
+=======
+};
+,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
         new BundleAnalyzerPlugin({};
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -215,7 +256,16 @@ if ( { config.plugins.push () {
 const { BundleAnalyzerPlugin } = require ("webpack - bundle - analyzer"); module.exports = { webpack: (config, { is_server }) => { // Check condition
 if ( { config.plugins.push () {
   $2
+<<<<<<< HEAD
+} new BundleAnalyzerPlugin ({ analyzer_mode: "static", open_analyzer: false, report_filename: "bundle - analysis.html", }))} return config} }
+<<<<<<< HEAD
+},;
+,;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 } new BundleAnalyzerPlugin ({ analyzer_mode: "static", open_analyzer: false, report_filename: "bundle - analysis.html" }))} return config} }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 ;
 ,;

@@ -10,6 +10,10 @@ export class TestingSystem {static async testUserInteraction(element: HTMLElemen
       case 'click':;
         element.click ();
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         break;
       case 'type': // Handle typing;
         break;
@@ -37,3 +41,8 @@ export class TestingSystem {static async testUserInteraction(element: HTMLElemen
 }
 
   }
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

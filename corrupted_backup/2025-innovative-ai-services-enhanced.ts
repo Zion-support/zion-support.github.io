@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 "export": interface InnovativeAIService  {id: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 "export": interface InnovativeAIService {
    id: string;
    name: string;

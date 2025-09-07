@@ -1,10 +1,27 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function SAASServicesPage() {return (;
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+      {/* Hero Section */}
+=======
 
 ;
 export default function SAASServicesPage() {return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;{/* Hero Section */}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+;
+export default function SAASServicesPage() {return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;{/* Hero Section */}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="bg - gradient - to - r from - purple - 600 to - pink - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;
           <h1 className="text - 5xl font - bold mb - 6">🚀 Micro SAAS Services</h1>;
           <p className="text - xl text - purple - 100 max - w-3xl mx - auto">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             Ready - to - deploy software solutions for specific business needs. From marketplace platforms;
             to AI - powered tools, we deliver turnkey solutions that accelerate your digital transformation.;
           </p>;
@@ -13,6 +30,30 @@ export default function SAASServicesPage() {return (<div className="min-h-screen
               Call Now: +1 302 464 0950;
             </a>;
               <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - purple - 600 transition - colors">;
+<<<<<<< HEAD
+=======
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+      {/* Hero Section */}
+      <div className="bg - gradient - to - r from - purple - 600 to - pink - 600 py-20">;
+        <div className="container mx - auto px - 6 text-center">;
+          <h1 className="text - 5xl font - bold mb-6">🚀 Micro SAAS Services</h1>;
+          <p className="text - xl text - purple - 100 max - w-3xl mx-auto">;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+            Ready - to - deploy software solutions for specific business needs. From marketplace platforms;
+            to AI - powered tools, we deliver turnkey solutions that accelerate your digital transformation.;
+          </p>;
+          <div className="mt - 8">;
+            <a href="tel:+13024640950" className="bg - white text - purple - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - purple - 50 transition - colors mr - 4">;
+              Call Now: +1 302 464 0950;
+            </a>;
+<<<<<<< HEAD
+              <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - purple - 600 transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - purple - 600 transition - colors">;
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
 export default function SAASServicesPage() {return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
@@ -29,24 +70,42 @@ export default function SAASServicesPage() {return (;
               Call Now: +1 302 464 0950;
             </a>;
               <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - purple - 600 transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               Get SAAS Demo;
             </a>;
           </div>;
         </div>;
       </div>;
       {/* Contact Info Banner */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="bg - zinc - 800 py - 4">;
         <div className="container mx - auto px - 6 text - center text - sm">;
           <span className="mr - 8">📱 +1 302 464 0950</span>;
           <span className="mr - 8">✉️ kleber@ziontechgroup.com</span>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="bg - zinc - 800 py-4">;
         <div className="container mx - auto px - 6 text - center text-sm">;
           <span className="mr-8">📱 +1 302 464 0950</span>;
           <span className="mr-8">✉️ kleber@ziontechgroup.com</span>;
+<<<<<<< HEAD
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>;
         </div>;
       </div>;
       {/* SAAS Services Grid */}
+<<<<<<< HEAD
+<<<<<<< HEAD
       <section className="py - 20">;
         <div className="container mx - auto px - 6">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
@@ -64,10 +123,40 @@ export default function SAASServicesPage() {return (;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-12">;
             {/* Zion Marketplace */}
                 and integrated payment processing for modern business ecosystems.;
+=======
+      <section className="py - 20">;
+        <div className="container mx - auto px - 6">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
+            {/* Zion Marketplace */}<div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+              <div className="text - 4xl mb - 6">🛒</div>;
+              <h2 className="text - 3xl font - bold mb - 4">Zion Marketplace</h2>;
+              <p className="text - zinc - 300 mb - 6 text - lg">;
+                Complete marketplace solution with job boards, talent matching, project management,and integrated payment processing for modern business ecosystems.;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+      <section className="py-20">;
+        <div className="container mx - auto px-6">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-12">;
+            {/* Zion Marketplace */}
+                and integrated payment processing for modern business ecosystems.;
+              </p>;
+<<<<<<< HEAD
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - purple-400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <li>• Multi - vendor marketplace platform</li>;
                   <li>• Advanced job board and talent matching</li>;
                   <li>• Project management and collaboration tools</li>;
@@ -76,6 +165,10 @@ export default function SAASServicesPage() {return (;
                   <li>• Mobile - responsive design</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Plans</h4>;
                 <div className="space - y-3">;
@@ -92,6 +185,13 @@ export default function SAASServicesPage() {return (;
                     <span className="text - green - 400 font - semibold">$1, 599 / month</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -107,17 +207,41 @@ export default function SAASServicesPage() {return (;
                     <span > Enterprise Plan</span>;
                     <span className="text - green - 400 font - semibold">$1, 599 / month</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text - sm text - zinc - 400 mt-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Setup fee: $2, 500 | Custom integrations available;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com / marketplace" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
+=======
+=======
+              <a href="https://ziontechgroup.com / marketplace" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <a href="https://ziontechgroup.com / marketplace" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="https://ziontechgroup.com / marketplace" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More About Zion Marketplace;
               </a>;
             </div>;
             {/* Resume AI Builder */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">📝</div>;
               <h2 className="text - 3xl font - bold mb - 4">Resume AI Builder</h2>;
@@ -128,6 +252,13 @@ export default function SAASServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc-700">;
               <div className="text - 4xl mb-6">📝</div>;
               <h2 className="text - 3xl font - bold mb-4">Resume AI Builder</h2>;
@@ -135,9 +266,22 @@ export default function SAASServicesPage() {return (;
                 AI - powered resume creation, optimization, and ATS - friendly formatting with industry insights;
                 and professional templates for career advancement.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - purple-400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   <li>• AI - powered resume writing assistance</li>;
                   <li>• ATS - optimized formatting</li>;
                   <li>• Industry - specific templates</li>;
@@ -146,6 +290,10 @@ export default function SAASServicesPage() {return (;
                   <li>• Resume analytics and tracking</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Plans</h4>;
                 <div className="space - y-3">;
@@ -162,6 +310,13 @@ export default function SAASServicesPage() {return (;
                     <span className="text - green - 400 font - semibold">$399 / month</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -177,13 +332,33 @@ export default function SAASServicesPage() {return (;
                     <span > Business Plan</span>;
                     <span className="text - green - 400 font - semibold">$399 / month</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text - sm text - zinc - 400 mt-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Setup fee: $500 | Unlimited resume creation;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com / resume - ai" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
+=======
+=======
+              <a href="https://ziontechgroup.com / resume - ai" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <a href="https://ziontechgroup.com / resume - ai" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="https://ziontechgroup.com / resume - ai" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More About Resume AI Builder;
               </a>;
             </div>;
@@ -192,15 +367,35 @@ export default function SAASServicesPage() {return (;
               <h2 className="text - 3xl font - bold mb - 4">Token Rewards System</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Blockchain - based loyalty and rewards platform with gamification, community engagement,and token economics for modern businesses and communities.;
+<<<<<<< HEAD
+=======
+              </p>;
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+                and token economics for modern businesses and communities.;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
                 and token economics for modern businesses and communities.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+=======
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - purple-400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <li>• Custom token creation and management</li>;
                   <li>• Gamified rewards and challenges</li>;
                   <li>• Community engagement tools</li>;
@@ -209,6 +404,10 @@ export default function SAASServicesPage() {return (;
                   <li>• API integration capabilities</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Plans</h4>;
                 <div className="space - y-3">;
@@ -225,6 +424,13 @@ export default function SAASServicesPage() {return (;
                     <span className="text - green - 400 font - semibold">$1, 199 / month</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -240,17 +446,41 @@ export default function SAASServicesPage() {return (;
                     <span > Enterprise Plan</span>;
                     <span className="text - green - 400 font - semibold">$1, 199 / month</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text - sm text - zinc - 400 mt-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Setup fee: $3, 000 | Custom blockchain integration;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com / token - rewards" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
+=======
+=======
+              <a href="https://ziontechgroup.com / token - rewards" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <a href="https://ziontechgroup.com / token - rewards" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="https://ziontechgroup.com / token - rewards" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More About Token Rewards System;
               </a>;
             </div>;
             {/* KYC / AML Verification */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">✅</div>;
               <h2 className="text - 3xl font - bold mb - 4">KYC / AML Verification</h2>;
@@ -261,6 +491,13 @@ export default function SAASServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc-700">;
               <div className="text - 4xl mb-6">✅</div>;
               <h2 className="text - 3xl font - bold mb-4">KYC / AML Verification</h2>;
@@ -268,9 +505,22 @@ export default function SAASServicesPage() {return (;
                 Compliance - ready identity verification and anti - money laundering screening system;
                 with advanced fraud detection and regulatory compliance features.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - purple-400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   <li>• Multi - factor identity verification</li>;
                   <li>• Document authentication and validation</li>;
                   <li>• AML screening and monitoring</li>;
@@ -279,6 +529,10 @@ export default function SAASServicesPage() {return (;
                   <li>• Audit trail and reporting</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Plans</h4>;
                 <div className="space - y-3">;
@@ -295,6 +549,13 @@ export default function SAASServicesPage() {return (;
                     <span className="text - green - 400 font - semibold">$799 / month</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -310,13 +571,33 @@ export default function SAASServicesPage() {return (;
                     <span > Enterprise Plan</span>;
                     <span className="text - green - 400 font - semibold">$799 / month</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text - sm text - zinc - 400 mt-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Setup fee: $1, 500 | Custom compliance rules;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com / kyc - aml" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
+=======
+=======
+              <a href="https://ziontechgroup.com / kyc - aml" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <a href="https://ziontechgroup.com / kyc - aml" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="https://ziontechgroup.com / kyc - aml" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More About KYC / AML Verification;
               </a>;
             </div>;
@@ -325,15 +606,35 @@ export default function SAASServicesPage() {return (;
               <h2 className="text - 3xl font - bold mb - 4">DAO Governance Platform</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Decentralized governance tools with proposal creation, voting mechanisms, treasury management,and community governance for modern organizations.;
+<<<<<<< HEAD
+=======
+              </p>;
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+                and community governance for modern organizations.;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
                 and community governance for modern organizations.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+=======
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - purple-400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <li>• Proposal creation and management</li>;
                   <li>• Multi - signature voting systems</li>;
                   <li>• Treasury management and budgeting</li>;
@@ -342,6 +643,10 @@ export default function SAASServicesPage() {return (;
                   <li>• Analytics and reporting dashboard</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Plans</h4>;
                 <div className="space - y-3">;
@@ -358,6 +663,13 @@ export default function SAASServicesPage() {return (;
                     <span className="text - green - 400 font - semibold">$1, 799 / month</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -373,17 +685,41 @@ export default function SAASServicesPage() {return (;
                     <span > Enterprise Plan</span>;
                     <span className="text - green - 400 font - semibold">$1, 799 / month</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text - sm text - zinc - 400 mt-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Setup fee: $4, 000 | Custom governance rules;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com / dao - governance" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
+=======
+=======
+              <a href="https://ziontechgroup.com / dao - governance" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <a href="https://ziontechgroup.com / dao - governance" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="https://ziontechgroup.com / dao - governance" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More About DAO Governance Platform;
               </a>;
             </div>;
             {/* Zion Academy */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🎓</div>;
               <h2 className="text - 3xl font - bold mb - 4">Zion Academy</h2>;
@@ -394,6 +730,13 @@ export default function SAASServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc-700">;
               <div className="text - 4xl mb-6">🎓</div>;
               <h2 className="text - 3xl font - bold mb-4">Zion Academy</h2>;
@@ -401,9 +744,22 @@ export default function SAASServicesPage() {return (;
                 Learning management system with AI - powered course creation, assessments, skill tracking;
                 and personalized learning paths for modern education and training.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - purple-400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   <li>• AI - powered course creation</li>;
                   <li>• Interactive assessments and quizzes</li>;
                   <li>• Skill tracking and certification</li>;
@@ -412,6 +768,10 @@ export default function SAASServicesPage() {return (;
                   <li>• Progress analytics and reporting</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Plans</h4>;
                 <div className="space - y-3">;
@@ -428,6 +788,13 @@ export default function SAASServicesPage() {return (;
                     <span className="text - green - 400 font - semibold">$719 / month</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Plans</h4>;
                 <div className="space-y-3">;
@@ -443,13 +810,33 @@ export default function SAASServicesPage() {return (;
                     <span > Enterprise Plan</span>;
                     <span className="text - green - 400 font - semibold">$719 / month</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text - sm text - zinc - 400 mt-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Setup fee: $1, 200 | Custom course templates;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com / academy" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
+=======
+=======
+              <a href="https://ziontechgroup.com / academy" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <a href="https://ziontechgroup.com / academy" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="https://ziontechgroup.com / academy" className="block w - full text - center bg - purple - 600 hover:bg - purple - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More About Zion Academy;
               </a>;
             </div>;
@@ -457,6 +844,10 @@ export default function SAASServicesPage() {return (;
         </div>;
       </section>;
       {/* SAAS Implementation Process */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - zinc - 800">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
@@ -490,6 +881,13 @@ export default function SAASServicesPage() {return (;
               <div className="bg - purple - 600 w - 16 h - 16 rounded - full flex items - center justify - center text - 2xl font - bold mx - auto mb - 4">5</div>;
               <h3 className="text - xl font - semibold mb - 3">Launch</h3>;
               <p className="text - zinc - 300">Go - live with ongoing support and continuous optimization.</p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - zinc-800">;
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
@@ -519,15 +917,33 @@ export default function SAASServicesPage() {return (;
               <h3 className="text - xl font - semibold mb - 3">Training</h3>;
               <p className="text - zinc - 300">Comprehensive user training and documentation for your team.</p>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <div className="text-center">;
+              <div className="bg - purple - 600 w - 16 h - 16 rounded - full flex items - center justify - center text - 2xl font - bold mx - auto mb-4">5</div>;
+              <h3 className="text - xl font - semibold mb-3">Launch</h3>;
+              <p className="text - zinc-300">Go - live with ongoing support and continuous optimization.</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="text - center">;
               <div className="bg - purple - 600 w - 16 h - 16 rounded - full flex items - center justify - center text - 2xl font - bold mx - auto mb - 4">5</div>;
               <h3 className="text - xl font - semibold mb - 3">Launch</h3>;
               <p className="text - zinc - 300">Go - live with ongoing support and continuous optimization.</p>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             </div>;
           </div>;
         </div>;
       </section>;
       {/* SAAS Benefits */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
@@ -566,6 +982,13 @@ export default function SAASServicesPage() {return (;
               <div className="text - 4xl mb - 4">📊</div>;
               <h3 className="text - xl font - semibold mb - 3">Analytics & Insights</h3>;
               <p className="text - zinc - 300">Built - in analytics and reporting to track performance and optimize operations.</p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py-20">;
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
@@ -600,15 +1023,33 @@ export default function SAASServicesPage() {return (;
               <h3 className="text - xl font - semibold mb - 3">Enterprise Security</h3>;
               <p className="text - zinc - 300">Bank - level security with SOC2 compliance, encryption, and regular security audits.</p>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 text-center">;
+              <div className="text - 4xl mb-4">📊</div>;
+              <h3 className="text - xl font - semibold mb-3">Analytics & Insights</h3>;
+              <p className="text - zinc-300">Built - in analytics and reporting to track performance and optimize operations.</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700 text - center">;
               <div className="text - 4xl mb - 4">📊</div>;
               <h3 className="text - xl font - semibold mb - 3">Analytics & Insights</h3>;
               <p className="text - zinc - 300">Built - in analytics and reporting to track performance and optimize operations.</p>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Call to Action */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - gradient - to - r from - purple - 600 to - pink - 600">;
         <div className="container mx - auto px - 6 text - center">;
           <h2 className="text - 4xl font - bold mb - 6">Ready to Deploy Your SAAS Solution?</h2>;
@@ -626,6 +1067,13 @@ export default function SAASServicesPage() {return (;
               </a>;
             </div>;
             <p className="text - purple - 100 text - sm">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - gradient - to - r from - purple - 600 to - pink-600">;
         <div className="container mx - auto px - 6 text-center">;
           <h2 className="text - 4xl font - bold mb-6">Ready to Deploy Your SAAS Solution?</h2>;
@@ -642,7 +1090,16 @@ export default function SAASServicesPage() {return (;
                 ✉️ Schedule SAAS Demo;
               </a>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <p className="text - purple - 100 text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
             <p className="text - purple - 100 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <p className="text - purple - 100 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com;
             </p>;
           </div>;

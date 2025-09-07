@@ -1,7 +1,16 @@
 #!/bin/bash
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 # Deployment script for production
 set -e
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+# Deployment script for production
+set -e
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 echo "🚀 Starting deployment process..."
 

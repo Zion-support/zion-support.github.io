@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+type Outdated = any;
+    generatedAt = json.generatedAt || ''
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
 
 ;
   const file = path.join(process.cwd(), 'datadep-radar.json')let outdated: Outdated[] = [];  let generatedAt = '';
@@ -7,6 +15,21 @@ import fs from 'fs';
 import path from 'path';
 type Outdated = any;
     generatedAt = json.generatedAt || '';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  const file = path.join(process.cwd(), 'datadep-radar.json');
+  let outdated: Outdated[] = [];  let generatedAt = '';
+  try {
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+    outdated = json.outdated |[];
+    generatedAt = json.generatedAt |''
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   } catch {}
   return { props: { outdated, generatedAt } }
 }
@@ -31,6 +54,37 @@ function getServerSideProps() {const file = path.join (process.cwd (), 'datadep 
 function DepRadarPage() {return (<div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {outdated.length === 0 ? (
+=======
+      {outdated.length === 0 ? (
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+        <div className="text-sm text-gray-600">All dependencies up to date.</div>
+      ) : (
+        <div className="overflow-auto border rounded">
+          <table className="min-w-full text-sm">
+            <thead className="bg-gray-50">
+              <tr>
+                <th className="text-left p-2">Package</th>
+                <th className="text-left p-2">Current</th>
+                <th className="text-left p-2">Latest</th>
+                <th className="text-left p-2">Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              {outdated.map(o => (
+                <tr key={o.name} className="border-t">
+                  <td className="p-2">{o.name}</td>
+                  <td className="p-2">{o.current}</td>
+                  <td className="p-2">{o.latest}</td>
+                  <td className="p-2">{o.type}</td>
+                </tr>
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {outdated.length === 0 ? (<div className="text-sm text-gray-600">All dependencies up to date.</div>;
       ) : (<div className="overflow-auto border rounded">;
           <table className="min-w-full text-sm">;
@@ -49,10 +103,29 @@ function DepRadarPage() {return (<div className="space-y-6">;
                   <td className="p-2">{o.latest}</td>;
                   <td className="p-2">{o.type}</td>;
                 </tr>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
             </tbody>;
           </table>;
         </div>;
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </div>
+);
+}
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
     </div>;
 )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>;
+)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

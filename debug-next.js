@@ -97,6 +97,16 @@ const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (content.includes('') || content.includes('
+}
+}
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
+    if (content.includes('      problematicFiles.push(file);
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -104,6 +114,10 @@ for (const file of allFiles) {;
 }
 }
       problematicFiles.push(file);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
   } catch (error) {
     // Skip files that can't be read
@@ -117,5 +131,14 @@ function getAllFiles() {let files = [];
   return files;
 }console.log('✅ Debug completed'),console.log('✅ Debug completed')
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+;
+console.log('✅ Debug completed'),;
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 console.log('✅ Debug completed');

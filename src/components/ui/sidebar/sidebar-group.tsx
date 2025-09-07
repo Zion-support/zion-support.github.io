@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement>  {import React, { forwardRef } from 'react';
 import { ChevronDown  } from 'lucide-react';
 import { cn  } from '@/lib/utils';
@@ -29,6 +30,53 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(({title;
               <span>{title}</span>;
             </div>;
             {showChevron && (<ChevronDown;
+=======
+
+import React, { forwardRef } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { SafeRef } from '@/types/ref-types';
+
+
+interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+  title?: string;
+  icon?: React.ReactNode;
+  defaultExpanded?: boolean;
+  showChevron?: boolean
+
+const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
+  (
+    {
+      title
+      icon
+      defaultExpanded = true
+      showChevron = true
+      className
+      children
+      ...props
+    }
+    ref
+  ) => {
+    const [expanded, setExpanded] = React.useState(defaultExpanded)
+        ref={ref as SafeRef<HTMLDivElement>}
+        className={cn('px-3 py-2', className)}        {...props}
+      >
+        {title && (
+          <button
+            type='button'
+            className='flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:bg-secondary/30'
+
+            onClick={() => setExpanded(!expanded)}          >;
+            <div className='flex items-center gap-2'>;
+
+              {icon}
+              <span>{title}</span>
+            </div>
+            {showChevron && (
+              <ChevronDown
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             )}
           </button>;
         )}
@@ -68,6 +116,7 @@ export { SidebarGroup }}
         )}
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
       </div>;
+<<<<<<< HEAD
     )}
 ),SidebarGroup.displayName = "SidebarGroup",export { SidebarGroup },<div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
       </div>;
@@ -81,3 +130,15 @@ export { SidebarGroup }}
     )}
 ))SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup }
+=======
+    );
+  }
+),;
+SidebarGroup.displayName = "SidebarGroup",;
+export { SidebarGroup };
+
+);
+
+SidebarGroup.displayName = 'SidebarGroup';
+export { SidebarGroup };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

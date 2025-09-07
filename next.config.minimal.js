@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 const nextConfig = {reactStrictMode: true,eslint: { ignoreDuringBuilds: true },typescript: { ignoreBuildErrors: true },pageExtensions: ['tsx', 'ts', 'jsx', 'js'],// Minimal webpack config;
   webpack: (config, { dev, isServer }) => {if (dev) {config.watchOptions = {ignored: [;
           '**/node_modules/**','**/backup*/**','**/disabled*/**','**/temp*/**','**/*.backup*','**/*.disabled*','**/pages_backup*/**','**/src_backup*/**','**/components.disabled*/**','**/pages.disabled*/**','**/src.disabled*/**';
@@ -32,6 +36,7 @@ const nextConfig = {,const nextConfig = {reactStrictMode: true,const nextConfig 
           }
         ];
       }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const nextConfig = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
@@ -58,6 +63,10 @@ const nextConfig = {
       };
     }
     return config;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
@@ -80,6 +89,15 @@ module.exports = next_config;
   distDir: '.next'
 };
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = nextConfig;
+module.exports = nextConfig;
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   images: {
     domains: ["localhost", "ziontechgroup.com"]
@@ -108,6 +126,11 @@ module.exports = nextConfig;};
 export default nextConfig;
 const nextConfig = {,
   reactStrictMode: true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const nextConfig = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
@@ -134,6 +157,10 @@ const nextConfig = {
       };
     }
     return config;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },

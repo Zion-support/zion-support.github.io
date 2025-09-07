@@ -1,5 +1,10 @@
 
+<<<<<<< HEAD
+
+import fs from 'fs';
+=======
 import fs from 'fs',import path from 'path',import { v4 as uuidv4 } from 'uuid',export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed',export type ProposalMeta = {id: string,createdAt: string,updatedAt: string,title: string,targetInstitution: string,type: string,regionalScope: string,budgetOrResolution: string,supportingMultiverses: string[],languages: string[],status: ProposalStatus,import fs from 'fs';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import path from 'path';
 import { v4 as uuidv4  } from 'uuid';
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';

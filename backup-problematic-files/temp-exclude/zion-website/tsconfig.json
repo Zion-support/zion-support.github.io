@@ -1,0 +1,137 @@
+{
+  "compilerOptions": {
+<<<<<<< HEAD
+=======
+
+:fix-tsconfig.cjs
+:backup-problematic-files/temp-exclude/zion-website/tsconfig.json
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+<<<<<<< HEAD
+=======
+ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+    "target": "es5";
+    "lib": [
+      "dom";
+      "dom.iterable";
+      "es6"
+    ];
+    "allowJs": true;
+    "skipLibCheck": true;
+    "strict": true;
+    "forceConsistentCasingInFileNames": true;
+    "noEmit": true;
+    "esModuleInterop": true;
+    "module": "esnext";
+    "moduleResolution": "node";
+    "resolveJsonModule": true;
+    "isolatedModules": true;
+    "jsx": "preserve";
+    "incremental": true;
+<<<<<<< HEAD
+=======
+
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+:backup-problematic-files/temp-exclude/zion-website/tsconfig.json
+>>>>>>> main:fix-tsconfig.cjs
+ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+    "plugins": [
+      {
+        "name": "next"
+      }
+<<<<<<< HEAD
+    ];
+    "baseUrl": ".";
+    ],
+=======
+
+    ];
+    "baseUrl": ".";
+
+:fix-tsconfig.cjs
+    ];
+    "baseUrl": ".";
+    ],
+:backup-problematic-files/temp-exclude/zion-website/tsconfig.json
+:backup-problematic-files/temp-exclude/zion-website/tsconfig.json
+    ]
+    ];
+    "baseUrl": ".";
+>>>>>>> main:fix-tsconfig.cjs
+ursor/automate-test-improve-and-merge-code-646c
+    ];
+    "baseUrl": ".";
+    ],
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  };
+  "include": [
+    "next-env.d.ts";
+    "**/*.ts";
+    "**/*.tsx";
+    ".next/types/**/*.ts"
+  ];
+  "exclude": [
+    "node_modules"
+  ]
+<<<<<<< HEAD
+=======
+
+:fix-tsconfig.cjs
+:backup-problematic-files/temp-exclude/zion-website/tsconfig.json
+}
+ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+}
+}`;
+
+// Write the clean tsconfig.json
+fs.writeFileSync('tsconfig.json', cleanTsconfig);
+
+console.log('Clean tsconfig.json created!');
+<<<<<<< HEAD
+=======
+
+}
+:backup-problematic-files/temp-exclude/zion-website/tsconfig.json
+>>>>>>> main:fix-tsconfig.cjs
+ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -210,4 +210,16 @@ if (require.main === module) {;}
     checker.log("Build health checker shutting down", "INFO');
     process.exit(0),}),};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = BuildHealthCheck;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = BuildHealthCheck;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = BuildHealthCheck;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

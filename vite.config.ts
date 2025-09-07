@@ -25,6 +25,22 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true
+<<<<<<< HEAD
+<<<<<<< HEAD
+  },
+  resolve: {
+    alias: {
+      '@': '/workspace/src'
+    }
+  },
+  css: {
+    postcss: {
+      plugins: []
+    }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 })ursor/automate-test-improve-and-merge-code-646c;
   },resolve: {alias: {'@': '/workspace/src';

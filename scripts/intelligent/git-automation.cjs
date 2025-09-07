@@ -1,5 +1,26 @@
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node;
+
+=======
+
+
+
+#!/usr/bin/env node;
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+const { execSync, spawn } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -11,7 +32,22 @@
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+
+
+#!/usr/bin/env node;
+
+
+const { execSync, spawn } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if ( {
         ) {
      {
@@ -27,8 +63,7 @@ const path = require('path')
 
   async performMerge(branchName) {
     try {
-      
-      
+
       // Create backup before merge
       if ( {
         await this.createBackup(`pre-merge-${branchName}`)}
@@ -73,9 +108,7 @@ const path = require('path')
         "strategy": this.config.mergeStrategy,
         "success": true
       })}
-      
-      
-      
+
       // Clean up branch
       await this.cleanupBranch(branchName)} catch (error) {
       console.error(`❌ Failed to merge ${branchName}:`, error);
@@ -207,8 +240,7 @@ const path = require('path')
   }
 
   async handleNewCommit(repoInfo) {
-    
-    
+
     // Check if commit should trigger automatic actions
     const commitMessage = repoInfo.lastCommit[1].toLowerCase(;);
     
@@ -228,8 +260,7 @@ const path = require('path')
   }
 
   async handleUncommittedChanges(repoInfo) {
-    
-    
+
     // Analyze changes
     const changes = repoInfo.statu;s;
     const changeTypes = {
@@ -238,9 +269,7 @@ const path = require('path')
       "deleted": changes.filter(c => c.startsWith('D')).length,
       "renamed": changes.filter(c => c.startsWith('R')).length
    };
-    
-    
-    
+
     // Auto-commit if configured
     if () {
       await this.autoCommit(changes)}
@@ -308,8 +337,7 @@ const path = require('path')
     }
 
   async performFullAnalysis() {
-    
-    
+
     try {
       const analysis = {
         "timestamp": new Date().toISOString(),
@@ -418,9 +446,7 @@ const path = require('path')
   }
 
   async notifyManualIntervention(branchName, resolution) {
-    
-    
-    
+
     // Save notification for later review
     const notification = {
       "branch": branchName,
@@ -478,8 +504,20 @@ const path = require('path')
 const gitAutomation = new IntelligentGitAutomation;(;);
 gitAutomation.start().catch(console.error);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "autoMerge"
       "conflictResolution"
       "branchProtection"
@@ -554,4 +592,15 @@ gitAutomation.start().catch(console.error);
 
       console.error('Error loading "history")
 
+<<<<<<< HEAD
+      console.error('Error loading "history")
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+      console.error('Error loading "history")
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 

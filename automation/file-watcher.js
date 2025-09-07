@@ -42,7 +42,14 @@ ursor/automate-test-improve-and-merge-code-646c;
         issues.push('Unmatched parentheses detected');
       }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       // Check for React usage without import
       if (content.includes('React.') && !content.includes('import React')) {
         issues.push('React used without import');
@@ -155,7 +162,14 @@ try {
   console.log('Installing chokidar...');
   execSync('yarn add chokidar', { stdio: 'inherit' });
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Main execution
 if (require.main === module) {
   const watcher = new FileWatcher();

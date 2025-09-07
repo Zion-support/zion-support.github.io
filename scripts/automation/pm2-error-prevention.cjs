@@ -129,4 +129,16 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   console.log("� Received SIGTERM, shutting down gracefully...")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  console.log("� Received SIGTERM, shutting down gracefully...")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  console.log("� Received SIGTERM, shutting down gracefully...")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

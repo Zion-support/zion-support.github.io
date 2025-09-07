@@ -12,6 +12,11 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
+<<<<<<< HEAD
+    // Remove all merge conflict markers and keep the main branch version (after =======)
+    
+    // Handle incomplete conflicts (missing closing markers)
+=======
     // Remove all merge conflict markers and keep the main branch version (after )
     content = content.replace(/[\s\S]*?([\s\S]*?)
     content = content.replace(/[\s\S]*?([\s\S]*?)
@@ -159,3 +164,4 @@ async function main() {
 }
 
 main();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -17,5 +17,18 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 </ModeToggle>'
 </ModeToggle>'
 </ModeToggle>'
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 </ModeToggle>'
 </ModeToggle>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+</ModeToggle>'
+</ModeToggle>'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+</ModeToggle>'
+</ModeToggle>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

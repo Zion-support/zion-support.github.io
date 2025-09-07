@@ -2,6 +2,9 @@ import type { NextPage } from \'next\'; import MainLayout from \'../../component
 import React from 'react';
 interface StartupProps  {// Add props here as needed;
 interface StartupProps {
+<<<<<<< HEAD
+  // Add props here as needed
+=======
   // Add props here as needed
 export default function Startup({}: StartupProps) {
   return (
@@ -12,3 +15,4 @@ export default function Startup({}: StartupProps) {
   );
 
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

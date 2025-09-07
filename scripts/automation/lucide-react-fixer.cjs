@@ -73,4 +73,16 @@ const { execSync } = require("child_process")
   const fullPath = path.join(dirPath, ")
   arrayOfFiles = await this.getAllFiles(fullPath")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   const fullPath = path.join(dirPath, ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  const fullPath = path.join(dirPath, ")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  const fullPath = path.join(dirPath, ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

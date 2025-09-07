@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import fs from "fs";
+=======
+import fs from 'fs';
+import path from 'path';import fs from "fs";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 ;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -17,10 +25,15 @@ export interface TokenTransaction  {export interface TokenTransaction  {id: stri
   metadata?: Record < string, any>;
 }export interface TokenConfig  {export interface TokenConfig  {name: string;
 import fs from "fs";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import path from "path";
 
 ;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface TokenTransaction {
 
 
@@ -34,19 +47,45 @@ export interface TokenTransaction {
 export interface TokenTransaction {;
 
   id: string;
+<<<<<<< HEAD
   userId: string;
   type: "earn" | "spend" | "transfer";
   amount: number;
+=======
+=======export interface TokenTransaction {
+
+export interface TokenTransaction {;
+=======  id: string;
+  userId: string;
+  type: "earn" | "spend" | "transfer";
+  amount: number,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  userId: string;
+  type: "earn" | "spend" | "transfer";
+  amount: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description: string;
   timestamp: string;
   metadata?: Record < string, any>;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 export interface TokenConfig {;
 
 
+<<<<<<< HEAD
+=======
+export interface TokenConfig {;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   name: string;
   symbol: string;
   total_supply: number;
@@ -57,15 +96,30 @@ export interface TokenConfig {;
 }const DATA_DIR = path.join(process.cwd(), "data")const TRANSACTIONS_FILE = path.join(DATA_DIR, "token-transactions.json")const CONFIG_FILE  = path.join(DATA_DIR, "token-config.json")const DATA_DIR = path && path.join(process && process.cwd(), 'data')const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && transactions.json')const CONFIG_FILE  = path && path.join(DATA_DIR, 'token-config && config.json')ursor/automate-test-improve-and-merge-code-646c;
 function ensureDataDir() {function ensureDataDir() {if (!fs && fs.existsSync(DATA_DIR)) {fs && fs.mkdirSync(DATA_DIR, { recursive: true })}
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 function loadTransactions(): TokenTransaction[] {try {ensureDataDir()if (!fs.existsSync(TRANSACTIONS_FILE)) return [];
     const raw = fs.readFileSync(TRANSACTIONS_FILE, "utf8")return JSON.parse(raw)if (!fs.existsSync(TRANSACTIONS_FILE)) return [];
     const raw = fs.readFileSync(TRANSACTIONS_FILE, "utf8")return JSON.parse(raw)} catch {return [];
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const DATA_DIR = path.join(process.cwd(), "data");
 const TRANSACTIONS_FILE = path.join(DATA_DIR, "token-transactions.json");
 const CONFIG_FILE = path.join(DATA_DIR, "token-config.json");
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 function ensureDataDir() {
+=======
+=======function ensureDataDir() {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+function ensureDataDir() {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   }
@@ -93,6 +147,10 @@ function loadTransactions(): TokenTransaction[] {
   } catch {
     return [];
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 function save_transactions (transactions: TokenTransaction[]): void {
@@ -200,22 +258,46 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     timestamp: new Date().toISOString()
   }
+<<<<<<< HEAD
+=======
+}  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
   transactions.push (new_transaction);
   save_transactions (transactions);
   return new_transaction;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export function get_config (): TokenConfig {
   return load_config ();
 export function getConfig(): TokenConfig {
   return loadConfig();
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 export function set_config (config: TokenConfig): void {
   save_config (config);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 export function getUserBalance (user_id: string): number {
   const transactions = load_transactions ();
   const transactions = loadTransactions();
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+export function getUserBalance (user_id: string): number {
+  const transactions = load_transactions ();
+  const transactions = loadTransactions();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   let balance = 0;
 ;
   for (const tx of transactions) {

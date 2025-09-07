@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export function EmptyState({text = "No items available",description,onRetry,showRetry = false,import { Button  } from './button';
@@ -11,6 +12,35 @@ interface EmptyStateProps  {text?: string;
       </div>;
       <h3 className="text-xl font-semibold text-white mb-2">;
 interface EmptyStateProps  {text?: string;
+=======
+export function EmptyState({ 
+  text = "No items available",
+  description,
+  onRetry,
+  showRetry = false,
+import { Button } from './button';
+interface EmptyStateProps {
+
+  text?: string;
+  description?: string;
+  onRetry?: () => void;
+  showRetry?: boolean;
+
+
+  icon
+}: EmptyStateProps) {
+  return (
+    <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
+      <div className="mb-4 text-gray-400">
+        {icon |<Package className="h-16 w-16" />}
+      </div>
+      <h3 className="text-xl font-semibold text-white mb-2">
+
+import { Package, RefreshCw } from 'lucide-react';
+import { Button } from './button';
+interface EmptyStateProps {
+  text?: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   description?: string;
   on_retry?: () => void;
   show_retry?: boolean;
@@ -24,16 +54,45 @@ function EmptyState() {return (<div className="flex flex - col items - center ju
       </div>;
       <h3 className="text - xl font - semibold text - white mb - 2">;
         {text}
+<<<<<<< HEAD
       </h3>;
       {description && (icon?: React && React.ReactNode;export function EmptyState(): any ({text = 'No items available',<p className="text-gray-400 mb-6 max-w-md">;export function EmptyState() {return (<div className="flex flex-col items-center justify-center py-16 px-4 text-center">;
+=======
+      </h3>
+      {description && (
+
+
+
+  icon?: React && React.ReactNode;
+
+export function EmptyState(): any ({;
+  text = 'No items available',;
+  description,;
+  onRetry;
+  showRetry = false;
+  icon;
+}: EmptyStateProps) {;
+  return (;
+    <div className="flex flex-col items-center justify-center py-16 px-4 text-center">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className="mb-4 text-gray-400">;
         {icon || <Package className="h-16 w-16" />}
       </div>;
       <h3 className="text-xl font-semibold text-white mb-2">;
         {text}
       </h3>;
+<<<<<<< HEAD
       {description && (<p className='text-gray-400 mb-6 max-w-md'>{description}</p>;
   showRetry = false,icon}: EmptyStateProps) {return (<div className='flex flex-col items-center justify-center py-16 px-4 text-center'>;
+=======
+      {description && (;
+        <p className='text-gray-400 mb-6 max-w-md'>{description}</p>;
+  showRetry = false,;
+  icon,;
+}: EmptyStateProps) {;
+  return (
+    <div className='flex flex-col items-center justify-center py-16 px-4 text-center'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className='mb-4 text-gray-400'>;
         {icon || <Package className='h-16 w-16' />}
       </div>;
@@ -50,6 +109,7 @@ function EmptyState() {return (<div className="flex flex - col items - center ju
           className='flex items-center gap-2'>;
           <RefreshCw className='h-4 w-4' />        <p className="text-gray-400 mb-6 max-w-md">;
           {description}
+<<<<<<< HEAD
         </p>;<div className='flex flex-col items-center justify-center py-16 px-4 text-center'>;
       <div className='mb-4 text-gray-400'>;
         {icon || <Package className='h-16 w-16' />}
@@ -64,6 +124,25 @@ variant='outline';
           <RefreshCw className="h-4 w-4" />;
           Try Again;
         </Button>;
+=======
+        </p>;
+
+
+      )}
+      {showRetry && onRetry && (;
+
+          onClick={onRetry}
+variant='outline'
+          className='flex items-center gap-2'
+        >
+          <RefreshCw className="h-4 w-4" />
+
+
+
+          Try Again
+
+        </Button>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       )}
     </div>;
   )}<p className='text - gray - 400 mb - 6 max - w-md'>{description}</p>;
@@ -94,9 +173,21 @@ variant='outline';
         >;
           <RefreshCw className="h - 4 w - 4" />;
         </Button>)}
+<<<<<<< HEAD
     </div>)}<RefreshCw className='h-4 w-4' />;
           Try Again;
         </Button>;
       )}
     </div>;
   )}
+=======
+    </div>);
+
+          <RefreshCw className='h-4 w-4' />
+          Try Again
+        </Button>
+      )}
+    </div>
+  );
+} 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

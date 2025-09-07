@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<=
+const originalLog = console.log;
+>        const originalLog = console.log;
+=======
+        const originalLog = console.log;
+const originalLog = console.log;
+        const originalLog = console.log;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 =;
         const originalLog = console.log;
 <:corrupted_backup/temp-error-fixer.js;
@@ -45,6 +56,7 @@ const originalLog = console.log; let fixCount = 0; console.log = (...args) => { 
         const originalLog = console.log;
 const originalLog = console.log;
         const originalLog = console.log;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         let fixCount = 0;
         console.log = (...args) => {
           const message = args.join(' ');
@@ -54,7 +66,15 @@ const originalLog = console.log;
               fixCount = parseInt(match[1]);
             }
           }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<          originalLog(...args);
+=======
           originalLog(...args);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+          originalLog(...args);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         };
         try {
           // // require('/workspace/scripts/automation/console-error-fixer.cjs');
@@ -65,7 +85,16 @@ const originalLog = console.log;
           console.error('Script error:', error.message);
           process.exit(1);
         }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<=
+>          originalLog(...args)};
+=======
           originalLog(...args)};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+          originalLog(...args)};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         try {
           // // require('/workspace/scripts/automation/console-error-fixer.cjs');
           setTimeout(() => {
@@ -76,8 +105,18 @@ const originalLog = console.log; let fixCount = 0; console.log = (...args) => { 
           console.error('Script "error": ', error.message);
           process.exit(1)}
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             process.exit(0)}, 5000)} catch (error) {
           console.error('Script "error": ', error.message);
           process.exit(1)}
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

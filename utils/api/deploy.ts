@@ -12,8 +12,18 @@ function toSlug(name: string): string {return name;
 }}export interface DeployResult  {success: boolean;
   modules: {
     token: boolean;
+<<<<<<< HEAD
+<<<<<<< HEAD
     [key: string]: boolean;
   };
+=======
+    [key: string]: boolean
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    [key: string]: boolean;
+  };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 export interface DeployResult {
@@ -86,6 +96,10 @@ export async function deployInstance(config: DeployConfig): Promise<DeployResult
       message: error instanceof Error ? error.message : 'Deployment failed'
     };
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 
@@ -105,16 +119,27 @@ import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../ty
 function toSlug(name: string): string {;
   return name;
     .toLowerCase();
+=======
+}    .toLowerCase();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   // Schedule launch stream (/summit);
   ensureDir(eventsDir),;
+<<<<<<< HEAD
+  const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
+<<<<<<< HEAD
+=======
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   } catch (error) {
     console.error("Error:", error);
@@ -177,6 +202,11 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     writeTextFile(promptBasePath, promptBase);
     assets.push({ kind: "file", path: promptBasePath, description: "ZionGPT prompt base" });
     logs.push({ timestamp: nowIso(), level: "info", action: "zion_gpt_initialized" });
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 }
 ;
@@ -201,8 +231,17 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       );
     );
     assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" });
+<<<<<<< HEAD
+<<<<<<< HEAD
     logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });
   }
+=======
+    logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });
+  }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 ;
   if (input.modules.token || input.tokenActivation) {;
@@ -252,8 +291,17 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       );
     );
     assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" });
+<<<<<<< HEAD
+<<<<<<< HEAD
     logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });
   }
+=======
+    logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });
+  }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 ;
 
@@ -278,6 +326,10 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       `# Public Roadmap\n\n- Q1: Launch core modules\n- Q2: DAO consolidation\n- Q3: Nation builder\n`;
     );
     assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     writeTextFile(;
       changelogPath,;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
@@ -291,6 +343,12 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 ;
   if (input.modules.bookBuilder) {;
     ensureDir(docsDir);
+<<<<<<< HEAD
+=======
+    writeTextFile(;    ensureDir(docsDir);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     writeTextFile(;
       bookPath,;
       `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`;
@@ -320,7 +378,14 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   ensureDir(eventsDir);
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   writeTextFile(;
 
     summitEventPath,;
@@ -345,6 +410,10 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
   ),;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       changelogPath;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
     );
@@ -916,3 +985,10 @@ if ( {) {
 }
 }
 }
+<<<<<<< HEAD
+=======
+}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

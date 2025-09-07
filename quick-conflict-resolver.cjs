@@ -12,6 +12,8 @@ function removeConflictMarkers(filePath) {
     const originalContent = content;
     
     // Remove all merge conflict markers
+<<<<<<< HEAD
+=======
     content = content.replace(/[\s\S]*?([\s\S]*?)
     content = content.replace(/[\s\S]*?([\s\S]*?)
     content = content.replace(/[\s\S]*?([\s\S]*?)(?=\n|$)/g, '$1');
@@ -87,3 +89,4 @@ async function main() {
 }
 
 main();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

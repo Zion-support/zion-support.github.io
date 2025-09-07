@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 const benefits = [;
   'Protection against cyber threats and attacks','Compliance with industry regulations','Reduced risk of data breaches','Enhanced customer trust and confidence','Lower insurance costs and liability','Peace of mind with 24/7 monitoring';
 ];
@@ -74,3 +76,4 @@ export default function CybersecurityServices() {return (<Layout;
             </div>;
           </div>;
         </section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

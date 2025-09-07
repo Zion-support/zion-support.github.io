@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -7,6 +9,7 @@ import React from \'react\'; import Head from \'next/head\'; const \"Guides\": R
 ursor/fix-syntax-push-and-merge-to-main-40de;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 

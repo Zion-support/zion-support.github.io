@@ -211,4 +211,16 @@ if (require.main === module) {}
     monitor.log(`Failed to start "monitoring": ${error.message}`, 'ERROR');
     process.exit(1)})};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = ErrorDetectionMonitor;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = ErrorDetectionMonitor;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = ErrorDetectionMonitor;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

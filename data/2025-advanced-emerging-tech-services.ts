@@ -1,4 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 export const advancedEmergingTechServices2025 = [;
   {{id: 'space-mining-operations-platform',name: 'SpaceMining Operations',description:;
@@ -1248,12 +1264,107 @@ export const advancedEmergingTechServices2025 = [;
 ];
 
 
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const advancedEmergingTechServices2025 = [
   {
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+id: 'space-mining-operations-platform',
+    name: 'SpaceMining Operations',
+    description:
+      'Advanced space mining platform that enables asteroid mining, lunar resource extraction, and space resource management for sustainable space exploration.'
+      'Asteroid mining operations'
+      'Lunar resource extraction'
+      'Space resource mapping'
+      'Automated mining systems'
+      'Integration with space agencies'
+      'Advanced analytics and reporting'
+      'Custom mining strategies'
+      '24/7 space operations monitoring'
+    ]
+    pricing: {
+      starter: {
+        price: 999
+        period: 'month'
+        features: [
+          'Basic space operations'
+          'Resource mapping'
+          'Standard support'
+        ]
+      }
+      professional: {
+        price: 2999
+        period: 'month'
+        features: [
+          'Advanced mining operations'
+          'Custom strategies'
+          'Priority support'
+          'Dedicated operations team'
+        ]
+      }
+      enterprise: {
+        price: 7999
+        period: 'month'
+        features: [
+          'Full mining operations'
+          'Custom space solutions'
+          'White-label platform'
+          'Dedicated support team'
+        ]
+      }
+    }
+    category: 'Space Technology'
+    tags: [
+      'Space Mining'
+      'Asteroid Mining'
+      'Lunar Resources'
+      'Space Operations'
+    ]
+    website: 'https://ziontechgroup.com/space-mining-operations'
+    contact: {
+      phone: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+    }
+    marketSize: '$3.8B'
+    targetAudience:
+      'Space agencies, mining companies, aerospace firms, government agencies'
+    competitiveAdvantage:
+      'Industry-leading space mining operations, comprehensive resource mapping, and extensive space agency integration'
+  }
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  {
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     features: [
       'Quantum-biological hybrid processing'
       'DNA-based computing'
@@ -1264,8 +1375,392 @@ export const advancedEmergingTechServices2025 = [
       'Custom quantum bio algorithms'
       '24/7 platform monitoring'
     ]
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    pricing: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    pricing: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+    id: 'quantum - materials - discovery - platform',
+    name: 'QuantumMaterials Discovery',
+    description:;
+      'Revolutionary quantum materials discovery platform that accelerates the development of new materials using quantum computing and AI.',
+    features: [;
+      'Quantum materials simulation',
+      'AI - powered discovery algorithms',
+      'Real - time material analysis',
+      'Advanced property prediction',
+      'Integration with research platforms',
+      'Advanced analytics and reporting',
+      'Custom discovery algorithms',
+      '24 / 7 discovery operations',
+    ],
     pricing: {
       starter: {
+        price: 699,
+        period: 'month',
+        features: [;
+          'Basic materials simulation',
+          'Standard discovery',
+          'Email support',
+        ],
+      },
+      professional: {
+        price: 1799,
+        period: 'month',
+        features: [;
+          'Advanced materials platform',
+          'Custom algorithms',
+          'Priority support',
+          'Dedicated research team',
+        ],
+      },
+      enterprise: {
+        price: 4499,
+        period: 'month',
+        features: [;
+          'Full materials platform',
+          'Custom solutions',
+          'White - label platform',
+          'Dedicated support team',
+        ],
+      },
+    },
+    category: 'Quantum Materials',
+    tags: [;
+
+      'Quantum Computing',
+      'Materials Science',
+      'AI Discovery',
+      'Research Platform',
+    ],
+
+    website: 'https://ziontechgroup.com / quantum - materials - discovery',
+
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+
+    market_size: '$2.8B',
+    target_audience:;
+      'Materials science companies, research institutions, manufacturing firms, government agencies',
+    competitive_advantage:;
+      'Industry - first quantum materials simulation, advanced AI discovery algorithms, and comprehensive research platform integration',
+  },
+  {
+    id: 'quantum - robotics - platform',
+    name: 'QuantumRobotics Pro',
+    description:;
+      'Advanced quantum robotics platform that combines quantum computing with robotics for intelligent automation and advanced robotic systems.',
+    features: [;
+      'Quantum - enhanced robotics',
+      'AI - powered automation',
+      'Real - time robotic control',
+      'Advanced motion planning',
+      'Integration with robotic systems',
+      'Advanced analytics and reporting',
+      'Custom robotic algorithms',
+      '24 / 7 robotic operations',
+    ],
+
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    pricing: {
+      starter: {
+        price: 499,
+        period: 'month',
+        features: [;
+          'Up to 5 robots',
+          'Basic quantum features',
+          'Standard control',
+        ],
+      },
+      professional: {
+        price: 1299,
+        period: 'month',
+        features: [;
+          'Up to 25 robots',
+          'Advanced quantum features',
+          'Custom algorithms',
+          'Priority support',
+        ],
+      },
+      enterprise: {
+        price: 3299,
+        period: 'month',
+        features: [;
+          'Unlimited robots',
+          'Custom quantum solutions',
+          'White - label platform',
+          'Dedicated support team',
+        ],
+      },
+    },
+    category: 'Quantum Robotics',
+    tags: [;
+
+      'Quantum Computing',
+      'Robotics',
+      'Automation',
+      'Intelligent Systems',
+    ],
+
+    website: 'https://ziontechgroup.com / quantum - robotics - pro',
+
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    market_size: '$3.2B',
+    target_audience:;
+      'Robotics companies, manufacturing firms, automation specialists, research institutions',
+    competitive_advantage:;
+      'Industry - first quantum - enhanced robotics, advanced AI automation, and comprehensive robotic system integration',
+  },
+  {
+    id: 'quantum - internet - security - platform',
+    name: 'QuantumInternet Security',
+    description:;
+      'Next - generation quantum internet security platform that provides unbreakable encryption and secure communication for the quantum internet.',
+    features: [;
+      'Quantum internet encryption',
+      'Secure quantum communication',
+      'Real - time security monitoring',
+      'Advanced threat detection',
+      'Integration with internet infrastructure',
+      'Advanced analytics and reporting',
+      'Custom security protocols',
+      '24 / 7 quantum security operations',
+    ],
+    pricing: {
+      starter: {
+        price: 299,
+        period: 'month',
+        features: [;
+          'Basic quantum security',
+          'Standard encryption',
+          'Email support',
+        ],
+      },
+      professional: {
+        price: 799,
+        period: 'month',
+        features: [;
+          'Advanced quantum security',
+          'Custom protocols',
+          'Priority support',
+          'Dedicated security team',
+        ],
+      },
+      enterprise: {
+        price: 1999,
+        period: 'month',
+        features: [;
+          'Full quantum security',
+          'Custom solutions',
+          'White - label platform',
+          'Dedicated support team',
+        ],
+      },
+    },
+    category: 'Quantum Internet Security',
+    tags: [;
+
+      'Quantum Internet',
+      'Cybersecurity',
+      'Encryption',
+      'Secure Communication',
+    ],
+
+    website: 'https://ziontechgroup.com / quantum - internet - security',
+
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    market_size: '$8.9B',
+    target_audience:;
+      'Internet service providers, telecommunications companies, government agencies, cybersecurity firms',
+    competitive_advantage:;
+      'Industry - first quantum internet security, unbreakable quantum encryption, and comprehensive internet infrastructure integration',
+  },
+  {
+    id: 'quantum - logistics - optimization - platform',
+    name: 'QuantumLogistics Pro',
+    description:;
+      'Advanced quantum logistics optimization platform that provides intelligent route planning, supply chain optimization, and logistics automation.',
+    features: [;
+      'Quantum route optimization',
+      'AI - powered logistics',
+      'Real - time supply chain monitoring',
+      'Advanced optimization algorithms',
+      'Integration with logistics systems',
+      'Advanced analytics and reporting',
+      'Custom optimization models',
+      '24 / 7 logistics operations',
+    ],
+    pricing: {
+      starter: {
+        price: 199,
+        period: 'month',
+        features: [;
+          'Up to 10 routes',
+          'Basic optimization',
+          'Standard monitoring',
+        ],
+      },
+      professional: {
+        price: 599,
+        period: 'month',
+        features: [;
+          'Up to 100 routes',
+          'Advanced quantum features',
+          'Custom models',
+          'Priority support',
+        ],
+      },
+      enterprise: {
+        price: 1499,
+        period: 'month',
+        features: [;
+          'Unlimited routes',
+          'Custom quantum solutions',
+          'White - label platform',
+          'Dedicated support team',
+        ],
+      },
+    },
+    category: 'Quantum Logistics',
+    tags: [;
+
+      'Quantum Computing',
+      'Logistics',
+      'Supply Chain',
+      'Route Optimization',
+    ],
+
+    website: 'https://ziontechgroup.com / quantum - logistics - pro',
+
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    market_size: '$12.4B',
+    target_audience:;
+      'Logistics companies, supply chain managers, transportation firms, e - commerce businesses',
+    competitive_advantage:;
+      'Advanced quantum route optimization, comprehensive logistics automation, and extensive logistics system integration',
+  },
+  {
+    id: 'quantum - metaverse - development - platform',
+    name: 'QuantumMetaverse Pro',
+    description:;
+      'Revolutionary quantum metaverse development platform that creates immersive virtual worlds with quantum - enhanced graphics and AI.',
+    features: [;
+      'Quantum - enhanced graphics',
+      'AI - powered world generation',
+      'Real - time virtual rendering',
+      'Advanced user interaction',
+      'Integration with VR / AR systems',
+      'Advanced analytics and reporting',
+      'Custom metaverse solutions',
+      '24 / 7 platform monitoring',
+    ],
+    pricing: {
+      starter: {
+        price: 399,
+        period: 'month',
+        features: [;
+          'Basic metaverse features',
+          'Standard graphics',
+          'Email support',
+        ],
+      },
+      professional: {
+        price: 999,
+        period: 'month',
+        features: [;
+          'Advanced metaverse platform',
+          'Custom solutions',
+          'Priority support',
+          'Dedicated development team',
+        ],
+      },
+      enterprise: {
+        price: 2499,
+        period: 'month',
+        features: [;
+
+          'Full metaverse platform',
+          'Custom solutions',
+          'White - label platform',
+          'Dedicated support team',
+        ],
+      },
+    },
+    category: 'Quantum Metaverse',
+    tags: ['Quantum Computing', 'Metaverse', 'Virtual Reality', 'AI Graphics'],
+
+    website: 'https://ziontechgroup.com / quantum - metaverse - pro',
+
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+
+
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
+  },;
+
+
+];      phone: '+1 302 464 0950';
+
+      email: 'kleber@ziontechgroup && ziontechgroup.com'
+
+    };
+    marketSize: '$6 && 6.8B',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      starter: {
+=======
+    pricing: {
+      starter: {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         price: 599
         period: 'month'
         features: [
@@ -1818,12 +2313,52 @@ export const advancedEmergingTechServices2025 = [
     targetAudience:
       'Gaming companies, virtual reality firms, entertainment companies, technology startups'
     competitiveAdvantage:
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
+=======
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
+  },;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
+  }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$6.8B'
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Quantum Computing',
       'Materials Science',
       'AI Discovery',
@@ -2348,14 +2883,58 @@ export const advancedEmergingTechServices2025 = [
 ];      phone: '+1 302 464 0950';
     };
     marketSize: '$6 && 6.8B',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
 
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  }
+];
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     market_size: '$6.8B',
     target_audience:;
       'Gaming companies, virtual reality firms, entertainment companies, technology startups',
@@ -2586,7 +3165,30 @@ export const advancedEmergingTechServices2025 = [
   }
 ];
 ;
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const advancedEmergingTechServices2025 = [;
   {;
     id: 'space-mining-operations-platform',;
@@ -2817,5 +3419,51 @@ export const advancedEmergingTechServices2025 = [;
     marketSize: '$6.8B',;
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
+  },
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
+  },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+];
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

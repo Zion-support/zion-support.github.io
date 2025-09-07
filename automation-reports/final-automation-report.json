@@ -1,4 +1,6 @@
 {
+<<<<<<< HEAD
+=======
 
   "timestamp": "2025-09-06T00:32:21.740Z",
   "duration": "66959ms",
@@ -43,6 +45,7 @@
     "Fix build issues to ensure application can be deployed",
     "Implement and run tests to ensure code reliability"
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   "timestamp": "2025-09-05T15:56:28.330Z",
   "summary": {
     "totalScripts": 8,

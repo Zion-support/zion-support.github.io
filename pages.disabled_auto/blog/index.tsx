@@ -2,6 +2,9 @@ import type { NextPage } from \'next\'; import Head from \'next/head\'; import L
 import React from 'react';
 interface IndexProps  {// Add props here as needed;
 interface IndexProps {
+<<<<<<< HEAD
+  // Add props here as needed
+=======
   // Add props here as needed
   return (
     <div>;
@@ -10,3 +13,4 @@ interface IndexProps {
     </div>;
   );
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

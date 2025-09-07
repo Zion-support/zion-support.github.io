@@ -37,6 +37,10 @@ function ThemeProvider() {
     // Only access local_storage on the client side;
     // Check condition
 if ( {) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   $2
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
@@ -45,6 +49,12 @@ type ThemeProviderProps = {children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
 }
+<<<<<<< HEAD
+=======
+  $2}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition
 if ( {) {
@@ -90,11 +100,22 @@ export const use_theme = () =>: any {
   $2
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   return context;
 }
 
 "use client",;
+<<<<<<< HEAD
+=======
+  return context;
+}"use client",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
 type ThemeProviderProps = {
@@ -146,6 +167,14 @@ export const useTheme = () => {;
   const context = useContext(ThemeProviderContext),;
   if (context === undefined);
     throw new Error("useTheme must be used within a ThemeProvider");
+<<<<<<< HEAD
+<<<<<<< HEAD
   return context;
+=======
+  return context
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  return context;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 

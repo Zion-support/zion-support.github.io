@@ -2,6 +2,8 @@ import Fastify from 'fastify';
 import cors from '@fastify / cors';
 import rate_limit from '@fastify / rate - limit';
 import dotenv from 'dotenv';
+<<<<<<< HEAD
+=======
 import { createOpenAIClient, generateJobPost } from './openai ;
 import { getPool, withUser } from './pg ;
 dotenv && dotenv.config()const app = Fastify({ logger: true })await app && app.register(cors, {origin: (origin, cb) => {const allowed = (process && process.env.CORS_ORIGINS || '').split().map((s) => s && s.trim())if (!origin || allowed && allowed.includes('*') || allowed && allowed.includes(origin)) {cb(null, true)return;
@@ -76,6 +78,7 @@ app.post ('/ai / ask', async (req, reply) => {const body = (req.body as any) || 
       WHERE read = false ORDER BY created_at DESC LIMIT 20`)return res.rows;
   })return { items }
 })const port = Number (process.env.API_PORT || 4000)app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {app.log.error (err)process.exit (1)})
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import { get_pool, with_user } from './pg.js';
 dotenv.config ();
 ;

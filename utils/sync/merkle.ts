@@ -36,6 +36,10 @@ export const merkle = {// Add merkle tree functionality here;
 }export function createMerkleTree(data: any[]): MerkleTree {return new MerkleTree(data)}export function verifyMerkleProof(leafData: any,proof: string[],rootHash: string,): boolean {const tree = new MerkleTree([leafData])return tree.verifyProof(leafData, proof, rootHash)}
 import crypto from "crypto";
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 // Merkle tree utilities;
 export const merkle = {
@@ -166,3 +170,8 @@ export function verifyMerkleProof(
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

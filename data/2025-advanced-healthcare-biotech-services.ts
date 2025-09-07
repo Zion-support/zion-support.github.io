@@ -1,7 +1,45 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+<<<<<<< HEAD
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+import { ServiceVariant } from '../types/service-variants';
+export interface AdvancedHealthcareBiotechService {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface AdvancedHealthcareBiotechService  {id: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface AdvancedHealthcareBiotechService {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface AdvancedHealthcareBiotechService  {id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -30,8 +68,30 @@ export interface AdvancedHealthcareBiotechService  {id: string;
   variant: string;
   contact_info: {mobile: string;
     email: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    address: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    website: string;
+  }
+
+        'AI-powered molecular modeling and simulation',
+  real_implementation: boolean;
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     address: string;website: string;
   }'AI-powered molecular modeling and simulation',real_implementation: boolean;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   implementation_details: string;
   launch_date: string;
   customers: number;
@@ -39,14 +99,57 @@ export interface AdvancedHealthcareBiotechService  {id: string;
   reviews: number;export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =;
   [;
     // AI - Powered Drug Discovery Platform;
+<<<<<<< HEAD
+    {
+      id: 'ai - drug - discovery - platform',
+      name: 'AI - Powered Drug Discovery Platform',
+      tagline: 'Accelerate drug discovery with AI and machine learning',
+      price: '$2, 999',
+      period: '/month',
+      description:;
+        'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.',
+      features: [;
+        'AI - powered molecular modeling and simulation',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    website: string
+  },
+  realImplementation: boolean;
+=======
     {id: 'ai - drug - discovery - platform',name: 'AI - Powered Drug Discovery Platform',tagline: 'Accelerate drug discovery with AI and machine learning',price: '$2, 999',period: '/month',description:;
         'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.',features: [;
         'AI - powered molecular modeling and simulation',website: string;
   },realImplementation: boolean;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
+  reviews: number
+}
+
+export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] = [
+  // AI-Powered Drug Discovery Platform
+  {
+    id: 'ai-drug-discovery-platform';
+    name: 'AI-Powered Drug Discovery Platform';
+    tagline: 'Accelerate drug discovery with AI and machine learning';
+    price: '$2,999',
+    period: '/month';
+    description: 'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.',
+    features: [
+      'AI-powered molecular modeling and simulationTarget identification and validationDrug repurposing and optimizationPredictive toxicity and efficacy analysisClinical trial optimizationReal-time collaboration toolsIntegration with research databasesAdvanced analytics and reporting';
+      'Mobile research appAPI for research institutions'
+=======
   reviews: number;
 }export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] = [;
   // AI-Powered Drug Discovery Platform;
@@ -57,12 +160,54 @@ export interface AdvancedHealthcareBiotechService  {id: string;
     description: 'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.',features: [;
       'AI-powered molecular modeling and simulationTarget identification and validationDrug repurposing and optimizationPredictive toxicity and efficacy analysisClinical trial optimizationReal-time collaboration toolsIntegration with research databasesAdvanced analytics and reporting';
       'Mobile research appAPI for research institutions';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     ];
     popular: true;
     icon: '🧬';
     color: 'from-green-600 to-emerald-600';
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/ai-drug-discovery-platform';
+<<<<<<< HEAD
+    marketPosition: 'Competes with Schrödinger ($50,000/year), Atomwise ($100,000/year), Insilico Medicine ($500,000/year). Our advantage: Affordable pricing, comprehensive features, and AI-powered insights.',
+    targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Drug discovery labs',
+    trialDays: 30;
+    setupTime: '2-4 weeks';
+    category: 'AI Drug Discovery & Biotech';
+    realService: true;
+    technology: ['Python, TensorFlow, PyTorch, React, Node.js, Molecular dynamics, Bioinformatics'],
+    integrations: ['PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms'],
+    useCases: ['Drug discovery, Target identification, Molecular modeling, Clinical trial optimization, Drug repurposing'],
+    roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.';
+    competitors: ['Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'],
+    marketSize: '$45.8B AI drug discovery market';
+    growthRate: '35% annual growth';
+    variant: 'ai-drug-discovery-enterprise';
+    contactInfo: {
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true;
+    implementationDetails: 'Advanced AI drug discovery platform with molecular modeling, target identification, and predictive analytics.',
+    launchDate: '2024-08-15';
+    customers: 23;
+    rating: 4.9;
+    reviews: 12
+  },
+
+  // Precision Medicine & Genomics Platform
+  {
+    id: 'precision-medicine-genomics';
+    name: 'Precision Medicine & Genomics Platform';
+    tagline: 'Personalized healthcare through genomic analysis and AI';
+    price: '$1,499',
+    period: '/month';
+    description: 'Comprehensive precision medicine platform that combines genomic analysis, AI-powered diagnostics, and personalized treatment recommendations for improved patient outcomes.',
+    features: [
+      'Whole genome sequencing and analysisAI-powered disease risk assessmentPersonalized treatment recommendationsDrug response predictionClinical decision supportPatient data managementIntegration with EHR systemsResearch collaboration tools';
+      'Mobile patient appAPI for healthcare providers'
+=======
     marketPosition: 'Competes with Schrödinger ($50,000/year), Atomwise ($100,000/year), Insilico Medicine ($500,000/year). Our advantage: Affordable pricing, comprehensive features, and AI-powered insights.',targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Drug discovery labs',trialDays: 30;
     setupTime: '2-4 weeks';
     category: 'AI Drug Discovery & Biotech';
@@ -88,12 +233,46 @@ export interface AdvancedHealthcareBiotechService  {id: string;
     description: 'Comprehensive precision medicine platform that combines genomic analysis, AI-powered diagnostics, and personalized treatment recommendations for improved patient outcomes.',features: [;
       'Whole genome sequencing and analysisAI-powered disease risk assessmentPersonalized treatment recommendationsDrug response predictionClinical decision supportPatient data managementIntegration with EHR systemsResearch collaboration tools';
       'Mobile patient appAPI for healthcare providers';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     ];
     popular: true;
     icon: '🧬';
     color: 'from-blue-600 to-indigo-600';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/precision-medicine-genomics';
+<<<<<<< HEAD
+    marketPosition: 'Competes with 23andMe ($199/kit), AncestryDNA ($99/kit), Color Genomics ($249/test). Our advantage: Comprehensive platform, AI-powered insights, and healthcare integration.',
+    targetAudience: 'Healthcare providers, Hospitals, Research institutions, Genetic counselors, Pharmaceutical companies',
+    trialDays: 21;
+    setupTime: '3-5 weeks';
+    category: 'Precision Medicine & Genomics';
+    realService: true;
+    technology: ['Python, TensorFlow, React, Node.js, Bioinformatics tools, Cloud computing'],
+    integrations: ['Epic, Cerner, Allscripts, Lab systems, Research databases'],
+    useCases: ['Personalized medicine, Disease risk assessment, Treatment optimization, Clinical research, Population health'],
+    roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.';
+    competitors: ['23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],
+    marketSize: '$78.6B precision medicine market';
+    growthRate: '28% annual growth';
+    variant: 'precision-medicine-enterprise';
+    contactInfo: {
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true;
+    implementationDetails: 'Comprehensive precision medicine platform with genomic analysis, AI diagnostics, and personalized treatment recommendations.',
+    launchDate: '2024-09-20';
+    customers: 45;
+    rating: 4.8;
+    reviews: 23
+  },
+
+  // AI-Powered Medical Imaging Analysis
+  {
+    id: 'ai-medical-imaging-analysis';
+=======
     marketPosition: 'Competes with 23andMe ($199/kit), AncestryDNA ($99/kit), Color Genomics ($249/test). Our advantage: Comprehensive platform, AI-powered insights, and healthcare integration.',targetAudience: 'Healthcare providers, Hospitals, Research institutions, Genetic counselors, Pharmaceutical companies',trialDays: 21;
     setupTime: '3-5 weeks';
     category: 'Precision Medicine & Genomics';
@@ -113,17 +292,60 @@ export interface AdvancedHealthcareBiotechService  {id: string;
     reviews: 23;
   },// AI-Powered Medical Imaging Analysis;
   {id: 'ai-medical-imaging-analysis';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     name: 'AI-Powered Medical Imaging Analysis Platform';
     tagline: 'Advanced medical imaging analysis with AI and deep learning';
     price: '$899';
     period: '/month';
+<<<<<<< HEAD
+    description: 'Advanced AI platform that provides automated medical image analysis, diagnosis assistance, and clinical decision support for radiologists and healthcare providers.',
+    features: [
+      'AI-powered image analysis and diagnosisMulti-modality support (X-ray, MRI, CT, Ultrasound)Automated abnormality detectionClinical decision support toolsIntegration with PACS systemsReal-time analysis and reportingMobile imaging appAPI for healthcare systems',
+      'Advanced analytics and insightsCompliance and audit tools'
+    ],
+    popular: true;
+=======
     description: 'Advanced AI platform that provides automated medical image analysis, diagnosis assistance, and clinical decision support for radiologists and healthcare providers.',features: [;
       'AI-powered image analysis and diagnosisMulti-modality support (X-ray, MRI, CT, Ultrasound)Automated abnormality detectionClinical decision support toolsIntegration with PACS systemsReal-time analysis and reportingMobile imaging appAPI for healthcare systems','Advanced analytics and insightsCompliance and audit tools';
     ],popular: true;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     icon: '🩻';
     color: 'from-purple-600 to-pink-600';
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/ai-medical-imaging-analysis';
+<<<<<<< HEAD
+    marketPosition: 'Competes with Aidoc ($500/month), Zebra Medical ($200/month), Arterys ($300/month). Our advantage: Comprehensive imaging support, affordable pricing, and advanced AI capabilities.',
+    targetAudience: 'Radiologists, Hospitals, Imaging centers, Healthcare providers, Medical device companies',
+    trialDays: 14;
+    setupTime: '2-3 weeks';
+    category: 'AI Medical Imaging & Diagnostics';
+    realService: true;
+    technology: ['Python, TensorFlow, PyTorch, React, Node.js, Medical imaging libraries'],
+    integrations: ['PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms'],
+    useCases: ['Medical imaging analysis, Diagnosis assistance, Clinical decision support, Research collaboration, Quality assurance'],
+    roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.';
+    competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'],
+    marketSize: '$32.1B AI medical imaging market';
+    growthRate: '42% annual growth';
+    variant: 'ai-imaging-enterprise';
+    contactInfo: {
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true;
+    implementationDetails: 'Advanced AI medical imaging platform with automated analysis, diagnosis assistance, and clinical decision support.',
+    launchDate: '2024-10-10';
+    customers: 67;
+    rating: 4.7;
+    reviews: 34
+  },
+
+  // Digital Health & Telemedicine Platform
+  {
+    id: 'digital-health-telemedicine';
+=======
     marketPosition: 'Competes with Aidoc ($500/month), Zebra Medical ($200/month), Arterys ($300/month). Our advantage: Comprehensive imaging support, affordable pricing, and advanced AI capabilities.',targetAudience: 'Radiologists, Hospitals, Imaging centers, Healthcare providers, Medical device companies',trialDays: 14;
     setupTime: '2-3 weeks';
     category: 'AI Medical Imaging & Diagnostics';
@@ -143,19 +365,68 @@ export interface AdvancedHealthcareBiotechService  {id: string;
     reviews: 34;
   },// Digital Health & Telemedicine Platform;
   {id: 'digital-health-telemedicine';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     name: 'Digital Health & Telemedicine Platform';
     tagline: 'Comprehensive digital health and telemedicine solutions';
     price: '$399';
     period: '/month';
+<<<<<<< HEAD
+    description: 'Integrated digital health platform that provides telemedicine, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.',
+    features: [
+      'High-quality video consultationsRemote patient monitoringHealth data analytics and insightsPatient engagement and educationIntegration with EHR systemsMobile health appsAI-powered health recommendationsSecure messaging and file sharing';
+      'Billing and insurance integrationAPI for healthcare applications'
+=======
     description: 'Integrated digital health platform that provides telemedicine, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.',features: [;
       'High-quality video consultationsRemote patient monitoringHealth data analytics and insightsPatient engagement and educationIntegration with EHR systemsMobile health appsAI-powered health recommendationsSecure messaging and file sharing';
       'Billing and insurance integrationAPI for healthcare applications';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     ];
     popular: true;
     icon: '🏥';
     color: 'from-teal-600 to-cyan-600';
     textColor: 'text-teal-400';
     link: 'https://ziontechgroup.com/digital-health-telemedicine';
+<<<<<<< HEAD
+    marketPosition: 'Competes with Teladoc ($49/month), Amwell ($79/month), Doxy.me ($35/month). Our advantage: Comprehensive platform, AI integration, and affordable pricing.',
+    targetAudience: 'Healthcare providers, Hospitals, Clinics, Telemedicine companies, Health systems',
+    trialDays: 21;
+    setupTime: '1-2 weeks';
+    category: 'Digital Health & Telemedicine';
+    realService: true;
+    technology: ['React, Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis'],
+    integrations: ['Epic, Cerner, Allscripts, Practice management systems, Insurance systems'],
+    useCases: ['Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management'],
+    roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.';
+    competitors: ['Teladoc, Amwell, Doxy.me, MDLive, PlushCare'],
+    marketSize: '$185.6B digital health market';
+    growthRate: '25% annual growth';
+    variant: 'digital-health-enterprise';
+    contactInfo: {
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true;
+    implementationDetails: 'Comprehensive digital health platform with telemedicine, remote monitoring, and health analytics capabilities.',
+    launchDate: '2024-07-15';
+    customers: 156;
+    rating: 4.6;
+    reviews: 78
+  },
+
+  // Clinical Trial Management & Optimization
+  {
+    id: 'clinical-trial-management-optimization';
+    name: 'Clinical Trial Management & Optimization Platform';
+    tagline: 'Streamline clinical trials with AI-powered optimization';
+    price: '$1,999',
+    period: '/month';
+    description: 'Advanced clinical trial platform that uses AI to optimize trial design, patient recruitment, data collection, and analysis for faster, more efficient clinical research.',
+    features: [
+      'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
+      'Mobile data collection appAPI for research platforms'
+=======
     marketPosition: 'Competes with Teladoc ($49/month), Amwell ($79/month), Doxy.me ($35/month). Our advantage: Comprehensive platform, AI integration, and affordable pricing.',targetAudience: 'Healthcare providers, Hospitals, Clinics, Telemedicine companies, Health systems',trialDays: 21;
     setupTime: '1-2 weeks';
     category: 'Digital Health & Telemedicine';
@@ -181,12 +452,62 @@ export interface AdvancedHealthcareBiotechService  {id: string;
     description: 'Advanced clinical trial platform that uses AI to optimize trial design, patient recruitment, data collection, and analysis for faster, more efficient clinical research.',features: [;
       'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
       'Mobile data collection appAPI for research platforms';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     ];
     popular: true;
     icon: '🔬';
     color: 'from-orange-600 to-red-600';
     textColor: 'text-orange-400';
     link: 'https://ziontechgroup.com/clinical-trial-management-optimization';
+<<<<<<< HEAD
+    marketPosition: 'Competes with Medidata ($500/month), Veeva Vault ($1,000/month), Oracle Clinical ($2,000/month). Our advantage: AI-powered optimization, comprehensive features, and competitive pricing.',
+    targetAudience: 'Pharmaceutical companies, CROs, Research institutions, Hospitals, Clinical research teams',
+    trialDays: 30;
+    setupTime: '3-6 weeks';
+    category: 'Clinical Research & Trials';
+    realService: true;
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Clinical trial software'],
+    integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'],
+    useCases: ['Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'],
+    roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.';
+    competitors: ['Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'],
+    marketSize: '$67.2B clinical trial market';
+    growthRate: '18% annual growth';
+    variant: 'clinical-trial-enterprise';
+    contactInfo: {
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
+    
+    },
+    realImplementation: true;
+    implementationDetails: 'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
+    launchDate: '2024-11-01';
+    customers: 34;
+    rating: 4.8;
+export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =
+  [
+    // AI-Powered Drug Discovery Platform
+    {
+      id: 'ai-drug-discovery-platform',
+      name: 'AI-Powered Drug Discovery Platform',
+      tagline: 'Accelerate drug discovery with AI and machine learning',
+      price: '$2,999',
+      period: '/month',
+      description:
+        'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.',
+      features: [
+        'AI-powered molecular modeling and simulation',
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     marketPosition: 'Competes with Medidata ($500/month), Veeva Vault ($1,000/month), Oracle Clinical ($2,000/month). Our advantage: AI-powered optimization, comprehensive features, and competitive pricing.',targetAudience: 'Pharmaceutical companies, CROs, Research institutions, Hospitals, Clinical research teams',trialDays: 30;
     setupTime: '3-6 weeks';
     category: 'Clinical Research & Trials';
@@ -581,25 +902,151 @@ export interface AdvancedHealthcareBiotechService  {id: string,name: string,tagl
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Target identification and validation',
         'Drug repurposing and optimization',
         'Predictive toxicity and efficacy analysis',
         'Clinical trial optimization',
+<<<<<<< HEAD
+        'Real-time collaboration tools',
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
         'Real - time collaboration tools',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Integration with research databases',
         'Advanced analytics and reporting',
         'Mobile research app',
         'API for research institutions'
       ],
       popular: true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      icon: '🧬',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      icon: '🧬',
+      color: 'from-green-600 to-emerald-600',
+      textColor: 'text-green-400',
+      link: 'https://ziontechgroup.com/ai-drug-discovery-platform',
+      marketPosition:
+        'Competes with Schrödinger ($50,000/year), Atomwise ($100,000/year), Insilico Medicine ($500,000/year). Our advantage: Affordable pricing, comprehensive features, and AI-powered insights.',
+      targetAudience:
+        'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Drug discovery labs',
+      trialDays: 30,
+      setupTime: '2-4 weeks',
+      category: 'AI Drug Discovery & Biotech',
+      realService: true,
+      technology: [
+        'Python, TensorFlow, PyTorch, React, Node.js, Molecular dynamics, Bioinformatics',
+      ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
-        'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms'
-      ]
+        'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms',
+      ],
       useCases: [
-        'Drug discovery, Target identification, Molecular modeling, Clinical trial optimization, Drug repurposing'
-      ]
-      roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.'
+        'Drug discovery, Target identification, Molecular modeling, Clinical trial optimization, Drug repurposing',
+      ],
+      roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.',
       competitors: [
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+        'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia',
+      ],
+      marketSize: '$45 && 45.8B AI drug discovery market',
+      growthRate: '35% annual growth',
+      variant: 'ai-drug-discovery-enterprise',
+      contactInfo: {
+      color: 'from - green - 600 to - emerald - 600',
+      text_color: 'text - green - 400',
+      link: 'https://ziontechgroup.com / ai - drug - discovery - platform',
+      market_position:;
+        'Competes with Schrödinger ($50, 000 / year), Atomwise ($100, 000 / year), Insilico Medicine ($500, 000 / year). Our advantage: Affordable pricing, comprehensive features, and AI - powered insights.',
+      target_audience:;
+        'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Drug discovery labs',
+      trial_days: 30,
+      setup_time: '2 - 4 weeks',
+      category: 'AI Drug Discovery & Biotech',
+      real_service: true,
+      technology: [;
+        'Python, TensorFlow, PyTorch, React, Node.js, Molecular dynamics, Bioinformatics',
+      ],
+      integrations: [;
+        'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms',
+      ],
+      use_cases: [;
+        'Drug discovery, Target identification, Molecular modeling, Clinical trial optimization, Drug repurposing',
+      ],
+      roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.',
+      competitors: [;
+        'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia',
+      ],
+      market_size: '$45.8B AI drug discovery market',
+      growth_rate: '35% annual growth',
+      variant: 'ai - drug - discovery - enterprise',
+      contact_info: {
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -613,8 +1060,90 @@ export interface AdvancedHealthcareBiotechService  {id: string,name: string,tagl
       rating: 4 && 4.9,
       reviews: 12
     },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+    // Precision Medicine & Genomics Platform;
+    {
+      id: 'precision - medicine - genomics',
+      name: 'Precision Medicine & Genomics Platform',
+      tagline: 'Personalized healthcare through genomic analysis and AI',
+      price: '$1, 499',
+      period: '/month',
+      description:;
+        'Comprehensive precision medicine platform that combines genomic analysis, AI - powered diagnostics, and personalized treatment recommendations for improved patient outcomes.',
+      features: [;
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         'Whole genome sequencing and analysis',
         'AI - powered disease risk assessment',
+=======
+
+
+        'Whole genome sequencing and analysis',
+        'AI - powered disease risk assessment',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+        'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia',
+      ],
+      marketSize: '$45.8B AI drug discovery market',
+      growthRate: '35% annual growth',
+      variant: 'ai-drug-discovery-enterprise',
+      contactInfo: {
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+        website: 'https://ziontechgroup.com',
+      },
+      realImplementation: true,
+      implementationDetails:
+        'Advanced AI drug discovery platform with molecular modeling, target identification, and predictive analytics.',
+      launchDate: '2024-08-15',
+      customers: 23,
+      rating: 4.9,
+      reviews: 12,
+    },
+
+    // Precision Medicine & Genomics Platform
+    {
+      id: 'precision-medicine-genomics',
+      name: 'Precision Medicine & Genomics Platform',
+      tagline: 'Personalized healthcare through genomic analysis and AI',
+      price: '$1,499',
+      period: '/month',
+      description:
+        'Comprehensive precision medicine platform that combines genomic analysis, AI-powered diagnostics, and personalized treatment recommendations for improved patient outcomes.',
+      features: [
+        'Whole genome sequencing and analysis',
+        'AI-powered disease risk assessment',
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        'Whole genome sequencing and analysis',
+        'AI - powered disease risk assessment',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Personalized treatment recommendations',
         'Drug response prediction',
         'Clinical decision support',
@@ -625,14 +1154,129 @@ export interface AdvancedHealthcareBiotechService  {id: string,name: string,tagl
         'API for healthcare providers'
       ],
       popular: true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      icon: '🧬',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      icon: '🧬',
+      color: 'from-blue-600 to-indigo-600',
+      textColor: 'text-blue-400',
+      link: 'https://ziontechgroup.com/precision-medicine-genomics',
+      marketPosition:
+        'Competes with 23andMe ($199/kit), AncestryDNA ($99/kit), Color Genomics ($249/test). Our advantage: Comprehensive platform, AI-powered insights, and healthcare integration.',
+      targetAudience:
+        'Healthcare providers, Hospitals, Research institutions, Genetic counselors, Pharmaceutical companies',
+      trialDays: 21,
+      setupTime: '3-5 weeks',
+      category: 'Precision Medicine & Genomics',
+      realService: true,
+      technology: [
+        'Python, TensorFlow, React, Node.js, Bioinformatics tools, Cloud computing',
+      ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
-        'Epic, Cerner, Allscripts, Lab systems, Research databases'
-      ]
+        'Epic, Cerner, Allscripts, Lab systems, Research databases',
+      ],
       useCases: [
-        'Personalized medicine, Disease risk assessment, Treatment optimization, Clinical research, Population health'
-      ]
-      roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.'
+        'Personalized medicine, Disease risk assessment, Treatment optimization, Clinical research, Population health',
+      ],
+      roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.',
       competitors: [
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+        '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics',
+      ],
+      marketSize: '$78 && 78.6B precision medicine market',
+      growthRate: '28% annual growth',
+      variant: 'precision-medicine-enterprise',
+      contactInfo: {
+      color: 'from - blue - 600 to - indigo - 600',
+      text_color: 'text - blue - 400',
+      link: 'https://ziontechgroup.com / precision - medicine - genomics',
+      market_position:;
+        'Competes with 23andMe ($199 / kit), AncestryDNA ($99 / kit), Color Genomics ($249 / test). Our advantage: Comprehensive platform, AI - powered insights, and healthcare integration.',
+      target_audience:;
+        'Healthcare providers, Hospitals, Research institutions, Genetic counselors, Pharmaceutical companies',
+      trial_days: 21,
+      setup_time: '3 - 5 weeks',
+      category: 'Precision Medicine & Genomics',
+      real_service: true,
+      technology: [;
+        'Python, TensorFlow, React, Node.js, Bioinformatics tools, Cloud computing',
+      ],
+      integrations: [;
+        'Epic, Cerner, Allscripts, Lab systems, Research databases',
+      ],
+      use_cases: [;
+        'Personalized medicine, Disease risk assessment, Treatment optimization, Clinical research, Population health',
+      ],
+      roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.',
+      competitors: [;
+        '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics',
+      ],
+      market_size: '$78.6B precision medicine market',
+      growth_rate: '28% annual growth',
+      variant: 'precision - medicine - enterprise',
+      contact_info: {
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -646,24 +1290,241 @@ export interface AdvancedHealthcareBiotechService  {id: string,name: string,tagl
       rating: 4 && 4.8,
       reviews: 23
     },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Automated abnormality detection',
         'Clinical decision support tools',
         'Integration with PACS systems',
         'Real - time analysis and reporting',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+        '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics',
+      ],
+      marketSize: '$78.6B precision medicine market',
+      growthRate: '28% annual growth',
+      variant: 'precision-medicine-enterprise',
+      contactInfo: {
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+        website: 'https://ziontechgroup.com',
+      },
+      realImplementation: true,
+      implementationDetails:
+        'Comprehensive precision medicine platform with genomic analysis, AI diagnostics, and personalized treatment recommendations.',
+      launchDate: '2024-09-20',
+      customers: 45,
+      rating: 4.8,
+      reviews: 23,
+    },
+
+    // AI-Powered Medical Imaging Analysis
+    {
+      id: 'ai-medical-imaging-analysis',
+      name: 'AI-Powered Medical Imaging Analysis Platform',
+      tagline: 'Advanced medical imaging analysis with AI and deep learning',
+      price: '$899',
+      period: '/month',
+      description:
+        'Advanced AI platform that provides automated medical image analysis, diagnosis assistance, and clinical decision support for radiologists and healthcare providers.',
+      features: [
+        'AI-powered image analysis and diagnosis',
+        'Multi-modality support (X-ray, MRI, CT, Ultrasound)',
+        'Automated abnormality detection',
+        'Clinical decision support tools',
+        'Integration with PACS systems',
+        'Real-time analysis and reporting',
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Mobile imaging app',
         'API for healthcare systems',
         'Advanced analytics and insights',
         'Compliance and audit tools'
       ],
       popular: true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      icon: '🩻',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      icon: '🩻',
+      color: 'from-purple-600 to-pink-600',
+      textColor: 'text-purple-400',
+      link: 'https://ziontechgroup.com/ai-medical-imaging-analysis',
+      marketPosition:
+        'Competes with Aidoc ($500/month), Zebra Medical ($200/month), Arterys ($300/month). Our advantage: Comprehensive imaging support, affordable pricing, and advanced AI capabilities.',
+      targetAudience:
+        'Radiologists, Hospitals, Imaging centers, Healthcare providers, Medical device companies',
+      trialDays: 14,
+      setupTime: '2-3 weeks',
+      category: 'AI Medical Imaging & Diagnostics',
+      realService: true,
+      technology: [
+        'Python, TensorFlow, PyTorch, React, Node.js, Medical imaging libraries',
+      ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
-        'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms'
-      ]
+        'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms',
+      ],
       useCases: [
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+      color: 'from - purple - 600 to - pink - 600',
+      text_color: 'text - purple - 400',
+      link: 'https://ziontechgroup.com / ai - medical - imaging - analysis',
+      market_position:;
+        'Competes with Aidoc ($500 / month), Zebra Medical ($200 / month), Arterys ($300 / month). Our advantage: Comprehensive imaging support, affordable pricing, and advanced AI capabilities.',
+      target_audience:;
+        'Radiologists, Hospitals, Imaging centers, Healthcare providers, Medical device companies',
+      trial_days: 14,
+      setup_time: '2 - 3 weeks',
+      category: 'AI Medical Imaging & Diagnostics',
+      real_service: true,
+      technology: [;
+        'Python, TensorFlow, PyTorch, React, Node.js, Medical imaging libraries',
+      ],
+      integrations: [;
+        'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms',
+      ],
+      use_cases: [;
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+        'Medical imaging analysis, Diagnosis assistance, Clinical decision support, Research collaboration, Quality assurance',
+      ],
+      roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.',
+      competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'],
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+      market_size: '$32.1B AI medical imaging market',
+      growth_rate: '42% annual growth',
+      variant: 'ai - imaging - enterprise',
+      contact_info: {
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Medical imaging analysis, Diagnosis assistance, Clinical decision support, Research collaboration, Quality assurance'
       ],
       roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.',
       competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'],
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -677,21 +1538,211 @@ export interface AdvancedHealthcareBiotechService  {id: string,name: string,tagl
       rating: 4 && 4.7,
       reviews: 34
     },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+        'High-quality video consultations',
+    // Digital Health & Telemedicine Platform;
+    {
+      id: 'digital - health - telemedicine',
+      marketSize: '$32.1B AI medical imaging market',
+      growthRate: '42% annual growth',
+      variant: 'ai-imaging-enterprise',
+      contactInfo: {
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+        website: 'https://ziontechgroup.com',
+      },
+      realImplementation: true,
+      implementationDetails:
+        'Advanced AI medical imaging platform with automated analysis, diagnosis assistance, and clinical decision support.',
+      launchDate: '2024-10-10',
+      customers: 67,
+      rating: 4.7,
+      reviews: 34,
+    },
+
+    // Digital Health & Telemedicine Platform
+    {
+      id: 'digital-health-telemedicine',
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      name: 'Digital Health & Telemedicine Platform',
+      tagline: 'Comprehensive digital health and telemedicine solutions',
+      price: '$399',
+      period: '/month',
+<<<<<<< HEAD
+      description:
+        'Integrated digital health platform that provides telemedicine, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.',
+      features: [
+        'High-quality video consultations',
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      description:;
+        'Integrated digital health platform that provides telemedicine, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.',
+      features: [;
+        'High - quality video consultations',
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Remote patient monitoring',
         'Health data analytics and insights',
         'Patient engagement and education',
         'Integration with EHR systems',
         'Mobile health apps',
+<<<<<<< HEAD
+        'AI-powered health recommendations',
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
         'AI - powered health recommendations',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         'Secure messaging and file sharing',
         'Billing and insurance integration',
         'API for healthcare applications'
       ],
       popular: true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      icon: '🏥',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      icon: '🏥',
+      color: 'from-teal-600 to-cyan-600',
+      textColor: 'text-teal-400',
+      link: 'https://ziontechgroup.com/digital-health-telemedicine',
+      marketPosition:
+        'Competes with Teladoc ($49/month), Amwell ($79/month), Doxy.me ($35/month). Our advantage: Comprehensive platform, AI integration, and affordable pricing.',
+      targetAudience:
+        'Healthcare providers, Hospitals, Clinics, Telemedicine companies, Health systems',
+      trialDays: 21,
+      setupTime: '1-2 weeks',
+      category: 'Digital Health & Telemedicine',
+      realService: true,
+      technology: [
+        'React, Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis',
+      ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       integrations: [
-        'Epic, Cerner, Allscripts, Practice management systems, Insurance systems'
-      ]
+        'Epic, Cerner, Allscripts, Practice management systems, Insurance systems',
+      ],
       useCases: [
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+        'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management',
+      ],
+      roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
+      competitors: ['Teladoc, Amwell, Doxy && Doxy.me, MDLive, PlushCare'],
+      marketSize: '$185 && 185.6B digital health market',
+      growthRate: '25% annual growth',
+      variant: 'digital-health-enterprise',
+      contactInfo: {
+      color: 'from - teal - 600 to - cyan - 600',
+      text_color: 'text - teal - 400',
+      link: 'https://ziontechgroup.com / digital - health - telemedicine',
+      market_position:;
+        'Competes with Teladoc ($49 / month), Amwell ($79 / month), Doxy.me ($35 / month). Our advantage: Comprehensive platform, AI integration, and affordable pricing.',
+      target_audience:;
+        'Healthcare providers, Hospitals, Clinics, Telemedicine companies, Health systems',
+      trial_days: 21,
+      setup_time: '1 - 2 weeks',
+      category: 'Digital Health & Telemedicine',
+      real_service: true,
+      technology: [;
+        'React, Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis',
+      ],
+      integrations: [;
+        'Epic, Cerner, Allscripts, Practice management systems, Insurance systems',
+      ],
+      use_cases: [;
+        'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management',
+      ],
+      roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
+      competitors: ['Teladoc, Amwell, Doxy.me, MDLive, PlushCare'],
+      market_size: '$185.6B digital health market',
+      growth_rate: '25% annual growth',
+      variant: 'digital - health - enterprise',
+      contact_info: {
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -705,8 +1756,84 @@ export interface AdvancedHealthcareBiotechService  {id: string,name: string,tagl
       rating: 4 && 4.6,
       reviews: 78
     },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         'Intelligent patient recruitment and matching',
         'Real - time data collection and monitoring',
+=======
+        'Intelligent patient recruitment and matching',
+        'Real - time data collection and monitoring',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+        'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management',
+      ],
+      roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
+      competitors: ['Teladoc, Amwell, Doxy.me, MDLive, PlushCare'],
+      marketSize: '$185.6B digital health market',
+      growthRate: '25% annual growth',
+      variant: 'digital-health-enterprise',
+      contactInfo: {
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+        website: 'https://ziontechgroup.com',
+      },
+      realImplementation: true,
+      implementationDetails:
+        'Comprehensive digital health platform with telemedicine, remote monitoring, and health analytics capabilities.',
+      launchDate: '2024-07-15',
+      customers: 156,
+      rating: 4.6,
+      reviews: 78,
+    },
+
+    // Clinical Trial Management & Optimization
+    {
+      id: 'clinical-trial-management-optimization',
+      name: 'Clinical Trial Management & Optimization Platform',
+      tagline: 'Streamline clinical trials with AI-powered optimization',
+      price: '$1,999',
+      period: '/month',
+      description:
+        'Advanced clinical trial platform that uses AI to optimize trial design, patient recruitment, data collection, and analysis for faster, more efficient clinical research.',
+      features: [
+        'AI-powered trial design optimization',
+        'Intelligent patient recruitment and matching',
+        'Real-time data collection and monitoring',
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        'Intelligent patient recruitment and matching',
+        'Real - time data collection and monitoring',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Predictive analytics and insights',
         'Regulatory compliance management',
         'Site and investigator management',
@@ -716,11 +1843,95 @@ export interface AdvancedHealthcareBiotechService  {id: string,name: string,tagl
         'API for research platforms'
       ],
       popular: true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      icon: '🔬',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      icon: '🔬',
+      color: 'from-orange-600 to-red-600',
+      textColor: 'text-orange-400',
+      link: 'https://ziontechgroup.com/clinical-trial-management-optimization',
+      marketPosition:
+        'Competes with Medidata ($500/month), Veeva Vault ($1,000/month), Oracle Clinical ($2,000/month). Our advantage: AI-powered optimization, comprehensive features, and competitive pricing.',
+      targetAudience:
+        'Pharmaceutical companies, CROs, Research institutions, Hospitals, Clinical research teams',
+      trialDays: 30,
+      setupTime: '3-6 weeks',
+      category: 'Clinical Research & Trials',
+      realService: true,
+      technology: [
+        'Python, TensorFlow, React, Node.js, PostgreSQL, Clinical trial software',
+      ],
+      integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'],
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       useCases: [
-        'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'
-      ]
-      roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.'
+        'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management',
+      ],
+      roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.',
       competitors: [
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+        'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel',
+      ],
+      marketSize: '$67 && 67.2B clinical trial market',
+      growthRate: '18% annual growth',
+      variant: 'clinical-trial-enterprise',
+      contactInfo: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       color: 'from - orange - 600 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / clinical - trial - management - optimization',
@@ -757,6 +1968,23 @@ export interface AdvancedHealthcareBiotechService  {id: string,name: string,tagl
       implementation_details:;
         'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
       launch_date: '2024 - 11 - 01',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+        'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
+      launchDate: '2024-11-01',
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       customers: 34,
       rating: 4 && 4.8,
       reviews: 19
@@ -764,6 +1992,32 @@ export interface AdvancedHealthcareBiotechService  {id: string,name: string,tagl
     },;
   ];    features: [
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface AdvancedHealthcareBiotechService {
   id: string, name: string,
   tagline: string, price: string,
@@ -785,15 +2039,117 @@ export interface AdvancedHealthcareBiotechService {
     website: string
   
     },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  ];    features: [
+      'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
+      'Mobile data collection appAPI for research platforms'
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+}
+export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] = [
+  // AI-Powered Drug Discovery Platform
+  {
+    id: 'ai-drug-discovery-platform', name: 'AI-Powered Drug Discovery Platform',
+    tagline: 'Accelerate drug discovery with AI and machine learning',
+    price: '$2,999',
+    period: '/month',
+    description: 'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.',
+    features: [
+      'AI-powered molecular modeling and simulationTarget identification and validationDrug repurposing and optimizationPredictive toxicity and efficacy analysisClinical trial optimizationReal-time collaboration toolsIntegration with research databasesAdvanced analytics and reporting';
+      'Mobile research appAPI for research institutions'
+        mobile: '+1 302 464 0950'
+        email: 'kleber@ziontechgroup.com'
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+        website: 'https://ziontechgroup.com'
+      }
+      realImplementation: true
+      implementationDetails:
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.'
       launchDate: '2024-11-01'
       customers: 34
       rating: 4.8
       reviews: 19
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+        'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel',
+      ],
+      marketSize: '$67.2B clinical trial market',
+      growthRate: '18% annual growth',
+      variant: 'clinical-trial-enterprise',
+      contactInfo: {
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+        website: 'https://ziontechgroup.com',
+      },
+      realImplementation: true,
+      implementationDetails:
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
   ];    features: [
       'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
       'Mobile data collection appAPI for research platforms'
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+        'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
+      launchDate: '2024-11-01',
+      customers: 34,
+      rating: 4.8,
+      reviews: 19,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    },;
+
+  ];    features: [
+      'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
+      'Mobile data collection appAPI for research platforms'
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  ];    features: [
+      'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
+      'Mobile data collection appAPI for research platforms'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+  ];    features: [
+      'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
+      'Mobile data collection appAPI for research platforms'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ];
     popular: true, icon: '🧬',
     color: 'from-green-600 to-emerald-600', textColor: 'text-green-400',
@@ -835,10 +2191,65 @@ export interface AdvancedHealthcareBiotechService {
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+    popular: true, icon: '🔬',
+    color: 'from-orange-600 to-red-600', textColor: 'text-orange-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/clinical-trial-management-optimization',
+    marketPosition: 'Competes with Medidata ($500/month), Veeva Vault ($1,000/month), Oracle Clinical ($2,000/month). Our advantage: AI-powered optimization, comprehensive features, and competitive pricing.',
+    targetAudience: 'Pharmaceutical companies, CROs, Research institutions, Hospitals, Clinical research teams',
+    trialDays: 30, setupTime: '3-6 weeks',
+    category: 'Clinical Research & Trials', realService: true,
+    technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software'];
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'];
     useCases: ['Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'];
     roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.'
     competitors: ['Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -1100,6 +2511,49 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     launchDate: '2024-11-01',;
     customers: 34,;
     rating: 4.8;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+    marketSize: '$67 && 67.2B clinical trial market', growthRate: '18% annual growth',
+    variant: 'clinical-trial-enterprise',
+    contactInfo: {
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
+    launchDate: '2024-11-01', customers: 34,
+    rating: 4 && 4.8,
+
+    },
+  ];
+origin/cursor/automate-test-improve-and-merge-code-2533
+    reviews: 19
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    reviews: 19
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     real_implementation: true,
     implementation_details: 'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
@@ -1107,12 +2561,50 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     rating: 4.8,
     reviews: 19;
 ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+];
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+  }
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+=======
+];
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+import { ServiceVariant } from '../types/service-variants',;
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
   }
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
   name: string,;
@@ -1375,13 +2867,35 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     customers: 34,;
     rating: 4.8;
     reviews: 19;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];
   }
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
 ];
+<<<<<<< HEAD
+=======
+  }
+];
+=======
+];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 ;
   }
 ];
+<<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import { ServiceVariant } from '../types/service-variants',;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
   name: string,;
@@ -1422,6 +2936,7 @@ export interface AdvancedHealthcareBiotechService {;
   rating: number,;
   reviews: number;
 }
+
 ;
 export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] = [;
   // AI-Powered Drug Discovery Platform;
@@ -1643,5 +3158,44 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     customers: 34,;
     rating: 4.8;
     reviews: 19;
+<<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+  }
+];
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

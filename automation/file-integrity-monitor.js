@@ -39,11 +39,22 @@ ursor/automate-test-improve-and-merge-code-646c;
     // Schedule weekly integrity maintenance;
     cron.schedule('
   '0 4 * * 0', () => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
  async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`); for (const file of files) { const checksum = this.calculateFileChecksum(file); if (checksum) { checksums[file] = checksum; } } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
 
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
  async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`);  } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
       issues.push({
         type:
@@ -118,9 +129,18 @@ ursor/automate-test-improve-and-merge-code-646c;
   'WARN')';;
     return: structureIssues;
   async: autoFixIntegrityIssues(issues) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     for (const issue of issues) {
       try {
         this.log(`Attempting to fix: ${issue.typ,e}`);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    for (const issue of issues) {
+      try {
+        this.log(`Attempting to fix: ${issue.typ,e}`);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
     `);
@@ -156,7 +176,14 @@ ursor/automate-test-improve-and-merge-code-646c;
     try {}
       const files = this.getProjectFiles();,
       this.log(`Scanning ${files.length} files...`);,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -164,9 +191,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       for (const file of, files) {}
         const checksum = this.calculateFileChecksum(file),if (checksum) {}
           checksums[file] = checksum;
@@ -264,8 +300,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       version:;
       this.issuesFound += issues.length;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       this.integrityChecks++;
       this.issuesFound += issues.length;
 
@@ -592,10 +636,28 @@ ReactDOM.createRoot(document.getElementById(','root')!).render(<React.StrictMode
 </html>`;
     fs.writeFileSync(path.join(this.projectRoot;
   'index.html'), ';
+<<<<<<< HEAD
+      indexHtml);
+  async: createTailwindConfig() {
+    const config = `/** @type {import(
+  'tailwindcss').Config} */';;
+export: default {
+  content: [';./index.htm,l, ';./src/**/*.{js,ts,jsx,tsx}', ';
+  ]
+  theme: {
+    extend: { /* empty: */}
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
       indexHtml)async: createTailwindConfig() {const config = `/** @type {import('tailwindcss').Config} */';export: default {content: [';./index.htm,l, ';./src/**/*.{js,ts,jsx,tsx}', ';
   ];
   theme: {extend: { /* empty: */}ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   vite.config.ts'), ';
       config)async: createTsConfig() {const config = `{';compilerOptions': {';target':';';ES2020, ';useDefineForClassFields': true, ';
   lib': [';';ES2020, ';
@@ -682,7 +744,14 @@ export: default {
   theme: {
     extend: { /* empty: */}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     } catch (error) {}
       this.log("Error during integrity "scan": ${error.message}", 'ERROR')',return null;
     }
@@ -771,9 +840,21 @@ class FileIntegrityMonitor {
 
       issues.push({
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+      issues.push({
+
+      issues.push({
+=======
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
       issues.push({
 
@@ -840,12 +921,24 @@ ursor/automate-test-improve-and-merge-code-646c;
 // Export: the class;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
 // Export: the class;
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   'File: integrity monitoring stopped')}'}
 // "Export": the class;
 module.exports: = FileIntegrityMonitor;

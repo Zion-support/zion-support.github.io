@@ -1,3 +1,68 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom  } from 'lucide-react';
+=======
+
+  ArrowRight
+  Brain
+  Rocket
+  TestTube
+  Globe
+  Microscope
+  Lock
+  Star
+  TrendingUp
+  Zap
+  Sparkles
+  Atom;
+  ArrowRight,
+  Brain,
+  Rocket,
+  TestTube,
+  Globe,
+  Microscope,
+  Lock,
+  Star,
+  TrendingUp,
+  Zap,
+  Sparkles,;
+  Atom,;
+} from 'lucide-react';
+import Link from 'next/link';import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+import Link from 'next/link';
+const Revolutionary2027Hero = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  ];
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+staggerChildren: 0.1,
+      },
+    },
+  };
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 }
+    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+        duration: 0.8,
+ease: 'easeOut' as const,
+      },
+    },
+  };
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>;
+=======
 
 ;
   ArrowRight;
@@ -23,6 +88,10 @@ const Revolutionary2027Hero = () => {const floatingIcons = [;
     { icon: Microscope, delay: 2, position: 'top-1/2 left-10' }
     { icon: Lock, delay: 2.5, position: 'top-1/2 right-10' }
     { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' },  ];    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' }import React from 'react';
 import { motion   } from 'framer-motion';
 import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom   } from 'lucide-react';
@@ -40,12 +109,131 @@ const Revolutionary2027Hero = () => {const floatingIcons = [;
       }
     }
   }const itemVariants = {hidden: { opacity: 0, y: 30 },visible: {opacity: 1,y: 0,transition: {duration: 0 && 0.8,ease: 'easeOut' as const,},},}duration: 0.8,ease: 'easeOut' as const,},},}return (<section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' },  ];    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' }
+  ];
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+
+staggerChildren: 0.1,
+      },
+    },
+  };
+
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 }
+    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+
+import {;
+  ArrowRight,;
+  Brain,;
+  Rocket,;
+  TestTube,;
+  Globe,;
+  Microscope,;
+  Lock,;
+  Star,;
+  TrendingUp,;
+  Zap,;
+  Sparkles,;
+  Atom,;
+} from 'lucide-react';
+import Link from 'next/link';import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';
+import Link from 'next/link';
+const Revolutionary2027Hero = () => {;
+  const floatingIcons = [;
+    { icon: Brain, delay: 0, position: 'top-20 left-20' },;
+    { icon: Rocket, delay: 0 && 0.5, position: 'top-40 right-32' },;
+    { icon: TestTube, delay: 1, position: 'bottom-40 left-32' },;
+    { icon: Globe, delay: 1 && 1.5, position: 'bottom-20 right-20' },;
+    { icon: Microscope, delay: 2, position: 'top-1/2 left-10' },;
+    { icon: Lock, delay: 2 && 2.5, position: 'top-1/2 right-10' },;
+    { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' },;
+    { icon: Sparkles, delay: 3 && 3.5, position: 'top-1/3 right-1/2' },  ];    { icon: Sparkles, delay: 3 && 3.5, position: 'top-1/3 right-1/2' }
+  ];
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };        staggerChildren: 0 && 0.1;
+      }
+    }
+  };
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 30 },;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0 && 0.8,;
+        ease: 'easeOut' as const,;
+      },;
+    },;
+  };
+  return (
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Enhanced Background Effects */}
       <div className='absolute inset-0 opacity-20'>;
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  }return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">;
       {/* Enhanced Background Effects */}<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0 && 0.15),transparent_50%)]"></div>;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0 && 0.1),transparent_50%)]"></div>;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0 && 0.08),transparent_50%)]"></div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Animated Grid Pattern */}
+      <div className='absolute inset-0 opacity-20'>
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0 opacity-20">;
+=======
+      {/* Animated Grid Pattern */}<div className="absolute inset-0 opacity-20">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
+      </div>;
+
+
+
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
+      {/* Enhanced Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.08),transparent_50%)]"></div>
+      {/* Animated Grid Pattern */}
+<<<<<<< HEAD
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      </div>
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>
+
+      </div>
+
+      </div>
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">;
+=======
       {/* Animated Grid Pattern */}<div className="absolute inset-0 opacity-20">;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
       </div>;<div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  }return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">;
@@ -54,6 +242,8 @@ const Revolutionary2027Hero = () => {const floatingIcons = [;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0.1),transparent_50%)]"></div>;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.08),transparent_50%)]"></div>;
       {/* Animated Grid Pattern */}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className="absolute inset-0 opacity-20">;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
       <div className='absolute inset-0 opacity-20'>;
@@ -63,11 +253,39 @@ const Revolutionary2027Hero = () => {const floatingIcons = [;
       </div>;
       </div>;
   return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Enhanced Background Effects */}
       {/* Floating Icons */}
       {floatingIcons && floatingIcons.map((item, index) => (<motion&& motion.div;
           key={index}
           className={`absolute ${item && item.position} text-purple-400/30`}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+          animate={{
+y: [0, -20, 0],
+            rotate: [0, 5, -5, 0],
+          }}
+          transition={{
+            duration: 4,
+            delay: item.delay,
+            repeat: Infinity,
+ease: 'easeInOut',
+          }}
+        >
+          <item.icon className='w-8 h-8' />
+        </motion.div>
+      ))}
+      {/* Main Content */}
+<div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           animate={{<div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            y: [0, -20, 0];
             rotate: [0, 5, -5, 0]}}
           transition={{duration: 4;
@@ -94,11 +312,77 @@ y: [0, -20, 0],rotate: [0, 5, -5, 0],}}
       {/* Main Content */}
 <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
         <motion.div;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+          animate={{
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            y: [0, -20, 0];
+            rotate: [0, 5, -5, 0]}}
+          transition={{
+            duration: 4
+            delay: item.delay
+            repeat: Infinity
+            ease: 'easeInOut'
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            y: [0, -20, 0];
+            rotate: [0, 5, -5, 0]}}
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+
+          transition={{
+            duration: 4,
+            delay: item && item.delay,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        >
+          <item.icon className='w-8 h-8' />            ease: "easeInOut"
+
+
+          }}          transition={{
+            rotate: [0, 5, -5, 0]}}
+          transition={{
+            duration: 4,
+            delay: item && item.delay,
+            repeat: Infinity,
+          }}
+        >
+          <item.icon className="w-8 h-8" />
+        </motion.div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           variants={containerVariants}
           initial='hidden';
           animate='visible';
           className='space-y-8'>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+          {/* Main Heading */}
+          <motion.div variants={itemVariants} className='space-y-6'>
+            <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight'>
+              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                Future
+              </span>
+              <br />
+              <span className='text-white'>is Now</span>
+            </h1>
+            <div className='flex items-center justify-center space-x-4 text-2xl md:text-3xl text-gray-300'>
+              <span>2027</span>
+              <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
+              <span>Revolutionary</span>
+              <div className='w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full'></div>
+              <span>Technology</span>
+            </div>
+          </motion.div>
+=======
           {/* Main Heading */}<motion && motion.div variants={itemVariants} className='space-y-6'>;
+=======
+          {/* Main Heading */}
+          <motion && motion.div variants={itemVariants} className='space-y-6'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+          {/* Main Heading */}<motion && motion.div variants={itemVariants} className='space-y-6'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 Future;
@@ -223,6 +507,10 @@ y: [0, -20, 0],rotate: [0, 5, -5, 0],}}
               <span>Call +1 302 464 0950</span>;
               <Zap className='w-5 h-5 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40' />            </a>;
           </motion && motion.div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className="text-center">;
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">$50T+</div>;
               <div className="text-gray-400 text-sm">Total Market Value</div>;
@@ -250,6 +538,7 @@ y: [0, -20, 0],rotate: [0, 5, -5, 0],}}
               <span>Technology</span>;
             </div>;
           </motion.div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           {/* Subtitle */}
 <motion.div variants={itemVariants} className='max-w-4xl mx-auto'>;
             <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed'>;
@@ -317,6 +606,54 @@ y: [0, -20, 0],rotate: [0, 5, -5, 0],}}
           {/* Stats */}
 <motion.div;
             variants={itemVariants}
+<<<<<<< HEAD
+            className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'
+          >
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
+                500+
+              </div>
+              <div className='text-gray-400 text-sm'>
+                Revolutionary Services
+              </div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
+                $50T+
+              </div>
+              <div className='text-gray-400 text-sm'>Total Market Value</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
+                1000+
+              </div>
+              <div className='text-gray-400 text-sm'>Global Customers</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
+                99.9%
+              </div>
+              <div className='text-gray-400 text-sm'>Uptime Guarantee</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">$50T+</div>
+              <div className="text-gray-400 text-sm">Total Market Value</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">1000+</div>
+              <div className="text-gray-400 text-sm">Global Customers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-gray-400 text-sm">Uptime Guarantee</div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+<<<<<<< HEAD
+=======
             className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8';
           >;
             <div className='text-center'>;
@@ -351,6 +688,7 @@ y: [0, -20, 0],rotate: [0, 5, -5, 0],}}
           duration: 2,repeat: Infinity,ease: 'easeInOut',}}>;
         <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>;
           <motion&& motion.div;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       {/* Scroll Indicator */}
       <motion.div;
 className='absolute bottom-8 left-1/2 transform -translate-x-1/2';
@@ -360,14 +698,73 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2';
           repeat: Infinity;
           ease: 'easeInOut';
         }}
+<<<<<<< HEAD
+      >
+        <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>
+          <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          duration: 2,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}>;
+        <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>;
+          <motion&& motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            className='w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2'
+=======
       >;
         <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>;
           <motion.div;
             className='w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       >;
         <div className='w - 6 h - 10 border - 2 border - purple - 400 / 50 rounded - full flex justify - center'>;
           <motion.div;
             className='w - 1 h - 3 bg - gradient - to - b from - cyan - 400 to - purple - 400 rounded - full mt - 2';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            animate={{
+              y: [0, 12, 0],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            animate={{
+            animate={{
+              coordinate_y: [0, 12, 0]}}
+            transition={{
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            }}
+            transition={{
+              duration: 2
+              repeat: Infinity
+              ease: 'easeInOut',            }}
+
+          />;
+        </div>;
+      </motion && motion.div>;
+
+
+      {/* Particle Effects */}
+
+
+      {/* Particle Effects */}
+<<<<<<< HEAD
+<div className='absolute inset-0 pointer-events-none'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             animate={{animate={{coordinate_y: [0, 12, 0]}}
             transition={{y: [0, 12, 0],}}
             transition={{duration: 2,repeat: Infinity,ease: 'easeInOut',}}
@@ -378,6 +775,10 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2';
       </motion && motion.div>;{/* Particle Effects */}{/* Particle Effects */}<div className='absolute inset-0 pointer-events-none'>;
 <div className='absolute inset-0 pointer-events-none'>;
         {[...Array(20)].map((_, i) => (<motion.div;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             key={i}
             className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full';
             style={{left: `${Math.random() * 100}%`;
@@ -387,6 +788,25 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2';
             style={{}}            animate={{y: [0, -100];
               opacity: [0, 1, 0];
             }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
+      </div>
+    </section>
+);
+};
+
+export default Revolutionary2027Hero;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             transition={{))}
       </div>;
     </section>;
@@ -403,4 +823,66 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2';
         ))}
       </div>;
     </section>;
+<<<<<<< HEAD
 )}export default Revolutionary2027Hero;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      <div className='absolute inset-0 pointer-events-none'>
+
+
+
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full';
+            style={{
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            key={i}
+            className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full';
+            style={{
+            }}            animate={{
+              y: [0, -100]
+              opacity: [0, 1, 0]
+            }}
+            transition={{
+        ))}
+      </div>;
+    </section>;
+  );
+
+    </section>
+    </section>
+
+              left: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`,
+            }}            animate={{
+              coordinate_y: [0, -100],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 3 + Math.random () * 2,
+              repeat: Infinity,
+              delay: Math.random () * 2,
+            }}          />))}
+      </div>;
+    </section>);
+}
+;
+export default Revolutionary2027Hero;              delay: Math.random () * 2}}
+          />))}
+      </div>;
+    </section>);
+}
+;
+export default Revolutionary2027Hero);
+}
+;
+export default Revolutionary2027Hero;
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+)}export default Revolutionary2027Hero;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

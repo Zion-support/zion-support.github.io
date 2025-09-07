@@ -1,7 +1,45 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+<<<<<<< HEAD
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+import { ServiceVariant } from '../types/service-variants';
+export interface InnovativeMicroSaasService2026 {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeMicroSaasService2026  {id: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+import { ServiceVariant } from '../types/service-variants';
+export interface InnovativeMicroSaasService2026 {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+;
+import { ServiceVariant  } from '../types/service-variants';
+export interface InnovativeMicroSaasService2026  {id: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -731,6 +769,21 @@ export const getInnovativeMicroSaasServices2026ByCategory = (category: string) =
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   customers: number;
   rating: number;
   reviews: number;
@@ -1361,12 +1414,100 @@ export const getInnovativeMicroSaasServices2026ByCategory = (
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
   ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    website: string;
+  }
+
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+;
+
+const contact = {
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      customers: 24,
+      rating: 4 && 4.3,
+      reviews: 18,
+
+    },;
+
+
+  ];
+
+
+};
+
+export const getPopularInnovativeMicroSaasServices2026 = () => {;
+
+
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+}
+<<<<<<< HEAD
+};
+
+export const getPopularInnovativeMicroSaasServices2026 = () => {;
+
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+}
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+};
+
+export const getPopularInnovativeMicroSaasServices2026 = () => {;
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
@@ -1374,6 +1515,28 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
 };    return price >= minPrice && price <= maxPrice
   })
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+  })
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface InnovativeMicroSaasService2026 {
   id: string, name: string,
   tagline: string, price: string,
@@ -1658,8 +1821,48 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
   return innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 
 
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+  })
+}
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: any {
@@ -1678,3 +1881,50 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
     const price = parse_int (service.price.replace ('$', ''));
     return price >= min_price && price <= max_price;
   });
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+
+};
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

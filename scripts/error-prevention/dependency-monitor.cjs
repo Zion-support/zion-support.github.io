@@ -18,7 +18,19 @@ class DependencyMonitor {}
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
@@ -41,7 +53,19 @@ class DependencyMonitor {}
         errorOutput += data.toString()}
 });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Dependency check passed ✓')) {}
@@ -61,7 +85,19 @@ class DependencyMonitor {}
       line.includes('→') && !line.includes('Package');
    ;);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if ( {})
       console.log('Outdated packages "found": ')) {}
      {}
@@ -89,7 +125,19 @@ class DependencyMonitor {}
         errorOutput += data.toString()}
 });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Package integrity check passed ✓')) {}
@@ -130,4 +178,16 @@ if ( {})
   
   monitor.start().catch(console.error)};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = DependencyMonitor;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = DependencyMonitor;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = DependencyMonitor;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

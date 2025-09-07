@@ -50,4 +50,16 @@ if (require.main === module) {}
   const checker = new EnhancedErrorChecker();
   checker.run().catch(console.error)};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = EnhancedErrorChecker;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = EnhancedErrorChecker;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = EnhancedErrorChecker;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

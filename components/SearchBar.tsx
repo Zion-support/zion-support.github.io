@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 ursor/automate-test-improve-and-merge-code-646c;
@@ -7,12 +24,35 @@ import React, { useState } from 'react';
 import { Search, X  } from 'lucide-react';
 interface SearchResult  {title: string;
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 interface SearchResult {
   title: string;
   description: string;
   url: string;
   type: 'service' | 'page' | 'category';
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+const SearchBar: React.FC = () => {
+interface SearchResult {;
+  title: string, description: string,;
+  url: string, type: 'service' | 'page' | 'category',;
+}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const SearchBar: React.FC = () => {interface SearchResult  {title: string, description: string,url: string, type: 'service' | 'page' | 'category'}const SearchBar: React.FC = () => {const [query, setQuery] = useState('')const [results, setResults] = useState<SearchResult[]>([])const [isOpen, setIsOpen] = useState(false)const [isLoading, setIsLoading] = useState(false)const searchRef = useRef<HTMLDivElement>(null)const inputRef  = useRef<HTMLInputElement>(null)// Mock search data - in a real app, this would come from an API;
   const searchData: SearchResult[] = [;
     {title: 'Micro SaaS Products',description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',url: '/micro-saas',type: 'category';
@@ -21,6 +61,7 @@ const SearchBar: React.FC = () => {interface SearchResult  {title: string, descr
     },{title: 'Cloud Cost Guard',description: 'FinOps Assistant for anomaly detection and cost optimization',url: '/services',type: 'service';
     },{title: 'Contact Us',description: 'Get in touch with our experts for consultation and quotes',url: '/contact',type: 'page';
     },{title: 'Pricing',description: 'View our transparent pricing for all services',url: '/pricing',type: 'page';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');
@@ -50,6 +91,15 @@ const SearchBar: React.FC = () => {
       url: '/it-services',
       type: 'category'
     },
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
@@ -178,6 +228,53 @@ interface SearchBarProps  {onSearch?: (query: string) => void;
 };
 
 export default SearchBar;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+interface SearchResult {
+  title: string, description: string
+  url: string, type: 'service' | 'page' | 'category'
+
+import React, { useState } from 'react';
+import { Search, X } from 'lucide-react';
+<<<<<<< HEAD
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import Link from 'next/link';
+origin/cursor/analyze-improve-and-deploy-application-0a01
+=======
+
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import Link from 'next/link';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+interface SearchBarProps {
+  onSearch?: (query: string) => void;
+  placeholder?: string;
+  className?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -187,6 +284,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 }) => {
   const [query, setQuery] = useState('');
 
+<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onSearch && query.trim()) {
@@ -209,6 +307,22 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   };
 
   const handleClear = () => {
@@ -231,6 +345,50 @@ const SearchBar: React.FC<SearchBarProps> = ({
           {query && (<button;
               type="button";
               onClick={handleClear}
+<<<<<<< HEAD
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+
+  const filteredResults = useMemo(() => {
+    if (query.length <= 2) return [];
+    
+    return searchData.filter(item =>
+      item.title.toLowerCase().includes(query.toLowerCase()) ||
+      item.description.toLowerCase().includes(query.toLowerCase()) ||
+      item.category.toLowerCase().includes(query.toLowerCase())
+    );
+  }, [query]);
+
+  useEffect(() => {
+    if (filteredResults.length > 0) {
+      setResults(filteredResults);
+      setIsOpen(true);
+      setSelectedIndex(-1);
+    } else {
+      setResults([]);
+      setIsOpen(false);
+      setSelectedIndex(-1);
+    }
+  }, [filteredResults]);
+
+  const handleResultClick = useCallback(() => {
+    setQuery('');
+    setResults([]);
+    setIsOpen(false);
+  }
+origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  return (
+    <div className="relative w-full max-w-md">
+      <div className="relative">
+        <input
+          type="text"
+          placeholder="Search services..."
+=======
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600";
   const [results, setResults] = useState<SearchResult[]>([])const [isOpen, setIsOpen] = useState(false)const [selectedIndex, setSelectedIndex]  = useState(-1)const filteredResults = useMemo(() => {if (query.length <= 2) return [];return searchData.filter(item =>;
       item.title.toLowerCase().includes(query.toLowerCase()) ||;
@@ -252,6 +410,10 @@ const SearchBar: React.FC<SearchBarProps> = ({
         <input;
           type="text";
           placeholder="Search services...";
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -291,6 +453,14 @@ const SearchBar: React.FC<SearchBarProps> = ({
               }`}
               role="option";
               aria-selected={index === selectedIndex}
+<<<<<<< HEAD
+<<<<<<< HEAD
+              tabIndex={-1}
+<<<<<<< HEAD
+origin/cursor/analyze-improve-and-deploy-application-0a01
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               tabIndex={-1}>;
               <X className="w-4 h-4" />;
             </button>;
@@ -300,6 +470,12 @@ const SearchBar: React.FC<SearchBarProps> = ({
     </div>;
   )}export default SearchBar;ursor/automate-test-improve-and-merge-code-646c;
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >
               <X className="w-4 h-4" />
             </button>
@@ -311,3 +487,24 @@ const SearchBar: React.FC<SearchBarProps> = ({
 };
 
 export default SearchBar;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

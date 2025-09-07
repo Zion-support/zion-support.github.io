@@ -37,7 +37,14 @@ try {// Ensure clean working directory;
                         exec_sync (`git checkout --theirs "${file}"`);
 
 #!/usr/bin/env node;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 
 
@@ -50,6 +57,12 @@ try {;
     console.error('❌ Not in a git repository'),;
     process.exit(1);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+            // Resolve conflicts by accepting our version;
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 try {;
     // Ensure clean working directory;
@@ -78,14 +91,33 @@ try {;
 
             // Resolve conflicts by accepting our version;
             // Resolve conflicts by accepting our version;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
             for (const file of files) {;
                 if (file.trim()) {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    console.log(`Resolving conflicts in: ${file}`);
+                    try {execSync(`git checkout --ours "${file}"`);
+                    } catch (e) {execSync(`git checkout --theirs "${file}"`);
+                    console.log(`Resolving conflicts in: ${file}`);
+                    try {execSync(`git checkout --ours "${file}"`);
+                    } catch (e) {execSync(`git checkout --theirs "${file}"`);
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
                     console.log(`Resolving conflicts in: ${file}`);
                     try {execSync(`git checkout --ours "${file}"`);
                     } catch (e) {execSync(`git checkout --theirs "${file}"`);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
                     console.log(`Resolving conflicts in: ${file}`),;
                     try {;
@@ -137,6 +169,11 @@ try {;
             // Commit the merge;
             execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')}
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     // Get all branches;
     console.log('🌿 Getting all branches...');
     const branches = execSync('git branch -r', { encoding: 'utf8' });
@@ -156,6 +193,10 @@ try {;
             execSync(`git merge ${branchName} --no-ff -m "feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`);
             console.log(`✅ Successfully merged ${branchName}`);
         } catch (error) {console.log(`⚠️  Error merging ${branch}: ${error.message}`);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             // Continue with other branches;
         }
     }
@@ -163,8 +204,16 @@ try {;
     // Push all changes;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
     // Get all branches;
     console.log('🌿 Getting all branches...'),const branches = execSync('git branch -r', { encoding: 'utf8' }),const branchList = branches.split('\n').map(branch => branch.trim()).filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')).filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),.filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'))console.log(`Found ${branchList.length} branches to merge: `),branchList.forEach(branch => console.log(`  - ${branch}`)),// Merge each branch;
@@ -191,6 +240,11 @@ try {;
 
     process.exit(1);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log ('📤 Pushing all changes to main...'),
     exec_sync ('git push origin main'),
     console.log ('🎉 All merge operations completed successfully!'),
@@ -201,5 +255,9 @@ try {;
     console.error ('❌ Error during merge process:', error.message),
     process.exit (1);
 }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     process.exit(1);
 }

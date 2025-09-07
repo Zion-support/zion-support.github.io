@@ -28,4 +28,16 @@ const path = require("path")
     const report = {"timestamp": new Date().toISOString(),"generatedContent": Object.fromEntries(this.generatedContent),"totalPages"}
     const reportPath = path.join(this.projectRoot, "content-generation-report.json")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     console.log(`� Report saved "to"`)
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    console.log(`� Report saved "to"`)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.log(`� Report saved "to"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

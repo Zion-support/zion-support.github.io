@@ -310,7 +310,15 @@ const accessibilityFeatures = [;
                   <p className="text-gray-600 mb-6">
                     If you encounter any accessibility barriers or have suggestions for improvement, we want to hear from you. Your feedback helps us create better experiences for everyone.
                   </p>
+<<<<<<< HEAD
+<<<<<<< HEAD
                 </div>
+=======
+=                </div>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 >:pages-disabled/accessibility.tsx.disabled
               </motion.div>
             </div>

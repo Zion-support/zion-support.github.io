@@ -10,6 +10,10 @@ export default function TermsPage() {return (<div className="min-h-screen bg-whi
 export default function TermsPage() {;
   return (;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <div className="min-h-screen bg-white">;
 export default /**
  * TermsPage - Function description
@@ -19,6 +23,7 @@ function TermsPage() {
     <div className="min - h-screen bg - white">;
 export default function TermsPage() {return (;
     <div className="min-h-screen bg-white">;
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - gray - 600 to - gray - 800 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -26,11 +31,31 @@ export default function TermsPage() {return (;
             Terms of Service;
           </h1>;
           <p className="text - xl md:text - 2xl text - gray - 100 max - w-3xl mx - auto">;
+=======
+    <div className="min-h-screen bg-white">;    <div className="min-h-screen bg-white">;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+      {/* Hero Section */}
+      <section className="bg - gradient - to - r from - gray - 600 to - gray - 800 text - white py - 20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+          <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+            Terms of Service;
+          </h1>;
+<<<<<<< HEAD
+          <p className="text - xl md:text - 2xl text - gray - 100 max - w-3xl mx-auto">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          <p className="text - xl md:text - 2xl text - gray - 100 max - w-3xl mx - auto">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             Please read these terms carefully before using our services.;
           </p>;
         </div>;
       </section>;
       {/* Terms Content */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20">;
         <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
           <div className="prose prose - lg max - w-none">;
@@ -55,6 +80,13 @@ export default function TermsPage() {return (;
                 Zion Tech Group provides AI - powered technology solutions, including but not limited to:;
               </p>;
               <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py-20">;
         <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px-8">;
           <div className="prose prose - lg max-w-none">;
@@ -78,7 +110,16 @@ export default function TermsPage() {return (;
               <p className="text - gray - 600 mb - 4">;
                 Zion Tech Group provides AI - powered technology solutions, including but not limited to:;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <ul className="list - disc pl - 6 text - gray - 600 mb-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li > Artificial intelligence and automation services</li>;
                 <li > Cybersecurity solutions</li>;
                 <li > IT infrastructure services</li>;
@@ -86,6 +127,10 @@ export default function TermsPage() {return (;
                 <li > Quantum computing solutions</li>;
                 <li > Consulting and advisory services</li>;
               </ul>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <p className="text - gray - 600">;
                 We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.;
               </p>;
@@ -96,6 +141,13 @@ export default function TermsPage() {return (;
                 Some of our services may require you to create an account. When creating an account, you agree to:;
               </p>;
               <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <p className="text - gray-600">;
                 We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.;
               </p>;
@@ -105,13 +157,26 @@ export default function TermsPage() {return (;
               <p className="text - gray - 600 mb - 4">;
                 Some of our services may require you to create an account. When creating an account, you agree to:;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <ul className="list - disc pl - 6 text - gray - 600 mb-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li > Provide accurate, current, and complete information</li>;
                 <li > Maintain and update your account information</li>;
                 <li > Protect your account credentials</li>;
                 <li > Accept responsibility for all activities under your account</li>;
                 <li > Notify us immediately of any unauthorized use</li>;
               </ul>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <p className="text - gray - 600">;
                 We reserve the right to terminate accounts that violate these terms or for any other reason at our sole discretion.;
               </p>;
@@ -122,6 +187,13 @@ export default function TermsPage() {return (;
                 You agree to use our services only for lawful purposes and in accordance with these Terms. You agree not to:;
               </p>;
               <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <p className="text - gray-600">;
                 We reserve the right to terminate accounts that violate these terms or for any other reason at our sole discretion.;
               </p>;
@@ -131,7 +203,16 @@ export default function TermsPage() {return (;
               <p className="text - gray - 600 mb - 4">;
                 You agree to use our services only for lawful purposes and in accordance with these Terms. You agree not to:;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <ul className="list - disc pl - 6 text - gray - 600 mb-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li > Use our services for any illegal or unauthorized purpose</li>;
                 <li > Violate any applicable laws or regulations</li>;
                 <li > Infringe on the rights of others</li>;
@@ -141,6 +222,10 @@ export default function TermsPage() {return (;
                 <li > Reverse engineer or attempt to extract source code</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="mb - 12">;
               <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">5. Intellectual Property Rights</h2>;
               <p className="text - gray - 600 mb - 4">;
@@ -150,6 +235,13 @@ export default function TermsPage() {return (;
                 You may not:;
               </p>;
               <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="mb-12">;
               <h2 className="text - 2xl font - bold text - gray - 900 mb-4">5. Intellectual Property Rights</h2>;
               <p className="text - gray - 600 mb-4">;
@@ -158,12 +250,25 @@ export default function TermsPage() {return (;
               <p className="text - gray - 600 mb - 4">;
                 You may not:;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <ul className="list - disc pl - 6 text - gray - 600 mb-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li > Copy, reproduce, or distribute our content without permission</li>;
                 <li > Modify, adapt, or create derivative works</li>;
                 <li > Remove or alter copyright notices</li>;
                 <li > Use our trademarks or service marks without authorization</li>;
               </ul>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <p className="text - gray - 600">;
                 Any feedback, suggestions, or ideas you provide may be used by us without compensation or obligation.;
               </p>;
@@ -183,6 +288,13 @@ export default function TermsPage() {return (;
                 <strong > Disclaimer of Warranties:</strong> Our services are provided "as is" and "as available" without warranties of any kind, either express or implied. We disclaim all warranties, including but not limited to:;
               </p>;
               <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <p className="text - gray-600">;
                 Any feedback, suggestions, or ideas you provide may be used by us without compensation or obligation.;
               </p>;
@@ -201,12 +313,23 @@ export default function TermsPage() {return (;
               <p className="text - gray - 600 mb - 4">;
                 <strong > Disclaimer of Warranties:</strong> Our services are provided "as is" and "as available" without warranties of any kind, either express or implied. We disclaim all warranties, including but not limited to:;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <ul className="list - disc pl - 6 text - gray - 600 mb-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li > Warranties of merchantability and fitness for a particular purpose</li>;
                 <li > Warranties that our services will be uninterrupted or error - free</li>;
                 <li > Warranties regarding the accuracy or reliability of information</li>;
                 <li > Warranties that defects will be corrected</li>;
               </ul>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <p className="text - gray - 600 mb - 4">;
                 <strong > Limitation of Liability:</strong> In no event shall Zion Tech Group be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or use, arising out of or relating to your use of our services.;
               </p>;
@@ -226,6 +349,36 @@ export default function TermsPage() {return (;
                 We may terminate or suspend your access to our services at any time, with or without cause, with or without notice, effective immediately. Upon termination:;
               </p>;
               <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+<<<<<<< HEAD
+=======
+              <p className="text - gray - 600 mb-4">;
+=======
+              <p className="text - gray - 600 mb - 4">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+                <strong > Limitation of Liability:</strong> In no event shall Zion Tech Group be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or use, arising out of or relating to your use of our services.;
+              </p>;
+              <p className="text - gray - 600">;
+                Our total liability shall not exceed the amount paid by you for the specific service giving rise to the claim.;
+              </p>;
+            </div>;
+            <div className="mb - 12">;
+              <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">8. Indemnification</h2>;
+              <p className="text - gray - 600">;
+                You agree to indemnify, defend, and hold harmless Zion Tech Group and its officers, directors, employees, and agents from and against any claims, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or relating to your use of our services or violation of these Terms.;
+              </p>;
+            </div>;
+            <div className="mb - 12">;
+              <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">9. Termination</h2>;
+              <p className="text - gray - 600 mb - 4">;
+                We may terminate or suspend your access to our services at any time, with or without cause, with or without notice, effective immediately. Upon termination:;
+              </p>;
+<<<<<<< HEAD
+              <ul className="list - disc pl - 6 text - gray - 600 mb-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <p className="text - gray - 600 mb-4">;
                 <strong > Limitation of Liability:</strong> In no event shall Zion Tech Group be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or use, arising out of or relating to your use of our services.;
               </p>;
@@ -245,11 +398,19 @@ export default function TermsPage() {return (;
                 We may terminate or suspend your access to our services at any time, with or without cause, with or without notice, effective immediately. Upon termination:;
               </p>;
               <ul className="list - disc pl - 6 text - gray - 600 mb - 4">;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li > Your right to use our services will cease immediately</li>;
                 <li > We may delete your account and data</li>;
                 <li > Provisions of these Terms that by their nature should survive termination shall remain in effect</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="mb - 12">;
               <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">10. Governing Law and Dispute Resolution</h2>;
               <p className="text - gray - 600 mb - 4">;
@@ -287,6 +448,13 @@ export default function TermsPage() {return (;
                   <strong > Phone:</strong> <a href="tel:+13024640950" className="text - blue - 600 hover:text - blue - 700">+1 (302) 464 - 0950</a>;
                 </p>;
                 <p className="text - gray - 600 mb - 2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="mb-12">;
               <h2 className="text - 2xl font - bold text - gray - 900 mb-4">10. Governing Law and Dispute Resolution</h2>;
               <p className="text - gray - 600 mb-4">;
@@ -323,7 +491,16 @@ export default function TermsPage() {return (;
                 <p className="text - gray - 600 mb - 2">;
                   <strong > Phone:</strong> <a href="tel:+13024640950" className="text - blue - 600 hover:text - blue - 700">+1 (302) 464 - 0950</a>;
                 </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <p className="text - gray - 600 mb-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                 <p className="text - gray - 600 mb - 2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                <p className="text - gray - 600 mb - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   <strong > Address:</strong> Zion Tech Group, 123 Innovation Drive, Tech Valley, CA 94000, United States;
                 </p>;
               </div>;
@@ -332,6 +509,10 @@ export default function TermsPage() {return (;
         </div>;
       </section>;
       {/* CTA Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
           <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
@@ -345,6 +526,13 @@ export default function TermsPage() {return (;
               Contact Us;
             </a>;
             <a href="/privacy" className="border - 2 border - gray - 300 text - gray - 700 px - 8 py - 3 rounded - lg text - lg font - semibold hover:border - gray - 400 transition - colors">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - gray-50">;
         <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
           <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-6">;
@@ -357,7 +545,16 @@ export default function TermsPage() {return (;
             <a href="/contact" className="bg - blue - 600 text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - blue - 700 transition - colors">;
               Contact Us;
             </a>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <a href="/privacy" className="border - 2 border - gray - 300 text - gray - 700 px - 8 py - 3 rounded - lg text - lg font - semibold hover:border - gray - 400 transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
             <a href="/privacy" className="border - 2 border - gray - 300 text - gray - 700 px - 8 py - 3 rounded - lg text - lg font - semibold hover:border - gray - 400 transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <a href="/privacy" className="border - 2 border - gray - 300 text - gray - 700 px - 8 py - 3 rounded - lg text - lg font - semibold hover:border - gray - 400 transition - colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               View Privacy Policy;
             </a>;
           </div>;

@@ -135,4 +135,16 @@ if (require.main === module) {}
     const healthChecker = new HealthChecker();
     healthChecker.run()};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = HealthChecker;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = HealthChecker;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = HealthChecker;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

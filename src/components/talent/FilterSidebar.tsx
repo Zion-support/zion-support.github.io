@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Filter  } from 'lucide-react';
 import { SearchFilter } from "./filters/SearchFilter",import { SortFilter } from "./filters/SortFilter",import { SkillsFilter } from "./filters/SkillsFilter",import { AvailabilityFilter } from "./filters/AvailabilityFilter",import { RegionFilter } from "./filters/RegionFilter",import { ExperienceFilter } from "./filters/ExperienceFilter",import React from 'react';
 import { Button  } from '@/components/ui/button';
@@ -52,6 +53,57 @@ import { PriceFilter } from "./filters/PriceFilter",import { FilterSidebarProps 
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";
   isMobileFilterOpen;
 }: FilterSidebarProps) {searchTerm;
+=======
+import { Filter } from 'lucide-react'
+import { SearchFilter } from "./filters/SearchFilter",
+import { SortFilter } from "./filters/SortFilter",
+import { SkillsFilter } from "./filters/SkillsFilter",
+import { AvailabilityFilter } from "./filters/AvailabilityFilter",
+import { RegionFilter } from "./filters/RegionFilter",
+import { ExperienceFilter } from "./filters/ExperienceFilter",
+
+
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Filter } from 'lucide-react';
+import { SearchFilter } from './filters/SearchFilter';
+import { SortFilter } from './filters/SortFilter';
+import { SkillsFilter } from './filters/SkillsFilter';
+import { AvailabilityFilter } from './filters/AvailabilityFilter';
+import { RegionFilter } from './filters/RegionFilter';
+import { ExperienceFilter } from './filters/ExperienceFilter';
+import { PriceFilter } from './filters/PriceFilter';
+import { FilterSidebarProps } from '@/types/filters';
+export function FilterSidebar(): any ({;
+  searchTerm,;
+  setSearchTerm,;
+  selectedSkills,;
+  toggleSkill,;
+  selectedAvailability,;
+  toggleAvailability,;
+  selectedRegions,;
+  toggleRegion,;
+  priceRange,;
+  setPriceRange,;
+  experienceRange,;
+  setExperienceRange,;
+  expandedSections,;
+  toggleSection,;
+  sortOption,;
+  setSortOption,;
+  clearFilters,;
+  isMobileFilterOpen,}: FilterSidebarProps) {;
+  return (
+    <>;
+      {/* Filter header */}
+
+      <div className='flex items-center justify-between mb-6'>;
+        <h3 className='text-lg font-semibold text-white flex items-center'>;
+          <Filter className='h-4 w-4 mr-2 text-zion-purple' />  searchTerm;
+
+
+  searchTerm;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   setSearchTerm;
   selectedSkills;
   toggleSkill;
@@ -68,6 +120,7 @@ import { PriceFilter } from "./filters/PriceFilter",import { FilterSidebarProps 
   sortOption;
   setSortOption;
   clearFilters;
+<<<<<<< HEAD
   isMobileFilterOpen}: FilterSidebarProps) {return (<>;
       {/* Filter header */}
       <div className='flex items-center justify-between mb-6'>;
@@ -87,6 +140,118 @@ import { PriceFilter } from "./filters/PriceFilter",import { FilterSidebarProps 
   expandedSections;
   toggleSection;
   sortOption;
+=======
+
+
+  return (
+    <>
+      {/* Filter header */}
+
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-lg font-semibold text-white flex items-center">
+          <Filter className="h-4 w-4 mr-2 text-zion-purple" />
+
+          Filters
+        </h3>
+        <Button
+          variant="ghost"
+          size="sm"
+
+import { PriceFilter } from "./filters/PriceFilter",
+import { FilterSidebarProps } from "@/types/filters",
+
+export function FilterSidebar({
+  searchTerm,
+  setSearchTerm,
+  selectedSkills,
+  toggleSkill,
+  selectedAvailability,
+  toggleAvailability,
+  selectedRegions,
+  toggleRegion,
+  priceRange,
+  setPriceRange,
+  experienceRange,
+  setExperienceRange,
+  expandedSections,
+  toggleSection,
+  sortOption,
+  setSortOption,
+  clearFilters,
+
+import { PriceFilter } from "./filters/PriceFilter",
+import { FilterSidebarProps } from "@/types/filters",
+export function FilterSidebar({
+  searchTerm,
+  setSearchTerm,
+  selectedSkills,
+  toggleSkill,
+  selectedAvailability,
+  toggleAvailability,
+  selectedRegions,
+  toggleRegion,
+  priceRange,
+  setPriceRange,
+  experienceRange,
+  setExperienceRange,
+  expandedSections,
+  toggleSection,
+  sortOption,
+  setSortOption,
+  clearFilters,
+
+  isMobileFilterOpen
+}: FilterSidebarProps) {
+  return (
+    <>
+      {/* Filter header */}
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-lg font-semibold text-white flex items-center">
+          <Filter className="h-4 w-4 mr-2 text-zion-purple" />
+
+
+          Filters
+        </h3>
+        <Button 
+          variant="ghost" 
+          size="sm" 
+          onClick={clearFilters}
+          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+        >
+          Clear All
+        </Button>
+      </div>
+
+
+      
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Filter } from 'lucide-react';
+import { SearchFilter } from "./filters/SearchFilter",;
+import { SortFilter } from "./filters/SortFilter",;
+import { SkillsFilter } from "./filters/SkillsFilter",;
+import { AvailabilityFilter } from "./filters/AvailabilityFilter",;
+import { RegionFilter } from "./filters/RegionFilter",;
+import { ExperienceFilter } from "./filters/ExperienceFilter",;
+import { PriceFilter } from "./filters/PriceFilter",;
+import { FilterSidebarProps } from "@/types/filters",;
+export function FilterSidebar({;
+  searchTerm,;
+  setSearchTerm,;
+  selectedSkills,;
+  toggleSkill,;
+  selectedAvailability,;
+  toggleAvailability,;
+  selectedRegions,;
+  toggleRegion,;
+  priceRange,;
+  setPriceRange,;
+  experienceRange,;
+  setExperienceRange,;
+  expandedSections,;
+  toggleSection,;
+  sortOption,;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   setSortOption;
   clearFilters;
   isMobileFilterOpen;
@@ -121,8 +286,16 @@ import React from "react",import { Button } from "@/components/ui/button",export
         >;
           Clear All;
         </Button>;
+<<<<<<< HEAD
       </div>;{/* Search */}
 {/* Search */}<SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
+=======
+      </div>;
+
+
+      {/* Search */}
+      <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
           className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
@@ -265,7 +438,12 @@ function FilterSidebar() {return (<>;
         expanded={expanded_sections.price}
         toggle_section={() => toggle_section ('price')}
         isMobileFilterOpen={isMobileFilterOpen}      />;
+<<<<<<< HEAD
       {isMobileFilterOpen && (<Button;
+=======
+      {isMobileFilterOpen && (
+        <Button;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           on_click={() =>;
             window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
           className='w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4'        >;
@@ -287,6 +465,7 @@ function FilterSidebar() {return (<>;
       />;{isMobileFilterOpen && (<Button;onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
         <Button;
+<<<<<<< HEAD
           onClick={() =>;
             window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4';
@@ -298,6 +477,21 @@ function FilterSidebar() {return (<>;
           onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
         <Button;
           onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
+=======
+
+
+
+          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
+          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
+        >
+          Apply Filters
+        </Button>
+      )}
+
+          className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
+        <Button
+          onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter')),}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;{/* Sorting */}
@@ -329,13 +523,34 @@ function FilterSidebar() {return (<>;
         </Button>;
       )}
     </>;
+<<<<<<< HEAD
   )})}
+=======
+  );
+
+}
+
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <Button;
           on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
           className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
         >;
           Apply Filters;
         </Button>)}
+<<<<<<< HEAD
     </>)}</>;
   )}</>;
   )}
+=======
+    </>);
+}
+
+
+    </>;
+  );
+
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

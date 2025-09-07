@@ -1,4 +1,63 @@
 import Link from 'next/link';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Star, Users, TrendingUp, DollarSign, Clock;
+  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe;
+  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud;
+  Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin
+ } from 'lucide-react';
+import { cuttingEdge2027Innovations  } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
+origin/cursor/automate-test-improve-and-merge-code-2533
+import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
+import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
+
+  // Sort options
+  const sortOptions = null;
+                  setSelectedPriceRange('all')
+      service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory =
+      selectedCategory === 'all' |service.category.includes(selectedCategory);
+    const matchesPrice =
+      selectedPriceRange === 'all' |
+      (selectedPriceRange === 'low' &&
+        parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |
+      (selectedPriceRange === 'medium' &&
+        parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 &&
+        parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) |
+      (selectedPriceRange === 'high' &&
+        parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
+
+    return matchesSearch && matchesCategory && matchesPrice;
+  });
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+  // Sort services
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'name':
+        return a.name.localeCompare(b.name);
+      case 'price':
+return (
+          parseInt(a.price.replace(/[^0-9]/g, '')) -
+          parseInt(b.price.replace(/[^0-9]/g, ''))
+origin/cursor/automate-test-improve-and-merge-code-2533
+        );
+      case 'roi':;
+        return (
+          parseInt(a && a.roi.replace(/[^0-9]/g, '')) -;
+          parseInt(b && b.roi.replace(/[^0-9]/g, ''));
+        );
+      default:
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion, AnimatePresence  } from 'framer-motion';
 import {Search;
   Star;
@@ -59,6 +118,68 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                         (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000)return matchesSearch && matchesCategory && matchesPrice;
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),const [sortBy, setSortBy] = useState<string>('name'),// Sort options;
   const sortOptions = null;
+=======
+import { motion, AnimatePresence  } from 'framer-motion';
+import {Search;
+  Star;
+  Users;
+  TrendingUp;
+  DollarSign;
+  Clock;
+  CheckCircle;
+  ArrowRight;
+  Rocket;
+  Brain;
+  Atom;
+  Globe;
+  Zap;
+  Sparkles;
+  Shield;
+  Target;
+  Cpu;
+  Database;
+  Cloud;
+  Lock;
+  ShieldCheck;
+  Eye;
+  Heart;
+  Share2;
+  Download;
+  Phone;
+  Mail;
+  MapPin;} from 'lucide-react';import {Search, Star, Users, TrendingUp, DollarSign, Clock;
+  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe;
+  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud;
+  Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ShieldCheck,Eye,Heart,Share2,Download,Phone,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Head from 'next / head';
+import { cuttingEdge2027Innovations  } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
+import { Search, Star, Users, TrendingUp, DollarSign, Clock;
+  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe;
+  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud;
+  Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin;
+  } from 'lucide-react';
+import { cuttingEdge2027Innovations   } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027   } from '../data/2027-practical-micro-saas';
+import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
+import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
+  const [searchTerm, setSearchTerm]  = useState('')const [selectedCategory, setSelectedCategory] = useState<string>('all')const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')const [sortBy, setSortBy] = useState<string>('name')export default function ServicesShowcase2027() {const [searchTerm, setSearchTerm]  = useState('')const [selectedCategory, setSelectedCategory] = useState<string>('all')const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')const [sortBy, setSortBy] = useState<string>('name')// Sort options;
+  const sortOptions = [;
+    { value: 'name', label: 'Sort by Name' }
+    { value: 'price', label: 'Sort by Price' }
+    { value: 'roi', label: 'Sort by ROI' }
+  ];
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase())const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory)const matchesPrice = selectedPriceRange === 'all' |;
+                        (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |;
+                        (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) |;
+                        (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000)return matchesSearch && matchesCategory && matchesPrice;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),const [sortBy, setSortBy] = useState<string>('name'),// Sort options;
+  const sortOptions = null;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   setSelectedPriceRange('all')service.category.toLowerCase().includes(searchTerm.toLowerCase())const matchesCategory =;
       selectedCategory === 'all' |service.category.includes(selectedCategory)const matchesPrice =;
       selectedPriceRange === 'all' |;
@@ -84,6 +205,10 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
         <title>2027 Services Showcase - Zion Tech Group | Cutting-Edge Innovations &;
           Micro SAAS;
         </title>;default:;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         return 0;
     }
   })const categories = [;
@@ -146,6 +271,37 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
           parseInt(s.price.replace(/[^0-9]/g, '')) < 10000;
       ).length;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    {
+      id: 'high'
+      name: '$10K+/month'
+      count: allServices.filter(
+        s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000
+      ).length,
+    },
+  ];
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+website: 'https://ziontechgroup.com',
+  };
+
+  return (
+    <UltraFuturisticMatrixBackground2027>
+      <Head>
+<title>
+          2027 Services Showcase - Zion Tech Group | Cutting-Edge Innovations &
+          Micro SAAS
+        </title>
+origin/cursor/automate-test-improve-and-merge-code-2533
+        <meta
+          name='description'
+          content="Explore Zion Tech Group's revolutionary 2027 services showcase featuring cutting-edge AI consciousness evolution, quantum computing, autonomous AI civilizations, and practical micro SAAS solutions for businesses."
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     {id: 'high';
       name: '$10K+/month';
       count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000;
@@ -158,6 +314,13 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
         <meta;
           name='description';
           content="Explore Zion Tech Group's revolutionary 2027 services showcase featuring cutting-edge AI consciousness evolution, quantum computing, autonomous AI civilizations, and practical micro SAAS solutions for businesses.";
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <meta;
           name='keywords';
@@ -173,6 +336,23 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
           property='og:url';
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <meta
+          name='twitter:title'
+          content='2027 Services Showcase - Zion Tech Group'
+        <meta
+          name='twitter:description'
+          content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.'
+        />
+      </Head>
+      <UltraFuturisticNavigation2027 />
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <meta;
           name='twitter:title';
           content='2027 Services Showcase - Zion Tech Group';
@@ -222,6 +402,10 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
         />;
       </Head>;
       <UltraFuturisticNavigation2027 />;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       {/* Hero Section */}
 <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>;
         <div className='max-w-7xl mx-auto text-center'>;
@@ -268,6 +452,32 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
               </div>;
             </div>;
             {/* CTA Buttons */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link
+                href='/contact'
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2'
+              >
+                <Rocket className='w-5 h-5' />
+                <span>Get Started</span>
+              </Link>
+              <Link
+                href='/pricing'
+                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2'
+              >
+                <DollarSign className='w-5 h-5' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+                <span>View Pricing</span>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <Link;
                 href='/contact';
@@ -287,6 +497,13 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
           </motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2">;
                 <DollarSign className="w-5 h-5" />;
                 <span>View Pricing</span>;
@@ -294,6 +511,20 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
             </div>;
           </motion && motion.div>;
         </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      </section>;
+
+      {/* Search and Filters */}
+<section className='px-4 sm:px-6 lg:px-8 mb-16'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20'>
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </section>;{/* Search and Filters */}<input;
                   type="text";
                   placeholder="Search services...";
@@ -318,6 +549,10 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                       {range && range.name} ({range && range.count})</option>;<section className='px-4 sm:px-6 lg:px-8 mb-16'>;
         <div className='max-w-7xl mx-auto'>;
           <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20'>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             {/* Search Bar */}
             <div className='mb-6'>;
               <div className='relative'>;
@@ -356,15 +591,50 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                 <select;
                   value={selectedPriceRange}
                   onChange={e => setSelectedPriceRange(e.target.value)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400'
+                >
+                  {priceRanges.map(range => (
+                    <option key={range.id} value={range.id}>
+                      {range.name} ({range.count})
+                    </option>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400';
                 >;
                   {priceRanges.map(range => (<option key={range.id} value={range.id}>;
                       {range.name} ({range.count})</option>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   ))}
               {/* Sort By */}
               <div>;
                 <label className='block text-cyan-400 font-medium mb-2'>;
                   Sort By;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                </label>;
+
+              {/* Sort By */}
+              <div>
+<label className='block text-cyan-400 font-medium mb-2'>
+                  Sort By
+                </label>
+                <select
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </label>;{/* Sort By */}
               <div>;
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>;
@@ -395,6 +665,10 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                   Sort By;
                 </label>;
                 <select;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   value={sortBy}
                   onChange={e => setSortBy(e.target.value)}
                   className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400';
@@ -409,10 +683,27 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
         </div>;
       </section>;
       {/* Services Grid */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<section className='px-4 sm:px-6 lg:px-8 mb-20'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+            <AnimatePresence>
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
         <div className='max-w-7xl mx-auto'>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             <AnimatePresence>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Services Grid */}
       <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
         <div className='max - w-7xl mx - auto'>;
@@ -424,6 +715,39 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                   animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  exit={{ opacity: 0, y: -30, scale: 0.9 }}
+className='group'
+                >
+                  <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20'>
+                    {/* Service Header */}
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='text-4xl'>🚀</div>
+                    </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                    {/* Service Info */}
+                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition-colors duration-300">;
+                      {service.name}
+                    </h3>
+                    <p className='text-cyan-300 text-sm mb-4 line-clamp-3'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                      {service.description}
+                    </p>
+
+                    {/* Price */}
+<div className='mb-4'>
+                      <div className='text-2xl font-bold text-white'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                        {service.price}
+
+                      </div>
+                    </div>
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   transition={{ duration: 0.5, delay: index * 0.1 }}exit={{ opacity: 0, y: -30, scale: 0.9 }}
 className='group';
                 >;
@@ -440,6 +764,27 @@ className='group';
                       <div className='text-2xl font-bold text-white'>                        {service.price}</h3>;
                     <p className='text-cyan-300 text-sm mb-4 line-clamp-3'>;
                       {service.description}
+<<<<<<< HEAD
+=======
+                  transition={{ duration: 0.5, delay: index * 0.1 }}exit={{ opacity: 0, y: -30, scale: 0.9 }}
+className='group';
+                >;
+                  <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20'>;
+                    {/* Service Header */}
+                    <div className='flex items-start justify-between mb-4'>;
+                      <div className='text-4xl'>🚀</div>;
+                    </div>;
+                    {/* Service Info */}
+                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition-colors duration-300">;
+                      {service.name}</h3>;
+                    <p className="text - cyan - 300 text - sm mb - 4 line-clamp-3">;
+                      {service.description}
+                      <div className='text-2xl font-bold text-white'>                        {service.price}</h3>;
+                    <p className='text-cyan-300 text-sm mb-4 line-clamp-3'>;
+                      {service.description}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </p>;
                     {/* Price */}<div className='mb-4'>;
                       <div className='text-2xl font-bold text-white'>;
@@ -463,6 +808,13 @@ className='group';
                       </div>;
                     </div>;
                         {service.features.length > 3 && (<div className="text-cyan-400 text-sm">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {/* Features */}
 <div className='mb-6'>;
                       <h4 className='text-cyan-400 font-semibold mb-3'>;
@@ -479,6 +831,32 @@ className='group';
                             </span>;
                           </div>;
                         ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        {service.features.length > 3 && (
+                          <div className='text-cyan-400 text-sm'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                            +{service.features.length - 3} more features
+                          </div>
+                        )}
+
+                    {/* ROI */}
+<div className='mb-6 text-center'>
+                      <div className='text-green-400 font-semibold text-lg'>
+                        ROI: {service.roi}
+                      </div>
+                      <div className='text-gray-400 text-xs'>
+                        Return on Investment
+                      </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                    </div>
+
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         {service.features.length > 3 && (<div className='text-cyan-400 text-sm'>;
                             +{service.features.length - 3} more features;
                           </div>;
@@ -495,6 +873,13 @@ className='group';
                         Return on Investment;
                       </div>;
                     </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {/* ROI */}
                     <div className='mb-6 text-center'>;
                       <div className='text-green-400 font-semibold text-lg'>;
@@ -506,6 +891,42 @@ className='group';
                     </div>;
                     {/* Actions */}
                     <div className="flex space-x-3">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      <Link
+                        href={service.link}
+                        className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm'
+origin/cursor/automate-test-improve-and-merge-code-2533
+                      >
+                        Learn More
+                      </Link>
+                      <Link
+href='/contact'
+                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'
+origin/cursor/automate-test-improve-and-merge-code-2533
+                      >
+                        Contact
+                    </div>
+
+                        className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm">;
+                        Contact;
+                      </Link>;
+                    </div>;
+
+                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact"
+                    {/* Category Badge */}
+<div className='mt-4'>
+                      <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>
+                        {service.category}
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       <Link;
                         href={service && service.link}
                         className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm">;
@@ -540,14 +961,89 @@ href='/contact';
                 </motion && motion.div>;<div className='mt-4'>;
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>;
                         {service.category}
+=======
+                      <Link;
+                        href={service && service.link}
+                        className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm">;
+                        Learn More;
+                      </Link>;
+                      <Link;
+                        href='/contact';
+                        href={service.link}
+                        className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm';
+                      >;
+                        Learn More;
+                      </Link>;
+                      <Link;
+                        href="/contact";
+                        className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm";
+href='/contact';
+                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm';
+                      >;
+                        Contact;
+                    </div>;
+                        className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm">;
+                        Contact;
+                      </Link>;
+                    </div>;className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact";
+                    {/* Category Badge */}<div className='mt-4'>;
+                      <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service && service.category}                    <div className="mt-4">;
+                      <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30">;
+                        {service && service.category}
+                      </span>;
+                    </div>;
+                  </div>;
+                </motion && motion.div>;<div className='mt-4'>;
+                      <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>;
+                        {service.category}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                       </span>;
                     </div>;
                   </div>;
                 </motion.div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (<motion&& motion.div;
               initial={{ opacity: 0 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              animate={{ opacity: 1 }}
+className='text-center py-20'
+            >
+              <div className='text-6xl mb-4'>🔍</div>
+              <h3 className='text-2xl font-bold text-white mb-2'>
+                No services found
+              </h3>
+              <p className='text-cyan-300 mb-6'>
+                Try adjusting your search criteria or browse all services.
+              </p>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+setSelectedPriceRange('all');
+                }}
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
+origin/cursor/automate-test-improve-and-merge-code-2533
+                }}
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Clear Filters
+              </button>
+            </motion.div>
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               animate={{ opacity: 1 }}onClick={() => {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all')}}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')setSelectedPriceRange('all')className='text-center py-20';
             >;
@@ -567,6 +1063,13 @@ href='/contact';
                 Clear Filters;
               </button>;
             </motion.div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           )}
       {/* Contact Section */}
 <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
@@ -595,6 +1098,52 @@ href='/contact';
             </div>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
           )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <Link
+                href='/contact'
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'
+              >
+                Get Started Today
+              </Link>
+origin/cursor/automate-test-improve-and-merge-code-2533
+              <Link
+href='/pricing'
+                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
+              >
+                View Pricing Plans
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Footer */}
+<footer className='px-4 sm:px-6 lg:px-8 py-12 border-t border-cyan-500/30'>
+        <div className='max-w-7xl mx-auto text-center'>
+          <div className='mb-8'>
+            <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 shadow-2xl shadow-cyan-500/50'>
+              Z
+            </div>
+            <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2'>
+              Zion Tech Group
+            </h3>
+            <p className='text-cyan-300'>2027 Innovation Hub</p>
+          </div>
+          <div className='text-cyan-300 text-sm'>
+            <p>&copy; 2027 Zion Tech Group. All rights reserved.</p>
+            <p className='mt-2'>
+              <Link
+                href='/privacy'
+                className='hover:text-cyan-400 transition-colors duration-300'
+              >
+                Privacy Policy
+              </Link>
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Link;
                 href='/contact';
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>;
@@ -906,6 +1455,10 @@ href='/pricing';
               >;
                 Privacy Policy;
               </Link>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               {' • '}
               <Link;
                 href='/terms';
@@ -914,6 +1467,24 @@ href='/pricing';
                 Terms of Service;
               </Link>;
               {' • '}
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <Link
+                href='/contact'
+                className='hover:text-cyan-400 transition-colors duration-300'
+              >
+                Contact Us
+              </Link>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </UltraFuturisticMatrixBackground2027>
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <Link;
                 href='/contact';
                 className='hover:text-cyan-400 transition-colors duration-300';
@@ -925,4 +1496,13 @@ href='/pricing';
         </div>;
       </footer>;
     </UltraFuturisticMatrixBackground2027>;
+<<<<<<< HEAD
+<<<<<<< HEAD
 )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+)
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

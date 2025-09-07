@@ -49,4 +49,16 @@ const path = require("path")
       return { "success": true, "results"}
       this.log(`� Build automation "failed": ${error.message}`, "error"`)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       return { "success": false, "error"}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      return { "success": false, "error"}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      return { "success": false, "error"}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

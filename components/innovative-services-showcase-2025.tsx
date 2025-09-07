@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { Search, Filter, Star, CheckCircle, ArrowRight;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  Brain, Atom, Shield, Rocket, Target, Microscope;
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { motion  } from 'framer-motion';
   Search;
   Filter;
@@ -30,11 +40,257 @@ import { motion  } from 'framer-motion';
 import Layout from '../components/layout/Layout';import { Search, Filter, Star, CheckCircle, ArrowRight;
   Search,Filter,Star,CheckCircle,ArrowRight,Brain,Atom,Shield,Rocket,Target,Microscope,Phone,Mail,MapPin,TrendingUp,Users,Award,Zap,Globe,Cpu,Database,Lock,Cloud,Stethoscope,GraduationCap,Leaf,Truck,} from 'lucide-react';
 import Layout from '../components/layout/Layout';import { Search, Filter, Star, CheckCircle, ArrowRight,import { Search, Filter, Star, CheckCircle, ArrowRight;Brain, Atom, Shield, Rocket, Target, Microscope;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+import { motion } from 'framer-motion';
+
+  Search
+  Filter
+  Star
+  CheckCircle
+  ArrowRight
+  Brain
+  Atom
+  Shield
+  Rocket
+  Target
+  Microscope
+  Phone
+  Mail
+  MapPin
+  TrendingUp
+  Users
+  Award
+  Zap
+  Globe
+  Cpu
+  Database
+  Lock
+  Cloud
+  Stethoscope
+  GraduationCap
+  Leaf
+  Truck;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  Search, Filter, Star, CheckCircle, ArrowRight
+
+  Search,
+  Filter,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  Microscope,
+  Phone,
+  Mail,
+  MapPin,
+  TrendingUp,
+  Users,
+  Award,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Lock,
+  Cloud,
+  Stethoscope,
+  GraduationCap,
+  Leaf,;
+  Truck,;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  Search, Filter, Star, CheckCircle, ArrowRight, ;
+  Brain, Atom, Shield, Rocket, Target, Microscope;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Phone, Mail, MapPin, TrendingUp, Users, Award;
   Zap, Globe, Cpu, Database, Lock, Cloud;
   Stethoscope, GraduationCap, Leaf, Truck;
   } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Import all the new 2025 innovative service data
+// Import existing services for comprehensive coverage
+import { realMicroSaasServices2025  } from '../data/2025-real-micro-saas-services';
+import { innovativeAIServices2025  } from '../data/2025-innovative-ai-services';
+import { innovativeITServices2025  } from '../data/2025-innovative-it-services';
+import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
+<<<<<<< HEAD
+const contactInfo = null;
+];
+export default function InnovativeServicesShowcase2025() {
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    id: 'micro - saas',
+    title: '🎯 Micro SAAS',
+    description: 'Innovative solutions for every business need',
+    icon: Target,
+    color: 'from - teal - 500 to - green - 500',
+    services: [...realMicroSaasServices2025],
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
+
+<<<<<<< HEAD
+const filteredServices = serviceCategories.flatMap(category =>
+    category.services.filter(
+      service =>
+        (selectedCategory === 'all' |category.id === selectedCategory) &&
+        (searchTerm === '' |
+          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+          service.description
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()) ||
+          service.category.toLowerCase().includes(searchTerm.toLowerCase()))
+    )
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  const filteredServices = serviceCategories.flatMap(category => 
+
+    category.services.filter(service =>
+      (selectedCategory === 'all' |category.id === selectedCategory) &&
+      (searchTerm === '' |
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+        service.category.toLowerCase().includes(searchTerm.toLowerCase()))
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  );
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'name':
+        return a.name.localeCompare(b.name);
+      case 'price':
+        return a.pricing.starter.price - b.pricing.starter.price;
+      case 'category':
+        return a.category.localeCompare(b.category);
+<<<<<<< HEAD
+default:
+        return 0;
+    }
+  });
+  return (
+    <Layout>
+      <Head>
+        <title>Innovative Services Showcase 2025 | Zion Tech Group</title>
+<meta
+          name='description'
+          content='Discover our comprehensive collection of innovative micro SAAS, AI, healthcare, fintech, and emerging technology services for 2025 and beyond.'
+        />
+        <meta
+          name='keywords'
+          content='innovative services, micro SAAS, AI services, healthcare technology, fintech, Zion Tech Group'
+        />
+        <meta
+          property='og:title'
+          content='Innovative Services Showcase 2025 - Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Comprehensive collection of innovative technology services.'
+        />
+        <meta
+          property='og:url'
+          content='https://ziontechgroup.com/innovative-services-showcase-2025'
+        />
+      </Head>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    gradient: 'from - teal - 500 / 20 to - green - 500 / 20',
+    badge: 'Popular',
+  }, ];    badge: 'Popular';
+  }
+];
+;
+export default /**
+ * InnovativeServicesShowcase2025 - Function description
+ */
+function InnovativeServicesShowcase2025() {
+  const [search_term, setSearchTerm] = useState ('');
+  const [selected_category, setSelectedCategory] = useState ('all');
+  const [sort_by, setSortBy] = useState ('name');
+;
+  const filtered_services = service_categories.flat_map (category =>;
+    category.services.filter (
+      service =>;
+        (selected_category === 'all' || category.id === selected_category) &&;
+        (search_term === '' ||;
+          service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+          service.description;
+            .toLowerCase ();
+            .includes (search_term.toLowerCase ()) ||;
+          service.category.toLowerCase ().includes (search_term.toLowerCase ()))    )  const filtered_services = service_categories.flat_map (category =>;
+    category.services.filter (service =>;
+      (selected_category === 'all' || category.id === selected_category) &&;
+      (search_term === '' ||;
+        service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+        service.category.toLowerCase ().includes (search_term.toLowerCase ())));
+;
+  const sorted_services = [...filtered_services].sort ((a, b) => {
+    switch (sort_by) {
+      case 'name':;
+        return a.name.locale_compare (b.name);
+      case 'price':;
+        return a.pricing.starter.price - b.pricing.starter.price;
+      case 'category':;
+        return a.category.locale_compare (b.category);
+      default:;
+        return 0;    }      default: return 0;
+    }
+  });
+;
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      {/* Hero Section */}
+      <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
+        <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'></div>;
+
+        {/* Background Elements */}
+<<<<<<< HEAD
+        <div className='absolute inset-0 overflow-hidden pointer-events-none'>
+          <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
+          <div className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
+          <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>
+        </div>
+
+        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+className='mb-8'
+          >
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6'>
+              <Star className='w-4 h-4 mr-2' />
+              Innovation Showcase 2025
+            </div>
+            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
+              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                Innovative Services
+              </span>
+              <br />
+              <span className='text-white'>Showcase</span>
+            </h1>
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
+              Discover our comprehensive collection of revolutionary micro SAAS
+              AI, healthcare, fintech, and emerging technology services that are
+              transforming industries worldwide.
+            </p>
+          </motion.div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Import all the new 2025 innovative service data;
 // Import existing services for comprehensive coverage;
 import { realMicroSaasServices2025   } from '../data/2025-real-micro-saas-services';
@@ -192,9 +448,88 @@ className='mb-8';
               transforming industries worldwide.;
             </p>;
           </motion.div>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           {/* Stats */}
           <motion&& motion.div;
             initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        <div className='absolute inset-0 overflow-hidden pointer-events-none'>;
+          <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>;
+          <div className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
+          <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>;
+        </div>;
+
+        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            className='mb-8'      </Head>;
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">;
+          <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>;
+          <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
+          <div className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>;
+        </div>;
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            className='mb-8'>;
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6'>;
+              <Star className='w-4 h-4 mr-2' />;
+              Innovation Showcase 2025;
+            </div>;
+            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>;
+              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+                Innovative Services;
+              </span>;
+              <br />;
+              <span className='text-white'>Showcase</span>;
+            </h1>;
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
+              Discover our comprehensive collection of revolutionary micro SAAS,;
+              AI, healthcare, fintech, and emerging technology services that are;
+              transforming industries worldwide.            </p>          >;
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">;
+              <Star className="w-4 h-4 mr-2" />;
+              Innovation Showcase 2025;
+            </div>;
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">;
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+                Innovative Services;
+              </span>;
+              <br />;
+              <span className="text-white">Showcase</span>;
+            </h1>;
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
+              Discover our comprehensive collection of revolutionary micro SAAS, AI, healthcare, fintech, and emerging technology services that are transforming industries worldwide.;
+            </p>;
+          </motion && motion.div>;
+          {/* Stats */}
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          >
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
+                {serviceCategories.reduce(
+                  (total, category) => total + category.services.length
+                  0
+=======
+=======
+          {/* Stats */}
+          <motion&& motion.div;
+            initial={{ opacity: 0, y: 30 }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.2 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
           >;
@@ -202,6 +537,10 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
               <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>;
                 {serviceCategories.reduce((total, category) => total + category.services.length;
                   0;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 )}
                 +;
               </div>;
@@ -210,6 +549,76 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
             <div className='text-center'>;
               <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2'>;
                 {serviceCategories.length}
+<<<<<<< HEAD
+<<<<<<< HEAD
+              </div>
+              <div className='text-gray-400'>Categories</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2'>
+                24/7
+              </div>
+              <div className='text-gray-400'>Support</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>
+                99.9%
+              </div>
+<<<<<<< HEAD
+              <div className='text-gray-400'>Uptime</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <div className='text-gray-400'>Uptime</div>            </div>          >
+=======
+              </div>;
+              <div className='text-gray-400'>Categories</div>;
+            </div>;
+            <div className='text-center'>;
+              <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2'>;
+                24/7;
+              </div>;
+              <div className='text-gray-400'>Support</div>;
+            </div>;
+            <div className='text-center'>;
+              <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>;
+                99.9%;
+              </div>;
+              <div className='text-gray-400'>Uptime</div>            </div>          >;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+          >
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+                {serviceCategories.reduce((total, category) => total + category.services.length, 0)}+
+              </div>
+              <div className="text-gray-400">Services</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
+                {serviceCategories.length}
+<<<<<<< HEAD
+              </div>
+              <div className="text-gray-400">Categories</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">
+                24/7
+              </div>
+              <div className="text-gray-400">Support</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
+                99.9%
+              </div>
+              <div className="text-gray-400">Uptime</div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            </div>
+          </motion.div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
               </div>;
               <div className='text-gray-400'>Categories</div>;
             </div>;
@@ -236,6 +645,8 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
             <div className="text-center">;
               <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">;
                 {serviceCategories.length}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </div>;
               <div className="text-gray-400">Categories</div>;
             </div>;
@@ -255,13 +666,23 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
           </motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 <input;
                   type="text";
                   placeholder="Search services...";
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       {/* Search and Filter Section */}
 <section className='py-16 bg-gradient-to-b from-black to-slate-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -275,6 +696,91 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
                   placeholder='Search services...';
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
+<<<<<<< HEAD
+                  className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                />
+              </div>
+                  className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50'                />
+
+                />
+
+              </div>
+
+              {/* Category Filter */}
+              <div>;
+                <select
+                  value={selectedCategory}
+<<<<<<< HEAD
+onChange={e => setSelectedCategory(e.target.value)}
+                  className='w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50'
+                >
+                  <option value='all'>All Categories</option>
+                  {serviceCategories.map(category => (
+                    <option key={category.id} value={category.id}>
+                      {category.title}
+                    </option>
+                  ))}
+                </select>
+              </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                </select>;
+              </div>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              {/* Sort By */}
+              <div>;
+                <select
+                  value={sortBy}
+<<<<<<< HEAD
+onChange={e => setSortBy(e.target.value)}
+                  className='w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50'
+                >
+                  <option value='name'>Sort by Name</option>
+                  <option value='price'>Sort by Price</option>
+                  <option value='category'>Sort by Category</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Services Grid */}
+<section className='py-20 bg-slate-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {sortedServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                >;
+                  <option value="name">Sort by Name</option>;
+                  <option value="price">Sort by Price</option>;
+                  <option value="category">Sort by Category</option>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+<<<<<<< HEAD
+className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              >
+=======
                   className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50';
                 />;
               </div>;
@@ -328,6 +834,10 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105';
               >;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {/* Service Header */}
                 <div className='mb-6'>;
                   <div className='flex items-center justify-between mb-4'>;
@@ -346,8 +856,23 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
                   </div>;
                   <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
                     {service.name}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  </h3>
+                  <p className='text-gray-300 text-sm leading-relaxed'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
                   </h3>;
                   <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}              >;
+=======
+                  </h3>
+                  <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}              >
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                  </h3>;
+                  <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}              >;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>;
                 {/* Service Header */}
                 {/* Service Header */}
@@ -412,13 +937,37 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
                   <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
                     {service.name}
                   </h3>;
+<<<<<<< HEAD
+<<<<<<< HEAD
                   <p className="text - gray - 300 text - sm leading - relaxed">;<p className='text-gray-300 text-sm leading-relaxed'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <p className="text - gray - 300 text - sm leading - relaxed">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                  <p className="text - gray - 300 text - sm leading - relaxed">;<p className='text-gray-300 text-sm leading-relaxed'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     {service.description}
                   <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}{service.description}</p>;
                 </div>;
                 {/* Features */}</p>;
                 </div>;
                 {/* Features */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<div className='mb-6'>
+                  <h4 className='text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide'>
+                    Key Features
+                  </h4>
+                  <ul className='space-y-2'>
+                    {service.features
+                      .slice(0, 3)
+                      .map((feature, featureIndex) => (
+                        <li
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <div className="mb-6">;
                   <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">Key Features</h4>;
                   <ul className="space-y-2">;
@@ -434,6 +983,10 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
                   <ul className='space-y-2'>;
                     {service.features;
                       .slice(0, 3).map((feature, featureIndex) => (<li;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           key={featureIndex}
                           className='flex items-center text-sm text-gray-300';
                         >;
@@ -441,14 +994,79 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
                           {feature}
                         </li>;
                       ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    {service.features.length > 3 && (
+                      <li className='text-sm text-cyan-400'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  </p>
+                </div>
+                {/* Features */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">Key Features</h4>
+                  <ul className="space-y-2">
+                    {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+
+                        {feature}
+                      </li>;
+                    ))}
+
+                    {service.features.length > 3 && (
+                      <li className="text-sm text-cyan-400">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                        +{service.features.length - 3} more features
+                      </li>
+
+=======
                     {service.features.length > 3 && (<li className='text-sm text-cyan-400'>;
                         +{service.features.length - 3} more features;
                       </li>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    {service.features.length > 3 && (<li className='text-sm text-cyan-400'>;
+                        +{service.features.length - 3} more features;
+                      </li>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     )}
                   </ul>;
                 </div>;
                 {/* Market Info */}<div className='mb-6 grid grid-cols-2 gap-4 text-sm'>;
                 {/* Market Info */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
+
+                {/* Market Info */}
+                <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                  <div>
+                    <div className='text-gray-400'>Market Size</div>
+                    <div className='text-white font-semibold'>
+                      {service.marketSize}
+                    </div>
+                  </div>
+                  <div>
+                    <div className='text-gray-400'>Target Audience</div>
+                    <div className='text-white font-semibold truncate'>
+                      {service.targetAudience}
+<<<<<<< HEAD
+                    </div>
+                  </div>
+=======
+                    </div>                  </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                </div>
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>;
 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>;
                   <div>;
@@ -483,11 +1101,16 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
                     <div className="text-white font-semibold truncate">{service && service.targetAudience}</div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   >;
                     <Mail className="w-5 h-5" />;
                     </div>;
                   </div>;
                 </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 {/* CTA */}
 <div className='flex gap-3'>;
                   <a;
@@ -498,16 +1121,70 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
                   </a>;
                   <a;
                     href={`mailto:${service.contact.email}`}
+<<<<<<< HEAD
+className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
+                  >
+                    <Mail className='w-5 h-5' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+                  </a>
+                </div>
+              </motion.div>
+=======
 className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300';
                   >;
                     <Mail className='w-5 h-5' />;
                   </a>;
                 </div>;
               </motion.div>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             ))}
           </div>;
           {sortedServices.length === 0 && (<motion.div;
               initial={{ opacity: 0 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+              animate={{ opacity: 1 }}
+=======
+                  >
+                    <Mail className="w-5 h-5" />
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+
+
+
+
+          {sortedServices.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+className='text-center py-20'
+            >
+              <div className='text-gray-400 text-xl mb-4'>
+                No services found
+              </div>
+              <div className='text-gray-500'>
+                Try adjusting your search or filter criteria
+              </div>
+            </motion.div>
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          )}
+
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               animate={{ opacity: 1 }}className='text-center py-20';
             >;
               <div className='text-gray-400 text-xl mb-4'>;
@@ -519,6 +1196,10 @@ className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg
             </motion.div>;
           )}</div>;
       </section>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>;
       </section>;
             ))}
@@ -535,6 +1216,61 @@ className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg
               <div className="text-gray-400 text-xl mb-4">No services found</div>;
               <div className="text-gray-500">Try adjusting your search or filter criteria</div>;
           )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Contact Section */}
+<section className='py-20 bg-gradient-to-b from-slate-900 to-black'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      {/* Contact Section */}
+      <section className='py-20 bg-gradient-to-b from-slate-900 to-black'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+          <motion&& motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+<<<<<<< HEAD
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          >
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+              Ready to Transform Your Business?
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Contact our team to learn more about how our innovative services
+              can revolutionize your operations and drive growth.
+            </p>
+          </motion.div>
+<<<<<<< HEAD
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Contact our team to learn more about how our innovative services can revolutionize your operations and drive growth.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            <motion.div
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Contact Section */}<section className='py-20 bg-gradient-to-b from-slate-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -568,6 +1304,10 @@ className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             <motion.div;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='text-center mb-16'>;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
@@ -587,6 +1327,39 @@ className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg
           </motion && motion.div>;initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              viewport={{ once: true }}
+className='text-center'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              viewport={{ once: true }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            >
+              <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                <Phone className='w-8 h-8 text-white' />
+              </div>
+              <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>
+<<<<<<< HEAD
+              <p className='text-gray-300'>{contactInfo.mobile}</p>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <p className='text-gray-300'>{contactInfo.mobile}</p>            </motion.div>            >
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+              <p className="text-gray-300">{contactInfo.mobile}</p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            </motion.div>
+            <motion.div
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}className='text-center';
             >;
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
@@ -604,6 +1377,10 @@ className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg
               <p className='text-gray-300'>{contactInfo.mobile}</p>;
             </motion.div>;
             <motion.div;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <Phone className='w-8 h-8 text-white' />;
@@ -619,6 +1396,39 @@ className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              viewport={{ once: true }}
+className='text-center'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              viewport={{ once: true }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            >
+              <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                <Mail className='w-8 h-8 text-white' />
+              </div>
+              <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>
+<<<<<<< HEAD
+              <p className='text-gray-300'>{contactInfo.email}</p>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <p className='text-gray-300'>{contactInfo.email}</p>            </motion.div>            >
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+              <p className="text-gray-300">{contactInfo.email}</p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            </motion.div>
+            <motion.div
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}className='text-center';
             >;
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
@@ -636,6 +1446,10 @@ className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg
               <p className='text-gray-300'>{contactInfo.email}</p>;
             </motion.div>;
             <motion.div;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <Mail className='w-8 h-8 text-white' />;
@@ -651,6 +1465,37 @@ className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              viewport={{ once: true }}
+className='text-center'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              viewport={{ once: true }}
+
+
+            >
+              className='text-center'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            >
+              <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                <MapPin className='w-8 h-8 text-white' />
+              </div>
+              <h3 className='text-xl font-semibold text-white mb-2'>Address</h3>
+              <p className='text-gray-300'>{contactInfo.address}</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+}
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               viewport={{ once: true }}>;
               className='text-center';
 className='text-center';
@@ -666,6 +1511,16 @@ className='text-center';
       </section>;
     </Layout>;
   )}}</p>;
+<<<<<<< HEAD
+=======
+
+;
+}
+
+                  </p>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </div>;
                 {/* Features */}
                 <div className='mb - 6'>;
@@ -841,4 +1696,15 @@ className='text-center';
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </Layout>);
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </Layout>)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

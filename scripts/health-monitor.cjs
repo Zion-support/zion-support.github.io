@@ -19,4 +19,16 @@ class HealthMonitor {
   }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 new HealthMonitor().runChecks();
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+new HealthMonitor().runChecks();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+new HealthMonitor().runChecks();
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

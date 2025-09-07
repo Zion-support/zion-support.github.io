@@ -108,6 +108,13 @@ function Page() {
         </p>
       </main>
     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   );export default function Page() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -155,3 +162,7 @@ export default function Page(req, res) {
 ;
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

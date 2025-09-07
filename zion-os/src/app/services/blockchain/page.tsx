@@ -1,10 +1,27 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function BlockchainServicesPage() {return (;
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+      {/* Hero Section */}
+=======
 
 ;
 export default function BlockchainServicesPage() {return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;{/* Hero Section */}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+;
+export default function BlockchainServicesPage() {return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;{/* Hero Section */}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="bg - gradient - to - r from - orange - 600 to - red - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;
           <h1 className="text - 5xl font - bold mb - 6">⛓️ Blockchain & Web3 Services</h1>;
           <p className="text - xl text - orange - 100 max - w-3xl mx - auto">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             Next - generation blockchain solutions, DeFi platforms, NFT marketplaces, and Web3 infrastructure;
             to power the decentralized future of business and finance.;
           </p>;
@@ -13,6 +30,30 @@ export default function BlockchainServicesPage() {return (<div className="min-h-
               Call Now: +1 302 464 0950;
             </a>;
             <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - orange - 600 transition - colors">;
+<<<<<<< HEAD
+=======
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+      {/* Hero Section */}
+      <div className="bg - gradient - to - r from - orange - 600 to - red - 600 py-20">;
+        <div className="container mx - auto px - 6 text-center">;
+          <h1 className="text - 5xl font - bold mb-6">⛓️ Blockchain & Web3 Services</h1>;
+          <p className="text - xl text - orange - 100 max - w-3xl mx-auto">;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+            Next - generation blockchain solutions, DeFi platforms, NFT marketplaces, and Web3 infrastructure;
+            to power the decentralized future of business and finance.;
+          </p>;
+          <div className="mt - 8">;
+            <a href="tel:+13024640950" className="bg - white text - orange - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - orange - 50 transition - colors mr - 4">;
+              Call Now: +1 302 464 0950;
+            </a>;
+<<<<<<< HEAD
+            <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - orange - 600 transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+            <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - orange - 600 transition - colors">;
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
 export default function BlockchainServicesPage() {return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
@@ -29,24 +70,42 @@ export default function BlockchainServicesPage() {return (;
               Call Now: +1 302 464 0950;
             </a>;
             <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - orange - 600 transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               Get Web3 Consultation;
             </a>;
           </div>;
         </div>;
       </div>;
       {/* Contact Info Banner */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="bg - zinc - 800 py - 4">;
         <div className="container mx - auto px - 6 text - center text - sm">;
           <span className="mr - 8">📱 +1 302 464 0950</span>;
           <span className="mr - 8">✉️ kleber@ziontechgroup.com</span>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="bg - zinc - 800 py-4">;
         <div className="container mx - auto px - 6 text - center text-sm">;
           <span className="mr-8">📱 +1 302 464 0950</span>;
           <span className="mr-8">✉️ kleber@ziontechgroup.com</span>;
+<<<<<<< HEAD
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>;
         </div>;
       </div>;
       {/* Blockchain Services Grid */}
+<<<<<<< HEAD
+<<<<<<< HEAD
       <section className="py - 20">;
         <div className="container mx - auto px - 6">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
@@ -64,10 +123,40 @@ export default function BlockchainServicesPage() {return (;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-12">;
             {/* DeFi Platform Development */}
                 yield farming, and automated market making capabilities.;
+=======
+      <section className="py - 20">;
+        <div className="container mx - auto px - 6">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
+            {/* DeFi Platform Development */}<div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+              <div className="text - 4xl mb - 6">💰</div>;
+              <h2 className="text - 3xl font - bold mb - 4">DeFi Platform Development</h2>;
+              <p className="text - zinc - 300 mb - 6 text - lg">;
+                Build next - generation decentralized finance platforms with lending, borrowing,yield farming, and automated market making capabilities.;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+      <section className="py-20">;
+        <div className="container mx - auto px-6">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap-12">;
+            {/* DeFi Platform Development */}
+                yield farming, and automated market making capabilities.;
+              </p>;
+<<<<<<< HEAD
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - orange-400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <li>• Smart contract development and auditing</li>;
                   <li>• Liquidity pools and AMM algorithms</li>;
                   <li>• Yield farming and staking mechanisms</li>;
@@ -76,6 +165,10 @@ export default function BlockchainServicesPage() {return (;
                   <li>• Real - time analytics and monitoring</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Structure</h4>;
                 <div className="space - y-3">;
@@ -92,6 +185,13 @@ export default function BlockchainServicesPage() {return (;
                     <span className="text - green - 400 font - semibold">$200K+</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -107,13 +207,33 @@ export default function BlockchainServicesPage() {return (;
                     <span > Enterprise DeFi Solution</span>;
                     <span className="text - green - 400 font - semibold">$200K+</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text - sm text - zinc - 400 mt-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Smart contract audit included | Ongoing support available;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com / defi - development" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
+=======
+=======
+              <a href="https://ziontechgroup.com / defi - development" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <a href="https://ziontechgroup.com / defi - development" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="https://ziontechgroup.com / defi - development" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More About DeFi Development;
               </a>;
             </div>;
@@ -122,15 +242,35 @@ export default function BlockchainServicesPage() {return (;
               <h2 className="text - 3xl font - bold mb - 4">NFT Marketplace Development</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Create cutting - edge NFT marketplaces with advanced features, multi - chain support,and innovative monetization strategies for digital assets.;
+<<<<<<< HEAD
+=======
+              </p>;
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+                and innovative monetization strategies for digital assets.;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
                 and innovative monetization strategies for digital assets.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+=======
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - orange-400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <li>• Multi - chain NFT minting and trading</li>;
                   <li>• Advanced auction and bidding systems</li>;
                   <li>• Royalty distribution mechanisms</li>;
@@ -139,6 +279,10 @@ export default function BlockchainServicesPage() {return (;
                   <li>• Mobile - first responsive design</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Structure</h4>;
                 <div className="space - y-3">;
@@ -155,6 +299,13 @@ export default function BlockchainServicesPage() {return (;
                     <span className="text - green - 400 font - semibold">$100K+</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -170,13 +321,33 @@ export default function BlockchainServicesPage() {return (;
                     <span > Enterprise NFT Solution</span>;
                     <span className="text - green - 400 font - semibold">$100K+</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text - sm text - zinc - 400 mt-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Multi - chain support included | Custom features available;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com / nft - marketplace" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
+=======
+=======
+              <a href="https://ziontechgroup.com / nft - marketplace" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <a href="https://ziontechgroup.com / nft - marketplace" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="https://ziontechgroup.com / nft - marketplace" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More About NFT Marketplace;
               </a>;
             </div>;
@@ -185,15 +356,35 @@ export default function BlockchainServicesPage() {return (;
               <h2 className="text - 3xl font - bold mb - 4">Smart Contract Development</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Secure, audited smart contracts for any blockchain use case with comprehensive testing,security analysis, and deployment support.;
+<<<<<<< HEAD
+=======
+              </p>;
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+                security analysis, and deployment support.;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
                 security analysis, and deployment support.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+=======
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - orange-400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <li>• Multi - language smart contract development</li>;
                   <li>• Comprehensive security auditing</li>;
                   <li>• Gas optimization and efficiency</li>;
@@ -202,6 +393,10 @@ export default function BlockchainServicesPage() {return (;
                   <li>• Upgradeable contract architecture</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Structure</h4>;
                 <div className="space - y-3">;
@@ -218,6 +413,13 @@ export default function BlockchainServicesPage() {return (;
                     <span className="text - green - 400 font - semibold">$50K+</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -233,13 +435,33 @@ export default function BlockchainServicesPage() {return (;
                     <span > Enterprise Smart Contract</span>;
                     <span className="text - green - 400 font - semibold">$50K+</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text - sm text - zinc - 400 mt-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Security audit included | Multi - chain deployment;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com / smart - contracts" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
+=======
+=======
+              <a href="https://ziontechgroup.com / smart - contracts" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <a href="https://ziontechgroup.com / smart - contracts" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="https://ziontechgroup.com / smart - contracts" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More About Smart Contracts;
               </a>;
             </div>;
@@ -248,15 +470,35 @@ export default function BlockchainServicesPage() {return (;
               <h2 className="text - 3xl font - bold mb - 4">Web3 Infrastructure</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Build robust Web3 infrastructure with node management, API gateways,indexing services, and decentralized storage solutions.;
+<<<<<<< HEAD
+=======
+              </p>;
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+                indexing services, and decentralized storage solutions.;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
                 indexing services, and decentralized storage solutions.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+=======
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - orange-400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <li>• Blockchain node infrastructure</li>;
                   <li>• Decentralized storage solutions</li>;
                   <li>• Web3 API development</li>;
@@ -265,6 +507,10 @@ export default function BlockchainServicesPage() {return (;
                   <li>• Infrastructure monitoring and scaling</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Structure</h4>;
                 <div className="space - y-3">;
@@ -281,6 +527,13 @@ export default function BlockchainServicesPage() {return (;
                     <span className="text - green - 400 font - semibold">$100K+</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -296,13 +549,33 @@ export default function BlockchainServicesPage() {return (;
                     <span > Enterprise Infrastructure</span>;
                     <span className="text - green - 400 font - semibold">$100K+</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text - sm text - zinc - 400 mt-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Monitoring included | 24 / 7 support available;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com / web3 - infrastructure" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
+=======
+=======
+              <a href="https://ziontechgroup.com / web3 - infrastructure" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <a href="https://ziontechgroup.com / web3 - infrastructure" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="https://ziontechgroup.com / web3 - infrastructure" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More About Web3 Infrastructure;
               </a>;
             </div>;
@@ -311,15 +584,35 @@ export default function BlockchainServicesPage() {return (;
               <h2 className="text - 3xl font - bold mb - 4">DAO Development</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Create sophisticated decentralized autonomous organizations with advanced governance,treasury management, and community engagement tools.;
+<<<<<<< HEAD
+=======
+              </p>;
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+                treasury management, and community engagement tools.;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
                 treasury management, and community engagement tools.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+=======
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - orange-400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <li>• Multi - signature governance systems</li>;
                   <li>• Proposal creation and voting mechanisms</li>;
                   <li>• Treasury management and budgeting</li>;
@@ -328,6 +621,10 @@ export default function BlockchainServicesPage() {return (;
                   <li>• Analytics and reporting dashboard</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Structure</h4>;
                 <div className="space - y-3">;
@@ -344,6 +641,13 @@ export default function BlockchainServicesPage() {return (;
                     <span className="text - green - 400 font - semibold">$150K+</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -359,17 +663,41 @@ export default function BlockchainServicesPage() {return (;
                     <span > Enterprise DAO</span>;
                     <span className="text - green - 400 font - semibold">$150K+</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text - sm text - zinc - 400 mt-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Governance tools included | Custom features available;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com / dao - development" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
+=======
+=======
+              <a href="https://ziontechgroup.com / dao - development" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <a href="https://ziontechgroup.com / dao - development" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="https://ziontechgroup.com / dao - development" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More About DAO Development;
               </a>;
             </div>;
             {/* Blockchain Consulting */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">💡</div>;
               <h2 className="text - 3xl font - bold mb - 4">Blockchain Consulting</h2>;
@@ -380,6 +708,13 @@ export default function BlockchainServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc-700">;
               <div className="text - 4xl mb-6">💡</div>;
               <h2 className="text - 3xl font - bold mb-4">Blockchain Consulting</h2>;
@@ -387,9 +722,22 @@ export default function BlockchainServicesPage() {return (;
                 Strategic blockchain consulting services including technology selection;
                 architecture design, regulatory compliance, and implementation strategy.;
               </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <div className="space - y-4 mb-8">;
+                <h3 className="text - xl font - semibold text - orange-400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc-300">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+              <div className="space - y-4 mb - 8">;
+                <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
+                <ul className="space - y-2 text - zinc - 300">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   <li>• Blockchain strategy and roadmap</li>;
                   <li>• Technology stack evaluation</li>;
                   <li>• Regulatory compliance guidance</li>;
@@ -398,6 +746,10 @@ export default function BlockchainServicesPage() {return (;
                   <li>• Team training and education</li>;
                 </ul>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
                 <h4 className="text - lg font - semibold mb - 4">Pricing Structure</h4>;
                 <div className="space - y-3">;
@@ -414,6 +766,13 @@ export default function BlockchainServicesPage() {return (;
                     <span className="text - green - 400 font - semibold">$100K+</span>;
                   </div>;
                   <div className="text - sm text - zinc - 400 mt - 2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               <div className="bg - zinc - 700 rounded - lg p - 6 mb-6">;
                 <h4 className="text - lg font - semibold mb-4">Pricing Structure</h4>;
                 <div className="space-y-3">;
@@ -429,13 +788,33 @@ export default function BlockchainServicesPage() {return (;
                     <span > Full Implementation</span>;
                     <span className="text - green - 400 font - semibold">$100K+</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text - sm text - zinc - 400 mt-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                   <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                  <div className="text - sm text - zinc - 400 mt - 2">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     Free initial consultation | Custom packages available;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
               <a href="https://ziontechgroup.com / blockchain - consulting" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+<<<<<<< HEAD
+=======
+=======
+              <a href="https://ziontechgroup.com / blockchain - consulting" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <a href="https://ziontechgroup.com / blockchain - consulting" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+              <a href="https://ziontechgroup.com / blockchain - consulting" className="block w - full text - center bg - orange - 600 hover:bg - orange - 700 text - white py - 3 rounded - lg font - semibold transition-colors">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More About Blockchain Consulting;
               </a>;
             </div>;
@@ -443,6 +822,10 @@ export default function BlockchainServicesPage() {return (;
         </div>;
       </section>;
       {/* Blockchain Technologies */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - zinc - 800">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
@@ -491,6 +874,13 @@ export default function BlockchainServicesPage() {return (;
               <div className="text - 3xl mb - 4">🔵</div>;
               <h3 className="text - lg font - semibold mb - 2">Binance Smart Chain</h3>;
               <p className="text - zinc - 300 text - sm">Ethereum - compatible blockchain with low fees</p>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - zinc-800">;
         <div className="container mx - auto px-6">;
           <div className="text - center mb-16">;
@@ -535,15 +925,33 @@ export default function BlockchainServicesPage() {return (;
               <h3 className="text - lg font - semibold mb - 2">Cosmos</h3>;
               <p className="text - zinc - 300 text - sm">Interoperable blockchain ecosystem</p>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 text-center">;
+              <div className="text - 3xl mb-4">🔵</div>;
+              <h3 className="text - lg font - semibold mb-2">Binance Smart Chain</h3>;
+              <p className="text - zinc - 300 text-sm">Ethereum - compatible blockchain with low fees</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="bg - zinc - 900 rounded - xl p - 6 border border - zinc - 600 text - center">;
               <div className="text - 3xl mb - 4">🔵</div>;
               <h3 className="text - lg font - semibold mb - 2">Binance Smart Chain</h3>;
               <p className="text - zinc - 300 text - sm">Ethereum - compatible blockchain with low fees</p>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Call to Action */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 bg - gradient - to - r from - orange - 600 to - red - 600">;
         <div className="container mx - auto px - 6 text - center">;
           <h2 className="text - 4xl font - bold mb - 6">Ready to Build the Future of Web3?</h2>;
@@ -561,6 +969,13 @@ export default function BlockchainServicesPage() {return (;
               </a>;
             </div>;
             <p className="text - orange - 100 text - sm">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 bg - gradient - to - r from - orange - 600 to - red-600">;
         <div className="container mx - auto px - 6 text-center">;
           <h2 className="text - 4xl font - bold mb-6">Ready to Build the Future of Web3?</h2>;
@@ -577,7 +992,16 @@ export default function BlockchainServicesPage() {return (;
                 ✉️ Schedule Web3 Consultation;
               </a>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <p className="text - orange - 100 text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
             <p className="text - orange - 100 text - sm">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <p className="text - orange - 100 text - sm">;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com;
             </p>;
           </div>;

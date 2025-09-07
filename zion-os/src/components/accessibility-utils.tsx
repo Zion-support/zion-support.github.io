@@ -5,24 +5,53 @@ export /**;
  * SkipLink - Function description;
  */;
 function SkipLink() {return (<a;
+<<<<<<< HEAD
+=======
+      href={`#${target_id}`}
+      className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
+    <a;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       href={`#${target_id}`}
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
     <a;
       href={`#${target_id}`}
+<<<<<<< HEAD
+<<<<<<< HEAD
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
+=======
+      className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z-50";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     >;
       {children}
     </a>)}export /**;
  * LiveRegion - Function description;
  */;
 function LiveRegion() {return (<div;
+<<<<<<< HEAD
+=======
+      role={role}
+      aria - live={aria_live}
+      className="sr - only";
+    <div;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       role={role}
       aria - live={aria_live}
       className="sr - only";
     <div;
       role={role}
       aria - live={aria_live}
+<<<<<<< HEAD
+<<<<<<< HEAD
       className="sr - only";
+=======
+      className="sr-only";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      className="sr - only";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       aria - atomic="true";
     >;
       {message}
@@ -63,6 +92,10 @@ export function ProgressIndicator() {const percentage  = Math.round((value / max
             lastElement.focus();
           }
         } else {if (document.activeElement === lastElement) {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             e.preventDefault();
             firstElement.focus();
           }
@@ -151,11 +184,29 @@ function ProgressIndicator() {
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
         <span>{label}</span>;
+<<<<<<< HEAD
         <span>{percentage}%</span>;
       </div>;
       <div className="w - full bg-[var (--border)] rounded - full h - 2">;
         <div;
           className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";
+=======
+            e.preventDefault();            firstElement.focus();
+          }
+        }
+      }        <span>{label}</span>;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+        <span>{percentage}%</span>;
+      </div>;
+      <div className="w - full bg-[var (--border)] rounded - full h - 2">;
+        <div;
+<<<<<<< HEAD
+          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration-300";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           style={{ width: `${percentage}%` }}
           role="progressbar";
           aria - valuenow={value}
@@ -171,9 +222,22 @@ export function CollapsibleSection() {const [isExpanded, setIsExpanded] = useSta
     </div>);
 }
   return (;
+<<<<<<< HEAD
+<<<<<<< HEAD
     <div className="border border-[var(--border)] rounded-lg">;
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
+=======
+    <div className="border border-[var(--border)] rounded-lg">;  return (;
+    <div className="border border-[var(--border)] rounded-lg">;
+      <button;
+        className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify-between";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    <div className="border border-[var(--border)] rounded-lg">;
+      <button;
+        className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         on_click={() => setIsExpanded (!is_expanded)}
         aria - expanded={is_expanded}
         aria - controls={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
@@ -186,13 +250,28 @@ export function CollapsibleSection() {const [isExpanded, setIsExpanded] = useSta
       <div;id={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
         ref={content_ref}
         className={`overflow - hidden transition - all duration - 300 ${is_expanded ? "max - h-96 opacity - 100" : "max - h-0 opacity - 0";}`}
+<<<<<<< HEAD
+=======
+        aria - hidden={!is_expanded}
+      >;
+        <div className="px - 4 pb - 3">;
+        }`}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         aria - hidden={!is_expanded}
       >;
         <div className="px - 4 pb - 3">;
         }`}
         aria - hidden={!is_expanded}
       >;
+<<<<<<< HEAD
+<<<<<<< HEAD
         <div className="px - 4 pb - 3">;
+=======
+        <div className="px - 4 pb-3">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        <div className="px - 4 pb - 3">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           {children}
         </div>;
       </div>;
@@ -202,9 +281,20 @@ export function Tooltip() {const [isVisible, setIsVisible] = useState(false),con
   }return (<div className="relative inline-block">;return (<div className="relative inline-block">;  return (<div className="relative inline-block">;
     </div>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div className="relative inline - block">;
   return (;
+=======
+  return (;
+    <div className="relative inline-block">;  return (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  return (
+    <div className="relative inline - block">;
+  return (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <div className="relative inline-block">;
       <div;
         onMouseEnter={() => setIsVisible (true)}
@@ -222,7 +312,18 @@ export function Tooltip() {const [isVisible, setIsVisible] = useState(false),con
           role="tooltip";
         >;
           {content}
+<<<<<<< HEAD
+<<<<<<< HEAD
           <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate - 45" />;
+<<<<<<< HEAD
+=======
+=======
+          <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate - 45" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate-45" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate-45" />;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         </div>)}
     </div>)}

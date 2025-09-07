@@ -22,5 +22,19 @@ const fs = require("fs").promises;const path = require("path")"
           .replace(/-/g, " ")
           .replace(/\s+/g, ")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
         console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
     console.error("Error identifying missing "pages")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
+    console.error("Error identifying missing "pages")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
+    console.error("Error identifying missing "pages")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

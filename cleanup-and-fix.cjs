@@ -51,14 +51,31 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     if (!content.includes('
+=======
+    if (!content.includes('') && !content.includes('') && !content.includes('
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    if (!content.includes('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       return false;
     }
     
     console.log(`📝 Fixing merge conflicts in: ${filePath}`);
     
     // Strategy: Keep the newer version (after ) for most cases
+<<<<<<< HEAD
+<<<<<<< HEAD
     content = content.replace(/
+=======
+    content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    content = content.replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       // For version conflicts, prefer the newer version
       if (headContent.includes('"') && newContent.includes('"')) {
         return newContent.trim();
@@ -67,7 +84,18 @@ function resolveMergeConflicts(filePath) {
     });
     
     // Clean up any remaining conflict markers
+<<<<<<< HEAD
+<<<<<<< HEAD
     content = content.replace(/
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/[\s\S]*?
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    content = content.replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     
     fs.writeFileSync(filePath, content);
     return true;
@@ -98,7 +126,16 @@ function findConflictedFiles(dir) {
           // Check for merge conflict markers
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
             if (content.includes('
+=======
+            if (content.includes('') || content.includes('') || content.includes('
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            if (content.includes('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               conflictedFiles.push(fullPath);
             }
           } catch (err) {
@@ -151,3 +188,5 @@ try {
   console.error('❌ Error during cleanup:', error);
   process.exit(1);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

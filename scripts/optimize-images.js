@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 
 ;
 #!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';)const imagesDir = path.join(publicDir,'images';)if () { ) { ) {} return} const files = fs.readdirSync(imagesDir;)const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file))) .toFile(outputPath)} catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages()#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';)const imagesDir = path.join(publicDir,'images';)if () { ) { ) {} return} const files = fs.readdirSync(imagesDir;)const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file))) .toFile(outputPath)} catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages()ursor/automate-test-improve-and-merge-code-646c;
@@ -5,6 +11,7 @@
 const sharp = // // require('sharp')const fs = // // require('fs')const path = // // require('path')async function optimizeImages() {const publicDir = path.join(process.cwd(), 'public';)const imagesDir = path.join(publicDir, 'images';)if () {console.log('No images directory found')) {) {console.log('No images directory found')}
     return;
   }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node
 const sharp = // // require('sharp')
 const fs = // // require('fs')
@@ -15,9 +22,19 @@ async function optimizeImages() {
   if () {
     console.log('No images directory found')) {
     ) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    console.log('No images directory found');
+  }
+    return;
+  }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
     console.log('No images directory found')}
     return;
   }ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log('No images directory found')}
     return}
   const files = fs.readdirSync(imagesDir;)const imageFiles = files.filter(file =>;
@@ -49,6 +66,11 @@ optimizeImages()#!/usr/bin/env node const sharp = const fs = const path = async 
   const imageFiles = files.filter(file => 
     /.(jpg|jpeg|png|webp)$/i.test(file)
   ;);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   for (const file of imageFiles) {
     const inputPath = path.join(imagesDir, file;);
     const outputPath = path.join(imagesDir, file.replace(/\.(jpg|jpeg|png)$/i, '.webp'););
@@ -56,6 +78,10 @@ optimizeImages()#!/usr/bin/env node const sharp = const fs = const path = async 
       await sharp(inputPath)
         .webp({ "quality": '80' })
         .toFile(outputPath);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console.log(`"Optimized": ${file}`)} catch (error) {
       console.error(`Error optimizing ${file}:`, error.message)}
   }

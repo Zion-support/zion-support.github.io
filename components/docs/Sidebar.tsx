@@ -1,5 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 ;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { ApiDocsSpec, Visibility  } from '../../data/api-docs/types';
 interface SidebarProps  {spec: ApiDocsSpec;
@@ -8,6 +18,35 @@ interface SidebarProps  {spec: ApiDocsSpec;
   selectedVersion: string;
   onChangeVersion: (v: string) => void;
   visibilityFilter: Visibility | 'all';
+<<<<<<< HEAD
+<<<<<<< HEAD
+  onChangeVisibility: (v: Visibility | 'all') => void
+}
+
+export default function Sidebar({
+  spec
+  activeEndpointId
+  onSelectEndpoint
+  selectedVersion
+  onChangeVersion
+  visibilityFilter
+  onChangeVisibility
+}: SidebarProps) {
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  return (
+            <button
+              key={v}
+              onClick={() => onChangeVersion(v)}
+              className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
+<<<<<<< HEAD
+            >
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   onChangeVisibility: (v: Visibility | 'all') => void;
 }export default function Sidebar() {return (<button;
               key={v}
@@ -19,6 +58,7 @@ interface SidebarProps  {spec: ApiDocsSpec;
               {section.endpoints;
                 .filter((e) => e.versions.includes(selectedVersion)).filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter).map((e) => (<li key={e.id}>;
             >;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               {v}
             </button>;
           ))}
@@ -55,10 +95,34 @@ interface SidebarProps  {spec: ApiDocsSpec;
                     >;
 <span className='mr-2 inline-block w-10 text-center text-[10px] opacity-80'>;
                         {e.method}
+<<<<<<< HEAD
+                      </span>
+                      <span className='font-mono'>{e.path}</span>
+                    </button>
+                  </li>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
                       </span>;
                       <span className='font-mono'>{e.path}</span>;
                     </button>;
                   </li>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+      <nav className="space-y-3">
+        {spec.sections.map((section) => (
+          <div key={section.id}>
+            <div className="text-sm font-medium mb-1">{section.title}</div>
+            <ul className="space-y-1">
+              {section.endpoints
+                .filter((e) => e.versions.includes(selectedVersion))
+                .filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter)
+                .map((e) => (
+                  <li key={e.id}>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 ))}
             </ul>;
           </div>;
@@ -138,5 +202,22 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
 }
 }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+    </aside>
+  );
+<<<<<<< HEAD
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
     </aside>;
   )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </aside>;
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

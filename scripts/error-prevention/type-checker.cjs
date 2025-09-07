@@ -18,7 +18,19 @@ class TypeChecker {}
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
@@ -40,7 +52,19 @@ class TypeChecker {}
         errorOutput += data.toString()}
 });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Type check passed ✓')) {}
@@ -61,7 +85,19 @@ class TypeChecker {}
       line.includes('error TS') || line.includes('Type error');
    ;);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if ( {})
       console.log('TypeScript errors "found": ')) {}
      {}
@@ -99,4 +135,16 @@ if ( {})
   
   checker.start().catch(console.error)};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = TypeChecker;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = TypeChecker;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = TypeChecker;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

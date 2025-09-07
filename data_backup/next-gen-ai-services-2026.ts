@@ -1,14 +1,37 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { ServiceVariant } from "./types/service-variants"; export interface NextGenAIService2026 { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenAIServices2026 NextGenAIServic",e2026[] =,[ "'"'"
 import { ServiceVariant } from "../types/service-variants"; export interface NextGenAIService2026 { "id": string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} "realImplementation": 'boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenAIServices2026 NextGenAIServic,e2026[] =,[ "
 
 
 
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+const { ServiceVariant } from "./types/service-variants"; export interface NextGenAIService2026 { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenAIServices2026 NextGenAIServic",e2026[] =,[ "'"'"
+import { ServiceVariant } from "../types/service-variants"; export interface NextGenAIService2026 { "id": string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} "realImplementation": 'boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenAIServices2026 NextGenAIServic,e2026[] =,[ "
+
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -22,15 +45,33 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 const { ServiceVariant } from "./types/service-variants"; export interface NextGenAIService2026 { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenAIServices2026 NextGenAIServic",e2026[] =,[ "'"'"
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { ServiceVariant } from "./types/service-variants"; export interface NextGenAIService2026 { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenAIServices2026 NextGenAIServic",e2026[] =,[ "'"'"
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
 const { ServiceVariant } from "./types/service-variants"; export interface NextGenAIService2026 { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenAIServices2026 NextGenAIServic",e2026[] =,[ "'"'"
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 ;
 const { ServiceVariant } from "./types/service-variants"; export interface NextGenAIService2026 { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenAIServices2026 NextGenAIServic",e2026[] =,[ "'"'";
 import { ServiceVariant } from "../types/service-variants"; export interface NextGenAIService2026 { "id": string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} "realImplementation": 'boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenAIServices2026 NextGenAIServic,e2026[] =,[ ";
@@ -53,3 +94,4 @@ ursor/automate-test-improve-and-merge-code-646c;
 const { ServiceVariant } from "./types/service-variants"; export interface NextGenAIService2026 { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenAIServices2026 NextGenAIServic",e2026[] =,[ "'"'";
 const { ServiceVariant } from "./types/service-variants"; export interface NextGenAIService2026 { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenAIServices2026 NextGenAIServic",e2026[] =,[ "'"'";
 const { ServiceVariant } from "./types/service-variants"; export interface NextGenAIService2026 { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenAIServices2026 NextGenAIServic",e2026[] =,[ "'"'";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

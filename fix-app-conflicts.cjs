@@ -6,6 +6,8 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
+=======
     if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`Fixing merge conflicts in: ${filePath}`);
       
@@ -23,6 +25,7 @@ function fixMergeConflicts(filePath) {
           takeHead = true;
           continue;
         } else if (line.includes('')) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           takeHead = false;
           continue;
         } else if (line.includes('>>>>>>>')) {

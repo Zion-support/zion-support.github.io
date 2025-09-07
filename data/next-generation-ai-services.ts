@@ -1632,7 +1632,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Quantum neural networks',
       'Quantum optimization algorithms',
       'Quantum chemistry simulations',
+<<<<<<< HEAD
+      'Quantum financial modeling',    ],    description: 'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.',
+=======
       'Quantum financial modeling'    ],    description: 'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     popular: true,
     icon: '⚛️',
     color: 'from-purple-600 to-indigo-700',
@@ -2166,7 +2170,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Mission optimization algorithms',
       'Multi - satellite coordination',
       'Earth observation analytics',
+<<<<<<< HEAD
+      'Space weather monitoring',    ],    price: '$25, 999',
+=======
       'Space weather monitoring'    ],    price: '$25, 999',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     period: '/month',
     description: 'Revolutionary AI platform for autonomous space exploration, satellite operations, and space mission management. Enable autonomous space operations with intelligent decision - making and real - time optimization.',
     features: [;
@@ -2440,7 +2448,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Biomarker discovery',
       'Personalized medicine algorithms',
       'Drug interaction prediction',
+<<<<<<< HEAD
+      'Regulatory compliance tools',    ],    description: 'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research. Reduce drug development timelines by 80% and increase success rates through intelligent molecular analysis and prediction.',
+=======
       'Regulatory compliance tools'    ],    description: 'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research. Reduce drug development timelines by 80% and increase success rates through intelligent molecular analysis and prediction.',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     popular: true,
     icon: '🧬',
     color: 'from-emerald-600 to-teal-700',
@@ -2991,7 +3003,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'VR / AR integration',
       'Blockchain integration',
       'Performance optimization',
+<<<<<<< HEAD
+      'Analytics and insights',    ],    price: '$6, 999',
+=======
       'Analytics and insights'    ],    price: '$6, 999',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     period: '/month',
     description: 'Revolutionary platform for building AI - powered metaverse experiences with intelligent NPCs, dynamic content generation, and immersive virtual environments. Create the next generation of digital experiences.',
     features: [;
@@ -3251,7 +3267,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Fleet management',
       'Safety monitoring',
       'Regulatory compliance',
+<<<<<<< HEAD
+      'Performance analytics',    ],    price: '$18, 999',
+=======
       'Performance analytics'    ],    price: '$18, 999',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     period: '/month',
     description: 'Revolutionary AI platform for autonomous vehicles with advanced perception, decision - making, and safety systems. Enable fully autonomous transportation with industry - leading safety and performance.',
     features: [;
@@ -3814,7 +3834,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     icon: '🏭',
     link: 'https://ziontechgroup.com/ai-manufacturing-platform',
     marketPosition:
+<<<<<<< HEAD
+      'Compliance management',    ],    price: '$9, 999',
+=======
       'Compliance management'    ],    price: '$9, 999',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     period: '/month',
     description: 'Revolutionary AI platform for intelligent manufacturing with predictive maintenance, quality control, and process optimization. Achieve Industry 4.0 with intelligent automation and real - time optimization.',
     features: [;

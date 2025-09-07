@@ -78,7 +78,14 @@ function fixNextLinks(filePath) {
   try {
   let content = fs.readFileSync(filePath, "utf8");
     // Add Link import if not present and file has href attributes;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     if (content.includes("href="/") && !content.includes("import Link")) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    if (content.includes("href="/") && !content.includes("import Link")) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   content = content.replace(;
         /import React from "react";/,
         "import React from "react";
@@ -94,7 +101,14 @@ function fixNextLinks(filePath) {
     fs.writeFileSync(filePath, content);
     console.log(`Fixed Next.js links "in": ${filePath}`)} catch (error) {
   console.error(`Error fixing links in ${filePath}:`, error.message)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 // "Note": previously broken fixer removed to avoid syntax errors.
 // Function to fix test files;

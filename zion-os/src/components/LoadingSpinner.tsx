@@ -23,10 +23,20 @@ function LoadingSpinner() {const size_classes = {small: "w - 4 h - 4",medium: "w
 interface LoadingSpinnerProps {
   size?: "small" | "medium" | "large",
   class_name?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 "use client";
 interface LoadingSpinnerProps {size?: "small" | "medium" | "large";
   className?: string;
 }
+<<<<<<< HEAD
+=======
+=======}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export /**
  * LoadingSpinner - Function description
  */
@@ -37,6 +47,8 @@ function LoadingSpinner() {
     large: "w - 12 h - 12";
   }
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
     <div className={`${size_classes[size]} ${class_name}`} role="status" aria - label="Loading">;
   return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
@@ -49,24 +61,77 @@ function LoadingSpinner() {
       >;
         <circle;
           className="opacity - 25";
+=======
+    <div className={`${size_classes[size]} ${class_name}`} role="status" aria - label="Loading">;  return (;
+=======
+    <div className={`${size_classes[size]} ${class_name}`} role="status" aria - label="Loading">;
+  return (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+    <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
+      <svg;
+        className="animate - spin text - blue - 500";
+        xmlns="http: //www.w3.org / 2000 / svg";
+        fill="none";
+        view_box="0 0 24 24";
+        aria - hidden="true";
+      >;
+        <circle;
+<<<<<<< HEAD
+          className="opacity-25";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          className="opacity - 25";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           cx="12";
           cy="12";
           r="10";
           stroke="current_color";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           stroke_width="4";
         />;
         <path;
           className="opacity - 75";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          strokeWidth="4";
+        />;
+        <path;
+          className="opacity-75";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           strokeWidth="4";
         />;
         <path;
           className="opacity - 75";
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           fill="current_color";
           d="M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z";
         />;
       </svg>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <span className="sr - only">Loading...</span>;
+<<<<<<< HEAD
+=======
+      <span className="sr-only">Loading...</span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
       <span className="sr - only">Loading...</span>;
       <span className="sr-only">Loading...</span>;
     </div>)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      <span className="sr-only">Loading...</span>;
+    </div>)}
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     </div>);
 }

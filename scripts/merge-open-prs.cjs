@@ -119,4 +119,24 @@ async function main() {}
 main().catch(err => {})
   console.error('"Error": ', err.message);
   process.exit(1)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+});
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+});
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

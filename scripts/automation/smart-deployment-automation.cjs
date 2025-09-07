@@ -46,7 +46,19 @@ class SmartDeploymentAutomation {}
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
         
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -187,4 +199,16 @@ if ( {})
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = SmartDeploymentAutomation;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = SmartDeploymentAutomation;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = SmartDeploymentAutomation;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

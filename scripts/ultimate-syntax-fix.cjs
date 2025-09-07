@@ -1,4 +1,26 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+#!/usr/bin/env node
+
+const fs = require('fs');
+const { execSync } = require('child_process');
+
+console.log('🔧 Ultimate Syntax Fix');
+<<<<<<< HEAD
+console.log('
+=======
+console.log('======================');
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
@@ -127,4 +149,18 @@ try {
 }
 
 
+<<<<<<< HEAD
+=======
+
+
 console.log('\n🎉 Ultimate syntax fix completed!');
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+console.log('\n🎉 Ultimate syntax fix completed!');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+console.log('\n🎉 Ultimate syntax fix completed!');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

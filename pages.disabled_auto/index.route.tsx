@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 import React from \'react\' export default function Home() { return ( <main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main> ) }\";
@@ -7,6 +9,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/automate-test-improve-and-merge-code-646c;;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 

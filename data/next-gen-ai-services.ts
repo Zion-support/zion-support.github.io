@@ -4149,7 +4149,11 @@ export const nextGenAIServices: NextGenAIService[] = [
     implementationDetails: 'Full-stack emotional AI platform with real-time processing, multi-modal input support, and comprehensive API ecosystem.',
     launchDate: '2024-12-01',
     customers: 150,
+<<<<<<< HEAD
+    reviews: 89,  },    },
+=======
     reviews: 89  }    },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     realImplementation: true,
     implementationDetails: 'Full-stack emotional AI platform with real-time processing, multi-modal input support, and comprehensive API ecosystem.',
     launchDate: '2024-12-01',
@@ -4186,7 +4190,11 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Custom algorithm development'
       'Integration with existing systems'
       'Scalable cloud infrastructure'
+<<<<<<< HEAD
+      '24/7 optimization support',    ],    description: 'Breakthrough AI optimization engine that uses quantum-inspired algorithms to solve complex business problems. Achieve optimal solutions 1000x faster than traditional methods.'
+=======
       '24/7 optimization support'    ],    description: 'Breakthrough AI optimization engine that uses quantum-inspired algorithms to solve complex business problems. Achieve optimal solutions 1000x faster than traditional methods.'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     id: 'ai - quantum - optimization - engine',
     name: 'AI Quantum Optimization Engine',
     tagline: 'Quantum - inspired AI for complex optimization problems',
@@ -4436,11 +4444,19 @@ export const nextGenAIServices: NextGenAIService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
+<<<<<<< HEAD
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+
+      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
+=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
 
       website: 'https://ziontechgroup.com'
       website: 'https://ziontechgroup.com'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     },
 
     realImplementation: true,
@@ -4713,11 +4729,19 @@ export const nextGenAIServices: NextGenAIService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
+<<<<<<< HEAD
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+
+      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
+=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
 
       website: 'https://ziontechgroup.com'
       website: 'https://ziontechgroup.com'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     },
 
     realImplementation: true,
@@ -4907,14 +4931,22 @@ export const nextGenAIServices: NextGenAIService[] = [
       website: 'https://ziontechgroup.com'
 
 
+<<<<<<< HEAD
+      website: 'https://ziontechgroup && ziontechgroup.com',
+=======
       website: 'https://ziontechgroup && ziontechgroup.com'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     },
     real_implementation: true,
     implementation_details:;
       'Full creative AI suite with advanced design generation, collaboration tools, and comprehensive integration capabilities.',
     launch_date: '2024 - 09 - 15',
     customers: 320,
+<<<<<<< HEAD
+    reviews: 245,  },    },
+=======
     reviews: 245  }    },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     realImplementation: true,
     implementationDetails: 'Full creative AI suite with advanced design generation, collaboration tools, and comprehensive integration capabilities.',
     launchDate: '2024-09-15',
@@ -5777,7 +5809,11 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Automated reorder systems',
       'Cost optimization recommendations',
       'Sustainability tracking',
+<<<<<<< HEAD
+      'Compliance management',    ],    description: 'Advanced supply chain optimization platform that uses AI to predict demand, optimize inventory, and streamline logistics operations for maximum efficiency and cost savings.',
+=======
       'Compliance management'    ],    description: 'Advanced supply chain optimization platform that uses AI to predict demand, optimize inventory, and streamline logistics operations for maximum efficiency and cost savings.',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     popular: true,
     icon: '🚚',
     color: 'from-green-600 to-emerald-600',
@@ -6312,7 +6348,11 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Automated reporting',
       'HIPAA compliance',
       'Integration with EMR systems',
+<<<<<<< HEAD
+      'Continuous learning algorithms',    ],    description: 'Advanced healthcare diagnostics platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.',
+=======
       'Continuous learning algorithms'    ],    description: 'Advanced healthcare diagnostics platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     popular: true,
     icon: '🏥',
     color: 'from-red-600 to-pink-600',

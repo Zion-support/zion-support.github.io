@@ -49,10 +49,23 @@ ursor/automate-test-improve-and-merge-code-646c;
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=
+
+
+
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -91,6 +104,13 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+=
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
       });
@@ -158,7 +178,35 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           });
         }
       }
+<<<<<<< HEAD
+    }
+
+
+
+            timestamp: new Date().toISOString(),
+          });
+
+    );
+        }
+      }
+    }
+
+<<<<<<< HEAD
+=
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+            timestamp: new Date().toISOString(),
+          });
+        }
+      }
+    }
+
+
+
+=======
     }ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return errors;
   }
   parseESLintErrors(output) {const errors = [];
@@ -187,6 +235,18 @@ ursor/automate-test-improve-and-merge-code-646c;
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
+<<<<<<< HEAD
+<<<<<<< HEAD
+>          timestamp: new Date().toISOString()
+        });
+      }
+    }
+<
+
+
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           timestamp: new Date().toISOString()
         });
       }
@@ -194,6 +254,10 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     );
       }
     }
@@ -201,13 +265,26 @@ ursor/automate-test-improve-and-merge-code-646c;
           timestamp: new Date().toISOString()})}
     })}
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=
+
+
+
+=======
+=======
           timestamp: new Date().toISOString()})}
     }
 =;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return errors;
   }
   updateHealthStatus() {const totalErrors = this.monitoringReport.metrics.totalErrors;
@@ -267,10 +344,33 @@ ursor/automate-test-improve-and-merge-code-646c;
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+<<<<<<< HEAD
+<<<<<<< HEAD
+>    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+<    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=
+>    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
@@ -282,9 +382,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -302,6 +411,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       const automation = new ErrorFixerAutomation();
       await automation.run();
       console.log('✅ Error fixer completed');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console.log('✅ Error fixer completed');
 
 
@@ -318,6 +434,13 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+=
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
       });
@@ -344,10 +467,23 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=
+
+
+
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(reportPath,JSON.stringify(this.monitoringReport, null, 2))// Keep only the latest 10 reports;
@@ -361,6 +497,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     // Save final report;
     await this.saveReport()console.log('✅ Error Monitor shutdown complete')process.exit(0)}}}ursor/automate-test-improve-and-merge-code-646c;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 // Run the monitor;
 if (require.main === module) {const monitor = new ErrorMonitor()monitor.start().catch(console.error)}
 module.exports = ErrorMonitor;
@@ -370,11 +512,20 @@ module.exports = ErrorMonitor;ursor/automate-test-improve-and-merge-code-646c;
 }
 module.exports = ErrorMonitor;
 }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
 }
 module.exports = ErrorMonitor;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 }
 module.exports = ErrorMonitor;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+module.exports = ErrorMonitor;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

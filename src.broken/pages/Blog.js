@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+:src.broken/pages/Blog.js
+:src.broken/pages/Blog.js
+import { useState, useEffect } from "react";
+=======
+:src.broken/pages/Blog.jsimport { useState, useEffect } from "react";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 ;
 :src.broken/pages/Blog.js;
@@ -22,6 +31,7 @@ const CATEGORIES = [;
 :src.broken/pages/Blog.js
 :src.broken/pages/Blog.js
 import { useState, useEffect } from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
 import { SEO } from "@/components/SEO";
@@ -111,10 +121,19 @@ export default function Blog() {const [searchQuery, setSearchQuery] = useState("
                   {CATEGORIES.map((category) => (<SelectItem key={category} value={category} className="text-white">;
                       {category}
                     </SelectItem>))}
+<<<<<<< HEAD
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+import React from 'react';
+<<<<<<< HEAD
+=======
                 </SelectContent>;
               </Select>;
             </div>;
           </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React from 'react';
 :src.broken/pages/Blog.js;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -164,6 +183,11 @@ export default function Blog() {return (<div className="min-h-screen bg-backgrou
     </>))}ursor/automate-test-improve-and-merge-code-646c;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export default function Blog() {
     return (
         <div className="min-h-screen bg-background p-8">
@@ -208,6 +232,15 @@ export default function Blog() {
       </div>
     </>);
     );
+<<<<<<< HEAD
+<<<<<<< HEAD
       </div>
     </>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      </div>
+    </>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

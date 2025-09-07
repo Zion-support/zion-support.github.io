@@ -115,4 +115,16 @@ const { execSync } = require("child_process")
     } catch (error) {  this.log(` Command "failed"`})
   process.on("SIGINT")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   process.on("SIGTERM")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  process.on("SIGTERM")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  process.on("SIGTERM")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

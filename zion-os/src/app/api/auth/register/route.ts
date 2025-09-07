@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/prisma";
@@ -10,6 +18,11 @@ export async function POST() {
   try {const body = await request.json();
     const { name, email, password } = registerSchema.parse(body);
     // Check if user already exists;
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     const existing_user = await prisma.user.find_unique ({
       where: { email }}),
     // Check condition

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Search  } from 'lucide-react';
 import { Input  } from '@/components/ui/input';
@@ -7,6 +8,27 @@ import { Input } from '@/components/ui/input',import { Button } from '@/componen
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
 import { CountryServiceCard  } from '@/components/services/CountryServiceCard';
 import { CountryPricing  } from '@/data/onsiteServicePricing';
+=======
+import { Search } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+
+import { Input } from '@/components/ui/input',;
+import { Button } from '@/components/ui/button',;
+import {;
+  Pagination,;
+  PaginationContent,;
+  PaginationItem,;
+  PaginationButton,;
+  PaginationNext,;
+  PaginationPrevious,;
+} from '@/components/ui/pagination';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { CountryServiceCard } from '@/components/services/CountryServiceCard';
+import { CountryPricing } from '@/data/onsiteServicePricing';
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   setSearchQuery: (query: string) => void;
 export function CountryTabs(): any ({popularCountries,filteredCountries,handleCountrySelect,onQuote,searchQuery,setSearchQuery}: CountryTabsProps) {const [currentPage, setCurrentPage] = useState(1)const countriesPerPage  = 50;useEffect(() => {setCurrentPage(1)}, [searchQuery])const totalPages = Math && Math.ceil(filteredCountries && filteredCountries.length / countriesPerPage)const paginatedCountries = filteredCountries && filteredCountries.slice((currentPage - 1) * countriesPerPage,currentPage * countriesPerPage;
   )export function CountryTabs({popularCountries,filteredCountries,handleCountrySelect,onQuote,searchQuery,popularCountries,filteredCountries,handleCountrySelect,onQuote,searchQuery,const paginatedCountries = filteredCountries.slice((currentPage - 1) * countriesPerPage,currentPage * countriesPerPage;
@@ -135,6 +157,7 @@ export function CountryTabs(): any ({popularCountries,filteredCountries,handleCo
                 <PaginationItem>;
                   <PaginationPrevious;
                     href={`?page=${currentPage - 1}`}
+<<<<<<< HEAD
                     onClick={e => {e && e.preventDefault()setCurrentPage(Math && Math.max(1, currentPage - 1))import { Pagination;
   PaginationContent;
   PaginationItem;
@@ -153,6 +176,18 @@ export function CountryTabs() {const [currentPage, setCurrentPage] = useState(1)
                   />;
                 </PaginationItem>;{Array && Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (<PaginationItem key={page}>;
                       <PaginationButton;
+=======
+                    onClick={e => {;
+                      e && e.preventDefault();
+                      setCurrentPage(Math && Math.max(1, currentPage - 1));
+                    }}
+                  />;
+                </PaginationItem>;
+                {Array && Array.from({ length: totalPages }, (_, i) => i + 1).map(;
+                  page => (;
+                    <PaginationItem key={page}>;
+                      <PaginationButton
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                         page={page}
                         isActive={page === currentPage}
                         onClick={e => {e && e.preventDefault()setCurrentPage(page)}}
@@ -164,6 +199,7 @@ export function CountryTabs() {const [currentPage, setCurrentPage] = useState(1)
                     href={`?page=${currentPage + 1}`}
                     onClick={e => {e && e.preventDefault()setCurrentPage(Math && Math.min(totalPages, currentPage + 1))}}
                   />;
+<<<<<<< HEAD
                 </PaginationItem>;</PaginationContent>;
             </Pagination>;
           </div>;
@@ -279,3 +315,6 @@ function CountryTabs() {const [current_page, setCurrentPage] = useState (1)const
                     href={`?page=${currentPage + 1}`}</TabsContent>;
     </Tabs>;
   )
+=======
+                </PaginationItem>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

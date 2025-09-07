@@ -44,6 +44,10 @@ ursor/automate-test-improve-and-merge-code-646c;
 let state: IntegrationState = {
   connections: [],
   logs: [],
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   overrides: [],
   connections: [],
   logs: [],
@@ -55,11 +59,25 @@ export function get_state (): IntegrationState {
 }
 export function write_state (updater: (state: IntegrationState) => void): IntegrationState {
   updater (state);
+<<<<<<< HEAD
+=======
+  overrides: [],}
+export function getState(): IntegrationState {
+  return { ...state }
+}
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 
 export function getState(): IntegrationState {;
   return { ...state };
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 export function writeState(
   updater: (state: IntegrationState) => void,
@@ -102,3 +120,16 @@ export function reset_state (): void {
   };
 }
 }
+<<<<<<< HEAD
+=======
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
+
+  updater(state);
+  return { ...state }
+}    connections: [],
+    logs: [],
+    overrides: [],
+  };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -37,4 +37,16 @@ const os = require('os')
         '5min'
         '15min'
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       const result = execSync('top -bn1 | grep "Cpu(s)"
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      const result = execSync('top -bn1 | grep "Cpu(s)"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      const result = execSync('top -bn1 | grep "Cpu(s)"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

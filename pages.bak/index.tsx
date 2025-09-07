@@ -1,5 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
+export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
+module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"import React from 'react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 ;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React from 'react';
 interface IndexProps  {// Add props here as needed;
 import * as React from 'react';
@@ -72,6 +81,10 @@ export default function Index({}: IndexProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 }
 }
@@ -86,6 +99,18 @@ interface IndexProps {
 
 
 
+<<<<<<< HEAD
+=======
+}}
+interface IndexProps {
+  // Add props here as needed
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import React from 'react';
+import React from 'react';
+import * as React from 'react';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 interface IndexProps {
   // Add props here as needed
@@ -131,6 +156,15 @@ export default function Index(): any ({}: IndexProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -8,6 +8,8 @@ resolve_conflicts() {
     echo "Resolving conflicts in: $file"
     
     # Check if file exists and has conflicts
+<<<<<<< HEAD
+=======
     if [[ -f "$file" && $(grep -c "" "$file") -gt 0 ]]; then
         # Create backup
         cp "$file" "${file}.backup"
@@ -50,3 +52,4 @@ git commit -m "Resolve merge conflicts - accept incoming changes
 - Ready for deployment"
 
 echo "✅ Merge completed successfully!"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

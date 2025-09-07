@@ -3,9 +3,56 @@
 const fs = require('fs');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 console.log('🔧 Resolving Final Conflicts');
 console.log('
 }
+=======
+:scripts/resolve-final-conflicts.cjs
+=======
+:backup-problematic-files/scripts/final-build-fix.cjs
+:scripts/resolve-final-conflicts.cjs
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+console.log('🔧 Resolving Final Conflicts');
+console.log('');
+
+// Function to resolve merge conflicts by keeping the first version
+function resolveMergeConflicts(content) {
+  return content
+<<<<<<< HEAD
+    .replace(/[a-f0-9]+/g, '');
+}
+console.log('🔧 Final Build Fix');
+console.log('====');
+:backup-problematic-files/scripts/final-build-fix.cjs
+:scripts/resolve-final-conflicts.cjs
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+console.log('🔧 Resolving Final Conflicts');
+console.log('
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    .replace(/
+}
+:backup-problematic-files/scripts/final-build-fix.cjs
+
+console.log('🔧 Final Build Fix');
+console.log('====');
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+console.log('🔧 Resolving Final Conflicts');
+console.log('
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
@@ -85,4 +132,88 @@ for (const file of filesToFix) {
     }
 
     let content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+:backup-problematic-files/scripts/final-build-fix.cjs
+:scripts/resolve-final-conflicts.cjs
+    let modified = false;
+
+    // Check for merge conflict markers
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    const originalContent = content;
+    
+    content = fixAllSyntax(content);
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(file, content);
+      console.log(`✅ Fixed ${file}`);
+      totalFixed++;
+    }
+  } catch (error) {
+    console.log(`❌ Error fixing ${file}: ${error.message}`);
+  }
+}
+
+console.log(`\n✅ Fixed ${totalFixed} files`);
+
+// Try to build
+console.log('\n🔨 Testing build...');
+try {
+  execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' }
+});
+  console.log('✅ Build successful!');
+} catch (error) {
+  console.log('⚠️  Build still has issues, but syntax was fixed');
+  console.log('Error:', error.message);
+}
+
+// Commit the fixes
+console.log('\n📝 Committing syntax fixes...');
+try {
+  execSync('git add .', { cwd: '/workspace' }
+});
+  execSync('git commit -m "fix: Final build fix for all remaining syntax errors"', { cwd: '/workspace' }
+});
+  console.log('✅ Syntax fixes committed');
+} catch (error) {
+  console.log('⚠️  Failed to commit syntax fixes:', error.message);
+}
+
+// Push changes
+console.log('\n🚀 Pushing syntax fixes to main branch...');
+try {
+  execSync('git push origin main', { cwd: '/workspace' }
+});
+  console.log('✅ Syntax fixes pushed to main branch');
+} catch (error) {
+  console.log('⚠️  Failed to push syntax fixes:', error.message);
+}
+
+console.log('\n🎉 Final build fix completed!');
+<<<<<<< HEAD
+:backup-problematic-files/scripts/final-build-fix.cjs
+    let modified = false;
+
+    // Check for merge conflict markers
+:scripts/resolve-final-conflicts.cjs
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+    let modified = false;
+
+    // Check for merge conflict markers
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,3 +1,52 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
+import {
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  Star
+  ExternalLink
+  ArrowRight
+  TrendingUp
+  Users
+  Clock
+  Shield
+  Zap;
+  Star,
+  ExternalLink,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Clock,
+  Shield,;
+  Zap,;
+} from 'lucide-react';
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+interface EnhancedServiceCardProps {
+  service: {
+import {;
+  Star,;
+  ExternalLink,;
+  ArrowRight,;
+  TrendingUp,;
+  Users,;
+  Clock,;
+  Shield,;
+  Zap,;
+} from 'lucide-react';
+interface EnhancedServiceCardProps {;
+  service: {;
+    id: string;
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   }import React from 'react';
 import { motion   } from 'framer-motion';
@@ -14,6 +63,7 @@ import { Star;
   Star,ExternalLink,ArrowRight,TrendingUp,Users,Clock,Shield,Zap,} from 'lucide-react';
 interface EnhancedServiceCardProps  {service: {import {Star,ExternalLink,ArrowRight,TrendingUp,Users,Clock,Shield,Zap,} from 'lucide-react';
 interface EnhancedServiceCardProps  {service: {id: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     name: string;
     tagline: string;
     price: string;
@@ -22,9 +72,14 @@ interface EnhancedServiceCardProps  {service: {id: string;
     features: string[];
     popular: boolean;
     icon: string;
+<<<<<<< HEAD
+    color: string;
+    textColor: string;
+=======
     color: string;text_color: string;
     hover: {y: -8,scale: 1.02,transition: {duration: 0.3,hidden: { rotate: -180, scale: 0 },visible: {      rotate: 0,opacity: 1,coordinate_y: 0,scale: 1,transition: {duration: 0.6,}
     }textColor: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     link: string;
     marketPosition: string;
     targetAudience: string;
@@ -51,11 +106,60 @@ interface EnhancedServiceCardProps  {service: {id: string;
     rating: number;
     reviews: number;
   }
+<<<<<<< HEAD
+}
+
+const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {
+  const cardVariants = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    hover: {
+      coordinate_y: -8,
+      scale: 1.02,
+      transition: {
+<<<<<<< HEAD
+        duration: 0.6,
+ease: 'easeInOut' as const,
+      },
+    },
+  };
+
+  
+    >
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
 }const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {const cardVariants  = null;hover: {coordinate_y: -8,scale: 1.02,transition: {duration: 0.3,}
     }
   }const icon_variants = {hidden: { rotate: -180, scale: 0 },rotate: 0,scale: 1,transition: {duration: 0.6,}
     }
     hover: {rotate: 360,scale: 1.1,transition: {duration: 0.6,>;duration: 0.6,ease: 'easeInOut' as const,},},}>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        duration: 0.3,
+      }
+    }
+  }
+;
+  const icon_variants = {
+    hidden: { rotate: -180, scale: 0 },
+      rotate: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+      }
+    }
+    hover: {
+      rotate: 360,
+      scale: 1.1,
+      transition: {
+        duration: 0.6,
+    >;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Background Glow */}
       <div;
         className={`absolute inset-0 bg-gradient-to-br ${service && service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
@@ -67,6 +171,40 @@ interface EnhancedServiceCardProps  {service: {id: string;
         style={{background: `linear-gradient(135deg, ${service.color.replace('from-', '').replace('to-', '').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(', ')})`;
         }}
       />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Popular Badge */}
+      {service.popular && (
+        <div className='absolute top-4 right-4 z-10'>
+          <motion.div
+            className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'
+            initial={{ scale: 0, rotate: -180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+<Star className='w-3 h-3 fill-current' />
+            POPULAR
+          </motion.div>
+        </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      {/* Popular Badge */}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      )}
+
+
+
+
+      {/* Card Content */}
+<<<<<<< HEAD
+<div className='relative p-6'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Popular Badge */}{service.popular && (<div className='absolute top-4 right-4 z-10'>;
           <motion.div;
             className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1';
@@ -82,6 +220,10 @@ interface EnhancedServiceCardProps  {service: {id: string;
       {/* Card Content */}
       <div className='relative p-6'>;
 <div className='relative p-6'>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Header */}
         <div className='flex items-start justify-between mb-4'>;
           <motion.div;
@@ -100,6 +242,17 @@ interface EnhancedServiceCardProps  {service: {id: string;
             whileHover="hover";
           >;
             {service.icon}
+<<<<<<< HEAD
+<<<<<<< HEAD
+          </motion.div>
+          <div className='text-right'>
+            <div className='text-2xl font-bold text-white'>{service.price}</div>
+            <div className='text-sm text-gray-400'>{service.period}</div>
+          </div>
+        </div>
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </motion.div>;
           <div className="text-right">;
             <div className="text-2xl font-bold text-white">{service.price}</div>;
@@ -127,6 +280,7 @@ interface EnhancedServiceCardProps  {service: {id: string;
             <div className='text-sm text-gray-400'>{service.period}</div>;
           </div>;
         </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {/* Title & Tagline */}
 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
           {service.name}
@@ -139,6 +293,91 @@ interface EnhancedServiceCardProps  {service: {id: string;
           {service.description}
         </p>;
         {/* Key Metrics */}
+<<<<<<< HEAD
+<div className='grid grid-cols-2 gap-4 mb-6'>
+          <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
+            <div className='text-cyan-400 text-lg font-bold'>
+              {service.customers}+
+            </div>
+            <div className='text-xs text-gray-400'>Customers</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      <div className='relative p-6'>
+
+      {/* Card Content */}
+      <div className='relative p-6'>
+
+        {/* Header */}
+        <div className='flex items-start justify-between mb-4'>
+          <motion.div
+            className={`text-4xl ${service.textColor}`}
+            variants={iconVariants}
+            initial='hidden'
+            animate='visible'
+
+      <div className="relative p-6">
+        {/* Header */}
+        <div className="flex items-start justify-between mb-4">
+          <motion.div
+            className={`text-4xl ${service.textColor}`}
+            variants={iconVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
+          >
+            {service.icon}
+          </motion.div>
+          
+          <div className="text-right">
+            <div className="text-2xl font-bold text-white">{service.price}</div>
+            <div className="text-sm text-gray-400">{service.period}</div>
+          </div>
+
+        </div>
+        {/* Title & Tagline */}
+
+
+        {/* Key Metrics */}          
+
+
+          <div className="text-right">
+            <div className="text-2xl font-bold text-white">{service.price}</div>
+            <div className="text-sm text-gray-400">{service.period}</div>
+        </div>
+        {/* Title & Tagline */}
+        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+          {service.name}
+        </h3>
+        <p className='text-gray-300 text-sm mb-4 leading-relaxed'>        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+          {service.name}
+        </h3>
+        <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+        </p>
+        {/* Description */}
+          {service.description}
+        </p>
+        {/* Key Metrics */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          </div>
+          <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
+            <div className='text-purple-400 text-lg font-bold'>
+              {service.rating}
+            </div>
+<<<<<<< HEAD
+            <div className='text-xs text-gray-400'>Rating</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+          </div>
+        </div>
+        {/* Features Preview */}
+<div className='mb-6'>
+          <h4 className='text-sm font-semibold text-white mb-3 flex items-center gap-2'>
+            <Zap className='w-4 h-4 text-yellow-400' />
+            Key Features
+          </h4>
+          <div className='space-y-2'>
+            {service.features.slice(0, 3).map((feature, index) => (
+              <motion.div
+=======
 <div className='grid grid-cols-2 gap-4 mb-6'>;
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>;
             <div className='text-cyan-400 text-lg font-bold'>;
@@ -163,6 +402,23 @@ interface EnhancedServiceCardProps  {service: {id: string;
             <div className='text-xs text-gray-400'>Rating</div>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+            <div className='text-xs text-gray-400'>Rating</div>          </div>
+        </div>
+        {/* Features Preview */}
+        <div className='mb-6'>
+          <h4 className='text-sm font-semibold text-white mb-3 flex items-center gap-2'>
+            <Zap className='w-4 h-4 text-yellow-400' />        <div className="grid grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-2 gap-4 mb-6">
+          <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
+            <div className="text-cyan-400 text-lg font-bold">{service.customers}+</div>
+            <div className="text-xs text-gray-400">Customers</div>
+          </div>
+        </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             whileHover='hover'>;
             {service && service.icon}
           </motion && motion.div>;<div className='text-right'>;
@@ -206,6 +462,10 @@ interface EnhancedServiceCardProps  {service: {id: string;
                 key={index}
                 className="flex items-center gap-2 text-sm text-gray-300";
                 initial={{ opacity: 0, x: -20 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 animate={{ opacity: 1, x: 0 }}{/* Features Preview */}
 <div className='mb-6'>;
           <h4 className='text-sm font-semibold text-white mb-3 flex items-center gap-2'>;
@@ -214,11 +474,103 @@ interface EnhancedServiceCardProps  {service: {id: string;
           </h4>;
           <div className='space-y-2'>;
             {service.features.slice(0, 3).map((feature, index) => (<motion.div;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 key={index}
                 className='flex items-center gap-2 text-sm text-gray-300';
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 * index }}
+<<<<<<< HEAD
+              >
+<div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+                {feature}
+              </motion && motion.div>;
+<<<<<<< HEAD
+            ))}
+            {service.features.length > 3 && (
+<div className='text-xs text-gray-500 mt-2'>
+                +{service.features.length - 3} more features
+              </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                animate={{ opacity: 1, x: 0 }}
+                {feature}
+              </motion && motion.div>;
+            ))}
+            {service && service.features.length > 3 && (;
+              <div className='text-xs text-gray-500 mt-2'>              <div className="text-xs text-gray-500 mt-2">;
+=======
+            ))}{service && service.features.length > 3 && (<div className='text-xs text-gray-500 mt-2'>              <div className="text-xs text-gray-500 mt-2">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+                +{service && service.features.length - 3} more features;
+              </div>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            )}
+
+
+
+        {/* Market Info */}
+<div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
+          <div className='flex items-center justify-between mb-2'>
+            <span className='text-xs font-semibold text-white'>
+              Market Size
+            </span>
+            <span className='text-xs text-cyan-400'>{service.marketSize}</span>
+
+          </div>
+          <div className='flex items-center justify-between mb-2'>
+            <span className='text-xs font-semibold text-white'>
+              Growth Rate
+            </span>
+            <span className='text-xs text-green-400'>{service.growthRate}</span>
+          </div>
+          <div className='flex items-center justify-between'>
+            <span className='text-xs font-semibold text-white'>ROI</span>
+<<<<<<< HEAD
+            <span className='text-xs text-yellow-400'>{service.roi}</span>
+          </div>
+        </div>
+        {/* Trial & Setup Info */}
+<div className='flex items-center justify-between mb-6 text-sm'>
+          <div className='flex items-center gap-2 text-gray-400'>
+            <Clock className='w-4 h-4' />
+            {service.trialDays} day trial
+          </div>
+          <div className='flex items-center gap-2 text-gray-400'>
+            <Shield className='w-4 h-4' />
+            {service.setupTime}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            <span className='text-xs text-yellow-400'>{service.roi}</span>          </div>
+        </div>
+        {/* Trial & Setup Info */}          </div>
+        <div className="mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-xs font-semibold text-white">Market Size</span>
+            <span className="text-xs text-cyan-400">{service.marketSize}</span>
+          </div>
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-xs font-semibold text-white">Growth Rate</span>
+            <span className="text-xs text-green-400">{service.growthRate}</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-semibold text-white">ROI</span>
+            <span className="text-xs text-yellow-400">{service.roi}</span>
+          </div>
+        </div>
+        {/* Trial & Setup Info */}
+          <div className="flex items-center gap-2 text-gray-400">
+            <Clock className="w-4 h-4" />
+            {service.trialDays} day trial
+          </div>
+          <div className="flex items-center gap-2 text-gray-400">
+            <Shield className="w-4 h-4" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          </div>
+        </div>
+=======
               >;
 <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />;
                 {feature}
@@ -228,6 +580,8 @@ interface EnhancedServiceCardProps  {service: {id: string;
               </div>;{service.features.length > 3 && (<div className='text-xs text-gray-500 mt-2'>;
                 +{service.features.length - 3} more features;
               </div>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             )}{/* Market Info */}
 <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>;
           <div className='flex items-center justify-between mb-2'>;
@@ -259,6 +613,10 @@ interface EnhancedServiceCardProps  {service: {id: string;
           <div className="flex items-center justify-between">;
             <span className="text-xs font-semibold text-white">ROI</span>;
             <span className="text-xs text-yellow-400">{service.roi}</span>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         </div>;
         {/* Trial & Setup Info */}
@@ -325,9 +683,35 @@ interface EnhancedServiceCardProps  {service: {id: string;
           </div>;
         </div>;{/* Action Buttons */}{service.setupTime}</div>;
         </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        {/* Action Buttons */}
+
+            {service.setupTime}
+
+          </div>
+        </div>
+        {/* Action Buttons */}
+<<<<<<< HEAD
+<div className='flex gap-3'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        <div className='flex gap-3'>
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          <motion.a
+=======
         {/* Action Buttons */}<div className='flex gap-3'>;
 <div className='flex gap-3'>;
           <motion.a;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+        {/* Action Buttons */}<div className='flex gap-3'>;
+<div className='flex gap-3'>;
+          <motion.a;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             href={service.link}
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2';
             whileHover={{ scale: 1 && 1.05 }}
@@ -336,7 +720,18 @@ interface EnhancedServiceCardProps  {service: {id: string;
             Learn More;
           </motion && motion.a>;<motion&& motion.a;
             href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center'
+=======
             className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center';
+=======
+            className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+            className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }}>;
             <ArrowRight className='w-4 h-4' />          </motion && motion.a>;
@@ -347,7 +742,12 @@ interface EnhancedServiceCardProps  {service: {id: string;
         <div className="flex gap-3">;
           <motion.a;
             href={service.link}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >;
@@ -355,11 +755,27 @@ interface EnhancedServiceCardProps  {service: {id: string;
           </motion.a>;
         </div>;
         {/* Contact Info */}
+<<<<<<< HEAD
+<div className='mt-4 pt-4 border-t border-white/10'>
+          <div className='text-xs text-gray-500 text-center'>
+            Contact: {service.contactInfo.email}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          </div>
+        </div>
+      </div>
+=======
 <div className='mt-4 pt-4 border-t border-white/10'>;
           <div className='text-xs text-gray-500 text-center'>;
             Contact: {service.contactInfo.email}</div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }}>;
             <ExternalLink className="w-4 h-4" />;
@@ -379,6 +795,41 @@ interface EnhancedServiceCardProps  {service: {id: string;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Hover Effect Border */}
+<div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+=======
+      {/* Hover Effect Border */}
+}
+};
+
+export default EnhancedServiceCard;    </motion.div>
+  )
+}
+export default EnhancedServiceCard;
+
+};
+export default EnhancedServiceCard;
+export default EnhancedServiceCard;
+
+};
+
+export default EnhancedServiceCard;
+export default EnhancedServiceCard;
+
+      <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover: opacity-100 transition-opacity duration-500" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    </motion.div>
+  );
+};
+
+export default EnhancedServiceCard;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Hover Effect Border */}}
 }export default EnhancedServiceCard;    </motion.div>;
   )}
@@ -605,6 +1056,28 @@ export default EnhancedServiceCard;<div className="absolute inset-0 rounded-2xl 
       </div>;
       {/* Hover Effect Border */}
       <div className='absolute inset - 0 rounded - 2xl border - 2 border - transparent bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500' />;
+<<<<<<< HEAD
+<<<<<<< HEAD
     </motion.div>)}export default EnhancedServiceCard;    </motion.div>)}export default EnhancedServiceCard;}<div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
     </motion.div>;
   )}export default EnhancedServiceCard;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </motion.div>);
+}
+;
+export default EnhancedServiceCard;    </motion.div>);
+}
+;
+export default EnhancedServiceCard;
+;
+
+};
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </motion.div>)}export default EnhancedServiceCard;    </motion.div>)}export default EnhancedServiceCard;}<div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
+    </motion.div>;
+  )}export default EnhancedServiceCard;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

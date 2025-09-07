@@ -95,4 +95,16 @@ const { execSync, spawn } = require("child_process")
       console.log("\n Build automation completed")
       process.exit(results.overallStatus === "success")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       console.error("\n Build automation "failed": ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      console.error("\n Build automation "failed": ")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      console.error("\n Build automation "failed": ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

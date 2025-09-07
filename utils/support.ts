@@ -8,14 +8,29 @@
   return null;export interface IntentMatch  {intentMatched: boolean;
   logEvent: (event: any) => null,
   getArticles: () => [],
+<<<<<<< HEAD
+<<<<<<< HEAD
   getArticleById: (id: string) => null;
+=======
+  getArticleById: (id: string) => null
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  getArticleById: (id: string) => null;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here
   return null;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface IntentMatch {
   intentMatched: boolean;
   matchedArticleIds: string[];
@@ -36,6 +51,13 @@ export interface IntentMatch {
 }export const logSupportEventToOperator = (event: any) => {// Add support event logging functionality here;
   return null;}ursor/automate-test-improve-and-merge-code-646c;
   // Add support functionality here;
+<<<<<<< HEAD
+  log_event: (event: any) => null,
+  get_articles: () => [],
+}
+}
+<<<<<<< HEAD
+=======
   log_event: (event: any) => null,get_articles: () => [],export const logSupportEventToOperator = (event: any) => {// Add support event logging functionality here;
   return null;
   // Add support functionality here;
@@ -44,10 +66,20 @@ export interface IntentMatch {
   get_articles: () => []
 }
 }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
+<<<<<<< HEAD
+=======
+}export const logSupportEventToOperator = (event: any) => {
+  // Add support event logging functionality here;
+  return null;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 }
 }export const logSupportEventToOperator = (event: any) => {// Add support event logging functionality here;

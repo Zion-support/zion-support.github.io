@@ -14,9 +14,13 @@ export type UserRole = "admin" | "user" | "guest";export interface Application  
   skills: string[];
   createdAt: string;
   updatedAt?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 }export type UserRole = 'admin' | 'user' | 'guest';id: string;job_id: string;
   talent_slug: string;
   status: 'applied' | 'skipped' | 'pending';export interface Application  {id: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 
@@ -66,3 +70,9 @@ export type UserRole = 'admin' | 'user' | 'guest';
 
 
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 console.log('🚀 Starting simple merge process...');
 try {// Check git status;
   console.log('📊 Checking git status...');
@@ -73,18 +80,42 @@ try {;
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),;
     if (conflictFiles.trim()) {;
       console.log('Found merge conflicts in:', conflictFiles.trim()),;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       // Resolve conflicts by accepting our version;
 
 
       for (const file of files) {;
         if (file.trim()) {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+          console.log(`Resolving conflicts in: ${file}`);
+          try {execSync(`git checkout --ours "${file}"`);
+          } catch (e) {execSync(`git checkout --theirs "${file}"`);
+      for (const file of files) {;
+        if (file.trim()) {;
+          console.log(`Resolving conflicts in: ${file}`);
+          try {execSync(`git checkout --ours "${file}"`);
+          } catch (e) {execSync(`git checkout --theirs "${file}"`);
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
       for (const file of files) {;
         if (file.trim()) {;
           console.log(`Resolving conflicts in: ${file}`);
           try {execSync(`git checkout --ours "${file}"`);
           } catch (e) {execSync(`git checkout --theirs "${file}"`);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           console.log(`Resolving conflicts in: ${file}`),;
           try {;
             execSync(`git checkout --ours "${file}"`);
@@ -170,6 +201,14 @@ const { execSync } = require('child_process'),const { execSync } = require('chil
   // Push all changes;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+      for (const file of files) {;
+        if (file.trim()) {;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           }
           execSync(`git add "${file}"`);
         }
@@ -182,6 +221,11 @@ const { execSync } = require('child_process'),const { execSync } = require('chil
   }
   // Push all changes;;
   // Push all changes;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   console.log('📤 Pushing all changes to main...');
   execSync('git push origin main');
   console.log('🎉 All merge operations completed successfully!');
@@ -189,6 +233,10 @@ const { execSync } = require('child_process'),const { execSync } = require('chil
   console.log('✅ All merge conflicts have been resolved');
   console.log('✅ Repository is now clean and up to date');
 } catch (error) {console.error('❌ Error during merge process:', error.message);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 ;
@@ -217,6 +265,11 @@ const { execSync } = require('child_process'),const { execSync } = require('chil
 
   process.exit(1);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   console.log ('📤 Pushing all changes to main...'),
   exec_sync ('git push origin main'),
   console.log ('🎉 All merge operations completed successfully!'),
@@ -227,5 +280,9 @@ const { execSync } = require('child_process'),const { execSync } = require('chil
   console.error ('❌ Error during merge process:', error.message),
   process.exit (1);
 }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   process.exit(1);
 }

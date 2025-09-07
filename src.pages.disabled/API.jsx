@@ -11,6 +11,10 @@ ursor/add-new-services-and-deploy-updates-0462;
 :temp_exclude/src.pages.disabled/API.jsx;
 :src.pages.disabled/API.jsx;
 import React from \'react\' export default API const API = () => { return (<> <Helmet> <title > API Reference - Zion Tech Group</title> <meta name=\'description\' content=\'Access Zion Tech Group\'s API documentation and integration guides for developers.\' / / /> </Helmet> <div className=\'min - h-screen bg - gray - 50 py - 12\'> <div className=\'max - w-7xl mx - auto px - 4 \"sm\": px: - 6 lg:px: - 8\'> <div className=\'text - center mb - 12\'> <h1 className=\'text - 4xl font - bold text - gray - 900 mb - 4\'> API Reference </h1> <p className=\'text - xl text - gray - 600 max - w-3xl mx - auto\'> Integrate with Zion Tech Group services using our comprehensive API documentation. </p> </div> <div className=\'bg - white rounded - lg shadow - lg p - 8\'> <p className=\'text - gray - 600 text - center\'> API documentation coming soon. We\'re building comprehensive integration guides. </p> </div> </div> </div> </>)}\'';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -21,9 +25,20 @@ import _React from 'react' export default API const API = () => { return (<> <He
 :src.pages.disabled/API.jsx
 :src.pages.disabled/API.jsx
 :src.pages.disabled/API.jsx
+<<<<<<< HEAD
+import _React from 'react' export default API const API = () => { return (<> <Helmet> <title > API Reference - Zion Tech Group</title> <meta name='description' content='Access Zion Tech Group's API documentation and integration guides for developers.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> API Reference </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Integrate with Zion Tech Group services using our comprehensive API documentation. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> API documentation coming soon. We're building comprehensive integration guides. </p> </div> </div> </div> </>)}'';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import _React from 'react' export default API const API = () => { return (<> <Helmet> <title > API Reference - Zion Tech Group</title> <meta name='description' content='Access Zion Tech Group's API documentation and integration guides for developers.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> API Reference </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Integrate with Zion Tech Group services using our comprehensive API documentation. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> API documentation coming soon. We're building comprehensive integration guides. </p> </div> </div> </div> </>)}'';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ursor/add-new-services-and-deploy-updates-0462
 :src.pages.disabled/API.jsx
 :temp_exclude/src.pages.disabled/API.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -31,3 +46,13 @@ ursor/add-new-services-and-deploy-updates-0462
 
 
 :src.pages.disabled/API.jsx
+<<<<<<< HEAD
+import _React from 'react' export default API const API = () => { return (<> <Helmet> <title > API Reference - Zion Tech Group</title> <meta name='description' content='Access Zion Tech Group's API documentation and integration guides for developers.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> API Reference </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Integrate with Zion Tech Group services using our comprehensive API documentation. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> API documentation coming soon. We're building comprehensive integration guides. </p> </div> </div> </div> </>)}'';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import _React from 'react' export default API const API = () => { return (<> <Helmet> <title > API Reference - Zion Tech Group</title> <meta name='description' content='Access Zion Tech Group's API documentation and integration guides for developers.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> API Reference </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Integrate with Zion Tech Group services using our comprehensive API documentation. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> API documentation coming soon. We're building comprehensive integration guides. </p> </div> </div> </div> </>)}'';
+import _React from 'react' export default API const API = () => { return (<> <Helmet> <title > API Reference - Zion Tech Group</title> <meta name='description' content='Access Zion Tech Group's API documentation and integration guides for developers.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> API Reference </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Integrate with Zion Tech Group services using our comprehensive API documentation. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> API documentation coming soon. We're building comprehensive integration guides. </p> </div> </div> </div> </>)}'';
+import _React from 'react' export default API const API = () => { return (<> <Helmet> <title > API Reference - Zion Tech Group</title> <meta name='description' content='Access Zion Tech Group's API documentation and integration guides for developers.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> API Reference </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Integrate with Zion Tech Group services using our comprehensive API documentation. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> API documentation coming soon. We're building comprehensive integration guides. </p> </div> </div> </div> </>)}'';
+import _React from 'react' export default API const API = () => { return (<> <Helmet> <title > API Reference - Zion Tech Group</title> <meta name='description' content='Access Zion Tech Group's API documentation and integration guides for developers.' / / /> </Helmet> <div className='min - h-screen bg - gray - 50 py - 12'> <div className='max - w-7xl mx - auto px - 4 "sm": px: - 6 lg:px: - 8'> <div className='text - center mb - 12'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 4'> API Reference </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Integrate with Zion Tech Group services using our comprehensive API documentation. </p> </div> <div className='bg - white rounded - lg shadow - lg p - 8'> <p className='text - gray - 600 text - center'> API documentation coming soon. We're building comprehensive integration guides. </p> </div> </div> </div> </>)}'';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

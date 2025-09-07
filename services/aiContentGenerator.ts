@@ -3,6 +3,9 @@
 export interface ContentGenerationRequest  {export interface ContentGenerationRequest  {type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   length: 'short' | 'medium' | 'long';keywords?: string[],target_audience?: string;export interface ContentGenerationRequest  {type: 'blog - post' | 'social - media' | 'email' | 'landing - page' | 'product - description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
@@ -189,6 +192,7 @@ This is a ${request.length} ${request.type} about ${request.topic}. The content 
     readabilityScore: number;
     suggestions: string[];
     keywordDensity: Record<string, number>      seo_score: Math.floor (Math.random () * 30) + 70;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   length: 'short' | 'medium' | 'long';
 
   keywords?: string[],
@@ -202,6 +206,12 @@ export interface ContentGenerationRequest {
   keywords?: string[],
   target_audience?: string;
 }
+<<<<<<< HEAD
+=======
+  length: 'short' | 'medium' | 'long';}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface ContentGenerationResponse {
   content: string;
   word_count: number;
@@ -210,6 +220,10 @@ export interface ContentGenerationResponse {
   suggestions: string[];
   metadata: {
     title: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     description: string,
     tags: string[];
@@ -222,6 +236,14 @@ export interface ContentTemplate {
     title: string;
 
     description: string
+<<<<<<< HEAD
+=======
+  metadata: {
+    title: string,
+  description: string
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     tags: string[]
   }
@@ -229,6 +251,10 @@ export interface ContentTemplate {
 export interface ContentTemplate {
 
 export interface ContentTemplate {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     description: string,
     tags: string[];
 
@@ -447,6 +473,19 @@ This is a ${request && request.length} ${request && request.type} about ${reques
 ${request && request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
 
     return {
+=======
+  id: string;
+  name: string,
+  description: string;
+  type: string;      }
+      {
+        id: 'social - media - campaign';
+        name: 'Social Media Campaign',
+  description: 'Complete social media content strategy and posts';
+      {
+        id: 'landing - page - copy';
+        name: 'Landing Page Copy';    return {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       content: mockContent;
       wordCount: mockContent && mockContent.split(' ').length;
       seoScore: 85;
@@ -455,6 +494,10 @@ ${request && request.topic} represents a significant opportunity for organizatio
         'Add more specific examplesInclude relevant statisticsOptimize for target keywords'
       ]
       metadata: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         title: `${request && request.topic} - Complete Guide`;
         description: `Learn everything about ${request && request.topic} and how to implement it effectively.`;
         tags: [request && request.topic, request && request.type, 'guidetutorial']
@@ -513,6 +556,20 @@ ${request.topic} represents a significant opportunity for organizations looking 
     // Mock content analysis;
     return {
       seo_score: Math.floor (Math.random () * 30) + 70;
+<<<<<<< HEAD
+=======
+        title: `${request && request.topic} - Complete Guide`,
+  description: `Learn everything about ${request && request.topic} and how to implement it effectively.`;
+        tags: [request && request.topic, request && request.type, 'guidetutorial']      }
+    }
+  }  async analyzeContent(content: string): Promise<{
+    seoScore: number;
+    readabilityScore: number;
+    suggestions: string[]
+    keywordDensity: Record<string, number>      seo_score: Math.floor (Math.random () * 30) + 70;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       readability_score: Math.floor (Math.random () * 30) + 70;
       suggestions: [;
         'Add more headings for better structure_include internal links to related content_optimize meta description';
@@ -549,6 +606,10 @@ export const AI_CONTENT_PRICING = {starter: {name: 'Starter';
         'content': 2.1;
         'seo': 1.8,
         'marketing': 1.5;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
   async analyzeContent(content: string): Promise<{;
     seoScore: number,;
@@ -558,6 +619,11 @@ export const AI_CONTENT_PRICING = {starter: {name: 'Starter';
   }> {;
     // Mock content analysis;
     return {;
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       seoScore: Math.floor(Math.random() * 30) + 70,;
       readabilityScore: Math.floor(Math.random() * 30) + 70,;
       suggestions: [;
@@ -566,6 +632,10 @@ export const AI_CONTENT_PRICING = {starter: {name: 'Starter';
       keywordDensity: {;
         'content': 2.1,;
         'seo': 1.8,;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         'marketing': 1.5;
 
 
@@ -582,18 +652,33 @@ export const AI_CONTENT_PRICING = {starter: {name: 'Starter';
 // Pricing tiers for the AI Content Generator;
 // Pricing tiers for the AI Content Generator;
 // Pricing tiers for the AI Content Generator;
+<<<<<<< HEAD
+=======
+        'marketing': 1.5;// Pricing tiers for the AI Content Generator;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter';
     price: 29;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     period: '/month',
     features: [;
       '100 content generations per month_basic templatesSEO analysis_email support_standard quality';
     ];
 
   }
+<<<<<<< HEAD
   professional: {
     name: 'Professional';
     price: 99;
@@ -606,13 +691,21 @@ export const AI_CONTENT_PRICING = {
 
 
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   enterprise: {
     name: 'Enterprise';
     price: 299;
 
     period: '/month',
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    period: '/month',
+=======
 
     period: '/month'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
   }
@@ -631,10 +724,21 @@ export const AI_CONTENT_PRICING = {;
     period: '/month',;
 
 
+<<<<<<< HEAD
+=======
+    period: '/month',
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     features: [;
       '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality';
     ];
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   },;
   },;
   professional: {;
@@ -666,6 +770,9 @@ export const AI_CONTENT_PRICING = {;
   }
 };
   }
+=======
+  },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 
   }

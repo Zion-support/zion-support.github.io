@@ -14,7 +14,13 @@ interface VideoCallProps  {// Add props here as needed;
 interface VideoCallProps {
   // Add props here as needed
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export default function VideoCall({}: VideoCallProps) {
@@ -25,10 +31,20 @@ export default function VideoCall({}: VideoCallProps) {
     </div>
   );
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 }
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 :src.pages.disabled/VideoCall.jsx
 }
 }
@@ -37,6 +53,10 @@ export default function VideoCall({}: VideoCallProps) {
 }
 }:src.pages.disabled/VideoCall.jsx;
 :temp_exclude/src.pages.disabled/VideoCall.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 
@@ -50,4 +70,9 @@ export default function VideoCall({}: VideoCallProps) {
 }
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 :temp_exclude/src.pages.disabled/VideoCall.jsx;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

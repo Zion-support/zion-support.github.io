@@ -62,6 +62,11 @@ process.on ('SIGTERM', () => {
   dev_process.kill ('SIGTERM'),
   process.exit (0);
 }),
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { spawn } = require('child_process');
 ;
 console.log('🚀 Starting development server...');
@@ -92,3 +97,7 @@ process.on('SIGTERM', () => {;
   devProcess.kill('SIGTERM');
   process.exit(0);
 });
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

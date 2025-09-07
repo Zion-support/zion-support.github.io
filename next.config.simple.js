@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/** @type {import ('next').NextConfig} */;
+const next_config = {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 ;
   reactStrictMode: true,compress: true,poweredByHeader: false,eslint: { ignoreDuringBuilds: true },typescript: { ignoreBuildErrors: true },page_extensions: ['tsx', 'ts', 'jsx', 'js'],// Image optimization;
   images: {domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],formats: ['image / webp', 'image / avif'];
@@ -23,6 +30,7 @@
 module.exports = nextConfig;
 /** @type {import ('next').NextConfig} */;
 const next_config = {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
   reactStrictMode: true,
@@ -49,7 +57,14 @@ const next_config = {
     formats: ["image/webp", "image/avif"]
   },
   // Output configuration
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   // Output configuration
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+  // Output configuration
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   output: 'standalone',
 
   // Trailing slash

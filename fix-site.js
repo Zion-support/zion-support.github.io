@@ -1,7 +1,14 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 ;
 const fs = require ('fs'),console.log ('🔧 Fixing site loading issues...'),// Fix Next.js configuration;
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require ('fs'),
 console.log ('🔧 Fixing site loading issues...'),
 // Fix Next.js configuration;
@@ -34,8 +41,16 @@ const nextConfig  = {reactStrictMode: true;
   'components/BundleAnalyzer.jscomponents/PerformanceMonitor.jscomponents/SEO.js';},output: 'standalone',trailingSlash: false,distDir: '.next';
 },module.exports = nextConfig,`,fs.writeFileSync('next.config.js', nextConfig),console.log('✅ Next.js configuration fixed'),// Remove empty files that might cause issues;
 const nextConfig = {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   reactStrictMode: true,;
   reactStrictMode: true;
 
@@ -45,8 +60,16 @@ const nextConfig = {;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
   images: {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
     domains: ["localhost", "ziontechgroup.com"];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+    domains: ["localhost", "ziontechgroup.com"];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   },
   output: 'standalone',
   trailing_slash: false,

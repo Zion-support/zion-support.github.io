@@ -28,4 +28,16 @@ const { execSync } = require("child_process")
       console.error("Please specify backup name to restore")
   case "list"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

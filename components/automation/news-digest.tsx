@@ -1,3 +1,45 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+type NewsItem = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+}</div> </div>) import fs from 'fs';
+import fs from 'fs';
+import path from 'path';
+ </div> </div>) ) ;
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
+export async function getServerSideProps() {
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
+export async function getServerSideProps() {;
+  const file = path.join(process.cwd(), 'datanews-digest.json');
+  let items: NewsItem[] = [];  let generatedAt = '';
+  try {;
+    const raw = fs && fs.readFileSync(file, 'utf-8');
+    const json = JSON && JSON.parse(raw);
+    items = json && json.items || [];
+    generatedAt = json && json.generatedAt || '';
+type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
+export async function getServerSideProps() {;
+  const file = path.join(process.cwd(), 'datanews-digest.json');
+  let items: NewsItem[] = [];  let generatedAt = '';
+  try {
+    items = json.items || [];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    generatedAt = json.generatedAt || ''
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 }</div> </div>) import fs from 'fs';
@@ -12,6 +54,10 @@ type NewsItem = { source: string, title: string, url: string, summary: string, t
     generatedAt = json && json.generatedAt || '';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },export async function getServerSideProps() {const file = path.join(process.cwd(), 'datanews-digest.json')let items: NewsItem[] = [];  let generatedAt = '';
   try {items = json.items || [];type NewsItem = any;generatedAt = json.generatedAt || '';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   } catch {}
   return { props: { items, generatedAt } }
 }export default function NewsDigestPage() {return (<div className="space-y-6">;
@@ -28,10 +74,37 @@ type NewsItem = { source: string, title: string, url: string, summary: string, t
               {n && n.tags?.map(t => (<span key={t} className="text-xs px-2 py-0 && 0.5 rounded bg-gray-100">{t}</span>))}
             </div>;
           </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        ))}
+
+    </div>;
+
+);
+}
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ))}</div>;)})}export default /**;
  * NewsDigestPage - Function description;
  */;
 function NewsDigestPage() {return (<div className="space-y-6">;
+<<<<<<< HEAD
+=======
+  );
+}
+
+export default /**
+ * NewsDigestPage - Function description
+ */
+function NewsDigestPage() {
+  return (
+    <div className="space-y-6">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
       <div className="grid grid - cols-1 gap-4">;
@@ -46,4 +119,14 @@ function NewsDigestPage() {return (<div className="space-y-6">;
             </div>;
           </div>))}
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
     </div>)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </div>)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

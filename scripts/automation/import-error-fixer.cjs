@@ -13,4 +13,16 @@ const glob = require('glob')
       const importLines = newContent.match(/import\s+.*\s+from\s+['"][^'')]
         this.log(`Remaining "errors"`)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       this.log(`Error during import fixing "process"`)
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      this.log(`Error during import fixing "process"`)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      this.log(`Error during import fixing "process"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

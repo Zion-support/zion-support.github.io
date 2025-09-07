@@ -44,7 +44,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     tagline: 'World\'s first quantum-enhanced AI with human-like reasoning',
     price: '$2,999',
 
+<<<<<<< HEAD
+      '24 / 7 quantum AI support',    ],    price: '$2, 999',
+=======
       '24 / 7 quantum AI support'    ],    price: '$2, 999',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     period: '/month',
     description: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
     features: [;
@@ -3307,7 +3311,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Legal analytics',
       'Team collaboration',
       'API for integration',
+<<<<<<< HEAD
+      'Mobile app support',    ],    description: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.',
+=======
       'Mobile app support'    ],    description: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     popular: true,
     icon: '⚖️',
     color: 'from-indigo-600 to-purple-700',
@@ -3705,7 +3713,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     launchDate: '2024-03-01',
     customers: 38,
     rating: 4.7,
+<<<<<<< HEAD
+    reviews: 26,
+=======
     reviews: 26
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   },;
 ];export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
     reviews: 26

@@ -109,8 +109,16 @@ const mergeSpecificFiles = () =>: any {
 
     return true;
   } catch (error) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     console.error("Error in selective merge:", error.message);
     console.error("Error in selective merge:", error.message);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    console.error("Error in selective merge:", error.message);
+    console.error("Error in selective merge:", error.message);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     } catch (error) {
       console && console.error('Error committing changes:', error && error.message);
     }

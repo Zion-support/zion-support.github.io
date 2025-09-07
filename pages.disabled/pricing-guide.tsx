@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
@@ -291,10 +307,76 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {pricingFactors.map((factor, index) => (<motion.div;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={factor.factor}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              >
+                <Card className="p-8 h-full">
+                  <div className="flex items-start mb-6">
+                    <div
+                      className={`p-3 rounded-lg bg-gradient-to-r ${factor.color} mr-4`}
+                    >
+                      <factor.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {factor.factor}
+                      </h3>
+                      <p className="text-gray-300">{factor.description}</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-3">
+                    {factor.details.map((detail, detailIndex) => (
+                      <li
+                        key={detailIndex}
+                        className="flex items-center text-gray-300"
+                      >
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Pricing Examples */}
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Real-World Pricing Examples
+            </h2>
+            <p className="text-xl text-gray-300">
+              See how different project types are priced
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {pricingExamples.map((example, index) => (
+              <motion.div
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                 <Card className="p-8 h-full">;
                   <div className="flex items-start mb-6">;
@@ -344,10 +426,83 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           </motion.div>;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {pricingExamples.map((example, index) => (<motion.div;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={example.scenario}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              >
+                <Card className="p-8 h-full">
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {example.scenario}
+                    </h3>
+                    <p className="text-gray-300 text-sm mb-4">
+                      {example.description}
+                    </p>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">
+                      {example.price}
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Timeline: {example.timeline}
+                    </div>
+                  </div>
+                  <ul className="space-y-3 mb-6">
+                    {example.features.map((feature, featureIndex) => (
+                      <li
+                        key={featureIndex}
+                        className="flex items-center text-gray-300 text-sm"
+                      >
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="text-center">
+                    <Badge variant="secondary" className="text-green-400">
+                      <TrendingUp className="w-4 h-4 mr-1" />
+                      {example.roi}
+                    </Badge>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Cost Saving Tips */}
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              How to Save on AI Development Costs
+            </h2>
+            <p className="text-xl text-gray-300">
+              Smart strategies to maximize your AI investment
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {costSavingTips.map((tip, index) => (
+              <motion.div
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                 <Card className="p-8 h-full">;
                   <div className="text-center mb-6">;
@@ -404,10 +559,88 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {costSavingTips.map((tip, index) => (<motion.div;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 key={tip.tip}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              >
+                <Card className="p-6">
+                  <div className="flex items-start">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 mr-4">
+                      <Lightbulb className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-white mb-2">
+                        {tip.tip}
+                      </h3>
+                      <p className="text-gray-300 mb-3">{tip.description}</p>
+                      <Badge variant="secondary" className="text-green-400">
+                        {tip.savings}
+                      </Badge>
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Get Your Custom Quote
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Ready to get started? Contact us for a personalized quote based on
+              your specific requirements.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+              >
+                <Calculator className="w-5 h-5 mr-2" />
+                Get Free Quote
+              </Button>
+              <Button size="lg" variant="outline">
+                <HelpCircle className="w-5 h-5 mr-2" />
+                Ask Questions
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default PricingGuide;
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               >;
                 <Card className="p-6">;
                   <div className="flex items-start">;
@@ -463,3 +696,13 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
       </section>;
     </div>;
   )}export default PricingGuide;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

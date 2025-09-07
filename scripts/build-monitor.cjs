@@ -38,4 +38,16 @@ const { execSync } = require('child_process')
       this.log(`🧪 "Tests"`)
       console.log(`� Build "status"`)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       console.error('\n� Build Monitor "failed")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      console.error('\n� Build Monitor "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      console.error('\n� Build Monitor "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

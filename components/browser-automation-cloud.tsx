@@ -3,6 +3,44 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }import React from 'react';
 import SEO from '../components / SEO';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {Check, ExternalLink} from 'lucide-react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+export default function BrowserAutomationCloudPage() {
+  const features = [
+    'Parallel Playwright/Puppeteer execution',
+    'Queued jobs with retries and rate limits',
+    'Artifacts: HAR, traces, screenshots, videos',
+    'Rotating proxies and geo targeting',
+    'Webhook callbacks and REST API',;
+  ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Check, ExternalLink } from 'lucide-react';
 export default function BrowserAutomationCloudPage() {const features = [;
     'Parallel Playwright/Puppeteer execution','Queued jobs with retries and rate limits','Artifacts: HAR, traces, screenshots, videos','Rotating proxies and geo targeting','Webhook callbacks and REST API'];const features = [;
@@ -17,6 +55,14 @@ export default function BrowserAutomationCloudPage() {const features = [;
         title='Browser Automation Cloud';
         description='Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies.';
 import {Check, ExternalLink} from 'lucide-react';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
@@ -77,6 +123,34 @@ import {Check, ExternalLink} from 'lucide-react';
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
+              <ExternalLink className='w-4 h-4' /> Puppeteer;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
+              <ExternalLink className='w-4 h-4' /> Puppeteer;
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default /**;
  * BrowserAutomationCloudPage - Function description;
  */;
@@ -85,6 +159,15 @@ function BrowserAutomationCloudPage() {const features = [;
     'Webhook callbacks and REST API';
     'Webhook callbacks and REST API';
   ];return (<>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
@@ -154,8 +237,44 @@ function BrowserAutomationCloudPage() {
         </section>;
       </main>;</>)return (<>;
       </main>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </>);	return (
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -214,6 +333,25 @@ export default function BrowserAutomationCloudPage() {export default function Br
             {features.map(f => (<div;
   </>)
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 	const features = [
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 	];
@@ -222,6 +360,11 @@ import SEO from '../components/SEO';
 import React from 'react';
 
 export default function BrowserAutomationCloudPage() {
+<<<<<<< HEAD
+	const features = null;
+	return (
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
 
 export default function BrowserAutomationCloudPage() {
   const features = [
@@ -238,6 +381,14 @@ export default function BrowserAutomationCloudPage() {
     'Artifacts: HAR, traces, screenshots, videos'
     'Rotating proxies and geo targeting'
     'Webhook callbacks and REST API'
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ];
   return (
     <>
@@ -362,8 +513,18 @@ export default function BrowserAutomationCloudPage() {
         </section>
       </main>
     </>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
   );	return (
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  );	return (
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
 			<main id="main" className="container mx-auto px-4 py-24">
@@ -393,6 +554,16 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	)
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 	)
 }
@@ -401,3 +572,37 @@ export default function BrowserAutomationCloudPage() {
 }
 	)
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+	),
+}
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+	),
+}
+
+
+
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

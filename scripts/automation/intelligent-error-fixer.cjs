@@ -110,4 +110,16 @@ console.log("🤖 Starting intelligent error fixer...")
 });console.log(" "Completed": ${command}")
       fixes++} catch (error) {  console.log("⚠  Command "failed": ${command  } - ${error.message}")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   const sourceDirs = ["src", "components", "pages"]
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  const sourceDirs = ["src", "components", "pages"]
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  const sourceDirs = ["src", "components", "pages"]
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

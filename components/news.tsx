@@ -1,7 +1,28 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+  const featuredNews = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+{
+ featured: true 
+};
+{;
+  title: 'Cybersecurity Partnership with Global Tech Leaders';
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 }import React from 'react';
   const featuredNews  = null;{featured: true;
 }{title: 'Cybersecurity Partnership with Global Tech Leaders';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 excerpt: 'Strategic collaboration to advance AI - powered threat detection and response systems.';
 author: 'Partnerships Team';
 date: '2025 - 01 - 10';
@@ -205,7 +226,38 @@ title: "New Research Paper on Autonomous Systems";
 excerpt: "Published in leading AI journal, our research explores the future of self - managing technology infrastructure.";
 date: "2025 - 01 - 12";
 category: "Research";
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+author: "Prof. Maria Garcia";
+readTime: "7 min read";
+image: "📚"
+}];
+min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className=" container mx-auto px-6 py-12"> <section className=" text-center mb-16"> <h1 className=" text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> Latest News </h1> > {
+  category
+}</button>) )
+}</div> <span>•</span> <span> {
+  article.date
+}</span> <span>•</span> <span> {
+  article.readTime 
+}</span> </div> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read Full Article </button> </div> </div> </div>) ) 
+}</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) ) 
+}</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>)
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+        <meta name="description" content="Stay informed with the latest news, company updates, and industry insights from Zion Tech Group." />;
+=======
 author: "Prof. Maria Garcia";{/* Upcoming Events Section */}
+=======
+author: "Prof. Maria Garcia";
+      {/* Upcoming Events Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+author: "Prof. Maria Garcia";{/* Upcoming Events Section */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion.h2;
@@ -470,6 +522,10 @@ author: "Prof. Maria Garcia";{/* Upcoming Events Section */}
     {id: 8,title: "New Research Paper on Autonomous Systems",excerpt: "Published in leading AI journal, our research explores the future of self - managing technology infrastructure.";
       date: "2025 - 01 - 12",category: "Research",author: "Prof. Maria Garcia",read_time: "7 min read",image: "📚";
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ];const categories  = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];readTime: "7 min read";
 image: "📚";
 }];
@@ -477,6 +533,18 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 }</button>) )}</div> <span>•</span> <span> {article.date;
 }</span> <span>•</span> <span> {article.readTime;
 }</span> </div> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read Full Article </button> </div> </div> </div>) )}</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) )}</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>)return (<meta name="description" content="Stay informed with the latest news, company updates, and industry insights from Zion Tech Group." />;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  ];
+;
+  const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
+;
+  return (
+        <meta name="description" content="Stay informed with the latest news, company updates, and industry insights from Zion Tech Group." />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <meta property="og:title" content="News - Zion Tech Group" />;
         <meta property="og:description" content="Latest company news, partnerships, and technology insights." />;
         <meta name="twitter:card" content="summary_large_image" />;
@@ -569,6 +637,30 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                   Get the latest news and updates delivered directly to your inbox. Never miss an important announcement.;
                 </p>;
                 <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"
+<<<<<<< HEAD
+                  />
+                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </>
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <input;
                     type="email";
                     placeholder="Enter your email";
@@ -582,6 +674,11 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
         </main>;
       </div>;/>;
                   <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     Subscribe;
                   </button>;
                 </div>;
@@ -590,5 +687,14 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
           </section>;
         </main>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </>;
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -197,4 +197,16 @@ this.log(" AI Review Report "generated": ${reportPath}")
 this.log(")
   this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

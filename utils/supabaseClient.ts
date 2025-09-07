@@ -21,6 +21,10 @@ export function getSupabaseClient(): ZionSupabase {try {if (!SUPABASE_URL |!SUPA
       return browser_client;
     }
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 export type ZionSupabase = SupabaseClient | undefined;
@@ -77,3 +81,8 @@ export function getSupabaseClient(): ZionSupabase {;
     return undefined;
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

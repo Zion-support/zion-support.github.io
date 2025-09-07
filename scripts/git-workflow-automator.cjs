@@ -40,4 +40,16 @@ const { execSync } = require('child_process')
       this.log(` Current "branch"`)
       console.log(` Current "branch"`)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       console.error('\n� Git Workflow Automator "failed")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      console.error('\n� Git Workflow Automator "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      console.error('\n� Git Workflow Automator "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

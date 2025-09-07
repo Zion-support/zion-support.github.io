@@ -5,5 +5,16 @@ import '@testing - library / jest - dom';describe ('Simple Test', () => {test ('
 describe('Simple Test', () => {
   it('should pass', () => {
     expect(1 + 1).toBe(2);
+<<<<<<< HEAD
+<<<<<<< HEAD
   });
 });
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+  });
+});
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst { execSync, spawn } = require("child_process")"const fs = require("fs")"const path = require("path")class TestAutomation { constructor() {" this.processName = process.env.PM2_PROCESS_NAME | "test-automation"; this.testCoverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) | 80;" this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === "true";" this.parallelTests = process.env.PARALLEL_TESTS === "true";" this.logFile = "logs/pm2/test-automation.log";" this.errorFile = "logs/pm2/test-automation-error.log"; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile)if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true })} }" log(message, level = "INFO") { const timestamp = new Date().toISOString()const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim())try { fs.appendFileSync(this.logFile, logMessage)} catch (error) {" console.error("Failed to write to log file:", error.message)} } error(message) {" this.log(message, "ERROR")try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) {" console.error("Failed to write to error file:", err.message)} } async runTests() {" this.log("Starting test automation.")try { / Check if test script exists in package.json" const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"))" const testScript = packageJson.scripts?.test | packageJson.scripts?.["test:smoke"]; if (!testScript) {" this.log("No test script found in package.json", "WARNING")" return { success: false, message: "No test script configured" }}` this.log(`Running tests with script: ${testScript}`)/ Run tests with coverage if available const testCommand = this.parallelTests ? ` `${testScript} --coverage --maxWorkers=4` : ` `${testScript} --coverage`; const result = execSync(testCommand, { " encoding: "utf8", cwd: process.cwd()," stdio: "pipe" })" this.log("Tests completed successfully")` this.log(`Test output: ${result}`)return { success: true, output: result }} catch (error) {` this.error(`Test execution failed: ${error.message}`)if (this.autoRetryFailed) {" this.log("Retrying failed tests.")return await this.retryTests()} return { success: false, error: error.message }} } async retryTests() {" this.log("Retrying failed tests.")try {" const retryCommand = "npm test -- --passWithNoTests --maxWorkers=1"; const result = execSync(retryCommand, { " encoding: "utf8", cwd: process.cwd()," stdio: "pipe" })" this.log("Retry tests completed")return { success: true, output: result, retried: true }} catch (error) {` this.error(`Retry tests also failed: ${error.message}`)return { success: false, error: error.message, retried: true }} } async checkTestCoverage() {" this.log("Checking test coverage.")try { / Look for coverage report const coverageFiles = [" "coverage/coverage-summary.json"," "coverage/lcov-report/index.html"," "coverage/coverage-final.json" ]; let coverageData = null; for (const file of coverageFiles) { if (fs.existsSync(file)) {" if (file.endsWith(".json")) {" coverageData = JSON.parse(fs.readFileSync(file, "utf8"))break; } } } if (!coverageData) {" this.log("No coverage data found", "WARNING")" return { success: false, message: "No coverage data available" }} / Extract coverage percentage let coveragePercentage = 0; if (coverageData.total) { coveragePercentage = coverageData.total.lines?.pct | 0; } else if (coverageData.coverageMap) { / Handle different coverage formats const statements = coverageData.coverageMap.statements | {}const covered = Object.values(statements).filter(s => s > 0).length; const total = Object.keys(statements).length; coveragePercentage = total > 0 ? (covered / total) * 100 : 0; } ` this.log(`Test coverage: ${coveragePercentage.toFixed(2)}%`)if (coveragePercentage < this.testCoverageThreshold) {"` this.log(`Coverage below threshold (${this.testCoverageThreshold}%)`, "WARNING")return { success: false, coverage: coveragePercentage, threshold: this.testCoverageThreshold }} ` this.log(`Coverage meets threshold (${this.testCoverageThreshold}%)`)return { success: true, coverage: coveragePercentage, threshold: this.testCoverageThreshold }} catch (error) {` this.error(`Coverage check failed: ${error.message}`)return { success: false, error: error.message }} } async generateTestReport() {" this.log("Generating test report.")try { const report = { timestamp: new Date().toISOString(), processName: this.processName, testResults: await this.runTests(), coverageResults: await this.checkTestCoverage(), environment: { nodeVersion: process.version, platform: process.platform, cwd: process.cwd() } }` const reportFile = `test-reports/test-report-${Date.now()}.json`; const reportDir = path.dirname(reportFile)if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir, { recursive: true })} fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))` this.log(`Test report saved to: ${reportFile}`)return report; } catch (error) {` this.error(`Failed to generate test report: ${error.message}`)return null; } } async start() {` this.log(`Starting ${this.processName}.`)/ Run initial test await this.generateTestReport()/ Set up periodic testing const interval = 3 * 60 * 60 * 1000; / 3 hours setInterval(async () => {" this.log("Running scheduled test automation.")await this.generateTestReport()}, interval)` this.log(`${this.processName} started successfully`)}}/ Start the automation if this script is run directlyif (require.main === module) { const automation = new TestAutomation()automation.start().catch(error => {" console.error("Test automation failed to start:", error)process.exit(1)})}module.exports = TestAutomation;"`"`;
@@ -454,6 +486,36 @@ module.exports = TestAutomation;
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-242d
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -513,6 +575,46 @@ const { execSync } = require('child_process');
 
 // Run the test automation;
 const testAutomation = new TestAutomation();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+testAutomation.run().catch(error = > {; process.exit(1)});
+
+// Run the test automation;
+const testAutomation = new TestAutomation();
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+// Run the test automation;
+const testAutomation = new TestAutomation();
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 class TestAutomation {;
   constructor() {;
     this.projectRoot = process.cwd();
@@ -913,8 +1015,16 @@ const testAutomation = new TestAutomation(),
 testAutomation.run().catch(error => {,
   process.exit(1)
 }),
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst { execSync, spawn } = require("child_process");"const fs = require("fs");"const path = require("path");class TestAutomation { constructor() {" this.processName = process.env.PM2_PROCESS_NAME | "test-automation"; this.testCoverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) | 80;" this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === "true";" this.parallelTests = process.env.PARALLEL_TESTS === "true";" this.logFile = "logs/pm2/test-automation.log";" this.errorFile = "logs/pm2/test-automation-error.log"; this.ensureLogDirectory(); } ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile, logMessage); } catch (error) {" console.error("Failed to write to log file:", error.message); } } error(message) {" this.log(message, "ERROR"); try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`); } catch (err) {" console.error("Failed to write to error file:", err.message); } } async runTests() {" this.log("Starting test automation."); try { / Check if test script exists in package.json" const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));" const testScript = packageJson.scripts?.test | packageJson.scripts?.["test:smoke"]; if (!testScript) {" this.log("No test script found in package.json", "WARNING");" return { success: false, message: "No test script configured" }; }` this.log(`Running tests with script: ${testScript}`); / Run tests with coverage if available const testCommand = this.parallelTests ? ` `${testScript} --coverage --maxWorkers=4` : ` `${testScript} --coverage`; const result = execSync(testCommand, { " encoding: "utf8", cwd: process.cwd()," stdio: "pipe" }); " this.log("Tests completed successfully");` this.log(`Test output: ${result}`); return { success: true, output: result }; } catch (error) {` this.error(`Test execution failed: ${error.message}`); if (this.autoRetryFailed) {" this.log("Retrying failed tests."); return await this.retryTests(); } return { success: false, error: error.message }; } } async retryTests() {" this.log("Retrying failed tests."); try {" const retryCommand = "npm test -- --passWithNoTests --maxWorkers=1"; const result = execSync(retryCommand, { " encoding: "utf8", cwd: process.cwd()," stdio: "pipe" }); " this.log("Retry tests completed"); return { success: true, output: result, retried: true }; } catch (error) {` this.error(`Retry tests also failed: ${error.message}`); return { success: false, error: error.message, retried: true }; } } async checkTestCoverage() {" this.log("Checking test coverage."); try { / Look for coverage report const coverageFiles = [" "coverage/coverage-summary.json"," "coverage/lcov-report/index.html"," "coverage/coverage-final.json" ]; let coverageData = null; for (const file of coverageFiles) { if (fs.existsSync(file)) {" if (file.endsWith(".json")) {" coverageData = JSON.parse(fs.readFileSync(file, "utf8")); break; } } } if (!coverageData) {" this.log("No coverage data found", "WARNING");" return { success: false, message: "No coverage data available" }; } / Extract coverage percentage let coveragePercentage = 0; if (coverageData.total) { coveragePercentage = coverageData.total.lines?.pct | 0; } else if (coverageData.coverageMap) { / Handle different coverage formats const statements = coverageData.coverageMap.statements | {}; const covered = Object.values(statements).filter(s => s > 0).length; const total = Object.keys(statements).length; coveragePercentage = total > 0 ? (covered / total) * 100 : 0; } ` this.log(`Test coverage: ${coveragePercentage.toFixed(2)}%`); if (coveragePercentage < this.testCoverageThreshold) {"` this.log(`Coverage below threshold (${this.testCoverageThreshold}%)`, "WARNING"); return { success: false, coverage: coveragePercentage, threshold: this.testCoverageThreshold }; } ` this.log(`Coverage meets threshold (${this.testCoverageThreshold}%)`); return { success: true, coverage: coveragePercentage, threshold: this.testCoverageThreshold }; } catch (error) {` this.error(`Coverage check failed: ${error.message}`); return { success: false, error: error.message }; } } async generateTestReport() {" this.log("Generating test report."); try { const report = { timestamp: new Date().toISOString(), processName: this.processName, testResults: await this.runTests(), coverageResults: await this.checkTestCoverage(), environment: { nodeVersion: process.version, platform: process.platform, cwd: process.cwd() } };` const reportFile = `test-reports/test-report-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir, { recursive: true }); } fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));` this.log(`Test report saved to: ${reportFile}`); return report; } catch (error) {` this.error(`Failed to generate test report: ${error.message}`); return null; } } async start() {` this.log(`Starting ${this.processName}.`); / Run initial test await this.generateTestReport(); / Set up periodic testing const interval = 3 * 60 * 60 * 1000; / 3 hours setInterval(async () => {" this.log("Running scheduled test automation."); await this.generateTestReport(); }, interval);` this.log(`${this.processName} started successfully`); }}/ Start the automation if this script is run directlyif (require.main === module) { const automation = new TestAutomation(); automation.start().catch(error => {" console.error("Test automation failed to start:", error); process.exit(1); });}module.exports = TestAutomation;"`"`
 #!/usr/bin/env node,
 /**;
@@ -1109,9 +1219,21 @@ if (require.main === module) {}
   });
 }
 module.exports = TestAutomation;
+<<<<<<< HEAD
+<<<<<<< HEAD
+testAutomation.run().catch(error = > {process.exit(1)});
+
+
+=======
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 testAutomation.run().catch(error = > {process.exit(1)});
 
@@ -1321,6 +1443,11 @@ class TestAutomation {,;
       } else {,;
         this.log('\n✨ All tests passed!');
       },;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     } catch (error) {,;
       this.log(`❌ Error running test: automation: ${error.message}`),;
       process.exit(1);
@@ -1737,6 +1864,10 @@ module.exports = TestAutomation;
 testAutomation.run().catch(error = > {process.exit(1)});
 
 testAutomation.run().catch(error = > {process.exit(1)});
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 class TestAutomation {; constructor() {; this && this.projectRoot = process && process.cwd(); this && this.logFile = path && path.join(this && this.projectRoot, 'logs/pm2/test-automation && automation.log'); this && this.reportFile = path && path.join(this && this.projectRoot, 'logs/pm2/test-report && report.json'); this && this.startTime = Date && Date.now()};
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
@@ -1992,11 +2123,20 @@ class TestAutomation {,;
     };
   };
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       this.log(`❌ Error running test: automation: ${error.message}`),;
       process.exit(1);
 }
 }
 },;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ,;
 // Run the test automation,;
 const testAutomation = new TestAutomation(),;
@@ -2006,6 +2146,11 @@ testAutomation.run().catch(error => {,;
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
   process.exit(1),;
@@ -2226,6 +2371,10 @@ testAutomation.run().catch(error => {,
 }),
   process.exit(1);
 }),;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   process.exit(1);
 }),;
 #!/usr/bin/env node,;
@@ -2442,4 +2591,53 @@ const testAutomation = new TestAutomation(),;
 testAutomation.run().catch(error => {,;
   process.exit(1);
 }),;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 module.exports = TestAutomation;
+
+
+testAutomation.run().catch(error = > {; process.exit(1)});
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+module.exports = TestAutomation;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+main
+
+
+testAutomation.run().catch(error = > {; process.exit(1)});
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = TestAutomation;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = TestAutomation;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

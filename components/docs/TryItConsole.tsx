@@ -1,11 +1,134 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 ;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useMemo, useState } from 'react';
 interface TryItProps  {path: string; // full URL or relative;
   requiresAuth: boolean;
 export default function TryItConsole() {const [baseUrl, setBaseUrl] = useState('https://api.zion.os')const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 interface TryItProps  {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',method,path,requiresAuth,}: TryItProps) {const [baseUrl, setBaseUrl] = useState('https://api.zion.os')const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',const [baseUrl, setBaseUrl]  = useState('https://api.zion.os')path: string, // full URL or relative;
   requiresAuth: boolean;
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function TryItConsole({
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  method
+  path
+  requiresAuth
+}: TryItProps) {
+<<<<<<< HEAD
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
+
+interface TryItProps {
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+
+  method,
+  path,
+  requiresAuth,
+}: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  path: string, // full URL or relative
+  requiresAuth: boolean
+}
+export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+<<<<<<< HEAD
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
+  const [token, setToken] = useState('');
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')
+  const [body, setBody] = useState('');
+  const [response, setResponse] = useState<string>(''),
+  const [loading, setLoading] = useState(false);
+return baseUrl.replace(/\/$/, '') + path;
+  }, [baseUrl, path]);
+  async function onSend() {
+    setLoading(true);
+    setResponse('');
+    try {
+const headers: Record<string, string> = {
+        'Content-Type': 'application/json',
+      };
+      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+      const res = await fetch(url, {
+        method
+        headers
+        body:
+          method === 'GET' |method === 'DELETE'
+            ? undefined
+            : body |undefined
+      });
+      const text = await res.text();
+      setResponse(text);
+    } catch (e: any) {
+      setResponse(String(e?.message |e));
+    } finally {
+      setLoading(false);
+      setResponse(text)
+    } catch (e: any) {
+      setResponse(String(e?.message |e))
+    } finally {
+      setLoading(false)
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+=======
+}
+export default function TryItConsole() {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  path: string; // full URL or relative;
+  requiresAuth: boolean;
+
+export default function TryItConsole(): any ({;
+  method,;
+  path,;
+  requiresAuth,;
+}: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
+  path: string, // full URL or relative;
+  requiresAuth: boolean;
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
+
+  const [body, setBody] = useState('');
+  const [response, setResponse] = useState<string>(''),
+  const [loading, setLoading] = useState(false);
+
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+      const res = await fetch(url, {
+        method;
+        headers;
+<<<<<<< HEAD
+        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),;
+      const text = await res && res.text();
+      setResponse(text);
+    } catch (e: any) {;
+      setResponse(String(e?.message || e));
+    } finally {;
+      setLoading(false);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    }
+  }
+  return (
+<div className='space-y-2'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+        <div>
+<<<<<<< HEAD
+          <label className='block text-sm mb-1'>Base URL</label>
+          <input
+            className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
+=======
 }
 export default function TryItConsole() {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   path: string; // full URL or relative;
@@ -14,6 +137,8 @@ export default function TryItConsole() {method: 'GET' | 'POST' | 'PUT' | 'PATCH'
   const [baseUrl, setBaseUrl]  = useState('https: //api.zion.os'),const [body, setBody] = useState('')const [response, setResponse] = useState<string>(''),const [loading, setLoading]  = useState(false)const headers: Record<string, string> = { 'Content-Type': 'application/json' }if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {method;
         headers;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),const text = await res && res.text()setResponse(text)} catch (e: any) {setResponse(String(e?.message || e))} finally {setLoading(false)const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')const [token, setToken] = useState('')const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')const [body, setBody] = useState('')const [response, setResponse] = useState<string>(''),const [loading, setLoading] = useState(false)return baseUrl.replace(/\/$/, '') + path;
   }, [baseUrl, path])async function onSend() {setLoading(true)setResponse('')try {const headers: Record<string, string> = {'Content-Type': 'application/json',}if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {method;
@@ -40,6 +165,7 @@ export default function TryItConsole() {method: 'GET' | 'POST' | 'PUT' | 'PATCH'
           <label className='block text-sm mb-1'>Base URL</label>;
           <input;
             className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             value={baseUrl}
             onChange={e => setBaseUrl(e.target.value)}
           />;
@@ -58,6 +184,40 @@ export default function TryItConsole() {method: 'GET' | 'POST' | 'PUT' | 'PATCH'
           <input;
             className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary';
             value={method}
+<<<<<<< HEAD
+            readOnly
+          />
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+          <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
+          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
+        </div>
+        <div>
+          <label className="block text-sm mb-1" htmlFor="input-Auth Token">Auth Token</label>
+          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={token} onChange={(e) => setToken(e.target.value)} placeholder="Optional" />
+        </div>
+        <div>
+          <label className="block text-sm mb-1" htmlFor="input-Method">Method</label>
+          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+        </div>
+      </div>
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+        <div>
+<<<<<<< HEAD
+<label className='block text-sm mb-1'>Request Body (JSON)</label>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+<label className='block text-sm mb-1'>Request Body (JSON)</label>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          <textarea
+            className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
+=======
             readOnly;
           />;
         </div>;
@@ -66,6 +226,10 @@ export default function TryItConsole() {method: 'GET' | 'POST' | 'PUT' | 'PATCH'
 <label className='block text-sm mb-1'>Request Body (JSON)</label>;
           <textarea;
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             value={body}
       )}
       <button;
@@ -121,6 +285,20 @@ export default function TryItConsole() {method: 'GET' | 'POST' | 'PUT' | 'PATCH'
       )}
       <button onClick={onSend} className=&quot;px-3 py-2 rounded bg-high-contrast-accent text-black&quot; disabled={loading}>;
         {loading ? 'Sending…' : 'Send Request'}
+<<<<<<< HEAD
+<<<<<<< HEAD
+      </button>
+      <div>
+        <label className=&quot;block text-sm mb-1&quot;>Response</label>
+        <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80&quot;><code>{response}</code></pre>
+      </div>
+    </div>
+<<<<<<< HEAD
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </button>;
       <div>;
         <label className=&quot;block text-sm mb-1&quot;>Response</label>;
@@ -133,4 +311,26 @@ export default function TryItConsole() {method: 'GET' | 'POST' | 'PUT' | 'PATCH'
   return (<div className='space-y-2'>;
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>;
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (<div>;
+<<<<<<< HEAD
   )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+  )
+    <div className='space-y-2'>
+
+}
+
+    }
+  }
+  return (
+    <div className='space-y-2'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+        <div>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

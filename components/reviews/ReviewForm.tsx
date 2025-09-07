@@ -1,9 +1,22 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 ;
   categories?: {communication?: number;
     qualityOfWork?: number;
     timeliness?: number;class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   categories?: {
     communication?: number;
@@ -11,7 +24,18 @@
     timeliness?: number;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -73,6 +97,24 @@ type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+import React, { useState } from 'react';
+import StarRating from './StarRating';
+export type ReviewFormValues = any;
+const ReviewForm: React.FC<Props> = ({ initial }) => {
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
   const [anonymous, setAnonymous] = useState(false);
@@ -83,6 +125,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
 
+<<<<<<< HEAD
     wouldWorkWithAgain?: boolean;
   }
   anonymous?: boolean;
@@ -120,6 +163,35 @@ function handle_submit() {
           text,
           anonymous,
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      const res = await fetch('/api/reviews/submit', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          projectId: initial.projectId,
+          fromRole: initial.fromRole,
+          fromId: initial.fromId,
+rating,
+          text,
+          anonymous,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           categories: {
             communication
             qualityOfWork
@@ -129,6 +201,7 @@ function handle_submit() {
         })
       });
 
+<<<<<<< HEAD
 
   async function handleSubmit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
@@ -156,6 +229,10 @@ function handle_submit() {
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;
       setMessage(err && err.message);
@@ -172,6 +249,15 @@ function handle_submit() {
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
 
+<<<<<<< HEAD
+=======
+      setMessage('Review submitted! Pending admin approval.');
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -190,17 +276,41 @@ function handle_submit() {
   }
   return (}
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             communication;
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
   return (
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
   return (<div>;
@@ -216,6 +326,45 @@ function handle_submit() {
         <StarRating value={rating} onChange={setRating} />;
       </div>;<div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    } catch (err: any) {
+      setMessage(err.message);
+    } finally {
+      setSubmitting(false);
+    }
+  }
+  return (
+<form onSubmit={handleSubmit} className='space-y-6'>
+      <div>
+        <label className='block text-sm font-medium mb-2'>Overall Rating</label>
+        <StarRating value={rating} onChange={setRating} />
+      </div>
+      <div>
+<label className='block text-sm font-medium mb-2'>Your Review</label>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     } catch (err: any) {setMessage(err.message)} finally {setSubmitting(false)}
   }
   return (<form onSubmit={handleSubmit} className='space-y-6'>;
@@ -227,26 +376,89 @@ function handle_submit() {
 <label className='block text-sm font-medium mb-2'>Your Review</label>;
         <textarea;
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
           value={text}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+          onChange={e => setText(e && e.target.value)}          required;
+        />;
+      </div>;
+<<<<<<< HEAD
+=======
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
           onChange={e => setText(e && e.target.value)}          required;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+<<<<<<< HEAD
+=======
+          onChange={e => setText(e && e.target.value)}          required;
+        />;
+      </div>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+          onChange={e => setText(e.target.value)}
+          required
+        />
+      </div>
+
+<div className='flex items-center gap-3'>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         <input
           id='anonymous'
           type='checkbox'
           checked={anonymous}
 
+<<<<<<< HEAD
           onChange={e => setAnonymous(e && e.target.checked)}
         />;
       </div>;<label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>;
@@ -269,7 +481,19 @@ function handle_submit() {
             <span className='text-sm'>Communication</span>;<StarRating;
               value={communication |0}
               onChange={v => setCommunication(v)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
       set_submitting (false)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      set_submitting (false)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       set_submitting (false);
     }
   }
@@ -318,6 +542,7 @@ function handle_submit() {
         </div>;<div className='enhanced - card'>;
         </div>;
 
+<<<<<<< HEAD
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
             <span className='text - sm'>Quality of Work</span>;
@@ -329,11 +554,21 @@ function handle_submit() {
         </div>;<div className='enhanced - card'>;
               on_change={v => setQualityOfWork (v)}
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
             <span className='text - sm'>Timeliness</span>;
@@ -361,12 +596,40 @@ function handle_submit() {
 }export default ReviewForm;</button>;{message && <p className='text-sm'>{message}</p>}
               on_change={v => set_timeliness (v)}
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<< HEAD
 
               onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+        <div className='enhanced - card'>;
+          <div className='flex items - center justify - between mb - 2'>;
+            <span className='text - sm'>Would Work With Again</span>;
+            <input;
+              type='checkbox';
+              checked={wouldWorkWithAgain}
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+              onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             />;
           </div>;
           <span className='pill'>Optional</span>        </div>;
@@ -380,6 +643,48 @@ function handle_submit() {
   )}export default ReviewForm;    </form>;
   )disabled={submitting}
       >;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {submitting ? 'Submitting...' : 'Submit Review'}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      <button
+        type="submit"
+        className="enhanced-button enhanced-button-primary"
+              onChange={e => setWouldWorkWithAgain(e.target.checked)}
+            />
+          </div>
+          <span className='pill'>Optional</span>
+        </div>
+      </div>
+
+      <button
+type='submit'
+        className='enhanced-button enhanced-button-primary'
+origin/cursor/automate-test-improve-and-merge-code-2533
+        disabled={submitting}
+      >;
+        {submitting ? 'Submitting...' : 'Submit Review'}
+=======
+        disabled={submitting}
+      >;
+        {submitting ? 'Submitting...' : 'Submit Review'}
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+<<<<<<< HEAD
+export default ReviewForm;
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {submitting ? 'Submitting...' : 'Submit Review'}<button;
         type="submit";
         className="enhanced-button enhanced-button-primary";
@@ -404,6 +709,13 @@ type='submit';
   )}export default ReviewForm;
         {submitting ? 'Submitting...' : 'Submit Review'}
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </button>;
       {message && <p className='text - sm'>{message}</p>}
     </form>);
@@ -415,3 +727,34 @@ export default ReviewForm;    </form>);
 export default ReviewForm;
 ;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      </button>
+
+{message && <p className='text-sm'>{message}</p>}
+    </form>
+  );
+};
+
+export default ReviewForm;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

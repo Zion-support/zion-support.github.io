@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 export interface MarketTrend  {export interface MarketTrend  {id: string;
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface MarketTrend {
 export interface MarketTrend {;
   id: string;
@@ -10,8 +17,16 @@ export interface MarketTrend {;
   relatedKeywords: string[];search_volume: number;
 export interface MarketTrend  {id: string;
   keyword: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
   search_volume: number;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+  search_volume: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   trend_direction: 'rising' | 'falling' | 'stable';
   growth_rate: number;
   related_keywords: string[];
@@ -22,6 +37,9 @@ export interface MarketTrend  {id: string;
   website: string;
   market_share: number;marketOpportunity: 'high' | 'medium' | 'low';
   timestamp: Date;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 }
 export interface CompetitorAnalysis  {export interface CompetitorAnalysis  {id: string;
   competitorName: string;
@@ -89,6 +107,7 @@ export class AIMarketResearchService {export class AIMarketResearchService {priv
     this.baseUrl = baseUrl;
   }
   async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {try {const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {size: number;export interface MarketReport {  title: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 export interface MarketTrend {
@@ -203,6 +222,25 @@ export class AIMarketResearchService {;
 
       const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {
+<<<<<<< HEAD
+=======
+  size: number;
+
+export interface MarketReport {  title: string;
+  industry: string;
+  summary: string;
+}
+export interface MarketResearchRequest {  success: boolean;
+  data: {
+    trends?: MarketTrend[];
+    competitors?: CompetitorAnalysis[];  }
+  async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
+    try {
+
+      const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {      const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
@@ -304,6 +342,10 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         body: JSON && JSON.stringify(request)});
 
       if (!response && response.ok) {
@@ -314,6 +356,12 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
       return data && data.trends || []
 
     } catch (error) {
+<<<<<<< HEAD
+=======
+        body: JSON && JSON.stringify(request)});    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console && console.error('Error analyzing market trends:', error);
       throw error
     }
@@ -322,7 +370,14 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
     try {
 
       const response = await fetch(`${this && this.baseUrl}/api/market-research/competitors`, {
+<<<<<<< HEAD
+<<<<<<< HEAD
       return data && data.competitors || []
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      return data && data.competitors || []
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     } catch (error) {
       console && console.error('Error analyzing competitors:', error);
@@ -338,6 +393,10 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
       const data = await response.json();
       return data.competitors |[]
     } catch (error) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console.error('Error analyzing competitors:', error);
       throw error
     }
@@ -346,6 +405,12 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/segments`, {
         method: 'POST',
+<<<<<<< HEAD
+=======
+      console.error('Error analyzing competitors:', error);        method: 'POST',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
@@ -357,6 +422,10 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
 
       const data = await response && response.json();
       return data && data.competitors || []
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     } catch (error) {
       console && console.error('Error analyzing competitors:', error);
@@ -367,6 +436,11 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
     try {
 
       const response = await fetch(`${this && this.baseUrl}/api/market-research/segments`, {
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return data && data.segments || []
 
     } catch (error) {
@@ -383,6 +457,10 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
       const data = await response.json();
       return data.segments |[]
     } catch (error) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console.error('Error segmenting market:', error);
       throw error
     }
@@ -391,6 +469,12 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/comprehensive`, {
         method: 'POST',
+<<<<<<< HEAD
+=======
+      console.error('Error segmenting market:', error);        method: 'POST',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
@@ -401,6 +485,10 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
       }
 
       const data = await response && response.json();
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return data && data.segments || []
 
     } catch (error) {
@@ -451,6 +539,9 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
       return data && data.trends || []
 
     } catch (error) {
+=======
+      return data && data.segments || []    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error getting real-time insights:', error);
       throw error
     }
@@ -458,7 +549,14 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
   async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       const response = await fetch(`${this && this.baseUrl}/api/market-research/export/${reportId}`, {
         method: 'POST',
         headers: {
@@ -474,8 +572,17 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
       return data && data.downloadUrl
 
     } catch (error) {
+<<<<<<< HEAD
+<<<<<<< HEAD
       console && console.error('Error exporting report:', error);
       if (!response && response.ok) {
+=======
+      console && console.error('Error exporting report:', error);      if (!response && response.ok) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      console && console.error('Error exporting report:', error);
+      if (!response && response.ok) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
 
@@ -497,12 +604,24 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
       return data.downloadUrl
     } catch (error) {
       console.error('Error exporting report:', error);
+<<<<<<< HEAD
+<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error exporting report:', error);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    } catch (error) {
+      console && console.error('Error exporting report:', error);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       throw error
     }
   }
   async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     try {
 
       const response = await fetch(`${this && this.baseUrl}/api/market-research/schedule`, {
@@ -526,14 +645,29 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
     } catch (error) {
       console && console.error('Error scheduling report:', error);
       throw error
+<<<<<<< HEAD
+=======
+    try {      throw error
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
   }
 }
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 export const aiMarketResearchService = new AIMarketResearchService(process && process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string,;
   keyword: string,;
   searchVolume: number,;
@@ -600,6 +734,10 @@ export interface MarketResearchResponse {;
     trends?: MarketTrend[],;
     competitors?: CompetitorAnalysis[],;
     segments?: MarketSegment[],;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 export const aiMarketResearchService = new AIMarketResearchService(process && process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 
@@ -781,6 +919,8 @@ export interface MarketTrend {;
 
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface MarketTrend {;
 
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
@@ -1019,4 +1159,11 @@ export const aiMarketResearchService  = new AIMarketResearchService (process.env
 ;
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
+<<<<<<< HEAD
+<<<<<<< HEAD
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,9 +1,22 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export async function parseQueryToFilters(
   query: string,
 ): Promise<SearchFilters> {
   const filters: SearchFilters = {};
 
+<<<<<<< HEAD
+=======
+  query: string,
+): Promise<SearchFilters> {
+  const filters: SearchFilters = {};
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   if (!query || query.trim().length === 0) {
     return filters;
   }
@@ -95,9 +108,20 @@ export async function parseQueryToFilters(
     filters.skills = skills;
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
   return filters;
 
     keywords: [],
+=======
+  return filters,
+  keywords: [],
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  return filters;
+
+    keywords: [],
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     skills: [],
     location: null,
     type: null;
@@ -105,6 +129,10 @@ export async function parseQueryToFilters(
     all: [],
     talent: [],
     jobs: [],
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     projects: [];
 
   };
@@ -120,6 +148,22 @@ export const suggestDidYouMean = (query: string) => {
 }
   }
 }
+<<<<<<< HEAD
+=======
+    projects: []
+};
+};
+
+export const suggestDidYouMean = (query: string) => {
+  // Add did you mean functionality here;
+  return null
+};
+
+}
+  }}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 export async function parseQueryToFilters(query: string,): Promise<SearchFilters> {const filters: SearchFilters = {}const apiKey =;
     process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY;
@@ -144,6 +188,13 @@ export const parseSearchQuery = (query: string) =>: any {// Add search query par
     projects: [];
 }}export const suggestDidYouMean = (query: string) => {// Add did you mean functionality here;
   return null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 }}
   }}export const suggestDidYouMean = (query: string) =>: any {// Add did you mean functionality here;
   return null;}
@@ -151,3 +202,4 @@ ursor/automate-test-improve-and-merge-code-646c;
 }}
 }
 }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,4 +1,59 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useEffect, useState  } from 'react';
+import { useRouter  } from 'next/router';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GrantApplication } from '../../types/grants';
+export default function GrantDetailPage() {
+  const router = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
 
+<<<<<<< HEAD
+  const router = useRouter();
+  const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
+  const router = useRouter();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  const [item, setItem] = useState<GrantApplication | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [updateContent, setUpdateContent] = useState('');
+
+  useEffect(() => {;
+    if (!id) return;
+    setLoading(true);
+<<<<<<< HEAD
+fetch(`/api/grants/${id}`)
+      .then(r => r.json())
+      .then(d => setItem(d.record))
+      .finally(() => setLoading(false));
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    if (!id || !updateContent.trim()) return;
+
+    if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    if (!id || !updateContent.trim()) return;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  }, [id]);
+
+  const addUpdate = async () => {
+    if (!id || !updateContent.trim()) return;
+const resp = await fetch(`/api/grants/${id}/updates`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ content: updateContent }),
+    });
+      const u = await resp.json();
+      setItem(prev =>
+        prev ? { ...prev, updates: [...(prev.updates |[]), u.update] } : prev
+      );
+      setUpdateContent('');
+    }
+=======
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
   const router = useRouter()const { id } = router && router.query as { id: string }const [item, setItem] = useState<GrantApplication | null>(null)export default function GrantDetailPage() {const router  = useRouter()import { useEffect, useState   } from 'react';
 import { useRouter   } from 'next/router';
@@ -9,6 +64,10 @@ export default function GrantDetailPage() {const router  = null;const [item, set
 const resp = await fetch(`/api/grants/${id}/updates`, {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ content: updateContent }),})const u = await resp.json()setItem(prev =>;
         prev ? { ...prev, updates: [...(prev.updates |[]), u.update] } : prev;
       )setUpdateContent('')}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   if (loading)return (<EnhancedLayout>;
         <div>Loading...</div>;
@@ -16,12 +75,40 @@ const resp = await fetch(`/api/grants/${id}/updates`, {method: 'POST',headers: {
     )if (!item)return (<EnhancedLayout>;
         <div>Not found</div>;
       </EnhancedLayout>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    );
+=======
+    );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  return (
+    <EnhancedLayout>
+      <div className='flex items-center justify-between mb-4'>
+        <div>
+          <h1 className='text-2xl font-semibold'>{item.projectName}</h1>
+          <div className='text-sm text-gray-600 dark:text-gray-400'>
+            {item.sector |'General'} • {item.region |'Global'} •{' '}
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            {item.program === 'incubator' ? 'Incubator' : 'Grant'}
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     )return (<EnhancedLayout>;
       <div className='flex items-center justify-between mb-4'>;
         <div>;
           <h1 className='text-2xl font-semibold'>{item.projectName}</h1>;
           <div className='text-sm text-gray-600 dark:text-gray-400'>;
             {item.sector |'General'} • {item.region |'Global'} •{' '}{item.program === 'incubator' ? 'Incubator' : 'Grant'}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </div>;
         </div>;
         <div className='flex gap - 2 items - center'>;
@@ -33,9 +120,19 @@ const resp = await fetch(`/api/grants/${id}/updates`, {method: 'POST',headers: {
                       <a;
                         className='text-blue-600';
                         href={l}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        target='_blank'
+                        rel='noreferrer'
+                      >
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         target='_blank';
                         rel='noreferrer';
                       >;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                         {l}
                       </a>;
                     </li>;
@@ -66,6 +163,29 @@ const resp = await fetch(`/api/grants/${id}/updates`, {method: 'POST',headers: {
                 />;
                 <button;
                   onClick={addUpdate}
+<<<<<<< HEAD
+                  className='mt-2 px-3 py-2 bg-gray-900 text-white rounded'
+                >
+                  Add Update
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+<aside className='space-y-4'>
+          <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
+            <h3 className='font-medium mb-2'>Milestones</h3>
+            <ul className='space-y-2'>
+              {(item.milestones |[]).map(m => (
+                <li key={m.id} className='text-sm flex items-start gap-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                        target='_blank'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                  <span
+=======
                   className='mt-2 px-3 py-2 bg-gray-900 text-white rounded';
                 >;
                   Add Update;
@@ -80,6 +200,10 @@ const resp = await fetch(`/api/grants/${id}/updates`, {method: 'POST',headers: {
             <ul className='space-y-2'>;
               {(item.milestones |[]).map(m => (<li key={m.id} className='text-sm flex items-start gap-2'>;
                   <span;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emerald-500' : 'bg-gray-400'}`}
                   />;
                   <div>;
@@ -96,6 +220,17 @@ const resp = await fetch(`/api/grants/${id}/updates`, {method: 'POST',headers: {
                     )}
                   </div>;
                 </li>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              ))}
+              {(!item.milestones |item.milestones.length === 0) && (
+                <div className='text-sm text-gray-600'>
+                  Milestones will appear here.
+                </div>
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}<div className="font-medium">{m.title}</div>;
                     {m.description && <div className="text-gray-600">{m.description}</div>}
                     {m.trancheAmount ? <div className="text-xs text-gray-600">Tranche: {m.trancheAmount} {m.trancheCurrency}</div> : null}
@@ -113,10 +248,49 @@ const resp = await fetch(`/api/grants/${id}/updates`, {method: 'POST',headers: {
               {(!item.milestones |item.milestones.length === 0) && (<div className='text-sm text-gray-600'>;
                   Milestones will appear here.;
                 </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               )}
             </ul>;
             <div className='mt-3 text-sm'>;
               Funds Released: {item.fundsReleased |0}
+<<<<<<< HEAD
+            </div>
+          </section>
+          <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
+            <h3 className='font-medium mb-2'>Team</h3>
+            <div className='text-sm whitespace-pre-wrap'>{item.teamInfo}</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              ))}
+                    <div className="font-medium">{m.title}</div>
+                    {m.description && <div className="text-gray-600">{m.description}</div>}
+                    {m.trancheAmount ? <div className="text-xs text-gray-600">Tranche: {m.trancheAmount} {m.trancheCurrency}</div> : null}
+                    {m.dueDate && <div className="text-xs text-gray-600">Due: {new Date(m.dueDate).toLocaleDateString()}</div>}
+                  </div>
+                </li>
+              ))}
+              {(!item.milestones |item.milestones.length === 0) && <div className="text-sm text-gray-600">Milestones will appear here.</div>}
+            </ul>
+            <div className="mt-3 text-sm">Funds Released: {item.fundsReleased |0}</div>
+          </section>
+          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
+            <h3 className="font-medium mb-2">Team</h3>
+            <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          </section>
+        </aside>
+      </div>
+    </EnhancedLayout>
+<<<<<<< HEAD
+=======
+    </EnhancedLayout>
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
             </div>;
           </section>;
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
@@ -254,4 +428,14 @@ const resp = await fetch(`/api/grants/${id}/updates`, {method: 'POST',headers: {
           </section>;
         </aside>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
     </EnhancedLayout>)})}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </EnhancedLayout>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </EnhancedLayout>)})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

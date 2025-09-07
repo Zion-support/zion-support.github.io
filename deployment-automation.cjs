@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -18,6 +23,10 @@ const { execSync } = require('child_process')
   console.log(' Deployment report "generated")
   console.error(' Deployment automation "failed")
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node
 <<<<<<< HEAD
 
@@ -135,6 +144,16 @@ function deployApplication() {
   }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+const deployment = new DeploymentAutomation();
+deployment.run().catch(console.error);
+=======
+// Run deployment automation
+deployApplication();
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 // Run deployment automation
 deployApplication();
 
@@ -169,3 +188,4 @@ class DeploymentAutomation {
 const deployment = new DeploymentAutomation();
 deployment.deploy().catch(console.error);
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

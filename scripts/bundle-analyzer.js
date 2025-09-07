@@ -23,8 +23,16 @@ export default function Bundleanalyzer() {export default function Bundleanalyzer
 
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+export default function Bundleanalyzer({ }: BundleanalyzerProps) {
+=======
 }
 export default function Bundleanalyzer({}: BundleanalyzerProps) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return (
     <div>
       <h1>Bundleanalyzer</h1>
@@ -42,4 +50,11 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

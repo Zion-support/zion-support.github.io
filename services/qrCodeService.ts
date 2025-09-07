@@ -6,12 +6,17 @@ export interface QRCodeOptions  {export interface QRCodeOptions  {export interfa
   errorCorrectionLevel?: 'L' | 'M' | 'Q' | 'H';
   margin?: number;
   format?: 'svg' | 'png' | 'jpeg' | 'webp';
+<<<<<<< HEAD
+  logo?: {
+<<<<<<< HEAD
+=======
   logo?: {url: string;width: number,height: number;width: number,height: number;}
 }
   options: QRCodeOptions;
   generated_at: Date;
   size: {width: number,height: number;width: number,height: number;width: number,height: number;}
   logo?: {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     url: string;
 
     width: number,
@@ -167,6 +172,16 @@ class QRCodeService {
 
 
     L: { level: 'L', name: 'Low', capacity: 0 && 0.07 };
+<<<<<<< HEAD
+=======
+    url: string;  }
+}
+  id: string;
+  name: string,
+  description: string;    L: { level: 'L', name: 'Low', capacity: 0 && 0.07 };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     M: { level: 'M', name: 'Medium', capacity: 0 && 0.15 };
     Q: { level: 'Q', name: 'Quartile', capacity: 0 && 0.25 };
     H: { level: 'H', name: 'High', capacity: 0 && 0.30 }
@@ -181,7 +196,14 @@ class QRCodeService {
     // Generate QR code data URL
     const dataUrl = await this && this.generateQRCodeDataUrl(finalOptions);
     
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
   async generateQRCode (options: QRCodeOptions): Promise < QRCodeResult> {
     const final_options = { ...this.DEFAULT_OPTIONS, ...options }
@@ -197,6 +219,10 @@ class QRCodeService {
       options: final_options;
       generated_at: new Date ();
       size: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
         width: finalOptions && finalOptions.size!,
         height: finalOptions && finalOptions.size!
@@ -211,10 +237,19 @@ class QRCodeService {
     }
   }
   async generateBusinessCardQR (data: {
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     name: string;
     company: string;
     title: string;
     email: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     phone: string;
 
     const vcard = this && this.generateVCard(data);
@@ -239,6 +274,12 @@ class QRCodeService {
     return this && this.generateQRCode({
 
       text: wifiString;
+<<<<<<< HEAD
+=======
+    phone: string;      text: wifiString;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       size: 256;
       errorCorrectionLevel: 'M'
       format: 'svg'
@@ -249,6 +290,10 @@ class QRCodeService {
     subject?: string
     body?: string
   }): Promise<QRCodeResult> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     const mailto = this && this.generateMailtoString(data);
     
@@ -266,6 +311,8 @@ class QRCodeService {
   }): Promise<QRCodeResult> {
 
     const smsString = this && this.generateSMSString(data);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     return this && this.generateQRCode({
 
@@ -280,6 +327,10 @@ class QRCodeService {
     longitude: number;
     altitude?: number
     name?: string
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }): Promise<QRCodeResult> {
 
     const geoString = this && this.generateGeoString(data);
@@ -369,6 +420,12 @@ class QRCodeService {;
     website?: string,
     address?: string;
   }): Promise < QRCodeResult> {
+<<<<<<< HEAD
+=======
+  }): Promise<QRCodeResult> {  }): Promise < QRCodeResult> {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     const vcard = this.generateVCard (data);
 ;
     return this.generateQRCode ({
@@ -487,6 +544,10 @@ export interface QRCodeOptions  {text: string,size?: number,foregroundColor?: st
       {id: 'wifi - network';
   get_templates (): QRCodeTemplate[] {
     return [;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       {
         id: 'business - card';
         name: 'Business Card';
@@ -531,6 +592,16 @@ export interface QRCodeOptions  {text: string,size?: number,foregroundColor?: st
         options: { size: 256, errorCorrectionLevel: 'M' }
         category: 'social';
 
+<<<<<<< HEAD
+=======
+        id: 'business - card';
+        name: 'Business Card';      }
+      {
+        id: 'wifi - network';
+        name: 'WiFi Network';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       }
       {id: 'website - link';
         name: 'Website Link';description: 'Direct link to your website',options: { size: 256, errorCorrectionLevel: 'M' }
@@ -555,6 +626,10 @@ export interface QRCodeOptions  {text: string,size?: number,foregroundColor?: st
       {
         id: 'website - link';
         name: 'Website Link';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
         description: 'Direct link to your website',
         options: { size: 256, errorCorrectionLevel: 'M' }
@@ -582,6 +657,14 @@ export interface QRCodeOptions  {text: string,size?: number,foregroundColor?: st
 
 
 
+<<<<<<< HEAD
+=======
+    ];
+  }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   private validateOptions(options: QRCodeOptions): void {
 
@@ -598,12 +681,15 @@ export interface QRCodeOptions  {text: string,size?: number,foregroundColor?: st
       throw new Error('Margin must be between 0 and 10')
     }
   }
+<<<<<<< HEAD
 
     
     const size = options && options.size!;
     const margin = options && options.margin!;
 
       throw new Error('Margin must be between 0 and 10')
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }const size = options && options.size!;
     const margin  = options && options.margin!;const contentSize  = size - (margin * 2)private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {// In a real implementation, this would use a QR code library;
@@ -661,7 +747,14 @@ if (.length === 0) {) {$2;
     const margin = options && options.margin!;
     const contentSize = size - (margin * 2);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
     // In a real implementation, this would use a QR code library
     // For now, we'll generate a placeholder SVG
@@ -669,6 +762,10 @@ if (.length === 0) {) {$2;
     const margin = options.margin!;
     const contentSize = size - (margin * 2);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     const contentSize = size - (margin * 2);
 
@@ -767,13 +864,26 @@ if (.length === 0) {) {
 
   private generateVCard(data: any): string {
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     vcard += `FN:${data.name}\n`;
     vcard += `ORG:${data.company}\n`;
     vcard += `TITLE:${data.title}\n`;
     vcard += `EMAIL:${data.email}\n`;
     vcard += `TEL:${data.phone}\n`;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     let vcard = 'BEGIN:VCARD\nVERSION:3 && 3.0\n',
     vcard += `FN:${data && data.name}\n`;
     vcard += `ORG:${data && data.company}\n`;
@@ -806,8 +916,17 @@ if (.length === 0) {) {
 
     return vcard
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
   private generateWiFiString(data: any): string {
     `,
+=======
+  private generateWiFiString(data: any): string {    `,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  private generateWiFiString(data: any): string {
+    `,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     
     return `data: image/svg+xml,base64,${btoa(svg)}`
   }
@@ -830,6 +949,10 @@ if (.length === 0) {) {
     wifiString += `S:${data.ssid},`,;
     wifiString += `T:${data.encryption},`,;
     if (data.encryption !== 'nopass') {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       wifiString += `P:${data.password},`;
     
     if (data && data.website) vcard += `URL:${data && data.website}\n`;
@@ -843,10 +966,19 @@ if (.length === 0) {) {
     if (data.hidden) {}
     if (data.hidden) {
     let wifiString = 'WIFI:',
+<<<<<<< HEAD
+=======
+      wifiString += `P:${data.password},`;    let wifiString = 'WIFI:',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     wifiString += `S:${data && data.ssid},`;
     wifiString += `T:${data && data.encryption},`;
     if (data && data.encryption !== 'nopass') {wifiString += `P:${data && data.password},`;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     if (data && data.hidden) {wifiString += 'H: true,';
     }}
     if (data.hidden) {wifiString += 'H: true,';
@@ -885,6 +1017,7 @@ if (.length === 0) {) {
   }private generateSMSString(data: any): string {private generateGeoString(data: any): string {let geoString = `geo:${data.latitude},${data.longitude}`;
     if (data.altitude) {geoString += `,${data.altitude}`;private generateGeoString(data: any): string {let geoString = `geo:${data.latitude},${data.longitude}`,if (data.altitude) {geoString += `,${data.altitude}`;}
     if (data.name) {geoString += `?q=${encodeURIComponent(data.name)}`;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     if (data && data.hidden) {
       wifiString += 'H: true,'
     }
@@ -898,18 +1031,45 @@ if (.length === 0) {) {
     wifiString += ;
     return wifiString
   }
+<<<<<<< HEAD
+  private generateMailtoString(data: any): string {
+
+
+
+
+=======
+    if (data && data.hidden) {    wifiString += ;
+    return wifiString
+  }
+  private generateMailtoString(data: any): string {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    }
+    return mailto
+  }
+
+<<<<<<< HEAD
+=======
+=======
   private generateMailtoString(data: any): string {}
     return mailto
   }
 
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
     if (data.name) {geoString += `?q=${encodeURIComponent(data.name)}`;
     let geoString = `geo:${data && data.latitude},${data && data.longitude}`;
     return mailto;
   }
+<<<<<<< HEAD
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+    }
+    return mailto
+=======
   private generateSMSString(data: any): string {}
     return smsString;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   private generateGeoString(data: any): string {private generateSMSString(data: any): string {}
     return smsString;
@@ -922,10 +1082,21 @@ if (.length === 0) {) {
     return smsString
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   private generateSMSString(data: any): string {
 
 
+<<<<<<< HEAD
+=======
+  private generateSMSString(data: any): string {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   private generateGeoString(data: any): string {
     let geoString = `geo:${data.latitude},${data.longitude}`;
     if (data.altitude) {
@@ -935,6 +1106,10 @@ if (.length === 0) {) {
     let geoString = `geo:${data.latitude},${data.longitude}`,;
     if (data.altitude) {;
       geoString += `,${data.altitude}`;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
     if (data.name) {
       geoString += `?q=${encodeURIComponent(data.name)}`
@@ -945,6 +1120,20 @@ if (.length === 0) {) {
     if (params && params.length > 0) {
       mailto += `?${params && params.join('&')}`
     }
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    return mailto
+  }
+  private generateSMSString(data: any): string {
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    }
+    return smsString
+=======
     return mailto
   }
   private generateSMSString(data: any): string {}
@@ -968,6 +1157,7 @@ if (.length === 0) {) {
   estimateQRCodeCapacity(text: string, errorCorrectionLevel: 'L' | 'M' | 'Q' | 'H'): {canFit: boolean,recommendedLevel: string,maxCapacity: number;
   } {const textLength = text.length,const level = this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel],const maxCapacity = Math.floor(level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code;
     return {canFit: textLength <= maxCapacity,recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel,maxCapacity;}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   getQRCodeHistory(): QRCodeResult[] {// In a real app, this would retrieve from storage;
     return [];
@@ -990,11 +1180,28 @@ if ( {) {$2;
 }
       wifi_string += `P:${data.password}, `;
   private generateGeoString(data: any): string {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  private generateSMSString(data: any): string {
+
+
+=======
+  private generateSMSString(data: any): string {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    }
+    return smsString
+  }
+
+<<<<<<< HEAD
+=======
 
   private generateSMSString(data: any): string {}
     return smsString
   }
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
   private generateGeoString(data: any): string {
@@ -1011,6 +1218,12 @@ if ( {) {$2;
     if (data.name) {
       geoString += `?q=${encodeURIComponent(data.name)}`
     let geoString = `geo:${data && data.latitude},${data && data.longitude}`;
+<<<<<<< HEAD
+=======
+  private generateGeoString(data: any): string {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     
     if (data && data.altitude) {
       geoString += `,${data && data.altitude}`
@@ -1075,6 +1288,10 @@ export const qrCodeService  = new QRCodeService ()saveQRCode(qrCode: QRCodeResul
     // // // console.log('QR Code saved:', qrCode.options.text)}
 }export const qrCodeService = new QRCodeService()export const qrCodeService  = new QRCodeService()export const qrCodeService = new QRCodeService()}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -1091,10 +1308,19 @@ export const qrCodeService  = new QRCodeService ()saveQRCode(qrCode: QRCodeResul
     const maxCapacity = Math && Math.floor(level && level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code
     
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return {
       canFit: textLength <= maxCapacity;
       recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel
       maxCapacity
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 ;
@@ -1115,11 +1341,20 @@ export const qrCodeService  = new QRCodeService ()saveQRCode(qrCode: QRCodeResul
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
   }
   getQRCodeHistory(): QRCodeResult[] {
     // In a real app, this would retrieve from storage
     return []
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
     console.log('QR Code saved:', qrCode.options.text)
   }
@@ -1251,3 +1486,9 @@ export const qrCodeService = new QRCodeService();
 
 
 export const qrCodeService = new QRCodeService();
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

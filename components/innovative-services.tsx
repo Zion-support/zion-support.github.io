@@ -1,5 +1,20 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon  } from 'lucide-react';
+import Button from '../components/ui/Button',
+import Card from '../components/ui/Card',
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground',
+import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard',
+import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground',
+import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
+import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon  } from 'lucide-react';
 import { Check;
   Star;
@@ -93,11 +108,338 @@ import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, Trend
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon   } from 'lucide-react';
 import Button from '../components/ui/Button',import Card from '../components/ui/Card',import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground',import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard',import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground',import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories  } from '../data/innovative-micro-saas-services';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+} from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+
+import {
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Target as TargetIcon
+  Zap as ZapIcon2
+  Shield as ShieldIcon
+  Globe as GlobeIcon
+  Cpu as CpuIcon
+  Cloud as CloudIcon
+  Bot as BotIcon
+  Lock as LockIcon
+  BarChart3 as BarChart3Icon
+  TrendingUp as TrendingUpIcon
+  Users as UsersIcon
+  Award as AwardIcon
+  Star as StarIcon
+  Check as CheckIcon
+  ArrowRight as ArrowRightIcon
+  ExternalLink as ExternalLinkIcon
+  Phone as PhoneIcon
+  Mail as MailIcon
+  MapPin as MapPinIcon
+  Trophy
+  FlaskConical as FlaskConicalIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon;
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+
+} from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
+import {
+  innovativeMicroSaasServices,
+  getInnovativeServicesByCategory,
+  getPopularInnovativeServices,
+  getInnovativeServicesByPriceRange,
+  getInnovativeServiceCategories,;
+} from '../data/innovative-micro-saas-services';
+
+export default function InnovativeServicesPage() {
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [priceRange, setPriceRange] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('innovation');
+  const [showFilters, setShowFilters] = useState(false);
+<<<<<<< HEAD
+    { value: 'All', label: 'All Prices' },
+{ value: '0-1000', label: '$0 - $1,000' },
+    { value: '1001-2000', label: '$1,001 - $2,000' },
+    { value: '2001-3000', label: '$2,001 - $3,000' },
+    { value: '3001-5000', label: '$3,001 - $5,000' },
+    { value: '5001+', label: '$5,001+' },
+  ];
+
+  const sortOptions = [
+    { value: 'innovation', label: 'Innovation Level' },
+    { value: 'price', label: 'Price Low-High' },
+    { value: 'popularity', label: 'Most Popular' },
+    { value: 'category', label: 'Category' },
+{ value: 'roi', label: 'Highest ROI' },
+  ];
+  // Filter and sort services
+  let filteredServices = innovativeMicroSaasServices;
+  // Category filter
+  if (selectedCategory !== 'All') {
+filteredServices = getInnovativeServicesByCategory(selectedCategory);
+  }
+
+  // Price range filter
+  if (priceRange !== 'All') {
+const [min, max] = priceRange
+      .split('-')
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getInnovativeServicesByPriceRange(min, max);
+  }
+  // Search filter
+  if (searchQuery) {
+filteredServices = filteredServices.filter(
+      service =>
+        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.category.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+    { value: '1001-2000', label: '$1,001 - $2,000' };
+    { value: '2001-3000', label: '$2,001 - $3,000' };
+    { value: '3001-5000', label: '$3,001 - $5,000' };
+    { value: '5001+', label: '$5,001+' }
+
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Target as TargetIcon,
+  Zap as ZapIcon2,
+  Shield as ShieldIcon,
+  Globe as GlobeIcon,
+  Cpu as CpuIcon,
+  Cloud as CloudIcon,
+  Bot as BotIcon,
+  Lock as LockIcon,
+  BarChart3 as BarChart3Icon,
+  TrendingUp as TrendingUpIcon,
+  Users as UsersIcon,
+  Award as AwardIcon,
+  Star as StarIcon,
+  Check as CheckIcon,
+  ArrowRight as ArrowRightIcon,
+  ExternalLink as ExternalLinkIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  Trophy,
+  FlaskConical as FlaskConicalIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+} from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
+import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
+import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
+  innovativeMicroSaasServices,
+  getInnovativeServicesByCategory,
+  getPopularInnovativeServices,
+  getInnovativeServicesByPriceRange,;
+  getInnovativeServiceCategories,;
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+export default function InnovativeServicesPage() {;
+
+  innovativeMicroSaasServices,
+  getInnovativeServicesByCategory,
+  getPopularInnovativeServices,
+  getInnovativeServicesByPriceRange,;
+  getInnovativeServiceCategories,;
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+export default function InnovativeServicesPage() {;
+
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [priceRange, setPriceRange] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('innovation');
+  const [showFilters, setShowFilters] = useState(false);
+
+  const priceRanges = [
+    { value: 'All', label: 'All Prices' }
+    { value: '0-1000', label: '$0 - $1,000' }
+    { value: '1001-2000', label: '$1,001 - $2,000' }
+    { value: '2001-3000', label: '$2,001 - $3,000' }
+    { value: '3001-5000', label: '$3,001 - $5,000' }
+    { value: '5001+', label: '$5,001+' },  ];    { value: '0-1000', label: '$0 - $1,000' }
+    { value: '1001-2000', label: '$1,001 - $2,000' }
+    { value: '2001-3000', label: '$2,001 - $3,000' }
+    { value: '3001-5000', label: '$3,001 - $5,000' }
+    { value: '5001+', label: '$5,001+' }
+  const sortOptions = [
+    { value: 'innovation', label: 'Innovation Level' }
+    { value: 'price', label: 'Price Low-High' }
+    { value: 'popularity', label: 'Most Popular' }
+    { value: 'category', label: 'Category' }
+    { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
+
+  ];
+  }
+
+  // Price range filter;
+  if (priceRange !== 'All') {;
+    const [min, max] = priceRange;
+      .split('-');
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getInnovativeServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    filteredServices = getInnovativeServicesByPriceRange(min, max);
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  // Sort services
+  filteredServices.sort((a, b) => {
+    switch (sortBy) {
+      case 'price':
+;
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories  } from '../data/innovative-micro-saas-services';
 import { innovativeMicroSaasServices,getInnovativeServicesByCategory,getPopularInnovativeServices,getInnovativeServicesByPriceRange,getInnovativeServiceCategories,} from '../data/innovative-micro-saas-services';
 export default function InnovativeServicesPage() {const [selectedCategory, setSelectedCategory] = useState('All')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),const [priceRange, setPriceRange] = useState('All')const [searchQuery, setSearchQuery] = useState('')const [sortBy, setSortBy] = useState('innovation')const [showFilters, setShowFilters]  = useState(false){ value: '1001-2000', label: '$1,001 - $2,000' }{ value: '2001-3000', label: '$2,001 - $3,000' }{ value: '3001-5000', label: '$3,001 - $5,000' }{ value: '5001+', label: '$5,001+' }Check,Star,Zap,Shield,Users,Globe,ArrowRight,ExternalLink,TrendingUp,Clock,Target,Building,Rocket,Award,DollarSign,ChartBar,Lock,Cpu,Database,Cloud,Smartphone,Palette,Search,MessageSquare,FileText,Calendar,CreditCard,BarChart3,Settings,Zap as ZapIcon,Code,BookOpen,Activity,Database as DatabaseIcon,Play,Mail,Phone,MapPin,Filter,Grid,List,ChevronDown,ChevronUp,Sparkles,FlaskConical,Dna,Car,Leaf,Factory,Truck,Microscope,GraduationCap,ShieldCheck,Brain,Atom,Globe2,Bot,Eye,Target as TargetIcon,Zap as ZapIcon2,Shield as ShieldIcon,Globe as GlobeIcon,Cpu as CpuIcon,Cloud as CloudIcon,Bot as BotIcon,Lock as LockIcon,BarChart3 as BarChart3Icon,TrendingUp as TrendingUpIcon,Users as UsersIcon,Award as AwardIcon,Star as StarIcon,Check as CheckIcon,ArrowRight as ArrowRightIcon,ExternalLink as ExternalLinkIcon,Phone as PhoneIcon,Mail as MailIcon,MapPin as MapPinIcon,Trophy,FlaskConical as FlaskConicalIcon,Dna as DnaIcon,Car as CarIcon,Leaf as LeafIcon,Factory as FactoryIcon,Truck as TruckIcon,Microscope as MicroscopeIcon,} from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon  } from 'lucide-react';
@@ -124,6 +466,10 @@ export default function InnovativeServicesPage() {const [selectedCategory, setSe
   if (priceRange !== 'All') {const [min, max] = priceRange;
       .split('-').map(p => (p === '+' ? Infinity : parseInt(p)))filteredServices = getInnovativeServicesByPriceRange(min, max)const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p))filteredServices = getInnovativeServicesByPriceRange(min, max)}{ value: 'All', label: 'All Prices' },{ value: '0-1000', label: '$0 - $1,000' },{ value: '1001-2000', label: '$1,001 - $2,000' },{ value: '2001-3000', label: '$2,001 - $3,000' },{ value: '3001-5000', label: '$3,001 - $5,000' },{ value: '5001+', label: '$5,001+' },];const sortOptions = [;
     { value: 'innovation', label: 'Innovation Level' },{ value: 'price', label: 'Price Low-High' },{ value: 'popularity', label: 'Most Popular' },{ value: 'category', label: 'Category' },{ value: 'roi', label: 'Highest ROI' },];
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // Filter and sort services;
   let filteredServices = innovativeMicroSaasServices;
   // Category filter;
@@ -174,6 +520,19 @@ if ( {) {$2;
   filtered_services.sort ((a, b) => {switch (sort_by) {case 'price':;
         return a.price.monthly - b.price.monthly;
       case 'popularity':;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      case 'category':;
+        return a.category.locale_compare (b.category);
+      case 'roi': {
+<<<<<<< HEAD
+        const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
+        const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
+return bRoi - aRoi;
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)case 'category':;
         return a.category.locale_compare (b.category)case 'roi': {// Innovation level sorting;
           const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
@@ -208,6 +567,7 @@ if ( {) {$2;
           const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }const aLevel = a && a.innovationLevel.split(' - ')[0];
           const bLevel = b && b.innovationLevel.split(' - ')[0];
           return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0)}const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0')const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0')return bRoi - aRoi;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       }
       default: {// Innovation level sorting;
         const innovationOrder = { Breakthrough: 3, Advanced: 2, Standard: 1 }
@@ -216,11 +576,183 @@ if ( {) {$2;
         return ((innovationOrder[aLevel as keyof typeof innovationOrder] |0) -;
           (innovationOrder[bLevel as keyof typeof innovationOrder] |0))}
     }
+<<<<<<< HEAD
+  });
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+website: 'https://ziontechgroup.com',
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          // Innovation level sorting
+          const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
+          const aLevel = a.innovationLevel.split(' - ')[0];
+          const bLevel = b.innovationLevel.split(' - ')[0];
+          return (innovationOrder[aLevel as keyof typeof innovationOrder] |0) - (innovationOrder[bLevel as keyof typeof innovationOrder] |0)
+        }
+  });
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  }
+
+  // Search filter;
+  if (searchQuery) {;
+    filteredServices = filteredServices && filteredServices.filter(;
+      service =>;
+        service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+    );  }    filteredServices = filteredServices && filteredServices.filter(service =>;
+      service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+      service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+      service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+      service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+    );
+  // Sort services;
+  filteredServices && filteredServices.sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
+        return a && a.price.monthly - b && b.price.monthly;
+      case 'popularity':;
+        return (b && b.popular ? 1 : 0) - (a && a.popular ? 1 : 0);
+      case 'category':;
+        return a && a.category.localeCompare(b && b.category);
+      case 'roi': {;
+        const aRoi = parseInt(a && a.roi.match(/\d+/)?.[0] || '0');
+        const bRoi = parseInt(b && b.roi.match(/\d+/)?.[0] || '0');
+        return bRoi - aRoi;
+      }
+      default: {;
+        // Innovation level sorting;
+        const innovationOrder = { Breakthrough: 3, Advanced: 2, Standard: 1 };
+        const aLevel = a && a.innovationLevel.split(' - ')[0];
+        const bLevel = b && b.innovationLevel.split(' - ')[0];
+        return (
+          (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) -;
+          (innovationOrder[bLevel as keyof typeof innovationOrder] || 0);
+        );
+      }    }              default: {;
+          // Innovation level sorting;
+          const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 };
+          const aLevel = a && a.innovationLevel.split(' - ')[0];
+          const bLevel = b && b.innovationLevel.split(' - ')[0];
+          return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0);
+        }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  };
+
+  const popularServices = getPopularInnovativeServices();
+  const categories = getInnovativeServiceCategories();
+  return (
+<<<<<<< HEAD
+    <>
+      <Head>
+        <title>Innovative Micro SAAS Services - Zion Tech Group</title>
+<meta
+          name='description'
+          content='Discover revolutionary quantum AI, blockchain, cybersecurity, and autonomous systems. Cutting-edge micro SAAS services with breakthrough innovation and unprecedented ROI.'
+        />
+        <meta
+          name='keywords'
+          content='quantum AI, blockchain, cybersecurity, autonomous systems, micro SAAS, innovation, quantum computing, AI services'
+        />
+        <meta
+          property='og:title'
+          content='Innovative Micro SAAS Services - Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Revolutionary quantum AI, blockchain, and autonomous systems. Breakthrough micro SAAS services with unprecedented innovation.'
+        />
+        <meta
+          property='og:url'
+          content='https://ziontechgroup.com/innovative-services'
+        />
+        <meta property='og:type' content='website' />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/innovative-services'
+        />
+      </Head>
+      <QuantumHolographicBackground>
+        <div className='min-h-screen'>
+          {/* Hero Section */}
+          <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
+            <div className='max-w-7xl mx-auto text-center'>
+              <div className='mb-8'>
+                <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>
+                  Revolutionary Innovation
+                </h1>
+                <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
+                  Discover the future of technology with our breakthrough micro
+                  SAAS services. From quantum AI to autonomous systems, we're
+                  redefining what's possible.
+                </p>
+              </div>
+              {/* Innovation Stats */}
+<div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
+                <div className='text-center'>
+                  <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
+                    10
+                  </div>
+                  <div className='text-gray-400'>Breakthrough Services</div>
+                </div>
+                <div className='text-center'>
+                  <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2'>
+                    $25B+
+                  </div>
+                  <div className='text-gray-400'>Market Value</div>
+                </div>
+                <div className='text-center'>
+                  <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2'>
+                    2500%
+                  </div>
+                  <div className='text-gray-400'>Average ROI</div>
+                </div>
+                <div className='text-center'>
+                  <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>
+                    99.99%
+                  </div>
+                  <div className='text-gray-400'>Accuracy Rate</div>
+                </div>
+              </div>
+              {/* Contact Information */}
+<div className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 mb-12 border border-white/10'>
+                <h3 className='text-2xl font-bold text-white mb-4'>
+                  Ready to Transform Your Business?
+                </h3>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
+                  <div className='flex items-center justify-center space-x-2'>
+                    <Phone className='w-5 h-5 text-cyan-400' />
+                    <span className='text-gray-300'>{contactInfo.mobile}</span>
+                  </div>
+                  <div className='flex items-center justify-center space-x-2'>
+                    <Mail className='w-5 h-5 text-purple-400' />
+                    <span className='text-gray-300'>{contactInfo.email}</span>
+                  </div>
+                  <div className='flex items-center justify-center space-x-2'>
+                    <MapPin className='w-5 h-5 text-pink-400' />
+                    <span className='text-gray-300'>{contactInfo.address}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+=======
   })const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',}const popularServices = getPopularInnovativeServices()const categories = getInnovativeServiceCategories()return (</div>;
+=======
+                  </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 </div>;
               </div>;
             </div>;
           </section>;
+<<<<<<< HEAD
                       <input;
                         type="text";
                         placeholder="Search innovative services...";
@@ -325,6 +857,10 @@ if ( {) {$2;
               </div>;
             </div>;
           </section>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Filters and Search */}
 <section className='px-4 sm:px-6 lg:px-8 mb-12'>;
             <div className='max-w-7xl mx-auto'>;
@@ -357,8 +893,35 @@ if ( {) {$2;
                     </select>;
                   </div>;
                   {/* Price Range Filter */}
+<<<<<<< HEAD
+<div className='flex-shrink-0'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                      <input
+                        type="text"
+                        placeholder="Search innovative services..."
+                        value={searchQuery}
+                      onChange={(e) => setSelectedCategory(e.target.value)}
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      <option value="All">All Categories</option>
+                      {categories.map((category) => (
+                        <option key={category.name} value={category.name}>
+                      {categories.map(category => (                        <option key={category.name} value={category.name}>
+
+                        <option key={category.name} value={category.name}>
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                    <select
+=======
 <div className='flex-shrink-0'>;
                     <select;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       value={priceRange}
                       onChange={e => setPriceRange(e.target.value)}
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
@@ -367,12 +930,34 @@ if ( {) {$2;
                       {priceRanges.map(range => (                        <option key={range.value} value={range.value}>;
                         <option key={range.value} value={range.value}>;
                           {range.label}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        </option>
+                      ))}
+<<<<<<< HEAD
+                    </select>
+                  </div>
+                  {/* Sort Options */}
+<div className='flex-shrink-0'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                    <select
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         </option>;
                       ))}</select>;
                   </div>;
                   {/* Sort Options */}
 <div className='flex-shrink-0'>;
                     <select;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       value={sortBy}
                       onChange={e => setSortBy(e.target.value)}
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
@@ -390,10 +975,35 @@ if ( {) {$2;
                   <div className="flex-shrink-0">;
                     <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">;
                   {/* View Mode Toggle */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<div className='flex-shrink-0'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  <div className='flex-shrink-0'>;
+                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;
+<<<<<<< HEAD
+
+                  {/* View Mode Toggle */}
+                  <div className="flex-shrink-0">
+                    <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
+
+
+                  {/* View Mode Toggle */}
+                  <div className='flex-shrink-0'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
+
+                      <button
+=======
                   <div className='flex-shrink-0'>;
 <div className='flex-shrink-0'>;
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;
                       <button;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                      <button;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${viewMode === 'grid';
                             ? 'bg-cyan-500 text-white';
@@ -407,6 +1017,40 @@ if ( {) {$2;
                             ? 'bg-cyan-500 text-white';
                             : 'text-gray-400 hover:text-white';
                         }`}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                      >
+                        <Grid className='w-5 h-5' />
+                      </button>
+                      <button
+                        onClick={() => setViewMode('list')}
+                        className={`px-3 py-2 rounded-lg transition-all ${
+viewMode === 'list'
+                            ? 'bg-cyan-500 text-white'
+                            : 'text-gray-400 hover:text-white'
+                        }`}
+                      >
+                        <List className='w-5 h-5' />
+                      </button>
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       >;
                         <List className='w-5 h-5' />;
                       </button>;
@@ -416,6 +1060,7 @@ if ( {) {$2;
               </div>;
             </div>;
           </section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           {/* Services Grid/List */}
 <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
             <div className='max-w-7xl mx-auto'>;
@@ -453,7 +1098,18 @@ if ( {) {$2;
                               POPULAR;
                             </div>;
                           )}
+<<<<<<< HEAD
+                        </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
                         </div>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         {/* Tagline */}
 <p className='text-gray-300 mb-4 font-medium'>;
                           {service.tagline}
@@ -461,7 +1117,28 @@ if ( {) {$2;
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>;
                           {service && service.description}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        </p>;
+
+                        {/* Innovation Level */}
+<<<<<<< HEAD
+                        <div className='mb-4'>
+                          <div className='flex items-center space-x-2 mb-2'>
+                            <Sparkles className='w-4 h-4 text-yellow-400' />
+                            <span className='text-sm font-medium text-yellow-400'>
+                              Innovation Level
+                            </span>
+                          </div>
+                          <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-lg text-xs font-bold text-center'>
+=======
                         </p>;{/* Innovation Level */}<div className='mb-4'>;
+=======
+                        <div className='mb-4'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                        </p>;{/* Innovation Level */}<div className='mb-4'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           <div className='flex items-center space-x-2 mb-2'>;
                             <Sparkles className='w-4 h-4 text-yellow-400' />;
                             <span className='text-sm font-medium text-yellow-400'>;
@@ -513,6 +1190,10 @@ if ( {) {$2;
                           <div className="text-center">;
                             <div className="text-lg font-bold text-green-400">{service && service.roi.split(' ')[0]}</div>;
                             <div className="text-xs text-gray-400">average ROI</div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         </div>;<div className='mb-4'>;
                           <div className='flex items-center space-x-2 mb-2'>;
                             <Sparkles className='w-4 h-4 text-yellow-400' />;
@@ -521,6 +1202,7 @@ if ( {) {$2;
                             </span>;
                           </div>;
                           <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-lg text-xs font-bold text-center'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                             {service.innovationLevel}
                           </div>;
                         </div>;
@@ -567,6 +1249,30 @@ if ( {) {$2;
                           </div>;
                         </div>;
                         {/* Market Info */}
+<<<<<<< HEAD
+<div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                        </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                          <div>
+                            <div className='text-gray-400'>Market Size</div>
+                            <div className='text-white font-medium'>
+                              {service.marketSize}
+                            </div>
+                          </div>
+                          <div>
+                            <div className='text-gray-400'>Growth Rate</div>
+                            <div className='text-white font-medium'>
+                              {service.growthRate}
+<<<<<<< HEAD
+                            </div>
+                          </div>
+=======
+                            </div>                          </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                        </div>
+=======
 <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>;
                           <div>;
                             <div className='text-gray-400'>Market Size</div>;
@@ -622,9 +1328,14 @@ if ( {) {$2;
                           <div className="mt-1">{contactInfo && contactInfo.website}</div>;
                         </div>;
                       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     </QuantumHolographicCard>;</div>;
                           </div>;
                         </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                         {/* CTA Buttons */}
 <div className='flex space-x-3'>;
                           <Button;
@@ -644,6 +1355,17 @@ if ( {) {$2;
                           </Button>;
                         </div>;
                         {/* Contact Info */}
+<<<<<<< HEAD
+<div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>
+                          <div>
+                            Contact: {contactInfo.mobile} | {contactInfo.email}
+                          </div>
+                          <div className='mt-1'>{contactInfo.website}</div>
+                        </div>
+                      </div>
+                    </QuantumHolographicCard>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
 <div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>;
                           <div>Contact: {contactInfo.mobile} | {contactInfo.email}
                           </div>;
@@ -651,6 +1373,10 @@ if ( {) {$2;
                         </div>;
                       </div>;
                     </QuantumHolographicCard>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    </QuantumHolographicCard>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   ))}
                 </div>;
               )}
@@ -680,8 +1406,23 @@ if ( {) {$2;
                   Transform your business with quantum AI, autonomous systems,and cutting-edge technology.;
                 </p>;
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <Button
+                    variant='primary'
+<<<<<<< HEAD
+                    className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'
+                  >
+                    <Phone className='w-5 h-5 mr-2' />
+=======
                   <Button;
                     variant='primary';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+                  <Button;
+                    variant='primary';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'>;
                     <Phone className='w-5 h-5 mr-2' />                    Call Now: {contactInfo && contactInfo.mobile}
                   </Button>;
@@ -702,6 +1443,10 @@ if ( {) {$2;
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                   <Button;
                     href={`tel:${contactInfo && contactInfo.mobile}`}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     variant="primary";
                     <Mail className="w-5 h-5 mr-2" />;
                     Email Us;
@@ -713,10 +1458,45 @@ if ( {) {$2;
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg';
                   >;
                     <Phone className='w-5 h-5 mr-2' />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     Call Now: {contactInfo.mobile}
                   </Button>;
                   <Button;
                     href={`mailto:${contactInfo.email}`}
+<<<<<<< HEAD
+variant='secondary'
+                    className='px-8 py-4 text-lg'
+                  >
+                    <Mail className='w-5 h-5 mr-2' />
+                    Email Us
+                  </Button>
+                </div>
+                <div className='mt-8 text-sm text-gray-400'>
+                  <div>Address: {contactInfo.address}</div>
+                  <div className='mt-1'>Website: {contactInfo.website}</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                    variant="primary"
+                    <Mail className="w-5 h-5 mr-2" />
+                    Email Us
+                  </Button>
+                </div>
+                <div className="mt-8 text-sm text-gray-400">
+                  <div>Address: {contactInfo.address}</div>
+                  <div className="mt-1">Website: {contactInfo.website}</div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                </div>
+              </EnhancedFuturisticCard>
+            </div>
+          </section>
+        </div>
+      </QuantumHolographicBackground>
+    </>
+<<<<<<< HEAD
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+}
+=======
 variant='secondary';
                     className='px-8 py-4 text-lg';
                   >;
@@ -734,6 +1514,12 @@ variant='secondary';
         </div>;
       </QuantumHolographicBackground>;
     </>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     className='px-8 py-4 text-lg'>;
                     <Mail className='w-5 h-5 mr-2' />;
                     Email Us;
@@ -962,4 +1748,20 @@ variant='secondary';
           </section>;
         </div>;
       </QuantumHolographicBackground>;
+<<<<<<< HEAD
+<<<<<<< HEAD
 })</>))}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+
+
+  );
+
+
+    </>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+})</>))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

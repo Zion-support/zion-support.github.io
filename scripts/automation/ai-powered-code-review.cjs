@@ -250,4 +250,16 @@ this.logError("Code review failed")
         .map(line => line.split(" ")
         .filter(file => file && !file.startsWith(".")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   const content = fs.readFileSync(filePath, ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  const content = fs.readFileSync(filePath, ")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  const content = fs.readFileSync(filePath, ")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -156,10 +156,21 @@ const monitor = new BuildMonitor()if (require.main === module) {const monitor = 
     default:;
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]')}
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 module.exports = BuildMonitor;
 ursor/automate-test-improve-and-merge-code-646c;
 const fs = require('fs)const path = require('path'),const { execSync } = require(child_process')class BuildMonitor {constructor() {this.logFile = path.join(__dirname, 'logsbuild-monitor.log)this.reportFile = path.join(__dirname, 'reportsbuild-status.json')this.alertThreshold = 3; // Alert after 3 consecutive failures;
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require('fs);
 const path = require('path'),
   const { execSync } = require(child_process');

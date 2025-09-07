@@ -129,13 +129,7 @@ class DependencyManager {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Report saved "to": ${reportFile}`);
     // Print summary
-    
-    
-    
-    
-    
-    
-    
+
     return report}
   async run() {
     try {this.log('🚀 Starting Dependency Manager'),const report = this.generateReport(),this.log('✅ Dependency management completed');
@@ -147,4 +141,16 @@ class DependencyManager {
 // Run the dependency manager
 if (require.main === module) {const manager = new DependencyManager(),manager.run().catch(console.error)}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = DependencyManager;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = DependencyManager;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = DependencyManager;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

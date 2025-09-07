@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+export type Infobox = {;
+=======
 
 ;
 export type Infobox = {export type Infobox = {founder: string,launchYear: string,token: string,export type Infobox = {founder: string,launchYear: string,token: string,protocolType: string;
@@ -80,6 +83,7 @@ export function generateZionWiki(): WikiContent {const title = 'Zion OS';
   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }export function buildMarkdownFromWiki(wiki: WikiContent): string {const infobox = `| | |;
 export type Infobox = {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   founder: string,;
   launchYear: string,;
   token: string,;

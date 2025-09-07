@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 
 ;
 const { execSync } = require('child_process')console.log('Testing Next.js installation...')try {// Check if Next.js is installed;
@@ -6,6 +12,7 @@ const { execSync } = require('child_process')console.log('Testing Next.js instal
   const nextVersion = execSync('npx next --version', { encoding: 'utf8' })console.log('Next.js version:', nextVersion.trim()),// Try to run a simple build;
   console.log('Testing build...'),execSync('npx next build', { stdio: 'inherit' }),console.log('Build successful!')} catch (error) {console.error('Error:', error.message)}
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require('child_process');
 console.log('Testing Next.js installation...');
 try {// Check if Next.js is installed;
@@ -19,8 +26,16 @@ try {// Check if Next.js is installed;
 const { execSync } = require('child_process'),;
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 console.log('Testing Next.js installation...'),;
 try {;
   // Check if Next.js is installed;

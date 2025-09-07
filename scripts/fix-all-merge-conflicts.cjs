@@ -24,7 +24,36 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    content = content.replace(/    
+:backup-problematic-files/scripts/fix-all-merge-conflicts.cjs
+    content = content.replace(/[^\n]+\n?/g, '');
+    
+:scripts/fix-all-merge-conflicts.cjs
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+:backup-problematic-files/scripts/fix-all-merge-conflicts.cjs
+:scripts/fix-all-merge-conflicts.cjs
+    content = content.replace(/
+    
+
+    content = content.replace(/    
+
+
+    content = content.replace(/
+    
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Clean up any double newlines
     content = content.replace(/\n\n\n+/g, '\n\n');
     

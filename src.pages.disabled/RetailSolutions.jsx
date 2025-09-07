@@ -14,7 +14,13 @@ interface RetailSolutionsProps  {// Add props here as needed;
 interface RetailSolutionsProps {
   // Add props here as needed
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export default function RetailSolutions({}: RetailSolutionsProps) {
@@ -25,10 +31,20 @@ export default function RetailSolutions({}: RetailSolutionsProps) {
     </div>
   );
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 }
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 :src.pages.disabled/RetailSolutions.jsx
 }
 }
@@ -37,6 +53,10 @@ export default function RetailSolutions({}: RetailSolutionsProps) {
 }
 }:src.pages.disabled/RetailSolutions.jsx;
 :temp_exclude/src.pages.disabled/RetailSolutions.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 
@@ -50,4 +70,9 @@ export default function RetailSolutions({}: RetailSolutionsProps) {
 }
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 :temp_exclude/src.pages.disabled/RetailSolutions.jsx;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

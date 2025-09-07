@@ -18,7 +18,19 @@ class SecurityAuditor {}
     this.intervalId = setInterval(() => {}
       this.runSecurityCheck()}, this.interval);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log('Security Auditor started successfully')};
   async runSecurityCheck() {}
     try {}
@@ -40,7 +52,19 @@ class SecurityAuditor {}
         errorOutput += data.toString()}
 });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Security audit passed ✓')) {}
@@ -64,7 +88,19 @@ class SecurityAuditor {}
         "cwd": process.cwd();
       };);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       child.on('close', (code) => {}
         if ( {})
           console.log('Security fix completed ✓')) {}
@@ -104,4 +140,16 @@ if ( {})
   
   auditor.start().catch(console.error)};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = SecurityAuditor;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = SecurityAuditor;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = SecurityAuditor;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

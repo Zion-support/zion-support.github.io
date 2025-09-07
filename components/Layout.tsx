@@ -1,5 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 ;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import Head from 'next/head';
 interface LayoutProps  {children: React.ReactNode;
@@ -12,6 +26,9 @@ interface LayoutProps  {children: React.ReactNode;
 }
 
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 class ErrorBoundary extends React.Component {
@@ -140,6 +157,23 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {return (<main className
   );
 };
 export default Layout;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import Link from 'next/link';
@@ -216,11 +250,16 @@ export default function Layout({
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -230,3 +269,81 @@ export default function Layout({
     </>
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+        <meta name="keywords" content={keywords} />
+        <meta property="og:title" content={ogTitle || title} />
+        <meta property="og:description" content={ogDescription || description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={ogUrl || "https://ziontechgroup.com"} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={ogTitle || title} />
+        <meta name="twitter:description" content={ogDescription || description} />
+        <meta name="twitter:image" content={ogImage} />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href={ogUrl || "https://ziontechgroup.com"} />
+      </Head>
+      
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <Header />
+        
+        <main className="flex-1">
+          {children}
+        </main>
+        
+        <Footer />
+        
+        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      </div>
+    </>
+  );
+}
+import React, { ReactNode } from 'react';
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </div>
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+  );
+};
+
+export default Layout;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+main
+
+main
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

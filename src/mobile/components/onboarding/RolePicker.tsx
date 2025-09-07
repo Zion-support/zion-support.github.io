@@ -1,4 +1,44 @@
+<<<<<<< HEAD
+=======
+className={`cursor-pointer transition-all ${
+            selectedRole === 'client' 
+              ? "border-primary bg-primary/5" 
+              : "border-border hover:border-primary/40"
+          }`}
+          onClick={() => handleSelect('client')}
+        >
+          <CardContent className="p-5">
+            <div className="flex items-center">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                <Users className="h-6 w-6 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-medium">I'm hiring</h3>
+                <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
+              </div>
+              {selectedRole === 'client' && (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
+<<<<<<< HEAD
+                <Check className="h-5 w-5 text-primary" />
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Briefcase, Users, Check } from 'lucide-react';
+type UserRole = "talent" | "client" | null,;
+interface RolePickerProps {;
+  onSelect: (role: UserRole) => void;
+}
+;
+export function RolePicker({ onSelect }: RolePickerProps) {;
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null),;
+  const handleSelect = (role: UserRole) => {;
+    setSelectedRole(role);
+    onSelect(role);
+  };
+  return (
+    <div className='space-y-4 px-4'>;
+=======
 className={`cursor-pointer transition-all ${selectedRole === 'client';
               ? "border-primary bg-primary/5";
               : "border-border hover:border-primary/40";
@@ -21,6 +61,7 @@ import { Briefcase, Users, Check  } from 'lucide-react';
                 <Check className="h-5 w-5 text-primary" />;
 import React, { useState } from "react",import { Button } from "@/components/ui/button",import { Card, CardContent } from "@/components/ui/card",type UserRole = "talent" | "client" | null,interface RolePickerProps  {onSelect: (role: UserRole) => void;
 }export function RolePicker() {const [selectedRole, setSelectedRole] = useState<UserRole>(null),const handleSelect = (role: UserRole) => {setSelectedRole(role)onSelect(role)}return (<div className='space-y-4 px-4'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <h2 className='text-xl font-medium'>What brings you to Zion?</h2>;
       <p className='text-muted-foreground'>;
         Choose how you want to use our platform;
@@ -47,9 +88,22 @@ import React, { useState } from "react",import { Button } from "@/components/ui/
                   Post jobs and find talented professionals;
                 </p>;
               </div>;
+<<<<<<< HEAD
+              {selectedRole === 'client' && (;
+                <Check className='h-5 w-5 text-primary' />;
+              )}
+<<<<<<< HEAD
+=======
               {selectedRole === 'client' && (<Check className='h-5 w-5 text-primary' />;
               )}import { Button  } from '@/components / ui / button';
 import { Card, CardContent  } from '@/components / ui / card';
+=======
+
+import React, { useState } from 'react';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent } from '@/components / ui / card';
+import { Briefcase, Users, Check } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 type UserRole = 'talent' | 'client' | null;
 interface RolePickerProps  {on_select: (role: UserRole) => void;
 export /**;
@@ -109,5 +163,13 @@ function RolePicker() {const [selected_role, setSelectedRole] = useState < UserR
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
     </div>;
   )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+    </div>);
+}
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

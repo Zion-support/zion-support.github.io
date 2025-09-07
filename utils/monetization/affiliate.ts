@@ -11,8 +11,17 @@ if (return url, ) {$2;
   u.search_params.set ('ref', code);
   return u.to_string ();
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
+=======
+}export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   if (!code) return url,;
   const u = new URL(url);
   u.searchParams.set('ref', code);
@@ -24,6 +33,10 @@ export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AF
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 }
 
@@ -47,3 +60,9 @@ export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AF
 
 }
 ;
+<<<<<<< HEAD
+=======
+  }}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+ursor/automate-test-fix-improve-and-merge-code-48f3
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [solutionsOpen, setSolutionsOpen] = useState(false)
+  return (
+    <nav className='bg-white shadow-lg sticky top-0 z-50'>
+      <div className='container mx-auto px-4'>
+        <div className='flex justify-between items-center py-4'>
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Menu,X,ChevronDown,Search,User,Settings,LogOut,Bell,Globe,Zap,Brain,Rocket,Dna,DollarSign,Lock,Wifi,Truck,Gamepad2,Bot,Factory,Car,} from "lucide-react";
 import Link from 'next/link';
 interface EnhancedNavigationProps  {className?: string;
@@ -5,6 +18,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   const [servicesOpen, setServicesOpen] = useState(false)const [solutionsOpen, setSolutionsOpen] = useState(false)return (<nav className='bg-white shadow-lg sticky top-0 z-50'>;
       <div className='container mx-auto px-4'>;
         <div className='flex justify-between items-center py-4'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           {/* Logo */}
           <Link href='/' className='flex items-center space-x-2'>;
             <div className='flex items-center space-x-2'>;
@@ -182,6 +196,64 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
               </div>            </div>;
           </div>;
         )}
+<<<<<<< HEAD
+      </div>
+    </nav>
+  )
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  User,
+  Settings,
+  LogOut,
+  Bell,
+  Globe,
+  Zap,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,
+  Wifi,
+  Truck,
+  Gamepad2,
+  Bot,
+  Factory,
+  Car,;
+} from "lucide-react";
+import Link from "next/link";
+interface EnhancedNavigationProps {;
+  className?: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+}
+
+const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
+  className = ""
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const navigationItems = [
+    {
+      name: "Services"
+      href: "/services"
+      icon: <Brain className="w-4 h-4" />
+      dropdown: [
+        {
+          name: "AI & Machine Learning"
+          href: "/services?category=ai-ml"
+          icon: <Brain className="w-4 h-4" />
+=======
       </div>;
     </nav>;
   )}const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({className = "";
@@ -194,6 +266,10 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
         {name: "AI & Machine Learning";
           href: "/services?category=ai-ml";
           icon: <Brain className="w-4 h-4" />;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }
         {name: "Quantum Computing";
           href: "/services?category=quantum";

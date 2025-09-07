@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
+=======
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Sitemap
@@ -14,6 +16,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
@@ -22,6 +25,9 @@ Disallow: /temp_*/
 Disallow: /*.backup.*
 Disallow: /private/
 
+<<<<<<< HEAD
+Crawl-delay: 1
+=======
 # Allow important pages
 Allow: /services/
 Allow: /ai-services/
@@ -38,6 +44,7 @@ Crawl-delay: 1
 Disallow: /private/
 
 Crawl-delay: 1
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 Disallow: /test/
 Disallow: /temp/
@@ -50,6 +57,11 @@ Allow: /about
 Allow: /contact
 Allow: /blog/
 Allow: /careers/
+<<<<<<< HEAD
+
+Crawl-delay: 1
+
+=======
 >>>>>>> origin/main
 Sitemap: https://zion.app/sitemap.xml
 
@@ -119,3 +131,4 @@ ursor/automate-test-improve-and-merge-code-646c
 
 Crawl-delay: 1
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

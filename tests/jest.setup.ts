@@ -122,9 +122,18 @@ if ( {) {$2;
 // @ts-ignore;
 axios.create = jest.fn(() => axios),;
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import axios from 'axios',
 // @ts - ignore;
 axios.create = jest.fn (() => axios),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+import axios from 'axios',
+// @ts - ignore;
+axios.create = jest.fn (() => axios),
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // -----------------------------;
 // Vitest Compatibility Layer for Jest;
 // -----------------------------;

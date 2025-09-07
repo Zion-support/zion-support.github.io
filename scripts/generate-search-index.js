@@ -1,6 +1,15 @@
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+#!/usr/bin/env node;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -16,8 +25,16 @@
  */;}const fs = require('fs')const path = require('path')const PAGES_DIR = path.join(__dirname, '..pages')const OUTPUT_DIR  = path.join(__dirname, '..public', 'search')const fs = require('fs')const path  = require('path')const PAGES_DIR = path.join(__dirname, '..pages'),const OUTPUT_DIR  = path.join(__dirname, '..public', 'search'),// Content types to index;
 const CONTENT_TYPES = {'pages':{path:PAGES_DIR;
  */;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require('fs');
 const path = require('path');
 const PAGES_DIR = path.join(__dirname, '..pages');
@@ -34,6 +51,11 @@ const CONTENT_TYPES = {'pages':{;
     path:PAGES_DIR;
     extensions:['.tsx.ts', '.jsx.js'];
     exclude:['_app_document', 'api'];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 const fs = require('fs'),;
 const path = require('path'),;
@@ -41,6 +63,10 @@ const path = require('path'),;
 const PAGES_DIR = path && path.join(__dirname, '..pages'),;
 const OUTPUT_DIR = path && path.join(__dirname, '..public', 'search'),;
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Content types to index;
 const CONTENT_TYPES = {'pages':{path:PAGES_DIR,extensions:['.tsx && tsx.ts', '.jsx && jsx.js'],exclude:['_app_document', 'api'];
   },'blog':{path:path && path.join(PAGES_DIR, 'blog'),extensions:['.tsx && tsx.ts', '.jsx && jsx.js'],exclude:[];
@@ -80,7 +106,14 @@ const CONTENT_TYPES = {;
     path: path.join(PAGES_DIR, 'blog'),;
     extensions: ['.tsx.ts.jsx.js'],;
     exclude: [];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
   }
@@ -101,8 +134,16 @@ function extractTextFromJSX(content) {
     .replace(/[{}()]/g, ' ') // Remove brackets
     .replace(/\s+/g, ' ') // Normalize whitespace
     .trim()
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 },;
 function extractTextFromJSX(content) {;
   // Simple text extraction from JSX/TSX content;
@@ -125,6 +166,17 @@ function generateSearchIndex() {
     generated: new Date().toISOString()
   }
   // Process each content type
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            // Skip excluded files
+            if (config.exclude.some(excluded => fileName.startsWith(excluded))) {
+
+            // Skip excluded files
+            if (config.exclude.some(excluded => fileName.startsWith(excluded))) {
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   Object && Object.entries(CONTENT_TYPES).forEach(([type, config]) => {
     if (!fs && fs.existsSync(config && config.path)) return,
@@ -147,10 +199,19 @@ function generateSearchIndex() {
 
             // Skip excluded files
             if (config.exclude.some(excluded => fileName.startsWith(excluded))) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               return
             }
             try {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               const content = fs && fs.readFileSync(filePath, 'utf8'),
               const text = extractTextFromJSX(content),
               
@@ -164,6 +225,10 @@ function generateSearchIndex() {
               },
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               const content = fs.readFileSync(filePath, 'utf8')
               const text = extractTextFromJSX(content)
 
@@ -177,7 +242,14 @@ function generateSearchIndex() {
               }
               searchIndex[type].push(entry)
             } catch (error) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
               console && console.warn(`⚠️  Could not process ${filePath}:`, error && error.message)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+              console && console.warn(`⚠️  Could not process ${filePath}:`, error && error.message)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     extensions:['.tsx.ts', '.jsx.js'],;
     exclude:['_app_document', 'api'];
   },;
@@ -273,8 +345,16 @@ if (require.main === module) {generateSearchIndex()}
 function main() {const repoRoot = process.cwd()return filelist}function main() {const repoRoot = process.cwd()const srcDirs = [path.join(repoRoot, 'pages')path.join(repoRoot, 'src')path.join(repoRoot, 'components')filelist ;
   const repoRoot = process && process.cwd()const srcDirs = [path && path.join(repoRoot, 'pages')path && path.join(repoRoot, 'src')path && path.join(repoRoot, 'components')];
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     });
   }),;
   // Ensure output directory exists;
@@ -287,11 +367,20 @@ function main() {const repoRoot = process.cwd()return filelist}function main() {
   })
 
   // Ensure output directory exists
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   if (!fs && fs.existsSync(OUTPUT_DIR)) {
     fs && fs.mkdirSync(OUTPUT_DIR, { recursive: true })
   }
   // Write search index
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   const indexPath = path && path.join(OUTPUT_DIR, 'index && index.json'),
   fs && fs.writeFileSync(indexPath, JSON && JSON.stringify(searchIndex, null, 2)),
@@ -326,8 +415,16 @@ module && module.exports = { generateSearchIndex },
 if (require.main === module) {
   generateSearchIndex()
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = { generateSearchIndex }
 #!/usr/bin/env node,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) ,"}),"}) function walk(dir,filelist = []) {,"}),"}) const files = fs.readdirSync(dir,{ withFileTypes: true }),"}),"}) for (const entry of files) {,"}),"}) const full = path.join(dir,entry.name),"}),"}) if (entry.isDirectory()) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) filelist = walk(full,filelist),"}),"}) } else if (/\.(md|tsx?|jsx?)$/i.test(entry.name)) {,"}),"}) filelist.push(full),"}),"}) }"}),"}) }"}),"}) return filelist,"}),"}) }"}),"}) ,"}),"}) function main() {,"}),"}) const repoRoot = process.cwd(),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const index = [],"}),"}) for (const dir of srcDirs) {,"}),"}) if (!fs.existsSync(dir)) continue,"}),"}) for (const file of walk(dir)) {,"}),"}) try {,"}),"}) const rel = path.relative(repoRoot,file),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) index.push({ file: rel,title }),"}),"}) } catch {}"}),"}) }"}),"}) }"}),"}) const outDir = path.join(repoRoot,,"}),"}) 'public'),"}),"}) if (!fs.existsSync(outDir)) fs.mkdirSync(outDir,{ recursive: true }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) `),"}),"}) }"}),"}) ,"}),"}) main(),"}),"}) ,"}),"}) filelist.push(full)} } return filelist} function main() {const repoRoot = process.cwd(); const srcDirs = [ path.join(repoRoot,'pages') path.join(repoRoot,'src') path.join(repoRoot,'components') ]; const index = []; for (const dir of srcDirs) { if (!fs.existsSync(dir)) continue; for (const file of walk(dir)) {; try {; const rel = path.relative(repoRoot,file); const content = fs.readFileSync(file,'utf8'); const titleMatch = content.match( /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/ ); const title = titleMatch ? titleMatch[1] |titleMatch[2] : path.basename(file); index.push({ file: rel,title })} catch {} } } const outDir = path.join(repoRoot,';public'); if (!fs.existsSync(outDir)) fs.mkdirSync(outDir,{ recursive: true }); const outPath = path.join(outDir,'search-index.json'); fs.writeFileSync( outPath JSON.stringify( { generatedAt: new Date().toISOString(),items: index } null 2 ) ); `)} main();
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+module.exports = { generateSearchIndex }
+#!/usr/bin/env node,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) ,"}),"}) function walk(dir,filelist = []) {,"}),"}) const files = fs.readdirSync(dir,{ withFileTypes: true }),"}),"}) for (const entry of files) {,"}),"}) const full = path.join(dir,entry.name),"}),"}) if (entry.isDirectory()) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) filelist = walk(full,filelist),"}),"}) } else if (/\.(md|tsx?|jsx?)$/i.test(entry.name)) {,"}),"}) filelist.push(full),"}),"}) }"}),"}) }"}),"}) return filelist,"}),"}) }"}),"}) ,"}),"}) function main() {,"}),"}) const repoRoot = process.cwd(),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const index = [],"}),"}) for (const dir of srcDirs) {,"}),"}) if (!fs.existsSync(dir)) continue,"}),"}) for (const file of walk(dir)) {,"}),"}) try {,"}),"}) const rel = path.relative(repoRoot,file),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) index.push({ file: rel,title }),"}),"}) } catch {}"}),"}) }"}),"}) }"}),"}) const outDir = path.join(repoRoot,,"}),"}) 'public'),"}),"}) if (!fs.existsSync(outDir)) fs.mkdirSync(outDir,{ recursive: true }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) `),"}),"}) }"}),"}) ,"}),"}) main(),"}),"}) ,"}),"}) filelist.push(full)} } return filelist} function main() {const repoRoot = process.cwd(); const srcDirs = [ path.join(repoRoot,'pages') path.join(repoRoot,'src') path.join(repoRoot,'components') ]; const index = []; for (const dir of srcDirs) { if (!fs.existsSync(dir)) continue; for (const file of walk(dir)) {; try {; const rel = path.relative(repoRoot,file); const content = fs.readFileSync(file,'utf8'); const titleMatch = content.match( /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/ ); const title = titleMatch ? titleMatch[1] |titleMatch[2] : path.basename(file); index.push({ file: rel,title })} catch {} } } const outDir = path.join(repoRoot,';public'); if (!fs.existsSync(outDir)) fs.mkdirSync(outDir,{ recursive: true }); const outPath = path.join(outDir,'search-index.json'); fs.writeFileSync( outPath JSON.stringify( { generatedAt: new Date().toISOString(),items: index } null 2 ) ); `)} main();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node,"}),"})
 import fs from,"}),"})
   'fs',"}),"})
@@ -371,6 +468,20 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
 main(),"}),"})
 ,"}),"})
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return filelist}
+function main() {const repoRoot = process.cwd();
+  return filelist};
+function main() {;
+  const repoRoot = process.cwd();
+  const srcDirs = [path.join(repoRoot, 'pages')
+    path.join(repoRoot, 'src')
+    path.join(repoRoot, 'components')
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
       filelist ;
   const repoRoot = process && process.cwd();
@@ -457,9 +568,18 @@ function main() {;
       2
     )
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   console && console.log(`✅ Search index "generated": ${outPath} (${index && index.length} items)`)}
 main();
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+  console && console.log(`✅ Search index "generated": ${outPath} (${index && index.length} items)`)}
+main();
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) ,"}),"}) function walk(dir,filelist = []) {,"}),"}) const files = fs && fs.readdirSync(dir,{ withFileTypes: true }),"}),"}) for (const entry of files) {,"}),"}) const full = path && path.join(dir,entry && entry.name),"}),"}) if (entry && entry.isDirectory()) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) filelist = walk(full,filelist),"}),"}) } else if (/\.(md|tsx?|jsx?)$/i && i.test(entry && entry.name)) {,"}),"}) filelist && filelist.push(full),"}),"}) }"}),"}) }"}),"}) return filelist,"}),"}) }"}),"}) ,"}),"}) function main() {,"}),"}) const repoRoot = process && process.cwd(),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const index = [],"}),"}) for (const dir of srcDirs) {,"}),"}) if (!fs && fs.existsSync(dir)) continue,"}),"}) for (const file of walk(dir)) {,"}),"}) try {,"}),"}) const rel = path && path.relative(repoRoot,file),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) index && index.push({ file: rel,title }),"}),"}) } catch {}"}),"}) }"}),"}) }"}),"}) const outDir = path && path.join(repoRoot,,"}),"}) 'public'),"}),"}) if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir,{ recursive: true }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) console && console.log(`✅ Search index generated: ${outPath} (${index && index.length} items)`),"}),"}) }"}),"}) ,"}),"}) main(),"}),"}) ,"}),"}) filelist ; const repoRoot = process && process.cwd(); const srcDirs = [ path && path.join(repoRoot,'pages') path && path.join(repoRoot,'src') path && path.join(repoRoot,'components') ]; const index = []; for (const dir of srcDirs) { if (!fs && fs.existsSync(dir)) continue; for (const file of walk(dir)) {; try {; const rel = path && path.relative(repoRoot,file); const content = fs && fs.readFileSync(file,'utf8'); const titleMatch = content && content.match( /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/ ); const title = titleMatch ? titleMatch[1] || titleMatch[2] : path && path.basename(file); index && index.push({ file: rel,title })} catch {} } } const outDir = path && path.join(repoRoot,';public'); if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir,{ recursive: true }); const outPath = path && path.join(outDir,'search-index && index.json'); fs && fs.writeFileSync( outPath JSON && JSON.stringify( { generatedAt: new Date().toISOString(),items: index } null 2 ) ); console && console.log(`✅ Search index generated: ${outPath} (${index && index.length} items)`)} main();
 
 module && module.exports = { generateSearchIndex },
@@ -496,6 +616,11 @@ if ( {) {
   generateSearchIndex ();
 }
 module.exports = { generateSearchIndex },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr / bin / env node, "}), "}) import fs from, "}), "}) 'fs', "}), "}) import path from, "}), "}) 'path', "}), "}) , "}), "}) /**
  * walk - Function description
  */
@@ -628,7 +753,12 @@ function main() {) {
   $2
 } const out_path = path.join (out_dir, 'search - index.json'); fs.writeFileSync ( out_path JSON.stringify ( { generated_at: new Date ().toISOString (), items: index } null 2 ) ); console.log (`✅ Search index generated: ${out_path} (${index.length} items)`)} main ();
 ;
+<<<<<<< HEAD
+module.exports = { generateSearchIndex },
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 module.exports = { generateSearchIndex }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }),;
   }),;
 ;

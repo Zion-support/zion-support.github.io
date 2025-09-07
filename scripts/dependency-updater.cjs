@@ -1,6 +1,20 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 #!/usr/bin/env node;
 const fs = require('fs')
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process')
 // console.log('� Starting dependency update check...')
     console.log(' Checking for outdated packages...')
@@ -18,4 +32,16 @@ const { execSync } = require('child_process')
 // console.log('\n� Outdated "Packages")
     console.log('\n� Security "Vulnerabilities")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     console.log('\n "Recommendations")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    console.log('\n "Recommendations")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    console.log('\n "Recommendations")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

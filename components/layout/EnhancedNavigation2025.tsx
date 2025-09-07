@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+'use client',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+import { useState, useEffect  } from 'react';
+=======
 
 ;
 }export default EnhancedNavigation2025;
@@ -461,7 +469,12 @@ function EnhancedNavigation2025() {const [is_open, setIsOpen] = useState (false)
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
       <div className="h-20" />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </>)}'use client',import { useState, useEffect   } from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import Link from 'next/link';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Menu, ChevronDown;
@@ -471,6 +484,21 @@ import { Menu, ChevronDown;
   BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb;
+<<<<<<< HEAD
+  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
+ } from 'lucide-react';
+const navigationItems = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
   Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon;
   } from 'lucide-react';
+<<<<<<< HEAD
 const navigationItems  = null;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+const navigationItems  = null;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

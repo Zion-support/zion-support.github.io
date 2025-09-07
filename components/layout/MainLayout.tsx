@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 ;
 }const MainLayout: React.FC<MainLayoutProps> = ({children,title,description,keywords,image,url,type = 'website',noindex = false,nofollow = false,canonical;
@@ -25,6 +31,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({children;
   image = '/og-image.jpg';
   url;
 ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
@@ -143,11 +150,22 @@ export default function MainLayout({
   keywords = "AI solutions, IT services, micro SaaS, technology consulting",
   canonical 
 }: MainLayoutProps) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}
@@ -254,10 +272,20 @@ import React from 'react'; import Head from 'next/head'; import Header from './H
     </>);
 }
 export default MainLayout;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
         <link rel="icon" href="/favicon.ico" />
       </Head>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       
 
 interface MainLayoutProps {
@@ -270,6 +298,12 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
   return (
     <>
       <SEOHead title={title} description={description} />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
@@ -279,4 +313,12 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
       </div>
     </>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 ;
   Rocket;
@@ -24,6 +38,17 @@
   MapPin;
   Rocket,Clock,CheckCircle,AlertCircle,Play,Eye,Settings,Globe,Activity,Calendar,User,Building2,Shield,TrendingUp,Users,Zap,Sparkles,ArrowRight,RefreshCw,Pause,StopCircle,MapPin} from 'lucide-react';
 interface Deployment  {id: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   Rocket
   Clock
   CheckCircle
@@ -223,6 +248,13 @@ const getVerticalIcon = (vertical: string) => {switch (vertical) {case 'HEALTH':
           </div>;
         </div>;
   country?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>;
@@ -243,6 +275,182 @@ const getVerticalIcon = (vertical: string) => {switch (vertical) {case 'HEALTH':
             </div>;
             <div>;
               <p className='text-2xl font-bold'>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+// Mock data - replace with actual API calls
+const mockDeployments: Deployment[] = [
+  {
+    id: 'deploy-001'
+    instanceName: 'Zion Health Network'
+    status: 'completed'
+    createdAt: '2024-01-15T10:30:00Z'
+    updatedAt: '2024-01-15T11:45:00Z'
+    progress: 100
+    features: ['marketplace', 'zion_gpt', 'kyc_aml', 'dao_voting']
+    vertical: 'HEALTH'
+    governanceType: 'DAO_FULL'
+    domain: 'health.zion.network'
+    region: 'North America'
+    country: 'United States'
+  }
+  {
+    id: 'deploy-002'
+    instanceName: 'EduDAO Academy'
+    status: 'deploying'
+    createdAt: '2024-01-15T14:20:00Z'
+    updatedAt: '2024-01-15T15:10:00Z'
+    progress: 65
+    features: ['academy', 'zion_gpt', 'incubator_grants']
+    vertical: 'EDUCATION'
+    governanceType: 'DAO_LITE'
+    subdomain: 'edu'
+    region: 'Europe'
+    country: 'Germany'
+  }
+  {
+    id: 'deploy-003'
+    instanceName: 'LegalTech DAO'
+    status: 'pending'
+    createdAt: '2024-01-15T16:00:00Z'
+    updatedAt: '2024-01-15T16:00:00Z'
+    progress: 0
+    features: ['marketplace', 'onchain_contracts', 'web3_login']
+    vertical: 'LAW'
+    governanceType: 'DAO_FULL'
+    domain: 'legal.zion.network'
+    region: 'Asia Pacific'
+    country: 'Singapore'
+  }
+];
+export default function DeploymentsPage() {
+  const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments);
+  const [filter, setFilter] = useState<
+    'all' | 'pending' | 'deploying' | 'completed' | 'failed'
+  >('all');
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'completed':
+        return 'text-green-400';
+      case 'deploying':
+        return 'text-blue-400';
+      case 'pending':
+        return 'text-yellow-400';
+      case 'failed':
+        return 'text-red-400';
+      case 'paused':
+        return 'text-orange-400';
+      default:
+        return 'text-gray-400';
+    }
+  ];
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'completed':
+        return <CheckCircle className='w-5 h-5' />;
+      case 'deploying':
+        return <Activity className='w-5 h-5' />;
+      case 'pending':
+        return <Clock className='w-5 h-5' />;
+      case 'failed':
+        return <AlertCircle className='w-5 h-5' />;
+      case 'paused':
+        return <Pause className='w-5 h-5' />;
+      default:
+        return <Clock className='w-5 h-5' />;
+    }
+  }
+const getVerticalIcon = (vertical: string) => {
+    switch (vertical) {
+      case 'HEALTH':
+        return <Shield className='w-4 h-4 text-blue-400' />;
+      case 'EDUCATION':
+        return <Building2 className='w-4 h-4 text-green-400' />;
+      case 'LAW':
+        return <Shield className='w-4 h-4 text-purple-400' />;
+      case 'GOV':
+        return <Users className='w-4 h-4 text-red-400' />;
+      default:
+        return <Globe className='w-4 h-4 text-gray-400' />;
+    }
+  }
+  const getGovernanceIcon = (type: string) => {
+    switch (type) {
+      case 'ADMIN':
+        return <User className='w-4 h-4 text-yellow-400' />;
+      case 'DAO_LITE':
+        return <Users className='w-4 h-4 text-blue-400' />;
+      case 'DAO_FULL':
+        return <Zap className='w-4 h-4 text-purple-400' />;
+      default:
+        return <User className='w-4 h-4 text-gray-400' />;
+    }
+  }
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      month: 'short'
+      day: 'numeric'
+      hour: '2-digit'
+      minute: '2-digit'
+    });
+  };
+
+  const filteredDeployments = deployments.filter(
+    deployment => filter === 'all' || deployment.status === filter
+  );
+  const getStatusCount = (status: string) => {
+    return deployments.filter(d => d.status === status).length;
+  };
+
+return (
+    <div className='space-y-8'>
+      {/* Header Section */}
+      <div className='border-b border-white/10 pb-6'>
+        <h1 className='text-3xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent'>
+          Deployment Management
+        </h1>
+        <p className='text-white/70 mt-2'>
+          Monitor and manage your Zion ecosystem deployments
+        </p>
+      </div>
+      {/* Stats Overview */}
+      <div className='grid grid-cols-1 md:grid-cols-5 gap-4 mb-8'>
+        <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
+          <div className='flex items-center gap-3'>
+            <div className='p-2 bg-blue-500/20 rounded-lg'>
+              <Rocket className='w-5 h-5 text-blue-400' />
+            </div>
+            <div>
+              <p className='text-2xl font-bold'>{deployments.length}</p>
+              <p className='text-sm text-white/60'>Total</p>
+            </div>
+          </div>
+        </div>
+        <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
+          <div className='flex items-center gap-3'>
+            <div className='p-2 bg-yellow-500/20 rounded-lg'>
+              <Clock className='w-5 h-5 text-yellow-400' />
+            </div>
+            <div>
+              <p className='text-2xl font-bold'>{getStatusCount('pending')}</p>
+              <p className='text-sm text-white/60'>Pending</p>
+            </div>
+          </div>
+        </div>
+        <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
+          <div className='flex items-center gap-3'>
+            <div className='p-2 bg-blue-500/20 rounded-lg'>
+              <Activity className='w-5 h-5 text-blue-400' />
+            </div>
+            <div>
+              <p className='text-2xl font-bold'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 {getStatusCount('deploying')}
               </p>;
               <p className='text-sm text-white/60'>Active</p>;
@@ -256,6 +464,96 @@ const getVerticalIcon = (vertical: string) => {switch (vertical) {case 'HEALTH':
             <div>;
               <p className='text-2xl font-bold'>;
                 {getStatusCount('completed')}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              </p>;
+              <p className='text-sm text-white/60'>Live</p>;
+            </div>;
+          </div>;
+        </div>;<div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>;
+          <div className='flex items-center gap-3'>;
+            <div className='p-2 bg-red-500/20 rounded-lg'>;
+              <AlertCircle className='w-5 h-5 text-red-400' />;
+            </div>;
+            <div>;
+              <p className='text-2xl font-bold'>{getStatusCount('failed')}</p>;
+              <p className='text-sm text-white/60'>Failed</p>            </div>  return (<div className="space-y-8">;
+      {/* Header Section */}
+      <div className="border-b border-white/10 pb-6">;
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">;
+          Deployment Management;
+        </h1>;
+        <p className="text-white/70 mt-2">Monitor and manage your Zion ecosystem deployments</p>;
+      </div>;
+              <p className='text-sm text-white/60'>Failed</p>            </div>  return (<div className="space-y-8">;
+      {/* Header Section */}<div className="border-b border-white/10 pb-6">;
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">;
+          Deployment Management;
+        </h1>;
+        <p className="text-white/70 mt-2">Monitor and manage your Zion ecosystem deployments</p>;
+      </div>;{/* Stats Overview */}
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">;
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">;
+          <div className="flex items-center gap-3">;
+            <div className="p-2 bg-blue-500/20 rounded-lg">;
+              <Rocket className="w-5 h-5 text-blue-400" />;
+            </div>;
+            <div>;
+              <p className="text-2xl font-bold">{deployments.length}</p>;
+              <p className="text-sm text-white/60">Total</p>;
+            </div>;
+          </div>;
+        </div>;
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">;
+          <div className="flex items-center gap-3">;
+            <div className="p-2 bg-yellow-500/20 rounded-lg">;
+              <Clock className="w-5 h-5 text-yellow-400" />;
+            </div>;
+            <div>;
+              <p className="text-2xl font-bold">{getStatusCount('pending')}</p>;
+              <p className="text-sm text-white/60">Pending</p>;
+            </div>;
+          </div>;
+        </div>;
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">;
+          <div className="flex items-center gap-3">;
+            <div className="p-2 bg-blue-500/20 rounded-lg">;
+              <CheckCircle className="w-5 h-5 text-blue-400" />;
+            </div>;
+            <div>;
+              <p className="text-2xl font-bold">{getStatusCount('deploying')}</p>;
+              <p className="text-sm text-white/60">Active</p>;
+            </div>;
+          </div>;
+        </div>;
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">;
+          <div className="flex items-center gap-3">;
+            <div className="p-2 bg-green-500/20 rounded-lg">;
+              <CheckCircle className="w-5 h-5 text-green-400" />;
+            </div>;
+            <div>;
+              <p className="text-2xl font-bold">{getStatusCount('completed')}</p>;
+              <p className="text-sm text-white/60">Live</p>;
+            </div>;
+          </div>;
+        </div>;
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">;
+          <div className="flex items-center gap-3">;
+            <div className="p-2 bg-red-500/20 rounded-lg">;
+              <AlertCircle className="w-5 h-5 text-red-400" />;
+            </div>;
+            <div>;
+              <p className="text-2xl font-bold">{getStatusCount('failed')}</p>;
+              <p className="text-sm text-white/60">Failed</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </p>;
               <p className='text-sm text-white/60'>Live</p>;
             </div>;
@@ -374,6 +672,43 @@ const getVerticalIcon = (vertical: string) => {switch (vertical) {case 'HEALTH':
         </h1>
         <p className="text-white/70 mt-2">Monitor and manage your Zion ecosystem deployments</p>
       </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+              <p className='text-sm text-white/60'>Failed</p>            </div>  return (
+    <div className="space-y-8">;
+      {/* Header Section */}
+
+      <div className="border-b border-white/10 pb-6">;
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">;
+          Deployment Management;
+        </h1>;
+        <p className="text-white/70 mt-2">Monitor and manage your Zion ecosystem deployments</p>;
+      </div>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
@@ -428,13 +763,74 @@ const getVerticalIcon = (vertical: string) => {switch (vertical) {case 'HEALTH':
             <div>
               <p className="text-2xl font-bold">{getStatusCount('failed')}</p>
               <p className="text-sm text-white/60">Failed</p>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              </p>
+              <p className='text-sm text-white/60'>Live</p>
+            </div>
+          </div>
+        </div>
+        <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
+          <div className='flex items-center gap-3'>
+            <div className='p-2 bg-red-500/20 rounded-lg'>
+              <AlertCircle className='w-5 h-5 text-red-400' />
+            </div>
+            <div>
+              <p className='text-2xl font-bold'>{getStatusCount('failed')}</p>
+              <p className='text-sm text-white/60'>Failed</p>
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </div>
           </div>
         </div>
       </div>
       {/* Filter Tabs */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       <div className='flex flex-wrap gap-2'>
           { key: 'all', label: 'All Deployments', count: deployments.length }
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+<div className='flex flex-wrap gap-2'>
+        {[
+          { key: 'all', label: 'All Deployments', count: deployments.length },
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      <div className='flex flex-wrap gap-2'>
+          { key: 'all', label: 'All Deployments', count: deployments.length }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      <div className='flex flex-wrap gap-2'>
+          { key: 'all', label: 'All Deployments', count: deployments.length }
+<<<<<<< HEAD
+
+<div className='flex flex-wrap gap-2'>
+        {[
+          { key: 'all', label: 'All Deployments', count: deployments.length },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {
             key: 'pending'
             label: 'Pending'
@@ -616,6 +1012,32 @@ export default function DeploymentsPage() {;
               filter === key;
                 ? 'bg-blue-600 text-white shadow-lg';
                 : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'            }`}              filter === key ? 'bg-blue-600 text-white shadow-lg' : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             }`}
           >;
             {label} ({count})</button>;
@@ -657,10 +1079,42 @@ const mockDeployments: Deployment[] = [;
         {filteredDeployments && filteredDeployments.map(deployment => (;
       </div>
       {/* Deployments Grid */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
         {filteredDeployments.map((deployment) => (
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>
         {filteredDeployments.map(deployment => (
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           <div
             key={deployment && deployment.id}
             className='group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5'>;
@@ -688,6 +1142,24 @@ const mockDeployments: Deployment[] = [;
 <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>;
         {filteredDeployments.map(deployment => (<div;
             {/* Status Header */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ))}
       </div>
       {/* Deployments Grid */}
@@ -800,10 +1272,49 @@ const mockDeployments: Deployment[] = [;
                     ></div>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+
+        ))}
+      </div>
+      {/* Deployments Grid */}
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
         {filteredDeployments.map((deployment) => (;
           <div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
             {/* Status Header */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className="p-6 border-b border-white/10">;
               <div className="flex items-start justify-between mb-4">;
                 <div className="flex items-center gap-3">;
@@ -819,6 +1330,10 @@ const mockDeployments: Deployment[] = [;
                         {deployment && deployment.vertical}
                       </span>;
                       <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
                         {deployment && deployment.governanceType}// Mock data - replace with actual API calls;
 const mock_deployments: Deployment[] = [;
   {id: 'deploy - 001',instance_name: 'Zion Health Network',status: 'completed',created_at: '2024 - 01 - 15T10:30:00Z',updated_at: '2024 - 01 - 15T11:45:00Z',progress: 100,features: ['marketplace', 'zion_gpt', 'kyc_aml', 'dao_voting'],vertical: 'HEALTH',governance_type: 'DAO_FULL',domain: 'health.zion.network',region: 'North America',country: 'United States';
@@ -1073,11 +1588,340 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                 </div>;{/* Progress Bar for Active Deployments */}
               {deployment && deployment.status === 'deploying' && (<div className='space-y-2'>;
                   <div className='flex justify-between text-sm text-white/70'>;<span>Deployment Progress</span>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                         {deployment && deployment.governanceType}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+;
+// Mock data - replace with actual API calls;
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+                        {deployment && deployment.governanceType}// Mock data - replace with actual API calls;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+const mock_deployments: Deployment[] = [;
+  {id: 'deploy - 001',instance_name: 'Zion Health Network',status: 'completed',created_at: '2024 - 01 - 15T10:30:00Z',updated_at: '2024 - 01 - 15T11:45:00Z',progress: 100,features: ['marketplace', 'zion_gpt', 'kyc_aml', 'dao_voting'],vertical: 'HEALTH',governance_type: 'DAO_FULL',domain: 'health.zion.network',region: 'North America',country: 'United States';
+  },{id: 'deploy - 002',instance_name: 'EduDAO Academy',status: 'deploying',created_at: '2024 - 01 - 15T14:20:00Z',updated_at: '2024 - 01 - 15T15:10:00Z',progress: 65,features: ['academy', 'zion_gpt', 'incubator_grants'],vertical: 'EDUCATION',governance_type: 'DAO_LITE',subdomain: 'edu',region: 'Europe',country: 'Germany';
+  },{id: 'deploy - 003',instance_name: 'LegalTech DAO',status: 'pending',created_at: '2024 - 01 - 15T16:00:00Z',updated_at: '2024 - 01 - 15T16:00:00Z',progress: 0,features: ['marketplace', 'onchain_contracts', 'web3_login'],vertical: 'LAW',governance_type: 'DAO_FULL',domain: 'legal.zion.network',region: 'Asia Pacific',country: 'Singapore';
+  }
+];export default /**;
+ * DeploymentsPage - Function description;
+ */;
+function DeploymentsPage() {const [deployments, set_deployments] = useState < Deployment[]>(mock_deployments)const [filter, set_filter] = useState<;
+    'all' | 'pending' | 'deploying' | 'completed' | 'failed';
+  >('all')const getStatusColor = (status: string) =>: any {switch (status) {case 'completed':;
+        return 'text - green - 400';
+      case 'deploying':;
+        return 'text - blue - 400';
+      case 'pending':;
+        return 'text - yellow - 400';
+      case 'failed':;
+        return 'text - red - 400';
+      case 'paused':;
+        return 'text - orange - 400';
+      default:;
+        return 'text - gray - 400';
+    }
+  ];const getStatusIcon = (status: string) =>: any {switch (status) {case 'completed':;
+        return <CheckCircle className='w - 5 h - 5' />;
+      case 'deploying':;
+        return <Activity className='w - 5 h - 5' />;
+      case 'pending':;
+        return <Clock className='w - 5 h - 5' />;
+      case 'failed':;
+        return <AlertCircle className='w - 5 h - 5' />;
+      case 'paused':;
+        return <Pause className='w - 5 h - 5' />;
+      default:;
+        return <Clock className='w - 5 h - 5' />;
+    }
+  }const getVerticalIcon = (vertical: string) =>: any {switch (vertical) {case 'HEALTH':;
+        return <Shield className='w - 4 h - 4 text - blue - 400' />;
+      case 'EDUCATION':;
+        return <Building2 className='w - 4 h - 4 text - green - 400' />;
+      case 'LAW':;
+        return <Shield className='w - 4 h - 4 text - purple - 400' />;
+      case 'GOV':;
+        return <Users className='w - 4 h - 4 text - red - 400' />;
+      default:;
+        return <Globe className='w - 4 h - 4 text - gray - 400' />;
+    }
+  }const getGovernanceIcon = (type: string) =>: any {switch (type) {case 'ADMIN':;
+        return <User className='w - 4 h - 4 text - yellow - 400' />;
+      case 'DAO_LITE':;
+        return <Users className='w - 4 h - 4 text - blue - 400' />;
+      case 'DAO_FULL':;
+        return <Zap className='w - 4 h - 4 text - purple - 400' />;
+      default:;
+        return <User className='w - 4 h - 4 text - gray - 400' />;
+    }
+  }const format_date = (date_string: string) =>: any {return new Date (date_string).toLocaleDateString ('en - US', {month: 'short',day: 'numeric',hour: '2 - digit',minute: '2 - digit';
+    })}const filtered_deployments = deployments.filter (deployment => filter === 'all' || deployment.status === filter)const deployments = []; // This should be populated from your data source;
+  const filter = 'all'; // This should be managed with state;
+  const filtered_deployments = deployments.filter (deployment => filter === 'all' || deployment.status === filter)return deployments.filter (d => d.status === status).length;
+  }return (<div className='space - y-8'>;
+      {/* Header Section */}
+      <div className='border - b border - white / 10 pb - 6'>;
+        <h1 className='text - 3xl font - bold bg - gradient - to - r from - white to - white / 80 bg - clip - text text - transparent'>;
+          Deployment Management;
+        </h1>;
+        <p className='text - white / 70 mt - 2'>;
+          Monitor and manage your Zion ecosystem deployments;
+        </p>;
+      </div>;
+      {/* Stats Overview */}
+      <div className='grid grid - cols - 1 md:grid - cols - 5 gap - 4 mb - 8'>;
+        <div className='bg - white / 5 backdrop - blur - sm rounded - xl p - 4 border border - white / 10'>;
+          <div className='flex items - center gap - 3'>;
+            <div className='p - 2 bg - blue - 500 / 20 rounded - lg'>;
+              <Rocket className='w - 5 h - 5 text - blue - 400' />;
+            </div>;
+            <div>;
+              <p className='text - 2xl font - bold'>{deployments.length}</p>;
+              <p className='text - sm text - white / 60'>Total</p>;
+            </div>;
+          </div>;
+        </div>;
+        <div className='bg - white / 5 backdrop - blur - sm rounded - xl p - 4 border border - white / 10'>;
+          <div className='flex items - center gap - 3'>;
+            <div className='p - 2 bg - yellow - 500 / 20 rounded - lg'>;
+              <Clock className='w - 5 h - 5 text - yellow - 400' />;
+            </div>;
+            <div>;
+              <p className='text - 2xl font - bold'>{getStatusCount ('pending')}</p>;
+              <p className='text - sm text - white / 60'>Pending</p>;
+            </div>;
+          </div>;
+        </div>;
+        <div className='bg - white / 5 backdrop - blur - sm rounded - xl p - 4 border border - white / 10'>;
+          <div className='flex items - center gap - 3'>;
+            <div className='p - 2 bg - blue - 500 / 20 rounded - lg'>;
+              <Activity className='w - 5 h - 5 text - blue - 400' />;
+            </div>;
+            <div>;
+              <p className='text - 2xl font - bold'>;
+                {getStatusCount ('deploying')}
+              </p>;
+              <p className='text - sm text - white / 60'>Active</p>;
+            </div>;
+          </div>;
+        </div>;
+        <div className='bg - white / 5 backdrop - blur - sm rounded - xl p - 4 border border - white / 10'>;
+          <div className='flex items - center gap - 3'>;
+            <div className='p - 2 bg - green - 500 / 20 rounded - lg'>;
+              <CheckCircle className='w - 5 h - 5 text - green - 400' />;
+            </div>;
+            <div>;
+              <p className='text - 2xl font - bold'>;
+                {getStatusCount ('completed')}
+              </p>;
+              <p className='text - sm text - white / 60'>Live</p>;
+            </div>;
+          </div>;
+        </div>;
+        <div className='bg - white / 5 backdrop - blur - sm rounded - xl p - 4 border border - white / 10'>;
+          <div className='flex items - center gap - 3'>;
+            <div className='p - 2 bg - red - 500 / 20 rounded - lg'>;
+              <AlertCircle className='w - 5 h - 5 text - red - 400' />;
+            </div>;
+            <div>;
+              <p className='text - 2xl font - bold'>{getStatusCount ('failed')}</p>;
+              <p className='text - sm text - white / 60'>Failed</p>            </div>  return (<div className="space - y-8">;
+      {/* Header Section */}
+      <div className="border - b border - white / 10 pb - 6">;
+        <h1 className="text - 3xl font - bold bg - gradient - to - r from - white to - white / 80 bg - clip - text text - transparent">;
+          Deployment Management;
+        </h1>;
+        <p className="text - white / 70 mt - 2">Monitor and manage your Zion ecosystem deployments</p>;
+      </div>;
+      {/* Stats Overview */}
+      <div className="grid grid - cols - 1 md:grid - cols - 5 gap - 4 mb - 8">;
+        <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 4 border border - white / 10">;
+          <div className="flex items - center gap - 3">;
+            <div className="p - 2 bg - blue - 500 / 20 rounded - lg">;
+              <Rocket className="w - 5 h - 5 text - blue - 400" />;
+            </div>;
+            <div>;
+              <p className="text - 2xl font - bold">{deployments.length}</p>;
+              <p className="text - sm text - white / 60">Total</p>;
+            </div>;
+          </div>;
+        </div>;
+        <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 4 border border - white / 10">;
+          <div className="flex items - center gap - 3">;
+            <div className="p - 2 bg - yellow - 500 / 20 rounded - lg">;
+              <Clock className="w - 5 h - 5 text - yellow - 400" />;
+            </div>;
+            <div>;
+              <p className="text - 2xl font - bold">{getStatusCount ('pending')}</p>;
+              <p className="text - sm text - white / 60">Pending</p>;
+            </div>;
+          </div>;
+        </div>;
+        <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 4 border border - white / 10">;
+          <div className="flex items - center gap - 3">;
+            <div className="p - 2 bg - blue - 500 / 20 rounded - lg">;
+              <CheckCircle className="w - 5 h - 5 text - blue - 400" />;
+            </div>;
+            <div>;
+              <p className="text - 2xl font - bold">{getStatusCount ('deploying')}</p>;
+              <p className="text - sm text - white / 60">Active</p>;
+            </div>;
+          </div>;
+        </div>;
+        <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 4 border border - white / 10">;
+          <div className="flex items - center gap - 3">;
+            <div className="p - 2 bg - green - 500 / 20 rounded - lg">;
+              <CheckCircle className="w - 5 h - 5 text - green - 400" />;
+            </div>;
+            <div>;
+              <p className="text - 2xl font - bold">{getStatusCount ('completed')}</p>;
+              <p className="text - sm text - white / 60">Live</p>;
+            </div>;
+          </div>;
+        </div>;
+        <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 4 border border - white / 10">;
+          <div className="flex items - center gap - 3">;
+            <div className="p - 2 bg - red - 500 / 20 rounded - lg">;
+              <AlertCircle className="w - 5 h - 5 text - red - 400" />;
+            </div>;
+            <div>;
+              <p className="text - 2xl font - bold">{getStatusCount ('failed')}</p>;
+              <p className="text - sm text - white / 60">Failed</p>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      {/* Filter Tabs */}
+      <div className='flex flex - wrap gap - 2'>;
+          { key: 'all', label: 'All Deployments', count: deployments.length },{key: 'pending',label: 'Pending',count: getStatusCount ('pending')},{key: 'deploying',label: 'Deploying',count: getStatusCount ('deploying')},{key: 'completed',label: 'Completed',count: getStatusCount ('completed')},{ key: 'failed', label: 'Failed', count: getStatusCount ('failed') }
+        ].map (({ key, label, count }) => (<button;
+            key={key}
+            on_click={() => set_filter (key as any)}
+            className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 200 ${filter === key;
+                ? 'bg - blue - 600 text - white shadow - lg';
+                : 'bg - white / 5 text - white / 70 hover:bg - white / 10 hover:text - white / 90'            }`}              filter === key ? 'bg - blue - 600 text - white shadow - lg' : 'bg - white / 5 text - white / 70 hover:bg - white / 10 hover:text - white / 90';
+            }`}
+          >;
+            {label} ({count})</button>))}
+      </div>;
+      {/* Deployments Grid */}
+      <div className='grid grid - cols - 1 xl:grid - cols - 2 gap - 6'>;
+        {filtered_deployments.map (deployment => (<div;
+            key={deployment.id}
+            className='group relative bg - white / 5 backdrop - blur - sm rounded - xl border border - white / 10 hover:border - white / 20 transition - all duration - 300 hover:shadow - xl hover:shadow - white / 5';
+          >;
+            {/* Status Header */}
+            <div className='p - 6 border - b border - white / 10'>;
+              <div className='flex items - start justify - between mb - 4'>;
+                <div className='flex items - center gap - 3'>;
+                  <div className='p - 2 bg - white / 10 rounded - lg'>;
+                    {getVerticalIcon (deployment.vertical)}
+                  </div>;
+                  <div>;
+                    <h3 className='font - bold text - lg text - white group - hover:text - white / 90 transition - colors'>;
+                      {deployment.instance_name}
+                    </h3>;
+                    <div className='flex items - center gap - 2 mt - 1'>;
+                      <span className='inline - flex items - center px - 2 py - 1 rounded - full text - xs font - medium bg - white / 10 text - white / 80'>;
+                        {deployment.vertical}
+                      </span>;
+                      <span className='inline - flex items - center px - 2 py - 1 rounded - full text - xs font - medium bg - blue - 500 / 20 text - blue - 400'>                        {deployment.governance_type}          <div;
+            key={deployment.id}
+            className="group relative bg - white / 5 backdrop - blur - sm rounded - xl border border - white / 10 hover:border - white / 20 transition - all duration - 300 hover:shadow - xl hover:shadow - white / 5";
+          >;
+            {/* Status Header */}
+            <div className="p - 6 border - b border - white / 10">;
+              <div className="flex items - start justify - between mb - 4">;
+                <div className="flex items - center gap - 3">;
+                  <div className="p - 2 bg - white / 10 rounded - lg">;
+                    {getVerticalIcon (deployment.vertical)}
+                  </div>;
+                  <div>;
+                    <h3 className="font - bold text - lg text - white group - hover:text - white / 90 transition - colors">;
+                      {deployment.instance_name}
+                    </h3>;
+                    <div className="flex items - center gap - 2 mt - 1">;
+                      <span className="inline - flex items - center px - 2 py - 1 rounded - full text - xs font - medium bg - white / 10 text - white / 80">;
+                        {deployment.vertical}
+                      </span>;
+                      <span className="inline - flex items - center px - 2 py - 1 rounded - full text - xs font - medium bg - blue - 500 / 20 text - blue - 400">;
+<<<<<<< HEAD
+                        {deployment.governance_type}
+
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+                        {deployment.governance_type}</span>;
+                    </div>;
+                  </div>;
+                </div>;{/* Progress Bar for Active Deployments */}
+              {deployment && deployment.status === 'deploying' && (<div className='space-y-2'>;
+                  <div className='flex justify-between text-sm text-white/70'>;<span>Deployment Progress</span>;
+                        {deployment && deployment.governanceType}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       </span>;
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+              {/* Progress Bar for Active Deployments */}
+              {deployment && deployment.status === 'deploying' && (;
+                <div className='space-y-2'>;
+                  <div className='flex justify-between text-sm text-white/70'>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     <span>Deployment Progress</span>;
                     <span>{deployment && deployment.progress}%</span>;
                   </div>;
@@ -1095,7 +1939,25 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
               )}
             </div>;
             {/* Deployment Details */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<div className='p-6 space-y-4'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
 <div className='p-6 space-y-4'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+<div className='p-6 space-y-4'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+<div className='p-6 space-y-4'>;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+<div className='p-6 space-y-4'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {/* Domain & Location */}
               <div className='grid grid-cols-2 gap-4 text-sm'>;
                 <div className='flex items-center gap-2 text-white/70'>;
@@ -1104,6 +1966,37 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     {deployment.domain |;
                       deployment.subdomain |;
                       'No domain set'}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  </span>
+                </div>
+                {(deployment.region |deployment.country) && (
+                  <div className='flex items-center gap-2 text-white/70'>
+                    <MapPin className='w-4 h-4' />
+                    <span>
+                      {[deployment.region, deployment.country]
+                        .filter(Boolean)
+                        .join(', ')}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    </span>                  </div>              {/* Domain & Location */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      style={{ width: `${deployment.progress}%` }}
+=======
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+                <div className="flex items-center gap-2">
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   </span>;
                 </div>;
                 {(deployment.region |deployment.country) && (<div className='flex items-center gap-2 text-white/70'>;
@@ -1115,6 +2008,10 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
             {/* Deployment Details */}</span>                  </div>              {/* Domain & Location */}
                       style={{ width: `${deployment.progress}%` }}
                 <div className="flex items-center gap-2">;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   {getStatusIcon(deployment.status)}
                   <span className={`text-sm font-medium ${getStatusColor(deployment.status)}`}>;
                     {deployment.status.charAt(0).toUpperCase() + deployment.status.slice(1)}
@@ -1156,6 +2053,19 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   <div className="w - full bg - white / 10 rounded - full h - 2">;
                     <div;
                       className="bg - blue - 500 h - 2 rounded - full transition - all duration - 500 ease - out";
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                      style={{ width: `${deployment.progress}%` }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+                      style={{ width: `${deployment.progress}%` }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                       style={{ width: `${deployment.progress}%` }}></div>;
                   </span>
                 </div>
@@ -1168,12 +2078,74 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                         .join(', ')}
                     </span>                  </div>              {/* Domain & Location */}
                       style={{ width: `${deployment.progress}%` }}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    </span>                  </div>              {/* Domain & Location */}
+
+                      style={{ width: `${deployment.progress}%` }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     ></div>;
                   </div>;
                 </div>)}
             </div>;
             {/* Deployment Details */}
               {/* Domain & Location */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="flex items-center gap-2 text-white/70">
+                  <span></span>
+                  <span className="font-mono">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                    {deployment.domain || deployment.subdomain || 'No domain set'}
+                  </span>
+                </div>
+                {(deployment.region || deployment.country) && (
+                  <div className="flex items-center gap-2 text-white/70">
+                    <span></span>
+                    <span>{deployment.region} {deployment.country}</span>
+<<<<<<< HEAD
+                    </span>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                  </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className="grid grid-cols-2 gap-4 text-sm">;
                 <div className="flex items-center gap-2 text-white/70">;
                   <span></span>;
@@ -1186,6 +2158,10 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     <span>{deployment.region} {deployment.country}</span>;
                     </span>;
                   </div>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="p-6 space-y-4">;
               {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">;
@@ -1198,6 +2174,31 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                 {(deployment.region || deployment.country) && (<div className="flex items-center gap-2 text-white/70">;
                     <MapPin className="w-4 h-4" />;
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  </div>;
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+                )}
+              </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+                )}
+              </div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </div>;ursor/fix-website-loading-errors-and-merge-6662;
                 )}
               </div>;
@@ -1215,6 +2216,20 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   </div>
                 )}
               </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+                    </span>
+                  </div>
+
+                )}
+              </div>
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className='grid grid-cols-2 gap-4 text-sm'>;
                 <div className='flex items-center gap-2 text-white/70'>;
                   <Globe className='w-4 h-4' />;
@@ -1240,6 +2255,43 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     <span>📍</span>;
                     <span>{deployment && deployment.region} {deployment && deployment.country}</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              {/* Features */}
+<div className='space-y-2'>
+                <div className='text-sm font-medium text-white/80'>
+                  Active Features
+                </div>
+                <div className='flex flex-wrap gap-2'>
+                  {deployment.features.slice(0, 4).map(feature => (
+                    <span
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {/* Features */}
 <div className='space-y-2'>;
                 <div className='text-sm font-medium text-white/80'>;
@@ -1247,12 +2299,37 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                 </div>;
                 <div className='flex flex-wrap gap-2'>;
                   {deployment.features.slice(0, 4).map(feature => (<span;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       key={feature}
                       className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70';
                     >;
                       {feature.replace('_', ' ')}
                     </span>;
                   ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                  {deployment.features.length > 4 && (
+                    <span className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'>
+                      +{deployment.features.length - 4} more
+                    </span>
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   {deployment.features.length > 4 && (<span className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'>;
                       +{deployment.features.length - 4} more;
                     </span>;
@@ -1304,11 +2381,106 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     ></div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+                  )}
+              {/* Timestamps */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+                    ></div>
+                  </div>
+                </div>
+=======
+                  {deployment.features.length > 4 && (<span className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'>;
+                      +{deployment.features.length - 4} more;
+                    </span>;
+                  )}
+              {/* Timestamps */}
+                    ></div>;
+                  </div>;
+                </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
+        {filteredDeployments.map((deployment) => (<div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
+            {/* Status Header */}
+            <div className="p-6 border-b border-white/10">;
+              <div className="flex items-start justify-between mb-4">;
+                <div className="flex items-center gap-3">;
+                  <div className="p-2 bg-white/10 rounded-lg">;
+                    {getVerticalIcon(deployment.vertical)}
+                  </div>;
+                  <div>;
+                    <h3 className="font-bold text-lg text-white group-hover:text-white/90 transition-colors">;
+                      {deployment.instanceName}
+                    </h3>;
+                    <div className="flex items-center gap-2 mt-1">;
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-white/10 text-white/80">;
+                        {deployment.vertical}
+                      </span>;
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">;
+                        {deployment.governanceType}
+                      </span>;
+                    </div>;
+                  </div>;
+                </div>;
+                <div className="flex items-center gap-2">;
+                  {getStatusIcon(deployment.status)}
+                  <span className={`text-sm font-medium ${getStatusColor(deployment.status)}`}>;
+                    {deployment.status.charAt(0).toUpperCase() + deployment.status.slice(1)}
+                  </span>;
+                </div>;
+              </div>;
+              {/* Progress Bar for Active Deployments */}
+              {deployment.status === 'deploying' && (<div className="space-y-2">;
+                  <div className="flex justify-between text-sm text-white/70">;
+                    <span>Deployment Progress</span>;
+                    <span>{deployment.progress}%</span>;
+                  </div>;
+                  <div className="w-full bg-white/10 rounded-full h-2">;
+                    <div;
+                      className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out";
+                      style={{ width: `${deployment.progress}%` }}
+                    ></div>;
+                  </div>;
+                </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+                  )}
+              {/* Timestamps */}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+                  )}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              )}
+            </div>;
+            {/* Deployment Details */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
                   )}
               {/* Timestamps */}
               )}
             </div>;
             {/* Deployment Details */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className='p-6 space-y-4'>;
               {/* Domain & Location */}
               <div className='grid grid-cols-2 gap-4 text-sm'>;
@@ -1344,6 +2516,14 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     <span>📍</span>;
                     <span>{deployment.region} {deployment.country}</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className='p-6 space-y-4'>
               {/* Domain & Location */}
               <div className='grid grid-cols-2 gap-4 text-sm'>
@@ -1356,6 +2536,23 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
+<<<<<<< HEAD
+=======
+
+
+              )}
+            </div>
+            {/* Deployment Details */}
+                    {deployment.domain ||
+                      deployment.subdomain ||
+                      'No domain set'}
+                  </span>
+                </div>
+                {(deployment.region || deployment.country) && (
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <div className='flex items-center gap-2 text-white/70'>
                     <MapPin className='w-4 h-4' />
                     <span>
@@ -1371,10 +2568,27 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
+<<<<<<< HEAD
+=======
+                    {deployment.domain || deployment.subdomain || 'No domain set'}
+                  </span>
+                </div>
+                {(deployment.region || deployment.country) && (
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                   <div className="flex items-center gap-2 text-white/70">
                     <span>📍</span>
                     <span>{deployment.region} {deployment.country}</span>
                   </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <div className="p-6 space-y-4">;
               {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">;
@@ -1388,6 +2602,19 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     <MapPin className="w-4 h-4" />;
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 )}
               </div>;
               {/* Features */}key={feature}
@@ -1398,6 +2625,13 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   ))}
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
               <div className="space-y-2">;
                 <div className="text-sm font-medium text-white/80">Active Features</div>;
@@ -1414,13 +2648,41 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
               {/* Timestamps */}<div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>;
                     </span>;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   )}
 
                 </div>;
               </div>;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               {/* Timestamps */}
+=======
+
+              {/* Timestamps */}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+              {/* Timestamps */}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>;
                 <div className='flex items-center gap-1'>;
                   <Calendar className='w-3 h-3' />;
@@ -1443,14 +2705,64 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
 
 
               {/* Timestamps */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
+=======
+=======
+
+              {/* Timestamps */}
+              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+<div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+              <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <div className='flex items-center gap-1'>
                   <Calendar className='w-3 h-3' />
                   <span>Created: {formatDate(deployment.createdAt)}</span>
                 </div>
                 {deployment.updatedAt !== deployment.createdAt && (
                   <div className='flex items-center gap-1'>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                     <RefreshCw className='w-3 h-3' />                    <span>Updated: {formatDate(deployment.updatedAt)}</span>              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+                    <RefreshCw className='w-3 h-3' />                    <span>Updated: {formatDate(deployment.updatedAt)}</span>              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <RefreshCw className='w-3 h-3' />                    <span>Updated: {formatDate(deployment.updatedAt)}</span>              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
+<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <div className="flex items-center gap-1">
                   <span>📅</span>
                   <span>Created: {formatDate(deployment.createdAt)}</span>
@@ -1458,10 +2770,58 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                 {deployment.updatedAt !== deployment.createdAt && (
                   <div className="flex items-center gap-1">
                     <span>🔄</span>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+                    <RefreshCw className='w-3 h-3' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+                    <span>Updated: {formatDate(deployment.updatedAt)}</span>
+                  </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+              {/* Timestamps */}
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+              {/* Timestamps */}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>
                   </div>
               {/* Timestamps */}
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                    <span>Updated: {formatDate(deployment.updatedAt)}</span>
+                  </div>
+<<<<<<< HEAD
+
+
+              {/* Timestamps */}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+              {/* Timestamps */}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>;
 <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>;
@@ -1489,6 +2849,20 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     <RefreshCw className="w-3 h-3" />;
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>;
                   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 )}
             {/* Action Buttons */}
                 )}ursor/fix-website-loading-errors-and-merge-6662;
@@ -1497,6 +2871,34 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                 )})}
                 {deployment && deployment.status === 'deploying' && (<>;
                 )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+                )}
+            {/* Action Buttons */}
+
+                )}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 )}
 
               </div>;
@@ -1504,10 +2906,34 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
 
 
             {/* Action Buttons */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
                 )}
                 {deployment && deployment.status === 'deploying' && (;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+                )}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <>;
                     <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">;
                       ⏸️ Pause;
@@ -1536,6 +2962,17 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ))}
 
       </div>;
@@ -1549,6 +2986,48 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
               className='inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200'>;
               <Rocket className='w-4 h-4' />              Deploy First Instance;
             </a>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+          )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  );
+}
+      {filteredDeployments.length === 0 && (;
+        <div className="text-center py-16">;
+          <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">;
+            <Rocket className="w-8 h-8 text-white/40" />;
+          </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+            <div className="p-6 pt-0">
+              <div className="flex gap-2">
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+            <div className='p-6 pt-0'>
+=======
+=======
+
+            <div className="p-6 pt-0">
+              <div className="flex gap-2">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+<div className='p-6 pt-0'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           )}<div className="p-6 pt-0">;
               <div className="flex gap-2">;
   )})})}
@@ -1565,7 +3044,16 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   </button>;
           )}
             <div className='p-6 pt-0'>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className='flex gap-2'>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <div className='flex gap-2'>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 {deployment.status === 'pending' && (
                   <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
                     ▶️ Start Deployment
@@ -1669,6 +3157,16 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                 <button className='flex items - center justify - center px - 3 py - 2 bg - white / 10 hover:bg - white / 20 text - white / 80 text - sm font - medium rounded - lg transition - colors duration - 200'>;
                   <Settings className='w - 4 h - 4' />                </button>                {deployment.status === 'pending' && (<button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
                     ▶️ Start Deployment;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  </button>)}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+                {deployment.status === 'pending' && (
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </button>)}{deployment.status === 'deploying' && (<>;
                     <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - orange - 600 hover:bg - orange - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
                       ⏸️ Pause;
@@ -1704,10 +3202,21 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
           {filter === 'all' && (<a;
               href="/admin/os-deploy";
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200";
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >;}
           </p>;
           {filter === 'all' && (<a;
               href="/admin/os-deploy";
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
             }
           </p>;
@@ -1716,14 +3225,34 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
               href="/admin/os-deploy"
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            >;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <Rocket className="w-4 h-4" />;
               Deploy First Instance;
             </a>;
           )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         </div>;
       )}
     </div>;</div>;
       </div>;{/* Deployments Table */}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
         </div>;
       </div>;
@@ -1915,11 +3444,128 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
 
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
+            >
+              <Rocket className="w-4 h-4" />
+                  <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
+                    <Play className='w-4 h-4' />
+                    Start Deployment
+                  </button>
+                )}
+                {deployment.status === 'deploying' && (
+                  <>
+                    <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
+                      <Pause className='w-4 h-4' />
+                      Pause
+                    </button>
+                    <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
+                      <StopCircle className='w-4 h-4' />
+                      Stop
+                    </button>
+                  </>
+                )}
+                {deployment.status === 'completed' && (
+                  <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
+                    <Eye className='w-4 h-4' />
+                    View Instance
+                  </button>
+                )}
+                {deployment.status === 'failed' && (
+                  <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
+                    <RefreshCw className='w-4 h-4' />
+                    Retry
+                  </button>
+                )}
+                <button className='flex items-center justify-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white/80 text-sm font-medium rounded-lg transition-colors duration-200'>
+                  <Settings className='w-4 h-4' />
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      {/* Empty State */}
+      {filteredDeployments.length === 0 && (
+<div className='text-center py-16'>
+          <div className='w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full'>
+            <Rocket className='w-8 h-8 text-white/40' />
+          </div>
+          <h3 className='text-lg font-medium text-white/60 mb-2'>
+            No deployments found
+          </h3>
+          <p className='text-white/40 mb-6'>
+            {filter === 'all'
+              ? 'Start by creating your first Zion ecosystem deployment'
+              : `No deployments with status "${filter}" found`}
+          </p>
+          {filter === 'all' && (
+            <a
+              href='/admin/os-deploy'
+              className='inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200'
+            >
+              <Rocket className='w-4 h-4' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        </div>;
+      )}
+    </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              Deploy First Instance
+            </a>
+          )}
+        </div>
+<<<<<<< HEAD
+        </div>;
+      )}
+    </div>;
+
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+      )}
+    </div>
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   );
 }
     </div>))}
     </div>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  );
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {filteredDeployments.length === 0 && (;
         <div className="text-center py-16">;
           <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">;
@@ -1943,6 +3589,16 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
         </div>;
       )}
     </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   )}
     </div>))}
     </div>)}</div>;
@@ -1990,8 +3646,103 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
       </div>;
     </div>;
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   );
 }
     </div>))}
     </div>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+
+
+  );
+}
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+</div>
+
+      {/* Deployments Table */}
+      <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">
+        <div className="p-6 border-b border-white/10">
+          <h2 className="text-xl font-semibold">Deployments</h2>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead className="bg-white/5">
+              <tr>
+                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Name</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Status</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Region</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Version</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Last Deployed</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Actions</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/10">
+              {filteredDeployments.map((deployment) => (
+                <tr key={deployment.id} className="hover:bg-white/5">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="text-sm font-medium text-white">{deployment.name}</div>
+                    <div className="text-sm text-white/60">ID: {deployment.id}</div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(deployment.status)}`}>
+                      {deployment.status}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-white/60">{deployment.region}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-white/60">{deployment.version}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-white/60">{deployment.lastDeployed}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button className="text-blue-400 hover:text-blue-300 mr-4">View</button>
+                    <button className="text-green-400 hover:text-green-300 mr-4">Deploy</button>
+                    <button className="text-red-400 hover:text-red-300">Stop</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

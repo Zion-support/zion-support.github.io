@@ -14,7 +14,13 @@ interface OnsiteSupportProps  {// Add props here as needed;
 interface OnsiteSupportProps {
   // Add props here as needed
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export default function OnsiteSupport({}: OnsiteSupportProps) {
@@ -25,10 +31,20 @@ export default function OnsiteSupport({}: OnsiteSupportProps) {
     </div>
   );
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 }
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 :src.pages.disabled/OnsiteSupport.jsx
 }
 }
@@ -37,6 +53,10 @@ export default function OnsiteSupport({}: OnsiteSupportProps) {
 }
 }:src.pages.disabled/OnsiteSupport.jsx;
 :temp_exclude/src.pages.disabled/OnsiteSupport.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 
@@ -50,4 +70,9 @@ export default function OnsiteSupport({}: OnsiteSupportProps) {
 }
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 :temp_exclude/src.pages.disabled/OnsiteSupport.jsx;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

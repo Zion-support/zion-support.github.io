@@ -47,8 +47,15 @@ npm run automation:all;
  * Generate README;
  * Creates or updates the main README.md file;
  */;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 const fs = require('fs'),const path = require('path'),const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub;
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 const fs = require('fs');
 const path = require('path'),;
@@ -234,14 +241,30 @@ function generateReadme() {
     if (existingContent.length > 1000) {
       // // // console.log('⚠️  README.md already exists and appears substantial. Skipping generation.'),
       return
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
   }
 
   fs.writeFileSync(outputPath, README_TEMPLATE),
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();
 // Simple README "maintenance": append an automation run footer with timestamp
 import fs from 'fs';
@@ -261,6 +284,14 @@ module.exports = { generateReadme },// // // console.log(`✅ README generated a
  */;const fs = require('fs')const path  = require('path')const fs = require('fs')const path = require('path')const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub;
 Leading-edge technology solutions and autonomous innovation systems.;#!/usr / bin / env node;/**;
  */;
+<<<<<<< HEAD
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require('fs');
 const path = require('path');
 const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub;
@@ -282,8 +313,16 @@ npm run build;
 npm run automation:all;
 \`\`\`;const fs = require('fs'),const path  = require('path'),const README_TEMPLATE  = `# Zion Tech Group — Autonomous Innovation Hub;Leading-edge technology solutions and autonomous innovation systems.;## 🚀 Quick Start;\`\`\`bash;
 \`\`\`;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 ## 🏗️ Project Structure;
 - \`pages/\` - Next.js pages and routing;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+## 🏗️ Project Structure;
+- \`pages/\` - Next.js pages and routing;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub;
 
 Leading-edge technology solutions and autonomous innovation systems.;
@@ -313,31 +352,68 @@ npm run automation:all;
 ## 🏗️ Project Structure;
 
 - \`pages/\` - Next && Next.js pages and routing;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 ;
 - \`pages/\` - Next.js pages and routing;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+;
+- \`pages/\` - Next.js pages and routing;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 - \`styles/\` - Global CSS and Tailwind configuration;
 - \`automation/\` - Autonomous automation systems;
 - \`scripts/\` - Utility scripts and build tools;
 - \`public/\` - Static assets and generated content;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 ## 🔧 Available Scripts;
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ### Development;
 - \`npm run dev\` - Start development server;
 - \`npm run build\` - Build for production;
 - \`npm run start\` - Start production server;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ### Automation;
 - \`npm run automation:all\` - Start all automation systems;
 - \`npm run redundancy:start\` - Start redundancy systems;
 - \`npm run pm2:start\` - Start PM2 process manager;
+<<<<<<< HEAD
+<<<<<<< HEAD
+### Maintenance;
+- \`npm run lint\` - Run ESLint;
+=======
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ### Maintenance;
 - \`npm run lint\` - Run ESLint;
 - \`npm run type - check\` - Run TypeScript type checking;
@@ -359,6 +435,11 @@ npm run automation:all;
 - [Contributing](./CONTRIBUTING.md) - Contribution guidelines;;
 ## 📊 Monitoring;- Real-time performance metrics;- Automated health checks;
 - **Modern UI/UX** - Responsive design with Tailwind CSS;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ;
 - **Autonomous Content Generation** - AI - powered content creation;
@@ -369,10 +450,19 @@ npm run automation:all;
 ;
 
 ## 📚 Documentation;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 - [Architecture](./ARCHITECTURE.md) - System architecture overview;
 - [API Reference](./API.md) - API documentation;
 - [Deployment](./DEPLOYMENT.md) - Deployment instructions;
 - [Contributing](./CONTRIBUTING.md) - Contribution guidelines;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ## 🔒 Security;
 - Regular security audits;
 - Automated vulnerability scanning;
@@ -382,6 +472,10 @@ npm run automation:all;
 ;
 - Real - time performance metrics;
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 - Automated health checks;
 - Comprehensive logging;
 ## 🤝 Contributing;
@@ -424,8 +518,16 @@ if (require.main === module) {generateReadme()}// Simple README maintenance: app
 if (require.main === module) {
   generateReadme()
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Simple README maintenance: append an automation run footer with timestamp
 
 
@@ -474,6 +576,11 @@ module && module.exports = { generateReadme },// Simple README maintenance: appe
 // Simple README maintenance: append an automation run footer with timestamp
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process && process.cwd(); const readmePath = path && path.join(repoRoot,'README && README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs && fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content && content.includes('Automation summary:')) { content += footer} else { content = content && content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs && fs.writeFileSync(readmePath,content,'utf8'); } main();
 // Simple README "maintenance": append an automation run footer with timestamp
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 *Generated on ${new Date ().toISOString ()}*;
 `,
@@ -515,6 +622,12 @@ function main() { const repo_root = process.cwd (); const readme_path = path.joi
   $2
 } } main ();
 // Simple README "maintenance": append an automation run footer with timestamp;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+import fs from 'fs';
+import path from 'path';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 /**
  * main - Function description
  */
@@ -545,7 +658,15 @@ main();
 #!/usr/bin/env node;,"});,"}) import fs from;,"});,"}) 'fs';,"});,"}) import path from;,"});,"}) 'path';,"});,"}) ;,"});,"}) function main() {,"});,"}) const repoRoot = process.cwd();,"});,"}) const readmePath = path.join(repoRoot;,"});,"}) 'README.md');,"});,"}) const now = new Date().toISOString();,"});,"}) ;,"});,"}) let content = ';,"});,"}) ';,"});,"}) try {,"});,"}) content = fs.readFileSync(readmePath,'utf8;,"});,"}) ');,"});,"}) } catch (err) {,"});,"}) content =;,"});,"}) '# Project\n\n';,"});,"}) }"});,"}) ;,"});,"}) const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`;,"});,"}) if (!content.includes(;,"});,"}) 'Automation summary:')) {,"});,"}) content += footer;,"});,"}) } else {,"});,"}) content = content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer);,"});,"}) }"});,"}) ;,"});,"}) fs.writeFileSync(readmePath,content;,"});,"}) 'utf8');,"});,"}) console.log(;,"});,"}) '✅ README updated');,"});,"}) }"});,"}) ;,"});,"}) main();,"});,"}) ;,"});,"}) content = fs.readFileSync(readmePath,'utf8';)} catch (err) {content =';# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes(` 'Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer)} fs.writeFileSync(readmePath,content,';utf8'); console.log(','✅ README updated')} main();
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Simple README maintenance: append an automation run footer with timestamp
 
 
@@ -634,6 +755,15 @@ module.exports = { generateReadme }
 
 ;
 module.exports = { generateReadme },;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

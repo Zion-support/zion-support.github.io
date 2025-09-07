@@ -1,4 +1,18 @@
+export function AIEnhancementButton({
+  currentContent,
+  enhancementType,
+  context,
+  onEnhanced,
+  buttonText = "Enhance with AI",
+  className
+}: AIEnhancementButtonProps) {
+
+
+
+      return
+=======
 export function AIEnhancementButton() {return;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
     setError(null)const enhancedContent = await enhanceContent(currentContent;
       enhancementType;
@@ -38,11 +52,45 @@ if (.length < 10) {) {$2;
     set_error (null)const enhanced_content = await enhance_content (current_content,enhancement_type,context)// Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD
+      on_enhanced (enhanced_content);
+    }
+<<<<<<< HEAD
+=======
       on_enhanced (enhanced_content)}}},return (onClick={handleEnhance}
       disabled={isEnhancing}>;
       {isEnhancing ? (<Loader2 className="h-3 w-3 animate-spin" />;
       ) : (<Sparkles className="h-3 w-3" />;
       )}<span className="text-xs">{buttonText}</span>;
+=======
+
+  }
+
+
+
+
+
+  },
+  
+
+  return (
+
+
+      onClick={handleEnhance}
+      disabled={isEnhancing}
+
+
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-3 w-3 animate-spin" />
+      ) : (
+
+
+        <Sparkles className="h-3 w-3" />
+      )}
+
+      <span className="text-xs">{buttonText}</span>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </Button>;
   )}<Button;
       type="button";
@@ -59,6 +107,7 @@ if ( {) {$2;
     >;
       {is_enhancing ? (<Loader2 className="h - 3 w - 3 animate - spin" />) : (<Sparkles className="h - 3 w - 3" />)}
       <span className="text - xs">{button_text}</span>;
+<<<<<<< HEAD
     </Button>)})}import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { useResumeEnhancer  } from '@/hooks/useResumeEnhancer';
@@ -89,3 +138,14 @@ export function AIEnhancementButton({currentContent;
       <span className='text-xs'>{buttonText}</span>;
     </Button>;
   )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </Button>);
+}
+
+  )
+}
+;
+
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

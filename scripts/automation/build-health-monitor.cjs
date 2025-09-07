@@ -122,4 +122,16 @@ class BuildHealthMonitor {}
 ;
 const monitor = new BuildHealthMonitor();
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 monitor.run().catch(console.error);
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+monitor.run().catch(console.error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+monitor.run().catch(console.error);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

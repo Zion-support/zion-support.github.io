@@ -2,6 +2,19 @@
 export const supabase = {// Add supabase functionality here;
   auth: {getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    signOut: () => Promise<any>;
+  };
+}
+
+
+=======
+    signOut: () => Promise<any>
+};
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     signOut: () => Promise<any>;
   }}getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
@@ -35,6 +48,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 }
 
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
@@ -99,10 +113,23 @@ export const supabase = createSupabaseClient(supabaseConfig);
     });
   });
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   });
 };
 }
 
   });
+<<<<<<< HEAD
+=======
+  })
+};
+}
+  })
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 

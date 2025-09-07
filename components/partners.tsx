@@ -9,6 +9,42 @@ import React from 'react';
 export default function PartnersPage() {export default function PartnersPage() {return (<div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
         <title>Partners | Zion Tech Group</title>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <meta
+          name='description'
+          content='Technology and go-to-market partners powering our customer outcomes.'
+<<<<<<< HEAD
+        />
+        <link rel='canonical' href='https://ziontechgroup.com/partners' />
+      </Head>
+      <div className='max-w-5xl mx-auto space-y-6'>
+        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+          Partners
+        </h1>
+        <p className='text-slate-300'>
+          We work with best‑in‑class platforms across AI, cloud, data, security
+          and DevOps.
+        </p>
+        <ul className='list-disc list-inside text-slate-300 space-y-1'>
+          <li>Cloud & Edge: AWS, Azure, Cloudflare</li>
+          <li>AI & LLM: OpenAI, Anthropic, Groq</li>
+          <li>Data & Analytics: Snowflake, BigQuery, ClickHouse</li>
+          <li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>
+        </ul>
+        <div className='pt-4 text-slate-300'>
+          Partner with us:{' '}
+          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
+            kleber@ziontechgroup.com
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <meta;
           name='description';
           content='Technology and go-to-market partners powering our customer outcomes.';
@@ -32,6 +68,30 @@ export default /**;
  * PartnersPage - Function description;
  */;
 function PartnersPage() {return (<div className='min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8'>;
+=======
+		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+			<Head>
+				<title>Partners | Zion Tech Group</title>
+				<meta name="description" content="Technology and go-to-market partners powering our customer outcomes." />
+				<link rel="canonical" href="https://ziontechgroup.com/partners" />
+			</Head>
+			<div className="max-w-5xl mx-auto space-y-6">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Partners</h1>
+				<p className="text-slate-300">We work with best‑in‑class platforms across AI, cloud, data, security, and DevOps.</p>
+				<ul className="list-disc list-inside text-slate-300 space-y-1">
+					<li>Cloud & Edge: AWS, Azure, Cloudflare</li>
+					<li>AI & LLM: OpenAI, Anthropic, Groq</li>
+					<li>Data & Analytics: Snowflake, BigQuery, ClickHouse</li>
+					<li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>
+				</ul>
+import Head from 'next / head';
+export default /**
+ * PartnersPage - Function description
+ */
+function PartnersPage() {
+  return (
+    <div className='min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <Head>;
         <title > Partners | Zion Tech Group</title>;
         <meta;
@@ -45,7 +105,12 @@ function PartnersPage() {return (<div className='min - h-screen pt - 24 pb - 20 
           Partners;
         </h1>;
         <p className='text - slate - 300'>;
+<<<<<<< HEAD
           We work with best‑in‑class platforms across AI, cloud, data, security,and DevOps.;
+=======
+          We work with best‑in‑class platforms across AI, cloud, data, security,
+          and DevOps.;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         </p>;
         <ul className='list - disc list - inside text - slate - 300 space - y-1'>;
           <li > Cloud & Edge: AWS, Azure, Cloudflare</li>;
@@ -60,7 +125,12 @@ function PartnersPage() {return (<div className='min - h-screen pt - 24 pb - 20 
           </a>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>)return (<div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
+=======
+    </div>);	return (
+  <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   <Head>;
     <title > Partners | Zion Tech Group</title>;
     <meta name="description" content="Technology and go - to - market partners powering our customer outcomes." />;
@@ -77,6 +147,10 @@ function PartnersPage() {return (<div className='min - h-screen pt - 24 pb - 20 
     </ul>;
     <div className="pt - 4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>;
   </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   </div>),}/>;
         <link rel='canonical' href='https://ziontechgroup.com/partners' />;
       </Head>;
@@ -102,4 +176,13 @@ function PartnersPage() {return (<div className='min - h-screen pt - 24 pb - 20 
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  </div>),
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

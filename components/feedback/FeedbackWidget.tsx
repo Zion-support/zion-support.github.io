@@ -6,6 +6,59 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { v4 as uuidv4 } from 'uuid';
+export type FeedbackWidgetProps = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { v4 as uuidv4 } from 'uuid';
+
+  responseId
+  aiModel
+}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
+  responseId?: string;
+  aiModel?: string
+}
+export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
+  responseId,
+  aiModel,;
+}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {;
+  responseId?: string;
+  aiModel?: string
+};
+
+export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  const [rating, setRating] = useState<null | 'up' | 'down'>(null);
+  const [comment, setComment] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+const effectiveResponseId = useMemo(
+    () => responseId || uuidv4(),
+    [responseId]
+  const [rating, setRating] = useState<null | 'up' | 'down'>(null);
+  const [comment, setComment] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const effectiveResponseId = useMemo(;
+    () => responseId || uuidv4(),;
+    [responseId];
+  );
+<<<<<<< HEAD
+
+  const submit = async () => {
+    if (!rating) {
+      setError('Please choose 👍 or 👎');
+return;
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { v4 as uuidv4  } from 'uuid';
   responseId;
   aiModel;
@@ -23,9 +76,73 @@ export default function FeedbackWidget() {responseId,aiModel,}: FeedbackWidgetPr
       {submitted ? (}
   }
   }const submit = async () => {if (!rating) {setError('Please choose 👍 or 👎')return;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
     setError(null)setSubmitting(true)try {const res = await fetch('/api/feedback/submit', {method: 'POST';
         headers: { 'Content-Type': 'application/json' }
+<<<<<<< HEAD
+        body: JSON.stringify({
+          responseId: effectiveResponseId,
+rating,
+          comment: comment.trim(),
+          pagePath:
+            typeof window !== 'undefined'
+              ? window.location.pathname
+              : undefined
+          aiModel
+        })
+      });
+      if (!res.ok) throw new Error('Failed to submit feedback');
+      setSubmitted(true);
+    } catch (e: any) {
+      setError(e?.message |'Something went wrong');
+    } finally {
+      setSubmitting(false);
+    }
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  const submit = async () => {;
+    if (!rating) {;
+      setError('Please choose 👍 or 👎');
+          aiModel})});
+      if (!res.ok) throw new Error('Failed to submit feedback');
+      setSubmitted(true)
+    } catch (e: any) {
+      setError(e?.message |'Something went wrong')
+    } finally {
+      setSubmitting(false)
+    }
+  }
+  };
+
+  return (
+
+    <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
+      <div className="text-sm font-medium mb-2">Was this answer useful?</div>
+      {submitted ? (
+    }
+  }
+  };
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  return (
+<div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
+      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>
+      {submitted ? (
+        <div className='text-sm text-emerald-700 dark:text-emerald-300'>
+          Thanks for your feedback!
+        </div>
+      ) : (
+        <div className='space-y-3'>
+          <div className='flex items-center gap-2'>
+=======
+=======
+    }
+    setError(null)setSubmitting(true)try {const res = await fetch('/api/feedback/submit', {method: 'POST';
+        headers: { 'Content-Type': 'application/json' }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         body: JSON.stringify({responseId: effectiveResponseId,rating,comment: comment.trim(),pagePath:;
             typeof window !== 'undefined';
               ? window.location.pathname;
@@ -33,12 +150,25 @@ export default function FeedbackWidget() {responseId,aiModel,}: FeedbackWidgetPr
           aiModel;
         })})if (!res.ok) throw new Error('Failed to submit feedback')setSubmitted(true)} catch (e: any) {setError(e?.message |'Something went wrong')} finally {setSubmitting(false)}
   }return (<div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>;
       {submitted ? (<div className='text-sm text-emerald-700 dark:text-emerald-300'>;
           Thanks for your feedback!;
         </div>;
       ) : (<div className='space-y-3'>;
           <div className='flex items-center gap-2'>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <button
+              type='button'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>;
       {submitted ? (<div className='text-sm text-emerald-700 dark:text-emerald-300'>;
           Thanks for your feedback!;
@@ -49,6 +179,15 @@ export default function FeedbackWidget() {responseId,aiModel,}: FeedbackWidgetPr
             <button;
               type="button";
               type='button';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+            <button
+            <button
+              type="button"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={rating === 'up'}
@@ -154,6 +293,35 @@ if ( {) {$2;
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={_`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={_rating === 'up'}
+<<<<<<< HEAD
+<<<<<<< HEAD
+            >
+              <span>👍</span>
+              <span>Yes</span>
+            </button>
+            <button
+<<<<<<< HEAD
+type='button'
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+type='button'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              onClick={() => setRating(rating === 'down' ? null : 'down')}
+              className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
+              aria-pressed={rating === 'down'}
+            >
+              <span>👎</span>
+              <span>No</span>
+            </button>
+          </div>
+          <textarea
+<<<<<<< HEAD
+placeholder='Optional feedback (what worked, what didn’t)'
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             >;
               <span>👍</span>;
               <span>Yes</span>;
@@ -170,6 +338,7 @@ type='button';
           </div>;
           <textarea;
 placeholder='Optional feedback (what worked, what didn’t)';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             value={comment}
             onChange={e => setComment(e.target.value.slice(0, 2000))}
             className='w-full rounded-md border px-3 py-2 text-sm';
@@ -180,13 +349,44 @@ placeholder='Optional feedback (what worked, what didn’t)';
             <button;
               onClick={submit}
               disabled={submitting}
+<<<<<<< HEAD
+              className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm'
+            >
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
               className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm';
             >;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>;
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              {submitting ? 'Submitting…' : 'Submit feedback'}
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+
+}
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  );
+=======
     </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 })}

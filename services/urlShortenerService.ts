@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 export interface ShortUrl  {export interface ShortUrl  {id: string;
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface ShortUrl {
 export interface ShortUrl {;
   id: string;
@@ -13,8 +20,16 @@ export interface ShortUrl  {id: string;
 
 export interface ShortUrl {
   id: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
   original_url: string;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+  original_url: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   short_code: string;
   short_url: string;
   created_at: Date;
@@ -24,7 +39,15 @@ export interface ShortUrl {
   is_active: boolean,
   user_id?: string;
 
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+export interface ShortUrl {
+  id: string;
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 }
 export interface UrlAnalytics  {total_clicks: number;
   unique_visitors: number;isActive: boolean;
@@ -32,12 +55,17 @@ export interface UrlAnalytics  {total_clicks: number;
 }
 export interface UrlAnalytics  {export interface UrlAnalytics  {totalClicks: number;
   uniqueVisitors: number;export interface ShortUrl  {id: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
   referrers: string[];
   countries: string[];
   devices: string[];
   browsers: string[];last_clicked: Date,click_history: ClickEvent[];last_clicked: Date,click_history: ClickEvent[];last_clicked: Date,click_history: ClickEvent[];export interface ShortUrl  {id: string;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   referrers: string[];
   countries: string[];
   devices: string[];
@@ -46,6 +74,11 @@ export interface UrlAnalytics  {export interface UrlAnalytics  {totalClicks: num
   last_clicked: Date,
   click_history: ClickEvent[];
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 export interface ClickEvent  {id: string;
   timestamp: Date;
@@ -105,6 +138,10 @@ class UrlShortenerService {private urls: Map < string, ShortUrl> = new Map ()pri
   }
   async getShortUrl(shortCode: string): Promise<ShortUrl | null> {const url = this && this.urls.get(shortCode)if (!url || !url && url.isActive) return null;if (url && url.expiresAt && url && url.expiresAt < new Date()) {url && url.isActive = false,return null    this && this.clicks.set(shortCode, [])return shortUrl;
   user_agent: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   referrer: string;
   country: string;
   city: string;
@@ -118,6 +155,8 @@ class UrlShortenerService {private urls: Map < string, ShortUrl> = new Map ()pri
     const shortCode = request && request.customCode || this && this.generateShortCode(),
     if (this && this.urls.has(shortCode)) {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       throw new Error('Short code already exists')
     }
     const shortUrl: ShortUrl = {
@@ -133,6 +172,10 @@ class UrlShortenerService {private urls: Map < string, ShortUrl> = new Map ()pri
     };
 
     this && this.urls.set(shortCode, shortUrl);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     this && this.analytics.set(shortCode, {
 
       throw new Error('Short code already exists')
@@ -194,13 +237,27 @@ class UrlShortenerService {
       totalClicks: 0;
       uniqueVisitors: 0;
       referrers: [];
+<<<<<<< HEAD
+=======
+    this && this.analytics.set(shortCode, {      totalClicks: 0;
+      uniqueVisitors: 0;      referrers: [];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       countries: [];
       devices: [];
       browsers: [];
 
     this && this.clicks.set(shortCode, []);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return shortUrl
   }
   async getShortUrl(shortCode: string): Promise<ShortUrl | null> {
@@ -211,15 +268,39 @@ class UrlShortenerService {
     if (url && url.expiresAt && url && url.expiresAt < new Date()) {
       url && url.isActive = false,
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return null
     this && this.clicks.set(shortCode, []);
 
+=======
+      return null    this && this.clicks.set(shortCode, []);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return shortUrl
   }
+<<<<<<< HEAD
+  async getShortUrl(shortCode: string): Promise<ShortUrl | null> {
+
+    const url = this && this.urls.get(shortCode);
+    if (!url || !url && url.isActive) return null;
+    
+    if (url && url.expiresAt && url && url.expiresAt < new Date()) {
+      url && url.isActive = false,
+
+      return null
+      lastClicked: new Date()
+      clickHistory: []
+    });
+    this.clicks.set(shortCode, []);
+    return shortUrl
+=======
   async getShortUrl(shortCode: string): Promise<ShortUrl | null> {const url = this && this.urls.get(shortCode)if (!url || !url && url.isActive) return null;if (url && url.expiresAt && url && url.expiresAt < new Date()) {url && url.isActive = false,return null;
   id: string,lastClicked: new Date()clickHistory: [];
     })this.clicks.set(shortCode, [])return shortUrl;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   async getShortUrl(shortCode: string): Promise<ShortUrl | null> {const url = this.urls.get(shortCode)if (!url |!url.isActive) return null;
     if (url.expiresAt && url.expiresAt < new Date()) {url.isActive = false;
@@ -247,8 +328,17 @@ export interface ShortUrl  {id: string,originalUrl: string,shortCode: string,sho
     if (url.expiresAt && url.expiresAt < new Date()) {
       url.isActive = false
       return null
+<<<<<<< HEAD
+<<<<<<< HEAD
 export interface ShortUrl {;
   id: string,;
+=======
+export interface ShortUrl {;  id: string,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+export interface ShortUrl {;
+  id: string,;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   originalUrl: string,;
   shortCode: string,;
   shortUrl: string,;
@@ -329,6 +419,10 @@ class UrlShortenerService {;
     if (!url || !url.isActive) return null,;
     if (url.expiresAt && url.expiresAt < new Date()) {;
       url.isActive = false,;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return null;
     }
     return url
@@ -424,21 +518,49 @@ export interface ShortUrl {;
 
 
 
+<<<<<<< HEAD
+=======
+      return null;  async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
+    const url = this && this.urls.get(shortCode);
+    if (!url) return;
+    const clickEvent: ClickEvent = {  async getUserUrls(userId: string): Promise<ShortUrl[]> {
+    return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId)
+  }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
     return true
   }
   async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     const url = this && this.urls.get(shortCode);
     if (!url || (userId && url && url.userId !== userId)) return false;
 
     Object && Object.assign(url, updates);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     return true
   }
   private generateShortCode(): string {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
+<<<<<<< HEAD
+    for (let i = 0, i < 6, i++) {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     for (let i = 0, i < 6, i++) {}
     const urlClicks = this.clicks.get(shortCode) |[];
     urlClicks.push(clickEvent)this.clicks.set(shortCode, urlClicks)const analytics = this.analytics.get(shortCode)if (analytics) {analytics.totalClicks++;
@@ -461,6 +583,7 @@ export interface ShortUrl {;
       if (!analytics.countries.includes(clickData.country)) {analytics.countries.push(clickData.country)}
       if (!analytics.devices.includes(clickData.device)) {analytics.devices.push(clickData.device)}
       if (!analytics.browsers.includes(clickData.browser)) {analytics.browsers.push(clickData.browser)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
   }async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {const url = this && this.urls.get(shortCode)if (!url || (userId && url && url.userId !== userId)) return false;
     url && url.isActive = false;
@@ -512,8 +635,16 @@ if (return null) {$2;
     for (let i = 0, i < 6, i++) {;
       result += chars.charAt(Math.floor(Math.random() * chars.length));
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   async getShortUrl (short_code: string): Promise < ShortUrl | null> {
     const url = this.urls.get (short_code);
     // Check condition
@@ -524,8 +655,17 @@ if (return null) {
 }
       url.is_active = false,return null;    }
       url.is_active = false,
+<<<<<<< HEAD
+<<<<<<< HEAD
       return null;
     }
+=======
+      return null;    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      return null;
+    }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return url;
   }
   async track_click (short_code: string, click_data: Omit < ClickEvent, 'id'>): Promise < void> {const url = this.urls.get (short_code)// Check condition;
@@ -572,6 +712,10 @@ if ( {) {$2;
   async importData(data: any): Promise<void> {}
     return result;
   }
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
   private generateId(): string {return Math.random().toString(36).substr(2, 9)}// Utility methods for data persistence (in a real app, this would use a database)async exportData(): Promise<any> {return {urls: Array.from(this.urls.entries())analytics: Array.from(this.analytics.entries())clicks: Array.from(this.clicks.entries())}
   }
   async importData(data: any): Promise<void> {this.urls = new Map(data.urls)this.analytics = new Map(data.analytics)this.clicks = new Map(data.clicks)async importData(data: any): Promise<void> {}
@@ -591,11 +735,17 @@ export const urlShortenerService  = new UrlShortenerService ()export const urlSh
   }async importData(data: any): Promise<void> {this.urls = new Map(data.urls),this.analytics = new Map(data.analytics),this.clicks = new Map(data.clicks)}
 }export const urlShortenerService = new UrlShortenerService()export const urlShortenerService  = new UrlShortenerService()export const urlShortenerService  = new UrlShortenerService()export const urlShortenerService  = new UrlShortenerService()
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
@@ -606,6 +756,10 @@ export const urlShortenerService  = new UrlShortenerService ()export const urlSh
 
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   async importData(data: any): Promise<void> {
 
     this && this.urls = new Map(data && data.urls);
@@ -632,6 +786,14 @@ export const urlShortenerService = new UrlShortenerService();
   private generate_id (): string {
     return Math.random ().to_string (36).substr (2, 9);
   }
+<<<<<<< HEAD
+=======
+  async importData(data: any): Promise<void> {  }
+}
+export const urlShortenerService = new UrlShortenerService();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   // Utility methods for data persistence (in a real app, this would use a database);
   async export_data (): Promise < any> {
     return {
@@ -649,9 +811,18 @@ export const urlShortenerService = new UrlShortenerService();
 export const urlShortenerService = new UrlShortenerService ();
 ;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export const urlShortenerService = new UrlShortenerService();
 export const urlShortenerService = new UrlShortenerService();
 ;
@@ -720,7 +891,16 @@ export const urlShortenerService = new UrlShortenerService();
 ;
 export const urlShortenerService = new UrlShortenerService();
 export const urlShortenerService = new UrlShortenerService();
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 export const urlShortenerService = new UrlShortenerService();
 
 export const urlShortenerService = new UrlShortenerService();
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

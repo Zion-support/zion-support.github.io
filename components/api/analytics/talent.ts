@@ -1,4 +1,51 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import { createServerClient } from '../../../utils/supabase/server';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+import { createServerClient } from '../../../utils/supabase/server';
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+      supabase
+=======
+
+
+      supabase
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+import { createServerClient } from '../../../utils/supabase/server';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const supabase = null;
+        { label: 'ai', value: 1 }]})
+  try {
+    const supabase = createServerClient();
+    const talentId = (req.query.talentId as string) |null
+    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
+supabase
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { createServerClient  } from '../../../utils/supabase/server';
       supabase;
       supabase;
@@ -28,6 +75,12 @@ function handler() {try {const supabase = createServerClient ()const talent_id =
 
 
       supabase
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         .from('profile_views')
         .select('id, talent_id')
         .eq('talent_id', talentId)
@@ -55,6 +108,68 @@ function handler() {try {const supabase = createServerClient ()const talent_id =
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
       ]
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+    });
+=======
+
+
+
+    });
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+  }
+
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+=======
 
     });
 
@@ -64,13 +179,51 @@ function handler() {try {const supabase = createServerClient ()const talent_id =
 }
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 
 }
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 }
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -122,3 +275,35 @@ function handler() {
   }
 }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+}
+
+  }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

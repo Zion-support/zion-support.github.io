@@ -631,7 +631,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
+<<<<<<< HEAD
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+=======
   address: '364 E Main St STE 1008 Middletown DE 19709'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 },
 
 export const nextGenAIServices2026: NextGenAIService2026[] = [
@@ -833,7 +837,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     contactInfo: contact,
     realImplementation: true,
     customers: 203,
+<<<<<<< HEAD
+    reviews: 445,
+=======
     reviews: 445
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   },
     launchDate: '2025-01-25',
     customers: 203,

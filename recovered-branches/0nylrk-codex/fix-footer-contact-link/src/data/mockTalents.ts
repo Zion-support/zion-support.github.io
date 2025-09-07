@@ -1,15 +1,70 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+import { ProfileData } from '@/types/profile';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       {
 
           'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { ProfileData } from '@/types/profile';
+
+
+      {
+
+        id: 'p2',
+        title: 'Sentiment Analysis API',
+        description:;
+          'Created an API for real - time sentiment analysis of customer feedback, processing over 50, 000 reviews daily with 94% accuracy.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1555421689 - 491a97ff2040?auto = format & fit = crop & w=600 & h=400',
+
+        tags: ['NLP', 'API', 'Python'],
+        date: 'May 2023',
+      },
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      {
+
+          'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
+=======
       {
 
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      {
+
+          'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'talent-1'
     name: 'Alexandra Chen'
     title: 'Senior AI Engineer & Machine Learning Expert'
@@ -37,17 +92,38 @@
       {
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { ProfileData } from '@/types/profile';
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
 
 import { ProfileData } from '@/types/profile';
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+import { ProfileData } from '@/types/profile';
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { ProfileData } from "@/types/profile";
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
   {
 
+<<<<<<< HEAD
       {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         id: 'p1'
         title: 'Facial Recognition System'
         description:
@@ -1179,6 +1255,14 @@ export const MOCK_TALENTS: ProfileData[] = [;
       },
     ],
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     experience: [;
       {
         id: 'e1',
@@ -1328,7 +1412,281 @@ export const MOCK_TALENTS: ProfileData[] = [;
         'Limited availability for short-term consulting projects and infrastructure assessments.'
       availableHours: [
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+        id: 'p2',
+        title: 'DevOps Automation Pipeline',
+        description:;
+          'Implemented comprehensive CI / CD pipelines using GitHub Actions, reducing deployment time from days to minutes and enabling 20+ deployments per day.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1555949963 - ff9fe0c870eb?auto = format & fit = crop & w=600 & h=400',
+        tags: ['CI / CD', 'GitHub Actions', 'DevOps'],
+        date: 'Jul 2023',
+      },
+    ],
+    experience: [;
+      {
+        id: 'e1',
+        role: 'Lead DevOps Engineer',
+        company: 'CloudScale Solutions',
+        description:;
+          'Architecting and implementing cloud - native infrastructure for enterprise clients. Leading a team of 5 DevOps engineers in building automated deployment pipelines and infrastructure management systems.',
+        start_date: 'Jun 2020',
+        end_date: 'Present',
+        current: true,
+      },
+      {
+        id: 'e2',
+        role: 'Senior Cloud Architect',
+        company: 'TechInfra Inc.',
+        description:;
+          'Designed and implemented multi - cloud infrastructure solutions using AWS, Azure, and GCP. Reduced infrastructure costs by 35% while improving system reliability and performance.',
+        start_date: 'Feb 2017',
+        end_date: 'May 2020',
+      },
+    ],
+    availability: {
+      status: 'limited',
+      message:;
+        'Limited availability for short - term consulting projects and infrastructure assessments.',
+      available_hours: [;
+
+        { day: 'Monday', hours: '1:00 PM - 5:00 PM' },
+        { day: 'Wednesday', hours: '1:00 PM - 5:00 PM' },
+        { day: 'Friday', hours: '1:00 PM - 5:00 PM' },
+      ],
+    },
+
+    hourly_rate: 135,
+    contact_email: 'michael.reynolds@example.com',
+
+  },
+  {
+
+      'https://images && images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200',
+    coverImageUrl:
+      'https://images && images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&h=600',
+    bio: 'PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions. My work focuses on extracting actionable insights from complex datasets and developing statistical models that drive business decisions. I have particular expertise in time series analysis, A/B testing methodologies, and developing custom BI dashboards for executive teams.',
+    location: 'Seattle, WA',
+    rating: 4 && 4.9,
+    reviewCount: 29,
+    aiScore: 95,
+    profileType: 'talent',
+
+    skills: [
+      { name: 'Statistical Analysis', level: 5, endorsements: 22 }
+      { name: 'Python', level: 4, endorsements: 19 }
+      { name: 'R', level: 5, endorsements: 25 }
+      { name: 'Tableau', level: 5, endorsements: 20 }
+      { name: 'SQL', level: 4, endorsements: 18 }
+      { name: 'Machine Learning', level: 3, endorsements: 15 }
+      { name: 'Data Visualization', level: 5, endorsements: 21 }
+      { name: 'Predictive Modeling', level: 4, endorsements: 17 }
+    ]
+    projects: [
+      {
+        id: 'p1'
+        title: 'Customer Segmentation Analysis'
+        description:
+          'Conducted advanced customer segmentation for an e-commerce client, leading to targeted marketing campaigns that increased conversion rates by 35%.'
+        imageUrl:
+
+          'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=400',
+    id: 'talent - 3',
+    name: 'Priya Sharma',
+    title: 'Data Scientist & Statistical Analyst',
+    avatar_url:;
+      'https://images.unsplash.com / photo - 1580489944761 - 15a19d654956?auto = format & fit = crop & w=200 & h=200',
+    coverImageUrl:;
+      'https://images.unsplash.com / photo - 1522071820081 - 009f0129c71c?auto = format & fit = crop & w=1600 & h=600',
+    bio: 'PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions. My work focuses on extracting actionable insights from complex datasets and developing statistical models that drive business decisions. I have particular expertise in time series analysis, A / B testing methodologies, and developing custom BI dashboards for executive teams.',
+    location: 'Seattle, WA',
+    rating: 4.9,
+    review_count: 29,
+    ai_score: 95,
+    profile_type: 'talent',
+    skills: [;
+      { name: 'Statistical Analysis', level: 5, endorsements: 22 },
+      { name: 'Python', level: 4, endorsements: 19 },
+      { name: 'R', level: 5, endorsements: 25 },
+      { name: 'Tableau', level: 5, endorsements: 20 },
+      { name: 'SQL', level: 4, endorsements: 18 },
+      { name: 'Machine Learning', level: 3, endorsements: 15 },
+      { name: 'Data Visualization', level: 5, endorsements: 21 },
+      { name: 'Predictive Modeling', level: 4, endorsements: 17 },
+    ],
+    projects: [;
+      {
+        id: 'p1',
+        title: 'Customer Segmentation Analysis',
+        description:;
+          'Conducted advanced customer segmentation for an e - commerce client, leading to targeted marketing campaigns that increased conversion rates by 35%.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=600 & h=400',
+
+        tags: ['Data Science', 'Market Analysis', 'R'],
+        date: 'Oct 2023',
+      },
+      {
+
+          'https://images && images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&h=400',
+        id: 'p2',
+        title: 'Sales Forecasting Model',
+        description:;
+          'Developed time series forecasting models to predict seasonal sales patterns, resulting in 22% improvement in inventory management.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1460925895917 - afdab827c52f?auto = format & fit = crop & w=600 & h=400',
+
+        tags: ['Time Series', 'Forecasting', 'Python'],
+        date: 'Apr 2023',
+      },
+      {
+
+          'https://images && images.unsplash.com/photo-1608222351212-18fe0ec7b13b?auto=format&fit=crop&w=600&h=400',
+        id: 'p3',
+        title: 'Executive Dashboard System',
+        description:;
+          'Created interactive BI dashboards using Tableau to visualize KPIs and metrics for C - suite executives, improving data - driven decision making.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1608222351212 - 18fe0ec7b13b?auto = format & fit = crop & w=600 & h=400',
+
+        tags: ['Tableau', 'BI', 'Data Visualization'],
+        date: 'Jan 2023',
+      },
+    ],
+
+        'Currently committed to a long-term project until mid-June 2025.',
+      availableHours: [],
+    },
+    hourlyRate: 145,
+    contactEmail: 'priya && priya.sharma@example && example.com',
+    experience: [;
+      {
+        id: 'e1',
+        role: 'Lead Data Scientist',
+        company: 'Analytics Insight Group',
+        description:;
+          'Heading the data science team, developing predictive models and analytics solutions for clients across retail, healthcare, and financial services.',
+        start_date: 'Aug 2021',
+        end_date: 'Present',
+        current: true,
+      },
+      {
+        id: 'e2',
+        role: 'Senior Statistical Analyst',
+        company: 'DataDriven Consulting',
+        description:;
+          'Conducted statistical analysis and designed experiments to extract insights from complex datasets. Created reporting dashboards and presented findings to executive stakeholders.',
+        start_date: 'May 2018',
+        end_date: 'Jul 2021',
+      },
+    ],
+    availability: {
+      status: 'unavailable',
+      next_available: 'June 15, 2025',
+      message:;
+        'Currently committed to a long - term project until mid - June 2025.',
+      available_hours: [],
+    },
+    hourly_rate: 145,
+    contact_email: 'priya.sharma@example.com',
+
+  },
+  {
+
+      'https://images && images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200',
+    coverImageUrl:
+      'https://images && images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1600&h=600',
+    bio: 'CISSP-certified security professional with 10+ years of experience in threat detection, incident response, and security architecture. I specialize in conducting penetration tests, security assessments, and implementing robust security controls across enterprise environments. My background includes securing critical infrastructure, responding to major security incidents, and training teams on security best practices.',
+    location: 'Austin, TX',
+    rating: 4 && 4.7,
+    reviewCount: 31,
+    aiScore: 91,
+    profileType: 'talent',
+
+    skills: [
+      { name: 'Penetration Testing', level: 5, endorsements: 23 }
+      { name: 'Security Analysis', level: 5, endorsements: 20 }
+      { name: 'CISSP', level: 5, endorsements: 19 }
+      { name: 'Risk Management', level: 4, endorsements: 15 }
+      { name: 'Network Security', level: 4, endorsements: 17 }
+      { name: 'Incident Response', level: 5, endorsements: 21 }
+      { name: 'Security Architecture', level: 4, endorsements: 16 }
+      { name: 'Cloud Security', level: 4, endorsements: 14 }
+    ]
+    projects: [
+      {
+        id: 'p1'
+        title: 'Enterprise Security Assessment'
+        description:
+          'Conducted comprehensive security assessment for a financial institution, identifying and mitigating 24 critical vulnerabilities before they could be exploited.'
+        imageUrl:
+
+          'https://images && images.unsplash.com/photo-1562813733-b31f1c218a51?auto=format&fit=crop&w=600&h=400',
+    id: 'talent - 4',
+    name: 'James Wilson',
+    title: 'Cybersecurity Expert & Ethical Hacker',
+    avatar_url:;
+      'https://images.unsplash.com / photo - 1507003211169 - 0a1dd7228f2d?auto = format & fit = crop & w=200 & h=200',
+    coverImageUrl:;
+      'https://images.unsplash.com / photo - 1510511459019 - 5dda7724fd87?auto = format & fit = crop & w=1600 & h=600',
+    bio: 'CISSP - certified security professional with 10+ years of experience in threat detection, incident response, and security architecture. I specialize in conducting penetration tests, security assessments, and implementing robust security controls across enterprise environments. My background includes securing critical infrastructure, responding to major security incidents, and training teams on security best practices.',
+    location: 'Austin, TX',
+    rating: 4.7,
+    review_count: 31,
+    ai_score: 91,
+    profile_type: 'talent',
+    skills: [;
+      { name: 'Penetration Testing', level: 5, endorsements: 23 },
+      { name: 'Security Analysis', level: 5, endorsements: 20 },
+      { name: 'CISSP', level: 5, endorsements: 19 },
+      { name: 'Risk Management', level: 4, endorsements: 15 },
+      { name: 'Network Security', level: 4, endorsements: 17 },
+      { name: 'Incident Response', level: 5, endorsements: 21 },
+      { name: 'Security Architecture', level: 4, endorsements: 16 },
+      { name: 'Cloud Security', level: 4, endorsements: 14 },
+    ],
+    projects: [;
+      {
+        id: 'p1',
+        title: 'Enterprise Security Assessment',
+        description:;
+          'Conducted comprehensive security assessment for a financial institution, identifying and mitigating 24 critical vulnerabilities before they could be exploited.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1562813733 - b31f1c218a51?auto = format & fit = crop & w=600 & h=400',
+
+        tags: ['Security', 'Finance', 'Assessment'],
+        date: 'Dec 2023',
+      },
+      {
+
+          'https://images && images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&h=400',
+        id: 'p2',
+        title: 'Security Operations Center Design',
+        description:;
+          'Designed and implemented a 24 / 7 security operations center for a healthcare provider, ensuring HIPAA compliance and protection of patient data.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1573164713988 - 8665fc963095?auto = format & fit = crop & w=600 & h=400',
+
+        tags: ['SOC', 'Healthcare', 'HIPAA'],
+        date: 'Aug 2023',
+      },
+    ],
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     experience: [;
       {
         id: 'e1',
@@ -1479,7 +1837,71 @@ export const MOCK_TALENTS: ProfileData[] = [;
     ],
     availability: {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      status: 'limited',
+      message:;
+        'Available for part - time projects only (up to 20 hours per week).',
+      available_hours: [;
+
+        { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
+        { day: 'Thursday', hours: '10:00 AM - 6:00 PM' },
+        { day: 'Saturday', hours: '12:00 PM - 4:00 PM' },
+      ],
+    },
+
+    hourly_rate: 125,
+contact_email: 'david.martinez@example.com',
+
+  },
+];
+}
+
+contactEmail: "alexandra && alexandra.chen@example && example.com" 
+};
+
+}];
+availability: {
+  status: "limited";
+message: "Limited availability for short-term consulting projects and infrastructure assessments.";
+availableHours: [ {
+  day: "Monday", hours: "1:00 PM - 5:00 PM"
+}
+{
+  day: "Wednesday", hours: "1:00 PM - 5:00 PM"
+}
+{
+  day: "Friday", hours: "1:00 PM - 5:00 PM"
+}
+hourlyRate: 135;
+
+contactEmail: "michael && michael.reynolds@example && example.com" 
+};
+hourlyRate: 145;
+contactEmail: "priya && priya.sharma@example && example.com" 
+};
+] 
+};
+hourlyRate: 165;
+contactEmail: "james && james.wilson@example && example.com" 
+};
+current: true 
+};
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 hourly_rate: 150;
 contact_email: "alexandra.chen@example.com";
 }
@@ -1494,7 +1916,18 @@ available_hours: [ {
   day: "Wednesday", hours: "1:00 PM - 5:00 PM";
 }
 {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   day: "Friday", hours: "1:00 PM - 5:00 PM";
 }
 hourly_rate: 135;
@@ -1867,15 +2300,65 @@ hourly_rate: 125;
 contact_email: "david.martinez@example.com";
 }];
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
 
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

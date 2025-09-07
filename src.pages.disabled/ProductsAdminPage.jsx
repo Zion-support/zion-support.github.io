@@ -14,7 +14,13 @@ interface ProductsAdminPageProps  {// Add props here as needed;
 interface ProductsAdminPageProps {
   // Add props here as needed
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export default function ProductsAdminPage({}: ProductsAdminPageProps) {
@@ -25,10 +31,20 @@ export default function ProductsAdminPage({}: ProductsAdminPageProps) {
     </div>
   );
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 }
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 :src.pages.disabled/ProductsAdminPage.jsx
 }
 }
@@ -37,6 +53,10 @@ export default function ProductsAdminPage({}: ProductsAdminPageProps) {
 }
 }:src.pages.disabled/ProductsAdminPage.jsx;
 :temp_exclude/src.pages.disabled/ProductsAdminPage.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 
@@ -50,4 +70,9 @@ export default function ProductsAdminPage({}: ProductsAdminPageProps) {
 }
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 :temp_exclude/src.pages.disabled/ProductsAdminPage.jsx;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

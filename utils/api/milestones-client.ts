@@ -9,7 +9,15 @@ export interface Milestone  {id: string;
 }export interface CreateMilestonePayload  {title: string,description: string;
 export interface Milestone {
   id: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
   title: string;
+=======
+  title: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  title: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description: string;
   status: 'pending' | 'in-progress' | 'completed';
   dueDate: string;
@@ -17,7 +25,15 @@ export interface Milestone {
 }
 
 export interface CreateMilestonePayload {
+<<<<<<< HEAD
+<<<<<<< HEAD
   title: string;
+=======
+  title: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  title: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description: string;
   dueDate: string;
 }export interface UpdateMilestoneStatusPayload  {status: Milestone['status'];
@@ -60,8 +76,26 @@ export async function updateMilestoneStatus(
   
   if (!res.ok) throw new Error(await res.text());
   return res.json();
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
+=======
+}}
+;
+export async function createMilestone(projectId: string, payload: any) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' },;
+    credentials: 'include',;
+    body: JSON.stringify(payload)}),;
+  if (!res.ok) throw new Error(await res.text()),;
+  return res.json();}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 export async function createMilestone(projectId: string, payload: any) {;
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;
@@ -95,6 +129,10 @@ export async function fetchMilestones(projectId: string) {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 }
 export async /**
@@ -144,6 +182,12 @@ export async function createMilestone(projectId: string, payload: any) {;
 
 
 }
+<<<<<<< HEAD
+=======
+  }}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {;

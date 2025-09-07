@@ -1,5 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 ;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence   } from 'framer-motion';
 import Link from 'next/link';
@@ -14,10 +25,34 @@ import { ArrowRight;
   Phone;
   Mail;
   MapPin;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  ArrowUpRight
+ } from 'lucide-react';
+import Head from 'next/head',
+// Import our enhanced components
+import EnhancedNavigation from './layout/EnhancedNavigation',
+import EnhancedServiceCard from './ui/EnhancedServiceCard',
+import PerformanceMonitor from './PerformanceMonitor',
+//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ArrowUpRight;
   } from 'lucide-react';
 import Head from 'next/head',// Import our enhanced components;
 import EnhancedNavigation from './layout/EnhancedNavigation',import EnhancedServiceCard from './ui/EnhancedServiceCard',import PerformanceMonitor from './PerformanceMonitor',//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -32,6 +67,54 @@ import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 ...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
 ...innovative2025AIAutonomousServices ];opacity: 0;
 import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+interface EnhancedHomepageProps {
+  className?: string;
+}
+
+const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnhancedHomepage</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+};
+visible: {
+  opacity: 1, transition: {
+  duration: 0.8, staggerChildren: 0.1 
+
+
+};
+
+};
+
+};
+
+};
+
+};
+export default EnhancedHomepage;
+import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
+// Import service data
+import { revolutionary2044AdvancedMicroSaas  } from '../data/revolutionary-2044-advanced-micro-saas';
+import { revolutionary2044ITServices  } from '../data/revolutionary-2044-it-services';
+import { revolutionary2044AIServices  } from '../data/revolutionary-2044-ai-services';
+import { realEnterpriseMicroSaas2025  } from '../data/2025-real-enterprise-micro-saas';
+import { innovativeITServicesExpansion2025V3  } from '../data/2025-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion2025V3  } from '../data/2025-innovative-ai-services-expansion-v3';
+import { innovative2025ITInfrastructureServices  } from '../data/2025-innovative-it-infrastructure-services';
+import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+const EnhancedHomepage: React.FC;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 interface EnhancedHomepageProps  {className?: string;
 }const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {return (<div className={className || ''}>;
       <h1>EnhancedHomepage</h1>;
@@ -376,4 +459,13 @@ import { innovativeITServicesExpansion2025V3   } from '../data/2025-innovative-i
 import { innovativeAIServicesExpansion2025V3   } from '../data/2025-innovative-ai-services-expansion-v3';
 import { innovative2025ITInfrastructureServices   } from '../data/2025-innovative-it-infrastructure-services';
 import { innovative2025AIAutonomousServices  } from '../data/2025-innovative-ai-autonomous-services';
+<<<<<<< HEAD
+<<<<<<< HEAD
 const EnhancedHomepage: React.FC;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+const EnhancedHomepage: React.FC;
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+const EnhancedHomepage: React.FC;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

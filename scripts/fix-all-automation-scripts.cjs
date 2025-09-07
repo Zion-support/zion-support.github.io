@@ -182,4 +182,16 @@ if (require.main === module) {}
   const fixer = new AutomationScriptFixer();
   fixer.run().catch(console.error)};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = AutomationScriptFixer;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = AutomationScriptFixer;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = AutomationScriptFixer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

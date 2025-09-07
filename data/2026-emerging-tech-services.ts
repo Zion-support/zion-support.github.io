@@ -1,8 +1,39 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 }id: string;
 export interface EmergingTechService2026  {id: string;name: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+export interface EmergingTechService2026 {
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+
+export interface EmergingTechService2026 {
+id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   tagline: string;
   price: string;
@@ -32,6 +63,11 @@ export interface EmergingTechService2026  {id: string;name: string;
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   text_color: string;
   link: string;
   market_position: string;
@@ -532,14 +568,71 @@ export interface EmergingTechService2026  {})}})}export const getEmergingTechSer
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 };
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
@@ -549,6 +642,28 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
 
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'ai-digital-twin-platform'
     name: 'AI Digital Twin Platform'
     tagline:
@@ -645,6 +760,29 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number
+}
+
+const contact = null;
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     tagline:
       'Access quantum computing power through the cloud with AI-optimized algorithms'
     price: '$999'
@@ -1060,6 +1198,53 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Siemens Digital Twin',
       'PTC ThingWorx',
       'GE Digital Twin',
+<<<<<<< HEAD
+<<<<<<< HEAD
+      'Autodesk',
+    ],
+<<<<<<< HEAD
+      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
+    launchDate: '2024-06-25'
+    customers: 56
+    rating: 4.4
+    reviews: 29
+  }
+    customers: 56,
+    rating: 4 && 4.4,
+    reviews: 29,
+  },
+];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+      'Siemens Digital Twin'
+      'PTC ThingWorx'
+      'GE Digital Twin'
+      'Autodesk'
+    ]
+    marketSize: '$86.1B digital twin market'
+    growthRate: '42% annual growth'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails:
+      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
+    launchDate: '2024-06-25',
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    customers: 56,
+    rating: 4 && 4.4,
+    reviews: 29,
+  },;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Autodesk'
     ],
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
@@ -1073,6 +1258,14 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     reviews: 29
   }
 ];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    customers: 56,
+    rating: 4 && 4.4,
+    reviews: 29,
+  },
+];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
@@ -1080,18 +1273,96 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
   );
 }
 export const getPopularEmergingTechServices2026 = () => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+};
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return emergingTechServices2026 && emergingTechServices2026.filter(service => {
     const price = parseInt(service && service.price.replace('$', ''));
+=======
+  return emergingTechServices2026.filter(service => {;
+    const price = parseInt(service.price.replace('$', ''));
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => {
+    const price = parseInt(service && service.price.replace('$', ''));
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => {
+    const price = parseInt(service && service.price.replace('$', ''));
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => {
+    const price = parseInt(service && service.price.replace('$', ''));
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
 
   })
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
     period: '/month',
@@ -1280,10 +1551,101 @@ export const getEmergingTechServices2026ByPriceRange = (
     reviews: 29
   }
 ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+  return emergingTechServices2026.filter(service => {;
+    const price = parseInt(service.price.replace('$', ''));
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    return price >= minPrice && price <= maxPrice;
+  });
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+export const getEmergingTechServices2026ByCategory = (category: string) => {
+  return emergingTechServices2026.filter(service => service.category === category)
+};
+export const getPopularEmergingTechServices2026 = () => {
+  return emergingTechServices2026.filter(service => service.popular)
+};
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+  })
+};
+;
+export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
+  return emergingTechServices2026.filter (
+    service => service.category === category);
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+export const getPopularEmergingTechServices2026 = () =>: any {
+  return emergingTechServices2026.filter (service => service.popular);
+}
+;
+export const getEmergingTechServices2026ByPriceRange = (
+  min_price: number,
+  max_price: number) =>: any {
+  return emergingTechServices2026.filter (service => {
+    const price = parse_int (service.price.replace ('$', ''));
+    return price >= min_price && price <= max_price;
+  });
+}    return price >= min_price && price <= max_price;
+  });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export interface EmergingTechService2026 {;
 
@@ -1294,6 +1656,10 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>: any 
   return emergingTechServices2026.filter (
     service => service.category === category);
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export interface EmergingTechService2026 {;
   id: string,;
@@ -1334,6 +1700,8 @@ export interface EmergingTechService2026 {;
   rating: number,;
   reviews: number;
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export const getPopularEmergingTechServices2026 = () =>: any {
   return emergingTechServices2026.filter (service => service.popular);
@@ -1350,7 +1718,46 @@ export const getEmergingTechServices2026ByPriceRange = (
   });
 }
 ;
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
 export interface EmergingTechService2026 {;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  })
+};
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

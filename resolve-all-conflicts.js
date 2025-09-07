@@ -32,19 +32,68 @@ function resolveMergeConflicts(filePath) {
         let content = fs.readFileSync(filePath, 'utf8');
         
         // Check if file has merge conflicts
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        if (!content.includes('            return false; // No conflicts to resolve
+=======
+=======
+        if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            return false; // No conflicts to resolve
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
         if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
             return false; // No conflicts to resolve
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         }
         
         // Strategy: Keep HEAD version (current branch) for most conflicts
         // Remove merge conflict markers and keep the HEAD version
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        content = content.replace(/        
+        // Remove any remaining conflict markers
+        content = content.replace(/        content = content.replace(/\n/g, '');
+        content = content.replace(/        
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         
         // Remove any remaining conflict markers
+<<<<<<< HEAD
+        content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
+=======
+        content = content.replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+        
+        // Remove any remaining conflict markers
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         
         // Remove any remaining conflict markers
         content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
         content = content.replace(/\n?/g, '');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+=======
+        content = content.replace(/
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         // Clean up any duplicate content
         content = content.replace(/\n\n\n+/g, '\n\n');
         
@@ -66,8 +115,16 @@ function getConflictFiles() {
     } catch (error) {
         // If git command fails, use grep to find files with conflict markers
         try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+            const result = execSync('grep -l "            return result.trim().split('\n').filter(file => file.length > 0);
+=======
+            return result.trim().split('\n').filter(file => file.length > 0);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
             const result = execSync('grep -l "<<<<<<<" -r . --exclude-dir=node_modules --exclude-dir=.git', { encoding: 'utf8' });
             return result.trim().split('\n').filter(file => file.length > 0);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         } catch (e) {
             return [];
         }

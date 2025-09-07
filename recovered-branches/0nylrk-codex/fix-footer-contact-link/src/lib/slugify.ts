@@ -1,0 +1,102 @@
+
+<<<<<<< HEAD
+
+
+
+export function slugify(title: string, separator = "-"): string {
+  const sep = separator;
+  const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+export function slugify(title: string, separator = "-"): string {
+  const sep = separator;
+  const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+<<<<<<< HEAD
+=======
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+export function slugify(title: string, separator = "-"): string {
+  const sep = separator,
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  return title
+    .trim()
+    .replace(/_/g, " ") // treat underscores like spaces
+    .normalize("NFD")
+    .replace(/[\u0300-\u036F]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/[\s-]+/g, sep)
+    .replace(new RegExp(`${escaped}{2}`, "g"), sep)
+    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "");
+}
+/**
+ * Convert a slug back into a human readable title.
+ * This simply splits the slug on the separator and
+ * capitalizes each word.
+ */
+export function unslugify(slug: string, separator = "-"): string {
+  return slug
+    .split(separator)
+    .filter(Boolean)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+export function slugify (title: string, separator = "-"): string {
+  const sep = separator;
+  const escaped = sep.replace (/[.*+?^${}()|[\]\\]/g, "\\$&");
+;
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+;
+
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator,;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+  return title;
+    .trim ();
+    .replace (/_ / g, " ") // treat underscores like spaces;
+    .normalize ("NFD");
+    .replace (/[\u0300-\u036F]/g, "");
+    .toLowerCase ();
+    .replace (/[^a - z0 - 9\s-]/g, "");
+    .replace (/[\s-]+/g, sep);
+    .replace (new RegExp (`${escaped}{2}`, "g"), sep);
+    .replace (new RegExp (`^${escaped}+|${escaped}+$`, "g"), "");
+}
+/**;
+* Convert a slug back into a human readable title.;
+* This simply splits the slug on the separator and;
+* capitalizes each word.;
+*/;
+export function unslugify (slug: string, separator = "-"): string {
+  return slug;
+
+    .split(separator);
+    .filter(Boolean);
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1));
+    .join(" ");
+}
+;
+<<<<<<< HEAD
+
+
+
+}
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

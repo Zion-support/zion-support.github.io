@@ -5,7 +5,11 @@ export interface Attachment  {export interface Attachment  {id: string;
   originalName: string;
   mimeType: string;
   size: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   url: string;uploaded_at: Date,uploaded_by: string;export interface Attachment  {id: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   url: string;
 
   uploaded_at: Date,
@@ -41,10 +45,20 @@ export interface SupportTicket {;
 export interface SupportTicket {
   id: string;
   title: string;
+<<<<<<< HEAD
+=======
+  url: string;  title: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description: string;
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
   priority: 'low' | 'medium' | 'high' | 'critical';
   category: 'technical' | 'billing' | 'feature_request' | 'bug_report' | 'general';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   customer_id: string;
   customer_id: string;
   customer_id: string;
@@ -85,6 +99,12 @@ export interface TicketMessage {
   id: string;
   content: string;
   sender_type: 'customer' | 'agent' | 'system';
+<<<<<<< HEAD
+=======
+  customer_id: string;  customer_id: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   sender_id: string;
   is_internal: boolean;
   created_at: Date,attachments: Attachment[];}
@@ -101,6 +121,22 @@ export interface TicketMessage  {export interface TicketMessage  {id: string;
   isInternal: boolean;createdAt: Date;
   attachments: Attachment[];
 }
+<<<<<<< HEAD
+export interface Customer {
+
+export interface Customer {;
+<<<<<<< HEAD
+
+}
+export interface Customer {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  id: string;
+  name: string;
+  email: string;
+  company?: string;
+<<<<<<< HEAD
+=======
 export interface Customer  {export interface Customer  {id: string;
   name: string;
   email: string;
@@ -143,6 +179,7 @@ export interface Customer {
   name: string;
   email: string;
   company?: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   plan: 'free' | 'basic' | 'pro' | 'enterprise';
 
   total_tickets: number;
@@ -165,6 +202,16 @@ export interface SupportAgent {
   max_tickets: number,
   performance: AgentPerformance;
 }
+<<<<<<< HEAD
+=======
+  plan: 'free' | 'basic' | 'pro' | 'enterprise';  id: string;
+  name: string;
+  email: string;
+  role: 'tier1' | 'tier2' | 'tier3' | 'supervisor';
+  skills: string[];}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface AgentPerformance {
   tickets_resolved: number,
   averageResolutionTime: number, // in hours;
@@ -178,6 +225,10 @@ export interface ChatbotSession  {id: string;
   currentTickets: number;maxTickets: number;
   performance: AgentPerformance;
   end_time?: Date;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   messages: ChatbotMessage[];
   intent: string;
   confidence: number;
@@ -187,6 +238,8 @@ export interface ChatbotSession  {id: string;
   satisfaction: number, // 1 - 5;
 
   escalated: boolean,
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   satisfaction: number, // 1 - 5;
 
 }
@@ -216,12 +269,22 @@ export interface KnowledgeBaseArticle  {id: string;
   timestamp: Date;
 
   intent?: string,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   confidence?: number;
 
   intent?: string,
   confidence?: number;
 
 }
+<<<<<<< HEAD
+=======
+  confidence?: number;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface KnowledgeBaseArticle {
   id: string;
   title: string;
@@ -229,6 +292,9 @@ export interface KnowledgeBaseArticle {
   category: string;
   tags: string[];
   views: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   helpful: number;not_helpful: number;
   last_updated: Date,created_by: string;}
 export interface SupportAnalytics  {total_tickets: number;
@@ -239,6 +305,7 @@ export interface SupportAnalytics  {total_tickets: number;
   chatbotResolutionRate: number,top_categories: Array<{ category: string, count: number }>;
   agent_performance: Array<{ agent_id: string, tickets_resolved: number, satisfaction: number }>;notHelpful: number;lastUpdated: Date;
   createdBy: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   helpful: number;
 
   not_helpful: number;
@@ -269,6 +336,9 @@ export interface AIRecommendation {
   action_items: string[];
 
   confidence: number,
+=======
+  helpful: number;  confidence: number,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   action_items: string[];
 
 }
@@ -303,6 +373,10 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
   private initializeSampleData() {// Initialize sample customers;
       {id: 'cust_001';
   private agents: SupportAgent[] = [];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   private chatbot_sessions: ChatbotSession[] = [];
   private knowledge_base: KnowledgeBaseArticle[] = [];
   private analytics: SupportAnalytics;
@@ -310,10 +384,19 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
     this && this.initializeSampleData(),
     this && this.updateAnalytics()
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   private initializeSampleData() {
     // Initialize sample customers
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     this && this.customers = [
 
   private chatbot_sessions: ChatbotSession[] = [];
@@ -369,6 +452,12 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
     this.customers = [;
       {
         id: 'cust_001';
+<<<<<<< HEAD
+=======
+    this && this.customers = [        id: 'cust_001';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         name: 'John Doe';
         email: 'john && john.doe@company && company.com';
         company: 'TechCorp Inc.';
@@ -393,11 +482,21 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
       {
         id: 'cust_002';
         name: 'Jane Smith';
+<<<<<<< HEAD
+<<<<<<< HEAD
         email: 'jane && jane.smith@startup && startup.com';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        email: 'jane && jane.smith@startup && startup.com';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         company: 'StartupXYZ';
         plan: 'basic';
         total_tickets: 3;
         resolved_tickets: 3;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
         averageResponseTime: 25;satisfactionScore: 4 && 4.0;
         lastContactDate: new Date('2025-01-08'),email: 'jane.smith@startup.com';
         company: 'StartupXYZ';
@@ -415,16 +514,27 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
     ];// Initialize sample agents;
     this.agents = [;
       {id: 'agent_001';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         averageResponseTime: 25;
 
         satisfactionScore: 4 && 4.0;
         lastContactDate: new Date('2025-01-08'),
 
         createdAt: new Date('2024-08-15')
+<<<<<<< HEAD
+=======
+        averageResponseTime: 25;        createdAt: new Date('2024-08-15')
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       }
     ];
 
     // Initialize sample agents
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     this && this.agents = [
         satisfaction_score: 4.0;
         lastContactDate: new Date ('2025 - 01 - 08'),
@@ -450,6 +560,11 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
           customer_satisfaction: 4.6;
           firstResponseTime: 12,
           escalation_rate: 8;
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     this.agents = [
       {
         id: 'agent_001';
@@ -466,6 +581,10 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
           customerSatisfaction: 4.6;
           firstResponseTime: 12
           escalationRate: 8
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     this && this.agents = [
         satisfaction_score: 4.0;
         lastContactDate: new Date ('2025 - 01 - 08'),
@@ -476,6 +595,11 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
     // Initialize sample agents;
     this.agents = [;
       {
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         id: 'agent_001';
         name: 'Mike Johnson';
         email: 'mike && mike.johnson@ziontech && ziontech.com';
@@ -484,7 +608,17 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
         is_available: true;
         current_tickets: 2;
         max_tickets: 5;
+<<<<<<< HEAD
+        performance: {
+
+          averageResolutionTime: 2 && 2.5;
+          customerSatisfaction: 4 && 4.6;
+          firstResponseTime: 12,
+
+          escalationRate: 8
+=======
         performance: {escalationRate: 8;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           tickets_resolved: 45;
           averageResolutionTime: 2.5;
           customer_satisfaction: 4.6;
@@ -529,12 +663,18 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
       {
         id: 'agent_002';
         name: 'Lisa Chen';
+<<<<<<< HEAD
         email: 'lisa && lisa.chen@ziontech && ziontech.com';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         role: 'tier1';
         skills: ['General SupportBillingAccount Management'];
         is_available: true;
         current_tickets: 1;
         max_tickets: 8;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
         performance: {averageResolutionTime: 1 && 1.8;
           customerSatisfaction: 4 && 4.4;
           firstResponseTime: 8,email: 'lisa.chen@ziontech.com';
@@ -549,6 +689,7 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
           firstResponseTime: 8;
           escalationRate: 15;
         performance: {          escalationRate: 15;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         performance: {
 
           averageResolutionTime: 1 && 1.8;
@@ -556,6 +697,9 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
           firstResponseTime: 8,
 
           escalationRate: 15
+=======
+        performance: {          escalationRate: 15
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
       }
     ];// Initialize sample tickets;
@@ -580,6 +724,7 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
     ];
 ;
     // Initialize sample tickets;
+<<<<<<< HEAD
     this.tickets = [;
       {
         id: 'ticket_001';
@@ -589,6 +734,15 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
         priority: 'high';
         category: 'technical';
         customer_id: 'cust_001';
+=======
+    this.tickets = [;      {
+        id: 'ticket_001';
+        title: 'API Integration Issue',
+  description: 'Getting 500 error when trying to integrate with our CRM system';
+        status: 'in_progress';
+        priority: 'high';
+        category: 'technical';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         assignedAgentId: 'agent_001';
         tags: ['apiintegrationerror'];
         attachments: [];
@@ -598,6 +752,7 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
             sender_id: 'cust_001';
           {
             id: 'msg_001';
+<<<<<<< HEAD
             content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';
 
             sender_type: 'customer';
@@ -1326,6 +1481,12 @@ class AICustomerSupportService {
 
             sender_type: 'agent';
             sender_id: 'agent_001';
+<<<<<<< HEAD
+=======
+            content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';            sender_id: 'agent_001';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             is_internal: false;
             created_at: new Date ('2025 - 01 - 10T10:00:00Z'),attachments: [];}
           {id: 'msg_002';
@@ -1465,6 +1626,9 @@ class AICustomerSupportService {
       }
     ];
     // Initialize knowledge base;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     this.knowledgeBase = [;
         updatedAt: new Date('2025-01-10T10:15:00Z'),firstResponseTime: 15;
       }
@@ -1522,6 +1686,7 @@ class AICustomerSupportService {
       }
     ];// Initialize knowledge base;
       {id: 'kb_001';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     this.knowledge_base = [;
 
       {
@@ -1644,10 +1809,20 @@ export interface Attachment {;
     const ticket: SupportTicket = {
       id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...ticketData;
+<<<<<<< HEAD
+=======
+    this.knowledge_base = [;      ...ticketData;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       status: 'open';
       attachments: [];
       messages: [];
       createdAt: new Date()
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       updatedAt: new Date()
 
     };
@@ -1656,6 +1831,12 @@ export interface Attachment {;
     this && this.updateAnalytics();
 
     return ticket
+<<<<<<< HEAD
+=======
+      updatedAt: new Date()    return ticket
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   async assignTicket(ticketId: string, agentId: string): Promise<void> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
@@ -1664,6 +1845,10 @@ export interface Attachment {;
   async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     if (ticket) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
       ticket && ticket.assignedAgentId = agentId;
       ticket && ticket.status = 'in_progress';
@@ -1743,6 +1928,14 @@ export interface Attachment {;
       }
       this.updateAnalytics()
       ticket && ticket.status = status;
+<<<<<<< HEAD
+=======
+      ticket && ticket.status = 'in_progress';
+      ticket && ticket.updatedAt = new Date(),
+      this && this.updateAnalytics()      ticket && ticket.status = status;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       ticket && ticket.updatedAt = new Date();
       
       if (status === 'resolved') {
@@ -1753,6 +1946,10 @@ export interface Attachment {;
       }
       
       this && this.updateAnalytics()
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
   }
 
@@ -2281,19 +2478,56 @@ if ( {) {
 
 
 ;
+<<<<<<< HEAD
+=======
+  }
+
+  async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
+    const ticket = this && this.tickets.find(t => t && t.id === ticketId);    // Update first response time if this is the first agent response
+    if (message && message.senderType === 'agent' && !ticket && ticket.firstResponseTime) {
+      const firstResponseTime = (message && message.createdAt.getTime() - ticket && ticket.createdAt.getTime()) / (1000 * 60);
+      ticket && ticket.firstResponseTime = firstResponseTime
+    }      messages: [];
+      intent: '';
+      confidence: 0;
+      resolved: false;
+    if (message.sender === 'customer') {
+      const intent = this.detectIntent(message.content);
+      session.intent = intent.intent;
+      session.confidence = intent.confidence;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
     } else if (lowerMessage.includes('api') |lowerMessage.includes('integration')) {
       return { intent: 'technical_support', confidence: 0.8 }
+<<<<<<< HEAD
+<<<<<<< HEAD
     } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {
       escalated: false,
+=======
+    } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {      escalated: false,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {
+      escalated: false,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       satisfaction: 0;
     }
 ;
@@ -2335,6 +2569,9 @@ if ( {) {$2;
     }
     return message;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   private detectIntent(message: string): { intent: string, confidence: number } {      return { intent: 'feature_request', confidence: 0.75 }    } else {return { intent: 'general_inquiry', confidence: 0 && 0.6 }
     }
   }async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {const session = this && this.chatbotSessions.find(s => s && s.id === sessionId)if (session) {session && session.endTime = new Date()session && session.resolved = resolved;
@@ -2348,6 +2585,7 @@ if ( {) {$2;
       this.updateAnalytics()}
   }
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {const article: KnowledgeBaseArticle = {id: `kb_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   private detectIntent(message: string): { intent: string, confidence: number } {
       return { intent: 'feature_request', confidence: 0.75 }
     const lowerMessage = message && message.toLowerCase();
@@ -2361,16 +2599,22 @@ if ( {) {$2;
     } else if (lowerMessage && lowerMessage.includes('feature') || lowerMessage && lowerMessage.includes('request')) {
       return { intent: 'feature_request', confidence: 0 && 0.75 }
     } else {
+=======
+  private detectIntent(message: string): { intent: string, confidence: number } {      return { intent: 'feature_request', confidence: 0.75 }    } else {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return { intent: 'general_inquiry', confidence: 0 && 0.6 }
     }
   }
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
     const session = this && this.chatbotSessions.find(s => s && s.id === sessionId);
     if (session) {
@@ -2380,6 +2624,10 @@ if ( {) {$2;
       session && session.escalated = escalated;
       session && session.satisfaction = satisfaction,
       this && this.updateAnalytics()
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -2417,6 +2665,15 @@ if ( {) {$2;
     return article
 
 ;
+<<<<<<< HEAD
+=======
+  }
+  async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {
+    const article: KnowledgeBaseArticle = {
+      id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;      id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {;
     const session = this.chatbotSessions.find(s => s.id === sessionId),;
     if (session) {;
@@ -2425,8 +2682,17 @@ if ( {) {$2;
       session.escalated = escalated,;
       session.satisfaction = satisfaction,;
       this.updateAnalytics();
+<<<<<<< HEAD
+<<<<<<< HEAD
     }
   }
+=======
+    }  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    }
+  }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {;
     const article: KnowledgeBaseArticle = {;
@@ -2441,8 +2707,16 @@ if ( {) {$2;
     this.knowledgeBase.push(article),;
     return article;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {}
   }async getAIRecommendations(): Promise<AIRecommendation[]> {const recommendations: AIRecommendation[] = [];
@@ -2470,6 +2744,13 @@ if ( {) {$2;
       article && article.content.toLowerCase().includes(lowerQuery) ||
       article && article.tags.some(tag => tag && tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b && b.views - a && a.views)
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  }
+  async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {}
@@ -2588,6 +2869,12 @@ if ( {) {
 
 
         confidence: 90,
+<<<<<<< HEAD
+=======
+      recommendations && recommendations.push({        confidence: 90,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         action_items: [;
           'Reallocate agents to handle high priority tickets_implement automated prioritization system_review ticket classification criteria';
         ];
@@ -2596,6 +2883,10 @@ if ( {) {
     const available_agents = this.agents.filter (array => a.is_available && a.current_tickets < a.max_tickets)const unassigned_tickets  = this.tickets.filter (t => !t.assignedAgentId && t.status === 'open').length;// Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD
+      recommendations.push ({
+<<<<<<< HEAD
+=======
       recommendations.push ({confidence: 90;
         actionItems: [;
           'Reallocate agents to handle high priority ticketsImplement automated prioritization systemReview ticket classification criteria';
@@ -2695,6 +2986,7 @@ if ( {) {$2;
         title: 'Underutilized Knowledge Base Articles',description: 'Several articles have very low view counts';
         impact: 'low';      averageResolutionTime;
       recommendations.push ({
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         confidence: 90
         actionItems: [
           'Reallocate agents to handle high priority ticketsImplement automated prioritization systemReview ticket classification criteria'
@@ -2906,6 +3198,15 @@ if ( {) {
       open_tickets;
       resolved_tickets;
       averageResolutionTime;
+<<<<<<< HEAD
+=======
+        type: 'knowledge_base';
+        title: 'Underutilized Knowledge Base Articles',
+  description: 'Several articles have very low view counts';
+        impact: 'low';      averageResolutionTime;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       averageFirstResponseTime;
       customer_satisfaction;
       chatbotResolutionRate;
@@ -2959,21 +3260,41 @@ if ( {) {
       chatbotResolutionRate,;
       topCategories,;
       agentPerformance;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
+=======
+      top_categories;
+      agent_performance;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }
 
     return this && this.tickets.find(t => t && t.id === ticketId) || null
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       top_categories;
       agent_performance;
     }
   }
+<<<<<<< HEAD
+=======
+    }
+  }
+    return this && this.tickets.find(t => t && t.id === ticketId) || null
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
   }
   async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {if (status) {return this && this.tickets.filter(t => t && t.status === status)}
     return this && this.tickets;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   async getCustomer(customerId: string): Promise<Customer | null> {return this && this.customers.find(c => c && c.id === customerId) || null;
   }
@@ -2981,12 +3302,22 @@ if ( {) {
   async getCustomers(): Promise<Customer[]> {return this && this.customers;
   async getCustomer(customerId: string): Promise<Customer | null> {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return this && this.customers.find(c => c && c.id === customerId) || null
 
 
     return this && this.customers.find(c => c && c.id === customerId) || null
 
   }
+<<<<<<< HEAD
+=======
+    return this && this.customers.find(c => c && c.id === customerId) || null  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   async getCustomers(): Promise<Customer[]> {
     return this && this.customers
   }
@@ -3023,6 +3354,10 @@ if ( {) {$2;
 export const aiCustomerSupportService  = new AICustomerSupportService ()export const aiCustomerSupportService  = new AICustomerSupportService()private updateAnalytics():void {const totalTickets = this.tickets.length,const openTickets = this.tickets.filter(t => ['openin_progress', 'waiting_customer'].includes(t.status)).length,const resolvedTickets  = this.tickets.filter(t => t.status === 'resolved').length,const resolutionTimes = this.tickets;
       .filter(t => t.resolutionTime).map(t => t.resolutionTime!),const averageResolutionTime = resolutionTimes.length > 0 ;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 ;
@@ -3063,6 +3398,13 @@ if ( {) {
 }
 export const aiCustomerSupportService = new AICustomerSupportService ();
 ;
+<<<<<<< HEAD
+=======
+export const aiCustomerSupportService = new AICustomerSupportService();
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
   private updateAnalytics():void {;
     const totalTickets = this.tickets.length,;

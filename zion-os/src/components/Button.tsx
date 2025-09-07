@@ -27,6 +27,10 @@ const Button = forward_ref < HTMLButtonElement ButtonProps>(({children,variant =
         {content}
       </Link>)}return (return (  return (<button;
     </>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 'use client';
 import React, { forwardRef } from 'react';
 import Link from 'next/link';
@@ -43,6 +47,11 @@ interface ButtonProps {children: React.ReactNode;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 const Button = forward_ref < HTMLButtonElement ButtonProps>(({
@@ -59,6 +68,10 @@ const Button = forward_ref < HTMLButtonElement ButtonProps>(({
   type = 'button',
   full_width = false,
   rounded = 'lg';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }, ref) => {
   const base_classes = 'inline - flex items - center justify - center font - semibold transition - all duration - 300 transform hover: scale - 105 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - black focus:ring - purple - 500 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none',
   const variant_classes = {
@@ -95,12 +108,21 @@ if ( {) {
 }
     return (
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <Link href={href} className={classes}>;
         {content}
       </Link>);
   }
 ;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   return (;
   return (
@@ -114,6 +136,17 @@ if ( {) {
 Button.display_name = 'Button',
 export default Button,
     <Button;
+<<<<<<< HEAD
+=======
+  return (;
+  return (  return (;
+    <button;
+      ref={ref}
+      type={type}
+      className={classes}    <Button;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       {...props}
       icon={icon}
       on_click={on_click}

@@ -15,7 +15,16 @@ function fixFile(filePath) {
       },
       // Fix merge conflict markers
       {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
         pattern: /
+=======
+        pattern: /[\s\S]*?[\s\S]*?
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        pattern: /
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         replacement: ''
       },
       // Fix malformed function calls and syntax
@@ -78,3 +87,5 @@ console.log('Starting comprehensive syntax fixes...');
 const apiDir = '/workspace/pages/api';
 const fixedCount = processDirectory(apiDir);
 console.log(`Fixed ${fixedCount} files`);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

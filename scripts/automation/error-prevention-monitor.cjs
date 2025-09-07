@@ -643,4 +643,16 @@ if (require.main === module) {
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 monitor.run();
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+monitor.run();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+monitor.run();
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

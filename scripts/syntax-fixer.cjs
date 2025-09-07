@@ -10,4 +10,16 @@ const util = require("util")
       console.error(`Failed to write to log "file"`)
     await this.log(" Starting syntax error fixing...")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

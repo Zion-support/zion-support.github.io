@@ -1,12 +1,70 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {
       },
     ],
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
+<<<<<<< HEAD
+      },
+    ],
+  },
+import { TalentProfile } from '@/types/talent';
+
+import { TalentProfile } from "@/types/talent";
+// Sample talent profiles with realistic data for the talent directory
+export const TALENT_PROFILES: TalentProfile[] = [
+  {
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     id: 't - 006',
     user_id: 'user - 006',
@@ -15,8 +73,27 @@
     profile_picture_url:;
       'https://images.unsplash.com / photo - 1494790108377 - be9c29b29330?auto = format & fit = crop & w=200 & h=200',
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 
 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
     location: 'Washington, DC',
     skills: [;
@@ -147,16 +224,57 @@
     rating_count: 27,
     availability_type: 'project',
     is_verified: true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
     id: "t-001", user_id: "user-001",
     full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
 
 
 import { TalentProfile } from "@/types/talent",
 
 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+import { TalentProfile } from "@/types/talent",
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+import { TalentProfile } from "@/types/talent",
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -191,6 +309,30 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
   },
 ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
+
+
+
+=======
+;
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+=======
 ;
 
 
@@ -198,19 +340,66 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+;
+
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ;
 
 
 ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+
+;
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 
 ;
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+
+;
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: "t-001";
     user_id: "user-001";
     full_name: "Alexandra Chen";
     professional_title: "Senior AI Engineer & Machine Learning Expert";
     profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

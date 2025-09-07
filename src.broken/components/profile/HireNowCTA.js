@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
+:src/components/profile/HireNowCTA.jsx
+=======
 
 ;
 import React, { useState } from 'react';
 :src/components/profile/HireNowCTA.jsx;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React, {useState} from 'react';
 import { Button } from '../ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
@@ -68,6 +75,12 @@ export function HireNowCTA() {const [isFormOpen", setIsFormOpen] = useState(fals
             </div>;
           </form>)"}
       </CardContent>;
+<<<<<<< HEAD
+    </Card>)}
+;
+export default HireNowCTA;import React, { useState } from 'react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
     </Card>)}export default HireNowCTA;import React, { useState } from 'react';
 export function HireNowCTA() {const [isFormOpen, setIsFormOpen] = useState(false)const [formData, setFormData] = useState({projectDescription: '',budget: '',startDate: '',message: '';
         e.preventDefault():src/components/profile/HireNowCTA.jsx;
@@ -83,6 +96,7 @@ export function HireNowCTA() {const [isFormOpen, setIsFormOpen] = useState(false
       <CardHeader>;
         <CardTitle className="text-white flex items-center gap-2">;
           <MessageSquare className="h-5 w-5 text-zion-cyan"/>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [formData, setFormData] = useState({
@@ -90,7 +104,20 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
+<<<<<<< HEAD
+<<<<<<< HEAD
         e.preventDefault();
+=======
+:src/components/profile/HireNowCTA.jsx
+    }
+    );
+    const handleSubmit = (props: any) => {
+    });
+    const handleSubmit = (e) => {        e.preventDefault();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        e.preventDefault();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         if (onHire) {
             onHire(formData);
         }
@@ -99,12 +126,37 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '',
             budget: '',
             startDate: '',
+<<<<<<< HEAD
+<<<<<<< HEAD
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
         }));
     };
+=======
+:src/components/profile/HireNowCTA.jsx
+            message: ''}
+    );
+        setIsFormOpen(false)};
+            message: ''
+        });
+        setIsFormOpen(false)
+};    const handleChange = (e) => {
+        setFormData(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }))
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    const handleChange = (e) => {
+        setFormData(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }));
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>
         <CardTitle className="text-white flex items-center gap-2">
@@ -166,4 +218,11 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
       </CardContent>
     </Card>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

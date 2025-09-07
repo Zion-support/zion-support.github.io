@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 import { NextResponse  } from 'next/server';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import { NextResponse } from 'next/server',;
 import type { NextRequest } from 'next/server',;
 export function middleware(request: NextRequest) {;
@@ -11,8 +18,16 @@ export function middleware(request: NextRequest) {;
   }
   return NextResponse.next();
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 import { NextResponse } from 'next / server',
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+import { NextResponse } from 'next / server',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import type { NextRequest } from 'next / server',
 export /**
  * middleware - Function description
@@ -26,7 +41,14 @@ if ( {) {
     const role = request.cookies.get ('user_role')?.value || 'talent',
     const target = role === 'client' ? '/dashboard / client' : '/dashboard / talent';
     return NextResponse.redirect (new URL (target, request.url));
+<<<<<<< HEAD
+<<<<<<< HEAD
 export const config = {matcher: ['/dashboard/dashboard/']}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+export const config = {matcher: ['/dashboard/dashboard/']}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {const { pathname } = request.nextUrl;
@@ -62,6 +84,10 @@ if ( {) {$2;
   return NextResponse.next ()}
 export const config = {}export const config = {matcher: ['/dashboard / dashboard/']}export const config = {matcher: ['/dashboard/dashboard/']}export const config = {matcher: ['/dashboard/dashboard/']}export const config = {matcher: ['/dashboard/dashboard/']}matcher: ['/dashboard/dashboard/']}
   return NextResponse.next ();
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
   }
 }
@@ -85,10 +111,20 @@ if ( {) {
   return NextResponse.next ();
 }
 export const config = {
+<<<<<<< HEAD
+=======
+}export const config = {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   matcher: ['/dashboard / dashboard/']}
 
 ;
 export const config = {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   matcher: ['/dashboard/dashboard/']};
 ;
 export const config = {;
@@ -96,3 +132,9 @@ export const config = {;
 ;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};
+<<<<<<< HEAD
+=======
+  matcher: ['/dashboard/dashboard/']};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

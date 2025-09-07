@@ -40,7 +40,14 @@ interface ErrorBoundaryState  {has_error: boolean,error?: Error;
 }
 interface ErrorBoundaryProps  {children: ReactNode,fallback?: ReactNode;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 );
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Error boundary for better error handling;
 interface ErrorBoundaryState  {has_error: boolean,error?: Error;
 }
@@ -60,6 +67,10 @@ function Skeleton() {return (<div className={`animate - pulse ${class_name}`}>;
       {Array.from({ length: lines }).map((_, i) => (<div;
   componentDidCatch (error: Error, error_info: React.ErrorInfo) {
     console.error ("Error caught by boundary:", error, error_info);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   render () {
     // Check condition
@@ -87,6 +98,12 @@ if ( {) {
     <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
   );
 }
+<<<<<<< HEAD
+=======
+  }}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Skeleton loading component;
 export /**
  * Skeleton - Function description
@@ -94,6 +111,8 @@ export /**
 function Skeleton() {
   return (
     <div className={`animate - pulse ${class_name}`}>;
+<<<<<<< HEAD
+<<<<<<< HEAD
       {Array.from ({ length: lines }).map ((_, i) => (
     <div className={`animate-pulse ${className}`}>;
       {Array.from({ length: lines }).map((_, i) => (;
@@ -111,13 +130,47 @@ if ( {) {$2;
     </div>);
 }
       // Log performance metrics in development;
+=======
+      {Array.from ({ length: lines }).map ((_, i) => (    <div className={`animate-pulse ${className}`}>;
+=======
+      {Array.from ({ length: lines }).map ((_, i) => (
+    <div className={`animate-pulse ${className}`}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+      {Array.from({ length: lines }).map((_, i) => (;
+        <div;
+          key={i}
+          className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb - 0";
+          style={{ width: `${Math.random () * 40 + 60}%` }}
+        />))}
+    </div>)}      // Log performance metrics in development;
+      // Check condition;
+if ( {) {$2;
+}
+        // // // console.log (`${component_name} render time: ${duration.to_fixed (2)}ms`)}// Send to analytics in production;
+      if (process.env.NODE_ENV === "production" && duration > 100) {// Could send to analytics service here;console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`)console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`)console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`)console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`)}
+    </div>);
+<<<<<<< HEAD
+}      // Log performance metrics in development;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+      // Log performance metrics in development;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       // Check condition
 if ( {) {
   $2
 }
         // // // console.log (`${component_name} render time: ${duration.to_fixed (2)}ms`);
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
+=======
+        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       }
     }
   }

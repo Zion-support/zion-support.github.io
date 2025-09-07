@@ -46,6 +46,15 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
   }
   return (
     <div className={`flex items-center gap-3 ${className}`}>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+      <svg 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         />
       </svg>
       {text && <span className="text-sm">{text}</span>}
@@ -56,9 +65,19 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
   class_name?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
 interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';
   text?: string;
   className?: string;
+=======
+=======  className?: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  className?: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 export default /**
  * LoadingSpinner - Function description
@@ -70,6 +89,10 @@ function LoadingSpinner() {
     lg: 'w - 8 h - 8';
   },
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <div className={`flex items - center gap - 3 ${class_name}`}>;
       <svg;
         className={`animate - spin ${size_classes[size]} text - current`}
@@ -113,6 +136,11 @@ function LoadingSpinner() {
         viewBox=&quot;0 0 24 24&quot;
         fill=&quot;none&quot;
       >
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         <circle 
           className="opacity-25" 
           cx="12" 

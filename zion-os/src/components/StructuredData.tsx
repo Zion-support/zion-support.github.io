@@ -50,6 +50,10 @@ function StructuredData() {
         "https://twitter.com / ziontechgroup",
         "https://github.com / ziontechgroup",
         "https://linkedin.com / company / ziontechgroup";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 "use client";
 export function StructuredData() {const structuredData = {;
     "@context": "https://schema.org";
@@ -73,6 +77,12 @@ export function StructuredData() {const structuredData = {;
         "https://github.com/ziontechgroup";
         "https://linkedin.com/company/ziontechgroup";
       ];
+<<<<<<< HEAD
+=======
+=======      ];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     },
     "feature_list": [;
       "Marketplace & Jobs",
@@ -98,8 +108,17 @@ export function StructuredData() {const structuredData = {;
       "url": "https://ziontechgroup.com";
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
   return (
   return (;
+=======
+  return (  return (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  return (
+  return (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <script;
       type="application / ld + json";
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}

@@ -61,4 +61,16 @@ const { execSync } = require('child_process')
         "priority"
         "impact"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       console.error('\n� Resource Optimizer "failed")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      console.error('\n� Resource Optimizer "failed")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      console.error('\n� Resource Optimizer "failed")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

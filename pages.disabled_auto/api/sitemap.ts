@@ -1,6 +1,8 @@
 import React from 'react';
 interface SitemapProps  {// Add props here as needed;
 }  res.status(200).send(sitemap)}
+<<<<<<< HEAD
+=======
   res.status(200).send(sitemap)}
 import * as React from 'react';
 interface SitemapProps  {// Add props here as needed;
@@ -43,6 +45,7 @@ interface SitemapProps {
 }
 
   res.status(200).send(sitemap)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   res.status(200).send(sitemap)}
 
 interface SitemapProps {
@@ -59,6 +62,10 @@ export default function Sitemap({}: SitemapProps) {
     </div>
   );
 }
+<<<<<<< HEAD
+
+}
+=======
 }
 }
 
@@ -80,3 +87,4 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 }
 }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

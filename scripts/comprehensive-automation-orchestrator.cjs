@@ -153,4 +153,16 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n"`)
     const reportPath = path.join(this.reportsDir, "comprehensive-automation-report.json")
     this.log(" Starting Comprehensive Automation Orchestrator")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       this.log(")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+      this.log(")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      this.log(")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

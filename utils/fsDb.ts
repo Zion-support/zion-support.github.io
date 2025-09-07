@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { promises as fs } from "fs";
+import path from "path";
+
+const DATA_DIR = path.join(process.cwd(), "data");
+
+
+  read: (path: string) => null
+  write: (path: string, data: any) => null
+  exists: (path: string) => false
+  delete: (path: string) => null
+
+=======
+import path from "path";
+
+const DATA_DIR = path.join(process.cwd(), "data");
+=======  read: (path: string) => null
+  write: (path: string, data: any) => null
+  exists: (path: string) => false
+  delete: (path: string) => null
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
 ;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -19,10 +47,15 @@ const DATA_DIR = path.join(process.cwd(), "data");
   exists: (path: string) => false
   delete: (path: string) => null
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   delete: (path: string) => null;
 };
 
@@ -38,11 +71,41 @@ const DATA_DIR = path.join(process.cwd(), "data");
 
 
 
+<<<<<<< HEAD
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
   delete: (path: string) => null;
 };
+import { promises as fs } from 'fs';
+=======
+  delete: (path: string) => null
+};
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null;
+};
+<<<<<<< HEAD
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import path from 'path';
+
+const DATA_DIR = path.join(process.cwd(), 'data');
+
+<<<<<<< HEAD
+
+
+
+=======
+  try {
+    const fullPath = path && path.join(DATA_DIR, filePath);
+    const data = fs && fs.readFileSync(fullPath, 'utf8');
+    return JSON && JSON.parse(data);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 import { promises as fs } from 'fs';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
@@ -50,6 +113,7 @@ const DATA_DIR = path.join(process.cwd(), 'data');
 
 
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   try {
     const fullPath = path.join(DATA_DIR, filePath);
@@ -60,8 +124,16 @@ const DATA_DIR = path.join(process.cwd(), 'data');
   }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export function writeJson<T>(filePath: string, data: T): void {
   try {
     const fullPath = path.join(DATA_DIR, filePath);
@@ -100,7 +172,14 @@ export async function writeJsonAsync<T>(
   }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // File system database utilities;
 export const fs_db = {
   // Add file system database functionality here;
@@ -136,6 +215,15 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,7 +1,22 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
 const fs = require("child_process")
 const path = require("path")
+<<<<<<< HEAD
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+const fs = require("child_process")
+const path = require("path")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     console.log("� Generating sitemap...")
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9"
@@ -30,6 +45,22 @@ Allow: /contact"
     image: "https://bolt.new.zion.app/og-image.jpg"
 "
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

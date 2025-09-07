@@ -67,6 +67,14 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     // Check automation scripts}
     _console.log('📋 Checking automation scripts...')',const automationScripts = ['scripts/comprehensive-automation-suite.cjs',','scripts/automation-orchestrator.cjs',','scripts/start-all-automations.sh',','automation/security-scanner.cjs',','automation/health-check.cjs'';];,for (const script of, automationScripts) {}
       const exists = fs.existsSync(script),const isExecutable = exists ? fs.statSync(script).mode & parseInt('111', 8) : false;',statusReport.automationScripts.push({"name": script,","exists": exists,","executable": isExecutable";

@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+// Export a safe environment accessor
+export const safeEnv = {
+  NODE_ENV:
+    (typeof (globalThis as any).process !== 'undefined' &&
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 // Export a safe environment accessor;
 export const safeEnv = {NODE_ENV:;
@@ -109,6 +118,7 @@ export function isDevelopment(): boolean {return getEnv('NODE_ENV') === 'develop
 export function isProduction(): boolean {return getEnv('NODE_ENV') === 'production';
 }export default safeEnv;console.log ('✅ Environment polyfill loaded successfully')export default safe_env;
 export default safe_env;
+<<<<<<< HEAD
 export default safe_env;/**;
  * Environment Polyfill for Browser;
  *;
@@ -157,3 +167,8 @@ export const isDevelopment = (): boolean => {
 export const isProduction = (): boolean => {
   return getEnvVar('NODE_ENV', 'development') === 'production';
 };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export default safe_env;
+export default safe_env;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

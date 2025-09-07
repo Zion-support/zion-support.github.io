@@ -239,5 +239,18 @@ this.log( Unreadable file "recovered")
         "recoveryRate"
       "recoveryResults"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
 
       "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

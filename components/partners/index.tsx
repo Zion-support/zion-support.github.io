@@ -1,3 +1,129 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+    name: "";
+    entityType: "";
+    pocName: "";
+    pocEmail: "";
+    useCaseType: "Education Partnership"});
+  const [result, setResult] = useState<any>(null),
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+<<<<<<< HEAD
+export default function Partners() {
+  const [form, setForm] = useState({
+
+export default function Partners() {
+  const [form, setForm] = useState({
+    name: '',
+    entityType: '',
+    pocName: '',
+    pocEmail: '',
+    useCaseType: 'Education Partnership',;
+  });  const [result, setResult] = useState<any>(null);    name: "",
+    entityType: "",
+    pocName: "",
+    pocEmail: "",
+    useCaseType: "Education Partnership"}),
+  const [loading, setLoading] = useState(false);
+
+    name: ''
+    entityType: ''
+    pocName: ''
+    pocEmail: ''
+    useCaseType: 'Education Partnership'
+  });  const [result, setResult] = useState<any>(null);    name: ""
+    entityType: ""
+    pocName: ""
+    pocEmail: ""
+    useCaseType: "Education Partnership"})
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  const [loading, setLoading] = useState(false);
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    setResult(null);
+<<<<<<< HEAD
+    const res = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+=======
+;
+export default function Partners() {const [form, setForm] = useState({export default function Partners() {const [form, setForm] = useState({name: '',entityType: '',pocName: '',pocEmail: '',useCaseType: 'Education Partnership',})const [result, setResult] = useState<any>(null)name: "",entityType: "",pocName: "",pocEmail: "",useCaseType: "Education Partnership"}),const [loading, setLoading]  = useState(false)name: '';
+    entityType: '';
+    pocName: '';
+    pocEmail: '';
+    useCaseType: 'Education Partnership';
+  })const [result, setResult] = useState<any>(null)name: "";
+    entityType: "";
+    pocName: "";
+    pocEmail: "";
+    useCaseType: "Education Partnership"})name: "";
+    entityType: "";
+    pocName: "";
+    pocEmail: "";
+    useCaseType: "Education Partnership"})const [result, setResult] = useState<any>(null),const [loading, setLoading] = useState(false)async function submit() {e.preventDefault()setLoading(true)setResult(null)class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { useState } from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+export default function Partners() {;
+  const [form, setForm] = useState({;
+    name: '',;
+    entityType: '',;
+    pocName: '',;
+    pocEmail: '',;
+    useCaseType: 'Education Partnership',;
+  });  const [result, setResult] = useState<any>(null);    name: "",;
+    entityType: "",;
+    pocName: "",;
+    pocEmail: "",;
+    useCaseType: "Education Partnership"}),;
+  const [loading, setLoading] = useState(false);
+  async function submit(): any (e: React && React.FormEvent) {;
+    e && e.preventDefault();
+    setLoading(true);
+    setResult(null);
+    const res = await fetch('/api/partners/register', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },      body: JSON && JSON.stringify({;
+        name: form && form.name,;
+        entityType: form && form.entityType,;
+        useCaseType: form && form.useCaseType,;
+        pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },;
+      }),;
+    });    const res = await fetch("/api/partners/register", {;
+      method: "POST",;
+      headers: { "Content-Type": "application/json" },;
+      body: JSON && JSON.stringify({;
+        name: form && form.name,;
+        entityType: form && form.entityType,;
+        useCaseType: form && form.useCaseType,;
+        pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },;
+      }),;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    });
+    const data = await res && res.json();
+    setLoading(false);
+    setResult(data);
+  }
+  return (
+    <div className='min-h-screen bg-gray-50 text-gray-900'>;
+=======
 
 ;
 export default function Partners() {const [form, setForm] = useState({export default function Partners() {const [form, setForm] = useState({name: '',entityType: '',pocName: '',pocEmail: '',useCaseType: 'Education Partnership',})const [result, setResult] = useState<any>(null)name: "",entityType: "",pocName: "",pocEmail: "",useCaseType: "Education Partnership"}),const [loading, setLoading]  = useState(false)name: '';
@@ -24,6 +150,11 @@ import { useState  } from 'react';
 import Head from 'next/head';
 export default function Partners() {const [form, setForm] = useState({name: '',entityType: '',pocName: '',pocEmail: '',useCaseType: 'Education Partnership',})const [result, setResult] = useState<any>(null)name: "",entityType: "",pocName: "",pocEmail: "",useCaseType: "Education Partnership"}),const [loading, setLoading] = useState(false)async function submit(): any (e: React && React.FormEvent) {e && e.preventDefault()setLoading(true)setResult(null)const res = await fetch('/api/partners/register', {method: 'POST',headers: { 'Content-Type': 'application/json' },      body: JSON && JSON.stringify({name: form && form.name,entityType: form && form.entityType,useCaseType: form && form.useCaseType,pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },}),})const res = await fetch("/api/partners/register", {method: "POST",headers: { "Content-Type": "application/json" },body: JSON && JSON.stringify({name: form && form.name,entityType: form && form.entityType,useCaseType: form && form.useCaseType,pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },}),const res  = null;})const data = await res && res.json()setLoading(false)setResult(data)}
   return (<div className='min-h-screen bg-gray-50 text-gray-900'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+export default function Partners() {const [form, setForm] = useState({name: '',entityType: '',pocName: '',pocEmail: '',useCaseType: 'Education Partnership',})const [result, setResult] = useState<any>(null)name: "",entityType: "",pocName: "",pocEmail: "",useCaseType: "Education Partnership"}),const [loading, setLoading] = useState(false)async function submit(): any (e: React && React.FormEvent) {e && e.preventDefault()setLoading(true)setResult(null)const res = await fetch('/api/partners/register', {method: 'POST',headers: { 'Content-Type': 'application/json' },      body: JSON && JSON.stringify({name: form && form.name,entityType: form && form.entityType,useCaseType: form && form.useCaseType,pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },}),})const res = await fetch("/api/partners/register", {method: "POST",headers: { "Content-Type": "application/json" },body: JSON && JSON.stringify({name: form && form.name,entityType: form && form.entityType,useCaseType: form && form.useCaseType,pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },}),const res  = null;})const data = await res && res.json()setLoading(false)setResult(data)}
+  return (<div className='min-h-screen bg-gray-50 text-gray-900'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <Head>;
         <title>Zion Partners</title>;
       </Head>;
@@ -69,11 +200,21 @@ export default function Partners() {const [form, setForm] = useState({name: '',e
               />;
             </div>;
             <label className='block text-sm mb-2'>Use Case</label>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <select
+              className='w-full border rounded px-3 py-2 mb-6'
+<<<<<<< HEAD
+              value={form.useCaseType}
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <select;
               className='w-full border rounded px-3 py-2 mb-6';
               value={form && form.useCaseType}
               onChange={e => setForm({ ...form, useCaseType: e && e.target.value })}
             >              <option>Education Partnership</option>    const data = await res && res.json()setLoading(false)method: "POST",headers: { "Content - Type": "application / json" },body: JSON.stringify ({name: form.name,entity_type: form.entity_type,useCaseType: form.useCaseType,value={form.useCaseType}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               onChange={e => setForm({ ...form, useCaseType: e.target.value })}
             >;
     setResult(data)}
@@ -108,6 +249,83 @@ export default function Partners() {const [form, setForm] = useState({name: '',e
               className='bg-black text-white px-4 py-2 rounded disabled:opacity-50';
             >;
               {loading ? 'Submitting...' : 'Register'}
+<<<<<<< HEAD
+            </button>
+          </form>
+          <div className='bg-white p-6 rounded-lg shadow'>
+            <h2 className='text-xl font-medium mb-4'>Available Endpoints</h2>
+            <ul className='list-disc ml-6 space-y-1 text-sm'>
+              <li>POST /talents</li>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              value={form && form.useCaseType}
+              onChange={e => setForm({ ...form, useCaseType: e && e.target.value })}
+            >              <option>Education Partnership</option>    const data = await res && res.json();
+    setLoading(false);
+      method: "POST",
+      headers: { "Content - Type": "application / json" },
+      body: JSON.stringify ({
+        name: form.name,
+        entity_type: form.entity_type,
+        useCaseType: form.useCaseType,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              <li>GET /jobs</li>
+              <li>GET /certifications</li>
+              <li>POST /verify-student</li>
+              <li>POST /redeem-grant</li>
+            </ul>
+<<<<<<< HEAD
+<div className='mt-6'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+<div className='mt-6'>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              <a
+                className='text-blue-600 underline mr-4'
+                href='/api/partners/sdk?type=rest'>;
+                Download REST SDK;
+              </a>;
+              <a
+                className='text-blue-600 underline'
+<<<<<<< HEAD
+                href='/api/partners/sdk?type=graphql'
+              >
+                Download GraphQL SDK
+              </a>
+            </div>
+            <div className='mt-6 text-sm text-gray-600'>
+              <p>Badges:</p>
+              <div className='flex gap-2 mt-2'>
+                <span className='inline-flex items-center bg-green-100 text-green-800 px-2 py-1 rounded'>
+                  Verified Partner
+                </span>
+                <span className='inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded'>
+                  Government API Active
+                </span>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+            <div className="mt-6 text-sm text-gray-600">
+              <p>Badges:</p>
+              <div className="flex gap-2 mt-2">
+                <span className="inline-flex items-center bg-green-100 text-green-800 px-2 py-1 rounded">Verified Partner</span>
+                <span className="inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded">Government API Active</span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              </div>
+            </div>
+          </div>
+        </div>
+        {result && (
+<<<<<<< HEAD
+<div className='mt-8 bg-white p-6 rounded-lg shadow'>
+            <h3 className='text-lg font-medium mb-2'>
+              Registration Successful
+            </h3>
+            <p className='text-sm'>Your API Key:</p>
+            <pre className='bg-gray-100 p-3 rounded text-xs overflow-auto'>
+=======
             </button>;
           </form>;
           <div className='bg-white p-6 rounded-lg shadow'>;
@@ -151,6 +369,12 @@ export default function Partners() {const [form, setForm] = useState({name: '',e
           </div>;
         </div>;
         {result && (<a;
+<<<<<<< HEAD
+=======
+            <a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               href={result && result.dashboardUrl}
               className='inline-block mt-4 bg-black text-white px-4 py-2 rounded'>;
               Go to Dashboard;
@@ -265,6 +489,10 @@ export default function Partners() {const [form, setForm] = useState({name: '',e
             <pre className="bg - gray - 100 p - 3 rounded text-xs overflow-auto">{result.api_key}</pre>;
             <a href={result.dashboard_url} className="inline - block mt - 4 bg - black text - white px-4 py-2 rounded">Go to Dashboard</a>)}
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)}
   )}<div className='mt-8 bg-white p-6 rounded-lg shadow'>;
             <h3 className='text-lg font-medium mb-2'>;
@@ -272,6 +500,7 @@ export default function Partners() {const [form, setForm] = useState({name: '',e
             </h3>;
             <p className='text-sm'>Your API Key:</p>;
             <pre className='bg-gray-100 p-3 rounded text-xs overflow-auto'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               {result.apiKey}
             </pre>;
             <a;
@@ -282,6 +511,26 @@ export default function Partners() {const [form, setForm] = useState({name: '',e
             </a>;
           </div>;
         )}
+<<<<<<< HEAD
+      </div>
+    </div>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
       </div>;
     </div>;
+<<<<<<< HEAD
   )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </div>);
+}
+  );
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

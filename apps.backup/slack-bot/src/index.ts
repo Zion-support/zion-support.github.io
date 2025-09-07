@@ -237,6 +237,12 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   await app.start(port),
   // eslint-disable-next-line no-console
 
+<<<<<<< HEAD
+import { App } from '@slack/bolt',;
+import dotenv from 'dotenv',;
+import fetch from 'node-fetch',;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 dotenv.config(),;
 const apiBase = process.env.API_ORIGIN || 'http: //localhost:4000',;
 const app = new App({;
@@ -303,3 +309,7 @@ app.command('/zion', async ({ command, ack, respond }) => {;
 })
 (async () => {
 import { App } from '@slack / bolt';
+<<<<<<< HEAD
+import dotenv from 'dotenv';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

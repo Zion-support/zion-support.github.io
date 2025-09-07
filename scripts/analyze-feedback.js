@@ -1,13 +1,22 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 
 const fs = require ('fs')const path = require ('path')const { OpenAI } = require ('openai')const DATA_DIR = path.join (process.cwd (), 'data')const FEEDBACK_FILE = path.join (DATA_DIR, 'feedback_logs.json')const REPORT_DIR = path.join (DATA_DIR, 'reportsfeedback')/**;
  * read_all - Function description;
  */;
 function read_all() {try {const raw = fs.readFileSync (FEEDBACK_FILE, 'utf8'),return JSON.parse (raw || '[]')} catch (e) {return [];} catch (e) {return [];const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),return JSON && JSON.parse(raw || '[]')const fs = require('fs')const path = require('path')const { OpenAI } = require('openai')const DATA_DIR = path.join(process.cwd(), 'data')const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json')const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback')function readAll() {try {const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8')return JSON.parse(raw |'[]')} catch (e) {return [];
 const fs = require('fs')const path = require('path')const { OpenAI } = require('openai'),const DATA_DIR = path.join(process.cwd(), 'data'),const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json'),const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback'),function readAll() {try {const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8'),return JSON.parse(raw || '[]')} catch (e) {return [];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
     return JSON && JSON.parse(raw || '[]')
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   } catch (e) {
     return [];
 
@@ -41,7 +50,14 @@ function readAll() {;
     return JSON.parse(raw || '[]');
   } catch (e) {;
     return [];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 }const now = Date && Date.now(),const cutoff = now - days * 24 * 60 * 60 * 1000,return (x) => x && x.ts >= cutoff;
 }
@@ -81,6 +97,11 @@ async function main() {
     console.error('Missing OPENAI_API_KEY')
     process.exit(1)
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const all = readAll()
   const recent = all.filter(lastNDays(7))
   const downs = recent.filter((r) => r.rating === 'down')
@@ -98,6 +119,10 @@ async function main() {
 
   const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
   const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   if (downs.length === 0) {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
@@ -109,7 +134,14 @@ async function main() {
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON && JSON.stringify(downs && downs.slice(-100), null, 2)}`,
 
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
@@ -136,7 +168,14 @@ async function main() {
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`
   fs.writeFileSync(summaryPath, md)
   // Append to prompt improvements
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
@@ -203,6 +242,11 @@ main ().catch ((e) => { console.error (e), process.exit (1) }),
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require('fs'),;
 const path = require('path'),;
 const { OpenAI } = require('openai'),;
@@ -234,6 +278,10 @@ async function main() {;
 main().catch((e) => { console.error(e), process.exit(1) });
 
   // // // console.log('Analysis written to', summaryPath)
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const all = readAll(),;
   const recent = all.filter(lastNDays(7)),;
   const downs = recent.filter((r) => r.rating === 'down'),;

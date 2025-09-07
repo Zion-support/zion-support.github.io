@@ -1,0 +1,210 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import React, { useState } from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {ServiceDescriptionForm} from "@/components/services/ServiceDescriptionForm";
+import {GeneratedDescriptionDisplay} from "@/components/services/GeneratedDescriptionDisplay";
+import {SEO} from "@/components/SEO";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+<<<<<<< HEAD
+export default function ServiceDescriptionGenerator() {;
+
+  const { isAuthenticated, isLoading } = useAuth();
+
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+
+
+
+
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",
+import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+export default function ServiceDescriptionGenerator() {
+  const { isAuthenticated, isLoading } = useAuth();
+
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+export default function ServiceDescriptionGenerator() {
+  const { isAuthenticated, isLoading } = useAuth(),
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
+  
+  // Show loading while checking authentication
+  if (isLoading) {
+=======
+export default function ServiceDescriptionGenerator() {;  if (isLoading) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">
+        <div className="animate-pulse text-zion-purple text-lg">
+          Loading...
+        </div>
+      </div>
+    )
+  }
+  // Redirect to login if not authenticated
+  if (!isAuthenticated) {
+    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />
+  }
+  const handleDescriptionSave = (editedDescription: string) => {
+    setGeneratedDescription(editedDescription)
+    // Here you could also save to database if needed
+<<<<<<< HEAD
+
+
+  },
+
+
+
+  return (
+    <div className="min-h-screen flex flex-col bg-zion-blue">
+      <SEO
+        title="Service Description Generator"
+        description="Generate professional service descriptions using AI"
+        keywords="service description, AI content, professional description generator"
+      />
+      <Header />
+      <main className="flex-1 p-6 md:p-10">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl font-bold text-white mb-2">Service Description Generator</h1>
+          <p className="text-zion-slate mb-8">
+            Create professional service descriptions with the help of AI. Just provide basic details about your service.
+          </p>
+          <div className="space-y-8">
+            <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
+            {generatedDescription && (
+
+import React, { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",;
+import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",;
+import { SEO } from "@/components/SEO",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+export default function ServiceDescriptionGenerator() {;
+  const { isAuthenticated, isLoading } = useAuth(),;
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),;
+
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  // Show loading while checking authentication;
+  if (isLoading) {;
+    return (
+  // Show loading while checking authentication;
+  if (isLoading) {;
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
+        <div className="animate-pulse text-zion-purple text-lg">;
+          Loading...;
+        </div>;
+      </div>;
+    );
+<<<<<<< HEAD
+  }
+
+  // Redirect to login if not authenticated;
+=======
+  }  // Redirect to login if not authenticated;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  if (!isAuthenticated) {;
+    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
+  }
+
+  const handleDescriptionSave = (editedDescription: string) => {;
+    setGeneratedDescription(editedDescription),;
+<<<<<<< HEAD
+    // Here you could also save to database if needed;
+  };
+=======
+    // Here you could also save to database if needed
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+  return (
+    <div className="min-h-screen flex flex-col bg-zion-blue">;
+      <SEO
+        title="Service Description Generator" 
+        description="Generate professional service descriptions using AI"
+<<<<<<< HEAD
+        keywords="service description, AI content, professional description generator"
+      />;
+=======
+        keywords="service description, AI content, professional description generator"      />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      <Header />;
+      <main className="flex-1 p-6 md:p-10">;
+        <div className="max-w-4xl mx-auto">;
+          <h1 className="text-3xl font-bold text-white mb-2">Service Description Generator</h1>;
+          <p className="text-zion-slate mb-8">;
+            Create professional service descriptions with the help of AI. Just provide basic details about your service.;
+          </p>;
+
+          <div className="space-y-8">;
+            <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
+
+            {generatedDescription && (;
+<<<<<<< HEAD
+
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+              <GeneratedDescriptionDisplay
+              <GeneratedDescriptionDisplay
+
+              <GeneratedDescriptionDisplay 
+
+              <GeneratedDescriptionDisplay
+          ;
+          <div className="space-y-8">;
+            <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
+            ;
+            {generatedDescription && (;
+              <GeneratedDescriptionDisplay ;
+                description={generatedDescription}
+                onSave={handleDescriptionSave}
+              />;
+            )}
+
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+
+    </div>);
+}
+
+=======
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+              <GeneratedDescriptionDisplay
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

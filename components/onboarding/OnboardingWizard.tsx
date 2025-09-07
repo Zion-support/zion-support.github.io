@@ -3,6 +3,60 @@ export default function OnboardingWizard() {export default function OnboardingWi
   }
 }
 import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const { user, completeOnboarding, setUser } = useUser();
+  const { addToast } = useToast();
+  const [step, setStep] = useState(0);
+  const isClient = user?.role === 'client';
+
+<<<<<<< HEAD
+  const isClient = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  const steps = useMemo(() => {
+    if (isClient) {
+      return [
+  const steps = useMemo(() => {
+    if (isClient) {
+      return [
+        {
+          title: 'Ready to find top IT talent?'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          content: (
+            <div className='space-y-4'>
+              <p>Post a role or import your job brief to get started.</p>
+              <Link href='/jobs/post'>
+                <a className='inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-white/5'>
+                  Post a job
+                </a>
+              </Link>
+            </div>
+          )
+        }
+        {
+          title: 'View suggested matches'
+          content: (
+            <p>
+              We will surface the best matches instantly based on your job
+              brief.
+            </p>
+          )
+        }
+        {
+
+  const steps = useMemo(() => {
+    if (isClient) {
+      return [
+
+          title: 'Invite or message talent',;
+          content: <p>Send invites or start a conversation to move fast.</p>,;
+        },;
+
+      ];
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const { user, completeOnboarding, setUser } = useUser()const { addToast } = useToast()const [step, setStep] = useState(0)const isClient  = user?.role === 'client';const steps = useMemo(() => {if (isClient) {return [;
   const steps = useMemo(() => {if (isClient) {return [;
         {title: 'Ready to find top IT talent?';
@@ -22,6 +76,10 @@ import React, { useMemo, useState } from 'react';
           )}
         {const steps = useMemo(() => {if (isClient) {return [;
           title: 'Invite or message talent',content: <p>Send invites or start a conversation to move fast.</p>,},];
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     return [;
       {title: 'Complete your profile';
@@ -77,8 +135,29 @@ export default function OnboardingWizard() {const { user, completeOnboarding, se
           >;
             Next;
           </button>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        ) : (;
+          <button
+            onClick={() => {;
+              completeOnboarding();
+              });
+            }}
+<<<<<<< HEAD
+            className='px-3 py-2 rounded-md border'
+          >
+            Finish
+          </button>
+=======
         ) : (<button;
             onClick={() => {completeOnboarding()})}}className='px-3 py-2 rounded-md border';
+=======
+            className='px-3 py-2 rounded-md border';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        ) : (<button;
+            onClick={() => {completeOnboarding()})}}className='px-3 py-2 rounded-md border';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           >;
             Finish;
           </button>        )}
@@ -238,10 +317,15 @@ if (return null) {$2;
         <button disabled={step === 0} on_click={() => set_step (string => Math.max (0, s - 1))} className="px - 3 py - 2 rounded-md border disabled:opacity-40">Back</button>;
         {step < steps.length - 1 ? (<button on_click={() => set_step (string => Math.min (steps.length - 1, s + 1))} className="px - 3 py-2 rounded-md border">Next</button>) : (<button on_click={() => { complete_onboarding (), add_toast ({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px - 3 py-2 rounded-md border">Finish</button>)}
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)className='px-3 py-2 rounded-md border';
           >;
             Finish;
           </button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         )}
       </div>;
     </div>;
@@ -268,6 +352,21 @@ if (return null) {$2;
         {step < steps.length - 1 ? (<button onClick={() => setStep(s => Math.min(steps.length - 1, s + 1))} className="px-3 py-2 rounded-md border">Next</button>;
         ) : (<button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px-3 py-2 rounded-md border">Finish</button>;
         )}
+<<<<<<< HEAD
+      </div>
+    </div>
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    </div>);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+}
+=======
       </div>;
     </div>;
+<<<<<<< HEAD
 )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

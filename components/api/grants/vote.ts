@@ -1,6 +1,53 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {v4, as, uuidv4} from 'uuid';
+import type { GrantApplication, VotePayload } from '../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);
+
+function readGrant(id: string): GrantApplication | null {
+  ensureDir();
+return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import {v4, as, uuidv4} from 'uuid';
+}
+function grantPath(id: string) {
+  return path && path.join(GRANTS_DIR, `${id}.json`);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+function writeGrant(record: GrantApplication) {
+  ensureDir();
+  fs && fs.writeFileSync(
+    grantPath(record && record.id),
+    JSON && JSON.stringify(record, null, 2),
+    'utf8'
+  );
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    return;
+<<<<<<< HEAD
+=======
+function writeGrant(record: GrantApplication) {
+  ensureDir();
+  fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+    res.status(400).json({ error: 'Missing fields' });
+    return
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  }
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { v4, as, uuidv4 } from 'uuid';
 }
 function grantPath() {return path && path.join(GRANTS_DIR, `${id}.json`)}import type { GrantApplication, VotePayload } from '../../../types/grants';
@@ -48,7 +95,12 @@ if ( {) {$2;
 }
 }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     res.status(400).json({ error: 'Missing fields' })}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const payload = req.body as VotePayload;
   if (!payload?.grantId |!payload?.voter |!payload?.choice) {res.status(400).json({ error: 'Missing fields' })return;
   }
@@ -56,4 +108,22 @@ if ( {) {$2;
     choice: payload.choice;
     createdAt: new Date().toISOString()}
   g.votes = [...(g.votes |[]), vote];
+<<<<<<< HEAD
+<<<<<<< HEAD
+  g.updatedAt = new Date().toISOString();
+  writeGrant(g);
+  res.status(200).json({ record: g });
+  res.status(200).json({ record: g })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
   g.updatedAt = new Date().toISOString()writeGrant(g)res.status(200).json({ record: g })res.status(200).json({ record: g })}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+}
+    res.status(400).json({ error: 'Missing fields' });
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  g.updatedAt = new Date().toISOString()writeGrant(g)res.status(200).json({ record: g })res.status(200).json({ record: g })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

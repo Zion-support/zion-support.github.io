@@ -21,11 +21,40 @@
           </li>;
         ))}
         )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+      </ul>
+    </div>
+  );
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
       </ul>;
+=======
+export async function getStaticProps() {;
+  try{;
+    const p = path && path.join(process && process.cwd(),'datagovernanceproposals && datagovernanceproposals.json');
+    const raw = fs && fs.readFileSync(p,'utf8');
+    return { props: { data: JSON && JSON.parse(raw) } }
+  }catch{;
+  try{
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+      </ul>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>;
   )export async function getStaticProps() {try{const p = path && path.join(process && process.cwd(),'datagovernanceproposals && datagovernanceproposals.json')const raw = fs && fs.readFileSync(p,'utf8')return { props: { data: JSON && JSON.parse(raw) } }
   }catch{try{</div>;
   )}}
     return { props: { data: { updated_at: null, proposals: [] } } }
   }
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

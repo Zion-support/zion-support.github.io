@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { Users, Rocket, Brain, Globe, Award, Zap;
+  Heart, Star, ArrowRight, CheckCircle, Briefcase
+ } from 'lucide-react';
+export default function Careers() {
+  const [selectedDepartment, setSelectedDepartment] = useState('all');
+  const departments = null;
+export default CareersPage;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ;
 }export default CareersPage;import React, { useState } from 'react';
@@ -251,6 +268,10 @@ export default function Careers() {const [selectedDepartment, setSelectedDepartm
               </a>;
             </div>;
           </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </motion.div>;
       </div>;
     </Layout>;
@@ -263,4 +284,11 @@ import { Users, Rocket, Brain, Globe, Award, Zap;
   Heart, Star, ArrowRight, CheckCircle, Briefcase;
   } from 'lucide-react';
 export default function Careers() {const [selectedDepartment, setSelectedDepartment] = useState('all')const departments = null;
+<<<<<<< HEAD
 export default CareersPage;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+export default CareersPage;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

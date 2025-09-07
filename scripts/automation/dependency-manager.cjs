@@ -502,4 +502,16 @@ if (require.main === module) {}
   main()};
 ;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = DependencyManager;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = DependencyManager;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = DependencyManager;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

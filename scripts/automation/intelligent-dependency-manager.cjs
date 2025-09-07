@@ -184,4 +184,16 @@ if ( {})
     const manager = new IntelligentDependencyManager}(;);
     manager.run().catch(console.error)};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = IntelligentDependencyManager;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = IntelligentDependencyManager;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = IntelligentDependencyManager;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

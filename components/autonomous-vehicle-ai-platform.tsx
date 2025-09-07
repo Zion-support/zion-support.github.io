@@ -1,3 +1,61 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react',
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Car, Star  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function AutonomousVehicleAIPage() {
+  const service = null;
+import {
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Car
+  Star;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Car,;
+  Star,;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+
+export default function AutonomousVehicleAIPage() {
+export default function AutonomousVehicleAIPage() {
+<<<<<<< HEAD
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/autonomous-vehicle-ai-platform')
+  );
+  if (!service) return null;
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>{service.name} - Zion Tech Group</title>
+<meta name='description' content={service.description} />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/autonomous-vehicle-ai-platform'
+        />
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto'>
+          <div className='text-center mb-10'>
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-rose-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
+              <Car className='w-10 h-10' />
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Phone,Mail,MapPin,Check,ArrowRight,Car,Star,import React from 'react',import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Car, Star   } from 'lucide-react';
@@ -28,6 +86,7 @@ export default function AutonomousVehicleAIPage() {const service = enhancedRealM
           <div className='text-center mb-10'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-rose-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>;
               <Car className='w-10 h-10' />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               {service.name}
             </h1>;
             <p className='mt-4 text-xl text-slate-300 max-w-3xl mx-auto'>;
@@ -68,6 +127,58 @@ export default function AutonomousVehicleAIPage() {const service = enhancedRealM
                 <div className='flex items-center text-yellow-400'>;
                   <Star className='w-4 h-4 mr-1' />;
                   {service.rating.toFixed(1)}
+<<<<<<< HEAD
+                </div>
+              </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function AutonomousVehicleAIPage() {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              <Button
+                href='/contact'
+                variant='quantum'
+                size='lg'
+<<<<<<< HEAD
+                className='w-full'
+              >
+                Schedule a Pilot
+                <ArrowRight className='w-5 h-5 ml-2' />
+              </Button>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>
+                <div className='flex items-center space-x-2'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
+                  <span>{service.contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Mail className='w-4 h-4 text-purple-400' />
+                  <span>{service.contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <MapPin className='w-4 h-4 text-green-400' />
+                  <span className='text-xs'>{service.contactInfo.address}</span>
+                </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+
+  );
+}
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
                 </div>;
               </div>;
               <Button;
@@ -103,6 +214,13 @@ export default function AutonomousVehicleAIPage() {const service = enhancedRealM
       </div>;
     </UltraAdvancedFuturisticBackground>;
   )}return (<UltraAdvancedFuturisticBackground>;
+<<<<<<< HEAD
+=======
+  return (
+    <UltraAdvancedFuturisticBackground>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <Head>;
         <title>{service.name} - Zion Tech Group</title>;
         <meta name='description' content={service.description} />;
@@ -186,4 +304,20 @@ export default function AutonomousVehicleAIPage() {const service = enhancedRealM
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>)}}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    </UltraAdvancedFuturisticBackground>);
+}
+
+}
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+    </UltraAdvancedFuturisticBackground>)}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

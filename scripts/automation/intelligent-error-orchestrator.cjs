@@ -318,4 +318,16 @@ if (require.main === module) {}
     orchestrator.log(`Failed to start "orchestrator": ${error.message}`, 'ERROR');
     process.exit(1)})};
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 module.exports = IntelligentErrorOrchestrator;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+module.exports = IntelligentErrorOrchestrator;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+module.exports = IntelligentErrorOrchestrator;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -17,7 +17,14 @@ import React from 'react';
 });
 export const createMockProps = (overrides = {}) => ({
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     </ThemeProvider>;
   );
 },;
@@ -44,6 +51,10 @@ export const mockNextRouter = () => ({;
   defaultLocale: 'en',;
   domainLocales: [],;
   isPreview: false;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 });
 export const createMockProps = (overrides = {}) => ({;
@@ -51,5 +62,12 @@ export const createMockProps = (overrides = {}) => ({;
 
 
 
+<<<<<<< HEAD
+=======
+});
+export const createMockProps = (overrides = {}) => ({;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 });

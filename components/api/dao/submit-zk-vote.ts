@@ -1,4 +1,7 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 ;
   }
 }import type { NextApiRequest, NextApiResponse } from 'next';
@@ -9,6 +12,7 @@ export default async function handler() {if (req.method !== 'POST') {res.status(
     // Here we just echo back.;
     res.status(200).json({ ok: true, received: { proof, optionId } })} catch (e: any) {res.status(500).json({ error: e?.message || 'internal error' })}
 }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import type { NextApiRequest, NextApiResponse } from './next';
 export default async /**
  * handler - Function description
@@ -45,3 +49,13 @@ export default async function handler(
     res.status(500).json({ error: e?.message || 'internal error' });
   }
 }
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+
+  }
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

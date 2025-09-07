@@ -2,6 +2,9 @@ import type { NextPage } from \'next\'; import MainLayout from \'../../component
 import React from 'react';
 interface IndustryProps  {// Add props here as needed;
 interface IndustryProps {
+<<<<<<< HEAD
+  // Add props here as needed
+=======
   // Add props here as needed
 export default function Industry({}: IndustryProps) {
   return (
@@ -12,3 +15,4 @@ export default function Industry({}: IndustryProps) {
   );
 
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

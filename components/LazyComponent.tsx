@@ -9,4 +9,11 @@ const LazyComponent: React.FC < LazyComponentProps> = ({component,fallback = <di
     </Suspense>);
 },
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 export default LazyComponent;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+export default LazyComponent;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

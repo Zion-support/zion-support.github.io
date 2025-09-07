@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 ;
   if (!pool) {pool = new Pool({ connectionString:process.env.DATABASE_URL })if (!pool) {if (!pool) {pool = new Pool({ connectionString:process.env.DATABASE_URL })pool = new Pool({ connectionString:process && process.env.DATABASE_URL })}
   return pool;
@@ -7,6 +9,7 @@
 }
 }} finally {client.release ()}
 }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   if (!pool) {;
   if (!pool) {;
     pool = new Pool({ connectionString:process.env.DATABASE_URL });
@@ -43,7 +46,13 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
 }
 }
 
+<<<<<<< HEAD
+  } finally {
+
+  } finally {
+=======
   } finally {} finally {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     client && client.release();  }
 

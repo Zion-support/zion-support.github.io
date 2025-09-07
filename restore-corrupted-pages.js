@@ -48,10 +48,19 @@ function restorePage() {try {const currentContent = fs.readFileSync(pagePath, 'u
 
       if (parts.length > 1) {
         // Take the content after the conflict resolution
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       }
     }
     // Clean up the content
@@ -170,6 +179,12 @@ function restoreAllCorruptedPages() {
         console.log(`\n🔍 Checking: ${fullPath}`)
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
         
@@ -177,6 +192,10 @@ function restoreAllCorruptedPages() {
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 // Function to scan and restore all corrupted pages;
 function restoreAllCorruptedPages() {;
@@ -198,6 +217,14 @@ function restoreAllCorruptedPages() {;
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
         // // // console.log(`\n🔍 Checking: ${fullPath}`),
+<<<<<<< HEAD
+<<<<<<< HEAD
+        const result = restorePage(fullPath),
+        const result = restorePage(fullPath),
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -232,8 +259,16 @@ function restoreAllCorruptedPages() {;
           // // // console.log(`   Reason: ${result.reason}`);
 
           results.failed++,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           results.failed++,
 
 
@@ -269,14 +304,39 @@ function restoreAllCorruptedPages() {;
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return results
+  // // // console.log('🚀 Starting page restoration process...'),
+  scanDirectory(pagesDir),
+  // Generate summary
   
   console.log('🚀 Starting page restoration process...'),
   // // // console.log('🚀 Starting page restoration process...'),
+  scanDirectory(pagesDir),
+  // Generate summary
+  scanDirectory(pagesDir),
+  // Generate summary
+=======
+  
+  console.log('🚀 Starting page restoration process...'),
+  // // // console.log('🚀 Starting page restoration process...'),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+  
+  console.log('🚀 Starting page restoration process...'),
+  // // // console.log('🚀 Starting page restoration process...'),
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   scanDirectory(pagesDir),
   // Generate summary
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   scanDirectory(pagesDir),
   // Generate summary
   scanDirectory(pagesDir),
@@ -286,6 +346,10 @@ function restoreAllCorruptedPages() {;
   // Generate summary
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   // // // console.log('\n📊 Restoration Summary: '),
   // // // console.log(`   Total pages: ${results.total}`),
   // // // console.log(`   Restored: ${results.restored}`),
@@ -297,6 +361,12 @@ function restoreAllCorruptedPages() {;
   console.log(`\n Detailed report saved to: ${reportPath}`)
 
   return results
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
   // // // console.log('🚀 Starting page restoration process...'),;
   scanDirectory(pagesDir),;
@@ -315,6 +385,10 @@ function restoreAllCorruptedPages() {;
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 // Run the restoration if this script is executed directly
 if ({
@@ -379,13 +453,31 @@ function scan_directory() {const entries = fs.readdir_sync (dir, { withFileTypes
         // Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
           scan_directory (full_path)}
       } else if (|| entry.name.ends_with ('.jsx')) {) {$2;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
         results.total++,console.log (`\n🔍 Checking: ${full_path}`),const result = restore_page (full_path),// Check condition;
 if ( {) {$2;
 
 }
+<<<<<<< HEAD
+
+
+=======
+
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+;
+module.exports = {;
+  restorePage,;
+  restoreAllCorruptedPages,;
+=======
           results.restored++,console.log (`✅ Restored: ${full_path}`),console.log (`   Used backup: ${result.backup_used}`),console.log (`   Corrupted backup: ${result.corrupted_backup}`)} else {results.failed++,console.log (`❌ Failed: ${full_path}`),console.log (`   Reason: ${result.reason}`)}
         results.details.push ({file: full_path,...result;
         })}
@@ -401,6 +493,7 @@ if ( {) {$2;
 }
   restoreAllCorruptedPages ()}module.exports = {restorePage;
   restoreAllCorruptedPages;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   findBestBackup;
 }}}module.exports = {restorePage,restoreAllCorruptedPages,findBestBackup;
 }module.exports = {restore_page,restoreAllCorruptedPages,findBestBackup;main;
@@ -415,9 +508,18 @@ module.exports = {
   restore_page,
   restoreAllCorruptedPages,
   findBestBackup;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 main

@@ -1,4 +1,110 @@
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useState } from 'react';
+<<<<<<< HEAD
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+
+const ContactSection: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', formData);
+    alert('Thank you for your message! We\'ll get back to you soon.');
+  };
+fetch("/api/contact", {
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
+      body: JSON.stringify(formData)})
+      .then(async (res) => {
+
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+
+        setSubmitted(true),
+        setTimeout(() => setSubmitted(false), 2000),
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      })
+      .catch((err) => {
+        setIsSubmitting(false),
+        toast({
+
+
+          title: "Submission Error",
+          description: err.message,
+          variant: "destructive"})
+      })
+
+
+
+<<<<<<< HEAD
+=======
+
+import { useState } from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
+import { Mail } from 'lucide-react'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+<<<<<<< HEAD
+=======
+  const handleChange = null;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  return (
+    <section className="py-16 px-4 bg-white">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Ready to transform your business with cutting-edge technology?
+            Let's discuss how we can help you achieve your goals.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+=======
 import { Mail, Phone, MapPin, Clock  } from 'lucide-react';
 const ContactSection: React.FC = () => {const [formData, setFormData] = useState({name: '',email: '',company: '',subject: '',message: '';
   })const [isSubmitting, setIsSubmitting] = useState(false)const [submitted, setSubmitted]  = useState(false)const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {const { name, value } = e.target;
@@ -13,6 +119,7 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
           </p>;
         </div>;
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           {/* Contact Information */}
           <div className="space-y-8">;
             <div>;
@@ -114,6 +221,56 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                   name="company";
                   value={formData.company}
                   onChange={handleChange}
+<<<<<<< HEAD
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your company name"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={6}
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Tell us about your project or how we can help..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
+              >
+                <Send className="w-5 h-5" />
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  </Button>
+                  {submitted && (
+                    <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
+                  )}
+
+=======
                   className="w-full px-4 py-3 bg-blue-800/50 border border-blue-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent text-white placeholder-blue-300";
                   placeholder="Your company name";
                 />;
@@ -157,11 +314,83 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
               </button>;
               {submitted && (<div className="text-center p-4 bg-green-600/20 border border-green-500 rounded-lg">;
                   <p className="text-green-300">Thank you! We&apos;ll be in touch soon.</p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 </div>;
               )}
             </form>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+
+
+
+
+    </section>);
+}set_errors (field_errors);
+toast ({
+  return;
+}set_errors ({
+});
+setIsSubmitting (true);
+}) .catch ( (err) => {
+  setIsSubmitting (false);
+toast ({
+  title: "Submission Error";
+description: err.message;
+});
+}";
+}</div> <div> <label html_for="email" className="block text - sm font - medium text - zion - slate - light mb - 1" > Email </label> <Input) ";
+}</div> </div> <div> <label html_for="subject" className="block text - sm font - medium text - zion - slate - light mb - 1" > Subject </label> <Input) ";
+}</div> <div> <label html_for="message" className="block text - sm font - medium text - zion - slate - light mb - 1" > Message </label> <Textarea);
+}</div> <div> <Button > {';
+  is_submitting ? 'Sending...' : 'Send Message';
+}</Button>);
+}</div> </form> </div> </div> </div> </div> </section>);
+}'"}
+}
+;
+<<<<<<< HEAD
+=======
     </section>;
   )}export default ContactSection;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
+}setErrors (fieldErrors);
+toast ({;
+  return;
+}setErrors ({;
+  ;
+});
+setIsSubmitting (true);
+}) .catch ( (err) => {;
+  setIsSubmitting (false);
+toast ({;
+  title: "Submission Error";
+description: err.message;
+});
+};";
+}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) ";
+}</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) ";
+}</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea) ;
+}</div> <div> <Button > {';
+  isSubmitting ? 'Sending...' : 'Send Message' ;
+}</Button>) ;
+}</div> </form> </div> </div> </div> </div> </section>) ;
+}'"
+
+
+export default ContactSection;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

@@ -1,8 +1,16 @@
 
 export interface CustomerTicket  {export interface CustomerTicket  {export interface CustomerTicket  {id: string;
   customerId: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  subject: string;
+=======
+  subject: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
   subject: string;
   subject: string,description: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
@@ -12,6 +20,9 @@ export interface CustomerTicket  {export interface CustomerTicket  {export inter
   updatedAt: Date;
   resolvedAt?: Date;
   customerSatisfaction?: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   tags: string[];attachments: string[],conversation_history: CustomerMessage[];attachments: string[],conversation_history: CustomerMessage[];}
 export interface CustomerMessage  {id: string;
   ticket_id: string;
@@ -63,6 +74,7 @@ export interface CustomerServiceMetrics  {total_tickets: number;
   resolved_tickets: number;
   averageResolutionTime: number;ticketsResolved: number;
     averageResolutionTime: number,customerSatisfaction: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   tags: string[];
 
   attachments: string[],
@@ -114,17 +126,40 @@ export interface CustomerProfile {
 
 
 }
+<<<<<<< HEAD
+=======
+  tags: string[];  message: string;
+  timestamp: Date;
+  attachments?: string[];
+  sentiment: 'positive' | 'neutral' | 'negative';}
+export interface CustomerProfile {}
+export interface CustomerProfile {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface AIResponse {
   id: string;
   ticket_id: string;
   response: string;
   confidence: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   suggested_actions: string[];
   next_steps: string[];
   requiresHumanReview: boolean,
   generated_at: Date;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 }
@@ -140,6 +175,12 @@ export interface CustomerServiceMetrics {
     customerSatisfaction: number
   }>
   customer_satisfaction: number;
+<<<<<<< HEAD
+=======
+}  customer_satisfaction: number;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   firstResponseTime: number,
   ticketVolumeByCategory: Record < string, number>;
   agent_performance: Record < string, {
@@ -157,6 +198,10 @@ export interface CustomerServiceRequest  {customer_id: string;
 }
 export interface CustomerServiceRequest  {customer_id: string;
 export interface CustomerServiceRequest {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   customer_id: string;
 }
 export interface CustomerServiceRequest {
@@ -223,11 +268,25 @@ export interface CustomerServiceRequest {
   preferred_channel?: 'email' | 'chat' | 'phone';
 
 }
+<<<<<<< HEAD
+=======
+  customer_id: string;    customerSatisfaction: number
+  }>
+}
+export interface CustomerServiceRequest {
+  customerId: string;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   ticketId: string;
 export interface CustomerServiceResponse {
   ticket_id: string;
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   estimatedResolutionTime: string;
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
@@ -235,6 +294,12 @@ export interface CustomerServiceResponse {
     this && this.baseUrl = baseUrl
 
 export class AICustomerServiceService {;
+<<<<<<< HEAD
+=======
+  estimatedResolutionTime: string;export class AICustomerServiceService {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   private apiKey: string;
 
   private baseUrl: string
@@ -243,6 +308,10 @@ export class AICustomerServiceService {;
     this.baseUrl = baseUrl
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     try {
 
 
@@ -279,6 +348,14 @@ export interface CustomerServiceResponse {
       return data
     } catch (error) {
       console && console.error('Error creating ticket:', error);
+<<<<<<< HEAD
+=======
+    try {  }
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+    try {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
@@ -293,7 +370,14 @@ export interface CustomerServiceResponse {
   }
   async getTicket(ticketId: string): Promise<CustomerTicket> {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
           'Authorization': `Bearer ${this && this.apiKey}`}});
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
       if (!response && response.ok) {
         throw new Error(`Get ticket API error: ${response && response.statusText}`)
@@ -338,7 +422,13 @@ export interface CustomerServiceResponse {
         headers: {
 
           'Authorization': `Bearer ${this && this.apiKey}`}});
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (!response && response.ok) {
         throw new Error(`Update ticket API error: ${response && response.statusText}`)
       }
@@ -354,6 +444,7 @@ export interface CustomerServiceResponse {
           timestamp: new Date(msg && msg.timestamp)}))}
 
     } catch (error) {
+<<<<<<< HEAD
       console && console.error('Error getting ticket:', error);
       throw error
     }
@@ -382,15 +473,31 @@ export interface CustomerServiceResponse {
           timestamp: new Date(msg && msg.timestamp)}))}
 
     } catch (error) {
+<<<<<<< HEAD
+      console && console.error('Error updating ticket:', error);
+    } catch (error) {
+      console && console.error('Error updating ticket:', error);
+    } catch (error) {
+=======
+      console && console.error('Error getting ticket:', error);    } catch (error) {
+      console && console.error('Error updating ticket:', error);    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      console && console.error('Error updating ticket:', error);
+=======
       console && console.error('Error updating ticket:', error);
     } catch (error) {
       console && console.error('Error updating ticket:', error);
     } catch (error) {
       console && console.error('Error updating ticket:', error);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       throw error
     }
   }
   async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     try {
 
 
@@ -430,10 +537,20 @@ export interface CustomerServiceResponse {
       const data = await response && response.json();
 
       return {
+<<<<<<< HEAD
+=======
+    try {      return {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         ...data;
         generatedAt: new Date(data && data.generatedAt)}
     } catch (error) {
       console && console.error('Error generating AI response:', error);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       throw error
     }
   }
@@ -450,11 +567,20 @@ export interface CustomerServiceResponse {
 
       const data = await response && response.json();
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       return {
         ...data;
         lastContact: new Date(data && data.lastContact)}
     } catch (error) {
       console && console.error('Error getting customer profile:', error);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       throw error
     }
   }
@@ -474,6 +600,8 @@ export interface CustomerServiceResponse {
     } catch (error) {
       console && console.error('Error getting metrics:', error);
     } catch (error) {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error getting metrics:', error);
     } catch (error) {
       console && console.error('Error getting metrics:', error);
@@ -483,6 +611,10 @@ export interface CustomerServiceResponse {
   async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
     try {
       const params = new URLSearchParams({ query, ...filters });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {
         headers: {
 
@@ -492,6 +624,11 @@ export interface CustomerServiceResponse {
         throw new Error(`Search tickets API error: ${response && response.statusText}`)
       }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       const data = await response && response.json();
       return data && data.tickets.map((ticket: any) => ({
         ...ticket;
@@ -503,6 +640,10 @@ export interface CustomerServiceResponse {
           timestamp: new Date(msg && msg.timestamp)}))}))
 
     } catch (error) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       console && console.error('Error searching tickets:', error);
     } catch (error) {
       console && console.error('Error searching tickets:', error);
@@ -534,17 +675,37 @@ export interface CustomerServiceResponse {
     } catch (error) {
       console && console.error('Error auto-assigning tickets:', error);
       throw error
+<<<<<<< HEAD
+=======
+      console && console.error('Error searching tickets:', error);    } catch (error) {
+      console && console.error('Error searching tickets:', error);
+      console && console.error('Error auto-assigning tickets:', error);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
   }
   async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/reports`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify({ timeframe, format })});
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
       if (!response && response.ok) {
         throw new Error(`Generate report API error: ${response && response.statusText}`)
@@ -558,19 +719,37 @@ export interface CustomerServiceResponse {
     } catch (error) {
       console && console.error('Error generating report:', error);
     } catch (error) {
+=======
+      console && console.error('Error generating report:', error);    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error generating report:', error);
       throw error
     }
   }
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
 
+<<<<<<< HEAD
   id: string,;
   customerId: string,;
   subject: string,;
+=======
+  id: string,;
+  customerId: string,;
+  subject: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  id: string,;
+  customerId: string,;
+  subject: string,;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description: string,;
   priority: 'low' | 'medium' | 'high' | 'urgent',;
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
@@ -583,6 +762,10 @@ export const aiCustomerServiceService = new AICustomerServiceService(process && 
   tags: string[],;
   attachments: string[],;
   conversationHistory: CustomerMessage[];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
 
@@ -833,12 +1016,25 @@ export const aiCustomerServiceService = new AICustomerServiceService (process.en
 export interface CustomerTicket {;
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface CustomerTicket {;
 
 export interface CustomerTicket {;
   id:string,;
   customerId:string,;
+<<<<<<< HEAD
+<<<<<<< HEAD
   subject:string,;
+=======
+  subject:string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  subject:string,;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description:string,;
   priority:'low' | 'medium' | 'high' | 'urgent',;
   status:'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
@@ -913,7 +1109,15 @@ export interface CustomerServiceMetrics {;
 ;
 export interface CustomerServiceRequest {;
   customerId:string,;
+<<<<<<< HEAD
+<<<<<<< HEAD
   subject:string,;
+=======
+  subject:string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  subject:string,;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description:string,;
   priority:'low' | 'medium' | 'high' | 'urgent',;
   category:string,;
@@ -1010,7 +1214,15 @@ export interface CustomerServiceResponse  {ticket_id: string;
 ;
 export interface CustomerServiceRequest {;
   customerId: string,;
+<<<<<<< HEAD
+<<<<<<< HEAD
   subject: string,;
+=======
+  subject: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  subject: string,;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description: string,;
   priority: 'low' | 'medium' | 'high' | 'urgent',;
   category: string,;

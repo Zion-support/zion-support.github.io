@@ -1,8 +1,34 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 function fixFile(filePath) {
 
+=======
+
+function fixFile(filePath) {
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+console.log('🔧 Fixing remaining syntax errors...');
+
+// Fix specific files with known issues
+const filesToFix = [
+    'src/components/SEO.tsx',
+    'src/components/ui/button.tsx',
+    'src/components/ui/card.tsx',
+    'src/components/ui/input.tsx',
+    'src/components/talent/TalentCard.jsx'
+
+];
+=======
+function fixFile(filePath) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Function to fix remaining syntax errors in a file;
 function fixRemainingSyntax(filePath) {}
   try {}
@@ -136,4 +162,117 @@ function fixFilesInDirectory(dirPath) {}
     
     const handleRequestHire = (talentId) => {
         // Handle hire request logic here
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    if (stat.isDirectory()) {}
+      fixedCount += fixFilesInDirectory(filePath);
+    } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {}
+      if (fixRemainingSyntax(filePath)) {}
+        fixedCount++;
+      };
+    };
+  };
+  return fixedCount;
+// Main execution
+
+const fixedCount = fixFilesInDirectory('./src');
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+};
+// Main execution;
+console.log('Starting remaining syntax error fixing...');
+const fixedCount = fixFilesInDirectory('./src');
+console.log(`Fixed ${fixedCount} files with remaining syntax errors.`);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    let content = fs.readFileSync(filePath, 'utf8');
+
+    // More comprehensive fixes
+    content = content
+      // Remove semicolons after function declarations
+      .replace(/function\s+([^{]+)\s*\{;/g, 'function $1 {')
+      // Remove semicolons after arrow functions
+      .replace(/=>\s*\{;/g, '=> {')
+      // Remove semicolons after if statements
+      .replace(/if\s*\([^)]+\)\s*\{;/g, match => match.replace('{;', '{'))
+      // Remove semicolons after object properties
+      .replace(/(\w+):\s*([^}]+);/g, '$1: $2,')
+      // Fix object syntax
+      .replace(/\{([^}]+);(\s*)\}/g, '{$1$2}')
+      // Remove semicolons in JSX
+      .replace(/<([^>]+);>/g, '<$1>')
+      // Fix array syntax
+      .replace(/\[([^\]]+);\]/g, '[$1]')
+      // Remove standalone semicolons
+      .replace(/^;$/gm, '')
+      // Fix function calls
+      .replace(/(\w+)\s*\(([^)]+);\)/g, '$1($2)')
+      // Fix object method calls
+      .replace(/(\w+)\.(\w+)\s*\(([^)]+);\)/g, '$1.$2($3)')
+      // Clean up multiple semicolons
+      .replace(/;+/g, ';')
+      // Remove trailing semicolons before closing braces
+      .replace(/;(\s*[}\]])/g, '$1')
+      // Fix template literals
+      .replace(/`([^`]+);([^`]+)`/g, '`$1$2`')
+      // Remove semicolons from JSX attributes
+      .replace(/(\w+)=([^>]+);/g, '$1=$2')
+      // Clean up empty lines
+      .replace(/^\s*$\n/gm, '');
+
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixe: d: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+function walkDir(dir) {
+  const files = fs.readdirSync(dir);
+
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (
+      stat.isDirectory() &&
+      !file.startsWith('.') &&
+      file !== 'node_modules'
+    ) {
+      walkDir(filePath);
+    } else if (
+      file.endsWith('.tsx') ||
+      file.endsWith('.ts') ||
+      file.endsWith('.jsx') ||
+      file.endsWith('.js')
+    ) {
+      fixFile(filePath);
+    }
+  });
+}
+
+// Start fixing from components directory
+walkDir('./components');
+walkDir('./hooks');
+walkDir('./lib');
+walkDir('./pages');
+
+console.log('Remaining syntax error fixing completed!');
+
+<<<<<<< HEAD
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,3 +1,62 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react',
+import Head from 'next/head';
+import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+export default function AIEvalsPage() {
+	const contactInfo = null;
+	return (
+		<QuantumHolographicMatrixBackground>
+			<Head>
+				<title>AI Evals & Observability | Zion Tech Group</title>
+				<meta name="description" content="Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included." />
+				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />
+			</Head>
+
+import {
+  Check
+  ShieldCheck
+  TrendingUp
+  Clock
+  Phone
+  Mail
+  MapPin
+  ExternalLink;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  Check,
+  ShieldCheck,
+  TrendingUp,
+  Clock,
+  Phone,
+  Mail,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+} from 'lucide-react';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+export default function AIEvalsPage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+};
+
+  const features = [
+    'Golden datasets and synthetic evals'
+    'Hallucination and grounding score'
+    'Toxicity, bias and safety metrics'
+    'LLM version comparison reports'
+    'CI quality gates and webhooks'
+    'Latency and cost KPIs with budgets'
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   Check,ShieldCheck,TrendingUp,Clock,Phone,Mail,import React from 'react',import Head from 'next/head';
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink   } from 'lucide-react';
@@ -25,12 +84,52 @@ export default function AIEvalsPage() {const contactInfo = {mobile: '+1 302 464 
     'LLM version comparison reports';
     'CI quality gates and webhooks';
     'Latency and cost KPIs with budgets';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   ];
   return (<QuantumHolographicMatrixBackground>;
       <Head>;
         <title>AI Evals & Observability | Zion Tech Group</title>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <meta
+          name='description'
+<<<<<<< HEAD
+          content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.'
+        />
+        <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />
+      </Head>
+      <section className='min-h-screen pt-28 pb-20 px-4'>
+        <div className='max-w-6xl mx-auto'>
+          <div className='text-center mb-12'>
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
+              AI Evals & Observability
+            </h1>
+            <p className='mt-4 text-xl text-gray-300'>
+              Continuous evaluation, drift detection, and quality gates to ship
+              safe, trustworthy AI.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10'>
+            <Card className='lg:col-span-2 bg-black/30 border border-cyan-500/30'>
+              <div className='p-6'>
+                <h2 className='text-2xl font-semibold text-white mb-4'>
+                  What you get
+                </h2>
+                <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>
+                  {features.map(f => (
+                    <li
+=======
         <meta;
           name='description';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+        <meta;
+          name='description';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-evals' />;
       </Head>;Continuous evaluation, drift detection, and quality gates to ship;
@@ -86,6 +185,10 @@ export default function AIEvalsPage() {const contactInfo = {mobile: '+1 302 464 
     </div>;
     </div>;
   </section>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   </QuantumHolographicMatrixBackground>)}content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.';
         />;
         <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />;
@@ -109,6 +212,7 @@ export default function AIEvalsPage() {const contactInfo = {mobile: '+1 302 464 
                 </h2>;
                 <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>;
                   {features.map(f => (<li;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                       key={f}
                       className='flex items-start gap-2 text-gray-200';
                     >;
@@ -191,6 +295,26 @@ export default function AIEvalsPage() {const contactInfo = {mobile: '+1 302 464 
                   className='text-xs';
                 >;
                   {contactInfo.address}
+<<<<<<< HEAD
+                </a>
+              </div>
+            </div>
+            <div className='text-center mt-6'>
+              <Button
+                href='/services'
+                variant='outline'
+                className='border-cyan-500 text-cyan-400'
+              >
+                Explore Services <ExternalLink className='w-4 h-4 ml-2' />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </QuantumHolographicMatrixBackground>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
                 </a>;
               </div>;
             </div>;
@@ -207,4 +331,13 @@ export default function AIEvalsPage() {const contactInfo = {mobile: '+1 302 464 
         </div>;
       </section>;
     </QuantumHolographicMatrixBackground>;
+<<<<<<< HEAD
   )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+  </QuantumHolographicMatrixBackground>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+=======
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

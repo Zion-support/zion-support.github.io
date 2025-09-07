@@ -22,7 +22,15 @@ export default function InteractiveCard({title;
 import React, { useState } from 'react',;
 import Link from 'next/link',;
 interface InteractiveCardProps {;
+<<<<<<< HEAD
+<<<<<<< HEAD
   title: string,;
+=======
+  title: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+  title: string,;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description: string,;
   icon: string,;
   href: string,;
@@ -40,6 +48,10 @@ export default function InteractiveCard({;
   className = '',;
   children;
 }: InteractiveCardProps) {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const [isHovered, setIsHovered] = useState(false),;
   return (;
     <Link;
@@ -49,6 +61,12 @@ export default function InteractiveCard({;
       onMouseLeave={() => setIsHovered(false)}
       aria-label={`Navigate to ${title} page`}
     <Link;
+<<<<<<< HEAD
+=======
+  const [isHovered, setIsHovered] = useState(false),;    <Link;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       href={href}
       className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
       onMouseEnter={() => setIsHovered (true)}
@@ -78,13 +96,29 @@ export default function InteractiveCard({;
             </div>;
           {/* Custom children or default arrow */}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 {children || (
 
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
           {children || (
+<<<<<<< HEAD
+<<<<<<< HEAD
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
               <span>Learn More</span>
+=======
+            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">              <span>Learn More</span>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
+              <span>Learn More</span>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
                   isHovered ? 'translate-x-2' : ''
@@ -126,6 +160,10 @@ function FeatureCard() {return (<InteractiveCard;
 >;
       {stats && (</div>;
       {stats && (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         <div className=&quot;mt - 6 pt - 6 border - t border - white / 10 & quot;>;
           <div className=&quot;grid grid - cols - 2 gap - 4&quot;>;
             {stats.map ((stat, index) => (
@@ -133,6 +171,11 @@ function FeatureCard() {return (<InteractiveCard;
                 <div className=&quot;text - 2xl font - bold text - white & quot;>{stat.value}</div>;
                 <div className=&quot;text - sm text - gray - 400 & quot;>{stat.label}</div>;
               </div>))}
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           </div>;
         </div>)}
     </InteractiveCard>)}export /**;
@@ -151,6 +194,12 @@ function TestimonialCard() {return (<div className={`bg - black / 30 backdrop - 
         ))}
       </div>;
       {/* Quote */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       </blockquote>      </blockquote>      </blockquote>;
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">;
@@ -160,6 +209,10 @@ function TestimonialCard() {return (<div className={`bg - black / 30 backdrop - 
       </div>;
     </div>;
   )}}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       </blockquote>
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
@@ -167,6 +220,12 @@ function TestimonialCard() {return (<div className={`bg - black / 30 backdrop - 
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
       </blockquote>
+<<<<<<< HEAD
+=======
+      </blockquote>      </blockquote>      </blockquote>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">
         <div className="font-semibold text-white">{author}</div>
@@ -175,5 +234,14 @@ function TestimonialCard() {return (<div className={`bg - black / 30 backdrop - 
       </div>
     </div>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
