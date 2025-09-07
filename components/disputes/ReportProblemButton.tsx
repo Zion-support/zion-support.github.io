@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function ReportProblemButton() {const query = null;
@@ -177,3 +178,7 @@ function ReportProblemButton() {
   );
 
 "
+=======
+Report a Problem </a> </Link>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

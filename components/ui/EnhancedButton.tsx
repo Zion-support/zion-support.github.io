@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
@@ -202,6 +203,10 @@ variant = \"primary\"
   fullWidth;
 }
   ...props}
+=======
+export default function EnhancedButton ({
+  className, variant = 'primary', size = 'md', fullWidth, ...props 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }: EnhancedButtonProps) {
  ;
   return (

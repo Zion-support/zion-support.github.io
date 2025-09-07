@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -61,6 +62,34 @@ if (metrics && metrics.ttfb > 600) score -= 20;"
 if (!performanceData) {}> <div className=\"animate-pulse\"  /> <div className=\"h-4 bg-gray-700 rounded w-1/3 mb-4\"  /></div> <div className=\"space-y-3\"  /> <div className=\"h-3 bg-gray-700 rounded\"  /></div> <div className=\"h-3 bg-gray-700 rounded w-5/6\"  /></div> <div className=\"h-3 bg-gray-700 rounded w-4/6\"  /></div> </div> </div> </div>)}"
 }> </p> </div> </div> <div className=\"flex items-center space-x-2\"  /> <button  /> <BarChart3 className=\"w-4 h-4\" /> </button> <button  /> <RefreshCwclassName= {`w-4 h-4 $ {//FCP recommendations // Check condition;}
 if ( {) {$2;}
+=======
+//FCP recommendations if (metrics.fcp > 2000) {
+  recs.push ({
+  
+}return recs
+}, [])
+//Wait for page to be fully loaded if (document.readyState !== 'complete') {
+  await new Promise (resolve => {
+  
+}//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) )
+if (metrics.fcp > 2000) score -= 20
+if (metrics.lcp > 2500) score -= 25
+if (metrics.cls > 0.1) score -= 15
+if (metrics.ttfb > 600) score -= 20
+if (!performanceData) {
+  return (<div className= {
+  `p-4 bg-gray-900 rounded-lg border border-gray-700 $ {
+  className 
+}` 
+}> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>) 
+}return (<motion.div className= {
+  `bg-gray-900 rounded-lg border border-gray-700 overflow-hidden $ {
+  className 
+}` 
+}initial= {
+  {
+  opacity: 0, y: 20 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
 "
 } /> </p> </div> </div> <div className=\"flex items-center space-x-2\"  /> <button  /> <BarChart3 className=\"w-4 h-4\" /> </button> <button  /> <RefreshCwclassName= {
@@ -92,8 +121,13 @@ if ( {) {$2;}
   isMonitoring ? 'Measuring...': 'Measure Performance' }
 }</span> </button> </div> </div> </motion.div>) 
 }</AnimatePresence> </>) 
+<<<<<<< HEAD
 };
 
 export default EnhancedPerformanceMonitor;
 
 "
+=======
+}
+export default EnhancedPerformanceMonitor
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 export type RedemptionType =;
@@ -198,3 +199,10 @@ disabled={!account |isSubmitting |tokens <= 0}
 }
 
 "
+=======
+export type RedemptionType = 'boost profile' | 'promote listing' | 'premium support'
+}if (!isOpen) return null
+</div> <div className="text-sm mb-3" >Conversion rate: 1 ZION = $0.01</div>) 
+}</div> </div> 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

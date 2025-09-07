@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -122,3 +123,7 @@ export default Pagination;
 }
 
 "
+=======
+Next </EnhancedButton> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

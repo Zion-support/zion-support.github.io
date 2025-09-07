@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
@@ -80,3 +81,18 @@ const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s 
 }
 
 "
+=======
+key= {
+  t.key 
+}className= {
+  `px-3 py-1 rounded border $ {
+  active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary' 
+}` 
+}onClick= {
+  () => setActive (t.key) 
+}> {
+  t.label 
+}</button>) ) 
+}</div> </pre> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

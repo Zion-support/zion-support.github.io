@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -108,3 +109,5 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

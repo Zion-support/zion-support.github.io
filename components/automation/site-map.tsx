@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import fs from 'fs';
@@ -32,3 +33,8 @@ function getServerSideProps() {const file = path.join (process.cwd (), 'datasite
 }
 
 "
+=======
+<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
+}</tbody> </table> </div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

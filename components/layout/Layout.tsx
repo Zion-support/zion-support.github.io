@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Header from '../Header';
@@ -32,4 +33,23 @@ export default function Layout({
       </div>
     </>
   );
+=======
+import React, { ReactNode } from 'react'
+import Header from '../Header'
+import Footer from './Footer'
+interface LayoutProps {
+  children: ReactNode
+}
+
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      <main className="pt-20">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  )
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }

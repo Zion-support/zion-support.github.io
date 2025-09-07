@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useMemo, useState } from 'react';
@@ -175,3 +176,8 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
   );
 
 "
+=======
+</div> </div> {
+  (method === 'POST' || method === 'PUT' || method === 'PATCH') && (<div> </div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

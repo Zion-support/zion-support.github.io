@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';,
@@ -14,6 +15,17 @@ import { CheckCircle2, Circle, PartyPopper  } from 'lucide-react';
 
 export type OnboardingStep = any;label: string;
   completed: boolean;
+=======
+<div className= {
+  `h-2 rounded-full bg-gradient-to-r $ {
+  highlightColorClass 
+}` 
+}style= {
+  {
+  width: `$ {
+  percentage 
+}%` 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
 
 export type OnboardingProgressCardProps = {title: string;

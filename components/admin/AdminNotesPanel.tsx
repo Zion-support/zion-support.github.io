@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 
 export type AdminNotesPanelProps = {
@@ -152,4 +153,10 @@ export default function AdminNotesPanel({
       </div>
     </div>
   );
+=======
+</div> <div className="text-xs opacity-60 mt-2" >Admin-only notes hidden.</div> </div>) 
+}</li>) ) 
+}</ul>) 
+}</div> </div>) 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }

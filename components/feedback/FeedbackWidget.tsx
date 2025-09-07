@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
@@ -261,3 +262,18 @@ placeholder='Optional feedback (what worked, what didn’t)'
 
 }
 })}"
+=======
+const submit = async () => {
+  if (!rating) {
+  <button type="button" onClick= {
+  () => setRating (rating === 'up' ? null : 'up') 
+}className= {
+  `inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm $ {
+  rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : '' 
+}` 
+}aria-pressed= {
+  rating === 'up' 
+}> <span>👍</span> <span>Yes</span> </button> <button > <span>👎</span> <span>No</span> </button> </div> <textarea </button> </div> </div>) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

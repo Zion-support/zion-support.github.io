@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ReactNode } from 'react';
 
 interface FuturisticCardProps {
@@ -18,3 +19,7 @@ function FuturisticCard() {return (<div className=\"futuristic-card\" />;"
         {cta && <div className=\"mt-3\" />{cta}</div>}
       </div>;
     </div>)"
+=======
+</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

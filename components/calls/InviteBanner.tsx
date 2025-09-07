@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -40,3 +41,8 @@ export default function InviteBanner({ message, onJoin, canJoin = true }: Props)
 }
 
 "
+=======
+Join Meeting </button>) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

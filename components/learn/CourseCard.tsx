@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import Link from 'next/link';
@@ -48,3 +49,7 @@ export default function CourseCard() {return (<div className='border rounded-lg 
   );
 }
 
+=======
+</Link> 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

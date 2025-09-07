@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';,
@@ -82,3 +83,13 @@ export default function EmptyState({ title, description, icon, primaryAction, se
 }
 
 "
+=======
+</a> </a>) 
+}{
+  secondaryAction && (<Link href= {
+  secondaryAction.href 
+}> <a> </a> </a>) 
+}</div>) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

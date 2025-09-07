@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -48,3 +49,9 @@ onClick={onClick}
 }
 
 "
+=======
+html2pdf () .set (opt) .from (element) .save () 
+}
+return (<button aria-label="Download as PDF" 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

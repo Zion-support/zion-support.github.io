@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Cookie, Settings, Shield, Eye, Database, AlertCircle } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
@@ -125,9 +126,14 @@ const rights = [
     description: "You can request information about the cookies we have stored about you."
   }
 ];
+=======
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 
-export default function CookiesPage() {
+export default function cookies() {
   return (
+<<<<<<< HEAD
     <MainLayout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -474,5 +480,22 @@ export default function CookiesPage() {
         </section>
       </div>
     </MainLayout>
+=======
+    <Layout>
+      <Head>
+        <title>Cookies - Zion Tech Group</title>
+        <meta name="description" content="Cookies solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cookies</h1>
+          <p className="text-lg text-gray-600">
+            Professional cookies solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
   );
 }

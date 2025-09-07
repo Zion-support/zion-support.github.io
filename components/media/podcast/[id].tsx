@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect, useState } from 'react';
@@ -31,3 +32,8 @@ const router = null;
 
   );
 
+=======
+if (!episode) return <div>Loading…</div>
+return (</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

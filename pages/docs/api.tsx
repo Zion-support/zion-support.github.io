@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../../components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -195,6 +196,11 @@ const rateLimits = [
   }
 ];
 
+=======
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../../components/Layout'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 export default function APIDocsPage() {
   return (
     <MainLayout>
@@ -571,6 +577,11 @@ export default function APIDocsPage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </MainLayout>
   );
+=======
+    </Layout>
+  )
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }

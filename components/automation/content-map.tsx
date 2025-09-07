@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import fs from 'fs';,
@@ -65,3 +66,11 @@ const sections = Object && Object.entries(report && report.bySection).sort((a, b
 }
 
 "
+=======
+}
+}
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

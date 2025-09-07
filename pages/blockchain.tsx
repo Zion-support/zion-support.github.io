@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Layout from '../components/Layout';
 
 export default function Blockchain() {
@@ -36,6 +37,24 @@ export default function Blockchain() {
               </a>
             </div>
           </div>
+=======
+import Layout from '../components/layout/Layout';
+
+export default function blockchain() {
+  return (
+    <Layout>
+      <Head>
+        <title>Blockchain - Zion Tech Group</title>
+        <meta name="description" content="Blockchain solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Blockchain</h1>
+          <p className="text-lg text-gray-600">
+            Professional blockchain solutions tailored to your business needs.
+          </p>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
         </div>
       </div>
     </Layout>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 import { motion  } from 'framer-motion';
@@ -108,6 +109,29 @@ className='group relative' />;
                 <h3 className='text-xl font-bold text-white group-hover: text-cyan-400 transition-colors duration-300' />
 
                   {service.nam}
+=======
+}
+}
+}
+}
+}
+}
+const renderServiceCard = (service: unknown, index: number) => (<motion.div <span>Popular</span> </div>) 
+}</div> </div>) ) 
+}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4" /> </motion.button> </div> </div> </div> </div> > <div className="flex items-center justify-center space-x-2 mb-4" > <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center" > <Rocket className="w-5 h-5 text-white" /> </div> <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wider" > Innovation 2026 </span> </div> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Next-Generation <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > AI & IT Services </span> </h2> </p> </motion.div> {
+  /* AI Services Section */ 
+}<motion.div > <div className="flex items-center space-x-3 mb-8" > <Brain className="w-6 h-6 text-cyan-400" /> <h3 className="text-2xl font-bold text-white" >AI-Powered Services</h3> </div> <motion.div > {
+  innovative2026AIServices.map ( (service, index) => renderServiceCard (service, index) ) 
+}</motion.div> </motion.div> {
+  /* IT Infrastructure Section */ 
+}<motion.div > <div className="flex items-center space-x-3 mb-8" > <Globe className="w-6 h-6 text-purple-400" /> <h3 className="text-2xl font-bold text-white" >IT Infrastructure & Security</h3> </div> <motion.div > {
+  innovative2026ITInfrastructureServices.map ( (service, index) => renderServiceCard (service, index) ) 
+}</motion.div> </motion.div> {
+  /* Micro SAAS Section */ 
+}<motion.div initial= {
+  {
+  opacity: 0, y: 30 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
                 </h3>;
                 <p className='text-slate-400 text-sm' />{service.tagline}</p>;

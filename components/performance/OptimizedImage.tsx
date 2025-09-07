@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from \"react\";"
 import Image from \"next/image\";
 
@@ -29,10 +30,13 @@ const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,
  ;
   return (}
     <Image;}
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 src={src}
       alt={alt}
       width={width}
       height={height}
+<<<<<<< HEAD
       className={className}
       priority={priority}
       sizes={sizes}
@@ -46,3 +50,9 @@ src={src}
 
 export default OptimizedImage;
 "
+=======
+      priority={priority}
+      className={className}
+      sizes={sizes}
+      quality={85}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

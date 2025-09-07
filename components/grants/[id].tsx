@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import { useEffect, useState  } from 'react';
@@ -174,3 +175,12 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
   );
 }
 
+=======
+}
+}
+if (loading) return <EnhancedLayout><div>Loading...</div></EnhancedLayout>
+if (!item) return <EnhancedLayout><div>Not found</div></EnhancedLayout>
+</ul> </div>) 
+}</section> </div> </div> </section> </div> </section> </aside> </div> </EnhancedLayout>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

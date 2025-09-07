@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }
+=======
+useEffect ( () => {
+  if (!query) {
+  
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) ;}

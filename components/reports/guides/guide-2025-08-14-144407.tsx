@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
       <Head />;
@@ -352,3 +353,7 @@ export default function Page() {return (<div className=\"min-h-screen bg-slate-9
 ;
 
 "
+=======
+<Head> <title>Guide — Capabilities Live Implementation</title> <meta name="description" content="Step-by-step guidance derived from live research signals." /> <meta property="og:title" content="Guide — Capabilities Live Implementation" /> <meta property="og:description" content="Step-by-step guidance derived from live research signals." /> <meta name="twitter:card" content="summary large image" /> </Head> 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

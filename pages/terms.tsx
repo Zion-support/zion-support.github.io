@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, Users } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
@@ -264,5 +265,27 @@ export default function TermsPage() {
         </section>
       </div>
     </MainLayout>
+=======
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function terms() {
+  return (
+    <Layout>
+      <Head>
+        <title>Terms - Zion Tech Group</title>
+        <meta name="description" content="Terms solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>
+          <p className="text-lg text-gray-600">
+            Professional terms solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
   );
 }

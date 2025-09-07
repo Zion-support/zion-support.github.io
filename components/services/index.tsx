@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type { NextPage } from 'next',
@@ -28,10 +29,16 @@ export default function ServicesIndexPage () {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (}
 }React;
   useEffect ( () => {
+=======
+export default function ServicesIndexPage () {
+  const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
+}React.useEffect ( () => {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
   const next = services.filter ( (s) => {
   //Category const handleSubmit = async (values: QuoteFormValues) => {
  ;
   const res = await fetch ('/api/quote-request', {
+<<<<<<< HEAD
   method: 'POST',
   headers: {
 body: JSON.stringify ({
@@ -47,12 +54,36 @@ budgetRange: values.budgetRange;
   () = /> setModalOpen (false)}
 }service= {}
   selected}
+=======
+  method: 'POST', headers: {
+  'Content-Type': 'application/json' 
+}
+body: JSON.stringify ({
+  service: values.serviceTitle, description: values.projectDescription, timeline: {
+  start: values.timelineStart, end: values.timelineEnd 
+}
+budgetRange: values.budgetRange
+}
+}
+<Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) ) 
+}</div> </div> </div> </div> <QuoteRequestModal open= {
+  modalOpen 
+}onClose= {
+  () => setModalOpen (false) 
+}service= {
+  selected 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }onSubmit= {
 }
   handleSubmit }
 }/> </div>) 
+<<<<<<< HEAD
 };
 
 export default ServicesPage;
 
 "
+=======
+}
+export default ServicesPage
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

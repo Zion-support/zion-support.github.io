@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -33,3 +34,7 @@ href={url}"
   );
 
 "
+=======
+return (<div className="border rounded p-4" > <div className="text-sm text-gray-600" >Zion Certificate</div> <div className="mt-2 h-40 bg-gradient-to-br from-slate-800 to-slate-900 text-white flex items-center justify-center rounded" > <div className="text-center" > <div className="text-xl font-semibold" >Certificate of Completion</div> <div className="text-xs opacity-80" >Preview</div> </div> </div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -34,6 +35,13 @@ const pct = Math.max(0, Math.min(100, value));
 type ProgressBarProps = { value: number}
 };
 );
+=======
+return (<div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded" > <div className="h-3 bg-blue-600 rounded" style= {
+  {
+  width: `$ {
+  pct 
+}%` 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
 
 "

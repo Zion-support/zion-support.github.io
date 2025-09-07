@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -65,3 +66,8 @@ onClick={dismiss}
     </div>
   );
 
+=======
+if (hidden) return null
+return (</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

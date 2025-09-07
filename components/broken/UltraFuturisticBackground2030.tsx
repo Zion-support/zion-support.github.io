@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect, useRef } from 'react';
@@ -161,6 +162,36 @@ window.removeEventListener('resize', handleResize)}
 className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
           style={{
             clipPath:
+=======
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+let animationId: number
+let particles: Array< {
+  
+}
+}
+// Wrap around edges if (particle.x < 0) particle.x = canvas.width
+if (particle.x > canvas.width) particle.x = 0
+if (particle.y < 0) particle.y = canvas.height
+if (particle.y > canvas.height) particle.y = 0
+// Draw particle // Draw connections particles.forEach ( (otherParticle, otherIndex) => {
+  if (index !== otherIndex) {
+  
+}
+}) 
+})
+ctx.globalAlpha = 1
+animationId = requestAnimationFrame (animate) 
+}
+initParticles ()
+animate ()
+window.addEventListener ('resize', handleResize)
+/> {
+  /* Floating Circles */ 
+}<motion.div /> {
+  /* Animated Lines */ 
+}<motion.div 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
               'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}
           }}
@@ -256,6 +287,7 @@ ease: 'easeInOut',
   ease: \"easeInOut\"
         {/* Animated Lines *}
 }
+<<<<<<< HEAD
 
         <motion.div;
 className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
@@ -393,3 +425,9 @@ export default UltraFuturisticBackground2030;transition={{duration: Math.random(
 export default UltraFuturisticBackground2030;
 
 "
+=======
+}/>) ) 
+}</div> </div> </div>) 
+}
+export default UltraFuturisticBackground2030
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

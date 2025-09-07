@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface CardProps {
@@ -169,3 +170,15 @@ const Card: React.FC<CardProps /> = ({export {Card,CardHeader,CardFooter,CardTit
   );
 }
 "
+=======
+return (<div className= {
+  classes 
+}style= {
+  style 
+}onClick= {
+  onClick 
+}>) 
+}</div>) 
+}
+export default Card
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

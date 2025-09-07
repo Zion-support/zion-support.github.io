@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   return <ExpoPage />;
@@ -67,3 +68,5 @@ const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: 
 }
 }
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

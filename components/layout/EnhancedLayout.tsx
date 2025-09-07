@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect } from 'react',
@@ -33,3 +34,7 @@ document.documentElement.setAttribute('lang', lng);}
   );
 }
 
+=======
+return (<div className="min-h-screen flex flex-col" > <header> <EnhancedNavigation /> <LanguageSwitchPrompt /> </header> <footer> <EnhancedFooter /> </footer> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

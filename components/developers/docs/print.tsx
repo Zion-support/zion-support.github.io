@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect } from 'react';
@@ -14,6 +15,12 @@ export type Section = any;
         {docs && docs.sections.map(s => (<section key={s && s.id} />;
             <h2 className='text-2xl font-semibold mb-2' />{s && s.title}</h2>;
             {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} /
+=======
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
+  return {
+  props: {
+  docs: content as DocsContent 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
             {s && s.code &&;
 
@@ -39,6 +46,7 @@ key = {i}
             {s && s.code && s && s.code.map((c, i) = /> (<pre key={i} className=\"mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap\" />{c && c.content}</pre>;
             ))}
 }
+<<<<<<< HEAD
 
 export default /**;
  * PrintDocs - Function description;
@@ -79,3 +87,10 @@ function PrintDocs() {useEffect (() => {const id = set_timeout (() => window.pri
 }
 
 "
+=======
+}
+) ) 
+}</section>) ) 
+}</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

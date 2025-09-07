@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 type Props = any;
 
 export default ReviewCard;
@@ -47,3 +48,9 @@ export default ReviewCard;
   )}
 
 export default ReviewCard;
+=======
+> Report abuse </button> </div>) 
+}</div> </div>) 
+}
+export default ReviewCard
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

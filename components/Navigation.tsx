@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowRight } from 'lucide-react';
@@ -198,3 +199,5 @@ const Navigation = () => {
 };
 
 export default Navigation;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

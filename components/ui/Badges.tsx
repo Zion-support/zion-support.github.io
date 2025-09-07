@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export function TrustBadge() {const colorMap = {Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'}
@@ -305,3 +306,8 @@ function MicroTestimonial() {
 }
 
 "
+=======
+</span>) 
+}</figure>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

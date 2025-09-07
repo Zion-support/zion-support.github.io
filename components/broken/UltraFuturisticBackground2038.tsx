@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect, useRef } from 'react';
@@ -513,6 +514,22 @@ ref={canvasRef}
         // Regenerate particles;
         // Check condition;}
 if ( {) {$2;}
+=======
+resizeCanvas ()
+window.addEventListener ('resize', resizeCanvas)
+// Enhanced theme-based color schemes for 2038 const getThemeColors = () => {
+  switch (theme) {
+  case 'consciousness': return {
+  
+}
+}
+Math.random () > 0.5 ? 'quantum-field' : Math.random () > 0.3 ? 'hologram' : 'particle'
+particles.push ({
+  
+}
+}
+// Enhanced animation loop with consciousness and quantum effects 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
           particle.coordinate_x = Math.random () * canvas.width;
           particle.coordinate_y = Math.random () * canvas.height;
@@ -694,6 +711,7 @@ top: `${(i * 8) % 10}
 
 // Enhanced animation loop with consciousness and quantum effects;
 }// Update and draw particles // Quantum entanglement effects if (particle.type === 'quantum-field') {
+<<<<<<< HEAD
   particles.forEach ( (otherParticle, otherIndex) => {}
   if (index !== otherIndex && Math.random () > 0.99) {}
 })
@@ -728,6 +746,28 @@ if (}) {$2;}
 
 init_particles ();
 animate ();
+=======
+  particles.forEach ( (otherParticle, otherIndex) => {
+  if (index !== otherIndex && Math.random () > 0.99) {
+  
+}
+}
+}) 
+}// Consciousness wave effects ctx.strokeRect (particle.x - hologramSize / 2
+particle.y - hologramSize / 2
+hologramSize
+hologramSize) 
+}// Quantum field effects ctx.fillStyle = gradient
+ctx.fillRect (particle.x - fieldSize / 2
+particle.y - fieldSize / 2
+fieldSize
+fieldSize) 
+}// Standard particle rendering 
+}// Boundary wrapping with quantum tunneling effect if (particle.x < 0 || particle.x > canvas.width || requestAnimationFrame (animate) 
+}
+initParticles ()
+animate ()
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 />) ) 
 }</div>) 
 }/>) ) 

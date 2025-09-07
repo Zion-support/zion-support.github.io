@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import fs from 'fs';
@@ -35,3 +36,8 @@ export default function NewsDigestPage() {return (<div className=\"space-y-6\" /
 }
 
 "
+=======
+</div> </div>) ) 
+}</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

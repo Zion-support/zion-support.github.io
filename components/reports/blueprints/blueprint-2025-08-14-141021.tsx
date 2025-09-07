@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
@@ -69,6 +70,13 @@ property='og:description'
       </main>
     </div>
   );
+=======
+<Head> <title>Reference Architecture — Autonomous Content Mesh</title> <meta name="description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." /> <meta property="og:title" content="Reference Architecture — Autonomous Content Mesh" /> <meta property="og:description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." /> <meta name="twitter:card" content="summary large image" /> </Head> <main className="container mx-auto px-6 py-12 prose prose-invert" > <h1 className="text-3xl font-extrabold" >Reference Architecture — Autonomous Content Mesh</h1> <div className="mt-4" dangerouslySetInnerHTML= {
+  {
+  html: `$ {
+  body 
+}` 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
   )
   } catch (error) {"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 
@@ -248,3 +249,6 @@ export default function Placeholder() {
 ;
 
 "
+=======
+<Head> <title>Reports • Seo • Latest.json - Placeholder</title> <meta name="robots" content="noindex" /> </Head> <div className="max-w-3xl mx-auto" > <h1 className="text-2xl font-semibold mb-2" >Reports • Seo • Latest.json</h1> <p className="text-gray-600 mb-6" >Auto-generated placeholder for missing route: <code>/reports/seo/latest.json</code>.</p> <Link href="/" ><a className="text-blue-600 hover:underline" >Back to Home</a></a> </div> </main>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

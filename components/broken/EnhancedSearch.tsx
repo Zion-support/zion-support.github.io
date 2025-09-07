@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
@@ -48,6 +49,23 @@ setIsSearching (false) }
 }, 300);
 [selected_filters]);
 [selected_filters]);
+=======
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+  
+}]
+setIsSearching (true)
+//Simulate API call delay setTimeout ( () => {
+  const filteredResults = mockSearchResults.filter (result => {
+  const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.category.toLowerCase () .includes (searchQuery.toLowerCase () )
+const matchesFilters = selectedFilters.length === 0 || selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) || result.type.toLowerCase () .includes (filter.toLowerCase () ) )
+setResults (sortedResults)
+setShowResults (true)
+setIsSearching (false) 
+}, 300) 
+}, 300)
+[selectedFilters])
+[selectedFilters])
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 //Close search on outside click useEffect ( () => {
 
   const handleClickOutside = (
@@ -56,6 +74,7 @@ setIsSearching (false) }
 ,) => {
   return $3;}
 }
+<<<<<<< HEAD
 }, []);
 //Handle filter toggle const toggleFilter = (
   setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId) ) => {
@@ -76,6 +95,29 @@ setIsSearching (false) }
 }<button type=\"submit\" className=\"absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50\"  /> Search </button> </div> </form> {}
   /* Search Results Dropdown */ }
 }<AnimatePresence /> {
+=======
+}, [])
+//Handle filter toggle const toggleFilter = (filterId: string) => {
+  setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId) return (<div className= {
+  `relative $ {
+  className 
+}` 
+}> {
+  /* Search Form */ 
+}<form onSubmit= {
+  handleSearch 
+}className="relative"> <div className="relative"> <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> <input /> {
+  /* Clear Button */ 
+}{
+  query && (<button type="button" onClick= {
+  clearSearch 
+}className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors" > <X className="w-4 h-4" /> </button>) 
+}{
+  /* Search Button */ 
+}<button type="submit" className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50" > Search </button> </div> </form> {
+  /* Search Results Dropdown */ 
+}<AnimatePresence> {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
   showResults && (<motion.div initial= {
   {
   opacity: 0, y: -10, scale: 0.95 }
@@ -212,6 +254,7 @@ setIsSearching (false) }
 }</div> </div> </div>) 
 }</div> </motion.div>) 
 }</AnimatePresence> </div>) 
+<<<<<<< HEAD
 };
 // Debounce utility function function debounce<T extends (...args: unknown[]) = /> any> (func: T;
 wait: number 
@@ -220,3 +263,9 @@ wait: number
 export default EnhancedSearch;
 
 "
+=======
+}
+// Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T
+wait: number 
+}export default EnhancedSearch
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

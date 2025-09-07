@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import TryItConsole from './TryItConsole';
 
@@ -87,3 +88,20 @@ method={endpoint && endpoint.method}
 }
 
 "
+=======
+</div> </div> <div>) ) 
+}</ul> </div>) 
+}{
+  endpoint.errors.map ( (e) => (<li key= {
+  e.code 
+}><strong> {
+  e.code 
+}</strong> ({
+  e.httpStatus 
+}) - {
+  e.message 
+}</li>) ) 
+}</ul> </div>) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

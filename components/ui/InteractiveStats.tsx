@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
     let start: number | null;
@@ -98,3 +99,8 @@ function Stat() {return (<div className='p - 5 rounded - xl border border - gray
   );
 
 "
+=======
+</div>) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

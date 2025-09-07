@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 import React from 'react';
 import type { KycProfile } from '../../utils / kyc';
@@ -40,3 +41,6 @@ export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {}
   return <VerifiedBadge labels={labels} />
 }
 
+=======
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

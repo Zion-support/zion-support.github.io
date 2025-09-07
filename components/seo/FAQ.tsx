@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -21,3 +22,12 @@ type QA = any;
 }
 
 "
+=======
+import React from 'react'
+type QA = {
+  q: string, a: string 
+}
+</div>) ) 
+}</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

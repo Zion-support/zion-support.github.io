@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 export default function UseTokensButton({
@@ -48,3 +49,7 @@ onClick={() = /> setOpen(true)}
   );
 
 "
+=======
+</>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
@@ -46,3 +47,18 @@ export function useAuth() {
   return useContext(AuthContext);
 }
 }
+=======
+type UserRole = 'talent' | 'client'
+useEffect ( () => {
+  try {
+  
+}catch {
+  
+}
+}, [])
+}catch {
+  
+}
+}
+return (
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

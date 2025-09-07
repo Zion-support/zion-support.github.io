@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const UserEngagementSystem = () => {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
@@ -21,3 +22,7 @@ const UserEngagementSystem = () => {
 };
 
 export default UserEngagementSystem;
+=======
+</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

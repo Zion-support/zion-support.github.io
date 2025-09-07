@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import Head from 'next/head';
 
@@ -55,6 +56,8 @@ const data = await res.json();
 };
   const data = await res.json()if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)}
  
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
 
  ;
@@ -107,6 +110,7 @@ onClick={regenerateKey}
             <button;
 onClick={fetchUsag}
 }
+<<<<<<< HEAD
               className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3' />;
               {loading ? 'Loading...' : 'Refresh'}
 
@@ -162,6 +166,12 @@ className='text-blue-600 underline'
       </div>
     </div>
   );
+=======
+})
+const data = await res.json ()
+setUsage (data.summary || null)
+setLoading (false)
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
 
 "

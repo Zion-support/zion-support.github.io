@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect, useState } from 'react';
@@ -101,3 +102,13 @@ href={ep.audio.wavUrl}
 }
 
 "
+=======
+useEffect ( () => {
+  const load = async () => {
+  try {
+  if (loading) return <div>Loading episodes…</div>
+MP4 </a>) 
+}</div> </div> </div> </li>) ) 
+}</ul> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

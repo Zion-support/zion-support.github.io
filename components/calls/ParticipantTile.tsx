@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect, useRef } from 'react';
@@ -188,3 +189,12 @@ if ( {) {$2;}
 }
 
 "
+=======
+useEffect ( () => {
+  const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
+  if (track.kind === 'video' && videoRef.current) {
+  participant.on ('trackSubscribed', handleTrackSubscribed)
+participant.on ('trackUnsubscribed', handleTrackUnsubscribed)
+</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

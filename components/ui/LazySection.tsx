@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useRef } from 'react';
@@ -106,3 +107,20 @@ const getAnimatePosition = (switch (direction) {case 'up':;
 
 export default LazySection;
 
+=======
+const getInitialPosition = () => {
+  switch (direction) {
+  case 'up': 
+}
+}
+const getAnimatePosition = () => {
+  switch (direction) {
+  case 'up': 
+}
+}
+return (<motion.div > {
+  children 
+}</motion.div>) 
+}
+export default LazySection
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

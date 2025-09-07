@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 
 const InteractiveNavigation = () => {
@@ -27,3 +28,6 @@ const InteractiveNavigation = () => {
 };
 
 export default InteractiveNavigation;
+=======
+const InteractiveNavigation = () => {}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

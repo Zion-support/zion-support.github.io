@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -77,3 +78,15 @@ onClick={toggleMic}
 
   );
 
+=======
+</button> <button onClick= {
+  toggleCam 
+}className= {
+  `px-4 py-2 rounded $ {
+  accentClass 
+}text-white` 
+}> {
+  camEnabled ? 'Stop Video' : 'Start Video' 
+}</button> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

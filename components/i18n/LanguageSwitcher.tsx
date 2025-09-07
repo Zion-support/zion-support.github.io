@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 const localeToFlag: Record<string, string /> = {
@@ -112,3 +113,15 @@ aria-haspopup=\"listbox\"
 }
 
 "
+=======
+> <span className= {
+  `fi fi-$ {
+  localeToFlag[lng] 
+}` 
+}></span> <span> {
+  t (localeLabelKey[lng]) 
+}</span> </button> </li>) ) 
+}</ul>) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

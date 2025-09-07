@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <div className=\"container mx-auto px-4 py-10\" />;
 "
@@ -76,3 +77,5 @@ function CategoryIndexPage() {
 }
 }
 "
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

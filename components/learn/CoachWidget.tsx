@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState } from 'react';
@@ -46,3 +47,11 @@ className='flex-1 border rounded px-3 py-2 bg-white dark: bg-black'
     </div>
   );
 
+=======
+async function ask () {
+  if (!input.trim () ) return
+setLoading (true)
+try {
+  </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

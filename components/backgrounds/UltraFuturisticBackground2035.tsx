@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect, useRef } from 'react';
@@ -22,6 +23,22 @@ ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);}
       vy: number;
       size: number;
       opacity: number;
+=======
+canvas.width = window.innerWidth * (window.devicePixelRatio || 1)
+canvas.height = window.innerHeight * (window.devicePixelRatio || 1)
+if (ctx) {
+  
+}
+}
+//Update and draw particles //Wrap around edges if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1)
+if (particle.x > canvas.width / (window.devicePixelRatio || 1) ) particle.x = 0
+if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1)
+if (particle.y > canvas.height / (window.devicePixelRatio || 1) ) particle.y = 0
+//Draw particle if (maxDistance > 0) {
+  particles.forEach ( (otherParticle, otherIndex) => {
+  if (index !== otherIndex) {
+  
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
       color: string;}
     }> = [];
@@ -50,6 +67,7 @@ color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][
           ],) => {
   return $3;}
 }
+<<<<<<< HEAD
         });
       }
     }
@@ -100,6 +118,15 @@ ctx.globalAlpha =
                   ((maxDistance - distance) / maxDistance) * 0.08;
                 ctx.lineWidth = 1;) => {
   return $3;}
+=======
+})
+initParticles ()
+updateParticles ()
+window.addEventListener ('resize', handleResize)
+return (<> {
+  /* Fixed Background Canvas */ 
+}<canvas backgroundImage: `linear-gradient (rgba (139, 92, 246, 0.3) 1px, transparent 1px), linear-gradient (90deg, rgba (139, 92, 246, 0.3) 1px, transparent 1px) `, backgroundSize: '50px 50px' 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
                 ctx.stroke()}
             }

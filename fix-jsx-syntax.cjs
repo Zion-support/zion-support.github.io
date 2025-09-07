@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 function fixJSXSyntax(filePath) {
   try {
   // TODO: Implement
@@ -31,31 +32,61 @@ function fixJSXSyntax(filePath) {
     }
 
     return modified;
+=======
+
+function fixJsxFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Fix JSX syntax issues
+    content = content
+      // Remove semicolons after JSX elements
+      .replace(/;\s*$/gm, '')
+      // Fix merge conflict markers
+      .replace(/^<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+\s*$/gm, '')
+      .replace(/^<<<<<<< [^\n]+\s*$/gm, '')
+      .replace(/^=======\s*$/gm, '')
+      .replace(/^>>>>>>> [^\n]+\s*$/gm, '')
+      // Fix interface syntax
+      .replace(/interface\s+(\w+)\s*\{;/g, 'interface $1 {')
+      .replace(/;\s*$/gm, '')
+      // Clean up extra semicolons
+      .replace(/;;+/g, ';')
+      .replace(/;\s*;/g, ';')
+      .replace(/;\s*$/gm, '')
+      .trim();
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed JSX: ${filePath}`);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-
+function walkDir(dir) {
+  const files = fs.readdirSync(dir);
+  
   for (const file of files) {
-    const filePath = path.join(dirPath, file);
+    const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-
+    
     if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
+      walkDir(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
-      if (fixJSXSyntax(filePath)) fixedCount++;
+      fixJsxFile(filePath);
     }
   }
-
-  return fixedCount;
 }
+<<<<<<< HEAD
 '
 console.log('Starting JSX syntax fixes...);
 const fixedCount = processDirectory('./pages');
 console.log(`Fixed ${fixedCount} files`);
 '
+=======
+
+walkDir('/workspace/components');
+walkDir('/workspace/pages');
+console.log('JSX syntax fixing complete!');
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

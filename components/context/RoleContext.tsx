@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
@@ -59,3 +60,21 @@ export function useRole(): RoleContextValue {
 return ctx;
 }
 }
+=======
+export type UserRole = 'client' | 'talent'
+useEffect ( () => {
+  try {
+  
+}catch {
+  
+}
+}, [])
+useEffect ( () => {
+  try {
+  if (typeof window !== 'undefined') {
+  
+}catch {
+  
+}
+}, [role])
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

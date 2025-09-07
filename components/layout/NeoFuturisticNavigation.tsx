@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState, useEffect } from 'react',
@@ -974,6 +975,39 @@ href='/contact'
 }<div /> <span />Resources</span> <ChevronRight className= {
   `w-5 h-5 transition-transform duration-300 $ {}
   activeDropdown === 'mobile-resources'? 'rotate-90': '' }
+=======
+window.addEventListener ('scroll', handleScroll)
+return () => window.removeEventListener ('scroll', handleScroll) 
+}, [])
+] 
+}]
+]
+const resources = [ {
+  name: 'Documentation', description: 'Comprehensive service guides', icon: <BookOpen className="w-5 h-5" />, link: '/docs' 
+}
+{
+  name: 'Blog & Insights', description: 'Latest technology trends', icon: <FileText className="w-5 h-5" />, link: '/blog' 
+}
+{
+  name: 'Case Studies', description: 'Real-world success stories', icon: <BarChart3 className="w-5 h-5" />, link: '/case-studies' 
+}
+{
+  name: 'Pricing', description: 'Transparent and flexible plans', icon: <CreditCard className="w-5 h-5" />, link: '/pricing' 
+}
+{
+  name: 'Reports', description: 'Live performance and audits', icon: <Activity className="w-5 h-5" />, link: '/reports' 
+}]
+
+  `w-4 h-4 transition-transform duration-300 $ {
+  activeDropdown === 'services' ? 'rotate-180' : '' 
+}` 
+}/> </button> </div>) ) 
+}</div> </div>) ) 
+}</div> <div className="mt-6 pt-6 border-t border-gray-700/50" > <div className="flex items-center justify-between" > <div className="text-gray-400 text-sm" > <span className="text-cyan-400 font-semibold" >500+</span> Revolutionary Services Available </div> <Button href="/services" variant="quantum" size="sm" > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div> </div>) 
+}</div> > <span>Popular</span> <ChevronDown className= {
+  `w-4 h-4 transition-transform duration-300 $ {
+  activeDropdown === 'popular'? 'rotate-180': '' 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }` 
 }/> </button>) ) 
 }</div>) "

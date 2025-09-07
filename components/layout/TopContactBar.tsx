@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState } from 'react';
@@ -342,6 +343,19 @@ href='/comprehensive-services-showcase-2025'
 }</div> {}
   /* Expand/Collapse Button */}"
 }<button) : (<ChevronDown className=\"w-4 h-4\" />)
+=======
+]
+
+  /* Main Contact Bar */ 
+}</a> </div> </div> > {
+  action.icon 
+}<span> {
+  action.name 
+}</span> </a>) ) 
+}</div> {
+  /* Expand/Collapse Button */ 
+}<button) : (<ChevronDown className="w-4 h-4" />) 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }</button> </div> </div> </div> </div> {
 }
   /* Expanded Information Panel */ }
