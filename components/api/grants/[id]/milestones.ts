@@ -1,18 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';
-<<<<<<< HEAD
 function grantPath() { return null; }
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';'
-=======
-function grantPath(id: string) {
-  return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {}`
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
-<<<<<<< HEAD
 function readGrant(id: string): GrantApplication | null {}
 }
 function writeGrant(record: GrantApplication) {}
@@ -44,7 +38,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN;
   );
-<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
@@ -64,12 +57,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   if (req.method === 'POST') {
     const existing = readGrant(id);
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {}
-  }'
-  if (req.method === 'POST') {};
-    const existing = readGrant(id);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (!existing) return res.status(404).json({ error: 'Not found' });
     const payload = req.body as MilestonesUpdatePayload;
     existing.milestones = payload.milestones |[];
@@ -140,19 +127,7 @@ if ( {) {}
   res.setHeader('Allow', 'GET, POST');
   }
 
-<<<<<<< HEAD
   res.status(405).end('Method Not Allowed');
   res.status(405).end('Method Not Allowed')
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-function readGrant(id: string): GrantApplication | null {
-
-  res.status(405).end('Method Not Allowed')
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

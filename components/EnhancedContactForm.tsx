@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  setErrors (newErrors);
 }
 setIsSubmitting (true);
@@ -15,7 +14,6 @@ const handleInputBlur = (name: keyof FormData) => {;
 }</select> </div> </div> <div> <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" > Message * </label> <textareaerrors && errors.message ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10' 
 }text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20` "
 }placeholder="Tell us about your project and requirements..." /> {;
-<<<<<<< HEAD
   errors && errors.message && (<motion&& motion.p initial= {
 
   {
@@ -100,13 +98,6 @@ const EnhancedContactForm: React.FC = () => {
       color: 'from-gray-500 to-slate-500',
     },
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
-  errors && errors.message && (<motion&& motion.p initial= {}
-  {}
-  opacity: 0, y: -10;
-}animate= {}
-  {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
   const validateForm = (): boolean => {}
     const newErrors: FormErrors = {}
@@ -379,15 +370,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { FormData, FormErrors } from '../types';
 import { useToast } from './ui/Toast';
 const EnhancedContactForm: React.FC;
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-16 max-w-7xl mx-auto">
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-8">
@@ -750,5 +737,4 @@ const EnhancedContactForm: React.FC;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 export default EnhancedContactForm;
 '"`
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

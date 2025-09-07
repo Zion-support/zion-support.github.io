@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 import { createOpenAIClient, generateJobPost  } from './openai.js';
 import { getPool, withUser } from './pg.js';
 dotenv.config();
-<<<<<<< HEAD
 const allowed = (process.env.CORS_ORIGINS || '')
       .split(',')
       .map(s => s.trim());
@@ -19,7 +18,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     cb(new Error('Not allowed'), false)
   }'
   methods: ['GETPOSTOPTIONS']
-<<<<<<< HEAD
 });
   },
   methods: ['GET', 'POST', 'OPTIONS'],
@@ -35,10 +33,6 @@ return (
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 app.post('/ai/ask', async (req, reply) => {
-=======
-});'
-app.post('/ai/ask', async (req, reply) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const body = (req.body as any) |{}
   const prompt = body.prompt as string;'
   if (!prompt) return reply.code(400).send({ error: 'prompt required' });
@@ -89,7 +83,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 });
   const userId = getUserId(req);'
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
-<<<<<<< HEAD
   const rows = await withUser(userId, async client => {
     const res = await client && client.query(
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -100,13 +93,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
        WHERE ($1::text IS NULL OR country = $1)
          AND ($2::text IS NULL OR EXISTS (
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' || $2 || '%'
-=======
-  const rows = await withUser(userId, async client => {}
-    const res = await client && client.query(`
-      `SELECT id, full_name, country, skills, experience_years FROM talent_profile;
-       WHERE ($1::text IS NULL OR country = $1)         AND ($2::text IS NULL OR EXISTS ('
-              SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
            ))
        ORDER BY created_at DESC;`
        LIMIT 25`,  const rows = await withUser(userId, async (client) => {}`
@@ -178,7 +164,6 @@ app.get ('/talent / search', async (req, reply) => {}
     );
     );
 ;
-<<<<<<< HEAD
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
 const project = await withUser(userId, async client => {
     const res = await client.query(
@@ -210,9 +195,3 @@ app.listen({ port, host: '0.0.0.0' }).catch(err => {
   process.exit(1);
 });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

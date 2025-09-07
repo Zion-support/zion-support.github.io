@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 @layer base {
   html {
     font-family: system-ui, sans-serif;
@@ -13,7 +12,6 @@
   body {
     @apply bg-white text-gray-900;
   }
-=======
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -228,5 +226,4 @@ body {
 
 .grid-auto-fill {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
->>>>>>> origin/main
 }

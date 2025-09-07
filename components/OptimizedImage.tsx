@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import React from "react";
-import Image from "next/image";
-interface OptimizedImageProps {
-=======
-import React from "react";"
-import Image from "next/image";
-interface OptimizedImageProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   src: string;
   alt: string;
   width?: number;
@@ -17,59 +5,8 @@ interface OptimizedImageProps {}
   className?: string;
   priority?: boolean;
   quality?: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-'use client'
-import React, { useState, useRef, useEffect } from 'react'
-import Image from 'next/image'
-interface OptimizedImageProps {
-'use client, ';''''
-  'import Image from 'next/image
-  ';interface OptimizedImageProps {'
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  quality?: number
-  placeholder?: 'blur' | 'empty'
-  blurDataURL?: string
-  sizes?: string
-  fill?: boolean
-  style?: React.CSSProperties
-  onClick?: () => void
-  onLoad?: () => void
-  onError?: () => void
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-}
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-<<<<<<< HEAD
-  src,
-  alt,
-  width = 800,
-  height = 600,
-  className = "",
-  priority = false,
-  quality = 75,
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }) => {
-=======
-}
-const OptimizedImage: React.FC<OptimizedImageProps> = ({}
-  src,
-  alt,
-  width = 800,
-  height = 600,"
-  className = "",
-  priority = false,
-  quality = 75,
-}) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <Image;
       src={src}
@@ -95,7 +32,6 @@ export default OptimizedImage;
   onError
 }) => {
 
-<<<<<<< HEAD
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 src, alt, width,  , ''
   '  height, '''
@@ -273,10 +209,4 @@ export const withImageOptimization = <P extends object>(;Component: React.Compon
 }''`
   '''export default OptimizedImage''`;''`''`'
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-<<<<<<< HEAD
-=======
-export default OptimizedImage;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

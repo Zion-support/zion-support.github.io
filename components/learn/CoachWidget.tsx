@@ -1,8 +1,4 @@
-<<<<<<< HEAD
         body: JSON.stringify({ prompt: input })
-=======
-        body: JSON.stringify({ prompt: input ;})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       });
       const data = await resp.json();
       setReply(data.text |'');
@@ -14,7 +10,6 @@
     }
   }
   return (
-
 
   return (      });
     }
@@ -31,19 +26,11 @@ function ask() {}
   $2;
 }
     set_loading (true);
-<<<<<<< HEAD
     try {'
       const resp = await fetch ('/api / learn / coach', {'
         method: 'POST','
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify ({ prompt: input }),
-=======
-    try {
-      const resp = await fetch ('/api / learn / coach', {
-        method: 'POST';,
-        headers: { 'Content - Type': 'application / json' ;},
-        body: JSON.stringify ({ prompt: input ;}),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       });
       const data = await resp.json ();'
       set_reply (data.text || '');
@@ -64,13 +51,7 @@ function ask() {}
         <input;'
           className='flex - 1 border rounded px - 3 py - 2 bg - white dark:bg - black';'
           placeholder='Ask for help...';
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function CoachWidget() {
   const [input, setInput] = useState('');
 
@@ -78,7 +59,6 @@ export default function CoachWidget() {
     if (!input.trim()) return;
     setLoading(true);
     try {
-<<<<<<< HEAD
       const resp = null;
       setReply(data.text || '')
     } finally {
@@ -108,30 +88,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {reply}
         </div>)}
     </div>);
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   }
 
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>
       )}
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';'
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -221,9 +220,6 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   BookOpen, MessageCircle, Star, TrendingUp, Target;
 
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
@@ -243,7 +239,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ShoppingCart, UserCheck, FileText, BarChart;
   PaletteIcon, VideoIcon, LockIcon as LockIcon2;
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2;
-<<<<<<< HEAD
   Handshake, LifeBuoy, Activity;
     services: [;
       {'
@@ -317,7 +312,6 @@ const quickLinks = ['
   { name: 'Blog', href: '/blog', icon: MessageCircle }'
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
     ];
-<<<<<<< HEAD
   }
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -512,29 +506,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   { name: 'News', href: '/news', icon: FileText },
   { name: 'Partners', href: '/partners', icon: Handshake },
   { name: 'Support', href: '/support', icon: LifeBuoy },
-=======
-  }'
-  { name: 'Home', href: '/', icon: Home },'
-  { name: 'Services', href: '/services', icon: Briefcase },'
-  { name: 'Solutions', href: '/solutions', icon: Target },'
-  { name: 'Pricing', href: '/pricing - 2034', icon: DollarSign },'
-  { name: 'Resources', href: '/resources', icon: BookOpen },'
-  { name: 'Case Studies', href: '/case - studies', icon: FileText },'
-  { name: 'Blog', href: '/blog', icon: MessageCircle },'
-  { name: 'About Us', href: '/about', icon: Users },'
-  { name: 'Careers', href: '/careers', icon: Briefcase },'
-  { name: 'News', href: '/news', icon: FileText },'
-  { name: 'Partners', href: '/partners', icon: Handshake },'
-  { name: 'Support', href: '/support', icon: LifeBuoy },'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { name: 'Status', href: '/status', icon: Activity }
 ];
 
-
-
-<<<<<<< HEAD
 export default function UltraFuturisticNavigation2034() {;
-
 
 { name: 'Status', href: '/status', icon: Activity },
 ];
@@ -577,12 +552,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {
     const handleScroll = () => {
     window.addEventListener('scroll', handleScroll);
-=======
-export default function UltraFuturisticNavigation2034() { return null; }
-  useEffect(() => {}
-    const handleScroll = () => {'
-    window.addEventListener('scroll', handleScroll);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
   const toggleDropdown = (category: string) => {}
@@ -667,237 +636,6 @@ setIsScrolled(window.scrollY > 50);
   const closeDropdown = () => {
     setActiveDropdown(null);
   };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-  return (
-    <>
-      {/* Top Contact Bar */}
-<div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-<div className = 'bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm' />
- ;
-  return (
-    <>;
-      {/* Top Contact Bar */}
-
-                {contactInfo.mobile}
-              </span>
-<<<<<<< HEAD
-            </div>'
-            <div className='flex items-center space-x-2'>'
-              <Mail className='w-4 h-4 text-blue-400' />'
-              <span className='hover:text-blue-400 transition-colors'>
-                {contactInfo.email}
-              </span>
-            </div>'
-            <div className='flex items-center space-x-2'>'
-              <MapPin className='w-4 h-4 text-purple-400' />'
-              <span className='hover:text-purple-400 transition-colors'>                {contactInfo.address}
-=======
-            </div>
-            <div className='flex items-center space-x-2' />
-              <Mail className='w-4 h-4 text-blue-400' />
-              <span className='hover: text-blue-400 transition-colors' />
-                {contactInfo.email}
-              </span>
-            </div>
-            <div className='flex items-center space-x-2' />
-              <MapPin className='w-4 h-4 text-purple-400' />
-              <span className='hover: text-purple-400 transition-colors'>                {contactInfo.address;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              </span>
-            </div>
-          </div>                {contactInfo.mobile}
-      <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm">"
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">"
-          <div className="flex items-center space-x-6">"
-            <div className="flex items-center space-x-2">"
-              <Phone className="w-4 h-4 text-cyan-400" />"
-              <span className="hover:text-cyan-400 transition-colors">'
-      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>'
-        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>'
-          <div className='flex items-center space-x-6'>'
-            <div className='flex items-center space-x-2'>'
-              <Phone className='w-4 h-4 text-cyan-400' />'
-              <span className='hover:text-cyan-400 transition-colors'>
-                {contactInfo.mobile}
-              </span>
-            </div>"
-            <div className="flex items-center space-x-2">"
-              <Mail className="w-4 h-4 text-blue-400" />"
-              <span className="hover:text-blue-400 transition-colors">
-                {contactInfo.email}
-              </span>
-            </div>"
-            <div className="flex items-center space-x-2">"
-              <MapPin className="w-4 h-4 text-purple-400" />"
-              <span className="hover:text-purple-400 transition-colors">
-              <span className='hover:text-purple-400 transition-colors'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-              <span className='hover:text-purple-400 transition-colors' />
-                {contactInfo.address}
-              </span>
-            </div>
-<<<<<<< HEAD
-          </div>"
-            <div className="flex items-center space-x-2">"
-              <Star className="w-4 h-4 text-yellow-400" />"
-=======
-          </div>
-            <div className="flex items-center space-x-2">
-              <Star className="w-4 h-4 text-yellow-400" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              <span className="text-yellow-400 font-semibold">5.0 Rating</span>
-            </div>"
-            <div className="flex items-center space-x-2">"
-              <Users className="w-4 h-4 text-green-400" />"
-              <span className="text-green-400 font-semibold">50K+ Customers</span>'
-      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;'
-        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;'
-          <div className='flex items-center space-x-6'>;'
-            <div className='flex items-center space-x-2'>;'
-              <Phone className='w-4 h-4 text-cyan-400' />;'
-              <span className='hover:text-cyan-400 transition-colors'>;
-                {contactInfo && contactInfo.mobile}
-              </span>;
-            </div>;'
-            <div className='flex items-center space-x-2'>;'
-              <Mail className='w-4 h-4 text-blue-400' />;'
-              <span className='hover:text-blue-400 transition-colors'>;
-                {contactInfo && contactInfo.email}
-              </span>;
-<<<<<<< HEAD
-            </div>;'
-            <div className='flex items-center space-x-2'>;'
-              <MapPin className='w-4 h-4 text-purple-400' />;'
-              <span className='hover:text-purple-400 transition-colors'>                {contactInfo && contactInfo.address}
-=======
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <MapPin className='w-4 h-4 text-purple-400' />;
-              <span className='hover: text-purple-400 transition-colors'>                {contactInfo && contactInfo.address;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              </span>;
-            </div>;
-          </div>                {contactInfo && contactInfo.mobile}
-              </span>;
-            </div>;"
-            <div className="flex items-center space-x-2">;"
-              <Mail className="w-4 h-4 text-blue-400" />;"
-              <span className="hover:text-blue-400 transition-colors">;
-                {contactInfo && contactInfo.email}
-              </span>;
-            </div>;"
-            <div className="flex items-center space-x-2">;"
-              <MapPin className="w-4 h-4 text-purple-400" />;"
-              <span className="hover:text-purple-400 transition-colors">;
-                {contactInfo && contactInfo.address}
-              </span>;
-            </div>;
-          </div>;'
-          <div className='flex items-center space-x-4'>;'
-            <div className='flex items-center space-x-2'>;'
-              <Star className='w-4 h-4 text-yellow-400' />;'
-              <span className='text-yellow-400 font-semibold'>5 && 5.0 Rating</span>;
-            </div>;'
-            <div className='flex items-center space-x-2'>;'
-              <Users className='w-4 h-4 text-green-400' />;'
-              <span className='text-green-400 font-semibold'>;
-                50K+ Customers;"
-              </span>            </div>          <div className="flex items-center space-x-4">;"
-            <div className="flex items-center space-x-2">;"
-              <Star className="w-4 h-4 text-yellow-400" />;"
-              <span className="text-yellow-400 font-semibold">5 && 5.0 Rating</span>;
-            </div>;"
-            <div className="flex items-center space-x-2">;"
-              <Users className="w-4 h-4 text-green-400" />;"
-              <span className="text-green-400 font-semibold">50K+ Customers</span>;
-          </div>;
-        </div>;
-      </div>;
-
-      {/* Main Navigation */}
-        isScrolled '
-          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' '
-          : 'bg-transparent'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<div className='flex items-center space-x-4'>
-            <div className='flex items-center space-x-2'>
-
-<div className='flex items-center space-x-4' />
-            <div className='flex items-center space-x-2' />
-              <Star className='w-4 h-4 text-yellow-400' />
-              <span className='text-yellow-400 font-semibold' />5.0 Rating</span>
-            </div>
-            <div className='flex items-center space-x-2' />
-              <Users className='w-4 h-4 text-green-400' />
-              <span className='text-green-400 font-semibold' />
-                50K+ Customers;
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Main Navigation */}
-<nav;
-className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled;
-            ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20'
-            : 'bg-transparent'}
-}
-        },
-} />
-
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />;
-          <div className='flex items-center justify-between h-20' />;
-            {/* Logo */}
-            <motion.div;
-              initial={{ opacity: 0;, x: -20 ;,}
-}
-              animate={{ opacity: 1;, x: 0 ;}}
-              transition={{ duration: 0.5 ;}}
-
-className='flex items-center space-x-3'
-origin/cursor/automate-test-improve-and-merge-code-2533
-            >
-              <div className='relative'>
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
-<<<<<<< HEAD
-=======
-            >'
-              <div className='relative'>'
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                  <Rocket className='w-7 h-7 text-white' />
-                </div>'
-                <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse'></div>
-              </div>
-              <div>'
-                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
-                  Zion Tech Group;
-                </h1>'
-                <p className='text-xs text-gray-400'>
-                  Future Technology Solutions;
-=======
-             />
-              <div className='relative' />
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center' />
-                  <Rocket className='w-7 h-7 text-white' />
-                </div>
-                <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse' /></div>
-              </div>
-              <div />
-                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent' />
-                  Zion Tech Group;
-                </h1>
-                <p className='text-xs text-gray-400'>
-                  Future Technology Solutions
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </p>              </div>
             </motion.div>
             {/* Desktop Navigation */}            >
@@ -905,17 +643,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-<<<<<<< HEAD
             <motion.div;
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}"
-=======
-            <motion.div
-              initial={{ opacity: 0;, x: -20 ;}}
-              animate={{ opacity: 1;, x: 0 ;}}
-              transition={{ duration: 0.5 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="flex items-center space-x-3"
             >"
               <div className="relative">"
@@ -931,17 +662,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>
               </div>
             </motion.div>
-<<<<<<< HEAD
               transition={{ duration: 0 && 0.5 }}'
               className='flex items-center space-x-3'>;'
               <div className='relative'>;'
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>;'
-=======
-              transition={{ duration: 0 && 0.5 ;}}
-              className='flex items-center space-x-3'>;
-              <div className='relative'>;
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Rocket className='w-7 h-7 text-white' />;
                 </div>;'
                 <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse'></div>;
@@ -976,14 +700,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {link.name}
                 </Link>
               ))}
-<<<<<<< HEAD
               
               {/* Services Dropdown */}"
               <div className="relative group">"
-=======
-              {/* Services Dropdown */}
-              <div className="relative group">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
                   <span>Services</span>"
                   <ChevronDown className="w-4 h-4" />
@@ -1002,7 +721,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <Link;
 ;
 const social_links = [;
-<<<<<<< HEAD
   {'
     name: 'LinkedIn','
     href: 'https://linkedin.com / company / ziontechgroup',
@@ -1020,25 +738,6 @@ const social_links = [;
     icon: Youtube,
   },'
   { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter },
-=======
-  {
-    name: 'LinkedIn';,
-    href: 'https://linkedin.com / company / ziontechgroup';,
-    icon: Linkedin;,
-  },
-  { name: 'GitHub';, href: 'https://github.com / Zion - Holdings';, icon: Github ;},
-  {
-    name: 'Instagram';,
-    href: 'https://instagram.com / ziontechgroup';,
-    icon: Instagram;,
-  },
-  {
-    name: 'YouTube';,
-    href: 'https://youtube.com/@ziontechgroup';,
-    icon: Youtube;,
-  },
-  { name: 'Twitter';, href: 'https://twitter.com / ziontechgroup';, icon: Twitter ;},
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];
 ;
 const certifications = [;'
@@ -1051,21 +750,12 @@ const certifications = [;'
   'Quantum Security Certified','
   'AI Ethics Compliant', ];];
 ;
-<<<<<<< HEAD
 const social_links = [;'
   { name: 'LinkedIn', href: 'https://linkedin.com / company / ziontechgroup', icon: Linkedin },'
   { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },'
   { name: 'Instagram', href: 'https://instagram.com / ziontechgroup', icon: Instagram },'
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },'
   { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter }
-=======
-const social_links = [;
-  { name: 'LinkedIn';, href: 'https://linkedin.com / company / ziontechgroup';, icon: Linkedin ;},
-  { name: 'GitHub';, href: 'https://github.com / Zion - Holdings';, icon: Github ;},
-  { name: 'Instagram';, href: 'https://instagram.com / ziontechgroup';, icon: Instagram ;},
-  { name: 'YouTube';, href: 'https://youtube.com/@ziontechgroup';, icon: Youtube ;},
-  { name: 'Twitter';, href: 'https://twitter.com / ziontechgroup';, icon: Twitter ;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];
 ;
 const certifications = [;'
@@ -1123,17 +813,10 @@ function UltraFuturisticNavigation2034() {}
               <span className='hover:text - blue - 400 transition - colors'>;
                 {contact_info.email}
               </span>;
-<<<<<<< HEAD
             </div>;'
             <div className='flex items - center space - x-2'>;'
               <MapPin className='w - 4 h - 4 text - purple - 400' />;'
               <span className='hover:text - purple - 400 transition - colors'>                {contact_info.address}
-=======
-            </div>;
-            <div className='flex items - center space - x-2'>;
-              <MapPin className='w - 4 h - 4 text - purple - 400' />;
-              <span className='hover: text - purple - 400 transition - colors'>                {contact_info.address;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </span>;
             </div>;
           </div>                {contact_info.mobile}
@@ -1189,15 +872,9 @@ function UltraFuturisticNavigation2034() {}
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
           <div className="flex items - center justify - between h - 20">;
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_x: -20 }}
               animate={{ opacity: 1, coordinate_x: 0 }}
               transition={{ duration: 0.5 }}'
-=======
-              initial={{ opacity: 0;, coordinate_x: -20 ;}}
-              animate={{ opacity: 1;, coordinate_x: 0 ;}}
-              transition={{ duration: 0.5 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='flex items - center space - x-3';
             >;'
               <div className='relative'>;'
@@ -1271,15 +948,9 @@ function UltraFuturisticNavigation2034() {}
                           {category.services.slice (0, 2).map (service => (
                             <Link;
                               key={service.name}
-<<<<<<< HEAD
                               href={service.href}'
                               className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}"
               <div className="relative group">;"
-=======
-                              href={service.href}
-                              className='block text - xs text - gray - 300 hover: text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */;}
-              <div className="relative group">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
                   <span > Services</span>;"
                   <ChevronDown className="w - 4 h - 4" />;
@@ -1301,11 +972,10 @@ function UltraFuturisticNavigation2034() {}
                               href={service.href}"
                               className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
                             >;
-<<<<<<< HEAD
-=======
+
                 <p className='text-xs text-gray-400' />
                   Future Technology Solutions;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                 </p>
               </div>
             </motion.div>
@@ -1361,21 +1031,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
 
                     ))}
-<<<<<<< HEAD
                     <Link'
                       href='/services''
-=======
-                    <Link
-                      href='/services'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
                       View All Services;'
                       <ArrowRight className='w-4 h-4 ml-2' />                    </Link>                    <Link"
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </div>
 <div className='mt-4 pt-4 border-t border-cyan-500/20' />
                     <Link;
@@ -1441,7 +1102,6 @@ onClick={() = /> setIsOpen(!isOpen,}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Mobile Menu */}
-<<<<<<< HEAD
         <AnimatePresence>;
           {isOpen && (;
             <motion&& motion.div;
@@ -1449,21 +1109,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
 
-
               transition={{ duration: 0.3 }}
-=======
-        <AnimatePresence />;
-          {isOpen && (<motion&& motion.div;}
-              initial={{ opacity: 0;, height: 0 ;,}
-}
-              animate={{ opacity: 1;, height: 'auto' ;,}
-}
-
-              exit={{ opacity: 0;, height: 0 ;}}
-
-
-              transition={{ duration: 0.3 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
              />
               <div className='px-4 py-6 space-y-4' />
@@ -1501,7 +1147,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <AnimatePresence>;
           {is_open && (
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, height: 0 }}'
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -1512,52 +1157,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
-=======
-              initial={{ opacity: 0;, height: 0 ;}}
-              animate={{ opacity: 1;, height: 'auto' ;}}
-              exit={{ opacity: 0;, height: 0 ;}}
-              transition={{ duration: 0.3 ;}}
-              className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20';
-            >;
-                          initial={{ opacity: 0;, height: 0 ;}}
-                          animate={{ opacity: 1;, height: 'auto' ;}}
-                          exit={{ opacity: 0;, height: 0 ;}}
-                    className='border-b border-cyan-500/20 pb-4' />
-
-                    <button;
-                      onClick={() = /> toggleDropdown(category.title)}
-                      className='flex items-center justify-between w-full text-left text-gray-300 hover: text-cyan-400 transition-colors duration-200 font-medium'>
-
-                      <span />{category.titl,}
-}</span>;
-                      <ChevronDown;
-                        className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === category.title ? 'rotate-180' : '';}
-                        }`}
-
-                      />
-                    </button>
-                    <AnimatePresence />
-                      {activeDropdown === category.title && (
-                        <motion.div;
-        <AnimatePresence />;
-          {is_open && (<motion.div;}
-              initial={{ opacity: 0;, height: 0 ;,}
-}
-              animate={{ opacity: 1;, height: 'auto' ;,}
-}
-              exit={{ opacity: 0;, height: 0 ;}}
-              transition={{ duration: 0.3 ;,}
-}
-              className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20' />
-
-                          initial={{ opacity: 0;, height: 0 ;,}
-}
-                          animate={{ opacity: 1;, height: 'auto' ;,}
-}
-                          exit={{ opacity: 0;, height: 0 ;}}
-
-                          transition={{ duration: 0.2 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 className='mt-3 ml-4 space-y-2'
                         >
@@ -1581,19 +1180,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </AnimatePresence>;
                   </div>;
                 ))}
-<<<<<<< HEAD
 <Link
-=======
-                <Link'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   href='/contact'
-<<<<<<< HEAD
                   onClick={() => setIsOpen(false)}'
                   className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link"
-=======
-                  onClick={() => setIsOpen(false)}
-                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   href="/contact"
                   onClick={() => setIsOpen(false)}"
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center";'
@@ -1632,7 +1222,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </AnimatePresence>;
       </nav>;
 
-<<<<<<< HEAD
       {/* Spacer for fixed navigation */}'
       <div className='h-20'></div>;
     </>;"
@@ -1648,13 +1237,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 
-<<<<<<< HEAD
-=======
-<Link;
-href='/contact'
-                  onClick={() = /> setIsOpen(false)}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'
                   className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'
                 >
@@ -1673,10 +1255,3 @@ href='/contact'
     </>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

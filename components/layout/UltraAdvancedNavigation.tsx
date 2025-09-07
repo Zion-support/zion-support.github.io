@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   Menu;
   X;
   ChevronDown;
@@ -59,7 +58,6 @@ import Link from 'next/link';import {}
 '
 import Link from 'next/link';import { ;
 
-
   Lock,
   Code,'
 } from 'lucide-react';
@@ -67,17 +65,13 @@ import Link from 'next/link';import { ;
 
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
   Bot, Car, Building2, DollarSign, Monitor, Users;
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
 
-<<<<<<< HEAD
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -91,17 +85,12 @@ icon: null,
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'AI Services'
-=======
-    {'
-      name: 'AI Services''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       href: '#'
       icon: Brain'
       description: 'Cutting-edge AI solutions'
       dropdown: ['
       description: 'Benchmarks & vendor references'
     }
-<<<<<<< HEAD
         {
           name: 'AI Agent Orchestrator',
           href: '/ai-agents',
@@ -270,26 +259,9 @@ description: '300+ micro SaaS services',
     },
     {
       name: 'Market Pricing'
-=======
-    {'
-      name: 'About''
-      href: '/about',          price: '$7,999/month'
-        }
-      ]
-    }'
-      name: 'Micro SaaS''
-      href: '/services'
-      icon: Monitor'
-      description: '300+ micro SaaS services''
-    },      description: '300+ micro SaaS services'
-    }
-    {'
-      name: 'Market Pricing''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       href: '/market-pricing'
       icon: DollarSign'
       description: 'Benchmarks & vendor references'
-<<<<<<< HEAD
     },    {
       name: 'Market Pricing',
       href: '/market-pricing',
@@ -305,24 +277,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {
     >;
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-=======
-    },    {}
-    {'
-      name: 'Contact''
-      href: '/contact'
-      icon: null;
-    }
-    {}
-    >;'
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className='flex justify-between items-center h-20'>          {/* Logo */}  return (
     <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${}
       isScrolled '
         ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' '
         : 'bg-transparent'
 
-<<<<<<< HEAD
       name: 'Contact',
       href: '/contact',
       icon: null,
@@ -348,11 +308,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-=======
-          >'
-            <Link href='/' className='flex items-center space-x-3 group'>'
-              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Zap className='w-6 h-6 text-white' />
               </div>'
               <div className='hidden sm:block'>'
@@ -374,15 +329,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>"
               <div className="hidden sm:block">"
                 <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-<<<<<<< HEAD
                   Zion Tech Group
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
-=======
-                  Zion Tech Group;
-                </div>"
-                <div className="text-xs text-gray-400">Revolutionary Technology</div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </Link>
           </motion.div>
@@ -411,12 +360,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </Link>;
           </motion && motion.div>;
-
-
-
-
-
-
 
           {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>
@@ -518,14 +461,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Contact Info & CTA */}'
           <div className='hidden lg:flex items-center space-x-6'>;'
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
-<<<<<<< HEAD
 <div className='hidden lg:flex items-center space-x-6'>
             <div className='flex items-center space-x-4 text-sm text-gray-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <a
-=======
-              <a;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </a>
               <a;
           </div>
@@ -848,8 +787,6 @@ export default UltraAdvancedNavigation;
 
 };
 
-
-<<<<<<< HEAD
                   href='/contact'
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -868,8 +805,4 @@ export default UltraAdvancedNavigation;
 
 export default UltraAdvancedNavigation;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

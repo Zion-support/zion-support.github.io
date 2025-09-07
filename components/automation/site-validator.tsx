@@ -1,17 +1,9 @@
 
 
-<<<<<<< HEAD
  
 
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
-=======
-
-
-import fs from 'fs';'
-import path from 'path';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { GetStaticProps } from 'next';
 type Broken = { url: string, page: string, status: number },
 interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
@@ -45,7 +37,6 @@ export const getStaticProps: GetStaticProps < Props> = async () => {}
 export default function SiteValidator(): any ({ report }: Props) {
 };
 
-<<<<<<< HEAD
 export default function SiteValidator({ report }: Props) {
 export default function SiteValidator({ report }: Props) {;
   if (!report) return <div>No validation report yet.</div>;
@@ -63,13 +54,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">;
         <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Pages Scanned</div><div className="text-2xl font-semibold">{report && report.pagesScanned}</div></div>;
         <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Broken Links</div><div className="text-2xl font-semibold">{report && report.brokenLinks.length}</div></div>;
-=======
-
-export default function SiteValidator({ report }: Props) {};
-export default function SiteValidator() { return null; }
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Pages Scanned</div><div className="text-2xl font-semibold">{report && report.pagesScanned}</div></div>;"
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Broken Links</div><div className="text-2xl font-semibold">{report && report.brokenLinks.length}</div></div>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">OG Issues</div><div className="text-2xl font-semibold">{report && report.pagesWithOgIssues}</div></div>;
       </div>;
       {report && report.brokenLinks.length > 0 && (;
@@ -78,50 +62,21 @@ export default function SiteValidator() { return null; }
           <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">;
             {report && report.brokenLinks.slice(0, 500).map((b, i) => (;"
               <li key={i} className="flex justify-between gap-4"><span className="truncate">{b && b.page} → {b && b.url}</span><span className="text-gray-500">{b && b.status}</span></li>;
-=======
-  return (
-    <div className=\"space-y-6\" />;
-"
-      <header className=\"space-y-1\" />;"
-        <h1 className=\"text-3xl font-bold\" />Site Validator</h1>;"
-        <p className=\"text-gray-600 dark:text-gray-300\" />Broken links and Open Graph checks from exported site.</p>;
-      </header>;"
-      <div className=\"grid sm:grid-cols-2 lg:grid-cols-4 gap-4\" />;"
-        <div className=\"p-4 rounded-lg border border-gray-200 dark: border-gray-800\" /><div className=\"text-xs text-gray-500\" />Pages Scanned</div><div className=\"text-2xl font-semibold\" />{report && report.pagesScanne;}
-}</div></div>;"
-        <div className=\"p-4 rounded-lg border border-gray-200 dark: border-gray-800\" /><div className=\"text-xs text-gray-500\" />Broken Links</div><div className=\"text-2xl font-semibold\" />{report && report.brokenLinks.lengt;}
-}</div></div>;"
-        <div className=\"p-4 rounded-lg border border-gray-200 dark: border-gray-800\" /><div className=\"text-xs text-gray-500\" />OG Issues</div><div className=\"text-2xl font-semibold\" />{report && report.pagesWithOgIssue;}
-}</div></div>;
-      </div>;
-      {report && report.brokenLinks.length > 0 && (<section />;"
-          <h2 className=\"font-semibold mb-2\" />Broken Links</h2>;}"
-          <ul className=\"text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800\" />;}"
-            {report && report.brokenLinks.slice(0, 500).map((b, i) => (<li key={i} className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{b && b.page} → {b && b.url}</span><span className=\"text-gray-500\" />{b && b.status}</span></li>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             ))}
           </ul>;
         </section>;
       )}
-<<<<<<< HEAD
       {report && report.ogIssues.length > 0 && (;
         <section>;"
           <h2 className="font-semibold mb-2">Pages Missing OG Tags</h2>;"
           <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">;
             {report && report.ogIssues.map((o, i) => (;'"
               <li key={i} className="flex justify-between gap-4"><span className="truncate">{o && o.page}</span><span className="text-gray-500 truncate">{o && o.missing.join(', ')}</span></li>;
-=======
-      {report && report.ogIssues.length > 0 && (<section />;"
-          <h2 className=\"font-semibold mb-2\" />Pages Missing OG Tags</h2>;}"
-          <ul className=\"text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800\" />;}"
-            {report && report.ogIssues.map((o, i) => (<li key={i} className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{o && o.page}</span><span className=\"text-gray-500 truncate\" />{o && o.missing.join(', ')}</span></li>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             ))}
           </ul>;
         </section>;
       )}
 }
-<<<<<<< HEAD
 ;
 export default /**;
  * SiteValidator - Function description;
@@ -131,7 +86,6 @@ function SiteValidator() {}
 if (return <div > No validation report yet.</div>) {}
   $2;
 }
-<<<<<<< HEAD
   return (
     <div className="space-y-6">;
       <header className="space-y-1">;
@@ -142,27 +96,6 @@ if (return <div > No validation report yet.</div>) {}
         <div className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800"><div className="text - xs text-gray-500">Pages Scanned</div><div className="text-2xl font-semibold">{report.pages_scanned}</div></div>;
         <div className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800"><div className="text - xs text-gray-500">Broken Links</div><div className="text-2xl font-semibold">{report.broken_links.length}</div></div>;
         <div className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800"><div className="text - xs text-gray-500">OG Issues</div><div className="text-2xl font-semibold">{report.pagesWithOgIssues}</div></div>;
-=======
-
-export default /**;
- * SiteValidator - Function description;
- */;
-function SiteValidator() {// Check condition;}
-if (return <div  /> No validation report yet.</div>) {$2;}
-}"
-  return (<div className=\"space-y-6\" />;"
-      <header className=\"space-y-1\" />;"
-        <h1 className=\"text-3xl font-bold\" />Site Validator</h1>;"
-        <p className=\"text - gray - 600 dark:text-gray-300\" />Broken links and Open Graph checks from exported site.</p>;
-      </header>;"
-      <div className=\"grid sm:grid - cols - 2 lg:grid - cols-4 gap-4\" />;"
-        <div className=\"p - 4 rounded - lg border border - gray - 200 dark: border-gray-800\" /><div className=\"text - xs text-gray-500\" />Pages Scanned</div><div className=\"text-2xl font-semibold\" />{report.pages_scanne;}
-}</div></div>;"
-        <div className=\"p - 4 rounded - lg border border - gray - 200 dark: border-gray-800\" /><div className=\"text - xs text-gray-500\" />Broken Links</div><div className=\"text-2xl font-semibold\" />{report.broken_links.lengt;}
-}</div></div>;"
-        <div className=\"p - 4 rounded - lg border border - gray - 200 dark: border-gray-800\" /><div className=\"text - xs text-gray-500\" />OG Issues</div><div className=\"text-2xl font-semibold\" />{report.pagesWithOgIssue;}
-}</div></div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>;
       {report.broken_links.length > 0 && (<section />;"
           <h2 className=\"font-semibold mb-2\" />Broken Links</h2>;}"
@@ -170,46 +103,12 @@ if (return <div  /> No validation report yet.</div>) {$2;}
             {report.broken_links.slice (0, 500).map ((b, i) => (<li key={i} className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{b.page} → {b.url}</span><span className=\"text-gray-500\" />{b.status}</span></li>))}
           </ul>;
         </section>)}
-<<<<<<< HEAD
       {report.og_issues.length > 0 && (
         <section>;
           <h2 className="font-semibold mb-2">Pages Missing OG Tags</h2>;
           <ul className="text - sm space - y-1 max - h-96 overflow - auto border rounded p - 3 border - gray - 200 dark:border-gray-800">;
             {report.og_issues.map ((o, i) => (
               <li key={i} className="flex justify-between gap-4"><span className="truncate">{o.page}</span><span className="text-gray-500 truncate">{o.missing.join (', ')}</span></li>))}
-=======
-  return ("
-    <div className="space - y-6">;"
-      <header className="space - y-1">;"
-        <h1 className="text - 3xl font - bold">Site Validator</h1>;"
-        <p className="text - gray - 600 dark:text - gray - 300">Broken links and Open Graph checks from exported site.</p>;
-      </header>;"
-      <div className="grid sm:grid - cols - 2 lg:grid - cols - 4 gap - 4">;"
-        <div className="p - 4 rounded - lg border border - gray - 200 dark:border - gray - 800"><div className="text - xs text - gray - 500">Pages Scanned</div><div className="text - 2xl font - semibold">{report.pages_scanned}</div></div>;"
-        <div className="p - 4 rounded - lg border border - gray - 200 dark:border - gray - 800"><div className="text - xs text - gray - 500">Broken Links</div><div className="text - 2xl font - semibold">{report.broken_links.length}</div></div>;"
-        <div className="p - 4 rounded - lg border border - gray - 200 dark:border - gray - 800"><div className="text - xs text - gray - 500">OG Issues</div><div className="text - 2xl font - semibold">{report.pagesWithOgIssues}</div></div>;
-      </div>;
-      {report.broken_links.length > 0 && (
-        <section>;"
-          <h2 className="font - semibold mb - 2">Broken Links</h2>;"
-          <ul className="text - sm space - y-1 max - h-96 overflow - auto border rounded p - 3 border - gray - 200 dark:border - gray - 800">;
-            {report.broken_links.slice (0, 500).map ((b, i) => ("
-              <li key={i} className="flex justify - between gap - 4"><span className="truncate">{b.page} → {b.url}</span><span className="text - gray - 500">{b.status}</span></li>))}
-          </ul>;
-        </section>)}
-      {report.og_issues.length > 0 && (
-        <section>;"
-          <h2 className="font - semibold mb - 2">Pages Missing OG Tags</h2>;"
-          <ul className="text - sm space - y-1 max - h-96 overflow - auto border rounded p - 3 border - gray - 200 dark:border - gray - 800">;
-            {report.og_issues.map ((o, i) => ('"
-              <li key={i} className="flex justify - between gap - 4"><span className="truncate">{o.page}</span><span className="text - gray - 500 truncate">{o.missing.join (', ')}</span></li>))}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      {report.og_issues.length > 0 && (<section />;"
-          <h2 className=\"font-semibold mb-2\" />Pages Missing OG Tags</h2>;}"
-          <ul className=\"text - sm space - y-1 max - h-96 overflow - auto border rounded p - 3 border - gray - 200 dark:border-gray-800\" />;}"
-            {report.og_issues.map ((o, i) => (<li key={i} className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{o.page}</span><span className=\"text-gray-500 truncate\" />{o.missing.join (', ')}</span></li>))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </ul>;
         </section>)}
 
@@ -219,14 +118,4 @@ if (return <div  /> No validation report yet.</div>) {$2;}
 }
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

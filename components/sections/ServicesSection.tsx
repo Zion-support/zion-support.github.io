@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  Brain
-  Cloud
-  RefreshCw
-  Wifi
-  Shield
-  BarChart3
-  ArrowRight
-  Zap;} from 'lucide-react';import {
-'use client';
-<<<<<<< HEAD
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  Brain;
-  Cloud;
-  RefreshCw;
-  Wifi;
-  Shield;
-  BarChart3;
-  ArrowRight;
-  Zap;} from 'lucide-react';import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Brain,
   Cloud,
   RefreshCw,
@@ -39,7 +13,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Shield;
   BarChart3;
   ArrowRight;
-<<<<<<< HEAD
   Zap
   ArrowRight,
   Zap,;
@@ -47,10 +20,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 const ServicesSection: React.FC = () => {
-=======
-  Zap;
-const ServicesSection: React.FC = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const services = [;
     {}
       icon: Brain,'
@@ -77,7 +46,6 @@ const ServicesSection: React.FC = () => {}
     }
   const container_variants = {}
     hidden: { opacity: 0 },
-
 
 import {;
   Brain,;
@@ -234,7 +202,6 @@ const ServicesSection: React.FC = () => {;
     hidden: { opacity: 0, y: 20 },;
     visible: { opacity: 1, y: 0 },;
   };
-<<<<<<< HEAD
 description:
         'Custom AI solutions and machine learning models tailored to your business needs.',
       features: [
@@ -333,9 +300,6 @@ visible: { opacity: 1, y: 0 },
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-=======
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>;
       {/* Background Elements */}
 '
@@ -434,16 +398,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
             viewport={{ once: true }}
 className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
           >
             <Zap className='w-5 h-5 text-blue-400' />
-=======
-            viewport={{ once: true }}'
-            className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6''
-            <Zap className='w-5 h-5 text-blue-400' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>'
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
@@ -459,17 +417,12 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth;
             for businesses across all industries.
-<<<<<<< HEAD
             We deliver cutting-edge technology solutions that drive innovation,
             efficiency, and growth for businesses across all industries.
           </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
             <Zap className='w-5 h-5 text-blue-400' />;
-=======
-        </motion.div>'
-            <Zap className='w-5 h-5 text-blue-400' />;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span className='text-blue-400 font-medium'>Our Services</span>;
           </motion && motion.div>;'
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>;
@@ -486,17 +439,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             for businesses across all industries.;
         </motion && motion.div>;
 
-
         {/* Services Grid */}
-<<<<<<< HEAD
         <motion&& motion.div
           variants={containerVariants}
 initial='hidden'
-=======
-        <motion&& motion.div;
-          variants={containerVariants}'
-          initial='hidden''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           whileInView='visible'
           viewport={{ once: true }}'"
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          initial="hidden";"
@@ -600,15 +546,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           viewport={{ once: true }}
 
-<<<<<<< HEAD
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
-=======
-        >'
-          <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h3 className='text-2xl font-bold text-white mb-4'>
               Ready to Transform Your Business?
             </h3>'
@@ -712,8 +653,6 @@ export default ServicesSection;
 
 };
 
-
-<<<<<<< HEAD
               className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1'
             >
               <span>Get Started Today</span>
@@ -728,9 +667,3 @@ export default ServicesSection;
 
 export default ServicesSection;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

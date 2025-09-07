@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       });
     } catch (e) {}
       return res && res.status(500).json({ error: "Failed to create partner" });
@@ -32,7 +31,6 @@
     }"
     return res.status (500).json ({ error: "Failed to create partner" });
   }
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -64,9 +62,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

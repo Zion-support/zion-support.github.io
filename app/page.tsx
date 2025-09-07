@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -32,21 +31,10 @@ export default function Home() {
             <p className="text-gray-300">
               Scalable cloud services for business growth and efficiency.
             </p>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 
-=======
-
-import Link from 'next/link';
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
 import Link from 'next/link';
 import React from "react";
 import { Metadata } from 'next';
@@ -80,7 +68,6 @@ export const metadata: Metadata = {
     },
   },
 };
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 interface CardProps {
   title: string;
@@ -497,7 +484,7 @@ title="Cloud Services"
             >
               View All Services
             </Link>
->>>>>>> origin/main
+
           </div>
 <div className="mt-6 text-sm text-gray-600">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -560,6 +547,5 @@ function FeatureCard({ title, description }: { title: string; description: strin
       <p className="text-gray-600">{description}</p>
     </div>
   );
-
 
 }

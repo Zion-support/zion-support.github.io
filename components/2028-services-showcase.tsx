@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';'
 import { motion } from 'framer-motion';
 
@@ -83,7 +82,6 @@ import {}
 
 export default function ServicesShowcase2028() { return null; }
       {/* Hero Section */}
-
 
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -384,7 +382,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ))}
                     </div>
 
-<<<<<<< HEAD
                     <Link
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
 className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group'
@@ -396,9 +393,6 @@ className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-
                 </div>
               </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                    <Link;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
       {/* Featured Services */}'
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>;'
@@ -409,7 +403,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               Our most innovative and in-demand services that are revolutionizing industries worldwide.
             </p>
-<<<<<<< HEAD
           </div>
 <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -468,9 +461,6 @@ className='group relative'
                       </div>
                       <div className='text-sm text-purple-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          </div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <span className='font-medium'>Market Size:</span>{' '}
                         {service && service.marketSize}
                       </div>;'
@@ -530,21 +520,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Market Analysis */}
 <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Market{' '}
-=======
-      {/* Market Analysis */}'
-      <section className='py-20 bg-black/50'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-          <div className='text-center mb-16'>'
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>'
-              Market{' '}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Insights;
               </span>
@@ -553,22 +534,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Understand the market dynamics and growth potential of our;
               futuristic services.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <motion.div
 
-=======
-          </div>'
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>"
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-              Understand the market dynamics and growth potential of our futuristic services.
-            </p>
-          </div>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}'
@@ -648,7 +618,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />"
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>"
               <p className="text-purple-300 mb-6">
-<<<<<<< HEAD
                 Our services target markets with exponential growth potential
 
 className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
@@ -664,17 +633,6 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               <div className='text-3xl font-bold text-green-400'>500%+</div>
               <div className='text-purple-300'>Average Annual Growth</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                Our services target markets with exponential growth potential;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
-  Building, Factory, Camera, Video, Music, Gamepad2
- } from 'lucide-react';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 with some sectors growing at 300-800% annually.
               </p>"
               <div className="text-3xl font-bold text-green-400">500%+</div>"
@@ -720,20 +678,11 @@ className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 bor
             </motion.div>
             <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
               viewport={{ once: true }}
 
-<<<<<<< HEAD
-=======
-              initial={{ opacity: 0;, y: 30 ;}}
-              whileInView={{ opacity: 1;, y: 0 ;}}
-              transition={{ duration: 0 && 0.6;, delay: 0 && 0.4 ;}}
-              viewport={{ once: true ;}}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
             >
               <Shield className='w-16 h-16 text-pink-400 mx-auto mb-6' />
@@ -755,29 +704,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
-<<<<<<< HEAD
-=======
-      {/* CTA Section */}'
-      <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>'"
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
-
-<<<<<<< HEAD
-=======
-            initial={{ opacity: 0;, y: 30 ;}}
-            whileInView={{ opacity: 1;, y: 0 ;}}
-            transition={{ duration: 0 && 0.8 ;}}
-            viewport={{ once: true ;}}
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='space-y-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
@@ -785,13 +716,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='space-y-8'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Ready to{' '}
-=======
-          >'
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>'
-            className='space-y-8'>;'
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;'
-              Ready to{' '}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Transform;'
               </span>{' '}
@@ -868,17 +792,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;"
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}'
-=======
-              initial={{ opacity: 0;, coordinate_y: 30 ;}}
-              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
-              transition={{ duration: 0.6 ;}}
-              viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='text - center p - 8 bg - gradient - to - br from - purple - 900 / 20 to - blue - 900 / 20 border border - purple - 500 / 30 rounded - 2xl';
             >;'
               <TrendingUp className='w - 16 h - 16 text - green - 400 mx - auto mb - 6' />;'
@@ -901,17 +818,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text - purple - 300">Average Annual Growth</div>;
             </motion.div>;
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}'
-=======
-              initial={{ opacity: 0;, coordinate_y: 30 ;}}
-              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
-              transition={{ duration: 0.6;, delay: 0.2 ;}}
-              viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='text - center p - 8 bg - gradient - to - br from - blue - 900 / 20 to - cyan - 900 / 20 border border - blue - 500 / 30 rounded - 2xl';
             >;'
               <DollarSign className='w - 16 h - 16 text - blue - 400 mx - auto mb - 6' />;'
@@ -934,17 +844,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text - blue - 300">Total Addressable Market</div>;
             </motion.div>;
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}'
-=======
-              initial={{ opacity: 0;, coordinate_y: 30 ;}}
-              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
-              transition={{ duration: 0.6;, delay: 0.4 ;}}
-              viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='text - center p - 8 bg - gradient - to - br from - pink - 900 / 20 to - rose - 900 / 20 border border - pink - 500 / 30 rounded - 2xl';
             >;'
               <Shield className='w - 16 h - 16 text - pink - 400 mx - auto mb - 6' />;'
@@ -974,17 +877,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30">;"
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
           <motion.div;
-<<<<<<< HEAD
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}'
-=======
-            initial={{ opacity: 0;, coordinate_y: 30 ;}}
-            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
-            transition={{ duration: 0.8 ;}}
-            viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             className='space - y-8';
           >;'
             <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;'
@@ -1038,15 +934,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 
-
     </>
   );
 
 }
-<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

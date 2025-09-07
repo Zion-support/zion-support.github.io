@@ -1,6 +1,5 @@
 import useSWR from 'swr';
 
-<<<<<<< HEAD
   const hasActiveDispute = !!data?.disputes?.some(;
     (d: any) =>;
       d && d.projectId === projectId &&;'
@@ -78,7 +77,6 @@ if (return null) {}
     <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow-300 text-xs">;
       Under Dispute;
     </span>);
-<<<<<<< HEAD
     <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>
       Under Dispute
     </span>
@@ -86,20 +84,7 @@ if (return null) {}
   return (
     <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
       Under Dispute
-=======
-  return (
-    <span className=\"inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs\" />
-      Under Dispute;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </span>
 );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

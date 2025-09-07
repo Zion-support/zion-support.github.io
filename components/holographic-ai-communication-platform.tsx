@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';'
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';'
@@ -8,19 +7,11 @@ export default function HolographicAICommunicationPage() {}
     mobile: '+1 302 464 0950''
     email: 'kleber@ziontechgroup.com''
     address: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
   }
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 };
-=======
-  }'
-    mobile: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com',';
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HolographicAICommunicationPage() {}
   const contactInfo = {'
@@ -34,7 +25,6 @@ export default function HolographicAICommunicationPage() {}
     'Cross-platform WebXR support''
     'Enterprise-grade security',    address: '364 E Main St STE 1008 Middletown DE 19709'
   }
-<<<<<<< HEAD
   const features = [
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
 export default function HolographicAICommunicationPage() {;
@@ -52,21 +42,6 @@ export default function HolographicAICommunicationPage() {;
     'Cross-platform WebXR support',;
     'Enterprise-grade security',    address: '364 E Main St STE 1008 Middletown DE 19709'
 };
-=======
-  const features = ['
-    'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security';
-export default function HolographicAICommunicationPage() { return null; }
-  };
-
-  const features = [;'
-    'AI-powered 3D holographic projection',;'
-    'Real-time holographic rendering',;'
-    'Multi-user holographic meetings',;'
-    'Gesture and voice control',;'
-    'Cross-platform WebXR support',;'
-    'Enterprise-grade security',    address: '364 E Main St STE 1008 Middletown DE 19709';
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const features = [;'
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security';
@@ -75,18 +50,8 @@ export default function HolographicAICommunicationPage() { return null; }
     <UltraAdvancedFuturisticBackground>;
       <Head>;
         <title>Holographic AI Communication Platform - Zion Tech Group</title>;
-<<<<<<< HEAD
         <meta
   const contactInfo = null;
-=======
-
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-export default function HolographicAICommunicationPage() {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -94,10 +59,6 @@ export default function HolographicAICommunicationPage() {
 <meta
 origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
-=======
-        <meta'
-          name='description''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           content='AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control.'
         />;
         <link'
@@ -138,17 +99,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='text-slate-400'>;
                 30-day free trial • Setup: 1 week;
               </div>;
-<<<<<<< HEAD
               <Button'
                 href='/contact''
                 variant='quantum''
                 size='lg''
-=======
-              <Button
-                href='/contact'
-                variant='quantum'
-                size='lg'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='w-full mt-4'>;
                 Start Free Trial;'
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -255,14 +209,4 @@ function HolographicAICommunicationPage() {}
   }
 ;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  );
-}
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

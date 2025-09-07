@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'AI Meeting Assistant | Zion Tech Group',
   description: 'AI meeting assistant for enhanced productivity and collaboration.',
@@ -43,19 +42,6 @@ export default function ServicePage() {
     </div>
   )
 }
-=======
-<<<<<<< HEAD
-import Link from 'next/link';
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-import FeatureCard from '../../../components/FeatureCard';
-import TestimonialCard from '../../../components/TestimonialCard';
-=======
-import Link from "next/link";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 export const metadata = {
   title: 'AI Meeting Assistant | Zion Tech Group',
@@ -63,75 +49,12 @@ export const metadata = {
     'Transform your meetings with AI-powered transcription, action items, and intelligent insights. Never miss important details again.',
 };
 
-<<<<<<< HEAD
-=======
 export default function AIMeetingAssistantPage() {
   return (
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Meeting Assistant
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional ai meeting assistant services for your business needs.
-          </p>
-=======
-    <div className="animate-fade-in">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          AI Meeting Assistant
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your meetings with AI-powered transcription, action items,
-          and intelligent insights. Never miss important details and make every
-          meeting more productive.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Key Features
-          </h2>
-          <div className="space-y-6">
-            <FeatureItem
-              icon="🎤"
-              title="Real-time Transcription"
-              description="Live transcription with 99% accuracy in 50+ languages with speaker identification"
-            />
-            <FeatureItem
-              icon="📝"
-              title="Smart Action Items"
-              description="Automatically extract and assign action items with due dates and responsible parties"
-            />
-            <FeatureItem
-              icon="🧠"
-              title="AI-Powered Summaries"
-              description="Intelligent meeting summaries highlighting key decisions, topics, and outcomes"
-            />
-            <FeatureItem
-              icon="📊"
-              title="Meeting Analytics"
-              description="Insights on meeting effectiveness, participation, and time management"
-            />
-            <FeatureItem
-              icon="🔍"
-              title="Search & Discovery"
-              description="Search across all meeting transcripts and find specific topics or decisions instantly"
-            />
-            <FeatureItem
-              icon="📱"
-              title="Multi-Platform Support"
-              description="Works with Zoom, Teams, Google Meet, and in-person meetings"
-            />
-          </div>
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
         </div>
 
         <div>
@@ -301,7 +224,6 @@ function FeatureItem({
     </div>
   );
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 function PricingCard({
   title,
@@ -326,7 +248,6 @@ function PricingCard({
         <div className="bg-green-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Features Section */}
@@ -430,93 +351,7 @@ function PricingCard({
           </a>
         </div>
       </section>
-=======
-      )}
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-      <div className="mb-4">
-        <span className="text-3xl font-bold text-gray-900">{price}</span>
-        <span className="text-gray-600 ml-2">{period}</span>
-      </div>
-      <p className="text-gray-600 mb-6">{description}</p>
-      <ul className="space-y-3">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center">
-            <span className="text-green-500 mr-3">✓</span>
-            <span className="text-gray-700">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <button
-        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
-          popular
-            ? 'bg-green-600 text-white hover:bg-green-700'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-        }`}
-      >
-        Start Free Trial
-      </button>
     </div>
   );
 }
 
-function PlatformCard({ name, icon }: { name: string; icon: string }) {
-  return (
-    <div className="text-center p-4 border border-gray-200 rounded-lg hover:border-green-300 transition-colors">
-      <div className="text-3xl mb-2">{icon}</div>
-      <div className="text-sm font-medium text-gray-700">{name}</div>
-    </div>
-  );
-}
-
-function UseCaseCard({
-  icon,
-  title,
-  description,
-}: {
-  icon: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center p-6 border border-gray-200 rounded-lg hover:border-green-300 transition-colors">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function CTA() {
-  return (
-    <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Transform Your Meetings?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Start your free trial today and experience the power of AI-driven
-        meeting intelligence. No setup required - works with your existing
-        tools.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
-      </div>
-      <div className="mt-4 text-sm text-gray-500">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-      </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    </div>
-  );
-}
->>>>>>> origin/main

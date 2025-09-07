@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Layout from './layout/Layout';'
 import { motion } from 'framer-motion';
 
@@ -31,18 +30,11 @@ import {}
   Award,;'
   Clock,;} from 'lucide-react';import { ;
   ArrowRight;
-<<<<<<< HEAD
   Star
 
 import { ArrowRight;
   Star;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  Star;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Search;
 
   Shield;
@@ -60,7 +52,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Sparkles;
   Target;
   Users;
-<<<<<<< HEAD
   Award;'
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';'
 import { innovative2041MicroSaasServices  } from '../data/innovative-2041-micro-saas-services';'
@@ -71,7 +62,6 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
     ...innovative2041ITServices.filter(s => s.popular).slice(0, 2);
     ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
   ];
-<<<<<<< HEAD
   const testimonials = [
     {
       name: 'Dr. Sarah Chen',
@@ -88,12 +78,6 @@ const Homepage2041: React.FC;
 name: 'Dr. Sarah Chen',
 origin/cursor/automate-test-improve-and-merge-code-2533
       role: 'Chief AI Officer, FutureTech Inc.',
-=======
-  const testimonials = []
-    {'
-      name: 'Dr. Sarah Chen','
-      role: 'Chief AI Officer, FutureTech Inc.','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       company: 'FutureTech Inc.',
       content:'
         "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago."'
@@ -130,7 +114,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       avatar: "👩‍🔬"
     }
   ];
-<<<<<<< HEAD
       name: 'Dr. Emily Watson'
       role: 'Research Director, SpaceLabs'
       company: 'SpaceLabs'
@@ -168,9 +151,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                   key={i}
-=======
-                  key={i}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className='absolute w - 2 h - 2 bg - cyan - 400 / 40 rounded - full';
                   animate={{}
                     opacity: [0, 0.7, 0];
@@ -222,18 +202,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     delay: i * 0.2,
 ease: 'easeInOut',
                   }}
-<<<<<<< HEAD
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
 origin/cursor/automate-test-improve-and-merge-code-2533
                   }}
                 />
-=======
-                  style={{}`
-                    left: `${Math.random() * 100}%``
-                    top: `${Math.random() * 100}%`}}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
@@ -248,13 +222,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {/* Hero Content */}"
           <div className="text-center max-w-7xl mx-auto relative z-10">
-<<<<<<< HEAD
 <div className='text-center max-w-7xl mx-auto relative z-10'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-=======
-            <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -381,7 +351,6 @@ href='/2041-futuristic-services-showcase'
 origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
 
-
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >;
@@ -409,13 +378,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
 
-
-
               ))}
-
-
-
-
 
         {/* Featured Services Section */}
 "
@@ -516,7 +479,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
               className="text-center mt-12"
 
-
             <motion.div'
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
 
@@ -537,7 +499,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
               viewport={{ once: true }}>;
-<<<<<<< HEAD
               <Link
 href='/2041-futuristic-services-showcase'
                 className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'
@@ -556,9 +517,6 @@ href='/2041-futuristic-services-showcase'
               className='text-center mb-16'
               initial={{ opacity: 0, y: 30 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-              <Link;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -634,7 +592,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"'
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}
 
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -653,7 +610,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>;'
                   <div className='flex items-center gap-2 mb-3'>;
                     {[...Array(testimonial && testimonial.rating)].map((_, i) => (;
-<<<<<<< HEAD
 className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -669,10 +625,6 @@ className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500
 origin/cursor/automate-test-improve-and-merge-code-2533
                       <Star
                         key={i}
-=======
-                      <Star;
-                        key={i}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         className='w-5 h-5 text-yellow-400 fill-current'
                       />;
                     ))}
@@ -691,13 +643,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
 
-
-
               ))}
-
-
-
-
 
         {/* CTA Section */}
 "
@@ -740,8 +686,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion&& motion.div "
               className="bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm"
 
-
-
 <section className='py-20 px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
@@ -768,7 +712,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>;
                 <Link"
                   href="/2041-futuristic-services-showcase"
-<<<<<<< HEAD
 Math.random () * 100 
 <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
                 Ready to Shape the Future?
@@ -807,13 +750,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }%`;
 top: `$ {
   Math.random () * 100
-=======
-Math.random () * 100;
-  Math.random () * 100;`
-}%`;`
-top: `$ {}
-  Math.random () * 100;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }%`
 }/>) )
 }</div> </div> <motion.div initial= {}
@@ -888,12 +824,4 @@ export default Homepage2041;
 export default Homepage2041;
 
 ;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  Award;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

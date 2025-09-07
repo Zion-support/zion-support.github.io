@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import fs from "fs-extra";
 import path from "path";
 import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
@@ -12,13 +7,8 @@ const REDEMPTIONS_FILE = null;
   return res.status(201).json({ id: record.id;, redeemedAt: now ;})
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs - extra';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import path from 'path';
 import {';
 } from '../../utils/api/partnerAuth';'
@@ -82,16 +72,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const { studentEmail, grantCode, courseId } = req.body |{}
   if (!studentEmail |!grantCode |!courseId) {}
   const { studentEmail, grantCode, courseId } = req.body || {};
-<<<<<<< HEAD
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 return res.status(400).json({ error: 'Missing required fields' });
   }
-=======
-  if (!studentEmail || !grantCode || !courseId) {}
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);'
-    return res.status(400).json({ error: 'Missing required fields' });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
   const records = (await fs.pathExists(REDEMPTIONS_FILE))
     ? await fs.readJSON(REDEMPTIONS_FILE)
@@ -239,26 +223,8 @@ redeemed_at: now,
 }
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 
-<<<<<<< HEAD
   records.push(record);
   await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id, redeemedAt: now });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-import type { NextApiRequest, NextApiResponse } from \"next\","
-import fs from \"fs-extra\";"
-import path from \"path\";"
-import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../utils/api/partnerAuth\";"
-import { v4 as uuidv4 } from \"uuid\";
-
-const REDEMPTIONS_FILE = null;
-  return res.status(201).json({ id: record.id;, redeemedAt: now ;})
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

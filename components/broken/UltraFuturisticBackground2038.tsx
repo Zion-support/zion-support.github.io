@@ -6,13 +6,7 @@ export default function UltraFuturisticBackground2038(): any ({;
   intensity = 'medium';'
   theme = 'consciousness';
   const canvasRef = useRef<HTMLCanvasElement>(null);
-<<<<<<< HEAD
   const containerRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
 
 import { motion  } from 'framer-motion';
@@ -24,8 +18,6 @@ interface UltraFuturisticBackground2038Props {
 }
 }
 
-
-<<<<<<< HEAD
 const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;
@@ -33,9 +25,6 @@ const prefersReducedMotion = window.matchMedia(
       intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  const containerRef = useRef<HTMLDivElement>(null);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     const resizeCanvas = () => {}
@@ -263,7 +252,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         const type = Math.random() > 0.7 ? 'consciousness' :'
                     Math.random() > 0.5 ? 'quantum-field' :'
                     Math.random() > 0.3 ? 'hologram' : 'particle';
-<<<<<<< HEAD
       quantumState: number;
     }> = [];
 
@@ -307,10 +295,6 @@ entanglement: [Math.random(), Math.random()],
 origin/cursor/automate-test-improve-and-merge-code-2533
     // Enhanced animation loop with consciousness and quantum effects
     const animate = () => {
-=======
-    // Enhanced animation loop with consciousness and quantum effects;
-    const animate = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       if (prefersReducedMotion) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
         const time = Date.now() * 0.001;
@@ -442,7 +426,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ctx && ctx.stroke();
               }
             }
-<<<<<<< HEAD
           });        }
         particle.quantumState = (particle.quantumState + 0.02) % (Math.PI * 2);
         // Quantum entanglement effects
@@ -472,9 +455,6 @@ const waveX =
           const waveY =
             particle.y + Math.cos(particle.phase) * particle.amplitude;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          });        }`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ctx.strokeStyle = `rgba(255, 0, 128, ${particle.opacity * 0.6})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
@@ -740,7 +720,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 particle.quantumState = Math.random() * Math.PI * 2;
         }
       });
-<<<<<<< HEAD
 
       requestAnimationFrame(animate);
     };
@@ -753,9 +732,6 @@ window.removeEventListener('resize', resizeCanvas);
   }, [intensity, theme]);
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-=======
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div ref={containerRef} className='fixed inset-0 pointer-events-none'>;
       <canvas;
         ref={canvasRef}'
@@ -830,7 +806,6 @@ if ( {) {}
                   left: `${(i * 5) % 100}%``
                   left: `${(i * 5) % 100}%`,`
                   top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
-<<<<<<< HEAD
                   left: `${(i * 5) % 100}%`,
                   top: `${(i * 3) % 100}%`,
                 }}
@@ -844,38 +819,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   repeat: Infinity
                   ease: "easeInOut"
                   left: `${(i * 5) % 100}%`,
-=======
-                animate={{}
-                  height: [32, 64, 32];
-                  opacity: [0.2, 0.6, 0.2]}}
-                transition={{}
-                  duration: 3 + i * 0.2;
-                  repeat: Infinity;
-                  ease: "easeInOut"`
-                  left: `${(i * 5) % 100}%`,`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   top: `${(i * 3) % 100}%`,
 `
                   top: `${(i * 3) % 100}%`,
 `
                   top: `${(i * 3) % 100}%`,
-
 
 `
                   left: `${(i * 5) % 100}%`,
 
-
-<<<<<<< HEAD
                   duration: 3 + i * 0.2,
                   repeat: Infinity,
                   ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
                 }}
                   left: `${(i * 5) % 100}%`
-=======
-                }}`
-                  left: `${(i * 5) % 100}%``
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
                 animate={{}
                   height: [32, 64, 32]
@@ -891,15 +849,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='absolute inset - 0'>;
             {[...Array (15)].map ((_, i) => (
               <motion.div;
-<<<<<<< HEAD
 <div className='absolute inset-0'>
             {[...Array(15)].map((_, i) => (
               <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
                 key={i}
-=======
-                key={i}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className='absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
                 style={{}`
                   top: `${(i * 7) % 100}%`,            {[...Array (15)].map ((_, i) => (
@@ -909,7 +863,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   top: `${(i * 7) % 100}%`}}
                 animate={{}
                   opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]}}
-<<<<<<< HEAD
                 transition={{
                   top: `${(i * 7) % 100}%`,
                 }}
@@ -921,9 +874,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   repeat: Infinity,
                   ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                transition={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 }}
                 animate={{}
                   opacity: [0.3, 0.8, 0.3]
@@ -970,7 +920,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   top: `${(i * 8) % 100}%`}}
                 animate={{}
                   duration: 6 + i * 0.5,
-<<<<<<< HEAD
                   repeat: Infinity,
 <div className='absolute inset-0'>
             {[...Array(8)].map((_, i) => (
@@ -990,21 +939,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   repeat: Infinity,
                   ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                  ease: "easeInOut"
-=======
-                  repeat: Infinity,"
-                  ease: "easeInOut"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   top: `${(i * 8) % 100}%`,
 "
                   ease: "easeInOut"
 
 `
                   left: `${(i * 12) % 100}%`,
-
-
 
                   ease: 'easeInOut',"
   ease: \"easeInOut\"}
@@ -1017,7 +957,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }%`
 
                 }}
-<<<<<<< HEAD
                 animate={{}
                   scale: [1, 1.5, 1]
                   opacity: [0.2, 0.6, 0.2]
@@ -1036,27 +975,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   duration: 6 + i * 0 && 0.5,
                   repeat: Infinity,'
                   ease: 'easeInOut',                }}
-=======
-                animate={{
-                  scale: [1, 1.5, 1]}
-                  opacity: [0.2, 0.6, 0.2]}
-                }}
-                transition={{
-                  duration: 6 + i * 0.5;
-repeat: Infinity;}
-top: `${(i * 8) % 10}
-}%`
-
-                }}
-                animate={{
-                  scale: [1, 1 && 1.5, 1]}
-                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}
-                }}
-                transition={{
-                  duration: 6 + i * 0 && 0.5}
-                  repeat: Infinity}
-                  ease: 'easeInOut'                }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               />
 
             ))}
@@ -1069,7 +987,6 @@ top: `${(i * 8) % 10}
     </div>;
   );
 
-
 };
 // Enhanced animation loop with consciousness and quantum effects ;
 '
@@ -1080,10 +997,6 @@ top: `${(i * 8) % 10}
 }) ;
 }// Consciousness wave effects ctx && ctx.strokeRect (particle && particle.x - hologramSize / 2;
 particle && particle.y - hologramSize / 2;
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </div>
 )
 };
@@ -1106,7 +1019,6 @@ hologramSize;
     </div>)}
 // Enhanced animation loop with consciousness and quantum effects;
 }// Update and draw particles // Quantum entanglement effects // Check condition;
-<<<<<<< HEAD
 if ( {) {}
   $2;
 }
@@ -1114,12 +1026,6 @@ if ( {) {}
   // Check condition;
 if (> 0.99) {) {}
   $2;
-=======
-if ( {) {$2;}
-}
-  particles.for_each ( (other_particle, other_index) => {// Check condition;}
-if (> 0.99) {) {$2;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 })}// Consciousness wave effects ctx.stroke_rect (particle.x - hologram_size / 2;
 particle.y - hologram_size / 2;
@@ -1128,18 +1034,12 @@ hologram_size)}// Quantum field effects ctx.fill_style = gradient;
 ctx.fill_rect (particle.x - field_size / 2;
 particle.y - field_size / 2;
 field_size;
-<<<<<<< HEAD
 field_size);
 }// Standard particle rendering;
 }// Boundary wrapping with quantum tunneling effect // Check condition;
 if (
 }) {}
   $2;
-=======
-field_size)}// Standard particle rendering;
-}// Boundary wrapping with quantum tunneling effect // Check condition;
-if (}) {$2;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 init_particles ();
@@ -1150,25 +1050,13 @@ animate ();
 }</div>) 
 }/>) ) 
 }</div>) 
-<<<<<<< HEAD
 }</div> {}
   children;
-=======
-}</div> {
-  children 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }</div>)   )
   children }
 }
 }</div>)
 
-<<<<<<< HEAD
 }</div>)
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -15,7 +13,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (!ctx) return;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
-<<<<<<< HEAD
     if (ctx) {
 ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
     }
@@ -25,9 +22,6 @@ ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
       x: number;
       y: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    if (ctx) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       vx: number;
       vy: number;
       size: number;
@@ -82,7 +76,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       particles.forEach((particle, index) => {}
         particle.x += particle.vx;
         particle.y += particle.vy;
-<<<<<<< HEAD
         // Wrap around edges
 if (particle.x < 0)
           particle.x = canvas.width / (window.devicePixelRatio || 1);
@@ -95,16 +88,11 @@ if (particle.x < 0)
 
 origin/cursor/automate-test-improve-and-merge-code-2533
         // Draw particle
-=======
-        // Wrap around edges;
-        // Draw particle;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.opacity;
         ctx.fill();
-<<<<<<< HEAD
         // Draw connections
 const maxDistance = prefersReducedMotion
           ? 0
@@ -115,12 +103,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         if (maxDistance > 0) {
           particles.forEach((otherParticle, otherIndex) => {
             if (index !== otherIndex) {
-=======
-        // Draw connections;
-        if (maxDistance > 0) {}
-          particles.forEach((otherParticle, otherIndex) => {}
-            if (index !== otherIndex) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               const dx = particle.x - otherParticle.x;
               const dy = particle.y - otherParticle.y;
               const distance = Math.sqrt(dx * dx + dy * dy);
@@ -258,7 +240,6 @@ if ( {) {}
             rotate: [45, 225, 405]
             opacity: [0.2, 0.5, 0.2],            scale: [1, 1.3, 1];
             rotate: [45, 225, 405];
-<<<<<<< HEAD
 ctx.globalAlpha =
                   ((maxDistance - distance) / maxDistance) * 0.08;
                 ctx.lineWidth = 1;
@@ -331,15 +312,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{
             duration: 10
             repeat: Infinity
-=======
-          animate={{}
-            scale: [1, 1.3, 1]
-            rotate: [45, 225, 405]
-            opacity: [0.2, 0.5, 0.2],          }}
-          transition={{}
-            duration: 10;
-            repeat: Infinity'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ease: 'easeInOut',          }}
             opacity: [0.4, 0.7, 0.4],          }}
         />;
@@ -380,7 +352,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />
         {/* Neon Glow Effects */}
-<<<<<<< HEAD
             duration: 10,
             repeat: Infinity,
 ease: 'easeInOut',
@@ -405,9 +376,6 @@ ease: 'easeInOut',
         <div className='absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000' />
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Animated Grid Lines */}
-=======
-        {/* Animated Grid Lines */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className='absolute inset-0 opacity-10'>;
           <div'
             className='absolute inset-0'
@@ -445,17 +413,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (;
-<<<<<<< HEAD
           <motion&& motion.div
             key={i}
 className='absolute w-1 h-1 bg-purple-400 rounded-full'
             style={{
-=======
-          <motion&& motion.div;
-            key={i}'
-            className='absolute w-1 h-1 bg-purple-400 rounded-full'
-            style={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {/* Floating Particles */}
         {[...Array (20)].map ((_, i) => (
           <motion.div;
@@ -499,7 +460,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
-
 
           />
           />;
@@ -569,7 +529,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
             scale_x: [0, 1, 0];
             opacity: [0, 1, 0];
-<<<<<<< HEAD
         <motion.div
 className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent'
           animate={{
@@ -594,35 +553,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,
             delay: 2,
 ease: 'easeInOut',
-=======
-          transition={{}
-            duration: 4;
-            repeat: Infinity;
-            delay: 2'"
-            ease: 'easeInOut',          }}            ease: "easeInOut"
-          }}'"
-            ease: 'easeInOut',          }}            ease: "easeInOut"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }}
         />'
             ease: 'easeInOut',          }}
 
         />;
 
-
         {/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (;
-<<<<<<< HEAD
           <motion&& motion.div
             key={`quantum-${i}`}
 className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'
             style={{
-=======
-          <motion&& motion.div;`
-            key={`quantum-${i}`}'
-            className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'
-            style={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {/* Quantum Dots */}
         {[...Array (15)].map ((_, i) => (
           <motion.div;`
@@ -678,7 +620,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Neural Network Connections */}'
         <svg className='absolute inset-0 w-full h-full opacity-20'>;
           <defs>;
-<<<<<<< HEAD
 <svg className='absolute inset-0 w-full h-full opacity-20'>
           <defs>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -691,17 +632,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               cx={`${20 + i * 10}%`}
               cy={`${30 + i * 5}%`}
               r='3';
-=======
-            <linearGradient'
-              id='neuralGradient''
-              x1='0%''
-              y1='0%''
-              x2='100%'`
-              key={`neural-${i}`}`
-              cx={`${20 + i * 10}%`}`
-              cy={`${30 + i * 5}%`}'
-              r='3';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               fill='url (#neural_gradient)';
               animate={{"
             <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">"
@@ -769,29 +699,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
                 ease: 'easeInOut',              }}
 
-=======
-
-              }}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }}
 
             />
           ))}
-<<<<<<< HEAD
         </svg>
 
         {/* Holographic Effects */}'
         <div className='absolute inset-0'>
 
-
-<<<<<<< HEAD
 <div className='absolute inset-0'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-=======
-          <motion.div'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
                 delay: i * 0.5,'"
                 ease: 'easeInOut',              }}                ease: "easeInOut";
@@ -845,13 +764,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           />
         </div>
-<<<<<<< HEAD
         {/* Data Streams */}
 <div className='absolute right-0 top-0 w-32 h-full opacity-30'>
-=======
-        {/* Data Streams */}'
-        <div className='absolute right-0 top-0 w-32 h-full opacity-30'>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           {[...Array(20)].map((_, i) => (
             <motion.div;`
               key={`stream-${i}`}'
@@ -875,7 +789,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 right: `${Math.random () * 32}px`,`
                 top: `${i * 5}%`;
               }}
-<<<<<<< HEAD
               animate={{
                 height: [8, 32, 8],
                 opacity: [0.3, 1, 0.3],
@@ -883,12 +796,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               }}
               animate={{
 
-
               transition={{
-=======
-              animate={{}
-              transition={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,'
@@ -898,67 +806,7 @@ ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
               }}
 
-
-
               }}
-
-
 
             />
           ))}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        </div>
-      </div>
-    </>
-);  )
-                height: [8;, 32, 8]
-                opacity: [0 && 0.3;, 1, 0 && 0.3]
-              }}
-<<<<<<< HEAD
-              transition={{'"
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-=======
-              transition={{
-                ease: 'easeInOut';,              }}                ease: "easeInOut";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              }}
-            />;
-          ))}
-        </div>;
-      </div>;
-    </>;
-  );  );
-}
-  )
-}
-<<<<<<< HEAD
-                delay: Math.random () * 2,'"
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-=======
-                delay: Math.random () * 2;,
-                ease: 'easeInOut';,              }}                ease: "easeInOut";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              }}
-            />))}
-        </div>;
-      </div>;
-    </>));
-}
-
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-);
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-);
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

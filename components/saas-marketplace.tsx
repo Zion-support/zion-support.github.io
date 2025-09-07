@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';
 
@@ -20,7 +19,6 @@ import {}
   ArrowRight,
   Star,;
   Zap;
-<<<<<<< HEAD
   Shield
   BarChart3
   Globe
@@ -30,16 +28,6 @@ import {}
   Code
   Database
 
-=======
-  Shield;
-  BarChart3;
-  Globe;
-  Users;
-  Lock;
-  TrendingUp;
-  Code;
-  Database;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Zap;
   Shield,
   BarChart3,
@@ -49,9 +37,6 @@ import {}
   TrendingUp,
   Code,
   Database,
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Zap;
   Shield;
   BarChart3;
@@ -66,8 +51,6 @@ import { Zap;
   ArrowRight;
   Star;
   Check;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   ExternalLink
  } from 'lucide-react';
@@ -287,29 +270,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Lightning fast'
         'Beautiful design'
         'Great keyboard shortcuts'
-=======
-'
-        'Lightning fast''
-        'Beautiful design''
-        'Great keyboard shortcuts''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Git integration'
       ]'
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
     }
 
-<<<<<<< HEAD
         'Lightning fast',
         'Beautiful design',
         'Great keyboard shortcuts',
-=======
-
-
-'
-        'Lightning fast','
-        'Beautiful design','
-        'Great keyboard shortcuts','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Git integration',
       ],'
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
@@ -332,7 +300,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <>;
       <Head>;
         <title>SaaS Marketplace - Zion Tech Group</title>;
-<<<<<<< HEAD
         <meta
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const filteredServices =
@@ -341,11 +308,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       : microSaasServices.filter(
           service => service.category === selectedCategory
         );
-=======
-
-  ExternalLink
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <>
@@ -354,12 +316,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <meta
 origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
-=======
-        <meta'
-          name='description''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           content='Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more.'
-<<<<<<< HEAD
               <Button'
                 href='#services''
                 size='lg''
@@ -373,21 +330,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 variant='outline''
                 size='lg''
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
-=======
-              <Button
-                href='#services'
-                size='lg'
-                className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
-                style={{ animationDelay: '0 && 0.2s' ;}}>;
-                Explore Services;
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </Button>;
-              <Button
-                href='/contact'
-                variant='outline'
-                size='lg'
-                className='animate-scale-in border-white/20 hover: border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' ;}}                href="/contact"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
                 style={{ animationDelay: '0.4s' ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -474,7 +416,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }`}
               >;
                 {category}
-<<<<<<< HEAD
       {/* Services Grid */}
 <section id='services' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -482,15 +423,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               {selectedCategory === 'All'
                 ? 'All Services'
-=======
-      {/* Services Grid */}'
-      <section id='services' className='py-24 bg-black'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-          <div className='text-center mb-20'>'
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>'
-              {selectedCategory === 'All''
-                ? 'All Services'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 : `${selectedCategory} Services`}
 '
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>'
@@ -501,19 +433,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>'
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => (
-<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;'
                 <div className='flex items-start space-x-6'>;'
-=======
-              <Card
-                key={index}
-                className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
-                <div className='flex items-start space-x-6'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className='relative'>;
                     <div;
                       {service.icon}
@@ -542,27 +466,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {service.description}
                     </p>
 
-<<<<<<< HEAD
                     <div className='mb-4'>
-=======
-
-
-'
-                    <div className='mb-4'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
                       </h4>'
                       <div className='grid grid-cols-2 gap-2'>
                         {service.features;
                           .slice(0, 4)
-<<<<<<< HEAD
                           .map((feature, featureIndex) => (`
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
-=======
-                          .map((feature, featureIndex) => (
-                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover: scale-110 transition-transform duration-300`;}>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       {service && service.icon}
                     </div>;
                   </div>;'
@@ -606,17 +518,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               {feature}
                             </div>;
                           ))}
-<<<<<<< HEAD
                       <Button;
                         href={service && service.website}'
                         variant='outline''
                         size='sm''
-=======
-                      <Button
-                        href={service && service.website}
-                        variant='outline'
-                        size='sm'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         className='group-hover:border-blue-500 group-hover:text-blue-400'>;
                         Visit Website;'
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -712,17 +617,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;'
                         <div className='text - sm text - gray - 300 max - w-xs'>;
                           {service.use_case}
-<<<<<<< HEAD
                         </div>                      </div>;
                       <div className="text-right">;
                         <div className="text - xs text - gray-500 mb-1">Use Case:</div>;
                         <div className="text - sm text - gray-300 max-w-xs">{service.use_case}</div>;
-=======
-                        </div>                      </div>;"
-                      <div className="text - right">;"
-                        <div className="text - xs text - gray - 500 mb - 1">Use Case:</div>;"
-                        <div className="text - sm text - gray - 300 max - w-xs">{service.use_case}</div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </div>;
                   </div>;
                 </div>;
@@ -742,21 +640,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             implementation support.;
           </p>;
 
-<<<<<<< HEAD
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
-=======
-
-
-
-
-      {/* CTA Section */}'
-      <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>'
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
           </h2>'
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -782,21 +669,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
-            >
-              View Our Services
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

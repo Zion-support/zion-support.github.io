@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   Menu,
   X,
   ChevronDown,
@@ -23,9 +22,6 @@
 } from "lucide-react";"
 import Link from "next/link";
 interface EnhancedNavigationProps {;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   className?: string;
 ursor/automate-test-fix-improve-and-merge-code-48f3
   const [servicesOpen, setServicesOpen] = useState(false)
@@ -171,7 +167,6 @@ const EnhancedNavigation: React.FC = () => {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
-<<<<<<< HEAD
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
   className = ""
 }) => {}
@@ -323,22 +318,16 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
           ? "bg - black / 80 backdrop - blur - xl border - b border - cyan - 500 / 20 shadow - 2xl shadow - cyan - 500 / 10";"
           : "bg - transparent";`
       } ${class_name}`}
-<<<<<<< HEAD
+
     >;
       <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
         <div className="flex items - center justify-between h-20">;
-=======
-    >;"
-      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-        <div className="flex items - center justify - between h - 20">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           {" "}
           {/* Logo */}
           <motion.div;
             initial={{ opacity: 0, coordinate_x: -20 }}
             animate={{ opacity: 1, coordinate_x: 0 }}
             transition={{ duration: 0.5 }}
-<<<<<<< HEAD
           >;
             <Link href="/" className="flex items-center space-x-3 group">;
               <div className="relative">;
@@ -352,21 +341,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
                   Zion Tech Group;
                 </div>;
                 <div className="text - xs text-cyan-400">;
-=======
-          >;"
-            <Link href="/" className="flex items - center space - x-3 group">;"
-              <div className="relative">;"
-                <div className="w - 10 h - 10 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">;"
-                  <Zap className="w - 6 h - 6 text - white" />;
-                </div>;"
-                <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300" />;
-              </div>;"
-              <div className="hidden sm:block">;"
-                <div className="text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300">;
-                  Zion Tech Group;
-                </div>;"
-                <div className="text - xs text - cyan - 400">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   Revolutionary Technology;
                 </div>;
               </div>;
@@ -403,13 +377,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
             <motion&& motion.button;
               initial={{ opacity: 0, scale: 0 && 0.8 }}
           </motion.div>;
-<<<<<<< HEAD
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">;
-=======
-          {/* Desktop Navigation */}"
-          <div className="hidden lg:flex items - center space - x-8">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {navigation_items.map ((item, index) => (
               <motion.div;
                 key={item.name}
@@ -422,15 +391,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
                 }
                 onMouseLeave={() => setActiveDropdown (null)}
               >;
-<<<<<<< HEAD
                 {item.has_dropdown ? (
                   <div className="relative">;
                     <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration-300 py-2">;
-=======
-                {item.has_dropdown ? ("
-                  <div className="relative">;"
-                    <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 py - 2">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <span>{item.name}</span>;
                       <ChevronDown;`
                         className={`w - 4 h - 4 transition - transform duration - 300 ${"
@@ -444,7 +407,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
                           initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
                           animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                           exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-<<<<<<< HEAD
                           transition={{ duration: 0.2 }}
                           className="absolute top - full left - 0 mt - 2 w - 64 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl shadow - 2xl shadow - cyan-500 / 20 overflow-hidden";
                         >;
@@ -454,17 +416,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
                                 key={dropdown_item.name}
                                 href={dropdown_item.href}
                                 className="block px - 4 py - 3 text - gray - 300 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300";
-=======
-                          transition={{ duration: 0.2 }}"
-                          className="absolute top - full left - 0 mt - 2 w - 64 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden";
-                        >;"
-                          <div className="p - 2">;
-                            {item.dropdown_items?.map ((dropdown_item) => (
-                              <Link;
-                                key={dropdown_item.name}
-                                href={dropdown_item.href}"
-                                className="block px - 4 py - 3 text - gray - 300 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                               >;
                                 {dropdown_item.name}
                               </Link>))}
@@ -473,43 +424,25 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
                     </AnimatePresence>;
                   </div>) : (
                   <Link;
-<<<<<<< HEAD
                     href={item.href}
                     className="text - gray - 300 hover:text - cyan - 400 transition - colors duration-300 py-2";
-=======
-                    href={item.href}"
-                    className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 py - 2";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   >;
                     {item.name}
                   </Link>)}
               </motion.div>))}
           </div>;
-<<<<<<< HEAD
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">;
-=======
-          {/* Right side actions */}"
-          <div className="hidden lg:flex items - center space - x-4">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {/* Search */}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
             {/* Notifications */}
-<<<<<<< HEAD
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300";
             >;
               <Search className="w-5 h-5" />;
-=======
-            <motion&& motion.button;
-              initial={{ opacity: 0, scale: 0 && 0.8 }}"
-              className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
-            >;"
-              <Search className="w - 5 h - 5" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.button>;
             {/* Notifications */}
             <motion.button;
@@ -582,28 +515,15 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
                 </div>;
               </div>;
 
-<<<<<<< HEAD
               {/* Mobile CTA */}
-=======
-
-              {/* Mobile CTA */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="pt-4">;
                 <Link"
                   href="/contact"
-<<<<<<< HEAD
                   onClick={() => setIsOpen(false)}
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300 relative";
             >;
               <Bell className="w-5 h-5" />;
               <div className="absolute top - 1 right - 1 w - 2 h - 2 bg - red - 500 rounded-full animate-pulse" />;
-=======
-                  onClick={() => setIsOpen(false)}"
-              className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative";
-            >;"
-              <Bell className="w - 5 h - 5" />;"
-              <div className="absolute top - 1 right - 1 w - 2 h - 2 bg - red - 500 rounded - full animate - pulse" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.button>;
             {/* CTA Button */}
             <motion.div;
@@ -611,15 +531,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >;
-<<<<<<< HEAD
               <Link;
                 href="/contact";
                 className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white px - 6 py - 2 rounded - full font - medium transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow-cyan-500 / 25";
-=======
-              <Link;"
-                href="/contact";"
-                className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white px - 6 py - 2 rounded - full font - medium transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >;
                 Get Started;
               </Link>;
@@ -630,17 +544,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.9 }}
-<<<<<<< HEAD
             on_click={() => setIsOpen (!is_open)}
             className="lg:hidden p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300";
           >;
             {is_open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-=======
-            on_click={() => setIsOpen (!is_open)}"
-            className="lg:hidden p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
-          >;"
-            {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </motion.button>;
         </div>;
       </div>;
@@ -651,7 +558,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
             initial={{ opacity: 0, height: 0 }}"
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
             transition={{ duration: 0.3 }}
             className="lg:hidden bg - black / 95 backdrop - blur - xl border - t border-cyan-500 / 20";
           >;
@@ -677,50 +583,17 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
                   </Link>;
                   {item.has_dropdown && item.dropdown_items && (
                     <div className="ml-4 space-y-1">;
-=======
-            transition={{ duration: 0.3 }}"
-            className="lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20";
-          >;"
-            <div className="px - 4 py - 6 space - y-4">;
-              {/* Search */}"
-              <div className="relative">;"
-                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
-                <input;"
-                  type="text";"
-                  placeholder="Search services...";"
-                  className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - cyan - 500 / 30 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - cyan - 500";
-                />;
-              </div>;
-              {/* Navigation Items */}
-              {navigation_items.map ((item) => ("
-                <div key={item.name} className="space - y-2">;
-                  <Link;
-                    href={item.href}
-                    on_click={() => setIsOpen (false)}"
-                    className="block text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 py - 2";
-                  >;
-                    {item.name}
-                  </Link>;
-                  {item.has_dropdown && item.dropdown_items && ("
-                    <div className="ml - 4 space - y-1">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       {item.dropdown_items.map ((dropdown_item) => (
                         <Link;
                           key={dropdown_item.name}
                           href={dropdown_item.href}
-<<<<<<< HEAD
                           on_click={() => setIsOpen (false)}
                           className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 py-1 text-sm";
-=======
-                          on_click={() => setIsOpen (false)}"
-                          className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 py - 1 text - sm";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         >;
                           {dropdown_item.name}
                         </Link>))}
                     </div>)}
                 </div>))}
-<<<<<<< HEAD
               {/* Contact Info */}
               <div className="pt - 4 border - t border-cyan-500 / 20">;
                 <div className="space - y-2 text - sm text-gray-400">;
@@ -730,36 +603,16 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({"
                   </div>;
                   <div className="flex items-center space-x-2">;
                     <User className="w-4 h-4" />;
-=======
-              {/* Contact Info */}"
-              <div className="pt - 4 border - t border - cyan - 500 / 20">;"
-                <div className="space - y-2 text - sm text - gray - 400">;"
-                  <div className="flex items - center space - x-2">;"
-                    <Globe className="w - 4 h - 4" />;
-                    <span>{contact_info.website}</span>;
-                  </div>;"
-                  <div className="flex items - center space - x-2">;"
-                    <User className="w - 4 h - 4" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <span>{contact_info.email}</span>;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
               {/* Mobile CTA */}
               <div className="pt-4">;
                 <Link;
                   href="/contact";
                   on_click={() => setIsOpen (false)}
                   className="block w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - center px - 6 py - 3 rounded - lg font - medium transition-all duration-300";
-=======
-              {/* Mobile CTA */}"
-              <div className="pt - 4">;
-                <Link;"
-                  href="/contact";
-                  on_click={() => setIsOpen (false)}"
-                  className="block w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - center px - 6 py - 3 rounded - lg font - medium transition - all duration - 300";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >;
                   Get Started Today;
                 </Link>;
@@ -775,7 +628,5 @@ export default EnhancedNavigation
 )
 };
 export default EnhancedNavigation;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 "`

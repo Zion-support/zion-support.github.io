@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'Website Analyzer | Zion Tech Group',
   description: 'Advanced website analysis tools for optimization.',
@@ -6,29 +5,16 @@ export const metadata = {
 }
 export default function ServicePage() {
   return (
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Link from "next/link";
-
-<<<<<<< HEAD
-export const metadata = {
-  title: 'Website Analyzer | Zion Tech Group',
-  description: 'Comprehensive website analysis tool. SEO audit, performance monitoring, security scanning, and competitive analysis.',
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
   title: "Website Analyzer | Zion Tech Group",
   description:
     "Comprehensive website analysis tool. SEO audit, performance monitoring, security scanning, and competitive analysis.",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
 };
 
 export default function WebsiteAnalyzerPage() {
   return (
-<<<<<<< HEAD
->>>>>>> origin/main
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -36,16 +22,11 @@ export default function WebsiteAnalyzerPage() {
             Website Analyzer
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
             Advanced website analysis tools for optimization.
-=======
-            Professional website analyzer services for your business needs.
->>>>>>> origin/main
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
             <p className="text-gray-300">
@@ -71,71 +52,11 @@ export default function WebsiteAnalyzerPage() {
     </div>
   )
 }
-=======
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>
-            <p className="text-gray-300 mb-6">Description of the first key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>
-            <p className="text-gray-300 mb-6">Description of the second key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-=======
-import Link from "next/link";
-
-export const metadata = {"
-  title: "Website Analyzer | Zion Tech Group",
-  description:"
-    "Comprehensive website analysis tool. SEO audit, performance monitoring, security scanning, and competitive analysis.",;
-};
-
-export default function WebsiteAnalyzerPage() {}
-  return ("
-    <div className="max-w-6xl mx-auto px-4 py-8">"
-      <div className="text-center mb-12">"
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">;
-          Website Analyzer;
-        </h1>"
-=======
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="text-center mb-12">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          Website Analyzer
-        </h1>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
           Comprehensive website analysis tool that provides SEO audits, performance monitoring,
           security scanning, and competitive analysis. Optimize your website for maximum impact.
-=======
-          Comprehensive website analysis tool that provides SEO audits,
-          performance monitoring, security scanning, and competitive analysis.
-          Optimize your website for maximum impact.
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
       </div>
-<<<<<<< HEAD
 "
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <FeatureCard"
@@ -165,109 +86,39 @@ export default function WebsiteAnalyzerPage() {}
             "SSL certificate monitoring","
             "GDPR compliance check","
             "Malware detection","
-=======
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <FeatureCard
-          title="SEO Analysis"
-          details={[
-<<<<<<< HEAD
-            'Technical SEO audit',
-            'Keyword ranking tracking',
-            'Backlink analysis',
-            'Content optimization suggestions',
-            'Core Web Vitals monitoring',
-=======
-            "Technical SEO audit",
-            "Keyword ranking tracking",
-            "Backlink analysis",
-            "Content optimization suggestions",
-            "Core Web Vitals monitoring",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Performance Monitoring"
           details={[
-<<<<<<< HEAD
             'Page speed analysis',
             'Mobile performance testing',
             'Uptime monitoring',
             'Load time optimization',
             'Performance alerts',
-=======
-            "Page speed analysis",
-            "Mobile performance testing",
-            "Uptime monitoring",
-            "Load time optimization",
-            "Performance alerts",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Security & Compliance"
           details={[
-<<<<<<< HEAD
             'Security vulnerability scanning',
             'SSL certificate monitoring',
             'GDPR compliance check',
             'Malware detection',
             'Security recommendations',
-=======
-            "Security vulnerability scanning",
-            "SSL certificate monitoring",
-            "GDPR compliance check",
-            "Malware detection",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Security recommendations",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           ]}
         />
       </div>
 
       <PricingSection />
-<<<<<<< HEAD
 
       <div className="mt-16 bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-8 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Optimize Your Website?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Get comprehensive insights into your website's performance, SEO, and security.
           Perfect for web developers, marketers, and business owners.
-=======
-<<<<<<< HEAD
-"
-      <div className="mt-16 bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-8 text-center">"
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
-          Ready to Optimize Your Website?
-        </h3>"
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Get comprehensive insights into your website's performance, SEO, and;
-          security. Perfect for web developers, marketers, and business owners.
-        </p>"
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a"
-            href="tel:+13024640950""
-            className="bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors"
-          >
-            Call +1 302 464 0950;
-          </a>
-          <a"
-            href="mailto:kleber@ziontechgroup.com""
-            className="border-2 border-amber-600 text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-amber-600 hover:text-white transition-colors"
-          >
-            Email Us;
-          </a>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-      <div className="mt-16 bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-8 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
-          Ready to Optimize Your Website?
-        </h3>
-        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Get comprehensive insights into your website's performance, SEO, and
-          security. Perfect for web developers, marketers, and business owners.
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -282,35 +133,12 @@ export default function WebsiteAnalyzerPage() {}
           >
             Email Us
           </a>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-}
-
-function FeatureCard({ title, details }: { title: string; details: string[] }) {}
-  return ("
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">"
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>"
-      <ul className="space-y-2 text-gray-600">
-        {details.map((detail, index) => ("
-          <li key={index} className="flex items-center">"
-=======
-}
-
-function FeatureCard({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-600">
-        {details.map((detail, index) => (
-          <li key={index} className="flex items-center">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span className="text-amber-500 mr-2">•</span> {detail}
           </li>
         ))}
@@ -319,7 +147,6 @@ function FeatureCard({ title, details }: { title: string; details: string[] }) {
   );
 }
 
-<<<<<<< HEAD
 function PricingSection() {}
   return ("
     <div className="mb-12">"
@@ -346,38 +173,12 @@ function PricingSection() {}
             "Weekly SEO reports","
             "Advanced performance monitoring","
             "Priority support","
-=======
-function PricingSection() {
-  return (
-    <div className="mb-12">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-        Pricing Plans
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <PricingPlan
-          name="Basic"
-          price="$19/mo"
-          features={[
-<<<<<<< HEAD
-            '5 websites',
-            'Monthly SEO reports',
-            'Basic performance monitoring',
-            'Email support',
-            'Standard security scan',
-=======
-            "5 websites",
-            "Monthly SEO reports",
-            "Basic performance monitoring",
-            "Email support",
-            "Standard security scan",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <PricingPlan
           name="Professional"
           price="$79/mo"
           features={[
-<<<<<<< HEAD
             '25 websites',
             'Weekly SEO reports',
             'Advanced performance monitoring',
@@ -386,17 +187,10 @@ function PricingSection() {
           ]}
           featured={true}
         />
-=======
-            "25 websites",
-            "Weekly SEO reports",
-            "Advanced performance monitoring",
-            "Priority support",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Comprehensive security analysis",
           ]}
           featured={true}
         />
-<<<<<<< HEAD
         <PricingPlan"
           name="Agency""
           price="$199/mo"
@@ -405,26 +199,8 @@ function PricingSection() {
             "Real-time monitoring","
             "White-label reports","
             "API access","
-=======
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-        <PricingPlan
-          name="Agency"
-          price="$199/mo"
-          features={[
-<<<<<<< HEAD
-            'Unlimited websites',
-            'Real-time monitoring',
-            'White-label reports',
-            'API access',
-            'Dedicated account manager',
-=======
-            "Unlimited websites",
-            "Real-time monitoring",
-            "White-label reports",
-            "API access",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Dedicated account manager",
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
           ]}
         />
       </div>
@@ -432,33 +208,18 @@ function PricingSection() {
   );
 }
 
-<<<<<<< HEAD
 function PricingPlan({
-=======
-<<<<<<< HEAD
-function PricingPlan({}
-=======
-function PricingPlan({
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
   name,
   price,
   features,
   featured = false,
-<<<<<<< HEAD
 }: {
-=======
-<<<<<<< HEAD
-}: {}
-=======
-}: {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
   name: string;
   price: string;
   features: string[];
   featured?: boolean;
-<<<<<<< HEAD
 }) {}
   return (
     <div;
@@ -473,68 +234,14 @@ function PricingPlan({
       <ul className="space-y-2 text-gray-600 mb-6">
         {features.map((feature, index) => ("
           <li key={index} className="flex items-center">"
-=======
-}) {
-  return (
-<<<<<<< HEAD
-    <div className={`border rounded-xl p-6 ${
-      featured
-        ? 'border-amber-500 bg-amber-50 shadow-lg'
-        : 'border-gray-200 bg-white shadow-sm'
-    }`}>
-=======
-    <div
-      className={`border rounded-xl p-6 ${
-        featured
-          ? "border-amber-500 bg-amber-50 shadow-lg"
-          : "border-gray-200 bg-white shadow-sm"
-      }`}
-    >
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
       <ul className="space-y-2 text-gray-600 mb-6">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
             <span className="text-amber-500 mr-2">✓</span> {feature}
           </li>
         ))}
       </ul>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <a"
-        href="tel:+13024640950"`
-        className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
-          featured"
-            ? "bg-amber-600 text-white hover:bg-amber-700""
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"`
-        }`}
-      >
-        Get Started;
-=======
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
-      <a
-        href="tel:+13024640950"
-        className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
-          featured
-            ? "bg-amber-600 text-white hover:bg-amber-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
-        }`}
-      >
-        Get Started
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      </a>
-    </div>
-  );
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
->>>>>>> origin/main
+

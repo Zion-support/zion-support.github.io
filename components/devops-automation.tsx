@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'
 import Head from 'next/head';'
 import Card from '../components/ui/Card';'
@@ -26,27 +25,13 @@ export default function DevOpsAutomationPage() {}
   Cpu,;'
 } from 'lucide-react';'
       icon: <GitBranch className='w-6 h-6' />,import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
-<<<<<<< HEAD
 export default function DevOpsAutomationPage() {
   const features = [
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
 export default function DevOpsAutomationPage() {
   const features = null;
               and intelligent security automation. Deploy faster, safer, and more reliably.
 
-<<<<<<< HEAD
-=======
-export default function DevOpsAutomationPage() {}
-  const features = []
-    {'
-      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines'';
-      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',;'
-      description: 'Automated build, test, and deployment workflows';
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
     }
     {}
@@ -97,21 +82,12 @@ function DevOpsAutomationPage() {}
 } from 'lucide-react';
 export default function DevOpsAutomationPage() { return null; }
       icon: <GitBranch className='w-6 h-6' />,import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
-<<<<<<< HEAD
     {
       icon: <Zap className="w-6 h-6" />,
       title: 'Infrastructure as Code',
     {
       icon: <Shield className="w-6 h-6" />,
       title: 'Security Automation',
-=======
-    {"
-      icon: <Zap className="w - 6 h - 6" />,'
-      title: 'Infrastructure as Code',
-    {"
-      icon: <Shield className="w - 6 h - 6" />,'
-      title: 'Security Automation','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: 'Automated security scanning and compliance checks',
   ];
       ];
@@ -123,7 +99,6 @@ export default function DevOpsAutomationPage() { return null; }
       price: '$129''
       period: '/month''
       description: 'Ideal for growing development teams'
-<<<<<<< HEAD
       icon: <BarChart3 className='w-6 h-6' />,
       title: 'Performance Monitoring',
       description: 'Real-time performance insights and optimization',
@@ -214,79 +189,6 @@ pros: ['Integrated platform', 'Good CI/CD'],
       pros: ['Completely free', 'Highly customizable']
       cons: ['Requires maintenance', 'No managed service']
     },  ];      pros: ['Completely freeHighly customizable']
-=======
-      features: ['
-        'Up to 25 repositories''
-        'Advanced CI/CD workflows''
-        'Multi-cloud deployment''
-        'Slack & Teams integration''
-        'Advanced security suite''
-        'Priority support''
-        'Custom pipelines''
-        'Team collaboration'
-      ]
-      popular: true'
-      cta: 'Start Free Trial''
-      color: 'border-blue-500 hover:border-blue-400''
-    },    {        'Up to 25 repositoriesAdvanced CI/CD workflowsMulti-cloud deploymentSlack & Teams integrationAdvanced security suitePriority supportCustom pipelinesTeam collaboration'
-      ];
-      popular: true'
-      cta: 'Start Free Trial''
-      color: 'border-blue-500 hover:border-blue-400'
-    }'
-      name: 'Enterprise''
-      price: '$399''
-      period: '/month''
-      description: 'For large-scale development operations'
-      features: ['
-        'Unlimited repositories''
-        'Enterprise CI/CD''
-        'Advanced IaC automation''
-        'Custom integrations''
-        '24/7 dedicated support''
-        'SLA guarantees''
-        'On-premise options''
-        'Custom security policies'
-      ]
-      popular: false'
-      cta: 'Contact Sales''
-      color: 'border-gray-600 hover:border-blue-500''
-    },  ];        'Unlimited repositoriesEnterprise CI/CDAdvanced IaC automationCustom integrations24/7 dedicated supportSLA guaranteesOn-premise optionsCustom security policies'
-      ];
-      popular: false'
-      cta: 'Contact Sales''
-      color: 'border-gray-600 hover:border-blue-500'
-    }
-  const marketComparison = []
-    {'
-      competitor: 'GitHub Actions''
-      pricing: 'Free + $0.008/min''
-      repositories: 'Unlimited''
-      rating: '4.6/5''
-      pros: ['GitHub native', 'Good free tier']'
-      cons: ['Expensive for teams', 'Limited features']'
-    },    {      pros: ['GitHub nativeGood free tier']'
-      cons: ['Expensive for teamsLimited features']
-    }
-    {'
-      competitor: 'GitLab CI/CD''
-      pricing: '$19/user/month''
-      repositories: 'Unlimited''
-      rating: '4.4/5''
-      pros: ['Integrated platform', 'Good CI/CD']'
-      cons: ['User-based pricing', 'Limited integrations']'
-    },    {      pros: ['Integrated platformGood CI/CD']'
-      cons: ['User-based pricingLimited integrations']
-    }
-    {'
-      competitor: 'Jenkins''
-      pricing: 'Free''
-      repositories: 'Unlimited''
-      rating: '4.2/5''
-      pros: ['Completely free', 'Highly customizable']'
-      cons: ['Requires maintenance', 'No managed service']'
-    },  ];      pros: ['Completely freeHighly customizable']'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Up to 5 repositoriesBasic CI/CD pipelinesGitHub integrationEmail notificationsBasic security scanningCommunity support'
       ];
       popular: false,'
@@ -340,7 +242,6 @@ pros: ['Integrated platform', 'Good CI/CD'],
       color: 'from - purple - 500 to - indigo - 600','
     },  ];      color: 'from - green - 500 to - emerald - 600';
     }
-<<<<<<< HEAD
       competitor: 'Jenkins',
       pricing: 'Free',
       repositories: 'Unlimited',
@@ -388,13 +289,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description: 'Automated vulnerability detection and compliance checks',
       icon: '🔒',
       color: 'from - red - 500 to - pink - 600',
-=======
-    {'
-      title: 'Security Scanning','
-      description: 'Automated vulnerability detection and compliance checks','
-      icon: '🔒','
-      color: 'from - red - 500 to - pink - 600','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },      color: 'from - red - 500 to - pink - 600';
     }
     {'
@@ -420,7 +314,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 ;
   return (
-<<<<<<< HEAD
     <>
       <Head>
 <title>
@@ -457,46 +350,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Streamline your development workflow with automated CI/CD
               pipelines, infrastructure as code, and intelligent security
               automation. Deploy faster, safer, and more reliably.
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <Button
-                href='#pricing'
-                variant='primary'
-                size='lg'
-                className='bg-blue-600 hover:bg-blue-700 text-white'>;
-                Start Free Trial;
-              </Button>;
-                className='bg-blue-600 hover:bg-blue-700 text-white'
-              >
-                Start Free Trial
-              </Button>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <Button
-href='#demo'
-                variant='outline'
-                size='lg'
-                className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'>                href="#pricing";
-                variant="primary";
-                size="lg";
-=======
-              <Button'
-                href='#pricing''
-                variant='primary''
-                size='lg''
-                className='bg-blue-600 hover:bg-blue-700 text-white'>;
-                Start Free Trial;
-              </Button>;
-              <Button'
-                href='#demo''
-                variant='outline''
-                size='lg''"
-                className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'>                href="#pricing";"
-                variant="primary";"
-                size="lg";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="bg-blue-600 hover:bg-blue-700 text-white";
                 Start Free Trial;
               </Button>;
@@ -556,18 +409,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Automation Examples Section */}
 
-<<<<<<< HEAD
         {/* Automation Examples Section */}
 <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
-=======
-
-        {/* Automation Examples Section */}'
-        <section className='py-24 bg-gray-800'>'
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-            <div className='text-center mb-20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
                 What You Can Automate;
               </h2>'
@@ -578,13 +423,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Card;
                   key={index}'
                   className='text-center group hover:scale-105 transition-transform duration-300'>;
-<<<<<<< HEAD
                   <div;
               </h2>"
-=======
-                  <div
-              </h2>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See how Zion DevOps can transform your development workflow.
               </p>
@@ -615,7 +455,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {example.title}
                   </h3>;'
                   <p className='text - gray - 400'>{example.description}</p>                </Card>                What You Can Automate;
-<<<<<<< HEAD
               </h2>;
               <p className="text - xl text - gray - 400 max-w-3xl mx-auto">;
                 See how Zion DevOps can transform your development workflow.;
@@ -632,34 +471,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {example.icon}
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-              </h2>;"
-              <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
-                See how Zion DevOps can transform your development workflow.;
-              </p>;
-            </div>;"
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-              {automation_examples.map ((example, index) => (
-                <Card;
 
-                  key={index}"
-                  className="text - center group hover:scale - 105 transition - transform duration - 300";
-                >;`
-                  <div className={`w - 16 h - 16 rounded - 2xl flex items - center justify - center text - 3xl mx - auto mb - 6 bg - gradient - to - br ${example.color}`}>;
-                    {example.icon}
-`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}
                   >
                     {example.icon}
                   </div>'
-=======
-                    className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}
-                  >
-                    {example.icon}
-                  </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <p className='text-gray-400'>{example.description}</p>                </Card>
 
                   <h3 className='text-xl font-semibold text-white mb-4'>
@@ -681,15 +497,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Choose the plan that fits your DevOps needs. All plans include a;
                 14-day free trial.;
               </p>;
-<<<<<<< HEAD
             </div>;'
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>              {pricingPlans && pricingPlans.map((plan, index) => (                Simple, Transparent Pricing;
               </h2>;"
-=======
-            </div>;
-            <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>              {pricingPlans && pricingPlans.map((plan;, index) => (                Simple, Transparent Pricing;
-              </h2>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
                 Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.;
               </p>;
@@ -735,7 +545,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <li key={featureIndex} className="flex items-center text-gray-300">;"
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
 
-<<<<<<< HEAD
         {/* Pricing Section */}
         <section id="pricing" className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -750,30 +559,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 Simple, Transparent Pricing
               </h2>
-<<<<<<< HEAD
-=======
 
-        {/* Pricing Section */}"
-        <section id="pricing" className="py-24 bg-gray-900">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-            <div className="text-center mb-20">"
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-
-
-
-
-        {/* Pricing Section */}'
-        <section id='pricing' className='py-24 bg-gray-900'>'
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-            <div className='text-center mb-20'>'
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-
-
-                Simple, Transparent Pricing;
-              </h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.
               </p>
@@ -790,7 +576,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Card;`
                   }`}
                 >;
-<<<<<<< HEAD
                   {plan.popular && (
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                       <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>
@@ -799,20 +584,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   )}
 <div className='text-center'>
-=======
-                  {plan.popular && ('
-                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'
-                      <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>                        Most Popular;
-                      </span>
-                    </div>"
-                  )}                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
-                      <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-                        Most Popular;
-                      </span>
-                    </div>
-                  )}'
-                  <div className='text-center'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <h3 className='text-2xl font-bold text-white mb-2'>
                       {plan.name}
                     </h3>'
@@ -828,18 +599,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <li;
                           key={featureIndex}'
                           className='flex items-center text-gray-300'
-<<<<<<< HEAD
                         >
                           <Check className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />
-=======
-                        >'
-                          <Check className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                          {feature}                    </div>"
-                    <p className="text-gray-300 mb-8">{plan.description}</p>"
-                    <ul className="text-left space-y-3 mb-8">
-                      {plan.features.map((feature, featureIndex) => ("
-                        <li key={featureIndex} className="flex items-center text-gray-300">"
-                          <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           {feature}
 
                           {feature}
@@ -849,7 +610,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </li>;
                       ))}
                     </ul>;
-<<<<<<< HEAD
                     <Button
                       href={plan && plan.name === 'Enterprise' ? '/contact' : '#signup'}
                       variant={plan && plan.popular ? 'primary' : 'outline'}
@@ -870,24 +630,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </span>;
                     </div>)}                    <div className="absolute -top - 4 left-1/2 transform -translate-x-1 / 2">;
                       <span className="bg - blue - 500 text - white px - 4 py - 2 rounded - full text-sm font-medium">;
-=======
-                    <Button'
-                      href={plan && plan.name === 'Enterprise' ? '/contact' : '#signup'}'
-                      variant={plan && plan.popular ? 'primary' : 'outline'}'
-                      size='lg'`
-                      className={`w-full ${}
-                        plan && plan.popular'"
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'                      size="lg"`
-                      className={`w-full ${}
-                        plan.popular '
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white' '
-                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white''
-                    <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;'
-                      <span className='bg - blue - 500 text - white px - 4 py - 2 rounded - full text - sm font - medium'>                        Most Popular;
-                      </span>;"
-                    </div>)}                    <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;"
-                      <span className="bg - blue - 500 text - white px - 4 py - 2 rounded - full text - sm font - medium">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         Most Popular;
                       </span>;
                     </div>)}'
@@ -907,7 +649,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <li;
                           key={feature_index}'
                           className='flex items - center text - gray - 300';
-<<<<<<< HEAD
                         >;
                           <Check className='w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0' />                          {feature}                    </div>;
                     <p className="text - gray-300 mb-8">{plan.description}</p>;
@@ -915,15 +656,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {plan.features.map ((feature, feature_index) => (
                         <li key={feature_index} className="flex items - center text-gray-300">;
                           <Check className="w - 5 h - 5 text - blue - 400 mr - 3 flex-shrink-0" />;
-=======
-                        >;'
-                          <Check className='w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0' />                          {feature}                    </div>;"
-                    <p className="text - gray - 300 mb - 8">{plan.description}</p>;"
-                    <ul className="text - left space - y-3 mb - 8">;
-                      {plan.features.map ((feature, feature_index) => ("
-                        <li key={feature_index} className="flex items - center text - gray - 300">;"
-                          <Check className="w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           {feature}
                         </li>))}
                     </ul>;
@@ -932,11 +664,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       variant={plan.popular ? 'primary' : 'outline'}
                         plan.popular'
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'
-<<<<<<< HEAD
                         plan.popular '
-=======
-                        plan.popular 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' 
 
                         plan.popular '
@@ -945,29 +673,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
 '
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
-<<<<<<< HEAD
 
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
-<<<<<<< HEAD
-=======
 
-                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       }`}
                     >;
                       {plan.cta}
 
-<<<<<<< HEAD
                         plan && plan.popular '
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' `
-=======
-                        plan && plan.popular 
-                          ? 'bg-blue-600 hover: bg-blue-700 text-white' ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       }`}>;
                       {plan && plan.cta}
                     </Button>;
@@ -978,7 +693,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Market Comparison Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -989,23 +703,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className="py-24 bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
-=======
-
-
-
-
-        {/* Market Comparison Section */}'
-        <section className='py-24 bg-gray-800'>'
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-            <div className='text-center mb-20'>'
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-
-
-        {/* Market Comparison Section */}"
-        <section className="py-24 bg-gray-800">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-            <div className="text-center mb-20">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 How We Compare to the Competition;
               </h2>"
@@ -1023,7 +720,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Market Comparison Section */}
 <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1031,15 +727,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>
-=======
-        {/* Market Comparison Section */}'
-        <section className='py-24 bg-gray-800'>'
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-            <div className='text-center mb-20'>'
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>"
-                  <div className="text-center mb-6">"
-                    <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className="flex items-center justify-center mb-2">
                       {[...Array(5)].map((_, i) => ('
                       size='lg';`
@@ -1073,39 +760,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="text-center mb-6">;"
                     <h3 className="text-xl font-bold text-white mb-2">{competitor && competitor.competitor}</h3>;"
                     <div className="flex items-center justify-center mb-2">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              </h2>
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-                See why Zion DevOps is the smart choice for automation.
-              </p>
-            </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-              {marketComparison.map((competitor, index) => (
-                <Card key={index} className='p-6'>
-                  <div className='text-center mb-6'>
-                    <h3 className='text-xl font-bold text-white mb-2'>
-                      {competitor.competitor}
-                    </h3>
-                    <div className='flex items-center justify-center mb-2'>
-                      {[...Array(5)].map((_, i) => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-                        <Star
-                          key={i}
-                          className={`w-5 h-5 ${
-                            i < Math && Math.floor(parseFloat(competitor && competitor.rating))
-                              ? 'text-yellow-400 fill-current'
-                              : 'text-gray-400'
-=======
-                        <Star;
-                          key={i}`
-                          className={`w-5 h-5 ${}
-                            i < Math && Math.floor(parseFloat(competitor && competitor.rating))'
-                              ? 'text-yellow-400 fill-current''
-                              : 'text-gray-400'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                           }`}
                         />;
                       ))}
@@ -1135,31 +790,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         ))}
                       </ul>
                     </div>
-<<<<<<< HEAD
                     <div>
 <p className='text-sm font-medium text-red-400 mb-1'>
-=======
-                    <div>'
-                      <p className='text-sm font-medium text-red-400 mb-1'>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         Cons:
                       </p>'
                       <ul className='text-sm text-gray-300 space-y-1'>
                         {competitor.cons.map((con, conIndex) => ('
                           <li key={conIndex} className='flex items-center'>'
                             <span className='w-4 h-4 text-red-400 mr-2 flex-shrink-0'>
-<<<<<<< HEAD
                               ×
                             </span>
                             {con}
-=======
-                              ×"
-                            </span>                            {con}                      <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>"
-                      <ul className="text-sm text-gray-300 space-y-1">
-                        {competitor.cons.map((con, conIndex) => ("
-                          <li key={conIndex} className="flex items-center">"
-                            <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0">×</span>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           </li>
                         ))}
                       </ul>
@@ -1177,18 +818,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Testimonials Section */}
 
-<<<<<<< HEAD
         {/* Testimonials Section */}
 <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
-=======
-
-        {/* Testimonials Section */}'
-        <section className='py-24 bg-gray-900'>'
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-            <div className='text-center mb-20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
                 Trusted by DevOps Teams Worldwide;
               </h2>
@@ -1281,15 +914,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/contact''
                 variant='outline''
                 size='lg'
-<<<<<<< HEAD
         {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-=======
-        {/* CTA Section */}'
-        <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>'
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
             </h2>'
             <p className='text-xl text-blue-100 mb-12'>
@@ -1297,7 +924,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               needs.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-<<<<<<< HEAD
               <Button
                 href='#signup'
                 variant='secondary'
@@ -1309,24 +935,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
 href='/contact'
                 variant='outline'
-=======
-              <Button'
-                href='#signup''
-                variant='secondary''
-                size='lg''
-                className='bg-white text-blue-600 hover:bg-gray-100'              >
-                Start Free Trial;
-              </Button>
-              <Button'
-                href='/contact''
-                variant='outline''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 size='lg'
-<<<<<<< HEAD
                 Contact Sales;
-=======
-                Contact Sales
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </Button>;
                   </div>;
                 </Card>))}
@@ -1349,19 +959,11 @@ href='/contact'
                   <div className='text - center mb - 6'>;'
                     <h3 className='text - xl font - bold text - white mb - 2'>;
                       {competitor.competitor}
-<<<<<<< HEAD
                     </h3>;
                     <div className='flex items - center justify - center mb - 2'>                      {[...Array (5)].map ((_, i) => (                <Card key={index} className="p-6">;
                   <div className="text-center mb-6">;
                     <h3 className="text - xl font - bold text-white mb-2">{competitor.competitor}</h3>;
                     <div className="flex items - center justify-center mb-2">;
-=======
-                    </h3>;'"
-                    <div className='flex items - center justify - center mb - 2'>                      {[...Array (5)].map ((_, i) => (                <Card key={index} className="p - 6">;"
-                  <div className="text - center mb - 6">;"
-                    <h3 className="text - xl font - bold text - white mb - 2">{competitor.competitor}</h3>;"
-                    <div className="flex items - center justify - center mb - 2">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <Star;
                           key={i}`
                           className={`w - 5 h - 5 ${}
@@ -1375,13 +977,8 @@ href='/contact'
                   </div>;'
                   <div className='mb - 4'>;'
                     <p className='text - lg font - semibold text - white mb - 1'>;
-<<<<<<< HEAD
                       Pricing: {competitor.pricing}
                     </p>;'
-=======
-                      Pricing: {competitor.pricing;}
-                    </p>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <p className='text - sm text - gray - 400'>;
                       Repositories: {competitor.repositories;}
                     </p>;
@@ -1392,7 +989,6 @@ href='/contact'
                         Pros:;
                       </p>;'
                       <ul className='text - sm text - gray - 300 space - y-1'>;
-<<<<<<< HEAD
                         {competitor.pros.map ((pro, pro_index) => (
                           <li key={pro_index} className='flex items - center'>;
                             <Check className='w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0' />                            {pro}                  </div>;
@@ -1407,22 +1003,6 @@ href='/contact'
                         {competitor.pros.map ((pro, pro_index) => (
                           <li key={pro_index} className="flex items-center">;
                             <Check className="w - 4 h - 4 text - green - 400 mr - 2 flex-shrink-0" />;
-=======
-                        {competitor.pros.map ((pro, pro_index) => ('
-                          <li key={pro_index} className='flex items - center'>;'
-                            <Check className='w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0' />                            {pro}                  </div>;"
-                  <div className="mb - 4">;"
-                    <p className="text - lg font - semibold text - white mb - 1">Pricing: {competitor.pricing}</p>;"
-                    <p className="text - sm text - gray - 400">Repositories: {competitor.repositories}</p>;
-                  </div>;"
-                  <div className="space - y-2">;
-                    <div>;"
-                      <p className="text - sm font - medium text - green - 400 mb - 1">Pros:</p>;"
-                      <ul className="text - sm text - gray - 300 space - y-1">;
-                        {competitor.pros.map ((pro, pro_index) => ("
-                          <li key={pro_index} className="flex items - center">;"
-                            <Check className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             {pro}
                           </li>))}
                       </ul>;
@@ -1435,21 +1015,12 @@ href='/contact'
                         {competitor.cons.map ((con, con_index) => ('
                           <li key={con_index} className='flex items - center'>;'
                             <span className='w - 4 h - 4 text - red - 400 mr - 2 flex - shrink - 0'>;
-<<<<<<< HEAD
                               ×;
                             </span>                            {con}                      <p className="text - sm font - medium text - red-400 mb-1">Cons:</p>;
                       <ul className="text - sm text - gray-300 space-y-1">;
                         {competitor.cons.map ((con, con_index) => (
                           <li key={con_index} className="flex items-center">;
                             <span className="w - 4 h - 4 text - red - 400 mr - 2 flex-shrink-0">×</span>;
-=======
-                              ×;"
-                            </span>                            {con}                      <p className="text - sm font - medium text - red - 400 mb - 1">Cons:</p>;"
-                      <ul className="text - sm text - gray - 300 space - y-1">;
-                        {competitor.cons.map ((con, con_index) => ("
-                          <li key={con_index} className="flex items - center">;"
-                            <span className="w - 4 h - 4 text - red - 400 mr - 2 flex - shrink - 0">×</span>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           </li>))}
                       </ul>;
                     </div>;
@@ -1488,7 +1059,6 @@ href='/contact'
                       {testimonial.company}
                     </p>                  </div>                Trusted by DevOps Teams Worldwide;
               </h2>;
-<<<<<<< HEAD
             </div>;
             <div className="grid grid - cols - 1 md:grid - cols-3 gap-8">;
               {testimonials.map ((testimonial, index) => (
@@ -1502,21 +1072,6 @@ href='/contact'
                     <p className="font-semibold text-white">{testimonial.name}</p>;
                     <p className="text - sm text-gray-400">{testimonial.role}</p>;
                     <p className="text - sm text-blue-400">{testimonial.company}</p>;
-=======
-            </div>;"
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-              {testimonials.map ((testimonial, index) => ("
-                <Card key={index} className="p - 6">;"
-                  <div className="flex items - center mb - 4">;
-                    {[...Array (testimonial.rating)].map ((_, i) => ("
-                      <Star key={i} className="w - 5 h - 5 text - yellow - 400 fill - current" />))}
-                  </div>;"
-                  <p className="text - gray - 300 mb - 6 italic">"{testimonial.content}"</p>;
-                  <div>;"
-                    <p className="font - semibold text - white">{testimonial.name}</p>;"
-                    <p className="text - sm text - gray - 400">{testimonial.role}</p>;"
-                    <p className="text - sm text - blue - 400">{testimonial.company}</p>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>;
                 </Card>))}
             </div>;
@@ -1539,7 +1094,6 @@ href='/contact'
                 className='bg - white text - blue - 600 hover:bg - gray - 100'              >;
                 Start Free Trial;
               </Button>;
-<<<<<<< HEAD
               <Button;
                 href='/contact';
                 variant='outline';
@@ -1558,26 +1112,6 @@ href='/contact'
                 variant="outline";
                 size="lg";
                 className="border - white text - white hover:bg - white hover:text-blue-600";
-=======
-              <Button;'
-                href='/contact';'
-                variant='outline';'
-                size='lg';'"
-                className='border - white text - white hover:bg - white hover:text - blue - 600'              >                href="#signup";"
-                variant="secondary";"
-                size="lg";"
-                className="bg - white text - blue - 600 hover:bg - gray - 100";
-                Start Free Trial;
-              </Button>;
-              <Button;'
-                href='/contact';'
-                variant='outline';'
-                size='lg';'"
-                className='border - white text - white hover:bg - white hover:text - blue - 600'                href="/contact";"
-                variant="outline";"
-                size="lg";"
-                className="border - white text - white hover:bg - white hover:text - blue - 600";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 Contact Sales;
               </Button>;
             </div>;

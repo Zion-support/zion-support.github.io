@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }</div> </div>) import fs from 'fs';'
 import fs from 'fs';'
 import path from 'path';
@@ -51,13 +50,8 @@ export type Trend = {}
   date: string,
   title: string,
   highlights: string[],
-<<<<<<< HEAD
   summary: string,
   tags: string[]
-=======
-  summary: string,;
-  tags: string[];
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
 
 export async function getServerSideProps() { return null; }
@@ -68,9 +62,6 @@ import path from 'path';
 export type Trend = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return { props: { items } }
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
     </div>;
@@ -88,7 +79,6 @@ export default /**;
  */
 function AiTrendsPage() {}
   return (
-<<<<<<< HEAD
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Trend Watch</h1>;
       <p className="text-gray-600">Autonomously generated insights on AI, dev tools, and cloud trends.</p>;
@@ -105,34 +95,8 @@ function AiTrendsPage() {}
             </ul>;
             <div className="flex flex - wrap gap-2 pt-1">;
               {t.tags.map (tag => (<span key={tag} className="text - xs px - 2 py - 0.5 rounded bg-gray-100">{tag}</span>))}
-=======
-    <div className="space - y-6">;"
-      <h1 className="text - 2xl font - semibold">AI Automation: Trend Watch</h1>;"
-      <p className="text - gray - 600">Autonomously generated insights on AI, dev tools, and cloud trends.</p>;"
-      <div className="grid grid - cols - 1 gap - 4">;
-        {items.map ((t) => ("
-          <div key={t.id} className="border rounded p - 4 space - y-2">;"
-            <div className="flex items - center justify - between">;"
-              <div className="font - medium">{t.title}</div>;"
-              <div className="text - xs text - gray - 500">{new Date (t.date).toLocaleDateString ()}</div>;
-            </div>;"
-            <div className="text - sm text - gray - 700">{t.summary}</div>;"
-            <ul className="list - disc pl - 5 text - sm text - gray - 700">;
-              {t.highlights.map ((h, i) => (<li key={i}>{h}</li>))}
-            </ul>;"
-            <div className="flex flex - wrap gap - 2 pt - 1">;"
-              {t.tags.map (tag => (<span key={tag} className="text - xs px - 2 py - 0.5 rounded bg - gray - 100">{tag}</span>))}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>;
           </div>))}
       </div>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

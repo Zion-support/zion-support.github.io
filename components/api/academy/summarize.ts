@@ -1,19 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import OpenAI from 'openai';
-<<<<<<< HEAD
 export default async function handler() { return null; }
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 
     });
   const fallback = () => res && res.status(200).json({}
     summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -21,7 +14,6 @@ export default async function handler(
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
 
-<<<<<<< HEAD
   if (!apiKey) return fallback();
   try {}
     const client = new OpenAI({ apiKey });`
@@ -32,7 +24,7 @@ export default async function handler(
         }'
         { role: 'user', content: prompt }
       ]
-<<<<<<< HEAD
+
       temperature: 0.3
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
@@ -46,10 +38,6 @@ export default async function handler(
       temperature: 0.3,
 origin/cursor/automate-test-improve-and-merge-code-2533
     });
-=======
-      temperature: 0.3;
-    });'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status (200).json ({ summary: text.trim () });
   } catch (err) {}
@@ -66,16 +54,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   }
   }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
     return res.status(200).json({ summary: text.trim() })
   } catch (err) {
     return fallback()
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-<<<<<<< HEAD
 '`
-=======
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

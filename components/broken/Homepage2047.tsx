@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   ArrowRight;
   Play;
   TrendingUp;
@@ -116,14 +115,10 @@ import { motion, AnimatePresence  } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon;
   DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor;
   Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon;
-<<<<<<< HEAD
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon
 
  } from 'lucide-react';
@@ -135,13 +130,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 // Import our new innovative services;
 import { innovative2025AIAutonomousEcosystemV2  } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
 import { emergingTechBreakthroughs2025V4  } from '../data/2025-emerging-tech-breakthroughs-v4';
-=======
-// Import our new innovative services'
-import { innovative2025AIAutonomousEcosystemV2  } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';'
-import { emergingTechBreakthroughs2025V4  } from '../data/2025-emerging-tech-breakthroughs-v4';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { innovative2025ITInfrastructureV2  } from '../data/2025-innovative-it-infrastructure-v2';
-<<<<<<< HEAD
 // Import enhanced components'
 import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047',';
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';'
@@ -392,9 +381,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
 
-
-
-
   };
 
     ...innovative2025ITInfrastructureV2,    ...innovative2025AIAutonomousEcosystemV2;
@@ -505,7 +491,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       },;
     },;
   };
-<<<<<<< HEAD
 transition: { duration: 0.6 },
   };
 
@@ -519,9 +504,6 @@ staggerChildren: 0.1,
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-=======
-  return ('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden'>;
       {/* Futuristic Background */}
 
@@ -530,24 +512,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Navigation */}
       <UltraFuturisticNavigation2047 />;
 
-<<<<<<< HEAD
       {/* Hero Section */}
 <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>
         <div className='max-w-7xl mx-auto w-full'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
-=======
-      {/* Hero Section */}'
-      <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>'
-        <div className='max-w-7xl mx-auto w-full'>'"
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            {/* Left Content */}      <section className="relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">"
-        <div className="max-w-7xl mx-auto w-full">"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {/* Left Content */}
             <motion.div;
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 1 }}
 className='space-y-8'
             >
@@ -558,24 +530,6 @@ className='space-y-8'
                   transition={{ duration: 0.8, delay: 0.2 }}
 className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'
                 >
-=======
-              transition={{ duration: 1 }}'
-              className='space-y-8'
-            >'
-              <div className='space-y-6'>                <motion.div;
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}'"
-                  className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'              className="space-y-8"
-            >"
-              <div className="space-y-6">
-                <motion.div;
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}'
-                  className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'
-                >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Sparkles className='w-4 h-4' />
                   <span>Innovating the Future Since 2025</span>
                 </motion.div>'
@@ -668,7 +622,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <ArrowUpRight className='w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200' />;
                 </Link>;
 
-
                 <Link'
                   href='/contact''
                   className='group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2'>;
@@ -685,7 +638,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Link"
                   href="/contact"
 
-
                   className='group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2'
                 >
                   <span>Get Started</span>
@@ -694,15 +646,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Stats */}
-<<<<<<< HEAD
               <motion&& motion.div
                 variants={staggerContainer}
 initial='initial'
-=======
-              <motion&& motion.div;
-                variants={staggerContainer}'
-                initial='initial''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 animate='animate'
 
                 className='grid grid-cols-2 md:grid-cols-4 gap-6'
@@ -744,8 +690,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
 
-
-
               transition={{ duration: 1, delay: 0.3 }}
 className='relative'
             >
@@ -759,22 +703,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   transition={{ duration: 0.5 }}'
                   className='relative'
 
-
-
-
-<<<<<<< HEAD
 className='relative'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>
                     <div className='flex items-center justify-between mb-6'>
                       <div className='w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center'>
-=======
-                >'
-                  <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>'
-                    <div className='flex items-center justify-between mb-6'>'
-                      <div className='w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <Brain className='w-8 h-8 text-white' />
                       </div>'
                       <div className='text-right'>'
@@ -834,10 +768,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Link"
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block"
 
-
                     >
 
-<<<<<<< HEAD
                         </span>
                       </div>
                       <div className='flex items-center justify-between text-sm'>
@@ -863,19 +795,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto'>
           <motion.div
 
-=======
-                      Learn More;
-      {/* Services Overview */}'
-      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;'"
-        <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;"
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.div;
-      {/* Services Overview */}'
-      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>'"
-        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto">
-          <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}'
                   className='relative';
@@ -974,14 +893,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-=======
-          >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Service Categories;
             </h2>'
@@ -1003,14 +918,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Revolutionary Service Categories;
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-<<<<<<< HEAD
               Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies
               Explore our comprehensive suite of innovative solutions across AI,
               quantum computing, IT infrastructure, and emerging technologies
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-              Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </motion.div>
             transition={{ duration: 0 && 0.8 }}'
@@ -1029,17 +940,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </motion && motion.div>;
 
-
           {/* Category Cards */}
-<<<<<<< HEAD
           <motion&& motion.div
             variants={staggerContainer}
 initial='initial'
-=======
-          <motion&& motion.div;
-            variants={staggerContainer}'
-            initial='initial''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             whileInView='animate'
             viewport={{ once: true }}'"
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            initial="initial";"
@@ -1085,7 +989,6 @@ initial='initial'
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;'"
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">;
-<<<<<<< HEAD
           <motion&& motion.div
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'
           >
@@ -1139,14 +1042,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto'>
           <motion.div
 
-=======
-          <motion&& motion.div;
-      {/* Featured Services Grid */}'
-      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>'"
-        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto">
-          <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}'
                     category.id === 'all';'
@@ -1195,17 +1090,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
 
-
-
-
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-=======
-          >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services;
             </h2>'
@@ -1227,13 +1115,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Featured Innovative Services;
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-<<<<<<< HEAD
               Discover our most revolutionary and cutting-edge technology solutions
               solutions
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-              Discover our most revolutionary and cutting-edge technology solutions;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </motion.div>
             transition={{ duration: 0 && 0.8 }}'
@@ -1252,17 +1136,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </motion && motion.div>;
 
-
           {/* Services Grid */}
-<<<<<<< HEAD
           <motion&& motion.div
             variants={staggerContainer}
 initial='initial'
-=======
-          <motion&& motion.div;
-            variants={staggerContainer}'
-            initial='initial''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             whileInView='animate'
             viewport={{ once: true }}
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
@@ -1335,7 +1212,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ArrowRight className='w-5 h-5' />            </Link>          >;
             <Link"
               href="/2025-innovative-services-showcase-v2"
-<<<<<<< HEAD
               className='inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25'
             >
               <span>View All {allInnovativeServices.length}+ Services</span>
@@ -1350,20 +1226,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
 
-
       {/* CTA Section */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
-=======
-      {/* CTA Section */}'
-      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>'"
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div;
-      {/* CTA Section */}'
-      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;'"
-        <div className='max-w-4xl mx-auto text-center'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-4xl mx-auto text-center">;
           <motion&& motion.div;
             initial={{ opacity: 0, y: 30 }}
@@ -1396,7 +1261,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
                 Get Started Today;
               </Link>;
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}
           >
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1417,12 +1281,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Link
 href='/2025-innovative-services-showcase-v2'
                 className='border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200'
-=======
-              <Link'
-                href='/2025-innovative-services-showcase-v2''"
-                className='border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200'                href="/2025-innovative-services-showcase-v2""
-                className="border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >
                 Explore Services;
               </Link>
@@ -1538,8 +1396,6 @@ export default Homepage2047);
 export default Homepage2047;
 ;
 
-
-
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
@@ -1553,26 +1409,8 @@ export default Homepage2047;
 
 };
 
-
-<<<<<<< HEAD
 );
 };
 
 export default Homepage2047;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-// Import enhanced components;
-import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';;
-import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
-import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
-
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('scroll', handleScroll)
-    }
-const Homepage2047: React.FC;
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

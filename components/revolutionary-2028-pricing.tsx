@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 import {}
@@ -73,13 +72,9 @@ import {};
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
-<<<<<<< HEAD
   Crown, Award, Target, Users, Clock, Globe2
 
  } from 'lucide-react';
@@ -88,21 +83,12 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 const contactInfo = null;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 const pricingTiers = [
   {
     name: 'Starter'
     price: '$299'
     period: '/month'
-=======
-  Crown, Award, Target, Users, Clock, Globe2;
-const pricingTiers = []
-  {'
-    name: 'Starter''
-    price: '$299''
-    period: '/month''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Perfect for small businesses and startups'
     features: []
   CheckCircle,
@@ -159,7 +145,6 @@ const pricingTiers = []
     price: '$999''
     period: '/month''
     description: 'Ideal for growing businesses and enterprises'
-<<<<<<< HEAD
 'Basic AI integration',
       'Standard support',
       'Core features access',
@@ -208,43 +193,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Custom integrations'
       'Dedicated account manager'
       'SLA guarantees'
-=======
-    features: ['
-      'Advanced AI capabilities''
-      'Priority support''
-      'Full feature access''
-      'Phone & email support''
-      'Advanced analytics''
-      'API access''
-      'Custom integrations''
-      'Training & onboarding'
-    ]
-    popular: true'
-    color: 'from-purple-600 to-pink-600''
-    cta: 'Start Free Trial''
-    href: '/contact''
-  },  {      'Advanced AI capabilitiesPriority supportFull feature accessPhone & email supportAdvanced analyticsAPI accessCustom integrationsTraining & onboarding'
-    ];
-    popular: true'
-    color: 'from-purple-600 to-pink-600''
-    cta: 'Start Free Trial''
-    href: '/contact'
-  }'
-    name: 'Enterprise''
-    price: 'Custom''
-    period: '''
-    description: 'Tailored solutions for large organizations'
-    features: ['
-      'Custom AI development''
-      'Dedicated support team''
-      'White-label solutions''
-      '24/7 phone support''
-      'Custom analytics''
-      'Full API access''
-      'Custom integrations''
-      'Dedicated account manager''
-      'SLA guarantees''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'On-premise deployment'
     ]
     popular: false'
@@ -617,49 +565,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
       {/* Service Pricing */}
 <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Service{' '}
-=======
-      {/* Service Pricing */}'
-      <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-          <div className='text-center mb-16'>'
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>'
-              Service{' '}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Pricing;
               </span>
             </h2>'
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
-<<<<<<< HEAD
               Detailed pricing for our individual services. Mix and match to
               create your perfect solution.
             </p>
           </div>
           {servicePricing.map((category, categoryIndex) => (
 <div key={category.category} className='mb-16'>
-=======
-              Detailed pricing for our individual services. Mix and match to;
-              create your perfect solution.            </p>
-          </div>"
-          {servicePricing.map((category, categoryIndex) => (      <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-          <div className="text-center mb-16">"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
-              Service <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Pricing</span>
-            </h2>"
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-              Detailed pricing for our individual services. Mix and match to create your perfect solution.
-          </div>
-          {servicePricing.map((category, categoryIndex) => ('
-            <div key={category.category} className='mb-16'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h3 className='text-3xl font-bold text-white mb-8 text-center'>
                 {category.category}
               </h3>'
@@ -690,7 +612,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className="text-right">"
                             <div className="text-xs text-purple-300">Trial</div>"
                             <div className="text-white font-medium">{service.trialDays} days</div>
-
 
                         </p>
                         <div className='mb-4'>
@@ -730,31 +651,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
           ))}
-<<<<<<< HEAD
       {/* Value Proposition */}
 <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Why Choose{' '}
-=======
-      {/* Value Proposition */}'
-      <section className='py-20 bg-black/50'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-          <div className='text-center mb-16'>'
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>'
-              Why Choose{' '}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Our Pricing;
               </span>
 
-
-
-
-
       {/* Value Proposition */}
-
 
             </h2>'
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
@@ -774,14 +681,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
-=======
-            <motion.div'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Our Pricing;
               </span>;
@@ -880,22 +783,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </div>;
 
-
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
 
-<<<<<<< HEAD
 className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
-=======
-            >'
-              <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h3 className='text-2xl font-bold text-white mb-4'>
                 Competitive Pricing;
               </h3>'
@@ -944,15 +840,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               viewport={{ once: true }}
 
-<<<<<<< HEAD
 className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
-=======
-            >'
-              <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h3 className='text-2xl font-bold text-white mb-4'>
                 No Hidden Costs;
               </h3>'
@@ -967,16 +858,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Shield className="w-16 h-16 text-blue-400 mx-auto mb-6" />"
               <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>"
               <p className="text-blue-300 mb-6">
-<<<<<<< HEAD
                 Transparent pricing with no surprise fees. What you see is what you pay
               <div className='text-blue-300'>Transparent Pricing</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                Transparent pricing with no surprise fees. What you see is what you pay;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 with clear value for every dollar.
               </p>"
               <div className="text-3xl font-bold text-blue-400">100%</div>"
@@ -1003,43 +887,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-3xl font-bold text-blue-400">100%</div>;"
               <div className="text-blue-300">Transparent Pricing</div>;
             </motion && motion.div>;
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
               viewport={{ once: true }}
 
-<<<<<<< HEAD
-=======
-              initial={{ opacity: 0;, y: 30 ;}}
-              whileInView={{ opacity: 1;, y: 0 ;}}
-              transition={{ duration: 0 && 0.6;, delay: 0 && 0.4 ;}}
-              viewport={{ once: true ;}}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
-=======
-            >'
-              <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h3 className='text-2xl font-bold text-white mb-4'>
                 Premium Quality;
               </h3>'
               <p className='text-pink-300 mb-6'>
                 Enterprise-grade technology with premium support and features;
                 that justify every penny of investment.
-<<<<<<< HEAD
               </p>'
               <div className='text-3xl font-bold text-pink-400'>5x</div>'
               <div className='text-pink-300'>ROI Guarantee</div>            </motion.div>            >"
-=======
-              </p>
-              <div className='text-3xl font-bold text-pink-400'>5x</div>
-              <div className='text-pink-300'>ROI Guarantee</div>            </motion.div>            >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
             >"
               <Award className="w-16 h-16 text-pink-400 mx-auto mb-6" />"
@@ -1056,47 +921,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<<<<<<< HEAD
-=======
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
-<<<<<<< HEAD
-=======
-          <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
-<<<<<<< HEAD
-=======
-            initial={{ opacity: 0;, y: 30 ;}}
-            whileInView={{ opacity: 1;, y: 0 ;}}
-            transition={{ duration: 0 && 0.8 ;}}
-            viewport={{ once: true ;}}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='space-y-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
-=======
-          >'
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>'
-              Ready to{' '}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Get Started;
               </span>
@@ -1122,16 +963,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex items-center space-x-2'>'
                 <CheckCircle className='w-5 h-5 text-green-400' />
                 <span>No Credit Card Required</span>
-<<<<<<< HEAD
               </div>
               <div className='flex items-center space-x-2'>
                 <CheckCircle className='w-5 h-5 text-green-400' />
-=======
-              </div>'
-              <div className='flex items-center space-x-2'>'"
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span>Cancel Anytime</span>              <div className="flex items-center space-x-2">"
-                <CheckCircle className="w-5 h-5 text-green-400" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <span>Cancel Anytime</span>
               </div>
             </div>
@@ -1139,32 +973,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       <UltraFuturisticFooter2028 />
-<<<<<<< HEAD
 '
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;'
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;"
-=======
-
-              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
               We offer the best value in the market with transparent pricing and unmatched features.;
             </p>;
           </div>;"
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}'
-=======
-              initial={{ opacity: 0;, coordinate_y: 30 ;}}
-              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
-              transition={{ duration: 0.6 ;}}
-              viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='text - center p - 8 bg - gradient - to - br from - purple - 900 / 20 to - blue - 900 / 20 border border - purple - 500 / 30 rounded - 2xl';
             >;'
               <Target className='w - 16 h - 16 text - green - 400 mx - auto mb - 6' />;'
@@ -1187,17 +1008,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text - purple - 300">Lower than Market</div>;
             </motion.div>;
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}'
-=======
-              initial={{ opacity: 0;, coordinate_y: 30 ;}}
-              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
-              transition={{ duration: 0.6;, delay: 0.2 ;}}
-              viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='text - center p - 8 bg - gradient - to - br from - blue - 900 / 20 to - cyan - 900 / 20 border border - blue - 500 / 30 rounded - 2xl';
             >;'
               <Shield className='w - 16 h - 16 text - blue - 400 mx - auto mb - 6' />;'
@@ -1220,17 +1034,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text - blue - 300">Transparent Pricing</div>;
             </motion.div>;
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}'
-=======
-              initial={{ opacity: 0;, coordinate_y: 30 ;}}
-              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
-              transition={{ duration: 0.6;, delay: 0.4 ;}}
-              viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='text - center p - 8 bg - gradient - to - br from - pink - 900 / 20 to - rose - 900 / 20 border border - pink - 500 / 30 rounded - 2xl';
             >;'
               <Award className='w - 16 h - 16 text - pink - 400 mx - auto mb - 6' />;'
@@ -1313,7 +1120,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 
   );
-
 
     </>
   );

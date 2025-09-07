@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 export const metadata = {
   title: 'Services | Zion Tech Group',
@@ -38,144 +37,39 @@ export default function ServicesPage() {
             <p className="text-gray-300">
               Scalable cloud services for business growth and efficiency.
             </p>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-};
-=======
-import Link from "next/link";
-
-export const metadata = {
-  title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description: "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
-=======
-import Link from "next/link";
-
-export const metadata = {
-  title:
-    "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description:
-    "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
-  keywords:
-    "AI services, micro SaaS, IT services, FinTech, HealthTech, EdTech, cloud migration, DevOps, SRE, enterprise software",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-<<<<<<< HEAD
 export const metadata = {
   title: 'Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions',
   description: 'Comprehensive technology services including AI development, micro SaaS solutions, financial technology, healthcare technology, and educational technology. Transform your business with cutting-edge solutions.',
   keywords: 'AI services, micro SaaS, FinTech, HealthTech, EdTech, technology solutions, software development, digital transformation'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-title: "Services | Zion Tech Group",
-  description:;
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-}
-export default /**
- * ServicesOverviewPage - Function description
- */
-function ServicesOverviewPage() {
 
-import Link from "next/link";
-  title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description:
 };
-export default function ServicesOverviewPage() {
-  return (
-    <div className="animate - fade - in">;
-      {" "}
-      <div className="text - center mb - 16">;
-        {" "}
-        <h1 className="text - 4xl font - bold text - gray - 900 mb - 6">;
-          Our Services;
-        </h1>{" "}
-        <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-          {" "}
-Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
-          we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.{" "}
-        </p>{" "}
-      </div>{" "}
-      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 16">;
-        {" "}
-        <ServiceCard;
-          href="/services / micro - saas";
-          title="Micro SaaS";
-          description="End - to - end product development with billing, auth, and analytics";
-          bullets={[;
-            "Foundational architecture",
-            "Billing + subscriptions",
-            "Growth analytics",
-          ]}
-title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description:
-    "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
 
-<<<<<<< HEAD
-export const metadata = {
-  title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description: "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-};
-=======
 import Link from 'next/link';
 
 export const metadata = {
   title: "Services | Zion Tech Group",
   description: "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
 
 export default function ServicesOverviewPage() {
   return (
-<<<<<<< HEAD
     <div className="animate-fade-in">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
-=======
-import Link from "next/link";
-
-};
-
-export default function ServicesOverviewPage() {}
-  return ("
-    <div className="animate-fade-in">"
-      <div className="text-center mb-16">"
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">;
-          Our Services;
-        </h1>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
           Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
           we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.
-=======
-          Transform your business with cutting-edge technology solutions. From
-          AI-powered micro SaaS to enterprise FinTech platforms, we deliver
-          measurable outcomes with 99.9% uptime, bank-grade security, and 24/7
-          expert support.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         </p>
       </div>
 
       {/* Statistics Section */}"
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">"
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-<<<<<<< HEAD
           <StatCard
             number="500+"
             label="Successful Projects"
@@ -195,45 +89,10 @@ export default function ServicesOverviewPage() {}
             number="300%"
             label="Average ROI"
             description="Client return on investment"
-=======
-          <StatCard "
-            number="500+" "
-            label="Successful Projects" "
-            description="Delivered worldwide" 
-          />
-          <StatCard "
-            number="$2B+" "
-            label="Combined Market Value" "
-            description="Generated for clients" 
-          />
-          <StatCard "
-            number="99.9%" "
-            label="Uptime Guarantee" "
-            description="Enterprise reliability" 
-          />
-          <StatCard "
-            number="300%" "
-            label="Average ROI" "
-            description="Client return on investment" 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           />
         </div>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-export const metadata = {
-  title: "Services | Zion Tech Group",
-  description:
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-};
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
 export default function ServicesOverviewPage() {
   return (
     <div className="animate-fade-in">
@@ -249,84 +108,44 @@ export default function ServicesOverviewPage() {
           outcomes for your business.{" "}
         </p>{" "}
       </div>{" "}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-      {/* Core Services Grid */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-<<<<<<< HEAD
 
 export default function ServicesOverviewPage() {
   return (
     <div className="animate-fade-in">
-=======
-
-export default function ServicesOverviewPage() {
-  return (
-    <div className="animate-fade-in">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
           Our Services
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+
           Product engineering and AI-first consulting to deliver measurable
           outcomes for your business.
         </p>
       </div>
-<<<<<<< HEAD
-=======
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
->>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        <ServiceCard
-          href="/services/micro-saas"
-          title="Micro SaaS Solutions"
-          description="Complete micro SaaS development from MVP to scale with billing, analytics, and growth optimization"
-          bullets={[
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            "Foundational architecture",
-            "Billing + subscriptions",
-            "Growth analytics",
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
+
             "15+ specialized micro SaaS tools",
             "End-to-end development & deployment",
             "Revenue optimization & scaling"
-=======
-            "Foundational architecture",
-            "Billing + subscriptions", 
-            "Growth analytics"
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
+
             "15+ specialized micro SaaS tools",
             "End-to-end development & deployment",
             "Revenue optimization & scaling"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
+
             "15+ specialized micro SaaS tools",
             "End-to-end development & deployment",
             "Revenue optimization & scaling",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
+
             "15+ specialized micro SaaS tools",
             "End-to-end development & deployment",
             "Revenue optimization & scaling"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
           ]}
           icon="🚀"
-=======
+
 "
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard"
@@ -336,9 +155,9 @@ export default function ServicesOverviewPage() {
           bullets={[]
           ]}"
           icon="🚀""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           pricing="From $2,999/month"
-=======
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
@@ -351,47 +170,19 @@ export default function ServicesOverviewPage() {
             "Multi-tenant systems"
           ]}
           icon="🚀"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+
         />
         <ServiceCard"
           href="/services/ai-services""
           title="AI Services"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
           description="LLM applications, RAG systems, and AI automation"
           bullets={[
             'Custom LLM development',
             'RAG systems',
             'AI agents & automation'
           ]}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-          description="Advanced AI solutions including LLM applications, RAG systems, and enterprise AI platforms"
-          bullets={[
-            "15+ AI service categories",
-            "Custom LLM development",
-            "Enterprise AI integration",
-          ]}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          description="LLM applications, RAG systems, and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
+
 description="LLM applications, RAG systems, and MLOps pipelines"
           bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
           description="Advanced AI solutions including LLM applications, RAG systems, and enterprise AI platforms"
@@ -400,141 +191,25 @@ description="LLM applications, RAG systems, and MLOps pipelines"
             "Custom LLM development",
             "Enterprise AI integration"
           ]}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
           icon="🤖"
-=======
+
 "
           icon="🤖""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           pricing="From $5,000/project"
-=======
+
           description="LLM applications, RAG systems, and MLOps pipelines"
           bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines", "Custom AI solutions"]}
           icon="🤖"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+
         />
         <ServiceCard"
           href="/services/it-services""
           title="IT Services"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
           description="Cloud migration, DevOps, and security solutions"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-          description="Comprehensive IT solutions including cloud migration, DevOps, security, and infrastructure management"
-          bullets={[
-            "15+ IT service categories",
-            "Cloud migration & optimization",
-            "24/7 monitoring & support",
-          ]}
-          icon="⚙️"
-          pricing="From $3,000/month"
-        />
-        <ServiceCard
-<<<<<<< HEAD
-          href="/services/fintech"
-          title="FinTech Solutions"
-          description="Complete financial technology solutions including digital banking, payment processing, and trading platforms"
-          bullets={[
-            "15+ FinTech service categories",
-            "Bank-grade security & compliance",
-            "Real-time payment processing",
-          ]}
-          icon="💳"
-          pricing="From $25,000/project"
-        />
-        <ServiceCard
-          href="/services/healthtech"
-          title="HealthTech Solutions"
-          description="Healthcare technology solutions including EHR systems, telemedicine platforms, and medical AI"
-          bullets={[
-            "15+ HealthTech service categories",
-            "HIPAA-compliant solutions",
-            "Medical AI & diagnostics",
-          ]}
-          icon="🏥"
-          pricing="From $40,000/project"
-        />
-        <ServiceCard
-          href="/services/edtech"
-          title="EdTech Solutions"
-          description="Educational technology platforms including LMS systems, virtual classrooms, and AI-powered learning"
-          bullets={[
-            "15+ EdTech service categories",
-            "Personalized learning AI",
-            "Multi-platform compatibility",
-          ]}
-          icon="🎓"
-          pricing="From $30,000/project"
-        />
-        <ServiceCard
-<<<<<<< HEAD
-=======
-          description="Cloud migration, DevOps, and security solutions"
-=======
-          href="/services/it-services"
-          title="IT Services"
-description="Cloud migration, DevOps, and security solutions"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-          icon="⚙️"
-          description="Comprehensive IT solutions including cloud migration, DevOps, security, and infrastructure management"
-          bullets={[
-            "15+ IT service categories",
-            "Cloud migration & optimization",
-            "24/7 monitoring & support"
-          ]}
-          icon="⚙️"
-          pricing="From $3,000/month"
-        />
-        <ServiceCard
-href="/services/fintech"
-          title="FinTech Solutions"
-          description="Complete financial technology solutions including digital banking, payment processing, and trading platforms"
-          bullets={[
-            "15+ FinTech service categories",
-            "Bank-grade security & compliance",
-            "Real-time payment processing"
-          ]}
-          icon="💳"
-          pricing="From $25,000/project"
-        />
-        <ServiceCard
-          href="/services/healthtech"
-          title="HealthTech Solutions"
-          description="Healthcare technology solutions including EHR systems, telemedicine platforms, and medical AI"
-          bullets={[
-            "15+ HealthTech service categories",
-            "HIPAA-compliant solutions",
-            "Medical AI & diagnostics"
-          ]}
-          icon="🏥"
-          pricing="From $40,000/project"
-        />
-        <ServiceCard
-          href="/services/edtech"
-          title="EdTech Solutions"
-          description="Educational technology platforms including LMS systems, virtual classrooms, and AI-powered learning"
-          bullets={[
-            "15+ EdTech service categories",
-            "Personalized learning AI",
-            "Multi-platform compatibility"
-          ]}
-          icon="🎓"
-          pricing="From $30,000/project"
-        />
-        <ServiceCard
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
           href="/services/blockchain-solutions"
           title="Blockchain Solutions"
           description="DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security"
@@ -553,24 +228,11 @@ href="/services/fintech"
           bullets={[
             "Process automation",
             "Workflow optimization",
-<<<<<<< HEAD
             "AI-powered automation"
           ]}
           icon="⚡"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-            "AI automation",
-          ]}
-          icon="⚡"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+
           pricing="From $2,500/month"
-=======
 
         />
         <ServiceCard"
@@ -588,33 +250,26 @@ href="/services/fintech"
           bullets={["Process automation", "Workflow optimization", "AI automation"]}"
           icon="⚡"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         />
         <ServiceCard"
           href="/services/data-analytics""
-=======
+
           pricing="From $2,500/month"
         />
 <ServiceCard
           href="/services/data-analytics"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
           title="Data Analytics"
-<<<<<<< HEAD
           description="Business intelligence, predictive analytics, and data engineering for data-driven decisions"
           bullets={[
             "BI dashboards",
             "Predictive analytics",
-<<<<<<< HEAD
             "Data engineering"
-=======
-            "Data engineering",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           ]}
           icon="📊"
           pricing="From $4,000/month"
         />
       </div>
-<<<<<<< HEAD
       
       {/* Additional Services Section */}
       <section className="py-16 bg-gray-50 rounded-xl mb-16">
@@ -777,10 +432,6 @@ href="/services/fintech"
       </section>
       
       {/* Why Choose Us Section */}
-=======
-
-      {/* Statistics Section */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       <section className="py-16 bg-gray-50 rounded-xl mb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -818,40 +469,8 @@ href="/services/fintech"
       </section>
 
       <CTA />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          description="Business intelligence, predictive analytics, and data engineering"
-          bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
-          icon="📊"
-        />
-        <ServiceCard
-          href="/services/digital-transformation"
-          title="Digital Transformation"
-          description="Complete digital transformation solutions and legacy modernization"
-          bullets={["Process automation", "Legacy modernization", "Digital strategy"]}
-          icon="🔄"
-        />
-        <ServiceCard
-          href="/services/cybersecurity"
-          title="Cybersecurity"
-          description="Comprehensive security solutions and compliance management"
-          bullets={["Security assessment", "Threat detection", "Compliance"]}
-          icon="🔒"
-        />
-        <ServiceCard
-          href="/services/cloud-services"
-          title="Cloud Services"
-          description="Cloud migration, architecture, and optimization solutions"
-          bullets={["Cloud migration", "Multi-cloud", "Cost optimization"]}
-          icon="☁️"
-        />
-        />
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <div className="bg-gray-50 rounded-lg p-8 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
@@ -873,59 +492,6 @@ href="/services/fintech"
           </a>
         </div>
       </div>
-=======
-          description="Cloud migration, DevOps, and security solutions"
-          bullets={["Cloud migration", "DevOps + SRE", "Security", "Infrastructure optimization"]}
-          icon="⚙️"
-        />
-      </div>
-      <CTA />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
-=======
-      <CTA />{" "}
-          description="Business intelligence, predictive analytics, and data engineering for data-driven decisions"
-          bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
-          icon="📊"
-          pricing="From $4,000/month"
-        />
-      </div>
-      
-      {/* Statistics Section */}
-      <section className="py-16 bg-gray-50 rounded-xl mb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Proven track record of delivering exceptional results for businesses across industries.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <StatCard
-              number="500+"
-              label="Successful Projects"
-              description="Delivered across 15+ industries"
-            />
-            <StatCard
-              number="$2B+"
-              label="Combined Market Value"
-              description="Generated for our clients"
-            />
-            <StatCard
-              number="99.9%"
-              label="Uptime Guarantee"
-              description="With 24/7 monitoring & support"
-            />
-            <StatCard
-              number="300%"
-              label="Average ROI"
-              description="For our technology solutions"
-            />
-          </div>
-        </div>
-      </section>
-      
-<CTA />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </div>
   );
 }
@@ -937,23 +503,12 @@ function ServiceCard({
   bullets, 
   icon 
 }: { 
-<<<<<<< HEAD
   href: string; 
   title: string; 
   description: string; 
   bullets: string[]; 
   icon: string; 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      <CTA />{" "}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>
   );
 }
@@ -963,72 +518,21 @@ function ServiceCard({}
   title,
   description,
   bullets,
-<<<<<<< HEAD
-<<<<<<< HEAD
   icon,
-<<<<<<< HEAD
+
   pricing
-=======
-  pricing,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-  icon
-  icon,
-  pricing
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }: {
-<<<<<<< HEAD
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
-=======
 
 }: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   href: string;
   title: string;
   description: string;
   bullets: string[];
   icon: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
+
   pricing: string;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
-}) {
-  return (
-    <Link
-      href={href}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
-    >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {bullets.map((bullet, index) => (
-          <li key={index} className="text-sm text-gray-500 flex items-center">
-            <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-            {bullet}
-          </li>
-        ))}
-      </ul>
-    </Link>
-  );
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+
       className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
@@ -1036,63 +540,21 @@ function ServiceCard({}
         {title}
       </h3>
       <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-<<<<<<< HEAD
       <ul className="text-gray-600 space-y-2 mb-4">
-=======
-      <ul className="text-gray-600 space-y-2">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
         {bullets.map((bullet) => (
           <li key={bullet} className="flex items-center">
             <span className="text-blue-500 mr-2">•</span> {bullet}
           </li>
         ))}
       </ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="text-lg font-semibold text-blue-600">
         {pricing}
       </div>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
-=======
-      <div className="text-lg font-semibold text-blue-600">{pricing}</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     </Link>
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 function StatCard({ 
-=======
-}) {}
-  return (
-    <Link;
-      href={href}"
-      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
-    >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-        {title}
-      </h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <ul className="text-gray-600 space-y-2 mb-4">
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {bullet}
-          </li>
-        ))}
-      </ul>
-      <div className="text-lg font-semibold text-blue-600">
-        {pricing}
-      </div>
-    </Link>
-  );
-}
-
-
-function StatCard({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   number, 
   label, 
   description;
@@ -1100,17 +562,6 @@ function StatCard({}
   number: string; 
   label: string; 
   description: string; 
-<<<<<<< HEAD
-=======
-function StatCard({
-  number,
-  label,
-  description,
-}: {
-  number: string;
-  label: string;
-  description: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }) {
   return (
     <div className="text-center">
@@ -1118,112 +569,13 @@ function StatCard({
       <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
       <div className="text-sm text-gray-600">{description}</div>
     </div>
-<<<<<<< HEAD
-=======
-{" "}
-      <div className="text-4xl mb-4">{icon}</div>{" "}
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-        {title}
-      </h3>{" "}
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>{" "}
-      <ul className="text-gray-600 space-y-2">
-        {" "}
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-center">
-            {" "}
-            <span className="text-blue-500 mr-2">•</span> {bullet}{" "}
-          </li>
-        ))}{" "}
-      </ul>{" "}
-    </Link>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
-=======
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto">
-          {/* Service Categories */}
-          {categories.map((category) => (
-            <div key={category} className="mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{category}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {services
-                  .filter(service => service.category === category)
-                  .map((service, index) => (
-                    <ServiceCard
-                      key={index}
-                      title={service.title}
-                      href={service.href}
-                      description={service.description}
-                      icon={service.icon}
-                      category={service.category}
-                    />
-                  ))}
-              </div>
-            </div>
-          ))}
-
-<<<<<<< HEAD
-          {/* CTA Section */}
-          <div className="text-center bg-white rounded-xl shadow-lg p-12 mt-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Need a Custom Solution?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Don't see what you're looking for? We specialize in creating custom solutions
-              tailored to your specific business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-              >
-                Get Custom Quote
-              </Link>
-              <Link
-                href="/about"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
-              >
-                Learn More About Us
-              </Link>
-            </div>
-=======
-        {/* CTA Section */}
-        <div className="text-center bg-white rounded-xl shadow-lg p-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss your project requirements and create a custom solution 
-            that drives real business value.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-            >
-              Contact Us
-              <ArrowRightIcon className="h-5 w-5 ml-2" />
-            </Link>
-            <Link
-              href="/about"
-              className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
-            >
-              Learn More About Us
-            </Link>
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-          </div>
-        </div>
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 function CTA() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-=======
+
 }) {}
   return ("
     <div className="text-center">"
@@ -1238,31 +590,18 @@ function CTA() {
 function CTA() {}
   return ("
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       <h3 className="text-2xl font-bold text-gray-900 mb-4">
         Ready to Get Started?
       </h3>"
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         Join 500+ successful businesses that trust Zion Tech Group for their technology needs. 
         Get a free consultation and discover how our solutions can drive 300% ROI and accelerate your growth.
-=======
-        Talk to our experts about your project. We'll help you choose the right
-        service and create a custom solution for your business needs.
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
-=======
-        Join 500+ successful businesses that trust Zion Tech Group for their
-        technology needs. Get a free consultation and discover how our solutions
-        can drive 300% ROI and accelerate your growth.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       </p>
-=======
+
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+
         {" "}
 Talk to our experts about your project. We&apos;ll help you choose the right
         service and create a custom solution for your business needs.{" "}
@@ -1270,158 +609,50 @@ Talk to our experts about your project. We&apos;ll help you choose the right
         Join 500+ successful businesses that trust Zion Tech Group for their technology needs. 
         Get a free consultation and discover how our solutions can drive 300% ROI and accelerate your growth.
       </p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a"
           href="tel:+13024640950""
           className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
         >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
           {" "}
           Call +1 302 464 0950{" "}
         </a>{" "}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          Call +1 302 464 0950
-        </a>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-          Call +1 302 464 0950
-        </a>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+
         <a
           href="mailto:kleber@ziontechgroup.com"
           className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
         >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          {" "}
-          Email Us{" "}
-        </a>{" "}
-      </div>{" "}
-=======
-          Email Us
-=======
-          Call +1 302 464 0950;
+
         </a>
-        <a"
-          href="mailto:kleber@ziontechgroup.com""
-          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-        >
-          Email Us;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        </a>
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
       </div>
       <div className="mt-6 text-sm text-gray-600">
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
       </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
     </div>
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          Email Us
-=======
-Email Us
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
         </a>
       </div>
-=======
-    <div className="space-y-16">
-      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Comprehensive technology solutions to accelerate your digital transformation. 
-          From AI development to micro SaaS products, we deliver enterprise-grade solutions that drive real results.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=Services Inquiry"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get Consultation
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-        </div>
-      </section>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+
 }
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
+
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
+
 import { Metadata } from 'next';
->>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
 
 export const metadata: Metadata = {
   title: 'Services | Zion Tech Group',
   description: 'Explore our comprehensive range of AI, micro SaaS, and IT services designed to transform your business.',
 };
 
-<<<<<<< HEAD
 export default function ServicesPage() {
-=======
-export const metadata: Metadata = {
-  title: 'Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions',
-  description: 'Comprehensive technology services including AI solutions, micro SaaS development, IT services, and specialized industry solutions.',
-  keywords: 'AI services, micro SaaS, IT services, blockchain, cloud solutions, enterprise technology'
-};
-
-export default function ServicesOverviewPage() {
-  const serviceCategories = [
-    {
-      title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence technologies.',
-      href: '/services/ai-solutions',
-      icon: '🤖',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'AI Agents']
-    },
-    {
-      title: 'Micro SaaS Development',
-      description: 'Build and launch your own micro SaaS products with our full-stack expertise.',
-      href: '/services/micro-saas',
-      icon: '💼',
-      features: ['Full-Stack Development', 'API Integration', 'Payment Processing', 'User Management']
-    },
-    {
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including cloud migration and cybersecurity.',
-      href: '/services/it-solutions',
-      icon: '⚙️',
-      features: ['Cloud Migration', 'Cybersecurity', 'Infrastructure Management', 'Technical Support']
-    },
-    {
-      title: 'Blockchain Solutions',
-      description: 'Leverage blockchain technology for secure and transparent applications.',
-      href: '/services/blockchain',
-      icon: '⛓️',
-      features: ['Smart Contracts', 'DeFi Applications', 'NFT Marketplaces', 'Blockchain Integration']
-    }
-  ];
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="container mx-auto px-4 py-16">
@@ -1482,7 +713,7 @@ export default function ServicesOverviewPage() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Partnership</h3>
               <p className="text-gray-600">We work closely with you as a trusted technology partner for long-term success.</p>
             </div>
->>>>>>> origin/main
+
           </div>
         </div>
 
@@ -1491,166 +722,12 @@ export default function ServicesOverviewPage() {
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Let's discuss your project and discover how our solutions can accelerate your business growth.
           </p>
-<<<<<<< HEAD
           <Link
             href="/contact"
             className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Contact Us Today
           </Link>
-=======
-const services = [
-  {
-    name: 'AI Solutions',
-    description: 'Custom AI models, automation, and intelligent systems that transform your business operations.',
-    icon: '🤖',
-    color: 'blue',
-    features: [
-      'Machine Learning Models',
-      'Natural Language Processing',
-      'Computer Vision',
-      'Predictive Analytics',
-      'AI Automation'
-    ],
-    pricing: 'Starting at $99/month',
-    href: '/services/ai-services'
-  },
-  {
-    name: 'Micro SaaS Development',
-    description: 'End-to-end SaaS product development with modern architecture and scalable infrastructure.',
-    icon: '🚀',
-    color: 'purple',
-    features: [
-      'Custom Web Applications',
-      'API Development',
-      'User Authentication',
-      'Payment Integration',
-      'Analytics Dashboard'
-    ],
-    pricing: 'Starting at $5,000',
-    href: '/services/micro-saas'
-  },
-  {
-    name: 'IT Services',
-    description: 'Comprehensive IT infrastructure, cloud migration, and cybersecurity solutions.',
-    icon: '💻',
-    color: 'green',
-    features: [
-      'Cloud Migration',
-      'DevOps & CI/CD',
-      'Infrastructure Management',
-      'Security Solutions',
-      '24/7 Support'
-    ],
-    pricing: 'Starting at $299/month',
-    href: '/services/it-services'
-  },
-  {
-    name: 'Blockchain Solutions',
-    description: 'Smart contracts, DeFi platforms, and blockchain integration for secure operations.',
-    icon: '⛓️',
-    color: 'indigo',
-    features: [
-      'Smart Contract Development',
-      'DeFi Protocols',
-      'NFT Marketplaces',
-      'Token Economics',
-      'Security Auditing'
-    ],
-    pricing: 'Starting at $2,500',
-    href: '/services/blockchain'
-  },
-  {
-    name: 'Data Analytics',
-    description: 'Transform raw data into actionable insights with advanced analytics and visualization.',
-    icon: '📊',
-    color: 'orange',
-    features: [
-      'Data Warehousing',
-      'Business Intelligence',
-      'Real-time Dashboards',
-      'Predictive Modeling',
-      'Data Visualization'
-    ],
-    pricing: 'Starting at $199/month',
-    href: '/services/analytics'
-  },
-  {
-    name: 'Cybersecurity',
-    description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
-    icon: '🔒',
-    color: 'red',
-    features: [
-      'Security Audits',
-      'Penetration Testing',
-      'Compliance Consulting',
-      'Incident Response',
-      'Security Training'
-    ],
-    pricing: 'Starting at $999/month',
-    href: '/services/security'
-  }
-];
-
-const addOns = [
-  {
-    name: 'AI Model Training',
-    price: '$299',
-    period: '/model',
-    description: 'Custom AI model training for your specific use case',
-    icon: '⚡'
-  },
-  {
-    name: 'Security Audit',
-    price: '$1,999',
-    period: '/audit',
-    description: 'Comprehensive security assessment and hardening',
-    icon: '🛡️'
-  },
-  {
-    name: 'Cloud Migration',
-    price: '$4,999',
-    period: '/project',
-    description: 'Complete cloud infrastructure migration service',
-    icon: '☁️'
-  },
-  {
-    name: 'Team Training',
-    price: '$199',
-    period: '/person',
-    description: 'AI and technology training for your team',
-    icon: '👥'
-  }
-];
-
-export default function ServicesPage() {
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6">
-            Our Services
-          </h1>
-          <p className="text-xl sm:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
-          </p>
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Get a Quote
-            </Link>
-            <Link
-              href="/about"
-              className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-            >
-              Learn More About Us
-            </Link>
-          </div>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>
       </section>
 
@@ -1749,18 +826,10 @@ export default function ServicesPage() {
           <p className="text-sm mt-8 opacity-80">
             364 E Main St STE 1008, Middletown DE 19709
           </p>
->>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
+
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );
-}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> origin/main
+

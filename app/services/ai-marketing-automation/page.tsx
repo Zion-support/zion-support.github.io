@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'AI Marketing Automation | Zion Tech Group',
   description: 'AI-powered marketing automation for better campaign performance.',
@@ -42,15 +41,6 @@ export default function ServicePage() {
       </div>
     </div>
   )
-=======
-<<<<<<< HEAD
-export const metadata = { title: 'AI Marketing Automation | Zion Tech Group' };
-=======
-import React from 'react';
-import Link from 'next/link';
-
-
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 export default function AIMarketingAutomationPage() {
   return (
@@ -64,7 +54,6 @@ export default function AIMarketingAutomationPage() {
           Transform your marketing with AI-driven personalization, predictive analytics, and automated campaign optimization. 
           Our platform increases conversion rates by 60% and reduces marketing costs by 40%.
         </p>
-<<<<<<< HEAD
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -147,21 +136,6 @@ export default function AIMarketingAutomationPage() {
               Efficient automation reduces ad spend waste
             </p>
           </div>
-=======
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Marketing Automation Platform Inquiry"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Start Free Trial
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </div>
       </section>
 
@@ -406,8 +380,6 @@ function FeatureCard({ icon, title, description, benefits }: {
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
 
-
-
 interface FeatureCardProps {
   icon: string;
   title: string;
@@ -433,7 +405,6 @@ function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
   );
 }
 
-<<<<<<< HEAD
 function PricingSection() {
   return (
     <div className="mb-16">
@@ -497,9 +468,6 @@ function PricingCard({
   features,
   popular,
 }: {
-=======
-function PricingCard({ name, price, period, description, features, popular }: {
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   period: string;
@@ -508,30 +476,9 @@ function PricingCard({ name, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-<<<<<<< HEAD
     <div
       className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-yellow-500 shadow-lg' : 'border-gray-200'}`}
     >
-=======
-    <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
-function PricingTier({ 
-  name, 
-  price, 
-  period, 
-  description, 
-  features, 
-  popular = false 
-}: { 
-  name: string; 
-  price: string; 
-  period: string; 
-  description: string; 
-  features: string[]; 
-  popular?: boolean; 
-}) {
-  return (
-    <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}>
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -561,13 +508,8 @@ function PricingTier({
         href="mailto:kleber@ziontechgroup.com?subject=AI Marketing Automation - {name} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-<<<<<<< HEAD
             ? 'bg-yellow-600 text-white hover:bg-yellow-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-=======
-            ? 'bg-blue-600 text-white hover:bg-blue-700'
-            : 'bg-gray-900 text-white hover:bg-gray-800'
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started
@@ -932,5 +874,5 @@ export default function AIMarketingAutomationPage() {
       </section>
     </div>
   );
->>>>>>> origin/main
+
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';'
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -61,14 +60,8 @@ import {};
   Download,
   Phone,
 
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
-=======
-
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     super(props);
     this.state = { hasError: false };
   }
@@ -88,7 +81,6 @@ class ErrorBoundary extends React.Component {}
     
     return this.props.children;
   }
-<<<<<<< HEAD
 }
 import React, { useState } from 'react';
 import Head from 'next / head';
@@ -97,9 +89,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Search, Star, Users, TrendingUp, DollarSign, Clock;
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe;
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud;
@@ -110,20 +99,7 @@ import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
 
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
-=======
-}'
-import React, { useState } from 'react';'
-import Head from 'next / head';'
-import Link from 'next / link';'
-import { motion, AnimatePresence } from 'framer-motion';
-'
-import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';'
-import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';'
-import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';'
-import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [searchTerm, setSearchTerm] = useState('');
-<<<<<<< HEAD
 '
   const [selectedCategory, setSelectedCategory] = useState<string>('all');'
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');'
@@ -141,12 +117,7 @@ export default function ServicesShowcase2027() { return null; }
                         (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |'
                         (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) |'
                         (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
-<<<<<<< HEAD
     return matchesSearch && matchesCategory && matchesPrice
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<string>('name'),
@@ -155,7 +126,6 @@ export default function ServicesShowcase2027() { return null; }
   const sortOptions = null;
                   setSelectedPriceRange('all')
 
-<<<<<<< HEAD
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
@@ -163,27 +133,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
-=======
-    return matchesSearch && matchesCategory && matchesPrice;
-  // Sort services;
-  const sortedServices = [...filteredServices].sort((a, b) => {}
-    switch (sortBy) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case 'name':
         return a.name.localeCompare(b.name);'
       case 'price':
         return ('
           parseInt(a && a.price.replace(/[^0-9]/g, '')) -;'
           parseInt(b && b.price.replace(/[^0-9]/g, ''));
-<<<<<<< HEAD
 return (
           parseInt(a.price.replace(/[^0-9]/g, '')) -
           parseInt(b.price.replace(/[^0-9]/g, ''))
 origin/cursor/automate-test-improve-and-merge-code-2533
         );
-=======
-        );'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case 'roi':;
         return ('
           parseInt(a && a.roi.replace(/[^0-9]/g, '')) -;'
@@ -202,7 +162,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           2027 Services Showcase - Zion Tech Group | Cutting-Edge Innovations &;
           Micro SAAS;
         </title>;
-<<<<<<< HEAD
       default:
         return 0;
     }
@@ -327,10 +286,6 @@ website: 'https://ziontechgroup.com',
 origin/cursor/automate-test-improve-and-merge-code-2533
         <meta
           name='description'
-=======
-        <meta'
-          name='description''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           content="Explore Zion Tech Group's revolutionary 2027 services showcase featuring cutting-edge AI consciousness evolution, quantum computing, autonomous AI civilizations, and practical micro SAAS solutions for businesses."
         />;
         <meta'
@@ -606,21 +561,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <AnimatePresence>
-<<<<<<< HEAD
       {/* Services Grid */}
       <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
         <div className='max - w-7xl mx - auto'>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>      <section className="px - 4 sm:px - 6 lg:px-8 mb-20">;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8">;
-=======
-      {/* Services Grid */}'
-      <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;'
-        <div className='max - w-7xl mx - auto'>;'"
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>      <section className="px - 4 sm:px - 6 lg:px - 8 mb - 20">;"
-        <div className="max - w-7xl mx - auto">;"
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <AnimatePresence>;
               {sorted_services.map ((service, index) => (
                 <motion.div;
@@ -628,7 +574,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                   animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
                   exit={{ opacity: 0, y: -30, scale: 0.9 }}
 className='group'
                 >
@@ -644,14 +589,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </h3>;
                     <p className="text - cyan - 300 text - sm mb - 4 line-clamp-3">;
                       {service.description}
-=======
-                    {/* Service Info */}"
-                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300">;
-                      {service.name}
-                    </h3>;"
-                    <p className="text - cyan - 300 text - sm mb - 4 line - clamp - 3">;
-                      {service.description}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <div className='text-2xl font-bold text-white'>                        {service.price}
 
                     </h3>
@@ -688,7 +625,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                         {service.features.length > 3 && ("
                           <div className="text-cyan-400 text-sm">
-<<<<<<< HEAD
                     {/* Features */}
 <div className='mb-6'>
                       <h4 className='text-cyan-400 font-semibold mb-3'>
@@ -710,9 +646,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className='text-cyan-400 text-sm'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                             +{service.features.length - 3} more features
-=======
-                            +{service.features.length - 3} more features;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           </div>
                         )}
 
@@ -733,14 +666,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 
-<<<<<<< HEAD
                     {/* ROI */}
                     <div className='mb-6 text-center'>;
-=======
-
-                    {/* ROI */}'
-                    <div className='mb-6 text-center'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <div className='text-green-400 font-semibold text-lg'>;
                         ROI: {service && service.roi}
                       </div>;'
@@ -778,12 +705,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </Link>;
                     </div>;
 
-<<<<<<< HEAD
-=======
-
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact"
                     {/* Category Badge */}'
                     <div className='mt-4'>;'"
@@ -816,7 +737,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
 '
                   setSelectedPriceRange('all')
-<<<<<<< HEAD
+
 className='text-center py-20'
             >
               <div className='text-6xl mb-4'>🔍</div>
@@ -834,29 +755,16 @@ setSelectedPriceRange('all');
                 }}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                }}
-=======
-                }}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 Clear Filters;
               </button>
             </motion.div>
           )}
-<<<<<<< HEAD
       {/* Contact Section */}
 <section className='px-4 sm:px-6 lg:px-8 mb-20'>
         <div className='max-w-4xl mx-auto'>
           <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
-=======
-      {/* Contact Section */}'
-      <section className='px-4 sm:px-6 lg:px-8 mb-20'>'
-        <div className='max-w-4xl mx-auto'>'
-          <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-3xl font-bold text-white mb-4'>
 
               Ready to Transform Your Business?
@@ -881,13 +789,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
           )}
-<<<<<<< HEAD
               <Link'
                 href='/contact''
-=======
-              <Link
-                href='/contact'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>;
                 Get Started Today;
               </Link>;
@@ -914,24 +817,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
               <Link"
                 href="/contact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'
-              >
-                Get Started Today
-              </Link>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <Link
-href='/pricing'
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
-=======
-              <Link'
-                href='/pricing''"
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'                href="/pricing""
-                className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
               >
                 View Pricing Plans;
               </Link>
@@ -940,11 +826,7 @@ href='/pricing'
         </div>
       </section>
       {/* Footer */}
-<<<<<<< HEAD
             </div>"
-=======
-            </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
               Zion Tech Group;
             </h3>"
@@ -965,17 +847,10 @@ href='/pricing'
 }"
               <Link href="/contact" className="hover: text-cyan-400 transition-colors duration-300">Contact Us</Link>;
                     </p>;
-<<<<<<< HEAD
                     {/* Price */}
                     <div className='mb - 4'>;
                       <div className='text - 2xl font - bold text - white'>                    <div className="mb-4">;
                       <div className="text - 2xl font-bold text-white">;
-=======
-                    {/* Price */}'
-                    <div className='mb - 4'>;'"
-                      <div className='text - 2xl font - bold text - white'>                    <div className="mb - 4">;"
-                      <div className="text - 2xl font - bold text - white">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         {service.price}
                       </div>;
                     </div>;
@@ -995,7 +870,6 @@ href='/pricing'
                               {feature}
                             </span>;
                           </div>))}
-<<<<<<< HEAD
                         {service.features.length > 3 && (
                           <div className='text - cyan - 400 text - sm'>                            +{service.features.length - 3} more features                        {service.features.slice (0, 3).map ((feature, idx) => (
                           <div key={idx} className="flex items-center space-x-2">;
@@ -1004,16 +878,6 @@ href='/pricing'
                           </div>))}
                         {service.features.length > 3 && (
                           <div className="text - cyan-400 text-sm">;
-=======
-                        {service.features.length > 3 && ('
-                          <div className='text - cyan - 400 text - sm'>                            +{service.features.length - 3} more features                        {service.features.slice (0, 3).map ((feature, idx) => ("
-                          <div key={idx} className="flex items - center space - x-2">;"
-                            <CheckCircle className="w - 4 h - 4 text - green - 400" />;"
-                            <span className="text - gray - 300 text - sm">{feature}</span>;
-                          </div>))}
-                        {service.features.length > 3 && ("
-                          <div className="text - cyan - 400 text - sm">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             +{service.features.length - 3} more features;
                           </div>)}
                       </div>;
@@ -1021,13 +885,8 @@ href='/pricing'
                     {/* ROI */}'
                     <div className='mb - 6 text - center'>;'
                       <div className='text - green - 400 font - semibold text - lg'>;
-<<<<<<< HEAD
                         ROI: {service.roi}
                       </div>;'
-=======
-                        ROI: {service.roi;}
-                      </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <div className='text - gray - 400 text - xs'>;
                         Return on Investment;
                       </div>;
@@ -1042,7 +901,6 @@ href='/pricing'
                       <Link;'
                         href='/contact';'
                         className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                      >                    </div>;
-<<<<<<< HEAD
                     {/* Actions */}
                     <div className="flex space-x-3">;
                       <Link;
@@ -1055,35 +913,14 @@ href='/pricing'
                         href='/contact';
                         className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                        href="/contact";
                         className="px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration-300 text-sm";
-=======
-                    {/* Actions */}"
-                    <div className="flex space - x-3">;
-                      <Link;
-                        href={service.link}"
-                        className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - lg hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 text - center text - sm";
-                      >;
-                        Learn More;
-                      </Link>;
-                      <Link;'
-                        href='/contact';'"
-                        className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                        href="/contact";"
-                        className="px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       >;
                         Contact;
                       </Link>;
                     </div>;
-<<<<<<< HEAD
                     {/* Category Badge */}
                     <div className='mt - 4'>;
                       <span className='inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border - cyan - 500 / 30'>                        {service.category}                    <div className="mt-4">;
                       <span className="inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border-cyan-500 / 30">;
-=======
-                    {/* Category Badge */}'
-                    <div className='mt - 4'>;'"
-                      <span className='inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border - cyan - 500 / 30'>                        {service.category}                    <div className="mt - 4">;"
-                      <span className="inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border - cyan - 500 / 30">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         {service.category}
                       </span>;
                     </div>;
@@ -1094,13 +931,8 @@ href='/pricing'
           {/* No Results */}
           {sorted_services.length === 0 && (
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}'
-=======
-              initial={{ opacity: 0 ;}}
-              animate={{ opacity: 1 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='text - center py - 20';
             >;'
               <div className='text - 6xl mb - 4'>🔍</div>;'
@@ -1114,7 +946,6 @@ href='/pricing'
                   setSearchTerm ('');'
                   setSelectedCategory ('all');'
                   setSelectedPriceRange ('all');
-<<<<<<< HEAD
                 }}
                 className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'              >              className="text-center py-20";
             >;
@@ -1124,27 +955,11 @@ href='/pricing'
                 on_click={() => {
                   setSearchTerm ('');
                   setSelectedCategory ('all');
-=======
-                }}'"
-                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'              >              className="text - center py - 20";
-            >;"
-              <div className="text - 6xl mb - 4">🔍</div>;"
-              <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;"
-              <p className="text - cyan - 300 mb - 6">Try adjusting your search criteria or browse all services.</p>;
-                on_click={() => {'
-                  setSearchTerm ('');'
-                  setSelectedCategory ('all');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   setSelectedPriceRange ('all');
                 }}'
                 className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  setSelectedPriceRange ('all');
-<<<<<<< HEAD
                 }}
                 className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300";
-=======
-                }}"
-                className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >;
                 Clear Filters;
               </button>;
@@ -1185,7 +1000,6 @@ href='/pricing'
               <Link;'
                 href='/pricing';'
                 className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'              >              Ready to Transform Your Business?;
-<<<<<<< HEAD
             </h2>;
             <p className="text - cyan - 300 mb-8 text-lg">;
               Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.;
@@ -1215,37 +1029,6 @@ href='/pricing'
                 href='/pricing';
                 className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                href="/pricing";
                 className="px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition-all duration-300";
-=======
-            </h2>;"
-            <p className="text - cyan - 300 mb - 8 text - lg">;
-              Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.;
-            </p>;"
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8">;"
-              <div className="flex items - center justify - center space - x-3">;"
-                <Phone className="w - 5 h - 5 text - cyan - 400" />;"
-                <span className="text - white">{contact_info.mobile}</span>;
-              </div>;"
-              <div className="flex items - center justify - center space - x-3">;"
-                <Mail className="w - 5 h - 5 text - purple - 400" />;"
-                <span className="text - white">{contact_info.email}</span>;
-              </div>;"
-              <div className="flex items - center justify - center space - x-3">;"
-                <MapPin className="w - 5 h - 5 text - pink - 400" />;"
-                <span className="text - white">{contact_info.address}</span>;
-              </div>;
-            </div>;"
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-              <Link;"
-                href="/contact";"
-                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25";
-              >;
-                Get Started Today;
-              </Link>;
-              <Link;'
-                href='/pricing';'"
-                className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                href="/pricing";"
-                className="px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >;
                 View Pricing Plans;
               </Link>;
@@ -1288,7 +1071,6 @@ href='/pricing'
               >;
                 Contact Us;
               </Link>            </p>              Z;
-<<<<<<< HEAD
             </div>;
             <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text-transparent mb-2">;
               Zion Tech Group;
@@ -1303,22 +1085,6 @@ href='/pricing'
               <Link href="/terms" className="hover:text - cyan - 400 transition-colors duration-300">Terms of Service</Link>;
               {' • '}
               <Link href="/contact" className="hover: text - cyan - 400 transition-colors duration-300">Contact Us</Link>;
-=======
-            </div>;"
-            <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 2">;
-              Zion Tech Group;
-            </h3>;"
-            <p className="text - cyan - 300">2027 Innovation Hub</p>;
-          </div>;"
-          <div className="text - cyan - 300 text - sm">;
-            <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>;"
-            <p className="mt - 2">;"
-              <Link href="/privacy" className="hover:text - cyan - 400 transition - colors duration - 300">Privacy Policy</Link>;'
-              {' • '}"
-              <Link href="/terms" className="hover:text - cyan - 400 transition - colors duration - 300">Terms of Service</Link>;'
-              {' • '}"
-              <Link href="/contact" className="hover: text - cyan - 400 transition - colors duration - 300">Contact Us</Link>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>;
           </div>;
         </div>;
@@ -1327,51 +1093,4 @@ href='/pricing'
 }
     </UltraFuturisticMatrixBackground2027>));
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<footer className='px-4 sm:px-6 lg:px-8 py-12 border-t border-cyan-500/30'>
-        <div className='max-w-7xl mx-auto text-center'>
-          <div className='mb-8'>
-            <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 shadow-2xl shadow-cyan-500/50'>
-              Z
-            </div>
-            <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2'>
-              Zion Tech Group
-            </h3>
-            <p className='text-cyan-300'>2027 Innovation Hub</p>
-          </div>
-          <div className='text-cyan-300 text-sm'>
-            <p>&copy; 2027 Zion Tech Group. All rights reserved.</p>
-            <p className='mt-2'>
-              <Link
-                href='/privacy'
-                className='hover:text-cyan-400 transition-colors duration-300'
-              >
-                Privacy Policy
-              </Link>
-              {' • '}
-              <Link
-                href='/terms'
-                className='hover:text-cyan-400 transition-colors duration-300'
-              >
-                Terms of Service
-              </Link>
-              {' • '}
-              <Link
-                href='/contact'
-                className='hover:text-cyan-400 transition-colors duration-300'
-              >
-                Contact Us
-              </Link>
-            </p>
-          </div>
-        </div>
-      </footer>
-    </UltraFuturisticMatrixBackground2027>
-);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

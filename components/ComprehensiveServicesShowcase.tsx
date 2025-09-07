@@ -1,7 +1,5 @@
 import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink;
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -30,32 +28,6 @@ import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink
 
-=======
-  Star;
-  Clock;
-  Users;
-  TrendingUp;
-  CheckCircle;
-  ExternalLink;
-  ChevronRight;
-  Shield;
-  Zap;
-  Globe;
-  Rocket;
-  Brain;
-  Atom;
-  Search;
-  Filter;
-  Grid;
-  List;
-  ArrowRight;
-  Award;
-  Target;'
-} from 'lucide-react';'
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';'
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {};
-  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Star,
   Clock,
   Users,
@@ -106,7 +78,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null),'
   const [searchTerm, setSearchTerm] = useState('');
-<<<<<<< HEAD
   const allServices = null;
   ];
   const categories = [
@@ -240,10 +211,6 @@ const matchesCategory =
 origin/cursor/automate-test-improve-and-merge-code-2533
     .sort((a, b) => {
       switch (sortBy) {
-=======
-    .sort((a, b) => {}
-      switch (sortBy) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         case 'popularity':
           return b.popular ? 1 : -1;'
         case 'price':
@@ -276,51 +243,28 @@ return categoryData?.icon || '🚀';
   return (
     <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
       <div className='max-w-7xl mx-auto'>
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-7xl mx-auto">
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Header */}
 
-<<<<<<< HEAD
         <motion.div
   const formatPrice = (price: string) => {;
     return price && price.replace('$', '').replace(, '')
 };
-=======
-        <motion.div;
-  const formatPrice = (price: string) => {;'
-    return price && price.replace('$', '').replace(, '');
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
         {/* Header */}
-<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
 
-<<<<<<< HEAD
-=======
-        <motion&& motion.div
-          initial={{ opacity: 0;, y: 30 ;}}
-          whileInView={{ opacity: 1;, y: 0 ;}}
-          transition={{ duration: 0.8 ;}}
-          viewport={{ once: true ;}}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
-=======
-        >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
             Revolutionary Micro SAAS Services 2025;
           </h2>'
@@ -358,13 +302,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='text-3xl font-bold text-purple-400'>24/7</div>'
                 <div className='text-white/60'>Support Available</div>
               </div>
-<<<<<<< HEAD
               <div>'
                 <div className='text-3xl font-bold text-orange-400'>500%+</div>'
-=======
-              <div>
-                <div className='text-3xl font-bold text-orange-400'>500%+</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div className='text-white/60'>Average ROI</div>              </div>        >
           className="text-center mb-16"
         >"
@@ -495,28 +434,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion && motion.div>;
 
         {/* Search and Filters */}
-<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
 
-<<<<<<< HEAD
-=======
-        <motion&& motion.div
-          initial={{ opacity: 0;, y: 20 ;}}
-          whileInView={{ opacity: 1;, y: 0 ;}}
-          transition={{ duration: 0 && 0.6 ;}}
-          viewport={{ once: true ;}}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
-=======
-        >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
             {/* Search */}'
             <div className='relative flex-1 max-w-md'>'
@@ -525,13 +451,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 type='text''
                 placeholder='Search services...'
                 value={searchTerm}
-<<<<<<< HEAD
             {/* Search */}"
             <div className="relative flex-1 max-w-md">;"
-=======
-            {/* Search */}
-            <div className="relative flex-1 max-w-md">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />;
               <input"
                 type="text""
@@ -543,32 +464,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <option value='rating'>Highest Rated</option>;'
                 <option value='newest'>Newest First</option>;
               </select>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                onChange={e => setSearchTerm(e.target.value)}
-                className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20'
-              />
-            </div>
-            {/* Sort and View Controls */}
-<div className='flex items-center gap-4'>
-              <select
-                value={sortBy}
-                onChange={e => setSortBy(e.target.value as any)}
-                className='bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400'
-              >
-                <option value='popularity'>Most Popular</option>
-                <option value='price'>Price: Low to High</option>
-                <option value='rating'>Highest Rated</option>
-                <option value='newest'>Newest First</option>
-              </select>
-              <div className='flex bg-white/10 rounded-xl p-1'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                <button
-=======
-                <button'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all ${;'
                     viewMode === 'grid';'
@@ -579,7 +474,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Grid className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>
-<<<<<<< HEAD
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all ${
@@ -591,11 +485,6 @@ viewMode === 'list'
                   <List className='w-5 h-5' />
                 </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                <button'
-                  onClick={() => setViewMode('list')}`
-                  className={`p-2 rounded-lg transition-all ${}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
           </div>
@@ -608,19 +497,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion && motion.div>;
 
         {/* Category Filter */}
-<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
-=======
-        <motion&& motion.div
-          initial={{ opacity: 0;, y: 20 ;}}
-          whileInView={{ opacity: 1;, y: 0 ;}}
-          transition={{ duration: 0 && 0.6 ;}}
-          viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='mb-12'
         >
           <div className='flex flex-wrap justify-center gap-3'>
@@ -643,13 +524,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
-<<<<<<< HEAD
         {/* Services Display */}'
         {viewMode === 'grid' ? (;'"
-=======
-        {/* Services Display */}
-        {viewMode === 'grid' ? (;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
               {filteredServices && filteredServices.map((service, index) => (;
@@ -662,17 +538,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div
                   key={service.id}
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}'
-=======
-                  initial={{ opacity: 0;, y: 30 ;}}
-                  animate={{ opacity: 1;, y: 0 ;}}
-                  exit={{ opacity: 0;, y: -30 ;}}
-                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
                   {/* Popular Badge */}
         {/* Services Display */}'
@@ -682,7 +551,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filteredServices.map((service, index) => (
                 <motion.div'
                 <span className='text - xs bg - white / 20 px - 2 py - 1 rounded - full'>;
-<<<<<<< HEAD
                   {category.count}
                 </span>              </button>                <span className="text - xs bg - white / 20 px - 2 py-1 rounded-full">{category.count}</span>;
               </button>))}
@@ -691,32 +559,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Services Display */}
         {view_mode === 'grid' ? (
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8">;
-=======
-                  {category.count}"
-                </span>              </button>                <span className="text - xs bg - white / 20 px - 2 py - 1 rounded - full">{category.count}</span>;
-              </button>))}
-          </div>;
-        </motion.div>;
-        {/* Services Display */}'
-        {view_mode === 'grid' ? ('"
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <AnimatePresence>;
               {filtered_services.map ((service, index) => (
                 <motion.div;
                   key={service.id}
-<<<<<<< HEAD
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   exit={{ opacity: 0, coordinate_y: -30 }}
-<<<<<<< HEAD
+
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-=======
-                  initial={{ opacity: 0;, coordinate_y: 30 ;}}
-                  animate={{ opacity: 1;, coordinate_y: 0 ;}}
-                  exit={{ opacity: 0;, coordinate_y: -30 ;}}
-                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <Star className='w-3 h-3' />                      Popular
 
                       Popular
@@ -737,19 +588,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='flex items-start justify-between mb-4'>
                       <div className='text-4xl'>{service.icon}</div>
                       <div className='text-right'>
-=======
-                  transition={{ duration: 0.6, delay: index * 0.1 }}'
-                      <Star className='w-3 h-3' />                      Popular;
-                      Popular;
-                    </div>
-                  )}
-
-                  {/* Service Content */}'
-                  <div className='p-6'>'
-                    <div className='flex items-start justify-between mb-4'>'
-                      <div className='text-4xl'>{service.icon}</div>'
-                      <div className='text-right'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <div className='text-2xl font-bold text-white'>
                           {service.price}
                         </div>'
@@ -773,22 +611,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {/* Features */}'
                     <div className='space-y-2 mb-6'>;
                       {service && service.features.slice(0, 3).map((feature, idx) => (;
-<<<<<<< HEAD
                         <div;
                           key={idx}'
                           className='flex items-center gap-2 text-sm text-white/60'>;'
-=======
-                        <div
-                          key={idx}
-                          className='flex items-center gap-2 text-sm text-white/60'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           <CheckCircle className='w-4 h-4 text-green-400' />                          {feature}                      </div>;
                     </div>;
 "
                     <h3 className="text-xl font-bold text-white mb-2">{service && service.name}</h3>;"
                     <p className="text-white/70 text-sm mb-4">{service && service.tagline}</p>;
 
-<<<<<<< HEAD
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
@@ -803,13 +634,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                       <div>
-=======
-
-                    {/* Stats */}'
-                    <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
-
-                      <div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <div className='text-lg font-bold text-blue-400'>
                           {service.rating}
 
@@ -823,13 +647,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {/* Stats */}"
                     <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                       <div>
-<<<<<<< HEAD
 "
                         <div className="text-lg font-bold text-blue-400">{service.rating}</div>"
-=======
-
-                        <div className="text-lg font-bold text-blue-400">{service.rating}</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <div className="text-xs text-white/60">Rating</div>
                       </div>
                       <div>"
@@ -879,7 +698,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
 
                     {/* CTA */}
-<<<<<<< HEAD
                     <a
                       href={service.link}
 target='_blank'
@@ -889,62 +707,25 @@ target='_blank'
                       Learn More
                       <ExternalLink className='w-4 h-4' />
                     </a>
-=======
-                    <a;
-                      href={service.link}'
-                      target='_blank''
-                      rel='noopener noreferrer''
-                      className='w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'
-                    >
-                      Learn More'"
-                      <ExternalLink className='w-4 h-4' />                    </a>                      target="_blank""
-                      rel="noopener noreferrer""
-                      className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
-                    >
-                      Learn More"
-                      <ExternalLink className="w-4 h-4" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
             </AnimatePresence>
           </div>
-<<<<<<< HEAD
         ) : (
 <div className='space-y-6'>
-=======
-        ) : ('"
-          <div className='space-y-6'>            <AnimatePresence>          <div className="space-y-6">
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <AnimatePresence>
               {filteredServices.map((service, index) => (
                 <motion.div;
                   key={service.id}
-<<<<<<< HEAD
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}'
-=======
-                  initial={{ opacity: 0;, x: -30 ;}}
-                  animate={{ opacity: 1;, x: 0 ;}}
-                  exit={{ opacity: 0;, x: 30 ;}}
-                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
 
                       )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
-origin/cursor/automate-test-improve-and-merge-code-2533
-                >
-=======
-                >'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className='flex flex-col lg:flex-row gap-6'>
                     {/* Left Side - Icon and Basic Info */}'
                     <div className='flex-shrink-0'>'
@@ -957,15 +738,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       )}
                     </div>
                     {/* CTA */}
-<<<<<<< HEAD
                     <a;
                     {/* Center - Service Details */}'
                     <div className='flex - 1'>;'
-=======
-                    <a
-                    {/* Center - Service Details */}
-                    <div className='flex - 1'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <div className='flex items - start justify - between mb - 4'>;
                         <div>;'
                           <h3 className='text - 2xl font - bold text - white mb - 2'>;
@@ -988,17 +763,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="flex-1">"
                       <div className="flex items-start justify-between mb-4">
                         <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<div className='flex-1'>
-                      <div className='flex items-start justify-between mb-4'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                        <div>
-=======
-                        <div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                           <h3 className='text-2xl font-bold text-white mb-2'>
                             {service.name}
                           </h3>'
@@ -1012,22 +777,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className='text-right'>'
                           <div className='text-3xl font-bold text-white'>
                             {service.price}
-<<<<<<< HEAD
                           </div>
                           <div className='text-white/60'>{service.period}</div>
-=======
-                          </div>'
-                          <div className='text-white/60'>{service.period}</div>                        </div>
-                      </div>
-                      {/* Features Grid */}                        <div>"
-                          <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>"
-                          <p className="text-white/70 text-lg mb-3">{service.tagline}</p>"
-                          <p className="text-white/60 text-sm">{service.description}</p>
-                        </div>"
-                        <div className="text-right">"
-                          <div className="text-3xl font-bold text-white">{service.price}</div>"
-                          <div className="text-white/60">{service.period}</div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         </div>
                       </div>
                     {/* Center - Service Details */}'
@@ -1061,7 +812,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       </div>;
                       {/* Features Grid */}
-<<<<<<< HEAD
 <div className='grid grid-cols-2 gap-2 mb-4'>
                         {service.features.slice(0, 6).map((feature, idx) => (
                           <div
@@ -1077,11 +827,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {/* Stats Row */}
 <div className='flex items-center gap-6 text-sm text-white/60'>
                         <div className='flex items-center gap-2'>
-=======
-                      {/* Stats Row */}'
-                      <div className='flex items-center gap-6 text-sm text-white/60'>'
-                        <div className='flex items-center gap-2'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <Star className='w-4 h-4 text-yellow-400' />
                           <span>
                             {service.rating} ({service.reviews} reviews)
@@ -1110,11 +855,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="flex items-center gap-2">"
                           <Users className="w-4 h-4 text-blue-400" />
                           <span>{service.customers}+ customers</span>
-<<<<<<< HEAD
                         </div>"
-=======
-                        </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           <Clock className="w-4 h-4 text-green-400" />
                         <div className='flex items-center gap-2'>
                           <Users className='w-4 h-4 text-blue-400' />
@@ -1127,15 +868,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       </div>
                     </div>
-<<<<<<< HEAD
                     {/* Right Side - CTA and Category */}"
                       <div className="text-right">"
                         <div className="text-sm text-white/60 mb-1">Category</div>"
-=======
-                    {/* Right Side - CTA and Category */}
-                      <div className="text-right">
-                        <div className="text-sm text-white/60 mb-1">Category</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <div className="flex items-center gap-2 text-white">
                           <span>{getCategoryIcon(service.category)}</span>"
                           <span className="text-sm">{service.category}</span>
@@ -1206,34 +941,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
-<<<<<<< HEAD
           <motion&& motion.div;
             initial={{ opacity: 0 }}
-<<<<<<< HEAD
+
             animate={{ opacity: 1 }}
-=======
-          <motion&& motion.div
-            initial={{ opacity: 0 ;}}
-            animate={{ opacity: 1 ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='text-center py-20'
           >
             <div className='text-6xl mb-4'>🔍</div>
-=======
-            animate={{ opacity: 1 }}'
-            className='text-center py-20'
-          >'
-            <div className='text-6xl mb-4'>🔍</div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h3 className='text-2xl font-bold text-white mb-2'>
               No services found;
             </h3>'
             <p className='text-white/60'>
-<<<<<<< HEAD
               Try adjusting your search or filter criteria;
-=======
-              Try adjusting your search or filter criteria
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         )}
             </p>          </motion.div>
 
@@ -1252,30 +971,16 @@ className='text-center py-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
         )}
         {/* Contact CTA */}
-<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
 
-<<<<<<< HEAD
-=======
-        <motion&& motion.div
-          initial={{ opacity: 0;, y: 30 ;}}
-          whileInView={{ opacity: 1;, y: 0 ;}}
-          transition={{ duration: 0 && 0.8 ;}}
-          viewport={{ once: true ;}}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='mt-20 text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>
-=======
-        >'
-          <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h3 className='text-3xl font-bold text-white mb-4'>
               Ready to Transform Your Business?
             </h3>'
@@ -1291,13 +996,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Contact Sales Team'
                 <ArrowRight className='w-5 h-5' />
               </a>
-<<<<<<< HEAD
               <a'
                 href='tel:+13024640950'"
-=======
-              <a
-                href='tel:+13024640950'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
                 className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1324,13 +1024,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

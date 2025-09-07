@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   Brain,
   Mail,
   Phone,
@@ -6,7 +5,6 @@
   Globe,
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';'
 import React from 'react';
-
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -31,9 +29,6 @@ class ErrorBoundary extends React.Component {}
   }
 }'
 import React from 'react';'
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from 'next/link';
 import {;
   Brain,;
@@ -43,14 +38,9 @@ import {;
   Globe,;
   Github,;
   Linkedin,;
-<<<<<<< HEAD
   Twitter,;'
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';'
 import React from 'react';
-=======
-  Twitter,;
-} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {
   Facebook,
   Twitter,
@@ -67,13 +57,11 @@ import {
 } from 'lucide-react';
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
     this.state = { hasError: false ;};
   }
-<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {}
     return { hasError: true };
@@ -85,28 +73,14 @@ class ErrorBoundary extends React.Component {}
   
   render() {}
     if (this.state.hasError) {}
-=======
-  static getDerivedStateFromError(error) {
-    return { hasError: true ;};
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: ';, error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
-<<<<<<< HEAD
 }'
 import React from 'react';'
 import Link from 'next/link';
 import {;
-=======
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Brain,;
   Mail,;
   Phone,;
@@ -121,7 +95,6 @@ const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear(),;
 
   const footerSections = [;
-<<<<<<< HEAD
     {;'
       title: 'Services',;
       links: [;'
@@ -132,32 +105,15 @@ const EnhancedFooter: React.FC = () => {;
         {;'
           name: 'View All Services',;'
           href: '/comprehensive-2025-services-showcase',;
-=======
-    {;
-      title: 'Services';,;
-      links: [;
-        { name: 'AI Business Intelligence';, href: '/ai-business-intelligence' ;},;
-        { name: 'Quantum Cybersecurity';, href: '/quantum-cybersecurity' ;},;
-        { name: 'Edge Computing';, href: '/edge-computing-orchestration' ;},;
-        { name: 'Space Technology';, href: '/space-technology' ;},;
-        {;
-          name: 'View All Services';,;
-          href: '/comprehensive-2025-services-showcase';,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         },;
-<<<<<<< HEAD
       ],;
-<<<<<<< HEAD
+
     },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
 import React from 'react',
 import Link from 'next/link';
-=======
-    },    {        { name: 'View All Services';, href: '/comprehensive-2025-services-showcase' ;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 const EnhancedFooter: React.FC;
 
-<<<<<<< HEAD
   const socialLinks = [
     {
       name: 'Facebook',
@@ -198,11 +154,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   const socialLinks = [
 origin/cursor/automate-test-improve-and-merge-code-2533
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
-=======
-      ],;'
-    },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }'
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
     {'
       name: 'LinkedIn''
@@ -222,7 +173,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       href: 'https://twitter && twitter.com/ziontechgroup',;
       icon: Twitter,;
     },;
-
 
 '
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
@@ -317,7 +267,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </ul>;
             </div>;
           ))}
-<<<<<<< HEAD
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail className="w-4 h-4" />
                 <a
@@ -455,10 +404,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>;
-=======
-        {/* Bottom Section */}'
-        <div className='pt-8 border-t border-white/10'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
             {/* Copyright */}
             {/* Social Links */}'
@@ -469,7 +414,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 "
             <div className="text-white/60 text-sm">;
             </div>;
-
 
             {/* Social Links */}
 
@@ -568,14 +512,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }export default EnhancedFooter);
 }
 ;
-<<<<<<< HEAD
 );
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default EnhancedFooter;
-=======
-export default EnhancedFooter;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from './react';
   FileText,'
   HelpCircle} from './lucide-react';
@@ -819,8 +759,6 @@ company updates.;"
 
 };
 
-
-<<<<<<< HEAD
       </button>
     </footer>
   )}"'
@@ -837,8 +775,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

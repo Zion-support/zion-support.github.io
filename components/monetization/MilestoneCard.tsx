@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -24,13 +23,6 @@ class ErrorBoundary extends React.Component {}
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
-=======
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true }
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}static getDerivedStateFromError(error) {return { hasError: true }
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
-  return <div />Something went wrong.</div>;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
     return this.props.children;
   }
@@ -40,7 +32,6 @@ import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
 
 type Props = any;
-<<<<<<< HEAD
 type Props = {
 origin/cursor/automate-test-improve-and-merge-code-2533
   milestone: Milestone;
@@ -123,16 +114,12 @@ type Props = {}
   const canClientApprove = role !== 'talent' && milestone && milestone.status === 'Submitted';'
   const canClientMarkPaid = role !== 'talent' && milestone && milestone.status === 'Approved';
 
-<<<<<<< HEAD
         >
           {expanded ? 'Hide' : 'Details'}
         </button>
       </div>
 
 <div className='mt-3'>
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="border rounded-lg p-4 bg-white shadow-sm">
       <div className="flex items-start justify-between">
@@ -150,9 +137,6 @@ type Props = {}
             <div key={step} className='flex items-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <div
-=======
-              <div'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) => Promise < void> | void;
   return (<div className='border rounded-lg p-4 bg-white shadow-sm' />;
       <div className='flex items-start justify-between' />;}
@@ -161,7 +145,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className='text-sm text-gray-600' />;
             Due: {new Date(milestone && milestone.dueDate).toLocaleDateString(}
 }
-<<<<<<< HEAD
 ;'
 const status_steps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
 ;
@@ -186,17 +169,6 @@ function MilestoneCard() {}
           <p className="text - sm text - gray - 600">Due: {new Date (milestone.due_date).toLocaleDateString ()}</p>;
         </div>;"
         <button className="text - sm text - blue - 600" on_click={() => set_expanded ((v) => !v)}>;'
-=======
-          </p>;
-        </div>;
-
-        <button;
-className='text-sm text-blue-600'
-          onClick={() = /> setExpanded(v => !v)}
-
-        >
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {expanded ? 'Hide' : 'Details'}
         </button>;
       </div>;'
@@ -205,13 +177,8 @@ className='text-sm text-blue-600'
           {status_steps.map ((step, idx) => ('
             <div key={step} className='flex items - center'>;
               <div;
-<<<<<<< HEAD
                 className={'
                   'h - 2 w - 2 rounded - full ' +;'
-=======
-                className={
-                  'h - 2 w - 2 rounded - full ' +;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')                }
                 title={step}"
             <div key={step} className="flex items-center">
@@ -219,28 +186,18 @@ className='text-sm text-blue-600'
               {idx < status_steps.length - 1 && (          {status_steps.map ((step, idx) => ("
             <div key={step} className="flex items - center">;
               <div;
-<<<<<<< HEAD
                 className={
 
                   'h-2 w-2 rounded-full ' +
                   (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                className={}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 }
                 title={step}
               />
               {idx < statusSteps.length - 1 && (
-<<<<<<< HEAD
 <div
                   className={
                     'h - 0.5 w - 8 ' +;
-=======
-                <div;
-                  className={'
-                    'h - 0.5 w - 8 ' +;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     (idx < current_index ? 'bg - green - 600' : 'bg - gray - 300');
                   }
                 />              )}
@@ -265,7 +222,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           ))}
         </div>
-<<<<<<< HEAD
 <div className='mt-2 text-xs text-gray-700'>
           Status: {milestone.status}
         </div>
@@ -358,23 +314,14 @@ className={
                   <li key={a.id}>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     <a
-=======
-                    <a'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       className='text-blue-600 underline'
-<<<<<<< HEAD
                       href={a && a.url}'
                       target='_blank'"
-=======
-                      href={a && a.url}
-                      target='_blank'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <ul className="list-disc ml-5">
                 {milestone.attachments.map((a) => (
                   <li key={a.id}>"
                     <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">
-<<<<<<< HEAD
-=======
+
             <div />
 <div className='font-medium' />Attachments</div>
               <ul className='list-disc ml-5' />}
@@ -385,28 +332,17 @@ className='text-blue-600 underline'
                       href={a && a.url}
                       target='_blank'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       rel='noreferrer'
                      />
                       {a.label || a.url}
 origin/cursor/automate-test-improve-and-merge-code-2533
                     </a>
-<<<<<<< HEAD
                   </li>'"
                       rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;"
               <ul className="list-disc ml-5">;
                 {milestone && milestone.attachments.map((a) => (;
                   <li key={a && a.id}>;"
                     <a className="text-blue-600 underline" href={a && a.url} target="_blank" rel="noreferrer">;
-=======
-                  </li>
-
-                      rel='noreferrer'>                      {a && a.label || a && a.ur}"
-}              <div className=\"font-medium\" />Attachments</div>;"
-              <ul className=\"list-disc ml-5\" />;
-                {milestone && milestone.attachments.map((a) => (<li key={a && a.id} />;"
-                    <a className=\"text-blue-600 underline\" href={a && a.url} target=\"_blank\" rel=\"noreferrer\" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </a>;
                   </li>;
                 ))}
@@ -416,7 +352,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       )}
           <button;
-<<<<<<< HEAD
           <button"
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
 '
@@ -429,25 +364,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     </a>
                   </li>
-=======
-          <button;"
-            className=\"px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700\";
-      <div className='mt-4 flex flex-wrap gap-2' />;
-        {canClientMarkInProgress && (<button;}
-            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() = /> onAction('in_progress', milestone.id)}onClick={() => onAction('in_progress', milestone.id)}</a>;
-                  </li>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 ))}
               </ul>;
             </div>;
           )}
 
         </div>
-<<<<<<< HEAD
       )}'"
-=======
-      )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
           <button"
@@ -467,9 +390,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"'
             onClick={() => onAction('in_progress', milestone.id)}
 
-
-
-
 <div className='mt-4 flex flex-wrap gap-2'>
         {canClientMarkInProgress && (
           <button
@@ -487,47 +407,34 @@ className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-70
           </button>
         )}
         {canTalentSubmit && (;
-<<<<<<< HEAD
           <button
 className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'
             onClick={() => onAction('submitted', milestone.id)}
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           >
             Submit Work;
           </button>
         )}
         {canClientApprove && (
-<<<<<<< HEAD
           <button
 className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'
             onClick={() => onAction('approved', milestone.id)}
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           >
             Approve;
           </button>
         )}
         {canClientMarkPaid && (
-<<<<<<< HEAD
           <button
 className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
             onClick={() => onAction('paid', milestone.id)}
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           >
             Mark as Paid;
           </button>
         )}
       </div>
     </div>
-
 
         )}
       </div>
@@ -583,53 +490,24 @@ className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'
           </button>
         )}
         {canClientApprove && (
-<<<<<<< HEAD
           <button;'"
             className='px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700'            on_click={() => on_action ('approved', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700";'
             on_click={() => on_action ('approved', milestone.id)}
           >;
-=======
-          <button;}
-className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'}
-            onClick={() = /> onAction('approved', milestone.id)}
-          >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             Approve;
           </button>
         )}
         {canClientMarkPaid && (
-<<<<<<< HEAD
           <button;'"
             className='px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800'            on_click={() => on_action ('paid', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800";'
             on_click={() => on_action ('paid', milestone.id)}
           >;
-=======
-          <button;}
-className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'}
-            onClick={() = /> onAction('paid', milestone.id)}
-          >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             Mark as Paid;
           </button>)}
       </div>;
     </div>);
 }
-<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          </button>
-        )}
-      </div>
-    </div>
 
-  );
-}
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

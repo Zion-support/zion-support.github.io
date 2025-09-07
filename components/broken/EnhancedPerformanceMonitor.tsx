@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Activity;
@@ -44,13 +38,9 @@ interface PerformanceRecommendation {
 }
 
 const EnhancedPerformanceMonitor: React.FC;
-<<<<<<< HEAD
 //FCP recommendations if (metrics.fcp > 2000) {
 origin/cursor/automate-test-improve-and-merge-code-2533
   recs.push ({
-=======
-  recs.push ({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }return recs;
 }, []);
 //Wait for page to be fully loaded if (document.readyState !== 'complete') {}
@@ -112,7 +102,6 @@ if (score -= 15) {}
 if (score -= 20) {}
   $2;
 }
-<<<<<<< HEAD
 }> <div className="animate-pulse" > <div className="h - 4 bg - gray - 700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h - 3 bg-gray-700 rounded" ></div> <div className="h - 3 bg - gray-700 rounded w-5/6" ></div> <div className="h - 3 bg - gray-700 rounded w-4/6" ></div> </div> </div> </div>);
 }
 }> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCw className= {
@@ -154,25 +143,3 @@ if (score -= 20) {}
 };
 export default EnhancedPerformanceMonitor;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-// Check condition;
-if ( {) {}
-  $2;
-}"
-}> <div className="animate - pulse" > <div className="h - 4 bg - gray - 700 rounded w - 1/3 mb - 4" ></div> <div className="space - y-3" > <div className="h - 3 bg - gray - 700 rounded" ></div> <div className="h - 3 bg - gray - 700 rounded w - 5/6" ></div> <div className="h - 3 bg - gray - 700 rounded w - 4/6" ></div> </div> </div> </div>);
-}"
-}> </p> </div> </div> <div className="flex items - center space - x-2" > <button > <BarChart3 className="w - 4 h - 4" /> </button> <button > <RefreshCw className= {}`
-  `w - 4 h - 4 $ {'
-  is_loading ? 'animate - spin' : '';`
-}`;'"
-}/> </button> <button > <Settings className="w - 4 h - 4" /> </button> </div> </div> </div> performance_data.overall_score >= 70 ? 'Good': 'Needs Improvement';
-}</p> </div> <span className= {}`
-  `font - mono $ {'
-  metrics.fcp > 2000 ? 'text - red - 400': 'text - green - 400';`
-}`;
-}> {}
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import Card from '../ui/Card';'
 import { Zap } from 'lucide-react';
-
 
 interface Feature {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -24,32 +22,10 @@ class ErrorBoundary extends React.Component {}
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
-=======
-
-  icon: React.ReactNode;
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);}
-    this.state = { hasError: false,}
-};
-  }
-  static getDerivedStateFromError(error) {}
-    return { hasError: true,}
-};
-  }
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
-  }
-  render() {
-    if (this.state.hasError) {}
-      return <div />Something went wrong.</div>;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
     return this.props.children;
 
   }
-<<<<<<< HEAD
 }'
 import React from 'react';'
 import Card from '../ui/Card';'
@@ -77,25 +53,12 @@ import { Zap } from 'lucide-react';
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
   delay?: number
 }
-=======
-}
-import React from 'react';
-  title: string;
-  description: string;
-  color: string;
-
-  gradient: string;
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface FeaturesProps {
   title: string;
   subtitle: string;
   features: Feature[];
 
-
-<<<<<<< HEAD
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
           {features && features.map((feature, index) => (;
@@ -119,7 +82,7 @@ export default Features);
 ;
 export default Features;
 ;
-<<<<<<< HEAD
+
 className='text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
               style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
             >
@@ -147,8 +110,4 @@ className='text-center group bg-gray-900/50 border border-gray-800 hover:border-
 
 export default Features;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

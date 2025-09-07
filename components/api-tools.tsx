@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';
 
@@ -35,9 +34,6 @@ import {}
   Zap,
   Bot,
   BarChart3,
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Code;
   Database;
   Globe;
@@ -53,7 +49,6 @@ import { Code;
   ExternalLink;
   Play;
   BookOpen;
-<<<<<<< HEAD
   Github;'
         free: '1,000 operations/month''
         pro: '$119/month''
@@ -66,28 +61,9 @@ import { Code;
       status: 'Live''
       users: '4,200+''
       responseTime: '<20ms'
-=======
-  Github;
-        free: '1;,000 operations/month'
-        pro: '$119/month'
-        enterprise: 'Custom';
-      }
-      category: 'Security';,      color: 'bg-gradient-to-br from-gray-500 to-slate-600';,      gradient: 'from-gray-400 to-slate-500'
-      website: 'https://encrypt.api'
-      docs: 'https://docs.encrypt.api'
-      github: 'https://github.com/encrypt-api'
-      status: 'Live'
-      users: '4;,200+'
-      responseTime: '<20ms';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
 
-
-
-<<<<<<< HEAD
-
   Terminal
-<<<<<<< HEAD
  } from 'lucide-react';
 export default function ApiToolsPage() {
   const apiTools = null;
@@ -312,19 +288,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       github: 'https://github.com/encrypt-api',
       status: 'Live',
       users: '4,200+',
-=======
-'
-        free: '1,000 operations/month','
-        pro: '$119/month','
-        enterprise: 'Custom',
-      },'
-      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500','
-      website: 'https://encrypt.api','
-      docs: 'https://docs.encrypt.api','
-      github: 'https://github.com/encrypt-api','
-      status: 'Live','
-      users: '4,200+','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       responseTime: '<20ms',
     },;
 rating: 4.9,
@@ -830,9 +793,6 @@ function ApiToolsPage() {}
     <>
       <Head>
 <title>
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -884,7 +844,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }`}
               >;
                 {category}
-<<<<<<< HEAD
       {/* API Tools Grid */}
 <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -892,22 +851,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
               {selectedCategory === 'All'
                 ? 'All API Tools'
-=======
-      {/* API Tools Grid */}'
-      <section className='py-24 bg-gray-900'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-          <div className='text-center mb-20'>'
-            <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>'
-              {selectedCategory === 'All''
-                ? 'All API Tools'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 : `${selectedCategory} APIs`}
 
-
-
-
       {/* API Tools Grid */}
-
 
             </h2>'
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -928,7 +874,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredTools && filteredTools.map((tool, index) => (;
-<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300'`
@@ -937,16 +882,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='relative'>;
                     <div;`
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl ${tool && tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
-=======
-              <Card
-                key={index}
-                className='group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300'
-                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
-                <div className='flex items-start space-x-6'>;
-                  <div className='relative'>;
-                    <div
-                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl ${tool && tool.color} shadow-xl group-hover: scale-110 transition-transform duration-300`;}>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       {tool && tool.icon}
                     </div>;
                     <div;
@@ -994,19 +929,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             {feature}
                           </li>;
                         ))}
-<<<<<<< HEAD
                       <Button;
                         href={tool && tool.website}'
                         variant='primary''
                         size='sm''
                         className='bg-indigo-600 hover:bg-indigo-700'>;'
-=======
-                      <Button
-                        href={tool && tool.website}
-                        variant='primary'
-                        size='sm'
-                        className='bg-indigo-600 hover:bg-indigo-700'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <ExternalLink className='w-4 h-4 mr-2' />                        Visit API;
                       </Button>;
                       <Button;
@@ -1039,38 +966,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         variant="primary""
                         size="sm"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                        className='bg-indigo-600 hover:bg-indigo-700'
-                      >
-                        <ExternalLink className='w-4 h-4 mr-2' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-                        Visit API
-                      </Button>
-                        className="bg-indigo-600 hover:bg-indigo-700">;
-=======
-                        Visit API;
-                      </Button>"
-                        className="bg-indigo-600 hover:bg-indigo-700">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <ExternalLink className="w-4 h-4 mr-2" />;
                         Visit API;
                       </Button>;
-<<<<<<< HEAD
                       <Button;
                         href={tool && tool.docs}'
                         variant='outline''
                         size='sm''
                         className='border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400'>;'
-=======
-                      <Button
-                        href={tool && tool.docs}
-                        variant='outline'
-                        size='sm'
-                        className='border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <BookOpen className='w-4 h-4 mr-2' />                        Documentation;
                       </Button>;
                       <Button"
@@ -1081,7 +984,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <BookOpen className="w-4 h-4 mr-2" />
                         Documentation;
                       </Button>
-<<<<<<< HEAD
                       <Button
                         href={tool.docs}
 variant='outline'
@@ -1113,15 +1015,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-24 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
-=======
-                      <Button;
-      {/* Developer Resources */}'
-      <section className='py-24 bg-gray-800'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-          <div className='text-center mb-20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
-
 
               Developer Resources;
             </h2>'
@@ -1174,29 +1068,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 languages and frameworks.
               </p>'
               <Button href='/sdk' variant='outline' size='sm'>
-<<<<<<< HEAD
                 Browse SDKs
                 <ArrowRight className='w-4 h-4 ml-2' />
-=======
-                Browse SDKs'"
-                <ArrowRight className='w-4 h-4 ml-2' />              </Button>                <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </Button>
             </Card>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Developer Resources */}'
       <section className='py-24 bg-gray-800'>;'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;'
           <div className='text-center mb-20'>;'
-=======
-      {/* Developer Resources */}
-      <section className='py-24 bg-gray-800'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='text-center mb-20'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>;
               Developer Resources;
             </h2>;'
@@ -1237,45 +1119,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      {/* CTA Section */}
-<section className='py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
-          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-          </h2>
-          <p className='text-xl text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
-            Start integrating our APIs today and join thousands of developers
-            building the future.
-          </p>
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
-            <Button
-              href='/contact'
-              variant='secondary'
-              size='lg'
-              className='bg-white text-indigo-600 hover:bg-gray-100 shadow-2xl'
-            >
-              Get API Access
-              <ArrowRight className='w-5 h-5 ml-2' />
-            </Button>
-            <Button
-              href='/docs'
-              variant='outline'
-              size='lg'
-              className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'
-            >
-              View Documentation
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

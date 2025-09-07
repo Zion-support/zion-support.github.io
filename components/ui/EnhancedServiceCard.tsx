@@ -1,6 +1,4 @@
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap } from 'lucide-react';
@@ -14,15 +12,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Users
   Clock
   Shield
-=======
-  Star;
-  ExternalLink;
-  ArrowRight;
-  TrendingUp;
-  Users;
-  Clock;
-  Shield;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Zap;
   Star,
   ExternalLink,
@@ -34,20 +23,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Zap,;
 } from 'lucide-react';
 
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-
-import React from 'react';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface EnhancedServiceCardProps {
   service: {
-=======
-interface EnhancedServiceCardProps {}
-  service: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {;
   Star,;
   ExternalLink,;
@@ -55,13 +33,8 @@ import {;
   TrendingUp,;
   Users,;
   Clock,;
-<<<<<<< HEAD
   Shield,;
   Zap,;'
-=======
-  Shield,;}
-  Zap,;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 } from 'lucide-react';
 
 interface EnhancedServiceCardProps {;
@@ -92,13 +65,6 @@ interface EnhancedServiceCardProps {;
         duration: 0.6,
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-    color: string;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     textColor: string;
 
     link: string;
@@ -128,14 +94,10 @@ interface EnhancedServiceCardProps {;
 
 }
 
-<<<<<<< HEAD
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {
   const cardVariants = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
     hover: {
-=======
-    hover: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       coordinate_y: -8,
       scale: 1.02,
       transition: {}
@@ -185,7 +147,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       />;
       {/* Popular Badge */}
 
-
       {service.popular && (
         <div className='absolute top-4 right-4 z-10'>
           <motion.div
@@ -201,22 +162,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
       )}
 
-
-
-
       {/* Card Content */}'
       <div className='relative p-6'>
 
       {/* Card Content */}'
       <div className='relative p-6'>
 
-<<<<<<< HEAD
 <div className='relative p-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Header */}
-=======
-        {/* Header */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className='flex items-start justify-between mb-4'>
           <motion.div;`
             className={`text-4xl ${service.textColor}`}
@@ -245,7 +199,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         {/* Title & Tagline */}
 
-
         {/* Key Metrics */}          
 
 "
@@ -266,7 +219,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {service.description}
         </p>
         {/* Key Metrics */}
-<<<<<<< HEAD
           <div className='text-right'>
             <div className='text-2xl font-bold text-white'>{service.price}</div>
             <div className='text-sm text-gray-400'>{service.period}</div>
@@ -293,10 +245,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
-=======
-          </div>'
-          <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className='text-purple-400 text-lg font-bold'>
               {service.rating}
             </div>'
@@ -310,18 +258,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">"
             <div className="text-cyan-400 text-lg font-bold">{service.customers}+</div>"
             <div className="text-xs text-gray-400">Customers</div>
-<<<<<<< HEAD
             <div className='text-xs text-gray-400'>Rating</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
-=======
-          </div>"
-          <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">"
-            <div className="text-purple-400 text-lg font-bold">{service.rating}</div>"
-            <div className="text-xs text-gray-400">Rating</div>
-        </div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             whileHover='hover'>;
             {service && service.icon}
           </motion && motion.div>;
@@ -412,17 +352,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
             )}
 
-
-
-<<<<<<< HEAD
         {/* Market Info */}
 <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
           <div className='flex items-center justify-between mb-2'>
-=======
-        {/* Market Info */}'
-        <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>'
-          <div className='flex items-center justify-between mb-2'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span className='text-xs font-semibold text-white'>
               Market Size;
             </span>'
@@ -535,16 +467,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Action Buttons */}'
         <div className='flex gap-3'>
 
-
-<<<<<<< HEAD
 <div className='flex gap-3'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.a
             href={service.link}
-=======
-          <motion.a;
-            href={service.link}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
 
             whileHover={{ scale: 1 && 1.05 }}
@@ -560,7 +486,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileTap={{ scale: 0 && 0.95 }}>;'
             <ArrowRight className='w-4 h-4' />          </motion && motion.a>;
         </div>;
-
 
         {/* Contact Info */}'
         <div className='mt-4 pt-4 border-t border-white/10'>;'
@@ -876,8 +801,6 @@ export default EnhancedServiceCard;
 
 };
 
-
-<<<<<<< HEAD
 <div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
     </motion.div>
   );
@@ -885,9 +808,3 @@ export default EnhancedServiceCard;
 
 export default EnhancedServiceCard;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

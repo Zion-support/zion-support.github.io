@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';
 
@@ -35,9 +34,6 @@ import {}
   Mail,
   Share2,
   Check,
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Brain;
   Monitor;
   Search;
@@ -54,14 +50,12 @@ import { Brain;
   Lock;
   BarChart3;
   Calendar;
-<<<<<<< HEAD
   Target
 
  } from 'lucide-react';
 export default function MicroSaasServicesPage() {
   const microSaasServices = null;
             we deliver professional solutions with competitive pricing and exceptional value.
-<<<<<<< HEAD
       features: [
         'AI-powered content generation'
         'Multiple content types (blog, social, email)'
@@ -81,10 +75,6 @@ export default function MicroSaasServicesPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {
         starter: {
-=======
-      pricing: {}
-        starter: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           price: 19,
           features: ['
             '5 URLs','
@@ -105,7 +95,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             'API access',
           ],
         },
-<<<<<<< HEAD
         enterprise: {
           price: 299
           features: [
@@ -124,11 +113,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
       id: 'performance-monitor',
-=======
-        enterprise: {}
-    {'
-      id: 'performance-monitor','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       name: 'Website Performance Monitor',
       description:'
         'Monitor your website performance in real-time with comprehensive metrics, alerts, and optimization recommendations.','
@@ -441,7 +425,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     }
   ];
-<<<<<<< HEAD
     {
           price: 199
     {
@@ -623,140 +606,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             'Advanced calendar',
             'Enterprise analytics',
             'Dedicated support',
-=======
-    {}
-          price: 199;
-          features: ['
-            'Unlimited keywords''
-            'Full SEO suite''
-            'Daily reports''
-            'Dedicated support''
-            '1-year retention''
-            'White-label options'
-          ]
-        }
-      }'
-      marketPrice: '$39-199/month''
-      competitors: ['Ahrefs', 'SEMrush', 'Moz']'
-      website: 'https://seo.ziontech.ai''
-      demo: 'https://demo.seo.ziontech.ai'
-    }
-    {'
-      id: 'api-rate-limiter''
-      name: 'API Rate Limiter'
-      description:'
-        'Protect your APIs with intelligent rate limiting, traffic management, and comprehensive analytics.''
-      icon: <Shield className='w-8 h-8 text-white' />'
-      color: 'bg-gradient-to-br from-red-500 to-orange-600''
-      gradient: 'from-red-400 to-orange-500'
-      features: ['
-        'Intelligent rate limiting''
-        'Traffic pattern analysis''
-        'API key management''
-        'Real-time monitoring''
-        'Custom rules & policies''
-        'Comprehensive analytics'
-      ]
-      useCases: ['
-        'API protection & security''
-        'Traffic management''
-        'Developer portal management''
-        'Microservices protection''
-        'SaaS API security''
-        'Enterprise API governance'
-      ]
-      pricing: {}
-        starter: {}
-          price: 25;
-          features: ['
-            '10 rate limit rules''
-            'Basic limiting''
-            'API key management''
-            'Email notifications''
-            '7-day retention'
-          ]
-        }
-        professional: {}
-          price: 79;
-          features: ['
-            '50 rate limit rules''
-            'Advanced limiting''
-            'Unlimited API keys''
-            'Real-time monitoring''
-            '30-day retention''
-            'API access'
-          ]
-        }
-        enterprise: {}
-          price: 199;
-          features: ['
-            'Unlimited rules''
-            'Enterprise security''
-            'Advanced features''
-            'Custom integrations''
-            '1-year retention''
-            'SLA guarantee'
-          ]
-        }
-      }'
-      marketPrice: '$25-199/month''
-      competitors: ['Kong', 'Tyk', 'AWS API Gateway']'
-      website: 'https://rate-limiter.ziontech.ai''
-      demo: 'https://demo.rate-limiter.ziontech.ai'
-    }
-    {'
-      id: 'email-marketing''
-      name: 'Email Marketing Automation'
-      description:'
-        'Create engaging email campaigns, automate customer journeys, and drive conversions with intelligent email marketing.''
-      icon: <Mail className='w-8 h-8 text-white' />'
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600''
-      gradient: 'from-indigo-400 to-purple-500'
-      features: ['
-        'Drag & drop email builder''
-        'Advanced automation workflows''
-        'A/B testing & optimization''
-        'Subscriber segmentation''
-        'Performance analytics''
-        'Template library'
-      ]
-      useCases: ['
-        'Newsletter campaigns''
-        'Welcome series automation''
-        'Abandoned cart recovery''
-        'Product announcements''
-        'Customer onboarding''
-        'Lead nurturing'
-      ]
-      pricing: {}
-        starter: {}
-          price: 29;
-          features: ['
-            '1,000 subscribers''
-            'Basic templates''
-            'Simple automation''
-            'Basic analytics''
-            'Email support'
-          ]
-        }
-        professional: {}
-          price: 79;
-          features: ['
-            '10,000 subscribers''
-            'Advanced templates''
-            'Advanced automation''
-            'Advanced analytics''
-            'Priority support''
-            'API access'
-          ]
-        }
-        enterprise: {'
-            'Unlimited accounts','
-            'Enterprise scheduling','
-            'Advanced calendar','
-            'Enterprise analytics','
-            'Dedicated support','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },  ];      demo: 'https://demo.social.ziontech.ai'
     }
   ];
@@ -835,7 +684,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Brand consistency',
 origin/cursor/automate-test-improve-and-merge-code-2533
       ],
-<<<<<<< HEAD
       pricing: {
         starter: {
           price: 19,
@@ -860,7 +708,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         enterprise: {
 
-
           price: 129,
           features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -868,36 +715,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             'Enterprise scheduling',
             'Advanced calendar',
             'Enterprise analytics',
-=======
-      pricing: {}
-        starter: {}
-          price: 19;
-          features: ['
-            '3 social accounts''
-            'Basic scheduling''
-            'Simple calendar''
-            'Basic analytics''
-            'Email support'
-          ]
-        }
-        professional: {}
-          price: 49;
-          features: ['
-            '10 social accounts''
-            'Advanced scheduling''
-            'Content calendar''
-            'Advanced analytics''
-            'Priority support''
-            'API access'
-          ]
-        }
-        enterprise: {}
-'
-            'Unlimited accounts','
-            'Enterprise scheduling','
-            'Advanced calendar','
-            'Enterprise analytics','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             'Dedicated support',
     }
   ];
@@ -1096,14 +913,10 @@ description:
             enterprise-grade performance monitoring, we deliver professional
             solutions with competitive pricing and exceptional value.
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </p>
         </div>
       </section>
       {/* Market Overview */}
-<<<<<<< HEAD
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
@@ -1120,19 +933,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
 origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
-=======
-                key={index}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className='card - hover border - gradient - blue text - center';
-<<<<<<< HEAD
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;'
                 <div className='p - 6'>;'
-=======
-                style={{ animation_delay: `${index * 0.1;}s` }}
-              >;
-                <div className='p - 6'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <h3 className='text - xl font - bold text - white mb - 4'>;
                     {insight.title}
                   </h3>;'
@@ -1142,11 +946,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;'
                     <div className='text - green - 400 font - semibold'>;
                       {insight.growth}
-<<<<<<< HEAD
             </h2>"
-=======
-            </h2>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Our services are positioned competitively in growing markets with strong demand and proven business models.
             </p>
@@ -1204,19 +1004,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {marketInsights && marketInsights.map((insight, index) => (;
-<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='card-hover border-gradient-blue text-center'`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;'
                 <div className='p-6'>;'
-=======
-              <Card
-                key={index}
-                className='card-hover border-gradient-blue text-center'
-                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
-                <div className='p-6'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <h3 className='text-xl font-bold text-white mb-4'>;
                     {insight && insight.title}
                   </h3>;'
@@ -1245,16 +1037,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>
             ))}
 
-
-
       {/* Services Grid */}'
       <section className='section-padding bg-gradient-cursor'>'
         <div className='container-cursor'>'
           <div className='text-center mb-20'>'
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-
-
 
               Our Micro SaaS Services;
             </h2>'
@@ -1287,17 +1074,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Services Grid */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
-=======
-      {/* Services Grid */}'
-      <section className='section-padding bg-gradient-cursor'>'
-        <div className='container-cursor'>'
-          <div className='text-center mb-20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
               Our Micro SaaS Services;
             </h2>'
@@ -1307,21 +1087,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>'
           <div className='space-y-16'>
-<<<<<<< HEAD
             {microSaasServices.map((service, index) => (`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;"
                 <div className="p-6">;"
                   <h3 className="text-xl font-bold text-white mb-4">{insight && insight.title}</h3>;"
                   <div className="flex items-center justify-center space-x-4 mb-4">;"
                     <div className="text-2xl font-bold text-cursor-blue">{insight && insight.marketSize}</div>;"
-=======
-            {microSaasServices.map((service, index) => (
-                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
-                <div className="p-6">;
-                  <h3 className="text-xl font-bold text-white mb-4">{insight && insight.title}</h3>;
-                  <div className="flex items-center justify-center space-x-4 mb-4">;
-                    <div className="text-2xl font-bold text-cursor-blue">{insight && insight.marketSize}</div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <div className="text-green-400 font-semibold">{insight && insight.growth}</div>;
                   </div>;"
                   <p className="text-gray-400 text-sm">{insight && insight.description}</p>;
@@ -1341,11 +1112,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div>;'
                         <h3 className='text - 2xl font - bold text - white'>;
                           {service.name}
-<<<<<<< HEAD
             </h2>"
-=======
-            </h2>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each service is designed to solve specific business challenges with professional-grade features and competitive pricing.
             </p>
@@ -1392,136 +1159,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />;
 "
                     <div className="flex flex-wrap gap-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                        </h3>
-                        <p className='text-gray-400'>{service.description}</p>
-                      </div>
-                    </div>
-                    <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
-                      <div>
-                        <h4 className='text-lg font-semibold text-white mb-3 flex items-center'>
-                          <Zap className='w-5 h-5 mr-2 text-cursor-blue' />
-                          Key Features
-                        </h4>
-                        <ul className='space-y-2'>
-                          {service.features.map((feature, featureIndex) => (
-                            <li
-                              key={featureIndex}
-                              className='flex items-center text-gray-300 text-sm'
-                            >
-                              <Check className='w-4 h-4 mr-2 text-green-400 flex-shrink-0' />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-<h4 className='text-lg font-semibold text-white mb-3 flex items-center'>
-                          <Target className='w-5 h-5 mr-2 text-cursor-blue' />
-                          Use Cases
-                        </h4>
-                        <ul className='space-y-2'>
-                          {service.useCases.map((useCase, useCaseIndex) => (
-                            <li
-                              key={useCaseIndex}
-                              className='flex items-center text-gray-300 text-sm'
-                            >
-                              <Check className='w-4 h-4 mr-2 text-green-400 flex-shrink-0' />
-                              {useCase}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
 
-<div className='flex flex-wrap gap-4'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                      <Button
-                        size='sm'
-<<<<<<< HEAD
-=======
-                      <Button'
-                        size='sm''"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         className='bg-cursor-blue hover:bg-blue-600'>                    <div className="flex flex-wrap gap-4">;
                       <Button;
                         href={service && service.website}"
                         size="sm""
                         className="bg-cursor-blue hover:bg-blue-600"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                        className='bg-cursor-blue hover:bg-blue-600'
-                      >
-                        Visit Website
-                      </Button>
-                      <Button
-                        href={service.demo}
-variant='outline'
-                        size='sm'
-                        className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'
-                      >
-                        Try Demo
-                      </Button>
-                    </div>
-                  </div>
-                  {/* Pricing & Market Info */}
-<div className='lg:col-span-1'>
-                    <div className='bg-gray-800/50 rounded-xl p-6 border border-gray-700'>
-                      <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
-                        <BarChart3 className='w-5 h-5 mr-2 text-cursor-blue' />
-                      </h4>
-                      <div className='space-y-4'>
-                        <div>
-                          <p className='text-sm text-gray-400 mb-1'>
-                            Market Price Range
-                          </p>
-                          <p className='text-lg font-bold text-white'>
-                            {service.marketPrice}
-                          </p>
-                        </div>
-                        <div>
-                          <p className='text-sm text-gray-400 mb-1'>
-                            Our Pricing
-                          </p>
-                          <div className='space-y-2'>
-                            {Object.entries(service.pricing).map(
-                              ([tier, details]) => (
-                                <div
-                                  key={tier}
-                                  className='flex justify-between items-center'
-                                >
-                                  <span className='text-sm text-gray-300 capitalize'>
-                                    {tier}
-                                  </span>
-                                  <span className='text-sm font-semibold text-white'>
-                                    ${details.price}/mo
-                                  </span>
-                                </div>
-                              )
-                            )}
-                          </div>
-                        </div>
-                        <div>
-<p className='text-sm text-gray-400 mb-1'>
-                            Key Competitors
-                          </p>
-                          <div className='flex flex-wrap gap-2'>
-                            {service.competitors.map(
-                              (competitor, compIndex) => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-                                <span
-                                  key={compIndex}
-=======
-                                <span;
-                                  key={compIndex}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                                   className='px-2 py-1 bg-gray-700 rounded text-xs text-gray-300'>;
                                   {competitor}
                                 </span>;

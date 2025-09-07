@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'AI Code Reviewer | Zion Tech Group',
   description: 'Professional AI code reviewer solutions for your business needs.',
@@ -14,77 +13,6 @@ export default function ServicePage() {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Professional AI code reviewer solutions for your business needs.
-=======
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-
-};
-
-export default function ServicePage() {
-  return (
-    <div className="animate-fade-in">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          AI Code Reviewer
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-Automated code review and quality analysis powered by advanced AI.
-          Improve code quality, catch bugs early, and maintain consistent coding
-          standards across your team.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div>
-<h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Key Features
-          </h2>
-          <div className="space-y-4">
-            <FeatureItem
-              icon="🔍"
-              title="Intelligent Code Analysis"
-              description="AI-powered analysis that understands context, patterns, and best practices to provide meaningful feedback."
-            />
-            <FeatureItem
-              icon="🐛"
-              title="Bug Detection"
-              description="Automatically identify potential bugs, security vulnerabilities, and performance issues before they reach production."
-            />
-            <FeatureItem
-              icon="📏"
-              title="Code Quality Metrics"
-              description="Comprehensive quality metrics including complexity, maintainability, test coverage, and technical debt analysis."
-            />
-            <FeatureItem
-              icon="🎯"
-              title="Custom Rules Engine"
-              description="Define custom coding standards and rules specific to your team's requirements and project needs."
-            />
-            <FeatureItem
-              icon="⚡"
-              title="Real-time Feedback"
-              description="Get instant feedback as you code with IDE integrations and continuous analysis during development."
-            />
-            <FeatureItem
-              icon="📊"
-              title="Team Analytics"
-              description="Track code quality trends, team performance metrics, and improvement areas across your organization."
-            />
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Code Reviewer
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional ai code reviewer services for your business needs.
->>>>>>> origin/main
           </p>
         </div>
         
@@ -92,11 +20,7 @@ Automated code review and quality analysis powered by advanced AI.
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
             <p className="text-gray-300">
-<<<<<<< HEAD
               Tailored ai-code-reviewer solutions designed for your specific business requirements.
-=======
-              Tailored ai code reviewer solutions designed for your specific business requirements.
->>>>>>> origin/main
             </p>
           </div>
           
@@ -106,7 +30,6 @@ Automated code review and quality analysis powered by advanced AI.
               Cutting-edge technology and best practices to deliver exceptional results.
             </p>
           </div>
-<<<<<<< HEAD
           
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
@@ -119,15 +42,6 @@ Automated code review and quality analysis powered by advanced AI.
     </div>
   )
 }
-=======
-
-=======
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-=======
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
             Ai Code Reviewer
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -143,7 +57,6 @@ Automated code review and quality analysis powered by advanced AI.
             </Link>
           </div>
 
-<<<<<<< HEAD
         <div>
 <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
           <div className="space-y-6">
@@ -243,7 +156,6 @@ Automated code review and quality analysis powered by advanced AI.
         <div className="mt-4 text-sm text-gray-500">
           <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
 
-<<<<<<< HEAD
             <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-3xl">📈</span>
@@ -280,109 +192,4 @@ Automated code review and quality analysis powered by advanced AI.
               </Link>
             </div>
           </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-=======
->>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 
-=======
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-}
-
-function FeatureItem({
-icon,
-  title,
-  description,
-}: {
-  icon: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="flex items-start space-x-4">
-<div className="text-2xl">{icon}</div>
-      <div>
-        <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
-      </div>
-    </div>
-  );
-}
-
-function PricingCard({
-  plan,
-  price,
-period,
-  description,
-  features,
-  popular,
-}: {
-  plan: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-}) {
-  return (
-    <div
-      className={`border rounded-xl p-6 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200"}`}
-    >
-      {popular && (
-        <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-          Most Popular
-        </div>
-      )}
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{plan}</h3>
-      <div className="mb-4">
-        <span className="text-3xl font-bold text-gray-900">{price}</span>
-        <span className="text-gray-600 ml-1">{period}</span>
-      </div>
-      <p className="text-gray-600 mb-6">{description}</p>
-      <ul className="space-y-2">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-green-500 mr-2">✓</span>
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function StepCard({
-  step,
-  title,
-  description,
-}: {
-  step: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center">
-<div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-        {step}
-      </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> origin/main

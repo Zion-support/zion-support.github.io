@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 export const metadata = {
   title: "Research | Zion Tech Group",
@@ -62,19 +61,7 @@ export default function ResearchPage() {
               <h3 className="text-xl font-bold text-white mb-2">University of Oxford</h3>
               <p className="text-gray-300">AI Ethics & Governance</p>
             </div>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
-<<<<<<< HEAD
-=======
 
   LightBulbIcon,
   CpuChipIcon, 
@@ -189,21 +176,11 @@ const academicPartners = [
     focus: 'Robotics & Autonomous Systems',
     collaboration: 'Robotic learning and human-robot interaction'}]
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
     metric: 'Patents Filed'
     value: '25+'
     description: 'Intellectual property protecting our innovations'}
   {
-<<<<<<< HEAD
-=======
-
-    metric: 'Research Collaborations',
-    value: '50+',
-    description: 'Partnerships with leading academic institutions'}];
-const academic_partners = [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
     name: 'Stanford University'
     location: 'Stanford, CA'
@@ -220,29 +197,7 @@ const academic_partners = [;
     focus: 'AI Ethics & Governance'
     collaboration: 'Policy research and ethical AI development'}
   {
-<<<<<<< HEAD
-=======
 
-    name: 'University of Tokyo',
-    location: 'Tokyo, Japan',
-    focus: 'Robotics & Autonomous Systems',
-    collaboration: 'Robotic learning and human - robot interaction'}];
-export default /**
- * ResearchPage - Function description
- */
-function ResearchPage() {
-
-  return (
-    <div className=&quot;bg - black & quot;>;
-<<<<<<< HEAD
-=======
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -282,45 +237,7 @@ function ResearchPage() {
                       <span className=&quot;text-sm text-gray-400&quot;>{topic}</span>
                     </div>
                   ))}
-<<<<<<< HEAD
-=======
-=======
-              <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
-                Innovation;
-              </span>;
-            </h1>;
-            <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-              Pushing the boundaries of artificial intelligence through groundbreaking research,
-              innovative discoveries, and academic collaboration.;
-            </p>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Research Focus Areas */}
-      <div className=&quot;mx - auto max - w-7xl px - 6 sm:px - 6 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Our Research</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Focus Areas;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            Our research spans the cutting edge of AI and technology, driving innovation;
-            and advancing the state of the art.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 2&quot;>;
-            {research_areas.map ((area) => (
-              <div key={area.name} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale - 105 & quot;>;
-                <div className=&quot;flex items - center gap - x-3 mb - 4&quot;>;
-                  <area.icon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
-                  <h3 className=&quot;text - xl font - semibold text - white & quot;>{area.name}</h3>;
-=======
-    name: 'University of Tokyo'
-    location: 'Tokyo, Japan'
-    focus: 'Robotics & Autonomous Systems'
-    collaboration: 'Robotic learning and human-robot interaction'}]
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
 export default function ResearchPage() {
   const researchAreas = [
     {
@@ -366,17 +283,10 @@ export default function ResearchPage() {
     }
   ];
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export default function ResearchPage() {;
   return (;
     <div className=&quot;bg-black&quot;>
-=======
-const Page: React.FC<PageProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
   return (
     <div className="min-h-screen bg-black text-white pt-20">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
@@ -390,21 +300,9 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 Innovation
               </span>
             </h1>
-<<<<<<< HEAD
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Pushing the boundaries of artificial intelligence through groundbreaking research, 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              Pushing the boundaries of artificial intelligence through groundbreaking research
-=======
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Pushing the boundaries of artificial intelligence through groundbreaking research, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
               innovative discoveries, and academic collaboration.
             </p>
           </div>
@@ -418,29 +316,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Focus Areas
           </p>
-<<<<<<< HEAD
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our research spans the cutting edge of AI and technology, driving innovation 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our research spans the cutting edge of AI and technology, driving innovation
-=======
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research spans the cutting edge of AI and technology, driving innovation 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-            and advancing the state of the art.
-=======
-import React from 'react';
 
-const researchAreas = [
-=======
-import {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            and advancing the state of the art.
   {
     metric: 'Patents Filed'
     value: '25+'
@@ -452,7 +331,6 @@ import {
     focus: 'AI & Machine Learning'
     collaboration: 'Joint research programs and student exchanges'}
   {
-<<<<<<< HEAD
     title: 'Human-AI Collaboration',
     description: 'Enhancing human capabilities through AI partnership',
     focus: ['Augmented Intelligence', 'Human-AI Interfaces', 'Collaborative AI', 'Ethical AI']
@@ -469,36 +347,7 @@ export default function ResearchPage() {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Pushing the boundaries of technology through innovative research and development initiatives.
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-    name: 'MIT'
-    location: 'Cambridge, MA'
-    focus: 'Quantum Computing & AI'
-    collaboration: 'Shared research facilities and joint publications'}
-  {
-    name: 'University of Oxford'
-    location: 'Oxford, UK'
-    focus: 'AI Ethics & Governance'
-    collaboration: 'Policy research and ethical AI development'}
-  {
-      {/* Hero section */}
-      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
-          <div className=&quot;text - center & quot;>;
-            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
-              Research &{' '}
-              innovative discoveries, and academic collaboration.
-            </p>
-          </div>
-        </div>
-      </div>
-      {/* Research Focus Areas */}
-      <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Research</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-            Focus Areas
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
           </p>
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
             Our research spans the cutting edge of AI and technology, driving innovation
@@ -519,9 +368,7 @@ export default function ResearchPage() {
                       {item}
                     </li>
                   ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                 </div>;
               </div>;
             ))}
@@ -529,77 +376,12 @@ export default function ResearchPage() {
         </div>;
       </div>;
       {/* Recent Publications */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
-=======
-            Recent Research
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our latest research contributions to the field of artificial intelligence and technology.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
-            {recentPublications.map((publication) => (
-              <div key={publication.title} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center gap-x-2 mb-4">
-                  <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
-                    publication.impact === 'High Impact' ? 'bg-blue-600/20 text-blue-400' :
-                    publication.impact === 'Industry Leading' ? 'bg-green-600/20 text-green-400' :
-                    publication.impact === 'Breakthrough' ? 'bg-purple-600/20 text-purple-400' :
-                    'bg-gray-600/20 text-gray-400'
-                  }`}>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                    {publication.impact}
-                  </span>;
-                  <span className=&quot;text - sm text - gray - 400 & quot;>{publication.year}</span>;
-                </div>;
-                <h3 className=&quot;text - lg font - semibold text - white mb - 2&quot;>{publication.title}</h3>;
-                <p className=&quot;text - sm text - blue - 400 mb - 3&quot;>{publication.authors}</p>;
-                <p className=&quot;text - sm text - gray - 400 mb - 3&quot;>{publication.journal}</p>;
-                <p className=&quot;text - sm text - gray - 300 mb - 4&quot;>{publication.abstract}</p>;
-                <a;
-                  href={`https://doi.org/${publication.doi}`}
-                  target=&quot;_blank & quot;
-                  rel=&quot;noopener noreferrer & quot;
-                  className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
-                >;
-                  View Publication <span aria - hidden=&quot;true & quot;>→</span>;
-                </Link>;
-              </div>))}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Publications</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
             Recent Research
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -635,29 +417,12 @@ export default function ResearchPage() {
                 </Link>
               </div>
             ))}
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
           </div>;
         </div>;
       </div>;
       {/* Research Impact */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            Research Influence
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our research has made significant contributions to the field
-=======
 
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
@@ -666,79 +431,24 @@ export default function ResearchPage() {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our research has made significant contributions to the field, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
             influencing both academia and industry.
           </p>
         </div>
-<<<<<<< HEAD
-=======
-        <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
-          <dl className=&quot;grid max-w-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4&quot;>
-            {researchImpact.map((item) => (
-              <div key={item.metric} className=&quot;flex flex-col bg-white/5 p-8 backdrop-blur-sm&quot;>
-                <dt className=&quot;text-sm font-semibold leading-6 text-gray-300&quot;>{item.metric}</dt>
-                <dd className=&quot;order-first text-3xl font-bold tracking-tight text-white&quot;>{item.value}</dd>
-                <p className=&quot;mt-2 text-sm text-gray-400&quot;>{item.description}</p>
-              </div>
-            ))}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Impact</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Research Influence;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            Our research has made significant contributions to the field,
-            influencing both academia and industry.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl lg:max - w-none & quot;>;
-          <dl className=&quot;grid max - w-xl grid - cols - 1 gap - 0.5 overflow - hidden rounded - 2xl text - center sm:grid - cols - 2 lg:grid - cols - 4&quot;>;
-            {research_impact.map ((item) => (
-              <div key={item.metric} className=&quot;flex flex - col bg - white / 5 p - 8 backdrop - blur - sm & quot;>;
-                <dt className=&quot;text - sm font - semibold leading - 6 text - gray - 300 & quot;>{item.metric}</dt>;
-                <dd className=&quot;order - first text - 3xl font - bold tracking - tight text - white & quot;>{item.value}</dd>;
-                <p className=&quot;mt - 2 text - sm text - gray - 400 & quot;>{item.description}</p>;
-              </div>))}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Impact</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-<<<<<<< HEAD
-            Research Influence
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our research has made significant contributions to the field
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             Research Influence
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our research has made significant contributions to the field, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             influencing both academia and industry.
           </p>
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
             {researchImpact.map((item) => (
@@ -752,20 +462,7 @@ export default function ResearchPage() {
         </div>;
       </div>;
       {/* Academic Collaborations */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            Academic Partnerships
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            We collaborate with leading academic institutions worldwide to advance
-=======
 
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
@@ -774,91 +471,20 @@ export default function ResearchPage() {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             We collaborate with leading academic institutions worldwide to advance 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
             the frontiers of AI research and innovation.
           </p>
         </div>
-<<<<<<< HEAD
-=======
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
-            {academicPartners.map((partner) => (
-              <div key={partner.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
-                <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
-                  <AcademicCapIcon className=&quot;h-8 w-8 text-blue-400&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white&quot;>{partner.name}</h3>
-                </div>
-                <div className=&quot;space-y-3 text-gray-300&quot;>
-                  <p className=&quot;flex items-center gap-2&quot;>
-                    <GlobeAltIcon className=&quot;h-5 w-5 text-blue-400&quot; />
-<<<<<<< HEAD
-=======
-=======
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Collaborations</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Academic Partnerships;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            We collaborate with leading academic institutions worldwide to advance;
-            the frontiers of AI research and innovation.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 2&quot;>;
-            {academic_partners.map ((partner) => (
-              <div key={partner.name} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale - 105 & quot;>;
-                <div className=&quot;flex items - center gap - x-3 mb - 4&quot;>;
-                  <AcademicCapIcon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
-                  <h3 className=&quot;text - xl font - semibold text - white & quot;>{partner.name}</h3>;
-                </div>;
-                <div className=&quot;space - y-3 text - gray - 300 & quot;>;
-                  <p className=&quot;flex items - center gap - 2&quot;>;
-                    <GlobeAltIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                    {partner.location}
-                  </p>;
-                  <p className=&quot;flex items - center gap - 2&quot;>;
-                    <LightBulbIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
-                    {partner.focus}
-                  </p>;
-                  <p className=&quot;flex items - center gap - 2&quot;>;
-                    <UserGroupIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Collaborations</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-<<<<<<< HEAD
-            Academic Partnerships
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            We collaborate with leading academic institutions worldwide to advance
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             Academic Partnerships
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             We collaborate with leading academic institutions worldwide to advance 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             the frontiers of AI research and innovation.
           </p>
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
             {academicPartners.map((partner) => (
@@ -878,11 +504,7 @@ export default function ResearchPage() {
                   </p>
                   <p className="flex items-center gap-2">
                     <UserGroupIcon className="h-5 w-5 text-blue-400" />
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
                     {partner.collaboration}
                   </p>;
                 </div>;
@@ -892,35 +514,15 @@ export default function ResearchPage() {
         </div>;
       </div>;
       {/* CTA section */}
-<<<<<<< HEAD
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-=======
-<<<<<<< HEAD
-            Join our research community
-          </h2>
-          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
-            Interested in collaborating on cutting-edge AI research?
-=======
-
-
-
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             Join our research community
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Interested in collaborating on cutting-edge AI research? 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
             Let's explore opportunities to work together.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -933,59 +535,14 @@ export default function ResearchPage() {
             <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Research Careers <span aria-hidden="true">→</span>
             </Link>
->>>>>>> origin/main
+
           </div>
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
-=======
-}
-<<<<<<< HEAD
-=======
-=======
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
-          <h2 className=&quot;text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Join our research community;
-          </h2>;
-          <p className=&quot;mx - auto mt - 6 max - w-xl text - lg leading - 8 text - gray - 300 & quot;>;
-            Interested in collaborating on cutting - edge AI research?;
-            Let's explore opportunities to work together.;
-          </p>;
-          <div className=&quot;mt - 10 flex items - center justify - center gap - x-6 & quot;>;
-            <a;
-              href=&quot;/contact & quot;
-              className=&quot;rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale - 105 & quot;
-            >;
-              Get in Touch;
-            </Link>;
-            <a href=&quot;/careers & quot; className=&quot;text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration - 200 & quot;>;
-              Research Careers <span aria - hidden=&quot;true & quot;>→</span>;
-            </Link>;
-          </div>;
-        </div>;
-      </div>;
-    </div>);
-}
-=======
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-<<<<<<< HEAD
-            Join our research community
-          </h2>
-          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
-            Interested in collaborating on cutting-edge AI research?
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
             Research & Development
@@ -1026,14 +583,12 @@ export default function ResearchPage() {
               </div>
             ))}
           </div>
-=======
+
                 </ul>
               </div>
             </div>
           ))}
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
   return (
     <div className="bg-black">
       {/* Hero section */}
@@ -1049,7 +604,7 @@ export default function ResearchPage() {
               innovative discoveries, and academic collaboration.
             </p>
           </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
         </div>
       </div>
       {/* Research Focus Areas */}
@@ -1059,218 +614,10 @@ export default function ResearchPage() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Focus Areas
           </p>
-<<<<<<< HEAD
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             View Open Positions
           </button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-            and advancing the state of the art.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
-            {researchAreas.map((area) => (
-              <div key={area.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center gap-x-3 mb-4">
-                  <area.icon className="h-8 w-8 text-blue-400" />
-                  <h3 className="text-xl font-semibold text-white">{area.name}</h3>
-                </div>
-                <p className="text-gray-300 mb-6">{area.description}</p>
-                <div className="space-y-2">
-                  {area.topics.map((topic) => (
-                    <div key={topic} className="flex items-center gap-2">
-                      <div className="h-1.5 w-1.5 bg-blue-400 rounded-full"></div>
-                      <span className="text-sm text-gray-400">{topic}</span>
-                    </div>
-                  ))}
-                </div>;
-                <p className=&quot;text - gray - 300 mb - 6&quot;>{area.description}</p>;
-                <div className=&quot;space - y-2 & quot;>;
-                  {area.topics.map ((topic) => (
-                    <div key={topic} className=&quot;flex items - center gap - 2&quot;>;
-                      <div className=&quot;h - 1.5 w - 1.5 bg - blue - 400 rounded - full & quot;></div>;
-                      <span className=&quot;text - sm text - gray - 400 & quot;>{topic}</span>;
-                    </div>))}
-                </div>;
-              </div>))}
-          </div>;
-        </div>;
-      </div>;
-      {/* Recent Publications */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Recent Research
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our latest research contributions to the field of artificial intelligence and technology.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
-            {recentPublications.map((publication) => (
-              <div key={publication.title} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center gap-x-2 mb-4">
-                  <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
-                    publication.impact === 'High Impact' ? 'bg-blue-600/20 text-blue-400' :
-                    publication.impact === 'Industry Leading' ? 'bg-green-600/20 text-green-400' :
-                    publication.impact === 'Breakthrough' ? 'bg-purple-600/20 text-purple-400' :
-                    'bg-gray-600/20 text-gray-400'
-                  }`}>
-                    {publication.impact}
-                  </span>;
-                  <span className=&quot;text - sm text - gray - 400 & quot;>{publication.year}</span>;
-                </div>;
-                <h3 className=&quot;text - lg font - semibold text - white mb - 2&quot;>{publication.title}</h3>;
-                <p className=&quot;text - sm text - blue - 400 mb - 3&quot;>{publication.authors}</p>;
-                <p className=&quot;text - sm text - gray - 400 mb - 3&quot;>{publication.journal}</p>;
-                <p className=&quot;text - sm text - gray - 300 mb - 4&quot;>{publication.abstract}</p>;
-                <a;
-                  href={`https://doi.org/${publication.doi}`}
-                  target=&quot;_blank & quot;
-                  rel=&quot;noopener noreferrer & quot;
-                  className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
-                >;
-                  View Publication <span aria - hidden=&quot;true & quot;>→</span>;
-                </Link>;
-              </div>))}
-          </div>;
-        </div>;
-      </div>;
-      {/* Research Impact */}
-            Research Influence
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our research has made significant contributions to the field
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Research Influence
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research has made significant contributions to the field, 
-            influencing both academia and industry.
-          </p>
-        </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
-          <dl className=&quot;grid max-w-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4&quot;>
-            {researchImpact.map((item) => (
-              <div key={item.metric} className=&quot;flex flex-col bg-white/5 p-8 backdrop-blur-sm&quot;>
-                <dt className=&quot;text-sm font-semibold leading-6 text-gray-300&quot;>{item.metric}</dt>
-                <dd className=&quot;order-first text-3xl font-bold tracking-tight text-white&quot;>{item.value}</dd>
-                <p className=&quot;mt-2 text-sm text-gray-400&quot;>{item.description}</p>
-              </div>
-            ))}
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Impact</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Research Influence;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            Our research has made significant contributions to the field,
-            influencing both academia and industry.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl lg:max - w-none & quot;>;
-          <dl className=&quot;grid max - w-xl grid - cols - 1 gap - 0.5 overflow - hidden rounded - 2xl text - center sm:grid - cols - 2 lg:grid - cols - 4&quot;>;
-            {research_impact.map ((item) => (
-              <div key={item.metric} className=&quot;flex flex - col bg - white / 5 p - 8 backdrop - blur - sm & quot;>;
-                <dt className=&quot;text - sm font - semibold leading - 6 text - gray - 300 & quot;>{item.metric}</dt>;
-                <dd className=&quot;order - first text - 3xl font - bold tracking - tight text - white & quot;>{item.value}</dd>;
-                <p className=&quot;mt - 2 text - sm text - gray - 400 & quot;>{item.description}</p>;
-              </div>))}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Research Influence
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research has made significant contributions to the field, 
-            influencing both academia and industry.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-            {researchImpact.map((item) => (
-              <div key={item.metric} className="flex flex-col bg-white/5 p-8 backdrop-blur-sm">
-                <dt className="text-sm font-semibold leading-6 text-gray-300">{item.metric}</dt>
-                <dd className="order-first text-3xl font-bold tracking-tight text-white">{item.value}</dd>
-                <p className="mt-2 text-sm text-gray-400">{item.description}</p>
-              </div>
-            ))}
-          </dl>;
-        </div>;
-      </div>;
-      {/* Academic Collaborations */}
-            Academic Partnerships
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            We collaborate with leading academic institutions worldwide to advance
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Academic Partnerships
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            We collaborate with leading academic institutions worldwide to advance 
-            the frontiers of AI research and innovation.
-          </p>
-        </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
-            {academicPartners.map((partner) => (
-              <div key={partner.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
-                <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
-                  <AcademicCapIcon className=&quot;h-8 w-8 text-blue-400&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white&quot;>{partner.name}</h3>
-                </div>
-                <div className=&quot;space-y-3 text-gray-300&quot;>
-                  <p className=&quot;flex items-center gap-2&quot;>
-                    <GlobeAltIcon className=&quot;h-5 w-5 text-blue-400&quot; />
-                    {partner.location}
-                  </p>;
-                  <p className=&quot;flex items - center gap - 2&quot;>;
-                    <LightBulbIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
-                    {partner.focus}
-                  </p>;
-                  <p className=&quot;flex items - center gap - 2&quot;>;
-                    <UserGroupIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
-                    {partner.collaboration}
-                  </p>;
-                </div>;
-              </div>))}
-          </div>;
-        </div>;
-      </div>;
-      {/* CTA section */}
-            Join our research community
-          </h2>
-          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
-            Interested in collaborating on cutting-edge AI research?
-            Join our research community
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-            Interested in collaborating on cutting-edge AI research? 
-            Let's explore opportunities to work together.
-          </p>
-          <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
-            <a
-              href=&quot;/contact&quot;
-              className=&quot;rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105&quot;
-            >
-              Get in Touch
-            </Link>
-            <a href=&quot;/careers&quot; className=&quot;text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200&quot;>
-              Research Careers <span aria-hidden=&quot;true&quot;>→</span>
-            </Link>
-          </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
         </div>
       </div>
     </div>
@@ -1299,29 +646,21 @@ export default function ResearchPage() {
       </div>
     </div>
   )
-=======
+
 import React from 'react';
 import { Metadata } from 'next';
 
-<<<<<<< HEAD
 export const metadata = {
   title: "Research & Development | Zion Tech Group",
   description: "Explore our cutting-edge research in AI, quantum computing, and emerging technologies that shape the future of business.",
->>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
-=======
-export const metadata: Metadata = {
-  title: 'Research & Innovation | Zion Tech Group',
-  description: 'Explore our cutting-edge research in AI, machine learning, and technology innovation. Leading the future of intelligent systems.',
-  keywords: 'AI research, machine learning, technology innovation, research publications, academic collaboration',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
+
 import React from 'react';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: "Research | Zion Tech Group",
   description: "Explore our cutting-edge research in AI, quantum computing, and autonomous systems."
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 };
 
 export default function ResearchPage() {
@@ -1431,130 +770,13 @@ export default function ResearchPage() {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             We're always looking for talented researchers and engineers to join our mission of advancing technology.
           </p>
-<<<<<<< HEAD
           <a
             href="/contact"
             className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Apply Now
           </a>
-=======
-import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Research & Development | Zion Tech Group',
-  description: 'Explore our cutting-edge research and development initiatives in AI, quantum computing, and emerging technologies.',
-};
-
-export default function ResearchPage() {
-  const metrics = [
-    {
-      metric: 'Patents Filed',
-      value: '25+',
-      description: 'Intellectual property protecting our innovations'
-    },
-    {
-      metric: 'Research Papers',
-      value: '50+',
-      description: 'Published in top-tier conferences and journals'
-    },
-    {
-      metric: 'R&D Investment',
-      value: '$10M+',
-      description: 'Annual investment in research and development'
-    },
-    {
-      metric: 'Innovation Labs',
-      value: '5',
-      description: 'Global research facilities'
-    }
-  ];
-
-  const researchAreas = [
-    {
-      title: 'Artificial Intelligence',
-      description: 'Advanced AI research including machine learning, deep learning, and neural networks.',
-      icon: '🤖'
-    },
-    {
-      title: 'Quantum Computing',
-      description: 'Cutting-edge quantum algorithms and quantum machine learning research.',
-      icon: '⚛️'
-    },
-    {
-      title: 'Blockchain Technology',
-      description: 'Next-generation blockchain solutions and decentralized systems.',
-      icon: '⛓️'
-    },
-    {
-      title: 'Edge Computing',
-      description: 'Distributed computing and edge AI optimization research.',
-      icon: '🌐'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Research & Development
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Driving innovation through cutting-edge research in AI, quantum computing, and emerging technologies.
-          </p>
-        </div>
-
-        {/* Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {metrics.map((metric, index) => (
-            <div key={index} className="text-center p-6 bg-gray-50 rounded-lg">
-              <div className="text-3xl font-bold text-blue-600 mb-2">{metric.value}</div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">{metric.metric}</div>
-              <div className="text-gray-600 text-sm">{metric.description}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Research Areas */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Research Areas</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {researchAreas.map((area, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow">
-                <div className="flex items-center mb-4">
-                  <span className="text-3xl mr-4">{area.icon}</span>
-                  <h3 className="text-xl font-semibold text-gray-900">{area.title}</h3>
-                </div>
-                <p className="text-gray-600">{area.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="text-center bg-blue-50 rounded-lg p-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Interested in Our Research?</h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Learn more about our research initiatives and how they can benefit your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-            >
-              Email Us
-            </a>
-          </div>
->>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/careers"
@@ -1569,10 +791,10 @@ export default function ResearchPage() {
               Contact Us
             </a>
           </div>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
         </div>
       </div>
     </div>
   );
->>>>>>> origin/main
+
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'AI Email Optimizer | Zion Tech Group',
   description: 'AI-powered email optimization for better engagement and deliverability.',
@@ -43,16 +42,6 @@ export default function ServicePage() {
     </div>
   )
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-
-=======
-import React from "react";
-import Link from "next/link";
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 export const metadata = {
   title: "AI Email Optimizer | Zion Tech Group",
@@ -418,8 +407,7 @@ export default function AIEmailOptimizerPage() {
           >
             Call +1 302 464 0950
           </a>
-<<<<<<< HEAD
-=======
+
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
@@ -440,24 +428,10 @@ export default function AIEmailOptimizerPage() {
             Transform your email marketing with AI-powered optimization that analyzes, 
             improves, and A/B tests your campaigns for maximum engagement and conversion rates.
           </p>
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-        </div>
-        <div className="mt-8 text-sm">
-          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-          <p>Email: kleber@ziontechgroup.com</p>
-        </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       </section>
-=======
-      </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-      </section>
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
     </div>
   );
 }
->>>>>>> origin/main
+

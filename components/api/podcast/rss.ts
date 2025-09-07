@@ -1,19 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';
-<<<<<<< HEAD
 function ensureStorage() {}
 '
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const EPISODES_PATH = null;
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
-<<<<<<< HEAD
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
@@ -25,7 +20,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 function ensureStorage() {}
   const dir = path.dirname(EPISODES_PATH);
-<<<<<<< HEAD
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
@@ -35,9 +29,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage();
   const siteUrl = process.env.SITE_URL |'http://localhost:3000';
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 '
   const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';'
@@ -53,15 +44,11 @@ export default function handler() { return null; }
   const items = episodes;
     .filter(e => e.audio?.mp3Url)
     .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
-<<<<<<< HEAD
     .map((e) => {
     .map(e => {
       const pubDate = new Date(e.createdAt).toUTCString();
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    .map((e) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return `
     <item>
       <pubDate>${pubDate}</pubDate>
@@ -76,7 +63,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <itunes:author>Zion</itunes:author>
     <description>Zion interviews builders, founders, and contributors.</description>
     ${items}
-<<<<<<< HEAD
   </channel>
 </rss>`;
 
@@ -84,10 +70,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 return res.status(200).json({ ok: true, path: '/podcast.xml' });
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  </channel>`
-</rss>`;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }) .join ('\n');
 <channel> <title>Zion Podcast</title> <link>$ {}
   siteUrl;
@@ -191,14 +173,6 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');'
   items;`
 }</channel> </rss>`;
 
-<<<<<<< HEAD
   items 
 }</channel> </rss>`;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import path from 'path';'
-=======
-
-import path from 'path';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import fs from 'fs';
-
 
 import DocsLayout from '../../../components/docs/DocsLayout';
 import CodeBlock from '../../../components/docs/CodeBlock';
-<<<<<<< HEAD
 export type Section = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
@@ -20,7 +13,6 @@ type DocsContent = {}
   title: string;
   sections: Section[];
 }
-
 
 };
 
@@ -34,24 +26,12 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
   return { props: { docs } };
 };
 
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function ApiDocsPage({ docs }: PageProps) {
-=======
-export default function ApiDocsPage({ docs }: PageProps) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       nav={docs.sections.map(s => ({ id: s.id, title: s.title }))}
     >
-<<<<<<< HEAD
       {docs.sections.map(section => ('
         <section key={section.id} id={section.id} className='scroll-mt-24'>'
-=======
-      {docs.sections.map(section => (
-        <section key={section.id} id={section.id} className='scroll-mt-24'>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <h2 className='text-2xl font-semibold'>{section.title}</h2>          {section.html && (
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
           )}
@@ -83,18 +63,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
           )}
           {section.code && section.code.length > 0 && (
-<<<<<<< HEAD
               ))};
-=======
-              ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
           )}
         </section>;
       ))}
 
   );
-
 
 }
 
@@ -175,18 +150,3 @@ export default function ApiDocsPage({ docs,}
         </section>
       ))}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    </DocsLayout>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

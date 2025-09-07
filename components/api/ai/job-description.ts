@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 ) {'
   const method = (req.method |'POST').toUpperCase();'
   if (method !== 'POST')'
@@ -39,9 +38,6 @@ function handler() { return null; }
 function handler() { return null; }
   if (return res.status (405).json ({ error: 'Method not allowed' })) {}
   $2;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   const auth = authenticate_request (req, false);
   if (return res.status (401).json ({ error: auth.error })) {}
@@ -72,13 +68,6 @@ function handler() { return null; }
 
 }
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
 
@@ -119,10 +108,3 @@ const text = await generateText(
   return res.status(200).json({ jobDescription: text }),
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

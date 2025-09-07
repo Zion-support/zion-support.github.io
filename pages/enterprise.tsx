@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
 
 
       permanent: false}}
 }
 export default function EnterpriseRedirect() { return null }
-
-
-
-
-
 
       destination: '/plans/enterprise',
       permanent: false}}
@@ -30,66 +12,14 @@ import type { GetServerSideProps } from 'next',';
 import type { GetServerSideProps } from 'next';
 '
 import type { GetServerSideProps } from 'next',;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    redirect: {
-=======
 
-
-export const getServerSideProps: GetServerSideProps = async () => {}
-  return {}
-    redirect: {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      destination: '/plans/enterprise'
-      permanent: false}}
-}
-export default function EnterpriseRedirect() { return null }
-
-},;
-;
-export default function EnterpriseRedirect() { return null };'
-import type { GetServerSideProps } from 'next';
-export const getServerSideProps: GetServerSideProps = async () => {;
-  return {;
-    redirect: {;'
-      destination: '/plans/enterprise';
-      permanent: false}  } catch (error) {}
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-};
-export default function EnterpriseRedirect() { return null   } catch (error) {";
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import Head from 'next/head';
 import Link from 'next/link';
-=======
-
-
-
 
 '
 import Head from 'next/head';'
 import Link from 'next/link';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 import { motion } from 'framer-motion';
 import {}
   Building, 
@@ -103,54 +33,9 @@ import {}
   MapPin,
   Globe,
   Database,
-<<<<<<< HEAD
   Lock
 } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-
-<<<<<<< HEAD
-const solutions = [
-  {
-    title: 'Enterprise Resource Planning',
-    description: 'Comprehensive ERP solutions integrating all business processes and departments.',
-    features: ['Financial Management', 'Supply Chain', 'Human Resources', 'Customer Relations'],
-=======
-  Lock';
-} from 'lucide-react';'
-import MainLayout from '../src/components/layout/MainLayout';
-
-const features = []
-  {}
-    icon: Building,'
-    title: 'Scalable Architecture','
-    description: 'Enterprise-grade solutions designed to scale with your business growth and requirements.'
-  },
-  {}
-    icon: Shield,'
-    title: 'Security & Compliance','
-    description: 'Comprehensive security measures and compliance with industry standards and regulations.'
-  },
-  {}
-    icon: Users,'
-    title: 'Team Collaboration','
-    description: 'Advanced collaboration tools and workflows to enhance team productivity and communication.'
-  },
-  {}
-    icon: Zap,'
-    title: 'Performance Optimization','
-    description: 'High-performance solutions optimized for speed, reliability, and efficiency.'
-  }
-];
-
-const solutions = []
-  {'
-    title: 'Enterprise Resource Planning','
-    description: 'Comprehensive ERP solutions integrating all business processes and departments.','
-    features: ['Financial Management', 'Supply Chain', 'Human Resources', 'Customer Relations'],'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     pricing: 'Starting at $50,000'
   },
   {'
@@ -367,34 +252,6 @@ export default function EnterprisePage() {}
     </MainLayout>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-      permanent: false}}
-}
-export default function EnterpriseRedirect() { return null }
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
 
       destination: '/plans/enterprise',
       permanent: false}}
@@ -404,13 +261,7 @@ import type { GetServerSideProps } from 'next',
 import type { GetServerSideProps } from 'next';
 
 import type { GetServerSideProps } from 'next',;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -438,29 +289,9 @@ export default function EnterpriseRedirect() { return null   } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-import type { GetServerSideProps } from 'next';
-export const getServerSideProps: GetServerSideProps;
-export default function EnterpriseRedirect() { return null }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -721,7 +552,6 @@ export default function EnterprisePage() {
   );
 }
 
-
       permanent: false}}
 
 permanent: false}}
@@ -729,11 +559,7 @@ permanent: false}}
 }
 export default function EnterpriseRedirect() { return null }
 
-
-
-
 ursor/fix-website-loading-errors-and-merge-6662
-
 
       destination: '/plans/enterprise',
       permanent: false}}
@@ -770,15 +596,10 @@ export default function EnterpriseRedirect() { return null   } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
-
 }
-
-
 
 import type { GetServerSideProps } from 'next';
 export const getServerSideProps: GetServerSideProps;
 export default function EnterpriseRedirect() { return null }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

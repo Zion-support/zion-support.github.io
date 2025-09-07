@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 } from '../../../utils/notifications';
-<<<<<<< HEAD
 function getUserId(req: NextApiRequest): string {}
 '
   const cookie = req && req.headers.cookie || '';
@@ -11,7 +10,6 @@ function getUserId(req: NextApiRequest): string {}
     .find(c => c && c.startsWith('user_id='));'
   if (match) return decodeURIComponent(match && match.split('=')[1]);'
   return 'demo-user-1';
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -46,12 +44,6 @@ return res.status(200).json({ count: exactCount || 0 });
       }
       return res.status(200).json({ count });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export default async function handler(;
-  req: NextApiRequest;
-  res: NextApiResponse;
-) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     // Build query based on filter;
     let query = supabase'
@@ -69,7 +61,6 @@ export default async function handler(;
     } else if (['systemonboardingquotematch'].includes(filter)) {'
       query = query && query.eq('type', filter as NotificationType);
     }
-<<<<<<< HEAD
     if (filter === 'unread') {
       query = query && query.eq('read_status', false)
     } else if (['systemonboardingquotematch'].includes(filter)) {
@@ -107,55 +98,20 @@ id: 'seed-1',
       ];
       return res.status(200).json({ notifications: fallback });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    if (error) {}
-      // Fallback seed data for local/dev if table is missing;
-      const fallback: NotificationItem[] = []
-        {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-function getUserId(req: NextApiRequest): string {
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   };
 }
       return res.status (200).json ({ notifications: fallback,}
 });
     }
-<<<<<<< HEAD
     return res.status (200).json ({ notifications: data as NotificationItem[] });
   } catch (e) {'
 return res.status (500).json ({ error: 'Unexpected error' });'
   }    return res.status (500).json ({ error: 'Unexpected error' });'
 return res.status(500).json({ error: 'Unexpected error' });'
-=======
-    return res.status (200).json ({ notifications: data as NotificationItem[],}
-});
-  } catch (e) {}
-return res.status (500).json ({ error: 'Unexpected error',}
-});
-  }    return res.status (500).json ({ error: 'Unexpected error',}
-});
-return res.status(500).json({ error: 'Unexpected error',}
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }    return res.status(500).json({ error: 'Unexpected error' })
   }
 }
   };
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
- ,
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

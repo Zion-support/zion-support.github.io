@@ -2,7 +2,6 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 
-<<<<<<< HEAD
 import {}
   ArrowRight,
   Star,
@@ -41,20 +40,12 @@ import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';'
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';'
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {};
-=======
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom;}
-import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
-
 
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom;
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom
 origin/cursor/automate-test-improve-and-merge-code-2533
   Rocket, Shield, Target, CheckCircle, ExternalLink;
-<<<<<<< HEAD
   Search, Filter, Grid, List, ChevronDown'
  } from 'lucide-react';'
 import { cuttingEdge2027Innovations  } from '../../data/2027-cutting-edge-innovations';'
@@ -72,7 +63,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {'
   const categories = ['
     'all'
     ...Array.from(new Set(all2027Services.map(service => service.category)))
-<<<<<<< HEAD
 const Enhanced2027ServicesShowcase: React.FC;
         service.tags.some(tag =>
           tag.toLowerCase().includes(searchTerm.toLowerCase())
@@ -84,10 +74,6 @@ const Enhanced2027ServicesShowcase: React.FC;
 origin/cursor/automate-test-improve-and-merge-code-2533
     .sort((a, b) => {
       switch (sortBy) {
-=======
-    .sort((a, b) => {}
-      switch (sortBy) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         case 'name':
           return a.name.localeCompare(b.name);'
         case 'price':
@@ -136,8 +122,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return icons[category as keyof typeof icons] || <Zap className='w-5 h-5' />;
   };
 
-
-<<<<<<< HEAD
 return (
             parseFloat(a.price.replace(/[^0-9.]/g, '')) -
             parseFloat(b.price.replace(/[^0-9.]/g, ''))
@@ -192,16 +176,11 @@ return (
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section className='py-20 bg-gray-900'>
-=======
-  return ('
-    <section className='py-20 bg-gray-900'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className='container mx-auto px-4'>
         {/* Header */}
         <motion.div'
           className='text-center mb-16'          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-
 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -303,19 +282,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </option>;
                     ))}
 
-
                   </select>;'
                   <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />;
                 </div>;
-<<<<<<< HEAD
                   </select>
 <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Sort */}
-=======
-                {/* Sort */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className='relative'>;
                   <select;
                     value={sortBy}
@@ -530,7 +504,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <li key={idx} className="flex items-center text-sm text-gray-300">"
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
 
-
                       {service.description}
                     </p>
 
@@ -583,13 +556,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </ul>
                     </div>
 
-<<<<<<< HEAD
                     {/* Tags */}
 <div className='flex flex-wrap gap-2 mb-6'>
-=======
-                    {/* Tags */}'
-                    <div className='flex flex-wrap gap-2 mb-6'>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       {service.tags.slice(0, 3).map((tag, idx) => (
                         <span;
                           key={idx}'"
@@ -610,10 +578,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ))}
                     </div>
 
-
-
                     {/* CTA */}
-<<<<<<< HEAD
                     <Link
                       href={service.link}
 className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'
@@ -621,17 +586,6 @@ className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-
                       <span>Learn More</span>
                       <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />
                     </Link>
-=======
-                    <Link;
-                      href={service.link}'
-                      className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'
-                    >
-                      <span>Learn More</span>'"
-                      <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />                    </Link>                      className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-                    >
-                      <span>Learn More</span>"
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
@@ -644,7 +598,6 @@ className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-
               transition={{ duration: 0.3 }}'"
               className='space-y-4'            >              key="list"'
               className='space-y-4'            >
-
 
 key='list'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -778,17 +731,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             {service && service.roi}
                           </div>;
                         </div>;
-<<<<<<< HEAD
                       {/* Stats and CTA */}
 <div className='flex flex-col items-end space-y-3'>
                         <div className='text-right'>
                           <div className='text-sm text-gray-400'>ROI</div>
-=======
-                      {/* Stats and CTA */}'
-                      <div className='flex flex-col items-end space-y-3'>'
-                        <div className='text-right'>'
-                          <div className='text-sm text-gray-400'>ROI</div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <div className='text-lg font-bold text-green-400'>
                             {service.roi}
                           </div>
@@ -997,7 +943,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>;
               <Link"
                 href="/pricing"
-<<<<<<< HEAD
         >
 <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -1042,17 +987,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   category === 'all' ? 'All Categories' : category
 }</option>) )
 }</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {
-=======
-}<motion.div /> </div> </div> > {}
-  categories.map ( (category) => (<option key= {}
-  category;
-}value= {}
-  category;
-}> {'
-  category === 'all' ? 'All Categories' : category;
-}</option>) )"
-}</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   () => setViewMode ('grid')
 }className= {}`
   `p-2 rounded-lg transition-all duration-200 $ {'
@@ -1206,19 +1140,4 @@ export default Enhanced2027ServicesShowcase;
 export default Enhanced2027ServicesShowcase;
 
 ;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  Search, Filter, Grid, List, ChevronDown
-  ArrowRight, Star, TrendingUp, Zap, Brain, Atom;
-Rocket, Shield, Target, CheckCircle, ExternalLink;}
-  Search, Filter, Grid, List, ChevronDown}
- } from 'lucide-react';
-import { cuttingEdge2027Innovations  } from '../../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027  } from '../../data/2027-practical-micro-saas';
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

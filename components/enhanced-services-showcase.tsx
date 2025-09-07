@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
 import React, { useState } from 'react',
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, TrendingUp, Zap, Brain, Rocket, Shield;
@@ -31,7 +27,6 @@ export default function EnhancedServicesShowcase() {
 
   const contactInfo = null;
 
-<<<<<<< HEAD
 //Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
 import React from 'react';
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
@@ -132,13 +127,9 @@ if ( {) {}
     </button>);
 }
 ;
-<<<<<<< HEAD
+
   children 
 }</button>) 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

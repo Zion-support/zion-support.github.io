@@ -1,35 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import React from 'react';
 
-interface CardProps {
-  children: React.ReactNode;
-  className?: string;}
-}
-}
-
-export default function Card() {return (<div className={`bg-white rounded-lg shadow-md p-6 ${className}`} />
-
-      {children}
-<<<<<<< HEAD
-    </div>
-  );
-}
-pr-12243
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    </div>;
-  )}
-import { cn  } from '../../lib/utils';
-
-interface HTMLDivElement extends HTMLElement  {tagName: \"DIV\";}
-}
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import { cn } from "../../lib/utils";
 
@@ -139,8 +108,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
 CardContent && CardContent.displayName = "CardContent";
-<<<<<<< HEAD
-
 
 const CardFooter = React && React.forwardRef<;
   HTMLDivElement,;
@@ -166,18 +133,9 @@ const CardFooter = React.forward_ref<;
   <div;
     ref={ref}
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
-=======
-const CardDescription = React.forwardRef<;
-  HTMLParagraphElement,const CardDescription = React.forwardRef<;
-  HTMLParagraphElement,const CardDescription  = null;React.HTMLAttributes<HTMLParagraphElement />;
->(({ className, ...props }, ref) => (<p;
-    ref={ref}"
-    className={cn(\"text-sm text-muted-foreground\", className)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     {...props}
   />;"
 ))CardDescription.displayName = \"CardDescription\";
-
 
   children: React.ReactNode;
   className?: string;
@@ -191,7 +149,6 @@ interface CardProps  {children: React.ReactNode;
   hover?: boolean;}
 }
 }
-<<<<<<< HEAD
   return (
       className={classes}
       style={style}
@@ -237,30 +194,5 @@ export {
   CardContent,
 };
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-<<<<<<< HEAD
 pr-12243
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-import React from 'react';
-
-interface CardProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export default function Card({ children, className = '' }: CardProps) {
-  return (
-    <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
-      {children}
-    </div>
-  );
-}
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 
 import Link from 'next/link';
@@ -33,7 +27,6 @@ import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-d
 
 export default function UltraAdvancedHero2026() {
   const totalServices = null;
-<<<<<<< HEAD
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
   ArrowRight
@@ -47,19 +40,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   CheckCircle
   Phone
   Mail
-=======
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Rocket;
-  Globe;
-  Sparkles;
-  CheckCircle;
-  Phone;
-  Mail;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   MapPin;
   ArrowRight,
   Star,
@@ -88,8 +68,6 @@ export default function UltraAdvancedHero2026() {};
 
   };
 
-
-<<<<<<< HEAD
 export default function UltraAdvancedHero2026() {
   const totalServices =
     aiAutonomousServices2026.length +
@@ -105,11 +83,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const containerVariants = {
     hidden: { opacity: 0 }
 import {motion} from 'framer-motion';
-=======
-  const containerVariants = {}
-    hidden: { opacity: 0 }'
-import {motion} from 'framer-motion';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Link from 'next / link';
 import {}
   ArrowRight,
@@ -155,7 +128,6 @@ function UltraAdvancedHero2026() {}
 ;
   const container_variants = {}
     hidden: { opacity: 0 },
-<<<<<<< HEAD
     visible: {
       opacity: 1
       transition: {
@@ -195,20 +167,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           variants={containerVariants}
           initial='hidden'
           animate='visible'
-=======
-    visible: {}
-      opacity: 1;
-      transition: {}
-  const itemVariants = {}
-    hidden: { opacity: 0, y: 30 }
-    visible: {}
-      opacity: 1;
-      y: 0;
-      transition: {}
-          variants={containerVariants}'
-          initial='hidden''
-          animate='visible''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className='space-y-8'>;
           {/* Badge */}
           <motion&& motion.div;
@@ -232,10 +190,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <br />;'
             <span className='text-white'>is Now</span>;
           </motion && motion.h1>;
-
-
-
-
 
           {/* Subheading */}
           <motion&& motion.p;
@@ -351,7 +305,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate="visible""
           className="space-y-8">;
           {/* Badge */}
-<<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
           >
             <div className='text-center p-4 bg-gradient-to-br from-purple-800/20 to-purple-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl'>
@@ -399,11 +352,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
-=======
-            </div>'
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>'
-              <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <span className='text-gray-200 font-medium'>
                 24/7 Autonomous Operation;
               </span>            </div>
@@ -438,7 +386,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >"
               <Zap className="w-6 h-6 mr-3" />
-<<<<<<< HEAD
               </span>
             </div>
           </motion.div>
@@ -462,9 +409,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Zap className='w-6 h-6 mr-3' />
 origin/cursor/automate-test-improve-and-merge-code-2533
               Get Started Today
-=======
-              Get Started Today;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Link>
           </motion.div>
 "
@@ -658,15 +602,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           🚀;
         </motion.div>;
         <motion.div;
-<<<<<<< HEAD
       {/* Floating Elements */}
 <div className='absolute inset-0 pointer-events-none'>
         <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
-=======
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             coordinate_y: [0, 20, 0],
             rotate: [0, -5, 0],
           }}
@@ -824,7 +764,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
   );
-<<<<<<< HEAD
             ease: 'easeInOut'
           }}
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'
@@ -832,20 +771,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           className="absolute bottom-1/3 right-10 text-5xl opacity-20"
         >
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           🌐
         </motion.div>
       </div>
     </section>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -14,13 +9,8 @@ export default async function handler(req: NextApiRequest;, res: NextApiResponse
   return res.status(201).json({ id: record.id ;})
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs - extra';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import path from 'path';
 import {';
 } from '../../utils/api/partnerAuth';'
@@ -111,9 +101,6 @@ if ( {) {}
     skills: skills || [],
     programTrack: programTrack || null,'
     certificationStatus: certificationStatus || 'pending',
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import type { NextApiRequest, NextApiResponse } from \"next\";"
 import fs from \"fs-extra\";"
@@ -127,7 +114,6 @@ export default async function handler(req: NextApiRequest;, res: NextApiResponse
   const started = null;}
   return res.status(201).json({ id: record.id ;})
 }
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import fs from "fs-extra";"
 import path from "path";"
@@ -182,12 +168,5 @@ created_at: now,
   await record_request (req, res, auth.partner, auth.api_key, started, 201);
   return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id });
 }
-<<<<<<< HEAD
   return res.status(201).json({ id: record.id });
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

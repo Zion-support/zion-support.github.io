@@ -1,42 +1,16 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   id: string;
-<<<<<<< HEAD
+
   type: "success" | "error" | "warning" | "info";
 
 pr-12243
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-export interface Notification {
-  id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  type: 'success' | 'error' | 'warning' | 'info';
-
-  id: string;
-  type: "success" | "error" | "warning" | "info";
-interface Notification {
-  id: string;
-  type: "success" | "error" | "warning" | "info";
-
-pr-12243
-  type: 'success' | 'error' | 'warning' | 'info';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   title?: string;
   message: string;}
   duration?: number;}
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 pr-12243
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
@@ -47,76 +21,11 @@ const getNotificationStyles = (type: Notification["type"]): string => {
     info: "bg-blue-50 border-blue-400 text-blue-800"
   }
   return `${baseStyles} ${typeStyles[type]}`;
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface NotificationSystemProps {
   notifications: Notification[];
   onDismiss?: (id: string) => void;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-}
 
-const NotificationSystem: React.FC<NotificationSystemProps> = ({
-  notifications,
-  onDismiss,
-  position = 'top-right',
-}) => {
-  const [visibleNotifications, setVisibleNotifications] = useState<Notification[]>([]);
-
-  const handleDismiss = useCallback((id: string) => {
-    setVisibleNotifications(prev => prev.filter(n => n.id !== id));
-    onDismiss?.(id);
-  }, [onDismiss]);
-
-  useEffect(() => {
-    setVisibleNotifications(notifications);
-  }, [notifications]);
-
-  useEffect(() => {
-    const timers: ReturnType<typeof setTimeout>[] = [];
-    notifications.forEach(notification => {
-      if (notification.duration && notification.duration > 0) {
-        const timer = setTimeout(() => {
-          handleDismiss(notification.id);
-        }, notification.duration);
-        timers.push(timer);
-      }
-    });
-
-    return () => {
-      timers.forEach(timer => clearTimeout(timer));
-    };
-  }, [notifications, handleDismiss]);
-
-  const getNotificationStyles = (type: Notification['type']) => {
-    const baseStyles = 'border-l-4';
-    switch (type) {
-      case 'success':
-        return `${baseStyles} border-green-500 bg-green-50 text-green-800`;
-      case 'error':
-        return `${baseStyles} border-red-500 bg-red-50 text-red-800`;
-      case 'warning':
-        return `${baseStyles} border-yellow-500 bg-yellow-50 text-yellow-800`;
-      case 'info':
-        return `${baseStyles} border-blue-500 bg-blue-50 text-blue-800`;
-      default:
-        return `${baseStyles} border-gray-500 bg-gray-50 text-gray-800`;
-    }
-  };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
-pr-12243
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const getIcon = (type: Notification['type']) => {
     switch (type) {
       case 'success':
@@ -152,35 +61,7 @@ pr-12243
   return (
     <div className={`fixed ${getPositionStyles()} z-50 space-y-2`}>
       {visibleNotifications.map(notification => (
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
-
-
-  return (
-    <div className="fixed top-4 right-4 z-50 space-y-2">
-      {notifications.map((notification) => (
-        <NotificationItem
-          key={notification.id}
-className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
-        >
-          <div className="flex items-start justify-between">
-            <div className="flex-1">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <NotificationItem
-          key={notification.id}
-          notification={notification}
-          onRemove={removeNotification}
-        />
-
-pr-12243
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="flex items-start space-x-2">
                 {getIcon(notification.type)}
                 <div className="flex-1">
@@ -230,20 +111,7 @@ onClick={() = /> handleDismiss(notification.id)}"
             )}
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      ))}
-    </div>
-  )
-};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default NotificationSystem;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {notification.title && (
               <p className="text-sm">{notification.message}</p>
             </div>
@@ -296,13 +164,6 @@ pr-12243
   };
 
   const Icon = icons[notification.type];
-<<<<<<< HEAD
-=======
-export default NotificationSystem;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-export default NotificationSystem;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'} />"
@@ -330,33 +191,4 @@ export const useNotifications = () => {
   }
   return context;
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 pr-12243
-=======
-        <div;
-          key={notification.id}
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
-        >
-          <div className="flex items-start justify-between">"
-            <div className="flex-1">
-
-"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-pr-12243
-export const useNotifications = (
- ;
-  const context = useContext(NotificationContext);
-  if (context === undefined) {
-    throw new Error('useNotifications must be used within a NotificationProvider');) => {
-  return $3;}
-}
-  }
-  return context;
-};
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

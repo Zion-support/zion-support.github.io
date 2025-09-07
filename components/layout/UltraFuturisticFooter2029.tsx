@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
   Phone;
@@ -72,7 +71,6 @@ const contactInfo = {'
   website: 'https://ziontechgroup.com'
 };
 
-<<<<<<< HEAD
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star;
   Rocket, Brain, Atom, Building, Briefcase, Microscope;
   Twitter, Facebook, Linkedin, Instagram, Youtube;
@@ -82,10 +80,6 @@ const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 const serviceCategories = [
   {
-=======
-const serviceCategories = []
-  {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     title: 'AI & Machine Learning'
     icon: Brain;
     services: ['
@@ -93,7 +87,6 @@ const serviceCategories = []
     ];
   }
 ];
-<<<<<<< HEAD
 {
         name: 'AI Consciousness Evolution',
         href: '/ai-consciousness-evolution-2029',
@@ -181,10 +174,6 @@ const socialLinks = [
 origin/cursor/automate-test-improve-and-merge-code-2533
 const footerSections = [
   {
-=======
-const footerSections = []
-  {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     title: 'Company'
     links: ['
       { name: 'About Us', href: '/about' },'
@@ -209,7 +198,6 @@ const footerSections = []
       { name: 'API Reference', href: '/api' },
   {'
     title: 'Legal',
-<<<<<<< HEAD
     links: [;
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
@@ -274,14 +262,6 @@ const UltraFuturisticFooter2029 = () => {
               </div>
             </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    links: [;'
-      { name: 'Privacy Policy', href: '/privacy' },'
-      { name: 'Terms of Service', href: '/terms' },'
-      { name: 'Cookie Policy', href: '/cookies' },'
-      { name: 'Data Protection', href: '/data - protection' },'
-      { name: 'Accessibility', href: '/accessibility' },'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <p className='text-gray-400 mb-6 leading-relaxed'>
               Leading the revolution in AI, quantum computing, and autonomous;
               technology solutions. Transforming businesses with cutting-edge;
@@ -300,7 +280,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <a href={`mailto:${contactInfo.email}`} className='text-sm'>
                   {contactInfo.email}
                 </a>
-<<<<<<< HEAD
               </div>
               <div className='flex items-center space-x-3 text-gray-400'>
                 <MapPin className='w-4 h-4' />
@@ -309,35 +288,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             {/* Social Links */}
 <div className='flex space-x-4'>
-=======
-              </div>'
-              <div className='flex items-center space-x-3 text-gray-400'>'
-                <MapPin className='w-4 h-4' />'
-                <span className='text-sm'>{contactInfo.address}</span>              </div>            </div>
-            {/* Social Links */}'
-            <div className='flex space-x-4'>
-              {socialLinks.map(social => (            {/* Contact Information */}
-            <div className="space-y-3 mb-6">"
-              <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">"
-                <Phone className="w-4 h-4" />"`
-                <a href={`tel:${contactInfo.mobile}`} className="text-sm">
-                  {contactInfo.mobile}
-                </a>
-              </div>"
-              <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">"
-                <Mail className="w-4 h-4" />"`
-                <a href={`mailto:${contactInfo.email}`} className="text-sm">
-                  {contactInfo.email}
-                </a>
-              </div>"
-              <div className="flex items-center space-x-3 text-gray-400">"
-                <MapPin className="w-4 h-4" />"
-                <span className="text-sm">{contactInfo.address}</span>
-              </div>
-            </div>
-            {/* Social Links */}'
-            <div className='flex space-x-4'>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {socialLinks.map(social => (
                 <a;
                   key={social.name}
@@ -345,20 +295,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   target='_blank''
                   rel='noopener noreferrer'`
                   className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
-<<<<<<< HEAD
                 >
                   <social.icon className='w-5 h-5' />
-=======
-                >'
-                  <social.icon className='w-5 h-5' />                </a>                <a;
-                  key={social.name}
-                  href={social.href}"
-                  target="_blank""
-                  rel="noopener noreferrer"`
-                  className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
-                >"
-                  <social.icon className="w-5 h-5" />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               ))}
             </div>
@@ -428,7 +366,6 @@ const UltraFuturisticFooter2029 = () => {}
             </p>;
 
           {/* Service Categories */}
-
 
 <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
@@ -530,20 +467,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
 
-
-<<<<<<< HEAD
           {/* Quick Links */}
 <div className='lg:col-span-1'>
-=======
-          {/* Quick Links */}'
-          <div className='lg:col-span-1'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h4 className='text-lg font-semibold text-white mb-6'>
               Quick Links;
             </h4>'
             <div className='grid grid-cols-2 gap-2'>
               {quickLinks.map(link => (
-
 
                 <Link;
                   key={link.name}
@@ -584,17 +514,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </Link>;
                       </li>;
 
-
           {/* Footer Sections */}
-<<<<<<< HEAD
           {/* Footer Sections */}
 <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>
-=======
-          {/* Footer Sections */}'
-          <div className='lg:col-span-1'>'
-            <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className='space-y-4'>
               {footerSections.map(section => (
 
@@ -775,17 +698,10 @@ const UltraFuturisticFooter2029 = () =>: any {}
                         >
 origin/cursor/automate-test-improve-and-merge-code-2533
                           {link.name}
-<<<<<<< HEAD
       {/* Bottom Footer */}
 <div className='border-t border-slate-700/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
-=======
-      {/* Bottom Footer */}'
-      <div className='border-t border-slate-700/50'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>'
-          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className='text-sm text-gray-400'>
 
               © 2025 Zion Tech Group. All rights reserved.
@@ -823,14 +739,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Terms of Service;
               </Link>"
               <Link href="/cookies" className="hover:text-white transition-colors">
-<<<<<<< HEAD
                 className='hover:text-white transition-colors'
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Cookie Policy
-=======
-                Cookie Policy;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </Link>
             </div>
           </div>
@@ -877,10 +789,8 @@ export default UltraFuturisticFooter2029;  )
 }
 export default UltraFuturisticFooter2029;
 
-
 }
 export default UltraFuturisticFooter2029;
-<<<<<<< HEAD
 <div className='bg-gradient-to-r from-purple-600/10 to-blue-600/10 border-t border-slate-700/50'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
           <div className='text-center'>
@@ -911,10 +821,3 @@ export default UltraFuturisticFooter2029;
 
 export default UltraFuturisticFooter2029;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

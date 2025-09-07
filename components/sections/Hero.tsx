@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     text: string;
     href: string;
   }
@@ -35,25 +34,12 @@ const Hero: React.FC<HeroProps> = ({;
   }
   secondaryAction?: {}
     text: string;
-=======
-
-  secondaryAction?: {
-    text: string
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     href: string;
   }
-<<<<<<< HEAD
   stats?: Array<{
     value: string
     label: string
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
-
-
-import React from 'react';;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
 
@@ -65,13 +51,6 @@ title: string;
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>
 origin/cursor/automate-test-improve-and-merge-code-2533
     color: string
-<<<<<<< HEAD
-=======
-  stats?: Array<{}
-    value: string;
-    label: string;
-    color: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }>
 }
 const Hero: React.FC<HeroProps> = ({}
@@ -80,30 +59,17 @@ const Hero: React.FC<HeroProps> = ({}
   primaryAction;
   secondaryAction;'
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
-=======
-          <p className = 'text-xl sm: text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light' />;}
-    color: string;}
-  }>
-}
-;
-  const Hero: React.FC<HeroProps /> = ({ title;
-  subtitle;
-  primaryAction;
-  secondaryAction;
-          <p className='text-xl sm: text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   stats}) => {
   return (
 
-<<<<<<< HEAD
           </p>
           </p>;
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (;'
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
               {primaryAction && (;
-<<<<<<< HEAD
+
           {(primaryAction || secondaryAction) && (
 <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               {primaryAction && (
@@ -111,11 +77,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button
                   href={primaryAction && primaryAction.href}
                   size='lg'
-=======
-                <Button;
-                  href={primaryAction && primaryAction.href}'
-                  size='lg''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
             {title}
           </h1>;
@@ -167,16 +128,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
         {/* Stats Section */}
         {stats && (;
-<<<<<<< HEAD
           <div
         {stats && (
 <div
 origin/cursor/automate-test-improve-and-merge-code-2533
             className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in'
-=======
-          <div'
-            className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             style={{ animationDelay: '0 && 0.6s' }}>;
             {stats && stats.map((stat, index) => (;'
               <div key={index} className='text-center group'>;'
@@ -199,11 +155,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         )}
         {/* Trust Indicators */}
-<<<<<<< HEAD
 <div
-=======
-        <div'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className='mt-16 md:mt-20 animate-fade-in'
             </div>"
             <div className="flex items-center gap-2">"
@@ -338,10 +290,5 @@ export default Hero;
       </div>
 
       {/* Decorative Elements */}
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

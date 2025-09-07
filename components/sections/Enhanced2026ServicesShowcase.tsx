@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   ArrowRight;
   Brain;
   Zap;
@@ -11,7 +10,6 @@
   Cpu;
   Lock;
   Cloud;
-
 
 import Link from 'next/link';
 const Enhanced2026ServicesShowcase = () => {}
@@ -324,34 +322,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
 
-<<<<<<< HEAD
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-=======
-        >'
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
               2026 Revolutionary Services;
             </span>
           </h2>'
           <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed'>
-<<<<<<< HEAD
             Experience the future with our cutting-edge AI, quantum, and
             emerging technology services designed to transform your business
-=======
-            Experience the future with our cutting-edge AI, quantum, and;
-            emerging technology services designed to transform your business          </p>        >"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              2026 Revolutionary Services;
-            </span>
-          </h2>"
-          <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
-            Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </p>
         </motion.div>'
           className='text-center mb-16'>;'
@@ -373,16 +354,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;
         </motion && motion.div>;
 
-
-
-
         {/* Category Overview */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
           viewport={{ once: true }}
-
 
         >
           {categories.map((category, index) => (
@@ -505,13 +482,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               viewport={{ once: true }}
 
-<<<<<<< HEAD
               whileHover={{ scale: 1.02, y: -5 }}
 className='group relative'
-=======
-              whileHover={{ scale: 1.02, y: -5 }}'
-              className='group relative'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             >
               <div;`
                 className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}
@@ -582,7 +554,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <li key={i} className="flex items-center text-gray-400 text-xs">"
                         <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
 
-
                   {service.description}
                 </p>
 
@@ -605,14 +576,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Price and CTA */}'
                 <div className='flex items-center justify-between'>
 
-
-<<<<<<< HEAD
 <div className='flex items-center justify-between'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                   <div>
-=======
-                  <div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <span className='text-2xl font-bold text-cyan-400'>
                       {service.price}
                     </span>'
@@ -684,7 +650,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Join thousands of businesses already leveraging our revolutionary services to achieve unprecedented growth and innovation.
             </p>"
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-<<<<<<< HEAD
 className='text-center'
         >
           <div className='bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8'>
@@ -698,9 +663,6 @@ className='text-center'
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
-=======
-              <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
@@ -710,16 +672,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200"
                 >"
                   <Rocket className="w-5 h-5 mr-2" />
-<<<<<<< HEAD
 href='/services'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200'
                 >
                   <Rocket className='w-5 h-5 mr-2' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                   View All Services
-=======
-                  View All Services;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </Link>
               </motion.div>
               <motion.div;
@@ -739,7 +697,6 @@ export default Enhanced2026ServicesShowcase;
 export default Enhanced2026ServicesShowcase;
 
 };
-
 
 };
 
@@ -928,7 +885,6 @@ export default Enhanced2026ServicesShowcase);
 ;
 export default Enhanced2026ServicesShowcase;
 ;
-<<<<<<< HEAD
 href='/contact'
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-200'
                 >
@@ -946,9 +902,3 @@ href='/contact'
 
 export default Enhanced2026ServicesShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

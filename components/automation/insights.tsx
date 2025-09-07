@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
  return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
 }</ul> </div> </div>) 
-
 
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {}
   talentMd;
@@ -12,28 +10,12 @@ import Head from 'next/head';
 '
 import Head from 'next/head';
 
-
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useEffect, useState  } from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-
 import Head from 'next/head';;
 export default function AutomationInsightsPage() {
-<<<<<<< HEAD
   const [intel, setIntel] = useState<any>(null);
-=======
-export default function AutomationInsightsPage() {};
-  const [intel, setIntel] = useState<any>(null);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [talentMd, setTalentMd] = useState<string>('');
   useEffect(() => {'
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});'
@@ -69,22 +51,6 @@ function AutomationInsightsPage() {}
             <div className="text - xs text - gray - 500">Generated at {intel.generated_at}</div>;"
             <div className="mt - 3">;"
               <h3 className="font - medium">Top Keywords</h3>;"
-=======
-  const [intel, setIntel] = useState<any />(null);
-
-const [talentMd, setTalentMd] = useState<string />('');
-  useEffect(() => {}
-}
-    fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
-    fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
-
-        {!intel ? (
-          <div className="text - sm text - gray - 500">Loading…</div>) : (
-          <div className="mt - 3 text - sm">;
-            <div className="text - xs text - gray - 500">Generated at {intel.generated_at}</div>;
-            <div className="mt - 3">;
-              <h3 className="font - medium">Top Keywords</h3>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <ul className="list - disc list - inside">;
                 {Object.entries (intel.insights.keyword_counts).map (([k, v]: any) => (
                   <li key={k}>{k}: {v as any}</li>))}
@@ -101,20 +67,11 @@ const [talentMd, setTalentMd] = useState<string />('');
       </section>;"
       <section id="talent" className="mb - 8">;"
         <h2 className="font - medium">Talent Highlights</h2>;
-<<<<<<< HEAD
         {!talent_md ? ("
           <div className="text - sm text - gray - 500">Loading…</div>) : ("
           <pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800">{talent_md}</pre>)}
       </section>;
     </div>);
-<<<<<<< HEAD
-=======
-        {!talent_md ? (
-          <div className="text - sm text - gray - 500">Loading…</div>) : (
-          <pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark: bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800">{talent_md;}</pre>)}
-      </section>;
-    </div>);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="text-sm text-gray-500">Loading…</div>
         ) : (
           <div className="mt-3 text-sm">
@@ -173,11 +130,3 @@ const [talentMd, setTalentMd] = useState<string />('');
 );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

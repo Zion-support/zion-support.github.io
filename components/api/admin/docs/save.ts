@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 const ts = new Date () .toISOString ()
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   if (req && req.method !== 'POST') {';
@@ -14,7 +13,6 @@ function ensureDir(dir: string) {}
     fs && fs.mkdirSync(dir, { recursive: true })
   }
 }
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
@@ -26,18 +24,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
   if (req && req.method !== 'POST') {
-=======
-export default function handler() { return null; }
-    return res.status(403).json({ error: 'Forbidden' });'
-  if (req && req.method !== 'POST') {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res && res.status(405).json({ error: 'Method Not Allowed' })
   }
   try {}
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
     res.status(200).json({ ok: true, version: ts })
-<<<<<<< HEAD
     const body = req.body;
 
 const jsonString =
@@ -53,9 +45,6 @@ const jsonString =
 res.status(200).json({ ok: true, version: ts });
 origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
-=======
-  } catch (e) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     res && res.status(500).json({ error: 'Failed to save content' });
 const ts = new Date () .toISOString ();
 export default /**;
@@ -89,13 +78,3 @@ function ensure_dir() {}
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 '
-=======
-
-  } catch (e) {
-    res.status (500).json ({ error: 'Failed to save content' ;});
-  }
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
-}
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

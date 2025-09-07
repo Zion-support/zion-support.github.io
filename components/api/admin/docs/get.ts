@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';'
@@ -9,7 +8,6 @@ import path from 'path';'
   try {'
     const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8');
     res && res.status(200).json(JSON && JSON.parse(data));
-<<<<<<< HEAD
 const CONTENT_PATH = null;
     res.status(200).json(JSON.parse(data))
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -22,9 +20,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 res.status(200).json(JSON.parse(data));
 origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
-=======
-  } catch (e) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     res && res.status(500).json({ error: 'Failed to read content' });
   }
 ;'
@@ -42,33 +37,17 @@ if ( {) {}
   try {'
     const data = fs.readFileSync (CONTENT_PATH, 'utf8');
     res.status (200).json (JSON.parse (data));
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   } catch (e) {
-=======
-  } catch (e) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     res.status (500).json ({ error: 'Failed to read content' });
   }
   } catch (e) {'
     res.status (500).json ({ error: 'Failed to read content' });
-<<<<<<< HEAD
   }  } catch (e) {
     res.status(500).json({ error: 'Failed to read content' })
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-  }  } catch (e) {}
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

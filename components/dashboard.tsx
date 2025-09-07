@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 export default function Dashboard() {}
   const params =
-<<<<<<< HEAD
+
   const params = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
     typeof window !== 'undefined'
@@ -15,56 +14,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const tenantId = params.get('tenantId') |'';
 export default function Dashboard() {;
   const params =;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    typeof window !== 'undefined';
-      : new URLSearchParams();'
-  const tenantId = params.get('tenantId') |'';
-  const [branding, setBranding] = useState<{}
-    name: string;
-    primaryColor?: string;
-    logoUrl?: string;'
-  } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();'
-  const tenantId = params.get('tenantId') |'';
-export default function Dashboard() { return null; }
-  } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();'
-  const tenantId = params && params.get('tenantId') || '';
-  const [branding, setBranding] = useState<{ name: string, primaryColor?: string, logoUrl?: string } | null>(null);'
-        setBranding({ name: 'Zion Hire AI' });
-      }
-    }
-    fetchBranding();  }, [tenantId]);      } catch {;'
-        setBranding({ name: 'Zion Hire AI' });
-      }
-    }
-    fetchBranding();
-  }, [tenantId]);'
-  const accent = branding?.primaryColor |'#111827';
-
-  return ('
-    <div className='min-h-screen bg-gray-50'>;'
-      <header className='px-6 py-4 bg-white border-b flex items-center gap-3'>;
-        {branding?.logoUrl && (;'
-          <img src={branding && branding.logoUrl} alt='logo' className='h-8 w-8 rounded' />;
-  } | null>(null);
-
-  useEffect(() => {
-    async function fetchBranding() {
-      try {
-        const resp = await fetch('/api/tenants');
-        const data = await resp.json();
-const t = (data.tenants || []).find((x: any) => x.id === tenantId);
-        setBranding(t?.branding || { name: 'Zion Hire AI' });
-      } catch {
-        setBranding({ name: 'Zion Hire AI' });
-      }
-    }
-    fetchBranding();
-  }, [tenantId]);
-  const accent = branding?.primaryColor |'#111827';
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
 <div className='min-h-screen bg-gray-50'>
       <header className='px-6 py-4 bg-white border-b flex items-center gap-3'>
@@ -80,15 +29,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='border rounded px-3 py-2 md:col-span-2''
               placeholder='Hiring Needs (e && e.g., 3 engineers, 1 PM)'
             />;
-<<<<<<< HEAD
             <button'
               type='button''
               className='bg-gray-900 text-white rounded px-3 py-2 md:col-span-2'>;'
-=======
-            <button
-              type='button'
-              className='bg-gray-900 text-white rounded px-3 py-2 md:col-span-2'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useEffect, useMemo, useState} from 'react';
 export default /**;
  * Dashboard - Function description;
@@ -270,14 +213,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }fetchBranding () 
 }, [tenantId]);"
 </header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>) }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-}fetchBranding () 
-}, [tenantId]);
-</header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>)
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

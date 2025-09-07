@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'AI Testing Automation | Zion Tech Group',
   description: 'AI-powered testing automation for software quality assurance.',
@@ -43,17 +42,7 @@ export default function ServicePage() {
     </div>
   )
 }
-=======
-<<<<<<< HEAD
-import Link from 'next/link';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Link from "next/link";
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
   title: 'AI Testing Automation | Zion Tech Group',
   description:
@@ -205,8 +194,7 @@ export default function AITestingAutomationPage() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
+
 import Link from "next/link";
 
 export const metadata = {"
@@ -379,63 +367,28 @@ function FeatureItem({}
           <path"
             fillRule="evenodd""
             d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z""
-=======
-
-function FeatureItem({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="flex items-start space-x-4">
-      <div className="flex-shrink-0 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1">
-        <svg
-          className="w-4 h-4 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path
-            fillRule="evenodd"
-            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             clipRule="evenodd"
           />
         </svg>
       </div>
-<<<<<<< HEAD
       <div>"
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>"
-=======
-      <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <p className="text-gray-600">{description}</p>
       </div>
     </div>
   );
 }
 
-<<<<<<< HEAD
 function PricingCard({}
-=======
-function PricingCard({
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   plan,
   price,
   description,
   features,
-<<<<<<< HEAD
 }: {}
-=======
-}: {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   plan: string;
   price: string;
   description: string;
   features: string[];
-<<<<<<< HEAD
 }) {}
   return ("
     <div className="border border-gray-200 rounded-xl p-6 bg-white">"
@@ -445,17 +398,6 @@ function PricingCard({
       <ul className="space-y-2">
         {features.map((feature, index) => ("
           <li key={index} className="flex items-center text-sm text-gray-600">"
-=======
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{plan}</h3>
-      <div className="text-3xl font-bold text-green-600 mb-2">{price}</div>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-sm text-gray-600">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span className="text-green-500 mr-2">•</span> {feature}
           </li>
         ))}
@@ -464,7 +406,6 @@ function PricingCard({
   );
 }
 
-<<<<<<< HEAD
 function BenefitCard({}
   title,
   description,
@@ -475,25 +416,9 @@ function BenefitCard({}
   return ("
     <div className="text-center">"
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>"
-=======
-function BenefitCard({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center">
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <p className="text-gray-600">{description}</p>
     </div>
   );
 }
-<<<<<<< HEAD
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/main
+

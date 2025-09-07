@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = any;
@@ -11,10 +9,6 @@ const completion = await client.chat.completions.create ({
 origin/cursor/automate-test-improve-and-merge-code-2533
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: system
-=======
-  model: 'gpt-4o-mini', messages: [ {'
-  role: 'system', content: system;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 export type AnalyzeResponse = {';
   analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';'
@@ -36,12 +30,8 @@ export type AnalyzeRequestBody = {}
   context?: Record<string, unknown>;
 };
 
-<<<<<<< HEAD
 export type AnalyzeResponse = {
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export type AnalyzeResponse = {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   analysis: string;
 };
 
@@ -89,7 +79,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ analysis })
   } catch (error: any) {'
     console.error('Analyze API error', error?.message |error);
-<<<<<<< HEAD
 
     const user = [
 `Operator Prompt: ${operatorPrompt}`,
@@ -117,11 +106,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: 'Failed to generate analysis' })
     console && console.error('Analyze API error', error?.message || error);
-=======
-'
-    return res.status(500).json({ error: 'Failed to generate analysis' })'
-    console && console.error('Analyze API error', error?.message || error);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res && res.status(500).json({ error: 'Failed to generate analysis' });
   }'
     const analysis = completion && completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
@@ -135,14 +119,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
     const analysis =;
       completion.choices?.[0]?.message?.content?.trim () ||;'
-=======
-
-
-}
-
-const analysis =;
-      completion.choices?.[0]?.message?.content?.trim () ||;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'No analysis generated.';
     return res.status (200).json ({ analysis })} catch (error: any) {console.error ('Analyze API error';, error?.message || error)return res.status (500).json ({ error: 'Failed to generate analysis' ;},
 }
@@ -150,7 +126,6 @@ const analysis =;
 const analysis = completion.choices?.[0]?.message?.content?.trim () || 'No analysis generated.';
 
     return res.status (200).json ({ analysis });
-<<<<<<< HEAD
   } catch (error: any) {'
     console.error ('Analyze API error', error?.message || error);'
     return res.status (500).json ({ error: 'Failed to generate analysis' });
@@ -160,22 +135,9 @@ const analysis = completion.choices?.[0]?.message?.content?.trim () || 'No analy
   } catch (error: any) {'
     console.error ('Analyze API error', error?.message || error);'
     return res.status (500).json ({ error: 'Failed to generate analysis' });
-=======
-  } catch (error: any) {
-    console.error ('Analyze API error', error?.message || error);}
-    return res.status (500).json ({ error: 'Failed to generate analysis';,}
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
-<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

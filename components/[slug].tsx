@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';'
 import { useRouter  } from 'next/router';'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';'
@@ -308,7 +307,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items - center space - x-2'>;'
                   <Mail className='w - 4 h - 4 text - purple - 400' />;
                   <span>{service.contact_info.email}</span>;
-<<<<<<< HEAD
                 </div>;
                 <div className='flex items - center space - x-2'>;
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
@@ -318,17 +316,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="flex items-center space-x-2"><Phone className="w - 4 h - 4 text-cyan-400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w - 4 h - 4 text-purple-400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w - 4 h - 4 text-green-400" /><span className="text-xs">{service.contact_info.address}</span></div>;
-=======
-                </div>;'
-                <div className='flex items - center space - x-2'>;'
-                  <MapPin className='w - 4 h - 4 text - green - 400' />;'
-                  <span className='text - xs'>{service.contact_info.address}</span>;"
-                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w - full">Start Free Trial < ArrowRight className="w - 5 h - 5 ml - 2" /></Button>;"
-              <div className="mt - 6 space - y-3 text - sm text - slate - 300">;"
-                <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;"
-                <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;"
-                <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>;
           </div>;
         </div>;
@@ -338,7 +325,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 // Static export support: generate root-level pages for service slugs;
 
-<<<<<<< HEAD
                 className='w-full'
               >
                 Start Free Trial
@@ -367,9 +353,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 // Static export support: generate root-level pages for service slugs
 
-=======
-// Static export support: generate root-level pages for service slugs;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
 function collectAllServices(): Svc[] {}
   return enhancedRealMicroSaasServices.concat(
@@ -406,14 +389,10 @@ function normalizeSlug(value: string): string {}
 }
   };
 }
-<<<<<<< HEAD
     .replace(/(^-|-$)/g, '');
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 export const getStaticPaths: GetStaticPaths = async () => {
-=======
-export const getStaticPaths: GetStaticPaths = async () => {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export const getStaticPaths: GetStaticPaths = async () => {;
 
 export const getStaticPaths: GetStaticPaths = async () => {};
@@ -519,7 +498,6 @@ export const getStaticPaths: GetStaticPaths = async () => {};
           static_slugs.add (base.toLowerCase ());
         }
 
-<<<<<<< HEAD
   // Exclude any slug that conflicts with an existing root page file
   try {
 const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
@@ -529,13 +507,6 @@ const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
 
 // Exclude any slug that conflicts with an existing root page file
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-
-
-
-  // Exclude any slug that conflicts with an existing root page file;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
     slug => !staticSlugs.has(slug)
   );
@@ -547,14 +518,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed; the component resolves the service client-side.
-<<<<<<< HEAD
   return { props: {} }
 };
   // Exclude any slug that conflicts with an existing root page file
-=======
-  return { props: {} };};
-  // Exclude any slug that conflicts with an existing root page file;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
 
   return {}
@@ -575,10 +541,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {};
 export const getStaticProps: GetStaticProps = async ({ params }) => {}
   // No dynamic fetching needed, the component resolves the service client-side.
 
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
     for (const entry of entries) {;
       if (entry && entry.isFile() && /\.tsx?$/.test(entry && entry.name)) {;'
@@ -642,42 +604,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {};
 }
 };
 ;
-<<<<<<< HEAD
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed; the component resolves the service client-side.
   return { props: {} };
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-import Head from 'next/head';
-import { useRouter  } from 'next/router';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
-import { extraServices  } from '../data/extra-services';
-import { additionalEnhancedServices  } from '../data/additional-real-services';
-import { innovativeAIServices  } from '../data/innovative-ai-services';
-import { quantumSpaceServices  } from '../data/quantum-space-services';
-import { enterpriseITServices  } from '../data/enterprise-it-services';
-import { newRealServices  } from '../data/new-real-services';
-import { marketReadyServices  } from '../data/market-ready-services';
-import { nextGenerationAIServices  } from '../data/next-generation-ai-services';
-import { emergingTechnologyServices  } from '../data/emerging-technology-services';
-import { comprehensiveITSolutions  } from '../data/comprehensive-it-solutions';
-import { marketValidatedServices  } from '../data/market-validated-services';
-import { newRealInnovations  } from '../data/new-real-innovations';
-import { realMarketServices  } from '../data/real-market-services';
-import { new2025Services  } from '../data/new-2025-services';
-import { curatedMarketServices  } from '../data/curated-market-services';
-import { cuttingEdgeITServices  } from '../data/cutting-edge-it-services';
-import { nextGenAIServices  } from '../data/next-gen-ai-services';
-import { industryRealServices  } from '../data/industry-real-services';
-import { professionalServices  } from '../data/professional-services';
-import { realVerifiedServices } from '../data/real-verified-services';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   Lock,
   Shield,
   Eye,
@@ -12,17 +11,12 @@
 import {';
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
-
-<<<<<<< HEAD
 export default function PasswordCheckerPage() {;
 import React, { useState, useEffect } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function PasswordCheckerPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [password, setPassword] = useState('');
@@ -30,32 +24,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [strength, setStrength] = useState(0);
   const [strengthText, setStrengthText] = useState('');
   const [strengthColor, setStrengthColor] = useState('');
-<<<<<<< HEAD
-=======
-export default function PasswordCheckerPage() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    }
-  AlertTriangle,;
-  ArrowRight,;'
-} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-import {';
-import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-<<<<<<< HEAD
 export default function PasswordCheckerPage() {;
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
   const [strengthText, setStrengthText] = useState('');
   const [strengthColor, setStrengthColor] = useState('');
-
 
       analyzePassword(password);
   const [checks, setChecks] = useState({
@@ -77,17 +52,9 @@ analyzePassword(password);
 origin/cursor/automate-test-improve-and-merge-code-2533
     } else {
       resetAnalysis();
-=======
-export default function PasswordCheckerPage() { return null; }
-    } else {}
-      resetAnalysis();    }      analyzePassword(password)
-    } else {}
-      resetAnalysis()
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }, [password]);
 
-<<<<<<< HEAD
     setChecks(newChecks);
     // Calculate strength score;
     let score = 0;
@@ -102,7 +69,6 @@ export default function PasswordCheckerPage() { return null; }
     if (pass.length >= 12) score += 10;
     if (pass.length >= 16) score += 5;
     setStrength(score);
-<<<<<<< HEAD
     // Set strength text and color
     if (score >= 90) {
       setStrengthText('Very Strong');
@@ -110,11 +76,6 @@ setStrengthColor('text-green-400');
     } else if (score >= 70) {
 origin/cursor/automate-test-improve-and-merge-code-2533
       setStrengthText('Strong');
-=======
-    // Set strength text and color;
-    if (score >= 90) {'
-      setStrengthText('Strong');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setStrengthColor('text-green-400');
     } else if (score >= 50) {;'
       setStrengthText('Moderate');'
@@ -131,7 +92,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security');'
     if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters');
     setSuggestions(suggestions)
-<<<<<<< HEAD
     // Generate suggestions
     generateSuggestions(newChecks, pass);
   };
@@ -188,11 +148,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const resetAnalysis = () => {
     setStrength(0);
     setStrengthText('');
-=======
-  const resetAnalysis = () => {}
-    setStrength(0);'
-    setStrengthText('');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setStrengthColor('');
     setChecks({}
     });
@@ -219,7 +174,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Fill the rest randomly;
     for (let i = 4, i < length, i++) {}
       result += charset[Math.floor(Math.random() * charset.length)]
-<<<<<<< HEAD
     }
       length: false,
       uppercase: false,
@@ -263,12 +217,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (strength >= 90) return 'bg-green-500';
     if (strength >= 70) return 'bg-green-400';
     if (strength >= 50) return 'bg-yellow-400';
-=======
-    }'
-    if (strength >= 90) return 'bg-green-500';'
-    if (strength >= 70) return 'bg-green-400';'
-    if (strength >= 50) return 'bg-yellow-400';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (strength >= 30) return 'bg-orange-400';
 
   };
@@ -298,13 +246,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <>
       <Head>
         <title>Password Strength Checker - Zion Tech Group</title>
-<<<<<<< HEAD
 <meta
           name='description'
-=======
-        <meta'
-          name='description''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           content='Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.'
         />
         <meta'
@@ -316,9 +259,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           content='Advanced password strength analyzer with security recommendations.'
         />
       </Head>
-
-
-
 
       {/* Hero Section */}'
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>'
@@ -357,394 +297,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Password Strength Checker;
           </h1>"
           <p className="text-xl text-indigo-200 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
             Analyze your password security with our advanced strength checker. Get detailed feedback
 
             protect your accounts and data.
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-            Analyze your password security with our advanced strength checker. Get detailed feedback;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            suggestions, and generate strong passwords to protect your accounts and data.
-          </p>
-        </div>
-      </section>
-      {/* Password Checker Tool */}
-<<<<<<< HEAD
-            </h2>"
-=======
-            </h2>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our advanced security analyzer evaluates multiple factors to determine password strength and security.
-            </p>
-          </div>
-                {/* Password Input */}
-                <div>"
-                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
-                    Enter Password;
-;
-    // Ensure at least one of each required character type;'
-    result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor (Math.random () * 26)]; // Uppercase;'
-    result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor (Math.random () * 26)]; // Lowercase;'
-    result += '0123456789'[Math.floor (Math.random () * 10)]; // Number;'
-    result += '!@#$%^&*'[Math.floor (Math.random () * 8)]; // Symbol;
-    // Fill the rest randomly;
-    for (let index = 4; i < length; i++) {}
-      result += charset[Math.floor (Math.random () * charset.length)];
-    }
-    // Shuffle the password;
-    result = result;'
-      .split ('');
-      .sort (() => Math.random () - 0.5);'
-      .join ('');
-    setGeneratedPassword (result);
-    set_password (result);
-  }
-;
-  const copyToClipboard = (text: string) =>: any {'
-    navigator.clipboard.write_text (text);  }    let result = '';
-;
-    // Ensure at least one of each required character type;'
-    result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor (Math.random () * 26)], // Uppercase;'
-    result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor (Math.random () * 26)], // Lowercase;'
-    result += '0123456789'[Math.floor (Math.random () * 10)], // Number;'
-    result += '!@#$%^&*'[Math.floor (Math.random () * 8)], // Symbol;
-    // Fill the rest randomly;
-    for (let index = 4, i < length, i++) {}
-      result += charset[Math.floor (Math.random () * charset.length)];
-    }
-    // Shuffle the password;'
-    result = result.split ('').sort (() => Math.random () - 0.5).join ('');
-    setGeneratedPassword (result);
-    set_password (result);
-  }
-;
-  const copyToClipboard = (text: string) =>: any {}
-    navigator.clipboard.write_text (text);
-  }
-;
-  const getStrengthBarColor = () =>: any {}
-    // Check condition'
-if (return 'bg - green - 500') {}
-  $2;
-}
-    // Check condition'
-if (return 'bg - green - 400') {}
-  $2;
-}
-    // Check condition'
-if (return 'bg - yellow - 400') {}
-  $2;
-}
-    // Check condition'
-if (return 'bg - orange - 400') {}
-  $2;
-}'
-    return 'bg - red - 400';  }
-;
-  const getCheckIcon = (passed: boolean) =>: any {}
-    return passed ? ('
-      <CheckCircle className='w - 5 h - 5 text - green - 400' />) : ('
-      <XCircle className='w - 5 h - 5 text - red - 400' />);  }    return 'bg - red - 400';
-  }
-;
-  const getCheckIcon = (passed: boolean) =>: any {}
-    return passed ? ('
-      <CheckCircle className='w - 5 h - 5 text - green - 400' />) : ('"
-      <XCircle className='w - 5 h - 5 text - red - 400' />);      <CheckCircle className="w - 5 h - 5 text - green - 400" />) : ("
-      <XCircle className="w - 5 h - 5 text - red - 400" />);
-  return (
-    <>;
-      <Head>;
-        <title > Password Strength Checker - Zion Tech Group</title>;
-        <meta;'
-          name='description';'
-          content='Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.';
-        />;
-        <meta;'
-          property='og:title';'
-          content='Password Strength Checker - Zion Tech Group';
-        />;
-        <meta;'
-          property='og:description';'
-          content='Advanced password strength analyzer with security recommendations.';
-        />;
-      </Head>;
-      {/* Hero Section */}'
-      <section className='pt - 32 pb - 20 bg - gradient - to - br from - indigo - 900 via - purple - 900 to - pink - 900'>;'
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;'
-          <div className='mb - 8'>;'
-            <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - indigo - 500 / 20 border border - indigo - 400 / 30 text - indigo - 300 text - sm font - medium mb - 6'>;'
-              <Lock className='w - 4 h - 4 mr - 2' />;
-              Password Security & Analysis;
-            </div>;
-          </div>;'
-          <h1 className='text - 4xl sm:text - 5xl lg:text - 6xl font - bold text - white mb - 8 leading - tight'>;
-            Password Strength Checker;
-          </h1>;'
-          <p className='text - xl text - indigo - 200 max - w-4xl mx - auto leading - relaxed'>;
-            Analyze your password security with our advanced strength checker.;
-            Get detailed feedback, suggestions, and generate strong passwords to;
-            protect your accounts and data.          </p>      </Head>;
-      {/* Hero Section */}"
-      <section className="pt - 32 pb - 20 bg - gradient - to - br from - indigo - 900 via - purple - 900 to - pink - 900">;"
-        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;"
-          <div className="mb - 8">;"
-            <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - indigo - 500 / 20 border border - indigo - 400 / 30 text - indigo - 300 text - sm font - medium mb - 6">;"
-              <Lock className="w - 4 h - 4 mr - 2" />;
-              Password Security & Analysis;
-            </div>;
-          </div>;"
-          <h1 className="text - 4xl sm:text - 5xl lg:text - 6xl font - bold text - white mb - 8 leading - tight">;
-            Password Strength Checker;
-          </h1>;"
-          <p className="text - xl text - indigo - 200 max - w-4xl mx - auto leading - relaxed">;
-            Analyze your password security with our advanced strength checker. Get detailed feedback,
-            suggestions, and generate strong passwords to protect your accounts and data.;
-          </p>;
-        </div>;
-      </section>;
-      {/* Password Checker Tool */}'
-      <section className='py - 20 bg - gray - 900'>;'
-        <div className='max - w-6xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;'
-          <div className='text - center mb - 16'>;'
-            <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 6'>;
-              Check Your Password Strength;
-            </h2>;'
-            <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-              Our advanced security analyzer evaluates multiple factors to;
-              determine password strength and security.;
-            </p>;
-          </div>;'
-          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
-            {/* Input Form */}'
-            <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;'
-              <h3 className='text - 2xl font - bold text - white mb - 6 flex items - center'>;'
-                <Lock className='w - 6 h - 6 mr - 3 text - indigo - 400' />;
-                Password Analysis;
-              </h3>;'
-              <div className='space - y-6'>;
-                {/* Password Input */}
-                <div>;'
-                  <label className='block text - sm font - medium text - gray - 300 mb - 2'>;
-                    Enter Password;
-                  </label>;'
-                  <div className='relative'>;
-                    <input;'
-                      type={show_password ? 'text' : 'password'}
-                      value={password}
-                      on_change={e => set_password (e.target.value)}'
-                      placeholder='Type your password here...';'
-                      className='w - full px - 4 py - 3 pr - 12 bg - gray - 700 border border - gray - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - indigo - 500 focus:border - transparent';
-                    />;
-                    <button;'
-                      type='button';
-                      on_click={() => setShowPassword (!show_password)}'
-                      className='absolute inset - y-0 right - 0 pr - 3 flex items - center text - gray - 400 hover:text - white';
-                    >;
-                      {show_password ? ('
-                        <EyeOff className='w - 5 h - 5' />) : ('
-                        <Eye className='w - 5 h - 5' />)}                    </button>              Check Your Password Strength;
-            </h2>;"
-            <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
-              Our advanced security analyzer evaluates multiple factors to determine password strength and security.;
-            </p>;
-          </div>;"
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
-            {/* Input Form */}"
-            <Card className="p - 8 bg - gray - 800 border border - gray - 700">;"
-              <h3 className="text - 2xl font - bold text - white mb - 6 flex items - center">;"
-                <Lock className="w - 6 h - 6 mr - 3 text - indigo - 400" />;
-                Password Analysis;
-              </h3>;"
-              <div className="space - y-6">;
-                {/* Password Input */}
-                <div>;"
-                  <label className="block text - sm font - medium text - gray - 300 mb - 2" html_for="input-;
-                    Enter Password;"
-                  ">;
-                    Enter Password;
-                  </label>;"
-                  <div className="relative">;
-<section className='py-20 bg-gray-900'>
-        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-              Check Your Password Strength
-            </h2>
-            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-              Our advanced security analyzer evaluates multiple factors to
-              determine password strength and security.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            {/* Input Form */}
-            <Card className='p-8 bg-gray-800 border border-gray-700'>
-              <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>
-                <Lock className='w-6 h-6 mr-3 text-indigo-400' />
-                Password Analysis
-              </h3>
-              <div className='space-y-6'>
-                {/* Password Input */}
-                <div>
-                  <label className='block text-sm font-medium text-gray-300 mb-2'>
-                    Enter Password
-                  </label>
-                  <div className='relative'>
-                    <input
-                      type={showPassword ? 'text' : 'password'}
-                      value={password}
-                      onChange={e => setPassword(e.target.value)}
-                      placeholder='Type your password here...'
-                      className='w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent'
-                    />
-                    <button
-                      type='button'
-                      onClick={() => setShowPassword(!showPassword)}
-                      className='absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white'
-                    >
-                      {showPassword ? (
-                        <EyeOff className='w-5 h-5' />
-                      ) : (
-                        <Eye className='w-5 h-5' />
-                      )}
-                    </button>
-                  </div>
-                </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                {/* Generate Password */}
-                <div>;
-<<<<<<< HEAD
-                  <Button;
-                    onClick={generateStrongPassword}'
-                    className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'>;'"
-=======
-                  <Button
-                    onClick={generateStrongPassword}
-                    className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    <RefreshCw className='w-5 h-5 mr-2' />                    Generate Strong Password                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold";
-                  >;"
-                    <RefreshCw className="w-5 h-5 mr-2" />;
-                    Generate Strong Password;
-                  </Button>;
-                </div>;
-
-                {/* Generated Password Display */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'
-                  >
-                    <RefreshCw className='w-5 h-5 mr-2' />
-                    Generate Strong Password
-                  </Button>
-                </div>
-                {/* Generated Password Display */}
-                {generatedPassword && (
-<div className='p-4 bg-gray-700 rounded-lg border border-gray-600'>
-                    <div className='flex items-center justify-between'>
-                      <span className='text-sm text-gray-300'>
-                        Generated Password:
-                      </span>
-                      <Button
-                        onClick={() => copyToClipboard(generatedPassword)}
-                        variant='outline'
-                        size='sm'
-                        className='border-gray-600 text-gray-300 hover:bg-gray-600'
-                      >
-                        <Copy className='w-4 h-4 mr-2' />
-                        Copy
-                      </Button>
-                    </div>
-                    <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                      {generatedPassword}
-=======
-                      {generatedPassword}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                    <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}
-
-                      {generatedPassword}
-
-                    </div>
-                  </div>
-                    </div>;
-                  </div>;
-                )}
-
-<div className='text-sm text-gray-400'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                  <p>• Real-time strength analysis</p>
-                  <p>• Multiple security criteria</p>
-                  <p>• Detailed feedback and suggestions</p>
-                  <p>• Strong password generator</p>
-                </div>
-              </div>
-            </Card>
-<<<<<<< HEAD
-            {/* Strength Analysis */}"
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">"
-=======
-            {/* Strength Analysis */}
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                <Shield className="w-6 h-6 mr-3 text-purple-400" />
-                Security Analysis;
-              </h3>
-                  {/* Strength Score */}
-                  <div>;'
-                    <div className='flex items-center justify-between mb-2'>;'
-                      <span className='text-sm text-gray-300'>;
-                        Password Strength:;
-                      </span>                      <span className={`text-lg font-bold ${strengthColor}`}>;
-                        {strengthText} ({strength}/100);
-                      </span>;
-                    </div>;'
-                    <div className='w-full bg-gray-700 rounded-full h-3'>;"`
-                      <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">;
-                  {/* Strength Score */}
-
-
-
-
-<<<<<<< HEAD
-                      <div 
-<Card className='p-8 bg-gray-800 border border-gray-700'>
-              <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>
-                <Shield className='w-6 h-6 mr-3 text-purple-400' />
-                Security Analysis
-              </h3>
-              {password ? (
-<div className='space-y-6'>
-                  {/* Strength Score */}
-                  <div>
-                    <div className='flex items-center justify-between mb-2'>
-                      <span className='text-sm text-gray-300'>
-                        Password Strength: </span>                      <span className={`text-lg font-bold ${strengthColor;}`}>
-                        {strengthText} ({strength}/100)
-                      </span>
-                      <span className={`text-lg font-bold ${strengthColor}`}>
-                        {strengthText} ({strength}/100)
-                      </span>
-                    </div>
-<div className='w-full bg-gray-700 rounded-full h-3'>
-                      <div
-origin/cursor/automate-test-improve-and-merge-code-2533
-                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-<<<<<<< HEAD
-=======
-                      <div;`
-                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                        style={{ width: `${strength}%` }}
-=======
-                        style={{ width: `${strength;}%` }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       />
                     </div>
                   </div>
@@ -756,44 +312,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;'
                     <div className='w-full bg-gray-700 rounded-full h-3'>;"
                       <div                    <div className="w-full bg-gray-700 rounded-full h-3">;
-<<<<<<< HEAD
                       <div;`
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}`
                         style={{ width: `${strength}%` }}
-=======
-                      <div
-                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-                        style={{ width: `${strength;}%` }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       />;
                     </div>;
                   </div>;
 
                   {/* Security Checks */}
-<<<<<<< HEAD
                   <div>
 <h4 className='text-lg font-semibold text-white mb-3'>
                       Security Criteria
                     </h4>
-=======
-                  <div>'
-                    <h4 className='text-lg font-semibold text-white mb-3'>
-                      Security Criteria;
-                    </h4>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className='space-y-3'>
                       {Object.entries(checks).map(([key, passed]) => ('
                         <div key={key} className='flex items-center space-x-3'>
                           {getCheckIcon(passed)}
-<<<<<<< HEAD
                           <span'`
                             className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}'
                           >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries(checks).map(([key, passed]) => ("
-=======
-                          <span
-                            className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}
-                          >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries(checks).map(([key, passed]) => (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <div key={key} className="flex items-center space-x-3">
                           {getCheckIcon(passed)}'`
                           <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>'
@@ -912,15 +449,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;'
                     <div className='w - full bg - gray - 700 rounded - full h - 3'>;"
                       <div                    <div className="w - full bg - gray - 700 rounded - full h - 3">;
-<<<<<<< HEAD
                       <div;`
                         className={`h - 3 rounded - full transition - all duration - 300 ${getStrengthBarColor ()}`}`
                         style={{ width: `${strength}%` }}
-=======
-                      <div;
-                        className={`h - 3 rounded - full transition - all duration - 300 ${getStrengthBarColor ()}`}
-                        style={{ width: `${strength;}%` }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       />;
                     </div>;
                   </div>;
@@ -937,7 +468,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             className={`text - sm ${passed ? 'text - green - 400' : 'text - red - 400'}`}'
                           >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries (checks).map (([key, passed]) => ("
                         <div key={key} className="flex items - center space - x-3">;
-<<<<<<< HEAD
                           {getCheckIcon (passed)}
                           <span className={`text - sm ${passed ? 'text - green - 400' : 'text - red - 400'}`}>;
                           >
@@ -946,18 +476,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
                             {key === 'numbers' && 'Contains number'}
-=======
-                          {getCheckIcon (passed)}'`
-                          <span className={`text - sm ${passed ? 'text - green - 400' : 'text - red - 400'}`}>;'
-                            {key === 'length' && 'At least 8 characters'}'
-                            {key === 'uppercase' && 'Contains uppercase letter'}'
-                            {key === 'lowercase' && 'Contains lowercase letter'}'
-                            {key === 'numbers' && 'Contains number'}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             {key === 'symbols' && 'Contains special character'}
                     </div>;
                   </div>;
-
 
                   {/* Suggestions */}
                             </span>                          </div>
@@ -995,7 +516,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   )}
                 </div>
-<<<<<<< HEAD
               ) : (
 <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
                   <div className='text-6xl mb-4'>🔒</div>
@@ -1003,17 +523,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     Enter a password above to see the security analysis and get
                     personalized suggestions.
                   </p>
-=======
-              ) : ('
-                <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>'
-                  <div className='text-6xl mb-4'>🔒</div>'
-                  <p className='text-gray-400'>
-                    Enter a password above to see the security analysis and get"
-                    personalized suggestions.                  </p>                <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">"
-                  <div className="text-6xl mb-4">🔒</div>"
-                  <p className="text-gray-400">
-                    Enter a password above to see the security analysis and get personalized suggestions.
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
               )}
             </Card>
@@ -1046,24 +555,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   )}
 
-
-
-
-
       {/* Features */}
-<<<<<<< HEAD
 "
       <section className="py-20 bg-gray-800">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="text-center mb-16">"
-=======
-
-      <section className="py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
               Advanced Password Security Features
 <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1071,10 +568,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>
-=======
-              Advanced Password Security Features;
-            </h2>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Comprehensive password analysis with real-time feedback and security recommendations.
             </p>
@@ -1120,11 +613,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Based on industry best practices and security standards for maximum protection.
               </p>
             </Card>
-<<<<<<< HEAD
 "
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
 "
               <div className="text-4xl mb-4">🔒</div>"
@@ -1146,7 +635,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       {/* Security Tips */}
-<<<<<<< HEAD
 <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
@@ -1223,13 +711,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Avoid writing passwords down
-=======
-                  Update passwords regularly;
-                </li>
-              </ul>
-            </Card>
-                  Avoid writing passwords down;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </li>
               </ul>
             </Card>
@@ -1251,19 +732,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      {/* CTA Section */}
-<section className='py-20 bg-gradient-to-r from-indigo-600 to-purple-600'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-          </h2>
-=======
-          </h2>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           <p className='text-xl text-indigo-100 mb-8'>
             Join thousands of users who trust our password strength checker to;
             improve their account security.
@@ -1290,21 +759,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              className='border-white text-white hover:bg-white hover:text-indigo-600'
-            >
-              View Pricing
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

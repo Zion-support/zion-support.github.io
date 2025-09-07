@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
-<<<<<<< HEAD
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handle_submit = async (values: QuoteFormValues) => {
@@ -14,21 +12,6 @@
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
-=======
-}React.useEffect ( () => {}
-  const next = services.filter ( (s) => {}
-  //Category const handle_submit = async (values: QuoteFormValues) => {}
-  const res = await fetch ('/api / quote - request', {'
-  method: 'POST', headers: {}
-'
-  'Content-Type': 'application/json' ;
-};
-
-
-body: JSON.stringify ({}
-  service: values.serviceTitle, description: values.projectDescription, timeline: {}
-  start: values.timelineStart, end: values.timelineEnd;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 budgetRange: values.budgetRange;
 }
@@ -43,15 +26,11 @@ budgetRange: values.budgetRange;
   handleSubmit;
 }/> </div>)
 };export default ServicesPage;
-<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import React from 'react',
 import SEO from '../../components/SEO',
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
 import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
@@ -69,14 +48,9 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 
 const mapLocalToServiceItem = null;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ServicesIndexPage () {
  export default function ServicesIndexPage () {
-=======
-export default function ServicesIndexPage () {}
- export default function ServicesIndexPage () {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {}
   const next = services.filter ( (s) => {}
@@ -272,7 +246,6 @@ if ( {) {}
       <Head>;
         <title > Zion AI Marketplace - Services</title>;"
         <meta name="description" content="Discover curated IT services. Request quotes with AI - assisted summaries." />;
-<<<<<<< HEAD
       </Head>;
       <div className="relative">;
         <div className="absolute -z - 10 -top - 40 -left - 40 w - 96 h - 96 rounded - full blur - 3xl opacity - 40 bg - gradient - to - tr from - cyan - 400 via - blue - 500 to-purple-500" />;
@@ -284,19 +257,6 @@ if ( {) {}
               <div className="text-sm text-white / 70">{filtered.length} results</div>;
             </div>;
             <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols-3 gap-5">;
-=======
-      </Head>;"
-      <div className="relative">;"
-        <div className="absolute -z - 10 -top - 40 -left - 40 w - 96 h - 96 rounded - full blur - 3xl opacity - 40 bg - gradient - to - tr from - cyan - 400 via - blue - 500 to - purple - 500" />;"
-        <div className="flex flex - col sm: flex - row gap - 6">;
-          <MarketplaceFilters available_categories={available_categories} value={filters} on_change={set_filters} />;"
-          <div className="flex - 1">;"
-            <div className="mb - 4 flex items - center justify - between">;"
-              <h1 className="text - 2xl font - semibold text - white">Services</h1>;"
-              <div className="text - sm text - white / 70">{filtered.length} results</div>;
-            </div>;"
-            <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 5">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {filtered.map ((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}
 
@@ -305,15 +265,7 @@ if ( {) {}
         </div>;
       </div>;
 
-<<<<<<< HEAD
       <QuoteRequestModal
-=======
-
-
-
-
-      <QuoteRequestModal;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
@@ -333,15 +285,8 @@ export default ServicesPage;
 ;
 export default ServicesPage;
 ;
-<<<<<<< HEAD
   handleSubmit 
 }/> </div>) 
 };
 export default ServicesPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

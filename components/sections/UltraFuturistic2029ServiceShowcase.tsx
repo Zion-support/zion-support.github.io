@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState } from 'react';
 
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029  } from '../../data/2029-cutting-edge-innovations';
 
 type Service = any;
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -28,24 +21,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Cloud
   Eye
   Timer
-=======
-  ChevronDown;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Cpu;
-  Shield;
-  Rocket;
-  Globe;
-  Database;
-  Lock;
-  Cloud;
-  Eye;
-  Timer;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Sparkles;
-
 
 } from 'lucide-react';'
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';'
@@ -188,7 +164,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
   services;
   title = "2029 Ultra - Futuristic Innovations";"
   subtitle = "Experience the future of technology with our revolutionary services";
-<<<<<<< HEAD
   // Filter and sort services
   const filteredServices = services
     .filter(
@@ -248,29 +223,6 @@ ease: 'easeOut' as const,
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-=======
-    .sort((a, b) => {}
-      switch (sortBy) {'
-        case 'innovation':'
-          // Default to 'Advanced' if innovationLevel is not available'
-          const aLevel = (a as any).innovationLevel |'Advanced';'
-          const bLevel = (b as any).innovationLevel |'Advanced';
-          const innovationOrder = {}
-            Revolutionary: 4;
-            Breakthrough: 3;
-            Advanced: 2;
-            Emerging: 1;
-          }
-          return (
-            (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0)
-  const itemVariants = {}
-    hidden: { opacity: 0, y: 20 }
-    visible: {}
-      opacity: 1;
-      y: 0;
-      transition: {}
-  return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <section className="py-20 relative overflow-hidden">;
       {/* Background Elements */}
         {/* Header */}
@@ -284,7 +236,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
       </div>"
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
       <div className='absolute inset-0 pointer-events-none'>
         <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
         <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
@@ -294,9 +245,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Header */}
-=======
-        {/* Header */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
 
         {/* Header */}
@@ -307,7 +255,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{ duration: 0.8 }}'"
           className='text-center mb-16'        >          className="text-center mb-16"'
           className='text-center mb-16'        >
-
 
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -395,7 +342,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <option value="rating">Rating</option>;
             </select>;
           </div>;
-<<<<<<< HEAD
                 </button>
               ))}
             </div>
@@ -405,9 +351,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <select
-=======
-            <select;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}'
               className='px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500'
@@ -424,15 +367,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
 
         {/* Services Grid */}
-<<<<<<< HEAD
         <motion&& motion.div
           variants={containerVariants}
 initial='hidden'
-=======
-        <motion&& motion.div;
-          variants={containerVariants}'
-          initial='hidden''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           whileInView='visible'
           viewport={{ once: true }}
 
@@ -474,16 +411,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 
-<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.4 }}
 className='text-center mt-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
-=======
-        >'
-          <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h3 className='text-3xl font-bold text-white mb-4'>
               Ready to Experience the Future?
             </h3>'
@@ -595,7 +527,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },'
               { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },'
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-<<<<<<< HEAD
               <motion.div
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'
               >
@@ -611,21 +542,13 @@ href='/pricing'
           </div>
         </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-              <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {/* Innovation Stats */}
         <motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.5 }}
 className='mt-20'
         >
-=======
-          transition={{ duration: 0.8, delay: 0.5 }}'
-          className='mt-20''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[]
               {'
@@ -653,7 +576,6 @@ className='mt-20'
                 label: 'Average Rating'
                 value: (
                   services.reduce((sum, s) => sum + s.rating, 0) /
-<<<<<<< HEAD
                   services.length
 
                 ).toFixed(1),
@@ -663,10 +585,6 @@ className='mt-20'
             ].map((stat, index) => (
 origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
-=======
-                  services.length;
-              <motion.div'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
             {[;
               {;'
@@ -721,20 +639,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>'
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.value}
-<<<<<<< HEAD
                 </div>
                 <div className='text-gray-400'>{stat.label}</div>
-=======
-                </div>'
-                <div className='text-gray-400'>{stat.label}</div>              </motion.div>              >`
-                <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>"
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>"
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>"
-                <div className="text-gray-400">{stat.label}</div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </motion.div>
-
 
             ))}
           </div>
@@ -750,7 +657,6 @@ export default UltraFuturistic2029ServiceShowcase;
 export default UltraFuturistic2029ServiceShowcase;
 
 };
-
 
 export default UltraFuturistic2029ServiceShowcase;
                   services.reduce ((sum, s) => sum + s.rating, 0) /;
@@ -794,15 +700,8 @@ export default UltraFuturistic2029ServiceShowcase);
 ;
 export default UltraFuturistic2029ServiceShowcase;
 ;
-<<<<<<< HEAD
 );
 };
 
 export default UltraFuturistic2029ServiceShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

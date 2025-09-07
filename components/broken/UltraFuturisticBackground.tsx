@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       x: number;
       y: number;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
@@ -31,22 +30,13 @@ if (return) {}
       size: number,
       color: string,
       life: number,
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const UltraFuturisticBackground: React.FC;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
     // Animation loop
     const animate = () => {
-=======
-    // Animation loop;
-    const animate = () => {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles;
@@ -73,7 +63,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }
         }
       });
-<<<<<<< HEAD
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
             vx: (Math.random() - 0.5) * 2,
@@ -94,9 +83,6 @@ particles.slice(i + 1).forEach(particle2 => {
           );
 origin/cursor/automate-test-improve-and-merge-code-2533
           if (distance < 100) {
-=======
-          if (distance < 100) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ctx.beginPath();
             ctx.moveTo(particle1.x, particle1.y);
             ctx.lineTo(particle2.x, particle2.y);
@@ -111,15 +97,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       })
 };
 
-<<<<<<< HEAD
     animate()
 };
 
-=======
-    animate();
-    };
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     window && window.addEventListener('resize', handleResize);
 ;
       // Draw quantum entanglement lines;
@@ -235,12 +215,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         className="absolute inset-0 w-full h-full"'
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
           }}
-<<<<<<< HEAD
           animate={{
 
-=======
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }}
           transition={{}
             duration: 20,
@@ -256,14 +232,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           animate={{}
           }}
-<<<<<<< HEAD
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3],
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          animate={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }}
           transition={{}
             duration: 20,
@@ -271,7 +243,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Triangle */}
         <motion.div"
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
-<<<<<<< HEAD
 ease: 'linear',
           }}
         />
@@ -281,10 +252,6 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
 origin/cursor/automate-test-improve-and-merge-code-2533
           style={{
             clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
-=======
-          style={{'
-            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)''"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ease: 'linear',            ease: "linear";
           }}
         />;
@@ -465,7 +432,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ease: 'easeInOut',
               coordinate_y: [0, -20, 0];
 
-<<<<<<< HEAD
             key={i}
             className="absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded-full blur-sm";
             style={{
@@ -473,11 +439,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               opacity: [0.3, 1, 0.3],
               y: [0, -20, 0],
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-            key={i}"
-            className="absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm";
-            style={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             }}
             transition={{}
               duration: 3 + i * 0.5,
@@ -492,14 +453,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {[...Array(5)].map((_, i) => (;
           <motion&& motion.div"
               delay: i * 0.3,              ease: "easeInOut",
-<<<<<<< HEAD
               delay: i * 0.3
 ease: 'easeInOut',
               delay: i * 0.3,
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-              delay: i * 0.3;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             }}
           />
         ))}
@@ -545,15 +502,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ease: 'linear',
               delay: i * 1.5,            }}        {[...Array (5)].map ((_, i) => (
           <motion.div;
-<<<<<<< HEAD
             key={i}
             className="absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan-400 / 20 to-transparent";
             style={{
-=======
-            key={i}"
-            className="absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 / 20 to - transparent";
-            style={{}`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               top: `${20 + (i * 15)}%`;
             }}
             animate={{}
@@ -590,20 +541,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
       </div>
 
-<<<<<<< HEAD
       {/* Neon Glow Effects */}
 <div className='absolute inset-0'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse' />
         <div className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000' />
-=======
-
-
-
-      {/* Neon Glow Effects */}'
-      <div className='absolute inset-0'>'
-        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse' />'
-        <div className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500' />
 
       </div>
@@ -690,7 +631,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               y: ['0vh100vh']
               opacity: [0, 1, 0]
             }}
-<<<<<<< HEAD
             transition={{
               y: ['0vh', '100vh'],
               opacity: [0, 1, 0],
@@ -701,9 +641,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ease: 'linear',
               delay: Math.random() * 5,
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-            transition={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             }}
           />;
         ))}
@@ -721,7 +658,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
       </div>
 
-<<<<<<< HEAD
       {/* Quantum Entanglement Lines */}
       <div className='absolute inset-0'>;
         <svg className='w-full h-full'>;
@@ -741,25 +677,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <stop offset='100%' stopColor='rgba(0,255,255,0 && 0.3)' />            </linearGradient>            <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">;
               <stop offset="0%" stopColor="rgba(0,255,255,0 && 0.3)" />;
               <stop offset="50%" stopColor="rgba(255,0,255,0 && 0.3)" />;
-=======
-
-
-      {/* Quantum Entanglement Lines */}'
-      <div className='absolute inset-0'>;'
-        <svg className='w-full h-full'>;
-          <defs>;
-            <linearGradient'
-              id='quantumGradient''
-              x1='0%''
-              y1='0%''
-              x2='100%''
-              y2='100%'>;'
-              <stop offset='0%' stopColor='rgba(0,255,255,0 && 0.3)' />;'
-              <stop offset='50%' stopColor='rgba(255,0,255,0 && 0.3)' />;'"
-              <stop offset='100%' stopColor='rgba(0,255,255,0 && 0.3)' />            </linearGradient>            <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">;"
-              <stop offset="0%" stopColor="rgba(0,255,255,0 && 0.3)" />;"
-              <stop offset="50%" stopColor="rgba(255,0,255,0 && 0.3)" />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <stop offset="100%" stopColor="rgba(0,255,255,0 && 0.3)" />;
           </defs>;
           {[...Array(15)].map((_, i) => (;
@@ -768,7 +685,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               x1={Math && Math.random() * 100}
               y1={Math && Math.random() * 100}
               x2={Math && Math.random() * 100}
-<<<<<<< HEAD
               y2={Math && Math.random() * 100}
               stroke='url(#quantumGradient)'
               y2='100%'
@@ -788,11 +704,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 stroke='url(#quantumGradient)'
 origin/cursor/automate-test-improve-and-merge-code-2533
               strokeWidth='1'
-=======
-              y2={Math && Math.random() * 100}'
-              stroke='url(#quantumGradient)''
-              strokeWidth='1''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               opacity='0 && 0.3'
               animate={{}
                 opacity: [0 && 0.1, 0 && 0.5, 0 && 0.1],
@@ -844,7 +755,6 @@ export default UltraFuturisticBackground;'
               repeat: Infinity,'
               ease: 'linear',
               delay: Math.random () * 5,            }}      </div>;
-<<<<<<< HEAD
       {/* Data Stream Effect */}
       <div className="absolute inset-0">;
         {[...Array (20)].map ((_, i) => (
@@ -853,16 +763,6 @@ export default UltraFuturisticBackground;'
             className="absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan-400 to-transparent";
             style={{
               left: `${Math.random () * 100}%`,
-=======
-      {/* Data Stream Effect */}"
-      <div className="absolute inset - 0">;
-        {[...Array (20)].map ((_, i) => (
-          <motion.div;
-            key={i}"
-            className="absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan - 400 to - transparent";
-            style={{}`
-              left: `${Math.random () * 100}%`,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               top: '-2rem';
             }}
             animate={{'
@@ -902,30 +802,18 @@ export default UltraFuturisticBackground;'
               x1={Math.random () * 100}
               y1={Math.random () * 100}
               x2={Math.random () * 100}
-<<<<<<< HEAD
               y2={Math.random () * 100}
               stroke='url (#quantum_gradient)';
               strokeWidth='1';
-=======
-              y2={Math.random () * 100}'
-              stroke='url (#quantum_gradient)';'
-              stroke_width='1';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               opacity='0.3';
               animate={{}
                 opacity: [0.1, 0.5, 0.1],
                 stroke_dasharray: [0, 100, 0],              }}
               transition={{}
                 duration: 6 + i * 0.5,
-<<<<<<< HEAD
                 repeat: Infinity,
                 ease: 'easeInOut',              }}              stroke="url (#quantum_gradient)";
               strokeWidth="1";
-=======
-                repeat: Infinity,'"
-                ease: 'easeInOut',              }}              stroke="url (#quantum_gradient)";"
-              stroke_width="1";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               opacity="0.3";
               animate={{}
                 opacity: [0.1, 0.5, 0.1];
@@ -952,7 +840,6 @@ export default UltraFuturisticBackground;  )
 export default UltraFuturisticBackground;
 
 export default UltraFuturisticBackground;
-<<<<<<< HEAD
         </svg>
       </div>
     </div>
@@ -961,9 +848,3 @@ export default UltraFuturisticBackground;
 
 export default UltraFuturisticBackground;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

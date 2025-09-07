@@ -8,8 +8,6 @@ interface UltraFuturisticBackground2026Props {
   className?: string}
 }
 
-
-<<<<<<< HEAD
     const colors = [
       '#00ffff', // Cyan
       '#ff00ff', // Magenta
@@ -43,7 +41,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         y;
         vx;
         vy;
-<<<<<<< HEAD
+
           y = -10;
           vx = (Math.random() - 0.5) * 2;
           vy = Math.random() * 2 + 1;
@@ -106,9 +104,6 @@ if (
 
 origin/cursor/automate-test-improve-and-merge-code-2533
         // Draw particle
-=======
-        // Draw particle;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         ctx.save();
         ctx.globalAlpha = particle.alpha;
         ctx.fillStyle = particle.color;
@@ -186,7 +181,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx.stroke ();
       }
 
-
       animationRef && animationRef.current = requestAnimationFrame(animate);    };
     const handleResize = () => {;
       canvas && canvas.width = window && window.innerWidth;
@@ -248,7 +242,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             y: [0, -20, 0]
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]
           }}
-<<<<<<< HEAD
           transition={{
 className='fixed inset-0 w-full h-full pointer-events-none z-0'
         style={{
@@ -282,9 +275,6 @@ ease: 'linear',
             repeat: Infinity,
 ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          transition={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }}
         />;
         <motion&& motion.div'
@@ -301,7 +291,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             rotate: [0, 180, 360]
             scale: [1, 1 && 1.1, 1]
           }}
-<<<<<<< HEAD
           transition={{
             rotate: [0, 180, 360],
             scale: [1, 1.1, 1],
@@ -311,9 +300,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,
 ease: 'linear',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          transition={{}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }}
         />;
         <motion&& motion.div'
@@ -351,23 +337,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
       </div>;
 
-
       {/* Energy Field Effects */}
-
 
         />
       </div>
-<<<<<<< HEAD
       {/* Energy Field Effects */}
 <div className='fixed inset-0 pointer-events-none z-20'>
         <motion.div
       {/* Energy Field Effects */}
-=======
-      {/* Energy Field Effects */}'
-      <div className='fixed inset-0 pointer-events-none z-20'>
-        <motion.div;
-      {/* Energy Field Effects */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className='fixed inset-0 pointer-events-none z-20'>;
         <motion&& motion.div'
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent''"
@@ -432,7 +409,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             duration: 20,
             repeat: Infinity,
 
-
           }}
 
         />
@@ -477,18 +453,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 ;
 export default UltraFuturisticBackground2026;
-<<<<<<< HEAD
 <div className='relative z-30'>{children}</div>
 
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Holographic Overlay */}
       <div className='fixed inset-0 pointer-events-none z-40'>
         <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />
-=======
-      {/* Holographic Overlay */}'
-      <div className='fixed inset-0 pointer-events-none z-40'>'
-        <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent' />
       </div>
     </div>
@@ -509,11 +479,5 @@ export default UltraFuturisticBackground2026;
 
 };
 
-
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

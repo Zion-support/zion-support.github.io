@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';
 
@@ -31,9 +30,6 @@ import {}
   TrendingUp,
   DollarSign,
   Users,
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Search;
   Filter;
   TrendingUp;
@@ -49,47 +45,11 @@ import { Search;
   Brain;
   Globe;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function ToolComparisonPage() {;
 
   Rocket
  } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-export default function ToolComparisonPage() {
-  const [searchTerm, setSearchTerm] = React.useState('');
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const [sortBy, setSortBy] = React.useState('rating');
-<<<<<<< HEAD
-
-  const allTools = [
-    // AI Tools
-  Rocket;
-export default /**
- * ToolComparisonPage - Function description
- */
-function ToolComparisonPage() {
-  const [search_term, setSearchTerm] = React.useState ('');
-  const [selected_category, setSelectedCategory] = React.useState ('All');
-  const [sort_by, setSortBy] = React.useState ('rating');
-;
-  const all_tools = [;
-    // AI Tools;
-    {
-      pros: [
-        'Easy to use'
-        'Extensive integrations'
-        'Reliable'
-=======
-export default function ToolComparisonPage() { return null; }
-    {}
-      pros: ['
-        'Easy to use''
-        'Extensive integrations''
-        'Reliable''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Great support'
       ]'
       cons: ['Can get expensive', 'Limited customization']'
@@ -136,7 +96,6 @@ export default function ToolComparisonPage() { return null; }
         'Excellent docs''
         'Reliable'
       ]
-<<<<<<< HEAD
       name: 'ChatGPT',
       category: 'AI Assistant',
       pricing: 'Free - $20/month',
@@ -306,87 +265,6 @@ pros: [
       cons: [
         'Limited free features'
         'Basic customization'
-=======
-      cons: ['
-        'Higher fees than some alternatives''
-        'Complex for beginners''
-        'Strict requirements'
-      ]'
-      website: 'https://stripe.com''
-      icon: <DollarSign className='w-6 h-6' />'
-      color: 'text-blue-400''
-    },    // Startup Tools      bestFor: 'Online businesses, SaaS companies, e-commerce';'
-      pros: ['Developer-friendlyGlobal reachExcellent docsReliable']'
-      cons: ['Higher fees than some alternativesComplex for beginnersStrict requirements']'
-      website: 'https://stripe.com'"
-      icon: <DollarSign className="w-6 h-6" />'
-      color: 'text-blue-400'
-    }
-    // Startup Tools;
-    {'
-      name: 'HubSpot''
-      category: 'Marketing & Sales''
-      pricing: 'Free - $45/month'
-      rating: 4.7'
-      users: '135K+''
-      bestFor: 'B2B startups, SaaS companies, marketing teams'
-      pros: ['
-        'Free tier''
-        'All-in-one solution''
-        'Great for beginners''
-        'Excellent support'
-      ]
-      cons: ['
-        'Can get expensive''
-        'Complex for small teams''
-        'Limited customization'
-      ]'
-      website: 'https://hubspot.com''
-      icon: <TrendingUp className='w-6 h-6' />'
-      color: 'text-orange-400''
-    },    {      bestFor: 'B2B startups, SaaS companies, marketing teams';'
-      pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support']'
-      cons: ['Can get expensiveComplex for small teamsLimited customization']'
-      website: 'https://hubspot.com'"
-      icon: <TrendingUp className="w-6 h-6" />'
-      color: 'text-orange-400'
-    }
-    {'
-      name: 'Mailchimp''
-      category: 'Email Marketing''
-      pricing: 'Free - $59/month'
-      rating: 4.5'
-      users: '12M+''
-      bestFor: 'E-commerce, content creators, small businesses''
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable']'
-      cons: ['Limited free features', 'Basic automation', 'Can be expensive']'
-      website: 'https://mailchimp.com''
-      icon: <Users className='w-6 h-6' />'
-      color: 'text-yellow-400''
-    },    {      bestFor: 'E-commerce, content creators, small businesses';'
-      pros: ['Free tierEasy to useGood templatesAffordable']'
-      cons: ['Limited free featuresBasic automationCan be expensive']'
-      website: 'https://mailchimp.com'"
-      icon: <Users className="w-6 h-6" />'
-      color: 'text-yellow-400'
-    }
-    {'
-      name: 'Calendly''
-      category: 'Productivity''
-      pricing: 'Free - $12/month'
-      rating: 4.8'
-      users: '10M+''
-      bestFor: 'Sales teams, consultants, remote teams'
-      pros: ['
-        'Free tier''
-        'Easy integration''
-        'Professional appearance''
-        'Time-saving'
-      ]
-      cons: ['
-        'Limited free features''
-        'Basic customization''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Can be expensive'
       ]'
       icon: <Globe className='w-6 h-6' />'
@@ -457,7 +335,6 @@ pros: [
       pricing: 'Free - $12 / month',
       rating: 4.8,'
       users: '10M+',
-<<<<<<< HEAD
         'Limited free features',
         'Basic customization',
         'Can be expensive',
@@ -493,10 +370,6 @@ pros: [
 origin/cursor/automate-test-improve-and-merge-code-2533
   const sortedTools = [...filteredTools].sort((a, b) => {
     switch (sortBy) {
-=======
-  const sortedTools = [...filteredTools].sort((a, b) => {}
-    switch (sortBy) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case 'rating':
         return b.rating - a.rating;'
       case 'users':
@@ -763,7 +636,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       default: return 0;
   });
 
-<<<<<<< HEAD
 return (
           parseInt(b.users.replace(/[^0-9]/g, '')) -
           parseInt(a.users.replace(/[^0-9]/g, ''))
@@ -779,57 +651,6 @@ return (
     if (pricing.includes('$')) return 'text-blue-400';
 return 'text-gray-400';
   };
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-  return (
-    <>
-      <Head>
-        <title>Tool Comparison - Zion Tech Group</title>
-<meta
-          name='description'
-          content='Compare SaaS tools, AI services, and business solutions. Find the perfect tools for your business needs with our comprehensive comparison.'
-        />
-        <meta property='og:title' content='Tool Comparison - Zion Tech Group' />
-        <meta
-          property='og:description'
-          content='Comprehensive comparison of SaaS tools and AI services to help you make informed decisions.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      {/* Hero Section */}
-      <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
-        <div className='absolute inset-0'>
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]' />
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]' />
-        </div>
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <div className='mb-20 animate-fade-in'>
-            <div className='mb-8'>
-              <div className='inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6 animate-scale-in'>
-                <Search className='w-4 h-4 mr-2' />
-                Smart Tool Selection
-              </div>
-            </div>
-            <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
-              Tool Comparison
-            </h1>
-            <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>
-              Compare SaaS tools, AI services, and business solutions. Make
-              informed decisions with our comprehensive analysis and expert
-              insights.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <Button
-                href='#comparison'
-                size='lg'
-=======
-              <Button'
-                href='#comparison''
-                size='lg''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className='animate-scale-in shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40'
               <Button'
                 href='/contact''
@@ -897,20 +718,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
-<<<<<<< HEAD
               <input"
                 type="text""
-=======
-              <input
-                type="text"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 placeholder="Search tools, categories, or use cases..."
                 value={searchTerm}
             {/* Category Filter */}'
             <div className='flex flex-wrap gap-2'>;"
               {categories && categories.map(category => (            <div className="flex flex-wrap gap-2">;
               {categories && categories.map((category) => (;
-<<<<<<< HEAD
                 <button
               {categories.map(category => (                <button
 
@@ -928,27 +743,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                <button;
-              {categories.map(category => (                <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               />
             </div>
 
             {/* Category Filter */}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<div className='flex flex-wrap gap-2'>
-              {categories.map(category => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-                <button
-
-=======
-                <button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -965,23 +764,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Filter className='w-5 h-5 text-gray-400' />;
             </div>
 
-
-<<<<<<< HEAD
             {/* Sort */}
 <div className='flex items-center space-x-2'>
-=======
-            {/* Sort */}'
-            <div className='flex items-center space-x-2'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Filter className='w-5 h-5 text-gray-400' />
 
               <select;
                 value={sortBy}
-<<<<<<< HEAD
                 onChange={e => setSortBy(e && e.target.value)}'
-=======
-                onChange={e => setSortBy(e && e.target.value)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500';
               >;'
                 <option value='rating'>Sort by Rating</option>;'
@@ -995,7 +784,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Users</th>"
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Best For</th>"
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Actions</th>
-<<<<<<< HEAD
                   <tr
                 onChange={e => setSortBy(e.target.value)}
                 className='bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500'
@@ -1053,12 +841,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     key={index}
                     className='border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200'>;
                     <td className='py-4 px-6'>;
-=======
-                  <tr;
-                    key={index}'
-                    className='border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200'>;'
-                    <td className='py-4 px-6'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <div className='flex items-center space-x-3'>;
                         <div;`
                           className={`w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center ${tool && tool.color}`}>;
@@ -1104,21 +886,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           Visit;'
                           <ExternalLink className='w-3 h-3 ml-1' />;
                         </Button>;
-<<<<<<< HEAD
                         <Button'`
                           href={`/tool-details/${tool && tool.name.toLowerCase().replace(/\s+/g, '-')}`}'
                           variant='ghost''
                           size='sm''"
                           className='text-xs'>                          variant="ghost";"
                           size="sm";"
-=======
-                        <Button
-                          href={`/tool-details/${tool && tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-                          variant='ghost'
-                          size='sm'
-                          className='text-xs'>                          variant="ghost";
-                          size="sm";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           className="text-xs";
                         >;
                           Details;
@@ -1191,33 +964,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </tbody>
             </table>
           </div>
-<<<<<<< HEAD
           {sortedTools.length === 0 && (
 <div className='text-center py-20'>
               <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />
-=======
-          {sortedTools.length === 0 && ('
-            <div className='text-center py-20'>'
-              <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h3 className='text-xl font-semibold text-gray-400 mb-2'>
                 No tools found;
               </h3>'
               <p className='text-gray-500'>
-<<<<<<< HEAD
                 Try adjusting your search criteria or category filter."
               </p>            </div>            <div className="text-center py-20">"
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />"
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>"
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
-<<<<<<< HEAD
-=======
-                Try adjusting your search criteria or category filter.
-              </p>            </div>            <div className="text-center py-20">
-              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
-              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
               </p>
             </div>
           )}
@@ -1228,12 +987,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
-=======
-      {/* Detailed Comparison Cards */}'
-      <section className='py-24 bg-gray-900'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-          <div className='text-center mb-20'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
             </h2>'
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>'
@@ -1247,7 +1000,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       {/* Detailed Comparison Cards */}
-<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'`
@@ -1255,22 +1007,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items-start space-x-4 mb-4'>;
                   <div;
                   <span;`
-=======
-              <Card
-                key={index}
-                className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
-                <div className='flex items-start space-x-4 mb-4'>;
-                  <div
-                  <span
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`}>                    {tool && tool.pricing}
                   </span>;
                   <Button"
                 <div className="flex items-center justify-between">`
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
-
-
 
 '
                 <div className='flex items-center justify-between'>
@@ -1278,7 +1019,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
                   >                    {tool.pricing}
                   </span>
-<<<<<<< HEAD
                   <Button
                     className={`w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center ${tool.color}`}
                   >
@@ -1348,14 +1088,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-                  <Button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     {tool.pricing}
                   </span>
                   <Button;
                     href={tool.website}
-
 
 variant='outline'
                     size='sm'
@@ -1373,21 +1109,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 
-
       {/* CTA Section */}
 
-
-<<<<<<< HEAD
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
-=======
-      {/* CTA Section */}'
-      <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>'
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
           </h2>'
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1428,17 +1155,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               variant="outline""
               size="lg""
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'
-            >
-origin/cursor/automate-test-improve-and-merge-code-2533
-              Explore All Tools
-=======
-              Explore All Tools;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             </Button>
           </div>
         </div>
@@ -1450,10 +1167,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 }
-<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

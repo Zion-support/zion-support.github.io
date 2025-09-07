@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';'
 import { useRouter  } from 'next/router';'
 import { getServiceById  } from '../../data/micro-saas-services';'
@@ -41,21 +40,6 @@ export default function ServiceDetailPage() {}
 
   if (!service) {;
     return (
-<<<<<<< HEAD
-=======
-
-import Head from 'next/head';
-
-import { useRouter  } from 'next/router';
-import { getServiceById  } from '../../data/micro-saas-services';
-import ServiceDetail from '../../components/sections/ServiceDetail';;
-import Button from '../../components/ui/Button';
-
-export default function ServiceDetailPage() {
-
-    return (
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (!id || typeof id !== 'string') {
     return (
       <div className='min-h-screen bg-black flex items-center justify-center' />
@@ -115,52 +99,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
                 href='/services'
                 variant='ghost'
-=======
-              <Button'
-                href='/services''
-                variant='ghost''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 size='sm'
-<<<<<<< HEAD
               <Button"
                 href="/services""
                 variant="ghost""
                 size="sm""
-=======
-              <Button
-                href="/services"
-                variant="ghost"
-                size="sm"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className="text-gray-400 hover:text-white"
               >"
                 <ArrowLeft className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                className='text-gray-400 hover:text-white'
-              >
-                <ArrowLeft className='w-4 h-4 mr-2' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-                Back to Services
-              </Button>
-              <Button
-                href={service.website}
-variant='primary'
-                size='sm'
-                icon={<ExternalLink className='w-4 h-4' />}
-=======
-                Back to Services;
-              </Button>
-              <Button;
-                href={service.website}'
-                variant='primary''
-                size='sm''"
-                icon={<ExternalLink className='w-4 h-4' />}                variant="primary""
-                size="sm""
-                icon={<ExternalLink className="w-4 h-4" />}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >
                 Visit Service;
               </Button>
@@ -204,15 +150,9 @@ variant='primary'
                 href='/contact''
                 variant='outline''
                 size='lg'
-<<<<<<< HEAD
         {/* Related Services CTA */}
 <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-=======
-        {/* Related Services CTA */}'
-        <section className='py-16 bg-gray-900/50'>'
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-3xl font-bold text-white mb-6'>
             </h2>'
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
@@ -220,7 +160,6 @@ variant='primary'
               perfect solution for your business needs.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-<<<<<<< HEAD
               <Button
                 href='/services'
                 variant='primary'
@@ -237,20 +176,6 @@ href='/contact'
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Get Custom Solution
-=======
-              <Button'
-                href='/services''
-                variant='primary''
-                size='lg''
-                className='shadow-2xl shadow-blue-500/25'              >
-                View All Services;
-              </Button>
-              <Button'
-                href='/contact''
-                variant='outline''
-                size='lg'
-                Get Custom Solution;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </Button>;
             </div>;
           </div>;
@@ -261,7 +186,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 ;
-<<<<<<< HEAD
               <Button;
 '
 import Head from 'next / head';'
@@ -272,17 +196,6 @@ import Button from '../../components / ui / Button';'
 import {ArrowLeft, ExternalLink} from 'lucide-react';
 export default /**;
  * ServiceDetailPage - Function description;
-=======
-              <Button
-
-import Head from 'next / head';
-import {use_router} from 'next / router';
-import {getServiceById} from '../../data / micro - saas - services';
-import ServiceDetail from '../../components / sections / ServiceDetail';
-import Button from '../../components / ui / Button';
-export default /**
- * ServiceDetailPage - Function description
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  */
 function ServiceDetailPage() {}
   const router = use_router ();
@@ -300,7 +213,6 @@ if ( {) {}
           </h1>;'
           <p className='text - gray - 400 mb - 6'>;
             The requested service could not be found.;
-<<<<<<< HEAD
           </p>;
           <Button href='/services' variant='primary'>;
             <ArrowLeft className='w - 4 h - 4 mr - 2' />            Back to Services      <div className="min - h-screen bg - black flex items-center justify-center">;
@@ -309,16 +221,6 @@ if ( {) {}
           <p className="text - gray-400 mb-6">The requested service could not be found.</p>;
           <Button href="/services" variant="primary">;
             <ArrowLeft className="w - 4 h-4 mr-2" />;
-=======
-          </p>;'
-          <Button href='/services' variant='primary'>;'"
-            <ArrowLeft className='w - 4 h - 4 mr - 2' />            Back to Services      <div className="min - h-screen bg - black flex items - center justify - center">;"
-        <div className="text - center">;"
-          <h1 className="text - 2xl font - bold text - white mb - 4">Service Not Found</h1>;"
-          <p className="text - gray - 400 mb - 6">The requested service could not be found.</p>;"
-          <Button href="/services" variant="primary">;"
-            <ArrowLeft className="w - 4 h - 4 mr - 2" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </Button>;
         </div>;
       </div>);
@@ -341,7 +243,6 @@ if ( {) {}
           <Button href='/services' variant='primary'>;'
             <ArrowLeft className='w - 4 h - 4 mr - 2' />            Back to Services;
           </Button>;
-<<<<<<< HEAD
         </div>;
       </div>);  }      <div className="min - h-screen bg - black flex items-center justify-center">;
         <div className="text-center">;
@@ -349,15 +250,6 @@ if ( {) {}
           <p className="text - gray-400 mb-6">The requested service "{id}" could not be found.</p>;
           <Button href="/services" variant="primary">;
             <ArrowLeft className="w - 4 h-4 mr-2" />;
-=======
-        </div>;"
-      </div>);  }      <div className="min - h-screen bg - black flex items - center justify - center">;"
-        <div className="text - center">;"
-          <h1 className="text - 2xl font - bold text - white mb - 4">Service Not Found</h1>;"
-          <p className="text - gray - 400 mb - 6">The requested service "{id}" could not be found.</p>;"
-          <Button href="/services" variant="primary">;"
-            <ArrowLeft className="w - 4 h - 4 mr - 2" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </Button>;
         </div>;
       </div>));
@@ -367,7 +259,6 @@ if ( {) {}
       <Head>;
         <title>{service.name} | Zion Tech Group - Micro SaaS Services</title>;'
         <meta name='description' content={service.description} />;
-<<<<<<< HEAD
         <meta;'
           property='og:title';
           content={`${service.name} | Zion Tech Group`}
@@ -389,7 +280,7 @@ if ( {) {}
                 <ArrowLeft className='w - 4 h - 4 mr - 2' />                Back to Services;
               </Button>;
               <Button;
-<<<<<<< HEAD
+
                 href={service.website}
                 variant='primary';
                 size='sm';
@@ -406,32 +297,6 @@ if ( {) {}
                 className="text - gray-400 hover:text-white";
               >;
                 <ArrowLeft className="w - 4 h-4 mr-2" />;
-=======
-        <meta;
-property='og: title'
-
-          content={`${service.name} | Zion Tech Group
-}
-        />;
-        <meta property='og: description' content={service.descriptio;}
-} />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-      <div className='min-h-screen bg-black' />;
-        {/* Navigation */}
-
-        <nav className='border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50' />
-          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />
-            <div className='flex items-center justify-between h-16' />
-              <Button;
-href='/services'
-                variant='ghost'
-                size='sm'
-
-                className='text-gray-400 hover:text-white'
-               />
-                <ArrowLeft className='w-4 h-4 mr-2' />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Back to Services;
               </Button>
               <Button;
@@ -439,40 +304,9 @@ href={service.websit}
 }
 variant='primary';
                 size='sm';
-<<<<<<< HEAD
                 icon={<ExternalLink className='w - 4 h - 4' />}                variant="primary";
                 size="sm";
                 icon={<ExternalLink className="w-4 h-4" />}
-=======
-                href={service.website}'
-                variant='primary';'
-                size='sm';'
-                icon={<ExternalLink className='w - 4 h - 4' />}              >      </Head>;"
-      <div className="min - h-screen bg - black">;
-        {/* Navigation */}"
-        <nav className="border - b border - gray - 800 bg - black / 50 backdrop - blur - sm sticky top - 0 z - 50">;"
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-            <div className="flex items - center justify - between h - 16">;
-              <Button;"
-                href="/services";"
-                variant="ghost";"
-                size="sm";"
-                className="text - gray - 400 hover:text - white";
-              >;"
-                <ArrowLeft className="w - 4 h - 4 mr - 2" />;
-                Back to Services;
-              </Button>;
-              <Button;
-                href={service.website}'
-                variant='primary';'
-                size='sm';'"
-                icon={<ExternalLink className='w - 4 h - 4' />}                variant="primary";"
-                size="sm";"
-                icon={<ExternalLink className="w - 4 h - 4" />}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                icon={<ExternalLink className='w-4 h-4' />}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               >;
                 Visit Service;
               </Button>;
@@ -481,7 +315,6 @@ variant='primary';
         </nav>;
         {/* Service Detail Content */}
         <ServiceDetail service={service} />;
-<<<<<<< HEAD
         {/* Related Services CTA */}'
         <section className='py - 16 bg - gray - 900 / 50'>;'
           <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;'
@@ -497,37 +330,8 @@ variant='primary';
                 variant='primary';'
                 size='lg';'
                 className='shadow - 2xl shadow - blue - 500 / 25'              >;
-=======
-        {/* Service Detail Content */}
-        <ServiceDetail service={service} />;{/* Related Services CTA */}
-        <section className='py-16 bg-gray-900/50' />;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center' />;
-            <h2 className='text-3xl font-bold text-white mb-6' />;
-            </h2>;
-            <p className='text-gray-400 mb-8 max-w-2xl mx-auto' />;
-              Explore our complete portfolio of micro SaaS services to find the;
-              perfect solution for your business needs.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center' />;
-        {/* Related Services CTA */}
-        <section className='py-16 bg-gray-900/50' />;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center' />;
-            <h2 className='text-3xl font-bold text-white mb-6' />;
-            </h2>;
-            <p className='text-gray-400 mb-8 max-w-2xl mx-auto' />;
-              Explore our complete portfolio of micro SaaS services to find the;
-              perfect solution for your business needs.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center' />;
-              <Button;
-                href='/services';
-                variant='primary';
-                size='lg';
-                className='shadow-2xl shadow-blue-500/25' />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 View All Services;
               </Button>;
-<<<<<<< HEAD
               <Button;
                 href='/contact';
                 variant='outline';
@@ -544,7 +348,6 @@ perfect solution for your business needs.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center' />
               <Button;
-<<<<<<< HEAD
                 href='/contact';
                 variant='outline';
                 size='lg';
@@ -552,42 +355,6 @@ perfect solution for your business needs.
                 variant="outline";
                 size="lg";
                 className="border - white / 20 text-white hover:border-white / 40";
-=======
-              <Button;'
-                href='/contact';'
-                variant='outline';'
-                size='lg';'"
-                className='border - white / 20 text - white hover:border - white / 40'              >                href="/services";"
-                variant="primary";"
-                size="lg";"
-                className="shadow - 2xl shadow - blue - 500 / 25";
-                View All Services;
-              </Button>;
-              <Button;'
-                href='/contact';'
-                variant='outline';'
-                size='lg';'"
-                className='border - white / 20 text - white hover:border - white / 40'                href="/contact";"
-                variant="outline";"
-                size="lg";"
-                className="border - white / 20 text - white hover:border - white / 40";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-href='/services'
-                variant='primary'
-                size='lg'
-                className='shadow-2xl shadow-blue-500/25'
-               />
-                View All Services;
-              </Button>
-              <Button;
-href='/contact'
-                variant='outline'
-                size='lg'
-
-                className='border-white/20 text-white hover:border-white/40'
-               />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Get Custom Solution;
               </Button>;
             </div>;
@@ -596,15 +363,5 @@ href='/contact'
       </div>;
     </>);
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 }
 '"`
-=======
-    </>;
-
-  );
-
-}
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'API Testing Suite | Zion Tech Group',
   description: 'Professional API testing suite for software quality assurance.',
@@ -43,17 +42,7 @@ export default function ServicePage() {
     </div>
   )
 }
-=======
-<<<<<<< HEAD
-import Link from 'next/link';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Link from "next/link";
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
   title: 'API Testing Suite | Zion Tech Group',
   description:
@@ -303,8 +292,7 @@ export default function APITestingSuitePage() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
+
 import Link from "next/link";
 
 export const metadata = {"
@@ -571,52 +559,26 @@ function FeatureItem({}
       <div className="text-2xl">{icon}</div>
       <div>"
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>"
-=======
-
-function FeatureItem({
-  icon,
-  title,
-  description,
-}: {
-  icon: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="flex items-start space-x-4">
-      <div className="text-2xl">{icon}</div>
-      <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <p className="text-gray-600">{description}</p>
       </div>
     </div>
   );
 }
 
-<<<<<<< HEAD
 function PricingCard({}
-=======
-function PricingCard({
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   title,
   price,
   period,
   description,
   features,
   popular,
-<<<<<<< HEAD
 }: {}
-=======
-}: {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   title: string;
   price: string;
   period: string;
   description: string;
   features: string[];
   popular: boolean;
-<<<<<<< HEAD
 }) {}
   return (
     <div"
@@ -637,33 +599,10 @@ function PricingCard({
         {features.map((feature, index) => ("
           <li key={index} className="flex items-center">"
             <span className="text-indigo-500 mr-3">✓</span>"
-=======
-}) {
-  return (
-    <div
-      className={`border rounded-xl p-6 ${popular ? 'border-indigo-500 bg-indigo-50' : 'border-gray-200 bg-white'}`}
-    >
-      {popular && (
-        <div className="bg-indigo-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-          Most Popular
-        </div>
-      )}
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-      <div className="mb-4">
-        <span className="text-3xl font-bold text-gray-900">{price}</span>
-        <span className="text-gray-600 ml-2">{period}</span>
-      </div>
-      <p className="text-gray-600 mb-6">{description}</p>
-      <ul className="space-y-3">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center">
-            <span className="text-indigo-500 mr-3">✓</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span className="text-gray-700">{feature}</span>
           </li>
         ))}
       </ul>
-<<<<<<< HEAD
       <button;`
         className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${}
           popular"
@@ -672,22 +611,11 @@ function PricingCard({
         }`}
       >
         Start Free Trial;
-=======
-      <button
-        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
-          popular
-            ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-        }`}
-      >
-        Start Free Trial
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </button>
     </div>
   );
 }
 
-<<<<<<< HEAD
 function TestingCapability({}
   icon,
   title,
@@ -701,59 +629,29 @@ function TestingCapability({}
     <div className="text-center p-6 border border-gray-200 rounded-lg hover:border-indigo-300 transition-colors">"
       <div className="text-4xl mb-4">{icon}</div>"
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>"
-=======
-function TestingCapability({
-  icon,
-  title,
-  description,
-}: {
-  icon: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center p-6 border border-gray-200 rounded-lg hover:border-indigo-300 transition-colors">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <p className="text-gray-600">{description}</p>
     </div>
   );
 }
 
-<<<<<<< HEAD
 function TechCard({ name, icon }: { name: string; icon: string }) {}
   return ("
     <div className="text-center p-4 border border-gray-200 rounded-lg hover:border-indigo-300 transition-colors">"
       <div className="text-3xl mb-2">{icon}</div>"
-=======
-function TechCard({ name, icon }: { name: string; icon: string }) {
-  return (
-    <div className="text-center p-4 border border-gray-200 rounded-lg hover:border-indigo-300 transition-colors">
-      <div className="text-3xl mb-2">{icon}</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="text-sm font-medium text-gray-700">{name}</div>
     </div>
   );
 }
 
-<<<<<<< HEAD
 function IntegrationCard({ name, icon }: { name: string; icon: string }) {}
   return ("
     <div className="text-center p-4 border border-gray-200 rounded-lg hover:border-indigo-300 transition-colors">"
       <div className="text-3xl mb-2">{icon}</div>"
-=======
-function IntegrationCard({ name, icon }: { name: string; icon: string }) {
-  return (
-    <div className="text-center p-4 border border-gray-200 rounded-lg hover:border-indigo-300 transition-colors">
-      <div className="text-3xl mb-2">{icon}</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="text-sm font-medium text-gray-700">{name}</div>
     </div>
   );
 }
 
-<<<<<<< HEAD
 function UseCaseCard({}
   icon,
   title,
@@ -767,27 +665,11 @@ function UseCaseCard({}
     <div className="p-6 border border-gray-200 rounded-lg hover:border-indigo-300 transition-colors">"
       <div className="text-4xl mb-4">{icon}</div>"
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>"
-=======
-function UseCaseCard({
-  icon,
-  title,
-  description,
-}: {
-  icon: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="p-6 border border-gray-200 rounded-lg hover:border-indigo-300 transition-colors">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <p className="text-gray-600">{description}</p>
     </div>
   );
 }
 
-<<<<<<< HEAD
 function CTA() {}
   return ("
     <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-8 text-center">"
@@ -812,32 +694,6 @@ function CTA() {}
           Email Us;
         </a>
       </div>"
-=======
-function CTA() {
-  return (
-    <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Ensure API Reliability?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Start your free trial today and experience comprehensive API testing and
-        monitoring. Test your first 5 APIs for free.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
-      </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="mt-4 text-sm text-gray-500">
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
@@ -845,9 +701,5 @@ function CTA() {
     </div>
   );
 }
-<<<<<<< HEAD
 "`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/main
+

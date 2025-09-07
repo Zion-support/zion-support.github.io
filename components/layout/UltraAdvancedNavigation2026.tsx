@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';'
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -34,7 +33,6 @@ const contactInfo = {'
   address: '364 E Main St STE 1008 Middletown DE 19709',;'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
-<<<<<<< HEAD
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
@@ -44,15 +42,10 @@ const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 const serviceCategories = [
   {
-=======
-const serviceCategories = []
-  {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     title: 'AI & Machine Learning 2026'
     icon: Brain'
     color: 'from-purple-600 to-pink-600''
     description: 'Next-generation AI solutions'
-<<<<<<< HEAD
     services: [
 {
         name: 'AI Consciousness Simulation',
@@ -64,19 +57,6 @@ const serviceCategories = []
         name: 'Autonomous AI Agents'
         href: '/autonomous-ai-agents-platform-2026'
         description: 'Create autonomous AI agents'
-=======
-    services: []
-      {'
-        name: 'AI Consciousness Simulation''
-        href: '/ai-consciousness-simulation-platform''
-        description: 'Simulate human consciousness''
-        price: '$4,999/month'
-      }
-      {'
-        name: 'Autonomous AI Agents''
-        href: '/autonomous-ai-agents-platform-2026''
-        description: 'Create autonomous AI agents''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         price: '$199/month'
       }
       {'
@@ -85,7 +65,6 @@ const serviceCategories = []
         description: 'Revolutionary healthcare AI''
         price: '$399/month'
       }
-<<<<<<< HEAD
       {
         name: 'AI Content Creation Revolution',
         href: '/ai-content-creation-revolution',
@@ -110,36 +89,6 @@ const serviceCategories = []
         name: 'Quantum Internet Security'
         href: '/quantum-internet-security-gateway'
         description: 'Unbreakable encryption'
-=======
-      {'
-        name: 'AI Content Creation Revolution''
-        href: '/ai-content-creation-revolution''
-        description: 'Unlimited AI content generation''
-        price: '$599/month'
-      }
-    ]'
-  },  {      { name: 'AI Consciousness Simulation', href: '/ai-consciousness-simulation-platform', description: 'Simulate human consciousness', price: '$4,999/month' }'
-      { name: 'Autonomous AI Agents', href: '/autonomous-ai-agents-platform-2026', description: 'Create autonomous AI agents', price: '$199/month' }'
-      { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion-2026', description: 'Revolutionary healthcare AI', price: '$399/month' }'
-      { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution', description: 'Unlimited AI content generation', price: '$599/month' }
-    ]
-  }'
-    title: 'Quantum Computing & Security'
-    icon: Atom'
-    color: 'from-blue-600 to-cyan-600''
-    description: 'Quantum-powered solutions'
-    services: []
-      {'
-        name: 'Quantum Neural Interface''
-        href: '/quantum-neural-interface-platform''
-        description: 'Brain-computer interface''
-        price: '$8,999/month'
-      }
-      {'
-        name: 'Quantum Internet Security''
-        href: '/quantum-internet-security-gateway''
-        description: 'Unbreakable encryption''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         price: '$3,999/month'
       }
       {'
@@ -148,7 +97,6 @@ const serviceCategories = []
         description: 'Quantum trading algorithms''
         price: '$12,999/month'
       }
-<<<<<<< HEAD
       {
         name: 'Quantum Internet Infrastructure',
         href: '/quantum-internet-infrastructure-platform',
@@ -173,36 +121,6 @@ const serviceCategories = []
         name: 'Space Debris Management'
         href: '/space-debris-management-ai-platform'
         description: 'AI space safety'
-=======
-      {'
-        name: 'Quantum Internet Infrastructure''
-        href: '/quantum-internet-infrastructure-platform''
-        description: 'Build the quantum internet''
-        price: '$15,999/month'
-      }
-    ]'
-  },  {      { name: 'Quantum Neural Interface', href: '/quantum-neural-interface-platform', description: 'Brain-computer interface', price: '$8,999/month' }'
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Unbreakable encryption', price: '$3,999/month' }'
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-algorithm-platform', description: 'Quantum trading algorithms', price: '$12,999/month' }'
-      { name: 'Quantum Internet Infrastructure', href: '/quantum-internet-infrastructure-platform', description: 'Build the quantum internet', price: '$15,999/month' }
-    ]
-  }'
-    title: 'Emerging Technologies 2026'
-    icon: Sparkles'
-    color: 'from-green-600 to-emerald-600''
-    description: 'Cutting-edge innovations'
-    services: []
-      {'
-        name: 'Holographic Metaverse''
-        href: '/holographic-metaverse-development-platform''
-        description: '3D holographic experiences''
-        price: '$2,999/month'
-      }
-      {'
-        name: 'Space Debris Management''
-        href: '/space-debris-management-ai-platform''
-        description: 'AI space safety''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         price: '$5,999/month'
       }
       {'
@@ -211,7 +129,6 @@ const serviceCategories = []
         description: 'Climate change prediction''
         price: '$1,999/month'
       }
-<<<<<<< HEAD
       {
         name: 'Autonomous Manufacturing',
         href: '/autonomous-manufacturing-ai-platform',
@@ -236,36 +153,6 @@ const serviceCategories = []
         name: 'Edge Computing Orchestration'
         href: '/edge-computing-orchestration-2026'
         description: 'Intelligent edge computing'
-=======
-      {'
-        name: 'Autonomous Manufacturing''
-        href: '/autonomous-manufacturing-ai-platform''
-        description: 'Self-optimizing manufacturing''
-        price: '$3,499/month'
-      }
-    ]'
-  },  {      { name: 'Holographic Metaverse', href: '/holographic-metaverse-development-platform', description: '3D holographic experiences', price: '$2,999/month' }'
-      { name: 'Space Debris Management', href: '/space-debris-management-ai-platform', description: 'AI space safety', price: '$5,999/month' }'
-      { name: 'AI Climate Prediction', href: '/ai-climate-prediction-platform', description: 'Climate change prediction', price: '$1,999/month' }'
-      { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing-ai-platform', description: 'Self-optimizing manufacturing', price: '$3,499/month' }
-    ]
-  }'
-    title: 'Enterprise IT Solutions 2026'
-    icon: Shield'
-    color: 'from-red-600 to-orange-600''
-    description: 'Enterprise-grade solutions'
-    services: []
-      {'
-        name: 'Zero Trust Architecture''
-        href: '/zero-trust-network-architecture-2026''
-        description: 'Next-gen security''
-        price: 'Custom pricing'
-      }
-      {'
-        name: 'Edge Computing Orchestration''
-        href: '/edge-computing-orchestration-2026''
-        description: 'Intelligent edge computing''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         price: 'Custom pricing'
       }
       {'
@@ -274,7 +161,6 @@ const serviceCategories = []
         description: 'Enterprise 5G''
         price: 'Custom pricing'
       }
-<<<<<<< HEAD
       {
         name: 'Blockchain Infrastructure',
         href: '/blockchain-infrastructure-platform-2026',
@@ -299,36 +185,6 @@ const serviceCategories = []
         name: 'Autonomous Healthcare AI'
         href: '/autonomous-healthcare-ai-platform'
         description: 'Self-learning healthcare'
-=======
-      {'
-        name: 'Blockchain Infrastructure''
-        href: '/blockchain-infrastructure-platform-2026''
-        description: 'Enterprise blockchain''
-        price: 'Custom pricing'
-      }
-    ]'
-  },  {      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture-2026', description: 'Next-gen security', price: 'Custom pricing' }'
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2026', description: 'Intelligent edge computing', price: 'Custom pricing' }'
-      { name: '5G Private Networks', href: '/5g-private-network-solutions-2026', description: 'Enterprise 5G', price: 'Custom pricing' }'
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform-2026', description: 'Enterprise blockchain', price: 'Custom pricing' }
-    ]
-  }'
-    title: 'Healthcare & Life Sciences'
-    icon: Microscope'
-    color: 'from-teal-600 to-cyan-600''
-    description: 'Healthcare innovation'
-    services: []
-      {'
-        name: 'AI Drug Discovery''
-        href: '/ai-drug-discovery-platform''
-        description: 'Accelerate drug development''
-        price: '$4,999/month'
-      }
-      {'
-        name: 'Autonomous Healthcare AI''
-        href: '/autonomous-healthcare-ai-platform''
-        description: 'Self-learning healthcare''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         price: '$2,499/month'
       }
       {'
@@ -337,7 +193,6 @@ const serviceCategories = []
         description: 'Quantum AI research''
         price: '$6,999/month'
       }
-<<<<<<< HEAD
       {
         name: 'AI Legal Research',
         href: '/ai-legal-research-platform',
@@ -362,36 +217,6 @@ const serviceCategories = []
         name: 'Autonomous Marketing AI'
         href: '/autonomous-marketing-ai-platform'
         description: 'Self-optimizing marketing'
-=======
-      {'
-        name: 'AI Legal Research''
-        href: '/ai-legal-research-platform''
-        description: 'Revolutionary legal tech''
-        price: '$899/month'
-      }
-    ]'
-  },  {      { name: 'AI Drug Discovery', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$4,999/month' }'
-      { name: 'Autonomous Healthcare AI', href: '/autonomous-healthcare-ai-platform', description: 'Self-learning healthcare', price: '$2,499/month' }'
-      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', description: 'Quantum AI research', price: '$6,999/month' }'
-      { name: 'AI Legal Research', href: '/ai-legal-research-platform', description: 'Revolutionary legal tech', price: '$899/month' }
-    ]
-  }'
-    title: 'Financial Technology'
-    icon: DollarSign'
-    color: 'from-emerald-600 to-green-600''
-    description: 'Fintech solutions'
-    services: []
-      {'
-        name: 'Autonomous Supply Chain''
-        href: '/autonomous-supply-chain-optimization-ai''
-        description: 'AI supply chain optimization''
-        price: '$899/month'
-      }
-      {'
-        name: 'Autonomous Marketing AI''
-        href: '/autonomous-marketing-ai-platform''
-        description: 'Self-optimizing marketing''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         price: '$1,499/month'
       }
       {'
@@ -400,20 +225,12 @@ const serviceCategories = []
         description: 'Next-gen security''
         price: '$2,999/month'
       }
-<<<<<<< HEAD
       {
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
         name: 'AI Business Intelligence',
         href: '/autonomous-business-intelligence-network',
         description: 'Self-evolving BI',
-=======
-      {}
-  }'
-        name: 'AI Business Intelligence','
-        href: '/autonomous-business-intelligence-network','
-        description: 'Self-evolving BI','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         price: '$1,299/month',
       },
     ],'
@@ -466,7 +283,6 @@ const companyLinks = ['
     href: '/2026-innovative-services-showcase'
     icon: Zap;
   }
-<<<<<<< HEAD
   },
 ];
 
@@ -512,17 +328,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const navigationItems = [
     {
       name: 'AI Services'
-=======
-const UltraAdvancedNavigation2026 = () => {}
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {}
-    const handleScroll = () => {}
-  const navigationItems = []
-    {'
-      name: 'AI Services''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       href: '/services?category=ai'
       icon: Brain'
       color: 'from-blue-500 to-cyan-500''
@@ -885,7 +690,6 @@ const UltraAdvancedNavigation2026 = () =>: any {}
               <div className="relative">"
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
                   <Rocket className="w-6 h-6 text-white" />
-<<<<<<< HEAD
 {
           name: 'AI Autonomous Agents',
           href: '/services?category=ai-autonomous',
@@ -1041,16 +845,6 @@ address: '364 E Main St STE 1008 Middletown DE 19709',
                   Revolutionary Technology Solutions
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
-=======
-                </div>"
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-              </div>"
-              <div className="hidden sm:block">"
-                <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                  Zion Tech Group;
-                </div>"
-                <div className="text-xs text-gray-400">Revolutionary Technology Solutions</div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </Link>'
             <Link href='/' className='flex items-center space-x-3 group'>;'
@@ -1162,7 +956,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </AnimatePresence>;
                 </div>;
               ))}
-<<<<<<< HEAD
               {/* Quick Links */}
 <div className='flex items-center space-x-6'>
                 <Link
@@ -1174,10 +967,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <Link
                   href='/pricing'
-=======
-                <Link'
-                  href='/pricing''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'>;
                   Pricing;
                 </Link>;
@@ -1188,14 +977,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Pricing;
                 </Link>"
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
-<<<<<<< HEAD
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Contact
-=======
-                  Contact;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </Link>
               </div>
             </div>'
@@ -1287,7 +1072,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
 
-
             {/* Contact Info - Desktop */}
 <div className='hidden lg:flex items-center space-x-4'>
               <div className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>
@@ -1303,15 +1087,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Mobile Menu Button */}
-<<<<<<< HEAD
             <button
               onClick={() => setIsOpen(!isOpen)}
 className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200'
-=======
-            <button;
-              onClick={() => setIsOpen(!isOpen)}'
-              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             >
               {isOpen ? ('
                 <X className='w-6 h-6' />
@@ -1353,14 +1131,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-<<<<<<< HEAD
             transition={{ duration: 0.2 }}
 className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'
 origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={() => setIsOpen(false)}
-=======
-            onClick={() => setIsOpen(false)}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
 
             onClick={() => setIsOpen(false)}
@@ -1375,7 +1149,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               exit={{ x: '100%' }}
                 <button;
                   onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
               transition={{ duration: 0.3, ease: 'easeOut' }}
 className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto'
               onClick={e => e.stopPropagation()}
@@ -1408,9 +1181,6 @@ className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl borde
                     >
 origin/cursor/automate-test-improve-and-merge-code-2533
                       <div
-=======
-                      <div;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center`}
                       >'
                         <item.icon className='w-4 h-4 text-white' />
@@ -1522,8 +1292,6 @@ export default UltraAdvancedNavigation2026;    </>);
 export default UltraAdvancedNavigation2026;
 ;
 
-
-<<<<<<< HEAD
 href='/contact'
                     className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'
                     onClick={() => setIsOpen(false)}
@@ -1564,10 +1332,6 @@ href='/contact'
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Spacer for fixed navigation */}
 <div className='h-20'></div>
-=======
-      {/* Spacer for fixed navigation */}'
-      <div className='h-20'></div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 export default UltraAdvancedNavigation2026;    </>
@@ -1580,15 +1344,7 @@ export default UltraAdvancedNavigation2026;
 
 };
 
-
-<<<<<<< HEAD
 };
 
 export default UltraAdvancedNavigation2026;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
