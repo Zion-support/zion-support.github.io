@@ -1,12 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
+import React from 'react'
+import Link from 'next/link'
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
 export const metadata = {
   title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
-};
-
+  description: 'Learn about Zion Tech Group, a leading provider of AI solutions, micro SaaS development, and enterprise IT services.'}
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
@@ -181,5 +178,5 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

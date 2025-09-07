@@ -136,9 +136,6 @@ export default [
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/exhaustive-deps': 'warn',
     },
   },
 ];

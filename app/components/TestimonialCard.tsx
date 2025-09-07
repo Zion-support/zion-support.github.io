@@ -1,12 +1,4 @@
-import React from 'react';
-import Image from 'next/image';
-
-interface TestimonialCardProps {
-  name: string;
-  role: string;
-  company: string;
-  content: string;
-  avatar?: string;}
+}
   rating?: number;}
 }
 
@@ -15,34 +7,33 @@ export default function TestimonialCard({
   role,
   company,
   content,
-  avatar,}
+  avatar}
   rating = 5}
 }: TestimonialCardProps) {
   return (
-    <div className=\"bg-white p-6 rounded-lg shadow-lg border border-gray-200\" />
-      <div className=\"flex items-center mb-4\" />
+    <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+      <div className="flex items-center mb-4">
         {avatar ? (}
           <Image;}
 src={avatar}
             alt={name || 'User'}
             width={48}
             height={48}
-            className=\"w-12 h-12 rounded-full mr-4\"
-          />
+            className="w-12 h-12 rounded-full mr-4">
         ) : (
-          <div className=\"w-12 h-12 bg-gray-300 rounded-full mr-4 flex items-center justify-center\" />
-            <span className=\"text-gray-600 font-semibold\" />
+          <div className="w-12 h-12 bg-gray-300 rounded-full mr-4 flex items-center justify-center">
+            <span className="text-gray-600 font-semibold">
               {name ? name.charAt(0) : 'U'}
             </span>
           </div>
         )}
         <div />
-          <h4 className=\"font-semibold text-gray-900\" />{name}</h4>
-          <p className=\"text-sm text-gray-600\" />{role} at {company}</p>
+          <h4 className="font-semibold text-gray-900">{name}</h4>
+          <p className="text-sm text-gray-600">{role} at {company}</p>
         </div>
       </div>
       
-      <div className=\"flex items-center mb-3\" />
+      <div className="flex items-center mb-3">
         {[...Array(rating)].map((_, i) => (}
           <svg;}
 key={i}
@@ -55,9 +46,9 @@ key={i}
         ))}
       </div>
       
-      <blockquote className=\"text-gray-700 italic\" />
-        &ldquo;{content}&rdquo;
+      <blockquote className="text-gray-700 italic">
+        &ldquo;{content}&rdquo
       </blockquote>
     </div>
-  );
+  )
 }

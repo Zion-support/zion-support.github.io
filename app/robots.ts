@@ -1,10 +1,9 @@
-import { MetadataRoute } from 'next';
-
+import { MetadataRoute } from 'next'
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
-  allow: '/',
+      allow: '/',
       disallow: [
         '/api/',
         '/admin/',
@@ -16,9 +15,9 @@ export default function robots(): MetadataRoute.Robots {
         '/scripts/',
         '/automation/',
         '/backup/',
-        '/temp/',}
-      ],}
+        '/temp/',
+      ],
     },
     sitemap: 'https://ziontechgroup.com/sitemap.xml'
-  };
+  }
 }

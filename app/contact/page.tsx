@@ -1,9 +1,7 @@
-'use client';
-
-import React, { useState } from 'react';
-import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
-
+'use client'
+import React, { useState } from 'react'
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,29 +9,24 @@ export default function ContactPage() {
     company: '',
     service: '',
     message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
-
+    })
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
+    e.preventDefault()
+    setIsSubmitting(true)
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setSubmitStatus('success');
-    setIsSubmitting(false);
-    setFormData({ name: '', email: '', company: '', service: '', message: '' });
-  };
-
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setSubmitStatus('success')
+    setIsSubmitting(false)
+    setFormData({ name: '', email: '', company: '', service: '', message: '' })
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
@@ -260,5 +253,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

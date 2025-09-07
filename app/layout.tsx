@@ -1,12 +1,9 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
+import type { Metadata } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
   keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
@@ -22,22 +19,20 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions.',
+    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
   },
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#3B82F6',
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         {children}
       </body>
     </html>
-  );
+  )
 }
