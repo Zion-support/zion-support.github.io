@@ -2,32 +2,32 @@
 <<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
 
 ;
-import React, { useState } from 'react';
+import React, { useState } from 'react;
 import {Table;
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
-  TableRow} from "@/components/ui/table",Dialog;
+  TableRow} from "@/components/ui/table,Dialog;
   DialogContent;
   DialogDescription;
   DialogFooter;
   DialogHeader;
   DialogTitle;
-  DialogTrigger} from "@/components/ui/dialog",import { Button } from "@/components/ui/button",import { Input } from "@/components/ui/input",import { Label } from "@/components/ui/label",import { Badge  } from '@/components/ui/badge';
-import { Trash, Mail, UserPlus  } from 'lucide-react';
-import { toast  } from '@/hooks/use-toast';
-export function TeamManagement() {const [isAddingMember, setIsAddingMember] = useState(false)const [newMemberEmail, setNewMemberEmail] = useState("")// Mock team members data;
+  DialogTrigger} from @/components/ui/dialog",import { Button } from "@/components/ui/button,import { Input } from @/components/ui/input",import { Label } from "@/components/ui/label,import { Badge  } from @/components/ui/badge';
+import { Trash, Mail, UserPlus  } from 'lucide-react;
+import { toast  } from @/hooks/use-toast';
+export function TeamManagement() {const [isAddingMember, setIsAddingMember] = useState(false)const [newMemberEmail, setNewMemberEmail] = useState(")// Mock team members data;
   const teamMembers = null;
 <<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
-import React, { useState } from 'react'; import {
+import React, { useState } from 'react; import {
   Table
   TableBody
   TableCell
   TableHead
   TableHeader
   TableRow
-} from '@/components/ui/table'
+} from @/components/ui/table'
 import {
   Dialog
   DialogContent
@@ -36,53 +36,53 @@ import {
   DialogHeader
   DialogTitle
   DialogTrigger
-} from '@/components/ui/dialog'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Badge } from '@/components/ui/badge'
-import { Trash, Mail, UserPlus } from 'lucide-react'
-import { toast } from '@/hooks/use-toast'
-  DialogTrigger} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Badge } from "@/components/ui/badge"
-import { toast } from "@/hooks/use-toast"
+} from '@/components/ui/dialog
+import { Button } from @/components/ui/button'
+import { Input } from '@/components/ui/input
+import { Label } from @/components/ui/label'
+import { Badge } from '@/components/ui/badge
+import { Trash, Mail, UserPlus } from lucide-react'
+import { toast } from '@/hooks/use-toast
+  DialogTrigger} from "@/components/ui/dialog
+import { Button } from @/components/ui/button"
+import { Input } from "@/components/ui/input
+import { Label } from @/components/ui/label"
+import { Badge } from "@/components/ui/badge
+import { toast } from @/hooks/use-toast"
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false)
-  const [newMemberEmail, setNewMemberEmail] = useState('')
+  const [newMemberEmail, setNewMemberEmail] = useState(')
 origin/cursor/automate-test-improve-and-merge-code-2533
   // Mock team members data
   const teamMembers = [
     {
       id: 1,
-      name: "Alex Johnson",
-      email: "alex@example.com",
-      role: "Admin",
-      status: "active",
-      lastActive: "2 hours ago"},
+      name: "Alex Johnson,
+      email: alex@example.com",
+      role: "Admin,
+      status: active",
+      lastActive: "2 hours ago},
     {
       id: 2,
-      name: "Jamie Smith",
-      email: "jamie@example.com",
-      role: "Recruiter",
-      status: "active",
-      lastActive: "Yesterday"},
+      name: Jamie Smith",
+      email: "jamie@example.com,
+      role: Recruiter",
+      status: "active,
+      lastActive: Yesterday"},
     {
       id: 3,
-      name: "Sam Williams",
-      email: "sam@example.com",
-      role: "Manager",
-      status: "pending",
-      lastActive: "Never"},
+      name: "Sam Williams,
+      email: sam@example.com",
+      role: "Manager,
+      status: pending",
+      lastActive: "Never},
     {
       id: 4,
-      name: "Taylor Brown",
-      email: "taylor@example.com",
-      role: "Viewer",
-      status: "active",
-      lastActive: "3 days ago"}],
+      name: Taylor Brown",
+      email: "taylor@example.com,
+      role: Viewer",
+      status: "active,
+      lastActive: 3 days ago"}],
 
   const handleAddMember = () => {
 <<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
@@ -95,32 +95,30 @@ const handleAddMember = () => {
     if (!newMemberEmail) {
       toast({
 
-        title: "Email required",
-        description: "Please enter an email address for the new team member.",
-        variant: "destructive"}),
+        title: "Email required,
+        description: Please enter an email address for the new team member.",
+        variant: "destructive}),
 
       return
     }
     toast({
 
-      title: 'Invitation sent',
-      description: `An invitation has been sent to ${newMemberEmail}`,
-
-    })
-    setNewMemberEmail('')
+      title: 'Invitation sent,
+      description: `An invitation has been sent to ${newMemberEmail}`})
+    setNewMemberEmail(')
     setIsAddingMember(false)
   }
   const handleRemoveMember = (_memberId: number,) => {
     // In a real app, this would make an API call to remove the member
     toast({
-      title: 'Team member removed'
-      description: 'The team member has been removed from your workspace.'
+      title: 'Team member removed
+      description: The team member has been removed from your workspace.'
     })
   }
   const handleResendInvite = (memberEmail: string,) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
-      title: 'Invitation resent'
+      title: 'Invitation resent
       description: `A new invitation has been sent to ${memberEmail}`
     })
 <<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
@@ -131,8 +129,7 @@ const handleAddMember = () => {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
-} from '@/components/ui/ table';
+  TableRow} from @/components/ui/ table';
 import {
   Dialog,
   DialogContent,
@@ -140,61 +137,55 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/ dialog';
-import { Button } from '@/components/ui/ button';
-import { Input } from '@/components/ui/ input';
-import { Label } from '@/components/ui/ label';
-import { Badge } from '@/components/ui/ badge';
-import { Trash, Mail, UserPlus } from 'lucide-react';
-import { toast } from '@/hooks/ use - toast';
-  DialogTrigger} from "@/components/ui/ dialog",
-import { Button  } from '@/components/ui/ button';
-import { Input  } from '@/components/ui/ input';
-import { Label  } from '@/components/ui/ label';
-import { Badge  } from '@/components/ui/ badge';
-import { toast  } from '@/hooks/ use - toast';
+  DialogTrigger} from '@/components/ui/ dialog;
+import { Button } from @/components/ui/ button';
+import { Input } from '@/components/ui/ input;
+import { Label } from @/components/ui/ label';
+import { Badge } from '@/components/ui/ badge;
+import { Trash, Mail, UserPlus } from lucide-react';
+import { toast } from '@/hooks/ use - toast;
+  DialogTrigger} from @/components/ui/ dialog",
+import { Button  } from @/components/ui/ button';
+import { Input  } from '@/components/ui/ input;
+import { Label  } from @/components/ui/ label';
+import { Badge  } from '@/components/ui/ badge;
+import { toast  } from @/hooks/ use - toast';
 export /**
  * TeamManagement - Function description
  */
 function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState (false);
-  const [newMemberEmail, setNewMemberEmail] = useState ('');
+  const [newMemberEmail, setNewMemberEmail] = useState (');
   // Mock team members data;
   const team_members = [;
     {
       id: 1,
-      name: 'Alex Johnson',
-      email: 'alex@example.com',
-      role: 'Admin',
-      status: 'active',
-      last_active: '2 hours ago',
-    },
+      name: Alex Johnson',
+      email: 'alex@example.com,
+      role: Admin',
+      status: 'active,
+      last_active: 2 hours ago'},
     {
       id: 2,
-      name: 'Jamie Smith',
-      email: 'jamie@example.com',
-      role: 'Recruiter',
-      status: 'active',
-      last_active: 'Yesterday',
-    },
+      name: 'Jamie Smith,
+      email: jamie@example.com',
+      role: 'Recruiter,
+      status: active',
+      last_active: 'Yesterday},
     {
       id: 3,
-      name: 'Sam Williams',
-      email: 'sam@example.com',
-      role: 'Manager',
-      status: 'pending',
-      last_active: 'Never',
-    },
+      name: Sam Williams',
+      email: 'sam@example.com,
+      role: Manager',
+      status: 'pending,
+      last_active: Never'},
     {
       id: 4,
-      name: 'Taylor Brown',
-      email: 'taylor@example.com',
-      role: 'Viewer',
-      status: 'active',
-      last_active: '3 days ago',
-    },
-  ];
+      name: 'Taylor Brown,
+      email: taylor@example.com',
+      role: 'Viewer,
+      status: active',
+      last_active: '3 days ago}];
   const handleAddMember = () =>: any {
     // In a real app, this would make an API call to add the member;
     // Check condition
@@ -202,25 +193,23 @@ if ( {) {
   $2
 }
       toast ({
-        title: 'Email required',
-        description: 'Please enter an email address for the new team member.',
-        variant: 'destructive',
-      });
+        title: Email required',
+        description: 'Please enter an email address for the new team member.,
+        variant: destructive'});
       return;
     }
     toast ({
-      title: 'Invitation sent',
-      description: `An invitation has been sent to ${newMemberEmail}`,
-    });
-    setNewMemberEmail ('');
+      title: 'Invitation sent,
+      description: `An invitation has been sent to ${newMemberEmail}`});
+    setNewMemberEmail (');
     setIsAddingMember (false);
   }
 <<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-        title: "Email required",
-        description: "Please enter an email address for the new team member.",
-        variant: "destructive"}),
+        title: "Email required,
+        description: Please enter an email address for the new team member.",
+        variant: "destructive}),
       return
     }
 
@@ -232,25 +221,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const handleRemoveMember = (_memberId: number) => {,
     // In a real app, this would make an API call to remove the member
     toast({
-      title: "Team member removed",
-      description: "The team member has been removed from your workspace."})
+      title: Team member removed",
+      description: "The team member has been removed from your workspace.})
   },
 
   const handleResendInvite = (memberEmail: string) => {,
     // In a real app, this would make an API call to resend the invitation
     toast({
-      title: "Invitation resent",
+      title: Invitation resent",
       description: `A new invitation has been sent to ${memberEmail}`})
   },
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h3 className="text-xl font-medium">Team Members</h3>
+    <div className="space-y-6>
+      <div className=flex items-center justify-between">
+        <h3 className="text-xl font-medium>Team Members</h3>
         <Dialog open={isAddingMember} onOpenChange={setIsAddingMember}>
           <DialogTrigger asChild>
-            <Button className="gap-2">
-              <UserPlus className="h-4 w-4" />
+            <Button className=gap-2">
+              <UserPlus className="h-4 w-4 />
               Add Team Member
             </Button>
           </DialogTrigger>
@@ -261,37 +250,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Send an invitation to join your workspace. They'll receive an email with instructions.
               </DialogDescription>
             </DialogHeader>
-            <div className="grid gap-4 py-4">
-              <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="email" className="text-right">
+            <div className=grid gap-4 py-4">
+              <div className="grid grid-cols-4 items-center gap-4>
+                <Label htmlFor=email" className="text-right>
                   Email
                 </Label>
                 <Input
-                  id="email"
-                  type="email"
-                  placeholder="colleague@company.com"
-                  className="col-span-3"
+                  id=email"
+                  type="email
+                  placeholder=colleague@company.com"
+                  className="col-span-3
                   value={newMemberEmail}
                   onChange={(e) => setNewMemberEmail(e.target.value)}
                 />
               </div>
-              <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="role" className="text-right">
+              <div className=grid grid-cols-4 items-center gap-4">
+                <Label htmlFor="role className=text-right">
                   Role
                 </Label>
                 <select
-                  id="role"
-                  className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  id="role
+                  className=col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                  <option value="admin">Admin</option>
-                  <option value="recruiter">Recruiter</option>
-                  <option value="manager">Manager</option>
-                  <option value="viewer">Viewer</option>
+                  <option value="admin>Admin</option>
+                  <option value=recruiter">Recruiter</option>
+                  <option value="manager>Manager</option>
+                  <option value=viewer">Viewer</option>
                 </select>
               </div>
             </div>
             <DialogFooter>,
-              <Button variant="outline" onClick={() => setIsAddingMember(false)}>
+              <Button variant="outline onClick={() => setIsAddingMember(false)}>
                 Cancel
               </Button>
               <Button onClick={handleAddMember}>Send Invitation</Button>
@@ -300,7 +289,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Dialog>
       </div>
 
-      <div className="rounded-md border">
+      <div className=rounded-md border">
         <Table>
           <TableHeader>
             <TableRow>
@@ -308,25 +297,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <TableHead>Role</TableHead>
               <TableHead>Status</TableHead>
               <TableHead>Last Active</TableHead>
-              <TableHead className="text-right">Actions</TableHead>
+              <TableHead className="text-right>Actions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
                 <TableCell>
-                  <div className="flex items-center gap-2">
-                    <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
-                      <span className="text-sm font-medium">
+                  <div className=flex items-center gap-2">
+                    <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center>
+                      <span className=text-sm font-medium">
                         {member.name
-                          .split(" ")
+                          .split(" )
                           .map((n) => n[0])
-                          .join("")}
+                          .join(")}
                       </span>
                     </div>
                     <div>
-                      <div className="font-medium">{member.name}</div>
-                      <div className="text-sm text-muted-foreground">
+                      <div className="font-medium>{member.name}</div>
+                      <div className=text-sm text-muted-foreground">
                         {member.email}
                       </div>
                     </div>
@@ -335,65 +324,63 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <TableCell>{member.role}</TableCell>
                 <TableCell>
                   <Badge
-                    variant={member.status === "active" ? "default" : "outline"}
+                    variant={member.status === "active ? default" : "outline}
                   >
                     {member.status}
                   </Badge>
                 </TableCell>
                 <TableCell>{member.lastActive}</TableCell>
-                <TableCell className="text-right">
-                  <div className="flex justify-end gap-2">
-                    {member.status === "pending" ? (
+                <TableCell className=text-right">
+                  <div className="flex justify-end gap-2>
+                    {member.status === pending" ? (
                       <Button
-                        variant="ghost"
-                        size="sm"
+                        variant="ghost
+                        size=sm"
                         onClick={() => handleResendInvite(member.email)}
                       >
-                        <Mail className="h-4 w-4 mr-1" />
+                        <Mail className="h-4 w-4 mr-1 />
                         Resend
                       </Button>
                     ) : (
                       <Button
-                        variant="ghost"
-                        size="sm"
-                        className="text-destructive hover:text-destructive"
-import React, { useState } from "react",;
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogFooter,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogTrigger,;
-} from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
+                        variant=ghost"
+                        size="sm
+                        className=text-destructive hover:text-destructive"
+import React, { useState } from "react,
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from @/components/ui/table;
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger} from '@/components/ui/dialog';
+import { Button } from @/components/ui/button;
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { Label } from @/components/ui/label;
 import { Badge } from '@/components/ui/badge';
-import { Trash, Mail, UserPlus } from 'lucide-react';
+import { Trash, Mail, UserPlus } from lucide-react;
 import { toast } from '@/hooks/use-toast';
-  DialogTrigger} from "@/components/ui/dialog",;
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
-import { Trash, Mail, UserPlus } from 'lucide-react';
-import { toast } from "@/hooks/use-toast";
-export function TeamManagement() {;
+  DialogTrigger} from @/components/ui/dialog",
+import { Button } from "@/components/ui/button;
+import { Input } from @/components/ui/input";
+import { Label } from "@/components/ui/label;
+import { Badge } from @/components/ui/badge";
+import { Trash, Mail, UserPlus } from lucide-react;
+import { toast } from "@/hooks/use-toast;
+export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState('');
 
   // Mock team members data;
-import React, { useState } from 'react'; import { Table;
+import React, { useState } from react; import { Table;
   TableBody;
   TableCell;
   TableHead;
@@ -407,101 +394,100 @@ import { Dialog;
   DialogHeader;
   DialogTitle;
   DialogTrigger;
- } from '@/components/ui/dialog';
+ } from @/components/ui/dialog;
 import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
+import { Input  } from @/components/ui/input;
 import { Label  } from '@/components/ui/label';
-  DialogTrigger} from "@/components/ui/dialog";
-export function TeamManagement() {const [isAddingMember, setIsAddingMember] = useState(false)const [newMemberEmail, setNewMemberEmail] = useState('')// Mock team members data;
+  DialogTrigger} from @/components/ui/dialog";
+export function TeamManagement() {const [isAddingMember, setIsAddingMember] = useState(false)const [newMemberEmail, setNewMemberEmail] = useState()// Mock team members data;
   const teamMembers = [;
-    {id: 1,name: "Alex Johnson",email: "alex@example.com",role: "Admin",status: "active",lastActive: "2 hours ago"},{id: 2,name: "Jamie Smith",email: "jamie@example.com",role: "Recruiter",status: "active",lastActive: "Yesterday"},{id: 3,name: "Sam Williams",email: "sam@example.com",role: "Manager",status: "pending",lastActive: "Never"},{id: 4,name: "Taylor Brown",email: "taylor@example.com",role: "Viewer",status: "active",lastActive: "3 days ago"}],const handleAddMember = () => {const handleAddMember = () => {// In a real app, this would make an API call to add the member;
-    if (!newMemberEmail) {toast({title: "Email required",description: "Please enter an email address for the new team member.",variant: "destructive"}),return;
+    {id: 1,name: "Alex Johnson,email: alex@example.com",role: "Admin,status: active",lastActive: "2 hours ago},{id: 2,name: Jamie Smith",email: "jamie@example.com,role: Recruiter",status: "active,lastActive: Yesterday"},{id: 3,name: "Sam Williams,email: sam@example.com",role: "Manager,status: pending",lastActive: "Never},{id: 4,name: Taylor Brown",email: "taylor@example.com,role: Viewer",status: "active,lastActive: 3 days ago"}],const handleAddMember = () => {const handleAddMember = () => {// In a real app, this would make an API call to add the member;
+    if (!newMemberEmail) {toast({title: "Email required,description: Please enter an email address for the new team member.",variant: "destructive}),return;
     }
-    toast({title: 'Invitation sent',description: `An invitation has been sent to ${newMemberEmail}`})setNewMemberEmail('')setIsAddingMember(false)}
+    toast({title: 'Invitation sent',description: `An invitation has been sent to ${newMemberEmail}`})setNewMemberEmail()setIsAddingMember(false)}
   const handleRemoveMember = (_memberId: number,) => {// In a real app, this would make an API call to remove the member;
     toast({title: 'Team member removed';
-      description: 'The team member has been removed from your workspace.';
+      description: The team member has been removed from your workspace.;
     })}
   const handleResendInvite = (memberEmail: string,) => {// In a real app, this would make an API call to resend the invitation;
     toast({title: 'Invitation resent';
       description: `A new invitation has been sent to ${memberEmail}`;
-    })Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components / ui / table';
+    })Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from @/components / ui / table;
 import { Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger} from '@/components / ui / dialog';
-import { Button  } from '@/components / ui / button';
+import { Button  } from @/components / ui / button;
 import { Input  } from '@/components / ui / input';
-import { Label  } from '@/components / ui / label';
+import { Label  } from @/components / ui / label;
 import { Badge  } from '@/components / ui / badge';
-import { toast  } from '@/hooks / use - toast';
-  DialogTrigger} from "@/components / ui / dialog",import { Button   } from '@/components / ui / button';
-import { Input   } from '@/components / ui / input';
+import { toast  } from @/hooks / use - toast;
+  DialogTrigger} from @/components / ui / dialog",import { Button   } from '@/components / ui / button';
+import { Input   } from @/components / ui / input;
 import { Label   } from '@/components / ui / label';
-import { Badge   } from '@/components / ui / badge';
+import { Badge   } from @/components / ui / badge;
 import { toast   } from '@/hooks / use - toast';
 export /**;
  * TeamManagement - Function description;
  */;
-function TeamManagement() {const [isAddingMember, setIsAddingMember] = useState (false)const [newMemberEmail, setNewMemberEmail] = useState ('')// Mock team members data;
   const team_members = [;
-    {id: 1,name: 'Alex Johnson',email: 'alex@example.com',role: 'Admin',status: 'active',last_active: '2 hours ago'},{id: 2,name: 'Jamie Smith',email: 'jamie@example.com',role: 'Recruiter',status: 'active',last_active: 'Yesterday'},{id: 3,name: 'Sam Williams',email: 'sam@example.com',role: 'Manager',status: 'pending',last_active: 'Never'},{id: 4,name: 'Taylor Brown',email: 'taylor@example.com',role: 'Viewer',status: 'active',last_active: '3 days ago'}];
+    {id: 1,name: Alex Johnson,email: 'alex@example.com',role: Admin,status: 'active',last_active: 2 hours ago},{id: 2,name: 'Jamie Smith',email: jamie@example.com,role: 'Recruiter',status: active,last_active: 'Yesterday'},{id: 3,name: Sam Williams,email: 'sam@example.com',role: Manager,status: 'pending',last_active: Never},{id: 4,name: 'Taylor Brown',email: taylor@example.com,role: 'Viewer',status: active,last_active: '3 days ago'}];
   const handleAddMember = () =>: any {// In a real app, this would make an API call to add the member;
     // Check condition;
 if ( {) {$2;
 }
-      toast ({title: 'Email required',description: 'Please enter an email address for the new team member.',variant: 'destructive'})return;
+      toast ({title: Email required,description: 'Please enter an email address for the new team member.',variant: destructive})return;
     }
-    toast ({title: 'Invitation sent',description: `An invitation has been sent to ${newMemberEmail}`})setNewMemberEmail ('')setIsAddingMember (false)}const handleRemoveMember = (_memberId: number, ) =>: any {// In a real app, this would make an API call to remove the member;
-    toast ({title: 'Team member removed',description: 'The team member has been removed from your workspace.'})}
+    toast ({title: 'Invitation sent',description: `An invitation has been sent to ${newMemberEmail}`})setNewMemberEmail ()setIsAddingMember (false)}const handleRemoveMember = (_memberId: number, ) =>: any {// In a real app, this would make an API call to remove the member;
+    toast ({title: 'Team member removed',description: The team member has been removed from your workspace.})}
   const handleResendInvite = (member_email: string, ) =>: any {// In a real app, this would make an API call to resend the invitation;
-    toast ({title: 'Invitation resent',description: `A new invitation has been sent to ${member_email}`})}title: "Email required",description: "Please enter an email address for the new team member.",variant: "destructive"}),return;
-    }toast({title: "Invitation sent",description: `An invitation has been sent to ${newMemberEmail}`}),setNewMemberEmail(""),setIsAddingMember(false)},const handleRemoveMember = (_memberId: number) => {// In a real app, this would make an API call to remove the member;
-    toast({title: "Team member removed",description: "The team member has been removed from your workspace."})},const handleResendInvite = (memberEmail: string) => {// In a real app, this would make an API call to resend the invitation;
-    toast({title: "Invitation resent",description: `A new invitation has been sent to ${memberEmail}`})},return (<div className="space-y-6">;
-      <div className="flex items-center justify-between">;
-        <h3 className="text-xl font-medium">Team Members</h3>;
+    toast ({title: 'Invitation resent',description: `A new invitation has been sent to ${member_email}`})}title: "Email required,description: Please enter an email address for the new team member.",variant: "destructive}),return;
+    }toast({title: Invitation sent",description: `An invitation has been sent to ${newMemberEmail}`}),setNewMemberEmail("),setIsAddingMember(false)},const handleRemoveMember = (_memberId: number) => {// In a real app, this would make an API call to remove the member;
+    toast({title: Team member removed",description: "The team member has been removed from your workspace.})},const handleResendInvite = (memberEmail: string) => {// In a real app, this would make an API call to resend the invitation;
+    toast({title: Invitation resent",description: `A new invitation has been sent to ${memberEmail}`})},return (<div className="space-y-6>;
+      <div className=flex items-center justify-between">;
+        <h3 className="text-xl font-medium>Team Members</h3>;
         <Dialog open={isAddingMember} onOpenChange={setIsAddingMember}>;
           <DialogTrigger asChild>;
-            <Button className="gap-2">;
-              <UserPlus className="h-4 w-4" />;
+            <Button className=gap-2">;
+              <UserPlus className="h-4 w-4 />;
               Add Team Member;
             </Button>;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
               <DialogTitle>Add Team Member</DialogTitle>;
-              <DialogDescription>Send an invitation to join your workspace. They'll receive an email with instructions.;
+              <DialogDescription>Send an invitation to join your workspace. Theyll receive an email with instructions.;
               </DialogDescription>;
             </DialogHeader>;
-            <div className="grid gap-4 py-4">;
-              <div className="grid grid-cols-4 items-center gap-4">;
-                <Label htmlFor="email" className="text-right">;
+            <div className=grid gap-4 py-4">;
+              <div className="grid grid-cols-4 items-center gap-4>;
+                <Label htmlFor=email" className="text-right>;
                   Email;
                 </Label>;
                 <Input;
-                  id="email";
-                  type="email";
-                  placeholder="colleague@company.com";
-                  className="col-span-3";
+                  id=email";
+                  type="email;
+                  placeholder=colleague@company.com";
+                  className="col-span-3;
                   value={newMemberEmail}
                   onChange={(e) => setNewMemberEmail(e.target.value)}
                 />;
               </div>;
-              <div className="grid grid-cols-4 items-center gap-4">;
-                <Label htmlFor="role" className="text-right">;
+              <div className=grid grid-cols-4 items-center gap-4">;
+                <Label htmlFor="role className=text-right">;
                   Role;
                 </Label>;
                 <select;
-                  id="role";
-                  className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
+                  id="role;
+                  className=col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
                 >;
-                  <option value="admin">Admin</option>;
-                  <option value="recruiter">Recruiter</option>;
-                  <option value="manager">Manager</option>;
-                  <option value="viewer">Viewer</option>;
+                  <option value="admin>Admin</option>;
+                  <option value=recruiter">Recruiter</option>;
+                  <option value="manager>Manager</option>;
+                  <option value=viewer">Viewer</option>;
                 </select>;
               </div>;
             </div>;
             <DialogFooter>;
-              <Button variant="outline" onClick={() => setIsAddingMember(false)}>;
+              <Button variant="outline onClick={() => setIsAddingMember(false)}>;
                 Cancel;
               </Button>;
               <Button onClick={handleAddMember}>Send Invitation</Button>;
@@ -509,7 +495,7 @@ if ( {) {$2;
           </DialogContent>;
         </Dialog>;
       </div>;
-      <div className="rounded-md border">;
+      <div className=rounded-md border">;
         <Table>;
           <TableHeader>;
             <TableRow>;
@@ -517,22 +503,22 @@ if ( {) {$2;
               <TableHead>Role</TableHead>;
               <TableHead>Status</TableHead>;
               <TableHead>Last Active</TableHead>;
-              <TableHead className="text-right">Actions</TableHead>;
+              <TableHead className="text-right>Actions</TableHead>;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
             {teamMembers.map((member) => (<TableRow key={member.id}>;
                 <TableCell>;
-                  <div className="flex items-center gap-2">;
-                    <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">;
-                      <span className="text-sm font-medium">;
+                  <div className=flex items-center gap-2">;
+                    <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center>;
+                      <span className=text-sm font-medium">;
                         {member.name;
-                          .split(" ").map((n) => n[0]).join("")}
+                          .split(" ).map((n) => n[0]).join(")}
                       </span>;
                     </div>;
                     <div>;
-                      <div className="font-medium">{member.name}</div>;
-                      <div className="text-sm text-muted-foreground">;
+                      <div className="font-medium>{member.name}</div>;
+                      <div className=text-sm text-muted-foreground">;
                         {member.email}
                       </div>;
                     </div>;
@@ -541,70 +527,70 @@ if ( {) {$2;
                 <TableCell>{member.role}</TableCell>;
                 <TableCell>;
                   <Badge;
-                    variant={member.status === "active" ? "default" : "outline"}
+                    variant={member.status === "active ? default" : "outline}
                   >;
                     {member.status}
                   </Badge>;
                 </TableCell>;
                 <TableCell>{member.lastActive}</TableCell>;
-                <TableCell className="text-right">;
-                  <div className="flex justify-end gap-2">;
-                    {member.status === "pending" ? (<Button;
-                        variant="ghost";
-                        size="sm";
+                <TableCell className=text-right">;
+                  <div className="flex justify-end gap-2>;
+                    {member.status === pending" ? (<Button;
+                        variant="ghost;
+                        size=sm";
                         onClick={() => handleResendInvite(member.email)}
                       >;
-                        <Mail className="h-4 w-4 mr-1" />;
+                        <Mail className="h-4 w-4 mr-1 />;
                         Resend;
                       </Button>;
                     ) : (<Button;
-                        variant="ghost";
-                        size="sm";
-                        className="text-destructive hover:text-destructive";
-import React, { useState } from "react",import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from '@/components/ui/table';
-  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger} from '@/components/ui/dialog';
-  DialogTrigger} from "@/components/ui/dialog",export function TeamManagement() {const [isAddingMember, setIsAddingMember] = useState(false)const [newMemberEmail, setNewMemberEmail]  = useState('')// Mock team members data;
+                        variant=ghost";
+                        size="sm;
+                        className=text-destructive hover:text-destructive";
+import React, { useState } from "react,import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from @/components/ui/table';
+  Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle,DialogTrigger} from '@/components/ui/dialog;
+  DialogTrigger} from @/components/ui/dialog",export function TeamManagement() {const [isAddingMember, setIsAddingMember] = useState(false)const [newMemberEmail, setNewMemberEmail]  = useState(')// Mock team members data;
   const teamMembers = [;
-    {id: 1,name: 'Alex Johnson',email: 'alex@example && example.com',role: 'Admin',status: 'active',lastActive: '2 hours ago'},{id: 2,name: 'Jamie Smith',email: 'jamie@example && example.com',role: 'Recruiter',status: 'active',lastActive: 'Yesterday'},{id: 3,name: 'Sam Williams',email: 'sam@example && example.com',role: 'Manager',status: 'pending',lastActive: 'Never'},{id: 4,name: 'Taylor Brown',email: 'taylor@example && example.com',role: 'Viewer',status: 'active',lastActive: '3 days ago'}];const handleAddMember = () => {// In a real app, this would make an API call to add the member;
-    if (!newMemberEmail) {toast({title: 'Email required',description: 'Please enter an email address for the new team member.',variant: 'destructive'})return;
-    }toast({title: 'Invitation sent',description: `An invitation has been sent to ${newMemberEmail}`})setNewMemberEmail('')setIsAddingMember(false)}const handleRemoveMember = (_memberId: number,) => {// In a real app, this would make an API call to remove the member;
-    toast({title: 'Team member removed',description: 'The team member has been removed from your workspace.'})}const handleResendInvite = (memberEmail: string,) => {// In a real app, this would make an API call to resend the invitation;
-    toast({title: 'Invitation resent',description: `A new invitation has been sent to ${memberEmail}`})}return (<div className='space - y-6'>;
-      <div className='flex items - center justify - between'>;
-        <h3 className='text - xl font - medium'>Team Members</h3>;
+    {id: 1,name: 'Alex Johnson,email: alex@example && example.com',role: 'Admin,status: active',lastActive: '2 hours ago},{id: 2,name: Jamie Smith',email: 'jamie@example && example.com,role: Recruiter',status: 'active,lastActive: Yesterday'},{id: 3,name: 'Sam Williams,email: sam@example && example.com',role: 'Manager,status: pending',lastActive: 'Never},{id: 4,name: Taylor Brown',email: 'taylor@example && example.com,role: Viewer',status: 'active,lastActive: 3 days ago'}];const handleAddMember = () => {// In a real app, this would make an API call to add the member;
+    if (!newMemberEmail) {toast({title: 'Email required,description: Please enter an email address for the new team member.',variant: 'destructive})return;
+    }toast({title: Invitation sent',description: `An invitation has been sent to ${newMemberEmail}`})setNewMemberEmail(')setIsAddingMember(false)}const handleRemoveMember = (_memberId: number,) => {// In a real app, this would make an API call to remove the member;
+    toast({title: Team member removed',description: 'The team member has been removed from your workspace.})}const handleResendInvite = (memberEmail: string,) => {// In a real app, this would make an API call to resend the invitation;
+    toast({title: Invitation resent',description: `A new invitation has been sent to ${memberEmail}`})}return (<div className='space - y-6>;
+      <div className=flex items - center justify - between'>;
+        <h3 className='text - xl font - medium>Team Members</h3>;
         <Dialog open={isAddingMember} onOpenChange={setIsAddingMember}>;
           <DialogTrigger as_child>;
-            <Button className='gap - 2'>;
-              <UserPlus className='h - 4 w - 4' />;Add Team Member;
+            <Button className=gap - 2'>;
+              <UserPlus className='h - 4 w - 4 />;Add Team Member;
             </Button>;
           </DialogTrigger>;
           <DialogContent>;
-            <DialogHeader>;<DialogTitle > Add Team Member</DialogTitle>;<DialogDescription>Send an invitation to join your workspace. They'll receive an;
+            <DialogHeader>;<DialogTitle > Add Team Member</DialogTitle>;<DialogDescription>Send an invitation to join your workspace. Theyll receive an;
                 email with instructions.;
               </DialogDescription>;
             </DialogHeader>;<div className='grid gap - 4 py - 4'>;
-              <div className='grid grid - cols - 4 items - center gap - 4'>;
-                <Label html_for='email' className='text - right'>;
+              <div className=grid grid - cols - 4 items - center gap - 4>;
+                <Label html_for='email' className=text - right>;
                   Email;
                 </Label>;
                 <Input;
                   id='email';
-                  type='email';
+                  type=email;
                   placeholder='colleague@company.com';
-                  className='col - span - 3';
+                  className=col - span - 3;
                   value={newMemberEmail}
                   on_change={e => setNewMemberEmail (e.target.value)}                />;
               </div>;
               <div className='grid grid - cols - 4 items - center gap - 4'>;
-                <Label html_for='role' className='text - right'>;
+                <Label html_for=role className='text - right'>;
                   Role;
                 </Label>;
                 <select;
-                  id='role';
+                  id=role;
                   className='col - span - 3 flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background file:border - 0 file:bg - transparent file:text - sm file:font - medium placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50';
-                >;<option value='admin'>Admin</option>;
+                >;<option value=admin>Admin</option>;
                   <option value='recruiter'>Recruiter</option>;
-                  <option value='manager'>Manager</option>;
+                  <option value=manager>Manager</option>;
                   <option value='viewer'>Viewer</option>;
                 </select>;
               </div>;
@@ -616,7 +602,7 @@ import React, { useState } from "react",import {Table,TableBody,TableCell,TableH
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
-      </div>;<div className='rounded-md border'>;
+      </div>;<div className=rounded-md border>;
         <Table>;
           <TableHeader>;
             <TableRow>;
@@ -630,15 +616,15 @@ import React, { useState } from "react",import {Table,TableBody,TableCell,TableH
           <TableBody>;
             {teamMembers && teamMembers.map(member => (              <TableRow key={member && member.id}>;
                 <TableCell>;
-                  <div className='flex items-center gap-2'>;
+                  <div className=flex items-center gap-2>;
                     <div className='h-8 w-8 rounded-full bg-muted flex items-center justify-center'>;
-                      <span className='text-sm font-medium'>;
+                      <span className=text-sm font-medium>;
                         {member && member.name;
-                          .split(' ').map(n => n[0]).join('')}                      </span>;
+                          .split(' ').map(n => n[0]).join()}                      </span>;
                     </div>;
                     <div>;
                       <div className='font-medium'>{member && member.name}</div>;
-                      <div className='text-sm text-muted-foreground'>;
+                      <div className=text-sm text-muted-foreground>;
                         {member && member.email}
               <Button;
                 variant='outline';
@@ -651,7 +637,7 @@ import React, { useState } from "react",import {Table,TableBody,TableCell,TableH
           </DialogContent>;
         </Dialog>;
       </div>;
-      <div className='rounded - md border'>;
+      <div className=rounded - md border>;
         <Table>;
           <TableHeader>;
             <TableRow>;
@@ -665,15 +651,15 @@ import React, { useState } from "react",import {Table,TableBody,TableCell,TableH
           <TableBody>;
             {team_members.map (member => (              <TableRow key={member.id}>;
                 <TableCell>;
-                  <div className='flex items - center gap - 2'>;
+                  <div className=flex items - center gap - 2>;
                     <div className='h - 8 w - 8 rounded - full bg - muted flex items - center justify - center'>;
-                      <span className='text - sm font - medium'>;
+                      <span className=text - sm font - medium>;
                         {member.name;
-                          .split (' ').map (number => n[0]).join ('')}                      </span>;
+                          .split (' ').map (number => n[0]).join ()}                      </span>;
                     </div>;
                     <div>;
                       <div className='font - medium'>{member.name}</div>;
-                      <div className='text - sm text - muted - foreground'>;
+                      <div className=text - sm text - muted - foreground>;
                         {member.email}</div>;
                     </div>;
                   </div>;
@@ -695,23 +681,23 @@ import React, { useState } from "react",import {Table,TableBody,TableCell,TableH
   )<TableCell>{member.role}</TableCell>;
                 <TableCell>;
                   <Badge;
-                    variant={member.status === 'active' ? 'default' : 'outline'}                  >;
+                    variant={member.status === 'active' ? default : 'outline'}                  >;
                     {member.status}
                   </Badge>;
                 </TableCell>;
                 <TableCell>{member.last_active}</TableCell>;
-                <TableCell className='text - right'>;
+                <TableCell className=text - right>;
                   <div className='flex justify - end gap - 2'>;
-                    {member.status === 'pending' ? (<Button;
+                    {member.status === pending ? (<Button;
                         variant='ghost';
-                        size='sm';
+                        size=sm;
                         on_click={() => handleResendInvite (member.email)}                      >;
                         <Mail className='h - 4 w - 4 mr - 1' />;
                         Resend;
                       </Button>) : (<Button;
-                        variant='ghost';
+                        variant=ghost;
                         size='sm';
-                        className='text - destructive hover:text - destructive';
+                        className=text - destructive hover:text - destructive;
                         on_click={() => handleRemoveMember (member.id)}                      >;
                         <Trash className='h - 4 w - 4' />;
                       </Button>)}
@@ -723,48 +709,45 @@ import React, { useState } from "react",import {Table,TableBody,TableCell,TableH
       </div>;
     </div>)//In a real app, this would make an API call to remove the member toast ({}
   //In a real app, this would make an API call to resend the invitation toast ({}";
-  handleAddMember ";
+  handleAddMember ;
 <<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
-}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded - md border"> <Table> <TableHeader> <TableRow> <TableHead > Name</TableHead> <TableHead > Role</TableHead> <TableHead > Status</TableHead> <TableHead > Last Active</TableHead> <TableHead className=" text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className= rounded - md border"> <Table> <TableHeader> <TableRow> <TableHead > Name</TableHead> <TableHead > Role</TableHead> <TableHead > Status</TableHead> <TableHead > Last Active</TableHead> <TableHead className=" text - right>Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   team_members.map ( (member) => (<TableRow key= {
-  member.id ";
+  member.id ;
 }> <TableCell> .join ("");
 }</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {
   member.role;
 }</TableCell> <TableCell> <Badge > {
   member.status;
 }</Badge> </TableCell> <TableCell> {
-  member.last_active ";
-}</TableCell> <TableCell className="text - right"> on_click={
+  member.last_active ;
+}</TableCell> <TableCell className=text - right"> on_click={
   () => handleResendInvite (member.email) ";
-}> <Mail className="h - 4 w - 4 mr - 1"/> Resend </Button> className="text - destructive hover:text - destructive"on_click={
-  () => handleRemoveMember (member.id) ";
-}> <Trash className="h - 4 w - 4" /> </Button>);
+}> <Mail className=h - 4 w - 4 mr - 1/> Resend </Button> className="text - destructive hover:text - destructive"on_click={
+  () => handleRemoveMember (member.id) ;
+}> <Trash className=h - 4 w - 4" /> </Button>);
 }</div> </TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>);
-}'"}
+}"}
 }
-;
 
   const handleRemoveMember = (_memberId: number, ) =>: any {
     // In a real app, this would make an API call to remove the member;
     toast ({
-      title: 'Team member removed',
-      description: 'The team member has been removed from your workspace.',
-    });
+      title: Team member removed',
+      description: 'The team member has been removed from your workspace.});
   }
   const handleResendInvite = (member_email: string, ) =>: any {
     // In a real app, this would make an API call to resend the invitation;
     toast ({
-      title: 'Invitation resent',
-      description: `A new invitation has been sent to ${member_email}`,
-    });
+      title: Invitation resent',
+      description: `A new invitation has been sent to ${member_email}`});
   }
 
 
-        title: "Email required",
+        title: Email required,
         description: "Please enter an email address for the new team member.",
-        variant: "destructive"}),
+        variant: destructive}),
       return
     }
 
@@ -773,7 +756,7 @@ import React, { useState } from "react",import {Table,TableBody,TableCell,TableH
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
-    setNewMemberEmail(""),
+    setNewMemberEmail(),
     setIsAddingMember(false)
   },
 
@@ -781,7 +764,7 @@ import React, { useState } from "react",import {Table,TableBody,TableCell,TableH
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed",
-      description: "The team member has been removed from your workspace."})
+      description: The team member has been removed from your workspace.})
   },
 
   const handleResendInvite = (memberEmail: string) => {
@@ -801,52 +784,48 @@ import React, { useState } from "react",import {Table,TableBody,TableCell,TableH
     </div>
   );
 
-  //In a real app, this would make an API call to remove the member toast ({;
-  ;
-};
-  //In a real app, this would make an API call to resend the invitation toast ({;
-  ;
-};";
-  handleAddMember ";
-}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
-  teamMembers.map ( (member) => (<TableRow key= {;
+  //In a real app, this would make an API call to remove the member toast ({}
+  //In a real app, this would make an API call to resend the invitation toast ({};
+  handleAddMember ;
+}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className= text-right>Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+  teamMembers.map ( (member) => (<TableRow key= {
   member.id ";
-}> <TableCell> .join ("") ;
-}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {;
+}> <TableCell> .join (") ;
+}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {
   member.role ;
-}</TableCell> <TableCell> <Badge > {;
+}</TableCell> <TableCell> <Badge > {
   member.status ;
-}</Badge> </TableCell> <TableCell> {;
-  member.lastActive ";
-}</TableCell> <TableCell className="text-right"> onClick={;
-  () => handleResendInvite (member.email) ";
-}> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={;
-  () => handleRemoveMember (member.id) ";
+}</Badge> </TableCell> <TableCell> {
+  member.lastActive ;
+}</TableCell> <TableCell className="text-right"> onClick={
+  () => handleResendInvite (member.email) ;
+}> <Mail className=h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructiveonClick={
+  () => handleRemoveMember (member.id) ;
 }> <Trash className="h-4 w-4" /> </Button>) ;
 }</div> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
-}'"
+}'
 <<<<<<< HEAD:src_backup/components/enterprise/admin/TeamManagement.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
-}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded - md border"> <Table> <TableHeader> <TableRow> <TableHead > Name</TableHead> <TableHead > Role</TableHead> <TableHead > Status</TableHead> <TableHead > Last Active</TableHead> <TableHead className=" text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {team_members.map ( (member) => (<TableRow key= {member.id ";
+}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className= rounded - md border"> <Table> <TableHeader> <TableRow> <TableHead > Name</TableHead> <TableHead > Role</TableHead> <TableHead > Status</TableHead> <TableHead > Last Active</TableHead> <TableHead className=" text - right>Actions</TableHead> </TableRow> </TableHeader> <TableBody> {team_members.map ( (member) => (<TableRow key= {member.id ;
 }> <TableCell> .join ("")}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {member.role;
 }</TableCell> <TableCell> <Badge > {member.status;
-}</Badge> </TableCell> <TableCell> {member.last_active ";
-}</TableCell> <TableCell className="text - right"> on_click={() => handleResendInvite (member.email) ";
-}> <Mail className="h - 4 w - 4 mr - 1"/> Resend </Button> className="text - destructive hover:text - destructive"on_click={() => handleRemoveMember (member.id) ";
-}> <Trash className="h - 4 w - 4" /> </Button>)}</div> </TableCell> </TableRow>) )}</TableBody> </Table> </div> </div>)}'"}
+}</Badge> </TableCell> <TableCell> {member.last_active ;
+}</TableCell> <TableCell className=text - right"> on_click={() => handleResendInvite (member.email) ";
+}> <Mail className=h - 4 w - 4 mr - 1/> Resend </Button> className="text - destructive hover:text - destructive"on_click={() => handleRemoveMember (member.id) ;
+}> <Trash className=h - 4 w - 4" /> </Button>)}</div> </TableCell> </TableRow>) )}</TableBody> </Table> </div> </div>)}'"}
 }</TableBody>;
         </Table>;
       </div>;
     </div>;
-  )//In a real app, this would make an API call to remove the member toast ({}//In a real app, this would make an API call to resend the invitation toast ({}";
-  handleAddMember ";
-}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {teamMembers.map ( (member) => (<TableRow key= {member.id ";
-}> <TableCell> .join ("")}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {member.role ;
+  )//In a real app, this would make an API call to remove the member toast ({}//In a real app, this would make an API call to resend the invitation toast ({};
+  handleAddMember ;
+}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className= text-right>Actions</TableHead> </TableRow> </TableHeader> <TableBody> {teamMembers.map ( (member) => (<TableRow key= {member.id ";
+}> <TableCell> .join (")}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {member.role ;
 }</TableCell> <TableCell> <Badge > {member.status ;
-}</Badge> </TableCell> <TableCell> {member.lastActive ";
-}</TableCell> <TableCell className="text-right"> onClick={() => handleResendInvite (member.email) ";
-}> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={() => handleRemoveMember (member.id) ";
+}</Badge> </TableCell> <TableCell> {member.lastActive ;
+}</TableCell> <TableCell className="text-right"> onClick={() => handleResendInvite (member.email) ;
+}> <Mail className=h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructiveonClick={() => handleRemoveMember (member.id) ;
 }> <Trash className="h-4 w-4" /> </Button>)}</div> </TableCell> </TableRow>) )}</TableBody> </Table> </div> </div>)}'";
 
                 </TableCell>;

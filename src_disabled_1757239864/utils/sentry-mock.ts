@@ -27,8 +27,7 @@ const mockSentry = {
     getScope: () => ({}),
     pushScope: () => ({}),
     popScope: () => true,
-    withScope: (callback: (scope: any) => void) => callback({}),
-  }),
+    withScope: (callback: (scope: any) => void) => callback({})}),
   onLoad: noop,
   wrap: (fn: (...args: any[]) => any) => fn,
 
@@ -53,8 +52,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         next(),
     tracingHandler:
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>
-        next(),
-  },
+        next()},
 
   // Integrations
   Integrations: {
@@ -66,8 +64,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
     Breadcrumbs: class Breadcrumbs {
       constructor() {}
-    },
-  },
+    }},
 
   // Utilities
   withScope: (callback: (scope: any) => void) => callback({}),
@@ -77,9 +74,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     getScope: () => ({}),
     pushScope: () => ({}),
     popScope: () => true,
-    withScope: (callback: (scope: any) => void) => callback({}),
-  }),
-};
+    withScope: (callback: (scope: any) => void) => callback({})})}
 
 export default mockSentry;
   finishTransaction: noop, // Error boundary and React integration
@@ -119,8 +114,7 @@ main
     tracingHandler:
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>
 
-        next(),
-  },
+        next()},
 
 <<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
   // Server-specific methods (Node.js)
@@ -133,8 +127,7 @@ main
         next(),
     tracingHandler:
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>
-        next(),
-  },
+        next()},
 
   // Next.js specific
   withSentryConfig: (config: any) => config,
@@ -166,8 +159,6 @@ main
   Integrations: {
 <<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
     BrowserTracing: class BrowserTracing {
-
-;
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
@@ -200,8 +191,7 @@ const mockSentry = {// Core Sentry methods;
     OnUncaughtException: class OnUncaughtException {,
       constructor() {}
 
-    },
-  },
+    }},
 
   // Transport
   makeBrowserOfflineTransport: noopReturn,
@@ -210,7 +200,7 @@ const mockSentry = {// Core Sentry methods;
   // Utils
   createTransport: noopReturn,
 <<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
-  SDK_VERSION: '7 && 7.0.0-mock',
+  SDK_VERSION: '7 && 7.0.0-mock,
 
 main
 =>
@@ -272,7 +262,7 @@ const mockSentry = {// Core Sentry methods;
   },// Transport;
   makeBrowserOfflineTransport: noopReturn,makeFetchTransport: noopReturn,// Utils;
   createTransport: noopReturn,ursor/automate-test-improve-and-merge-code-646c;
-  SDK_VERSION: "7.0.0-mock",SDK_VERSION: "7.0.0-mock",SDK_VERSION: '7 && 7.0.0-mock',// Constants;
+  SDK_VERSION: "7.0.0-mock,SDK_VERSION: 7.0.0-mock",SDK_VERSION: 7 && 7.0.0-mock',// Constants;
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
 const noop = () =>: any {}
@@ -297,8 +287,7 @@ const mock_sentry = {// Core Sentry methods;
   Tracing: {
     BrowserTracing: class BrowserTracing {
       constructor () {}
-    },
-  },
+    }},
   // Integrations;
   Integrations: {
     BrowserTracing: class BrowserTracing {
@@ -312,30 +301,27 @@ const mock_sentry = {// Core Sentry methods;
     },
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor () {}
-    },
-  },
+    }},
   // Transport;
   makeBrowserOfflineTransport: noop_return,
   makeFetchTransport: noop_return,
   // Utils;
   create_transport: noop_return,
-  SDK_VERSION: '7.0.0 - mock',
+  SDK_VERSION: '7.0.0 - mock,
   // Constants;
   Severity: {
 <<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
-    Fatal: "fatal",
-    Error: "error",
-    Warning: "warning",
-    Info: "info",
-    Debug: "debug",
-  },
-};
+    Fatal: "fatal,
+    Error: error",
+    Warning: "warning,
+    Info: info",
+    Debug: "debug}}
 <<<<<<< HEAD:src_backup/utils/sentry-mock.ts
-    Fatal: 'fatal',
-    Error: 'error',
-    Warning: 'warning',
-    Info: 'info',
-    Debug: 'debug'
+    Fatal: fatal',
+    Error: 'error,
+    Warning: warning',
+    Info: 'info,
+    Debug: debug'
   }
 }
 main
@@ -357,13 +343,13 @@ export const init = mockSentry && mockSentry.init;
     }
   },// Transport;
   makeBrowserOfflineTransport: noop_return,makeFetchTransport: noop_return,// Utils;
-  create_transport: noop_return,SDK_VERSION: '7.0.0 - mock',// Constants;
+  create_transport: noop_return,SDK_VERSION: '7.0.0 - mock,// Constants;
   Severity: {ursor/automate-test-improve-and-merge-code-646c;
-    Fatal: "fatal",Error: "error",Warning: "warning",Info: "info",Debug: "debug";
+    Fatal: fatal",Error: "error,Warning: warning",Info: "info,Debug: debug";
   }
 }Debug: "debug";
   }
-}Fatal: 'fatal',Error: 'error',Warning: 'warning',Info: 'info',Debug: 'debug';
+}Fatal: fatal',Error: 'error,Warning: warning',Info: 'info,Debug: debug';
   }
 }export const init = mockSentry && mockSentry.init;
 export const captureException = mockSentry && mockSentry.captureException;
@@ -400,7 +386,7 @@ export const Severity  = mockSentry && mockSentry.Severity;// Additional exports
 export { mockSentry as Sentry }// Additional exports for compatibility;
 =
 // Mock scope
-const mockScope = {;
+const mockScope = {
   setUser: noop;
   setTag: noop;
   setTags: noop;
@@ -423,7 +409,7 @@ const mockScope = {;
   onLoad: noop, wrap: (fn: (...args: any[]) => any) => fn,
 
 // Additional exports for compatibility;
-export { mockSentry as Sentry };
+export { mockSentry as Sentry }
 >// All exports are already defined above;
 
 // All exports are already defined above;
@@ -510,47 +496,47 @@ interface SentryMock {
 
 const mockSentry: SentryMock = {
   captureException: (error: Error, context?: any) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Sentry mock - Exception:', error, context);
+    if (process.env.NODE_ENV === 'development) {
+      console.error(Sentry mock - Exception:', error, context);
     }
   },
   captureMessage: (message: string, level?: string) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`Sentry mock - Message (${level || 'info'}):`, message);
+    if (process.env.NODE_ENV === 'development) {
+      console.log(`Sentry mock - Message (${level || info'}):`, message);
     }
   },
   addBreadcrumb: (breadcrumb: any) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Sentry mock - Breadcrumb:', breadcrumb);
+    if (process.env.NODE_ENV === 'development) {
+      console.log(Sentry mock - Breadcrumb:', breadcrumb);
     }
   },
   setContext: (key: string, context: any) => {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development) {
       console.log(`Sentry mock - Context ${key}:`, context);
     }
   },
   setUser: (user: any) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Sentry mock - User:', user);
+    if (process.env.NODE_ENV === development') {
+      console.log('Sentry mock - User:, user);
     }
   },
   setTag: (key: string, value: string) => {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === development') {
       console.log(`Sentry mock - Tag ${key}:`, value);
     }
   },
   configureScope: (callback: (scope: any) => void) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Sentry mock - Configure scope');
+    if (process.env.NODE_ENV === 'development) {
+      console.log(Sentry mock - Configure scope');
       callback({});
     }
   },
   withScope: (callback: (scope: any) => void) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Sentry mock - With scope');
+    if (process.env.NODE_ENV === 'development) {
+      console.log(Sentry mock - With scope');
       callback({});
     }
   }
-};
+}
 
 export default mockSentry;

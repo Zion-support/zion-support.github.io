@@ -6,7 +6,7 @@ interface StatusProps {
   // Add props here as needed
 }
 
-export default function Status({ }: StatusProps) {
+export default function Status({}: StatusProps) {
   return (
     <div>
       <h1>Status</h1>

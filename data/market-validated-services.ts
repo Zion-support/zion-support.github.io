@@ -1,39 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-;
-import { ServiceVariant  } from '../types/service-variants';
-
-
-import { ServiceVariant } from '../types/service-variants';
-;
-import { ServiceVariant  } from '../types/service-variants';
 =======
-;
-import { ServiceVariant  } from '../types/service-variants';
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+
 =======
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
-<<<<<<< HEAD
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -49,224 +20,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   description: string;
   features: string[];
   category: string;
-<<<<<<< HEAD
-  link: string;
-  variant?: ServiceVariant;
-  rating?: number;
-  customers?: number;
-  trial_days?: number;
-  setup_time?: string;
-  contact_info: {}
-    mobile: string;
-    email: string;
-    address: string;
-    website?: string;
-<<<<<<< HEAD
-  }'RAG over your docs with hybrid search','Guardrails: PII / PHI redaction, jailbreak detection','Human handoff + conversation analytics','Slack / Teams / Widget channels';
-    ],category: 'AI & Assistants',customers: 1200,trial_days: 14,setup_time: '30 minutes',contact_info;
-  },{'Policy and toxicity checks','Latency and cost KPIs','Prompt / version diff and alerts';
-    ],category: 'AI & MLOps',customers: 600,trial_days: 14,setup_time: '1 hour',contact_info;
-  },{'Chunking strategies + citations','Toolformer - style agents','Eval suite and drift monitoring';
-    ],category: 'AI & Search',customers: 900,trial_days: 14,setup_time: '2 hours',contact_info;
-  },'OWASP Top 10 tests','CI gate','Fix guidance';
-    ],category: 'Enterprise IT - Security',const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
-}export const marketValidatedServices: MarketValidatedService[] = [;
-  // AI and Assistants;
-  {id: 'ai - assistant - pro',name: 'AI Assistant Pro',tagline: 'Branded copilot with RAG, guardrails, and analytics',price: '$149',period: '/month',description:;
-      'Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.',features: [;'RAG over your docs with hybrid search','Guardrails: PII / PHI redaction, jailbreak detection','Human handoff + conversation analytics','Slack / Teams / Widget channels';
-    ],category: 'AI & Assistants',link: 'https://ziontechgroup.com / ai - assistant',variant: 'ai - futuristic',rating: 4.8,customers: 1200,trial_days: 14,setup_time: '30 minutes',contact_info;
-  },{'Eval datasets/versioning',id: 'ai - evals - observability',name: 'AI Evals & Observability',tagline:;
-      'Regression testing, safety checks, and live metrics for LLM features',price: '$99',period: '/month',description:;
-      'Ship reliable LLM apps with dataset management, prompt diffing, red - teaming, and production KPIs for quality, latency, and costs.',features: [;
-      'Eval datasets / versioning','Policy and toxicity checks','Latency and cost KPIs','Prompt / version diff and alerts';
-    ],category: 'AI & MLOps',link: 'https://ziontechgroup.com / ai - evals',variant: 'quantum - holographic',rating: 4.7,customers: 600,trial_days: 14,setup_time: '1 hour',contact_info;
-  },{'Hybrid vector+BM25 + reranker',id: 'agentic - rag - platform',name: 'Agentic RAG Platform',tagline: 'Production RAG with hybrid search, chunking, tools, and evals',price: '$179',period: '/month',description:;
-      'Ingest and index your knowledge with hybrid search + reranking, enable tool - using agents, and validate responses with reference checks and citations.',features: [;
-      'Hybrid vector + BM25 + reranker','Chunking strategies + citations','Toolformer - style agents','Eval suite and drift monitoring';
-    ],category: 'AI & Search',link: 'https://ziontechgroup.com / agentic - rag',variant: 'quantum - matrix',rating: 4.7,customers: 900,trial_days: 14,setup_time: '2 hours',contact_info;
-  },'Auth/Z misconfig checks',// Security and APIs;
-  {id: 'api - security - scanner',name: 'API Security Scanner',tagline: 'OpenAPI / GraphQL scanning, auth / Z checks, dependency audit',price: '$59',period: '/month',description:;
-      'Automatically scan APIs for OWASP issues, auth / z misconfigurations, and dependency CVEs with CI gating and fix guidance.',features: [;
-      'Auth / Z misconfig checks','OWASP Top 10 tests','CI gate','Fix guidance';
-    ],category: 'Enterprise IT - Security',link: 'https://ziontechgroup.com / api - security - scanner',variant: 'cyberpunk',rating: 4 && 4.6,customers: 750,trial_days: 14,setup_time: '20 minutes',contact_info;
-  },{'SLOs & error budgets','Alerting','Dashboards';
-    ],category: 'Enterprise IT - Observability',contact_info;
-  },{'OTel traces/metrics/logs',id: 'api - observability',name: 'API Observability & SLA Guard',tagline: 'OTel tracing, SLOs, and error budgets for services',price: '$69',period: '/month',description:;
-      'Collect traces / metrics / logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.',features: [;
-      'OTel traces / metrics / logs','SLOs & error budgets','Alerting','Dashboards';
-    ],category: 'Enterprise IT - Observability',link: 'https://ziontechgroup.com / api - observability',variant: 'holographic',rating: 4 && 4.6,customers: 640,trial_days: 14,setup_time: '40 minutes',contact_info;
-  },'Auto rightsizing','Idle cleanup','Spot orchestration','Anomaly detection';
-    ],category: 'Enterprise IT - FinOps',contact_info;
-  },// Cloud and Infra;
-  {id: 'cloud - cost - optimizer - pro',name: 'Cloud Cost Optimizer Pro',tagline: 'Rightsizing, lifecycle, anomaly detection, and k8s bin - packing',price: '$99',period: '/month',description:;
-      'Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.',features: [;'Auto rightsizing','Idle cleanup','Spot orchestration','Anomaly detection';
-    ],category: 'Enterprise IT - FinOps',link: 'https://ziontechgroup.com / cloud - cost - optimizer',variant: 'quantum',rating: 4 && 4.6,customers: 820,trial_days: 14,setup_time: '1 hour',contact_info;
-  },{'Slow query ranking','AI index advice','Pool tuning','SLA / SLO dashboards';
-    ],category: 'Enterprise IT - Data',customers: 560,trial_days: 14,setup_time: '45 minutes',contact_info;
-  },{'Global synthetic checks','Error budgets & burn rates','On - call & escalations','Incident runbooks';
-    ],category: 'Enterprise IT - SRE',customers: 1100,trial_days: 14,setup_time: '25 minutes',contact_info;
-  },{'Expiry alerts','Issuer checks','Auto - renew validation','Inventory export';
-    ],category: 'Enterprise IT - Security',contact_info;
-  },{id: 'database - performance - monitor',name: 'Database Performance Monitor',tagline: 'Slow query capture, AI index suggestions, capacity forecasting',price: '$79',period: '/month',description:;
-      'Postgres / MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.',features: [;'Slow query ranking','AI index advice','Pool tuning','SLA / SLO dashboards';
-    ],category: 'Enterprise IT - Data',link: 'https://ziontechgroup.com / database - performance - monitor',variant: 'neural - quantum',rating: 4.7,customers: 560,trial_days: 14,setup_time: '45 minutes',contact_info;
-  },{id: 'managed - postgres - ha',name: 'Managed Postgres HA',tagline: 'Highly - available Postgres with backups, failover, and guardrails',price: '$499',period: '/month',description:;
-      'Production - ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.',features: [;'Automated backups','Failover & replication','Performance tuning','SLA & support';
-    ],category: 'Enterprise IT - Data',link: 'https://ziontechgroup.com / managed - postgres - ha',variant: 'holographic - advanced',rating: 4.8,customers: 240,trial_days: 7,setup_time: '1 day',contact_info;
-  },// Reliability & Monitoring;
-  {id: 'uptime - slo - monitor',name: 'Uptime & SLO Monitor',tagline: 'Synthetic checks, error budgets, and incident automation',price: '$39',period: '/month',description:;
-      'Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.',features: [;'Global synthetic checks','Error budgets & burn rates','On - call & escalations','Incident runbooks';
-    ],category: 'Enterprise IT - SRE',link: 'https://ziontechgroup.com / uptime - slo - monitor',variant: 'quantum - cyberpunk',rating: 4.5,customers: 1100,trial_days: 14,setup_time: '25 minutes',contact_info;
-  },{id: 'tls - certificate - monitor',name: 'TLS Certificate Monitor',tagline: 'Auto - renewal checks and expiry alerts across your fleet',price: '$19',period: '/month',description:;
-      'Monitor certificates across domains and environments, get renewal reminders and failure alerts.',features: [;'Expiry alerts','Issuer checks','Auto - renew validation','Inventory export';
-    ],category: 'Enterprise IT - Security',link: 'https://ziontechgroup.com / tls - certificate - monitor',variant: 'default',rating: 4 && 4.5,customers: 2200,trial_days: 14,setup_time: '10 minutes',contact_info;
-  },{'Change detection','Misconfig alerts','TTL insights','Export & audit';
-    ],category: 'Enterprise IT - Networking',contact_info;
-  },{id: 'domain - dns - monitor',name: 'Domain & DNS Monitor',tagline: 'Track DNS changes, TTLs, and misconfigurations',price: '$29',period: '/month',description:;
-      'Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.',features: [;'Change detection','Misconfig alerts','TTL insights','Export & audit';
-    ],category: 'Enterprise IT - Networking',link: 'https://ziontechgroup.com / domain - dns - monitor',variant: 'default',rating: 4 && 4.4,customers: 980,trial_days: 14,setup_time: '15 minutes',contact_info;
-  },'Watermarks','Async webhooks';
-    ],category: 'Micro SaaS',customers: 1300,trial_days: 7,setup_time: '10 minutes',contact_info;
-  },{'RUM collection','CWV dashboards','Waterfall analysis','Alerts & webhooks';
-    ],category: 'Micro SaaS',customers: 760,trial_days: 14,setup_time: '20 minutes',contact_info;
-  },{'Edge evaluation','Targeting & segments','Experiments','SDKs & audit';
-    ],category: 'Micro SaaS',customers: 430,trial_days: 14,setup_time: '30 minutes',contact_info;
-  },{'Control mapping','Evidence collection','Change tracking','Export & auditor access';
-    ],category: 'Enterprise IT - Compliance',customers: 310,trial_days: 7,setup_time: '1 day',contact_info;
-  },{'Capture & inspect','Replay with backoff','Signature verification','Forwarding rules';
-    ],category: 'Micro SaaS',customers: 1650,trial_days: 14,setup_time: '10 minutes',contact_info;
-  },{contact_info;
-  },'HTML/Markdown to PDF','Headers/footers',// Dev & Productivity;
-  {id: 'pdf - render - api',name: 'PDF Render API',tagline: 'High - fidelity serverless PDF rendering and watermarking',price: '$49',period: '/month',description:;
-      'Generate pixel - perfect PDFs from HTML / Markdown with headers, footers, and watermarking using a simple API.',features: [;
-      'HTML / Markdown to PDF','Headers / footers','Watermarks','Async webhooks';
-    ],category: 'Micro SaaS',link: 'https://ziontechgroup.com / pdf - render - api',variant: 'holographic - matrix',rating: 4.6,customers: 1300,trial_days: 7,setup_time: '10 minutes',contact_info;
-  },{id: 'browser - performance - monitor',name: 'Browser Performance Monitor',tagline: 'RUM metrics, Core Web Vitals, and UX waterfall analysis',price: '$39',period: '/month',description:;
-      'Collect real - user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.',features: [;'RUM collection','CWV dashboards','Waterfall analysis','Alerts & webhooks';
-    ],category: 'Micro SaaS',link: 'https://ziontechgroup.com / browser - performance - monitor',variant: 'quantum - holographic',rating: 4.5,customers: 760,trial_days: 14,setup_time: '20 minutes',contact_info;
-  },{id: 'feature - flags - edge',name: 'Feature Flags at the Edge',tagline: 'Targeting, rollouts, and experiments at CDN edge',price: '$69',period: '/month',description:;
-      'Ship features safely with edge - evaluated flags, user targeting, and experimentation without latency.',features: [;'Edge evaluation','Targeting & segments','Experiments','SDKs & audit';
-    ],category: 'Micro SaaS',link: 'https://ziontechgroup.com / feature - flags - edge',variant: 'quantum - holographic',rating: 4.5,customers: 430,trial_days: 14,setup_time: '30 minutes',contact_info;
-  },{id: 'serverless - cron - manager',name: 'Serverless Cron Manager',tagline: 'Reliable scheduled jobs with retries and observability',price: '$29',period: '/month',description:;
-      'Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.',features: [;'Cron & schedules','Retries & DLQs','Logs & traces','Alerts & webhooks';
-    ],category: 'Micro SaaS',link: 'https://ziontechgroup.com / serverless - cron - manager',variant: 'default',rating: 4 && 4.4,customers: 1150,trial_days: 14,setup_time: '15 minutes',contact_info;
-  },// Compliance & Risk;
-  {id: 'soc2 - evidence - automation',name: 'SOC 2 Evidence Automation',tagline: 'Collect and map controls with change tracking',price: '$149',period: '/month',description:;
-      'Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.',features: [;'Control mapping','Evidence collection','Change tracking','Export & auditor access';
-    ],category: 'Enterprise IT - Compliance',link: 'https://ziontechgroup.com / soc2 - evidence - automation',variant: 'holographic - neural',rating: 4.6,customers: 310,trial_days: 7,setup_time: '1 day',contact_info;
-  },{id: 'vendor - risk - automation',name: 'Vendor Risk Automation',tagline: 'Automate VRM workflows, DDQs, and risk scoring',price: '$99',period: '/month',description:;
-      'Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.',features: [;'DDQs and questionnaires','Risk scoring','Continuous monitoring','Dashboards & export';
-    ],category: 'Enterprise IT - Compliance',link: 'https://ziontechgroup.com / vendor - risk - automation',variant: 'quantum - entanglement',rating: 4.5,customers: 520,trial_days: 14,setup_time: '2 hours',contact_info;
-  },// Developer and Ops Utilities;
-  {id: 'webhook - relay - replay',name: 'Webhook Relay & Replay',tagline: 'Capture, inspect, and replay webhooks reliably',price: '$19',period: '/month',description:;
-      'Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.',features: [;'Capture & inspect','Replay with backoff','Signature verification','Forwarding rules';
-    ],category: 'Micro SaaS',link: 'https://ziontechgroup.com / webhook - relay - replay',variant: 'cyberpunk - holographic',rating: 4.5,customers: 1650,trial_days: 14,setup_time: '10 minutes',contact_info;
-  },{'Managed vector DB';
-      'Ingestion pipelines';
-      'Metadata filters';
-      'Access controls';
-    ];
-    category: 'AI & Search';
-    link: 'https://ziontechgroup.com/vector-search-starter';
-    variant: 'quantum';
-    rating: 4.6;
-    customers: 410;
-    trialDays: 14;
-    setupTime: '2 hours';
-    contactInfo;
-  }
-];import { ServiceVariant   } from '../types/service-variants';
-    id: 'audit-log-vault';
-    name: 'Audit Log Vault';
-    tagline: 'Tamper-evident logs with retention and export';
-    price: '$39';
-    period: '/month';
-    description:;
-      'Centralize audit logs with WORM retention, export APIs, and fine-grained access for investigations.';
-    features: [;
-      'WORM retention';
-      'Export APIs';
-      'Fine-grained access';
-      'Tamper evidence';
-    ];
-    category: 'Enterprise IT - Security';
-    link: 'https://ziontechgroup.com/audit-log-vault';
-    variant: 'quantum-neural';
-    rating: 4.5;
-    customers: 420;
-    trialDays: 14;
-    setupTime: '30 minutes';
-    contactInfo;
-  }
-  // AI Channels;
-  {id: 'ai-phone-agent';
-    name: 'AI Phone Agent';
-    tagline: 'Voice IVR and call handling with CRM handoff';
-    price: '$129';
-    period: '/month';
-    description:;
-      'Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.';
-    features: ['Natural TTS/ASR', 'Routing & handoff', 'CRM sync', 'Analytics'];
-    category: 'AI & Assistants';
-    link: 'https://ziontechgroup.com/ai-phone-agent';
-    variant: 'quantum-holographic-advanced';
-    rating: 4.6;
-    customers: 380;
-    trialDays: 7;
-    setupTime: '1 hour';
-    contactInfo;
-  }
-  // Search and Knowledge;
-  {id: 'vector-search-starter';
-    name: 'Vector Search Starter';
-    tagline: 'Deploy a production-grade vector database and APIs';
-    price: '$89';
-    period: '/month';
-    description:;
-      'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.';
-    features: [;
-      'Managed vector DB','Ingestion pipelines','Metadata filters','Access controls';
-    ],category: 'AI & Search',link: 'https://ziontechgroup.com/vector-search-starter',variant: 'quantum',rating: 4.6,customers: 410,trialDays: 14,setupTime: '2 hours',contactInfo;
-  }
-];export interface MarketValidatedService  {id: 'audit - log - vault',name: 'Audit Log Vault',tagline: 'Tamper - evident logs with retention and export',price: '$39',period: '/month',description:;
-      'Centralize audit logs with WORM retention, export APIs, and fine - grained access for investigations.',features: [;'WORM retention','Export APIs','Fine - grained access','Tamper evidence';
-    ],category: 'Enterprise IT - Security',link: 'https://ziontechgroup.com / audit - log - vault',variant: 'quantum - neural',rating: 4.5,customers: 420,trial_days: 14,setup_time: '30 minutes',contact_info;
-  },// AI Channels;
-  {id: 'ai - phone - agent',name: 'AI Phone Agent',tagline: 'Voice IVR and call handling with CRM handoff',price: '$129',period: '/month',description:;'Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.',features: ['Natural TTS / ASR', 'Routing & handoff', 'CRM sync', 'Analytics'],category: 'AI & Assistants',link: 'https://ziontechgroup.com / ai - phone - agent',variant: 'quantum - holographic - advanced',rating: 4.6,customers: 380,trial_days: 7,setup_time: '1 hour',contact_info;
-  },// Search and Knowledge;
-  {id: 'vector - search - starter',name: 'Vector Search Starter',tagline: 'Deploy a production - grade vector database and APIs',price: '$89',period: '/month',description:;
-      'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',features: [;'Managed vector DB','Ingestion pipelines','Metadata filters','Access controls';
-    ],category: 'AI & Search','WORM retention','Export APIs','Fine - grained access','Tamper evidence';
-    ],category: 'Enterprise IT - Security',customers: 420,trial_days: 14,setup_time: '30 minutes',contact_info;
-  },customers: 380,trial_days: 7,setup_time: '1 hour',contact_info;
-  },ursor/fix-website-loading-errors-and-merge-6662;
-      'Managed vector DB','Ingestion pipelines','Metadata filters','Access controls';
-    ],category: 'AI & Search',link: 'https://ziontechgroup.com / vector - search - starter',variant: 'quantum',rating: 4.6,customers: 410,trial_days: 14,setup_time: '2 hours',contact_info;
-  },'Access controls';
-    ],category: 'AI & Search',export interface MarketValidatedService  {export interface MarketValidatedService  {contact_info;
-  },export interface MarketValidatedService  {export interface MarketValidatedService  {ursor/fix-website-loading-errors-and-merge-6662;
-=======
-  }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-  id: string;,
-  name: string;
-  tagline: string;,
-
-  price: string;
-  description: string;,
-  features: string[];
-  category: string;,
-pr-12325
-  link: string;
-  variant?: ServiceVariant;
-  rating?: number;
-  customers?: number;
-  trial_days?: number;
-  setup_time?: string;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   contact_info: {
     mobile: string;
     email: string;
@@ -274,101 +28,49 @@ pr-12325
     website?: string;
   }
 
-<<<<<<< HEAD
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ;
 const contact_info = {
 
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  mobile: '+1 302 464 0950,
+  email: kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709,
 
-  website: 'https://ziontechgroup.com',
-}
-;
+  website: https://ziontechgroup.com'}
 export const marketValidatedServices: MarketValidatedService[] = [;
   // AI and Assistants;
   {
-    id: 'ai - assistant - pro',
-    name: 'AI Assistant Pro',
-    tagline: 'Branded copilot with RAG, guardrails, and analytics',
-    price: '$149',
-    period: '/month',
+    id: 'ai - assistant - pro,
+    name: AI Assistant Pro',
+    tagline: 'Branded copilot with RAG, guardrails, and analytics,
+    price: $149',
+    period: '/month,
     description:;
-      'Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.',
+      Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.',
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      'RAG over your docs with hybrid search',
-      'Guardrails: PII / PHI redaction, jailbreak detection',
-      'Human handoff + conversation analytics',
+      'RAG over your docs with hybrid search,
+      Guardrails: PII / PHI redaction, jailbreak detection',
+      'Human handoff + conversation analytics,
 =======
-      'RAG over your docs with hybrid search','
-      'Guardrails: PII / PHI redaction, jailbreak detection','
-      'Human handoff + conversation analytics','
+      RAG over your docs with hybrid search','
+      Guardrails: PII / PHI redaction, jailbreak detection,'
+      'Human handoff + conversation analytics,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Slack / Teams / Widget channels',
-    ],'
-    category: 'AI & Assistants',
-<<<<<<< HEAD
+      'Slack / Teams / Widget channels'],
+    category: AI & Assistants',
 
-<<<<<<< HEAD
-=======
-
-  contact_info: {,
-  mobile: string;
-    email: string;,
-  address: string;
-    website?: string;
-  }
-pr-12325
-      'RAG over your docs with hybrid search',
-      'Guardrails: PII / PHI redaction, jailbreak detection',
-      'Human handoff + conversation analytics',
-      'Slack / Teams / Widget channels',
-    ],
-    category: 'AI & Assistants',
-
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    customers: 1200,
-    trial_days: 14,
-    setup_time: '30 minutes',
-    contact_info
-  },
-  {
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-    link: 'https://ziontechgroup.com / ai - assistant',
-    variant: 'ai - futuristic',
+    link: 'https://ziontechgroup.com / ai - assistant,
+    variant: ai - futuristic',
     rating: 4.8,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 
 =======
@@ -376,89 +78,43 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 1200,
     trial_days: 14,'
-    setup_time: '30 minutes',
-    contact_info,
-  },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-=======
-pr-12325
-    customers: 1200,
-    trial_days: 14,
-    setup_time: '30 minutes',
-    contact_info,
-  },
-  {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+    setup_time: 30 minutes,
+    contact_info},
+
 
       'Eval datasets/versioning',
-    id: 'ai - evals - observability',
+    id: ai - evals - observability,
     name: 'AI Evals & Observability',
     tagline:;
-      'Regression testing, safety checks, and live metrics for LLM features',
+      Regression testing, safety checks, and live metrics for LLM features,
     price: '$99',
-    period: '/month',
+    period: /month,
     description:;
       'Ship reliable LLM apps with dataset management, prompt diffing, red - teaming, and production KPIs for quality, latency, and costs.',
     features: [;
-      'Eval datasets / versioning',
+      Eval datasets / versioning,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Policy and toxicity checks',
-      'Latency and cost KPIs',
+      Latency and cost KPIs,
 =======
   {}
 '
-      'Policy and toxicity checks','
-      'Latency and cost KPIs','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Prompt / version diff and alerts',
-    ],'
-    category: 'AI & MLOps',
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-      'Policy and toxicity checks',
+      'Policy and toxicity checks,
       'Latency and cost KPIs',
-      'Prompt / version diff and alerts',
-    ],
-    category: 'AI & MLOps',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      Prompt / version diff and alerts'],'
+    category: AI & MLOps,
 
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    customers: 600,
-    trial_days: 14,
-    setup_time: '1 hour',
-    contact_info
-  },
-  {
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
     link: 'https://ziontechgroup.com / ai - evals',
-    variant: 'quantum - holographic',
+    variant: quantum - holographic,
     rating: 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 
 =======
@@ -466,479 +122,242 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 600,
     trial_days: 14,'
-    setup_time: '1 hour',
-    contact_info,
-  },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-=======
-    customers: 600,
-    trial_days: 14,
-    setup_time: '1 hour',
-    contact_info,
-  },
-  {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+    setup_time: '1 hour,
+    contact_info},
 
-      'Hybrid vector+BM25 + reranker',
-    id: 'agentic - rag - platform',
-    name: 'Agentic RAG Platform',
-    tagline: 'Production RAG with hybrid search, chunking, tools, and evals',
-    price: '$179',
-    period: '/month',
+
+      Hybrid vector+BM25 + reranker',
+    id: 'agentic - rag - platform,
+    name: Agentic RAG Platform',
+    tagline: 'Production RAG with hybrid search, chunking, tools, and evals,
+    price: $179',
+    period: '/month,
     description:;
-      'Ingest and index your knowledge with hybrid search + reranking, enable tool - using agents, and validate responses with reference checks and citations.',
+      Ingest and index your knowledge with hybrid search + reranking, enable tool - using agents, and validate responses with reference checks and citations.',
     features: [;
-      'Hybrid vector + BM25 + reranker',
+      'Hybrid vector + BM25 + reranker,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      'Chunking strategies + citations',
-      'Toolformer - style agents',
+      Chunking strategies + citations',
+      'Toolformer - style agents,
 =======
   {}
-'
-      'Chunking strategies + citations','
-      'Toolformer - style agents','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Eval suite and drift monitoring',
-    ],'
-    category: 'AI & Search',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
       'Chunking strategies + citations',
-      'Toolformer - style agents',
-      'Eval suite and drift monitoring',
-    ],
-    category: 'AI & Search',
+      Toolformer - style agents','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      Eval suite and drift monitoring],'
+    category: 'AI & Search,
 
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    customers: 900,
-    trial_days: 14,
-    setup_time: '2 hours',
-    contact_info
-  },
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-    link: 'https://ziontechgroup.com / agentic - rag',
-    variant: 'quantum - matrix',
+    link: https://ziontechgroup.com / agentic - rag',
+    variant: 'quantum - matrix,
     rating: 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 900,
-    trial_days: 14,'
-    setup_time: '2 hours',
-    contact_info,
-  },
-<<<<<<< HEAD
-=======
-    customers: 900,
     trial_days: 14,
     setup_time: '2 hours',
-    contact_info,
-  },
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+    contact_info},
 
-      'Auth/Z misconfig checks',
+
+      Auth/Z misconfig checks,
   // Security and APIs;
   {
     id: 'api - security - scanner',
-    name: 'API Security Scanner',
+    name: API Security Scanner,
     tagline: 'OpenAPI / GraphQL scanning, auth / Z checks, dependency audit',
-    price: '$59',
+    price: $59,
     period: '/month',
     description:;
-      'Automatically scan APIs for OWASP issues, auth / z misconfigurations, and dependency CVEs with CI gating and fix guidance.',
+      Automatically scan APIs for OWASP issues, auth / z misconfigurations, and dependency CVEs with CI gating and fix guidance.,
     features: [;
       'Auth / Z misconfig checks',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      'OWASP Top 10 tests',
+      OWASP Top 10 tests,
       'CI gate',
 =======
-'
-      'OWASP Top 10 tests','
-      'CI gate','
+
+      OWASP Top 10 tests','
+      CI gate,'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Fix guidance',
-    ],'
+      'Fix guidance],
     category: 'Enterprise IT - Security',
-<<<<<<< HEAD
-=======
-      'OWASP Top 10 tests',
-      'CI gate',
-      'Fix guidance',
-    ],
-    category: 'Enterprise IT - Security',
-<<<<<<< HEAD
 
-
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-    link: 'https://ziontechgroup.com / api - security - scanner',
+    link: https://ziontechgroup.com / api - security - scanner,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    variant: 'cyberpunk',
-    rating: 4 && 4.6,
-    customers: 750,
-    trial_days: 14,'
-    setup_time: '20 minutes',
-    contact_info,
-  },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     variant: 'cyberpunk',
     rating: 4 && 4.6,
     customers: 750,
     trial_days: 14,
-    setup_time: '20 minutes',
-<<<<<<< HEAD
-    contact_info
-  },
-  {
+    setup_time: 20 minutes',
+    contact_info},
+
+    variant: 'cyberpunk,
+    rating: 4 && 4.6,
+    customers: 750,
+    trial_days: 14,
+    setup_time: 20 minutes',
 
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-    contact_info,
-  },
-  {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-
-      'OTel traces/metrics/logs',
-    id: 'api - observability',
-    name: 'API Observability & SLA Guard',
-    tagline: 'OTel tracing, SLOs, and error budgets for services',
-    price: '$69',
-    period: '/month',
+      'OTel traces/metrics/logs,
+    id: api - observability',
+    name: 'API Observability & SLA Guard,
+    tagline: OTel tracing, SLOs, and error budgets for services',
+    price: '$69,
+    period: /month',
     description:;
-      'Collect traces / metrics / logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.',
+      'Collect traces / metrics / logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.,
     features: [;
-      'OTel traces / metrics / logs',
+      OTel traces / metrics / logs',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      'SLOs & error budgets',
-      'Alerting',
+      'SLOs & error budgets,
+      Alerting',
 =======
   {}
 '
-      'SLOs & error budgets','
-      'Alerting','
+      SLOs & error budgets,'
+      'Alerting,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Dashboards',
-    ],'
-    category: 'Enterprise IT - Observability',
-<<<<<<< HEAD
-=======
-      'SLOs & error budgets',
-      'Alerting',
-      'Dashboards',
-    ],
-    category: 'Enterprise IT - Observability',
-<<<<<<< HEAD
+      'Dashboards'],
+    category: Enterprise IT - Observability',
 
-
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-    link: 'https://ziontechgroup.com / api - observability',
+    link: 'https://ziontechgroup.com / api - observability,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    variant: 'holographic',
+    variant: holographic',
     rating: 4 && 4.6,
     customers: 640,
     trial_days: 14,'
-    setup_time: '40 minutes',
-    contact_info,
-  },
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    setup_time: 40 minutes,
+    contact_info},
+
     variant: 'holographic',
     rating: 4 && 4.6,
     customers: 640,
     trial_days: 14,
-    setup_time: '40 minutes',
-<<<<<<< HEAD
-    contact_info
-  },
-=======
-    contact_info,
-  },
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+    setup_time: 40 minutes,
+
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   // Cloud and Infra;
   {
     id: 'cloud - cost - optimizer - pro',
-    name: 'Cloud Cost Optimizer Pro',
+    name: Cloud Cost Optimizer Pro,
     tagline: 'Rightsizing, lifecycle, anomaly detection, and k8s bin - packing',
-    price: '$99',
+    price: $99,
     period: '/month',
     description:;
-      'Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.',
+      Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.,
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Auto rightsizing',
-      'Idle cleanup',
+      Idle cleanup,
       'Spot orchestration',
 =======
-'
-      'Auto rightsizing','
-      'Idle cleanup','
-      'Spot orchestration','
+
+      Auto rightsizing','
+      Idle cleanup,'
+      'Spot orchestration,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Anomaly detection',
-    ],'
-    category: 'Enterprise IT - FinOps',
-<<<<<<< HEAD
-=======
-      'Policy and toxicity checks',
-      'Latency and cost KPIs',
-      'Prompt / version diff and alerts',
-    category: 'AI & MLOps',
-    customers: 600,
-    setup_time: '1 hour',
-      'Chunking strategies + citations',
-      'Toolformer - style agents',
-      'Eval suite and drift monitoring',
-    category: 'AI & Search',
-    customers: 900,
-    setup_time: '2 hours',
-      'OWASP Top 10 tests',
-      'CI gate',
-      'Fix guidance',
-    category: 'Enterprise IT - Security',
-    variant: 'cyberpunk',
-    rating: 4 && 4.6,
-    customers: 750,
-    setup_time: '20 minutes',
-      'SLOs & error budgets',
-      'Alerting',
-      'Dashboards',
-    category: 'Enterprise IT - Observability',
-    variant: 'holographic',
-    customers: 640,
-    setup_time: '40 minutes',
-pr-12325
-      'Auto rightsizing',
-      'Idle cleanup',
-      'Spot orchestration',
-      'Anomaly detection',
-    ],
-    category: 'Enterprise IT - FinOps',
-<<<<<<< HEAD
+      'Anomaly detection'],
+    category: Enterprise IT - FinOps',
 
-
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-    link: 'https://ziontechgroup.com / cloud - cost - optimizer',
+    link: 'https://ziontechgroup.com / cloud - cost - optimizer,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    variant: 'quantum',
+    variant: quantum',
     rating: 4 && 4.6,
     customers: 820,
     trial_days: 14,'
-    setup_time: '1 hour',
-    contact_info,
-  },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    setup_time: 1 hour,
+    contact_info},
+
     variant: 'quantum',
     rating: 4 && 4.6,
     customers: 820,
     trial_days: 14,
-    setup_time: '1 hour',
-<<<<<<< HEAD
-    contact_info
-  },
-  {
-=======
-    contact_info,
-  },
-  {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+    setup_time: 1 hour,
+
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     id: 'database - performance - monitor',
-    name: 'Database Performance Monitor',
+    name: Database Performance Monitor,
     tagline: 'Slow query capture, AI index suggestions, capacity forecasting',
-    price: '$79',
+    price: $79,
     period: '/month',
     description:;
-      'Postgres / MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.',
+      Postgres / MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.,
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Slow query ranking',
-      'AI index advice',
+      AI index advice,
       'Pool tuning',
 =======
   {}
-'
-      'Slow query ranking','
-      'AI index advice','
-      'Pool tuning','
+
+      Slow query ranking','
+      AI index advice,'
+      'Pool tuning,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'SLA / SLO dashboards',
-    ],'
-    category: 'Enterprise IT - Data',
-<<<<<<< HEAD
+      'SLA / SLO dashboards'],
+    category: Enterprise IT - Data',
 
-<<<<<<< HEAD
-=======
-    category: 'Enterprise IT - FinOps',
-    variant: 'quantum',
-    customers: 820,
-pr-12325
-      'Slow query ranking',
-      'AI index advice',
-      'Pool tuning',
-      'SLA / SLO dashboards',
-    ],
-    category: 'Enterprise IT - Data',
-
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    customers: 560,
-    trial_days: 14,
-    setup_time: '45 minutes',
-    contact_info
-  },
-  {
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-    link: 'https://ziontechgroup.com / database - performance - monitor',
-    variant: 'neural - quantum',
+    link: 'https://ziontechgroup.com / database - performance - monitor,
+    variant: neural - quantum',
     rating: 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 
 =======
@@ -946,122 +365,69 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 560,
     trial_days: 14,'
-    setup_time: '45 minutes',
-    contact_info,
-  },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-=======
-    customers: 560,
-    trial_days: 14,
-    setup_time: '45 minutes',
-    contact_info,
-  },
-  {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+    setup_time: 45 minutes,
+    contact_info},
+
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     id: 'managed - postgres - ha',
-    name: 'Managed Postgres HA',
+    name: Managed Postgres HA,
     tagline: 'Highly - available Postgres with backups, failover, and guardrails',
-    price: '$499',
+    price: $499,
     period: '/month',
     description:;
-      'Production - ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.',
+      Production - ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.,
     features: [;
 
       'Automated backups',
-      'Failover & replication',
+      Failover & replication,
       'Performance tuning',
-      'SLA & support',
-    ],
+      SLA & support],
     category: 'Enterprise IT - Data',
 
-    link: 'https://ziontechgroup.com / managed - postgres - ha',
+    link: https://ziontechgroup.com / managed - postgres - ha,
     variant: 'holographic - advanced',
     rating: 4.8,
 
     customers: 240,
     trial_days: 7,
-    setup_time: '1 day',
-    contact_info,
-  },
+    setup_time: 1 day,
+    contact_info},
 
   // Reliability & Monitoring;
   {
     id: 'uptime - slo - monitor',
-    name: 'Uptime & SLO Monitor',
+    name: Uptime & SLO Monitor,
     tagline: 'Synthetic checks, error budgets, and incident automation',
-    price: '$39',
+    price: $39,
     period: '/month',
     description:;
-      'Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.',
+      Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.,
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Global synthetic checks',
-      'Error budgets & burn rates',
+      Error budgets & burn rates,
       'On - call & escalations',
 =======
   {}
-'
-      'Global synthetic checks','
-      'Error budgets & burn rates','
-      'On - call & escalations','
+
+      Global synthetic checks','
+      Error budgets & burn rates,'
+      'On - call & escalations,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Incident runbooks',
-    ],'
-    category: 'Enterprise IT - SRE',
-<<<<<<< HEAD
+      'Incident runbooks'],
+    category: Enterprise IT - SRE',
 
-<<<<<<< HEAD
-=======
-    category: 'Enterprise IT - Data',
-    customers: 560,
-    setup_time: '45 minutes',
-pr-12325
-      'Global synthetic checks',
-      'Error budgets & burn rates',
-      'On - call & escalations',
-      'Incident runbooks',
-    ],
-    category: 'Enterprise IT - SRE',
-
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    customers: 1100,
-    trial_days: 14,
-    setup_time: '25 minutes',
-    contact_info
-  },
-  {
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-    link: 'https://ziontechgroup.com / uptime - slo - monitor',
-    variant: 'quantum - cyberpunk',
+    link: 'https://ziontechgroup.com / uptime - slo - monitor,
+    variant: quantum - cyberpunk',
     rating: 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 
 =======
@@ -1069,782 +435,422 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 1100,
     trial_days: 14,'
-    setup_time: '25 minutes',
-    contact_info,
-  },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-=======
-    customers: 1100,
-    trial_days: 14,
-    setup_time: '25 minutes',
-    contact_info,
-  },
-  {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+    setup_time: 25 minutes,
+    contact_info},
+
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     id: 'tls - certificate - monitor',
-    name: 'TLS Certificate Monitor',
+    name: TLS Certificate Monitor,
     tagline: 'Auto - renewal checks and expiry alerts across your fleet',
-    price: '$19',
+    price: $19,
     period: '/month',
     description:;
-      'Monitor certificates across domains and environments, get renewal reminders and failure alerts.',
+      Monitor certificates across domains and environments, get renewal reminders and failure alerts.,
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Expiry alerts',
-      'Issuer checks',
+      Issuer checks,
       'Auto - renew validation',
 =======
   {}
-'
-      'Expiry alerts','
-      'Issuer checks','
-      'Auto - renew validation','
+
+      Expiry alerts','
+      Issuer checks,'
+      'Auto - renew validation,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Inventory export',
-    ],'
-    category: 'Enterprise IT - Security',
-<<<<<<< HEAD
-=======
-    category: 'Enterprise IT - SRE',
-    customers: 1100,
-    setup_time: '25 minutes',
-pr-12325
-      'Expiry alerts',
-      'Issuer checks',
-      'Auto - renew validation',
-      'Inventory export',
-    ],
-    category: 'Enterprise IT - Security',
-<<<<<<< HEAD
+      'Inventory export'],
+    category: Enterprise IT - Security',
 
-
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-    link: 'https://ziontechgroup.com / tls - certificate - monitor',
+    link: 'https://ziontechgroup.com / tls - certificate - monitor,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    variant: 'default',
+    variant: default',
     rating: 4 && 4.5,
     customers: 2200,
     trial_days: 14,'
-    setup_time: '10 minutes',
-    contact_info,
-  },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    setup_time: 10 minutes,
+    contact_info},
+
     variant: 'default',
     rating: 4 && 4.5,
     customers: 2200,
     trial_days: 14,
-    setup_time: '10 minutes',
-<<<<<<< HEAD
-    contact_info
-  },
-  {
-=======
-    contact_info,
-  },
-  {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+    setup_time: 10 minutes,
+
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     id: 'domain - dns - monitor',
-    name: 'Domain & DNS Monitor',
+    name: Domain & DNS Monitor,
     tagline: 'Track DNS changes, TTLs, and misconfigurations',
-    price: '$29',
+    price: $29,
     period: '/month',
     description:;
-      'Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.',
+      Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.,
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Change detection',
-      'Misconfig alerts',
+      Misconfig alerts,
       'TTL insights',
 =======
   {}
-'
-      'Change detection','
-      'Misconfig alerts','
-      'TTL insights','
+
+      Change detection','
+      Misconfig alerts,'
+      'TTL insights,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Export & audit',
-    ],'
-    category: 'Enterprise IT - Networking',
-<<<<<<< HEAD
-=======
-    variant: 'default',
-    rating: 4 && 4.5,
-    customers: 2200,
-    setup_time: '10 minutes',
-pr-12325
-      'Change detection',
-      'Misconfig alerts',
-      'TTL insights',
-      'Export & audit',
-    ],
-    category: 'Enterprise IT - Networking',
-<<<<<<< HEAD
+      'Export & audit'],
+    category: Enterprise IT - Networking',
 
-
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-    link: 'https://ziontechgroup.com / domain - dns - monitor',
+    link: 'https://ziontechgroup.com / domain - dns - monitor,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    variant: 'default',
+    variant: default',
     rating: 4 && 4.4,
     customers: 980,
     trial_days: 14,'
-    setup_time: '15 minutes',
-    contact_info,
-  },
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    setup_time: 15 minutes,
+    contact_info},
+
     variant: 'default',
     rating: 4 && 4.4,
     customers: 980,
     trial_days: 14,
-    setup_time: '15 minutes',
-<<<<<<< HEAD
-    contact_info
-  },
+    setup_time: 15 minutes,
 
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-    contact_info,
-  },
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
       'HTML/Markdown to PDF',
-      'Headers/footers',
+      Headers/footers,
   // Dev & Productivity;
   {
     id: 'pdf - render - api',
-    name: 'PDF Render API',
+    name: PDF Render API,
     tagline: 'High - fidelity serverless PDF rendering and watermarking',
-    price: '$49',
+    price: $49,
     period: '/month',
     description:;
-      'Generate pixel - perfect PDFs from HTML / Markdown with headers, footers, and watermarking using a simple API.',
+      Generate pixel - perfect PDFs from HTML / Markdown with headers, footers, and watermarking using a simple API.,
     features: [;
       'HTML / Markdown to PDF',
-      'Headers / footers',
+      Headers / footers,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       'Watermarks',
 =======
-'
-      'Watermarks','
+
+      Watermarks','
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Async webhooks',
-    ],'
-    category: 'Micro SaaS',
-<<<<<<< HEAD
+      Async webhooks],'
+    category: 'Micro SaaS,
 
-<<<<<<< HEAD
-=======
-      'Watermarks',
-      'Async webhooks',
-    ],
-    category: 'Micro SaaS',
-
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    customers: 1300,
-    trial_days: 7,
-    setup_time: '10 minutes',
-    contact_info
-  },
-  {
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-    link: 'https://ziontechgroup.com / pdf - render - api',
-    variant: 'holographic - matrix',
+    link: https://ziontechgroup.com / pdf - render - api',
+    variant: 'holographic - matrix,
     rating: 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 1300,
-    trial_days: 7,'
-    setup_time: '10 minutes',
-    contact_info,
-  },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-=======
-    customers: 1300,
     trial_days: 7,
     setup_time: '10 minutes',
-    contact_info,
-  },
-  {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+    contact_info},
+
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-    id: 'browser - performance - monitor',
+    id: browser - performance - monitor,
     name: 'Browser Performance Monitor',
-    tagline: 'RUM metrics, Core Web Vitals, and UX waterfall analysis',
+    tagline: RUM metrics, Core Web Vitals, and UX waterfall analysis,
     price: '$39',
-    period: '/month',
+    period: /month,
     description:;
       'Collect real - user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.',
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      'RUM collection',
+      RUM collection,
       'CWV dashboards',
-      'Waterfall analysis',
+      Waterfall analysis,
 =======
   {}
 '
-      'RUM collection','
-      'CWV dashboards','
-      'Waterfall analysis','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Alerts & webhooks',
-    ],'
-    category: 'Micro SaaS',
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-    category: 'Enterprise IT - Networking',
-    rating: 4 && 4.4,
-    customers: 980,
-    setup_time: '15 minutes',
-      'Watermarks',
-      'Async webhooks',
-    category: 'Micro SaaS',
-    customers: 1300,
-    trial_days: 7,
-pr-12325
-      'RUM collection',
+      'RUM collection,
       'CWV dashboards',
-      'Waterfall analysis',
-      'Alerts & webhooks',
-    ],
-    category: 'Micro SaaS',
+      Waterfall analysis','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      Alerts & webhooks],'
+    category: 'Micro SaaS,
 
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    customers: 760,
-    trial_days: 14,
-    setup_time: '20 minutes',
-    contact_info
-  },
-  {
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-    link: 'https://ziontechgroup.com / browser - performance - monitor',
-    variant: 'quantum - holographic',
+    link: https://ziontechgroup.com / browser - performance - monitor',
+    variant: 'quantum - holographic,
     rating: 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 760,
-    trial_days: 14,'
-    setup_time: '20 minutes',
-    contact_info,
-  },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-=======
-    customers: 760,
     trial_days: 14,
     setup_time: '20 minutes',
-    contact_info,
-  },
-  {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+    contact_info},
+
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-    id: 'feature - flags - edge',
+    id: feature - flags - edge,
     name: 'Feature Flags at the Edge',
-    tagline: 'Targeting, rollouts, and experiments at CDN edge',
+    tagline: Targeting, rollouts, and experiments at CDN edge,
     price: '$69',
-    period: '/month',
+    period: /month,
     description:;
       'Ship features safely with edge - evaluated flags, user targeting, and experimentation without latency.',
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      'Edge evaluation',
+      Edge evaluation,
       'Targeting & segments',
-      'Experiments',
+      Experiments,
 =======
   {}
 '
-      'Edge evaluation','
-      'Targeting & segments','
-      'Experiments','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'SDKs & audit',
-    ],'
-    category: 'Micro SaaS',
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-    customers: 760,
-pr-12325
-      'Edge evaluation',
+      'Edge evaluation,
       'Targeting & segments',
-      'Experiments',
-      'SDKs & audit',
-    ],
-    category: 'Micro SaaS',
+      Experiments','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      SDKs & audit],'
+    category: 'Micro SaaS,
 
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    customers: 430,
-    trial_days: 14,
-    setup_time: '30 minutes',
-    contact_info
-  },
-  {
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-    link: 'https://ziontechgroup.com / feature - flags - edge',
-    variant: 'quantum - holographic',
+    link: https://ziontechgroup.com / feature - flags - edge',
+    variant: 'quantum - holographic,
     rating: 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 430,
-    trial_days: 14,'
-    setup_time: '30 minutes',
-    contact_info,
-  },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-=======
-    customers: 430,
     trial_days: 14,
     setup_time: '30 minutes',
-    contact_info,
-  },
-  {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+    contact_info},
+
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-    id: 'serverless - cron - manager',
+    id: serverless - cron - manager,
     name: 'Serverless Cron Manager',
-    tagline: 'Reliable scheduled jobs with retries and observability',
+    tagline: Reliable scheduled jobs with retries and observability,
     price: '$29',
-    period: '/month',
+    period: /month,
     description:;
       'Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.',
     features: [;
 
-      'Cron & schedules',
+      Cron & schedules,
       'Retries & DLQs',
-      'Logs & traces',
-      'Alerts & webhooks',
-    ],
-    category: 'Micro SaaS',
+      Logs & traces,
+      'Alerts & webhooks'],
+    category: Micro SaaS,
 
     link: 'https://ziontechgroup.com / serverless - cron - manager',
 
-    variant: 'default',
+    variant: default,
     rating: 4 && 4.4,
     customers: 1150,
     trial_days: 14,
     setup_time: '15 minutes',
-    contact_info,
-  },
+    contact_info},
 
   // Compliance & Risk;
   {
-    id: 'soc2 - evidence - automation',
+    id: soc2 - evidence - automation,
     name: 'SOC 2 Evidence Automation',
-    tagline: 'Collect and map controls with change tracking',
+    tagline: Collect and map controls with change tracking,
     price: '$149',
-    period: '/month',
+    period: /month,
     description:;
       'Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.',
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      'Control mapping',
+      Control mapping,
       'Evidence collection',
-      'Change tracking',
+      Change tracking,
 =======
   {}
 '
-      'Control mapping','
-      'Evidence collection','
-      'Change tracking','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Export & auditor access',
-    ],'
-    category: 'Enterprise IT - Compliance',
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-    customers: 430,
-pr-12325
-      'Control mapping',
+      'Control mapping,
       'Evidence collection',
-      'Change tracking',
-      'Export & auditor access',
-    ],
-    category: 'Enterprise IT - Compliance',
+      Change tracking','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      Export & auditor access],'
+    category: 'Enterprise IT - Compliance,
 
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    customers: 310,
-    trial_days: 7,
-    setup_time: '1 day',
-    contact_info
-  },
-  {
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-    link: 'https://ziontechgroup.com / soc2 - evidence - automation',
-    variant: 'holographic - neural',
+    link: https://ziontechgroup.com / soc2 - evidence - automation',
+    variant: 'holographic - neural,
     rating: 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 310,
-    trial_days: 7,'
-    setup_time: '1 day',
-    contact_info,
-  },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-=======
-    customers: 310,
     trial_days: 7,
     setup_time: '1 day',
-    contact_info,
-  },
-  {
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+    contact_info},
+
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-    id: 'vendor - risk - automation',
+    id: vendor - risk - automation,
     name: 'Vendor Risk Automation',
-    tagline: 'Automate VRM workflows, DDQs, and risk scoring',
+    tagline: Automate VRM workflows, DDQs, and risk scoring,
     price: '$99',
-    period: '/month',
+    period: /month,
     description:;
       'Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.',
     features: [;
 
-      'DDQs and questionnaires',
+      DDQs and questionnaires,
       'Risk scoring',
-      'Continuous monitoring',
-      'Dashboards & export',
-    ],
-    category: 'Enterprise IT - Compliance',
+      Continuous monitoring,
+      'Dashboards & export'],
+    category: Enterprise IT - Compliance,
 
     link: 'https://ziontechgroup.com / vendor - risk - automation',
-    variant: 'quantum - entanglement',
+    variant: quantum - entanglement,
     rating: 4.5,
 
     customers: 520,
     trial_days: 14,
     setup_time: '2 hours',
-    contact_info,
-  },
+    contact_info},
 
   // Developer and Ops Utilities;
   {
-    id: 'webhook - relay - replay',
+    id: webhook - relay - replay,
     name: 'Webhook Relay & Replay',
-    tagline: 'Capture, inspect, and replay webhooks reliably',
+    tagline: Capture, inspect, and replay webhooks reliably,
     price: '$19',
-    period: '/month',
+    period: /month,
     description:;
       'Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.',
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
 
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      'Capture & inspect',
+      Capture & inspect,
       'Replay with backoff',
-      'Signature verification',
+      Signature verification,
 =======
   {}
 '
-      'Capture & inspect','
-      'Replay with backoff','
-      'Signature verification','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Forwarding rules',
-    ],'
-    category: 'Micro SaaS',
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-    category: 'Enterprise IT - Compliance',
-    customers: 310,
-    setup_time: '1 day',
-pr-12325
-      'Capture & inspect',
+      'Capture & inspect,
       'Replay with backoff',
-      'Signature verification',
-      'Forwarding rules',
-    ],
-    category: 'Micro SaaS',
+      Signature verification','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      Forwarding rules],'
+    category: 'Micro SaaS,
 
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    customers: 1650,
-    trial_days: 14,
-    setup_time: '10 minutes',
-    contact_info
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-    link: 'https://ziontechgroup.com / webhook - relay - replay',
-    variant: 'cyberpunk - holographic',
+    link: https://ziontechgroup.com / webhook - relay - replay',
+    variant: 'cyberpunk - holographic,
     rating: 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     customers: 1650,
-    trial_days: 14,'
-    setup_time: '10 minutes',
-    contact_info,
-  },
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-=======
-    customers: 1650,
     trial_days: 14,
     setup_time: '10 minutes',
-    contact_info,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  },
+    contact_info}},
   {
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-      'Managed vector DB'
+      Managed vector DB
       'Ingestion pipelines'
-      'Metadata filters'
+      Metadata filters
       'Access controls'
     ]
-    category: 'AI & Search'
+    category: AI & Search
     link: 'https://ziontechgroup.com/vector-search-starter'
-    variant: 'quantum'
+    variant: quantum
     rating: 4.6
     customers: 410
     trialDays: 14
     setupTime: '2 hours'
     contactInfo
   }
-];import { ServiceVariant  } from "../types/service-variants";
+];import { ServiceVariant  } from "../types/service-variants;
 
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    id: 'audit-log-vault'
+    id: audit-log-vault
     name: 'Audit Log Vault'
-    tagline: 'Tamper-evident logs with retention and export'
+    tagline: Tamper-evident logs with retention and export
     price: '$39'
-    period: '/month'
+    period: /month
     description:
       'Centralize audit logs with WORM retention, export APIs, and fine-grained access for investigations.'
     features: [
-      'WORM retention'
+      WORM retention
       'Export APIs'
-      'Fine-grained access'
+      Fine-grained access
       'Tamper evidence'
     ]
-    category: 'Enterprise IT - Security'
+    category: Enterprise IT - Security
     link: 'https://ziontechgroup.com/audit-log-vault'
-    variant: 'quantum-neural'
+    variant: quantum-neural
     rating: 4.5
     customers: 420
     trialDays: 14
@@ -1853,17 +859,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   // AI Channels
   {
-    id: 'ai-phone-agent'
+    id: ai-phone-agent
     name: 'AI Phone Agent'
-    tagline: 'Voice IVR and call handling with CRM handoff'
+    tagline: Voice IVR and call handling with CRM handoff
     price: '$129'
-    period: '/month'
+    period: /month
     description:
       'Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.'
-    features: ['Natural TTS/ASR', 'Routing & handoff', 'CRM sync', 'Analytics']
-    category: 'AI & Assistants'
+    features: [Natural TTS/ASR, 'Routing & handoff', CRM sync, 'Analytics']
+    category: AI & Assistants
     link: 'https://ziontechgroup.com/ai-phone-agent'
-    variant: 'quantum-holographic-advanced'
+    variant: quantum-holographic-advanced
     rating: 4.6
     customers: 380
     trialDays: 7
@@ -1872,407 +878,236 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   // Search and Knowledge
   {
-    id: 'vector-search-starter'
+    id: vector-search-starter
     name: 'Vector Search Starter'
-    tagline: 'Deploy a production-grade vector database and APIs'
+    tagline: Deploy a production-grade vector database and APIs
     price: '$89'
-    period: '/month'
+    period: /month
     description:
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
     features: [
-      'Managed vector DB',
+      Managed vector DB,
       'Ingestion pipelines',
-      'Metadata filters',
-      'Access controls',
-    ],
-    category: 'AI & Search',
+      Metadata filters,
+      'Access controls'],
+    category: AI & Search,
     link: 'https://ziontechgroup.com/vector-search-starter',
-    variant: 'quantum',
+    variant: quantum,
     rating: 4.6,
     customers: 410,
     trialDays: 14,
     setupTime: '2 hours',
-    contactInfo,
-  },
-];
-<<<<<<< HEAD
+    contactInfo}];
 
-    id: 'audit - log - vault',
-    name: 'Audit Log Vault',
-    tagline: 'Tamper - evident logs with retention and export',
-    price: '$39',
-    period: '/month',
-    description:;
-      'Centralize audit logs with WORM retention, export APIs, and fine - grained access for investigations.',
-    features: [;
-
-      'WORM retention',
-      'Export APIs',
-      'Fine - grained access',
-      'Tamper evidence',
-    ],
-    category: 'Enterprise IT - Security',
-
-    link: 'https://ziontechgroup.com / audit - log - vault',
-    variant: 'quantum - neural',
-    rating: 4.5,
-
-    customers: 420,
-    trial_days: 14,
-    setup_time: '30 minutes',
-    contact_info,
-  },
-
-  // AI Channels;
-  {
-    id: 'ai - phone - agent',
-    name: 'AI Phone Agent',
-    tagline: 'Voice IVR and call handling with CRM handoff',
-    price: '$129',
-    period: '/month',
-    description:;
-
-      'Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.',
-    features: ['Natural TTS / ASR', 'Routing & handoff', 'CRM sync', 'Analytics'],
-    category: 'AI & Assistants',
-
-    link: 'https://ziontechgroup.com / ai - phone - agent',
-    variant: 'quantum - holographic - advanced',
-    rating: 4.6,
-
-    customers: 380,
-    trial_days: 7,
-    setup_time: '1 hour',
-    contact_info,
-  },
-
-  // Search and Knowledge;
-  {
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-export interface MarketValidatedService {
-
-
-export interface MarketValidatedService {
-    id: 'vector - search - starter',
-    name: 'Vector Search Starter',
-    tagline: 'Deploy a production - grade vector database and APIs',
-    price: '$89',
-    period: '/month',
-    description:;
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-export interface MarketValidatedService {
-
-    id: 'audit - log - vault',
-    name: 'Audit Log Vault',
-    tagline: 'Tamper - evident logs with retention and export',
-    price: '$39',
-    period: '/month',
-    description:;
-      'Centralize audit logs with WORM retention, export APIs, and fine - grained access for investigations.',
-    features: [;
-
-      'WORM retention',
-      'Export APIs',
-      'Fine - grained access',
-      'Tamper evidence',
-    ],
-    category: 'Enterprise IT - Security',
-
-    link: 'https://ziontechgroup.com / audit - log - vault',
-    variant: 'quantum - neural',
-    rating: 4.5,
-
-    customers: 420,
-    trial_days: 14,
-    setup_time: '30 minutes',
-    contact_info,
-  },
-
-  // AI Channels;
-  {
-    id: 'ai - phone - agent',
-    name: 'AI Phone Agent',
-    tagline: 'Voice IVR and call handling with CRM handoff',
-    price: '$129',
-    period: '/month',
-    description:;
-
-      'Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.',
-    features: ['Natural TTS / ASR', 'Routing & handoff', 'CRM sync', 'Analytics'],
-    category: 'AI & Assistants',
-
-    link: 'https://ziontechgroup.com / ai - phone - agent',
-    variant: 'quantum - holographic - advanced',
-    rating: 4.6,
-
-    customers: 380,
-    trial_days: 7,
-    setup_time: '1 hour',
-    contact_info,
-  },
-
-  // Search and Knowledge;
-  {
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-      'Managed vector DB'
-      'Ingestion pipelines'
-      'Metadata filters'
-      'Access controls'
-    ]
-    category: 'AI & Search'
-    link: 'https://ziontechgroup.com/vector-search-starter'
-    variant: 'quantum'
-    rating: 4.6
-    customers: 410
-    trialDays: 14
-    setupTime: '2 hours'
-    contactInfo
-  }
-];import { ServiceVariant  } from "../types/service-variants";
-
-export interface MarketValidatedService {
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
     customers: 1650,
-      'Managed vector DB
-      'Ingestion pipelines
+      Managed vector DB
+      Ingestion pipelines
       'Metadata filters
       'Access controls
     ]
-    category: 'AI & Search,
-  link: 'https: //ziontechgroup.com/vector-search-starter,
+    category: AI & Search,
+  link: https: //ziontechgroup.com/vector-search-starter,
   variant: 'quantum
     rating: 4.6;,
   customers: 410;
     trialDays: 14;,
   setupTime: '2 hours
     contactInfo;
-      'RAG over your docs with hybrid search',''
-      'Guardrails: PII / PHI redaction, jailbreak detection',''
-      'Human handoff + conversation analytics',''
-      'Slack / Teams / Widget channels','
+      RAG over your docs with hybrid search,''
+      Guardrails: PII / PHI redaction, jailbreak detection,''
+      Human handoff + conversation analytics,''
+      Slack / Teams / Widget channels,'
     ],'
-    category: 'AI & Assistants','
+    category: AI & Assistants,'
     customers: 1200,
     trial_days: 14,'
-    setup_time: '30 minutes','
-    contact_info,
-  },
+    setup_time: 30 minutes,'
+    contact_info},
   {'
-      'Policy and toxicity checks',''
-      'Latency and cost KPIs',''
-      'Prompt / version diff and alerts','
+      Policy and toxicity checks,''
+      Latency and cost KPIs,''
+      Prompt / version diff and alerts,'
     ],'
-    category: 'AI & MLOps','
+    category: AI & MLOps,'
     customers: 600,
     trial_days: 14,'
-    setup_time: '1 hour','
-    contact_info,
-  },
+    setup_time: 1 hour,'
+    contact_info},
   {'
-      'Chunking strategies + citations',''
-      'Toolformer - style agents',''
-      'Eval suite and drift monitoring','
+      Chunking strategies + citations,''
+      Toolformer - style agents,''
+      Eval suite and drift monitoring,'
     ],'
-    category: 'AI & Search','
+    category: AI & Search,'
     customers: 900,
     trial_days: 14,'
-    setup_time: '2 hours','
-    contact_info,
-  },'
-      'OWASP Top 10 tests',''
-      'CI gate',''
-      'Fix guidance','
+    setup_time: 2 hours,'
+    contact_info},'
+      OWASP Top 10 tests,''
+      CI gate,''
+      Fix guidance,'
     ],'
-    category: 'Enterprise IT - Security',''
-    variant: 'cyberpunk','
+    category: Enterprise IT - Security,''
+    variant: cyberpunk,'
     rating: 4 && 4.6,
     customers: 750,
     trial_days: 14,'
-    setup_time: '20 minutes','
-    contact_info,
-  },
+    setup_time: 20 minutes,'
+    contact_info},
   {'
-      'SLOs & error budgets',''
-      'Alerting',''
-      'Dashboards','
+      SLOs & error budgets,''
+      Alerting,''
+      Dashboards,'
     ],'
-    category: 'Enterprise IT - Observability',''
-    variant: 'holographic','
+    category: Enterprise IT - Observability,''
+    variant: holographic,'
     rating: 4 && 4.6,
     customers: 640,
     trial_days: 14,'
-    setup_time: '40 minutes','
-    contact_info,
-  },'
-      'Auto rightsizing',''
-      'Idle cleanup',''
-      'Spot orchestration',''
-      'Anomaly detection','
+    setup_time: 40 minutes,'
+    contact_info},'
+      Auto rightsizing,''
+      Idle cleanup,''
+      Spot orchestration,''
+      Anomaly detection,'
     ],'
-    category: 'Enterprise IT - FinOps',''
-    variant: 'quantum','
+    category: Enterprise IT - FinOps,''
+    variant: quantum,'
     rating: 4 && 4.6,
     customers: 820,
     trial_days: 14,'
-    setup_time: '1 hour','
-    contact_info,
-  },
+    setup_time: 1 hour,'
+    contact_info},
   {'
-      'Slow query ranking',''
-      'AI index advice',''
-      'Pool tuning',''
-      'SLA / SLO dashboards','
+      Slow query ranking,''
+      AI index advice,''
+      Pool tuning,''
+      SLA / SLO dashboards,'
     ],'
-    category: 'Enterprise IT - Data','
+    category: Enterprise IT - Data,'
     customers: 560,
     trial_days: 14,'
-    setup_time: '45 minutes','
-    contact_info,
-  },
+    setup_time: 45 minutes,'
+    contact_info},
   {'
-      'Global synthetic checks',''
-      'Error budgets & burn rates',''
-      'On - call & escalations',''
-      'Incident runbooks','
+      Global synthetic checks,''
+      Error budgets & burn rates,''
+      On - call & escalations,''
+      Incident runbooks,'
     ],'
-    category: 'Enterprise IT - SRE','
+    category: Enterprise IT - SRE,'
     customers: 1100,
     trial_days: 14,'
-    setup_time: '25 minutes','
-    contact_info,
-  },
+    setup_time: 25 minutes,'
+    contact_info},
   {'
-      'Expiry alerts',''
-      'Issuer checks',''
-      'Auto - renew validation',''
-      'Inventory export','
+      Expiry alerts,''
+      Issuer checks,''
+      Auto - renew validation,''
+      Inventory export,'
     ],'
-    category: 'Enterprise IT - Security',''
-    variant: 'default','
+    category: Enterprise IT - Security,''
+    variant: default,'
     rating: 4 && 4.5,
     customers: 2200,
     trial_days: 14,'
-    setup_time: '10 minutes','
-    contact_info,
-  },
+    setup_time: 10 minutes,'
+    contact_info},
   {'
-      'Change detection',''
-      'Misconfig alerts',''
-      'TTL insights',''
-      'Export & audit','
+      Change detection,''
+      Misconfig alerts,''
+      TTL insights,''
+      Export & audit,'
     ],'
-    category: 'Enterprise IT - Networking',''
-    variant: 'default','
+    category: Enterprise IT - Networking,''
+    variant: default,'
     rating: 4 && 4.4,
     customers: 980,
     trial_days: 14,'
-    setup_time: '15 minutes','
-    contact_info,
-  },'
-      'Watermarks',''
-      'Async webhooks','
+    setup_time: 15 minutes,'
+    contact_info},'
+      Watermarks,''
+      Async webhooks,'
     ],'
-    category: 'Micro SaaS','
+    category: Micro SaaS,'
     customers: 1300,
     trial_days: 7,'
-    setup_time: '10 minutes','
-    contact_info,
-  },
+    setup_time: 10 minutes,'
+    contact_info},
   {'
-      'RUM collection',''
-      'CWV dashboards',''
-      'Waterfall analysis',''
-      'Alerts & webhooks','
+      RUM collection,''
+      CWV dashboards,''
+      Waterfall analysis,''
+      Alerts & webhooks,'
     ],'
-    category: 'Micro SaaS','
+    category: Micro SaaS,'
     customers: 760,
     trial_days: 14,'
-    setup_time: '20 minutes','
-    contact_info,
-  },
+    setup_time: 20 minutes,'
+    contact_info},
   {'
-      'Edge evaluation',''
-      'Targeting & segments',''
-      'Experiments',''
-      'SDKs & audit','
+      Edge evaluation,''
+      Targeting & segments,''
+      Experiments,''
+      SDKs & audit,'
     ],'
-    category: 'Micro SaaS','
+    category: Micro SaaS,'
     customers: 430,
     trial_days: 14,'
-    setup_time: '30 minutes','
-    contact_info,
-  },
+    setup_time: 30 minutes,'
+    contact_info},
   {'
-      'Control mapping',''
-      'Evidence collection',''
-      'Change tracking',''
-      'Export & auditor access','
+      Control mapping,''
+      Evidence collection,''
+      Change tracking,''
+      Export & auditor access,'
     ],'
-    category: 'Enterprise IT - Compliance','
+    category: Enterprise IT - Compliance,'
     customers: 310,
     trial_days: 7,'
-    setup_time: '1 day','
-    contact_info,
-  },
+    setup_time: 1 day,'
+    contact_info},
   {'
-      'Capture & inspect',''
-      'Replay with backoff',''
-      'Signature verification',''
-      'Forwarding rules','
+      Capture & inspect,''
+      Replay with backoff,''
+      Signature verification,''
+      Forwarding rules,'
     ],'
-    category: 'Micro SaaS','
+    category: Micro SaaS,'
     customers: 1650,
     trial_days: 14,'
-    setup_time: '10 minutes','
-    contact_info,
-  },
+    setup_time: 10 minutes,'
+    contact_info},
   {'
-      'Managed vector DB'''
-      'Ingestion pipelines'''
-      'Metadata filters'''
-      'Access controls''
+      Managed vector DB''
+      Ingestion pipelines''
+      Metadata filters''
+      Access controls'
     ]'
-    category: 'AI & Search'','
-  link: 'https: //ziontechgroup.com/vector-search-starter'','
-  variant: 'quantum''
+    category: AI & Search','
+  link: https: //ziontechgroup.com/vector-search-starter','
+  variant: quantum'
     rating: 4.6;,
   customers: 410;
     trialDays: 14;,'
-  setupTime: '2 hours''
+  setupTime: 2 hours'
     contactInfo;
   }'
-];import { ServiceVariant  } from "../types/service-variants";"
+];import { ServiceVariant  } from ../types/service-variants";"
 export interface MarketValidatedService {
   // TODO: Implement
-}"
+}
 pr-12325
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-    id: 'vector - search - starter',
+    id: vector - search - starter,
     name: 'Vector Search Starter',
-    tagline: 'Deploy a production - grade vector database and APIs',
+    tagline: Deploy a production - grade vector database and APIs,
     price: '$89',
-    period: '/month',
+    period: /month,
     description:;
-<<<<<<< HEAD
-=======
-  {}
-'
-    id: 'vector - search - starter','
-    name: 'Vector Search Starter','
-    tagline: 'Deploy a production - grade vector database and APIs','
-    price: '$89','
-    period: '/month',
-    description:;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -2280,121 +1115,59 @@ pr-12325
     features: [;
 
 
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-      'WORM retention',
+      WORM retention,
       'Export APIs',
-      'Fine - grained access',
-      'Tamper evidence',
-    ],
-    category: 'Enterprise IT - Security',
+      Fine - grained access,
+      'Tamper evidence'],
+    category: Enterprise IT - Security,
     customers: 420,
     trial_days: 14,
     setup_time: '30 minutes',
-    contact_info,
-  },
+    contact_info},
     customers: 380,
     trial_days: 7,
-    setup_time: '1 hour',
-    contact_info,
-  },
+    setup_time: 1 hour,
+    contact_info},
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-      'WORM retention',
-      'Export APIs',
-      'Fine - grained access',
-      'Tamper evidence',
-    ],
-    category: 'Enterprise IT - Security',
-    customers: 420,
-    trial_days: 14,
-    setup_time: '30 minutes',
-    contact_info,
-  },
-    customers: 380,
-    trial_days: 7,
-    setup_time: '1 hour',
-    contact_info,
-  },
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'Managed vector DB',
-      'Ingestion pipelines',
+      Ingestion pipelines,
       'Metadata filters',
 =======
-'
-      'Managed vector DB','
-      'Ingestion pipelines','
-      'Metadata filters','
+
+      Managed vector DB','
+      Ingestion pipelines,'
+      'Metadata filters,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      'Access controls',
-    ],'
-    category: 'AI & Search',
-<<<<<<< HEAD
+      'Access controls'],
+    category: AI & Search',
 
-<<<<<<< HEAD
-=======
-      'Tamper evidence',']
-    customers: 420,
-    customers: 380,
-pr-12325
-      'Managed vector DB',
-      'Ingestion pipelines',
-      'Metadata filters',
-      'Access controls',
-    ],
-    category: 'AI & Search',
+    link: 'https://ziontechgroup.com / vector - search - starter,
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-    link: 'https://ziontechgroup.com / vector - search - starter',
-
-    variant: 'quantum',
+    variant: quantum',
     rating: 4.6,
     customers: 410,
     trial_days: 14,
-    setup_time: '2 hours',
-    contact_info,
-  },
+    setup_time: '2 hours,
+    contact_info},
 
-<<<<<<< HEAD
-=======
-export interface MarketValidatedService {
-export interface MarketValidatedService {;
 
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 
 export interface MarketValidatedService {
-export interface MarketValidatedService {;
+export interface MarketValidatedService {
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-export interface MarketValidatedService {};
-export interface MarketValidatedService {;
 
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
 export interface MarketValidatedService {
-export interface MarketValidatedService {;
+export interface MarketValidatedService {
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -2416,14 +1189,7 @@ export interface MarketValidatedService {;
 	rating?: number;
 	customers?: number;
 	trialDays?: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}}
-}}
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
 =======
 }}
 	setupTime?: string;
@@ -2432,15 +1198,12 @@ export interface MarketValidatedService {;
 	setupTime?: string;
 
 
-  mobile: "+1 302 464 0950",
-	email: "kleber@ziontechgroup && ziontechgroup.com",
-	address: "364 E Main St STE 1008 Middletown DE 19709";
-  website: "https://ziontechgroup && ziontechgroup.com";,
+  mobile: +1 302 464 0950",
+	email: "kleber@ziontechgroup && ziontechgroup.com,
+	address: 364 E Main St STE 1008 Middletown DE 19709";
+  website: "https://ziontechgroup && ziontechgroup.com;,
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 =======
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 	contactInfo: {
@@ -2448,446 +1211,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 		email: string;
 		address: string;
 		website?: string;
-	};
+	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-export const marketValidatedServices: MarketValidatedService[] = [;
-	// AI and Assistants;
-	{;
-		id: "ai-assistant-pro",
-		name: "AI Assistant Pro",
-		tagline: "Branded copilot with RAG, guardrails, and analytics",
-		price: "$149",
-		period: "/month",
-		description: "Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.",
-		features[ "RAG over your docs with hybrid search",
-			"Guardrails: PII/PHI redaction, jailbreak detection",
-			"Human handoff + conversation analytics",
-			"Slack/Teams/Widget channels",
-		],
-		category: "AI & Assistants",
-		link: "https://ziontechgroup && ziontechgroup.com/ai-assistant",
-		variant: "ai-futuristic",
-		rating: 4 && 4.8,
-		customers: 1200,
-		trialDays: 14,
-		setupTime: "30 minutes",
-		contactInfo;,
-},
-	{;
-		id: "ai-evals-observability",
-		name: "AI Evals & Observability",
-		tagline: "Regression testing, safety checks, and live metrics for LLM features",
-		price: "$99",
-		period: "/month",
-		description: "Ship reliable LLM apps with dataset management, prompt diffing, red-teaming, and production KPIs for quality, latency, and costs.",
-		features[ "Eval datasets/versioning",
-			"Policy and toxicity checks",
-			"Latency and cost KPIs",
-			"Prompt/version diff and alerts",
-		],
-		category: "AI & MLOps",
-		link: "https://ziontechgroup && ziontechgroup.com/ai-evals",
-		variant: "quantum-holographic",
-		rating: 4 && 4.7,
-		customers: 600,
-		trialDays: 14,
-		setupTime: "1 hour",
-		contactInfo;,
-},
-	{;
-		id: "agentic-rag-platform",
-		name: "Agentic RAG Platform",
-		tagline: "Production RAG with hybrid search, chunking, tools, and evals",
-		price: "$179",
-		period: "/month",
-		description: "Ingest and index your knowledge with hybrid search + reranking, enable tool-using agents, and validate responses with reference checks and citations.",
-		features[ "Hybrid vector+BM25 + reranker",
-			"Chunking strategies + citations",
-			"Toolformer-style agents",
-			"Eval suite and drift monitoring",
-		],
-		category: "AI & Search",
-		link: "https://ziontechgroup && ziontechgroup.com/agentic-rag",
-		variant: "quantum-matrix",
-		rating: 4 && 4.7,
-		customers: 900,
-		trialDays: 14,
-		setupTime: "2 hours",
-		contactInfo;,
-},
-	// Security and APIs;
-	{;
-		id: "api-security-scanner",
-		name: "API Security Scanner",
-		tagline: "OpenAPI/GraphQL scanning, auth/Z checks, dependency audit",
-		price: "$59",
-		period: "/month",
-		description: "Automatically scan APIs for OWASP issues, auth/z misconfigurations, and dependency CVEs with CI gating and fix guidance.",
-		features["Auth/Z misconfig checks", "OWASP Top 10 tests", "CI gate", "Fix guidance"],
-		category: "Enterprise IT - Security",
-		link: "https://ziontechgroup && ziontechgroup.com/api-security-scanner",
-		variant: "cyberpunk",
-		rating: 4 && 4.6,
-		customers: 750,
-		trialDays: 14,
-		setupTime: "20 minutes",
-		contactInfo;,
-},
-	{;
-		id: "api-observability",
-		name: "API Observability & SLA Guard",
-		tagline: "OTel tracing, SLOs, and error budgets for services",
-		price: "$69",
-		period: "/month",
-		description: "Collect traces/metrics/logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.",
-		features["OTel traces/metrics/logs", "SLOs & error budgets", "Alerting", "Dashboards"],
-		category: "Enterprise IT - Observability",
-		link: "https://ziontechgroup && ziontechgroup.com/api-observability",
-		variant: "holographic",
-		rating: 4 && 4.6,
-		customers: 640,
-		trialDays: 14,
-		setupTime: "40 minutes",
-		contactInfo;,
-},
-	// Cloud and Infra;
-	{;
-		id: "cloud-cost-optimizer-pro",
-		name: "Cloud Cost Optimizer Pro",
-		tagline: "Rightsizing, lifecycle, anomaly detection, and k8s bin-packing",
-		price: "$99",
-		period: "/month",
-		description: "Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.",
-		features["Auto rightsizing", "Idle cleanup", "Spot orchestration", "Anomaly detection"],
-		category: "Enterprise IT - FinOps",
-		link: "https://ziontechgroup && ziontechgroup.com/cloud-cost-optimizer",
-		variant: "quantum",
-		rating: 4 && 4.6,
-		customers: 820,
-		trialDays: 14,
-		setupTime: "1 hour",
-		contactInfo;,
-},
-	{;
-		id: "database-performance-monitor",
-		name: "Database Performance Monitor",
-		tagline: "Slow query capture, AI index suggestions, capacity forecasting",
-		price: "$79",
-		period: "/month",
-		description: "Postgres/MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.",
-		features["Slow query ranking", "AI index advice", "Pool tuning", "SLA/SLO dashboards"],
-		category: "Enterprise IT - Data",
-		link: "https://ziontechgroup && ziontechgroup.com/database-performance-monitor",
-		variant: "neural-quantum",
-		rating: 4 && 4.7,
-		customers: 560,
-		trialDays: 14,
-		setupTime: "45 minutes",
-		contactInfo;,
-},
-	{;
-		id: "managed-postgres-ha",
-		name: "Managed Postgres HA",
-		tagline: "Highly-available Postgres with backups, failover, and guardrails",
-		price: "$499",
-		period: "/month",
-		description: "Production-ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.",
-		features["Automated backups", "Failover & replication", "Performance tuning", "SLA & support"],
-		category: "Enterprise IT - Data",
-		link: "https://ziontechgroup && ziontechgroup.com/managed-postgres-ha",
-		variant: "holographic-advanced",
-		rating: 4 && 4.8,
-		customers: 240,
-		trialDays: 7,
-		setupTime: "1 day",
-		contactInfo;,
-},
-	// Reliability & Monitoring;
-	{;
-		id: "uptime-slo-monitor",
-		name: "Uptime & SLO Monitor",
-		tagline: "Synthetic checks, error budgets, and incident automation",
-		price: "$39",
-		period: "/month",
-		description: "Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.",
-		features["Global synthetic checks", "Error budgets & burn rates", "On-call & escalations", "Incident runbooks"],
-		category: "Enterprise IT - SRE",
-		link: "https://ziontechgroup && ziontechgroup.com/uptime-slo-monitor",
-		variant: "quantum-cyberpunk",
-		rating: 4 && 4.5,
-		customers: 1100,
-		trialDays: 14,
-		setupTime: "25 minutes",
-		contactInfo;,
-},
-	{;
-		id: "tls-certificate-monitor",
-		name: "TLS Certificate Monitor",
-		tagline: "Auto-renewal checks and expiry alerts across your fleet",
-		price: "$19",
-		period: "/month",
-		description: "Monitor certificates across domains and environments, get renewal reminders and failure alerts.",
-		features["Expiry alerts", "Issuer checks", "Auto-renew validation", "Inventory export"],
-		category: "Enterprise IT - Security",
-		link: "https://ziontechgroup && ziontechgroup.com/tls-certificate-monitor",
-		variant: "default",
-		rating: 4 && 4.5,
-		customers: 2200,
-		trialDays: 14,
-		setupTime: "10 minutes",
-		contactInfo;,
-},
-	{;
-		id: "domain-dns-monitor",
-		name: "Domain & DNS Monitor",
-		tagline: "Track DNS changes, TTLs, and misconfigurations",
-		price: "$29",
-		period: "/month",
-		description: "Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.",
-		features["Change detection", "Misconfig alerts", "TTL insights", "Export & audit"],
-		category: "Enterprise IT - Networking",
-		link: "https://ziontechgroup && ziontechgroup.com/domain-dns-monitor",
-		variant: "default",
-		rating: 4 && 4.4,
-		customers: 980,
-		trialDays: 14,
-		setupTime: "15 minutes",
-		contactInfo;,
-},
-	// Dev & Productivity;
-	{;
-		id: "pdf-render-api",
-		name: "PDF Render API",
-		tagline: "High-fidelity serverless PDF rendering and watermarking",
-		price: "$49",
-		period: "/month",
-		description: "Generate pixel-perfect PDFs from HTML/Markdown with headers, footers, and watermarking using a simple API.",
-		features["HTML/Markdown to PDF", "Headers/footers", "Watermarks", "Async webhooks"],
-		category: "Micro SaaS",
-		link: "https://ziontechgroup && ziontechgroup.com/pdf-render-api",
-		variant: "holographic-matrix",
-		rating: 4 && 4.6,
-		customers: 1300,
-		trialDays: 7,
-		setupTime: "10 minutes",
-		contactInfo;,
-},
-	{;
-		id: "browser-performance-monitor",
-		name: "Browser Performance Monitor",
-		tagline: "RUM metrics, Core Web Vitals, and UX waterfall analysis",
-		price: "$39",
-		period: "/month",
-		description: "Collect real-user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.",
-		features["RUM collection", "CWV dashboards", "Waterfall analysis", "Alerts & webhooks"],
-		category: "Micro SaaS",
-		link: "https://ziontechgroup && ziontechgroup.com/browser-performance-monitor",
-		variant: "quantum-holographic",
-		rating: 4 && 4.5,
-		customers: 760,
-		trialDays: 14,
-		setupTime: "20 minutes",
-		contactInfo;,
-},
-	{;
-		id: "feature-flags-edge",
-		name: "Feature Flags at the Edge",
-		tagline: "Targeting, rollouts, and experiments at CDN edge",
-		price: "$69",
-		period: "/month",
-		description: "Ship features safely with edge-evaluated flags, user targeting, and experimentation without latency.",
-		features["Edge evaluation", "Targeting & segments", "Experiments", "SDKs & audit"],
-		category: "Micro SaaS",
-		link: "https://ziontechgroup && ziontechgroup.com/feature-flags-edge",
-		variant: "quantum-holographic",
-		rating: 4 && 4.5,
-		customers: 430,
-		trialDays: 14,
-		setupTime: "30 minutes",
-		contactInfo;,
-},
-	{;
-		id: "serverless-cron-manager",
-		name: "Serverless Cron Manager",
-		tagline: "Reliable scheduled jobs with retries and observability",
-		price: "$29",
-		period: "/month",
-		description: "Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.",
-		features["Cron & schedules", "Retries & DLQs", "Logs & traces", "Alerts & webhooks"],
-		category: "Micro SaaS",
-		link: "https://ziontechgroup && ziontechgroup.com/serverless-cron-manager",
-		variant: "default",
-		rating: 4 && 4.4,
-		customers: 1150,
-		trialDays: 14,
-		setupTime: "15 minutes",
-		contactInfo;,
-},
-	// Compliance & Risk;
-	{;
-		id: "soc2-evidence-automation",
-		name: "SOC 2 Evidence Automation",
-		tagline: "Collect and map controls with change tracking",
-		price: "$149",
-		period: "/month",
-		description: "Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.",
-		features["Control mapping", "Evidence collection", "Change tracking", "Export & auditor access"],
-		category: "Enterprise IT - Compliance",
-		link: "https://ziontechgroup && ziontechgroup.com/soc2-evidence-automation",
-		variant: "holographic-neural",
-		rating: 4 && 4.6,
-		customers: 310,
-		trialDays: 7,
-		setupTime: "1 day",
-		contactInfo;,
-},
-	{;
-		id: "vendor-risk-automation",
-		name: "Vendor Risk Automation",
-		tagline: "Automate VRM workflows, DDQs, and risk scoring",
-		price: "$99",
-		period: "/month",
-		description: "Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.",
-		features["DDQs and questionnaires", "Risk scoring", "Continuous monitoring", "Dashboards & export"],
-		category: "Enterprise IT - Compliance",
-		link: "https://ziontechgroup && ziontechgroup.com/vendor-risk-automation",
-		variant: "quantum-entanglement",
-		rating: 4 && 4.5,
-		customers: 520,
-		trialDays: 14,
-		setupTime: "2 hours",
-		contactInfo;,
-},
-	// Developer and Ops Utilities;
-	{;
-		id: "webhook-relay-replay",
-		name: "Webhook Relay & Replay",
-		tagline: "Capture, inspect, and replay webhooks reliably",
-		price: "$19",
-		period: "/month",
-		description: "Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.",
-		features["Capture & inspect", "Replay with backoff", "Signature verification", "Forwarding rules"],
-		category: "Micro SaaS",
-		link: "https://ziontechgroup && ziontechgroup.com/webhook-relay-replay",
-		variant: "cyberpunk-holographic",
-		rating: 4 && 4.5,
-		customers: 1650,
-		trialDays: 14,
-		setupTime: "10 minutes",
-		contactInfo;,
-},
-	{;
-		id: "audit-log-vault",
-		name: "Audit Log Vault",
-		tagline: "Tamper-evident logs with retention and export",
-		price: "$39",
-		period: "/month",
-		description: "Centralize audit logs with WORM retention, export APIs, and fine-grained access for investigations.",
-		features["WORM retention", "Export APIs", "Fine-grained access", "Tamper evidence"],
-		category: "Enterprise IT - Security",
-		link: "https://ziontechgroup && ziontechgroup.com/audit-log-vault",
-		variant: "quantum-neural",
-		rating: 4 && 4.5,
-		customers: 420,
-		trialDays: 14,
 
-];import { ServiceVariant   } from '../types / service - variants';
-export interface MarketValidatedService {
-id: string;
-=======
-}
-    id: 'vector - search - starter',''
-    name: 'Vector Search Starter',''
-    tagline: 'Deploy a production - grade vector database and APIs',''
-    price: '$89',''
-    period: '/month','
-    description:;'
-      'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.','
-    features: [;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-      'WORM retention',
-      'Export APIs',
-      'Fine - grained access',
-      'Tamper evidence'
+      WORM retention',
+      'Export APIs,
+      Fine - grained access',
+      'Tamper evidence
     ],
-    category: 'Enterprise IT - Security',
+    category: Enterprise IT - Security',
     customers: 420,
     trial_days: 14,
-    setup_time: '30 minutes',
+    setup_time: '30 minutes,
     contact_info
   },
     customers: 380,
-<<<<<<< HEAD
-    trial_days: 7,
-    setup_time: '1 hour',
-    contact_info
-  },
 
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-      'Managed vector DB',
-      'Ingestion pipelines',
-      'Metadata filters',
-      'Access controls'
-    ],
-    category: 'AI & Search',
-
-    link: 'https://ziontechgroup.com / vector - search - starter',
-
-    variant: 'quantum',
-    rating: 4.6,
-    customers: 410,
-    trial_days: 14,
-    setup_time: '2 hours',
-    contact_info,
-  },
-
-
-
-export interface MarketValidatedService {
-export interface MarketValidatedService {;
-
-
-export interface MarketValidatedService {
-export interface MarketValidatedService {;
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-export interface MarketValidatedService {
-export interface MarketValidatedService {;
-
-
-export interface MarketValidatedService {
-
-export interface MarketValidatedService {;
-
-
-=======
-    trial_days: 7,'
-    setup_time: '1 hour','
-    contact_info,
-  },'
-      'Managed vector DB',''
-      'Ingestion pipelines',''
-      'Metadata filters',''
-      'Access controls','
-    ],'
-    category: 'AI & Search','
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 export interface MarketValidatedService {
   // TODO: Implement
 }
-export interface MarketValidatedService {;
+export interface MarketValidatedService {
 
 	id: string;,
   name: string;
@@ -2905,15 +1250,15 @@ export interface MarketValidatedService {;
 	setupTime?: string;
 
 
-  mobile: "+1 302 464 0950",
-	email: "kleber@ziontechgroup && ziontechgroup.com",
-	address: "364 E Main St STE 1008 Middletown DE 19709";
-  website: "https://ziontechgroup && ziontechgroup.com";,
+  mobile: +1 302 464 0950",
+	email: "kleber@ziontechgroup && ziontechgroup.com,
+	address: 364 E Main St STE 1008 Middletown DE 19709";
+  website: "https://ziontechgroup && ziontechgroup.com;,
 	setupTime?: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
 	trialDays?: number;
 }}
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from ../types/service-variants';
 export interface MarketValidatedService {
 	id: string,
 	name: string,
@@ -2938,34 +1283,34 @@ export interface MarketValidatedService {
 }
 
 const contactInfo = $2;
-	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',
-	website: 'https://ziontechgroup.com'
+	email: 'kleber@ziontechgroup.com,
+	address: 364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com
 },
 
 export const marketValidatedServices: MarketValidatedService[] = [
 	// AI and Assistants
 	{
-		id: 'ai-assistant-pro',
-		name: 'AI Assistant Pro',
-		tagline: 'Branded copilot with RAG, guardrails, and analytics',
-		price: '$149',
-		period: '/month',
-		description: 'Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.',
+		id: ai-assistant-pro',
+		name: 'AI Assistant Pro,
+		tagline: Branded copilot with RAG, guardrails, and analytics',
+		price: '$149,
+		period: /month',
+		description: 'Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.,
 		features: [
-			'RAG over your docs with hybrid searchGuardrails: PII/PHI redaction, jailbreak detectionHuman handoff + conversation analyticsSlack/Teams/Widget channels'],
-		category: 'AI & Assistants',
-		link: 'https://ziontechgroup.com/ai-assistant',
-		variant: 'ai-futuristic',
+			RAG over your docs with hybrid searchGuardrails: PII/PHI redaction, jailbreak detectionHuman handoff + conversation analyticsSlack/Teams/Widget channels'],
+		category: 'AI & Assistants,
+		link: https://ziontechgroup.com/ai-assistant',
+		variant: 'ai-futuristic,
 		rating: 4.8,
 		customers: 1200,
 		trialDays: 14,
-		setupTime: '30 minutes',
+		setupTime: 30 minutes',
 		contactInfo
 	trialDays?: number;setupTime?: string;}}
 }}
-	setupTime?: string;mobile: "+1 302 464 0950",email: "kleber@ziontechgroup && ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";
-  website: "https://ziontechgroup && ziontechgroup.com";,contactInfo: {mobile: string;
+	setupTime?: string;mobile: +1 302 464 0950",email: "kleber@ziontechgroup && ziontechgroup.com,address: 364 E Main St STE 1008 Middletown DE 19709";
+  website: "https://ziontechgroup && ziontechgroup.com;,contactInfo: {mobile: string;
 		email: string;
 		address: string;
 		website?: string;
@@ -2973,35 +1318,35 @@ export const marketValidatedServices: MarketValidatedService[] = [
 }
 export const marketValidatedServices: MarketValidatedService[] = [;
 	// AI and Assistants;
-	{id: "ai-assistant-pro",name: "AI Assistant Pro",tagline: "Branded copilot with RAG, guardrails, and analytics",price: "$149",period: "/month",description: "Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.",features[ "RAG over your docs with hybrid search","Guardrails: PII/PHI redaction, jailbreak detection","Human handoff + conversation analytics","Slack/Teams/Widget channels";
-		],category: "AI & Assistants",link: "https://ziontechgroup && ziontechgroup.com/ai-assistant",variant: "ai-futuristic",rating: 4 && 4.8,customers: 1200,trialDays: 14,setupTime: "30 minutes",contactInfo;
-},{id: "ai-evals-observability",name: "AI Evals & Observability",tagline: "Regression testing, safety checks, and live metrics for LLM features",price: "$99",period: "/month",description: "Ship reliable LLM apps with dataset management, prompt diffing, red-teaming, and production KPIs for quality, latency, and costs.",features[ "Eval datasets/versioning","Policy and toxicity checks","Latency and cost KPIs","Prompt/version diff and alerts";
-		],category: "AI & MLOps",link: "https://ziontechgroup && ziontechgroup.com/ai-evals",variant: "quantum-holographic",rating: 4 && 4.7,customers: 600,trialDays: 14,setupTime: "1 hour",contactInfo;
-},{id: "agentic-rag-platform",name: "Agentic RAG Platform",tagline: "Production RAG with hybrid search, chunking, tools, and evals",price: "$179",period: "/month",description: "Ingest and index your knowledge with hybrid search + reranking, enable tool-using agents, and validate responses with reference checks and citations.",features[ "Hybrid vector+BM25 + reranker","Chunking strategies + citations","Toolformer-style agents","Eval suite and drift monitoring";
-		],category: "AI & Search",link: "https://ziontechgroup && ziontechgroup.com/agentic-rag",variant: "quantum-matrix",rating: 4 && 4.7,customers: 900,trialDays: 14,setupTime: "2 hours",contactInfo;
+	{id: ai-assistant-pro",name: "AI Assistant Pro,tagline: Branded copilot with RAG, guardrails, and analytics",price: "$149,period: /month",description: "Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.,features[ RAG over your docs with hybrid search","Guardrails: PII/PHI redaction, jailbreak detection,Human handoff + conversation analytics","Slack/Teams/Widget channels;
+		],category: AI & Assistants",link: "https://ziontechgroup && ziontechgroup.com/ai-assistant,variant: ai-futuristic",rating: 4 && 4.8,customers: 1200,trialDays: 14,setupTime: "30 minutes,contactInfo;
+},{id: ai-evals-observability",name: "AI Evals & Observability,tagline: Regression testing, safety checks, and live metrics for LLM features",price: "$99,period: /month",description: "Ship reliable LLM apps with dataset management, prompt diffing, red-teaming, and production KPIs for quality, latency, and costs.,features[ Eval datasets/versioning","Policy and toxicity checks,Latency and cost KPIs","Prompt/version diff and alerts;
+		],category: AI & MLOps",link: "https://ziontechgroup && ziontechgroup.com/ai-evals,variant: quantum-holographic",rating: 4 && 4.7,customers: 600,trialDays: 14,setupTime: "1 hour,contactInfo;
+},{id: agentic-rag-platform",name: "Agentic RAG Platform,tagline: Production RAG with hybrid search, chunking, tools, and evals",price: "$179,period: /month",description: "Ingest and index your knowledge with hybrid search + reranking, enable tool-using agents, and validate responses with reference checks and citations.,features[ Hybrid vector+BM25 + reranker","Chunking strategies + citations,Toolformer-style agents","Eval suite and drift monitoring;
+		],category: AI & Search",link: "https://ziontechgroup && ziontechgroup.com/agentic-rag,variant: quantum-matrix",rating: 4 && 4.7,customers: 900,trialDays: 14,setupTime: "2 hours,contactInfo;
 },// Security and APIs;
-	{id: "api-security-scanner",name: "API Security Scanner",tagline: "OpenAPI/GraphQL scanning, auth/Z checks, dependency audit",price: "$59",period: "/month",description: "Automatically scan APIs for OWASP issues, auth/z misconfigurations, and dependency CVEs with CI gating and fix guidance.",features["Auth/Z misconfig checks", "OWASP Top 10 tests", "CI gate", "Fix guidance"],category: "Enterprise IT - Security",link: "https://ziontechgroup && ziontechgroup.com/api-security-scanner",variant: "cyberpunk",rating: 4 && 4.6,customers: 750,trialDays: 14,setupTime: "20 minutes",contactInfo;
-},{id: "api-observability",name: "API Observability & SLA Guard",tagline: "OTel tracing, SLOs, and error budgets for services",price: "$69",period: "/month",description: "Collect traces/metrics/logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.",features["OTel traces/metrics/logs", "SLOs & error budgets", "Alerting", "Dashboards"],category: "Enterprise IT - Observability",link: "https://ziontechgroup && ziontechgroup.com/api-observability",variant: "holographic",rating: 4 && 4.6,customers: 640,trialDays: 14,setupTime: "40 minutes",contactInfo;
+	{id: api-security-scanner",name: "API Security Scanner,tagline: OpenAPI/GraphQL scanning, auth/Z checks, dependency audit",price: "$59,period: /month",description: "Automatically scan APIs for OWASP issues, auth/z misconfigurations, and dependency CVEs with CI gating and fix guidance.,features[Auth/Z misconfig checks", "OWASP Top 10 tests, CI gate", "Fix guidance],category: Enterprise IT - Security",link: "https://ziontechgroup && ziontechgroup.com/api-security-scanner,variant: cyberpunk",rating: 4 && 4.6,customers: 750,trialDays: 14,setupTime: "20 minutes,contactInfo;
+},{id: api-observability",name: "API Observability & SLA Guard,tagline: OTel tracing, SLOs, and error budgets for services",price: "$69,period: /month",description: "Collect traces/metrics/logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.,features[OTel traces/metrics/logs", "SLOs & error budgets, Alerting", "Dashboards],category: Enterprise IT - Observability",link: "https://ziontechgroup && ziontechgroup.com/api-observability,variant: holographic",rating: 4 && 4.6,customers: 640,trialDays: 14,setupTime: "40 minutes,contactInfo;
 },// Cloud and Infra;
-	{id: "cloud-cost-optimizer-pro",name: "Cloud Cost Optimizer Pro",tagline: "Rightsizing, lifecycle, anomaly detection, and k8s bin-packing",price: "$99",period: "/month",description: "Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.",features["Auto rightsizing", "Idle cleanup", "Spot orchestration", "Anomaly detection"],category: "Enterprise IT - FinOps",link: "https://ziontechgroup && ziontechgroup.com/cloud-cost-optimizer",variant: "quantum",rating: 4 && 4.6,customers: 820,trialDays: 14,setupTime: "1 hour",contactInfo;
-},{id: "database-performance-monitor",name: "Database Performance Monitor",tagline: "Slow query capture, AI index suggestions, capacity forecasting",price: "$79",period: "/month",description: "Postgres/MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.",features["Slow query ranking", "AI index advice", "Pool tuning", "SLA/SLO dashboards"],category: "Enterprise IT - Data",link: "https://ziontechgroup && ziontechgroup.com/database-performance-monitor",variant: "neural-quantum",rating: 4 && 4.7,customers: 560,trialDays: 14,setupTime: "45 minutes",contactInfo;
-},{id: "managed-postgres-ha",name: "Managed Postgres HA",tagline: "Highly-available Postgres with backups, failover, and guardrails",price: "$499",period: "/month",description: "Production-ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.",features["Automated backups", "Failover & replication", "Performance tuning", "SLA & support"],category: "Enterprise IT - Data",link: "https://ziontechgroup && ziontechgroup.com/managed-postgres-ha",variant: "holographic-advanced",rating: 4 && 4.8,customers: 240,trialDays: 7,setupTime: "1 day",contactInfo;
+	{id: cloud-cost-optimizer-pro",name: "Cloud Cost Optimizer Pro,tagline: Rightsizing, lifecycle, anomaly detection, and k8s bin-packing",price: "$99,period: /month",description: "Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.,features[Auto rightsizing", "Idle cleanup, Spot orchestration", "Anomaly detection],category: Enterprise IT - FinOps",link: "https://ziontechgroup && ziontechgroup.com/cloud-cost-optimizer,variant: quantum",rating: 4 && 4.6,customers: 820,trialDays: 14,setupTime: "1 hour,contactInfo;
+},{id: database-performance-monitor",name: "Database Performance Monitor,tagline: Slow query capture, AI index suggestions, capacity forecasting",price: "$79,period: /month",description: "Postgres/MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.,features[Slow query ranking", "AI index advice, Pool tuning", "SLA/SLO dashboards],category: Enterprise IT - Data",link: "https://ziontechgroup && ziontechgroup.com/database-performance-monitor,variant: neural-quantum",rating: 4 && 4.7,customers: 560,trialDays: 14,setupTime: "45 minutes,contactInfo;
+},{id: managed-postgres-ha",name: "Managed Postgres HA,tagline: Highly-available Postgres with backups, failover, and guardrails",price: "$499,period: /month",description: "Production-ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.,features[Automated backups", "Failover & replication, Performance tuning", "SLA & support],category: Enterprise IT - Data",link: "https://ziontechgroup && ziontechgroup.com/managed-postgres-ha,variant: holographic-advanced",rating: 4 && 4.8,customers: 240,trialDays: 7,setupTime: "1 day,contactInfo;
 },// Reliability & Monitoring;
-	{id: "uptime-slo-monitor",name: "Uptime & SLO Monitor",tagline: "Synthetic checks, error budgets, and incident automation",price: "$39",period: "/month",description: "Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.",features["Global synthetic checks", "Error budgets & burn rates", "On-call & escalations", "Incident runbooks"],category: "Enterprise IT - SRE",link: "https://ziontechgroup && ziontechgroup.com/uptime-slo-monitor",variant: "quantum-cyberpunk",rating: 4 && 4.5,customers: 1100,trialDays: 14,setupTime: "25 minutes",contactInfo;
-},{id: "tls-certificate-monitor",name: "TLS Certificate Monitor",tagline: "Auto-renewal checks and expiry alerts across your fleet",price: "$19",period: "/month",description: "Monitor certificates across domains and environments, get renewal reminders and failure alerts.",features["Expiry alerts", "Issuer checks", "Auto-renew validation", "Inventory export"],category: "Enterprise IT - Security",link: "https://ziontechgroup && ziontechgroup.com/tls-certificate-monitor",variant: "default",rating: 4 && 4.5,customers: 2200,trialDays: 14,setupTime: "10 minutes",contactInfo;
-},{id: "domain-dns-monitor",name: "Domain & DNS Monitor",tagline: "Track DNS changes, TTLs, and misconfigurations",price: "$29",period: "/month",description: "Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.",features["Change detection", "Misconfig alerts", "TTL insights", "Export & audit"],category: "Enterprise IT - Networking",link: "https://ziontechgroup && ziontechgroup.com/domain-dns-monitor",variant: "default",rating: 4 && 4.4,customers: 980,trialDays: 14,setupTime: "15 minutes",contactInfo;
+	{id: uptime-slo-monitor",name: "Uptime & SLO Monitor,tagline: Synthetic checks, error budgets, and incident automation",price: "$39,period: /month",description: "Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.,features[Global synthetic checks", "Error budgets & burn rates, On-call & escalations", "Incident runbooks],category: Enterprise IT - SRE",link: "https://ziontechgroup && ziontechgroup.com/uptime-slo-monitor,variant: quantum-cyberpunk",rating: 4 && 4.5,customers: 1100,trialDays: 14,setupTime: "25 minutes,contactInfo;
+},{id: tls-certificate-monitor",name: "TLS Certificate Monitor,tagline: Auto-renewal checks and expiry alerts across your fleet",price: "$19,period: /month",description: "Monitor certificates across domains and environments, get renewal reminders and failure alerts.,features[Expiry alerts", "Issuer checks, Auto-renew validation", "Inventory export],category: Enterprise IT - Security",link: "https://ziontechgroup && ziontechgroup.com/tls-certificate-monitor,variant: default",rating: 4 && 4.5,customers: 2200,trialDays: 14,setupTime: "10 minutes,contactInfo;
+},{id: domain-dns-monitor",name: "Domain & DNS Monitor,tagline: Track DNS changes, TTLs, and misconfigurations",price: "$29,period: /month",description: "Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.,features[Change detection", "Misconfig alerts, TTL insights", "Export & audit],category: Enterprise IT - Networking",link: "https://ziontechgroup && ziontechgroup.com/domain-dns-monitor,variant: default",rating: 4 && 4.4,customers: 980,trialDays: 14,setupTime: "15 minutes,contactInfo;
 },// Dev & Productivity;
-	{id: "pdf-render-api",name: "PDF Render API",tagline: "High-fidelity serverless PDF rendering and watermarking",price: "$49",period: "/month",description: "Generate pixel-perfect PDFs from HTML/Markdown with headers, footers, and watermarking using a simple API.",features["HTML/Markdown to PDF", "Headers/footers", "Watermarks", "Async webhooks"],category: "Micro SaaS",link: "https://ziontechgroup && ziontechgroup.com/pdf-render-api",variant: "holographic-matrix",rating: 4 && 4.6,customers: 1300,trialDays: 7,setupTime: "10 minutes",contactInfo;
-},{id: "browser-performance-monitor",name: "Browser Performance Monitor",tagline: "RUM metrics, Core Web Vitals, and UX waterfall analysis",price: "$39",period: "/month",description: "Collect real-user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.",features["RUM collection", "CWV dashboards", "Waterfall analysis", "Alerts & webhooks"],category: "Micro SaaS",link: "https://ziontechgroup && ziontechgroup.com/browser-performance-monitor",variant: "quantum-holographic",rating: 4 && 4.5,customers: 760,trialDays: 14,setupTime: "20 minutes",contactInfo;
-},{id: "feature-flags-edge",name: "Feature Flags at the Edge",tagline: "Targeting, rollouts, and experiments at CDN edge",price: "$69",period: "/month",description: "Ship features safely with edge-evaluated flags, user targeting, and experimentation without latency.",features["Edge evaluation", "Targeting & segments", "Experiments", "SDKs & audit"],category: "Micro SaaS",link: "https://ziontechgroup && ziontechgroup.com/feature-flags-edge",variant: "quantum-holographic",rating: 4 && 4.5,customers: 430,trialDays: 14,setupTime: "30 minutes",contactInfo;
-},{id: "serverless-cron-manager",name: "Serverless Cron Manager",tagline: "Reliable scheduled jobs with retries and observability",price: "$29",period: "/month",description: "Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.",features["Cron & schedules", "Retries & DLQs", "Logs & traces", "Alerts & webhooks"],category: "Micro SaaS",link: "https://ziontechgroup && ziontechgroup.com/serverless-cron-manager",variant: "default",rating: 4 && 4.4,customers: 1150,trialDays: 14,setupTime: "15 minutes",contactInfo;
+	{id: pdf-render-api",name: "PDF Render API,tagline: High-fidelity serverless PDF rendering and watermarking",price: "$49,period: /month",description: "Generate pixel-perfect PDFs from HTML/Markdown with headers, footers, and watermarking using a simple API.,features[HTML/Markdown to PDF", "Headers/footers, Watermarks", "Async webhooks],category: Micro SaaS",link: "https://ziontechgroup && ziontechgroup.com/pdf-render-api,variant: holographic-matrix",rating: 4 && 4.6,customers: 1300,trialDays: 7,setupTime: "10 minutes,contactInfo;
+},{id: browser-performance-monitor",name: "Browser Performance Monitor,tagline: RUM metrics, Core Web Vitals, and UX waterfall analysis",price: "$39,period: /month",description: "Collect real-user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.,features[RUM collection", "CWV dashboards, Waterfall analysis", "Alerts & webhooks],category: Micro SaaS",link: "https://ziontechgroup && ziontechgroup.com/browser-performance-monitor,variant: quantum-holographic",rating: 4 && 4.5,customers: 760,trialDays: 14,setupTime: "20 minutes,contactInfo;
+},{id: feature-flags-edge",name: "Feature Flags at the Edge,tagline: Targeting, rollouts, and experiments at CDN edge",price: "$69,period: /month",description: "Ship features safely with edge-evaluated flags, user targeting, and experimentation without latency.,features[Edge evaluation", "Targeting & segments, Experiments", "SDKs & audit],category: Micro SaaS",link: "https://ziontechgroup && ziontechgroup.com/feature-flags-edge,variant: quantum-holographic",rating: 4 && 4.5,customers: 430,trialDays: 14,setupTime: "30 minutes,contactInfo;
+},{id: serverless-cron-manager",name: "Serverless Cron Manager,tagline: Reliable scheduled jobs with retries and observability",price: "$29,period: /month",description: "Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.,features[Cron & schedules", "Retries & DLQs, Logs & traces", "Alerts & webhooks],category: Micro SaaS",link: "https://ziontechgroup && ziontechgroup.com/serverless-cron-manager,variant: default",rating: 4 && 4.4,customers: 1150,trialDays: 14,setupTime: "15 minutes,contactInfo;
 },// Compliance & Risk;
-	{id: "soc2-evidence-automation",name: "SOC 2 Evidence Automation",tagline: "Collect and map controls with change tracking",price: "$149",period: "/month",description: "Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.",features["Control mapping", "Evidence collection", "Change tracking", "Export & auditor access"],category: "Enterprise IT - Compliance",link: "https://ziontechgroup && ziontechgroup.com/soc2-evidence-automation",variant: "holographic-neural",rating: 4 && 4.6,customers: 310,trialDays: 7,setupTime: "1 day",contactInfo;
-},{id: "vendor-risk-automation",name: "Vendor Risk Automation",tagline: "Automate VRM workflows, DDQs, and risk scoring",price: "$99",period: "/month",description: "Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.",features["DDQs and questionnaires", "Risk scoring", "Continuous monitoring", "Dashboards & export"],category: "Enterprise IT - Compliance",link: "https://ziontechgroup && ziontechgroup.com/vendor-risk-automation",variant: "quantum-entanglement",rating: 4 && 4.5,customers: 520,trialDays: 14,setupTime: "2 hours",contactInfo;
+	{id: soc2-evidence-automation",name: "SOC 2 Evidence Automation,tagline: Collect and map controls with change tracking",price: "$149,period: /month",description: "Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.,features[Control mapping", "Evidence collection, Change tracking", "Export & auditor access],category: Enterprise IT - Compliance",link: "https://ziontechgroup && ziontechgroup.com/soc2-evidence-automation,variant: holographic-neural",rating: 4 && 4.6,customers: 310,trialDays: 7,setupTime: "1 day,contactInfo;
+},{id: vendor-risk-automation",name: "Vendor Risk Automation,tagline: Automate VRM workflows, DDQs, and risk scoring",price: "$99,period: /month",description: "Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.,features[DDQs and questionnaires", "Risk scoring, Continuous monitoring", "Dashboards & export],category: Enterprise IT - Compliance",link: "https://ziontechgroup && ziontechgroup.com/vendor-risk-automation,variant: quantum-entanglement",rating: 4 && 4.5,customers: 520,trialDays: 14,setupTime: "2 hours,contactInfo;
 },// Developer and Ops Utilities;
-	{id: "webhook-relay-replay",name: "Webhook Relay & Replay",tagline: "Capture, inspect, and replay webhooks reliably",price: "$19",period: "/month",description: "Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.",features["Capture & inspect", "Replay with backoff", "Signature verification", "Forwarding rules"],category: "Micro SaaS",link: "https://ziontechgroup && ziontechgroup.com/webhook-relay-replay",variant: "cyberpunk-holographic",rating: 4 && 4.5,customers: 1650,trialDays: 14,setupTime: "10 minutes",contactInfo;
-},{id: "audit-log-vault",name: "Audit Log Vault",tagline: "Tamper-evident logs with retention and export",price: "$39",period: "/month",description: "Centralize audit logs with WORM retention, export APIs, and fine-grained access for investigations.",features["WORM retention", "Export APIs", "Fine-grained access", "Tamper evidence"],category: "Enterprise IT - Security",link: "https://ziontechgroup && ziontechgroup.com/audit-log-vault",variant: "quantum-neural",rating: 4 && 4.5,customers: 420,trialDays: 14;
-];import { ServiceVariant    } from '../types / service - variants';
+	{id: webhook-relay-replay",name: "Webhook Relay & Replay,tagline: Capture, inspect, and replay webhooks reliably",price: "$19,period: /month",description: "Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.,features[Capture & inspect", "Replay with backoff, Signature verification", "Forwarding rules],category: Micro SaaS",link: "https://ziontechgroup && ziontechgroup.com/webhook-relay-replay,variant: cyberpunk-holographic",rating: 4 && 4.5,customers: 1650,trialDays: 14,setupTime: "10 minutes,contactInfo;
+},{id: audit-log-vault",name: "Audit Log Vault,tagline: Tamper-evident logs with retention and export",price: "$39,period: /month",description: "Centralize audit logs with WORM retention, export APIs, and fine-grained access for investigations.,features[WORM retention", "Export APIs, Fine-grained access", "Tamper evidence],category: Enterprise IT - Security",link: "https://ziontechgroup && ziontechgroup.com/audit-log-vault,variant: quantum-neural",rating: 4 && 4.5,customers: 420,trialDays: 14;
+];import { ServiceVariant    } from '../types / service - variants;
 export interface MarketValidatedService  {id: string;
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 name: string;
@@ -3017,501 +1362,37 @@ rating?: number;
 customers?: number;
 trial_days?: number;
 setup_time?: string;
-<<<<<<< HEAD
-contact_info: {
-  mobile: string;
-  email: string;
-  address: string;
-const contact_info = {
-  mobile: "+1 302 464 0950",
-email: "kleber@ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709";
-;
-  website: "https://ziontechgroup.com";,
-}
-export const marketValidatedServices: MarketValidatedService[] = [;
-// AI and Assistants;
-{
-  id: "ai - assistant - pro",
-  name: "AI Assistant Pro",
-  tagline: "Branded copilot with RAG, guardrails, and analytics",
-  price: "$149",
-  period: "/month",
-  description: "Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.",
-  features[ "RAG over your docs with hybrid search",
-  "Guardrails: PII / PHI redaction, jailbreak detection",
-  "Human handoff + conversation analytics",
-  "Slack / Teams / Widget channels",
-  ],
-  category: "AI & Assistants",
-  link: "https://ziontechgroup.com / ai - assistant",
-  variant: "ai - futuristic",
-  rating: 4.8,
-  customers: 1200,
-  trial_days: 14,
-  setup_time: "30 minutes",
-  contact_info;,
-},
-{
-  id: "ai - evals - observability",
-  name: "AI Evals & Observability",
-  tagline: "Regression testing, safety checks, and live metrics for LLM features",
-  price: "$99",
-  period: "/month",
-  description: "Ship reliable LLM apps with dataset management, prompt diffing, red - teaming, and production KPIs for quality, latency, and costs.",
-  features[ "Eval datasets / versioning",
-  "Policy and toxicity checks",
-  "Latency and cost KPIs",
-  "Prompt / version diff and alerts",
-  ],
-  category: "AI & MLOps",
-  link: "https://ziontechgroup.com / ai - evals",
-  variant: "quantum - holographic",
-  rating: 4.7,
-  customers: 600,
-  trial_days: 14,
-  setup_time: "1 hour",
-  contact_info;,
-},
-{
-  id: "agentic - rag - platform",
-  name: "Agentic RAG Platform",
-  tagline: "Production RAG with hybrid search, chunking, tools, and evals",
-  price: "$179",
-  period: "/month",
-  description: "Ingest and index your knowledge with hybrid search + reranking, enable tool - using agents, and validate responses with reference checks and citations.",
-  features[ "Hybrid vector + BM25 + reranker",
-  "Chunking strategies + citations",
-  "Toolformer - style agents",
-  "Eval suite and drift monitoring",
-  ],
-  category: "AI & Search",
-  link: "https://ziontechgroup.com / agentic - rag",
-  variant: "quantum - matrix",
-  rating: 4.7,
-  customers: 900,
-  trial_days: 14,
-  setup_time: "2 hours",
-  contact_info;,
-},
-// Security and APIs;
-{
-  id: "api - security - scanner",
-  name: "API Security Scanner",
-  tagline: "OpenAPI / GraphQL scanning, auth / Z checks, dependency audit",
-  price: "$59",
-  period: "/month",
-  description: "Automatically scan APIs for OWASP issues, auth / z misconfigurations, and dependency CVEs with CI gating and fix guidance.",
-  features["Auth / Z misconfig checks", "OWASP Top 10 tests", "CI gate", "Fix guidance"],
-  category: "Enterprise IT - Security",
-  link: "https://ziontechgroup.com / api - security - scanner",
-  variant: "cyberpunk",
-  rating: 4.6,
-  customers: 750,
-  trial_days: 14,
-  setup_time: "20 minutes",
-  contact_info;,
-},
-{
-  id: "api - observability",
-  name: "API Observability & SLA Guard",
-  tagline: "OTel tracing, SLOs, and error budgets for services",
-  price: "$69",
-  period: "/month",
-  description: "Collect traces / metrics / logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.",
-  features["OTel traces / metrics / logs", "SLOs & error budgets", "Alerting", "Dashboards"],
-  category: "Enterprise IT - Observability",
-  link: "https://ziontechgroup.com / api - observability",
-  variant: "holographic",
-  rating: 4.6,
-  customers: 640,
-  trial_days: 14,
-  setup_time: "40 minutes",
-  contact_info;,
-},
-// Cloud and Infra;
-{
-  id: "cloud - cost - optimizer - pro",
-  name: "Cloud Cost Optimizer Pro",
-  tagline: "Rightsizing, lifecycle, anomaly detection, and k8s bin - packing",
-  price: "$99",
-  period: "/month",
-  description: "Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.",
-  features["Auto rightsizing", "Idle cleanup", "Spot orchestration", "Anomaly detection"],
-  category: "Enterprise IT - FinOps",
-  link: "https://ziontechgroup.com / cloud - cost - optimizer",
-  variant: "quantum",
-  rating: 4.6,
-  customers: 820,
-  trial_days: 14,
-  setup_time: "1 hour",
-  contact_info;,
-},
-{
-  id: "database - performance - monitor",
-  name: "Database Performance Monitor",
-  tagline: "Slow query capture, AI index suggestions, capacity forecasting",
-  price: "$79",
-  period: "/month",
-  description: "Postgres / MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.",
-  features["Slow query ranking", "AI index advice", "Pool tuning", "SLA / SLO dashboards"],
-  category: "Enterprise IT - Data",
-  link: "https://ziontechgroup.com / database - performance - monitor",
-  variant: "neural - quantum",
-  rating: 4.7,
-  customers: 560,
-  trial_days: 14,
-  setup_time: "45 minutes",
-  contact_info;,
-},
-{
-  id: "managed - postgres - ha",
-  name: "Managed Postgres HA",
-  tagline: "Highly - available Postgres with backups, failover, and guardrails",
-  price: "$499",
-  period: "/month",
-  description: "Production - ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.",
-  features["Automated backups", "Failover & replication", "Performance tuning", "SLA & support"],
-  category: "Enterprise IT - Data",
-  link: "https://ziontechgroup.com / managed - postgres - ha",
-  variant: "holographic - advanced",
-  rating: 4.8,
-  customers: 240,
-  trial_days: 7,
-  setup_time: "1 day",
-  contact_info;,
-},
-// Reliability & Monitoring;
-{
-  id: "uptime - slo - monitor",
-  name: "Uptime & SLO Monitor",
-  tagline: "Synthetic checks, error budgets, and incident automation",
-  price: "$39",
-  period: "/month",
-  description: "Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.",
-  features["Global synthetic checks", "Error budgets & burn rates", "On - call & escalations", "Incident runbooks"],
-  category: "Enterprise IT - SRE",
-  link: "https://ziontechgroup.com / uptime - slo - monitor",
-  variant: "quantum - cyberpunk",
-  rating: 4.5,
-  customers: 1100,
-  trial_days: 14,
-  setup_time: "25 minutes",
-  contact_info;,
-},
-{
-  id: "tls - certificate - monitor",
-  name: "TLS Certificate Monitor",
-  tagline: "Auto - renewal checks and expiry alerts across your fleet",
-  price: "$19",
-  period: "/month",
-  description: "Monitor certificates across domains and environments, get renewal reminders and failure alerts.",
-  features["Expiry alerts", "Issuer checks", "Auto - renew validation", "Inventory export"],
-  category: "Enterprise IT - Security",
-  link: "https://ziontechgroup.com / tls - certificate - monitor",
-  variant: "default",
-  rating: 4.5,
-  customers: 2200,
-  trial_days: 14,
-  setup_time: "10 minutes",
-  contact_info;,
-},
-{
-  id: "domain - dns - monitor",
-  name: "Domain & DNS Monitor",
-  tagline: "Track DNS changes, TTLs, and misconfigurations",
-  price: "$29",
-  period: "/month",
-  description: "Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.",
-  features["Change detection", "Misconfig alerts", "TTL insights", "Export & audit"],
-  category: "Enterprise IT - Networking",
-  link: "https://ziontechgroup.com / domain - dns - monitor",
-  variant: "default",
-  rating: 4.4,
-  customers: 980,
-  trial_days: 14,
-  setup_time: "15 minutes",
-  contact_info;,
-},
-// Dev & Productivity;
-{
-  id: "pdf - render - api",
-  name: "PDF Render API",
-  tagline: "High - fidelity serverless PDF rendering and watermarking",
-  price: "$49",
-  period: "/month",
-  description: "Generate pixel - perfect PDFs from HTML / Markdown with headers, footers, and watermarking using a simple API.",
-  features["HTML / Markdown to PDF", "Headers / footers", "Watermarks", "Async webhooks"],
-  category: "Micro SaaS",
-  link: "https://ziontechgroup.com / pdf - render - api",
-  variant: "holographic - matrix",
-  rating: 4.6,
-  customers: 1300,
-  trial_days: 7,
-  setup_time: "10 minutes",
-  contact_info;,
-},
-{
-  id: "browser - performance - monitor",
-  name: "Browser Performance Monitor",
-  tagline: "RUM metrics, Core Web Vitals, and UX waterfall analysis",
-  price: "$39",
-  period: "/month",
-  description: "Collect real - user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.",
-  features["RUM collection", "CWV dashboards", "Waterfall analysis", "Alerts & webhooks"],
-  category: "Micro SaaS",
-  link: "https://ziontechgroup.com / browser - performance - monitor",
-  variant: "quantum - holographic",
-  rating: 4.5,
-  customers: 760,
-  trial_days: 14,
-  setup_time: "20 minutes",
-  contact_info;,
-},
-{
-  id: "feature - flags - edge",
-  name: "Feature Flags at the Edge",
-  tagline: "Targeting, rollouts, and experiments at CDN edge",
-  price: "$69",
-  period: "/month",
-  description: "Ship features safely with edge - evaluated flags, user targeting, and experimentation without latency.",
-  features["Edge evaluation", "Targeting & segments", "Experiments", "SDKs & audit"],
-  category: "Micro SaaS",
-  link: "https://ziontechgroup.com / feature - flags - edge",
-  variant: "quantum - holographic",
-  rating: 4.5,
-  customers: 430,
-  trial_days: 14,
-  setup_time: "30 minutes",
-  contact_info;,
-},
-{
-  id: "serverless - cron - manager",
-  name: "Serverless Cron Manager",
-  tagline: "Reliable scheduled jobs with retries and observability",
-  price: "$29",
-  period: "/month",
-  description: "Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.",
-  features["Cron & schedules", "Retries & DLQs", "Logs & traces", "Alerts & webhooks"],
-  category: "Micro SaaS",
-  link: "https://ziontechgroup.com / serverless - cron - manager",
-  variant: "default",
-  rating: 4.4,
-  customers: 1150,
-  trial_days: 14,
-  setup_time: "15 minutes",
-  contact_info;,
-},
-// Compliance & Risk;
-{
-  id: "soc2 - evidence - automation",
-  name: "SOC 2 Evidence Automation",
-  tagline: "Collect and map controls with change tracking",
-  price: "$149",
-  period: "/month",
-  description: "Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.",
-  features["Control mapping", "Evidence collection", "Change tracking", "Export & auditor access"],
-  category: "Enterprise IT - Compliance",
-  link: "https://ziontechgroup.com / soc2 - evidence - automation",
-  variant: "holographic - neural",
-  rating: 4.6,
-  customers: 310,
-  trial_days: 7,
-  setup_time: "1 day",
-  contact_info;,
-},
-{
-  id: "vendor - risk - automation",
-  name: "Vendor Risk Automation",
-  tagline: "Automate VRM workflows, DDQs, and risk scoring",
-  price: "$99",
-  period: "/month",
-  description: "Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.",
-  features["DDQs and questionnaires", "Risk scoring", "Continuous monitoring", "Dashboards & export"],
-  category: "Enterprise IT - Compliance",
-  link: "https://ziontechgroup.com / vendor - risk - automation",
-  variant: "quantum - entanglement",
-  rating: 4.5,
-  customers: 520,
-  trial_days: 14,
-  setup_time: "2 hours",
-  contact_info;,
-},
-// Developer and Ops Utilities;
-{
-  id: "webhook - relay - replay",
-  name: "Webhook Relay & Replay",
-  tagline: "Capture, inspect, and replay webhooks reliably",
-  price: "$19",
-  period: "/month",
-  description: "Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.",
-  features["Capture & inspect", "Replay with backoff", "Signature verification", "Forwarding rules"],
-  category: "Micro SaaS",
-  link: "https://ziontechgroup.com / webhook - relay - replay",
-  variant: "cyberpunk - holographic",
-  rating: 4.5,
-  customers: 1650,
-  trial_days: 14,
-  setup_time: "10 minutes",
-  contact_info;,
-},
-{
-  id: "audit - log - vault",
-  name: "Audit Log Vault",
-  tagline: "Tamper - evident logs with retention and export",
-  price: "$39",
-  period: "/month",
-  description: "Centralize audit logs with WORM retention, export APIs, and fine - grained access for investigations.",
-  features["WORM retention", "Export APIs", "Fine - grained access", "Tamper evidence"],
-  category: "Enterprise IT - Security",
-  link: "https://ziontechgroup.com / audit - log - vault",
-  variant: "quantum - neural",
-  rating: 4.5,
-  customers: 420,
-  trial_days: 14,
-  setup_time: "30 minutes",
-  contact_info;,
-},
-// AI Channels;
-{
-  id: "ai - phone - agent",
-  name: "AI Phone Agent",
-  tagline: "Voice IVR and call handling with CRM handoff",
-  price: "$129",
-  period: "/month",
-  description: "Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.",
-  features["Natural TTS / ASR", "Routing & handoff", "CRM sync", "Analytics"],
-  category: "AI & Assistants",
-  link: "https://ziontechgroup.com / ai - phone - agent",
-  variant: "quantum - holographic - advanced",
-  rating: 4.6,
-  customers: 380,
-  trial_days: 7,
-  setup_time: "1 hour",
-  contact_info;,
-},
-// Search and Knowledge;
-{
-  id: "vector - search - starter",
-  name: "Vector Search Starter",
-  tagline: "Deploy a production - grade vector database and APIs",
-  price: "$89",
-  period: "/month",
-  description: "Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.",
-  features["Managed vector DB", "Ingestion pipelines", "Metadata filters", "Access controls"],
-  category: "AI & Search",
-  link: "https://ziontechgroup.com / vector - search - starter",
-  variant: "quantum",
-  rating: 4.6,
-  customers: 410,
-  trial_days: 14,
-  setup_time: "2 hours",
-  contact_info;,
 
-},
-];,
-}}
-
-  // Search and Knowledge;
-{
-  id: 'vector - search - starter';
-=======
-contact_info: {mobile: string;
-  email: string;
-  address: string;
-const contact_info = {mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";website: "https://ziontechgroup.com";
-}
-export const marketValidatedServices: MarketValidatedService[] = [;
-// AI and Assistants;
-{id: "ai - assistant - pro",name: "AI Assistant Pro",tagline: "Branded copilot with RAG, guardrails, and analytics",price: "$149",period: "/month",description: "Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.",features[ "RAG over your docs with hybrid search","Guardrails: PII / PHI redaction, jailbreak detection","Human handoff + conversation analytics","Slack / Teams / Widget channels";
-  ],category: "AI & Assistants",link: "https://ziontechgroup.com / ai - assistant",variant: "ai - futuristic",rating: 4.8,customers: 1200,trial_days: 14,setup_time: "30 minutes",contact_info;
-},{id: "ai - evals - observability",name: "AI Evals & Observability",tagline: "Regression testing, safety checks, and live metrics for LLM features",price: "$99",period: "/month",description: "Ship reliable LLM apps with dataset management, prompt diffing, red - teaming, and production KPIs for quality, latency, and costs.",features[ "Eval datasets / versioning","Policy and toxicity checks","Latency and cost KPIs","Prompt / version diff and alerts";
-  ],category: "AI & MLOps",link: "https://ziontechgroup.com / ai - evals",variant: "quantum - holographic",rating: 4.7,customers: 600,trial_days: 14,setup_time: "1 hour",contact_info;
-},{id: "agentic - rag - platform",name: "Agentic RAG Platform",tagline: "Production RAG with hybrid search, chunking, tools, and evals",price: "$179",period: "/month",description: "Ingest and index your knowledge with hybrid search + reranking, enable tool - using agents, and validate responses with reference checks and citations.",features[ "Hybrid vector + BM25 + reranker","Chunking strategies + citations","Toolformer - style agents","Eval suite and drift monitoring";
-  ],category: "AI & Search",link: "https://ziontechgroup.com / agentic - rag",variant: "quantum - matrix",rating: 4.7,customers: 900,trial_days: 14,setup_time: "2 hours",contact_info;
-},// Security and APIs;
-{id: "api - security - scanner",name: "API Security Scanner",tagline: "OpenAPI / GraphQL scanning, auth / Z checks, dependency audit",price: "$59",period: "/month",description: "Automatically scan APIs for OWASP issues, auth / z misconfigurations, and dependency CVEs with CI gating and fix guidance.",features["Auth / Z misconfig checks", "OWASP Top 10 tests", "CI gate", "Fix guidance"],category: "Enterprise IT - Security",link: "https://ziontechgroup.com / api - security - scanner",variant: "cyberpunk",rating: 4.6,customers: 750,trial_days: 14,setup_time: "20 minutes",contact_info;
-},{id: "api - observability",name: "API Observability & SLA Guard",tagline: "OTel tracing, SLOs, and error budgets for services",price: "$69",period: "/month",description: "Collect traces / metrics / logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.",features["OTel traces / metrics / logs", "SLOs & error budgets", "Alerting", "Dashboards"],category: "Enterprise IT - Observability",link: "https://ziontechgroup.com / api - observability",variant: "holographic",rating: 4.6,customers: 640,trial_days: 14,setup_time: "40 minutes",contact_info;
-},// Cloud and Infra;
-{id: "cloud - cost - optimizer - pro",name: "Cloud Cost Optimizer Pro",tagline: "Rightsizing, lifecycle, anomaly detection, and k8s bin - packing",price: "$99",period: "/month",description: "Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.",features["Auto rightsizing", "Idle cleanup", "Spot orchestration", "Anomaly detection"],category: "Enterprise IT - FinOps",link: "https://ziontechgroup.com / cloud - cost - optimizer",variant: "quantum",rating: 4.6,customers: 820,trial_days: 14,setup_time: "1 hour",contact_info;
-},{id: "database - performance - monitor",name: "Database Performance Monitor",tagline: "Slow query capture, AI index suggestions, capacity forecasting",price: "$79",period: "/month",description: "Postgres / MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.",features["Slow query ranking", "AI index advice", "Pool tuning", "SLA / SLO dashboards"],category: "Enterprise IT - Data",link: "https://ziontechgroup.com / database - performance - monitor",variant: "neural - quantum",rating: 4.7,customers: 560,trial_days: 14,setup_time: "45 minutes",contact_info;
-},{id: "managed - postgres - ha",name: "Managed Postgres HA",tagline: "Highly - available Postgres with backups, failover, and guardrails",price: "$499",period: "/month",description: "Production - ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.",features["Automated backups", "Failover & replication", "Performance tuning", "SLA & support"],category: "Enterprise IT - Data",link: "https://ziontechgroup.com / managed - postgres - ha",variant: "holographic - advanced",rating: 4.8,customers: 240,trial_days: 7,setup_time: "1 day",contact_info;
-},// Reliability & Monitoring;
-{id: "uptime - slo - monitor",name: "Uptime & SLO Monitor",tagline: "Synthetic checks, error budgets, and incident automation",price: "$39",period: "/month",description: "Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.",features["Global synthetic checks", "Error budgets & burn rates", "On - call & escalations", "Incident runbooks"],category: "Enterprise IT - SRE",link: "https://ziontechgroup.com / uptime - slo - monitor",variant: "quantum - cyberpunk",rating: 4.5,customers: 1100,trial_days: 14,setup_time: "25 minutes",contact_info;
-},{id: "tls - certificate - monitor",name: "TLS Certificate Monitor",tagline: "Auto - renewal checks and expiry alerts across your fleet",price: "$19",period: "/month",description: "Monitor certificates across domains and environments, get renewal reminders and failure alerts.",features["Expiry alerts", "Issuer checks", "Auto - renew validation", "Inventory export"],category: "Enterprise IT - Security",link: "https://ziontechgroup.com / tls - certificate - monitor",variant: "default",rating: 4.5,customers: 2200,trial_days: 14,setup_time: "10 minutes",contact_info;
-},{id: "domain - dns - monitor",name: "Domain & DNS Monitor",tagline: "Track DNS changes, TTLs, and misconfigurations",price: "$29",period: "/month",description: "Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.",features["Change detection", "Misconfig alerts", "TTL insights", "Export & audit"],category: "Enterprise IT - Networking",link: "https://ziontechgroup.com / domain - dns - monitor",variant: "default",rating: 4.4,customers: 980,trial_days: 14,setup_time: "15 minutes",contact_info;
-},// Dev & Productivity;
-{id: "pdf - render - api",name: "PDF Render API",tagline: "High - fidelity serverless PDF rendering and watermarking",price: "$49",period: "/month",description: "Generate pixel - perfect PDFs from HTML / Markdown with headers, footers, and watermarking using a simple API.",features["HTML / Markdown to PDF", "Headers / footers", "Watermarks", "Async webhooks"],category: "Micro SaaS",link: "https://ziontechgroup.com / pdf - render - api",variant: "holographic - matrix",rating: 4.6,customers: 1300,trial_days: 7,setup_time: "10 minutes",contact_info;
-},{id: "browser - performance - monitor",name: "Browser Performance Monitor",tagline: "RUM metrics, Core Web Vitals, and UX waterfall analysis",price: "$39",period: "/month",description: "Collect real - user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.",features["RUM collection", "CWV dashboards", "Waterfall analysis", "Alerts & webhooks"],category: "Micro SaaS",link: "https://ziontechgroup.com / browser - performance - monitor",variant: "quantum - holographic",rating: 4.5,customers: 760,trial_days: 14,setup_time: "20 minutes",contact_info;
-},{id: "feature - flags - edge",name: "Feature Flags at the Edge",tagline: "Targeting, rollouts, and experiments at CDN edge",price: "$69",period: "/month",description: "Ship features safely with edge - evaluated flags, user targeting, and experimentation without latency.",features["Edge evaluation", "Targeting & segments", "Experiments", "SDKs & audit"],category: "Micro SaaS",link: "https://ziontechgroup.com / feature - flags - edge",variant: "quantum - holographic",rating: 4.5,customers: 430,trial_days: 14,setup_time: "30 minutes",contact_info;
-},{id: "serverless - cron - manager",name: "Serverless Cron Manager",tagline: "Reliable scheduled jobs with retries and observability",price: "$29",period: "/month",description: "Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.",features["Cron & schedules", "Retries & DLQs", "Logs & traces", "Alerts & webhooks"],category: "Micro SaaS",link: "https://ziontechgroup.com / serverless - cron - manager",variant: "default",rating: 4.4,customers: 1150,trial_days: 14,setup_time: "15 minutes",contact_info;
-},// Compliance & Risk;
-{id: "soc2 - evidence - automation",name: "SOC 2 Evidence Automation",tagline: "Collect and map controls with change tracking",price: "$149",period: "/month",description: "Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.",features["Control mapping", "Evidence collection", "Change tracking", "Export & auditor access"],category: "Enterprise IT - Compliance",link: "https://ziontechgroup.com / soc2 - evidence - automation",variant: "holographic - neural",rating: 4.6,customers: 310,trial_days: 7,setup_time: "1 day",contact_info;
-},{id: "vendor - risk - automation",name: "Vendor Risk Automation",tagline: "Automate VRM workflows, DDQs, and risk scoring",price: "$99",period: "/month",description: "Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.",features["DDQs and questionnaires", "Risk scoring", "Continuous monitoring", "Dashboards & export"],category: "Enterprise IT - Compliance",link: "https://ziontechgroup.com / vendor - risk - automation",variant: "quantum - entanglement",rating: 4.5,customers: 520,trial_days: 14,setup_time: "2 hours",contact_info;
-},// Developer and Ops Utilities;
-{id: "webhook - relay - replay",name: "Webhook Relay & Replay",tagline: "Capture, inspect, and replay webhooks reliably",price: "$19",period: "/month",description: "Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.",features["Capture & inspect", "Replay with backoff", "Signature verification", "Forwarding rules"],category: "Micro SaaS",link: "https://ziontechgroup.com / webhook - relay - replay",variant: "cyberpunk - holographic",rating: 4.5,customers: 1650,trial_days: 14,setup_time: "10 minutes",contact_info;
-},{id: "audit - log - vault",name: "Audit Log Vault",tagline: "Tamper - evident logs with retention and export",price: "$39",period: "/month",description: "Centralize audit logs with WORM retention, export APIs, and fine - grained access for investigations.",features["WORM retention", "Export APIs", "Fine - grained access", "Tamper evidence"],category: "Enterprise IT - Security",link: "https://ziontechgroup.com / audit - log - vault",variant: "quantum - neural",rating: 4.5,customers: 420,trial_days: 14,setup_time: "30 minutes",contact_info;
-},// AI Channels;
-{id: "ai - phone - agent",name: "AI Phone Agent",tagline: "Voice IVR and call handling with CRM handoff",price: "$129",period: "/month",description: "Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.",features["Natural TTS / ASR", "Routing & handoff", "CRM sync", "Analytics"],category: "AI & Assistants",link: "https://ziontechgroup.com / ai - phone - agent",variant: "quantum - holographic - advanced",rating: 4.6,customers: 380,trial_days: 7,setup_time: "1 hour",contact_info;
-},// Search and Knowledge;
-{id: "vector - search - starter",name: "Vector Search Starter",tagline: "Deploy a production - grade vector database and APIs",price: "$89",period: "/month",description: "Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.",features["Managed vector DB", "Ingestion pipelines", "Metadata filters", "Access controls"],category: "AI & Search",link: "https://ziontechgroup.com / vector - search - starter",variant: "quantum",rating: 4.6,customers: 410,trial_days: 14,setup_time: "2 hours",contact_info;}
-];
-}}// Search and Knowledge;
-{id: 'vector - search - starter';
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-  name: 'Vector Search Starter';
-  tagline: 'Deploy a production - grade vector database and APIs';
-  price: '$89';
-  period: '/month';
-  description: 'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.';
-  features: ['Managed vector DBIngestion pipelines_metadata filters_access controls'];
-  category: 'AI & Search';
-  link: 'https://ziontechgroup.com / vector - search - starter';
-  variant: 'quantum';
+  name: Vector Search Starter';
+  tagline: 'Deploy a production - grade vector database and APIs;
+  price: $89';
+  period: '/month;
+  description: Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.';
+  features: ['Managed vector DBIngestion pipelines_metadata filters_access controls];
+  category: AI & Search';
+  link: 'https://ziontechgroup.com / vector - search - starter;
+  variant: quantum';
   rating: 4.6;
   customers: 410;
   trial_days: 14;
-  setup_time: '2 hours';
+  setup_time: '2 hours;
   contact_info;
-<<<<<<< HEAD
-=======
-}];
-;
-;
 
-
-		contactInfo
-	}
-];
-
-
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-const contactInfo = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 }}
 
 
-  mobile: "+1 302 464 0950",
-	email: "kleber@ziontechgroup && ziontechgroup.com",
-	address: "364 E Main St STE 1008 Middletown DE 19709";
-  website: "https://ziontechgroup && ziontechgroup.com";,
+  mobile: "+1 302 464 0950,
+	email: kleber@ziontechgroup && ziontechgroup.com",
+	address: "364 E Main St STE 1008 Middletown DE 19709;
+  website: https://ziontechgroup && ziontechgroup.com";,
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 =======
   // TODO: Implement
-export interface MarketValidatedService {;
+export interface MarketValidatedService {
 
 	period: string;,
   description: string;
@@ -3521,15 +1402,15 @@ export interface MarketValidatedService {;
 }}
 
 
-  mobile: "+1 302 464 0950",""
-	email: "kleber@ziontechgroup && ziontechgroup.com",""
-	address: "364 E Main St STE 1008 Middletown DE 19709";","
-  website: "https://ziontechgroup && ziontechgroup.com";,""
+  mobile: "+1 302 464 0950,"
+	email: "kleber@ziontechgroup && ziontechgroup.com,"
+	address: "364 E Main St STE 1008 Middletown DE 19709;,"
+  website: "https://ziontechgroup && ziontechgroup.com;,"
 pr-12325
-  setup_time: '2 hours';}
+  setup_time: 2 hours';}
   contact_info;}
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-}];;contactInfo;
+}];contactInfo;
 	}
 ];ursor/fix-website-loading-errors-and-merge-6662;
 const contactInfo  = null;
@@ -3537,381 +1418,372 @@ const contactInfo  = null;
 }}
 }];
 ;
-;
 
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-  mobile: "+1 302 464 0950",
-	email: "kleber@ziontechgroup && ziontechgroup.com",
-	address: "364 E Main St STE 1008 Middletown DE 19709";
-  website: "https://ziontechgroup && ziontechgroup.com";,
-
-	},
+  mobile: "+1 302 464 0950,
+	email: kleber@ziontechgroup && ziontechgroup.com",
+	address: "364 E Main St STE 1008 Middletown DE 19709;
+  website: https://ziontechgroup && ziontechgroup.com";},
 	{
-		id: 'ai-evals-observability',
-		name: 'AI Evals & Observability',
-		tagline: 'Regression testing, safety checks, and live metrics for LLM features',
-		price: '$99',
-		period: '/month',
-		description: 'Ship reliable LLM apps with dataset management, prompt diffing, red-teaming, and production KPIs for quality, latency, and costs.',
+		id: 'ai-evals-observability,
+		name: AI Evals & Observability',
+		tagline: 'Regression testing, safety checks, and live metrics for LLM features,
+		price: $99',
+		period: '/month,
+		description: Ship reliable LLM apps with dataset management, prompt diffing, red-teaming, and production KPIs for quality, latency, and costs.',
 		features: [
-			'Eval datasets/versioningPolicy and toxicity checksLatency and cost KPIsPrompt/version diff and alerts'],
-		category: 'AI & MLOps',
-		link: 'https://ziontechgroup.com/ai-evals',
-		variant: 'quantum-holographic',
+			'Eval datasets/versioningPolicy and toxicity checksLatency and cost KPIsPrompt/version diff and alerts],
+		category: AI & MLOps',
+		link: 'https://ziontechgroup.com/ai-evals,
+		variant: quantum-holographic',
 		rating: 4.7,
 		customers: 600,
 		trialDays: 14,
-		setupTime: '1 hour',
+		setupTime: '1 hour,
 		contactInfo
 	},
 	{
-		id: 'agentic-rag-platform',
-		name: 'Agentic RAG Platform',
-		tagline: 'Production RAG with hybrid search, chunking, tools, and evals',
-		price: '$179',
-		period: '/month',
-		description: 'Ingest and index your knowledge with hybrid search + reranking, enable tool-using agents, and validate responses with reference checks and citations.',
+		id: agentic-rag-platform',
+		name: 'Agentic RAG Platform,
+		tagline: Production RAG with hybrid search, chunking, tools, and evals',
+		price: '$179,
+		period: /month',
+		description: 'Ingest and index your knowledge with hybrid search + reranking, enable tool-using agents, and validate responses with reference checks and citations.,
 		features: [
-			'Hybrid vector+BM25 + rerankerChunking strategies + citationsToolformer-style agentsEval suite and drift monitoring'],
-		category: 'AI & Search',
-		link: 'https://ziontechgroup.com/agentic-rag',
-		variant: 'quantum-matrix',
+			Hybrid vector+BM25 + rerankerChunking strategies + citationsToolformer-style agentsEval suite and drift monitoring'],
+		category: 'AI & Search,
+		link: https://ziontechgroup.com/agentic-rag',
+		variant: 'quantum-matrix,
 		rating: 4.7,
 		customers: 900,
 		trialDays: 14,
-		setupTime: '2 hours',
+		setupTime: 2 hours',
 		contactInfo
 	},
 
 	// Security and APIs
 	{
-		id: 'api-security-scanner',
-		name: 'API Security Scanner',
-		tagline: 'OpenAPI/GraphQL scanning, auth/Z checks, dependency audit',
-		price: '$59',
-		period: '/month',
-		description: 'Automatically scan APIs for OWASP issues, auth/z misconfigurations, and dependency CVEs with CI gating and fix guidance.',
-		features: ['Auth/Z misconfig checksOWASP Top 10 testsCI gateFix guidance'],
-		category: 'Enterprise IT - Security',
-		link: 'https://ziontechgroup.com/api-security-scanner',
-		variant: 'cyberpunk',
+		id: 'api-security-scanner,
+		name: API Security Scanner',
+		tagline: 'OpenAPI/GraphQL scanning, auth/Z checks, dependency audit,
+		price: $59',
+		period: '/month,
+		description: Automatically scan APIs for OWASP issues, auth/z misconfigurations, and dependency CVEs with CI gating and fix guidance.',
+		features: ['Auth/Z misconfig checksOWASP Top 10 testsCI gateFix guidance],
+		category: Enterprise IT - Security',
+		link: 'https://ziontechgroup.com/api-security-scanner,
+		variant: cyberpunk',
 		rating: 4.6,
 		customers: 750,
 		trialDays: 14,
-		setupTime: '20 minutes',
+		setupTime: '20 minutes,
 		contactInfo
 	},
 	{
-		id: 'api-observability',
-		name: 'API Observability & SLA Guard',
-		tagline: 'OTel tracing, SLOs, and error budgets for services',
-		price: '$69',
-		period: '/month',
-		description: 'Collect traces/metrics/logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.',
-		features: ['OTel traces/metrics/logsSLOs & error budgetsAlertingDashboards'],
-		category: 'Enterprise IT - Observability',
-		link: 'https://ziontechgroup.com/api-observability',
-		variant: 'holographic',
+		id: api-observability',
+		name: 'API Observability & SLA Guard,
+		tagline: OTel tracing, SLOs, and error budgets for services',
+		price: '$69,
+		period: /month',
+		description: 'Collect traces/metrics/logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.,
+		features: [OTel traces/metrics/logsSLOs & error budgetsAlertingDashboards'],
+		category: 'Enterprise IT - Observability,
+		link: https://ziontechgroup.com/api-observability',
+		variant: 'holographic,
 		rating: 4.6,
 		customers: 640,
 		trialDays: 14,
-		setupTime: '40 minutes',
+		setupTime: 40 minutes',
 		contactInfo
 	},
 
 	// Cloud and Infra
 	{
-		id: 'cloud-cost-optimizer-pro',
-		name: 'Cloud Cost Optimizer Pro',
-		tagline: 'Rightsizing, lifecycle, anomaly detection, and k8s bin-packing',
-		price: '$99',
-		period: '/month',
-		description: 'Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.',
-		features: ['Auto rightsizingIdle cleanupSpot orchestrationAnomaly detection'],
-		category: 'Enterprise IT - FinOps',
-		link: 'https://ziontechgroup.com/cloud-cost-optimizer',
-		variant: 'quantum',
+		id: 'cloud-cost-optimizer-pro,
+		name: Cloud Cost Optimizer Pro',
+		tagline: 'Rightsizing, lifecycle, anomaly detection, and k8s bin-packing,
+		price: $99',
+		period: '/month,
+		description: Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.',
+		features: ['Auto rightsizingIdle cleanupSpot orchestrationAnomaly detection],
+		category: Enterprise IT - FinOps',
+		link: 'https://ziontechgroup.com/cloud-cost-optimizer,
+		variant: quantum',
 		rating: 4.6,
 		customers: 820,
 		trialDays: 14,
-		setupTime: '1 hour',
+		setupTime: '1 hour,
 		contactInfo
 	},
 	{
-		id: 'database-performance-monitor',
-		name: 'Database Performance Monitor',
-		tagline: 'Slow query capture, AI index suggestions, capacity forecasting',
-		price: '$79',
-		period: '/month',
-		description: 'Postgres/MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.',
-		features: ['Slow query rankingAI index advicePool tuningSLA/SLO dashboards'],
-		category: 'Enterprise IT - Data',
-		link: 'https://ziontechgroup.com/database-performance-monitor',
-		variant: 'neural-quantum',
+		id: database-performance-monitor',
+		name: 'Database Performance Monitor,
+		tagline: Slow query capture, AI index suggestions, capacity forecasting',
+		price: '$79,
+		period: /month',
+		description: 'Postgres/MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.,
+		features: [Slow query rankingAI index advicePool tuningSLA/SLO dashboards'],
+		category: 'Enterprise IT - Data,
+		link: https://ziontechgroup.com/database-performance-monitor',
+		variant: 'neural-quantum,
 		rating: 4.7,
 		customers: 560,
 		trialDays: 14,
-		setupTime: '45 minutes',
+		setupTime: 45 minutes',
 		contactInfo
 	},
 	{
-		id: 'managed-postgres-ha',
-		name: 'Managed Postgres HA',
-		tagline: 'Highly-available Postgres with backups, failover, and guardrails',
-		price: '$499',
-		period: '/month',
-		description: 'Production-ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.',
-		features: ['Automated backupsFailover & replicationPerformance tuningSLA & support'],
-		category: 'Enterprise IT - Data',
-		link: 'https://ziontechgroup.com/managed-postgres-ha',
-		variant: 'holographic-advanced',
+		id: 'managed-postgres-ha,
+		name: Managed Postgres HA',
+		tagline: 'Highly-available Postgres with backups, failover, and guardrails,
+		price: $499',
+		period: '/month,
+		description: Production-ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.',
+		features: ['Automated backupsFailover & replicationPerformance tuningSLA & support],
+		category: Enterprise IT - Data',
+		link: 'https://ziontechgroup.com/managed-postgres-ha,
+		variant: holographic-advanced',
 		rating: 4.8,
 		customers: 240,
 		trialDays: 7,
-		setupTime: '1 day',
+		setupTime: '1 day,
 		contactInfo
 	},
 
 	// Reliability & Monitoring
 	{
-		id: 'uptime-slo-monitor',
-		name: 'Uptime & SLO Monitor',
-		tagline: 'Synthetic checks, error budgets, and incident automation',
-		price: '$39',
-		period: '/month',
-		description: 'Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.',
-		features: ['Global synthetic checksError budgets & burn ratesOn-call & escalationsIncident runbooks'],
-		category: 'Enterprise IT - SRE',
-		link: 'https://ziontechgroup.com/uptime-slo-monitor',
-		variant: 'quantum-cyberpunk',
+		id: uptime-slo-monitor',
+		name: 'Uptime & SLO Monitor,
+		tagline: Synthetic checks, error budgets, and incident automation',
+		price: '$39,
+		period: /month',
+		description: 'Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.,
+		features: [Global synthetic checksError budgets & burn ratesOn-call & escalationsIncident runbooks'],
+		category: 'Enterprise IT - SRE,
+		link: https://ziontechgroup.com/uptime-slo-monitor',
+		variant: 'quantum-cyberpunk,
 		rating: 4.5,
 		customers: 1100,
 		trialDays: 14,
-		setupTime: '25 minutes',
+		setupTime: 25 minutes',
 		contactInfo
 	},
 	{
-		id: 'tls-certificate-monitor',
-		name: 'TLS Certificate Monitor',
-		tagline: 'Auto-renewal checks and expiry alerts across your fleet',
-		price: '$19',
-		period: '/month',
-		description: 'Monitor certificates across domains and environments, get renewal reminders and failure alerts.',
-		features: ['Expiry alertsIssuer checksAuto-renew validationInventory export'],
-		category: 'Enterprise IT - Security',
-		link: 'https://ziontechgroup.com/tls-certificate-monitor',
-		variant: 'default',
+		id: 'tls-certificate-monitor,
+		name: TLS Certificate Monitor',
+		tagline: 'Auto-renewal checks and expiry alerts across your fleet,
+		price: $19',
+		period: '/month,
+		description: Monitor certificates across domains and environments, get renewal reminders and failure alerts.',
+		features: ['Expiry alertsIssuer checksAuto-renew validationInventory export],
+		category: Enterprise IT - Security',
+		link: 'https://ziontechgroup.com/tls-certificate-monitor,
+		variant: default',
 		rating: 4.5,
 		customers: 2200,
 		trialDays: 14,
-		setupTime: '10 minutes',
+		setupTime: '10 minutes,
 		contactInfo
 	},
 	{
-		id: 'domain-dns-monitor',
-		name: 'Domain & DNS Monitor',
-		tagline: 'Track DNS changes, TTLs, and misconfigurations',
-		price: '$29',
-		period: '/month',
-		description: 'Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.',
-		features: ['Change detectionMisconfig alertsTTL insightsExport & audit'],
-		category: 'Enterprise IT - Networking',
-		link: 'https://ziontechgroup.com/domain-dns-monitor',
-		variant: 'default',
+		id: domain-dns-monitor',
+		name: 'Domain & DNS Monitor,
+		tagline: Track DNS changes, TTLs, and misconfigurations',
+		price: '$29,
+		period: /month',
+		description: 'Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.,
+		features: [Change detectionMisconfig alertsTTL insightsExport & audit'],
+		category: 'Enterprise IT - Networking,
+		link: https://ziontechgroup.com/domain-dns-monitor',
+		variant: 'default,
 		rating: 4.4,
 		customers: 980,
 		trialDays: 14,
-		setupTime: '15 minutes',
+		setupTime: 15 minutes',
 		contactInfo
 	},
 
 	// Dev & Productivity
 	{
-		id: 'pdf-render-api',
-		name: 'PDF Render API',
-		tagline: 'High-fidelity serverless PDF rendering and watermarking',
-		price: '$49',
-		period: '/month',
-		description: 'Generate pixel-perfect PDFs from HTML/Markdown with headers, footers, and watermarking using a simple API.',
-		features: ['HTML/Markdown to PDFHeaders/footersWatermarksAsync webhooks'],
-		category: 'Micro SaaS',
-		link: 'https://ziontechgroup.com/pdf-render-api',
-		variant: 'holographic-matrix',
+		id: 'pdf-render-api,
+		name: PDF Render API',
+		tagline: 'High-fidelity serverless PDF rendering and watermarking,
+		price: $49',
+		period: '/month,
+		description: Generate pixel-perfect PDFs from HTML/Markdown with headers, footers, and watermarking using a simple API.',
+		features: ['HTML/Markdown to PDFHeaders/footersWatermarksAsync webhooks],
+		category: Micro SaaS',
+		link: 'https://ziontechgroup.com/pdf-render-api,
+		variant: holographic-matrix',
 		rating: 4.6,
 		customers: 1300,
 		trialDays: 7,
-		setupTime: '10 minutes',
+		setupTime: '10 minutes,
 		contactInfo
 	},
 	{
-		id: 'browser-performance-monitor',
-		name: 'Browser Performance Monitor',
-		tagline: 'RUM metrics, Core Web Vitals, and UX waterfall analysis',
-		price: '$39',
-		period: '/month',
-		description: 'Collect real-user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.',
-		features: ['RUM collectionCWV dashboardsWaterfall analysisAlerts & webhooks'],
-		category: 'Micro SaaS',
-		link: 'https://ziontechgroup.com/browser-performance-monitor',
-		variant: 'quantum-holographic',
+		id: browser-performance-monitor',
+		name: 'Browser Performance Monitor,
+		tagline: RUM metrics, Core Web Vitals, and UX waterfall analysis',
+		price: '$39,
+		period: /month',
+		description: 'Collect real-user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.,
+		features: [RUM collectionCWV dashboardsWaterfall analysisAlerts & webhooks'],
+		category: 'Micro SaaS,
+		link: https://ziontechgroup.com/browser-performance-monitor',
+		variant: 'quantum-holographic,
 		rating: 4.5,
 		customers: 760,
 		trialDays: 14,
-		setupTime: '20 minutes',
+		setupTime: 20 minutes',
 		contactInfo
 	},
 	{
-		id: 'feature-flags-edge',
-		name: 'Feature Flags at the Edge',
-		tagline: 'Targeting, rollouts, and experiments at CDN edge',
-		price: '$69',
-		period: '/month',
-		description: 'Ship features safely with edge-evaluated flags, user targeting, and experimentation without latency.',
-		features: ['Edge evaluationTargeting & segmentsExperimentsSDKs & audit'],
-		category: 'Micro SaaS',
-		link: 'https://ziontechgroup.com/feature-flags-edge',
-		variant: 'quantum-holographic',
+		id: 'feature-flags-edge,
+		name: Feature Flags at the Edge',
+		tagline: 'Targeting, rollouts, and experiments at CDN edge,
+		price: $69',
+		period: '/month,
+		description: Ship features safely with edge-evaluated flags, user targeting, and experimentation without latency.',
+		features: ['Edge evaluationTargeting & segmentsExperimentsSDKs & audit],
+		category: Micro SaaS',
+		link: 'https://ziontechgroup.com/feature-flags-edge,
+		variant: quantum-holographic',
 		rating: 4.5,
 		customers: 430,
 		trialDays: 14,
-		setupTime: '30 minutes',
+		setupTime: '30 minutes,
 		contactInfo
 	},
 	{
-		id: 'serverless-cron-manager',
-		name: 'Serverless Cron Manager',
-		tagline: 'Reliable scheduled jobs with retries and observability',
-		price: '$29',
-		period: '/month',
-		description: 'Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.',
-		features: ['Cron & schedulesRetries & DLQsLogs & tracesAlerts & webhooks'],
-		category: 'Micro SaaS',
-		link: 'https://ziontechgroup.com/serverless-cron-manager',
-		variant: 'default',
+		id: serverless-cron-manager',
+		name: 'Serverless Cron Manager,
+		tagline: Reliable scheduled jobs with retries and observability',
+		price: '$29,
+		period: /month',
+		description: 'Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.,
+		features: [Cron & schedulesRetries & DLQsLogs & tracesAlerts & webhooks'],
+		category: 'Micro SaaS,
+		link: https://ziontechgroup.com/serverless-cron-manager',
+		variant: 'default,
 		rating: 4.4,
 		customers: 1150,
 		trialDays: 14,
-		setupTime: '15 minutes',
+		setupTime: 15 minutes',
 		contactInfo
 	},
 
 	// Compliance & Risk
 	{
-		id: 'soc2-evidence-automation',
-		name: 'SOC 2 Evidence Automation',
-		tagline: 'Collect and map controls with change tracking',
-		price: '$149',
-		period: '/month',
-		description: 'Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.',
-		features: ['Control mappingEvidence collectionChange trackingExport & auditor access'],
-		category: 'Enterprise IT - Compliance',
-		link: 'https://ziontechgroup.com/soc2-evidence-automation',
-		variant: 'holographic-neural',
+		id: 'soc2-evidence-automation,
+		name: SOC 2 Evidence Automation',
+		tagline: 'Collect and map controls with change tracking,
+		price: $149',
+		period: '/month,
+		description: Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.',
+		features: ['Control mappingEvidence collectionChange trackingExport & auditor access],
+		category: Enterprise IT - Compliance',
+		link: 'https://ziontechgroup.com/soc2-evidence-automation,
+		variant: holographic-neural',
 		rating: 4.6,
 		customers: 310,
 		trialDays: 7,
-		setupTime: '1 day',
+		setupTime: '1 day,
 		contactInfo
 	},
 	{
-		id: 'vendor-risk-automation',
-		name: 'Vendor Risk Automation',
-		tagline: 'Automate VRM workflows, DDQs, and risk scoring',
-		price: '$99',
-		period: '/month',
-		description: 'Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.',
-		features: ['DDQs and questionnairesRisk scoringContinuous monitoringDashboards & export'],
-		category: 'Enterprise IT - Compliance',
-		link: 'https://ziontechgroup.com/vendor-risk-automation',
-		variant: 'quantum-entanglement',
+		id: vendor-risk-automation',
+		name: 'Vendor Risk Automation,
+		tagline: Automate VRM workflows, DDQs, and risk scoring',
+		price: '$99,
+		period: /month',
+		description: 'Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.,
+		features: [DDQs and questionnairesRisk scoringContinuous monitoringDashboards & export'],
+		category: 'Enterprise IT - Compliance,
+		link: https://ziontechgroup.com/vendor-risk-automation',
+		variant: 'quantum-entanglement,
 		rating: 4.5,
 		customers: 520,
 		trialDays: 14,
-		setupTime: '2 hours',
+		setupTime: 2 hours',
 		contactInfo
 	},
 
 	// Developer and Ops Utilities
 	{
-		id: 'webhook-relay-replay',
-		name: 'Webhook Relay & Replay',
-		tagline: 'Capture, inspect, and replay webhooks reliably',
-		price: '$19',
-		period: '/month',
-		description: 'Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.',
-		features: ['Capture & inspectReplay with backoffSignature verificationForwarding rules'],
-		category: 'Micro SaaS',
-		link: 'https://ziontechgroup.com/webhook-relay-replay',
-		variant: 'cyberpunk-holographic',
+		id: 'webhook-relay-replay,
+		name: Webhook Relay & Replay',
+		tagline: 'Capture, inspect, and replay webhooks reliably,
+		price: $19',
+		period: '/month,
+		description: Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.',
+		features: ['Capture & inspectReplay with backoffSignature verificationForwarding rules],
+		category: Micro SaaS',
+		link: 'https://ziontechgroup.com/webhook-relay-replay,
+		variant: cyberpunk-holographic',
 		rating: 4.5,
 		customers: 1650,
 		trialDays: 14,
-		setupTime: '10 minutes',
+		setupTime: '10 minutes,
 		contactInfo
 	},
 	{
-		id: 'audit-log-vault',
-		name: 'Audit Log Vault',
-		tagline: 'Tamper-evident logs with retention and export',
-		price: '$39',
-		period: '/month',
-		description: 'Centralize audit logs with WORM retention, export APIs, and fine-grained access for investigations.',
-		features: ['WORM retentionExport APIsFine-grained accessTamper evidence'],
-		category: 'Enterprise IT - Security',
-		link: 'https://ziontechgroup.com/audit-log-vault',
-		variant: 'quantum-neural',
+		id: audit-log-vault',
+		name: 'Audit Log Vault,
+		tagline: Tamper-evident logs with retention and export',
+		price: '$39,
+		period: /month',
+		description: 'Centralize audit logs with WORM retention, export APIs, and fine-grained access for investigations.,
+		features: [WORM retentionExport APIsFine-grained accessTamper evidence'],
+		category: 'Enterprise IT - Security,
+		link: https://ziontechgroup.com/audit-log-vault',
+		variant: 'quantum-neural,
 		rating: 4.5,
 		customers: 420,
 		trialDays: 14,
-		setupTime: '30 minutes',
+		setupTime: 30 minutes',
 		contactInfo
 	},
 
 	// AI Channels
 	{
-		id: 'ai-phone-agent',
-		name: 'AI Phone Agent',
-		tagline: 'Voice IVR and call handling with CRM handoff',
-		price: '$129',
-		period: '/month',
-		description: 'Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.',
-		features: ['Natural TTS/ASRRouting & handoffCRM syncAnalytics'],
-		category: 'AI & Assistants',
-		link: 'https://ziontechgroup.com/ai-phone-agent',
-		variant: 'quantum-holographic-advanced',
+		id: 'ai-phone-agent,
+		name: AI Phone Agent',
+		tagline: 'Voice IVR and call handling with CRM handoff,
+		price: $129',
+		period: '/month,
+		description: Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.',
+		features: ['Natural TTS/ASRRouting & handoffCRM syncAnalytics],
+		category: AI & Assistants',
+		link: 'https://ziontechgroup.com/ai-phone-agent,
+		variant: quantum-holographic-advanced',
 		rating: 4.6,
 		customers: 380,
 		trialDays: 7,
-		setupTime: '1 hour',
+		setupTime: '1 hour,
 		contactInfo
 	},
 
 	// Search and Knowledge
 	{
-		id: 'vector-search-starter',
-		name: 'Vector Search Starter',
-		tagline: 'Deploy a production-grade vector database and APIs',
-		price: '$89',
-		period: '/month',
-		description: 'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
-		features: ['Managed vector DBIngestion pipelinesMetadata filtersAccess controls'],
-		category: 'AI & Search',
-		link: 'https://ziontechgroup.com/vector-search-starter',
-		variant: 'quantum',
+		id: vector-search-starter',
+		name: 'Vector Search Starter,
+		tagline: Deploy a production-grade vector database and APIs',
+		price: '$89,
+		period: /month',
+		description: 'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.,
+		features: [Managed vector DBIngestion pipelinesMetadata filtersAccess controls'],
+		category: 'AI & Search,
+		link: https://ziontechgroup.com/vector-search-starter',
+		variant: 'quantum,
 		rating: 4.6,
 		customers: 410,
 		trialDays: 14,
-		setupTime: '2 hours',
+		setupTime: 2 hours',
 		contactInfo
 	}],
 
-<<<<<<< HEAD
-=======
-  mobile: \"+1 302 464 0950\",
-	email: \"kleber@ziontechgroup && ziontechgroup.com\",
-	address: \"364 E Main St STE 1008 Middletown DE 19709\";
-  website: \"https://ziontechgroup && ziontechgroup.com\";,
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

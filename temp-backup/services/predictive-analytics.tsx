@@ -6,7 +6,7 @@ interface PredictiveanalyticsProps {
   // Add props here as needed
 }
 
-export default function Predictiveanalytics({ }: PredictiveanalyticsProps) {
+export default function Predictiveanalytics({}: PredictiveanalyticsProps) {
   return (
     <div>
       <h1>Predictiveanalytics</h1>

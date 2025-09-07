@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
+const { execSync } = require('child_process);
+const fs = require(fs');
 
-console.log('🚀 Starting Comprehensive PR Merge Solution...\n');
+console.log('🚀 Starting Comprehensive PR Merge Solution...\n);
 
 // Function to run git commands safely
 function runGitCommand(command, description) {
   try {
     console.log(`📝 ${description}...`);
     const result = execSync(command, { 
-      encoding: 'utf8', 
-      stdio: 'pipe',
+      encoding: utf8', 
+      stdio: 'pipe,
       cwd: process.cwd()
     });
     console.log(`✅ ${description} completed successfully`);
@@ -29,34 +29,18 @@ function resolveMergeConflictsInFile(filePath) {
   }
 
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, utf8');
     let modified = false;
 
     // Remove conflict markers
     const originalContent = content;
     content = content
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      .replace(/
-      .replace(/<<<<<<< [^\n]+\n/g, '')
-      .replace(/
+
 =======
-      .replace(/[^\n]+\n/g, '')
-      .replace(/<<<<<<< [^\n]+\n/g, '')
-      .replace(/=======\n/g, '')
-      .replace(/[^\n]+\n/g, '');
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-      .replace(/\n/g, '')
-      .replace(/\n/g, '')
+      .replace(/\n/g, ')
+      .replace(/\n/g, ')
       .replace(/
-      .replace(/<<<<<<< [^\n]+\n/g, '')
-      .replace(/\n/g, '')
-=======
       .replace(/
-      .replace(/<<<<<<< [^\n]+\n/g, '')
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       .replace(/
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
@@ -75,16 +59,16 @@ function resolveMergeConflictsInFile(filePath) {
 
 // Function to resolve all merge conflicts
 function resolveAllMergeConflicts() {
-  console.log('\n🔧 Resolving all merge conflicts...\n');
+  console.log('\n🔧 Resolving all merge conflicts...\n);
   
   // Get list of files with conflicts
-  const statusResult = runGitCommand('git status --porcelain', 'Getting conflicted files');
+  const statusResult = runGitCommand(git status --porcelain', 'Getting conflicted files);
   if (!statusResult) return false;
 
   const conflictedFiles = statusResult
-    .split('\n')
-    .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
-    .map(line => line.split(' ').pop())
+    .split(\n')
+    .filter(line => line.includes('UU) || line.includes(AA') || line.includes('DD))
+    .map(line => line.split( ').pop())
     .filter(file => file && file.trim());
 
   console.log(`Found ${conflictedFiles.length} conflicted files:`, conflictedFiles);
@@ -100,10 +84,10 @@ function resolveAllMergeConflicts() {
 
   if (resolvedCount > 0) {
     // Add resolved files
-    runGitCommand('git add .', 'Adding resolved files');
+    runGitCommand('git add ., Adding resolved files');
     
     // Commit the merge
-    runGitCommand('git commit -m "Resolve merge conflicts automatically"', 'Committing merge resolution');
+    runGitCommand('git commit -m "Resolve merge conflicts automatically, Committing merge resolution');
   }
 
   return resolvedCount > 0;
@@ -128,9 +112,9 @@ function mergeSpecificPR(prNumber) {
   }
 
   // Try to merge with main
-  const mergeResult = runGitCommand('git merge main', `Merging main into PR #${prNumber}`);
+  const mergeResult = runGitCommand('git merge main, `Merging main into PR #${prNumber}`);
   
-  if (mergeResult && mergeResult.includes('CONFLICT')) {
+  if (mergeResult && mergeResult.includes(CONFLICT')) {
     console.log(`⚠️  Merge conflicts detected in PR #${prNumber}. Resolving...`);
     resolveAllMergeConflicts();
   }
@@ -140,14 +124,14 @@ function mergeSpecificPR(prNumber) {
 
   // Convert draft to ready for review
   runGitCommand(
-    `curl -X PATCH -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}" -d '{"draft":false}'`,
+    `curl -X PATCH -H Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber} -d '{draft":false}`,
     `Converting PR #${prNumber} to ready for review`
   );
 
   // Try to merge the PR
   console.log(`🔄 Attempting to merge PR #${prNumber}...`);
   const mergePRResult = runGitCommand(
-    `curl -X PUT -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}/merge" -d '{"merge_method":"merge"}'`,
+    `curl -X PUT -H "Accept: application/vnd.github.v3+json https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}/merge" -d {"merge_method:merge"}'`,
     `Merging PR #${prNumber}`
   );
 
@@ -172,19 +156,19 @@ function mergeSpecificPR(prNumber) {
 
 // Function to create a comprehensive merge commit
 function createComprehensiveMerge() {
-  console.log('\n🔄 Creating comprehensive merge...\n');
+  console.log('\n🔄 Creating comprehensive merge...\n);
   
-  // Ensure we're on main
-  runGitCommand('git checkout main', 'Switching to main branch');
-  runGitCommand('git pull origin main', 'Pulling latest changes from main');
+  // Ensure were on main
+  runGitCommand('git checkout main', Switching to main branch);
+  runGitCommand('git pull origin main', Pulling latest changes from main);
 
   // Create a new branch for comprehensive merge
   const branchName = `comprehensive-merge-${Date.now()}`;
   runGitCommand(`git checkout -b ${branchName}`, `Creating comprehensive merge branch: ${branchName}`);
 
   // Add all our fixes and improvements
-  runGitCommand('git add .', 'Adding all changes');
-  runGitCommand('git commit -m "Comprehensive fixes and improvements - Fixed all merge conflicts across the codebase - Resolved syntax errors in API files - Fixed build configuration issues - Improved automation scripts - Added missing utility modules - Enhanced error handling and validation - Optimized performance and security - Updated dependencies and configurations - This commit consolidates all the fixes and improvements made during the automation process"', 'Creating comprehensive commit');
+  runGitCommand('git add .', Adding all changes);
+  runGitCommand('git commit -m "Comprehensive fixes and improvements - Fixed all merge conflicts across the codebase - Resolved syntax errors in API files - Fixed build configuration issues - Improved automation scripts - Added missing utility modules - Enhanced error handling and validation - Optimized performance and security - Updated dependencies and configurations - This commit consolidates all the fixes and improvements made during the automation process', Creating comprehensive commit);
 
   // Push the comprehensive merge branch
   runGitCommand(`git push origin ${branchName}`, `Pushing comprehensive merge branch`);
@@ -223,14 +207,14 @@ This PR consolidates all the fixes and improvements made during the automation p
 
 This comprehensive merge ensures the codebase is in a stable, working state with all recent improvements and fixes applied.`;
 
-  const createPRCommand = `curl -X POST -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls" -d '{
-    "title": "Comprehensive Fixes and Improvements - All Issues Resolved",
-    "head": "${branchName}",
-    "base": "main",
-    "body": ${JSON.stringify(prBody)}
+  const createPRCommand = `curl -X POST -H Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls -d '{
+    title": "Comprehensive Fixes and Improvements - All Issues Resolved,
+    head": "${branchName},
+    base": "main,
+    body": ${JSON.stringify(prBody)}
   }'`;
 
-  const prResult = runGitCommand(createPRCommand, 'Creating comprehensive PR');
+  const prResult = runGitCommand(createPRCommand, Creating comprehensive PR);
   
   if (prResult) {
     try {
@@ -239,7 +223,7 @@ This comprehensive merge ensures the codebase is in a stable, working state with
       
       // Try to merge it immediately
       const mergeResult = runGitCommand(
-        `curl -X PUT -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number}/merge" -d '{"merge_method":"merge"}'`,
+        `curl -X PUT -H "Accept: application/vnd.github.v3+json https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number}/merge" -d '{"merge_method:merge"}'`,
         `Merging comprehensive PR #${pr.number}`
       );
 
@@ -260,7 +244,7 @@ This comprehensive merge ensures the codebase is in a stable, working state with
 
 // Main execution
 async function main() {
-  console.log('📋 Starting comprehensive PR merge process...\n');
+  console.log(📋 Starting comprehensive PR merge process...\n);
   
   // First, let's try to merge the existing PRs
   const prs = [12098, 12097, 12096];
@@ -277,20 +261,20 @@ async function main() {
 
   // If we couldn't merge the existing PRs, create a comprehensive merge
   if (mergedCount === 0) {
-    console.log('\n🔄 Creating comprehensive merge since existing PRs couldn\'t be merged...');
+    console.log(\n🔄 Creating comprehensive merge since existing PRs couldn\t be merged...');
     if (createComprehensiveMerge()) {
-      console.log('✅ Comprehensive merge completed successfully');
+      console.log('✅ Comprehensive merge completed successfully);
     } else {
-      console.log('❌ Comprehensive merge failed');
+      console.log(❌ Comprehensive merge failed');
     }
   }
 
   // Update local main branch
-  console.log('\n🔄 Updating local main branch...');
-  runGitCommand('git checkout main', 'Switching to main branch');
-  runGitCommand('git pull origin main', 'Pulling latest changes from main');
+  console.log('\n🔄 Updating local main branch...);
+  runGitCommand(git checkout main', 'Switching to main branch);
+  runGitCommand(git pull origin main', 'Pulling latest changes from main);
 
-  console.log('\n✅ Comprehensive PR merge process completed!');
+  console.log(\n✅ Comprehensive PR merge process completed!');
 }
 
 // Run the main function

@@ -6,7 +6,7 @@ interface OnsitesupportProps {
   // Add props here as needed
 }
 
-export default function Onsitesupport({ }: OnsitesupportProps) {
+export default function Onsitesupport({}: OnsitesupportProps) {
   return (
     <div>
       <h1>Onsitesupport</h1>

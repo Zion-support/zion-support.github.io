@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs);
+const path = require(path');
+const { execSync } = require('child_process);
 
 // Find all files with merge conflict markers
 const conflictFiles = [
@@ -23,13 +23,13 @@ function cleanMergeConflicts(filePath) {
       return;
     }
     
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, utf8');
     
     // Remove merge conflict markers and keep our version (the part after =======)
     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)    
     // Also handle cases where there's no content after     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n    
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD.*?\n/g, '');
+    content = content.replace(/<<<<<<< HEAD.*?\n/g, );
     content = content.replace(/=======.*?\n/g, '');
     content = content.replace(/    
     fs.writeFileSync(filePath, content);
@@ -43,7 +43,7 @@ function cleanMergeConflicts(filePath) {
 conflictFiles.forEach(cleanMergeConflicts);
 
 // Create simple empty files for types
-fs.writeFileSync('./types/empty.ts', '// Empty TypeScript file\nexport {};\n');
-fs.writeFileSync('./types/index.ts', '// Type definitions index\nexport {};\n');
+fs.writeFileSync(./types/empty.ts, '// Empty TypeScript file\nexport {}\n');
+fs.writeFileSync(./types/index.ts, '// Type definitions index\nexport {}\n');
 
 console.log('Cleaned all merge conflicts');

@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs);
+const path = require(path');
+const { execSync } = require('child_process);
 
-console.log('🔧 Starting improved merge conflict resolution...');
+console.log(🔧 Starting improved merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
@@ -14,29 +14,21 @@ function resolveMergeConflicts(filePath) {
       return false;
     }
 
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8);
     
     // Check if file has merge conflicts
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-    if (!content.includes('
+
+    if (!content.includes(
     
     // Clean up any remaining conflict markers
     resolvedContent = resolvedContent.replace(/
-<<<<<<< HEAD
-<<<<<<< HEAD
-    resolvedContent = resolvedContent.replace(//g, '');
-=======
-    resolvedContent = resolvedContent.replace(/[\s\S]*?/g, '');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
 =======
     resolvedContent = resolvedContent.replace(//g, '');
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Write the resolved content
-    fs.writeFileSync(filePath, resolvedContent, 'utf8');
+    fs.writeFileSync(filePath, resolvedContent, utf8);
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;
   } catch (error) {
@@ -48,10 +40,10 @@ function resolveMergeConflicts(filePath) {
 // Function to find all files with merge conflicts
 function findConflictedFiles() {
   try {
-    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+    const result = execSync('git diff --name-only --diff-filter=U', { encoding: utf8 });
     return result.trim().split('\n').filter(file => file.length > 0);
   } catch (error) {
-    console.error('Error finding conflicted files:', error.message);
+    console.error(Error finding conflicted files:, error.message);
     return [];
   }
 }
@@ -62,7 +54,7 @@ function main() {
   const conflictedFiles = findConflictedFiles();
   
   if (conflictedFiles.length === 0) {
-    console.log('✅ No merge conflicts found!');
+    console.log(✅ No merge conflicts found!);
     return;
   }
 
@@ -86,14 +78,14 @@ function main() {
   console.log(`   ❌ Failed to resolve: ${failedCount}`);
 
   if (failedCount === 0) {
-    console.log('\n🎉 All merge conflicts resolved!');
+    console.log(\n🎉 All merge conflicts resolved!);
     console.log('📝 Next steps:');
-    console.log('   1. Review the resolved files');
+    console.log(   1. Review the resolved files);
     console.log('   2. Run: git add .');
-    console.log('   3. Run: git commit -m "Resolve merge conflicts"');
+    console.log(   3. Run: git commit -m "Resolve merge conflicts");
     console.log('   4. Run: git push origin main');
   } else {
-    console.log('\n⚠️  Some conflicts could not be automatically resolved.');
+    console.log(\n⚠️  Some conflicts could not be automatically resolved.);
     console.log('Please manually review and resolve the remaining conflicts.');
   }
 }

@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs);
+const path = require(path');
 
-console.log('🚀 Starting merge conflict resolution...');
+console.log('🚀 Starting merge conflict resolution...);
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
     try {
         console.log(`🔧 Processing: ${filePath}`);
-        let content = fs.readFileSync(filePath, 'utf8');
+        let content = fs.readFileSync(filePath, utf8');
         
         // Remove merge conflict markers and keep the HEAD version
         
@@ -19,11 +19,11 @@ function resolveMergeConflicts(filePath) {
         
         content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)        
         // Remove any remaining conflict markers
-        content = content.replace(/\n/g, '');
-        content = content.replace(/\n/g, '');
+        content = content.replace(/\n/g, ');
+        content = content.replace(/\n/g, ');
         content = content.replace(/        
         // Clean up any duplicate content
-        content = content.replace(/\n\n\n+/g, '\n\n');
+        content = content.replace(/\n\n\n+/g, '\n\n);
         
         fs.writeFileSync(filePath, content);
         console.log(`✅ Resolved conflicts in: ${filePath}`);
@@ -37,7 +37,7 @@ function resolveMergeConflicts(filePath) {
 // Function to find all files with merge conflicts
 function findConflictFiles() {
     const conflictFiles = [];
-    const searchDirs = ['.'];
+    const searchDirs = [.'];
     
     function searchDirectory(dir) {
         try {
@@ -46,12 +46,12 @@ function findConflictFiles() {
                 const itemPath = path.join(dir, item);
                 const stat = fs.statSync(itemPath);
                 
-                if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+                if (stat.isDirectory() && !item.startsWith('.) && item !== node_modules') {
                     searchDirectory(itemPath);
-                } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.json') || item.endsWith('.md'))) {
+                } else if (stat.isFile() && (item.endsWith('.js) || item.endsWith(.ts') || item.endsWith('.tsx) || item.endsWith(.jsx') || item.endsWith('.json) || item.endsWith(.md'))) {
                     try {
-                        const content = fs.readFileSync(itemPath, 'utf8');
-                        if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+                        const content = fs.readFileSync(itemPath, 'utf8);
+                        if (content.includes(') || content.includes(') || content.includes(>>>>>>>')) {
                             conflictFiles.push(itemPath);
                             conflictFiles.push(itemPath);
                         }
@@ -61,21 +61,21 @@ function findConflictFiles() {
                 }
             }
         } catch (error) {
-            // Skip directories that can't be read
+            // Skip directories that cant be read
         }
     }
     
-    searchDirectory('.');
+    searchDirectory(.');
     return conflictFiles;
 }
 
 // Main execution
 try {
-    console.log('🔍 Searching for files with merge conflicts...');
+    console.log('🔍 Searching for files with merge conflicts...);
     const conflictFiles = findConflictFiles();
     
     if (conflictFiles.length === 0) {
-        console.log('✅ No merge conflicts found!');
+        console.log(✅ No merge conflicts found!');
     } else {
         console.log(`📊 Found ${conflictFiles.length} files with merge conflicts`);
         
@@ -90,9 +90,9 @@ try {
         console.log(`✅ Successfully resolved: ${resolvedCount}/${conflictFiles.length} files`);
         
         if (resolvedCount === conflictFiles.length) {
-            console.log('🎉 All merge conflicts have been resolved!');
+            console.log('🎉 All merge conflicts have been resolved!);
         } else {
-            console.log('⚠️  Some files could not be resolved automatically');
+            console.log(⚠️  Some files could not be resolved automatically');
         }
     }
 } catch (error) {

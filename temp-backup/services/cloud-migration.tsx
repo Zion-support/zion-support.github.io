@@ -6,7 +6,7 @@ interface CloudmigrationProps {
   // Add props here as needed
 }
 
-export default function Cloudmigration({ }: CloudmigrationProps) {
+export default function Cloudmigration({}: CloudmigrationProps) {
   return (
     <div>
       <h1>Cloudmigration</h1>

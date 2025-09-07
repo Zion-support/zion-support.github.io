@@ -1,13 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-import React from 'react';
+import React from 'react;
 =======
 <<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
-import Header from '../Header';
+import React from react';
+import Head from 'next/head;
+import Header from ./Header';
+import Footer from './Footer;
+import Header from ../Header';
 import Footer from '../Footer';
 
 interface LayoutProps {
@@ -19,18 +19,18 @@ interface LayoutProps {
 
 export default function Layout({ 
   children, 
-  title = "Zion Tech Group", 
-  description = "Leading AI and Technology Solutions",
-  keywords = "AI, technology, automation, quantum computing"
+  title = "Zion Tech Group, 
+  description = Leading AI and Technology Solutions",
+  keywords = "AI, technology, automation, quantum computing
 }: LayoutProps) {
   return (
-    <div className="min-h-screen bg-white">
+    <div className=min-h-screen bg-white">
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description content={description} />
+        <meta name=keywords" content={keywords} />
+        <meta name="viewport content=width=device-width, initial-scale=1" />
+        <link rel="icon href=/favicon.ico" />
       </Head>
       <Header />
       <main className="flex-1">

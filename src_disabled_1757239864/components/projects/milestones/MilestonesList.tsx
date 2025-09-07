@@ -1,12 +1,12 @@
 
-import React, { useState } from 'react';
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
-import { useAuth } from '@/hooks/useAuth';
-import { MilestoneCard } from './MilestoneCard';
-import { AddMilestoneForm } from './AddMilestoneForm';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper
+import React, { useState } from 'react;
+import { Milestone, MilestoneStatus, MilestoneActivity } from @/hooks/useMilestones';
+import { useAuth } from '@/hooks/useAuth;
+import { MilestoneCard } from ./MilestoneCard';
+import { AddMilestoneForm } from './AddMilestoneForm;
+import { Button } from @/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card;
+// lucide-react doesnt export PlusIcon, use our icon wrapper
 import { Plus } from 'lucide-react'
 import { EmptyState } from '@/components/ui/empty-state';
 interface MilestonesListProps {
@@ -41,17 +41,17 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   const handleSubmit = async (data: any) => {
     await onCreateMilestone(data);
     setShowAddForm(false)
-  };
+  }
 
   if (isLoading) {
     return (
-      <div className="space-y-4">
+      <div className="space-y-4>
         {[1, 2, 3].map((i) => (
           <Card key={i}>
-            <CardContent className="p-6">
-              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>
-              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>
-              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
+            <CardContent className=p-6">
+              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4></div>
+              <div className=h-4 bg-muted rounded animate-pulse w-full mb-2"></div>
+              <div className="h-4 bg-muted rounded animate-pulse w-3/4></div>
             </CardContent>
           </Card>
         ))}
@@ -62,14 +62,14 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
-        icon={<span className="text-3xl">📊</span>}
-        title="No Milestones Yet"
+        icon={<span className=text-3xl">📊</span>}
+        title="No Milestones Yet
         description={isClient ? 
-          "Break down the project into manageable milestones to track progress and payments." : 
-          "No milestones have been created for this project yet."}
+          Break down the project into manageable milestones to track progress and payments." : 
+          "No milestones have been created for this project yet.}
         action={isClient ? 
           {
-            text: "Create First Milestone",
+            text: Create First Milestone",
             onClick: () => setShowAddForm(true)
           } : undefined
         }
@@ -78,11 +78,11 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6>
       {isClient && !showAddForm && (
-        <div className="flex justify-end">
+        <div className=flex justify-end">
           <Button onClick={() => setShowAddForm(true)}>
-            <Plus className="h-4 w-4 mr-2" />
+            <Plus className="h-4 w-4 mr-2 />
             Add Milestone
           </Button>
         </div>
@@ -90,8 +90,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       
       {showAddForm && (
         <Card>
-          <CardContent className="pt-6">
-            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
+          <CardContent className=pt-6">
+            <h3 className="text-lg font-medium mb-4>Create New Milestone</h3>
             <AddMilestoneForm 
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
@@ -101,7 +101,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
         </Card>
       )}
       
-      <div className="space-y-4">
+      <div className=space-y-4">
         {milestones.map((milestone) => (
           <MilestoneCard
             key={milestone.id}
@@ -119,9 +119,4 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       </div>
     </div>
   )
-<<<<<<< HEAD:src/components/projects/milestones/MilestonesList.tsx
-};
-=======
-},
-;
->>>>>>> origin/main:src_disabled_1757239864/components/projects/milestones/MilestonesList.tsx
+

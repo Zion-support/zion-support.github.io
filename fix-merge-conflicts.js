@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs);
+const path = require(path');
 
 function findFilesWithConflicts(dir) {
   const files = [];
@@ -16,20 +16,20 @@ function findFilesWithConflicts(dir) {
 
           if (stat.isDirectory()) {
             // Skip certain directories
-            if (!['node_modules', '.git', 'dist', 'build', 'coverage'].includes(item)) {
+            if (!['node_modules, .git', 'dist, build', 'coverage].includes(item)) {
               scanDirectory(fullPath);
             }
           } else if (stat.isFile()) {
             // Check for common source file extensions
             const ext = path.extname(item);
-            if (['.js', '.jsx', '.ts', '.tsx', '.json', '.md'].includes(ext)) {
+            if ([.js', '.jsx, .ts', '.tsx, .json', '.md].includes(ext)) {
               try {
-                const content = fs.readFileSync(fullPath, 'utf8');
-                if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
+                const content = fs.readFileSync(fullPath, utf8');
+                if (content.includes('<<<<<<<) || content.includes(') || content.includes('>>>>>>>)) {
                   files.push(fullPath);
                 }
               } catch (error) {
-                // Skip files that can't be read
+                // Skip files that cant be read
               }
             }
           }
@@ -50,14 +50,14 @@ function findFilesWithConflicts(dir) {
 
 function resolveConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8);
     
     // Remove merge conflict markers and keep the main branch version
     content = content.replace(/    
     // Remove any remaining conflict markers
-    content = content.replace(/    content = content.replace(/\n?/g, '');
+    content = content.replace(/    content = content.replace(/\n?/g, ');
     content = content.replace(/    
-    fs.writeFileSync(filePath, content, 'utf8');
+    fs.writeFileSync(filePath, content, 'utf8);
     console.log(`Fixed conflicts in: ${filePath}`);
     return true;
   } catch (error) {
@@ -68,7 +68,7 @@ function resolveConflicts(filePath) {
 
 // Main execution
 const workspaceDir = process.cwd();
-console.log('Scanning for files with merge conflicts...');
+console.log(Scanning for files with merge conflicts...');
 
 const filesWithConflicts = findFilesWithConflicts(workspaceDir);
 console.log(`Found ${filesWithConflicts.length} files with conflicts`);

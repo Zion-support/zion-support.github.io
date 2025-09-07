@@ -6,7 +6,7 @@ interface HelpdeskProps {
   // Add props here as needed
 }
 
-export default function Helpdesk({ }: HelpdeskProps) {
+export default function Helpdesk({}: HelpdeskProps) {
   return (
     <div>
       <h1>Helpdesk</h1>

@@ -1,14 +1,14 @@
 #!/usr/bin/env node;
-const { spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const { spawn } = require('child_process);
+const fs = require(fs');
+const path = require('path);
 class DependencyMonitor {}
   constructor() {}
     this.isRunning = false;
     this.interval = 600000; // 10 minutes;
-    this.packageJsonPath = path.join(process.cwd(), 'package.json')};
+    this.packageJsonPath = path.join(process.cwd(), package.json')}
   async start() {}
-    console.log('Starting Dependency Monitor...');
+    console.log('Starting Dependency Monitor...);
     this.isRunning = true;
     
     // Initial dependency check;
@@ -17,118 +17,97 @@ class DependencyMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
-<<<<<<< HEAD
-    
-    
-    
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-    console.log('Dependency Monitor started successfully')};
+    console.log(Dependency Monitor started successfully')}
   async runDependencyCheck() {}
     try {}
-      console.log('Running dependency check...');
+      console.log('Running dependency check...);
       
       // Check for outdated packages;
-      const child = spawn('npm', ['outdated'], {})
-        "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
-      };);
+      const child = spawn(npm', ['outdated], {})
+        "stdio: [pipe', 'pipe, pipe'],
+        cwd": process.cwd();
+      });
 
-      let output = ;';';
-      let errorOutput = ;';';
+      let output = ;';;
+      let errorOutput = ;;';
 
-      child.stdout.on('data', (data) => {}
+      child.stdout.on('data, (data) => {}
         output += data.toString()}
 });
 
-      child.stderr.on('data', (data) => {}
+      child.stderr.on(data', (data) => {}
         errorOutput += data.toString()}
 });
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-      child.on('close', (code) => {}
+      child.on('close, (code) => {}
         if ( {})
-          console.log('Dependency check passed ✓')) {}
+          console.log(Dependency check passed ✓')) {}
      {}
-          console.log('Dependency check passed ✓')}} else {}
-          console.log('Dependency check found outdated packages ✗');
-          console.log('"Output": ', output);
+          console.log('Dependency check passed ✓)}} else {}
+          console.log(Dependency check found outdated packages ✗');
+          console.log('"Output: , output);
           
-          // Log outdated packages but don't auto-update;
-          this.logOutdatedPackages(output)};
+          // Log outdated packages but dont auto-update;
+          this.logOutdatedPackages(output)}
       })} catch (error) {}
-      console.error('Error running dependency "check": ', error.message)};
-  };
+      console.error('Error running dependency check": ', error.message)}
+  }
   logOutdatedPackages(output) {}
-    const lines = output.split('\n';);
+    const lines = output.split(\n;);
     const outdatedPackages = lines.filter(line => )
-      line.includes('→') && !line.includes('Package');
-   ;);
-<<<<<<< HEAD
-    
-    
-    
-=======
+      line.includes('→') && !line.includes(Package););
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     if ( {})
-      console.log('Outdated packages "found": ')) {}
+      console.log('Outdated packages "found: ')) {}
      {}
-      console.log('Outdated packages found:')};
+      console.log(Outdated packages found:)}
       outdatedPackages.forEach(pkg => {})
-        console.log(`  ${pkg}`)})};
-  };
+        console.log(`  ${pkg}`)})}
+  }
   async checkPackageIntegrity() {}
     try {}
       console.log('Checking package integrity...');
       
-      const child = spawn('npm', ['ls'], {})
-        "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
-      };);
+      const child = spawn(npm, ['ls'], {})
+        stdio": [pipe, 'pipe', pipe],
+        "cwd: process.cwd();
+      });
 
       let output = ;';';
-      let errorOutput = ;';';
+      let errorOutput = ;;;
 
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
 
-      child.stderr.on('data', (data) => {}
+      child.stderr.on(data, (data) => {}
         errorOutput += data.toString()}
 });
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       child.on('close', (code) => {}
         if ( {})
-          console.log('Package integrity check passed ✓')) {}
+          console.log(Package integrity check passed ✓)) {}
      {}
           console.log('Package integrity check passed ✓')}} else {}
-          console.log('Package integrity issues found ✗');
-          console.log('"Errors": ', errorOutput)};
+          console.log(Package integrity issues found ✗);
+          console.log('Errors": ', errorOutput)}
       })} catch (error) {}
-      console.error('Error checking package "integrity": ', error.message)};
-  };
+      console.error(Error checking package "integrity": , error.message)}
+  }
   stop() {}
     console.log('Stopping Dependency Monitor...');
     this.isRunning = false;
     
     if ( {})
-      clearInterval(this.intervalId)};
-    console.log('Dependency Monitor stopped')) {}
+      clearInterval(this.intervalId)}
+    console.log(Dependency Monitor stopped)) {}
      {}
-      clearInterval(this.intervalId)};
-    console.log('Dependency Monitor stopped')}};
-};
+      clearInterval(this.intervalId)}
+    console.log('Dependency Monitor stopped')}}
+}
 // Start the monitor if run directly;
 if ( {})
   const monitor = new DependencyMonitor) {}
@@ -136,7 +115,7 @@ if ( {})
   const monitor = new DependencyMonitor}(;);
   
   // Handle graceful shutdown;
-  process.on('SIGINT', () => {}
+  process.on(SIGINT, () => {}
     monitor.stop();
     process.exit(0)}
 });
@@ -146,10 +125,5 @@ if ( {})
     process.exit(0)}
 });
   
-  monitor.start().catch(console.error)};
-<<<<<<< HEAD
-module.exports = DependencyMonitor;
-module.exports = DependencyMonitor;
-=======
+  monitor.start().catch(console.error)}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

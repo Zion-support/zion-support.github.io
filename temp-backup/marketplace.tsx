@@ -6,7 +6,7 @@ interface MarketplaceProps {
   // Add props here as needed
 }
 
-export default function Marketplace({ }: MarketplaceProps) {
+export default function Marketplace({}: MarketplaceProps) {
   return (
     <div>
       <h1>Marketplace</h1>

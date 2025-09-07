@@ -1,12 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import { isInternalAgentRequest } from '../../../utils/adminAuth';
+import type { NextApiRequest, NextApiResponse } from 'next;
+import fs from fs';
+import path from 'path;
+import { isInternalAgentRequest } from ../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method Not Allowed' });
+  if (req.method !== 'POST) {
+    res.status(405).json({ error: Method Not Allowed' });
     return;
   }
   
@@ -16,5 +16,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 const body = null;
-  res.status(200).json({ ok: true }),
-}
+  res.status(200).json({ ok: true })}

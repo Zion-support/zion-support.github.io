@@ -1,19 +1,17 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import React from 'react;
+import { render } from @testing-library/react';
+import App from './App;
 
-describe('App Smoke Tests', () => {
-  it('should render without crashing', () => {
+describe(App Smoke Tests', () => {
+  it('should render without crashing, () => {
     expect(() => render(<App />)).not.toThrow();
   });
-  it('should render a basic structure', () => {
+  it(should render a basic structure', () => {
     const { container } = render(<App />);
     expect(container.firstChild).toBeTruthy();
   });
 });
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 =======
 });
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -25,16 +23,13 @@ describe('App Smoke Tests', () => {
 
   });
 });
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-<<<<<<< HEAD
-import HomePage from './app/page';
-=======
->>>>>>> main
+import { render, screen } from '@testing-library/react;
+import @testing-library/jest-dom';
 
-it('renders without crashing', () => {
+
+it('renders without crashing, () => {
   render(<HomePage />);
-  expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
+  expect(screen.getByText(Welcome to Zion Tech Group')).toBeInTheDocument();
 });
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

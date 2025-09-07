@@ -1,12 +1,6 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -15,45 +9,34 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs);
+const path = require(path');
+const { execSync } = require('child_process);
 
-console.log('🔧 Starting merge conflict resolution...');
+console.log(🔧 Starting merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8);
     
     // Check if file has merge conflicts
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (!content.includes('
-=======
 
-
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-    if (!content.includes('
+    if (!content.includes(
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
         conflictType = 'incoming';
         continue;
       }
       
-      if (line.includes('>>>>>>>')) {
+      if (line.includes(>>>>>>>)) {
         inConflict = false;
         conflictType = '';
         continue;
@@ -61,7 +44,7 @@ function resolveMergeConflicts(filePath) {
       
       if (!inConflict) {
         resolvedLines.push(line);
-      } else if (conflictType === 'head') {
+      } else if (conflictType === head) {
         // Keep HEAD version (first part)
         resolvedLines.push(line);
       }
@@ -90,21 +73,13 @@ function findConflictedFiles(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith(.) && item !== 'node_modules') {
         scanDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+      } else if (stat.isFile() && (item.endsWith(.tsx) || item.endsWith('.ts') || item.endsWith(.js) || item.endsWith('.jsx'))) {
         try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          if (content.includes('
-=======
+          const content = fs.readFileSync(fullPath, utf8);
 
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 =======
 =======
@@ -113,7 +88,4 @@ function findConflictedFiles(dir) {
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+

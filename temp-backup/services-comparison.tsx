@@ -6,7 +6,7 @@ interface ServicescomparisonProps {
   // Add props here as needed
 }
 
-export default function Servicescomparison({ }: ServicescomparisonProps) {
+export default function Servicescomparison({}: ServicescomparisonProps) {
   return (
     <div>
       <h1>Servicescomparison</h1>

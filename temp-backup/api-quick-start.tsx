@@ -6,7 +6,7 @@ interface ApiquickstartProps {
   // Add props here as needed
 }
 
-export default function Apiquickstart({ }: ApiquickstartProps) {
+export default function Apiquickstart({}: ApiquickstartProps) {
   return (
     <div>
       <h1>Apiquickstart</h1>

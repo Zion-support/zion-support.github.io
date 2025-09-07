@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React from 'react';
 interface LoginProps  {// Add props here as needed;
 interface LoginProps  {// Add props here as needed;
@@ -19,20 +15,13 @@ interface LoginProps {
 
 
 
-<<<<<<< HEAD
-import React from 'react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
 interface LoginProps {
   // Add props here as needed
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-export default function Login({ }: LoginProps) {
-=======
-export default function Login({}: LoginProps) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
   return (
     <div>
       <h1>Login</h1>

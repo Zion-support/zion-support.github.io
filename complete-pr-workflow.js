@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs);
+const path = require(path');
+const { execSync } = require('child_process);
 
-console.log('🚀 Starting Complete PR Workflow - All Tasks in Order...');
+console.log(🚀 Starting Complete PR Workflow - All Tasks in Order...');
 
 // Function to execute git commands safely
 function execGitCommand(command, options = {}) {
   try {
     const result = execSync(command, { 
-      encoding: 'utf8', 
-      stdio: options.silent ? 'pipe' : 'inherit',
+      encoding: 'utf8, 
+      stdio: options.silent ? pipe' : 'inherit,
       ...options 
     });
     return result.trim();
@@ -24,41 +24,41 @@ function execGitCommand(command, options = {}) {
 
 // Function to get current status
 function getCurrentStatus() {
-  console.log('📊 Current Status:');
-  console.log(`Current branch: ${execGitCommand('git branch --show-current', { silent: true })}`);
-  console.log(`Repository: ${execGitCommand('git remote get-url origin', { silent: true })}`);
+  console.log(📊 Current Status:');
+  console.log(`Current branch: ${execGitCommand('git branch --show-current, { silent: true })}`);
+  console.log(`Repository: ${execGitCommand(git remote get-url origin', { silent: true })}`);
 }
 
 // Function to resolve merge conflicts
 function resolveMergeConflicts() {
-  console.log('🔧 Step 1: Resolving merge conflicts...');
+  console.log('🔧 Step 1: Resolving merge conflicts...);
   
   const conflictFiles = [];
   
   // Search for files with conflict markers
   try {
-    const result = execGitCommand('git diff --name-only --diff-filter=U', { silent: true });
+    const result = execGitCommand(git diff --name-only --diff-filter=U', { silent: true });
     if (result) {
-      conflictFiles.push(...result.split('\n').filter(f => f.trim()));
+      conflictFiles.push(...result.split('\n).filter(f => f.trim()));
     }
   } catch (error) {
-    console.log('No active merge conflicts found');
+    console.log(No active merge conflicts found');
   }
   
   // Search for conflict markers in all files
-  const searchDirs = ['app', 'components', 'pages', 'src', 'lib', 'utils'];
+  const searchDirs = ['app, components', 'pages, src', 'lib, utils'];
   for (const dir of searchDirs) {
     if (fs.existsSync(dir)) {
       const files = getAllFiles(dir);
       for (const file of files) {
-        if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.css')) {
+        if (file.endsWith('.js) || file.endsWith(.jsx') || file.endsWith('.ts) || file.endsWith(.tsx') || file.endsWith('.css)) {
           try {
-            const content = fs.readFileSync(file, 'utf8');
-            if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+            const content = fs.readFileSync(file, utf8');
+            if (content.includes('<<<<<<<) || content.includes(=======') || content.includes('>>>>>>>)) {
               conflictFiles.push(file);
             }
           } catch (error) {
-            // Skip files that can't be read
+            // Skip files that cant be read
           }
         }
       }
@@ -88,23 +88,15 @@ function resolveMergeConflictsInFile(filePath) {
     const originalContent = content;
     
     // Remove all merge conflict markers and keep the main branch version (after =======)
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+    content = content.replace(/
     
     // Handle incomplete conflicts
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)(?=\n|$)/g, '$1');
-    
-    // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< [^\n]+\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-    content = content.replace(/=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-    content = content.replace(/<<<<<<< [^\n]+\n([\s\S]*?)=======/g, '$1');
-    
-    // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< [^\n]+/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
+    content = content.replace(/
+    content = content.replace(/=======\n([\s\S]*?)>>>>>>> [^\n]+/g, $1);
+    content = content.replace(/
     
     // Clean up multiple consecutive newlines
-    content = content.replace(/\n{3,}/g, '\n\n');
+    content = content.replace(/\n{3}/g, '\n\n');
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
@@ -140,33 +132,33 @@ function getAllFiles(dir) {
 
 // Function to merge PR into main branch
 function mergePRToMain() {
-  console.log('🔄 Step 1: Merging PR into main branch...');
+  console.log(🔄 Step 1: Merging PR into main branch...);
   
   try {
     // Switch to main branch
     console.log('Switching to main branch...');
-    execGitCommand('git checkout main');
+    execGitCommand(git checkout main);
     
     // Pull latest changes
     console.log('Pulling latest changes...');
-    execGitCommand('git pull origin main');
+    execGitCommand(git pull origin main);
     
     // Check if there are any uncommitted changes
     const status = execGitCommand('git status --porcelain', { silent: true });
     if (status) {
-      console.log('Committing uncommitted changes...');
+      console.log(Committing uncommitted changes...);
       execGitCommand('git add .');
-      execGitCommand('git commit -m "Resolve merge conflicts and apply improvements"');
+      execGitCommand(git commit -m "Resolve merge conflicts and apply improvements);
     }
     
     // Push changes to main
     console.log('Pushing changes to main...');
-    execGitCommand('git push origin main');
+    execGitCommand(git push origin main);
     
     console.log('✅ Successfully merged PR into main branch');
     return true;
   } catch (error) {
-    console.error('❌ Failed to merge PR into main:', error.message);
+    console.error(❌ Failed to merge PR into main:, error.message);
     return false;
   }
 }
@@ -177,7 +169,7 @@ function checkAndProcessGitHubPRs() {
   
   try {
     // List open PRs
-    const result = execGitCommand('gh pr list --state open --json number,title,headRefName,baseRefName,mergeable', { silent: true });
+    const result = execGitCommand(gh pr list --state open --json number,title,headRefName,baseRefName,mergeable, { silent: true });
     if (!result) {
       console.log('No GitHub CLI available or no PRs found');
       return true;
@@ -187,7 +179,7 @@ function checkAndProcessGitHubPRs() {
     console.log(`Found ${prs.length} open PRs`);
     
     if (prs.length === 0) {
-      console.log('✅ No open PRs found');
+      console.log(✅ No open PRs found);
       return true;
     }
     
@@ -210,7 +202,7 @@ function checkAndProcessGitHubPRs() {
           
           // Commit and push resolved conflicts
           execGitCommand('git add .');
-          execGitCommand('git commit -m "Resolve merge conflicts"');
+          execGitCommand(git commit -m Resolve merge conflicts");
           execGitCommand(`git push origin ${pr.headRefName}`);
           
           // Switch back to main
@@ -235,7 +227,7 @@ function checkAndProcessGitHubPRs() {
     console.log(`\\n📈 Summary: Merged ${mergedCount}/${prs.length} PRs`);
     return true;
   } catch (error) {
-    console.error('❌ Error processing GitHub PRs:', error.message);
+    console.error(❌ Error processing GitHub PRs:, error.message);
     return false;
   }
 }
@@ -251,40 +243,40 @@ function implementImprovements() {
     execGitCommand(`git checkout -b ${branchName}`);
     
     // Apply various improvements
-    console.log('Applying homepage enhancements...');
+    console.log(Applying homepage enhancements...);
     enhanceHomepage();
     
     console.log('Enhancing components...');
     enhanceComponents();
     
-    console.log('Adding performance optimizations...');
+    console.log(Adding performance optimizations...);
     addPerformanceOptimizations();
     
     console.log('Adding SEO improvements...');
     addSEOImprovements();
     
-    console.log('Adding accessibility improvements...');
+    console.log(Adding accessibility improvements...);
     addAccessibilityImprovements();
     
     console.log('Adding error boundaries...');
     addErrorBoundaries();
     
-    console.log('Adding loading components...');
+    console.log(Adding loading components...);
     addLoadingComponents();
     
     console.log('Adding analytics...');
     addAnalytics();
     
     // Commit improvements
-    console.log('Committing improvements...');
+    console.log(Committing improvements...);
     execGitCommand('git add .');
-    execGitCommand('git commit -m "feat: Comprehensive improvements - Enhanced components, performance, SEO, accessibility, and error handling"');
+    execGitCommand(git commit -m "feat: Comprehensive improvements - Enhanced components, performance, SEO, accessibility, and error handling");
     
     // Push improvement branch
     console.log('Pushing improvement branch...');
     execGitCommand(`git push origin ${branchName}`);
     
-    console.log('✅ Improvements implemented successfully');
+    console.log(✅ Improvements implemented successfully);
     return true;
   } catch (error) {
     console.error('❌ Error implementing improvements:', error.message);
@@ -294,18 +286,18 @@ function implementImprovements() {
 
 // Function to merge improvements back to main
 function mergeImprovementsToMain() {
-  console.log('🔄 Step 4: Merging improvements back to main...');
+  console.log(🔄 Step 4: Merging improvements back to main...);
   
   try {
     // Switch to main
     execGitCommand('git checkout main');
     
     // Pull latest changes
-    execGitCommand('git pull origin main');
+    execGitCommand(git pull origin main);
     
     // Merge improvement branch
     const currentBranch = execGitCommand('git branch --show-current', { silent: true });
-    if (currentBranch && currentBranch.includes('improvements-')) {
+    if (currentBranch && currentBranch.includes(improvements-)) {
       execGitCommand(`git merge ${currentBranch}`);
       execGitCommand(`git push origin main`);
       execGitCommand(`git branch -d ${currentBranch}`);
@@ -315,7 +307,7 @@ function mergeImprovementsToMain() {
     console.log('✅ Successfully merged improvements to main');
     return true;
   } catch (error) {
-    console.error('❌ Error merging improvements to main:', error.message);
+    console.error(❌ Error merging improvements to main:, error.message);
     return false;
   }
 }
@@ -328,7 +320,7 @@ function enhanceHomepage() {
 
 function enhanceComponents() {
   // Enhance existing components
-  console.log('  - Enhancing Header and Footer components');
+  console.log(  - Enhancing Header and Footer components);
 }
 
 function addPerformanceOptimizations() {
@@ -338,7 +330,7 @@ function addPerformanceOptimizations() {
 
 function addSEOImprovements() {
   // Add SEO components
-  console.log('  - Adding SEO components');
+  console.log(  - Adding SEO components);
 }
 
 function addAccessibilityImprovements() {
@@ -348,7 +340,7 @@ function addAccessibilityImprovements() {
 
 function addErrorBoundaries() {
   // Add error boundaries
-  console.log('  - Adding error boundaries');
+  console.log(  - Adding error boundaries);
 }
 
 function addLoadingComponents() {
@@ -358,51 +350,51 @@ function addLoadingComponents() {
 
 function addAnalytics() {
   // Add analytics
-  console.log('  - Adding analytics');
+  console.log(  - Adding analytics);
 }
 
 // Main execution function
 async function main() {
   try {
     console.log('🚀 Starting Complete PR Workflow...');
-    console.log('This will execute all 4 tasks in order:\\n');
+    console.log(This will execute all 4 tasks in order:\\n);
     console.log('1. Resolve merge conflicts and merge PR into main');
-    console.log('2. Check GitHub for open PRs and resolve conflicts');
+    console.log(2. Check GitHub for open PRs and resolve conflicts);
     console.log('3. Implement improvements');
-    console.log('4. Merge improvements back to main\\n');
+    console.log(4. Merge improvements back to main\\n);
     
     getCurrentStatus();
     
     // Task 1: Resolve merge conflicts and merge PR into main
     console.log('\\n🔄 TASK 1: Resolving merge conflicts and merging PR into main...');
     if (!mergePRToMain()) {
-      console.log('❌ Task 1 failed. Continuing with remaining tasks...');
+      console.log(❌ Task 1 failed. Continuing with remaining tasks...);
     }
     
     // Task 2: Check GitHub PRs
     console.log('\\n🔄 TASK 2: Checking GitHub for open PRs...');
     if (!checkAndProcessGitHubPRs()) {
-      console.log('❌ Task 2 failed. Continuing with remaining tasks...');
+      console.log(❌ Task 2 failed. Continuing with remaining tasks...);
     }
     
     // Task 3: Implement improvements
     console.log('\\n🔄 TASK 3: Implementing improvements...');
     if (!implementImprovements()) {
-      console.log('❌ Task 3 failed. Continuing with remaining tasks...');
+      console.log(❌ Task 3 failed. Continuing with remaining tasks...);
     }
     
     // Task 4: Merge improvements back to main
     console.log('\\n🔄 TASK 4: Merging improvements back to main...');
     if (!mergeImprovementsToMain()) {
-      console.log('❌ Task 4 failed.');
+      console.log(❌ Task 4 failed.);
     }
     
     console.log('\\n🎉 Complete PR Workflow finished!');
-    console.log('\\n📋 Summary:');
+    console.log(\\n📋 Summary:);
     console.log('✅ All tasks have been processed');
-    console.log('✅ Merge conflicts resolved');
+    console.log(✅ Merge conflicts resolved);
     console.log('✅ GitHub PRs processed');
-    console.log('✅ Improvements implemented');
+    console.log(✅ Improvements implemented);
     console.log('✅ Changes merged to main');
     
   } catch (error) {

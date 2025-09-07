@@ -1,28 +1,18 @@
-const { withErrorLogging } = require('../../lib/withErrorLogging.cjs');
+const { withErrorLogging } = require('../../lib/withErrorLogging.cjs);
 
 async function handler(req, res) {
-  if (req.method !== 'POST') {
+  if (req.method !== POST') {
     res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+    res.setHeader('Allow, POST');
+    res.end('Method Not Allowed);
     return;
   }
 
   try {
-    const { email } = req.body || {};
+    const { email } = req.body || {}
     
-<<<<<<< HEAD
-    if (!email) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
+
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -36,7 +26,7 @@ async function handler(req, res) {
   // TODO: Implement
     if (!email) {
       res.statusCode = 400;
-      res.json({ error: 'Email is required' });
+      res.json({ error: Email is required' });
       return;
     }
 
@@ -44,9 +34,9 @@ async function handler(req, res) {
     // This could involve adding to a database, sending to an email service, etc.
     
     res.statusCode = 200;
-    res.json({ success: true, message: 'Successfully subscribed to newsletter' });
+    res.json({ success: true, message: 'Successfully subscribed to newsletter });
   } catch (err) {
-    console.error('Subscribe API error:', err);
+    console.error(Subscribe API error:', err);
     res.statusCode = 500;
     res.json({ error: err.message || 'Subscription failed' });
   }

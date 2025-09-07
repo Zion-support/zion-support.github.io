@@ -1,12 +1,12 @@
-import React from "react",
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from "lucide-react";
+import React from "react,
+import { Button } from @/components/ui/button";
+import { ShieldAlert } from "lucide-react;
 interface EmptyFraudStateProps {
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
-import { Button } from "@/components/ui/button",
-import { ShieldAlert } from "lucide-react",
+import { Button } from @/components/ui/button",
+import { ShieldAlert } from "lucide-react,
   hasFilters: boolean,
   onResetFilters: () => void
 }
@@ -20,54 +20,50 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
     </div>;
 );
 
-=======        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { ShieldAlert } from "lucide-react",;
-interface EmptyFraudStateProps {;
-  hasFilters: boolean,;
+=======        <Button variant=outline" onClick={onResetFilters}>Clear Filters</Button>
+import React from "react,
+import { Button } from @/components/ui/button",
+import { ShieldAlert } from "lucide-react,
+interface EmptyFraudStateProps {
+  hasFilters: boolean,
   onResetFilters: () => void;
 }
 export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
   has_filters,
-  onResetFilters,
-}) => {
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
-  hasFilters,;
-  onResetFilters,;
-}) => {;
+  onResetFilters}) => {
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+  hasFilters,
+  onResetFilters}) => {
   return (
-};
+}
   )
-};
+}
 
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { ShieldAlert } from "lucide-react",;
-;
-interface EmptyFraudStateProps {;
-  hasFilters:boolean,;
+import React from react",
+import { Button } from "@/components/ui/button,
+import { ShieldAlert } from lucide-react",
+interface EmptyFraudStateProps {
+  hasFilters:boolean,
   onResetFilters:() => void;
 }
-;
-export const EmptyFraudState:React.FC<EmptyFraudStateProps> = ({ ;
-  hasFilters,;
+export const EmptyFraudState:React.FC<EmptyFraudStateProps> = ({
+  hasFilters,
   onResetFilters ;
-}) => {;
+}) => {
   return (;
-    <div className="text-center py-12">;
-      <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
-      <h3 className="text-lg font-medium">No fraud flags found</h3>;
-      <p className="text-muted-foreground mb-6">;
+    <div className="text-center py-12>;
+      <ShieldAlert className=mx-auto h-12 w-12 text-muted-foreground mb-4" />;
+      <h3 className="text-lg font-medium>No fraud flags found</h3>;
+      <p className=text-muted-foreground mb-6">;
         {hasFilters;
-          ? "Try adjusting your filters";
-          :"You don't have any fraud flags yet"}
+          ? "Try adjusting your filters;
+          :You don't have any fraud flags yet"}
       </p>;
       {hasFilters && (;
-        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
+        <Button variant="outline onClick={onResetFilters}>Clear Filters</Button>;
       )}
     </div>;
-<Button variant="outline" onClick={onResetFilters}>
+<Button variant=outline" onClick={onResetFilters}>
           Clear Filters
         </Button>
       )}
@@ -76,8 +72,8 @@ export const EmptyFraudState:React.FC<EmptyFraudStateProps> = ({ ;
 
 }
 
-};
+}
 
   )
-};
+}
     <div className = $2;

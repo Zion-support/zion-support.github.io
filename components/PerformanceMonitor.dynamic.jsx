@@ -1,30 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
-export default PerformanceMonitor.dynamic;
-=======
-
-<<<<<<< HEAD
-;
-const PerformanceMonitor.dynamic = () => {
-=======
-<<<<<<< HEAD
-pr-12243
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-;
 const PerformanceMonitor.dynamic = () => {}
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   return (
-    <div data - testid="performancemonitor.dynamic">;
+    <div data - testid="performancemonitor.dynamic>;
       <h1 > PerformanceMonitor.dynamic</h1>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
 const PerformanceMonitor.dynamic = () => ;
-  return (<div data - testid=\"performancemonitor.dynamic\"    />;
+  return (<div data - testid=\performancemonitor.dynamic\"    />;
       <h1     /> PerformanceMonitor.dynamic</h1>
     </div>
   );

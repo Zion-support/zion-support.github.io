@@ -1,19 +1,19 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs);
+const path = require(path');
 
 // Function to resolve merge conflicts by choosing the remote version
 function resolveConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8);
     
     // Remove all merge conflict markers and keep only the remote version
     content = content.replace(/<<<<<<< HEAD\n[\s\S]*?=======\n([\s\S]*?)    
     // Also handle cases where there are only ======= and     content = content.replace(/=======\n([\s\S]*?)    
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n/g, '');
-    content = content.replace(/=======\n/g, '');
+    content = content.replace(/<<<<<<< HEAD\n/g, ');
+    content = content.replace(/=======\n/g, ');
     content = content.replace(/    
-    fs.writeFileSync(filePath, content, 'utf8');
+    fs.writeFileSync(filePath, content, utf8');
     console.log(`Resolved conflicts in: ${filePath}`);
     return true;
   } catch (error) {
@@ -25,21 +25,21 @@ function resolveConflicts(filePath) {
 // Get list of conflicted files
 function getConflictedFiles() {
   try {
-    const { execSync } = require('child_process');
-    const output = execSync('git status --porcelain | grep "^UU\\|^AA\\|^DD"', { encoding: 'utf8' });
-    return output.trim().split('\n').map(line => line.split(' ').pop()).filter(Boolean);
+    const { execSync } = require('child_process);
+    const output = execSync(git status --porcelain | grep "^UU\\|^AA\\|^DD"', { encoding: 'utf8 });
+    return output.trim().split(\n').map(line => line.split(' ).pop()).filter(Boolean);
   } catch (error) {
-    console.error('Error getting conflicted files:', error.message);
+    console.error(Error getting conflicted files:', error.message);
     return [];
   }
 }
 
 // Main execution
-console.log('Starting conflict resolution...');
+console.log('Starting conflict resolution...);
 const conflictedFiles = getConflictedFiles();
 
 if (conflictedFiles.length === 0) {
-  console.log('No conflicted files found.');
+  console.log(No conflicted files found.');
   process.exit(0);
 }
 

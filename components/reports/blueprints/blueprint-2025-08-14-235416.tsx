@@ -1,44 +1,39 @@
 ;
-import Head from 'next/head';
-export default function Page() {return (export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
+import Head from 'next/head;
+export default function Page() {return (export default function Page() {export default function Page() {return (<div className=min-h-screen bg-slate-950 text-white' />;
       <Head>;
         <title />Reference Architecture — Autonomous Content Mesh</title>;
         <meta;
-          name='description';
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';
+          name='description;
+          content=High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';
         />;
         <meta;
-          property='og:title';
-          content='Reference Architecture — Autonomous Content Mesh';
+          property='og:title;
+          content=Reference Architecture — Autonomous Content Mesh';
         />;
         <meta;
-          property='og:description';
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';
+          property='og:description;
+          content=High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';
         />;
-        <meta name='twitter:card' content='summary_large_image' />;
+        <meta name='twitter:card content=summary_large_image' />;
       </Head>;
-      <main className='container mx-auto px-6 py-12 prose prose-invert'>;
-        <h1 className='text-3xl font-extrabold'>;
+      <main className='container mx-auto px-6 py-12 prose prose-invert>;
+        <h1 className=text-3xl font-extrabold'>;
           Reference Architecture — Autonomous Content Mesh;
         </h1>;
         <div;
-          className='mt-4';
+          className='mt-4;
           dangerouslySetInnerHTML={{__html:;
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>';
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>';
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>';
+              <p>Signal source: <a class="text-cyan-300 underline href=https://ziontechgroup.com" target="_blank rel=noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>';
+              '<p>Signal source: <a class="text-cyan-300 underline href=https://ziontechgroup.com" target="_blank rel=noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>;
+              <p>Signal source: <a class="text-cyan-300 underline href=https://ziontechgroup.com" target="_blank rel=noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>';
 
 
 
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-;
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-import Head from 'next/head';
+import Head from 'next/head;
 export default function Page(){
 export default function Page() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
@@ -52,609 +47,166 @@ export default function Page() {
 
 export default function Page() {
 
-import Head from 'next/head';
+import Head from next/head';
 export default function Page(){
 export default function Page() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-<<<<<<< HEAD
-pr-12243
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    <div className='min-h-screen bg-slate-950 text-white'>
-      <Head>
-        <title>Reference Architecture — Autonomous Content Mesh</title>
-        <meta'
-          name='description''
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
-        />
-        <meta'
-          property='og:title''
-          content='Reference Architecture — Autonomous Content Mesh'
-        />
-        <meta'
-          property='og:description''
-=======
-
-  return (
-pr-12243
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    <div className='min-h-screen bg-slate-950 text-white'>
+    <div className='min-h-screen bg-slate-950 text-white>
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
         <meta
           name='description'
-<<<<<<< HEAD
-=======
-    <div className='min-h-screen bg-slate-950 text-white' />
-      <Head>
-        <title />Reference Architecture — Autonomous Content Mesh</title>
-        <meta;
-name='description'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
+          content=High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
         />
-        <meta
-          property='og:title'
-          content='Reference Architecture — Autonomous Content Mesh'
+        <meta'
+          property=og:title'
+          content='Reference Architecture — Autonomous Content Mesh
         />
-<<<<<<< HEAD
         <meta
           property='og:description'
 =======
-        <meta;
-property='og:description'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
-        />'
-        <meta name='twitter:card' content='summary_large_image' />
-<<<<<<< HEAD
-      </Head>'
-      <main className='container mx-auto px-6 py-12 prose prose-invert'>'
-        <h1 className='text-3xl font-extrabold'>
-          Reference Architecture — Autonomous Content Mesh;
-        </h1>
-        <div'
-          className='mt-4'
-          dangerouslySetInnerHTML={{}
-            __html:'
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>''"
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>',
-          }}
-        />'
-        <p className='mt-6 text-white/60 text-sm'>
-          Auto-generated by Cloud Blueprint Factory.
-        </p>
-      </main>
-    </div>
-  );  return (
-  return (
-    </div>;
-  );  return ("
-    <div className="min-h-screen bg-slate-950 text-white">
 
-      <Head>
-        <title>Reference Architecture — Autonomous Content Mesh</title>"
-        <meta name="description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />"
-        <meta property="og:title" content="Reference Architecture — Autonomous Content Mesh" />"
-        <meta property="og:description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />"
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>"
-        <h1 className="text-3xl font-extrabold">Reference Architecture — Autonomous Content Mesh</h1>"
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>" }} />"
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Blueprint Factory.</p>
-      </main>
-    </div>
-  )
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-          }}
-        />;'
-        <p className='mt-6 text-white/60 text-sm'>;
-          Auto-generated by Cloud Blueprint Factory.;
-        </p>;
-      </main>;
-    </div>;
-  );  return ("
-    <div className="min-h-screen bg-slate-950 text-white">;
-      <Head>;
-        <title>Reference Architecture — Autonomous Content Mesh</title>;"
-        <meta name="description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />;"
-        <meta property="og:title" content="Reference Architecture — Autonomous Content Mesh" />;"
-        <meta property="og:description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />;"
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;"
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;"
-        <h1 className="text-3xl font-extrabold">Reference Architecture — Autonomous Content Mesh</h1>;"
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>" }} />;"
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Blueprint Factory.</p>;
-      </main>;
-    </div>;
-  );
-}
-<<<<<<< HEAD
-export default function Page(){
   return (
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>'
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>',
-          }}
-=======
-      </Head>
-      <main className='container mx-auto px-6 py-12 prose prose-invert'>
-        <h1 className='text-3xl font-extrabold'>
-          Reference Architecture — Autonomous Content Mesh
-        </h1>
-        <div
-          className='mt-4'
-          dangerouslySetInnerHTML={{
-<<<<<<< HEAD
-            __html:
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>'
-<<<<<<< HEAD
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>',
-          }}
-=======
-            __html:"
-              '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>'"
-              '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>';}
-          }
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-        />
-        <p className='mt-6 text-white/60 text-sm'>
-          Auto-generated by Cloud Blueprint Factory.
-        </p>
-      </main>
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );  return (
-  return (
-    </div>;
-  );  return (
 pr-12243
-    <div className="min-h-screen bg-slate-950 text-white">
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    <div className=min-h-screen bg-slate-950 text-white'>
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
-        <meta name="description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />
-        <meta property="og:title" content="Reference Architecture — Autonomous Content Mesh" />
-        <meta property="og:description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      <main className="container mx-auto px-6 py-12 prose prose-invert">
-        <h1 className="text-3xl font-extrabold">Reference Architecture — Autonomous Content Mesh</h1>
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>" }} />
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Blueprint Factory.</p>
-      </main>
-    </div>
+        <meta
+          name='description
 
-pr-12243
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
+          content=High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
+        />
+        <meta
+          property='og:title
+          content=Reference Architecture — Autonomous Content Mesh'
+        />
 
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  );  return (
-  return (
-    </div>;
-<<<<<<< HEAD
-  );  return (
-    <div className="min-h-screen bg-slate-950 text-white">
-
-export default function Page(){
-  return (
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>'
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>'
-          }}
-=======
-          }}
-=======
-  );  return ("
-    <div className=\"min-h-screen bg-slate-950 text-white\" />
-
-      <Head>
-        <title />Reference Architecture — Autonomous Content Mesh</title>"
-        <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />"
-        <meta property=\"og: title\" content=\"Reference Architecture — Autonomous Content Mesh\" />"
-        <meta property=\"og:description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />"
-        <meta name=\"twitter:card\" content=\"summary_large_image\" />
-      </Head>"
-        <h1 className=\"text-3xl font-extrabold\" />Reference Architecture — Autonomous Content Mesh</h1>"
-        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>\" ;}} />"
-        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Blueprint Factory.</p>
-      </main>
-    </div>
-  )
-
-} catch (error) {"
-    console.error(\"Error: \";, error);}"
-    return res.status(500).json({ error: \"Internal server error\";}
-});
-  }
-}
-;
-          }}
-        />;
-        <p className='mt-6 text-white/60 text-sm' />;
-          Auto-generated by Cloud Blueprint Factory.;
-        </p>;
-      </main>;
-    </div>;
-  )return (return (</div>;"
-  )return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head>;
-        <title />Reference Architecture — Autonomous Content Mesh</title>;"
-        <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />;"
-        <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\" />;"
-        <meta property=\"og:description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />;"
-        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
-      </Head>;"
-        <h1 className=\"text-3xl font-extrabold\" />Reference Architecture — Autonomous Content Mesh</h1>;"
-        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>\" ;}
-} />;"
-        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Blueprint Factory.</p>;
-      </main>;
-    </div>;"
-  )} catch (error) {console.error(\"Error: \";, error)return res.status(500).json({ error: \"Internal server error\" ;})}
-}
-}
-        />;
-        <p className='mt-6 text-white/60 text-sm' />;
-          Auto-generated by Cloud Blueprint Factory.;
-        </p>;
-      </main>;
-    </div>;"
-  )return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-  );  return ("
-    <div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head>;
-        <title />Reference Architecture — Autonomous Content Mesh</title>;"
-        <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />;"
-        <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\" />;"
-        <meta property=\"og:description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />;"
-        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
-      </Head>;"
-      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />;"
-        <h1 className=\"text-3xl font-extrabold\" />Reference Architecture — Autonomous Content Mesh</h1>;"
-        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup && ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>\" ;}
-} />;"
-        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Blueprint Factory.</p>;
-      </main>;
-    </div>;
-  );
-}
-export default function Page(){
-  return (
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>'
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>';,
-  )}
-"
-export default function Page() {return ('<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>';}"
-              '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>';}
-          }}
-        />;
-        <p className='mt-6 text-white/60 text-sm' />;
-          Auto-generated by Cloud Blueprint Factory.;
-        </p>;
-      </main>;
-    </div>;
-  )return (return (</div>;"
-  )return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
-      <Head>;
-        <title />Reference Architecture — Autonomous Content Mesh</title>;"
-        <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />;"
-        <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\" />;"
-        <meta property=\"og:description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />;"
-        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
-      </Head>;"
-      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />;"
-        <h1 className=\"text-3xl font-extrabold\" />Reference Architecture — Autonomous Content Mesh</h1>;"
-        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>\" ;}
-} />;"
-        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Blueprint Factory.</p>;
-      </main>;
-    </div>;
-import Head from 'next / head';
-export default /**;
- * Page - Function description;
- */;
-function Page() {return (<div className='min - h-screen bg - slate - 950 text - white' />;}
-  );}
-}
-export default function Page(){
-  return ("
-              '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>'"
-              '<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>';}
-          }
-}
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.
         />
-        <meta'
-          property='og:title''
-          content='Reference Architecture — Autonomous Content Mesh'
-        />
-        <meta'
-          property='og:description''
+        <meta name='twitter:card' content=summary_large_image />
 
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
-        />'
-        <meta name='twitter:card' content='summary_large_image' />
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         />
         <p className='mt-6 text-white/60 text-sm'>
           Auto-generated by Cloud Blueprint Factory.
         </p>
       </main>
     </div>
-  );  return (
-<<<<<<< HEAD
-  return (
-    </div>;
-  );  return (
-<<<<<<< HEAD
 
 =======
+
+  );  return (
+  return (
+    </div>;
+
+        />
+        <meta
+          property=og:title''
+          content=Reference Architecture — Autonomous Content Mesh
+        />
+        <meta'
+          property='og:description
+
+          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.'
+        />
+        <meta name=twitter:card' content='summary_large_image />
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+        />
+        <p className=mt-6 text-white/60 text-sm'>
+          Auto-generated by Cloud Blueprint Factory.
+        </p>
+      </main>
+    </div>
+  );  return (
+
 >>>>>>> origin/main
 =======
-<<<<<<< HEAD
-=======
-pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-slate-950 text-white>
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
-        <meta name="description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />
-        <meta property="og:title" content="Reference Architecture — Autonomous Content Mesh" />
-        <meta property="og:description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name=description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop. />
+        <meta property=og:title" content="Reference Architecture — Autonomous Content Mesh />
+        <meta property=og:description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop. />
+        <meta name=twitter:card" content="summary_large_image />
       </Head>
-      <main className="container mx-auto px-6 py-12 prose prose-invert">
-        <h1 className="text-3xl font-extrabold">Reference Architecture — Autonomous Content Mesh</h1>
-<<<<<<< HEAD
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>" }} />
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Blueprint Factory.</p>
-=======
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>" ;}} />
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Blueprint Factory.</p>
-      </main>
-    </div>
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+      <main className=container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className="text-3xl font-extrabold>Reference Architecture — Autonomous Content Mesh</h1>
 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import Head from 'next / head';
+
+
+import Head from 'next / head;
 pr-12243
-  );  return ("
+  );  return (
     <div className=\"min-h-screen bg-slate-950 text-white\" />
       <Head>
-        <title />Reference Architecture — Autonomous Content Mesh</title>"
-        <meta name=\"description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />"
-        <meta property=\"og: title\" content=\"Reference Architecture — Autonomous Content Mesh\" />"
-        <meta property=\"og:description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />"
-        <meta name=\"twitter:card\" content=\"summary_large_image\" />
-      </Head>"
-      <main className=\"container mx-auto px-6 py-12 prose prose-invert\" />"
-        <h1 className=\"text-3xl font-extrabold\" />Reference Architecture — Autonomous Content Mesh</h1>"
-        <div className=\"mt-4\" dangerouslySetInnerHTML={{ __html: \"<p />Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>\" ;}
+        <title />Reference Architecture — Autonomous Content Mesh</title>
+        <meta name=\description\" content=\"High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\ />
+        <meta property=\"og: title\" content=\Reference Architecture — Autonomous Content Mesh\ />"
+        <meta property=\"og:description\ content=\High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.\" />"
+        <meta name=\twitter:card\ content=\"summary_large_image\" />
+      </Head>
+      <main className=\container mx-auto px-6 py-12 prose prose-invert\" />"
+        <h1 className=\text-3xl font-extrabold\ />Reference Architecture — Autonomous Content Mesh</h1>"
+        <div className=\"mt-4\ dangerouslySetInnerHTML={{ __html: \<p />Signal source: <a class=\"text-cyan-300 underline\" href=\https://ziontechgroup.com\ target=\"_blank\" rel=\noopener\ />https://ziontechgroup.com</a></p><h2 />Components</h2><ul /><li />Ingestion & normalization</li><li />Knowledge index</li><li />Generation & evaluation</li><li />Publishing</li><li />Observability</li></ul><h2 />Flows</h2><ol /><li />Collect</li><li />Synthesize</li><li />Review</li><li />Publish</li><li />Measure</li></ol>\" ;}
 } />"
-        <p className=\"mt-6 text-white/60 text-sm\" />Auto-generated by Cloud Blueprint Factory.</p>
+        <p className=\mt-6 text-white/60 text-sm\ />Auto-generated by Cloud Blueprint Factory.</p>
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       </main>
     </div>
-<<<<<<< HEAD
-  )
-}
-=======
-<<<<<<< HEAD
 
-
-
-
-;
-export default /**
- * Page - Function description;
- */
-function Page() {}
-  return ('
-    <div className='min - h-screen bg - slate - 950 text - white'>;
-      <Head>;
-        <title > Reference Architecture — Autonomous Content Mesh</title>;
-        <meta;'
-          name='description';'
-=======
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export default /**
  * Page - Function description
  */
 function Page() {
   return (
-    <div className='min - h-screen bg - slate - 950 text - white' />;
+    <div className=min - h-screen bg - slate - 950 text - white' />;
       <Head>;
         <title  /> Reference Architecture — Autonomous Content Mesh</title>;
         <meta;
-          name='description';
+          name='description;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          content='High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.';
+          content=High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.';
         />;
         <meta;'
-          property='og:title';'
-          content='Reference Architecture — Autonomous Content Mesh';
+          property=og:title;'
+          content='Reference Architecture — Autonomous Content Mesh;
         />;
-        <meta;'
-          property='og:description';'
-          content='High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.';
+        <meta;
+          property='og:description';
+          content=High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.';
         />;'
-        <meta name='twitter:card' content='summary_large_image' />;
-<<<<<<< HEAD
-      </Head>;'
-      <main className='container mx - auto px - 6 py - 12 prose prose - invert'>;'
-        <h1 className='text - 3xl font - extrabold'>;
-=======
-      </Head>;
-<<<<<<< HEAD
-      <main className='container mx - auto px - 6 py - 12 prose prose - invert'>;
-        <h1 className='text - 3xl font - extrabold'>;
-=======
-      <main className='container mx - auto px - 6 py - 12 prose prose - invert' />;
-        <h1 className='text - 3xl font - extrabold' />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        <meta name=twitter:card content='summary_large_image' />;
+
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           Reference Architecture — Autonomous Content Mesh;
         </h1>;
-        <div;'
-          className='mt - 4';
-<<<<<<< HEAD
-          dangerouslySetInnerHTML={{
-            __html:;
-              '<p > Signal source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2 > Components</h2><ul><li > Ingestion & normalization</li><li > Knowledge index</li><li > Generation & evaluation</li><li > Publishing</li><li > Observability</li></ul><h2 > Flows</h2><ol><li > Collect</li><li > Synthesize</li><li > Review</li><li > Publish</li><li > Measure</li></ol>',
-          }}
-=======
-<<<<<<< HEAD
-          dangerouslySetInnerHTML={{}
-            __html:;'"
-              '<p > Signal source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2 > Components</h2><ul><li > Ingestion & normalization</li><li > Knowledge index</li><li > Generation & evaluation</li><li > Publishing</li><li > Observability</li></ul><h2 > Flows</h2><ol><li > Collect</li><li > Synthesize</li><li > Review</li><li > Publish</li><li > Measure</li></ol>',
-          }}
-        />;'
-        <p className='mt - 6 text - white / 60 text - sm'>;
-          Auto - generated by Cloud Blueprint Factory.;
-        </p>;
-      </main>;
-    </div>);  return ("
-    <div className="min - h-screen bg - slate - 950 text - white">;
-      <Head>;
-        <title > Reference Architecture — Autonomous Content Mesh</title>;"
-        <meta name="description" content="High - level blueprint for an autonomous content mesh with evaluation - in - the - loop." />;"
-        <meta property="og:title" content="Reference Architecture — Autonomous Content Mesh" />;"
-        <meta property="og:description" content="High - level blueprint for an autonomous content mesh with evaluation - in - the - loop." />;"
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;"
-      <main className="container mx - auto px - 6 py - 12 prose prose - invert">;"
-        <h1 className="text - 3xl font - extrabold">Reference Architecture — Autonomous Content Mesh</h1>;"
-        <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Signal source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2 > Components</h2><ul><li > Ingestion & normalization</li><li > Knowledge index</li><li > Generation & evaluation</li><li > Publishing</li><li > Observability</li></ul><h2 > Flows</h2><ol><li > Collect</li><li > Synthesize</li><li > Review</li><li > Publish</li><li > Measure</li></ol>" }} />;"
-        <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Blueprint Factory.</p>;
-      </main>;
-    </div>);
-}
-<<<<<<< HEAD
-=======
-          dangerouslySetInnerHTML={{__html:;"
-              '<p  /> Signal source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2  /> Components</h2><ul /><li  /> Ingestion & normalization</li><li  /> Knowledge index</li><li  /> Generation & evaluation</li><li  /> Publishing</li><li  /> Observability</li></ul><h2  /> Flows</h2><ol /><li  /> Collect</li><li  /> Synthesize</li><li  /> Review</li><li  /> Publish</li><li  /> Measure</li></ol>';"
-              '<p  /> Signal source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2  /> Components</h2><ul /><li  /> Ingestion & normalization</li><li  /> Knowledge index</li><li  /> Generation & evaluation</li><li  /> Publishing</li><li  /> Observability</li></ul><h2  /> Flows</h2><ol /><li  /> Collect</li><li  /> Synthesize</li><li  /> Review</li><li  /> Publish</li><li  /> Measure</li></ol>';
-          dangerouslySetInnerHTML={{
-            __html:;"
-              '<p  /> Signal source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2  /> Components</h2><ul /><li  /> Ingestion & normalization</li><li  /> Knowledge index</li><li  /> Generation & evaluation</li><li  /> Publishing</li><li  /> Observability</li></ul><h2  /> Flows</h2><ol /><li  /> Collect</li><li  /> Synthesize</li><li  /> Review</li><li  /> Publish</li><li  /> Measure</li></ol>';}
-          }
-}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+        <div;
+          className=mt - 4';
+
         />;
         <p className='mt - 6 text - white / 60 text - sm'>;
           Auto - generated by Cloud Blueprint Factory.;
         </p>;
-<<<<<<< HEAD
-      </main>;
-    </div>);  return (
-    <div className="min - h-screen bg - slate - 950 text - white">;
-      <Head>;
-        <title > Reference Architecture — Autonomous Content Mesh</title>;
-        <meta name="description" content="High - level blueprint for an autonomous content mesh with evaluation - in - the - loop." />;
-        <meta property="og:title" content="Reference Architecture — Autonomous Content Mesh" />;
-        <meta property="og:description" content="High - level blueprint for an autonomous content mesh with evaluation - in - the - loop." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-      <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
-        <h1 className="text - 3xl font - extrabold">Reference Architecture — Autonomous Content Mesh</h1>;
-        <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Signal source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2 > Components</h2><ul><li > Ingestion & normalization</li><li > Knowledge index</li><li > Generation & evaluation</li><li > Publishing</li><li > Observability</li></ul><h2 > Flows</h2><ol><li > Collect</li><li > Synthesize</li><li > Review</li><li > Publish</li><li > Measure</li></ol>" }} />;
-        <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Blueprint Factory.</p>;
-      </main>;
-    </div>);
-}
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  );
-}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-  )
-}
-;
 
   );
-
-
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-
-  );
-
-=======
-=======
-      </main>;"
-    </div>)return (<div className=\"min - h-screen bg - slate - 950 text - white\" />;
-    </div>);  return ("
-    <div className=\"min - h-screen bg - slate - 950 text - white\" />;
-      <Head>;
-        <title  /> Reference Architecture — Autonomous Content Mesh</title>;"
-        <meta name=\"description\" content=\"High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.\" />;"
-        <meta property=\"og:title\" content=\"Reference Architecture — Autonomous Content Mesh\" />;"
-        <meta property=\"og:description\" content=\"High - level blueprint for an autonomous content mesh with evaluation - in - the - loop.\" />;"
-        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
-      </Head>;"
-      <main className=\"container mx - auto px - 6 py - 12 prose prose - invert\" />;"
-        <h1 className=\"text - 3xl font - extrabold\" />Reference Architecture — Autonomous Content Mesh</h1>;"
-        <div className=\"mt - 4\" dangerouslySetInnerHTML={{ __html: \"<p  /> Signal source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com</a></p><h2  /> Components</h2><ul /><li  /> Ingestion & normalization</li><li  /> Knowledge index</li><li  /> Generation & evaluation</li><li  /> Publishing</li><li  /> Observability</li></ul><h2  /> Flows</h2><ol /><li  /> Collect</li><li  /> Synthesize</li><li  /> Review</li><li  /> Publish</li><li  /> Measure</li></ol>\" ;}
-} />;"
-        <p className=\"mt - 6 text - white / 60 text - sm\" />Auto - generated by Cloud Blueprint Factory.</p>;
-      </main>
-    </div>
-  );
-})}"
-  )} catch (error) {console.error(\"Error: \";, error)return res.status(500).json({ error: \"Internal server error\" ;})}
-}ursor/fix-website-loading-errors-and-merge-6662;
-  )
-    </div>);
 }
 
-);
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 pr-12243
 
-<<<<<<< HEAD
-  );
-}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
@@ -662,46 +214,31 @@ pr-12243
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   )
   } catch (error) {"
-    console.error("Error:", error);"
+    console.error("Error:, error);
     return res.status(500).json({ error: "Internal server error" });
 =======
 
   )
-  } catch (error) {"
-    console.error(\"Error: \";, error);}"
-    return res.status(500).json({ error: \"Internal server error\";}
+  } catch (error) {
+    console.error(\Error: \";, error);}"
+    return res.status(500).json({ error: \Internal server error\;}
 });
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
-;
 
-<<<<<<< HEAD
-"
-=======
-<Head> <title>Reference Architecture — Autonomous Content Mesh</title> <meta name="description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." /> <meta property="og:title" content="Reference Architecture — Autonomous Content Mesh" /> <meta property="og:description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." /> <meta name="twitter:card" content="summary large image" /> </Head> <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Blueprint Factory.</p> </main> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+
 =======
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 ursor/fix-website-loading-errors-and-merge-6662
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
-<<<<<<< HEAD
-=======
 
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 

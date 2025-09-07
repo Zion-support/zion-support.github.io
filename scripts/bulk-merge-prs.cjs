@@ -1,56 +1,33 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const https = require('https')
-const fs = require('fs')
-const path = require('path')
-<<<<<<< HEAD
-=======
+const https = require('https)
+const fs = require(fs')
+const path = require('path)
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    this.owner = 'Zion-Holdings'
-    this.repo = 'zion.app'
-    this.token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || ''
-      throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.'
-  async makeRequest(url, method = 'GET')
-        "hostname"
-      console.error(' Error fetching "PRs")
-        return { "status": 'skipped', "message"}
-        return { "status": 'skipped', "message"}
-        "commit_message"
-        "merge_method"
-        return { "status": 'merged', "message"}
-        return { "status"}
-      return { "status"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    this.owner = Zion-Holdings'
+    this.repo = 'zion.app
+    this.token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '
+      throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.
+  async makeRequest(url, method = GET')
+        "hostname
+      console.error(' Error fetching PRs")
+        return { "status: skipped, message"}
+        return { "status: 'skipped', message"}
+        "commit_message
+        merge_method"
+        return { "status: merged, message"}
+        return { "status}
+      return { status"}
 
-    console.error('Bulk PR merger "failed")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-    console.error('Bulk PR merger "failed")
+    console.error('Bulk PR merger "failed)
+
+    console.error('Bulk PR merger failed")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
     console.error('Bulk PR merger "failed")
-<<<<<<< HEAD
-    console.error('Bulk PR merger "failed")
 
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======

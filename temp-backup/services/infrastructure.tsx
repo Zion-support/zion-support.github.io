@@ -6,7 +6,7 @@ interface InfrastructureProps {
   // Add props here as needed
 }
 
-export default function Infrastructure({ }: InfrastructureProps) {
+export default function Infrastructure({}: InfrastructureProps) {
   return (
     <div>
       <h1>Infrastructure</h1>

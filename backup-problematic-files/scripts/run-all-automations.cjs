@@ -10,14 +10,14 @@
         timeout: 120000, 
         ...options 
       });
-      return { success: true, stdout, stderr };
+      return { success: true, stdout, stderr }
     } catch (error) {
       this.log(`Command failed: ${command} - ${error.message}`);
       return { 
         success: false, 
-        stdout: error.stdout || "", 
+        stdout: error.stdout || ", 
         stderr: error.stderr || error.message 
-      };
+      }
     }
   }
 
@@ -37,32 +37,32 @@
   }
 
   async runAll() {
-    this.log('🚀 Starting comprehensive automation run...');
+    this.log('🚀 Starting comprehensive automation run...);
     
     // Ensure logs directory exists
-    const logsDir = path.join(__dirname, '..', 'automation', 'logs');
+    const logsDir = path.join(__dirname, ..', 'automation, logs');
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 
     // Define all automation scripts to run
     const automations = [
-      { name: 'Install Dependencies', command: 'npm install' },
-      { name: 'Type Check', command: 'npm run type-check' },
-      { name: 'Lint Fix', command: 'npm run lint:fix' },
-      { name: 'Build Application', command: 'npm run build' },
-      { name: 'Test Smoke', command: 'npm run test:smoke' },
-      { name: 'Security Audit', command: 'npm run security:audit' },
-      { name: 'Performance Monitor', command: 'npm run perf:monitor' },
-      { name: 'SEO Optimizer', command: 'npm run automation:seo' },
-      { name: 'Health Check', command: 'npm run automation:health' },
-      { name: 'Quick Improvements', command: 'node scripts/quick-app-improvements.cjs' },
-      { name: 'Performance Improver', command: 'node scripts/performance-improver.cjs' },
-      { name: 'Security Improver', command: 'node scripts/security-improver.cjs' },
-      { name: 'Git Status', command: 'git status' },
-      { name: 'Git Add', command: 'git add .' },
-      { name: 'Git Commit', command: 'git commit -m "Automated improvements and fixes"' },
-      { name: 'Git Push', command: 'git push origin main' }
+      { name: 'Install Dependencies, command: npm install' },
+      { name: 'Type Check, command: npm run type-check' },
+      { name: 'Lint Fix, command: npm run lint:fix' },
+      { name: 'Build Application, command: npm run build' },
+      { name: 'Test Smoke, command: npm run test:smoke' },
+      { name: 'Security Audit, command: npm run security:audit' },
+      { name: 'Performance Monitor, command: npm run perf:monitor' },
+      { name: 'SEO Optimizer, command: npm run automation:seo' },
+      { name: 'Health Check, command: npm run automation:health' },
+      { name: 'Quick Improvements, command: node scripts/quick-app-improvements.cjs' },
+      { name: 'Performance Improver, command: node scripts/performance-improver.cjs' },
+      { name: 'Security Improver, command: node scripts/security-improver.cjs' },
+      { name: 'Git Status, command: git status' },
+      { name: 'Git Add, command: git add .' },
+      { name: 'Git Commit, command: git commit -m Automated improvements and fixes"' },
+      { name: 'Git Push, command: git push origin main' }
     ];
 
     // Run each automation
@@ -73,7 +73,7 @@
     // Generate comprehensive report
     this.generateReport();
     
-    this.log('🎉 Comprehensive automation run completed');
+    this.log('🎉 Comprehensive automation run completed);
     this.log(`✅ Successful: ${this.results.success.length}`);
     this.log(`❌ Failed: ${this.results.failed.length}`);
     this.log(`⚠️ Warnings: ${this.results.warnings.length}`);
@@ -95,9 +95,9 @@
         failed: this.results.failed,
         warnings: this.results.warnings
       }
-    };
+    }
 
-    const reportFile = path.join(__dirname, '..', 'automation', 'logs', 'comprehensive-automation-report.json');
+    const reportFile = path.join(__dirname, ..', 'automation, logs', 'comprehensive-automation-report.json);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to ${reportFile}`);
     return report;
@@ -110,62 +110,51 @@ if (require.main === module) {
   const command = process.argv[2];
 
   switch (command) {
-    case "run":
+    case "run:
       runner.runAll().catch(error => {
-        console.error("Automation run failed: ", error);
+        console.error(Automation run failed: ", error);
         process.exit(1);
       });
       break;
-    case "report":
+    case "report:
       runner.generateReport();
       break;
     default:
-      console.log("Usage: node run-all-automations.cjs [run|report]");
+      console.log(Usage: node run-all-automations.cjs [run|report]");
       process.exit(1);
   }
 }
-<<<<<<< HEAD
-module.exports = RunAllAutomations;
-=======
 
-module.exports = RunAllAutomations;
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require(fs')
+const path = require('path)
+const { execSync } = require(child_process')
     this.reportsDir = path.join(this.projectRoot, 'all-automations-reports')
-        "encoding"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "type"
-        "priority"
-        "impact"
-        "type"
-        "priority"
+        "encoding
+        name"
+        "script
+        name"
+        "script
+        name"
+        "script
+        name"
+        "script
+        name"
+        "script
+        name"
+        "script
+        name"
+        "script
+        name"
+        "script
+        name"
+        "script
+        name"
+        "script
+        type"
+        "priority
+        impact"
+        "type
+        priority"
         "message"
-<<<<<<< HEAD
-        "impact"
-        "impact"
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

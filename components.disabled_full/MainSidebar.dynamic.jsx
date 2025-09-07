@@ -1,31 +1,28 @@
-const MainSidebar = dynamic(() => import("./MainSidebar"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainSidebar' ,';
+const MainSidebar = dynamic(() => import("./MainSidebar),{'; loading": () => <p>Loading...</p,>}) "export: default MainSidebar ,';
 </p>';
-</p>';
-</p>';
+</p>;
+</p>;
 </p>';
 ursor/automate-test-improve-and-merge-code-646c;
 </p>';
-</p>';
-</p>';
+</p>;
+</p>;
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
-</p>';
-</p>';
+</p>;
+</p>;
 ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
-</p>'</p>';
+</p></p>;
 </p>';
-const MainSidebar = dynamic(() => import("./MainSidebar"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainSidebar' ,'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+const MainSidebar = dynamic(() => import(./MainSidebar"),{'; "loading: () => <p>Loading...</p,>}) export": default MainSidebar ,'
+
 </p>'
-</p>'
-</p>'
+</p>
+</p>
 
 
 </p>'
@@ -33,12 +30,9 @@ const MainSidebar = dynamic(() => import("./MainSidebar"),{'; "loading": () => <
 
 </p>'
 
-</p>'
-</p>'
-<<<<<<< HEAD
-=======
-</p>'</p>'
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+</p>
+</p>
+
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 </p>'

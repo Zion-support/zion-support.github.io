@@ -1,9 +1,9 @@
 
-import {useState} from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "@/hooks/use-toast";
-export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
+import {useState} from "react;
+import {useAuth} from @/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client;
+import {toast} from @/hooks/use-toast";
+export type ApiKeyScope = 'jobs: read | jobs:write' | 'talent:read | quotes:write' | 'webhooks:manage;
   name: string;
   key_prefix: string;
   scopes: ApiKeyScope[];
@@ -13,7 +13,7 @@ export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:
   response_time_ms?: number
 }
 
-export function useApiKeys() {;
+export function useApiKeys() {
 
   const { user } = useAuth();
   const [keys, setKeys] = useState<ApiKey[]>([]);
@@ -26,10 +26,10 @@ export function useApiKeys() {;
   const getApiUrl = () => {
     // Using optional chaining ensures this function works both in the browser
     // (where import && import.meta.env is injected by Vite) and in Node environments
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+import { useState } from "react;
+import { useAuth } from @/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client;
+import { toast } from @/hooks/use-toast";
 export type ApiKeyScope = $2;
 export interface ApiKey {
   id: string,
@@ -65,7 +65,7 @@ export function useApiKeys() {
     return `${url}/functions/v1/api-key-manager`
   },
 
-  // Fetch user's API keys
+  // Fetch users API keys
   const fetchApiKeys = $2;
     setLoading($2);
     setError($2);
@@ -92,7 +92,6 @@ function useApiKeys() {
   const [loading, set_loading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
   const [newApiKey, setNewApiKey] = useState < string | null>(null);
-;
   // Helper to get the base URL for API functions;
   const getApiUrl = () =>: any {
     // Using optional chaining ensures this function works both in the browser;
@@ -102,8 +101,7 @@ function useApiKeys() {
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL;
     return `${url}/functions / v1 / api - key - manager`;
   }
-;
-  // Fetch user's API keys;
+  // Fetch users API keys;
   const fetchApiKeys = async () => {
     // Check condition
 if (return) {
@@ -111,38 +109,35 @@ if (return) {
 }
     set_loading (true);
     set_error (null);
-;
     try {
       const { data: { session } } = await supabase.auth.get_session ();
       // Check condition
 if ( {) {
   $2
 }
-        set_error ("Authentication required");
+        set_error ("Authentication required);
         return;
       }
       const response = await fetch (`${getApiUrl ()}/keys`, {
-        method: 'GET',
+        method: GET',
         headers: {
-          'Authorization': `Bearer ${session.access_token}`;
-          'Content - Type': 'application / json';
+          'Authorization: `Bearer ${session.access_token}`;
+          Content - Type': 'application / json;
         }
       });
-;
       const result = await response.json ();
-;
       // Check condition
 if ( {) {
   $2
 }
-          'Authorization': `Bearer ${session.access_token}`;
-          'Content-Type': 'application/json'
+          Authorization': `Bearer ${session.access_token}`;
+          'Content-Type: application/json'
         }
       }),
 
       const result = await response.json($2);
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to fetch API keys')
+        throw new Error(result.error || 'Failed to fetch API keys)
       }
 
       setKeys(result.keys || [])
@@ -150,9 +145,9 @@ if ( {) {
       console.error($2);
       setError($2);
       toast({
-        variant: "destructive",
-        title: "Error fetching API keys",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        variant: destructive",
+        title: "Error fetching API keys,
+        description: err instanceof Error ? err.message : An unknown error occurred'})
     } finally {
       setLoading(false)
     }
@@ -162,10 +157,10 @@ if ( {) {
   const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {
     if (!user) return,
     
-        throw new Error (result.error || 'Failed to fetch API keys');      setKeys(result.keys || [])
+        throw new Error (result.error || 'Failed to fetch API keys);      setKeys(result.keys || [])
     } catch (err) {
-      console.error('Error fetching API keys:', err),
-      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      console.error(Error fetching API keys:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred),
       toast({          name;
           scopes,
           expiresAt: expiresAt ? expiresAt && expiresAt.toISOString() : null
@@ -176,54 +171,52 @@ if ( {) {
       setKeys(prev => [{ ...result, key: undefined }, ...prev]);
       // Store the actual key value temporarily so it can be displayed once
       toast({
-        title: "API Key Created"
-        description: "Your new API key has been generated. Save it now, you won't be able to see it again."});      toast({
-        title: "API Key Created"
-        description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
+        title: API Key Created"
+        description: "Your new API key has been generated. Save it now, you wont be able to see it again.});      toast({
+        title: API Key Created"
+        description: "Your new API key has been generated. Save it now, you won't be able to see it again.});
 
       toast({
-        title: "API Key Created"
-        description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
-;
+        title: API Key Created"
+        description: "Your new API key has been generated. Save it now, you won't be able to see it again.});
       setKeys(result.keys || []);
-    } catch (err) {;
-      console.error('Error fetching API keys:', err),;
-      setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
-      toast({;
-        variant: "destructive",;
-        title: "Error fetching API keys",,
-  description: err instanceof Error ? err.message : 'An unknown error occurred'});
-    } finally {;
+    } catch (err) {
+      console.error(Error fetching API keys:, err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+        variant: destructive",
+        title: "Error fetching API keys,,
+  description: err instanceof Error ? err.message : An unknown error occurred});
+    } finally {
       setLoading(false);
     }
-  },;
+  },
   // Create new API key;
-  const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {;
-    if (!user) return,;
-    setLoading(true),;
-    setError(null),;
-    setNewApiKey(null),;
-    try {;
-      const { data: { session } } = await supabase.auth.getSession(),;
-      if (!session) {;
-        setError("Authentication required"),;
+  const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {
+    if (!user) return,
+    setLoading(true),
+    setError(null),
+    setNewApiKey(null),
+    try {
+      const { data: { session } } = await supabase.auth.getSession(),
+      if (!session) {
+        setError(Authentication required"),
         return;
       }
-;
-      const response = await fetch(`${getApiUrl()}/create`, {;
-        method: 'POST',;
-        headers: {;
-          'Authorization': `Bearer ${session.access_token}`,;
-          'Content-Type': 'application/json';
-        },;
-        body: JSON.stringify({;
-          name,;
-          scopes,;
+      const response = await fetch(`${getApiUrl()}/create`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${session.access_token}`,
+          'Content-Type': application/json;
+        },
+        body: JSON.stringify({
+          name,
+          scopes,
           expiresAt: expiresAt ? expiresAt.toISOString() : null;
         });
-      }),;
-      const result = await response.json(),;
-      if (!response.ok) {;
+      }),
+      const result = await response.json(),
+      if (!response.ok) {
         throw new Error(result.error || 'Failed to create API key');
       }
 
@@ -234,8 +227,8 @@ if ( {) {
       setNewApiKey(result.key),
       
       toast({
-        title: "API Key Created",
-        description: "Your new API key has been generated. Save it now, you won't be able to see it again."}),
+        title: "API Key Created,
+        description: Your new API key has been generated. Save it now, you wont be able to see it again."}),
     setLoading($2);
     setError($2);
     setNewApiKey($2);
@@ -246,10 +239,10 @@ if ( {) {
         return
       }
       const response = await fetch(`${getApiUrl()}/create`, {
-        method: 'POST'
+        method: POST'
         headers: {
-          'Authorization': `Bearer ${session.access_token}`;
-          'Content-Type': 'application/json'
+          'Authorization: `Bearer ${session.access_token}`;
+          Content-Type': 'application/json
         }
         body: JSON.stringify({
           name;
@@ -260,7 +253,7 @@ if ( {) {
 
       const result = await response.json($2);
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to create API key')
+        throw new Error(result.error || Failed to create API key')
       }
       // Add the new key to the list
       setKeys($2);
@@ -272,9 +265,9 @@ if ( {) {
       console.error($2);
       setError($2);
       toast({
-        variant: "destructive",
-        title: "Error creating API key",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        variant: "destructive,
+        title: Error creating API key",
+        description: err instanceof Error ? err.message : 'An unknown error occurred})
     } finally {
       setLoading(false)
     }
@@ -295,61 +288,60 @@ if ( {) {
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
-        setError("Authentication required");
+        setError("Authentication required);
         return
 
-        };
+        }
         body: JSON && JSON.stringify({ keyId })
       });
 
       const result = await response && response.json();
       
       if (!response && response.ok) {
-        throw new Error(result && result.error || 'Failed to regenerate API key')
+        throw new Error(result && result.error || Failed to regenerate API key')
 
-      };
+      }
       // Add the new key to the list;
-      setKeys(prev => [{ ...result, key: undefined }, ...prev]),;
+      setKeys(prev => [{ ...result, key: undefined }, ...prev]),
       // Store the actual key value temporarily so it can be displayed once;
-      setNewApiKey(result.key),;
-      toast({;
-        title: "API Key Created",,
-  description: "Your new API key has been generated. Save it now, you won't be able to see it again."}),;
+      setNewApiKey(result.key),
+      toast({
+        title: API Key Created",,
+  description: "Your new API key has been generated. Save it now, you won't be able to see it again.}),
       return result;
-    } catch (err) {;
-      console.error('Error creating API key:', err),;
-      setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
-      toast({;
-        variant: "destructive",;
-        title: "Error creating API key",,
-  description: err instanceof Error ? err.message : 'An unknown error occurred'});
-    } finally {;
+    } catch (err) {
+      console.error(Error creating API key:, err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+        variant: destructive",
+        title: "Error creating API key,,
+  description: err instanceof Error ? err.message : An unknown error occurred});
+    } finally {
       setLoading(false);
     }
-  },;
+  },
   // Regenerate API key;
-  const regenerateApiKey = async (keyId: string) => {;
-    if (!user) return,;
-    setLoading(true),;
-    setError(null),;
-    setNewApiKey(null),;
-    try {;
-      const { data: { session } } = await supabase.auth.getSession(),;
-      if (!session) {;
-        setError("Authentication required"),;
+  const regenerateApiKey = async (keyId: string) => {
+    if (!user) return,
+    setLoading(true),
+    setError(null),
+    setNewApiKey(null),
+    try {
+      const { data: { session } } = await supabase.auth.getSession(),
+      if (!session) {
+        setError(Authentication required"),
         return;
       }
-;
-      const response = await fetch(`${getApiUrl()}/regenerate`, {;
-        method: 'POST',;
-        headers: {;
-          'Authorization': `Bearer ${session.access_token}`,;
-          'Content-Type': 'application/json';
-        },;
+      const response = await fetch(`${getApiUrl()}/regenerate`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${session.access_token}`,
+          'Content-Type': application/json;
+        },
         body: JSON.stringify({ keyId });
-      }),;
-      const result = await response.json(),;
-      if (!response.ok) {;
+      }),
+      const result = await response.json(),
+      if (!response.ok) {
         throw new Error(result.error || 'Failed to regenerate API key');
       }
 
@@ -365,7 +357,7 @@ if ( {) {
       
 
       toast({
-        title: "API Key Regenerated"
+        title: "API Key Regenerated
   },
 
   // Regenerate API key
@@ -380,17 +372,17 @@ if ( {) {
         return
       }
       const response = await fetch(`${getApiUrl()}/regenerate`, {
-        method: 'POST'
+        method: POST
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
-          'Content-Type': 'application/json'
+          Content-Type: 'application/json'
         }
         body: JSON.stringify({ keyId })
       }),
 
       const result = await response.json($2);
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to regenerate API key')
+        throw new Error(result.error || Failed to regenerate API key)
       }
       // Update the key in the list
       setKeys(prev => prev.map(key => 
@@ -405,8 +397,8 @@ if ( {) {
       console.error($2);
       setError($2);
       toast({
-        variant: "destructive",
-        title: "Error regenerating API key",
+        variant: destructive",
+        title: "Error regenerating API key,
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
@@ -414,18 +406,17 @@ if ( {) {
   },
 
   // Revoke API key
-        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});      ));
+        description: Your API key has been regenerated. Save it now, you wont be able to see it again."});      ));
       // Store the new key value
       toast({
-        title: "API Key Regenerated"
-        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});      return result
+        title: "API Key Regenerated
+        description: Your API key has been regenerated. Save it now, you wont be able to see it again."});      return result
     } catch (err) {
       console && console.error('Error revoking API key:', err);
-      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
+      setError(err instanceof Error ? err && err.message : An unknown error occurred);
       toast({
-        variant: "destructive",
-        title: "Error regenerating API key",
-    } finally {
+        variant: "destructive,
+        title: Error regenerating API key"} finally {
       setLoading(false)
     }
 
@@ -442,7 +433,7 @@ if ( {) {
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
-        setError("Authentication required");
+        setError("Authentication required);
         return
       }
       const response = await fetch (
@@ -455,7 +446,7 @@ if ( {) {
       const result = await response && response.json();
       
       if (!response && response.ok) {
-        throw new Error(result && result.error || 'Failed to revoke API key')
+        throw new Error(result && result.error || Failed to revoke API key)
 
       }        throw new Error(result && result.error || 'Failed to fetch API logs')
       }
@@ -465,8 +456,7 @@ if ( {) {
 
       setLogs(result.logs || []);
       setTotalLogs(result.count || 0);      
-        variant: "destructive";
-;
+        variant: destructive";
   // Revoke API key;
   const revokeApiKey = async (key_id: string) => {
     // Check condition
@@ -481,42 +471,38 @@ if (return) {
 if ( {) {
   $2
 }
-        set_error ("Authentication required");
+        set_error ("Authentication required);
         return;
       }
       const response = await fetch (`${getApiUrl ()}/revoke`, {
-        method: 'POST',
+        method: POST,
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
-          'Content - Type': 'application / json';
+          Content - Type: 'application / json';
         }
         body: JSON.stringify ({ key_id });
       });
-;
       const result = await response.json ();
-;
       // Check condition
 if ( {) {
   $2
 }
-        throw new Error (result.error || 'Failed to revoke API key');
+        throw new Error (result.error || Failed to revoke API key);
       }
       // Update the key's active status in the list;
       set_keys (prev => prev.map (key =>;
         key.id === key_id ? { ...key, is_active: false } : key));
-;
       toast ({
-        title: "API Key Revoked",
-        description: "The API key has been revoked successfully."});
-;
+        title: API Key Revoked",
+        description: "The API key has been revoked successfully.});
       return result;
     } catch (err) {
-      console.error ('Error revoking API key:', err);
-      set_error (err instanceof Error ? err.message : 'An unknown error occurred');
+      console.error ('Error revoking API key:, err);
+      set_error (err instanceof Error ? err.message : An unknown error occurred');
       toast ({
-        variant: "destructive";
-        title: "Error revoking API key",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+        variant: destructive";
+        title: "Error revoking API key,
+        description: err instanceof Error ? err.message : 'An unknown error occurred});
     } finally {
       set_loading (false);
     }
@@ -531,17 +517,17 @@ if ( {) {
         return
       }
       const response = await fetch(`${getApiUrl()}/revoke`, {
-        method: 'POST'
+        method: POST'
         headers: {
-          'Authorization': `Bearer ${session.access_token}`;
-          'Content-Type': 'application/json'
+          'Authorization: `Bearer ${session.access_token}`;
+          Content-Type': 'application/json
         }
         body: JSON.stringify({ keyId })
       }),
 
       const result = await response.json($2);
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to revoke API key')
+        throw new Error(result.error || Failed to revoke API key')
       }
       // Update the key's active status in the list
       setKeys(prev => prev.map(key => 
@@ -554,15 +540,15 @@ if ( {) {
       console.error($2);
       setError($2);
       toast({
-        variant: "destructive",
-        title: "Error revoking API key",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        variant: destructive",
+        title: "Error revoking API key,
+        description: err instanceof Error ? err.message : An unknown error occurred})
     } finally {
       setLoading(false)
     }
         {
           method: 'GET'
-          headers: {        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+          headers: {        description: err instanceof Error ? err.message : An unknown error occurred})
     } finally {
       setLoading(false)
     }
@@ -579,7 +565,7 @@ if ( {) {
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
-        setError("Authentication required");
+        setError(Authentication required");
         return
       const result = await response && response.json();
       
@@ -590,62 +576,61 @@ if ( {) {
       setLogs(result && result.logs || []);
       setTotalLogs(result && result.count || 0);
 =======;
-      // Update the key's active status in the list;
+      // Update the keys active status in the list;
       setKeys(prev => prev.map(key =>;
         key.id === keyId ? { ...key, is_active: false } : key;
-      )),;
-      toast({;
-        title: "API Key Revoked",,
-  description: "The API key has been revoked successfully."}),;
+      )),
+      toast({
+        title: "API Key Revoked,,
+  description: The API key has been revoked successfully."}),
       return result;
-    } catch (err) {;
-      console.error('Error revoking API key:', err),;
-      setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
-      toast({;
-        variant: "destructive",;
-        title: "Error revoking API key",,
-  description: err instanceof Error ? err.message : 'An unknown error occurred'});
-    } finally {;
+    } catch (err) {
+      console.error(Error revoking API key:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred),
+      toast({
+        variant: "destructive,
+        title: Error revoking API key",,
+  description: err instanceof Error ? err.message : An unknown error occurred'});
+    } finally {
       setLoading(false);
     }
-  },;
+  },
   // Fetch API usage logs;
-  const fetchApiLogs = async (limit = 50, offset = 0) => {;
-    if (!user) return,;
-    setLoading(true),;
-    setError(null),;
-    try {;
-      const { data: { session } } = await supabase.auth.getSession(),;
-      if (!session) {;
-        setError("Authentication required"),;
+  const fetchApiLogs = async (limit = 50, offset = 0) => {
+    if (!user) return,
+    setLoading(true),
+    setError(null),
+    try {
+      const { data: { session } } = await supabase.auth.getSession(),
+      if (!session) {
+        setError("Authentication required),
         return;
       }
-;
       const response = await fetch(;
-        `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`,;
-        {;
-          method: 'GET',;
-          headers: {;
-            'Authorization': `Bearer ${session.access_token}`,;
-            'Content-Type': 'application/json';
+        `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`,
+        {
+          method: 'GET,
+          headers: {
+            Authorization': `Bearer ${session.access_token}`,
+            'Content-Type: application/json';
           }
         }
-      ),;
-      const result = await response.json(),;
-      if (!response.ok) {;
-        throw new Error(result.error || 'Failed to fetch API logs');
+      ),
+      const result = await response.json(),
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to fetch API logs);
       }
 
       setLogs(result.logs || []),
       setTotalLogs(result.count || 0),
 
       
-          method: 'GET'
+          method: GET'
           headers: {
       return result
     } catch (err) {
-      console && console.error('Error fetching API logs:', err);
-      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
+      console && console.error('Error fetching API logs:, err);
+      setError(err instanceof Error ? err && err.message : An unknown error occurred');
       toast({    error;
     newApiKey;
     fetchApiKeys;
@@ -671,17 +656,17 @@ if ( {) {
 
       const response = $2;
         {
-          method: 'GET'
+          method: 'GET
           headers: {
-            'Authorization': `Bearer ${session.access_token}`;
-            'Content-Type': 'application/json'
+            Authorization': `Bearer ${session.access_token}`;
+            'Content-Type: application/json'
           }
         }
       ),
 
       const result = await response.json($2);
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to fetch API logs')
+        throw new Error(result.error || 'Failed to fetch API logs)
       }
 
       setLogs($2);
@@ -691,34 +676,33 @@ if ( {) {
       console.error($2);
       setError($2);
       toast({
-        variant: "destructive",
-        title: "Error fetching API logs",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        variant: destructive",
+        title: "Error fetching API logs,
+        description: err instanceof Error ? err.message : An unknown error occurred'})
     } finally {
       setLoading(false)
-        title: "Error fetching API logs",,
+        title: Error fetching API logs",,
   description: err instanceof Error ? err.message : 'An unknown error occurred'});
-    } finally {;
+    } finally {
       setLoading(false);
     }
-  },;
-  return {;
-    keys,;
-    logs,;
-    totalLogs,;
-    loading,;
-    error,;
-    newApiKey,;
-    fetchApiKeys,;
-    createApiKey,;
-    regenerateApiKey,;
+  },
+  return {
+    keys,
+    logs,
+    totalLogs,
+    loading,
+    error,
+    newApiKey,
+    fetchApiKeys,
+    createApiKey,
+    regenerateApiKey,
     revokeApiKey;
     fetchApiLogs;
     clearNewApiKey: () => setNewApiKey(null);
 
   }
 }
-;
   }
 }
     }
@@ -739,4 +723,3 @@ if ( {) {
     clearNewApiKey: () => setNewApiKey(null)
   }
 }
-;

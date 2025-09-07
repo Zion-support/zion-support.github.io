@@ -5,34 +5,6 @@ const createJestConfig = nextJest({
   dir: './',
 })
 
-
-module.exports = {
-
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
-  },
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', {
-      presets: [
-        ['@babel/preset-env', { targets: { node: 'current' } }],
-        ['@babel/preset-react', { runtime: 'automatic' }],
-        '@babel/preset-typescript'
-      ]
-    }]
-  },
-  testMatch: [
-    '<rootDir>/__tests__/**/*.(js|jsx|ts|tsx)',
-    '<rootDir>/**/*.(test|spec).(js|jsx|ts|tsx)'
-  ],
-  collectCoverageFrom: [
-    'components/**/*.{js,jsx,ts,tsx}',
-    'pages/**/*.{js,jsx,ts,tsx}',
-    'app/**/*.{js,jsx,ts,tsx}',
-    'utils/**/*.{js,jsx,ts,tsx}',
-    '!**/node_modules/**',
-    '!**/*.d.ts'
-  ],
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -104,13 +76,6 @@ const customJestConfig = {
     '<rootDir>/src/',
     '<rootDir>/automation/',
     '<rootDir>/automation_backup/',
-
-module.exports = {
-  preset: "ts-jest",
-  testEnvironment: "jsdom",
-  setupFilesAfterEnv: [
-    "@testing-library/jest-dom",
-    "<rootDir>/src/test/setup.ts"
     '<rootDir>/data_backup/',
     '<rootDir>/pm2-automation/',
     '<rootDir>/scripts/',
@@ -120,6 +85,7 @@ module.exports = {
   ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
   },
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',

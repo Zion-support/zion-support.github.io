@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
@@ -14,142 +6,125 @@
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Check, Star, ArrowRight, Zap, Shield, Users } from 'lucide-react';
+import React from 'react;
+import Head from next/head';
+import Link from 'next/link;
+import { Check, Star, ArrowRight, Zap, Shield, Users } from lucide-react';
 
 export default function Pricing() {
   const plans = [
     {
-      name: 'Starter',
-      price: '$2,999',
-      period: 'per month',
-      description: 'Perfect for small businesses and startups',
+      name: 'Starter,
+      price: $2,999',
+      period: 'per month,
+      description: Perfect for small businesses and startups',
       features: [
-        'Basic AI Integration',
-        'Cloud Infrastructure Setup',
-        'Monthly Support (8 hours)',
-        'Basic Security Features',
-        'Email Support',
-        'Standard SLA (99.5%)',
-      ],
+        'Basic AI Integration,
+        Cloud Infrastructure Setup',
+        'Monthly Support (8 hours),
+        Basic Security Features',
+        'Email Support,
+        Standard SLA (99.5%)'],
       popular: false,
-      cta: 'Get Started',
-      href: '/contact',
-    },
+      cta: 'Get Started,
+      href: /contact'},
     {
-      name: 'Professional',
-      price: '$7,999',
-      period: 'per month',
-      description: 'Ideal for growing businesses',
+      name: 'Professional,
+      price: $7,999',
+      period: 'per month,
+      description: Ideal for growing businesses',
       features: [
-        'Advanced AI Solutions',
-        'Custom Development',
-        'Monthly Support (20 hours)',
-        'Enhanced Security & Compliance',
-        'Priority Support',
-        'Premium SLA (99.9%)',
-        'Dedicated Account Manager',
-        'Custom Integrations',
-      ],
+        'Advanced AI Solutions,
+        Custom Development',
+        'Monthly Support (20 hours),
+        Enhanced Security & Compliance',
+        'Priority Support,
+        Premium SLA (99.9%)',
+        'Dedicated Account Manager,
+        Custom Integrations'],
       popular: true,
-      cta: 'Most Popular',
-      href: '/contact',
-    },
+      cta: 'Most Popular,
+      href: /contact'},
     {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: 'pricing',
-      description: 'Tailored solutions for large organizations',
+      name: 'Enterprise,
+      price: Custom',
+      period: 'pricing,
+      description: Tailored solutions for large organizations',
       features: [
-        'Full AI Suite Implementation',
-        'Custom Enterprise Solutions',
-        'Unlimited Support',
-        'Enterprise Security & Compliance',
-        '24/7 Phone Support',
-        'Enterprise SLA (99.99%)',
-        'Dedicated Team',
-        'Custom Training & Documentation',
-        'Multi-region Deployment',
-        'Advanced Analytics & Reporting',
-      ],
+        'Full AI Suite Implementation,
+        Custom Enterprise Solutions',
+        'Unlimited Support,
+        Enterprise Security & Compliance',
+        '24/7 Phone Support,
+        Enterprise SLA (99.99%)',
+        'Dedicated Team,
+        Custom Training & Documentation',
+        'Multi-region Deployment,
+        Advanced Analytics & Reporting'],
       popular: false,
-      cta: 'Contact Sales',
-      href: '/contact',
-    },
-  ];
+      cta: 'Contact Sales,
+      href: /contact'}];
 
   const addOns = [
     {
-      name: 'Additional Support Hours',
-      price: '$150',
-      period: 'per hour',
-      description: 'Extra support hours for your project needs',
-    },
+      name: 'Additional Support Hours,
+      price: $150',
+      period: 'per hour,
+      description: Extra support hours for your project needs'},
     {
-      name: 'Priority Support',
-      price: '$500',
-      period: 'per month',
-      description: 'Faster response times and dedicated support',
-    },
+      name: 'Priority Support,
+      price: $500',
+      period: 'per month,
+      description: Faster response times and dedicated support'},
     {
-      name: 'Custom Integrations',
-      price: '$2,000',
-      period: 'per integration',
-      description: 'Custom third-party integrations and APIs',
-    },
+      name: 'Custom Integrations,
+      price: $2,000',
+      period: 'per integration,
+      description: Custom third-party integrations and APIs'},
     {
-      name: 'Training & Documentation',
-      price: '$1,000',
-      period: 'per session',
-      description: 'Team training and comprehensive documentation',
-    },
-  ];
+      name: 'Training & Documentation,
+      price: $1,000',
+      period: 'per session,
+      description: Team training and comprehensive documentation'}];
 
   const faqs = [
     {
-      question: 'Can I change my plan at any time?',
+      question: 'Can I change my plan at any time?,
       answer:
-        'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and take effect immediately.',
-    },
+        Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and take effect immediately.'},
     {
-      question: 'What is included in the support hours?',
+      question: 'What is included in the support hours?,
       answer:
-        'Support hours include bug fixes, minor updates, technical assistance, and general maintenance tasks.',
-    },
+        Support hours include bug fixes, minor updates, technical assistance, and general maintenance tasks.'},
     {
-      question: 'Do you offer custom pricing for large projects?',
+      question: 'Do you offer custom pricing for large projects?,
       answer:
-        'Yes, we offer custom pricing for enterprise clients and large-scale projects. Contact us for a personalized quote.',
-    },
+        Yes, we offer custom pricing for enterprise clients and large-scale projects. Contact us for a personalized quote.'},
     {
-      question: 'What payment methods do you accept?',
+      question: 'What payment methods do you accept?,
       answer:
-        'We accept all major credit cards, bank transfers, and can accommodate enterprise billing arrangements.',
-    },
-  ];
+        We accept all major credit cards, bank transfers, and can accommodate enterprise billing arrangements.'}];
 
   return (
     <>
       <Head>
         <title>Pricing - Zion Tech Group</title>
         <meta
-          name="description"
-          content="Transparent pricing for our technology services. Choose the plan that fits your business needs and budget."
+          name="description
+          content=Transparent pricing for our technology services. Choose the plan that fits your business needs and budget."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport content=width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-white>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold text-gray-900 mb-6">
+        <section className=bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
+            <div className=text-center">
+              <h1 className="text-4xl font-bold text-gray-900 mb-6>
                 Simple, Transparent Pricing
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className=text-xl text-gray-600 max-w-3xl mx-auto">
                 Choose the plan that fits your business needs. All plans include
                 our core services with the option to add additional features.
               </p>
@@ -158,45 +133,45 @@ export default function Pricing() {
         </section>
 
         {/* Pricing Plans */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section className="py-20>
+          <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8>
               {plans.map((plan, index) => (
                 <div
                   key={index}
                   className={`relative bg-white border rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow ${
                     plan.popular
-                      ? 'border-blue-500 ring-2 ring-blue-500'
-                      : 'border-gray-200'
+                      ? 'border-blue-500 ring-2 ring-blue-500
+                      : border-gray-200'
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
+                    <div className=absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center>
+                        <Star className=w-4 h-4 mr-1" />
                         Most Popular
                       </span>
                     </div>
                   )}
 
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <div className="text-center mb-8>
+                    <h3 className=text-2xl font-bold text-gray-900 mb-2">
                       {plan.name}
                     </h3>
-                    <p className="text-gray-600 mb-4">{plan.description}</p>
-                    <div className="mb-4">
-                      <span className="text-4xl font-bold text-gray-900">
+                    <p className="text-gray-600 mb-4>{plan.description}</p>
+                    <div className=mb-4">
+                      <span className="text-4xl font-bold text-gray-900>
                         {plan.price}
                       </span>
-                      <span className="text-gray-600 ml-2">{plan.period}</span>
+                      <span className=text-gray-600 ml-2">{plan.period}</span>
                     </div>
                   </div>
 
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-4 mb-8>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                      <li key={featureIndex} className=flex items-start">
+                        <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0 />
+                        <span className=text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -205,8 +180,8 @@ export default function Pricing() {
                     href={plan.href}
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
                       plan.popular
-                        ? 'bg-blue-600 text-white hover:bg-blue-700'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                        ? 'bg-blue-600 text-white hover:bg-blue-700
+                        : bg-gray-100 text-gray-900 hover:bg-gray-200'
                     }`}
                   >
                     {plan.cta}
@@ -218,34 +193,34 @@ export default function Pricing() {
         </section>
 
         {/* Add-ons Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <section className="py-20 bg-gray-50>
+          <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16>
+              <h2 className=text-3xl font-bold text-gray-900 mb-4">
                 Add-on Services
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600>
                 Enhance your plan with additional services tailored to your
                 specific needs.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {addOns.map((addOn, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"
+                  className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm
                 >
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h3 className=text-lg font-semibold text-gray-900 mb-2">
                     {addOn.name}
                   </h3>
-                  <div className="mb-3">
-                    <span className="text-2xl font-bold text-blue-600">
+                  <div className="mb-3>
+                    <span className=text-2xl font-bold text-blue-600">
                       {addOn.price}
                     </span>
-                    <span className="text-gray-600 ml-1">{addOn.period}</span>
+                    <span className="text-gray-600 ml-1>{addOn.period}</span>
                   </div>
-                  <p className="text-gray-600 text-sm">{addOn.description}</p>
+                  <p className=text-gray-600 text-sm">{addOn.description}</p>
                 </div>
               ))}
             </div>
@@ -253,52 +228,52 @@ export default function Pricing() {
         </section>
 
         {/* Features Comparison */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <section className="py-20>
+          <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16>
+              <h2 className=text-3xl font-bold text-gray-900 mb-4">
                 Why Choose Our Services?
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600>
                 We provide comprehensive technology solutions with unmatched
                 support and expertise.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Zap className="w-8 h-8 text-blue-600" />
+            <div className=grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center>
+                <div className=bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Zap className="w-8 h-8 text-blue-600 />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className=text-xl font-semibold text-gray-900 mb-3">
                   Fast Delivery
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600>
                   Quick turnaround times without compromising on quality or
                   security.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Shield className="w-8 h-8 text-blue-600" />
+              <div className=text-center">
+                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center>
+                  <Shield className=w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3>
                   Enterprise Security
                 </h3>
-                <p className="text-gray-600">
+                <p className=text-gray-600">
                   Bank-level security and compliance with industry standards.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Users className="w-8 h-8 text-blue-600" />
+              <div className="text-center>
+                <div className=bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Users className="w-8 h-8 text-blue-600 />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className=text-xl font-semibold text-gray-900 mb-3">
                   Expert Support
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600>
                   Dedicated support from our team of technology experts.
                 </p>
               </div>
@@ -307,27 +282,27 @@ export default function Pricing() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <section className=py-20 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8>
+            <div className=text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4>
                 Frequently Asked Questions
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className=text-lg text-gray-600">
                 Have questions about our pricing? We've got answers.
               </p>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-8>
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-gray-200 rounded-lg p-6"
+                  className=bg-white border border-gray-200 rounded-lg p-6"
                 >
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3>
                     {faq.question}
                   </h3>
-                  <p className="text-gray-600">{faq.answer}</p>
+                  <p className=text-gray-600">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -335,25 +310,25 @@ export default function Pricing() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600>
+          <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6>
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className=text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Contact us today for a free consultation and custom quote tailored
               to your specific needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center>
               <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                href=/contact"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors
               >
                 Get Free Quote
               </Link>
               <Link
-                href="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                href=/services"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors
               >
                 View Our Services
               </Link>
@@ -364,67 +339,61 @@ export default function Pricing() {
     </>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 =======
-import React from 'react';
+import React from react;
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from next/link;
 import { Check, Star, ArrowRight, Zap, Shield, Users  } from 'lucide-react';
 export default function Pricing() {const plans = [;
-    {name: 'Starter',price: '$2,999',period: 'per month',description: 'Perfect for small businesses and startups',features: [;
-        'Basic AI Integration','Cloud Infrastructure Setup','Monthly Support (8 hours)','Basic Security Features','Email Support','Standard SLA (99.5%)';
-      ],popular: false,cta: 'Get Started',href: '/contact';
-    },{name: 'Professional',price: '$7,999',period: 'per month',description: 'Ideal for growing businesses',features: [;
-        'Advanced AI Solutions','Custom Development','Monthly Support (20 hours)','Enhanced Security & Compliance','Priority Support','Premium SLA (99.9%)','Dedicated Account Manager','Custom Integrations';
-      ],popular: true,cta: 'Most Popular',href: '/contact';
-    },{name: 'Enterprise',price: 'Custom',period: 'pricing',description: 'Tailored solutions for large organizations',features: [;
-        'Full AI Suite Implementation','Custom Enterprise Solutions','Unlimited Support','Enterprise Security & Compliance','24/7 Phone Support','Enterprise SLA (99.99%)','Dedicated Team','Custom Training & Documentation','Multi-region Deployment','Advanced Analytics & Reporting';
-      ],popular: false,cta: 'Contact Sales',href: '/contact';
+    {name: Starter,price: '$2,999',period: per month,description: 'Perfect for small businesses and startups',features: [;
+        Basic AI Integration,'Cloud Infrastructure Setup',Monthly Support (8 hours),'Basic Security Features',Email Support,'Standard SLA (99.5%)';
+      ],popular: false,cta: Get Started,href: '/contact';
+    },{name: Professional,price: '$7,999',period: per month,description: 'Ideal for growing businesses',features: [;
+        Advanced AI Solutions,'Custom Development',Monthly Support (20 hours),'Enhanced Security & Compliance',Priority Support,'Premium SLA (99.9%)',Dedicated Account Manager,'Custom Integrations';
+      ],popular: true,cta: Most Popular,href: '/contact';
+    },{name: Enterprise,price: 'Custom',period: pricing,description: 'Tailored solutions for large organizations',features: [;
+        Full AI Suite Implementation,'Custom Enterprise Solutions',Unlimited Support,'Enterprise Security & Compliance',24/7 Phone Support,'Enterprise SLA (99.99%)',Dedicated Team,'Custom Training & Documentation',Multi-region Deployment,'Advanced Analytics & Reporting';
+      ],popular: false,cta: Contact Sales,href: '/contact';
     }
   ];const addOns = [;
-    {name: 'Additional Support Hours',price: '$150',period: 'per hour',description: 'Extra support hours for your project needs';
-    },{name: 'Priority Support',price: '$500',period: 'per month',description: 'Faster response times and dedicated support';
-    },{name: 'Custom Integrations',price: '$2,000',period: 'per integration',description: 'Custom third-party integrations and APIs';
-    },{name: 'Training & Documentation',price: '$1,000',period: 'per session',description: 'Team training and comprehensive documentation';
+    {name: Additional Support Hours,price: '$150',period: per hour,description: 'Extra support hours for your project needs';
+    },{name: Priority Support,price: '$500',period: per month,description: 'Faster response times and dedicated support';
+    },{name: Custom Integrations,price: '$2,000',period: per integration,description: 'Custom third-party integrations and APIs';
+    },{name: Training & Documentation,price: '$1,000',period: per session,description: 'Team training and comprehensive documentation';
     }
   ];const faqs = [;
-    {question: 'Can I change my plan at any time?',answer:;
+    {question: Can I change my plan at any time?,answer:;
         'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and take effect immediately.';
-    },{question: 'What is included in the support hours?',answer:;
+    },{question: What is included in the support hours?,answer:;
         'Support hours include bug fixes, minor updates, technical assistance, and general maintenance tasks.';
-    },{question: 'Do you offer custom pricing for large projects?',answer:;
+    },{question: Do you offer custom pricing for large projects?,answer:;
         'Yes, we offer custom pricing for enterprise clients and large-scale projects. Contact us for a personalized quote.';
-    },{question: 'What payment methods do you accept?',answer:;
+    },{question: What payment methods do you accept?,answer:;
         'We accept all major credit cards, bank transfers, and can accommodate enterprise billing arrangements.';
     }
   ];return (<>;
       <Head>;
         <title>Pricing - Zion Tech Group</title>;
         <meta;
-          name="description";
-          content="Transparent pricing for our technology services. Choose the plan that fits your business needs and budget.";
+          name=description";
+          content="Transparent pricing for our technology services. Choose the plan that fits your business needs and budget.;
         />;
-        <meta name="viewport" content="width=device-width, initial-scale=1" />;
+        <meta name=viewport" content="width=device-width, initial-scale=1 />;
       </Head>;
-      <main className="min-h-screen bg-white">;
+      <main className=min-h-screen bg-white">;
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="text-center">;
-              <h1 className="text-4xl font-bold text-gray-900 mb-6">;
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20>;
+          <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="text-center>;
+              <h1 className=text-4xl font-bold text-gray-900 mb-6">;
                 Simple, Transparent Pricing;
               </h1>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto>;
                 Choose the plan that fits your business needs. All plans include;
                 our core services with the option to add additional features.;
               </p>;
@@ -432,45 +401,45 @@ export default function Pricing() {const plans = [;
           </div>;
         </section>;
         {/* Pricing Plans */}
-        <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+        <section className=py-20">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>;
+            <div className=grid grid-cols-1 md:grid-cols-3 gap-8">;
               {plans.map((plan, index) => (<div;
                   key={index}
                   className={`relative bg-white border rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow ${plan.popular;
-                      ? 'border-blue-500 ring-2 ring-blue-500';
+                      ? border-blue-500 ring-2 ring-blue-500;
                       : 'border-gray-200';
                   }`}
                 >;
-                  {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                      <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">;
-                        <Star className="w-4 h-4 mr-1" />;
+                  {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2>;
+                      <span className=bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">;
+                        <Star className="w-4 h-4 mr-1 />;
                         Most Popular;
                       </span>;
                     </div>;
-                  )}<div className="text-center mb-8">;
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">;
+                  )}<div className=text-center mb-8">;
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2>;
                       {plan.name}
                     </h3>;
-                    <p className="text-gray-600 mb-4">{plan.description}</p>;
-                    <div className="mb-4">;
-                      <span className="text-4xl font-bold text-gray-900">;
+                    <p className=text-gray-600 mb-4">{plan.description}</p>;
+                    <div className="mb-4>;
+                      <span className=text-4xl font-bold text-gray-900">;
                         {plan.price}
                       </span>;
-                      <span className="text-gray-600 ml-2">{plan.period}</span>;
+                      <span className="text-gray-600 ml-2>{plan.period}</span>;
                     </div>;
                   </div>;
-                  <ul className="space-y-4 mb-8">;
-                    {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-start">;
-                        <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />;
-                        <span className="text-gray-700">{feature}</span>;
+                  <ul className=space-y-4 mb-8">;
+                    {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-start>;
+                        <Check className=w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />;
+                        <span className="text-gray-700>{feature}</span>;
                       </li>;
                     ))}
                   </ul>;
                   <Link;
                     href={plan.href}
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${plan.popular;
-                        ? 'bg-blue-600 text-white hover:bg-blue-700';
+                        ? bg-blue-600 text-white hover:bg-blue-700;
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200';
                     }`}
                   >;
@@ -482,81 +451,81 @@ export default function Pricing() {const plans = [;
           </div>;
         </section>;
         {/* Add-ons Section */}
-        <section className="py-20 bg-gray-50">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="text-center mb-16">;
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">;
+        <section className=py-20 bg-gray-50">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>;
+            <div className=text-center mb-16">;
+              <h2 className="text-3xl font-bold text-gray-900 mb-4>;
                 Add-on Services;
               </h2>;
-              <p className="text-lg text-gray-600">;
+              <p className=text-lg text-gray-600">;
                 Enhance your plan with additional services tailored to your;
                 specific needs.;
               </p>;
             </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>;
               {addOns.map((addOn, index) => (<div;
                   key={index}
-                  className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm";
+                  className=bg-white border border-gray-200 rounded-lg p-6 shadow-sm";
                 >;
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">;
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2>;
                     {addOn.name}
                   </h3>;
-                  <div className="mb-3">;
-                    <span className="text-2xl font-bold text-blue-600">;
+                  <div className=mb-3">;
+                    <span className="text-2xl font-bold text-blue-600>;
                       {addOn.price}
                     </span>;
-                    <span className="text-gray-600 ml-1">{addOn.period}</span>;
+                    <span className=text-gray-600 ml-1">{addOn.period}</span>;
                   </div>;
-                  <p className="text-gray-600 text-sm">{addOn.description}</p>;
+                  <p className="text-gray-600 text-sm>{addOn.description}</p>;
                 </div>;
               ))}
             </div>;
           </div>;
         </section>;
         {/* Features Comparison */}
-        <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="text-center mb-16">;
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">;
+        <section className=py-20">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>;
+            <div className=text-center mb-16">;
+              <h2 className="text-3xl font-bold text-gray-900 mb-4>;
                 Why Choose Our Services?;
               </h2>;
-              <p className="text-lg text-gray-600">;
+              <p className=text-lg text-gray-600">;
                 We provide comprehensive technology solutions with unmatched;
                 support and expertise.;
               </p>;
             </div>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              <div className="text-center">;
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">;
-                  <Zap className="w-8 h-8 text-blue-600" />;
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8>;
+              <div className=text-center">;
+                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center>;
+                  <Zap className=w-8 h-8 text-blue-600" />;
                 </div>;
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">;
+                <h3 className="text-xl font-semibold text-gray-900 mb-3>;
                   Fast Delivery;
                 </h3>;
-                <p className="text-gray-600">;
+                <p className=text-gray-600">;
                   Quick turnaround times without compromising on quality or;
                   security.;
                 </p>;
               </div>;
-              <div className="text-center">;
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">;
-                  <Shield className="w-8 h-8 text-blue-600" />;
+              <div className="text-center>;
+                <div className=bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">;
+                  <Shield className="w-8 h-8 text-blue-600 />;
                 </div>;
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">;
+                <h3 className=text-xl font-semibold text-gray-900 mb-3">;
                   Enterprise Security;
                 </h3>;
-                <p className="text-gray-600">;
+                <p className="text-gray-600>;
                   Bank-level security and compliance with industry standards.;
                 </p>;
               </div>;
-              <div className="text-center">;
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">;
-                  <Users className="w-8 h-8 text-blue-600" />;
+              <div className=text-center">;
+                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center>;
+                  <Users className=w-8 h-8 text-blue-600" />;
                 </div>;
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">;
+                <h3 className="text-xl font-semibold text-gray-900 mb-3>;
                   Expert Support;
                 </h3>;
-                <p className="text-gray-600">;
+                <p className=text-gray-600">;
                   Dedicated support from our team of technology experts.;
                 </p>;
               </div>;
@@ -564,50 +533,50 @@ export default function Pricing() {const plans = [;
           </div>;
         </section>;
         {/* FAQ Section */}
-        <section className="py-20 bg-gray-50">;
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="text-center mb-16">;
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">;
+        <section className="py-20 bg-gray-50>;
+          <div className=max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="text-center mb-16>;
+              <h2 className=text-3xl font-bold text-gray-900 mb-4">;
                 Frequently Asked Questions;
               </h2>;
-              <p className="text-lg text-gray-600">;
+              <p className="text-lg text-gray-600>;
                 Have questions about our pricing? We've got answers.;
               </p>;
             </div>;
-            <div className="space-y-8">;
+            <div className=space-y-8">;
               {faqs.map((faq, index) => (<div;
                   key={index}
-                  className="bg-white border border-gray-200 rounded-lg p-6";
+                  className="bg-white border border-gray-200 rounded-lg p-6;
                 >;
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">;
+                  <h3 className=text-lg font-semibold text-gray-900 mb-3">;
                     {faq.question}
                   </h3>;
-                  <p className="text-gray-600">{faq.answer}</p>;
+                  <p className="text-gray-600>{faq.answer}</p>;
                 </div>;
               ))}
             </div>;
           </div>;
         </section>;
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-            <h2 className="text-3xl font-bold text-white mb-6">;
+        <section className=py-20 bg-gradient-to-r from-blue-600 to-purple-600">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center>;
+            <h2 className=text-3xl font-bold text-white mb-6">;
               Ready to Get Started?;
             </h2>;
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto>;
               Contact us today for a free consultation and custom quote tailored;
               to your specific needs.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+            <div className=flex flex-col sm:flex-row gap-4 justify-center">;
               <Link;
-                href="/contact";
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors";
+                href="/contact;
+                className=bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors";
               >;
                 Get Free Quote;
               </Link>;
               <Link;
-                href="/services";
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors";
+                href="/services;
+                className=border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors";
               >;
                 View Our Services;
               </Link>;
@@ -617,12 +586,7 @@ export default function Pricing() {const plans = [;
       </main>;
     </>;
   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
 =======
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======

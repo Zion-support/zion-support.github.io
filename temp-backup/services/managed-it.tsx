@@ -6,7 +6,7 @@ interface ManageditProps {
   // Add props here as needed
 }
 
-export default function Managedit({ }: ManageditProps) {
+export default function Managedit({}: ManageditProps) {
   return (
     <div>
       <h1>Managedit</h1>

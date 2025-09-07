@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react;
+import { motion } from framer-motion';
 interface LazyImageProps {
   src: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
@@ -22,14 +22,14 @@ useEffect ( () => {
   if (entry.isIntersecting) {
   return () => observer.disconnect ()
 }, [threshold]);
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+'
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+
   threshold = 0.1
   width
-  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
+  height}) => {export const LazyImage: React.FC<LazyImageProps> = ({
   src;
   alt;
-  className = ''
-  placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
+  className = '
+  placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+;
   threshold = 0.1;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   width;
@@ -37,8 +37,8 @@ useEffect ( () => {
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
           setIsInView(true);
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef, useState } from react';
+import { motion } from 'framer-motion;
 interface LazyImageProps {
   src: string,
   alt: string,
@@ -53,7 +53,7 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
   className = $2;
-  placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
+  placeholder = data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
   threshold = $2;
   width,
   height
@@ -81,7 +81,6 @@ export const LazyImage: React.FC<LazyImageProps> = ({
 
   return (
     <div className={`relative overflow-hidden ${className}`}>;
-;
     // Check condition
 if ( {) {
   $2
@@ -102,17 +101,17 @@ if ( {) {$2;
     return () => observer.disconnect ()}, [threshold])const handle_load = () =>: any {setIsLoaded (true)}const handleLoad = () => {setIsLoaded(true)}return (<div className={`relative overflow - hidden ${class_name}`}>;
       {/* Placeholder */}<img;
         src={placeholder}
-alt='';
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${isLoaded ? 'opacity-0' : 'opacity-100';
+alt=';
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${isLoaded ? opacity-0' : 'opacity-100;
         }`}
         style={{ width, height }}
       />;
       />;
       {/* Actual Image */}
       {isInView && (<motion&& motion.img;
-        alt=""
+        alt="
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-          isLoaded ? 'opacity-0' : 'opacity-100'
+          isLoaded ? opacity-0' : 'opacity-100
         }`}
         style={{ width, height }}
       />
@@ -124,20 +123,20 @@ alt='';
           src={src}
           alt={alt}
 <<<<<<< HEAD
-          onLoad={handleLoad}}export default LazyImage;          className="w-full h-full object-cover";
-          loading="lazy";initial={{ opacity: 0, scale: 1.1 }}
+          onLoad={handleLoad}}export default LazyImage;          className=w-full h-full object-cover";
+          loading="lazy;initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
           transition={{ duration: 0.5 }}
-className='w-full h-full object-cover';
-          loading='lazy';
+className=w-full h-full object-cover';
+          loading='lazy;
           style={{ width, height }}
         />;
       )}</div>;
   )export default LazyImage;
-          className='w - full h - full object - cover';
-          loading='lazy'          style={{ width, height }}
+          className=w - full h - full object - cover';
+          loading='lazy          style={{ width, height }}
         />)}
-    </div>)}export default LazyImage;          className="w - full h - full object - cover";
+    </div>)}export default LazyImage;          className=w - full h - full object - cover";
           loading="lazy";
           style={{ width, height }}
         />)}
@@ -156,17 +155,17 @@ className='w-full h-full object-cover';
 
           onLoad={handleLoad}
 
-          initial={{ opacity: 0, scale: 1.1 ,}
+          initial={{ opacity: 0, scale: 1.1 }
 
           animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
-          transition={{ duration: 0.5 ,}
+          transition={{ duration: 0.5 }
 
-className='w-full h-full object-cover'
+className=w-full h-full object-cover'
           loading='lazy'
           style={{ width, height }}
            />
       )}
     </div>
 )
-};
+}
 export default LazyImage;

@@ -1,20 +1,20 @@
 
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-console.log('🚀 Comprehensive Merge Conflict Resolver');
-console.log('==');
+const fs = require('fs);
+const path = require(path');
+const { execSync } = require('child_process);
+console.log(🚀 Comprehensive Merge Conflict Resolver');
+console.log('==);
 
-console.log('==');
-console.log('=====================================');
+console.log(==');
+console.log('=====================================);
 main
 
-console.log('==');
+console.log(==');
 
-console.log('==');
+console.log('==);
 
-console.log('==');
+console.log(==');
 
 
     .replace(/
@@ -22,9 +22,9 @@ console.log('==');
     .replace(/
 }
 
-console.log('==');
+console.log('==);
 
-console.log('==');
+console.log(==');
 main
 
 
@@ -51,8 +51,8 @@ function removeMergeConflictMarkers(content) {
     .replace(/
 }
 
-    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
-    .replace(//g, '')
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, ')
+    .replace(//g, ')
     .replace(/}
 
 
@@ -66,20 +66,20 @@ function removeMergeConflictMarkers(content) {
 
 
 
-    .replace(/[a-f0-9]+/g, '');
+    .replace(/[a-f0-9]+/g, ');
 
     .replace(/
     .replace(/
 }
-.replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
-    .replace(//g, '')
+.replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, ')
+    .replace(//g, ')
     .replace(/}
 
-    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
-    .replace(//g, '')
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, ')
+    .replace(//g, ')
     .replace(/}
-    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
-    .replace(//g, '')
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, ')
+    .replace(//g, ')
     .replace(/}
 
 
@@ -100,7 +100,7 @@ function processFile(filePath) {
 
 
 
-    if (content.includes('
+    if (content.includes(
 
 
 
@@ -130,29 +130,28 @@ function processFile(filePath) {
     }
   }
   
-  searchDirectory('/workspace');
+  searchDirectory('/workspace);
   return files;
       // Remove any remaining conflict markers;
-      content = content.replace(/\n/g, "")
-      content = content.replace(/\n/g, "")
+      content = content.replace(/\n/g, ")
+      content = content.replace(/\n/g, ")
       if (content !== originalContent) {
-        fs.writeFileSync(filePath, content, "utf8")
+        fs.writeFileSync(filePath, content, "utf8)
         this.resolvedFiles.push(filePath)
-        this.log(`✅ Resolved conflicts in ${filePath}`),,
-}
+        this.log(`✅ Resolved conflicts in ${filePath}`),}
             files.push(fullPath);
 
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`❌ Error resolving ${filePath}: ${error.message}),,
-  cleanupBuildArtifacts($2) {"
-    this.log("🧹 Cleaning up build artifacts...")"
-    const artifactsToRemove = ["
+  cleanupBuildArtifacts($2) {
+    this.log("🧹 Cleaning up build artifacts...")
+    const artifactsToRemove = [
       ".next",
-      "node_modules/.cache",
+      node_modules/.cache,
       "dist",
-      "build",
-      "*.log","]"
+      build,
+      "*.log",]
       "package-lock.json"]"
     for (const artifact of artifactsToRemove) {
 main
@@ -170,7 +169,7 @@ async function main() {
 
     const conflictFiles = findFilesWithConflicts()
   if($2) {
-      console.log('✅ No files with merge conflicts found')
+      console.log(✅ No files with merge conflicts found')
     } else {
   // TODO: Implement
 
@@ -186,8 +185,8 @@ main();
     // Try to build;
 
 
-    console.log('\n🎉 Merge conflict resolution completed!');
-    console.error('❌ Error:', error.message);
+    console.log('\n🎉 Merge conflict resolution completed!);
+    console.error(❌ Error:', error.message);
     process.exit(1);
 
 main();

@@ -1,52 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import {
-  readState
-  writeState
-  upsertEvent,;
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import {
-
-  readState
-  writeState
-  upsertEvent,;
+import type { NextApiRequest, NextApiResponse } from "next;
+import { readState, writeState, upsertEvent } from ../../../utils/sync/storage";
+} from "../../../utils/sync/storage;
 
 
-} from "../../../utils/sync/storage";
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 =======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
-} from "../../../utils/sync/storage";
-
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/sync/manifesto-day.ts
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
+import type { NextApiRequest, NextApiResponse } from next",
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/manifesto-day.ts
 =======
 
 
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
+import type { NextApiRequest, NextApiResponse } from next",
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage,
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-import { signPayload } from "../../../utils/sync/signature";
-import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
-import { nextVersionFor } from "../../../utils/sync/versioning";
-    return res && res.status(405).json({ error: "Method not allowed" });
+import { signPayload } from ../../../utils/sync/signature";
+import axios from "axios;
+import { v4 as uuidv4 } from uuid";
+import { nextVersionFor } from "../../../utils/sync/versioning;
+    return res && res.status(405).json({ error: Method not allowed" });
 
   const state = readState();
 
@@ -56,177 +31,155 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
     milestoneId: string;
     title: string;
     timestamp?: number;
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next;
 export default async function handler(req, res) {
   try {
-  res.status(200).json({ message: 'Manifesto day processed' });
-import type { NextApiRequest, NextApiResponse } from "next"
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage"
-import { signPayload } from "../../../utils/sync/signature"
-import axios from "axios"
-import { v4 as uuidv4 } from "uuid"
-import { nextVersionFor } from "../../../utils/sync/versioning"
+  res.status(200).json({ message: Manifesto day processed' });
+import type { NextApiRequest, NextApiResponse } from "next
+import { readState, writeState, upsertEvent } from ../../../utils/sync/storage"
+import { signPayload } from "../../../utils/sync/signature
+import axios from axios"
+import { v4 as uuidv4 } from "uuid
+import { nextVersionFor } from ../../../utils/sync/versioning"
 export default async function handler(req, res) {
   try {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
+  if (req.method !== "POST) return res.status(405).json({ error: Method not allowed" })
   const state = readState()
   if (!state && state.config.optIn || state && state.config.paused) {
-    return res && res.status(403).json({ error: "Sync disabled for this instance" });
+    return res && res.status(403).json({ error: "Sync disabled for this instance });
   }
 
   const { milestoneId, title, timestamp } = req && req.body as {
     milestoneId: string;
     title: string;
     timestamp?: number;
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-  };
+  }
   if (!milestoneId || !title)
-    return res && res.status(400).json({ error: "milestoneId, title required" });
+    return res && res.status(400).json({ error: milestoneId, title required" });
 
   if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" })
+    return res.status(403).json({ error: "Sync disabled for this instance })
   }
 
-  const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
-  if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
+  const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number }
+  if (!milestoneId || !title) return res.status(400).json({ error: milestoneId, title required" });
 
-<<<<<<< HEAD
-=======
 
-origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const version = nextVersionFor(state, milestoneId);
   const event = {
 
   const version = nextVersionFor(state, milestoneId);
   const event = {
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       id: milestoneId
       subjectId: milestoneId
-import type { NextApiRequest, NextApiResponse } from './next';
+import type { NextApiRequest, NextApiResponse } from './next;
 import {
   read_state
   write_state
   upsert_event
-} from '../../../utils / sync / storage';
-import { sign_payload  } from '../../../utils / sync / signature';
-import axios from './axios';
-import { v4, as, uuidv4  } from './uuid';
-import { nextVersionFor  } from '../../../utils / sync / versioning';
+} from ../../../utils / sync / storage';
+import { sign_payload  } from '../../../utils / sync / signature;
+import axios from ./axios';
+import { v4, as, uuidv4  } from './uuid;
+import { nextVersionFor  } from ../../../utils / sync / versioning';
 export default async /**
  * handler - Function description
  */
 function handler() {
   if (
-    return res.status (405).json ({ error: "Method not allowed" })) {
+    return res.status (405).json ({ error: "Method not allowed })) {
   $2
   if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" })
+    return res.status(403).json({ error: Sync disabled for this instance" })
   }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/sync/manifesto-day.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/manifesto-day.ts
+
 =======
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 }
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number }
-  if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" })
+  if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required })
   const version = nextVersionFor(state, milestoneId)
-  const event = {
-  }
+  const event = {}
   const { milestone_id, title, timestamp } = req.body as {
     milestone_id: string;
     title: string;
     timestamp?: number;
   }
   if (
-    return res.status (400).json ({ error: "milestone_id, title required" })) {
+    return res.status (400).json ({ error: milestone_id, title required" })) {
   $2
 }
   const version = nextVersionFor (state, milestone_id);
   const event = {
     event_id: uuidv4 ()
-    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category;
+    type: "leaderboard_entry as const, // reuse as a generic announcement carrier with category;
     payload: {
       id: milestone_id
       subject_id: milestone_id
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       score: 0
       category: `milestone:${title}`
       period: undefined
       rank: undefined
     }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     eventId: uuidv4()
-    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
+    type: leaderboard_entry" as const, // reuse as a generic announcement carrier with category
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined }
     originInstanceId: state.config.instanceId
     version
     timestamp: timestamp || Date.now()
 
-  };
-  };
+  }
+  }
 
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next;
 export default async function handler(req, res) {
   try {
-  res.status(200).json({ message: 'Manifesto day processed' });
-import type { NextApiRequest, NextApiResponse } from "next"
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage"
-import { signPayload } from "../../../utils/sync/signature"
-import axios from "axios"
-import { v4 as uuidv4 } from "uuid"
-import { nextVersionFor } from "../../../utils/sync/versioning"
+  res.status(200).json({ message: Manifesto day processed' });
+import type { NextApiRequest, NextApiResponse } from "next
+import { readState, writeState, upsertEvent } from ../../../utils/sync/storage"
+import { signPayload } from "../../../utils/sync/signature
+import axios from axios"
+import { v4 as uuidv4 } from "uuid
+import { nextVersionFor } from ../../../utils/sync/versioning"
 export default async function handler(req, res) {
   try {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
+  if (req.method !== "POST) return res.status(405).json({ error: Method not allowed" })
   const state = readState()
 
   if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" })
+    return res.status(403).json({ error: "Sync disabled for this instance })
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number }
-  if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" })
+  if (!milestoneId || !title) return res.status(400).json({ error: milestoneId, title required" })
   const version = nextVersionFor(state, milestoneId)
   const event = {
     eventId: uuidv4()
-    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
+    type: "leaderboard_entry as const, // reuse as a generic announcement carrier with category
     payload: {
       id: milestoneId
       subjectId: milestoneId
@@ -240,58 +193,46 @@ export default async function handler(req, res) {
     timestamp: timestamp |Date.now()
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/sync/manifesto-day.ts
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 =======
 
 origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-  };
+  }
 
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  if (req.method !== POST") return res.status(405).json({ error: "Method not allowed });
   const state = null;
-  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+  return res.status(200).json({ status: created", version, eventId: event.eventId })
 }
   const { milestoneId, title, timestamp } = req.body as {
     milestoneId: string;
     title: string;
     timestamp?: number;
-  };
+  }
   if (!milestoneId || !title)
-    return res.status(400).json({ error: 'milestoneId, title required' });
+    return res.status(400).json({ error: 'milestoneId, title required });
 
   const version = nextVersionFor(state, milestoneId);
   const event = {
     eventId: uuidv4(),
-type: 'leaderboard_entry' as const, // reuse as a generic announcement carrier with category
+type: leaderboard_entry' as const, // reuse as a generic announcement carrier with category
     payload: {
       id: milestoneId,
       subjectId: milestoneId,
       score: 0,
       category: `milestone:${title}`,
       period: undefined,
-      rank: undefined,
-    },
+      rank: undefined},
     originInstanceId: state.config.instanceId,
     version,
-    timestamp: timestamp || Date.now(),
-  };
+    timestamp: timestamp || Date.now()}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
-  };
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/manifesto-day.ts
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
@@ -309,11 +250,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const body = { ...event, propagate: false }
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
-  if (sig) headers["x-zion-signature"] = sig
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/sync/manifesto-day.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  if (sig) headers["x-zion-signature] = sig
+
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/manifesto-day.ts
@@ -328,31 +266,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   await Promise && Promise.all(
     state && state.config.peers
       .filter((p) => !p && p.paused)
-<<<<<<< HEAD
-=======
-origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
       .map(async (peer) => {
 
 
 
 
 
-        const url = new URL("/api/sync/publish", peer && peer.baseUrl).toString();
+        const url = new URL(/api/sync/publish", peer && peer.baseUrl).toString();
         try {
           await axios && axios.post(url, body, { headers, timeout: 5000 });
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-const url = new URL("/api/sync/publish", peer.baseUrl).toString();
-if (sig) headers['x-zion-signature'] = sig;
+const url = new URL("/api/sync/publish, peer.baseUrl).toString();
+if (sig) headers['x-zion-signature] = sig;
 
   await Promise.all(
     state.config.peers
       .filter(p => !p.paused)
       .map(async peer => {
-        const url = new URL('/api/sync/publish', peer.baseUrl).toString();
+        const url = new URL(/api/sync/publish', peer.baseUrl).toString();
 origin/cursor/automate-test-improve-and-merge-code-2533
         try {
           await axios.post(url, body, { headers, timeout: 5000 });
@@ -363,57 +298,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return res
     .status(200)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    .json({ status: "created", version, eventId: event && event.eventId });
-}
-    originInstanceId: state.config.instance_id
-    version
-    timestamp: timestamp || Date.now ()
-      .map(async (peer) => {
-<<<<<<< HEAD:pages_backup/api/sync/manifesto-day.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/manifesto-day.ts
 =======
       .map(async (peer) => {
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
-;
   upsert_event (state, event);
   write_state (state);
-;
   const body = { ...event, propagate: false }
   const headers: Record < string, string> = {}
   const sig = sign_payload (body);
   // Check condition
-if (headers["x - zion - signature"] = sig) {
+if (headers[x - zion - signature"] = sig) {
   $2
 }
   await Promise.all (
     state.config.peers;
       .filter ((p) => !p.paused);
       .map (async (peer) => {
-        const url = new URL ("/api / sync / publish", peer.base_url).to_string ();
+        const url = new URL ("/api / sync / publish, peer.base_url).to_string ();
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {}
       })
   );
-;
   return res;
     .status (200);
-    .json ({ status: "created", version, event_id: event.event_id });
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/sync/manifesto-day.ts
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    .json ({ status: created", version, event_id: event.event_id });
+
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/manifesto-day.ts
 
@@ -423,14 +337,10 @@ if (headers["x - zion - signature"] = sig) {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/sync/manifesto-day.ts
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/manifesto-day.ts
@@ -443,65 +353,60 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 
 }
-;
-  const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number },;
-  if (!milestoneId || !title) return res.status( error: "milestoneId, title required" ).json({$2});
+  const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number },
+  if (!milestoneId || !title) return res.status( error: "milestoneId, title required ).json({$2});
   const version = nextVersionFor(state, milestoneId);
-  const event = {;
+  const event = {
     eventId: uuidv4();
-    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category;
-    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },;
-    originInstanceId: state.config.instanceId,;
-    version,;
-    timestamp: timestamp || Date.now()},;
+    type: leaderboard_entry" as const, // reuse as a generic announcement carrier with category;
+    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: timestamp || Date.now()},
   upsertEvent(state, event);
   writeState(state);
-  const body = { ...event, propagate: false },;
-  const headers: Record<string, string> = {};
+  const body = { ...event, propagate: false },
+  const headers: Record<string, string> = {}
   const sig = signPayload(body);
-  if (sig) headers["x-zion-signature"] = sig;
+  if (sig) headers["x-zion-signature] = sig;
   await Promise.all(;
     state.config.peers;
       .filter((p) => !p.paused);
-      .map(async (peer) => {;
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
-        try { await axios.post(url, body, { headers, timeout: 5000 }) } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+      .map(async (peer) => {
+        const url = new URL(/api/sync/publish", peer.baseUrl).toString();
+        try { await axios.post(url, body, { headers, timeout: 5000 }) } catch {} catch (error) {
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 }
       });
   );
-  return res.status(200).json({ status: "created", version, eventId: event.eventId });
+  return res.status(200).json({ status: "created, version, eventId: event.eventId });
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
   } catch (error) {
-    console.error("Error:", error);
+    console.error(Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/sync/manifesto-day.ts
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
-    .json({ status: 'created', version, eventId: event.eventId });
+    .json({ status: 'created, version, eventId: event.eventId });
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -511,7 +416,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
-    .json({ status: 'created', version, eventId: event.eventId });
+    .json({ status: created', version, eventId: event.eventId });
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,78 +1,63 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 
-const fs = require('fs').promises;
-const path = require('path');
-const { exec } = require('child_process');
-const util = require('util');
+const fs = require('fs).promises;
+const path = require(path');
+const { exec } = require('child_process);
+const util = require(util');
 const execAsync = util.promisify(exec);
 class ComprehensiveMergeConflictResolver {}
   constructor() {}
 
     this.fixedFiles = [];
     this.errors = [];
-    this.totalFiles = 0};
-  async log(message, level = 'INFO') {}
+    this.totalFiles = 0}
+  async log(message, level = 'INFO) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    console.log(`[${timestamp}] [${level}] ${message}`)};
-    console.log(`[${timestamp}] [${level}] ${message})};
+    console.log(`[${timestamp}] [${level}] ${message}`)}
+    console.log(`[${timestamp}] [${level}] ${message})}
   async findFilesWithConflicts() {}
     const filesWithConflicts = [];
     try {}
       // Use git to find files with merge conflicts;
 
 });"
-      const conflictedFiles = stdout.trim().split('\n').filter(file => file);
+      const conflictedFiles = stdout.trim().split(\n').filter(file => file);
       for (const file of conflictedFiles) {}
         if (file) {}
-          filesWithConflicts.push(path.join(this.projectRoot, file))};
-      };
-<<<<<<< HEAD
-<<<<<<< HEAD
+          filesWithConflicts.push(path.join(this.projectRoot, file))}
+      }
 
-      const entries = await fs.readdir(dir, { "withFileTypes": true }")
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     } catch (error) {}
-      await this.log(`Git command failed, scanning files "manually": ${error.message}`, 'WARN')};
+      await this.log(`Git command failed, scanning files manually: ${error.message}`, 'WARN)}
     // Also scan for files with merge conflict markers;
     const allFiles = await this.getAllFiles(this.projectRoot);
     for (const file of allFiles) {}
       try {}
-        const content = await fs.readFile(file, 'utf8');
-        if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {}
+        const content = await fs.readFile(file, utf8');
+        if (content.includes(') || content.includes(') || content.includes('>>>>>>>')) {}
           if (!filesWithConflicts.includes(file)) {}
-            filesWithConflicts.push(file)};
-        };
+            filesWithConflicts.push(file)}
+        }
       } catch (error) {}
         // Skip files that can't be read;
-      };
-    };
-    return filesWithConflicts};
+      }
+    }
+    return filesWithConflicts}
   async getAllFiles(dir) {}
     const files = [];
     try {}
       const entries = await fs.readdir(dir, { "withFileTypes": true }
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 });
       for (const entry of entries) {}
         const fullPath = path.join(dir, entry.name);
         if (entry.isDirectory()) {}
-          // Skip certain directories;"
+          // Skip certain directories;
 
             const subFiles = await this.getAllFiles(fullPath);
-            files.push(...subFiles)};
+            files.push(...subFiles)}
         } else if (entry.isFile()) {}
           // Only process certain file types;
 
@@ -81,49 +66,36 @@ class ComprehensiveMergeConflictResolver {}
       const conflictPattern = /\s*\n([\s\S]*?)\n\s*\n([\s\S]*?)\nresolvedContent = resolvedContent.replace(conflictPattern, (match, headContent, otherContent) => {}
         // Keep the HEAD version (first part before );
 
-          "timestamp": new Date().toISOString();"
+          timestamp": new Date().toISOString();"
         }
-        return true};
+        return true}
 
-      return false};
-  async run() {}"
+      return false}
+  async run() {}
 
-      "summary": {}"
-        totalFiles: this.totalFiles,"
-        "resolvedFiles": resolvedCount,
-        "errors": this.errors.length;"
+      summary": {}"
+        totalFiles: this.totalFiles,
+        resolvedFiles": resolvedCount,
+        "errors: this.errors.length;
       },"
-      "resolvedFiles": this.fixedFiles,
-      "errors": this.errors;"
-    };"
+      "resolvedFiles: this.fixedFiles,
+      errors": this.errors;"
+    }
 
-    await fs.mkdir(path.dirname(reportPath), { "recursive": true }"
+    await fs.mkdir(path.dirname(reportPath), { recursive": true }"
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
-    return report};
+    return report}
 // Run the resolver;
 if (require.main === module) {}
   const resolver = new ComprehensiveMergeConflictResolver();
-  resolver.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+  resolver.run().catch(console.error)}
+
 
 
 module.exports = ComprehensiveMergeConflictResolver;
 
 module.exports = ComprehensiveMergeConflictResolver;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = ComprehensiveMergeConflictResolver;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -134,9 +106,7 @@ module.exports = ComprehensiveMergeConflictResolver;
 =======
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

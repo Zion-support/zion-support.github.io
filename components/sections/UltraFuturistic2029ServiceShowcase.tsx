@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react;
 
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-import { CuttingEdgeInnovation2029  } from '../../data/2029-cutting-edge-innovations';
+import UltraFuturisticServiceCard from ../ui/UltraFuturisticServiceCard';
+import { CuttingEdgeInnovation2029  } from '../../data/2029-cutting-edge-innovations;
 type Service = any;
-import { motion } from 'framer-motion';
+import { motion } from framer-motion';
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -21,106 +21,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Cloud
   Eye
   Timer
-<<<<<<< HEAD
+
   Sparkles;
 
 
-} from 'lucide-react';
+} from 'lucide-react;
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
-import { motion  } from 'framer-motion';
-import { ChevronDown;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Cpu;
-  Shield;
-  Rocket;
-  Globe;
-  Database;
-  Lock;
-  Cloud;
-  Eye;
-  Timer;
-  Sparkles;} from 'lucide-react';
-type Service = CuttingEdgeInnovation2029 | any;
-  ChevronDown,Star,TrendingUp,Zap,Brain,Cpu,Shield,Rocket,Globe,Database,Lock,Cloud,Eye,} from 'lucide-react';
-import UltraFuturisticServiceCard from '../ui / UltraFuturisticServiceCard';
-import { CuttingEdgeInnovation2029   } from '../../data / 2029 - cutting - edge - innovations';type Service = CuttingEdgeInnovation2029 | any;interface UltraFuturistic2029ServiceShowcaseProps  {interface UltraFuturistic2029ServiceShowcaseProps  {services: Service[];
-  title?: string;
-  subtitle?: string;
-const categoryColors: { [key: string]: string } = {'AI & Consciousness': 'from-purple-600 to-pink-600';
-  'Quantum & Neuroscience': 'from-indigo-600 to-purple-600';
-  'Space Colonization': 'from-red-600 to-orange-600';
-  'Space Mining': 'from-yellow-600 to-orange-600';
-  'Space Architecture': 'from-green-600 to-teal-600';
-  'Space Energy': 'from-yellow-500 to-orange-500';
-  'AI & Business': 'from-blue-600 to-cyan-600';
-  'Quantum & Time': 'from-green-600 to-emerald-600';
-  'AI & Augmented Reality': 'from-orange-600 to-red-600';
-}
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react';
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
-type Service = $2;
-interface UltraFuturistic2029ServiceShowcaseProps {
-  services: Service[],
-  title?: string,
-  subtitle?: string,
-  maxServices?: number
-}
-
-const categoryColors: { [key: string]: string } = {
-  'AI & Consciousness': 'from-purple-600 to-pink-600Quantum & Neuroscience': 'from-indigo-600 to-purple-600Space Colonization': 'from-red-600 to-orange-600Space Mining': 'from-yellow-600 to-orange-600Space Architecture': 'from-green-600 to-teal-600Space Energy': 'from-yellow-500 to-orange-500AI & Business': 'from-blue-600 to-cyan-600Quantum & Time': 'from-green-600 to-emerald-600AI & Augmented Reality': 'from-orange-600 to-red-600'
-},
-
-const categoryIcons: { [key: string]: any } = {
-  'AI & Consciousness': Brain,
-  'Quantum & Neuroscience': Cpu,
-  'Space Colonization': Rocket,
-  'Space Mining': Zap,
-  'Space Architecture': Globe,
-  'Space Energy': Sparkles,
-  'AI & Business': Database,
-  'Quantum & Time': Timer,
-  'AI & Augmented Reality': Eye
-},
-
-const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
-  services,
-  title = $2;
-  subtitle = $2;
-  maxServices = 12
-}) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation'),
-
-=======
-=======
-  ChevronDown;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Cpu;
-  Shield;
-  Rocket;
-  Globe;
-  Database;
-  Lock;
-  Cloud;
-  Eye;
-  Timer;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  Sparkles;
-
-
-} from 'lucide-react';'
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';'
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
+import { CuttingEdgeInnovation2029 } from ../../data/2029-cutting-edge-innovations';
 type Service = CuttingEdgeInnovation2029 | any;
   ChevronDown,
   Star,
@@ -135,344 +42,121 @@ type Service = CuttingEdgeInnovation2029 | any;
   Lock,
   Cloud,
   Eye,'
-} from 'lucide-react';'
-import UltraFuturisticServiceCard from '../ui / UltraFuturisticServiceCard';'
+} from lucide-react;'
+import UltraFuturisticServiceCard from '../ui / UltraFuturisticServiceCard;
 import { CuttingEdgeInnovation2029 } from '../../data / 2029 - cutting - edge - innovations';
-;
 type Service = CuttingEdgeInnovation2029 | any;
-;
 interface UltraFuturistic2029ServiceShowcaseProps {}
-interface UltraFuturistic2029ServiceShowcaseProps {;
+interface UltraFuturistic2029ServiceShowcaseProps {
   services: Service[];
   title?: string;
   subtitle?: string;
-const categoryColors: { [key: string]: string } = {'
-  'AI & Consciousness': 'from-purple-600 to-pink-600''
-  'Quantum & Neuroscience': 'from-indigo-600 to-purple-600''
-  'Space Colonization': 'from-red-600 to-orange-600''
-  'Space Mining': 'from-yellow-600 to-orange-600''
-  'Space Architecture': 'from-green-600 to-teal-600''
-  'Space Energy': 'from-yellow-500 to-orange-500''
-  'AI & Business': 'from-blue-600 to-cyan-600''
-  'Quantum & Time': 'from-green-600 to-emerald-600''
-  'AI & Augmented Reality': 'from-orange-600 to-red-600'
+const categoryColors: { [key: string]: string } = {
+  AI & Consciousness': 'from-purple-600 to-pink-600
+  'Quantum & Neuroscience': from-indigo-600 to-purple-600'
+  'Space Colonization: from-red-600 to-orange-600''
+  Space Mining: 'from-yellow-600 to-orange-600'
+  Space Architecture': 'from-green-600 to-teal-600
+  'Space Energy': from-yellow-500 to-orange-500'
+  'AI & Business: from-blue-600 to-cyan-600''
+  Quantum & Time: 'from-green-600 to-emerald-600'
+  AI & Augmented Reality': 'from-orange-600 to-red-600
 }
-const categoryIcons: { [key: string]: any } = {'
-  'AI & Consciousness': Brain'
-  'Quantum & Neuroscience': Cpu'
-  'Space Colonization': Rocket'
-  'Space Mining': Zap'
-  'Space Architecture': Globe'
-  'Space Energy': Sparkles'
-  'AI & Business': Database'
-  'Quantum & Time': Timer'
+const categoryIcons: { [key: string]: any } = {
+  'AI & Consciousness': Brain
+  Quantum & Neuroscience': Cpu'
+  Space Colonization: Rocket'
+  'Space Mining: Zap
+  'Space Architecture': Globe
+  Space Energy': Sparkles'
+  AI & Business: Database'
+  'Quantum & Time: Timer
   'AI & Augmented Reality': Eye;
 }
 const UltraFuturistic2029ServiceShowcase: React.FC<
   UltraFuturistic2029ServiceShowcaseProps;
 > = ({}
-  services'
-  title = '2029 Ultra-Futuristic Innovations''
-  subtitle = 'Experience the future of technology with our revolutionary services'
+  services
+  title = 2029 Ultra-Futuristic Innovations''
+  subtitle = Experience the future of technology with our revolutionary services
   maxServices = 12;
 }) => {}
-const categoryColors: { [key: string]: string } = {;'
-  'AI & Consciousness': 'from-purple-600 to-pink-600',;'
-  'Quantum & Neuroscience': 'from-indigo-600 to-purple-600',;'
-  'Space Colonization': 'from-red-600 to-orange-600',;'
-  'Space Mining': 'from-yellow-600 to-orange-600',;'
-  'Space Architecture': 'from-green-600 to-teal-600',;'
-  'Space Energy': 'from-yellow-500 to-orange-500',;'
-  'AI & Business': 'from-blue-600 to-cyan-600',;'
-  'Quantum & Time': 'from-green-600 to-emerald-600',;'
-  'AI & Augmented Reality': 'from-orange-600 to-red-600',;
-};
+const categoryColors: { [key: string]: string } = {'
+  'AI & Consciousness: from-purple-600 to-pink-600','
+  Quantum & Neuroscience: 'from-indigo-600 to-purple-600',
+  Space Colonization': 'from-red-600 to-orange-600,
+  'Space Mining': from-yellow-600 to-orange-600,'
+  'Space Architecture: from-green-600 to-teal-600','
+  Space Energy: 'from-yellow-500 to-orange-500',
+  AI & Business': 'from-blue-600 to-cyan-600,
+  'Quantum & Time': from-green-600 to-emerald-600,'
+  'AI & Augmented Reality: from-orange-600 to-red-600'}
 
-const categoryIcons: { [key: string]: any } = {;'
-  'AI & Consciousness': Brain,;'
-  'Quantum & Neuroscience': Cpu,;'
-  'Space Colonization': Rocket,;'
-  'Space Mining': Zap,;'
-  'Space Architecture': Globe,;'
-  'Space Energy': Sparkles,;'
-  'AI & Business': Database,;'
-  'Quantum & Time': Timer,;'
-  'AI & Augmented Reality': Eye,;
-};
+const categoryIcons: { [key: string]: any } = {'
+  AI & Consciousness: Brain,'
+  'Quantum & Neuroscience: Cpu,
+  'Space Colonization': Rocket,
+  Space Mining': Zap,'
+  Space Architecture: Globe,'
+  'Space Energy: Sparkles,
+  'AI & Business': Database,
+  Quantum & Time': Timer,'
+  AI & Augmented Reality: Eye}
 
 const UltraFuturistic2029ServiceShowcase: React.FC<;
   UltraFuturistic2029ServiceShowcaseProps;
-> = ({;
-  services,;'
-  title = '2029 Ultra-Futuristic Innovations',;'
-  subtitle = 'Experience the future of technology with our revolutionary services',;
-  maxServices = 12,;
-}) => {;
+> = ({
+  services,'
+  title = '2029 Ultra-Futuristic Innovations,
+  subtitle = 'Experience the future of technology with our revolutionary services',
+  maxServices = 12}) => {
   services: Service[];
   title?: string;
-  subtitle?: string;'
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');'
-  const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>(;'
-    'innovation';
+  subtitle?: string;
+  const [selectedCategory, setSelectedCategory] = useState<string>(all');'
+  const [sortBy, setSortBy] = useState<innovation | 'price' | rating>(;'
+    'innovation;
   );
 interface UltraFuturistic2029ServiceShowcaseProps {}
   services: Service[]
 
   // Get unique categories;
-  const categories = [;'
-    'all',;
-    ...Array && Array.from(new Set(services && services.map(service => service && service.category))),;
-  ];
+  const categories = [;
+    'all',
+    ...Array && Array.from(new Set(services && services.map(service => service && service.category)))];
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   // Filter and sort services;
   const filteredServices = services;
     .filter(;
-<<<<<<< HEAD
-      service =>;
-        selectedCategory === 'all' || service && service.category === selectedCategory;
-    )    .sort((a, b) => {import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-=======
-      service =>;'
-        selectedCategory === 'all' || service && service.category === selectedCategory;'
-    )    .sort((a, b) => {import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
+
+import { CuttingEdgeInnovation2029 } from ../../data/2029-cutting-edge-innovations;
 type Service = CuttingEdgeInnovation2029 | any;
 
-interface UltraFuturistic2029ServiceShowcaseProps {;
-  services: Service[],;
+interface UltraFuturistic2029ServiceShowcaseProps {
+  services: Service[],
   title?: string;
   subtitle?: string;
   max_services?: number;
 }
-<<<<<<< HEAD
-const category_colors: { [key: string]: string } = {
-  'AI & Consciousness': 'from - purple - 600 to - pink - 600Quantum & Neuroscience': 'from - indigo - 600 to - purple - 600Space Colonization': 'from - red - 600 to - orange - 600Space Mining': 'from - yellow - 600 to - orange - 600Space Architecture': 'from - green - 600 to - teal - 600Space Energy': 'from - yellow - 500 to - orange - 500AI & Business': 'from - blue - 600 to - cyan - 600Quantum & Time': 'from - green - 600 to - emerald - 600AI & Augmented Reality': 'from - orange - 600 to - red - 600';
-}
-;
-const category_icons: { [key: string]: any } = {
-  'AI & Consciousness': Brain;
-  'Quantum & Neuroscience': Cpu;
-  'Space Colonization': Rocket;
-  'Space Mining': Zap;
-  'Space Architecture': Globe;
-  'Space Energy': Sparkles;
-  'AI & Business': Database;
-  'Quantum & Time': Timer;
-  'AI & Augmented Reality': Eye;
-}
 
-const UltraFuturistic2029ServiceShowcase: React.FC<
-  UltraFuturistic2029ServiceShowcaseProps;
-> = ({ services;
-title = '2029 Ultra-Futuristic Innovations'
-  subtitle = 'Experience the future of technology with our revolutionary services'
-  maxServices = 12}
-  }
-}) => {
-
-;}
-  const categoryColors: { [key: string]: string}
-} = {;
-  'AI & Consciousness': 'from-purple-600 to-pink-600',;
-  'Quantum & Neuroscience': 'from-indigo-600 to-purple-600',;
-  'Space Colonization': 'from-red-600 to-orange-600',;
-  'Space Mining': 'from-yellow-600 to-orange-600',;
-  'Space Architecture': 'from-green-600 to-teal-600',;
-  'Space Energy': 'from-yellow-500 to-orange-500',;
-  'AI & Business': 'from-blue-600 to-cyan-600',;
-  'Quantum & Time': 'from-green-600 to-emerald-600',;}
-  'AI & Augmented Reality': 'from-orange-600 to-red-600'}
-};
-
-const categoryIcons: { [key: string]: any}
-} = {;
-  'AI & Consciousness': Brain,;
-  'Quantum & Neuroscience': Cpu,;
-  'Space Colonization': Rocket,;
-  'Space Mining': Zap,;
-  'Space Architecture': Globe,;
-  'Space Energy': Sparkles,;
-  'AI & Business': Database,;
-  'Quantum & Time': Timer,;}
-  'AI & Augmented Reality': Eye}
-};
-
-const UltraFuturistic2029ServiceShowcase: React.FC<;
-  UltraFuturistic2029ServiceShowcaseProps;
-> = ({ ;
-  services,;
-  title = '2029 Ultra-Futuristic Innovations',;
-  subtitle = 'Experience the future of technology with our revolutionary services',;}
-  maxServices = 12,;}
-   }) => {
-
-;
-  services: Service[];
-  title?: string;
-  subtitle?: string;
-
-const [selectedCategory, setSelectedCategory] = useState<string />('all');
-
-const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>(;
-    'innovation';
-  );
-
-interface UltraFuturistic2029ServiceShowcaseProps {
-  services: Service[]
-
-  // Get unique categories;
-
-const categories = [
-  'all',;
-    ...Array && Array.from(new Set(services && services.map(service => service && service.category)))
-];
-
-  // Filter and sort services;
-const filteredServices = services;
-    .filter(
-      service =>
-        selectedCategory === 'all' || service.category === selectedCategory
-    )
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'innovation':
-          // Default to 'Advanced' if innovationLevel is not available
-<<<<<<< HEAD
-
-=======
-          const aLevel = (a as any).innovationLevel || 'Advanced';
-          const bLevel = (b as any).innovationLevel || 'Advanced';
-const innovationOrder = {
-            Revolutionary: 4,
-            Breakthrough: 3,
-            Advanced: 2,
-            Emerging: 1,
-          };
-          return (
-            (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0)
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           );
         case 'price':
           return (
-            parseFloat(a.price.replace(/[^0-9.]/g, '')) -
+            parseFloat(a.price.replace(/[^0-9.]/g, )) -
             parseFloat(b.price.replace(/[^0-9.]/g, ''))
           );
-        case 'rating':
-<<<<<<< HEAD
-const categoryIcons: { [key: string]: any } = {'AI & Consciousness': Brain;
-  'Quantum & Neuroscience': Cpu;
-  'Space Colonization': Rocket;
-  'Space Mining': Zap;
-  'Space Architecture': Globe;
-  'Space Energy': Sparkles;
-  'AI & Business': Database;
-  'Quantum & Time': Timer;
-  'AI & Augmented Reality': Eye;
-}
-const UltraFuturistic2029ServiceShowcase: React.FC<;
-  UltraFuturistic2029ServiceShowcaseProps;
-> = ({services;
-  title = '2029 Ultra-Futuristic Innovations';
-  subtitle = 'Experience the future of technology with our revolutionary services';
-  maxServices = 12;
-}) => {const categoryColors: { [key: string]: string } = {'AI & Consciousness': 'from-purple-600 to-pink-600','Quantum & Neuroscience': 'from-indigo-600 to-purple-600','Space Colonization': 'from-red-600 to-orange-600','Space Mining': 'from-yellow-600 to-orange-600','Space Architecture': 'from-green-600 to-teal-600','Space Energy': 'from-yellow-500 to-orange-500','AI & Business': 'from-blue-600 to-cyan-600','Quantum & Time': 'from-green-600 to-emerald-600','AI & Augmented Reality': 'from-orange-600 to-red-600',}const categoryIcons: { [key: string]: any } = {'AI & Consciousness': Brain,'Quantum & Neuroscience': Cpu,'Space Colonization': Rocket,'Space Mining': Zap,'Space Architecture': Globe,'Space Energy': Sparkles,'AI & Business': Database,'Quantum & Time': Timer,'AI & Augmented Reality': Eye,}const UltraFuturistic2029ServiceShowcase: React.FC<;
-  UltraFuturistic2029ServiceShowcaseProps;
-> = ({services,title = '2029 Ultra-Futuristic Innovations',subtitle = 'Experience the future of technology with our revolutionary services',maxServices = 12,}) => {services: Service[];
-  title?: string;
-  subtitle?: string;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all')const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation';
-  )interface UltraFuturistic2029ServiceShowcaseProps  {services: Service[];
-  // Get unique categories;
-  const categories = [;
-    'all',...Array && Array.from(new Set(services && services.map(service => service && service.category))),];// Filter and sort services;
-  const filteredServices = services;
-    .filter(service =>;
-        selectedCategory === 'all' || service && service.category === selectedCategory;
-    )    .sort((a, b) => {import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-type Service = CuttingEdgeInnovation2029 | any;interface UltraFuturistic2029ServiceShowcaseProps  {services: Service[],title?: string;
-  subtitle?: string;
-  max_services?: number;
-}
-const category_colors: { [key: string]: string } = {'AI & Consciousness': 'from - purple - 600 to - pink - 600Quantum & Neuroscience': 'from - indigo - 600 to - purple - 600Space Colonization': 'from - red - 600 to - orange - 600Space Mining': 'from - yellow - 600 to - orange - 600Space Architecture': 'from - green - 600 to - teal - 600Space Energy': 'from - yellow - 500 to - orange - 500AI & Business': 'from - blue - 600 to - cyan - 600Quantum & Time': 'from - green - 600 to - emerald - 600AI & Augmented Reality': 'from - orange - 600 to - red - 600';
-}const category_icons: { [key: string]: any } = {'AI & Consciousness': Brain;
-  'Quantum & Neuroscience': Cpu;
-  'Space Colonization': Rocket;
-  'Space Mining': Zap;
-  'Space Architecture': Globe;
-  'Space Energy': Sparkles;
-  'AI & Business': Database;
-  'Quantum & Time': Timer;
-  'AI & Augmented Reality': Eye;
-}const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceShowcaseProps> = ({services;
-  title = "2029 Ultra - Futuristic Innovations";
-  subtitle = "Experience the future of technology with our revolutionary services";// Filter and sort services;
-  const filteredServices = services;
-    .filter(service =>;
-        selectedCategory === 'all' || service.category === selectedCategory;
-    ).sort((a, b) => {switch (sortBy) {case 'innovation':;
-          // Default to 'Advanced' if innovationLevel is not available;
-          const aLevel = (a as any).innovationLevel || 'Advanced';
-          const bLevel = (b as any).innovationLevel || 'Advanced';
-const innovationOrder = {Revolutionary: 4,Breakthrough: 3,Advanced: 2,Emerging: 1,}return ((innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0))case 'price':;
-          return (parseFloat(a.price.replace(/[^0-9.]/g, '')) -;
-            parseFloat(b.price.replace(/[^0-9.]/g, '')))case 'rating':;
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+        case rating:
+
           return b.rating - a.rating;
         default:
           return 0;
       }
-<<<<<<< HEAD
-          const aLevel = $2;
-          const bLevel = $2;
-          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 },
-          return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0),
-        case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
-        case 'rating':
-          return b.rating - a.rating,
-        default: return 0
-      }
-    })
-    .slice($2);
-  const containerVariants = $2;
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  },
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20},
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-  return (
-<<<<<<< HEAD
-    <section className="py-20 relative overflow-hidden">;
-=======
-    <section className='py-20 relative overflow-hidden'>
-      {/* Background Elements */}
-      <div className='absolute inset-0 pointer-events-none'>
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
-        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
-        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
-      </div>
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
-  return (
-    <section className="py-20 relative overflow-hidden">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       {/* Background Elements */}
         {/* Header */}
         duration: 0.6,
-        ease: "easeOut" as const
+        ease: "easeOut as const
       }
     }
   },
@@ -484,10 +168,7 @@ const innovationOrder = {Revolutionary: 4,Breakthrough: 3,Advanced: 2,Emerging: 
     visible: {
       opacity: 1
       transition: {
-staggerChildren: 0.1,
-      },
-    },
-  };
+staggerChildren: 0.1}}}
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
@@ -497,129 +178,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       y: 0
       transition: {
         duration: 0.6,
-ease: 'easeOut' as const,
-      },
-    },
-  };
+ease: 'easeOut' as const}}}
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-<<<<<<< HEAD
-    <section className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
-=======
-=======
-    .sort((a, b) => {}
-      switch (sortBy) {'
-        case 'innovation':'
-          // Default to 'Advanced' if innovationLevel is not available'
-          const aLevel = (a as any).innovationLevel |'Advanced';'
-          const bLevel = (b as any).innovationLevel |'Advanced';
-          const innovationOrder = {}
-            Revolutionary: 4;
-            Breakthrough: 3;
-            Advanced: 2;
-            Emerging: 1;
-          }
-          return (
-            (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0)
-  const itemVariants = {}
-    hidden: { opacity: 0, y: 20 }
-    visible: {}
-      opacity: 1;
-      y: 0;
-      transition: {}
-  return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    <section className="py-20 relative overflow-hidden">;
+
+    <section className=py-20 relative overflow-hidden">;
       {/* Background Elements */}
         {/* Header */}
 
   return ("
-    <section className="py-20 relative overflow-hidden">
+    <section className=py-20 relative overflow-hidden>
       {/* Background Elements */}"
-      <div className="absolute inset-0 pointer-events-none">"
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>"
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>"
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 pointer-events-none>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className=absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>"
+        <div className=absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl></div>
       </div>"
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-      <div className='absolute inset-0 pointer-events-none'>
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
-        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
-        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-      </div>
-          className='text-center mb-16'        >          className="text-center mb-16"
-          className='text-center mb-16'        >
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
 
-<<<<<<< HEAD
-
-        >
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-    }).slice(0, maxServices)const containerVariants = {hidden: { opacity: 0 }
-    visible: {opacity: 1;
-      transition: {staggerChildren: 0.1,},},}const itemVariants = {hidden: { opacity: 0, y: 20 }
-    visible: {opacity: 1;
-      y: 0;
-      transition: {duration: 0.6,ease: 'easeOut' as const,},},}return (<section className="py-20 relative overflow-hidden">;
-      {/* Background Elements */}{/* Header */}return (<section className="py-20 relative overflow-hidden">;
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">;
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>;
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>;
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>;
-      </div>;
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-      <div className='absolute inset-0 pointer-events-none'>;
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>;
-      </div>;
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-        {/* Header */}
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}{/* Header */}<motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}className='text-center mb-16'        >          className="text-center mb-16";
-          className='text-center mb-16'        >;
-className='text-center mb-16';
-        >;
-          <motion.h2;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
-=======
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-        {/* Header */}
-=======
-        {/* Header */}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
+      <div className=relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>        {/* Header */}
 
         {/* Header */}
 
         <motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}'"
-          className='text-center mb-16'        >          className="text-center mb-16"'
+          transition={{ duration: 0.8 }}'
+          className='text-center mb-16        >          className="text-center mb-16"
           className='text-center mb-16'        >
 
 
-className='text-center mb-16'
+className=text-center mb-16
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <motion.h2;
@@ -628,62 +219,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0.8, delay: 0.1 }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}'"
+          transition={{ duration: 0 && 0.8 }}'
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-          className='text-center mb-16'>          className="text-center mb-16";
+          className='text-center mb-16>          className=text-center mb-16";
         >;
           <motion&& motion.h2;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
-=======
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}'"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-            className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'>            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6";
+
+            className=text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'>            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6;
           >;
             {title}
           </motion && motion.h2>;
           <motion&& motion.p;
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
-            whileInView={{ opacity: 1, y: 0 }}className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6';
-          >;
-            {title}
-          </motion.h2>;
-          <motion.p;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed';
-          >;
-            whileInView={{ opacity: 1, y: 0 }}
-            {subtitle}
-          </motion.p>;
-        </motion.div>;
-            className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >;
-          >;
-=======
-            whileInView={{ opacity: 1, y: 0 }}
-className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'
-          >
-            {title}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
-          >
-origin/cursor/automate-test-improve-and-merge-code-2533
-            {subtitle}
-          </motion.p>
-        </motion.div>'
-            className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >
 
-          >
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             {subtitle}
           </motion.p>
         </motion.div>
@@ -693,159 +243,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <motion.h2
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
-          >
-            {title}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-          >
-            {subtitle}
-          </motion.p>
-        </motion.div>
-
-        {/* Filters and Controls */}
-        <motion.div
-          initial={{ opacity: 0, y: 20}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12"
-        >
-          {/* Category Filter */}
-          <div className='flex items-center space-x-2' />
-            <span className='text-gray-300 text-sm font-medium' />
-              Filter by:
-            </span>
-            <div className='flex flex-wrap gap-2' />
-              {categories.map(category => (}
-                <button;}
-key={category}
-                  onClick={() = /> setSelectedCategory(category}
-}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${selectedCategory === category;
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg';}
-                      : 'bg-gray-900/50 text-gray-300 hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50';}
-                  }`}>
-
-                  {category === 'all' ? 'All Categories' : category}
-
-            <select
-                  {category === 'all' ? 'All Categories' : category}<select;
-              value={sortBy}
-              onChange={e => setSortBy(e && e.target.value as any)}
-              className='px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500';
-            >;
-              <option value='innovation'>Innovation Level</option>;
-              <option value='price'>Price</option>;
-              <option value='rating'>Rating</option>            </select>            <select;
-              value={sortBy}
-            >;
-              <option value="innovation">Innovation Level</option>;
-              <option value="price">Price</option>;
-              <option value="rating">Rating</option>;
-            </select>;
-          </div>;</button>;
-              ))}
-            </div>;
-          </div>;
-          {/* Sort Options */}
-          </div>;
-                >
-                  {category === 'all' ? 'All Categories' : category}
-=======
-          transition={{ duration: 0.6, delay: 0.3 }}
-className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
-        >
-          {/* Category Filter */}
-          <div className='flex items-center space-x-2'>
-            <span className='text-gray-300 text-sm font-medium'>
-              Filter by:
-            </span>
-            <div className='flex flex-wrap gap-2'>
-              {categories.map(category => (
-                <button
-origin/cursor/automate-test-improve-and-merge-code-2533
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
-                    selectedCategory === category;'
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg';'
-                      : 'bg-gray-900/50 text-gray-300 hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50';`
-                  }`}
-                >;'
-                  {category === 'all' ? 'All Categories' : category}
-            <select;
-              value={sortBy}
-              onChange={e => setSortBy(e && e.target.value as any)}'
-              className='px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500';
-            >;'
-              <option value='innovation'>Innovation Level</option>;'
-              <option value='price'>Price</option>;'
-              <option value='rating'>Rating</option>            </select>            <select;
-              value={sortBy}
-            >;"
-              <option value="innovation">Innovation Level</option>;"
-              <option value="price">Price</option>;"
-              <option value="rating">Rating</option>;
-            </select>;
-          </div>;
-<<<<<<< HEAD
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </button>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
 
-          {/* Sort Options */}
-          <div className="flex items-center space-x-2">
-            <span className="text-gray-300 text-sm font-medium">Sort by:</span>
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
-              className="px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500"
-            >
-              <option value='rating'>Rating</option>            </select>
-
-              <option value="innovation">Innovation Level</option>
-              <option value="price">Price</option>
-              <option value="rating">Rating</option>
-=======
-          {/* Sort Options */}
-<div className='flex items-center space-x-2'>
-            <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <select
-=======
-            <select;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}'
-              className='px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500'
+              className=px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500
             >'
-              <option value='innovation'>Innovation Level</option>'
-              <option value='price'>Price</option>'
-              <option value='rating'>Rating</option>            </select>
+              <option value='innovation>Innovation Level</option>
+              <option value='price'>Price</option>
+              <option value=rating'>Rating</option>            </select>
 
-              <option value='rating'>Rating</option>
+              <option value='rating>Rating</option>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </select>
@@ -856,47 +268,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
         <motion&& motion.div;
           variants={containerVariants}
-initial='hidden';
-          whileInView='visible';
-          viewport={{ once: true }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          initial="hidden";
-          whileInView="visible";
+initial=hidden';
+          whileInView='visible;
+          viewport={{ once: true }}className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          initial=hidden";
+          whileInView="visible;
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
+          className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
           {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;
               key={service && service.id}
               variants={itemVariants}
 =======
         {/* Services Grid */}
-<<<<<<< HEAD
-        <motion&& motion.div
-          variants={containerVariants}
-initial='hidden'
-=======
-        <motion&& motion.div;
-          variants={containerVariants}'
-          initial='hidden''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-          whileInView='visible'
+
+          whileInView='visible
           viewport={{ once: true }}
 
-'"
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          initial="hidden";"
-          whileInView="visible";
-          viewport={{ once: true }}"
+"
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          initial=hidden;"
+          whileInView="visible;
+          viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
           {filteredServices && filteredServices.map((service, index) => (;
             <motion&& motion.div;
               key={service && service.id}
-              variants={itemVariants}'
+              variants={itemVariants}
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-              className='group'>;
+              className=group'>;
               <UltraFuturisticServiceCard;
-                service={service}'"
-                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />              className="group";
+                service={service}'
+                className=h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300              />              className=group";
             >;
               <UltraFuturisticServiceCard;
                 service={service}"
-                className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
+                className=h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300
             </motion && motion.div>;
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
         >
@@ -904,149 +308,43 @@ initial='hidden'
             <motion.div
               key={service.id}
               variants={itemVariants}
-className='group'
+className=group
             >
               <UltraFuturisticServiceCard
                 service={service}
-<<<<<<< HEAD
-                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />              className="group";
-            >;
-              <UltraFuturisticServiceCard;
-                service={service}
-                className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300";
-            </motion && motion.div>;className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
-        >;
-          {filteredServices.map((service, index) => (<motion.div;
-              key={service.id}
-              variants={itemVariants}
-className='group';
-            >;
-              <UltraFuturisticServiceCard;
-                service={service}
-                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300';
-              />;
-            </motion.div>;
 
-
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          initial="hidden";
-          whileInView="visible";
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-          {filteredServices && filteredServices.map((service, index) => (;
-            <motion&& motion.div
-              key={service && service.id}
-              variants={itemVariants}
-              className='group'>;
-              <UltraFuturisticServiceCard
-                service={service}
-                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />              className="group";
-            >;
-              <UltraFuturisticServiceCard
-                service={service}
-                className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
-            </motion && motion.div>;
-          ))}
-        {/* Call to Action */}
-        <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true}}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {filteredServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              variants={itemVariants}
-              className="group"
-            >
-              <UltraFuturisticServiceCard
-                service={service}
-                className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
-              />
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Experience the Future?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of forward-thinking companies already using our revolutionary 2029 technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25"
-              >
-                Get Started Today
-              </a>
-              <a
-                href="/pricing"
-                className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold"
-=======
-                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'
-              />
-            </motion.div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-          ))}
-        {/* Call to Action */}
-        <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-
-<<<<<<< HEAD
-          transition={{ duration: 0.8, delay: 0.4 }}
-className='text-center mt-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
-        >
-          <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
-=======
-        >'
-          <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h3 className='text-3xl font-bold text-white mb-4'>
               Ready to Experience the Future?
-            </h3>'
-            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
+            </h3>
+            <p className=text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
               Join thousands of forward-thinking companies already using our;
               revolutionary 2029 technology solutions.
             </p>'
-            <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+            <div className=flex flex-col sm:flex-row items-center justify-center gap-4>
               <a'
-                href='/contact''
+                href='/contact
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'              >
                 Get Started Today;
               </a>
-              <a'
-                href='/pricing''
-                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'>        >;"
-          <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">;"
+              <a
+                href=/pricing''
+                className=px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold>        >;"
+          <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm>;
             <h3 className="text-3xl font-bold text-white mb-4">;
               Ready to Experience the Future?;
-            </h3>;"
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+            </h3>;
+            <p className=text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
               Join thousands of forward-thinking companies already using our revolutionary 2029 technology solutions.;
             </p>;"
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">;
+            <div className=flex flex-col sm:flex-row items-center justify-center gap-4>;
               <a"
-                href="/contact""
+                href="/contact
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25">;
                 Get Started Today;
               </a>;
               <a'
-                href='/pricing''"
-                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'                href="/pricing"
+                href='/pricing
+                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'                href=/pricing"
                 View Pricing;
               </a>;
             </div>;
@@ -1054,351 +352,141 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Innovation Stats */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}'
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+          whileInView={{ opacity: 1, y: 0 }}
+          <div className=grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[]
               {'
-                label: 'Revolutionary Services'
+                label: Revolutionary Services
                 value: services.filter('
-                  s => s.innovationLevel === 'Revolutionary'
+                  s => s.innovationLevel === 'Revolutionary
                 ).length;
-                icon: Rocket'
-                color: 'from-purple-500 to-pink-500'
-              }
-              {'
-                label: 'Patent Pending''
-                value: services.filter(s => s.patentStatus === 'Patent Pending')
-                  .length;
-                icon: Shield'
-                color: 'from-blue-500 to-cyan-500'
-              }
-              {'
-                label: 'Total Customers'
-                value: services.reduce((sum, s) => sum + s.customers, 0)
-                icon: Star'
-                color: 'from-yellow-500 to-orange-500'
-              }
-        </motion.div>;
-        {/* Innovation Stats */}
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}'
-          className='mt - 20';'
-          <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 8'>;
-            {[;
-              {'
-                label: 'Revolutionary Services',
-                value: services.filter ('
-                  string => s.innovation_level === 'Revolutionary').length,
-                icon: Rocket,'
-                color: 'from - purple - 500 to - pink - 500',
-              },
-              {'
-                label: 'Patent Pending','
-                value: services.filter (string => s.patent_status === 'Patent Pending');
-                  .length,
-                icon: Shield,'
-                color: 'from - blue - 500 to - cyan - 500',
-              },
-              {'
-                label: 'Total Customers',
-                value: services.reduce ((sum, s) => sum + s.customers, 0),
-                icon: Star,'
-                color: 'from - yellow - 500 to - orange - 500',
-              },
-              {'
-                label: 'Average Rating'
-                value: (
-                  services.reduce((sum, s) => sum + s.rating, 0) /
-                  services.length;
-                ).toFixed(1)
-                icon: TrendingUp'
-                color: 'from-green-500 to-teal-500''
-              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' }'
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }'
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }'
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-                ).toFixed(1),
-                icon: TrendingUp,'
-                color: 'from-green-500 to-teal-500','
-              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },'
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },'
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },'
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-<<<<<<< HEAD
-              <motion.div
-                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'
-              >
-                Get Started Today
-              </a>
-              <a
-href='/pricing'
-                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-              >
-                View Pricing
-              </a>
-            </div>
-          </div>
-        </motion.div>
-<<<<<<< HEAD
-          whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.4 }}
-className='text-center mt-16';
-        >;
-          <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>;
-            <h3 className='text-3xl font-bold text-white mb-4'>;
-              Ready to Experience the Future?;
-            </h3>;
-            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
-              Join thousands of forward-thinking companies already using our;
-              revolutionary 2029 technology solutions.;
-            </p>;
-            <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;
-              <a;
-                href='/contact';
-                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'              >;
-                Get Started Today;
-              </a>;
-              <a;
-                href='/pricing';
-                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'              >
-                Get Started Today
-              </a>
-              <a
-                href='/pricing'
-                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'>        >;
-          <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">;
-            <h3 className="text-3xl font-bold text-white mb-4">;
-              Ready to Experience the Future?;
-            </h3>;
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-              Join thousands of forward-thinking companies already using our revolutionary 2029 technology solutions.;
-            </p>;
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">;
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25">;
-                Get Started Today;
-              </a>;
-              <a
-                href='/pricing'
-                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'                href="/pricing"
-                View Pricing;
-              </a>;
-            </div>;
-          </div>;
-        {/* Innovation Stats */}
-        <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-            {[
-              {
-                label: 'Revolutionary Services'
-                value: services.filter(
-                  s => s.innovationLevel === 'Revolutionary'
-                ).length
                 icon: Rocket
                 color: 'from-purple-500 to-pink-500'
               }
               {
-                label: 'Patent Pending'
-                value: services.filter(s => s.patentStatus === 'Patent Pending')
-                  .length
-                icon: Shield
-                color: 'from-blue-500 to-cyan-500'
+                label: Patent Pending''
+                value: services.filter(s => s.patentStatus === Patent Pending)
+                  .length;
+                icon: Shield'
+                color: 'from-blue-500 to-cyan-500
               }
               {
                 label: 'Total Customers'
                 value: services.reduce((sum, s) => sum + s.customers, 0)
                 icon: Star
-                color: 'from-yellow-500 to-orange-500'
+                color: from-yellow-500 to-orange-500'
               }
         </motion.div>;
         {/* Innovation Stats */}
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 30 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className='mt - 20';
-          <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 8'>;
+          transition={{ duration: 0.8, delay: 0.5 }}'
+          className=mt - 20;'
+          <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 8>;
             {[;
               {
                 label: 'Revolutionary Services',
                 value: services.filter (
-                  string => s.innovation_level === 'Revolutionary').length,
-                icon: Rocket,
-                color: 'from - purple - 500 to - pink - 500',
-              },
-              {
-                label: 'Patent Pending',
+                  string => s.innovation_level === Revolutionary').length,
+                icon: Rocket,'
+                color: from - purple - 500 to - pink - 500},
+              {'
+                label: 'Patent Pending,
                 value: services.filter (string => s.patent_status === 'Patent Pending');
                   .length,
                 icon: Shield,
-                color: 'from - blue - 500 to - cyan - 500',
-              },
-              {
-                label: 'Total Customers',
+                color: from - blue - 500 to - cyan - 500'},
+              {'
+                label: Total Customers,
                 value: services.reduce ((sum, s) => sum + s.customers, 0),
-                icon: Star,
-                color: 'from - yellow - 500 to - orange - 500',
-              },
+                icon: Star,'
+                color: 'from - yellow - 500 to - orange - 500},
               {
                 label: 'Average Rating'
                 value: (
                   services.reduce((sum, s) => sum + s.rating, 0) /
-                  services.length
+                  services.length;
                 ).toFixed(1)
                 icon: TrendingUp
-                color: 'from-green-500 to-teal-500'
-              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' }
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
+                color: from-green-500 to-teal-500''
+              }].map((stat, index) => (              { label: Revolutionary Services, value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: from-purple-500 to-pink-500 }'
+              { label: 'Patent Pending, value: services.filter(s => s.patentStatus === Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500 }
+              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: from-yellow-500 to-orange-500 }'
+              { label: 'Average Rating, value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: from-green-500 to-teal-500' }
                 ).toFixed(1),
-                icon: TrendingUp,
-                color: 'from-green-500 to-teal-500',
-              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-              <motion.div
+                icon: TrendingUp,'
+                color: from-green-500 to-teal-500,'
+              }].map((stat, index) => (              { label: 'Revolutionary Services, value: services.filter(s => s.innovationLevel === Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500 },
+              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === Patent Pending).length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
+              { label: Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500 },
+              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: from-green-500 to-teal-500 }
 
-        {/* Innovation Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.8, delay: 0.5 }}
         {/* Innovation Stats */}
         <motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-className='mt-20';
-        >;
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
-            {[;
-              {label: 'Revolutionary Services';
-                value: services.filter(s => s.innovationLevel === 'Revolutionary';
-                ).length;
-                icon: Rocket;
-                color: 'from-purple-500 to-pink-500';
-              }
-              {label: 'Patent Pending';
-                value: services.filter(s => s.patentStatus === 'Patent Pending').length;
-                icon: Shield;
-                color: 'from-blue-500 to-cyan-500';
-              }
-              {label: 'Total Customers';
-                value: services.reduce((sum, s) => sum + s.customers, 0)icon: Star;
-                color: 'from-yellow-500 to-orange-500';
-              }
 
-              <motion.div
-              {label: 'Average Rating';
-                value: (services.reduce((sum, s) => sum + s.rating, 0) /;
-                  services.length;
-                ).toFixed(1),icon: TrendingUp,color: 'from-green-500 to-teal-500',},].map((stat, index) => (<motion.div;
-<div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
-            {[;
-              {label: 'Revolutionary Services',value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary';
-                ).length,icon: Rocket,color: 'from-purple-500 to-pink-500',},{label: 'Patent Pending',value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length,icon: Shield,color: 'from-blue-500 to-cyan-500',},{label: 'Total Customers',value: services && services.reduce((sum, s) => sum + s && s.customers, 0),icon: Star,color: 'from-yellow-500 to-orange-500',},{label: 'Average Rating',value: (services && services.reduce((sum, s) => sum + s && s.rating, 0) /;
-                  services && services.length;
-                ).toFixed(1),icon: TrendingUp,color: 'from-green-500 to-teal-500',},            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },{ label: 'Patent Pending', value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },{ label: 'Total Customers', value: services && services.reduce((sum, s) => sum + s && s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },{ label: 'Average Rating', value: (services && services.reduce((sum, s) => sum + s && s.rating, 0) / services && services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-              <motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        {/* Innovation Stats */}
-        <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.8, delay: 0.5 }}
-className='mt-20'
-        >
-=======
-          transition={{ duration: 0.8, delay: 0.5 }}'
-          className='mt-20''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[]
-              {'
-                label: 'Revolutionary Services'
+              {
+                label: Revolutionary Services'
                 value: services.filter('
-                  s => s.innovationLevel === 'Revolutionary'
+                  s => s.innovationLevel === Revolutionary
                 ).length;
                 icon: Rocket'
-                color: 'from-purple-500 to-pink-500'
+                color: 'from-purple-500 to-pink-500
               }
-              {'
-                label: 'Patent Pending''
-                value: services.filter(s => s.patentStatus === 'Patent Pending')
+              {
+                label: 'Patent Pending'
+                value: services.filter(s => s.patentStatus === Patent Pending')
                   .length;
                 icon: Shield'
-                color: 'from-blue-500 to-cyan-500'
+                color: from-blue-500 to-cyan-500
               }
               {'
-                label: 'Total Customers'
+                label: 'Total Customers
                 value: services.reduce((sum, s) => sum + s.customers, 0)
-                icon: Star'
+                icon: Star
                 color: 'from-yellow-500 to-orange-500'
               }
-              {'
-                label: 'Average Rating'
+              {
+                label: Average Rating'
                 value: (
                   services.reduce((sum, s) => sum + s.rating, 0) /
-<<<<<<< HEAD
-                  services.length
 
-                ).toFixed(1),
-                icon: TrendingUp,
-                color: 'from-green-500 to-teal-500',
-              },
-            ].map((stat, index) => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <motion.div
-=======
-                  services.length;
-              <motion.div'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-<div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
+<div className='grid grid-cols-1 md:grid-cols-4 gap-8>;
             {[;
-              {;'
-                label: 'Revolutionary Services',;
-                value: services && services.filter(;'
-                  s => s && s.innovationLevel === 'Revolutionary';
-                ).length,;
-                icon: Rocket,;'
-                color: 'from-purple-500 to-pink-500',;
-              },;
-              {;'
-                label: 'Patent Pending',;'
+              {
+                label: 'Revolutionary Services',
+                value: services && services.filter(;
+                  s => s && s.innovationLevel === Revolutionary';
+                ).length,
+                icon: Rocket,'
+                color: from-purple-500 to-pink-500},
+              {'
+                label: 'Patent Pending,
                 value: services && services.filter(s => s && s.patentStatus === 'Patent Pending');
-                  .length,;
-                icon: Shield,;'
-                color: 'from-blue-500 to-cyan-500',;
-              },;
-              {;'
-                label: 'Total Customers',;
-                value: services && services.reduce((sum, s) => sum + s && s.customers, 0),;
-                icon: Star,;'
-                color: 'from-yellow-500 to-orange-500',;
-              },;
-              {;'
-                label: 'Average Rating',;
+                  .length,
+                icon: Shield,
+                color: from-blue-500 to-cyan-500'},
+              {'
+                label: Total Customers,
+                value: services && services.reduce((sum, s) => sum + s && s.customers, 0),
+                icon: Star,'
+                color: 'from-yellow-500 to-orange-500},
+              {
+                label: 'Average Rating',
                 value: (;
                   services && services.reduce((sum, s) => sum + s && s.rating, 0) /;
                   services && services.length;
-                ).toFixed(1),;
-                icon: TrendingUp,;'
-                color: 'from-green-500 to-teal-500',;'
-              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },;'
-              { label: 'Patent Pending', value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },;'
-              { label: 'Total Customers', value: services && services.reduce((sum, s) => sum + s && s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },;'
-              { label: 'Average Rating', value: (services && services.reduce((sum, s) => sum + s && s.rating, 0) / services && services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
+                ).toFixed(1),
+                icon: TrendingUp,
+                color: from-green-500 to-teal-500','
+              }].map((stat, index) => (              { label: Revolutionary Services, value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: from-purple-500 to-pink-500 },'
+              { label: 'Patent Pending, value: services && services.filter(s => s && s.patentStatus === Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500 },
+              { label: 'Total Customers', value: services && services.reduce((sum, s) => sum + s && s.customers, 0), icon: Star, color: from-yellow-500 to-orange-500 },'
+              { label: 'Average Rating, value: (services && services.reduce((sum, s) => sum + s && s.rating, 0) / services && services.length).toFixed(1), icon: TrendingUp, color: from-green-500 to-teal-500' }
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               <motion&& motion.div;
                 key={index}
@@ -1406,58 +494,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, y: 0 }}
 
 export default UltraFuturistic2029ServiceShowcase;  );
-};
-
-<<<<<<< HEAD
-              >
-                <div
-                whileInView={{ opacity: 1, y: 0 }}export default UltraFuturistic2029ServiceShowcase;  )}transition={{ duration: 0.6, delay: index * 0.1 }}
-className='text-center';
-              >;
-                <div;
-                  className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}
-                >;
-                  <stat.icon className='w-8 h-8 text-white' />;
-                </div>;
-                <div className='text-3xl font-bold text-white mb-2'>;
-                  {stat.value}
-                </div>;
-                <div className='text-gray-400'>{stat.label}</div>;
-              </motion.div>;
-            ))}
-  );
-export default UltraFuturistic2029ServiceShowcase;  )
 }
-export default UltraFuturistic2029ServiceShowcase;
-<<<<<<< HEAD
 
-export default UltraFuturistic2029ServiceShowcase;
-export default UltraFuturistic2029ServiceShowcase;
 
-=======
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-className='text-center'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              >
-                <div;`
-                  className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}
-                >'
-                  <stat.icon className='w-8 h-8 text-white' />
-                </div>'
-                <div className='text-3xl font-bold text-white mb-2'>
-                  {stat.value}
-<<<<<<< HEAD
-                </div>
-                <div className='text-gray-400'>{stat.label}</div>
-=======
-                </div>'
-                <div className='text-gray-400'>{stat.label}</div>              </motion.div>              >`
-                <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>"
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>"
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>"
-                <div className="text-gray-400">{stat.label}</div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </motion.div>
 
 
@@ -1474,86 +513,36 @@ export default UltraFuturistic2029ServiceShowcase;
 export default UltraFuturistic2029ServiceShowcase;
 export default UltraFuturistic2029ServiceShowcase;
 
-};
+}
 export default UltraFuturistic2029ServiceShowcase;
                   services.reduce ((sum, s) => sum + s.rating, 0) /;
                   services.length).to_fixed (1),
                 icon: TrendingUp,'
-                color: 'from - green - 500 to - teal - 500','
-              },            ].map ((stat, index) => (              { label: 'Revolutionary Services', value: services.filter (string => s.innovation_level === 'Revolutionary').length, icon: Rocket, color: 'from - purple - 500 to - pink - 500' },'
-              { label: 'Patent Pending', value: services.filter (string => s.patent_status === 'Patent Pending').length, icon: Shield, color: 'from - blue - 500 to - cyan - 500' },'
-              { label: 'Total Customers', value: services.reduce ((sum, s) => sum + s.customers, 0), icon: Star, color: 'from - yellow - 500 to - orange - 500' },'
-              { label: 'Average Rating', value: (services.reduce ((sum, s) => sum + s.rating, 0) / services.length).to_fixed (1), icon: TrendingUp, color: 'from - green - 500 to - teal - 500' }
+                color: from - green - 500 to - teal - 500,'
+              }].map ((stat, index) => (              { label: 'Revolutionary Services, value: services.filter (string => s.innovation_level === Revolutionary').length, icon: Rocket, color: 'from - purple - 500 to - pink - 500 },
+              { label: 'Patent Pending', value: services.filter (string => s.patent_status === Patent Pending).length, icon: Shield, color: 'from - blue - 500 to - cyan - 500' },
+              { label: Total Customers', value: services.reduce ((sum, s) => sum + s.customers, 0), icon: Star, color: 'from - yellow - 500 to - orange - 500 },
+              { label: 'Average Rating', value: (services.reduce ((sum, s) => sum + s.rating, 0) / services.length).to_fixed (1), icon: TrendingUp, color: from - green - 500 to - teal - 500 }
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}'
-                className='text - center';
+                className='text - center;
               >;
                 <div;`
-                  className={`w - 16 h - 16 bg - gradient - to - br ${stat.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4`}
-                >;'
-                  <stat.icon className='w - 8 h - 8 text - white' />;
-                </div>;'
-                <div className='text - 3xl font - bold text - white mb - 2'>;
-                  {stat.value}
-                </div>;'
-                <div className='text - gray - 400'>{stat.label}</div>              </motion.div>              >;`
-                <div className={`w - 16 h - 16 bg - gradient - to - br ${stat.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4`}>;"
-                  <stat.icon className="w - 8 h - 8 text - white" />;
-                </div>;"
-                <div className="text - 3xl font - bold text - white mb - 2">{stat.value}</div>;"
-                <div className="text - gray - 400">{stat.label}</div>;
-              </motion.div>))}
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>);
-}
-;
-export default UltraFuturistic2029ServiceShowcase);
-}
-;
-export default UltraFuturistic2029ServiceShowcase;
-;
-<<<<<<< HEAD
-);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-};
-
-export default UltraFuturistic2029ServiceShowcase;
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;
-  )export default UltraFuturistic2029ServiceShowcase;  )}
-export default UltraFuturistic2029ServiceShowcase;export default UltraFuturistic2029ServiceShowcase;
-export default UltraFuturistic2029ServiceShowcase;}export default UltraFuturistic2029ServiceShowcase;
-                  services.reduce ((sum, s) => sum + s.rating, 0) /;
-                  services.length).to_fixed (1),icon: TrendingUp,color: 'from - green - 500 to - teal - 500',},            ].map ((stat, index) => (              { label: 'Revolutionary Services', value: services.filter (string => s.innovation_level === 'Revolutionary').length, icon: Rocket, color: 'from - purple - 500 to - pink - 500' },{ label: 'Patent Pending', value: services.filter (string => s.patent_status === 'Patent Pending').length, icon: Shield, color: 'from - blue - 500 to - cyan - 500' },{ label: 'Total Customers', value: services.reduce ((sum, s) => sum + s.customers, 0), icon: Star, color: 'from - yellow - 500 to - orange - 500' },{ label: 'Average Rating', value: (services.reduce ((sum, s) => sum + s.rating, 0) / services.length).to_fixed (1), icon: TrendingUp, color: 'from - green - 500 to - teal - 500' }
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className='text - center';
-              >;
-                <div;
                   className={`w - 16 h - 16 bg - gradient - to - br ${stat.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4`}
                 >;
                   <stat.icon className='w - 8 h - 8 text - white' />;
                 </div>;
-                <div className='text - 3xl font - bold text - white mb - 2'>;
+                <div className=text - 3xl font - bold text - white mb - 2'>;
                   {stat.value}
-                </div>;
-                <div className='text - gray - 400'>{stat.label}</div>              </motion.div>              >;
-                <div className={`w - 16 h - 16 bg - gradient - to - br ${stat.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4`}>;
-                  <stat.icon className="w - 8 h - 8 text - white" />;
-                </div>;
-                <div className="text - 3xl font - bold text - white mb - 2">{stat.value}</div>;
+                </div>;'
+                <div className=text - gray - 400>{stat.label}</div>              </motion.div>              >;`
+                <div className={`w - 16 h - 16 bg - gradient - to - br ${stat.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4`}>;"
+                  <stat.icon className=w - 8 h - 8 text - white />;
+                </div>;"
+                <div className="text - 3xl font - bold text - white mb - 2>{stat.value}</div>;
                 <div className="text - gray - 400">{stat.label}</div>;
               </motion.div>))}
           </div>;
@@ -1561,85 +550,10 @@ export default UltraFuturistic2029ServiceShowcase;}export default UltraFuturisti
       </div>;
     </section>);
 }
-;
 export default UltraFuturistic2029ServiceShowcase);
 }
-;
 export default UltraFuturistic2029ServiceShowcase;
-;
-    </section>)}export default UltraFuturistic2029ServiceShowcase)}export default UltraFuturistic2029ServiceShowcase;)}export default UltraFuturistic2029ServiceShowcase;
-          className="mt-20"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20}}
-                whileInView={{ opacity: 1, y: 0}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className = $2;
-export default UltraFuturistic2029ServiceShowcase,
-=======
-<<<<<<< HEAD
 
-"
-=======
-//Filter and sort services const filteredServices = services .filter (service => selectedCategory === 'all' || service.category === selectedCategory) .sort ( (a, b) => {
-  switch (sortBy) {
-  case 'innovation': //Default to 'Advanced' if innovationLevel is not available case 'price': return parseFloat (a.price.replace (/[^0-9.]/g, '') ) - parseFloat (b.price.replace (/[^0-9.]/g, '') )
-case 'rating': return b.rating - a.rating
-default: return 0
-}
-}) .slice (0, maxServices)
-const containerVariants = {
-  hidden: {
-  opacity: 0 
-}
-visible: {
-  opacity: 1, transition: {
-  staggerChildren: 0.1 
-}
-}
-}
-}
-}
-> {
-  title 
-}</motion.h2> <motion.p > {
-  subtitle 
-}</motion.p> </motion.div> {
-  /* Filters and Controls */ 
-}<motion.div key= {
-  category 
-}onClick= {
-  () => setSelectedCategory (category) 
-}className= {
-  `px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 $ {
-  selectedCategory === category ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg': 'bg-gray-900/50 text-gray-300 hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50' 
-}` 
-}> {
-  category === 'all'? 'All Categories' : category 
-}</button>) ) 
-}</div> </div> > <option value="innovation" >Innovation Level</option> <option value="price" >Price</option> <option value="rating" >Rating</option> </select> </div> </motion.div> {
-  /* Services Grid */ 
-}<motion.div > {
-  filteredServices.map ( (service, index) => (<motion.div key= {
-  service.id 
-}/> </motion.div>) ) 
-}</motion.div> {
-  /* Call to Action */ 
-}<motion.div > <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm" > <h3 className="text-3xl font-bold text-white mb-4" > Ready to Experience the Future? </h3> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join thousands of forward-thinking companies already using our revolutionary 2029 technology solutions. </p> <div className="flex flex-col sm:flex-row items-center justify-center gap-4" > <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25" > Get Started Today </a> <a href="/pricing" className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > View Pricing </a> </div> </div> </motion.div> {
-  /* Innovation Stats */ 
-}<motion.div </motion.div>) ) 
-}</div> </motion.div> </div> </section>) 
-}
-export default UltraFuturistic2029ServiceShowcase
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 =======
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

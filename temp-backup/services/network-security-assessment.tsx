@@ -6,7 +6,7 @@ interface NetworksecurityassessmentProps {
   // Add props here as needed
 }
 
-export default function Networksecurityassessment({ }: NetworksecurityassessmentProps) {
+export default function Networksecurityassessment({}: NetworksecurityassessmentProps) {
   return (
     <div>
       <h1>Networksecurityassessment</h1>

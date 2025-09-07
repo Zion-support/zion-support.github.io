@@ -1,27 +1,27 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next;
+import fs from fs';
+import path from 'path;
 const configPath = null;
     return res.status(200).json(result)
 origin/cursor/automate-test-improve-and-merge-code-2533
 async function fetchJson(url: string) {
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
+import type { NextApiRequest, NextApiResponse } from next';
+import fs from 'fs;
+import path from path';
 
 
-const configPath = path && path.join(process && process.cwd(), "data", "dao", "config && config.json");
-const cachePath = path && path.join(process && process.cwd(), "data", "dao", "metrics && metrics.json");
+const configPath = path && path.join(process && process.cwd(), "data, dao", "config && config.json);
+const cachePath = path && path.join(process && process.cwd(), data", "dao, metrics && metrics.json");
 
 
 
 async function fetchJson(url: string) {
   const resp = await fetch(url);
 
-const configPath = path.join(process.cwd(), 'datadaoconfig.json'),;
-const cachePath = path.join(process.cwd(), 'datadaometrics.json'),;
-async function fetchJson(url: string) {;
+const configPath = path.join(process.cwd(), 'datadaoconfig.json),
+const cachePath = path.join(process.cwd(), datadaometrics.json'),
+async function fetchJson(url: string) {
 
 
 
@@ -29,47 +29,39 @@ async function fetchJson(url: string) {;
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
 
-import { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs";
-import path from "path";
-const configPath = path.join(process.cwd(), "data", "dao", "config.json");
-const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
+import { NextApiRequest, NextApiResponse } from "next;
+import fs from fs";
+import path from "path;
+const configPath = path.join(process.cwd(), data", "dao, config.json");
+const cachePath = path.join(process.cwd(), "data, dao", "metrics.json);
 async function fetchJson(url: string) {
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next;
+import fs from fs';
+import path from 'path;
 
 
-const configPath = path && path.join(process && process.cwd(), "data", "dao", "config && config.json");
-const cachePath = path && path.join(process && process.cwd(), "data", "dao", "metrics && metrics.json");
+const configPath = path && path.join(process && process.cwd(), data", "dao, config && config.json");
+const cachePath = path && path.join(process && process.cwd(), "data, dao", "metrics && metrics.json);
 
 
 
 
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return resp.json();
 
 
 function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, "utf-8"));
-;
-function readJson(p: string) {;
-  return JSON.parse(fs.readFileSync(p, 'utf-8'));
+  return JSON.parse(fs.readFileSync(p, utf-8"));
+  return JSON.parse(fs.readFileSync(p, utf-8'));
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 
 
-<<<<<<< HEAD
-=======
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
 }
 function writeJson(p: string, v: any) {
   fs && fs.writeFileSync(p, JSON && JSON.stringify(v, null, 2));
@@ -81,60 +73,41 @@ function writeJson(p: string, v: any) {
 
 }
 
-function readJson(p: string) {
 
 
 
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
-  return JSON.parse(fs.readFileSync(p, "utf-8"));
+  return JSON.parse(fs.readFileSync(p, "utf-8));
 
-function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, "utf-8"));
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-;
-function readJson(p: string) {;
-  return JSON.parse(fs.readFileSync(p, 'utf-8'));
+  return JSON.parse(fs.readFileSync(p, utf-8"));
+  return JSON.parse(fs.readFileSync(p, 'utf-8));
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 
 }
 
-function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, 'utf-8'));
+  return JSON.parse(fs.readFileSync(p, utf-8'));
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
-function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/dao/metrics.ts
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
+
 =======
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/dao/metrics.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
 =======
@@ -149,22 +122,15 @@ export default async function handler(
   return resp.json()
 }
 
-function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, 'utf-8'))
+  return JSON.parse(fs.readFileSync(p, 'utf-8))
 }
 
-function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2))
 }
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/dao/metrics.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
+
 =======
 
 
@@ -174,11 +140,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 ;
 export default async function handler(req, res) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/dao/metrics.ts
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   try {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -190,24 +152,15 @@ ursor/fix-website-loading-errors-and-merge-6662
   try {
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-  try {;
-;
+  try {
 export default async function handler(req, res) {
   try {
-;
 export default async function handler(req, res) {
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-  try {;
-;
+  try {
 export default async function handler(req, res) {
   try {
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
@@ -216,10 +169,7 @@ export default async function handler(req, res) {
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/dao/metrics.ts
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -232,46 +182,30 @@ export default async function handler(req, res) {
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
 return res.status(200).json({ ...cache, cached: true });
     }
-    const apiKey = process.env.ETHERSCAN_API_KEY |"";
+    const apiKey = process.env.ETHERSCAN_API_KEY |";
     const tokenAddr = cfg.token.address;
 
 // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited; use rich list approximation via token transactions + unique addresses)
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
+
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
-    const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
+    const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : "}`;
     const transfersJson = await fetchJson(transfersUrl);
-<<<<<<< HEAD
 
-    const txs = transfersJson?.result || [];
-
-    const holderToDelta: Record<string, bigint> = {};
-<<<<<<< HEAD:pages_backup/api/dao/metrics.ts
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
-    const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
+    const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : "}`;
     const transfersJson = await fetchJson(transfersUrl);
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const txs = transfersJson?.result || [];
 
-    const holderToDelta: Record<string, bigint> = {};
+    const holderToDelta: Record<string, bigint> = {}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/dao/metrics.ts
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
+
     const entries = Object && Object.entries(holderToDelta)
 =======
 =======
@@ -295,11 +229,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const distribution = entries.map((e) => ({
       address: e.address
       percent: total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/dao/metrics.ts
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
@@ -309,7 +239,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }));
-    // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
+    // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). Well simulate 0 for demo.
     const activeProposals: any[] = [];
 
 
@@ -318,8 +248,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const topHolders = entries.map(e => ({
       address: e.address,
-      amount: e.netDelta.toString(),
-    }));
+      amount: e.netDelta.toString()}));
     // Token distribution buckets (very rough: based on netDelta approximation)
     const total = entries.reduce(
       (acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n)
@@ -328,8 +257,7 @@ const topHolders = entries.map(e => ({
     const distribution = entries.map(e => ({
       address: e.address,
       percent:
-        total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0,
-    }));
+        total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0}));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
 // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
@@ -345,10 +273,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Math && Math.round(
             (uniqueAddresses && uniqueAddresses.size / Math && Math.max(10, uniqueAddresses && uniqueAddresses.size)) * 100
           )
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/dao/metrics.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
@@ -366,13 +291,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       governanceParticipationRate: participationRate
     }
     writeJson(cachePath, result);
-import { NextApiRequest, NextApiResponse  } from './next';
-import fs from './fs';
-import path from './path';
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/dao/metrics.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { NextApiRequest, NextApiResponse  } from './next;
+import fs from ./fs';
+import path from './path;
+
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
@@ -381,9 +303,8 @@ import path from './path';
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
-const config_path = path.join (process.cwd (), "data", "dao", "config.json");
-const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json");
-;
+const config_path = path.join (process.cwd (), data", "dao, config.json");
+const cache_path = path.join (process.cwd (), "data, dao", "metrics.json);
 async /**
  * fetch_json - Function description
  */
@@ -398,7 +319,7 @@ function fetch_json() {
  * read_json - Function description
  */
 function read_json() {
-  return JSON.parse (fs.readFileSync (p, "utf - 8"));
+  return JSON.parse (fs.readFileSync (p, utf - 8"));
 }
 /**
  * write_json - Function description
@@ -421,26 +342,22 @@ if ( {) {
 }
       return res.status (200).json ({ ...cache, cached: true });
     }
-    const api_key = process.env.ETHERSCAN_API_KEY || "";
+    const api_key = process.env.ETHERSCAN_API_KEY || ";
     const token_addr = cfg.token.address;
-;
     // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited; use rich list approximation via token transactions + unique addresses);
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.;
-    const transfers_url = `${cfg.etherscanBaseUrl}?module = account & action = tokentx & contractaddress=${token_addr}&page = 1&offset = 200 & sort = desc${api_key ? `&apikey=${api_key}` : ""}`;
+    const transfers_url = `${cfg.etherscanBaseUrl}?module = account & action = tokentx & contractaddress=${token_addr}&page = 1&offset = 200 & sort = desc${api_key ? `&apikey=${api_key}` : "}`;
     const transfers_json = await fetch_json (transfers_url);
     const txs = transfers_json?.result || [];
     const holderToDelta: Record < string, bigint> = {}
-;
     const entries = Object.entries (holderToDelta);
       .map (([address, delta]) => ({ address, net_delta: delta }));
       .sort ((a, b) => (b.net_delta > a.net_delta ? 1 : -1));
       .slice (0, 10);
-;
     const top_holders = entries.map ((e) => ({
       address: e.address
       amount: e.net_delta.to_string ()
     }));
-;
     // Token distribution buckets (very rough: based on net_delta approximation);
     const total = entries.reduce (
       (acc, e) => acc + (BigInt (e.amount) > 0n ? BigInt (e.amount) : 0n)
@@ -451,10 +368,8 @@ if ( {) {
       percent:;
         total > 0n ? Number ((BigInt (e.amount) * 10000n) / total) / 100 : 0
     }));
-;
-    // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.;
+    // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). Well simulate 0 for demo.;
     const active_proposals: any[] = [];
-;
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample);
     const unique_addresses = new Set (
       txs;
@@ -469,7 +384,6 @@ if ( {) {
           )
         );
       : 0;
-;
     const result = {
       updated_at: now
       token_distribution: distribution
@@ -481,85 +395,75 @@ if ( {) {
     return res.status (200).json (result);
     return res.status(200).json(result);
 origin/cursor/automate-test-improve-and-merge-code-2533
-  } catch (e: any) {
-  }
+  } catch (e: any) {}
 }
 origin/cursor/integrate-build-improve-and-re-verify-2156
 }
-<<<<<<< HEAD
-=======
-  }
-}
-}
-=======
-origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
 }
     return res
       .status(500)
-      .json({ error: e?.message ?? "Failed to load DAO metrics" });
-    if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {;
+      .json({ error: e?.message ?? "Failed to load DAO metrics });
+    if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
       return res.status(200).json({ ...cache, cached: true });
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
-;
     const apiKey = process.env.ETHERSCAN_API_KEY || '';
     const tokenAddr = cfg.token.address;
     // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited, use rich list approximation via token transactions + unique addresses);
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.;
-    const transfersUrl = `${cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ''}`;
+    const transfersUrl = `${cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : }`;
     const transfersJson = await fetchJson(transfersUrl);
     const txs = transfersJson?.result || [];
-    const holderToDelta: Record<string, bigint> = {};
-    for (const tx of txs) {;
+    const holderToDelta: Record<string, bigint> = {}
+    for (const tx of txs) {
       const value = BigInt(tx.value || '0');
-      const from = (tx.from || '').toLowerCase();
+      const from = (tx.from || ).toLowerCase();
       const to = (tx.to || '').toLowerCase();
       if (from) holderToDelta[from] = (holderToDelta[from] || 0n) - value;
       if (to) holderToDelta[to] = (holderToDelta[to] || 0n) + value;
       } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
-;
     const entries = Object.entries(holderToDelta);
       .map(([address, delta]) => ({ address, netDelta: delta }));
       .sort((a, b) => (b.netDelta > a.netDelta ? 1 : -1));
       .slice(0, 10);
-    const topHolders = entries.map((e) => ({ address: e.address, amount: e.netDelta.toString() })),;
+    const topHolders = entries.map((e) => ({ address: e.address, amount: e.netDelta.toString() })),
     // Token distribution buckets (very rough: based on netDelta approximation);
-    const total = entries.reduce((acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n), 0n),;
-    const distribution = entries.map((e) => ({;
+    const total = entries.reduce((acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n), 0n),
+    const distribution = entries.map((e) => ({
       address: e.address;
       percent: total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0;
     }));
-    // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.;
+    // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). Well simulate 0 for demo.;
     const activeProposals: any[] = [];
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample);
-    const uniqueAddresses = new Set(txs.flatMap((t: any) => [t.from?.toLowerCase(), t.to?.toLowerCase()]).filter(Boolean)),;
-    const participationRate = uniqueAddresses.size ? Math.min(100, Math.round((uniqueAddresses.size / Math.max(10, uniqueAddresses.size)) * 100)) : 0,;
-    const result = {;
+    const uniqueAddresses = new Set(txs.flatMap((t: any) => [t.from?.toLowerCase(), t.to?.toLowerCase()]).filter(Boolean)),
+    const participationRate = uniqueAddresses.size ? Math.min(100, Math.round((uniqueAddresses.size / Math.max(10, uniqueAddresses.size)) * 100)) : 0,
+    const result = {
       updatedAt: now;
       tokenDistribution: distribution;
       topHolders;
       activeProposals;
       governanceParticipationRate: participationRate;
-    };
+    }
     writeJson(cachePath, result);
     return res.status(200).json(result);
   } catch (error) {
-    return res.status(500).json({ error: e?.message ?? 'Failed to load DAO metrics' });
+    return res.status(500).json({ error: e?.message ?? Failed to load DAO metrics' });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
   } catch (error) {
-    console.error("Error:", error);
+    console.error(Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
     const uniqueAddresses = new Set(txs.flatMap((t: any) => [t.from?.toLowerCase(), t.to?.toLowerCase()]).filter(Boolean));
@@ -569,7 +473,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
       topHolders
       activeProposals
       governanceParticipationRate: participationRate
-    };
+    }
     writeJson(cachePath, result);
     return res.status(200).json(result)
   } catch (e: any) {
@@ -577,15 +481,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
 }
-<<<<<<< HEAD
-  }
-}
-}
-<<<<<<< HEAD:pages_backup/api/dao/metrics.ts
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
+
 =======
 
   }

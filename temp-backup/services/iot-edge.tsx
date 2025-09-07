@@ -6,7 +6,7 @@ interface IotedgeProps {
   // Add props here as needed
 }
 
-export default function Iotedge({ }: IotedgeProps) {
+export default function Iotedge({}: IotedgeProps) {
   return (
     <div>
       <h1>Iotedge</h1>

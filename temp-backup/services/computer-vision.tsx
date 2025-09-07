@@ -6,7 +6,7 @@ interface ComputervisionProps {
   // Add props here as needed
 }
 
-export default function Computervision({ }: ComputervisionProps) {
+export default function Computervision({}: ComputervisionProps) {
   return (
     <div>
       <h1>Computervision</h1>

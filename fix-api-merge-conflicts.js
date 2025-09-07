@@ -1,48 +1,38 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs);
+const path = require(path');
+const { execSync } = require('child_process);
 
-console.log('🔧 Fixing merge conflicts in API files...');
+console.log(🔧 Fixing merge conflicts in API files...');
 
 // Find all files with merge conflicts
 const findConflictedFiles = () => {
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    // Clean up any remaining conflict markers
-    content = content.replace(/[^\n]+\n?/g, '');
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-    const result = execSync('grep -r "" pages/api/ --include="*.ts" --include="*.js" | cut -d: -f1 | sort -u', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(file => file);
+
+    const result = execSync('grep -r " pages/api/ --include=*.ts" --include="*.js" | cut -d: -f1 | sort -u, { encoding: utf8' });
+    return result.trim().split('\n).filter(file => file);
   } catch (error) {
     return [];
   }
-};
+}
 
 const fixMergeConflicts = (filePath) => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, utf8');
     
     // Remove merge conflict markers and keep the main branch content
     content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)
     
     // Clean up any remaining conflict markers
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, ');
+    content = content.replace(/\n?/g, ');
     content = content.replace(/
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
     
     // Fix common syntax issues
-    content = content.replace(/,\s*;/g, ';'); // Remove trailing commas before semicolons
-    content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;'); // Fix import statements
+    content = content.replace(/,\s*;/g, ';); // Remove trailing commas before semicolons
+    content = content.replace(/import\s+([^;]+),\s*;/g, import $1;'); // Fix import statements
     
     fs.writeFileSync(filePath, content);
     console.log(`✅ Fixed: ${filePath}`);
@@ -51,7 +41,7 @@ const fixMergeConflicts = (filePath) => {
     console.log(`❌ Failed to fix: ${filePath} - ${error.message}`);
     return false;
   }
-};
+}
 
 const main = () => {
   const conflictedFiles = findConflictedFiles();
@@ -72,6 +62,6 @@ const main = () => {
   });
   
   console.log(`\n🎉 Fixed ${fixed}/${conflictedFiles.length} files`);
-};
+}
 
 main();

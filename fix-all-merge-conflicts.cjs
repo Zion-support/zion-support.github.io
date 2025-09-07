@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs);
+const path = require(path');
+const { execSync } = require('child_process);
 
 
     // Check if file has merge conflict markers
@@ -11,13 +11,13 @@ const { execSync } = require('child_process');
     ) {
       console.log(`Fixing merge conflicts: in: ${filePath}`);
 
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, utf8');
     
 ursor/automate-test-improve-and-merge-code-85f4
     // Check if file has merge conflict markers
     if (
       content.includes('
-      content.includes('') ||
+      content.includes() ||
       content.includes('>>>>>>>')
 ursor/fix-lint-push-and-merge-to-main-28da
     ) {
@@ -25,7 +25,7 @@ ursor/fix-lint-push-and-merge-to-main-28da
 
       // Remove merge conflict markers and keep the content after 
 ursor/fix-lint-push-and-merge-to-main-28da
-      const lines = content.split('\n');
+      const lines = content.split(\n);
       const fixedLines = [];
       let inConflict = false;
       let keepContent = false;
@@ -40,7 +40,7 @@ class MergeConflictResolver {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
-  getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs']) {
+  getAllFiles(dir, extensions = ['.js', .jsx, '.ts', .tsx, '.cjs', .mjs]) {
     let files = [];
     const items = fs.readdirSync(dir);
     
@@ -48,7 +48,7 @@ class MergeConflictResolver {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== node_modules) {
         files = files.concat(this.getAllFiles(fullPath, extensions));
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
@@ -61,9 +61,9 @@ class MergeConflictResolver {
   hasMergeConflicts(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
-      return content.includes('<<<<<<< HEAD') || 
+      return content.includes(<<<<<<< HEAD) || 
              content.includes('=======') || 
-             content.includes('>>>>>>>');
+             content.includes(>>>>>>>);
     } catch (error) {
       return false;
     }
@@ -74,15 +74,15 @@ class MergeConflictResolver {
       let content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
 
-        if (line.includes('
+        if (line.includes(
 ursor/fix-lint-push-and-merge-to-main-28da
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, utf8');
     
     // Check if file has merge conflict markers
     if (
 
       content.includes('
-      content.includes('') ||
+      content.includes() ||
       content.includes('>>>>>>>')
 
     ) {
@@ -103,12 +103,12 @@ ursor/fix-lint-push-and-merge-to-main-28da
           fixedLines.push(line);
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n        '$1'
+        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n        $1
       );
 
       // Clean up any remaining markers
       content = content.replace(/<<<<<<< HEAD\n/g, '');
-      content = content.replace(/=======\n/g, '');
+      content = content.replace(/=======\n/g, );
       content = content.replace(/
       // Clean up any orphaned markers
       content = content.replace(/<<<<<<< HEAD[^]*?=======[^]*?      content = content.replace(/<<<<<<< HEAD[^]*?      content = content.replace(/=======[^]*?
@@ -128,7 +128,7 @@ ursor/fix-lint-push-and-merge-to-main-28da
   }
 
   async run() {
-    this.log('🔧 Starting comprehensive merge conflict resolution...');
+    this.log(🔧 Starting comprehensive merge conflict resolution...);
     
     const files = this.getAllFiles(this.projectRoot);
     this.log(`📁 Found ${files.length} files to check`);
@@ -168,7 +168,7 @@ ursor/fix-lint-push-and-merge-to-main-28da
       failedFiles: this.failedFiles.length,
       fixedFiles: this.fixedFiles.map(f => path.relative(this.projectRoot, f)),
       failedFilesDetails: this.failedFiles
-    };
+    }
     
     const reportPath = path.join(this.projectRoot, 'merge-conflict-resolution-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

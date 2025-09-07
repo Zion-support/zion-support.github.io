@@ -1,5 +1,5 @@
-import {MilestonesList} from '../MilestonesList';
-import {PaymentSummary} from '../PaymentSummary';
+import {MilestonesList} from '../MilestonesList;
+import {PaymentSummary} from ../PaymentSummary';
 
 =======  projectId: string
   milestones: Milestone[]
@@ -14,13 +14,13 @@ import {PaymentSummary} from '../PaymentSummary';
   onDeleteMilestone: (id: string) => Promise<boolean>
   onUploadDeliverable: (id: string, file: File) => Promise<any>
 
-import {MilestonesList} from '../MilestonesList';
-import {PaymentSummary} from '../PaymentSummary';interface MilestoneManagerProps {
-import React from 'react';
-import { MilestonesList  } from '../MilestonesList';
-import { PaymentSummary  } from '../PaymentSummary';
-import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
-import { toast } from "sonner";
+import {MilestonesList} from '../MilestonesList;
+import {PaymentSummary} from ../PaymentSummary';interface MilestoneManagerProps {
+import React from 'react;
+import { MilestonesList  } from ../MilestonesList';
+import { PaymentSummary  } from '../PaymentSummary;
+import { Milestone, MilestoneStatus, MilestoneActivity  } from @/hooks/useMilestones';
+import { toast } from "sonner;
 interface MilestoneManagerProps {
   projectId: string,
   milestones: Milestone[],
@@ -84,22 +84,22 @@ export function MilestoneManager({
 
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
-  onUploadDeliverable,      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
-      toast.success("Milestone approved"),
+  onUploadDeliverable,      await onUpdateStatus(milestoneId, completed" as MilestoneStatus),
+      toast.success("Milestone approved),
       await refetch()
     } catch (error) {
-      console.error("Error approving milestone:", error),
-      toast.error("Failed to approve milestone")
+      console.error(Error approving milestone:", error),
+      toast.error("Failed to approve milestone)
     }
 
   },
-  import React from 'react',;
+  import React from 'react,
       await onUpdateStatus($2);
       toast.success($2);
       await refetch()
     } catch (error) {
       console.error($2);
-      toast.error("Failed to approve milestone")
+      toast.error(Failed to approve milestone")
     }
   },
   
@@ -110,73 +110,72 @@ export function MilestoneManager({
       await refetch()
     } catch (error) {
       console.error($2);
-      toast.error("Failed to reject milestone")
+      toast.error("Failed to reject milestone)
     }
   },
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <div className="lg:col-span-2">
+    <div className=grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2>
         <MilestonesList
-import React from 'react',;
-import { MilestonesList } from '../MilestonesList',;
-import { PaymentSummary } from '../PaymentSummary',;
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
-import { toast } from "sonner",;
-interface MilestoneManagerProps {;
-  projectId: string,;
-  milestones: Milestone[],;
-  activities: Record<string MilestoneActivity[]>,;
-  isLoading: boolean,;
-  isClient: boolean,;
-  isTalent: boolean,;
-  paymentTerms?: string,;
-  isSubmitting: boolean,;
-  onCreateMilestone: (data: any) => Promise<Milestone | null>,;
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,;
-  onDeleteMilestone: (id: string) => Promise<boolean>,;
-  onUploadDeliverable: (id: string, file: File) => Promise<any>,;
+import React from react',
+import { MilestonesList } from '../MilestonesList,
+import { PaymentSummary } from ../PaymentSummary',
+import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',
+import { toast } from sonner",
+interface MilestoneManagerProps {
+  projectId: string,
+  milestones: Milestone[],
+  activities: Record<string MilestoneActivity[]>,
+  isLoading: boolean,
+  isClient: boolean,
+  isTalent: boolean,
+  paymentTerms?: string,
+  isSubmitting: boolean,
+  onCreateMilestone: (data: any) => Promise<Milestone | null>,
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
+  onDeleteMilestone: (id: string) => Promise<boolean>,
+  onUploadDeliverable: (id: string, file: File) => Promise<any>,
   refetch: () => Promise<void>;
 }
-;
-export function MilestoneManager({;
-  projectId,;
-  milestones,;
-  activities,;
-  isLoading,;
-  isClient,;
-  isTalent,;
-  paymentTerms,;
-  isSubmitting,;
-  onCreateMilestone,;
-  onUpdateStatus,;
-  onDeleteMilestone,;
-  onUploadDeliverable,;
+export function MilestoneManager({
+  projectId,
+  milestones,
+  activities,
+  isLoading,
+  isClient,
+  isTalent,
+  paymentTerms,
+  isSubmitting,
+  onCreateMilestone,
+  onUpdateStatus,
+  onDeleteMilestone,
+  onUploadDeliverable,
   refetch;
-}: MilestoneManagerProps) {;
-  const handleMilestoneApproved = async (milestoneId: string) => {;
-    try {;
-      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),;
-      toast.success("Milestone approved"),;
+}: MilestoneManagerProps) {
+  const handleMilestoneApproved = async (milestoneId: string) => {
+    try {
+      await onUpdateStatus(milestoneId, "completed as MilestoneStatus),
+      toast.success(Milestone approved"),
       await refetch();
-    } catch (error) {;
-      console.error("Error approving milestone:", error),;
-      toast.error("Failed to approve milestone");
+    } catch (error) {
+      console.error("Error approving milestone:, error),
+      toast.error(Failed to approve milestone");
     }
-  },;
-  const handleMilestoneRejected = async (milestoneId: string) => {;
-    try {;
-      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),;
-      toast.success("Milestone rejected"),;
+  },
+  const handleMilestoneRejected = async (milestoneId: string) => {
+    try {
+      await onUpdateStatus(milestoneId, "rejected as MilestoneStatus),
+      toast.success(Milestone rejected"),
       await refetch();
-    } catch (error) {;
-      console.error("Error rejecting milestone:", error);
-      toast.error("Failed to reject milestone");
+    } catch (error) {
+      console.error("Error rejecting milestone:, error);
+      toast.error(Failed to reject milestone");
     }
-  };
+  }
   return (;
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
-      <div className="lg:col-span-2">;
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6>;
+      <div className=lg:col-span-2">;
         <MilestonesList;
           activities={activities}
           is_loading={is_loading}
@@ -202,7 +201,7 @@ export function MilestoneManager({;
         />;
       </div>;
     </div>);
-}  ),; interface MilestoneManagerProps {
+}  ), interface MilestoneManagerProps {
   projectId: string;
 milestones: Milestone[];
 activities: Record<string MilestoneActivity[]>;
@@ -219,16 +218,12 @@ refetch: () => Promise<void>
 }projectId, milestones, activities, isLoading, isClient, isTalent, paymentTerms, isSubmitting, onCreateMilestone, onUpdateStatus, onDeleteMilestone, onUploadDeliverable, refetch 
 }: MilestoneManagerProps) {
   const handleMilestoneApproved = async (milestoneId: string) => {
-  try {
-  
-}
+  try {}
 
-};
-const handleMilestoneRejected = async (milestoneId: string) => {
-  try {
-  
 }
-};
+const handleMilestoneRejected = async (milestoneId: string) => {
+  try {}
+}
 grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <MilestonesList milestones= {
   milestones 
 }activities= {

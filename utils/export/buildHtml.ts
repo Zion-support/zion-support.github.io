@@ -1,13 +1,13 @@
 
-import type { BookProject } from '../book/bookTypes';
+import type { BookProject } from '../book/bookTypes;
 export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
   const quotesHtml = visuals.quoteCallouts;
-    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`).join('\n')const chapterHtml = chapters;
-    .map(import type { BookProject } from '../book / book_types',export function buildPrintableHtml (project: BookProject): string {const { meta, chapters, visuals } = project,const quotes_html = visuals.quote_callouts;
-    .map ((q) => `<blockquote class="quote"><p>${escape_html (q.text)}</p>${q.attribution ? `<cite>${escape_html (q.attribution)}</cite>` : ''}</blockquote>`).join ('\n'),const chapter_html = chapters;
+    .map((q) => `<blockquote class="quote><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : '}</blockquote>`).join('\n)const chapterHtml = chapters;
+    .map(import type { BookProject } from ../book / book_types',export function buildPrintableHtml (project: BookProject): string {const { meta, chapters, visuals } = project,const quotes_html = visuals.quote_callouts;
+    .map ((q) => `<blockquote class=quote"><p>${escape_html (q.text)}</p>${q.attribution ? `<cite>${escape_html (q.attribution)}</cite>` : '}</blockquote>`).join (\n'),const chapter_html = chapters;
     .map ((c) => `;
-    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
-    .join('\n');
+    .map((q) => `<blockquote class="quote><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : '}</blockquote>`);
+    .join(\n');
 
 
 
@@ -15,89 +15,83 @@ export function buildPrintableHtml(project: BookProject): string {const { meta, 
 
   const chapterHtml = chapters;
     .map(;
-import type { BookProject } from '../book / book_types',
+import type { BookProject } from '../book / book_types,
 export function buildPrintableHtml (project: BookProject): string {
   const { meta, chapters, visuals } = project,
   const quotes_html = visuals.quote_callouts;
-    .map ((q) => `<blockquote class="quote"><p>${escape_html (q.text)}</p>${q.attribution ? `<cite>${escape_html (q.attribution)}</cite>` : ''}</blockquote>`);
-    .join ('\n'),
+    .map ((q) => `<blockquote class=quote"><p>${escape_html (q.text)}</p>${q.attribution ? `<cite>${escape_html (q.attribution)}</cite>` : '}</blockquote>`);
+    .join ('\n),
   const chapter_html = chapters;
     .map (
       (c) => `;
-      <section class="chapter">;
+      <section class="chapter>;
         <h2>${escape_html (c.title)}</h2>;
-        <div class="content">${paragraphize (c.content)}</div>;
+        <div class=content">${paragraphize (c.content)}</div>;
       </section>;
-    `).join('\n\n'),const visualsHtml = [;
+    `).join(\n\n'),const visualsHtml = [;
     ...visuals.timelineImages,...visuals.daoVoteCharts,...visuals.uiScreens];
-    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
-    .join('\n'),.join('\n\n').join('\n').join('\n\n')const visualsHtml = [;
+    .map((src) => `<figure class="visual><img src=${src}" /></figure>`) // base64 ok;
+    .join('\n),.join(\n\n').join('\n).join(\n\n')const visualsHtml = [;
     `);
 
-    .join('\n\n');
-    .join('\n');    .join('\n\n');
+    .join('\n\n);
+    .join(\n');    .join('\n\n);
   const visualsHtml = [;
     ...visuals.timelineImages;
     ...visuals.daoVoteCharts;
     ...visuals.uiScreens];
-    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
-    .join('\n')const barcode  = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';.join ('\n\n'),const visuals_html = [;
+    .map((src) => `<figure class="visual><img src=${src}" /></figure>`) // base64 ok;
+    .join(\n')const barcode  = meta.isbn ? `<img class="barcode src=/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : ';.join (\n\n'),const visuals_html = [;
     ...visuals.timeline_images,...visuals.daoVoteCharts,...visuals.ui_screens];
-    .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
-    .join ('\n'),const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
-  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
-  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
-    .join('\n');
+    .map ((src) => `<figure class="visual><img src=${src}" /></figure>`) // base64 ok;
+    .join ('\n),const barcode = meta.isbn ? `<img class="barcode src=/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : ';
+  const barcode = meta.isbn ? `<img class="barcode src=/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : ';
+  const barcode = meta.isbn ? `<img class="barcode src=/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : ';
+    .join('\n);
 
-  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
-=======  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+  const barcode = meta.isbn ? `<img class="barcode src=/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : ';
+=======  const barcode = meta.isbn ? `<img class="barcode src=/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : ';
   return `<!doctype html>;
 <html>;
 <head>;
-<meta charset="utf - 8" />;
+<meta charset="utf - 8 />;
 <title>${escape_html (meta.title)}</title>;
 <style>;
-function escapeHtml(s: string): string {return s;@page { margin: 1in   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
-
-
-
-
-;
-function escapeHtml(s: string): string {;
+function escapeHtml(s: string): string {return s;@page { margin: 1in   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
   return s;
 
   @page { margin: 1in   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
-  body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  body { font-family: ui-serif, Georgia, Cambria, Times New Roman', Times, serif, color: #111   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .cover h1 { font-size: 40px, margin: 0   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .cover h1 { font-size: 40px, margin: 0   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .cover .by { margin-top: 24px, color: #666   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .cover .by { margin-top: 24px, color: #666   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .barcode { margin-top: 24px, height: 64px   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .barcode { margin-top: 24px, height: 64px   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .quote cite { display: block, margin-top:6px, color:#666, font-style: normal   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .quote cite { display: block, margin-top:6px, color:#666, font-style: normal   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .chapter { break-before: page   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .chapter { break-before: page   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .chapter h2 { font-size: 28px, margin: 0 0 12px 0   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .chapter h2 { font-size: 28px, margin: 0 0 12px 0   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .visual { break-inside: avoid, margin: 12px 0   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .visual { break-inside: avoid, margin: 12px 0   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .visual img { max-width: 100%, height: auto   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .visual img { max-width: 100%, height: auto   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }@page { margin: 1in }
-  body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
+  body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman, Times, serif, color: #111 }
   .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh }
   .cover h1 { font-size: 40px, margin: 0 }
   .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444 }
@@ -112,28 +106,28 @@ function escapeHtml(s: string): string {;
   .visual img { max-width: 100%, height: auto }</style>;
 </head>;
 <body>;
-  <section class="cover">;<div>${escape_html (meta.publisher || '')}</div>;
+  <section class=cover">;<div>${escape_html (meta.publisher || ')}</div>;
     <h1>${escape_html (meta.title)}</h1>;
-    <h3>${escape_html (meta.subtitle || '')}</h3>;
-    <div class="by">By ${escape_html (meta.author)}</div>;<div>${escapeHtml(meta.publisher |'')}</div>;
+    <h3>${escape_html (meta.subtitle || ')}</h3>;
+    <div class="by>By ${escape_html (meta.author)}</div>;<div>${escapeHtml(meta.publisher |')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
-    <h3>${escapeHtml(meta.subtitle |'')}</h3>;
-    <div class="by">By ${escapeHtml(meta.author)}</div>;${barcode}
+    <h3>${escapeHtml(meta.subtitle |')}</h3>;
+    <div class=by">By ${escapeHtml(meta.author)}</div>;${barcode}
   .visual img { max-width: 100%, height: auto   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:, error);
+    return res.status(500).json({ error: Internal server error" });
   }
 }
 
 </style>;
 </head>;
 <body>;
-  <section class="cover">;
+  <section class="cover>;
 
-    <div>${escape_html (meta.publisher || '')}</div>;
+    <div>${escape_html (meta.publisher || ')}</div>;
     <h1>${escape_html (meta.title)}</h1>;
-    <h3>${escape_html (meta.subtitle || '')}</h3>;
-    <div class="by">By ${escape_html (meta.author)}</div>;
+    <h3>${escape_html (meta.subtitle || ')}</h3>;
+    <div class=by">By ${escape_html (meta.author)}</div>;
 
     ${barcode}
   </section>;
@@ -142,65 +136,62 @@ function escapeHtml(s: string): string {;
   ${visuals_html}
 </body>;
 </html>`;
-}function paragraphize(text: string): string {if (!text) return '';
+}function paragraphize(text: string): string {if (!text) return ';
   return text;
-    .split(/\n\n+/).map((p) => `<p>${escapeHtml(p)}</p>`).join('\n')}
-function escapeHtml(s: string): string {return s;function escapeHtml(s: string): string {return s;
-  @page { margin: 1in   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+    .split(/\n\n+/).map((p) => `<p>${escapeHtml(p)}</p>`).join('\n)}
+  @page { margin: 1in   } catch (error) {console.error("Error:, error)return res.status(500).json({ error: Internal server error" })}
 }
-  body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  body { font-family: ui-serif, Georgia, Cambria, Times New Roman', Times, serif, color: #111   } catch (error) {console.error("Error:, error)return res.status(500).json({ error: Internal server error" })}
 }
-  .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh   } catch (error) {console.error("Error:, error)return res.status(500).json({ error: Internal server error" })}
 
 
-    <div>${escapeHtml(meta.publisher || '')}</div>;
+    <div>${escapeHtml(meta.publisher || ')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
-    <h3>${escapeHtml(meta.subtitle || '')}</h3>;
-    <div class="by">By ${escapeHtml(meta.author)}</div>;
+    <h3>${escapeHtml(meta.subtitle || ')}</h3>;
+    <div class="by>By ${escapeHtml(meta.author)}</div>;
     ${barcode  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
   </section>;
   ${quotesHtml  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
   ${chapterHtml  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
   ${visualsHtml  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
 </body>;
 </html>`;
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 }
-;
-function paragraphize(text: string): string {;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+function paragraphize(text: string): string {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden });
 
 
 
-    .replace(/&/g, '&amp,');
-    .replace(/</g, '<');
-    .replace(/>/g, '>');
-    .replace(/"/g, '"');
-    .replace(/'/g, '&#039,');
+    .replace(/&/g, &amp,');
+    .replace(/</g, '<);
+    .replace(/>/g, >');
+    .replace(//g, '");
+    .replace(//g, '&#039,');
 
 
-function paragraphize (text: string): string {
   // Check condition
-if (return '') {
+if (return ) {
   $2
 }
   return text;
@@ -210,76 +201,75 @@ if (return '') {
 }
 function escape_html (string: string): string {
   return s;
-    .replace (/&/g, '&amp, ');
+    .replace (/&/g, &amp, );
     .replace (/</g, '<');
-    .replace (/>/g, '>');
-    .replace (/"/g, '"');
-    .replace (/'/g, '&#039, ');
+    .replace (/>/g, >);
+    .replace (/"/g, '');
+    .replace (//g, &#039, ');
 }
 
 
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error(Error:", error);
+    return res.status(500).json({ error: "Internal server error });
   }
 
 }
 }
-  .cover h1 { font-size: 40px, margin: 0   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .cover h1 { font-size: 40px, margin: 0   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .cover .by { margin-top: 24px, color: #666   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .cover .by { margin-top: 24px, color: #666   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .barcode { margin-top: 24px, height: 64px   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .barcode { margin-top: 24px, height: 64px   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .quote cite { display: block, margin-top:6px, color:#666, font-style: normal   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .quote cite { display: block, margin-top:6px, color:#666, font-style: normal   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .chapter { break-before: page   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .chapter { break-before: page   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .chapter h2 { font-size: 28px, margin: 0 0 12px 0   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .chapter h2 { font-size: 28px, margin: 0 0 12px 0   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .visual { break-inside: avoid, margin: 12px 0   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .visual { break-inside: avoid, margin: 12px 0   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  .visual img { max-width: 100%, height: auto   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .visual img { max-width: 100%, height: auto   } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
 </style>;
 </head>;
 <body>;
-  <section class="cover">;<div>${escapeHtml(meta.publisher || '')}</div>;
+  <section class=cover">;<div>${escapeHtml(meta.publisher || ')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
-    <h3>${escapeHtml(meta.subtitle || '')}</h3>;
-    <div class="by">By ${escapeHtml(meta.author)}</div>;
-    ${barcode  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+    <h3>${escapeHtml(meta.subtitle || ')}</h3>;
+    <div class="by>By ${escapeHtml(meta.author)}</div>;
+    ${barcode  } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
   </section>;
-  ${quotesHtml  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  ${quotesHtml  } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  ${chapterHtml  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  ${chapterHtml  } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
-  ${visualsHtml  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  ${visualsHtml  } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
 }
 </body>;
 </html>`;
-  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
-}function paragraphize(text: string): string {if (!isAdmin) return res.status(403).json({ error: 'Forbidden' }).replace(/&/g, '&amp,').replace(/</g, '<').replace(/>/g, '>').replace(/"/g, '"').replace(/'/g, '&#039,')function paragraphize (text: string): string {// Check condition;
-if (return '') {$2;
+  } catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}
+}function paragraphize(text: string): string {if (!isAdmin) return res.status(403).json({ error: 'Forbidden }).replace(/&/g, &amp,').replace(/</g, '<).replace(/>/g, >').replace(//g, '").replace(//g, '&#039,')function paragraphize (text: string): string {// Check condition;
+if (return ) {$2;
 }
   return text;
     .split (/\n\n+/).map ((p) => `<p>${escape_html (p)}</p>`).join ('\n')}
-function escape_html (string: string): string {return s;
-    .replace (/&/g, '&amp, ').replace (/</g, '<').replace (/>/g, '>').replace (/"/g, '"').replace (/'/g, '&#039, ')}} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}}}
+    .replace (/&/g, &amp, ).replace (/</g, '<').replace (/>/g, >).replace (/"/g, '').replace (//g, &#039, ')}} catch (error) {console.error(Error:", error)return res.status(500).json({ error: "Internal server error })}}}
 }}
 }
-import type { BookProject } from '../book/bookTypes';
+import type { BookProject } from '../book/bookTypes;
 export function buildPrintableHtml(project: BookProject): string {
   const { meta, chapters, visuals } = project,
   const quotesHtml = visuals.quoteCallouts
-    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`)
+    .map((q) => `<blockquote class=quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : '}</blockquote>`)
     .join($2);
   const chapterHtml = $2;
     )
@@ -287,7 +277,7 @@ export function buildPrintableHtml(project: BookProject): string {
   const visualsHtml = $2;
     ...visuals.daoVoteCharts,
     ...visuals.uiScreens]
-    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok
+    .map((src) => `<figure class="visual><img src=${src}" /></figure>`) // base64 ok
     .join($2);
   const barcode = $2;
   return `<!doctype html>
@@ -297,7 +287,7 @@ export function buildPrintableHtml(project: BookProject): string {
 <title>${escapeHtml(meta.title)}</title>
 <style>
   @page { margin: 1in}
-  body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
+  body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman, Times, serif, color: #111 }
   .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh}
   .cover h1 { font-size: 40px, margin: 0}
   .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444 }
@@ -317,14 +307,13 @@ export function buildPrintableHtml(project: BookProject): string {
   return text
     .split(/\n\n+/)
     .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join('\n')
+    .join(\n')
 }
 
-function escapeHtml(s: string): string {
   return s
-    .replace(/&/g, '&amp,')
-    .replace(/</g, '&lt,')
-    .replace(/>/g, '&gt,')
-    .replace(/"/g, '&quot,')
+    .replace(/&/g, '&amp,)
+    .replace(/</g, &lt,')
+    .replace(/>/g, '&gt,)
+    .replace(/"/g, &quot,')
     .replace(/'/g, '&#039,')
 }

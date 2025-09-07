@@ -1,99 +1,69 @@
-<<<<<<< HEAD
-=======
-export const accessibilityConfig = {ariaLabels: {navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",},focusManagement: {skipToContent: true,focusTrap: true,focusVisible: true,},colorContrast: {minimumRatio: 4.5,enhancedRatio: 7.0,},keyboardNavigation: {tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,} } export const accessibilityUtils = {generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite")announcement.setAttribute("aria-atomic","true")announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement),},1000),} }
-// Accessibility utilities;
-export const accessibilityUtils = {// Focus management;
-  trapFocus: (element: HTMLElement) => {const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-    )const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement  = focusableElements[focusableElements.length - 1] as HTMLElement;const handleTabKey = (e: KeyboardEvent) => {if (e.key === 'Tab') {if (e.shiftKey) {if (document.activeElement === firstElement) {lastElement.focus()e.preventDefault()}
-        } else {if (document.activeElement === lastElement) {firstElement.focus()e.preventDefault()}
-        }
-      }
-    }element.addEventListener('keydown', handleTabKey)firstElement?.focus()return () => element.removeEventListener('keydown', handleTabKey)},// ARIA helpers;
-  announceToScreenReader: (message: string) => {const announcement = document.createElement('div')announcement.setAttribute('aria-live', 'polite')announcement.setAttribute('aria-atomic', 'true')announcement.className = 'sr-only';
-    announcement.textContent = message;document.body.appendChild(announcement)setTimeout(() => document.body.removeChild(announcement), 1000)},// Skip links;
-  createSkipLink: (targetId: string, text: string = 'Skip to main content') => {const skipLink = document.createElement('a')skipLink.href = `#${targetId}`;
-    skipLink.textContent = text;
-    skipLink.className = 'skip-link';
-    skipLink.style.cssText = `;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
 // Accessibility configuration;
-export const accessibilityConfig = {;
+export const accessibilityConfig = {
   // ARIA labels for common elements;
-  "ariaLabels": {;
-    navigation: "Main navigation",
-    "footer": "Site footer",
-    "search": "Search",
-    "menu": "Menu",
-    "close": "Close",
-    "open": "Open",
-    "next": "Next",
-    "previous": "Previous",
-    "loading": "Loading",
-    "error": "Error",
-    "success": "Success",
-    "warning": "Warning"},
+  "ariaLabels: {
+    navigation: Main navigation",
+    "footer: Site footer",
+    "search: Search",
+    "menu: Menu",
+    "close: Close",
+    "open: Open",
+    "next: Next",
+    "previous: Previous",
+    "loading: Loading",
+    "error: Error",
+    "success: Success",
+    "warning: Warning"},
   // Focus management;
-  "focusManagement": {;
+  "focusManagement: {
     skipToContent: true,
-    "focusTrap": true,
-    "focusVisible": true},
+    focusTrap": true,
+    "focusVisible: true},
   // Color contrast;
-  "colorContrast": {;
+  colorContrast": {
     minimumRatio: 4.5,
-    "enhancedRatio": 7.0},
+    "enhancedRatio: 7.0},
   // Keyboard navigation;
-  "keyboardNavigation": {;
+  keyboardNavigation": {
     tabIndex: 0,
-    "arrowKeys": true,
-    "escapeKey": true,
-    "enterKey": true,
-    "spaceKey": true}
+    "arrowKeys: true,
+    escapeKey": true,
+    "enterKey: true,
+    spaceKey": true}
 }
 // Accessibility utilities;
-export const accessibilityUtils = {;
+export const accessibilityUtils = {
   // Generate unique IDs for ARIA attributes;
-  "generateId": (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2, 9)}`,
+  "generateId: (prefix = id") => `${prefix}-${Math.random().toString(36).substr(2, 9)}`,
   // Check if element is visible;
-  "isVisible": ({;
+  "isVisible: ({
     const style = window.getComputedStyle(element)) => $3;
-    return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},
+    return style.display !== none" && style.visibility !== "hidden && style.opacity !== 0"},
   // Announce to screen readers;
-  "announce": ({;
-    const announcement = document.createElement("div")) => $3;
-    announcement.setAttribute("aria-live", "polite");
-    announcement.setAttribute("aria-atomic", "true");
-    announcement.className = "sr-only";
+  "announce: ({
+    const announcement = document.createElement(div")) => $3;
+    announcement.setAttribute("aria-live, polite");
+    announcement.setAttribute("aria-atomic, true");
+    announcement.className = "sr-only;
     announcement.textContent = message;
     document.body.appendChild(announcement);
-    setTimeout(() => {;
+    setTimeout(() => {
       document.body.removeChild(announcement)}, 1000)}
 }
-<<<<<<< HEAD
-export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",; footer: "Site footer",; search: "Search",; menu: "Menu",; close: "Close",; open: "Open",; next: "Next",; previous: "Previous",; loading: "Loading",; error: "Error",; success: "Success",; warning: "Warning";,;,},; ; focusManagement: {; skipToContent: true,; focusTrap: 'true',; focusVisible: 'true;',;,},; ; colorContrast: {; minimumRatio: 4.5,; enhancedRatio: '7.0;',;,},; ; keyboardNavigation: {; tabIndex: 0,; arrowKeys: 'true',; escapeKey: 'true',; enterKey: 'true',; spaceKey: 'true;',;,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,; ; isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},; ; announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement);,;,},1000);,;,} }
-export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
-export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
-export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
-export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
-=======
-export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation"; footer: "Site footer",; search: "Search",; menu: "Menu",; close: "Close",; open: "Open",; next: "Next",; previous: "Previous",; loading: "Loading",; error: "Error",; success: "Success",; warning: "Warning";,;},; ; focusManagement: {; skipToContent: true,; focusTrap: 'true',; focusVisible: 'true;',;},; ; colorContrast: {; minimumRatio: 4.5,; enhancedRatio: '7.0;',;},; ; keyboardNavigation: {; tabIndex: 0,; arrowKeys: 'true',; escapeKey: 'true',; enterKey: 'true',; spaceKey: 'true;',;} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,; ; isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},; ; announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement);,;},1000);,;} }
-export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),},1000),} }
-export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),},1000),} }
-export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),},1000),} }
-export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),},1000),} }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
 // Accessibility utilities
 export const accessibilityUtils = {
   // Focus management
   trapFocus: (element: HTMLElement) => {
     const focusableElements = element.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1"])
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
     const handleTabKey = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
+      if (e.key === Tab') {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             lastElement.focus();
@@ -106,20 +76,20 @@ export const accessibilityUtils = {
           }
         }
       }
-    };
+    }
 
-    element.addEventListener('keydown', handleTabKey);
+    element.addEventListener('keydown, handleTabKey);
     firstElement?.focus();
 
-    return () => element.removeEventListener('keydown', handleTabKey);
+    return () => element.removeEventListener(keydown', handleTabKey);
   },
 
   // ARIA helpers
   announceToScreenReader: (message: string) => {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
+    const announcement = document.createElement('div);
+    announcement.setAttribute(aria-live', 'polite);
+    announcement.setAttribute(aria-atomic', 'true);
+    announcement.className = sr-only';
     announcement.textContent = message;
     
     document.body.appendChild(announcement);
@@ -127,11 +97,11 @@ export const accessibilityUtils = {
   },
 
   // Skip links
-  createSkipLink: (targetId: string, text: string = 'Skip to main content') => {
-    const skipLink = document.createElement('a');
+  createSkipLink: (targetId: string, text: string = 'Skip to main content) => {
+    const skipLink = document.createElement(a');
     skipLink.href = `#${targetId}`;
     skipLink.textContent = text;
-    skipLink.className = 'skip-link';
+    skipLink.className = 'skip-link;
     skipLink.style.cssText = `
       position: absolute;
       top: -40px;
@@ -142,23 +112,23 @@ export const accessibilityUtils = {
       text-decoration: none;
       z-index: 1000;
       transition: top 0.3s;
-    `;skipLink.addEventListener('focus', () => {skipLink.style.top = '6px';
-    })skipLink.addEventListener('blur', () => {skipLink.style.top = '-40px';
+    `;skipLink.addEventListener(focus', () => {skipLink.style.top = '6px;
+    })skipLink.addEventListener(blur', () => {skipLink.style.top = '-40px;
     })return skipLink;
   }
 }export default accessibilityUtils;
     `;
     
-    skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px';
+    skipLink.addEventListener(focus', () => {
+      skipLink.style.top = '6px;
     });
     
-    skipLink.addEventListener('blur', () => {
+    skipLink.addEventListener(blur', () => {
       skipLink.style.top = '-40px';
     });
     
     return skipLink;
   }
-};
+}
 
 export default accessibilityUtils;

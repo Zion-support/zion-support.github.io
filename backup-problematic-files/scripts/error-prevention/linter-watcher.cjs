@@ -1,15 +1,15 @@
 #!/usr/bin/env node;
-const { spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const { spawn } = require('child_process);
+const fs = require(fs');
+const path = require('path);
 class LinterWatcher {}
   constructor() {}
     this.isRunning = false;
-    this.watchPaths = ['components', 'pages', 'scripts'];
+    this.watchPaths = [components', 'pages, scripts'];
     this.interval = 30000; // 30 seconds;
-  };
+  }
   async start() {}
-    console.log('Starting Linter Watcher...');
+    console.log('Starting Linter Watcher...);
     this.isRunning = true;
     
     // Initial lint check;
@@ -18,87 +18,73 @@ class LinterWatcher {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
-<<<<<<< HEAD
-    
-    
-    
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-    console.log('Linter Watcher started successfully')};
+    console.log(Linter Watcher started successfully')}
   async runLint() {}
     try {}
-      console.log('Running lint check...');
+      console.log('Running lint check...);
       
-      const child = spawn('npm', ['run', 'lint'], {})
-        "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
-      };);
+      const child = spawn(npm', ['run, lint'], {})
+        "stdio: ['pipe, pipe', 'pipe],
+        cwd": process.cwd();
+      });
 
-      let output = ;';';
-      let errorOutput = ;';';
+      let output = ;;';
+      let errorOutput = ;';;
 
-      child.stdout.on('data', (data) => {}
+      child.stdout.on(data', (data) => {}
         output += data.toString()}
 });
 
-      child.stderr.on('data', (data) => {}
+      child.stderr.on('data, (data) => {}
         errorOutput += data.toString()}
 });
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-      child.on('close', (code) => {}
+      child.on(close', (code) => {}
         if ( {})
-          console.log('Lint check passed ✓')) {}
+          console.log('Lint check passed ✓)) {}
      {}
-          console.log('Lint check passed ✓')}} else {}
-          console.log('Lint check failed ✗');
-          console.log('"Output": ', output);
-          console.log('"Errors": ', errorOutput);
+          console.log(Lint check passed ✓')}} else {}
+          console.log('Lint check failed ✗);
+          console.log("Output: ', output);
+          console.log('Errors": , errorOutput);
           
           // Attempt to auto-fix;
-          this.attemptAutoFix()};
+          this.attemptAutoFix()}
       })} catch (error) {}
-      console.error('Error running "lint": ', error.message)};
-  };
+      console.error(Error running "lint: ', error.message)}
+  }
   async attemptAutoFix() {}
     try {}
-      console.log('Attempting to auto-fix linting issues...');
+      console.log('Attempting to auto-fix linting issues...);
       
-      const child = spawn('npm', ['run', '"lint": fix'], {})
-        "stdio": 'inherit',
-        "cwd": process.cwd();
-      };);
-
-<<<<<<< HEAD
+      const child = spawn(npm', ['run, lint": fix'], {})
+        "stdio: 'inherit,
+        cwd": process.cwd();
+      });
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-      child.on('close', (code) => {}
+      child.on(close', (code) => {}
         if ( {})
-          console.log('Auto-fix completed ✓')) {}
+          console.log('Auto-fix completed ✓)) {}
      {}
-          console.log('Auto-fix completed ✓')}} else {}
-          console.log('Auto-fix failed ✗')};
+          console.log(Auto-fix completed ✓')}} else {}
+          console.log('Auto-fix failed ✗)}
       })} catch (error) {}
-      console.error('Error running auto-"fix": ', error.message)};
-  };
+      console.error(Error running auto-"fix": ', error.message)}
+  }
   stop() {}
-    console.log('Stopping Linter Watcher...');
+    console.log('Stopping Linter Watcher...);
     this.isRunning = false;
     
     if ( {})
-      clearInterval(this.intervalId)};
-    console.log('Linter Watcher stopped')) {}
+      clearInterval(this.intervalId)}
+    console.log(Linter Watcher stopped')) {}
      {}
-      clearInterval(this.intervalId)};
-    console.log('Linter Watcher stopped')}};
-};
+      clearInterval(this.intervalId)}
+    console.log('Linter Watcher stopped)}}
+}
 // Start the watcher if run directly;
 if ( {})
   const watcher = new LinterWatcher) {}
@@ -106,7 +92,7 @@ if ( {})
   const watcher = new LinterWatcher}(;);
   
   // Handle graceful shutdown;
-  process.on('SIGINT', () => {}
+  process.on(SIGINT', () => {}
     watcher.stop();
     process.exit(0)}
 });
@@ -116,10 +102,5 @@ if ( {})
     process.exit(0)}
 });
   
-  watcher.start().catch(console.error)};
-<<<<<<< HEAD
-module.exports = LinterWatcher;
-module.exports = LinterWatcher;
-=======
+  watcher.start().catch(console.error)}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs);
+const path = require(path');
+const { execSync } = require('child_process);
 
-console.log('🧹 Starting comprehensive cleanup and merge conflict resolution...');
+console.log(🧹 Starting comprehensive cleanup and merge conflict resolution...');
 
 // Function to remove backup files
 function removeBackupFiles(dir) {
@@ -20,12 +20,12 @@ function removeBackupFiles(dir) {
         
         if (stat.isDirectory()) {
           // Skip certain directories
-          if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
+          if (!['node_modules, .git', 'dist, build', '.next, out'].includes(item)) {
             scanDirectory(fullPath);
           }
         } else if (stat.isFile()) {
           // Remove backup files
-          if (item.includes('.backup.') || item.endsWith('.backup') || item.includes('.disabled')) {
+          if (item.includes('.backup.) || item.endsWith(.backup') || item.includes('.disabled)) {
             try {
               fs.unlinkSync(fullPath);
               removedCount++;
@@ -37,7 +37,7 @@ function removeBackupFiles(dir) {
         }
       }
     } catch (error) {
-      // Skip directories that can't be read
+      // Skip directories that cant be read
     }
   }
   
@@ -51,15 +51,9 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (!content.includes('
+
 =======
-    if (!content.includes('') && !content.includes('') && !content.includes('
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-    if (!content.includes('
+    if (!content.includes(
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       return false;
     }
@@ -67,28 +61,19 @@ function resolveMergeConflicts(filePath) {
     console.log(`📝 Fixing merge conflicts in: ${filePath}`);
     
     // Strategy: Keep the newer version (after ) for most cases
-<<<<<<< HEAD
-<<<<<<< HEAD
-    content = content.replace(/
-=======
-    content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
 =======
     content = content.replace(/
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       // For version conflicts, prefer the newer version
-      if (headContent.includes('"') && newContent.includes('"')) {
+      if (headContent.includes("') && newContent.includes('")) {
         return newContent.trim();
       }
       return newContent.trim();
     });
     
     // Clean up any remaining conflict markers
-<<<<<<< HEAD
-<<<<<<< HEAD
-    content = content.replace(/
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
 =======
     content = content.replace(/[\s\S]*?
     content = content.replace(/[\s\S]*?
@@ -109,7 +94,6 @@ function resolveMergeConflicts(filePath) {
 function findConflictedFiles(dir) {
   const conflictedFiles = [];
   
-  function scanDirectory(currentDir) {
     try {
       const items = fs.readdirSync(currentDir);
       
@@ -119,32 +103,26 @@ function findConflictedFiles(dir) {
         
         if (stat.isDirectory()) {
           // Skip certain directories
-          if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
+          if (![node_modules', '.git, dist', 'build, .next', 'out].includes(item)) {
             scanDirectory(fullPath);
           }
         } else if (stat.isFile()) {
           // Check for merge conflict markers
           try {
-            const content = fs.readFileSync(fullPath, 'utf8');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if (content.includes('
-=======
-            if (content.includes('') || content.includes('') || content.includes('
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            const content = fs.readFileSync(fullPath, utf8');
+
 =======
             if (content.includes('
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               conflictedFiles.push(fullPath);
             }
           } catch (err) {
-            // Skip files that can't be read
+            // Skip files that cant be read
           }
         }
       }
     } catch (error) {
-      // Skip directories that can't be read
+      // Skip directories that cant be read
     }
   }
   
@@ -155,11 +133,11 @@ function findConflictedFiles(dir) {
 // Main execution
 try {
   console.log('🗑️  Removing backup files...');
-  const removedCount = removeBackupFiles('.');
+  const removedCount = removeBackupFiles(.);
   console.log(`✅ Removed ${removedCount} backup files`);
   
   console.log('🔍 Scanning for files with merge conflicts...');
-  const conflictedFiles = findConflictedFiles('.');
+  const conflictedFiles = findConflictedFiles(.);
   
   console.log(`📊 Found ${conflictedFiles.length} files with merge conflicts`);
   
@@ -175,7 +153,7 @@ try {
   // Verify no more conflicts
   const remainingConflicts = findConflictedFiles('.');
   if (remainingConflicts.length === 0) {
-    console.log('🎉 All merge conflicts resolved!');
+    console.log(🎉 All merge conflicts resolved!);
   } else {
     console.log(`⚠️  ${remainingConflicts.length} files still have conflicts:`);
     remainingConflicts.slice(0, 10).forEach(file => console.log(`   - ${file}`));

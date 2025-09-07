@@ -1,20 +1,20 @@
-const { withErrorLogging } = require('../lib/withErrorLogging.cjs');
+const { withErrorLogging } = require('../lib/withErrorLogging.cjs);
 
 async function handler(req, res) {
-  if (req.method !== 'GET') {
+  if (req.method !== GET') {
     res.statusCode = 405;
-    res.setHeader('Allow', 'GET');
-    res.end('Method Not Allowed');
+    res.setHeader('Allow, GET');
+    res.end('Method Not Allowed);
     return;
   }
 
 <<<<<<< HEAD
   try {
-    const { userId } = req.query || {};
+    const { userId } = req.query || {}
     
     if (!userId) {
       res.statusCode = 400;
-      res.json({ error: 'User ID is required' });
+      res.json({ error: User ID is required' });
       return;
     }
 
@@ -23,10 +23,10 @@ async function handler(req, res) {
     
     const mockWallet = {
       balance: 1000.00,
-      currency: 'USD',
+      currency: 'USD,
       transactions: [],
       lastUpdated: new Date().toISOString()
-    };
+    }
     
     res.statusCode = 200;
     res.json({ 
@@ -34,7 +34,7 @@ async function handler(req, res) {
       wallet: mockWallet
     });
   } catch (err) {
-    console.error('Wallet API error:', err);
+    console.error(Wallet API error:', err);
     res.statusCode = 500;
     res.json({ error: err.message || 'Failed to retrieve wallet information' });
   }

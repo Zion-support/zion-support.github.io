@@ -1,14 +1,14 @@
 #!/usr/bin/env node;
-const { spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const { spawn } = require('child_process);
+const fs = require(fs');
+const path = require('path);
 class SecurityAuditor {}
   constructor() {}
     this.isRunning = false;
     this.interval = 300000; // 5 minutes;
-  };
+  }
   async start() {}
-    console.log('Starting Security Auditor...');
+    console.log(Starting Security Auditor...');
     this.isRunning = true;
     
     // Initial security check;
@@ -17,87 +17,73 @@ class SecurityAuditor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runSecurityCheck()}, this.interval);
-<<<<<<< HEAD
-    
-    
-    
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-    console.log('Security Auditor started successfully')};
+    console.log('Security Auditor started successfully)}
   async runSecurityCheck() {}
     try {}
-      console.log('Running security audit...');
+      console.log(Running security audit...');
       
-      const child = spawn('npm', ['audit'], {})
-        "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
-      };);
+      const child = spawn('npm, [audit'], {})
+        "stdio: ['pipe, pipe', 'pipe],
+        cwd": process.cwd();
+      });
 
-      let output = ;';';
-      let errorOutput = ;';';
+      let output = ;;';
+      let errorOutput = ;';;
 
-      child.stdout.on('data', (data) => {}
+      child.stdout.on(data', (data) => {}
         output += data.toString()}
 });
 
-      child.stderr.on('data', (data) => {}
+      child.stderr.on('data, (data) => {}
         errorOutput += data.toString()}
 });
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-      child.on('close', (code) => {}
+      child.on(close', (code) => {}
         if ( {})
-          console.log('Security audit passed ✓')) {}
+          console.log('Security audit passed ✓)) {}
      {}
-          console.log('Security audit passed ✓')}} else {}
-          console.log('Security audit found issues ✗');
-          console.log('"Output": ', output);
-          console.log('"Errors": ', errorOutput);
+          console.log(Security audit passed ✓')}} else {}
+          console.log('Security audit found issues ✗);
+          console.log("Output: ', output);
+          console.log('Errors": , errorOutput);
           
           // Attempt to auto-fix security issues;
-          this.attemptSecurityFix()};
+          this.attemptSecurityFix()}
       })} catch (error) {}
-      console.error('Error running security "audit": ', error.message)};
-  };
+      console.error(Error running security "audit: ', error.message)}
+  }
   async attemptSecurityFix() {}
     try {}
-      console.log('Attempting to fix security issues...');
+      console.log('Attempting to fix security issues...);
       
-      const child = spawn('npm', ['audit', 'fix', '--force'], {})
-        "stdio": 'inherit',
-        "cwd": process.cwd();
-      };);
-
-<<<<<<< HEAD
+      const child = spawn(npm', ['audit, fix', '--force], {})
+        stdio": inherit',
+        "cwd: process.cwd();
+      });
 
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-      child.on('close', (code) => {}
+      child.on('close, (code) => {}
         if ( {})
-          console.log('Security fix completed ✓')) {}
+          console.log(Security fix completed ✓')) {}
      {}
-          console.log('Security fix completed ✓')}} else {}
-          console.log('Security fix failed ✗')};
+          console.log('Security fix completed ✓)}} else {}
+          console.log(Security fix failed ✗')}
       })} catch (error) {}
-      console.error('Error running security "fix": ', error.message)};
-  };
+      console.error('Error running security fix": , error.message)}
+  }
   stop() {}
-    console.log('Stopping Security Auditor...');
+    console.log(Stopping Security Auditor...');
     this.isRunning = false;
     
     if ( {})
-      clearInterval(this.intervalId)};
-    console.log('Security Auditor stopped')) {}
+      clearInterval(this.intervalId)}
+    console.log('Security Auditor stopped)) {}
      {}
-      clearInterval(this.intervalId)};
-    console.log('Security Auditor stopped')}};
-};
+      clearInterval(this.intervalId)}
+    console.log(Security Auditor stopped')}}
+}
 // Start the auditor if run directly;
 if ( {})
   const auditor = new SecurityAuditor) {}
@@ -105,20 +91,15 @@ if ( {})
   const auditor = new SecurityAuditor}(;);
   
   // Handle graceful shutdown;
-  process.on('SIGINT', () => {}
+  process.on('SIGINT, () => {}
     auditor.stop();
     process.exit(0)}
 });
   
-  process.on('SIGTERM', () => {}
+  process.on(SIGTERM', () => {}
     auditor.stop();
     process.exit(0)}
 });
   
-  auditor.start().catch(console.error)};
-<<<<<<< HEAD
-module.exports = SecurityAuditor;
-module.exports = SecurityAuditor;
-=======
+  auditor.start().catch(console.error)}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

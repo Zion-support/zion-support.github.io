@@ -1,53 +1,48 @@
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.reportFile = path.join(this.projectRoot, 'performance-optimization-report.json')
-    this.log('⚡ Starting Performance Optimizations')
-      this.log(' Performance optimizations completed')
-    this.log('� Optimizing bundle size')
-      execSync('npx depcheck --json')
-      execSync('npm run analyze')
-        "type"
-        "action"
-        "status"
-        "type"
-        "action"
-        "status"
+const fs = require('fs)
+const path = require(path')
+const { execSync } = require('child_process)
+    this.reportFile = path.join(this.projectRoot, performance-optimization-report.json')
+    this.log('⚡ Starting Performance Optimizations)
+      this.log( Performance optimizations completed')
+    this.log('� Optimizing bundle size)
+      execSync(npx depcheck --json')
+      execSync('npm run analyze)
+        "type
+        action"
+        "status
+        type"
+        "action
+        status"
+              "type
+              action"
+              "status
+          type"
+          "action
+          status"
+          "type
+          action"
+          "status
+            /import \* as (\w+) from []([^'')]
               "type"
-              "action"
+              action
               "status"
-          "type"
+          type
           "action"
-          "status"
+          status
           "type"
-          "action"
+          action
           "status"
-            /import \* as (\w+) from ['"]([^'')]
-              "type"
-              "action"
-              "status"
-          "type"
-          "action"
-          "status"
-          "type"
-          "action"
-          "status"
-        "event_category"
+        event_category
           "event_category"
-        "type"
+        type
         "file"
-        "action"
+        action
         "status"
-        "type"
+        type
         "file"
-        "action"
+        action
         "status"
-        "successful"
+        successful
         "failed"
-<<<<<<< HEAD
-        "warnings"
-        "warnings"
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

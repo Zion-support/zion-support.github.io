@@ -1,25 +1,22 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs);
+const path = require(path');
 
 class PerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportPath = path.join(this.projectRoot, 'performance-optimization-report.json');
+    this.reportPath = path.join(this.projectRoot, 'performance-optimization-report.json);
   }
 
   log(message) {
     console.log(`⚡ [Performance Optimizer] ${message}`);
 
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
 
-class PerformanceOptimizer {
   constructor() {
     this.optimizations = [];
-    this.logFile = path.join(__dirname, '../logs/performance-optimizer.log');
+    this.logFile = path.join(__dirname, ../logs/performance-optimizer.log');
     this.ensureLogsDir();
   }
 
@@ -28,25 +25,24 @@ class PerformanceOptimizer {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-    if (!config.includes('experimental')) {}
-      optimizations.push('Add experimental features')
+    if (!config.includes('experimental)) {}
+      optimizations.push(Add experimental features')
     }
-    if (!config.includes('compress')) {}
-      optimizations.push('Enable compression')
+    if (!config.includes('compress)) {}
+      optimizations.push(Enable compression')
     }
   if($2) {}
       this.report.recommendations.push({})
         file: configPath,
         optimizations
-const { execSync } = require('child_process')
+const { execSync } = require('child_process)
 
 ///usr/bin/env node
 
-console.log('⚡ Starting Performance Optimizer...')
-class PerformanceOptimizer {
+console.log(⚡ Starting Performance Optimizer...')
 
 
-  log(message, level = 'INFO') {
+  log(message, level = 'INFO) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(`[${level}] ${message}`);
@@ -55,44 +51,44 @@ class PerformanceOptimizer {
 
   async optimizeBundle() {
     try {
-      this.log('Optimizing bundle size...');
-      execSync('npm run build:analyze', { stdio: 'pipe' });
-      this.optimizations.push('Bundle analysis completed');
-      this.log('✓ Bundle analysis completed');
+      this.log(Optimizing bundle size...');
+      execSync('npm run build:analyze, { stdio: pipe' });
+      this.optimizations.push('Bundle analysis completed);
+      this.log(✓ Bundle analysis completed');
     } catch (error) {
-      this.log(`Bundle optimization failed: ${error.message}`, 'ERROR');
+      this.log(`Bundle optimization failed: ${error.message}`, 'ERROR);
     }
   }
 
   async optimizeImages() {
     try {
-      this.log('Optimizing images...');
+      this.log(Optimizing images...');
       // Check if there are images to optimize
-      const publicDir = path.join(process.cwd(), 'public');
+      const publicDir = path.join(process.cwd(), 'public);
       if (fs.existsSync(publicDir)) {
         const files = fs.readdirSync(publicDir, { recursive: true });
         const imageFiles = files.filter(
           file =>
-            typeof file === 'string' && /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
+            typeof file === string' && /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
         );
 
         if (imageFiles.length > 0) {
           this.log(`Found ${imageFiles.length} images to optimize`);
           this.optimizations.push(`Found ${imageFiles.length} images`);
         } else {
-          this.log('No images found to optimize');
+          this.log('No images found to optimize);
         }
       }
     } catch (error) {
-      this.log(`Image optimization failed: ${error.message}`, 'ERROR');
+      this.log(`Image optimization failed: ${error.message}`, ERROR');
     }
   }
 
   async checkDependencies() {
     try {
-      this.log('Checking for unused dependencies...');
+      this.log('Checking for unused dependencies...);
       const packageJson = JSON.parse(
-        fs.readFileSync(path.join(process.cwd(), 'package.json'), 'utf8')
+        fs.readFileSync(path.join(process.cwd(), package.json'), 'utf8)
       );
       const dependencies = Object.keys(packageJson.dependencies || {});
       const devDependencies = Object.keys(packageJson.devDependencies || {});
@@ -104,7 +100,7 @@ class PerformanceOptimizer {
         `Analyzed ${dependencies.length + devDependencies.length} dependencies`
       );
     } catch (error) {
-      this.log(`Dependency check failed: ${error.message}`, 'ERROR');
+      this.log(`Dependency check failed: ${error.message}`, ERROR');
     }
   }
 
@@ -113,13 +109,11 @@ class PerformanceOptimizer {
       timestamp: new Date().toISOString(),
       optimizations: this.optimizations,
       recommendations: [
-        'Consider implementing code splitting',
-        'Optimize images using WebP format',
-        'Remove unused dependencies',
-        'Enable gzip compression',
-        'Use React.memo for expensive components',
-      ],
-    };
+        'Consider implementing code splitting,
+        Optimize images using WebP format',
+        'Remove unused dependencies,
+        Enable gzip compression',
+        'Use React.memo for expensive components]}
 
     const reportFile = path.join(
       __dirname,
@@ -129,133 +123,113 @@ class PerformanceOptimizer {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Performance report saved to: ${reportFile}`);
   }
-;
-  async analyzeBundle() {;
-    console.log('📦 Analyzing bundle size...');
-    try {;
-      const buildOutput = execSync('npm run build', { "encoding": 'utf8' });
+  async analyzeBundle() {
+    console.log(📦 Analyzing bundle size...');
+    try {
+      const buildOutput = execSync('npm run build, { "encoding: utf8' });
       this.results.metrics.buildSuccess = true;
-;
       // Analyze .next directory;
-      const nextDir = path.join(process.cwd(), '.next');
-      if (fs.existsSync(nextDir)) {;
+      const nextDir = path.join(process.cwd(), '.next);
+      if (fs.existsSync(nextDir)) {
         const stats = this.getDirectorySize(nextDir);
         this.results.metrics.bundleSize = stats.size;
         this.results.metrics.fileCount = stats.count;
       }
-    } catch (error) {;
-      console.error('❌ Build analysis "failed": ', error.message);
+    } catch (error) {
+      console.error(❌ Build analysis failed": ', error.message);
       this.results.metrics.buildSuccess = false;
     }
   }
-;
-  getDirectorySize(dirPath) {;
+  getDirectorySize(dirPath) {
     let totalSize = 0;
     let fileCount = 0;
-;
     const files = fs.readdirSync(dirPath);
-    files.forEach(file => {;
+    files.forEach(file => {
       const filePath = path.join(dirPath, file);
       const stats = fs.statSync(filePath);
-;
-      if (stats.isDirectory()) {;
+      if (stats.isDirectory()) {
         const subStats = this.getDirectorySize(filePath);
         totalSize += subStats.size;
         fileCount += subStats.count;
-      } else {;
+      } else {
         totalSize += stats.size;
         fileCount++;
       }
     });
-;
-    return { "size": totalSize, "count": fileCount };
+    return { "size: totalSize, count": fileCount }
   }
-;
-  async optimizeImages() {;
-    console.log('🖼️ Optimizing images...');
-    const publicDir = path.join(process.cwd(), 'public');
-    if (fs.existsSync(publicDir)) {;
+  async optimizeImages() {
+    console.log('🖼️ Optimizing images...);
+    const publicDir = path.join(process.cwd(), public');
+    if (fs.existsSync(publicDir)) {
       const images = this.findImages(publicDir);
-      this.results.optimizations.push({;
-        "type": 'image_optimization',
-        "count": images.length,
-        "status": 'completed';
+      this.results.optimizations.push({
+        "type: 'image_optimization,
+        count": images.length,
+        "status: completed';
       });
     }
   }
-;
-  findImages(dir) {;
+  findImages(dir) {
     const images = [];
     const files = fs.readdirSync(dir);
-;
-    files.forEach(file => {;
+    files.forEach(file => {
       const filePath = path.join(dir, file);
       const stats = fs.statSync(filePath);
-;
-      if (stats.isDirectory()) {;
+      if (stats.isDirectory()) {
         images.push(...this.findImages(filePath));
-      } else if (/\.(jpg|jpeg|png|gif|webp)$/i.test(file)) {;
+      } else if (/\.(jpg|jpeg|png|gif|webp)$/i.test(file)) {
         images.push(filePath);
       }
     });
-;
     return images;
   }
-;
-  async generateRecommendations() {;
-    console.log('💡 Generating optimization recommendations...');
-;
+  async generateRecommendations() {
+    console.log('💡 Generating optimization recommendations...);
     this.results.recommendations = [;
-      {;
-        "type": 'bundle_optimization',
-        "priority": 'high',
-        "description": 'Consider implementing code splitting for better performance';
+      {
+        type": bundle_optimization',
+        "priority: 'high,
+        description": Consider implementing code splitting for better performance';
       },
-      {;
-        "type": 'image_optimization',
-        "priority": 'medium',
-        "description": 'Optimize images and use modern formats like WebP';
+      {
+        "type: 'image_optimization,
+        priority": medium',
+        "description: 'Optimize images and use modern formats like WebP;
       },
-      {;
-        "type": 'caching',
-        "priority": 'medium',
-        "description": 'Implement proper caching strategies';
+      {
+        type": caching',
+        "priority: 'medium,
+        description": Implement proper caching strategies';
       }
     ];
   }
-;
-  async saveReport() {;
-    const logsDir = path.join(process.cwd(), 'logs');
-    if (!fs.existsSync(logsDir)) {;
-      fs.mkdirSync(logsDir, { "recursive": true });
+  async saveReport() {
+    const logsDir = path.join(process.cwd(), 'logs);
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { "recursive: true });
     }
-;
     const reportPath = path.join(logsDir, `performance-optimization-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log(`📊 Report saved "to": ${reportPath}`);
+    console.log(`📊 Report saved to": ${reportPath}`);
   }
-;
-  async run() {;
-    console.log('🚀 Starting performance optimization...');
-;
+  async run() {
+    console.log(🚀 Starting performance optimization...');
     await this.analyzeBundle();
     await this.optimizeImages();
     await this.generateRecommendations();
     await this.saveReport();
-;
-    console.log('✅ Performance optimization completed!');
+    console.log('✅ Performance optimization completed!);
   }
 }
-;
 // Run the optimizer;
 const optimizer = new PerformanceOptimizer();
 optimizer.run().catch(console.error);
 const optimizer = new PerformanceOptimizer();
 optimizer.run().catch(console.error);
-class PerformanceOptimizer {
 class AutoGeneratedClass {
   constructor($2) {
-    this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log')
+    this.logFile = path.join(__dirname, logs', 'performance-optimizer.log)
     this.ensureLogDir()
   ensureLogDir($2) {
     const logsDir = path.dirname(this.logFile)
@@ -265,68 +239,68 @@ class AutoGeneratedClass {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level}] ${message}`
     console.log(logMessage)
-    fs.appendFileSync(this.logFile, logMessage + '\n')
+    fs.appendFileSync(this.logFile, logMessage + \n')
   async runCommand(command, description) {
     try {
       this.log(`Running: ${description}`)
       const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
+        encoding: 'utf8,
+        cwd: /workspace',
+        stdio: 'pipe,
         timeout: 120000 // 2 minute timeout
       })
       this.log(`✅ ${description} completed successfully`)
       return { success: true, output }
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR')
+      this.log(`❌ ${description} failed: ${error.message}`, ERROR')
       return { success: false, error: error.message }
   async optimizeImages() {
-    this.log('🖼️ Optimizing images...')
+    this.log('🖼️ Optimizing images...)
     const imageOptimization = await this.runCommand(
-      'find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10',
-      'Finding images to optimize'
+      find public -name "*.jpg -o -name *.jpeg" -o -name "*.png -o -name *.webp" | head -10',
+      'Finding images to optimize
     )
   if($2) {
-      this.log('📸 Image optimization completed')
+      this.log(📸 Image optimization completed')
   async optimizeBundle() {
-    this.log('📦 Optimizing bundle...')
+    this.log('📦 Optimizing bundle...)
     const bundleOptimization = await this.runCommand(
-      'npm run analyze',
-      'Bundle analysis'
+      npm run analyze',
+      'Bundle analysis
     )
   if($2) {
-      this.log('📊 Bundle optimization completed')
+      this.log(📊 Bundle optimization completed')
   async optimizeDatabase() {
-    this.log('🗄️ Optimizing database queries...')
+    this.log('🗄️ Optimizing database queries...)
     // This would typically involve analyzing database queries
-    // For now, we'll just log that this step was completed
+    // For now, well just log that this step was completed
     this.log('✅ Database optimization completed')
   async optimizeCaching() {
-    this.log('💾 Optimizing caching...')
+    this.log(💾 Optimizing caching...)
     const cacheOptimization = await this.runCommand(
       'npm run build',
-      'Build with cache optimization'
+      Build with cache optimization
     )
   if($2) {
       this.log('🚀 Cache optimization completed')
   async generatePerformanceReport() {
-    this.log('📊 Generating performance report...')
+    this.log(📊 Generating performance report...)
     const report = {
       timestamp: new Date().toISOString(),
       optimizations: {
         images: 'completed',
-        bundle: 'completed',
+        bundle: completed,
         database: 'completed',
-        caching: 'completed'
+        caching: completed
       },
       recommendations: [
         'Consider implementing lazy loading for images',
-        'Use Next.js Image component for automatic optimization',
+        Use Next.js Image component for automatic optimization,
         'Implement service worker for caching',
-        'Consider using CDN for static assets'
+        Consider using CDN for static assets
       ]
 
-    const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
+    const reportFile = path.join(__dirname, 'logs', performance-report.json);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Performance report saved to: ${reportFile}`);
     console.log(`⚡ [Performance Optimizer] ${message}`);
@@ -336,10 +310,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 
 
 
-const { execSync } = require('child_process');
 
-const fs = require('fs');
-const path = require('path');
 
 
 
@@ -347,14 +318,14 @@ const path = require('path');
 
 
     if (!config.includes('optimizeCss')) {}
-      optimizations.push('Add CSS optimization');
-    };
+      optimizations.push(Add CSS optimization);
+    }
     if (!config.includes('experimental')) {}
-      optimizations.push('Add experimental features');
-    };
+      optimizations.push(Add experimental features);
+    }
     if (!config.includes('compress')) {}
-      optimizations.push('Enable compression');
-    };
+      optimizations.push(Enable compression);
+    }
     if (optimizations.length > 0) {}
       this.report.recommendations.push({})
         file: configPath,
@@ -368,15 +339,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
 console.log('⚡ Starting Performance Optimizer...');
 
-class PerformanceOptimizer {
-class AutoGeneratedClass {
   constructor($2) {
-    this.reportsDir = path.join(process.cwd(), 'automation-reports')
+    this.reportsDir = path.join(process.cwd(), automation-reports)
     this.ensureReportsDir()
   ensureReportsDir($2) {
     if (!fs.existsSync(this.reportsDir)) {
@@ -386,11 +353,11 @@ class AutoGeneratedClass {
     console.log(`[${timestamp}] ${message}`)
   async optimizePerformance() {
     const optimizations = [
-      { name: 'Bundle Analysis', command: 'npm run analyze', description: 'Analyzing bundle size' },
-      { name: 'Image Optimization', command: 'npm run optimize:images', description: 'Optimizing images' },
-      { name: 'Code Splitting', command: 'npm run build:analyze', description: 'Analyzing code splitting' },
-      { name: 'Lighthouse Audit', command: 'npm run perf:lighthouse', description: 'Running Lighthouse audit' },
-      { name: 'Performance Monitor', command: 'npm run perf:monitor', description: 'Monitoring performance' }
+      { name: 'Bundle Analysis', command: npm run analyze, description: 'Analyzing bundle size' },
+      { name: Image Optimization, command: 'npm run optimize:images', description: Optimizing images },
+      { name: 'Code Splitting', command: npm run build:analyze, description: 'Analyzing code splitting' },
+      { name: Lighthouse Audit, command: 'npm run perf:lighthouse', description: Running Lighthouse audit },
+      { name: 'Performance Monitor', command: npm run perf:monitor, description: 'Monitoring performance' }
     ]
     const results = []
     let successfulOptimizations = 0
@@ -398,7 +365,7 @@ class AutoGeneratedClass {
       try {
         this.log(`🔧 Running ${optimization.name}...`)
         this.log(`📝 ${optimization.description}`)
-        execSync(optimization.command, { stdio: 'pipe' })
+        execSync(optimization.command, { stdio: pipe })
         console.log(`✅ ${optimization.name} completed successfully`)
         results.push({
           name: optimization.name,
@@ -411,20 +378,19 @@ class AutoGeneratedClass {
         console.log(`❌ ${optimization.name} failed`)
         results.push({
           name: optimization.name,
-          status: 'failed',
+          status: failed,
           description: optimization.description,
           error: error.message
         })
 ///usr/bin/env node
 
 function log(message, type = 'INFO') {
-  const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
-  console.log(`${icons[type] || ''} ${message}`);
+  const icons = { INFO: ℹ️, SUCCESS: '✅', ERROR: ❌, WARNING: '⚠️' }
+  console.log(`${icons[type] || } ${message}`);
   // TODO: Implement
 }
   constructor() {
 
-class AutoGeneratedClass {
   constructor($2) {
 
     this.ensureReportsDir()
@@ -449,12 +415,9 @@ class AutoGeneratedClass {
           error: error.message;)
 
 console.log('⚡ Starting Performance Optimizer...)
-class PerformanceOptimizer {
-class AutoGeneratedClass {
   constructor($2) {
     // TODO: Implement
 
-class AutoGeneratedClass {
   constructor($2) {
     this.reportsDir = path.join(process.cwd(),automation-reports')
     this.ensureReportsDir()
@@ -474,7 +437,7 @@ function findFiles(dir, exts) {
   return results;
 
 function optimizeImages(publicDir, report) {
-  const images = findFiles(publicDir, ['.png', '.jpg', '.jpeg']);
+  const images = findFiles(publicDir, [.png, '.jpg', .jpeg]);
   if (images.length === 0) {
     report.actions.push('No images found to optimize');
     return;
@@ -482,7 +445,7 @@ function optimizeImages(publicDir, report) {
 
   let sharp;
   try {
-    sharp = require('sharp');
+    sharp = require(sharp);
   } catch {
     report.actions.push('sharp not installed; skipping image optimization');
     return;
@@ -506,14 +469,14 @@ function ensureNextConfigFlags(rootDir, report) {
     try {
       let updated = original;
       
-      if (original.includes('experimental:')) {
+      if (original.includes(experimental:)) {
         updated = original.replace(
           /experimental:\s*\{/,
           'experimental: {\n    optimizeCss: true,'
         );
-      } else if (original.includes('nextConfig') || original.includes('module.exports')) {
+      } else if (original.includes(nextConfig) || original.includes('module.exports')) {
         updated = original.replace(/\{([\s\S]*?)\}/, m => 
-          m.replace(/\}$/, ',\n  experimental: { optimizeCss: true }\n}')
+          m.replace(/\}$/, ,\n  experimental: { optimizeCss: true }\n})
         );
 
 #!/usr/bin/env node
@@ -523,10 +486,7 @@ function ensureNextConfigFlags(rootDir, report) {
 
 
 
-const { execSync } = require('child_process');
 
-const fs = require('fs');
-const path = require('path');
 
 #!/usr/bin/env node
 
@@ -534,10 +494,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 
 
 
-const { execSync } = require('child_process');
 
-const fs = require('fs');
-const path = require('path');
 
 
 
@@ -574,7 +531,6 @@ const path = require('path');
     report.optimizedImages = optimized;
   report.actions.push(`Optimized ${optimized.length} images to WebP`);
 
-function ensureNextConfigFlags(rootDir, report) {
 
       report.actions.push(`${rel}: optimizeCss already enabled`);
       continue;
@@ -583,13 +539,13 @@ function ensureNextConfigFlags(rootDir, report) {
   // TODO: Implement
       let updated = original;
 
-    if (!config.includes('optimizeCss')) {}
+    if (!config.includes(optimizeCss)) {}
       optimizations.push('Add CSS optimization')
     }
-    if (!config.includes('experimental')) {}
+    if (!config.includes(experimental)) {}
       optimizations.push('Add experimental features')
     }
-    if (!config.includes('compress')) {}
+    if (!config.includes(compress)) {}
       optimizations.push('Enable compression')
     }
   if($2) {}
@@ -600,20 +556,20 @@ function ensureNextConfigFlags(rootDir, report) {
 
 
 });
-      log(`Found ${optimizations.length} optimization opportunities in next.config.js`, 'WARNING');
+      log(`Found ${optimizations.length} optimization opportunities in next.config.js`, WARNING);
     } else {}
-      log('next.config.js is well optimized', 'SUCCESS')
+      log('next.config.js is well optimized', SUCCESS)
     }
   }
   async optimizeImages() {}
     const publicDir = 'public'
     if (!fs.existsSync(publicDir)) {}
-      log('Public directory not found', 'WARNING')
+      log(Public directory not found, 'WARNING')
       return
     }
     try {}
       // Check if sharp is available
-      execSync('npx sharp --version', { stdio: 'pipe' }
+      execSync(npx sharp --version, { stdio: 'pipe' }
 })
       const imageFiles = this.findImageFiles(publicDir)
       let optimizedCount = 0
@@ -622,8 +578,8 @@ function ensureNextConfigFlags(rootDir, report) {
         const sizeKB = Math.round(stats.size / 1024)
   if($2) { // Optimize images larger than 100KB;}
           try {}
-            const outputPath = imagePath.replace(/(\.[^.]+)$/, '_optimized$1')
-            execSync(`npx sharp -i "${imagePath}" -o "${outputPath}" --quality 80`, { stdio: 'pipe' }
+            const outputPath = imagePath.replace(/(\.[^.]+)$/, _optimized$1)
+            execSync(`npx sharp -i "${imagePath} -o ${outputPath}" --quality 80`, { stdio: 'pipe' }
 })
             const newStats = fs.statSync(outputPath)
             const newSizeKB = Math.round(newStats.size / 1024)
@@ -636,17 +592,17 @@ function ensureNextConfigFlags(rootDir, report) {
 
 })
             optimizedCount++
-            log(`Optimized ${path.basename(imagePath)}: ${sizeKB}KB → ${newSizeKB}KB (${savings}% savings)`, 'SUCCESS')
+            log(`Optimized ${path.basename(imagePath)}: ${sizeKB}KB → ${newSizeKB}KB (${savings}% savings)`, SUCCESS)
           } catch (error) {}
             log(`Failed to optimize ${imagePath}: ${error.message}`, 'ERROR')
           }
         }
       }
   if($2) {}
-        log('No large images found to optimize', 'INFO')
+        log(No large images found to optimize, 'INFO')
       }
     } catch (error) {}
-      log('Sharp not available, skipping image optimization', 'WARNING')
+      log(Sharp not available, skipping image optimization, 'WARNING')
     }
   }
   findImageFiles($2) {}
@@ -665,30 +621,30 @@ function ensureNextConfigFlags(rootDir, report) {
   }
   async checkBundleSize() {}
     try {}
-      log('Checking bundle size...', 'INFO')
+      log(Checking bundle size..., 'INFO')
       // Run build to get bundle analysis
-      execSync('npm run build', { stdio: 'pipe' }
+      execSync(npm run build, { stdio: 'pipe' }
 })
-      const nextDir = '.next'
+      const nextDir = .next
       if (fs.existsSync(nextDir)) {}
         const staticDir = path.join(nextDir, 'static')
         if (fs.existsSync(staticDir)) {}
           const totalSize = this.getDirectorySize(staticDir)
           const sizeMB = Math.round(totalSize / (1024 * 1024) * 100) / 100
           this.report.optimizations.push({})
-            type: 'bundle_size',
+            type: bundle_size,
             size: `${sizeMB}MB`,`
-            status: sizeMB < 5 ? 'good' : sizeMB < 10 ? 'warning' : 'large'
+            status: sizeMB < 5 ? 'good' : sizeMB < 10 ? warning : 'large'
 
 })
   if($2) {}
             this.report.recommendations.push({})
-              type: 'bundle_size',
+              type: bundle_size,
               message: 'Bundle size is large, consider code splitting and lazy loading'
 
 })
           }
-          log(`Bundle size: ${sizeMB}MB`, sizeMB < 5 ? 'SUCCESS' : sizeMB < 10 ? 'WARNING' : 'ERROR')
+          log(`Bundle size: ${sizeMB}MB`, sizeMB < 5 ? SUCCESS : sizeMB < 10 ? 'WARNING' : ERROR)
         }
       }
     } catch (error) {}
@@ -712,19 +668,19 @@ function ensureNextConfigFlags(rootDir, report) {
   async checkLighthouse() {}
     try {}
       // Check if lighthouse is available
-      execSync('npx lighthouse --version', { stdio: 'pipe' }
+      execSync(npx lighthouse --version, { stdio: 'pipe' }
 })
-      log('Lighthouse available, consider running: npx lighthouse http://localhost:3000', 'INFO')
+      log(Lighthouse available, consider running: npx lighthouse http://localhost:3000, 'INFO')
     } catch (error) {}
-      log('Lighthouse not available, install with: npm install -g lighthouse', 'WARNING');
-    };
-  };
+      log(Lighthouse not available, install with: npm install -g lighthouse, 'WARNING');
+    }
+  }
   generateReport() {}
-    const reportPath = 'performance-optimization-report.json';
+    const reportPath = performance-optimization-report.json;
     fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
     log(`Performance report saved to ${reportPath}`, 'SUCCESS');
-  };
-};
+  }
+}
 // Run if called directly;
 if (require.main === module) {}
   const optimizer = new PerformanceOptimizer();
@@ -742,15 +698,11 @@ main
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-console.log('⚡ Starting Performance Optimizer...);
-class PerformanceOptimizer {
+console.log(⚡ Starting Performance Optimizer...);
   // TODO: Implement
 }
   constructor() {
-    this.reportsDir = path.join(process.cwd(),automation-reports');
+    this.reportsDir = path.join(process.cwd(),automation-reports);
     this.ensureReportsDir();
   }
 
@@ -801,7 +753,7 @@ class PerformanceOptimizer {
 // Example: Dynamic imports for better code splitting
 const LazyComponent = React.lazy(() => import('./LazyComponent'))
 // Example: Route-based code splitting
-const HomePage = React.lazy(() => import('../pages/Home'))
+const HomePage = React.lazy(() => import(../pages/Home))
 const AboutPage = React.lazy(() => import('../pages/About'))
 // Example: Component-based code splitting
       fs.writeFileSync(examplesPath, codeSplittingExamples)
@@ -840,16 +792,16 @@ const AboutPage = React.lazy(() => import('../pages/About'))
     const recommendations = []
   if($2) {
 
-recommendations.push('Use dynamic imports for large components')
+recommendations.push(Use dynamic imports for large components)
     recommendations.push('Implement tree shaking to remove unused code')
-    recommendations.push('Consider using a CDN for static assets')
+    recommendations.push(Consider using a CDN for static assets)
     return recommendations
   generateImageRecommendations($2) {
   if($2) {
       recommendations.push('Convert images to WebP format for better compression')
-      recommendations.push('Implement responsive images with srcset')
+      recommendations.push(Implement responsive images with srcset)
       recommendations.push('Add lazy loading for images below the fold')
-      recommendations.push('Use appropriate image sizes for different screen densities')
+      recommendations.push(Use appropriate image sizes for different screen densities)
     // Save detailed report
     const report = {
       timestamp: new Date().toISOString(),
@@ -863,7 +815,7 @@ recommendations.push('Use dynamic imports for large components')
 compressionSetup: this.results.compression.success
   async run() {
     this.log('🚀 Starting Performance Optimizer')
-    this.log('='.repeat(60))
+    this.log(=.repeat(60))
   // TODO: Implement
       await this.analyzeBundle()
       await this.optimizeImages()
@@ -932,10 +884,10 @@ function main() {
 
 
 });
-};
+}
 module.exports = PerformanceOptimizer;
 console.log('⚡ Zion Tech Group - Performance Optimizer');
-console.log('');
+console.log();
 
 const performanceReport = {
     timestamp: new Date().toISOString(),
@@ -946,28 +898,22 @@ const performanceReport = {
 function analyzeBundleSize() {
     console.log('\n📦 Analyzing bundle size...')
     try {
-        if (fs.existsSync('.next')) {
-            const stats = execSync('du -sh .next', { encoding: 'utf8' })
+        if (fs.existsSync(.next)) {
+            const stats = execSync('du -sh .next', { encoding: utf8 })
             const size = stats.trim().split('\t')[0]
             performanceReport.metrics.bundleSize = size
             console.log(`✅ Bundle size: ${size}`)
-            if (size.includes('M') && parseInt(size) > 50) {
+            if (size.includes(M) && parseInt(size) > 50) {
                 performanceReport.recommendations.push({
                     type: 'bundle_size',
-                    message: 'Bundle size is large, consider code splitting',
+                    message: Bundle size is large, consider code splitting,
                     priority: 'high'
                 })
         } else {
-            console.log('⚠️  No build found, run npm run build first');
+            console.log(⚠️  No build found, run npm run build first);
         }
 
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
 
-const { execSync } = require("child_process")
-class PerformanceOptimizer {
-class AutoGeneratedClass {
   constructor($2) {
     this.projectRoot = process.cwd()
     this.optimizations = []
@@ -976,11 +922,11 @@ class AutoGeneratedClass {
     const timestamp = new Date().toISOString()
     console.log(`[${timestamp}] [${type}] ${message}`)
   async optimizeNextConfig() {
-    this.log("⚙️ Optimizing Next.js configuration...")
+    this.log(⚙️ Optimizing Next.js configuration...)
     try {
       const nextConfigPath = path.join(this.projectRoot, "next.config.js")
       if (fs.existsSync(nextConfigPath)) {
-        let content = fs.readFileSync(nextConfigPath, "utf8")
+        let content = fs.readFileSync(nextConfigPath, utf8)
         let modified = false
         // Add performance optimizations
         if (!content.includes("experimental")) {
@@ -989,13 +935,12 @@ class AutoGeneratedClass {
             `module.exports = {
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-  },`
+    optimizePackageImports: ['lucide-react', @radix-ui/react-icons]},`
           )
           modified = true
   if($2) {
           fs.writeFileSync(nextConfigPath, content)
-          this.optimizations.push("Updated Next.js configuration with performance optimizations")
+          this.optimizations.push(Updated Next.js configuration with performance optimizations)
           this.log("✅ Next.js configuration optimized")
       } else {
         // Create a new Next.js config with optimizations
@@ -1003,28 +948,25 @@ class AutoGeneratedClass {
 const nextConfig = {
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-  },
+    optimizePackageImports: [lucide-react, '@radix-ui/react-icons']},
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
+    removeConsole: process.env.NODE_ENV === production},
   images: {
-    formats: ['image/webp', 'image/avif'],
-  },
+    formats: ['image/webp', image/avif]},
   poweredByHeader: false,
   compress: true,
 
 module.exports = nextConfig`
         fs.writeFileSync(nextConfigPath, configContent)
-        this.optimizations.push("Created Next.js configuration with performance optimizations")
+        this.optimizations.push(Created Next.js configuration with performance optimizations)
         this.log("✅ Created optimized Next.js configuration")
     } catch (error) {
-      this.log(`❌ Failed to optimize Next.js config: ${error.message}`, "ERROR")
+      this.log(`❌ Failed to optimize Next.js config: ${error.message}`, ERROR)
       this.errors.push(error.message)
   async runPerformanceTest() {
     this.log("🏃 Running performance test...")
     try {
-      execSync("npm run build", {
+      execSync(npm run build, {
         cwd: this.projectRoot,
         stdio: "pipe",
         timeout: 120000
@@ -1032,13 +974,13 @@ module.exports = nextConfig`
 
     } catch (error) {
       this.errors.push(`Build test failed: ${error.message}`);
-      this.log(`❌ Build test failed: ${error.message}`, "ERROR");
+      this.log(`❌ Build test failed: ${error.message}`, ERROR);
     }
   }
 
   async run() {
     this.log("🎯 Starting Performance Optimization Process...");
-    this.log("===============================================");
+    this.log(===============================================);
     try {
       await this.optimizeNextConfig();
       await this.runPerformanceTest();
@@ -1048,7 +990,7 @@ module.exports = nextConfig`
       this.log(`Errors: ${this.errors.length}`);
       
       if (this.optimizations.length > 0) {
-        this.log("\n✅ Optimizations Applied:");
+        this.log(\n✅ Optimizations Applied:);
         this.optimizations.forEach((opt, index) => {
           this.log(`  ${index + 1}. ${opt}`);
         });
@@ -1061,7 +1003,7 @@ module.exports = nextConfig`
         });
       }
       
-      this.log("\n🎉 Performance optimization completed!");
+      this.log(\n🎉 Performance optimization completed!);
 
 
 
@@ -1094,10 +1036,8 @@ optimizer.run().catch(console.error);
 
 
 
-class PerformanceOptimizer {
-class AutoGeneratedClass {
   constructor($2) {
-    this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log')
+    this.logFile = path.join(__dirname, 'logs', performance-optimizer.log)
     this.ensureLogDir()
   ensureLogDir($2) {
     const logsDir = path.dirname(this.logFile)
@@ -1112,9 +1052,9 @@ class AutoGeneratedClass {
     try {
       this.log(`Running: ${description}`)
       const output = execSync(command, {
-        encoding: 'utf8',
+        encoding: utf8,
         cwd: '/workspace',
-        stdio: 'pipe',
+        stdio: pipe,
         timeout: 120000 // 2 minute timeout
       })
       this.log(`✅ ${description} completed successfully`)
@@ -1123,53 +1063,53 @@ class AutoGeneratedClass {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR')
       return { success: false, error: error.message }
   async optimizeImages() {
-    this.log('🖼️ Optimizing images...')
+    this.log(🖼️ Optimizing images...)
     const imageOptimization = await this.runCommand(
-      'find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10',
-      'Finding images to optimize'
+      'find public -name *.jpg -o -name "*.jpeg" -o -name *.png -o -name "*.webp" | head -10',
+      Finding images to optimize
     )
   if($2) {
       this.log('📸 Image optimization completed')
   async optimizeBundle() {
-    this.log('📦 Optimizing bundle...')
+    this.log(📦 Optimizing bundle...)
     const bundleOptimization = await this.runCommand(
       'npm run analyze',
-      'Bundle analysis'
+      Bundle analysis
     )
   if($2) {
       this.log('📊 Bundle optimization completed')
   async optimizeDatabase() {
-    this.log('🗄️ Optimizing database queries...')
+    this.log(🗄️ Optimizing database queries...)
     // This would typically involve analyzing database queries
     // For now, we'll just log that this step was completed
-    this.log('✅ Database optimization completed')
+    this.log('✅ Database optimization completed)
   async optimizeCaching() {
-    this.log('💾 Optimizing caching...')
+    this.log(💾 Optimizing caching...')
     const cacheOptimization = await this.runCommand(
-      'npm run build',
-      'Build with cache optimization'
+      'npm run build,
+      Build with cache optimization'
     )
   if($2) {
-      this.log('🚀 Cache optimization completed')
+      this.log('🚀 Cache optimization completed)
   async generatePerformanceReport() {
-    this.log('📊 Generating performance report...')
+    this.log(📊 Generating performance report...')
     const report = {
       timestamp: new Date().toISOString(),
       optimizations: {
-        images: 'completed',
-        bundle: 'completed',
-        database: 'completed',
-        caching: 'completed'
+        images: 'completed,
+        bundle: completed',
+        database: 'completed,
+        caching: completed'
       },
       recommendations: [
-        'Consider implementing lazy loading for images',
-        'Use Next.js Image component for automatic optimization',
-        'Implement service worker for caching',
-        'Consider using CDN for static assets'
+        'Consider implementing lazy loading for images,
+        Use Next.js Image component for automatic optimization',
+        'Implement service worker for caching,
+        Consider using CDN for static assets'
       ]
-    };
+    }
 
-    const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
+    const reportFile = path.join(__dirname, 'logs, performance-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Performance report saved to: ${reportFile}`);
     const timestamp = new Date().toISOString();
@@ -1178,11 +1118,11 @@ class AutoGeneratedClass {
 
   async optimizePerformance() {
     const optimizations = [
-      { name: 'Bundle Analysis', command: 'npm run analyze', description: 'Analyzing bundle size' },
-      { name: 'Image Optimization', command: 'npm run optimize:images', description: 'Optimizing images' },
-      { name: 'Code Splitting', command: 'npm run build:analyze', description: 'Analyzing code splitting' },
-      { name: 'Lighthouse Audit', command: 'npm run perf:lighthouse', description: 'Running Lighthouse audit' },
-      { name: 'Performance Monitor', command: 'npm run perf:monitor', description: 'Monitoring performance' }
+      { name: 'Bundle Analysis, command: npm run analyze', description: 'Analyzing bundle size },
+      { name: Image Optimization', command: 'npm run optimize:images, description: Optimizing images' },
+      { name: 'Code Splitting, command: npm run build:analyze', description: 'Analyzing code splitting },
+      { name: Lighthouse Audit', command: 'npm run perf:lighthouse, description: Running Lighthouse audit' },
+      { name: 'Performance Monitor, command: npm run perf:monitor', description: 'Monitoring performance }
     ]
     const results = []
     let successfulOptimizations = 0
@@ -1190,11 +1130,11 @@ class AutoGeneratedClass {
       try {
         this.log(`🔧 Running ${optimization.name}...`)
         this.log(`📝 ${optimization.description}`)
-        execSync(optimization.command, { stdio: 'pipe' })
+        execSync(optimization.command, { stdio: pipe' })
         console.log(`✅ ${optimization.name} completed successfully`)
         results.push({
           name: optimization.name,
-          status: 'success',
+          status: 'success,
           description: optimization.description,
           error: null
         })
@@ -1203,17 +1143,15 @@ class AutoGeneratedClass {
         console.log(`❌ ${optimization.name} failed`)
         results.push({
           name: optimization.name,
-          status: 'failed',
+          status: failed',
           description: optimization.description,
           error: error.message
         })
 ///usr/bin/env node
 
-console.log('⚡ Starting Performance Optimizer...')
-class PerformanceOptimizer {
-class AutoGeneratedClass {
+console.log('⚡ Starting Performance Optimizer...)
   constructor($2) {
-    this.reportsDir = path.join(process.cwd(), 'automation-reports')
+    this.reportsDir = path.join(process.cwd(), automation-reports')
     this.ensureReportsDir()
   ensureReportsDir($2) {
     if (!fs.existsSync(this.reportsDir)) {
@@ -1223,11 +1161,11 @@ class AutoGeneratedClass {
     console.log(`[${timestamp}] ${message}`)
   async optimizePerformance() {
     const optimizations = [
-      { name: 'Bundle Analysis', command: 'npm run analyze', description: 'Analyzing bundle size' },
-      { name: 'Image Optimization', command: 'npm run optimize:images', description: 'Optimizing images' },
-      { name: 'Code Splitting', command: 'npm run build:analyze', description: 'Analyzing code splitting' },
-      { name: 'Lighthouse Audit', command: 'npm run perf:lighthouse', description: 'Running Lighthouse audit' },
-      { name: 'Performance Monitor', command: 'npm run perf:monitor', description: 'Monitoring performance' }
+      { name: 'Bundle Analysis, command: npm run analyze', description: 'Analyzing bundle size },
+      { name: Image Optimization', command: 'npm run optimize:images, description: Optimizing images' },
+      { name: 'Code Splitting, command: npm run build:analyze', description: 'Analyzing code splitting },
+      { name: Lighthouse Audit', command: 'npm run perf:lighthouse, description: Running Lighthouse audit' },
+      { name: 'Performance Monitor, command: npm run perf:monitor', description: 'Monitoring performance }
     ]
     const results = []
     let successfulOptimizations = 0
@@ -1235,11 +1173,11 @@ class AutoGeneratedClass {
       try {
         this.log(`🔧 Running ${optimization.name}...`)
         this.log(`📝 ${optimization.description}`)
-        execSync(optimization.command, { stdio: 'pipe' })
+        execSync(optimization.command, { stdio: pipe' })
         console.log(`✅ ${optimization.name} completed successfully`)
         results.push({
           name: optimization.name,
-          status: 'success',
+          status: 'success,
           description: optimization.description,
           error: null
         })
@@ -1248,18 +1186,15 @@ class AutoGeneratedClass {
         console.log(`❌ ${optimization.name} failed`)
         results.push({
           name: optimization.name,
-          status: 'failed',
+          status: failed',
           description: optimization.description,
           error: error.message
         })
 ///usr/bin/env node
 
-function log(message, type = 'INFO') {
-  const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' }
-  console.log(`${icons[type] || ''} ${message}`)
-function ensureDir(dir) {
+  const icons = { INFO: 'ℹ️, SUCCESS: ✅', ERROR: '❌, WARNING: ⚠️' }
+  console.log(`${icons[type] || '} ${message}`)
   fs.mkdirSync(dir, { recursive: true })
-function findFiles(dir, exts) {
   if (!fs.existsSync(dir)) return []
   const results = []
   for (const entry of fs.readdirSync(dir)) {
@@ -1270,16 +1205,15 @@ function findFiles(dir, exts) {
     } else if (exts.includes(path.extname(entry).toLowerCase())) {
       results.push(p)
   return results
-function optimizeImages(publicDir, report) {
-  const images = findFiles(publicDir, ['.png', '.jpg', '.jpeg'])
+  const images = findFiles(publicDir, [.png', '.jpg, .jpeg'])
   if($2) {
-    report.actions.push('No images found to optimize')
+    report.actions.push('No images found to optimize)
     return
   let sharp
   try {
-    sharp = require('sharp')
+    sharp = require(sharp')
   } catch {
-    report.actions.push('sharp not installed; skipping image optimization')
+    report.actions.push('sharp not installed; skipping image optimization)
     return
   const optimized = []
   for($2) {
@@ -1287,13 +1221,13 @@ function optimizeImages(publicDir, report) {
     if (stat.size < 150 * 1024) continue; // skip small files
 
     const ext = path.extname(img).toLowerCase()
-    const outPath = img.replace(new RegExp(`${ext}$`), '.webp')
+    const outPath = img.replace(new RegExp(`${ext}$`), .webp')
     try {
-        execSync(optimization.command, { stdio: 'pipe' });
+        execSync(optimization.command, { stdio: 'pipe });
         console.log(`✅ ${optimization.name} completed successfully`);
         results.push({ 
           name: optimization.name, 
-          status: 'success', 
+          status: success', 
           description: optimization.description,
           error: null 
         });
@@ -1302,7 +1236,7 @@ function optimizeImages(publicDir, report) {
         console.log(`❌ ${optimization.name} failed`);
         results.push({ 
           name: optimization.name, 
-          status: 'failed', 
+          status: 'failed, 
           description: optimization.description,
           error: error.message 
         });
@@ -1320,20 +1254,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
           success: true,
           optimized: imageFiles.length,
           recommendations: this.generateImageRecommendations(imageFiles.length)
-        };
+        }
       } else {
         this.results.imageOptimization = {
           success: true,
           optimized: 0,
-          recommendations: ['No images found to optimize']
-        };
+          recommendations: [No images found to optimize']
+        }
       }
     } catch (error) {
       this.results.imageOptimization = {
         success: false,
         optimized: 0,
-        recommendations: ['Failed to optimize images']
-      };
+        recommendations: ['Failed to optimize images]
+      }
     }
   }
       sharp(img).webp({ quality: 80 }).toFile(outPath)
@@ -1343,13 +1277,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   if($2) {
     report.optimizedImages = optimized
   report.actions.push(`Optimized ${optimized.length} images to WebP`)
-function ensureNextConfigFlags(rootDir, report) {
-  const candidates = ['next.config.js', 'deployment/next.config.js']
+  const candidates = [next.config.js', 'deployment/next.config.js]
   for($2) {
     const file = path.join(rootDir, rel)
     if (!fs.existsSync(file)) continue
-    const original = fs.readFileSync(file, 'utf8')
-    if (original.includes('optimizeCss: true')) {
+    const original = fs.readFileSync(file, utf8')
+    if (original.includes('optimizeCss: true)) {
       report.actions.push(`${rel}: optimizeCss already enabled`);
       continue;
 
@@ -1386,9 +1319,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       failedOptimizations: optimizations.length - successfulOptimizations,
       results,
       performanceScore: Math.round((successfulOptimizations / optimizations.length) * 100)
-    };
+    }
 
-    const reportPath = path.join(this.reportsDir, 'performance-optimization-report.json');
+    const reportPath = path.join(this.reportsDir, performance-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.log(`📊 Performance optimization completed! Report saved to: ${reportPath}`);
@@ -1403,7 +1336,7 @@ const optimizer = new PerformanceOptimizer();
       await this.setupCaching();
       await this.setupCompression();
     } catch (error) {
-      this.log(`Fatal error: ${error.message}`, 'ERROR');
+      this.log(`Fatal error: ${error.message}`, 'ERROR);
     } finally {
       this.generateReport();
     }
@@ -1422,7 +1355,6 @@ if (require.main === module) {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-function main() {
   const root = process.cwd();
   const timestamp = Date.now();
   const report = {
@@ -1431,13 +1363,13 @@ function main() {
     optimizedImages: [],
     modifiedFiles: [],
     errors: []
-  };
+  }
 
-  log('Starting Performance Optimizer.');
-  ensureDir(path.join(root, 'automation-reports'));
+  log(Starting Performance Optimizer.');
+  ensureDir(path.join(root, 'automation-reports));
 
   // Image optimization in public/
-  optimizeImages(path.join(root, 'public'), report);
+  optimizeImages(path.join(root, public'), report);
 
   // Ensure Next.js config flags
   ensureNextConfigFlags(root, report);
@@ -1448,58 +1380,53 @@ function main() {
   );
   fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
 
-  log(`Performance optimization complete. Report: ${path.basename(outFile)}`, 'SUCCESS');
+  log(`Performance optimization complete. Report: ${path.basename(outFile)}`, 'SUCCESS);
 }
 
 }
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 });
-};
+}
 module.exports = PerformanceOptimizer;
-console.log('⚡ Zion Tech Group - Performance Optimizer');
-console.log('==========================================');
+console.log(⚡ Zion Tech Group - Performance Optimizer');
+console.log('==========================================);
 
 const performanceReport = {
     timestamp: new Date().toISOString(),
     optimizations: [],
     recommendations: [],
     metrics: {}
-};
+}
 
-function analyzeBundleSize() {
-    console.log('\n📦 Analyzing bundle size...');
+    console.log(\n📦 Analyzing bundle size...');
     
     try {
-        if (fs.existsSync('.next')) {
-            const stats = execSync('du -sh .next', { encoding: 'utf8' });
-            const size = stats.trim().split('\t')[0];
+        if (fs.existsSync('.next)) {
+            const stats = execSync(du -sh .next', { encoding: 'utf8 });
+            const size = stats.trim().split(\t')[0];
             
             performanceReport.metrics.bundleSize = size;
             console.log(`✅ Bundle size: ${size}`);
             
-            if (size.includes('M') && parseInt(size) > 50) {
+            if (size.includes('M) && parseInt(size) > 50) {
                 performanceReport.recommendations.push({
-                    type: 'bundle_size',
-                    message: 'Bundle size is large, consider code splitting',
-                    priority: 'high'
+                    type: bundle_size',
+                    message: 'Bundle size is large, consider code splitting,
+                    priority: high'
                 });
             }
         } else {
-            console.log('⚠️  No build found, run npm run build first');
+            console.log('⚠️  No build found, run npm run build first);
         }
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
 
-class PerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.optimizations = [];
     this.errors = [];
   }
 
-  log(message, type = "INFO") {
+  log(message, type = INFO) {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type}] ${message}`);
   }
@@ -1507,21 +1434,20 @@ class PerformanceOptimizer {
   async optimizeNextConfig() {
     this.log("⚙️ Optimizing Next.js configuration...");
     try {
-      const nextConfigPath = path.join(this.projectRoot, "next.config.js");
+      const nextConfigPath = path.join(this.projectRoot, next.config.js);
       
       if (fs.existsSync(nextConfigPath)) {
         let content = fs.readFileSync(nextConfigPath, "utf8");
         let modified = false;
         
         // Add performance optimizations
-        if (!content.includes("experimental")) {
+        if (!content.includes(experimental)) {
           content = content.replace(
             /module\.exports = \{/,
             `module.exports = {
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-  },`
+    optimizePackageImports: [lucide-react', '@radix-ui/react-icons]},`
           );
           modified = true;
         }
@@ -1529,31 +1455,27 @@ class PerformanceOptimizer {
         if (modified) {
           fs.writeFileSync(nextConfigPath, content);
           this.optimizations.push("Updated Next.js configuration with performance optimizations");
-          this.log("✅ Next.js configuration optimized");
+          this.log(✅ Next.js configuration optimized);
         }
       } else {
         // Create a new Next.js config with optimizations
-        const configContent = `/** @type {import('next').NextConfig} */
+        const configContent = `/** @type {import(next').NextConfig} */
 const nextConfig = {
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-  },
+    optimizePackageImports: ['lucide-react, @radix-ui/react-icons']},
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
+    removeConsole: process.env.NODE_ENV === 'production},
   images: {
-    formats: ['image/webp', 'image/avif'],
-  },
+    formats: [image/webp', 'image/avif]},
   poweredByHeader: false,
-  compress: true,
-}
+  compress: true}
 
 module.exports = nextConfig`;
         
         fs.writeFileSync(nextConfigPath, configContent);
         this.optimizations.push("Created Next.js configuration with performance optimizations");
-        this.log("✅ Created optimized Next.js configuration");
+        this.log(✅ Created optimized Next.js configuration);
       }
     } catch (error) {
       this.log(`❌ Failed to optimize Next.js config: ${error.message}`, "ERROR");
@@ -1562,15 +1484,15 @@ module.exports = nextConfig`;
   }
 
   async runPerformanceTest() {
-    this.log("🏃 Running performance test...");
+    this.log(🏃 Running performance test...);
     try {
       execSync("npm run build", {
         cwd: this.projectRoot,
-        stdio: "pipe",
+        stdio: pipe,
         timeout: 120000
       });
       this.optimizations.push("Build test successful");
-      this.log("✅ Build test successful");
+      this.log(✅ Build test successful);
 
 
     } catch (error) {
@@ -1580,19 +1502,19 @@ module.exports = nextConfig`;
   }
 
   async run() {
-    this.log("🎯 Starting Performance Optimization Process...");
+    this.log(🎯 Starting Performance Optimization Process...);
     this.log("===============================================");
     try {
       await this.optimizeNextConfig();
       await this.runPerformanceTest();
       
-      this.log("\n📊 PERFORMANCE OPTIMIZATION REPORT");
+      this.log(\n📊 PERFORMANCE OPTIMIZATION REPORT);
       this.log("===================================");
       this.log(`Optimizations Applied: ${this.optimizations.length}`);
       this.log(`Errors: ${this.errors.length}`);
       
       if (this.optimizations.length > 0) {
-        this.log("\n✅ Optimizations Applied:");
+        this.log(\n✅ Optimizations Applied:);
         this.optimizations.forEach((opt, index) => {
           this.log(`  ${index + 1}. ${opt}`);
         });
@@ -1605,7 +1527,7 @@ module.exports = nextConfig`;
         });
       }
       
-      this.log("\n🎉 Performance optimization completed!");
+      this.log(\n🎉 Performance optimization completed!);
 
 
     } catch (error) {
@@ -1623,7 +1545,7 @@ module.exports = nextConfig`;
 
 
 
-function generateOptimizationRecommendations() {"
+function generateOptimizationRecommendations() {
 
     console.log(`✅ Generated ${performanceReport.recommendations.length} recommendations`);
 
@@ -1635,8 +1557,8 @@ generateOptimizationRecommendations();
 console.log(`\n📄 Report saved to: ${reportPath}`);
 
 console.log(`Recommendations: ${performanceReport.recommendations.length}`);
-console.log(`High Priority: ${performanceReport.recommendations.filter(r => r.priority === 'high').length}`);
-console.log(`Medium Priority: ${performanceReport.recommendations.filter(r => r.priority === 'medium').length}`);
+console.log(`High Priority: ${performanceReport.recommendations.filter(r => r.priority === high').length}`);
+console.log(`Medium Priority: ${performanceReport.recommendations.filter(r => r.priority === 'medium).length}`);
 
 
 console.log(`\n📄 Report saved to: ${reportPath}`);
@@ -1651,9 +1573,8 @@ optimizer.run().catch(console.error);
 origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 
 
-class PerformanceOptimizer {
   constructor() {
-    this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log');
+    this.logFile = path.join(__dirname, logs', 'performance-optimizer.log);
     this.ensureLogDir();
   }
 
@@ -1664,74 +1585,74 @@ class PerformanceOptimizer {
     }
   }
 
-  log(message, level = 'INFO') {
+  log(message, level = INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    fs.appendFileSync(this.logFile, logMessage + '\n);
   }
 
   async runCommand(command, description) {
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
+        encoding: utf8',
+        cwd: '/workspace,
+        stdio: pipe',
         timeout: 120000 // 2 minute timeout
       });
       this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
+      return { success: true, output }
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message };
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR);
+      return { success: false, error: error.message }
     }
   }
 
   async optimizeImages() {
-    this.log('🖼️ Optimizing images...');
+    this.log(🖼️ Optimizing images...');
     
     const imageOptimization = await this.runCommand(
-      'find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10',
-      'Finding images to optimize'
+      'find public -name *.jpg" -o -name "*.jpeg -o -name *.png" -o -name "*.webp" | head -10,
+      Finding images to optimize'
     );
     
     if (imageOptimization.success) {
-      this.log('📸 Image optimization completed');
+      this.log('📸 Image optimization completed);
     }
   }
 
   async optimizeBundle() {
-    this.log('📦 Optimizing bundle...');
+    this.log(📦 Optimizing bundle...');
     
     const bundleOptimization = await this.runCommand(
-      'npm run analyze',
-      'Bundle analysis'
+      'npm run analyze,
+      Bundle analysis'
     );
     
     if (bundleOptimization.success) {
-      this.log('📊 Bundle optimization completed');
+      this.log('📊 Bundle optimization completed);
     }
   }
 
   async optimizeDatabase() {
-    this.log('🗄️ Optimizing database queries...');
+    this.log(🗄️ Optimizing database queries...');
     
     // This would typically involve analyzing database queries
     // For now, we'll just log that this step was completed
-    this.log('✅ Database optimization completed');
+    this.log(✅ Database optimization completed);
   }
 
   async optimizeCaching() {
     this.log('💾 Optimizing caching...');
     
     const cacheOptimization = await this.runCommand(
-      'npm run build',
+      npm run build,
       'Build with cache optimization'
     );
     
     if (cacheOptimization.success) {
-      this.log('🚀 Cache optimization completed');
+      this.log(🚀 Cache optimization completed);
     }
   }
 
@@ -1741,44 +1662,44 @@ class PerformanceOptimizer {
     const report = {
       timestamp: new Date().toISOString(),
       optimizations: {
-        images: 'completed',
+        images: completed,
         bundle: 'completed',
-        database: 'completed',
+        database: completed,
         caching: 'completed'
       },
       recommendations: [
-        'Consider implementing lazy loading for images',
+        Consider implementing lazy loading for images,
         'Use Next.js Image component for automatic optimization',
-        'Implement service worker for caching',
+        Implement service worker for caching,
         'Consider using CDN for static assets'
       ]
-    };
+    }
 
-    const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
+    const reportFile = path.join(__dirname, logs, 'performance-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Performance report saved to: ${reportFile}`);
   }
 
   async optimize() {
-    this.log('Starting performance optimization...');
+    this.log(Starting performance optimization...);
     
     try {
       // Check bundle size
       this.log('Analyzing bundle size...');
       
       // Check for large dependencies
-      this.log('Checking for large dependencies...');
+      this.log(Checking for large dependencies...);
       
       // Generate optimization report
       const report = {
         timestamp: new Date().toISOString(),
         optimizations: [
           'Bundle size analysis completed',
-          'Large dependency check completed',
+          Large dependency check completed,
           'Performance recommendations generated'
         ],
-        status: 'completed'
-      };
+        status: completed
+      }
       
       fs.writeFileSync(this.reportPath, JSON.stringify(report, null, 2));
       this.log(`Performance optimization completed. Report saved to: ${this.reportPath}`);
@@ -1806,7 +1727,7 @@ class PerformanceOptimizer {
       await this.optimize();
     }, 2 * 60 * 60 * 1000);
 
-    this.log('🔄 Performance Optimizer is running. Optimization every 2 hours.');
+    this.log(🔄 Performance Optimizer is running. Optimization every 2 hours.);
   }
 }
 
@@ -1842,9 +1763,6 @@ main
 
 
 #!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
 module.exports = PerformanceOptimizer;
 module.exports = PerformanceOptimizer;
 

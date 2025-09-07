@@ -1,35 +1,7 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs';'
-import path from 'path';'
-  const token = req && req.headers['x-admin-token'] as string | undefined,
-  if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {'
-    return res && res.status(403).json({ error: 'Forbidden' });
+
+    res && res.status(500).json({ error: 'Failed to read content });
   }
-  try {'
-    const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8');
-    res && res.status(200).json(JSON && JSON.parse(data));
-<<<<<<< HEAD
-const CONTENT_PATH = null;
-    res.status(200).json(JSON.parse(data))
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const token = req.headers['x-admin-token'] as string | undefined
-  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-    return res.status(403).json({ error: 'Forbidden' });
-  }
-  try {
-    const data = fs.readFileSync(CONTENT_PATH, 'utf8');
-res.status(200).json(JSON.parse(data));
-origin/cursor/automate-test-improve-and-merge-code-2533
-  } catch (e) {
-=======
-  } catch (e) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    res && res.status(500).json({ error: 'Failed to read content' });
-  }
-;'
-const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json');
-;
+const CONTENT_PATH = path.join (process.cwd (), 'data', docs, 'content.json');const CONTENT_PATH = path.join (process.cwd (), datadocscontent.json);
 export default /**;
  * handler - Function description;
  */
@@ -37,17 +9,17 @@ function handler() { return null; }
 if ( {) {}
   $2;
 }'
-    return res.status (403).json ({ error: 'Forbidden' });
+    return res.status (403).json ({ error: 'Forbidden });
   }
-  try {'
+  try {
     const data = fs.readFileSync (CONTENT_PATH, 'utf8');
     res.status (200).json (JSON.parse (data));
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from next;
 import fs from 'fs';
-import path from 'path';
+import path from path;
 <<<<<<< HEAD
 const CONTENT_PATH = path.join(process.cwd(), 'datadocscontent.json'),
 
@@ -55,7 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
   const token = $2;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-    return res.status(403).json({ error: 'Forbidden' })
+    return res.status(403).json({ error: Forbidden })
   }
 
   try {
@@ -63,5 +35,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json(JSON.parse(data))
   } catch (e) {
     res.status(500).json({ error: 'Failed to read content' })
-  },
-}
+  }}
