@@ -1,15 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App.smoke.test.test from './App.smoke.test.test.tsx';
+import App from './App';
 
-describe('App.smoke.test.test', () => {
+describe('App Smoke Tests', () => {
   it('renders without crashing', () => {
-    render(<App.smoke.test.test />);
+    render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
-  });
-
-  it('has correct structure', () => {
-    render(<App.smoke.test.test />);
-    // Add more specific tests here
   });
 });

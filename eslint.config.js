@@ -1,18 +1,12 @@
-import js from '@eslint/js';'
-import typescript from '@typescript-eslint/eslint-plugin';'
-import typescriptParser from '@typescript-eslint/parser';'
-import react from 'eslint-plugin-react';'
-import reactHooks from 'eslint-plugin-react-hooks';'
-import globals from 'globals';'
+import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import globals from 'globals';
 
 export default [
   js.configs.recommended,
-  ...compat.extends(
-    'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended'
-  ),
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
@@ -24,50 +18,39 @@ export default [
       },
       globals: {
         ...globals.browser,
-        ...globals.node
-        }
-        "jest": 'readonly','
-        "describe": 'readonly','
-        "it": 'readonly','
-        "test": 'readonly','
-        "expect": 'readonly','
-        "beforeEach": 'readonly','
-        "afterEach": 'readonly','
-        "beforeAll": 'readonly','
-        "afterAll": 'readonly''
-      },
-      "parser": typescriptParser,
-      "parserOptions": {
-        }
-        "ecmaFeatures": {
-          }
-          "jsx": true
-        }
+        ...globals.node,
+        "jest": 'readonly',
+        "describe": 'readonly',
+        "it": 'readonly',
+        "test": 'readonly',
+        "expect": 'readonly',
+        "beforeEach": 'readonly',
+        "afterEach": 'readonly',
+        "beforeAll": 'readonly',
+        "afterAll": 'readonly'
       }
     },
-    "plugins": {
-      '@typescript-eslint': typescript,'
-      'react': react,'
-      'react-hooks': reactHooks'
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks
     },
-    "rules": {
-      'no-unused-vars': 'off','
-      '@typescript-eslint/no-unused-vars': ['warn', { "argsIgnorePattern": '^_' }],'
-      '@typescript-eslint/no-explicit-any': 'warn','
-      '@typescript-eslint/ban-ts-comment': 'off','
-      'no-console': ['warn', { "allow": ['warn', 'error'] }],'
-      'prefer-const': 'error','
-      'no-debugger': 'warn','
-      'react/react-in-jsx-scope': 'off','
-      'react/prop-types': 'off','
-      'react-hooks/rules-of-hooks': 'error','
-      'react-hooks/exhaustive-deps': 'warn''
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { "argsIgnorePattern": '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'off',
+      'no-console': ['warn', { "allow": ['warn', 'error'] }],
+      'prefer-const': 'error',
+      'no-debugger': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn'
     },
-    "settings": {
-      }
+    settings: {
       "react": {
-        }
-        "version": 'detect''
+        "version": 'detect'
       }
     }
   },

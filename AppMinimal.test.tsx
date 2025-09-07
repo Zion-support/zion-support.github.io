@@ -1,52 +1,21 @@
-import { render, screen } from '@testing-library/react';'
-import { describe, it, expect } from 'vitest';'
-import AppMinimal from './AppMinimal';'
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import AppMinimal from './AppMinimal';
 
-describe('AppMinimal', () => {'
-  }
-  it('renders without crashing', () => {'
-    }
+describe('AppMinimal', () => {
+  it('renders without crashing', () => {
     render(<AppMinimal />);
-    expect(screen.getByRole('main')).toBeInTheDocument();'
-  });
-<<<<<<< HEAD
-
-  it('displays correct content', () => {'
-    }
-    render(<AppMinimal />);
-    // Add content tests here
+    expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
-  it('handles user interactions', () => {'
-    }
+  it('displays correct content', () => {
+    render(<AppMinimal />);
+    expect(screen.getByText('Zion Tech Group - Minimal')).toBeInTheDocument();
+  });
+
+  it('handles user interactions', () => {
     render(<AppMinimal />);
     // Add interaction tests here
+    expect(screen.getByText(/Building the future/i)).toBeInTheDocument();
   });
 });
->>>>>>> cursor/automate-test-improve-and-merge-code-aa0d
-=======
-<<<<<<< HEAD
-=======
-import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import AppMinimal from \'./AppMinimal\'; describe(\'AppMinimal\',() => { it(\'renders without crashing\',() => { render(<AppMinimal />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<AppMinimal />)}); it(\'handles user interactions\',() => { render(<AppMinimal />)})});
-const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe("AppMinimal",() => { it("renders without crashing",() => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<AppMinimal />)}); it("handles user interactions",() => { render(<AppMinimal />)})});''"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-import { render, screen, describe, it, expect } from 'lucide-react'; import AppMinimal from './AppMinimal'; describe('AppMinimal',() => { it('renders without crashing',() => { render(<AppMinimal />); expect(screen.getByRole('main')).toBeInTheDocument()}
-}); it('displays correct content',() => { render(<AppMinimal />)}
-}); it('handles user interactions',() => { render(<AppMinimal />)})}
-});'
-<<<<<<< HEAD
-
-import { render, screen } from '@testing-library/react'
-import { describe, it, expect } from 'vitest'
-import AppMinimal from './AppMinimal'
-describe('AppMinimal'
-  it('renders without crashing'
-    expect(screen.getByRole('main'
-  it('displays correct content'
-  it('handles user interactions'
-});
-import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import AppMinimal from \'./AppMinimal\'; describe(\'AppMinimal\',() => { it(\'renders without crashing\',() => { render(<AppMinimal />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<AppMinimal />)}); it(\'handles user interactions\',() => { render(<AppMinimal />)})});
-const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe('AppMinimal', () => { it('renders without crashing', () => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<AppMinimal />)}); it("handles user interactions"
-});
-});
-</AppMinimal>'

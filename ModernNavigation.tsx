@@ -1,13 +1,14 @@
 import React from "react";
+
 interface ModernNavigationProps {
-  // Add props here as needed
+  className?: string;
 }
-export default function ModernNavigation({ }: ModernNavigationProps) {
-export default function Docs({ }: DocsProps) {
+
+export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>
       <p>This component is currently under development.</p>
-    </div>;
+    </div>
   );
 }
