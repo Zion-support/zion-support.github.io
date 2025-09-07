@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import Link from 'next/link'
 
@@ -7,10 +6,6 @@ export const metadata = {
   description:
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
 }
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export default function AboutPage() {
 	return (
@@ -20,28 +15,6 @@ export default function AboutPage() {
 		</main>
 	);
 }
-=======
-
-export const metadata = {;
-  title: "About | Zion Tech Group",;
-  description:;
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  description:
-
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
-
-<<<<<<< HEAD
-  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
-export const metadata = {
-  title: "About | Zion Tech Group",
-  description:
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
