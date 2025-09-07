@@ -189,6 +189,18 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI SEO Optimization', href: '/services/ai-seo-optimization-platform' },
         { name: 'AI Project Management', href: '/services/ai-project-management' }
       ]
+    },
+    {
+      title: 'Contact Information',
+      icon: MessageSquare,
+      color: 'from-cyan-600 to-blue-600',
+      links: [
+        { name: 'Phone: +1 302 464 0950', href: 'tel:+13024640950' },
+        { name: 'Email: kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+        { name: 'Address: 364 E Main St STE 1008', href: '#' },
+        { name: 'Middletown DE 19709', href: '#' },
+        { name: 'Website: ziontechgroup.com', href: 'https://ziontechgroup.com' }
+      ]
     }
   ];
 

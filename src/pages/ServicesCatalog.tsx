@@ -1,7 +1,10 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
 import { 
+  Search, 
+  Filter, 
   Brain, 
   Cloud, 
   Shield, 
@@ -429,7 +432,5 @@ const ServicesCatalog: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default ServicesCatalog;
+}
 

@@ -213,6 +213,10 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
             </div>
           </motion.div>
         </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
       </section>
 
       {/* Features Section */}
@@ -520,6 +524,4 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default AISupplyChainOptimizationPlatform;
+}
