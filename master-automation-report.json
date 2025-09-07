@@ -1,40 +1,76 @@
 {
-  "timestamp": "2025-09-05T15:58:44.701Z",
-  "totalDuration": "130s",
+  "timestamp": "2025-09-07T11:25:07.671Z",
+  "totalDuration": 32087,
+  "successfulTasks": 5,
+  "totalTasks": 9,
   "results": {
-    "dependencyFix": {
+    "syntaxFix": {
       "success": true,
-      "duration": 52674,
-      "errors": []
+      "duration": 24,
+      "errors": [],
+      "warnings": []
     },
-    "typescriptFix": {
+    "dependencyCheck": {
       "success": true,
-      "duration": 12508,
-      "errors": []
+      "duration": 2213,
+      "errors": [],
+      "warnings": []
     },
-    "healthCheck": {
-      "success": true,
-      "duration": 21039,
-      "errors": []
+    "typeCheck": {
+      "success": false,
+      "duration": 18116,
+      "errors": [
+        "spawnSync /bin/sh ENOBUFS"
+      ],
+      "warnings": []
     },
-    "securityScan": {
-      "success": true,
-      "duration": 2557,
-      "errors": []
+    "linting": {
+      "success": false,
+      "duration": 2072,
+      "errors": [
+        "Command failed: npx eslint app/ --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:8338) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
+      ],
+      "warnings": []
     },
-    "performanceOptimize": {
-      "success": true,
-      "duration": 20709,
-      "errors": []
+    "securityAudit": {
+      "success": false,
+      "duration": 1507,
+      "errors": [
+        "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      ],
+      "warnings": []
     },
     "buildTest": {
       "success": true,
-      "duration": 20538,
-      "errors": []    }
+      "duration": 255,
+      "errors": [],
+      "warnings": []
+    },
+    "testSuite": {
+      "success": false,
+      "duration": 5963,
+      "errors": [
+        "spawnSync /bin/sh ENOBUFS"
+      ],
+      "warnings": []
+    },
+    "performanceCheck": {
+      "success": true,
+      "duration": 43,
+      "errors": [],
+      "warnings": []
+    },
+    "gitOperations": {
+      "success": true,
+      "duration": 1891,
+      "errors": [],
+      "warnings": []
+    }
   },
-  "summary": {
-    "totalPhases": 6,
-    "successfulPhases": 6,
-    "failedPhases": 0,
-    "overallSuccess": true  }
+  "recommendations": [
+    "Address TypeScript type errors",
+    "Fix ESLint issues",
+    "Address security vulnerabilities",
+    "Fix failing tests"
+  ]
 }
