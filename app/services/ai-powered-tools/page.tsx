@@ -1,10 +1,5 @@
 
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: 'Ai Powered Tools - Zion Tech Group',
-  description: 'Advanced ai powered tools solutions for modern businesses.',
-};
 
 export default function ServicePage() {
   return (
@@ -248,5 +243,4 @@ function SuccessStory({
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
   );
-}
 }

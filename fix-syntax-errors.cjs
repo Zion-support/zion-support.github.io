@@ -1,97 +1,92 @@
 const fs = require('fs');
 const path = require('path');
 
-      {
-        pattern: /^[\s\n]*\}[\w\s]*\([\s\S]*?\)\s*\{[\s\S]*?\}[\s\S]*$/,
-        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
-      // Fix files with just return statements;
-        pattern: /^[\s\n]*return[\s\S]*$/,`;
-      // Fix malformed object literals;
-        pattern: /^[\s\n]*\{[\s\S]*\}\s*$/,`;
-    ];
-
-    for (const fix of fixes) {
-      if (fix.pattern.test(content)) {
-        content = content.replace(fix.pattern, fix.replacement);
-        modified = true;
-        break; // Only apply one fix per file;
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);`;
-      console.log(`Fixed: ${filePath}`);
-      return true;
-
-
-function fixSyntaxErrors(filePath) {
+// Function to fix common syntax errors in service pages
+function fixServicePage(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    // Fix missing closing brace in metadata and missing function declaration
-    if (content.includes('export const metadata = {') && !content.includes('export default function')) {
-      // Find the metadata object and add missing closing brace and function declaration
-      const metadataMatch = content.match(/export const metadata = \{[\s\S]*?keywords: "[^"]*"/);
-      if (metadataMatch) {
-        const beforeMetadata = content.substring(0, content.indexOf('export const metadata = {'));
-        const afterMetadata = content.substring(content.indexOf('export const metadata = {'));
-        // Extract the metadata content
-        const metadataContent = afterMetadata.match(/export const metadata = \{[\s\S]*?keywords: "[^"]*"/)[0];
-        // Find where the JSX starts (look for <div)
-        const jsxStart = afterMetadata.search(/^\s*<div/);
-        if (jsxStart !== -1) {
-          const jsxContent = afterMetadata.substring(jsxStart);
-          // Get the function name from the file path
-          const fileName = path.basename(filePath, '.tsx');
-          const functionName = fileName.split('-').map(word => 
-            word.charAt(0).toUpperCase() + word.slice(1)
-          ).join('') + 'Page';
-          // Reconstruct the file
-          content = beforeMetadata + 
-            metadataContent + '};\n\n' +
-            `export default function ${functionName}() {\n` +
-            '  return (\n' +
-            jsxContent.replace(/^\s*/, '    ') + '\n' +
-            '  );\n' +
-            '}';
-          modified = true;
+
+    // Fix missing closing braces in IndustryCard components
+    content = content.replace(
+      /features=\[([^\]]+)\]\s*\/>/g,
+      (match, features) => {
+        // Check if the features array is properly closed
+        if (!features.includes(']')) {
+          return match.replace(']', ']');
         }
-
+        return match;
       }
-    }
-    // Remove stray commit hashes
-    content = content.replace(/[a-f0-9]{40}/g, '');
-    // Remove any remaining merge conflict markers
-    content = content.replace(/[\s\S]*?>>>>>>>/g, '');
-    content = content.replace(/[\s\S]*?>>>>>>>/g, '');
-    content = content.replace(/[\s\S]*?>>>>>>>/g, '');
-    if (modified) {
+    );
 
+    // Fix duplicate metadata exports
+    const metadataRegex = /export const metadata = \{[\s\S]*?\};/g;
+    const metadataMatches = content.match(metadataRegex);
+    if (metadataMatches && metadataMatches.length > 1) {
+      // Keep only the first metadata export
+      content = content.replace(metadataRegex, (match, index) => {
+        return index === 0 ? match : '';
+      });
+      modified = true;
+    }
+
+    // Fix metadata in JSX
+    content = content.replace(
+      /\/\/ eslint-disable-next-line react-refresh\/only-export-components\nexport const metadata = \{[\s\S]*?\};\n/g,
+      ''
+    );
+
+    // Fix missing closing tags
+    content = content.replace(/(<IndustryCard[^>]*>)(?![\s\S]*?<\/IndustryCard>)/g, (match) => {
+      return match + '</IndustryCard>';
+    });
+
+    // Fix duplicate description in metadata
+    content = content.replace(
+      /description: '[^']*',\s*description: '[^']*',/g,
+      (match) => {
+        const firstDesc = match.match(/description: '([^']*)'/)[1];
+        return `description: '${firstDesc}',`;
+      }
+    );
+
+    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath});
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-
-      fs.writeFileSync(filePath, content, 'utf8');
-      return true;
-    }
-    return false;
-
   } catch (error) {
-
     console.error(`Error fixing ${filePath}:`, error.message);
+  }
   return false;
+}
 
+// Find all service page files
+const servicesDir = path.join(__dirname, 'app', 'services');
+const serviceFiles = [];
 
-function findAndFixFiles(dir) {
+function findServiceFiles(dir) {
   const files = fs.readdirSync(dir);
-  let fixedCount = 0;
   files.forEach(file => {
-
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {
+      findServiceFiles(filePath);
+    } else if (file === 'page.tsx') {
+      serviceFiles.push(filePath);
+    }
+  });
+}
 
-      if (fixSyntaxErrors(filePath)) {
-        console.log(`Fixed syntax errors in: ${filePath}`);
-        fixedCount++;
+findServiceFiles(servicesDir);
 
+console.log(`Found ${serviceFiles.length} service page files`);
 
+let fixedCount = 0;
+serviceFiles.forEach(file => {
+  if (fixServicePage(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files`);

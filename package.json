@@ -4,7 +4,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-
     "dev": "next dev",
     "build": "next build",
     "export": "next build && next export",
@@ -46,7 +45,7 @@
     "automation:improvement:dev": "nodemon automation/continuous-automation-improvement-system.js",
     "automation:coordinator": "node automation/master-automation-coordinator.js",
     "automation:coordinator:dev": "nodemon automation/master-automation-coordinator.js",
-    "automation:all": "npm run automation:master",
+    "automation:all": "npm run automation:enhanced && npm run automation:performance && npm run automation:security",
     "automation:status": "node automation/master-automation.cjs status",
     "automation:restart": "node automation/master-automation.cjs restart",
     "automation:enhance": "node automation/enhance-all-automation.js",
@@ -204,10 +203,10 @@
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "npm run clean && npm run build",
     "automation:master": "node automation/master-orchestrator.cjs",
-    "automation:performance": "node automation/performance-optimizer.cjs",
+    "automation:performance": "node scripts/performance-monitor.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
     "automation:health": "node automation/health-check.cjs",
-    "automation:security": "node automation/security-scanner.cjs",
+    "automation:security": "node scripts/security-audit.cjs",
     "pr:merge-open": "node scripts/merge-open-prs.cjs",
     "pr:auto-resolve-and-merge": "node scripts/auto-resolve-merge-prs.cjs",
     "pr:force-merge-heads": "node scripts/force-merge-open-pr-heads-into-main.cjs",
@@ -232,7 +231,7 @@
     "error:prevention:logs": "pm2 logs --lines 100",
     "build:production": "NODE_ENV=production npm run build",
     "error:detect": "node automation/intelligent-error-detector.cjs",
-    "automation:enhanced": "node automation/enhanced-master-automation-orchestrator.cjs",
+    "automation:enhanced": "node scripts/enhanced-automation-suite.cjs",
     "optimize:images": "node scripts/optimize-images.js",
     "analyze:bundle": "npm run build && npx @next/bundle-analyzer",
     "test:accessibility": "npx jest --testPathPatterns=accessibility",
@@ -245,10 +244,6 @@
     "improve:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
     "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
-    "automation:enhanced": "node scripts/enhanced-automation-suite.cjs",
-    "automation:performance": "node scripts/performance-monitor.cjs",
-    "automation:security": "node scripts/security-audit.cjs",
-    "automation:all": "npm run automation:enhanced && npm run automation:performance && npm run automation:security",
     "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs"
   },
   "dependencies": {
@@ -259,7 +254,6 @@
     "@google/generative-ai": "^0.24.1",
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.2.1",
-
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
@@ -273,7 +267,7 @@
     "react": "^18.3.1",
     "react-datepicker": "^8.4.0",
     "react-day-picker": "^8.9.1",
-
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@axe-core/cli": "^4.10.2",
@@ -315,26 +309,20 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-"typescript": "^5.9.2",
+    "typescript": "^5.9.2",
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
-
-    "typescript": "^5.9.2",
-    "vite": "^7.1.4"
-
   },
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=10.0.0"
   },
-
   "postcss": {
     "plugins": {
       "tailwindcss": {},
       "autoprefixer": {}
     }
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Zion-Holdings/zion.app.git"
@@ -351,37 +339,3 @@
   "author": "Zion Tech Group",
   "license": "MIT"
 }
-    "postcss": "^8.4.32",
-    "react": "^19.1.1",
-    "react-datepicker": "^8.4.0",
-    "react-dom": "^19.1.1",
-    "tailwindcss-animate": "^1.0.7",
-    "uuid": "^11.1.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.28.4",
-    "@babel/preset-env": "^7.28.3",
-    "@babel/preset-react": "^7.27.1",
-    "@babel/preset-typescript": "^7.27.1",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@typescript-eslint/eslint-plugin": "^8.42.0",
-    "eslint": "^8",
-    "eslint-config-next": "15.5.2",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "husky": "^9.1.7",
-    "node": "^10.9.2",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5"
-  }
-}
-    "typescript": "^5.9.2",
-    "vite": "^7.1.4"
-  }
-}
-

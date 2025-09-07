@@ -1,10 +1,5 @@
 
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: 'Ai Copilots - Zion Tech Group',
-  description: 'Advanced ai copilots solutions for modern businesses.',
-};
 
 export default function ServicePage() {
   return (
@@ -96,5 +91,4 @@ function Plan({
       </a>
     </div>
   );
-}
 }

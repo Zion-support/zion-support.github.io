@@ -1,10 +1,5 @@
 
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: 'Ai Healthcare Assistant - Zion Tech Group',
-  description: 'Advanced ai healthcare assistant solutions for modern businesses.',
-};
 
 export default function ServicePage() {
   return (
