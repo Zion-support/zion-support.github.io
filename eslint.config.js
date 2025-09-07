@@ -1,10 +1,15 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
+=======
+import { FlatCompat } from '@eslint/eslintrc';
+>>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+<<<<<<< HEAD
 import nextPlugin from '@next/eslint-plugin-next';
 import globals from 'globals';
 
@@ -19,6 +24,62 @@ const compat = new FlatCompat({
 
 export default [
   ...compat.extends('next/core-web-vitals'),
+=======
+// import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
+import globals from 'globals';
+
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all
+});
+
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn'
+    }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks
+    },
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off'
+    }
+  },
+>>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
   {
     ignores: [
       'node_modules/**',
@@ -29,6 +90,7 @@ export default [
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
+<<<<<<< HEAD
       'scripts/**',
       'automation/**',
       'backup-problematic-files/**',
@@ -36,6 +98,18 @@ export default [
       'components.disabled/**',
       'pages.disabled/**',
     ],
+=======
+      'scripts/',
+      'automation/',
+      'temp_*/',
+      'tests/',
+      'supabase/',
+      '*.test.js',
+      '*.test.ts',
+      '*.test.tsx',
+      '*.spec.js',
+    ]
+>>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
   },
   {
     files: ['**/*.{ts,tsx}'],
@@ -51,12 +125,25 @@ export default [
         ...globals.node,
         ...globals.es2021,
       },
+<<<<<<< HEAD
+=======
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+>>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
     },
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
+<<<<<<< HEAD
       '@next/next': nextPlugin
+=======
+      '@typescript-eslint': typescript
+>>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -65,6 +152,11 @@ export default [
       ...nextPlugin.configs.recommended.rules,
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
+<<<<<<< HEAD
+=======
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
+>>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react/no-unescaped-entities': 'off',

@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 export const metadata = {
   title: "QA & Testing | Zion Tech Group",
