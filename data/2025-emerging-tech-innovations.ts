@@ -5,6 +5,8 @@ export interface EmergingTechInnovationService  {export interface EmergingTechIn
 export interface EmergingTechInnovation  {export interface EmergingTechInnovationService  {id: string;
 export interface EmergingTechInnovationService {
 
+
+
 export interface EmergingTechInnovationService {;
 
 export interface EmergingTechInnovationService {

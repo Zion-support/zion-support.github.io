@@ -1,5 +1,9 @@
 export const metadata = {
   title: 'Automation Solutions | Zion Tech Group',
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
   description: 'Professional automation solutions services for your business needs.',
   keywords: 'automation-solutions, services, business, technology'
 };
@@ -43,3 +47,7 @@ export default function ServicePage() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2

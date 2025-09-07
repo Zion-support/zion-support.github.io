@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
@@ -41,3 +42,8 @@ interface SEOProps  {title?: string;
       />;
     </Head>;
   )}export default EnhancedSEO;
+=======
+
+
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2

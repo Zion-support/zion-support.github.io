@@ -1,4 +1,8 @@
 export const metadata = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
   title: 'Finance | Zion Tech Group',
   description: 'Professional finance services for your business needs.',
   keywords: 'finance, services, business, technology'
@@ -43,3 +47,7 @@ export default function ServicePage() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2

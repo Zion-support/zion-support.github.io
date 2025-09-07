@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -72,3 +73,8 @@ interface BeforeInstallPromptEvent extends Event  {readonly platforms: string[];
       )}
     </AnimatePresence>;
   )}export default PWARegistration;
+=======
+
+
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2

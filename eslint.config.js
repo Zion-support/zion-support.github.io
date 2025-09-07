@@ -287,4 +287,4 @@ export default [
     }
 >>>>>>> cursor/expand-services-advertise-and-build-project-e77d
   }
-];
+};

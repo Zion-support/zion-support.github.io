@@ -274,8 +274,12 @@ const categories = [
     name: 'Quantum Computing',
     icon: <Atom className='w-6 h-6' />,
     color: 'from-violet-500 to-indigo-500',
+<<<<<<< HEAD
     description: 'Quantum computing solutions'},
 ];
+=======
+    description: 'Quantum computing solutions'}];
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
 
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
@@ -347,6 +351,10 @@ return 'Contact for pricing';}const getServiceFeatures = (service: any) => {if (
   ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
@@ -416,6 +424,10 @@ ursor/automate-test-improve-and-merge-code-646c;
           getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase()))}setFilteredServices(filtered)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { service: any }) => (<motion.div;
 };
 export default function AdvancedServicesShowcase() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');

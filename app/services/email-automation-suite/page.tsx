@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
 export const metadata = {
   title: 'Email Automation Suite | Zion Tech Group',
   description: 'Professional email automation suite services for your business needs.',
@@ -38,8 +42,18 @@ export default function ServicePage() {
               Round-the-clock support to ensure your email automation suite solutions run smoothly.
             </p>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+
+}
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2

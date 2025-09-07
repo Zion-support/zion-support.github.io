@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
 export const metadata = {
   title: 'Email Campaign Manager | Zion Tech Group',
   description: 'Professional email campaign manager services for your business needs.',
@@ -43,3 +47,7 @@ export default function ServicePage() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2

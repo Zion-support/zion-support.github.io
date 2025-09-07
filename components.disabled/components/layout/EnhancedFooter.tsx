@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 import React from 'react';
 // Common interfaces for better type safety;
@@ -144,3 +145,8 @@ const EnhancedFooter: React.FC = () => {return (<footer className="bg-gray-900 t
       </div>;
     </footer>;
   )}export default EnhancedFooter;
+=======
+
+
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
