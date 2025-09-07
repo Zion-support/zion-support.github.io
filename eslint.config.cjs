@@ -1,4 +1,6 @@
 const js = require('@eslint/js');
+const tseslint = require('@typescript-eslint/eslint-plugin');
+const tsparser = require('@typescript-eslint/parser');
 
 module.exports = [
   {
@@ -12,6 +14,22 @@ module.exports = [
       'advanced-automation-improvements.cjs',
       'analyze_links.cjs',
       'app-enhancement-suite.cjs',
+      'advanced-app-enhancement-suite.cjs',
+      'advanced-performance-optimizer.cjs',
+      'ai-optimization-backups/**/*',
+      'api-backup/**/*',
+      'api.disabled/**/*',
+      'api.disabled.temp/**/*',
+      'src_backup_temp/**/*',
+      'temp-backup/**/*',
+      'temp_backup/**/*',
+      'temp_exclude/**/*',
+      'targeted-syntax-fixer.cjs',
+      'ultimate-automation-suite.cjs',
+      'ultimate-syntax-fixer.cjs',
+      'ultimate-test-fixer.cjs',
+      'test-runner.cjs',
+      'analyze-missing-pages.js',
       '.next/**',
       'dist/**',
       'build/**',
@@ -24,7 +42,7 @@ module.exports = [
   },
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -47,5 +65,57 @@ module.exports = [
       'no-console': 'warn',
       'prefer-const': 'warn',
     }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tsparser,
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+        React: 'readonly',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
+    }
+  },
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/*.spec.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: {
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly',
+      },
+    },
   }
 ];
