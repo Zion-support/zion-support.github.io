@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 import { X } from 'lucide-react';
 
 interface SidebarProps {
@@ -25,6 +28,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
         
         <nav className="p-4">
+<<<<<<< HEAD
           <ul className="space-y-2">
             <li>
               <Link
@@ -72,6 +76,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </Link>
             </li>
           </ul>
+=======
+          <div className="space-y-2">
+            <a href="/" className="block text-gray-300 hover:text-white py-2">Home</a>
+            <a href="/about" className="block text-gray-300 hover:text-white py-2">About</a>
+            <a href="/services" className="block text-gray-300 hover:text-white py-2">Services</a>
+            <a href="/pricing" className="block text-gray-300 hover:text-white py-2">Pricing</a>
+            <a href="/contact" className="block text-gray-300 hover:text-white py-2">Contact</a>
+          </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
         </nav>
       </div>
     </div>

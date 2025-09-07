@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 import { motion } from 'framer-motion';
 import { Home, ArrowLeft, Search } from 'lucide-react';
 
@@ -95,6 +100,7 @@ const NotFound = () => {
   );
 };
 
+<<<<<<< HEAD
 export default NotFound;
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -154,3 +160,6 @@ export function NotFound() {
   );
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+export default NotFound;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef

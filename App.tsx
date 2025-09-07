@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';'
 const services = [;
     {
@@ -475,13 +476,21 @@ export default function App(): JSX.Element {
 export default App;
 >>>>>>> origin/main
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import Header from './src/components/Header';
 import Sidebar from './src/components/layout/Sidebar';
+<<<<<<< HEAD
 import Footer from './src/components/Footer';
 import LandingPage from './src/pages/LandingPage';
+=======
+import { Footer } from './src/components/Footer';
+import HomePage from './src/pages/Home';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 import AboutPage from './src/pages/About';
 import ContactPage from './src/pages/Contact';
 import ServicesPage from './src/pages/Services';
@@ -496,7 +505,11 @@ export default function App() {
           <Sidebar />
           <main className="flex-1 lg:ml-80">
             <Routes>
+<<<<<<< HEAD
               <Route path="/" element={<LandingPage />} />
+=======
+              <Route path="/" element={<HomePage />} />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/services" element={<ServicesPage />} />

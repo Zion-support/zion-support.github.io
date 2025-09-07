@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { 
@@ -36,6 +37,8 @@ import {
   Cpu,
   GraduationCap
 } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 
 export function Footer() {
   const scrollToTop = () => {
@@ -284,6 +287,7 @@ export function Footer() {
         </motion.button>
 =======
 
+<<<<<<< HEAD
 export function Footer() {
   return (
     <footer className="bg-background border-t">
@@ -300,6 +304,16 @@ export function Footer() {
               Advanced technology solutions for the future. Empowering businesses with 
               cutting-edge innovation and digital transformation.
             </p>
+=======
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
+            </ul>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
           </div>
 
           <div className="space-y-4">
@@ -361,4 +375,8 @@ export function Footer() {
       </div>
     </footer>
   );
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef

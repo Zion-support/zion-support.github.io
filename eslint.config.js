@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
+<<<<<<< HEAD
 import reactHooks from 'eslint-plugin-react-hooks';
 =======
 <<<<<<< HEAD
@@ -20,6 +21,20 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 import js from '@eslint/js';
       'coverage/**',
 
+=======
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+
+export default [
+  {
+    files: ['src/App.tsx', 'src/main.tsx', 'src/components/Header.tsx', 'src/components/Footer.tsx', 'src/components/Sidebar.tsx', 'src/components/PerformanceMonitor.tsx', 'src/components/ErrorBoundary.tsx', 'src/pages/Home.tsx', 'src/pages/About.tsx', 'src/pages/Services.tsx', 'src/pages/Pricing.tsx', 'src/pages/Contact.tsx'],
+    ignores: [
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'node_modules/**',
+      'coverage/**',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -34,8 +49,12 @@ import js from '@eslint/js';
       '**/*.temp.*',
       '**/*.test.*',
       '**/*.spec.*',
+<<<<<<< HEAD
 
       '**/performance-*.txt'
+=======
+      '**/performance-*.txt',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
       '**/zion-os/**',
       '**/zion-website/**',
       '**/zion-academy/**',
@@ -186,6 +205,7 @@ export default [
         __filename: 'readonly',
         exports: 'readonly'
       },
+<<<<<<< HEAD
       parserOptions: {
         ecmaFeatures: {
           jsx: true
@@ -195,11 +215,21 @@ export default [
     plugins: {
       react,
       'react-hooks': reactHooks
+=======
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      'jsx-a11y': jsxA11y,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
     },
     rules: {
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+<<<<<<< HEAD
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn',
@@ -207,16 +237,49 @@ export default [
   },
   {
     files: ['**/*.{ts,tsx}'],
+=======
+      ...jsxA11y.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+  {
+    files: [
+      '**/*.cjs',
+      '**/scripts/**/*.js',
+      '**/automation/**/*.js',
+      '**/pm2/**/*.js',
+    ],
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
     languageOptions: {
       parser: tsparser,
       ecmaVersion: 2021,
       sourceType: 'module',
       globals: {
+<<<<<<< HEAD
         window: 'readonly',
         document: 'readonly',
         navigator: 'readonly',
         localStorage: 'readonly',
         sessionStorage: 'readonly',
+=======
+        ...globals.node,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
         console: 'readonly',
         setTimeout: 'readonly',
         setInterval: 'readonly',
@@ -280,6 +343,7 @@ export default [
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',
+<<<<<<< HEAD
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
     }
@@ -297,6 +361,9 @@ export default [
       'react': react,
       'react-hooks': reactHooks,
       'jsx-a11y': jsxA11y,
+=======
+      'no-undef': 'error',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
     },
     rules: {
       ...typescript.configs.recommended.rules,

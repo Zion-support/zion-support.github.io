@@ -1,8 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+import React, { Component, ReactNode, ErrorInfo } from 'react';
+
+interface Props {
+  children: ReactNode;
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -28,8 +36,13 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
 =======
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     console.error('Error caught by boundary:', error, errorInfo);
+=======
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    this.setState({ error, errorInfo });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
   }
   render() {
     if (this.state.hasError) {
@@ -62,7 +75,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
                 <summary className="cursor-pointer text-sm text-gray-500">
                   Error Details (Development)
                 </summary>
+<<<<<<< HEAD
                 <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+=======
+                <pre className="mt-2 text-xs text-gray-600 overflow-auto">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
                   {this.state.error.toString()}
                 </pre>
               </details>

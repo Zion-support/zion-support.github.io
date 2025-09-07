@@ -1,4 +1,127 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React, { lazy, Suspense } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { usePerformance } from '../hooks/usePerformance';
+import Testimonials from '../components/Testimonials';
+import BlogSection from '../components/BlogSection';
+import { trackScrollDepth, trackButtonClick } from '../utils/analytics';
+import ScrollAnimation from '../components/ScrollAnimation';
+import ParallaxSection from '../components/ParallaxSection';
+import TypingAnimation from '../components/TypingAnimation';
+import ParticleBackground from '../components/ParticleBackground';
+import { 
+  ArrowRight, 
+  CheckCircle, 
+  Star, 
+  Users, 
+  Award, 
+  Zap,
+  Shield,
+  Globe,
+  Code,
+  Database,
+  Smartphone,
+  Cloud
+} from 'lucide-react';
+
+const Home: React.FC = () => {
+  usePerformance();
+
+  // Track scroll depth
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      
+      if (scrollPercent > 25 && scrollPercent <= 50) {
+        trackScrollDepth(25);
+      } else if (scrollPercent > 50 && scrollPercent <= 75) {
+        trackScrollDepth(50);
+      } else if (scrollPercent > 75 && scrollPercent <= 90) {
+        trackScrollDepth(75);
+      } else if (scrollPercent > 90) {
+        trackScrollDepth(100);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const services = [
+    {
+      icon: <Code className="w-8 h-8" />,
+      title: "AI Services",
+      description: "Custom AI solutions powered by machine learning and deep learning technologies",
+      href: "/services/ai-services"
+    },
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: "IT Services",
+      description: "Comprehensive IT infrastructure and digital transformation solutions",
+      href: "/services/it-services"
+    },
+    {
+      icon: <Smartphone className="w-8 h-8" />,
+      title: "Micro SaaS",
+      description: "Scalable software-as-a-service solutions for growing businesses",
+      href: "/services/micro-saas"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Cybersecurity",
+      description: "Advanced security solutions to protect your digital assets",
+      href: "/services/cybersecurity"
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure and migration services",
+      href: "/services/cloud-solutions"
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "Data Analytics",
+      description: "Transform data into actionable insights with advanced analytics",
+      href: "/services/data-analytics"
+    }
+  ];
+
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "100+", label: "Happy Clients" },
+    { number: "5+", label: "Years Experience" },
+    { number: "24/7", label: "Support Available" }
+  ];
+
+  const features = [
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Lightning Fast",
+      description: "Optimized solutions that deliver exceptional performance"
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Secure & Reliable",
+      description: "Enterprise-grade security with 99.9% uptime guarantee"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Expert Team",
+      description: "Experienced professionals with deep technical expertise"
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      title: "Proven Results",
+      description: "Track record of successful projects and satisfied clients"
+    }
+  ];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 
 export function Home() {
   return (
@@ -93,6 +216,14 @@ export function Home() {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
   );
 }
+=======
+    </>
+  );
+};
+
+export default Home;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef

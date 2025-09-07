@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+<<<<<<< HEAD
 
 // https://vitejs.dev/config/
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 export default defineConfig({
   plugins: [react()],
   resolve: {

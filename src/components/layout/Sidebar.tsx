@@ -1,4 +1,26 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React from 'react'
+import { Link } from 'react-router-dom'
+import {
+  Home,
+  Users,
+  Settings,
+  DollarSign,
+  Phone,
+  Menu
+} from 'lucide-react'
+
+
+  const navigation = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Contact', href: '/contact', icon: Phone }
+  ]
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 
 export default function Sidebar() {
   return (
@@ -18,6 +40,7 @@ export default function Sidebar() {
 }
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
 const Sidebar: React.FC = () => {
   return (
     <div className="fixed left-0 top-0 h-full w-80 bg-white shadow-lg z-40 lg:block hidden">
@@ -272,3 +295,6 @@ export default Sidebar;
 export default Sidebar;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+export default Sidebar
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef

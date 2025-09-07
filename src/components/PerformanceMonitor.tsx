@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Activity } from 'lucide-react';
 
@@ -37,6 +38,13 @@ export const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
+=======
+import React from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  return null; // Placeholder component
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 <<<<<<< HEAD
 }
         }

@@ -1,11 +1,17 @@
 export const metadata = { 
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'Data Analytics Services | Zion Tech Group',
   description: 'Advanced data analytics solutions including business intelligence, data visualization, machine learning, and data engineering.'
 =======
   title: 'Advanced Data Analytics & BI | Zion Tech Group',
   description: 'Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.'
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  title: 'Data Analytics Services | Zion Tech Group',
+  description: 'Comprehensive data analytics services including business intelligence, data visualization, predictive analytics, and data science solutions for data-driven decision making.',
+  keywords: 'data analytics, business intelligence, data visualization, predictive analytics, data science, machine learning, data consulting'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 };
 
 export default function DataAnalyticsPage() {
@@ -19,6 +25,7 @@ export default function DataAnalyticsPage() {
           From data engineering to advanced visualization, we help you make data-driven decisions.
         </p>
       </div>
+<<<<<<< HEAD
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <Item 
@@ -204,11 +211,60 @@ function Item({ title, details }: { title: string; details: string[] }) {
       <ul style={{paddingLeft: 18, color: '#4b5563', margin: 0}}>
         {details.map(d => (<li key={d} style={{listStyle: 'disc', marginBottom: 4}}>{d}</li>))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <ul className="text-gray-600 space-y-2">
+        {features.map((feature) => (
+          <li key={feature} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {feature}
+          </li>
+        ))}
+      </ul>
+      <a 
+        href="tel:+13024640950" 
+        className="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
+
+function DataAnalyticsProcessStep({ step, title, description }: { 
+  step: string; 
+  title: string; 
+  description: string; 
+}) {
+  return (
+    <div className="text-center p-6">
+      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+        {step}
+      </div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function DataAnalyticsTechStack({ title, technologies }: { 
+  title: string; 
+  technologies: string[]; 
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <div className="flex flex-wrap gap-2">
+        {technologies.map((tech) => (
+          <span key={tech} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+            {tech}
+          </span>
+        ))}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
       </ul>
     </div>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function ServiceCard({ title, description, price, features }: { 
   title: string; 
@@ -229,6 +285,40 @@ function ServiceCard({ title, description, price, features }: {
           </li>
         ))}
       </ul>
+=======
+function IndustryAnalytics({ title, description, solutions, icon }: { 
+  title: string; 
+  description: string; 
+  solutions: string[]; 
+  icon: string; 
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="text-gray-600 space-y-2">
+        {solutions.map((solution) => (
+          <li key={solution} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {solution}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function DataAnalyticsBenefitCard({ title, description, icon }: { 
+  title: string; 
+  description: string; 
+  icon: string; 
+}) {
+  return (
+    <div className="text-center p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
     </div>
   );
 }
