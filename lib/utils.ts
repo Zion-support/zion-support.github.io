@@ -19,7 +19,6 @@ export function formatCurrency(amount: number, currency = "USD"): string {
     currency;
   }).format(amount);
 }
-<<<<<<< HEAD
 
 export function slugify(text: string): string {
   return text
@@ -58,6 +57,3 @@ export function throttle<T extends (...args: any[]) => any>(
     }
   };
 }
-=======
-};
->>>>>>> pr-11992

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
-<<<<<<< HEAD
 import { useTranslation } from "react-i18next";
 import { Search, X } from 'lucide-react'
 import { Input } from "@/components/ui/input";
@@ -26,14 +25,8 @@ interface EnhancedSearchInputProps {
    * If provided, these will be shown when the input is empty.
    */
   searchSuggestions?: SearchSuggestion[]
-=======
-interface EnhancedSearchInputProps {
-  value: string;
-  onChange: (value: string) => void;
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 }
 export function EnhancedSearchInput({
-<<<<<<< HEAD
   value;
   onChange;
   onSelectSuggestion;
@@ -256,30 +249,10 @@ export function EnhancedSearchInput({
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
             aria-label="Clear search"
-=======
-  value,
-  onChange,
-  onSelectSuggestion,
-  searchSuggestions,
-  placeholder = "Search...",
-  className = ""
-}: EnhancedSearchInputProps) {
-        <Input,
-  type="text"
-          value={value}
-          <button,
-  type="button"
-            onClick={() => {
-              onChange('');
-              setIsOpen(false);
-            }}
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 hover:text-gray-600"
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
           >
             <X className="h-4 w-4" />
           </button>
         )}
-<<<<<<< HEAD
       </div>
       
       <AutocompleteSuggestions
@@ -293,6 +266,3 @@ export function EnhancedSearchInput({
     </div>
   )
 }
-=======
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57

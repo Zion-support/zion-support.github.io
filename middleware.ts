@@ -8,7 +8,7 @@ export function middleware() {
   response.headers.set('X-XSS-Protection', '1; mode=block');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set(
-    "Permissions-Policy"
+    "Permissions-Policy",
     "camera=(), microphone=(), geolocation=()"
   );
 
@@ -31,9 +31,5 @@ export function middleware() {
 export const config = {
   matcher: [
     '/((?!api|_next/static|_next/image|favicon.ico).*)'
-<<<<<<< HEAD
   ],
-=======
-  ]
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
 };

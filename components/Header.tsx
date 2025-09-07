@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap } from 'lucide-react';
 import { useRouter } from 'next/router';
@@ -45,12 +44,6 @@ const servicesDropdown = [
 ];
 
 const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
-=======
-import React, { useState } from 'react';
-import Link from 'next/link';
-
-const Header = () => {
->>>>>>> 9e52e46f57e53278f6e8f46f78a33c4d92654ea6
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [

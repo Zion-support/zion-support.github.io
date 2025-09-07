@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -83,10 +82,6 @@ export default [
       'react/react-in-jsx-scope': 'off'
     }
   },
-=======
-}
-  }
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -94,7 +89,6 @@ export default [
       ecmaVersion: 2021,
       sourceType: 'module',
       globals: {
-<<<<<<< HEAD
         window: 'readonly',
         document: 'readonly',
         navigator: 'readonly',
@@ -140,24 +134,6 @@ export default [
         AbortController: 'readonly',
         Performance: 'readonly',
         PerformanceNavigationTiming: 'readonly'
-=======
-        // Node.js globals,
-  process: 'readonly'
-        console: 'readonly'
-        require: 'readonly'
-        module: 'readonly'
-        exports: 'readonly'
-        __dirname: 'readonly'
-        __filename: 'readonly'
-        global: 'readonly'
-        Buffer: 'readonly'
-        setTimeout: 'readonly'
-        clearTimeout: 'readonly'
-        setInterval: 'readonly'
-        clearInterval: 'readonly'
-        setImmediate: 'readonly'
-        clearImmediate: 'readonly'
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
       }
     },
     plugins: {
@@ -179,7 +155,6 @@ export default [
   },
   {
     ignores: [
-<<<<<<< HEAD
       'node_modules/**',
       '.next/**',
       'dist/**',
@@ -416,13 +391,6 @@ export default [
       '*.ear',
       '*.sar',
       '*.nar'
-=======
-      // Node/build outputs
-      '.next/**out/**dist/**build/**node_modules/**',
-      // Public assets/scripts
-      // Root-level noisy files
-      '*.config.js*.config.cjs*.config.mjs*.backup.**.old.**.disabled.**.broken.**.corrupted.**.temp.*'
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
     ]
   }
 ];

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import Image from 'next/image';
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 interface OptimizedImageProps {
   src: string,
   alt: string,
@@ -13,7 +10,6 @@ interface OptimizedImageProps {
   className?: string;
   sizes?: string;
 }
-<<<<<<< HEAD
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src;
@@ -26,22 +22,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
   return (
     <Image
-=======
-  src,
-  alt,
-  width,
-  height,
-  className = "",
-  priority = false,
-  quality = 75,
-  sizes = "100vw",
-}) => {
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
       src={src}
       alt={alt}
       width={width}
       height={height}
-<<<<<<< HEAD
       priority={priority}
       className={className}
       sizes={sizes}
@@ -51,7 +35,3 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 };
 
 export default OptimizedImage;
-=======
-      className={className}
-      priority={priority}
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57

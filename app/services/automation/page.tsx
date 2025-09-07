@@ -202,17 +202,14 @@ export default function AutomationPage() {
       <ContactCTA />
     </div>
   );
-<<<<<<< HEAD
 }
-=======
->>>>>>> 9e52e46f57e53278f6e8f46f78a33c4d92654ea6
 function AutomationSolution({ title, description, features, pricing, icon }: {
   title: string
   description: string
   features: string[]
   pricing: string
   icon: string;
-}) {;
+}) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
@@ -229,10 +226,12 @@ function AutomationSolution({ title, description, features, pricing, icon }: {
       <div className="text-lg font-bold text-blue-600">{pricing}</div>
     </div>
   );
+}
+
 function AutomationServiceItem({ title, details }: {
   title: string
   details: string[];
-}) {;
+}) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
@@ -246,11 +245,13 @@ function AutomationServiceItem({ title, details }: {
       </ul>
     </div>
   );
+}
+
 function IndustryCard({ title, description, icon }: {
   title: string
   description: string
   icon: string;
-}) {;
+}) {
   return (
     <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
       <div className="text-3xl mb-3">{icon}</div>
@@ -258,11 +259,13 @@ function IndustryCard({ title, description, icon }: {
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
   );
+}
+
 function BenefitCard({ title, description, icon }: {
   title: string
   description: string
   icon: string;
-}) {;
+}) {
   return (
     <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
       <div className="text-3xl mb-3">{icon}</div>
@@ -270,13 +273,15 @@ function BenefitCard({ title, description, icon }: {
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
   );
+}
+
 function AutomationPricingPlan({ name, price, duration, features, popular }: {
   name: string
   price: string
   duration: string
   features: string[]
   popular: boolean;
-}) {;
+}) {
   return (
     <div className={`bg-white border-2 rounded-xl p-6 ${popular ? 'border-blue-500 relative' : 'border-gray-200'}`}>
       {popular && (
@@ -296,7 +301,6 @@ function AutomationPricingPlan({ name, price, duration, features, popular }: {
             <span className="text-gray-600">{feature}</span>
           </li>
         ))}
-<<<<<<< HEAD
       </ul>
       <a
         href="tel:+13024640950"
@@ -342,6 +346,3 @@ function ContactCTA() {
     </div>
   );
 }
-=======
-      </ul>
->>>>>>> 9e52e46f57e53278f6e8f46f78a33c4d92654ea6

@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
@@ -9,25 +8,28 @@ const nextConfig = {
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
   images: {
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],
     remotePatterns: [
-=======
-  reactStrictMode: true,
-  images: {
-    domains: ['ziontechgroup.com'],
-    formats: ['image/webp', 'image/avif'],
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
   async headers() {
     return [
->>>>>>> 9e52e46f57e53278f6e8f46f78a33c4d92654ea6
       {
         source: '/(.*)',
         headers: [
@@ -45,7 +47,7 @@ const nextConfig = {
           },
         ],
       },
-    ],
+    ];
   },
 };
 export default nextConfig;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
 import Link from "next/link", // Changed from react-router-dom
@@ -42,21 +41,6 @@ export function Footer() {
             </div>
             <p className="text-foreground/80 mb-4" style={{ maxWidth: 'clamp(16rem, 90%, 20rem)' }}>
               The world&apos,s first free marketplace dedicated to high-tech and artificial intelligence.
-=======
-<div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-400 mb-4 max-w-md">
-              Leading AI & Technology Solutions for a Smarter Future. We deliver cutting-edge,
-  technology solutions that transform businesses and drive innovation.
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
             </p>
             <div className="flex flex-wrap gap-3">
               <a,
@@ -173,7 +157,6 @@ export function Footer() {
               <FooterNewsletter />
             </div>
           </div>
-<<<<<<< HEAD
         </div>
 
         <div className="mt-8 flex justify-end">
@@ -225,6 +208,3 @@ export function Footer() {
     </footer>
   )
 }
-=======
-        </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
