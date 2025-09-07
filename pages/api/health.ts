@@ -24,7 +24,7 @@ export default async function handler(
 
     res.status(200).json(healthCheck);
   } catch (error) {
-    console.error('Health check error:', error);
+    // console.error('Health check error:', error);
     res.status(500).json({
       status: 'unhealthy',
       timestamp: new Date().toISOString(),

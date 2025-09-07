@@ -1,8 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Button from './components/Button';
-import Card from './components/Card';
-import ServiceCard from './components/ServiceCard';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';

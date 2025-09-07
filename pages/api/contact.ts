@@ -40,14 +40,14 @@ export default async function handler(
     // 4. Send auto-reply to user
 
     // For now, we'll just log the data and return success
-    console.log('Contact form submission:', {
-      name,
-      email,
-      company,
-      message,
-      timestamp: new Date().toISOString(),
-      ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
-    });
+    // console.log('Contact form submission:', {
+    //   name,
+    //   email,
+    //   company,
+    //   message,
+    //   timestamp: new Date().toISOString(),
+    //   ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
+    // });
 
     // Simulate processing time
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -58,7 +58,7 @@ export default async function handler(
     });
 
   } catch (error) {
-    console.error('Contact form error:', error);
+    // console.error('Contact form error:', error);
     res.status(500).json({ 
       message: 'Internal server error. Please try again later.',
       success: false

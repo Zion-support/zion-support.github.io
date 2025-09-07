@@ -55,7 +55,7 @@ export default async function handler(
     });
 
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
+    // console.error('Newsletter subscription error:', error);
     res.status(500).json({ 
       message: 'Internal server error. Please try again later.',
       success: false
