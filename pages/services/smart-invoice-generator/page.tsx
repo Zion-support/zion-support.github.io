@@ -1,103 +1,17 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export const metadata = {
-  title: 'Smart Invoice Generator | Zion Tech Group',
-  description: 'AI-powered invoice automation with smart templates, payment tracking, and financial analytics. Reduce billing time by 80% and get paid 30% faster.',
-  keywords: 'invoice automation, smart invoicing, AI billing, payment tracking, financial analytics, invoice generator'
-=======
 import React from "react";
 import Link from "next/link";
-
-export const metadata = {
-  title: "Smart Invoice Generator | Zion Tech Group",
-  description:
-    "AI-powered invoice automation with smart templates, payment tracking, and financial analytics. Reduce billing time by 80% and get paid 30% faster.",
-  keywords:
-    "invoice automation, smart invoicing, AI billing, payment tracking, financial analytics, invoice generator",
->>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
-};
+import Head from "next/head";
 
 export default function SmartInvoiceGeneratorPage() {
   return (
-    <div className="space-y-16">
+    <>
+      <Head>
+        <title>Smart Invoice Generator | Zion Tech Group</title>
+        <meta name="description" content="AI-powered invoice automation with smart templates, payment tracking, and financial analytics. Reduce billing time by 80% and get paid 30% faster." />
+        <meta name="keywords" content="invoice automation, smart invoicing, AI billing, payment tracking, financial analytics, invoice generator" />
+      </Head>
+      <div className="space-y-16">
       {/* Hero Section */}
-<<<<<<< HEAD
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6">
-              Smart Invoice Generator
-            </h1>
-            <p className="text-xl mb-8 leading-relaxed">
-              AI-powered invoice automation with smart templates, payment tracking, and financial analytics. 
-              Reduce billing time by 80% and get paid 30% faster.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="#contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Started
-              </Link>
-              <Link
-                href="#features"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Features Section */}
-      <div id="features" className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
-              Powerful Features
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="text-3xl mb-4">🤖</div>
-                <h3 className="text-xl font-semibold mb-3">AI-Powered Generation</h3>
-                <p className="text-gray-600">
-                  Automatically generate professional invoices using AI that learns from your business patterns.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="text-3xl mb-4">📊</div>
-                <h3 className="text-xl font-semibold mb-3">Smart Analytics</h3>
-                <p className="text-gray-600">
-                  Track payment patterns, identify late payers, and optimize your billing strategy.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="text-3xl mb-4">⚡</div>
-                <h3 className="text-xl font-semibold mb-3">Instant Processing</h3>
-                <p className="text-gray-600">
-                  Generate and send invoices in seconds with our lightning-fast automation.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div id="contact" className="bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Transform Your Invoicing?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses already saving time and getting paid faster with our AI-powered invoice generator.
-          </p>
-          <Link
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-=======
       <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           Smart Invoice Generator
@@ -111,17 +25,10 @@ export default function SmartInvoiceGeneratorPage() {
           <a
             href="mailto:kleber@ziontechgroup.com?subject=Smart Invoice Generator Demo"
             className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
->>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
           >
             Start Your Free Trial
-          </Link>
+          </a>
         </div>
-<<<<<<< HEAD
-      </div>
-    </div>
-  );
-}
-=======
       </section>
 
       {/* Key Features */}
@@ -360,16 +267,7 @@ export default function SmartInvoiceGeneratorPage() {
             What Our Clients Say
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            Don't just take our word for it. Here's what our clients have to say
-            about their experience.
-=======
             Don&apos;t just take our word for it. Here&apos;s what our clients have to say about their experience.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
-=======
-            Don&apos;t just take our word for it. Here&apos;s what our clients have to say about their experience.
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-32fb
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -422,7 +320,8 @@ export default function SmartInvoiceGeneratorPage() {
           <p>Email: kleber@ziontechgroup.com</p>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
 
@@ -590,4 +489,3 @@ function TestimonialCard({
     </div>
   );
 }
->>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4

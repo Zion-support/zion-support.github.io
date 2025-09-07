@@ -1,26 +1,16 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export const metadata = {
-  title: 'AI Meeting Assistant | Zion Tech Group',
-  description: 'Revolutionary AI meeting platform with real-time transcription, intelligent summaries, and action item extraction. Transform your meetings with 95% accuracy and 50% time savings.',
-  keywords: 'AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meetings'
-=======
 import React from "react";
 import Link from "next/link";
-
-export const metadata = {
-  title: "AI Meeting Assistant | Zion Tech Group",
-  description:
-    "Revolutionary AI meeting platform with real-time transcription, intelligent summaries, and action item extraction. Transform your meetings with 95% accuracy and 50% time savings.",
-  keywords:
-    "AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meetings",
->>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
-};
+import Head from "next/head";
 
 export default function AIMeetingAssistantPage() {
   return (
-    <div className="space-y-16">
+    <>
+      <Head>
+        <title>AI Meeting Assistant | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI meeting platform with real-time transcription, intelligent summaries, and action item extraction. Transform your meetings with 95% accuracy and 50% time savings." />
+        <meta name="keywords" content="AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meetings" />
+      </Head>
+      <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -58,45 +48,6 @@ export default function AIMeetingAssistantPage() {
             real-time transcription to intelligent follow-ups.
           </p>
         </div>
-<<<<<<< HEAD
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="text-3xl mb-4">🎤</div>
-            <h3 className="text-xl font-semibold mb-3">Real-time Transcription</h3>
-            <p className="text-gray-600">
-              Get instant, accurate transcription of all your meetings with 95% accuracy in multiple languages.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="text-3xl mb-4">📝</div>
-            <h3 className="text-xl font-semibold mb-3">Smart Summaries</h3>
-            <p className="text-gray-600">
-              Automatically generate concise meeting summaries highlighting key decisions and outcomes.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="text-3xl mb-4">✅</div>
-            <h3 className="text-xl font-semibold mb-3">Action Items</h3>
-            <p className="text-gray-600">
-              Extract and track action items automatically, ensuring nothing falls through the cracks.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-gray-900 text-white py-16 rounded-lg">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Transform Your Meetings?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of teams already saving 50% of their meeting time with our AI assistant.
-          </p>
-          <Link
-            href="/contact"
-            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
             icon="🎤"
@@ -372,16 +323,7 @@ export default function AIMeetingAssistantPage() {
             What Our Clients Say
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            Don't just take our word for it. Here's what our clients have to say
-            about their experience.
-=======
             Don&apos;t just take our word for it. Here&apos;s what our clients have to say about their experience.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
-=======
-            Don&apos;t just take our word for it. Here&apos;s what our clients have to say about their experience.
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-32fb
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -419,17 +361,24 @@ export default function AIMeetingAssistantPage() {
           <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Meeting Assistant Demo Request"
             className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
->>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
           >
             Start Your Free Trial
-          </Link>
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+        <div className="mt-8 text-sm">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+          <p>Email: kleber@ziontechgroup.com</p>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
-<<<<<<< HEAD
-}
-=======
 }
 
 function FeatureCard({
@@ -596,4 +545,3 @@ function TestimonialCard({
     </div>
   );
 }
->>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
