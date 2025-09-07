@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Ai Video Generator | Zion Tech Group',
   description: 'Professional ai video generator services for your business needs.',
@@ -38,8 +39,11 @@ export default function ServicePage() {
               Round-the-clock support to ensure your ai video generator solutions run smoothly.
             </p>
           </div>
+
         </div>
       </div>
     </div>
   );
+
 }
+

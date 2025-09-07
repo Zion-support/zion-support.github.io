@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Ai Financial Analyzer | Zion Tech Group',
   description: 'Professional ai financial analyzer services for your business needs.',
@@ -43,3 +44,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

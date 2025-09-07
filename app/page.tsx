@@ -270,6 +270,73 @@ export default function HomePage() {
         </div>
       </section>
 
+          {/* Contact Information Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 rounded-2xl relative overflow-hidden" aria-labelledby="contact-heading">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-blue-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-purple-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
+        </div>
+        
+        <div className="relative z-10">
+          <div className="text-center mb-16">
+            <h2 id="contact-heading" className="text-5xl font-bold bg-gradient-to-r from-gray-900 to-blue-600 bg-clip-text text-transparent mb-8 animate-fade-in">
+              Get In Touch With Us
+            </h2>
+            <p className="text-2xl text-gray-700 max-w-4xl mx-auto animate-slide-up font-medium">
+              Ready to transform your business? Contact our expert team today.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="text-center p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group border border-white/20">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                <span className="text-3xl">📞</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                Phone
+              </h3>
+              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-lg font-medium">
+                +1 302 464 0950
+              </p>
+              <p className="text-gray-500 text-sm mt-2">
+                Available 24/7 for urgent matters
+              </p>
+            </div>
+
+            <div className="text-center p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group border border-white/20">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500" style={{ animationDelay: '0.5s' }}>
+                <span className="text-3xl">✉️</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300">
+                Email
+              </h3>
+              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-lg font-medium">
+                kleber@ziontechgroup.com
+              </p>
+              <p className="text-gray-500 text-sm mt-2">
+                We respond within 2 hours
+              </p>
+            </div>
+
+            <div className="text-center p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group border border-white/20">
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500" style={{ animationDelay: '1s' }}>
+                <span className="text-3xl">📍</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors duration-300">
+                Address
+              </h3>
+              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-lg font-medium">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
+              <p className="text-gray-500 text-sm mt-2">
+                Visit us for consultations
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="text-center py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-lg relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
         {/* Animated background elements */}

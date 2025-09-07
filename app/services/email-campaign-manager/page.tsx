@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Email Campaign Manager | Zion Tech Group',
   description: 'Professional email campaign manager services for your business needs.',
@@ -43,3 +44,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

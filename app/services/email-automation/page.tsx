@@ -1,4 +1,5 @@
 export const metadata = {
+
   title: 'Email Automation | Zion Tech Group',
   description: 'Professional email automation services for your business needs.',
   keywords: 'email-automation, services, business, technology'
@@ -43,3 +44,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

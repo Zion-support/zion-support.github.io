@@ -1,4 +1,5 @@
 export const metadata = {
+
   title: 'Ecommerce Platform | Zion Tech Group',
   description: 'Professional ecommerce platform services for your business needs.',
   keywords: 'ecommerce-platform, services, business, technology'
@@ -43,3 +44,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

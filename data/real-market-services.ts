@@ -1666,14 +1666,6 @@ export const realMarketServices: RealMarketService[] = [
     contactInfo: contact
     realImplementation: true
 
-    id: 'vector - search - starter',
-    name: 'Vector Search Starter',
-    tagline: 'Production vector DB setup with ingestion pipelines in a day',
-    price: '$249',
-    period: '/month',
-    description:;
-      'Ready - to - run vector database setup (Pinecone / Weaviate / Elastic) with embeddings pipelines, schema, and example retrieval for your data.',
-    features: [;
 
       'Provider selection guide',
       'Schema and index templates',

@@ -1,4 +1,5 @@
 export const metadata = {
+
   title: 'Finance | Zion Tech Group',
   description: 'Professional finance services for your business needs.',
   keywords: 'finance, services, business, technology'
@@ -43,3 +44,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

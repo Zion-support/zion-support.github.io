@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Website Analyzer | Zion Tech Group',
   description: 'Professional website analyzer services for your business needs.',
@@ -38,8 +39,11 @@ export default function ServicePage() {
               Round-the-clock support to ensure your website analyzer solutions run smoothly.
             </p>
           </div>
+
         </div>
       </div>
     </div>
   );
+
 }
+

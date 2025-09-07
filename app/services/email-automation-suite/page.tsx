@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Email Automation Suite | Zion Tech Group',
   description: 'Professional email automation suite services for your business needs.',
@@ -38,8 +39,11 @@ export default function ServicePage() {
               Round-the-clock support to ensure your email automation suite solutions run smoothly.
             </p>
           </div>
+
         </div>
       </div>
     </div>
   );
+
 }
+
