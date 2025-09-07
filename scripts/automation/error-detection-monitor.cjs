@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -6,32 +7,27 @@ const { execSync } = require('child_process');
 class ErrorDetectionMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'error-reports');
-    this.logsDir = path.join(this.projectRoot, 'automation/logs');
+
     this.errorThreshold = parseInt(process.env.ERROR_THRESHOLD) || 10;
     this.checkInterval = parseInt(process.env.ERROR_DETECTION_INTERVAL) || 300000; // 5 minutes;
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
-        fs.mkdirSync(dir, { "recursive": true })};
+        fs.mkdirSync(dir, { "recursive": true })};"
     }
 });
     
     this.errorHistory = [];
-    this.lastCheck = null};
+    this.lastCheck = null};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
+
     console.log(`[${timestamp}] [${level}] ${message}`)};
+    console.log(`[${timestamp}] [${level}] ${message})};
   async runTypeScriptCheck() {}
     try {}
-      this.log('Running TypeScript type check...');
-      execSync('npm run type-check', { "stdio": 'pipe' }
-});
-      return { "success": true, "errors": [], "count": 0 }} catch (error) {}
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseTypeScriptErrors(output);
-      this.log(`TypeScript check failed with ${errors.length} errors`, 'ERROR');
-      return { "success": false, errors, "count": errors.length }};
+
+      return { "success": false, errors, "count": errors.length }};"
   };
   async runLintCheck() {}
     try {}
@@ -113,22 +109,21 @@ class ErrorDetectionMonitor {}
       { "name": 'ESLint', "check": this.runLintCheck.bind(this) },
       { "name": 'Build', "check": this.runBuildCheck.bind(this) },
       { "name": 'Dependencies', "check": this.runDependencyCheck.bind(this) };
+    try {}"
+
     ];
 
     const results = {};
     let totalErrors = 0;
 
     for (const check of checks) {}
-      try {}
         const result = await check.check();
         results[check.name] = result;
-        totalErrors += result.count} catch (error) {}
-        this.log(`Error running ${check.name} "check": ${error.message}`, 'ERROR');
-        results[check.name] = { "success": false, "errors": [], "count": 0 }};
-    };
-    const errorReport = {}
-      "timestamp": new Date().toISOString(),
-      totalErrors,
+
+        results[check.name] = { "success": false, "errors": [], "count": 0 }};"
+    const errorReport = {}"
+      "timestamp": new Date().toISOString(),"
+      totalErrors,"
       "checks": results,
       "threshold": this.errorThreshold,
       "exceeded": totalErrors > this.errorThreshold;
@@ -142,8 +137,8 @@ class ErrorDetectionMonitor {}
     this.errorHistory.push(errorReport);
     if (this.errorHistory.length > 100) {}
       this.errorHistory = this.errorHistory.slice(-100)};
-    // Save error history;
-    const historyPath = path.join(this.reportsDir, 'error-history.json');
+    // Save error history;"
+
     fs.writeFileSync(historyPath, JSON.stringify(this.errorHistory, null, 2));
 
     this.lastCheck = new Date();
@@ -162,6 +157,8 @@ class ErrorDetectionMonitor {}
       "timestamp": new Date().toISOString(),
       "message": 'Error threshold exceeded',
       "report": errorReport;
+
+      "report": errorReport;"
     }, null, 2));
 
     // Log critical error;
@@ -184,13 +181,9 @@ class ErrorDetectionMonitor {}
     this.log(`Error detection monitor started. Checking every ${this.checkInterval / 1000} seconds.`)};
   getStatus() {}
     return {}
-      "running": true,
-      "lastCheck": this.lastCheck,
-      "errorHistory": this.errorHistory.length,
-      "threshold": this.errorThreshold,
-      "checkInterval": this.checkInterval;
+
+      "checkInterval": this.checkInterval;"
     }};
-};
 // Main execution;
 if (require.main === module) {}
   const monitor = new ErrorDetectionMonitor();
@@ -209,12 +202,11 @@ if (require.main === module) {}
   // Start monitoring;
   monitor.startMonitoring().catch(error => {})
     monitor.log(`Failed to start "monitoring": ${error.message}`, 'ERROR');
+  // Handle graceful shutdown;"
+
     process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 module.exports = ErrorDetectionMonitor;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
 module.exports = ErrorDetectionMonitor;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

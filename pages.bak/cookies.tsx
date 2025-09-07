@@ -5,11 +5,9 @@ interface CookiesProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface CookiesProps {
-  // Add props here as needed
-}
+export default function Cookies({ }: CookiesProps) {
+
 export default function Cookies({ }: CookiesProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Cookies({ }: CookiesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Cookies({ }: CookiesProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,8 @@ export default function Cookies(): any ({ }: CookiesProps) {;
       <h1>Cookies</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+}

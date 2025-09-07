@@ -5,11 +5,9 @@ interface HelpProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface HelpProps {
-  // Add props here as needed
-}
+export default function Help({ }: HelpProps) {
+
 export default function Help({ }: HelpProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Help({ }: HelpProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Help({ }: HelpProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,17 @@ export default function Help(): any ({ }: HelpProps) {;
       <h1>Help</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

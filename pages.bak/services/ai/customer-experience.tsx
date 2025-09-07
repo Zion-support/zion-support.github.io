@@ -5,11 +5,9 @@ interface CustomerexperienceProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface CustomerexperienceProps {
-  // Add props here as needed
-}
+export default function Customerexperience({ }: CustomerexperienceProps) {
+
 export default function Customerexperience({ }: CustomerexperienceProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Customerexperience({ }: CustomerexperienceProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Customerexperience({ }: CustomerexperienceProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -60,4 +62,17 @@ export default function Customerexperience(): any ({ }: CustomerexperienceProps)
       <h1>Customerexperience</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

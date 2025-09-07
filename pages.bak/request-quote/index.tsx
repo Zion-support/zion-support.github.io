@@ -5,11 +5,9 @@ interface IndexProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface IndexProps {
-  // Add props here as needed
-}
+export default function Index({ }: IndexProps) {
+
 export default function Index({ }: IndexProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Index({ }: IndexProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Index({ }: IndexProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,17 @@ export default function Index(): any ({ }: IndexProps) {;
       <h1>Index</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

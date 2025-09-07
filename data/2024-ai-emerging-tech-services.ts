@@ -5,7 +5,7 @@ export interface AIEmergingTechService {
   name: string;
   tagline: string;
   price: string;
-  period: string,
+
   description: string;
   features: string[];
   popular: boolean;
@@ -31,8 +31,7 @@ export interface AIEmergingTechService {
     mobile: string;
     email: string;
     address: string;
-    website: string
-};
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -92,5 +91,3 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     customers: 3200,
     rating: 4.8,
     reviews: 1800
-  }
-];

@@ -1,34 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+#!/usr/bin/env node
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-function log(msg, level = "INFO")
-    execSync(cmd, { "stdio": "inherit"})
-    return { "ok"}
-    return { "ok": false, "error"}
-  log("� Starting security audit...")
-  log("Running npm audit (moderate)..."
-  const audit = tryExec("npm audit --audit-level=moderate")
-    log("Vulnerabilities found, attempting npm audit fix", "WARN")
-    tryExec("npm audit fix")
-  const sensitive = [".env", ".env.local", ".env.production", "config.json", "secrets.json"]
-    log(`Sensitive files "present": ${found.join(", ")}`, "WARN"
-    log("No sensitive files found in repo root")
-  log(" Security audit completed")
-=======
+
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -187,344 +164,97 @@ class SecurityAuditor {
     } catch (error) {
       console.log(`❌ Security audit failed: ${error.message}`);
       process.exit(1);
-=======
+
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔒 Security Audit');
-console.log('================');
+console.log('🔍 Security Audit Starting...');
 
-class SecurityAuditor {
-  constructor() {
-    this.vulnerabilities = [];
-    this.recommendations = [];
-    this.startTime = Date.now();
-  }
-
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry);
-  }
-
-  async runNpmAudit() {
-    this.log('🔍 Running npm audit...');
-    
-    try {
-      const result = execSync('npm audit --json', {
-        encoding: 'utf8',
-        stdio: 'pipe',
-        cwd: process.cwd()
+const securityChecks = [
+  {
+    name: 'NPM Audit',
+    command: 'npm audit --audit-level moderate',
+    critical: true
+  },
+  {
+    name: 'Dependency Check',
+    check: () => {
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const deps = { ...packageJson.dependencies, ...packageJson.devDependencies };
+      
+      // Check for known vulnerable packages
+      const vulnerablePackages = [
+        'lodash',
+        'moment',
+        'jquery'
+      ];
+      
+      const foundVulnerable = vulnerablePackages.filter(pkg => deps[pkg]);
+      if (foundVulnerable.length > 0) {
+        console.log(`⚠️  Potentially vulnerable packages found: ${foundVulnerable.join(', ')}`);
+        return false;
+      }
+      return true;
+    }
+  },
+  {
+    name: 'Environment Variables Check',
+    check: () => {
+      const envFile = '.env.local';
+      if (fs.existsSync(envFile)) {
+        const content = fs.readFileSync(envFile, 'utf8');
+        const hasSecrets = content.includes('SECRET') || content.includes('KEY') || content.includes('PASSWORD');
+        if (hasSecrets) {
+          console.log('⚠️  Environment file contains potential secrets');
+          return false;
+        }
+      }
+      return true;
+    }
+  },
+  {
+    name: 'File Permissions Check',
+    check: () => {
+      const sensitiveFiles = [
+        'package.json',
+        'package-lock.json',
+        'tsconfig.json'
+      ];
+      
+      let allSecure = true;
+      sensitiveFiles.forEach(file => {
+        if (fs.existsSync(file)) {
+          const stats = fs.statSync(file);
+          const mode = stats.mode & parseInt('777', 8);
+          if (mode > parseInt('644', 8)) {
+            console.log(`⚠️  File ${file} has overly permissive permissions`);
+            allSecure = false;
+          }
+        }
       });
-      
-      const auditData = JSON.parse(result);
-      
-      if (auditData.vulnerabilities) {
-        const vulnCount = Object.keys(auditData.vulnerabilities).length;
-        this.log(`⚠️ Found ${vulnCount} vulnerabilities`, 'warning');
-        
-        for (const [packageName, vuln] of Object.entries(auditData.vulnerabilities)) {
-          this.vulnerabilities.push({
-            package: packageName,
-            severity: vuln.severity,
-            title: vuln.title,
-            description: vuln.description,
-            recommendation: vuln.recommendation,
-            type: 'npm-audit'
-          });
-        }
-      } else {
-        this.log('✅ No npm vulnerabilities found', 'success');
-      }
-      
-      return auditData;
-    } catch (error) {
-      this.log(`⚠️ npm audit failed: ${error.message}`, 'warning');
-      return null;
-    }
-  }
-
-  async checkEnvironmentFiles() {
-    this.log('🔍 Checking environment files...');
-    
-    const envFiles = ['.env', '.env.local', '.env.production', '.env.development'];
-    const issues = [];
-    
-    for (const envFile of envFiles) {
-      const envPath = path.join(process.cwd(), envFile);
-      
-      if (fs.existsSync(envPath)) {
-        const content = fs.readFileSync(envPath, 'utf8');
-        const lines = content.split('\n');
-        
-        for (let i = 0; i < lines.length; i++) {
-          const line = lines[i].trim();
-          
-          // Check for hardcoded secrets
-          if (line.includes('password') || line.includes('secret') || line.includes('key')) {
-            if (!line.includes('=') || line.split('=')[1].trim() === '') {
-              issues.push({
-                file: envFile,
-                line: i + 1,
-                issue: 'Potential hardcoded secret',
-                severity: 'high'
-              });
-            }
-          }
-          
-          // Check for commented out secrets
-          if (line.startsWith('#') && (line.includes('password') || line.includes('secret'))) {
-            issues.push({
-              file: envFile,
-              line: i + 1,
-              issue: 'Commented secret found',
-              severity: 'medium'
-            });
-          }
-        }
-        
-        this.log(`✅ Checked ${envFile}`, 'success');
-      }
-    }
-    
-    if (issues.length > 0) {
-      this.vulnerabilities.push(...issues.map(issue => ({
-        ...issue,
-        type: 'environment'
-      })));
-    }
-    
-    return issues;
-  }
-
-  async checkPackageJson() {
-    this.log('🔍 Checking package.json for security issues...');
-    
-    const packageJsonPath = path.join(process.cwd(), 'package.json');
-    
-    if (!fs.existsSync(packageJsonPath)) {
-      this.log('⚠️ package.json not found', 'warning');
-      return;
-    }
-    
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    const issues = [];
-    
-    // Check for scripts that might be dangerous
-    if (packageJson.scripts) {
-      for (const [scriptName, script] of Object.entries(packageJson.scripts)) {
-        if (script.includes('rm -rf') || script.includes('sudo') || script.includes('chmod 777')) {
-          issues.push({
-            script: scriptName,
-            issue: 'Potentially dangerous script',
-            severity: 'high',
-            scriptContent: script
-          });
-        }
-      }
-    }
-    
-    // Check for packages with known security issues
-    const dangerousPackages = ['eval', 'vm', 'child_process'];
-    const allDeps = { ...packageJson.dependencies, ...packageJson.devDependencies };
-    
-    for (const [packageName, version] of Object.entries(allDeps)) {
-      if (dangerousPackages.some(dangerous => packageName.includes(dangerous))) {
-        issues.push({
-          package: packageName,
-          version: version,
-          issue: 'Potentially dangerous package',
-          severity: 'medium'
-        });
-      }
-    }
-    
-    if (issues.length > 0) {
-      this.vulnerabilities.push(...issues.map(issue => ({
-        ...issue,
-        type: 'package-json'
-      })));
-    }
-    
-    return issues;
-  }
-
-  async checkFilePermissions() {
-    this.log('🔍 Checking file permissions...');
-    
-    const sensitiveFiles = [
-      'package.json',
-      'package-lock.json',
-      '.env',
-      '.env.local',
-      'next.config.js',
-      'next.config.cjs'
-    ];
-    
-    const issues = [];
-    
-    for (const file of sensitiveFiles) {
-      const filePath = path.join(process.cwd(), file);
-      
-      if (fs.existsSync(filePath)) {
-        try {
-          const stats = fs.statSync(filePath);
-          const mode = stats.mode;
-          
-          // Check if file is world-writable (dangerous)
-          if (mode & 0o002) {
-            issues.push({
-              file: file,
-              issue: 'File is world-writable',
-              severity: 'high',
-              permissions: mode.toString(8)
-            });
-          }
-          
-          // Check if file is group-writable (potentially dangerous)
-          if (mode & 0o020) {
-            issues.push({
-              file: file,
-              issue: 'File is group-writable',
-              severity: 'medium',
-              permissions: mode.toString(8)
-            });
-          }
-        } catch (error) {
-          // Ignore permission errors
-        }
-      }
-    }
-    
-    if (issues.length > 0) {
-      this.vulnerabilities.push(...issues.map(issue => ({
-        ...issue,
-        type: 'permissions'
-      })));
-    }
-    
-    return issues;
-  }
-
-  generateRecommendations() {
-    const recommendations = [];
-    
-    // Generate recommendations based on vulnerabilities
-    const highSeverity = this.vulnerabilities.filter(v => v.severity === 'high');
-    const mediumSeverity = this.vulnerabilities.filter(v => v.severity === 'medium');
-    
-    if (highSeverity.length > 0) {
-      recommendations.push({
-        priority: 'high',
-        message: `Address ${highSeverity.length} high-severity security issues immediately`,
-        count: highSeverity.length
-      });
-    }
-    
-    if (mediumSeverity.length > 0) {
-      recommendations.push({
-        priority: 'medium',
-        message: `Review ${mediumSeverity.length} medium-severity security issues`,
-        count: mediumSeverity.length
-      });
-    }
-    
-    // General recommendations
-    recommendations.push({
-      priority: 'low',
-      message: 'Regularly update dependencies to latest secure versions',
-      action: 'npm update'
-    });
-    
-    recommendations.push({
-      priority: 'low',
-      message: 'Use environment variables for all sensitive configuration',
-      action: 'Review .env files'
-    });
-    
-    recommendations.push({
-      priority: 'low',
-      message: 'Implement Content Security Policy (CSP) headers',
-      action: 'Add CSP to next.config.js'
-    });
-    
-    return recommendations;
-  }
-
-  async generateReport() {
-    const duration = Date.now() - this.startTime;
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      vulnerabilities: this.vulnerabilities,
-      recommendations: this.generateRecommendations(),
-      summary: {
-        totalVulnerabilities: this.vulnerabilities.length,
-        highSeverity: this.vulnerabilities.filter(v => v.severity === 'high').length,
-        mediumSeverity: this.vulnerabilities.filter(v => v.severity === 'medium').length,
-        lowSeverity: this.vulnerabilities.filter(v => v.severity === 'low').length
-      }
-    };
-    
-    const reportPath = path.join(process.cwd(), 'security-audit-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📄 Report saved to: ${reportPath}`);
-    return report;
-  }
-
-  async run() {
-    this.log('🚀 Starting security audit...');
-    
-    try {
-      await this.runNpmAudit();
-      await this.checkEnvironmentFiles();
-      await this.checkPackageJson();
-      await this.checkFilePermissions();
-      
-      const report = await this.generateReport();
-      
-      this.log('🎉 Security audit completed!');
-      this.log(`📊 Summary: ${report.summary.totalVulnerabilities} vulnerabilities found (${report.summary.highSeverity} high, ${report.summary.mediumSeverity} medium, ${report.summary.lowSeverity} low)`);
-      
-      if (report.recommendations.length > 0) {
-        this.log('💡 Recommendations:');
-        report.recommendations.forEach(rec => {
-          this.log(`  - [${rec.priority.toUpperCase()}] ${rec.message}`, 'info');
-        });
-      }
-      
-      return report;
-    } catch (error) {
-      this.log(`❌ Security audit failed: ${error.message}`, 'error');
-      throw error;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+      return allSecure;
     }
   }
 }
 
-<<<<<<< HEAD
 // Run the security auditor
 const auditor = new SecurityAuditor();
-auditor.run().catch(console.error);
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
+auditor.checkDependencies();
+auditor.checkEnvironmentVariables();
+const report = auditor.generateReport();
+
+fs.writeFileSync('security-audit-report.json', JSON.stringify(report, null, 2));
+console.log('Security audit completed');
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 // Run the auditor
 if (require.main === module) {
   const auditor = new SecurityAuditor();
@@ -532,4 +262,36 @@ if (require.main === module) {
 }
 
 module.exports = SecurityAuditor;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+
+];
+
+let passed = 0;
+let failed = 0;
+let criticalFailed = 0;
+
+securityChecks.forEach(check => {
+  try {
+    if (check.command) {
+      console.log(`\n🔄 Running ${check.name}...`);
+      execSync(check.command, { stdio: 'pipe' });
+      console.log(`✅ ${check.name} passed`);
+      passed++;
+    } else if (check.check()) {
+      console.log(`✅ ${check.name}`);
+      passed++;
+    } else {
+      console.log(`❌ ${check.name}`);
+      failed++;
+      if (check.critical) {
+        criticalFailed++;
+      }
+    }
+  } catch (error) {
+    console.log(`❌ ${check.name} failed`);
+    failed++;
+    if (check.critical) {
+      criticalFailed++;
+    }
+  }
+});
+

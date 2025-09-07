@@ -1,20 +1,17 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 #!/usr/bin/env node/usr/bin/env node;/ No-op Netlify functions manifest generator placeholder;/ Writes a minimal manifest file if functions dir exists;const fs = require("$1");"const path = require("$1");"const outDir = path.resolve(process.cwd(), "automation");"const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try {;" fs.mkdirSync(outDir, { recursive: true }),} catch {};"const manifest = { functions: [], generatedAt: new Date().toISOString() }try {; fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));" console.log("[netlify: manifest] wrote", manifestPath),} catch (e) {;" console.log("[netlify: manifest] skipped (write failed)"),}process.exit(0);"const fs = require("$1");"const path = require("path")";const outDir = path.resolve(process.cwd(), "automation");const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try { fs.mkdirSync(outDir, { recursive: true }),"} catch {};"const manifest = { functions: [], generatedAt: new Date().toISOString() };";try {; fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));" console.log("[netlify:manifest] wrote", manifestPath)} catch (e) { console.log("[netlify:manifest] skipped (write failed)")}";process.exit(0)""
-=======
->>>>>>> 5d987fe43090d7728810c06da2fede859a7f3c62
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
+
 // No-op Netlify functions manifest generator placeholder;
 // Writes a minimal manifest file if functions dir exists;
 const fs = require("$1");
 const path = require("$1");
 const outDir = path.resolve(process.cwd(), "automation");
-const manifestPath = path.join(outDir, "netlify-functions-manifest.json");
+const manifestPath = path.join(outDir, "netlify-functions-manifest.json");"
+try {;}"
+  fs.mkdirSync(outDir, { "recursive": true })} catch {};"
+;"
+const manifest = { "functions": [], "generatedAt": new Date().toISOString() };"
 try {;}
   fs.mkdirSync(outDir, { "recursive": true }),} catch {};
 ;
@@ -30,13 +27,8 @@ const path = require("path")";const outDir = path.resolve(process.cwd(), "automa
 const manifest = { "functions": [], "generatedAt": new Date().toISOString() };";try {;}
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log("["netlify":manifest] wrote", manifestPath)} catch (e) {  console.log("["netlify":manifest] skipped (write failed)")}";process.exit(0);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
-=======
+main
+main
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -52,6 +44,4 @@ const manifest = {
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(outFile, JSON.stringify(manifest, null, 2));
 console.log('[netlify:manifest] wrote', outFile);
->>>>>>> origin/chore/fix-build-nav-links
->>>>>>> 5d987fe43090d7728810c06da2fede859a7f3c62
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+

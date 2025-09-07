@@ -5,11 +5,9 @@ interface RevenueopsProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface RevenueopsProps {
-  // Add props here as needed
-}
+export default function Revenueops({ }: RevenueopsProps) {
+
 export default function Revenueops({ }: RevenueopsProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Revenueops({ }: RevenueopsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Revenueops({ }: RevenueopsProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -60,4 +62,17 @@ export default function Revenueops(): any ({ }: RevenueopsProps) {;
       <h1>Revenueops</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

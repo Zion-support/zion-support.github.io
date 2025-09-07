@@ -1,44 +1,20 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+return (
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
-    <div className='container mx-auto px-4 py-10'>;
+    <div className='container mx-auto px-4 py-10'>;'
       <h1 className='text-2xl font-semibold'>;
         Sustainable Technology Practices;
-      </h1>;
+      </h1>;'
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Article coming soon.;
       </p>;
     </div>;
-  );export default function SustainableTechnologyPracticesPage() {;
-  return (
-    <div className="container mx-auto px-4 py-10">;
-      <h1 className="text-2xl font-semibold">Sustainable Technology Practices</h1>;
-      <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>;
-    </div>;
-  );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 }
 
-=======
-=======
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import React from 'react';
-
-
 
 export default function SustainableTechnologyPracticesPage() {
   return (
@@ -46,82 +22,31 @@ export default function SustainableTechnologyPracticesPage() {
       <h1 className='text-2xl font-semibold'>
         Sustainable Technology Practices
       </h1>
+
       <p className='mt-2 text-gray-600 dark:text-gray-300'>
         Article coming soon.
       </p>
-<<<<<<< HEAD
-    </div>;
-  );export default function SustainableTechnologyPracticesPage() {
-  return (
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl font-semibold">Sustainable Technology Practices</h1>
-      <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
 
-export default /**
- * SustainableTechnologyPracticesPage - Function description
- */
-function SustainableTechnologyPracticesPage() {
-  return (
-    <div className='container mx - auto px - 4 py - 10'>;
-      <h1 className='text - 2xl font - semibold'>;
-        Sustainable Technology Practices;
-      </h1>;
-      <p className='mt - 2 text - gray - 600 dark:text - gray - 300'>;
-        Article coming soon.;
-      </p>;
-    </div>);export default /**
- * SustainableTechnologyPracticesPage - Function description
- */
-function SustainableTechnologyPracticesPage() {
-  return (
-    <div className="container mx - auto px - 4 py - 10">;
-      <h1 className="text - 2xl font - semibold">Sustainable Technology Practices</h1>;
-      <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Article coming soon.</p>;
-    </div>);
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
-  )
-}
-
-import React from 'react';
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function SustainableTechnologyPracticesPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
       <h1 className='text-2xl font-semibold'>
         Sustainable Technology Practices
       </h1>
+
       <p className='mt-2 text-gray-600 dark:text-gray-300'>
         Article coming soon.
       </p>
     </div>;
-  );export default function SustainableTechnologyPracticesPage() {
-  return (
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl font-semibold">Sustainable Technology Practices</h1>
+  );export default function SustainableTechnologyPracticesPage() {}
+  return ("
+    <div className="container mx-auto px-4 py-10">"
+      <h1 className="text-2xl font-semibold">Sustainable Technology Practices</h1>"
       <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
-<<<<<<< HEAD
 
     </div>
-  );
+);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </div>
   );
 
@@ -134,11 +59,9 @@ export default function SustainableTechnologyPracticesPage() {
   );
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
+

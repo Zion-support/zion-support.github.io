@@ -1,104 +1,95 @@
 import { ApiDocsSpec } from './types';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   ]
 }
 export default v1;
-
   ];
 
-<<<<<<< HEAD
-=======
-=======
-
 const baseUrl = 'https://api && api.zion.os';
-=======
-<<<<<<< HEAD
-=======
-
 
 const v1: ApiDocsSpec = {
-<<<<<<< HEAD
   product: 'Zion OS'
   versions: ['v1']
   defaultVersion: 'v1'
+  product: 'Zion OS;,
+  versions: ['v1']
+  defaultVersion: 'v1;,
+pr-12325
   lastUpdatedIso: new Date().toISOString()
   sections: [
 const base_url = 'https://api.zion.os';
 ;
 const v1: ApiDocsSpec = {
-  product: 'Zion OS',
+  product: 'Zion OS';,
+const v1: ApiDocsSpec = {;,
+  product: 'Zion OS';,']
+pr-12325
   versions: ['v1'],
-  default_version: 'v1',
-  lastUpdatedIso: new Date ().toISOString (),
-  sections: [;
+  defaultVersion: 'v1',
+  lastUpdatedIso: new Date().toISOString(),
+  sections: [
     {
-
       id: 'auth',
-      title: 'Auth (JWT, OAuth, Wallet)',
 
           ],
           versions: ['v1']
-=======
   openapi: '3.0.0',
+  versions: ['v1'];,
+  default_version: 'v1';,
+  lastUpdatedIso: new Date ().toISOString ();,
+  sections: [;
+    {
+
+      id: 'auth';,
+      title: 'Auth (JWT;, OAuth, Wallet)',
+
+          ],
+          versions: ['v1']
+  openapi: '3.0.0';,
   info: {
-    title: 'Zion OS API',
-    version: '1.0.0',
-    description: 'Zion OS API Documentation'
+    title: 'Zion OS API';,
+    version: '1.0.0';,
+    description: 'Zion OS API Documentation';
   },
-  servers: [{ url: baseUrl }],
+  servers: [{ url: baseUrl ;}],
   paths: {
     '/v1/nation/stats': {
       get: {
-        summary: 'Get Nation Stats',
+        summary: 'Get Nation Stats';,
         responses: {
           '200': {
-            description: 'Success',
+            description: 'Success';,
             content: {
               'application/json': {
-                schema: { type: 'object' }
+                schema: { type: 'object' ;}
               }
             }
           }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         }
-<<<<<<< HEAD
       ]
-    },
 
-=======
-id: 'auth-login-jwt',
-          title: 'JWT Login',
-          description: 'Obtain a JWT by providing credentials.',
-          path: '/v1/auth/login',
-          method: 'POST',
-          visibility: 'public',
-          auth: ['none'],
           requestBodySchema: {
-            type: 'object',
+            type: 'object';,
             properties: {
-              email: { type: 'string' },
-              password: { type: 'string' },
+              email: { type: 'string' ;},
+              password: { type: 'string' ;},
             },
-            required: ['email', 'password'],
+            required: ['email';, 'password'],
           },
           responseBodySchema: {
-            type: 'object',
+            type: 'object';,
             properties: {
-              token: { type: 'string' },
-              expiresIn: { type: 'number' },
+              token: { type: 'string' ;},
+              expiresIn: { type: 'number' ;},
             },
           },
           samples: [
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/auth/login -H 'Content-Type: application/json' -d '{"email":"user@zion.os","password":"***"}'` }
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: 'user@zion.os', password: '***' }) }).then(r => r.json()),` }
-            { language: 'python', code: `import requests\nresp = requests.post('${baseUrl}/v1/auth/login', json={'email':'user@zion.os','password':'***'})\nprint(resp.json())` }]
+            { language: 'curl';, code: `curl -X POST ${baseUrl;}/v1/auth/login -H 'Content-Type: application/json' -d '{"email":"user@zion.os";,"password":"***"}'` }
+            { language: 'javascript';, code: `await fetch('${baseUrl;}/v1/auth/login', { method: 'POST';, headers: { 'Content-Type': 'application/json' ;}, body: JSON.stringify({ email: 'user@zion.os';, password: '***' ;}) }).then(r => r.json()),` }
+            { language: 'python';, code: `import requests\nresp = requests.post('${baseUrl;}/v1/auth/login', json={'email':'user@zion.os','password':'***'})\nprint(resp.json())` }]
           errors: [
-            { code: 'INVALID_CREDENTIALS', httpStatus: 401, message: 'Email or password incorrect' }]
-          versions: ['v1']}
+            { code: 'INVALID_CREDENTIALS';, httpStatus: 401;, message: 'Email or password incorrect' ;}]
+          versions: ['v1'];}
         {
           id: 'oauth-token'
           title: 'OAuth Token'
@@ -107,28 +98,29 @@ id: 'auth-login-jwt',
           method: 'POST'
           visibility: 'partner'
           auth: ['none']
-          requestBodySchema: { type: 'object', properties: { code: { type: 'string' }, redirect_uri: { type: 'string' } }, required: ['code', 'redirect_uri'] }
-          responseBodySchema: { type: 'object', properties: { access_token: { type: 'string' }, refresh_token: { type: 'string' } } }
+          requestBodySchema: { type: 'object';, properties: { code: { type: 'string' ;}, redirect_uri: { type: 'string' ;} }, required: ['code';, 'redirect_uri'] }
+          responseBodySchema: { type: 'object';, properties: { access_token: { type: 'string' ;}, refresh_token: { type: 'string' ;} } }
           samples: [
             {
-              language: 'curl',
-              code: `curl -X POST ${baseUrl}/v1/oauth/token -H 'Content-Type: application/json' -d '{"code":"AUTH_CODE","redirect_uri":"https://app.partner.com/callback"}'`,
+              language: 'curl';,
+              code: `curl -X POST ${baseUrl;}/v1/oauth/token -H 'Content-Type: application/json' -d '{"code":"AUTH_CODE";,"redirect_uri":"https: //app.partner.com/callback";}'`,
             },
             {
-              language: 'javascript',
-              code: `await fetch('${baseUrl}/v1/oauth/token', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code: 'AUTH_CODE', redirect_uri: 'https://app.partner.com/callback' }) }).then(r => r.json());`,
+              language: 'javascript';,
+              code: `await fetch('${baseUrl;}/v1/oauth/token', { method: 'POST';, headers: { 'Content-Type': 'application/json' ;}, body: JSON.stringify({ code: 'AUTH_CODE';, redirect_uri: 'https://app.partner.com/callback' ;}) }).then(r => r.json());`,
             },
             {
-              language: 'python',
-              code: `import requests\nrequests.post('${baseUrl}/v1/oauth/token', json={'code':'AUTH_CODE','redirect_uri':'https://app.partner.com/callback'}).json()`,
+              language: 'python';,
+              code: `import requests\nrequests.post('${baseUrl;}/v1/oauth/token', json={'code':'AUTH_CODE','redirect_uri':'https: //app.partner.com/callback';}).json()`;
             },
           ],
-          versions: ['v1'],
+          versions: ['v1'];,
         },
       ],
     },
     {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+
       id: 'talent'
       title: 'Talent Profiles'
 
@@ -137,45 +129,85 @@ id: 'auth-login-jwt',
           id: 'talent-get'
           title: 'Get Talent Profile'
           description: 'Fetch a talent profile by ID.'
-          path: '/v1/talent/{talentId}'
+          path: '/v1/talent/{talentId;}'
           method: 'GET'
           visibility: 'public'
           auth: ['jwt']
-          params: { talentId: 'The UUID of the talent' }
-          responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, skills: { type: 'array', items: { type: 'string' } } } }
-          samples: [
-<<<<<<< HEAD
-
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r && r.json())` },
-            { language: 'python', code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
 
           ],
-          versions: ['v1']
+    },
+
+      id: 'talent;,
+  title: 'Talent Profiles
+      endpoints: [
+          id: 'talent-get;,
+  title: 'Get Talent Profile
+          description: 'Fetch a talent profile by ID.;,
+  path: '/v1/talent/{talentId;}
+          method: 'GET;,
+  visibility: 'public]
+          auth: ['jwt']';,
+  params: { talentId: 'The UUID of the talent' ;}
+pr-12325
+          responseBodySchema: { type: 'object';, properties: { id: { type: 'string' ;}, name: { type: 'string' ;}, skills: { type: 'array';, items: { type: 'string' ;} } } }
+          samples: [
+
+            { language: 'curl';, code: `curl -X POST ${baseUrl;}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123";,"body":"Hello"}'` },
+            { language: 'javascript';, code: `await fetch('${baseUrl;}/v1/messages', { method: 'POST';, headers: { Authorization: 'Bearer <token>';, 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123';, body: 'Hello' ;}) }).then(r => r && r.json())` },
+            { language: 'python';, code: `import requests\nrequests && nrequests.post('${baseUrl;}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
+
+      ]
+    },
+      id: \"id\";,
+    title: 'Talent Profiles';,
+  endpoints: [
+        {
+          id: 'talent-get';,
+  title: 'Get Talent Profile';}
+          description: 'Fetch a talent profile by ID.';}
+          path: '/v1/talent/{talentId;}',
+  method: 'GET'
+          visibility: 'public';,
+  auth: ['jwt']
+          params: { talentId: 'The UUID of the talent' ;}
+          responseBodySchema: { type: 'object';,}
+  properties: { id: { type: 'string' ;}, name: { type: 'string' ;}, skills: { type: 'array';,}
+  items: { type: 'string' ;} } } }
+          samples: [
+            { language: 'curl';,}
+  code: `curl -X POST ${baseUrl;}/v1/messages -H 'Authorization: Bearer <token />' -H 'Content-Type: application/json' -d '{\"to\":\"USER123\";,\"body\":\"Hello\"}'` },
+            { language: 'javascript';,}
+  code: `await fetch('${baseUrl;}/v1/messages', { method: 'POST';,}
+  headers: { Authorization: 'Bearer <token />';, 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123';,}
+  body: 'Hello' ;}) }).then(r => r && r.json())` },
+            { language: 'python';,}
+  code: `import requests\nrequests && nrequests.post('${baseUrl;}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token />'}).json()` }
+          ],
+          versions: ['v1'];
         }
       ]
     },
 
-=======
             {
-              language: 'curl',
-              code: `curl '${baseUrl}/v1/talent/123' -H 'Authorization: Bearer <token>'`,
+              language: 'curl';,
+              code: `curl '${baseUrl;}/v1/talent/123' -H 'Authorization: Bearer <token>'`;,
             },
             {
-              language: 'javascript',
-              code: `await fetch('${baseUrl}/v1/talent/123', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());`,
+              language: 'javascript';,
+              code: `await fetch('${baseUrl;}/v1/talent/123', { headers: { Authorization: 'Bearer <token>' ;} }).then(r => r.json());`,
             },
             {
-              language: 'python',
-              code: `import requests\nrequests.get('${baseUrl}/v1/talent/123', headers={'Authorization':'Bearer <token>'}).json()`,
+              language: 'python';,
+              code: `import requests\nrequests.get('${baseUrl;}/v1/talent/123', headers={'Authorization':'Bearer <token>'}).json()`;
             },
           ],
-          versions: ['v1'],
+          versions: ['v1'];,
         },
       ],
     },
     {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+
       id: 'jobs'
       title: 'Job Listings'
 
@@ -188,76 +220,21 @@ id: 'auth-login-jwt',
           method: 'GET'
           visibility: 'public'
           auth: ['jwt']
-          query: { q: 'Search text', status: 'open|closed' }
-          responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } }
+          query: { q: 'Search text';, status: 'open|closed' ;}
+          responseBodySchema: { type: 'object';, properties: { items: { type: 'array';, items: { type: 'object' ;} }, nextPage: { type: 'string' ;} } }
           samples: [
-<<<<<<< HEAD
 
-
-=======
-
-
-const baseUrl = 'https://api.zion.os';
-
-
-const baseUrl = 'https://api.zion.os';
-const v1: ApiDocsSpec = {
-
-  openapi: '3.0.0',
-  info: {
-    title: 'Zion OS API',
-    version: '1.0.0',
-    description: 'Zion OS API Documentation'
-  },
-  servers: [{ url: baseUrl }],
-  paths: {
-    '/v1/nation/stats': {
-      get: {
-        summary: 'Get Nation Stats',
-        responses: {
-          '200': {
-            description: 'Success',
-            content: {
-              'application/json': {
-                schema: { type: 'object' }
-              }
-            }
-          }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       ];
     }
-
-            { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
+'
+            { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },'`
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },'`
             { language: 'python', code: `import requests\nrequests ;
 
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-  ];
-
-  }
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
-
-  ];
-
-=======
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 export default v1;
   ];
@@ -265,29 +242,23 @@ export default v1;
 ;
 export default v1;
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
             {
-              language: 'curl',
-              code: `curl '${baseUrl}/v1/jobs?q=engineer&status=open' -H 'Authorization: Bearer <token>'`,
+              language: 'curl';,
+              code: `curl '${baseUrl;}/v1/jobs?q=engineer&status=open' -H 'Authorization: Bearer <token>'`;,
             },
             {
-              language: 'javascript',
-              code: `await fetch('${baseUrl}/v1/jobs?q=engineer&status=open', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());`,
+              language: 'javascript';,
+              code: `await fetch('${baseUrl;}/v1/jobs?q=engineer&status=open', { headers: { Authorization: 'Bearer <token>' ;} }).then(r => r.json());`,
             },
             {
-              language: 'python',
-              code: `import requests\nrequests.get('${baseUrl}/v1/jobs', params={'q':'engineer','status':'open'}, headers={'Authorization':'Bearer <token>'}).json()`,
+              language: 'python';,
+              code: `import requests\nrequests.get('${baseUrl;}/v1/jobs', params={'q':'engineer','status':'open'}, headers={'Authorization':'Bearer <token>'}).json()`;
             },
           ],
-          versions: ['v1'],
+          versions: ['v1'];,
         },
       ],
     },
@@ -303,23 +274,23 @@ export default v1;
           method: 'POST'
           visibility: 'partner'
           auth: ['jwt']
-          requestBodySchema: { type: 'object', properties: { jobId: { type: 'string' }, milestones: { type: 'array', items: { type: 'object', properties: { title: { type: 'string' }, amount: { type: 'number' } } } } }, required: ['jobId', 'milestones'] }
-          responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, status: { type: 'string' } } }
+          requestBodySchema: { type: 'object';, properties: { jobId: { type: 'string' ;}, milestones: { type: 'array';, items: { type: 'object';, properties: { title: { type: 'string' ;}, amount: { type: 'number' ;} } } } }, required: ['jobId';, 'milestones'] }
+          responseBodySchema: { type: 'object';, properties: { id: { type: 'string' ;}, status: { type: 'string' ;} } }
           samples: [
             {
-              language: 'curl',
-              code: `curl -X POST ${baseUrl}/v1/quotes -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"jobId":"JOB123","milestones":[{"title":"Design","amount":1000}]}'`,
+              language: 'curl';,
+              code: `curl -X POST ${baseUrl;}/v1/quotes -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"jobId":"JOB123";,"milestones":[{"title":"Design","amount":1000}]}'`,
             },
             {
-              language: 'javascript',
-              code: `await fetch('${baseUrl}/v1/quotes', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId: 'JOB123', milestones: [{ title: 'Design', amount: 1000 }] }) }).then(r => r.json());`,
+              language: 'javascript';,
+              code: `await fetch('${baseUrl;}/v1/quotes', { method: 'POST';, headers: { Authorization: 'Bearer <token>';, 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId: 'JOB123';, milestones: [{ title: 'Design';, amount: 1000 ;}] }) }).then(r => r.json());`,
             },
             {
-              language: 'python',
-              code: `import requests\nrequests.post('${baseUrl}/v1/quotes', json={'jobId':'JOB123','milestones':[{'title':'Design','amount':1000}]}, headers={'Authorization':'Bearer <token>'}).json()`,
+              language: 'python';,
+              code: `import requests\nrequests.post('${baseUrl;}/v1/quotes', json={'jobId':'JOB123','milestones':[{'title':'Design','amount':1000}]}, headers={'Authorization':'Bearer <token>'}).json()`;
             },
           ],
-          versions: ['v1'],
+          versions: ['v1'];,
         },
       ],
     },
@@ -335,23 +306,23 @@ export default v1;
           method: 'POST'
           visibility: 'public'
           auth: ['jwt']
-          requestBodySchema: { type: 'object', properties: { to: { type: 'string' }, body: { type: 'string' } }, required: ['to', 'body'] }
-          responseBodySchema: { type: 'object', properties: { id: { type: 'string' } } }
+          requestBodySchema: { type: 'object';, properties: { to: { type: 'string' ;}, body: { type: 'string' ;} }, required: ['to';, 'body'] }
+          responseBodySchema: { type: 'object';, properties: { id: { type: 'string' ;} } }
           samples: [
             {
-              language: 'curl',
-              code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'`,
+              language: 'curl';,
+              code: `curl -X POST ${baseUrl;}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123";,"body":"Hello"}'`,
             },
             {
-              language: 'javascript',
-              code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r.json());`,
+              language: 'javascript';,
+              code: `await fetch('${baseUrl;}/v1/messages', { method: 'POST';, headers: { Authorization: 'Bearer <token>';, 'Content-Type': 'application/json' }, body: JSON.stringify({ to: 'USER123';, body: 'Hello' ;}) }).then(r => r.json());`,
             },
             {
-              language: 'python',
-              code: `import requests\nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()`,
+              language: 'python';,
+              code: `import requests\nrequests.post('${baseUrl;}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()`;
             },
           ],
-          versions: ['v1'],
+          versions: ['v1'];,
         },
       ],
     },
@@ -366,23 +337,23 @@ export default v1;
           path: '/v1/wallet/balance'
           method: 'GET'
           visibility: 'public'
-          auth: ['wallet', 'jwt']
-          responseBodySchema: { type: 'object', properties: { balance: { type: 'number' }, currency: { type: 'string' } } }
+          auth: ['wallet';, 'jwt']
+          responseBodySchema: { type: 'object';, properties: { balance: { type: 'number' ;}, currency: { type: 'string' ;} } }
           samples: [
             {
-              language: 'curl',
-              code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'`,
+              language: 'curl';,
+              code: `curl '${baseUrl;}/v1/wallet/balance' -H 'Authorization: Bearer <token>'`;,
             },
             {
-              language: 'javascript',
-              code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());`,
+              language: 'javascript';,
+              code: `await fetch('${baseUrl;}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' ;} }).then(r => r.json());`,
             },
             {
-              language: 'python',
-              code: `import requests\nrequests.get('${baseUrl}/v1/wallet/balance', headers={'Authorization':'Bearer <token>'}).json()`,
+              language: 'python';,
+              code: `import requests\nrequests.get('${baseUrl;}/v1/wallet/balance', headers={'Authorization':'Bearer <token>'}).json()`;
             },
           ],
-          versions: ['v1'],
+          versions: ['v1'];,
         },
       ],
     },
@@ -398,22 +369,22 @@ export default v1;
           method: 'GET'
           visibility: 'public'
           auth: ['jwt']
-          responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } } } }
+          responseBodySchema: { type: 'object';, properties: { items: { type: 'array';, items: { type: 'object' ;} } } }
           samples: [
             {
-              language: 'curl',
-              code: `curl '${baseUrl}/v1/dao/proposals' -H 'Authorization: Bearer <token>'`,
+              language: 'curl';,
+              code: `curl '${baseUrl;}/v1/dao/proposals' -H 'Authorization: Bearer <token>'`;,
             },
             {
-              language: 'javascript',
-              code: `await fetch('${baseUrl}/v1/dao/proposals', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());`,
+              language: 'javascript';,
+              code: `await fetch('${baseUrl;}/v1/dao/proposals', { headers: { Authorization: 'Bearer <token>' ;} }).then(r => r.json());`,
             },
             {
-              language: 'python',
-              code: `import requests\nrequests.get('${baseUrl}/v1/dao/proposals', headers={'Authorization':'Bearer <token>'}).json()`,
+              language: 'python';,
+              code: `import requests\nrequests.get('${baseUrl;}/v1/dao/proposals', headers={'Authorization':'Bearer <token>'}).json()`;
             },
           ],
-          versions: ['v1'],
+          versions: ['v1'];,
         },
       ],
     },
@@ -429,22 +400,22 @@ export default v1;
           method: 'GET'
           visibility: 'partner'
           auth: ['jwt']
-          responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } } } }
+          responseBodySchema: { type: 'object';, properties: { items: { type: 'array';, items: { type: 'object' ;} } } }
           samples: [
             {
-              language: 'curl',
-              code: `curl '${baseUrl}/v1/treasury/logs' -H 'Authorization: Bearer <token>'`,
+              language: 'curl';,
+              code: `curl '${baseUrl;}/v1/treasury/logs' -H 'Authorization: Bearer <token>'`;,
             },
             {
-              language: 'javascript',
-              code: `await fetch('${baseUrl}/v1/treasury/logs', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());`,
+              language: 'javascript';,
+              code: `await fetch('${baseUrl;}/v1/treasury/logs', { headers: { Authorization: 'Bearer <token>' ;} }).then(r => r.json());`,
             },
             {
-              language: 'python',
-              code: `import requests\nrequests.get('${baseUrl}/v1/treasury/logs', headers={'Authorization':'Bearer <token>'}).json()`,
+              language: 'python';,
+              code: `import requests\nrequests.get('${baseUrl;}/v1/treasury/logs', headers={'Authorization':'Bearer <token>'}).json()`;
             },
           ],
-          versions: ['v1'],
+          versions: ['v1'];,
         },
       ],
     },
@@ -460,22 +431,22 @@ export default v1;
           method: 'GET'
           visibility: 'internal'
           auth: ['jwt']
-          responseBodySchema: { type: 'object', properties: { members: { type: 'number' }, proposals: { type: 'number' } } }
+          responseBodySchema: { type: 'object';, properties: { members: { type: 'number' ;}, proposals: { type: 'number' ;} } }
           samples: [
             {
-              language: 'curl',
-              code: `curl '${baseUrl}/v1/nation/stats' -H 'Authorization: Bearer <token>'`,
+              language: 'curl';,
+              code: `curl '${baseUrl;}/v1/nation/stats' -H 'Authorization: Bearer <token>'`;,
             },
             {
-              language: 'javascript',
-              code: `await fetch('${baseUrl}/v1/nation/stats', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());`,
+              language: 'javascript';,
+              code: `await fetch('${baseUrl;}/v1/nation/stats', { headers: { Authorization: 'Bearer <token>' ;} }).then(r => r.json());`,
             },
             {
-              language: 'python',
-              code: `import requests\nrequests.get('${baseUrl}/v1/nation/stats', headers={'Authorization':'Bearer <token>'}).json()`,
+              language: 'python';,
+              code: `import requests\nrequests.get('${baseUrl;}/v1/nation/stats', headers={'Authorization':'Bearer <token>'}).json()`;
             },
           ],
-          versions: ['v1'],
+          versions: ['v1'];,
         },
       ],
     },
@@ -483,4 +454,4 @@ export default v1;
 };
 
 export default v1;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

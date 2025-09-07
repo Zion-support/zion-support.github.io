@@ -5,11 +5,9 @@ interface DigitaltransformationProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface DigitaltransformationProps {
-  // Add props here as needed
-}
+export default function Digitaltransformation({ }: DigitaltransformationProps) {
+
 export default function Digitaltransformation({ }: DigitaltransformationProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Digitaltransformation({ }: DigitaltransformationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Digitaltransformation({ }: DigitaltransformationProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,8 @@ export default function Digitaltransformation(): any ({ }: Digitaltransformation
       <h1>Digitaltransformation</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+}

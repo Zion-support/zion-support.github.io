@@ -5,11 +5,9 @@ interface CloudfinopsProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface CloudfinopsProps {
-  // Add props here as needed
-}
+export default function Cloudfinops({ }: CloudfinopsProps) {
+
 export default function Cloudfinops({ }: CloudfinopsProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Cloudfinops({ }: CloudfinopsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Cloudfinops({ }: CloudfinopsProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -60,4 +62,17 @@ export default function Cloudfinops(): any ({ }: CloudfinopsProps) {;
       <h1>Cloudfinops</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

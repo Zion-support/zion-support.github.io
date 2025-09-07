@@ -5,11 +5,9 @@ interface PlatformengineeringProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface PlatformengineeringProps {
-  // Add props here as needed
-}
+export default function Platformengineering({ }: PlatformengineeringProps) {
+
 export default function Platformengineering({ }: PlatformengineeringProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Platformengineering({ }: PlatformengineeringProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Platformengineering({ }: PlatformengineeringProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -60,4 +62,17 @@ export default function Platformengineering(): any ({ }: PlatformengineeringProp
       <h1>Platformengineering</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

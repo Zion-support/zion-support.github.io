@@ -1,36 +1,37 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-#!/usr/bin/env node;
-'use strict';
 
-const { execSync, spawnSync } = require('"node": child_process');
+  async runAllScripts() {
+    this.log('Starting automation runner...');
+    
+    const scripts = [
+      'performance-optimizer.cjs',
+      'security-enhancer.cjs',
+      'app-improvement-automation.cjs'
+    ];
+    
+    for (const script of scripts) {
+      await this.runScript(script);
+    }
+    
+    await this.generateReport();
+    this.log('Automation runner completed!');
+  }
 
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-function run(command, options = {}) {}
-	console.log(`\n$ ${command}`);
-	const result = spawnSync(command, {})
-		"shell": true,
-		"stdio": 'inherit',
-		...options}
-});
-	return result.status === 0};
-function main() {}
-	let ok = true;
+  async generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      results: this.results,
+      summary: {
+        total_scripts: this.results.length,
+        successful: this.results.filter(r => r.status === 'success').length,
+        failed: this.results.filter(r => r.status === 'failed').length,
+        total_duration: this.results.reduce((sum, r) => sum + r.duration, 0)
+      }
+    };
 
-	// Ensure deps are installed;
-	ok = run('corepack enable >/dev/null 2>&1 || true') && ok;
-	ok = run('yarn install --frozen-lockfile --check-files --non-interactive || yarn install --non-interactive') && ok;
-
-	// Lint, type-check, tests;
-	ok = run('npm run lint') && ok;
-	ok = run('npm run type-check') && ok;
-	ok = run('npm run test') && ok;
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    this.log(`Report saved to ${this.reportFile}`);
+  }
+}
 
 	// Security;
 	ok = run('npm run "security": audit') && ok;
@@ -43,17 +44,5 @@ function main() {}
 
 	if (!ok) {}
 		console.error('\nAutomation runner encountered failures. See logs above.');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-		process.exitCode = 1} else {}
-		console.log('\nAutomation runner completed successfully.')};
-};
-main();
 
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+module.exports = AutomationRunner;

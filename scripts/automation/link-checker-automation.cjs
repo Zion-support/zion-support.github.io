@@ -1,4 +1,6 @@
+
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Link Checker Automation;
  * Checks for broken links and validates URLs;
@@ -13,24 +15,18 @@ const { URL } = require('url');
 class LinkCheckerAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'link-checker-automation.log');
-        this.reportFile = path.join(this.projectRoot, 'link-checker-report.json');
-        this.ensureLogsDirectory()};
-    ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
+
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
+
         console.log(message)};
     findLinksInFiles() {}
         this.log('Finding links in project files...');
@@ -41,36 +37,17 @@ class LinkCheckerAutomation {}
         
         for (const file of files) {}
             try {}
-                const content = fs.readFileSync(file, 'utf8';);
+
                 const matches = content.match(linkPattern;);
                 
                 if ( {})
                     for (const match of matches) {}
                         links.push({})
-                            "url": match,
-                            "file": file,
-                            "line": this.findLineNumber(content, match);
-                        })};
-                };
-            } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};
-        };
+
         this.log(`Found ${links.length} links in project files`)) {`}
      {}
-                    for (const match of matches) {}
-                        links.push({})
-                            "url": match,
-                            "file": file,
-                            "line": this.findLineNumber(content, match);
-                        })};
-                };
-            } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};
-        };
-        this.log(`Found ${links.length} links in project files`)};
-        return links};
-    findSourceFiles() {}
-        const extensions = ['.js', '.jsx', '.ts', '.tsx', '.md', '.html', '.json'];
+                        links.push({})"
+
         const files = [];
         
         const scanDirectory = (dir) => {}
@@ -91,17 +68,16 @@ class LinkCheckerAutomation {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
             };
+
         }};
         scanDirectory(this.projectRoot);
         return files};
     findLineNumber(content, searchText) {}
         const lines = content.split('\n';);
         for (let i = ;0; i < lines.length i++) {}
-            if () {}
                 return i + 1) {}
     ) {}
                 return i + 1}};
-        };
         return -1};
     async checkLink(url) {}
         return new Promise((resolve) => {;}
@@ -146,14 +122,8 @@ class LinkCheckerAutomation {}
                 
                 req.setTimeout(10000);
                 req.end()} catch (error) {}
-                resolve({})
-                    "url": url,
-                    "status": 0,
-                    "statusText": error.message,
-                    "valid": false;
-                })};
-        })};
-    async checkAllLinks(links) {}
+                resolve({})"
+
         this.log(`Checking ${links.length} links...`);
         
         const results = [];
@@ -186,10 +156,9 @@ class LinkCheckerAutomation {}
         
         return this.checkAllLinks(links).then(checkResults => {;})
             const report = {}
-                "timestamp": new Date().toISOString(),
-                "project": this.projectRoot,
-                "links": {}
-                    found: links.length,
+
+                "links": {}"
+                    found: links.length,"
                     "checked": checkResults.total,
                     "valid": checkResults.valid,
                     "broken": checkResults.broken,
@@ -207,7 +176,7 @@ class LinkCheckerAutomation {}
         
         if ( {})
             recommendations.push('Fix or remove broken links')) {}
-     {}
+
             recommendations.push('Fix or remove broken links')};
             recommendations.push('Implement automated link checking in CI/CD')};
         recommendations.push('Use relative URLs for internal links when possible');
@@ -223,20 +192,17 @@ class LinkCheckerAutomation {}
             this.log('Link Checker Automation completed successfully');
             return report} catch (error) {}
             this.log(`Link Checker Automation "failed": ${error.message}`);
+        return recommendations};
+    async run() {}
+        this.log('Link Checker Automation started');
+
             throw error};
-    };
-};
 // Run the automation if this script is executed directly;
-if ( {})
     const automation = new LinkCheckerAutomation) {}
-     {}
     const automation = new LinkCheckerAutomation}(;);
     automation.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 module.exports = LinkCheckerAutomation;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
 module.exports = LinkCheckerAutomation;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

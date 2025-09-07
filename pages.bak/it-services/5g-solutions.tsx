@@ -5,11 +5,9 @@ interface 5gsolutionsProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface 5gsolutionsProps {
-  // Add props here as needed
-}
+export default function 5gsolutions({ }: 5gsolutionsProps) {
+
 export default function 5gsolutions({ }: 5gsolutionsProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function 5gsolutions({ }: 5gsolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function 5gsolutions({ }: 5gsolutionsProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,8 @@ export default function 5gsolutions(): any ({ }: 5gsolutionsProps) {;
       <h1>5gsolutions</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+}

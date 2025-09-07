@@ -1,15 +1,8 @@
-import { useState, useEffect } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
 }
+export function usePerformanceMonitor() {
 
-export function usePerformanceMonitor(): PerformanceMetrics | null {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-
+  const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
     if (typeof window === 'undefined') return;
     // Check if Performance Observer is supported
@@ -19,6 +12,11 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
   }
     setIsSupported(true);
     const observer = new PerformanceObserver((list) => {
+
+},
+,
+export default usePerformanceMonitor;
+
     const updateMetrics = () => {
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (window.performance as any).memory;
@@ -129,4 +127,5 @@ if ( {) {
   }, []);
 
   return metrics;
+
 }

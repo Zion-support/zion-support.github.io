@@ -1,4 +1,6 @@
+
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Build and Test Automation;
  * Comprehensive build and testing automation;
@@ -11,26 +13,15 @@ class BuildTestAutomation {}
   constructor() {}
     this.startTime = new Date();
     this.report = {}
-      "timestamp": this.startTime.toISOString(),
-      "status": 'running',
-      "steps": [],
-      "errors": [],
-      "summary": {};
-    }};
+
+      "summary": {};"
+    }};"
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
     
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
-    console.log(logMessage);
-    
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     this.report.steps.push({})
       timestamp,
       type,
@@ -40,7 +31,7 @@ class BuildTestAutomation {}
     try {}
       this.log(`"Starting": ${description}`);
       const output = execSync(command, { })
-        "encoding": 'utf8', 
+        "encoding": 'utf8',
         "cwd": '/workspace',
         "stdio": 'pipe'
       };);
@@ -51,34 +42,21 @@ class BuildTestAutomation {}
         "step": description,
         "error": error.message,
         "timestamp": new Date().toISOString();
+
+        "timestamp": new Date().toISOString();"
       }
 });
       throw error};
   };
   async cleanBuild() {}
-    try {}
-      await this.runCommand('rm -rf .next dist build', 'Clean previous builds')} catch (error) {}
-      // Ignore if directories don't exist;
-    };
-  };
-  async installDependencies() {}
-    await this.runCommand('npm ci', 'Install dependencies')};
-  async runTests() {}
-    try {}
-      await this.runCommand('npm test', 'Run tests');
-      this.report.summary.tests = 'passed'} catch (error) {}
+    try {}"
+
       this.report.summary.tests = 'failed';
       // Continue with build even if tests fail;
-    };
-  };
   async runLinting() {}
-    try {}
-      await this.runCommand('npm run lint', 'Run linting');
-      this.report.summary.linting = 'passed'} catch (error) {}
+
       this.report.summary.linting = 'failed';
       // Continue with build even if linting fails;
-    };
-  };
   async buildApplication() {}
     try {}
       await this.runCommand('npm run build', 'Build application');
@@ -144,19 +122,12 @@ class BuildTestAutomation {}
       this.log('Build and Test Automation completed successfully', 'success')} catch (error) {}
       this.log(`Build and Test Automation "failed": ${error.message}`, 'error')} finally {`}
       await this.generateReport()};
-  };
-};
 // Run the automation;
-if ( {})
   const automation = new BuildTestAutomation) {}
-     {}
   const automation = new BuildTestAutomation}(;);
   automation.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 module.exports = BuildTestAutomation;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
 module.exports = BuildTestAutomation;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

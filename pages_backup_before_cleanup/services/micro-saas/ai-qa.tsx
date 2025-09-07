@@ -3,6 +3,7 @@ module.exports = default function AIQACopilot() {; return (; <Article; title="AI
 import React from 'react';
 interface AiqaProps {
   // Add props here as needed
+
 export default function Aiqa({ }: AiqaProps) {
   return (
     <div>

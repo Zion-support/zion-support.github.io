@@ -1,3 +1,4 @@
+
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -30,6 +31,7 @@ const path = require('path')
           type: 'missing_semicolon'
           message: 'Missing semicolon'
           severity: 'error'
+
     const lines = content.split('\n')
       case 'console.log'
         lines[lineIndex] = lines[lineIndex].replace(/console\.log\([^)]*\);?/g, ''
@@ -47,11 +49,6 @@ const path = require('path')
       this.log(`\n⚠  ${this.stats.issuesFound} issues remain (some may require manual attention)`, 'WARNING'
     this.log(' Starting Code Quality Check', 'INFO')
         this.log('� No code quality issues found!', 'SUCCESS')
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

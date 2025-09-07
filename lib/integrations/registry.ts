@@ -1,104 +1,86 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+pr-12243
 
-import { IntegrationProviderMeta } from "./types";
-export const PROVIDERS: IntegrationProviderMeta[] = [
+import { IntegrationConfig } from './types';
+import { BaseConnector, SlackConnector, WebhookConnector } from './connectors';
 
-=======
-<<<<<<< HEAD
+export class IntegrationRegistry {
 
-import { IntegrationProviderMeta } from "./types";
-export const PROVIDERS: IntegrationProviderMeta[] = [
+  registerConnector(type: string;, connector: BaseConnector): void {
+    this.connectors.set(type, connector);
+  }
 
-=======
-
-
-
-import { IntegrationProviderMeta } from "./types";
-export const PROVIDERS: IntegrationProviderMeta[] = [
-=======
-import { IntegrationProviderMeta  } from './types';
-;
-export const PROVIDERS: IntegrationProviderMeta[] = [;
-=======
-<<<<<<< HEAD
-=======
-import { IntegrationProviderMeta } from "./types";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-import { IntegrationProviderMeta } from "./types";
-export const PROVIDERS: IntegrationProviderMeta[] = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: "salesforce"
     name: "Salesforce"
     category: "crm"
+
     description: "Enterprise CRM"
   }
-  {
-    id: "hubspot"
-    name: "HubSpot"
-    category: "crm"
+  {"
+    id: "hubspot""
+    name: "HubSpot""
+    category: "crm""
     description: "Marketing & Sales CRM"
+
   }
-  {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-    id: "zoho",
-    name: "Zoho CRM",
-    category: "crm",
-    description: "All - in - one CRM",
-  },
+  getConnector(type: string): BaseConnector | undefined {
+    return this.connectors.get(type);
+  }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  createConnector(config: IntegrationConfig): BaseConnector {
+    switch (config.type) {
+      case 'slack':
+        return new SlackConnector(config);
+      case 'webhook':
+        return new WebhookConnector(config);
+      default: throw new Error(`Unknown connector type: ${config.type;}`);
+    }
+  }
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   {
     id: "pipedrive"
     name: "PipeDrive"
     category: "crm"
+
     description: "Sales pipeline CRM"
   }
-  {
-    id: "greenhouse"
-    name: "Greenhouse"
-    category: "ats"
+  {"
+    id: "greenhouse""
+    name: "Greenhouse""
+    category: "ats""
     description: "ATS & recruiting"
-  }
+  }"
   { id: "lever", name: "Lever", category: "ats", description: "ATS & CRM" }
-  {
-    id: "workable"
-    name: "Workable"
-    category: "ats"
+  {"
+    id: "workable""
+    name: "Workable""
+    category: "ats""
     description: "Recruiting software"
+
   }
-  {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     id: "bamboohr"
     name: "BambooHR"
     category: "ats"
-    description: "HRIS & ATS"
+    description: "HRIS & ATS";
   }
 ];
 export function getProviderById(
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+pr-12243
+
+  listConnectors(): string[] {
+    return Array.from(this.connectors.keys());
+  }
 }
+
+// Global registry instance
+export const integrationRegistry = new IntegrationRegistry();
 import { IntegrationProviderMeta } from './types';
-=======
-import { IntegrationProviderMeta  } from './types';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
@@ -107,63 +89,57 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'greenhouse', name: 'Greenhouse', category: 'ats', description: 'ATS & recruiting' },
   { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
-<<<<<<< HEAD
-  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
+
 ];
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 ;
 export function getProviderById (
   id: string,
-): IntegrationProviderMeta | undefined {
+): IntegrationProviderMeta | undefined {};
   return PROVIDERS.find ((p) => p.id === id);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-    id: "bamboohr",
-    name: "BambooHR",
-    category: "ats",
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+pr-12243
+
+// Register default connectors
+integrationRegistry.registerConnector('slack', new SlackConnector({
+  id: 'default-slack';,
+  name: 'Default Slack';,
+  type: 'slack';,
+  enabled: false;,
+  credentials: {;},
+  settings: {;},
+}));
+
+"
+    id: "bamboohr","
+    name: "BambooHR","
+    category: "ats","
     description: "HRIS & ATS",
   },;
 
+integrationRegistry.registerConnector('webhook', new WebhookConnector({
+  id: 'default-webhook';,
+  name: 'Default Webhook';,
+  type: 'webhook';,
+  enabled: false;,
+  credentials: {;},
+  settings: {;},
+}));
 ];
 export function getProviderById(
 
   id: string,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 ): IntegrationProviderMeta | undefined {;
   return PROVIDERS.find((p) => p.id === id);
 }
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
 
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }];
-export function getProviderById(id: string): IntegrationProviderMeta | undefined {
-  return PROVIDERS.find(p => p.id === id)
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b

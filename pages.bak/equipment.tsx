@@ -5,11 +5,9 @@ interface EquipmentProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface EquipmentProps {
-  // Add props here as needed
-}
+export default function Equipment({ }: EquipmentProps) {
+
 export default function Equipment({ }: EquipmentProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Equipment({ }: EquipmentProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Equipment({ }: EquipmentProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,17 @@ export default function Equipment(): any ({ }: EquipmentProps) {;
       <h1>Equipment</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

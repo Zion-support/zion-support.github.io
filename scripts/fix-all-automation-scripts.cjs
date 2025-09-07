@@ -1,4 +1,32 @@
+#!/usr/bin/env node
+/**
+ * Fix All Automation Scripts
+ * Fixes syntax errors and merge conflicts in all automation scripts
+ */
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+
+class ScriptFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.scriptsDir = path.join(this.projectRoot, "scripts");
+    this.fixedCount = 0;
+    this.errorCount = 0;
+  }
+
+  log(message, type = "info") {
+    const timestamp = new Date().toISOString();
+    const prefix = type === "error" ? "❌" : type === "success" ? "✅" : "ℹ️";
+    console.log(`[${timestamp}] ${prefix} ${message}`);
+  }
+
+  fixMergeConflicts(content) {
+    // Remove merge conflict markers
+    return content
+      .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?      .replace(/<<<<<<< HEAD[\s\S]*?      .replace(/=======[\s\S]*?  }
 #!/usr/bin/env node;
+
 const fs = require('fs').promises;
 const path = require('path');
 const { exec } = require('child_process');
@@ -8,9 +36,7 @@ const execAsync = util.promisify(exec);
 
 class AutomationScriptFixer {}
   constructor() {}
-    this.logFile = path.join(__dirname, '../logs/script-fixer.log');
-    this.reportFile = path.join(__dirname, '../reports/script-fixes.json');
-    this.projectRoot = path.join(__dirname, '..');
+
     this.fixedScripts = [];
     this.errors = []};
   async log(message, level = 'INFO') {}
@@ -18,6 +44,7 @@ class AutomationScriptFixer {}
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     try {}
       await fs.appendFile(this.logFile, logEntry);
+
       console.log(`[${level}] ${message}`)} catch (error) {`}
       console.error(`Failed to write to log "file": ${error.message}`)};
   };
@@ -43,19 +70,11 @@ class AutomationScriptFixer {}
     const scriptFiles = [];
     
     for (const dir of scriptDirs) {}
-      try {}
         const files = await fs.readdir(dir);
         for (const file of files) {}
           if (file.endsWith('.cjs') || file.endsWith('.js')) {}
             scriptFiles.push(path.join(dir, file))};
-        };
-      } catch (error) {}
-        await this.log(`Error reading directory ${dir}: ${error.message}`, 'WARN')};
-    };
-    return scriptFiles};
-  async fixScriptFile(filePath) {}
-    try {}
-      const content = await fs.readFile(filePath, 'utf8');
+
       let fixedContent = content;
 
       // Fix common issues;
@@ -104,28 +123,14 @@ class AutomationScriptFixer {}
         if (fix.pattern.test(fixedContent)) {}
           fixedContent = fixedContent.replace(fix.pattern, fix.replacement);
           hasChanges = true};
-      };
-      if (hasChanges) {}
-        await fs.writeFile(filePath, fixedContent, 'utf8');
-        await this.log(`Fixed "script": ${path.basename(filePath)}`, 'SUCCESS');
-        this.fixedScripts.push({})
-          "file": path.basename(filePath),
-          "path": filePath,
-          "timestamp": new Date().toISOString();
+      if (hasChanges) {}"
+
+          "timestamp": new Date().toISOString();"
         }
 });
         return true};
-      return false} catch (error) {}
-      await this.log(`Error fixing script ${filePath}: ${error.message}`, 'ERROR');
-      this.errors.push({})
-        "file": path.basename(filePath),
-        "path": filePath,
-        "error": error.message,
-        "timestamp": new Date().toISOString();
-      }
-});
+
       return false};
-  };
   async testScript(filePath) {}
     try {}
       // Try to run the script with --help or similar to test syntax;
@@ -163,10 +168,13 @@ class AutomationScriptFixer {}
       "timestamp": new Date().toISOString(),
       "summary": {}
         totalScripts: scriptFiles.length,
+
+      "summary": {}"
+        totalScripts: scriptFiles.length,"
         "fixedScripts": fixedCount,
         "testedScripts": testedCount,
-        "errors": this.errors.length;
-      },
+        "errors": this.errors.length;"
+      },"
       "fixedScripts": this.fixedScripts,
       "errors": this.errors;
     };
@@ -176,16 +184,10 @@ class AutomationScriptFixer {}
     await this.log(`Report saved "to": ${this.reportFile}`, 'INFO');
 
     return report};
-};
 // Run the fixer;
 if (require.main === module) {}
   const fixer = new AutomationScriptFixer();
   fixer.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 module.exports = AutomationScriptFixer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = AutomationScriptFixer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

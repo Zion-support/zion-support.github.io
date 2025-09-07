@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     cpus: os.cpus ().length} processes: [],
     alerts: []}
 ; // Get PM2 process info; try { const pm2List = exec_sync ('pm2 list --json', { encoding: 'utf8' }); const processes = JSON.parse (pm2List); report.processes = processes.map (proc = > ({ name: proc.name, status: proc.pm2_env?.status, memory: proc.monit?.memory || 0,
@@ -9,7 +8,6 @@
 ; async start () { this.log ('Health monitor service started');
 ; // Run health checks immediately; await this.checkSystemHealth (); await this.checkApplicationHealth (); await this.generateHealthReport ();
 ; // Set up interval for periodic health checks; set_interval (async () = > { await this.checkSystemHealth (); await this.checkApplicationHealth ()}, 60 * 1000), // Every minute; // Generate health report every hour; set_interval (async () = > { await this.generateHealthReport ()}, 60 * 60 * 1000), // Every hour}}
-=======
 };
 ; if (this.monitorProcesses) {; await this.checkProcessHealth()};
 ; if (this.monitorSystem) {; await this.checkSystemStatus()};
@@ -47,4 +45,4 @@
 // Start the service;
 const healthMonitor = new HealthMonitor();
 healthMonitor.start().catch(console.error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

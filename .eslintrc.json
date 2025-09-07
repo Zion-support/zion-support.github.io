@@ -1,10 +1,10 @@
 {
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": [
-    "next/core-web-vitals",
     "@typescript-eslint/recommended"
   ],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
@@ -15,6 +15,8 @@ origin/automation-improvements-final
     "browser": true,
     "node": true,
     "es6": true,
+    "jest": true,
+
     "jest": true
     "es6": true,
     "jest": true
@@ -29,6 +31,7 @@ origin/automation-improvements-final
     "KeyboardEvent": "readonly",
     "HTMLImageElement": "readonly",
     "alert": "readonly"
+
     "es6": true,
     "jest": true
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -52,6 +55,8 @@ origin/automation-improvements-final
     "no-console": "warn"
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
+    "no-undef": "error"
+
     "no-undef": "error",
     "react/no-unescaped-entities": "off"
     "react/no-unescaped-entities": "off",
@@ -63,6 +68,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+    "no-console": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "error"
   },
   "ignorePatterns": [
     "node_modules/",
@@ -135,25 +143,11 @@ origin/automation-improvements-final
     "security-reports/",
     "pages.__backup/",
     "pages-disabled/",
+
     "pages.disabled_auto/"
+
     "pages.disabled_auto/",
-    "zion_academy/",
-    "pm2-automation/",
-    "scripts/",
-    "*.report.json",
-    "temp_*/",
-    "test_build/",
-    "tests.disabled/",
-    "pages.disabled/",
-    "src.disabled/",
-    "components.disabled/",
-    "hooks.disabled/",
-    "types.disabled/",
-    "contracts.disabled/",
-    "solutions.disabled/",
-    "zion-os.disabled/",
     "src_backup_temp/",
-    "temp-backup/",
     "tests/",
     "supabase/",
     "*.test.js",

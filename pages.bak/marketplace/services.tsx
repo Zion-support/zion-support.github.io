@@ -5,11 +5,9 @@ interface ServicesProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface ServicesProps {
-  // Add props here as needed
-}
+export default function Services({ }: ServicesProps) {
+
 export default function Services({ }: ServicesProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Services({ }: ServicesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Services({ }: ServicesProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,17 @@ export default function Services(): any ({ }: ServicesProps) {;
       <h1>Services</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

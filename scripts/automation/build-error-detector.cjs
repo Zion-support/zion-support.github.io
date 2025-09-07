@@ -1,29 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
+
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-
-class BuildErrorDetector {
-  constructor() {
-    this.workspacePath = process.cwd();
-    this.logsPath = path.join(this.workspacePath, "logs");
-    this.reportsPath = path.join(this.workspacePath, "automation-reports");
-    this.ensureDirectories();
-    this.buildHistory = new Map();
-  }
-
-  ensureDirectories() {
-    [this.logsPath, this.reportsPath].forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
-  }
 
   log(message, level = "INFO") {
     const timestamp = new Date().toISOString();
@@ -259,13 +238,8 @@ if (require.main === module) {
 }
 
 module.exports = BuildErrorDetector;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/""usr/bin/env""
+
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -305,7 +279,7 @@ const { execSync } = require("child_process")
   "line"
           "severity": "error"
           "timestamp"
-          "timestamp": new Date().toISOString()})} catch (fixError) {this.log(` Error fixing build "error": ${fixError.message}`, "ERROR"`)
+          "timestamp": new Date().toISOString()})} catch (fixError) {this.log(` Error fixing build "error": ${fixError.message}, "ERROR"`)
           "fixed"
           "error"
           "timestamp"
@@ -317,14 +291,14 @@ const { execSync } = require("child_process")
   return await this.fixDependencyError()} else if (errorLine.includes("syntax") || errorLine.includes("parse")
   return await this.fixSyntaxError()} else if (errorLine.includes("type") || errorLine.includes("ts")
   this.log(" Fixing memory error...")
-      execSync("rm -rf dist build .next ""node_modules/.cache""")
+      execSync("rm -rf dist build .next node_modules/.cache")
   "cwd"
         "stdio": "pipe"
       execSync("npm install")
   "cwd"
         "stdio": "pipe"
       this.log(" Memory error fix applied")
-      return true} catch (error) {  this.log(` Failed to fix memory "error": ${error.message  }`, "ERROR"`)
+      return true} catch (error) {  this.log(` Failed to fix memory "error": ${error.message  }, "ERROR"`)
   this.log(" Fixing dependency error...")
       execSync("rm -rf node_modules package-lock.json")
   "cwd"
@@ -341,13 +315,13 @@ const { execSync } = require("child_process")
   "cwd"
         "stdio": "pipe"
       this.log(" Dependency error fix applied")
-      return true} catch (error) {  this.log(` Failed to fix dependency "error": ${error.message  }`, "ERROR"`)
+      return true} catch (error) {  this.log(` Failed to fix dependency "error": ${error.message  }, "ERROR"`)
   this.log(" Fixing syntax error...")
       execSync("npm run "lint": fix")
   "cwd"
         "stdio": "pipe"
       this.log(" Syntax error fix applied")
-      return true} catch (error) {  this.log(` Failed to fix syntax "error": ${error.message  }`, "ERROR"`)
+      return true} catch (error) {  this.log(` Failed to fix syntax "error": ${error.message  }, "ERROR"`)
   this.log(" Fixing type error...")
       execSync("npm run type-check")
   "cwd"
@@ -358,14 +332,14 @@ const { execSync } = require("child_process")
   "cwd"
         "stdio": "pipe"
       this.log(" Type error fix applied")
-      return true} catch (error) {  this.log(` Failed to fix type "error": ${error.message  }`, "ERROR"`)
+      return true} catch (error) {  this.log(` Failed to fix type "error": ${error.message  }, "ERROR"`)
   this.log(" Generating build error detection report...")
   "timestamp"
       "summary"
         "fixedErrors"
         "successRate"
       "fixResults"
-      "recommendations": ["Review any remaining build errors manually"", "Check for memory constraints in build process", "Verify all dependencies are properly installed"", "Monitor build performance and optimize if needed", ""]
+      "recommendations": ["Review any remaining build errors manually, "Check for memory constraints in build process", "Verify all dependencies are properly installed, "Monitor build performance and optimize if needed", ]
       this.reportsPath,build-error-detector-report.json"
 this.log("� Report "generated": ${reportFile}")
   this.log(" Starting Build Error Detector...")
@@ -375,13 +349,9 @@ this.log("� Report "generated": ${reportFile}")
   this.log(" Starting Build Error Detector...")
   this.log("� Build check passed successfully!")
         return { "success": true, "errors": [], "fixed"}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       this.log("� Build Error Detector completed!")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
       this.log("� Build Error Detector completed!")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+      this.log("� Build Error Detector completed!")
+

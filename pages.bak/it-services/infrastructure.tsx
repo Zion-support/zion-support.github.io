@@ -5,11 +5,9 @@ interface InfrastructureProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface InfrastructureProps {
-  // Add props here as needed
-}
+export default function Infrastructure({ }: InfrastructureProps) {
+
 export default function Infrastructure({ }: InfrastructureProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Infrastructure({ }: InfrastructureProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Infrastructure({ }: InfrastructureProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,8 @@ export default function Infrastructure(): any ({ }: InfrastructureProps) {;
       <h1>Infrastructure</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+}

@@ -1,5 +1,8 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   "semi": false,
   "singleQuote": true,
   "tabWidth": 2,
@@ -8,6 +11,7 @@
   "bracketSpacing": true,
   "arrowParens": "avoid",
   "endOfLine": "lf"
+<<<<<<< HEAD
 }
 =======
   "semi": true,
@@ -24,4 +28,7 @@
   "jsxSingleQuote": true,
   "proseWrap": "preserve"
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+}
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

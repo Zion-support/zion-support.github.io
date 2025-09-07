@@ -5,11 +5,9 @@ interface BlogProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface BlogProps {
-  // Add props here as needed
-}
+export default function Blog({ }: BlogProps) {
+
 export default function Blog({ }: BlogProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Blog({ }: BlogProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Blog({ }: BlogProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,17 @@ export default function Blog(): any ({ }: BlogProps) {;
       <h1>Blog</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

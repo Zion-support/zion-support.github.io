@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -196,11 +197,6 @@ this.log(" AI Review Report "generated": ${reportPath}")
   this.log(" AI Code Reviewer starting...")
 this.log(")
   this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

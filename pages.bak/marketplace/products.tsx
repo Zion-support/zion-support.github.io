@@ -5,11 +5,9 @@ interface ProductsProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface ProductsProps {
-  // Add props here as needed
-}
+export default function Products({ }: ProductsProps) {
+
 export default function Products({ }: ProductsProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Products({ }: ProductsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Products({ }: ProductsProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,17 @@ export default function Products(): any ({ }: ProductsProps) {;
       <h1>Products</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -14,76 +15,45 @@ class BuildErrorAutoFixer {}
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
-        fs.mkdirSync(dir, { "recursive": true })};
+        fs.mkdirSync(dir, { "recursive": true })};"
     }
 });
     
     this.fixesApplied = 0;
-    this.buildHistory = []};
+    this.buildHistory = []};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
+
     console.log(`[${timestamp}] [${level}] ${message}`)};
+    console.log(`[${timestamp}] [${level}] ${message})};
   async runBuildCheck() {}
     try {}
-      this.log('Running build check...');
-      execSync('npm run build', { "stdio": 'pipe' }
-});
-      return { "success": true, "errors": [], "count": 0 }} catch (error) {}
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseBuildErrors(output);
-      this.log(`Build check failed with ${errors.length} errors`, 'ERROR');
-      return { "success": false, errors, "count": errors.length }};
+
+      return { "success": false, errors, "count": errors.length }};"
   };
-  parseBuildErrors(output) {}
+  parseBuildErrors(output) {}"
     const errorLines = output.split('\n').filter(line => )
-      line.includes('error') || line.includes('"Error": ') || line.includes('Failed') || line.includes('Build failed');
+
     );
     
     const errors = [];
     let currentError = null;
     
     for (const line of errorLines) {}
-      if (line.includes('error') || line.includes('Error:') || line.includes('Failed')) {}
+
         const match = line.match(/([^:]+):(\d+):(\d+)/);
         if (match) {}
           if (currentError) {}
             errors.push(currentError)};
           currentError = {}
-            "file": match[1].trim(),
-            "line": parseInt(match[2]),
-            "column": parseInt(match[3]),
-            "message": line.split(' - ')[1] || line,
-            "type": 'build'
-          }} else {}
-          // Handle errors without line numbers;
-          if (currentError) {}
-            errors.push(currentError)};
-          currentError = {}
-            "file": 'unknown',
-            "line": 0,
-            "column": 0,
-            "message": line.trim(),
-            "type": 'build'
-          }};
-      } else if (currentError && line.trim()) {}
-        currentError.message += ' ' + line.trim()};
-    };
-    if (currentError) {}
-      errors.push(currentError)};
-    return errors};
-  async fixBuildErrors(errors) {}
-    if (!this.autoFixEnabled) {}
-      this.log('Auto-fix is disabled', 'INFO');
+
       return 0};
     let fixesApplied = 0;
     
     for (const error of errors) {}
-      try {}
         if (await this.fixSingleBuildError(error)) {}
           fixesApplied++};
-      } catch (error) {}
-        this.log(`Failed to fix build "error": ${error.message}`, 'ERROR')};
-    };
+
     return fixesApplied};
   async fixSingleBuildError(error) {}
     const message = error.message.toLowerCase();
@@ -133,7 +103,7 @@ class BuildErrorAutoFixer {}
         const lines = content.split('\n');
         
         // Basic syntax fixes;
-        const fixes = [this.fixMissingSemicolons.bind(this),]
+        const fixes = [this.fixMissingSemicolons.bind(this)]
           this.fixUnclosedBrackets.bind(this),
           this.fixUnclosedQuotes.bind(this),
           this.fixTrailingCommas.bind(this);
@@ -143,7 +113,6 @@ class BuildErrorAutoFixer {}
         let modifiedContent = content;
         
         for (const fix of fixes) {}
-          try {}
             const result = fix(lines, error);
             if (result.modified) {}
               modifiedContent = result.content;
@@ -212,20 +181,16 @@ class BuildErrorAutoFixer {}
   fixMissingSemicolons(lines, error) {}
     const lineIndex = error.line - 1;
     if (lineIndex >= 0 && lineIndex < lines.length) {}
+
       const line = lines[lineIndex];
       if (!line.trim().endsWith(';') && !line.trim().endsWith('{') && !line.trim().endsWith('}')) {}
         lines[lineIndex] = line + ';';
         return {}
-          "modified": true,
+          "modified": true,""
           "content": lines.join('\n'),
-          "description": 'Added missing semicolon'
-        }};
-    };
+          "description": 'Added missing semicolon
     return { "modified": false, "content": lines.join('\n') }};
   fixUnclosedBrackets(lines, error) {}
-    const lineIndex = error.line - 1;
-    if (lineIndex >= 0 && lineIndex < lines.length) {}
-      const line = lines[lineIndex];
       const openBrackets = (line.match(/[\(\[\{]/g) || []).length;}
       const closeBrackets = (line.match(/[\)\]\}]/g) || []).length;
       
@@ -297,9 +262,9 @@ class BuildErrorAutoFixer {}
       const postCheckResult = await this.runBuildCheck();
       
       const report = {}
-        "timestamp": new Date().toISOString(),
-        "initialErrors": checkResult.errors.length,
-        fixesApplied,
+
+        "initialErrors": checkResult.errors.length,"
+        fixesApplied,"
         "remainingErrors": postCheckResult.errors.length,
         "success": postCheckResult.success;
       };
@@ -330,13 +295,8 @@ class BuildErrorAutoFixer {}
 
     this.log(`Build error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
   getStatus() {}
-    return {}
-      "running": true,
-      "buildHistory": this.buildHistory.length,
-      "fixInterval": this.fixInterval,
-      "autoFixEnabled": this.autoFixEnabled;
-    }};
-};
+
+      "autoFixEnabled": this.autoFixEnabled;"
 // Main execution;
 if (require.main === module) {}
   const fixer = new BuildErrorAutoFixer();
@@ -355,12 +315,11 @@ if (require.main === module) {}
   // Start auto-fixer;
   fixer.startAutoFixer().catch(error => {})
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
+  // Handle graceful shutdown;"
+
     process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 module.exports = BuildErrorAutoFixer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
 module.exports = BuildErrorAutoFixer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

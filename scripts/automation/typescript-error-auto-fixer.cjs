@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -14,72 +15,55 @@ class TypeScriptErrorAutoFixer {}
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
-        fs.mkdirSync(dir, { "recursive": true })};
+        fs.mkdirSync(dir, { "recursive": true })};"
     }
 });
     
     this.fixesApplied = 0;
-    this.filesProcessed = 0};
+    this.filesProcessed = 0};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
+
     console.log(`[${timestamp}] [${level}] ${message}`)};
+    console.log(`[${timestamp}] [${level}] ${message})};
   async runTypeScriptCheck() {}
     try {}
-      this.log('Running TypeScript type check...');
-      execSync('npm run type-check', { "stdio": 'pipe' }
-});
-      return { "success": true, "errors": [], "count": 0 }} catch (error) {}
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseTypeScriptErrors(output);
-      this.log(`TypeScript check failed with ${errors.length} errors`, 'ERROR');
-      return { "success": false, errors, "count": errors.length }};
+
+      return { "success": false, errors, "count": errors.length }};"
   };
-  parseTypeScriptErrors(output) {}
+  parseTypeScriptErrors(output) {}"
     const errorLines = output.split('\n').filter(line => )
-      line.includes('error TS') || line.includes('"error": ');
+
     );
     
     const errors = [];
     let currentError = null;
     
     for (const line of errorLines) {}
-      if (line.includes('error TS') || line.includes('error:')) {}
+
         const match = line.match(/([^:]+):(\d+):(\d+)/);
         if (match) {}
           if (currentError) {}
             errors.push(currentError)};
           currentError = {}
-            "file": match[1].trim(),
-            "line": parseInt(match[2]),
-            "column": parseInt(match[3]),
-            "message": line.split(' - ')[1] || line,
-            "type": 'typescript'
-          }};
-      } else if (currentError && line.trim()) {}
-        currentError.message += ' ' + line.trim()};
-    };
-    if (currentError) {}
-      errors.push(currentError)};
+
     return errors};
   async fixTypeScriptErrors(errors) {}
     let fixesApplied = 0;
     
     for (const error of errors) {}
-      try {}
         if (await this.fixSingleError(error)) {}
           fixesApplied++};
-      } catch (error) {}
-        this.log(`Failed to fix error in ${error.file}: ${error.message}`, 'ERROR')};
-    };
+
     return fixesApplied};
   async fixSingleError(error) {}
     if (!error.file || !fs.existsSync(error.file)) {}
       return false};
-    const content = fs.readFileSync(error.file, 'utf8');
+
     const lines = content.split('\n');
     
     // Apply common TypeScript fixes;
-    const fixes = [this.fixAnyType.bind(this),]
+    const fixes = [this.fixAnyType.bind(this)]
       this.fixMissingImports.bind(this),
       this.fixTypeAnnotations.bind(this),
       this.fixInterfaceIssues.bind(this),
@@ -91,18 +75,12 @@ class TypeScriptErrorAutoFixer {}
     let modifiedContent = content;
 
     for (const fix of fixes) {}
-      try {}
         const result = fix(lines, error);
         if (result.modified) {}
-          modifiedContent = result.content;
-          this.log(`Applied fix to ${error.file}: ${result.description}`, 'INFO')};
-      } catch (fixError) {}
-        this.log(`Fix failed for ${error.file}: ${fixError.message}`, 'WARN')};
-    };
+
     if (modifiedContent !== originalContent) {}
       fs.writeFileSync(error.file, modifiedContent);
       return true};
-    return false};
   fixAnyType(lines, error) {}
     const lineIndex = error.line - 1;
     const line = lines[lineIndex];
@@ -134,19 +112,18 @@ class TypeScriptErrorAutoFixer {}
         
         // Find the last import statement;
         let lastImportIndex = -1;
+
+</any>
         for (let i = 0; i < lines.length; i++) {}
           if (lines[i].trim().startsWith('import ')) {}
             lastImportIndex = i};
-        };
         if (lastImportIndex >= 0) {}
           lines.splice(lastImportIndex + 1, 0, importStatement)} else {}
           lines.unshift(importStatement)};
         return {}
-          "modified": true,
-          "content": lines.join('\n'),
-          "description": `Added missing import for ${moduleName}
-        }};
-    };
+
+          "description": `Added missing import for ${moduleName}"
+    };"
     return { "modified": false, "content": lines.join('\n') }};
   fixTypeAnnotations(lines, error) {}
     const lineIndex = error.line - 1;
@@ -164,26 +141,16 @@ class TypeScriptErrorAutoFixer {}
         
         if (fixedLine !== line) {}
           lines[lineIndex] = fixedLine;
-          return {}
-            modified: true,
-            "content": lines.join('\n'),
-            "description": `Added type annotation for ${varName}
-          }};
-      };
-    };
-    return { "modified": false, "content": lines.join('\n') }};
-  fixInterfaceIssues(lines, error) {}
-    if (error.message.includes('Property') && error.message.includes('does not exist on type')) {}
-      const propMatch = error.message.match(/Property '([^']+)' does not exist on type '([^']+)'/);
+            modified: true,"
+
       if (propMatch) {}
         const propName = propMatch[1];
         const typeName = propMatch[2];
         
         // Try to find and extend the interface;
-        for (let i = 0; i < lines.length; i++) {}
-          if (lines[i].includes(`interface ${typeName}`) || lines[i].includes(`type ${typeName}`)) {`}
+
             // Add the missing property;
-            const indent = lines[i].match(/^\s*/)[0];
+            const indent = lines[i].match(/^\s*/)[0];`;
             lines.splice(i + 1, 0, `${indent}  ${propName}?: unknown;`);
             
             return {}
@@ -256,9 +223,9 @@ class TypeScriptErrorAutoFixer {}
       const postCheckResult = await this.runTypeScriptCheck();
       
       const report = {}
-        "timestamp": new Date().toISOString(),
-        "initialErrors": checkResult.errors.length,
-        fixesApplied,
+
+        "initialErrors": checkResult.errors.length,"
+        fixesApplied,"
         "remainingErrors": postCheckResult.errors.length,
         "success": postCheckResult.success;
       };
@@ -284,7 +251,6 @@ class TypeScriptErrorAutoFixer {}
     }, this.fixInterval);
 
     this.log(`TypeScript error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
-};
 // Main execution;
 if (require.main === module) {}
   const fixer = new TypeScriptErrorAutoFixer();
@@ -303,12 +269,11 @@ if (require.main === module) {}
   // Start auto-fixer;
   fixer.startAutoFixer().catch(error => {})
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
+  // Handle graceful shutdown;
+
     process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 module.exports = TypeScriptErrorAutoFixer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
 module.exports = TypeScriptErrorAutoFixer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

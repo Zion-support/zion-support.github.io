@@ -1,3 +1,4 @@
+
 const fs = require('fs')
 const path = require('path')
 console.log(' Comprehensive syntax fix...')
@@ -11,11 +12,14 @@ console.log(' Comprehensive syntax fix...')
     content = content.replace(/>\s*<h2 className="([^"]*)\n\s*([^"]*)"/g, '>\n            <h2 className="$1 $2"
     content = content.replace(/<h1 className="([^"]*)\n\s*([^"]*)\s*>/g, '<h1 className="$1 $2"
     content = content.replace(/<p className="([^"]*)\n\s*([^"]*)\s*>/g, '<p className="$1 $2"
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2"
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2"
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+</div>"
+    content = content.replace(/>\s*<h2 className="([^"]*)\n\s*([^"]*)"/g,>\n            <h2 className="$1 $2
+</h2>"
+    content = content.replace(/<h1 className="([^"]*)\n\s*([^"]*)\s*>/g,<h1 className="$1 $2
+</h1>"
+    content = content.replace(/<p className="([^"]*)\n\s*([^"]*)\s*>/g,<p className="$1 $2
+</p>"
+

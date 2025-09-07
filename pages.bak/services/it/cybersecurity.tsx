@@ -5,11 +5,9 @@ interface CybersecurityProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface CybersecurityProps {
-  // Add props here as needed
-}
+export default function Cybersecurity({ }: CybersecurityProps) {
+
 export default function Cybersecurity({ }: CybersecurityProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Cybersecurity({ }: CybersecurityProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Cybersecurity({ }: CybersecurityProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -60,4 +62,17 @@ export default function Cybersecurity(): any ({ }: CybersecurityProps) {;
       <h1>Cybersecurity</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

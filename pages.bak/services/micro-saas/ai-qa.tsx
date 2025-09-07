@@ -5,11 +5,9 @@ interface AiqaProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface AiqaProps {
-  // Add props here as needed
-}
+export default function Aiqa({ }: AiqaProps) {
+
 export default function Aiqa({ }: AiqaProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Aiqa({ }: AiqaProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Aiqa({ }: AiqaProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -60,4 +62,17 @@ export default function Aiqa(): any ({ }: AiqaProps) {;
       <h1>Aiqa</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

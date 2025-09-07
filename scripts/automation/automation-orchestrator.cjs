@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const pm2 = require("pm2")
 const fs = require("fs")
@@ -146,11 +147,6 @@ const path = require("path")
   console.error(" Failed to save "report": ")
   console.error(" Failed to save "report": ")
       console.log(" Automation Orchestrator started")
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   console.error(" Orchestrator "error")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Orchestrator "error")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

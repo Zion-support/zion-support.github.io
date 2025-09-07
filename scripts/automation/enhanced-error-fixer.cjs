@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
+
 #!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-
-console.log("Starting enhanced error fixer automation...");
-
-// Get automation interval from environment variable (default: 10 minutes)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 600000; // 10 minutes
 
 async function runEnhancedErrorFixer() {
   try {
@@ -636,17 +627,12 @@ runContinuous().catch(error => {
   console.error("Failed to start enhanced error fixer:", error);
   process.exit(1);
 });
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/""usr/bin/env""
+
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log("" Starting enhanced error fixer automation...")
+console.log( Starting enhanced error fixer automation...")
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -892,13 +878,15 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   console.error(" Failed to start enhanced error "fixer": ")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
   console.error(" Failed to start enhanced error "fixer": ")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+  console.error(" Failed to start enhanced error "fixer": ")
+
+console.log( Starting enhanced error fixer automation...")
+
+// Get automation interval from environment variable ("default")"
+  console.log(` Running enhanced error fixer at ${new Date().toISOString()}`;
+console.log(` Starting enhanced error fixer automation...``)"
+

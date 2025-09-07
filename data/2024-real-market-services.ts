@@ -5,7 +5,7 @@ export interface RealMarketService {
   name: string;
   tagline: string;
   price: string;
-  period: string,
+
   description: string;
   features: string[];
   popular: boolean;
@@ -31,8 +31,7 @@ export interface RealMarketService {
     mobile: string;
     email: string;
     address: string;
-    website: string
-};
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -92,5 +91,3 @@ export const realMarketServices: RealMarketService[] = [
     customers: 1800,
     rating: 4.7,
     reviews: 950
-  }
-];

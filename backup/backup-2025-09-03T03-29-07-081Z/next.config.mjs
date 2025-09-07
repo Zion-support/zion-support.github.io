@@ -17,11 +17,11 @@ const nextConfig = {}
     ignoreBuildErrors: true,
   },
   images: {}
-    domains: ['ziontechgroup.com'],
+    domains: [ziontechgroup.com],
     unoptimized: true,
   },
   compiler: {}
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NODE_ENV ===production,
   },
   webpack: config => {}
     config.module.rules.push({})
@@ -43,9 +43,7 @@ const nextConfig = {}
     });
 
     config.resolve.alias = {}
-      ...config.resolve.alias,
-      'react-router-dom': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
-      'react-router': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
+      ...config.resolve.alias,react-router-dom: path.resolve(__dirname,utils/next-router-shim.tsx'),react-router: path.resolve(__dirname,utils/next-router-shim.tsx'),
     };
 
     config.resolve.fallback = {}
@@ -57,7 +55,7 @@ const nextConfig = {}
 
     return config;
   },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: [tsx,ts,jsx,js],
   onDemandEntries: {}
     maxInactiveAge: 25 * 1000,
     pagesBufferLength: 2,

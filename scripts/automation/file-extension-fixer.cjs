@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -8,11 +9,6 @@ const path = require('path')
       this.log(' File extension fixing logic to be implemented')
         "successRate"
         "version"
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   console.error('Fatal "error")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error('Fatal "error")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

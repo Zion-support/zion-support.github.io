@@ -1,161 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
 
-class EnhancedErrorFixingAutomation {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixesApplied = [];
-    this.startTime = Date.now();
-  }
-
-  log(message, type = "info") {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-  }
-
-  async runCommand(command, options = {}) {
-    try {
-      const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: "utf8",
-        stdio: options.silent ? "pipe" : "inherit",
-        ...options
-      });
-      return { success: true, output: result };
-    } catch (error) {
-      return { success: false, error: error.message, output: error.stdout || error.stderr };
-    }
-  }
-
-  async fixMergeConflicts() {
-    this.log("Fixing merge conflicts...");
-    
-    const files = this.getTypeScriptFiles();
-    
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, "utf8");
-        if (content.includes("<<<<<<< HEAD") || content.includes("=======") || content.includes(">>>>>>> ")) {
-          this.log(`Fixing merge conflicts in ${file}`);
-          
-          // Simple merge conflict resolution - keep the HEAD version
-          const lines = content.split("\n");
-          const newLines = [];
-          let inConflict = false;
-          
-          for (const line of lines) {
-            if (line.includes("<<<<<<< HEAD")) {
-              inConflict = true;
-              continue;
-            } else if (line.includes("=======")) {
-              continue;
-            } else if (line.includes(">>>>>>> ")) {
-              inConflict = false;
-              continue;
-            } else if (!inConflict) {
-              newLines.push(line);
-            }
-          }
-          
-          fs.writeFileSync(file, newLines.join("\n"));
-          this.fixesApplied.push({
-            type: "merge_conflict",
-            file: file,
-            description: "Resolved merge conflicts"
-          });
-        }
-      } catch (error) {
-        this.log(`Could not fix merge conflicts in ${file}: ${error.message}`, "error");
-      }
-    }
-  }
-
-  getTypeScriptFiles() {
-    const files = [];
-    const srcDir = path.join(process.cwd(), "src");
-    
-    function walkDir(dir) {
-      if (!fs.existsSync(dir)) return;
-      const items = fs.readdirSync(dir);
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory()) {
-          walkDir(fullPath);
-        } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {
-          files.push(fullPath);
-        }
-      }
-    }
-    
-    walkDir(srcDir);
-    return files;
-  }
-
-  async generateReport() {
-    const duration = Date.now() - this.startTime;
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      fixesApplied: this.fixesApplied,
-      summary: {
-        totalFixes: this.fixesApplied.length,
-        mergeConflictFixes: this.fixesApplied.filter(f => f.type === "merge_conflict").length
-      }
-    };
-    
-    const reportPath = path.join(this.projectRoot, "error-fixing-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Error fixing report saved to: ${reportPath}`);
-    return report;
-  }
-
-  async run() {
-    this.log("Starting Enhanced Error Fixing Automation...");
-    
-    try {
-      // Run all fix operations
-      await this.fixMergeConflicts();
-      
-      // Generate report
-      const report = await this.generateReport();
-      this.log(`Error fixing completed! Applied ${report.summary.totalFixes} fixes.`);
-      
-      return report;
-    } catch (error) {
-      this.log(`Error fixing automation failed: ${error.message}`, "error");
-      throw error;
-    }
-  }
-}
-
-// Run the automation if called directly
-if (require.main === module) {
-  const automation = new EnhancedErrorFixingAutomation();
-  automation.run().catch(console.error);
-}
-
-module.exports = EnhancedErrorFixingAutomation;
-=======
 #!/usr/bin/env node;
-#!/usr/bin/env node;
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-#!/usr/bin/env node;
+
 const fs = require("fs")
 const path = require("path")
-console.log("" Starting Enhanced Error Fixing Automation System...")
+console.log( Starting Enhanced Error Fixing Automation System...")
   "AUTOMATION_INTERVAL"
   "MAX_RETRIES"
   "LOG_LEVEL": process.env.LOG_LEVEL || "info"
@@ -163,8 +11,8 @@ console.log("" Starting Enhanced Error Fixing Automation System...")
   "ENABLE_TYPE_CHECK": process.env.ENABLE_TYPE_CHECK !== "false"
   "ENABLE_LINT_FIX": process.env.ENABLE_LINT_FIX !== "false"
   console.log("� Starting error fixing cycle at ${this.startTime.toISOString()}"
-      // Create logs directory if it doesn"
-      console.log(` Enhanced error fixing completed successfully! Applied ${this.fixesApplied} fixes.``)
+      // Create logs directory if it doesn
+      console.log(` Enhanced error fixing completed successfully! Applied ${this.fixesApplied} fixes.``)"
   console.error(" Enhanced error fixing "failed": ")
   const logsDir = path.join(process.cwd(), "automation", "logs"
   fs.mkdirSync(logsDir, { "recursive"})
@@ -193,9 +41,9 @@ console.log("" Starting Enhanced Error Fixing Automation System...")
           "fix": "TypeScript error fix"
   console.warn(⚠  Could not fix TypeScript error in ${error.file}:")
     const moduleName = error.message.match(/Cannot find module "([^"]+)"
-        new RegExp(import.*from\\s+[""]${moduleName}[""], "g"),import {   } from "${moduleName}"
-const { execSync, spawn } = require("child_process")
-const glob = require(`glob``)
+        new RegExp(import.*from\\s+[]${moduleName}[], "g"),import {   } from "${moduleName}"
+const { execSync, spawn } = require("child_process")"
+const glob = require(`glob``)"
     this.logFile = path.join(this.projectRoot, "error-reports", "error-fixer-report-${Date.now()}.json"
     if (!fs.existsSync(path.join(this.projectRoot, "error-reports")
   fs.mkdirSync(path.join(this.projectRoot, "error-reports"), { "recursive"}
@@ -241,10 +89,8 @@ export default function"
   console.log(`" Fixing React hooks errors..."`)
   let content = fs.readFileSync(file, "utf8")
           /useEffect\(\s*\(\)\s*=>\s*\{/g,useEffect(() => {"}
-        content = content.replace(/useState\s*<\s*any\s*>/g, "useState<any>")
-  console.warn(⚠  Could not fix React hooks in ${file}:")
-  console.log(" Fixing JSX errors...")
-  let content = fs.readFileSync(file, "utf8")
+        content = content.replace(/useState\s*<\s*any\s*>/g, "useState<any>")"
+</any>"
           /<([A-Z][a-zA-Z]*)\s+([^>]*)\/>/g,<$1 $2 />"
         content = content.replace(/className=/g, "className=")
         content = content.replace(/onClick=/g, "onClick=")
@@ -265,7 +111,7 @@ export default function"
         content = content.replace(/;\s*}/g, "}")
   console.log(`" Fixing build errors..."`)
       execSync("npm run build", { "stdio": "pipe"})
-      console.log(" Build successful"")
+      console.log(" Build successful)
   console.warn("⚠  Build failed, but continuing with other fixes")
   console.log(" Running final checks...")
   execSync("npm run type-check", { "stdio": "pipe"})
@@ -282,7 +128,7 @@ export default function"
         const varMatch = message.match(/"(.+)"
           lines[line - 1] = lines[line - 1].replace(new RegExp("\\b${varName}\\b"), "_${varName}"
       } else if (message.includes("no-console")
-        lines[line - 1] = lines[line - 1].replace(/console\.(log|warn|error|info)\([^)]*\);?/g, "")} else if (message.includes("prefer-const")
+        lines[line - 1] = lines[line - 1].replace(/console\.(log|warn|error|info)\([^)]*\);?/g, )} else if (message.includes("prefer-const")
         lines[line - 1] = lines[line - 1].replace(/\blet\b/g, "const")
       fs.writeFileSync(filePath, lines.join("\n")
   "type": "eslint_error"
@@ -312,8 +158,8 @@ export default function"
       "summary": "Enhanced error fixing automation failed"
       "status": "failed"
       "config"
-      process.cwd(),enhanced-error-fixing-error-report.json"
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log( Error report saved to ${reportPath}```)
+      process.cwd(),enhanced-error-fixing-error-report.json
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log( Error report saved to ${reportPath}``)"
   this.log("Installing missing "dependencies": ${missingDeps.join(", ")}"
       await this.runCommand("npm install --save-dev ${missingDeps.join(" ")}"
   "type": "dependency_install"
@@ -324,13 +170,6 @@ export default function"
       "summary"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

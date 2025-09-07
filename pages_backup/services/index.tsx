@@ -1,6 +1,13 @@
-import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+
+import { motion } from 'framer-motion';
+import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
+
+export default function ServicesIndex() {
+
+  return (
+
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -240,11 +247,14 @@ const ServicesIndex: NextPage = () => {
       link: "/services/ai-automation";
     }
   ];  return (
+
     <>
       <Head>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology services including AI development, cloud services, cybersecurity, and data analytics solutions." />
+        <title>Our Services - Zion Tech Group | AI, Cloud, Blockchain & IT Solutions</title>
+        <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
+        <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
       </Head>
+
                     Learn More
                   </Link>
                 </div>
@@ -509,47 +519,55 @@ export default ServicesIndex;
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
+
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8 }}"
               className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
+            >"
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>"
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to transform your business 
+                Comprehensive technology solutions designed to transform your business;
                 with AI, cloud services, cybersecurity, and data analytics.
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+        {/* Services Grid */}"
+        <section className="py-16 px-4">"
+          <div className="max-w-7xl mx-auto">"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
-                <motion.div
+                <motion.div;
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}"
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-                >
-                  <div className="text-center mb-6">
-                    <div className="text-4xl mb-4">{service.icon}</div>
-                    <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
+                >"
+                  <div className="text-center mb-6">"
+                    <div className="text-4xl mb-4">{service.icon}</div>"
+                    <h3 className="text-xl font-semibold mb-2">{service.title}</h3>"
+                    <p className="text-gray-600 mb-4">{service.description}</p>"
                     <div className="text-lg font-semibold text-blue-600 mb-4">{service.pricing}</div>
-                  </div>
+                  </div>"
                   <div className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">
+                    {service.features.map((feature, featureIndex) => ("
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {feature}
                       </div>
                     ))}
                   </div>
-                  <Link
+
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
       </main>;
     </div>;
   ),
@@ -559,3 +577,9 @@ export default ServicesIndex;
       </div>;
     </>;
   );
+
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>

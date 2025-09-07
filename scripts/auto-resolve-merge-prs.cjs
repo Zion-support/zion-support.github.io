@@ -1,50 +1,27 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
 function sh(cmd, opts = {}) {}
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts }).trim()};
+
 function getRepoFromGit() {}
   const remoteUrl = sh('git remote get-url origin');
   const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
   if (!m) throw new Error('Unable to parse owner/repo from origin');
-  return { "owner": m[1], "repo": m[2] }};
+  return { "owner": m[1], "repo": m[2] }};"
 function getToken() {}
-  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
-  const remoteUrl = sh('git remote get-url origin');
-  const tokenMatch = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);
-  if (!tokenMatch) throw new Error('No GitHub token available');
-  return tokenMatch[1]};
-async function gh(path, method = 'GET', body) {}
-  const token = getToken();
-  const base = '"https": //api.github.com';
-  const res = await fetch(`${base}${path}`, {`})
-    method,
-    "headers": {}
-      Authorization: `token ${token}`,`
-      "Accept": 'application/vnd.github.v3+json',
-      'User-Agent': 'auto-resolve-merge-prs',
-      'Content-Type': 'application/json'
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
+
     },
-    "body": body ? JSON.stringify(body) : undefined;
+    "body": body ? JSON.stringify(body) : undefined;"
   }
 });
-  const text = await res.text();
-  let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
-  if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
+  const text = await res.text();"
+
   return data};
-async function listOpenPRs(owner, repo) {}
+async function listOpenPRs(owner, repo) {}`;
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
   return prs};
 function resolveConflictsFiles() {}
@@ -83,7 +60,7 @@ async function main() {}
   for (const pr of prs) {}
     processed++;
     const head = pr.head.ref;
-    const base = pr.base.ref;
+    const base = pr.base.ref;`;
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
     try {}
       // Checkout PR branch;

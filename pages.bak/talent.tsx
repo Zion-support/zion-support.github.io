@@ -5,11 +5,9 @@ interface TalentProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface TalentProps {
-  // Add props here as needed
-}
+export default function Talent({ }: TalentProps) {
+
 export default function Talent({ }: TalentProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Talent({ }: TalentProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Talent({ }: TalentProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,17 @@ export default function Talent(): any ({ }: TalentProps) {;
       <h1>Talent</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

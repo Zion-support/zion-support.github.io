@@ -1,3 +1,4 @@
+
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -168,6 +169,7 @@ npm run dev\"\"\"
     this.improvementsList.push("Enhanced Jest configuration")
     // Add test utilitiesconst testUtils = "
 import React from "react";
+
 import { render, RenderOptions  } from "@testing-";library/react""
 import { Provider  } from "react-redux"
 import { store  } from "../store"
@@ -216,11 +218,18 @@ export * from "@testing-"library/react""
   const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   "analyzerMode": "static"
           "openAnalyzer"
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     fs.writeFileSync(path.join(this.projectRoot, ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    fs.writeFileSync(path.join(this.projectRoot, ")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+</p>"
+        <div className="min-h-screen flex items-center justify-center bg-gray-50"
+            <h1 className="text-2xl font-bold text-gray-900 mb-4"
+            <p className=text-gray-600 mb-4>We
+</div>"
+  "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"]"
+</rootDir>"
+  "moduleNameMapping": {^@/(.*)$": "<rootDir>/src/$1",\\.(css|less|scss|sass)$": "identity-obj-proxy"}"
+
+) => render(ui, { "wrapper"})"
+"`;
+

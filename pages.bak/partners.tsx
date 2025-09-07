@@ -5,11 +5,9 @@ interface PartnersProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface PartnersProps {
-  // Add props here as needed
-}
+export default function Partners({ }: PartnersProps) {
+
 export default function Partners({ }: PartnersProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Partners({ }: PartnersProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Partners({ }: PartnersProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,17 @@ export default function Partners(): any ({ }: PartnersProps) {;
       <h1>Partners</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

@@ -5,11 +5,9 @@ interface SmartchurnProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface SmartchurnProps {
-  // Add props here as needed
-}
+export default function Smartchurn({ }: SmartchurnProps) {
+
 export default function Smartchurn({ }: SmartchurnProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Smartchurn({ }: SmartchurnProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Smartchurn({ }: SmartchurnProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -60,4 +62,17 @@ export default function Smartchurn(): any ({ }: SmartchurnProps) {;
       <h1>Smartchurn</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

@@ -1,23 +1,33 @@
+
+
+interface AccessibilityContextType {
+
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+import React, { create_context, useContext, useState, ReactNode } from './react';
+;
+
 import React, { createContext, useContext, ReactNode } from "react";
 
 interface AccessibilityContextType {
   announceToScreenReader: (message: string) => void;
   setFocus: (elementId: string) => void;
+
+}
+
 }
 
 const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
 >(undefined);
 
-interface AccessibilityProviderProps {
-  children: ReactNode;
-}
-
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   children,
 }) => {
+
   const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById("live-region");
+    const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = message;
     }
@@ -31,10 +41,26 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   };
 
   return (
-    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
+    <AccessibilityContext.Provider
+      value={{
+        announceToScreenReader,
+        setFocus,
+        highContrast,
+        largeText,
+        reducedMotion,
+        toggleHighContrast,
+        toggleLargeText,
+        toggleReducedMotion,
+      }}
+    >
       {children}
     </AccessibilityContext.Provider>
   );
+};
+
+    );
+  }
+  return context;
 };
 
 export const useAccessibility = () => {
@@ -46,3 +72,4 @@ export const useAccessibility = () => {
   }
   return context;
 };
+

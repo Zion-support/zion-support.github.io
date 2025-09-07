@@ -1,7 +1,7 @@
-export default /**
- * GovernancePrivacy - Function description
+export default /**;
+ * GovernancePrivacy - Function description;
  */
-function GovernancePrivacy() {
+function GovernancePrivacy() {}
   return (
 
     <div className=&quot;max - w-2xl mx - auto p - 6 space - y-4 & quot;>;

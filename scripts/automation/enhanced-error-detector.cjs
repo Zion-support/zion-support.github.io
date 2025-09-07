@@ -1,24 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
+
 #!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-
-console.log("Starting enhanced error detector...");
-
-async function detectAllErrors() {
-  const errors = {
-    typescript: [],
-    linting: [],
-    build: [],
-    dependencies: [],
-    syntax: [],
-    timestamp: new Date().toISOString()
-  };
 
   try {
     // 1. Detect TypeScript errors
@@ -287,43 +271,38 @@ if (require.main === module) {
 }
 
 module.exports = { detectAllErrors };
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/""usr/bin/env""
+
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log("" Starting enhanced error detector...")
+console.log( Starting enhanced error detector...")
   "typescript"
     "linting"
     "build"
     "dependencies"
     "syntax"
     "timestamp"
-    console.log("" Detecting TypeScript errors...")
+    console.log( Detecting TypeScript errors...")
   const tsResult = execSync("npx tsc --noEmit")
   "encoding": "utf8"
         "stdio": "pipe"
   const tsResult = execSync("npx tsc --noEmit")
   "encoding": "utf8"
         "stdio": "pipe"
-  const tsOutput = error.stdout || error.stderr || ""
+  const tsOutput = error.stdout || error.stderr || 
   const tsOutput = error.stdout || error.stderr || "
     console.log(" Detecting linting errors...")
   const lintResult = execSync("npm run lint")
   "encoding": "utf8"
         "stdio": "pipe"
-  const lintOutput = error.stdout || error.stderr || ""
+  const lintOutput = error.stdout || error.stderr || 
   const lintOutput = error.stdout || error.stderr || "
 console.log(" Detecting build errors...")
   const buildResult = execSync("npm run build")
   "encoding": "utf8"
         "stdio": "pipe"
-  const buildOutput = error.stdout || error.stderr || ""
+  const buildOutput = error.stdout || error.stderr || 
   const buildOutput = error.stdout || error.stderr || "
     console.log(" Detecting dependency issues...")
   const auditResult = execSync("npm audit --json")
@@ -332,7 +311,7 @@ console.log(" Detecting build errors...")
 // console.log("⚠  Could not run npm audit")
     console.log(" Detecting syntax errors...")
     const reportPath = path.join(process.cwd(), "error-detection-report.json"
-    console.log( Error detection completed. "Found": );console.log(   - ${errors.typescript.length} TypeScript errors"");console.log(`   - ${errors.linting.length} linting errors`);console.log(`   - ${errors.build.length} build errors`);console.log(`   - ${errors.dependencies.length} dependency issues`);console.log(`   - ${errors.syntax.length} syntax errors`);console.log(` Report saved "to"`)
+    console.log( Error detection completed. "Found": );console.log(   - ${errors.typescript.length} TypeScript errors);console.log(`   - ${errors.linting.length} linting errors`);console.log(`   - ${errors.build.length} build errors`);console.log(`   - ${errors.dependencies.length} dependency issues`);console.log(`   - ${errors.syntax.length} syntax errors`);console.log(` Report saved "to"`)
   console.error(" Error detection "failed": ")
   const lines = output.split("\n")
   if (line.includes("error TS")
@@ -388,7 +367,7 @@ function checkSyntaxErrors(content")
         "line"
         "message": "Potential unmatched brackets or parentheses"
         "type": "syntax"
-    // Check for missing semicolons in ""JS/TS""
+    // Check for missing semicolons in JS/TS
       (filePath.endsWith(".js") || filePath.endsWith(".ts")
       !line.trim().endsWith(";")
       !line.trim().endsWith("{"})
@@ -418,13 +397,9 @@ function checkSyntaxErrors(content")
         "line"
         "message": "Missing semicolon"
         "type": "syntax"
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   console.error(" Error detection "failed": ")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
   console.error(" Error detection "failed": ")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+  console.error(" Error detection "failed": ")
+

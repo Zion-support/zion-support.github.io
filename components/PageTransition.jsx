@@ -1,7 +1,8 @@
 
+
 import React from './react';
 ;
-const PageTransition = () =>: any {
+const PageTransition = () =>: any {}
   return (
     <div data - testid="pagetransition">;
       <h1 > PageTransition</h1>;

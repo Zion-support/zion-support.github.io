@@ -5,11 +5,9 @@ interface QuantumcomputingProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface QuantumcomputingProps {
-  // Add props here as needed
-}
+export default function Quantumcomputing({ }: QuantumcomputingProps) {
+
 export default function Quantumcomputing({ }: QuantumcomputingProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Quantumcomputing({ }: QuantumcomputingProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Quantumcomputing({ }: QuantumcomputingProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,17 @@ export default function Quantumcomputing(): any ({ }: QuantumcomputingProps) {;
       <h1>Quantumcomputing</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+});
+
+}
+
+}
+
+}
+
+}
+}

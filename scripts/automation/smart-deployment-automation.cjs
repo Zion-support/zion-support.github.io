@@ -1,4 +1,6 @@
+
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Smart Deployment Automation;
  * Handles intelligent deployment processes;
@@ -11,24 +13,18 @@ const { execSync } = require('child_process');
 class SmartDeploymentAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'smart-deployment-automation.log');
-        this.reportFile = path.join(this.projectRoot, 'deployment-automation-report.json');
-        this.ensureLogsDirectory()};
-    ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
+
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
+
         console.log(message)};
     preDeploymentChecks() {}
         this.log('Running pre-deployment checks...');
@@ -39,79 +35,66 @@ class SmartDeploymentAutomation {}
             "build": this.runBuildCheck(),
             "test": this.runTestCheck();
        };
+
         
         // Health check after each instance
         const healthCheck = await this.performHealthCheck(environment);
         if (!healthCheck.healthy) {
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-        
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
         try {}
             execSync('npm run lint', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
+                "cwd": this.projectRoot,""
+                "stdio": 'pipe
             return { "status": 'success', "message": 'Lint check passed' }} catch (error) {}
-            return { "status": 'failed', "message": error.message }};
-    };
+            return { "status": 'failed', "message": error.message }};"
     runTypeCheck() {}
-        try {}
+        try {}"
             execSync('npm run type-check', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
             return { "status": 'success', "message": 'Type check passed' }} catch (error) {}
-            return { "status": 'failed', "message": error.message }};
-    };
     runBuildCheck() {}
-        try {}
             execSync('npm run build', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
             return { "status": 'success', "message": 'Build check passed' }} catch (error) {}
-            return { "status": 'failed', "message": error.message }};
-    };
     runTestCheck() {}
-        try {}
             execSync('npm test', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
             return { "status": 'success', "message": 'Test check passed' }} catch (error) {}
             // Tests might not be configured, so we'll mark as warning;
             return { "status": 'warning', "message": 'No tests configured or tests failed' }};
-    };
     generateBuild() {}
         this.log('Generating production build...');
         
         try {}
             execSync('npm run build', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
             
             this.log('Production build generated successfully');
-            return { "status": 'success', "message": 'Build completed' }} catch (error) {}
-            this.log(`Build "failed": ${error.message}`);
-            return { "status": 'failed', "message": error.message }};
-    };
-    optimizeBuild() {}
+            return { "status": 'success', "message": 'Build completed' }} catch (error) {}`;
+            this.log(`Build "failed": ${error.message}`);""
+    optimizeBuild() {}"
         this.log('Optimizing build...');
         
         try {}
@@ -120,21 +103,26 @@ class SmartDeploymentAutomation {}
             
             if ( {})
                 execSync('npm run "build": production', { })
+                    "cwd": this.projectRoot,
+            // Check if build optimization is available;
+            const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8';););
+            if ( {})
+                execSync('npm run "build": production', { })
                     "cwd": this.projectRoot, 
                     "stdio": 'pipe'
                 })) {}
      {}
                 execSync('npm run "build": production', { })
-                    "cwd": this.projectRoot, 
+                    "cwd": this.projectRoot,
                     "stdio": 'pipe'
+                })) {}
+     {}
                 })};
                 this.log('Production build optimization completed')} else {}
                 this.log('No production build optimization script found')};
-            return { "status": 'success', "message": 'Build optimization completed' }} catch (error) {}
-            this.log(`Build optimization "failed": ${error.message}`);
-            return { "status": 'failed', "message": error.message }};
-    };
-    checkDeploymentReadiness() {}
+            return { "status": 'success', "message": 'Build optimization completed' }} catch (error) {}`;
+            this.log(`Build optimization "failed": ${error.message}`);""
+    checkDeploymentReadiness() {}"
         this.log('Checking deployment readiness...');
         
         const readiness = {}
@@ -183,20 +171,27 @@ class SmartDeploymentAutomation {}
             this.log('Smart Deployment Automation completed successfully');
             return report} catch (error) {}
             this.log(`Smart Deployment Automation "failed": ${error.message}`);
+        const report = {}
+            "timestamp": new Date().toISOString(),""
+            "project": this.projectRoot,""
+            "preDeploymentChecks": this.preDeploymentChecks(),""
+            "build": this.generateBuild(),""
+            "optimization": this.optimizeBuild(),""
+            "readiness": this.checkDeploymentReadiness(),""
+
+            "recommendations": this.generateDeploymentRecommendations();"
+
+        return report};
+    generateDeploymentRecommendations() {}
+        return [;]"
+
             throw error};
-    };
-};
 // Run the automation if this script is executed directly;
-if ( {})
     const automation = new SmartDeploymentAutomation) {}
-     {}
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 module.exports = SmartDeploymentAutomation;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
 module.exports = SmartDeploymentAutomation;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

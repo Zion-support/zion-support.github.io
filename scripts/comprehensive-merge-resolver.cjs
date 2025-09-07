@@ -1,66 +1,44 @@
 #!/usr/bin/env node
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-merge-resolver.cjs
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 console.log('🚀 Comprehensive Merge Conflict Resolver');
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log('=====================================');
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-merge-resolver.cjs
 console.log('==');
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-console.log('==');
-=======
+// Function to remove merge conflict markers
+function removeMergeConflictMarkers(content) {
+  return content
 console.log('=====================================');
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+console.log('==');
+
+console.log('==');
+console.log('=====================================');
+main
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-    .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-    .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-    .replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-    .replace(/<<<<<<< HEAD/g, '')
-    .replace(/=======/g, '')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-    .replace(/>>>>>>> [a-f0-9]+/g, '');
+
+    .replace(/[a-f0-9]+/g, '');
+
+    .replace(/
+    .replace(/
 }
-<<<<<<< HEAD
-=======
+.replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
+    .replace(//g, '')
+    .replace(/}
+
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
+    .replace(//g, '')
+    .replace(/}
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -69,13 +47,11 @@ function fixSyntaxErrors(content) {
     .replace(/\{\s*$/gm, '{')
     .replace(/\[\s*$/gm, '[')
     .replace(/\(\s*$/gm, '(')
-    
     // Fix semicolons in wrong places
     .replace(/;\s*$/gm, '')
     .replace(/;\s*}/g, '}')
     .replace(/;\s*]/g, ']')
     .replace(/;\s*\)/g, ')')
-    
     // Fix quotes in className
     .replace(/"hover":\s*/g, 'hover:')
     .replace(/"focus":\s*/g, 'focus:')
@@ -85,132 +61,95 @@ function fixSyntaxErrors(content) {
     .replace(/"lg":\s*/g, 'lg:')
     .replace(/"xl":\s*/g, 'xl:')
     .replace(/"2xl":\s*/g, '2xl:')
-    
     // Fix function declarations
     .replace(/function\s+\w+\s*\{\s*$/gm, 'function $1() {')
     .replace(/export\s+default\s+function\s+\w+\s*\{\s*$/gm, 'export default function $1() {')
-    
     // Fix array and object syntax
     .replace(/\[\s*\{\s*$/gm, '[{')
     .replace(/\{\s*\[\s*$/gm, '{[')
     .replace(/\}\s*\]\s*$/gm, '}]')
     .replace(/\]\s*\}\s*$/gm, ']}')
-    
     // Fix JSX syntax
     .replace(/<\s*\/\s*>\s*$/gm, '</>')
     .replace(/<\s*\/\w+\s*>\s*$/gm, '</$1>')
     .replace(/;\s*$/gm, '')
-    
     // Fix quotes in strings
     .replace(/;\s*$/gm, '')
     .replace(/;\s*$/gm, '')
-    
     // Clean up extra semicolons
     .replace(/;;+/g, ';')
     .replace(/;\s*;/g, ';')
-    
     // Fix empty objects and arrays
     .replace(/\{\s*\}/g, '{}')
     .replace(/\[\s*\]/g, '[]')
-    
     // Fix trailing commas
     .replace(/,\s*}/g, '}')
     .replace(/,\s*]/g, ']')
     .replace(/,\s*\)/g, ')')
-    
     // Fix quotes in JSX
     .replace(/;\s*$/gm, '')
     .replace(/;\s*$/gm, '')
-    
     // Clean up whitespace
     .replace(/\n\s*\n\s*\n/g, '\n\n')
     .replace(/\s+$/gm, '');
 }
-
 // Function to process a file
 function processFile(filePath) {
   try {
+  // TODO: Implement
     if (!fs.existsSync(filePath)) {
-      console.log(`⚠️  File not found: ${filePath}`);
+      console.log(`⚠️  File not found: ${filePath});
       return false;
     }
-
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
     // Check for merge conflict markers
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-merge-resolver.cjs
+
     if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
       console.log(`🔧 Removing merge conflict markers from ${filePath}`);
       content = removeMergeConflictMarkers(content);
       modified = true;
     }
-
     // Fix syntax errors
     const originalContent = content;
     content = fixSyntaxErrors(content);
-    
     if (content !== originalContent) {
       console.log(`🔧 Fixing syntax errors in ${filePath}`);
       modified = true;
     }
-
     if (modified) {
       fs.writeFileSync(filePath, content);
       console.log(`✅ Fixed ${filePath}`);
       return true;
     }
-
     return false;
   } catch (error) {
     console.log(`❌ Error processing ${filePath}: ${error.message}`);
     return false;
   }
 }
-
 // Function to find all files with merge conflicts
 function findFilesWithConflicts() {
   const files = [];
-  
   function searchDirectory(dir) {
     const items = fs.readdirSync(dir);
-    
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         searchDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-merge-resolver.cjs
+
           if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+    if (content.includes('
+
+main
+
             files.push(fullPath);
           }
         } catch (error) {
@@ -219,7 +158,6 @@ function findFilesWithConflicts() {
       }
     }
   }
-  
   searchDirectory('/workspace');
   return files;
       // Remove any remaining conflict markers;
@@ -230,25 +168,23 @@ function findFilesWithConflicts() {
         this.resolvedFiles.push(filePath)
         this.log(`✅ Resolved conflicts in ${filePath}`),,
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-merge-resolver.cjs
+
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message })
-      this.log(`❌ Error resolving ${filePath}: ${error.message}`),,
+      this.log(`❌ Error resolving ${filePath}: ${error.message}),,
 }
   }
-  cleanupBuildArtifacts() {
-    this.log("🧹 Cleaning up build artifacts...")
-    const artifactsToRemove = [
+
+  cleanupBuildArtifacts() {"
+    this.log("🧹 Cleaning up build artifacts...")"
+    const artifactsToRemove = ["
       ".next",
       "node_modules/.cache",
       "dist",
       "build",
-      "*.log",
-      "package-lock.json"]
+      "*.log","]"
+      "package-lock.json"]"
     for (const artifact of artifactsToRemove) {
       try {
         if (fs.existsSync(artifact)) {
@@ -258,26 +194,22 @@ function findFilesWithConflicts() {
       } catch (error) {
         this.log(`⚠️ Could not remove ${artifact}: ${error.message}`),,
 }
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-merge-resolver.cjs
+main
+  // TODO: Implement
 
 // Main execution
 async function main() {
-  try {
-    console.log('🔍 Searching for files with merge conflicts...');
+  // TODO: Implement
+}"
+
     const conflictFiles = findFilesWithConflicts();
-    
     if (conflictFiles.length === 0) {
       console.log('✅ No files with merge conflicts found');
     } else {
       console.log(`📁 Found ${conflictFiles.length} files with merge conflicts:`);
       conflictFiles.forEach(file => console.log(`   - ${file}`));
     }
-
     // Process all TypeScript/JavaScript files
     const allFiles = [
       'pages/about.tsx',
@@ -291,18 +223,14 @@ async function main() {
       'components/Layout.tsx',
       'components/layout/MainLayout.tsx'
     ];
-
     console.log('\n🔧 Processing all files...');
     let totalFixed = 0;
-
     for (const file of allFiles) {
       if (processFile(file)) {
         totalFixed++;
       }
     }
-
     console.log(`\n✅ Fixed ${totalFixed} files`);
-
     // Try to build
     console.log('\n🔨 Testing build...');
     try {
@@ -313,13 +241,20 @@ async function main() {
       console.log('⚠️  Build still has issues, but conflicts were resolved');
       console.log('Error:', error.message);
     }
-
     console.log('\n🎉 Merge conflict resolution completed!');
-
   } catch (error) {
     console.error('❌ Error:', error.message);
     process.exit(1);
   }
 }
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-merge-resolver.cjs
+`;
+    console.log(`\n✅ Fixed ${totalFixed} files`);
+
+    // Try to build;
+
+    console.log('\n🎉 Merge conflict resolution completed!');
+    console.error('❌ Error:', error.message);
+    process.exit(1);
 
 main();

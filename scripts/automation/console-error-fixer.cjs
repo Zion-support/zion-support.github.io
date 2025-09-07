@@ -1,4 +1,6 @@
+
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Console Error Fixer Automation;
  * Identifies and fixes console errors and warnings;
@@ -11,24 +13,18 @@ const { execSync } = require('child_process');
 class ConsoleErrorFixer {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'console-error-fixer.log');
-        this.reportFile = path.join(this.projectRoot, 'console-error-fix-report.json');
-        this.ensureLogsDirectory()};
-    ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
+
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
+
         console.log(message)};
     findConsoleStatements() {}
         this.log('Finding console statements...');
@@ -38,7 +34,7 @@ class ConsoleErrorFixer {}
         
         for (const file of files) {}
             try {}
-                const content = fs.readFileSync(file, 'utf8';);
+
                 const lines = content.split('\n';);
                 
                 for (let i = ;0; i < lines.length i++) {}
@@ -47,31 +43,7 @@ class ConsoleErrorFixer {}
                     
                     if ( {})
                         consoleStatements.push({})
-                            "file": file,
-                            "line": i + 1,
-                            "statement": line.trim(),
-                            "type": consoleMatch[0].match(/console\.(\w+)/)[1];
-                        })};
-                };
-            } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};
-        };
-        this.log(`Found ${consoleStatements.length} console statements`)) {`}
-     {}
-                        consoleStatements.push({})
-                            "file": file,
-                            "line": i + 1,
-                            "statement": line.trim(),
-                            "type": consoleMatch[0].match(/console\.(\w+)/)[1];
-                        })};
-                };
-            } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};
-        };
-        this.log(`Found ${consoleStatements.length} console statements`)};
-        return consoleStatements};
-    findSourceFiles() {}
-        const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+
         const files = [];
         
         const scanDirectory = (dir) => {}
@@ -92,6 +64,7 @@ class ConsoleErrorFixer {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
             };
+
         }};
         scanDirectory(this.projectRoot);
         return files};
@@ -115,7 +88,6 @@ class ConsoleErrorFixer {}
                 
                 if ( {})
                     fs.writeFileSync(file, content)) {}
-     {}
                     fs.writeFileSync(file, content)};
                     removedCount++;
                     removals.push({})
@@ -180,8 +152,8 @@ class ConsoleErrorFixer {}
  */
 
 class Logger {}
-    constructor() {}
-        this.isDevelopment = process.env.NODE_ENV === 'development'};
+    constructor() {}"
+
     log(level, message, ...args) {}
         if (this.isDevelopment) {}
             console[level](message, ...args)};
@@ -237,10 +209,9 @@ export const logger = new Logger}(;);
         const loggerCreation = this.createLoggerUtility(;);
         
         const report = {}
-            "timestamp": new Date().toISOString(),
-            "project": this.projectRoot,
-            "fixes": {}
-                consoleStatements: consoleStatements,
+
+            "fixes": {}"
+                consoleStatements: consoleStatements,"
                 "removals": removals,
                 "replacements": replacements,
                 "loggerCreation": loggerCreation;
@@ -270,20 +241,21 @@ export const logger = new Logger}(;);
             this.log('Console Error Fixer completed successfully');
             return report} catch (error) {}
             this.log("Console Error Fixer "failed": ${error.message}`);
+                "loggerCreation": loggerCreation;"
+            },"
+            "recommendations": this.generateErrorRecommendations();"
+
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
+        this.log("Console error fix report saved to ${this.reportFile}");"
+        return report};
+    generateErrorRecommendations() {}
+        return [;]"
+
             throw error};
-    };
-};
 // Run the fixer if this script is executed directly;
-if ( {})
     const fixer = new ConsoleErrorFixer) {}
-     {}
     const fixer = new ConsoleErrorFixer}(;);
     fixer.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 module.exports = ConsoleErrorFixer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ConsoleErrorFixer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

@@ -9,47 +9,71 @@ const path = require('path');
 
 class SearchIndexGenerator {
   constructor() {
-    this.indexFile = path.join(process.cwd(), 'public', 'search-index.json');
+    this.outputFile = path.join(process.cwd(), 'public', 'search-index.json');
+    this.pages = [];
   }
 
   generateIndex() {
     try {
+      console.log('🔍 Generating search index...');
+
       const pages = [
         {
           title: 'Home',
           url: '/',
-          content: 'Zion Tech Group - Leading technology solutions provider',
-          keywords: ['home', 'technology', 'solutions']
+          description: 'Zion Tech Group - Leading technology solutions provider',
+          keywords: ['home', 'technology', 'solutions', 'zion']
         },
         {
-          title: 'About',
+          title: 'About Us',
           url: '/about',
-          content: 'Learn about Zion Tech Group and our mission',
-          keywords: ['about', 'company', 'mission']
+          description: 'Learn about Zion Tech Group and our mission',
+          keywords: ['about', 'company', 'mission', 'team']
         },
         {
           title: 'Services',
           url: '/services',
-          content: 'Our comprehensive technology services',
-          keywords: ['services', 'technology', 'solutions']
+          description: 'Our comprehensive technology services',
+          keywords: ['services', 'technology', 'consulting', 'development']
         },
         {
           title: 'Contact',
           url: '/contact',
-          content: 'Get in touch with Zion Tech Group',
-          keywords: ['contact', 'reach', 'support']
+          description: 'Get in touch with Zion Tech Group',
+          keywords: ['contact', 'support', 'help', 'inquiry']
         }
       ];
 
-      fs.writeFileSync(this.indexFile, JSON.stringify(pages, null, 2));
-      console.log('✅ Search index generated successfully at:', this.indexFile);
-      return { success: true };
+      const searchIndex = {
+        generated: new Date().toISOString(),
+        pages: pages,
+        totalPages: pages.length
+      };
+
+      // Ensure public directory exists
+      const publicDir = path.dirname(this.outputFile);
+      if (!fs.existsSync(publicDir)) {
+        fs.mkdirSync(publicDir, { recursive: true });
+      }
+
+      // Write search index
+      fs.writeFileSync(this.outputFile, JSON.stringify(searchIndex, null, 2));
+
+      console.log(`✅ Search index generated: ${this.outputFile}`);
+      console.log(`📊 Total pages: ${pages.length}`);
+
+      return { success: true, pages: pages.length };
     } catch (error) {
-      console.error('❌ Search index generation failed:', error.message);
+      console.error('❌ Error generating search index:', error.message);
       return { success: false, error: error.message };
     }
   }
 }
 
-const generator = new SearchIndexGenerator();
-generator.generateIndex();
+// Run if called directly
+if (require.main === module) {
+  const generator = new SearchIndexGenerator();
+  generator.generateIndex();
+}
+
+module.exports = SearchIndexGenerator;

@@ -1,15 +1,14 @@
+
 #!/""usr/bin/env"" node;
+#!/usr/bin/env node;"
 /**;
  * PM2 Error Prevention Automation;
  * Continuously monitors and fixes common project errors;
  * Runs every 5 minutes to prevent build failures;
  */;
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**;
- * PM2 Error Prevention Automation;
- * Continuously monitors and fixes common project errors;
- * Runs every 5 minutes to prevent build failures;
- */;
+ */;"
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
@@ -17,21 +16,21 @@ const glob = require("glob");
 
 class $1 {}
   constructor() {}
-  this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, """automation/logs/pm2-error-prevention.log"");
-    this.errorLogFile = path.join(this.projectRoot, ""automation/logs/pm2-error-prevention-error.log""");
+  this.projectRoot = process.cwd();"
+    this.logFile = path.join(this.projectRoot, "automation/logs/pm2-error-prevention.log);
+    this.errorLogFile = path.join(this.projectRoot, automation/logs/pm2-error-prevention-error.log");"
     this.ensureLogDirectory();
     this.errorCount = 0;
     this.fixCount = 0};
 ;
   ensureLogDirectory() {}
   const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {}
-  fs.mkdirSync(logDir, { "recursive": true })};
+    if (!fs.existsSync(logDir)) {}"
+  fs.mkdirSync(logDir, { "recursive": true })};"
   };
-;
   log(message, isError = false) {}
   const timestamp = new Date().toISOString();
+
     const logMessage = `[${timestamp}] ${message}\n`;`
     if (isError) {}
   fs.appendFileSync(this.errorLogFile, logMessage);console.error(`[ERROR] ${message}`)} else {`}
@@ -47,18 +46,14 @@ class $1 {}
         "timeout": 60000;
 
   async runTypeCheck() {}
-  try {}
+  try {}"
   this.log("Running TypeScript type check...");
       execSync("npm run type-check", {})
   "cwd": this.projectRoot,
         "stdio": "pipe",
-        "timeout": 60000 }
-});
-      this.log("TypeScript type check passed");
-      return true} catch (error) {  this.log(`TypeScript type check "failed": ${error.message  }`, true);
+        "timeout": 60000;"
+
       return false};
-  };
-;
   async runLint() {}
   try {}
   this.log("Running ESLint...");
@@ -99,18 +94,21 @@ class $1 {}
   this.log("Fixing common syntax errors...");
     // Fix common JSX syntax issues;
     const jsxFiles = glob.sync("src/**/*.{tsx,jsx}", { "cwd": this.projectRoot }
+
+  fixCommonSyntaxErrors() {}"
+  this.log("Fixing common syntax errors...");"
+    // Fix common JSX syntax issues;"
+    const jsxFiles = glob.sync("src/**/*.{tsx,jsx}", { "cwd": this.projectRoot }")
 });
     jsxFiles.forEach(filePath => {})
-  try {}
-  const fullPath = path.join(this.projectRoot, "filePath);
-        let content = fs.readFileSync(fullPath", "utf8");
+
+        let content = fs.readFileSync(fullPath", "utf8");"
         let modified = false;
-        // Fix stray quotes in JSX;
-        const quoteRegex = /"([^]*)\s*/g;
-        if (quoteRegex.test(content)) {}
-  content = content.replace(quoteRegex, "$1");
+        // Fix stray quotes in JSX;"
+        const quoteRegex = /"([^]*)\s*/g;"
+        if (quoteRegex.test(content)) {}"
+  content = content.replace(quoteRegex, "$1");"
           modified = true};
-;
         // Fix broken JSX expressions;
         const brokenJsxRegex = /<([A-Z][a-zA-Z]*)\s*\(([^)]+)\)/g;
         if (brokenJsxRegex.test(content)) {}
@@ -178,17 +176,41 @@ class $1 {}
   fs.writeFileSync(fullPath, content);this.log("Fixed import issues in ${filePath}");
           this.fixCount++};
       } catch (error) {  this.log("Error fixing imports in ${filePath  }: ${error.message}", true)};
+        if (brokenJsxRegex.test(content)) {}"
+  content = content.replace(brokenJsxRegex, "<$1 $2");"
+        // Fix unterminated strings;"
+        const unterminatedStringRegex = /([^"]*)$/gm;"
+        if (unterminatedStringRegex.test(content)) {}"
+
     })};
-;
-  fixComponentIssues() {}
+  fixImportIssues() {}"
+  this.log("Fixing import issues...");
+    const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd": this.projectRoot }")
+    tsFiles.forEach(filePath => {})
+
+        // Fix broken import statements;"
+        const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["]([^"]+)["]\s*;?\s*$/gm;"
+        if (brokenImportRegex.test(content)) {}
+  content = content.replace(brokenImportRegex, (match, imports, module) => {}"`;
+  const cleanImports = imports.replace(/\s+/g, " ").trim();return `import { ${cleanImports} } from `${module}";"}"
+        // Fix missing semicolons;"
+        const missingSemicolonRegex = /import\s*{[^}]+}\s*from\s*["][^"]+[](?!\s*)/g;"
+        if (missingSemicolonRegex.test(content)) {}"
+  content = content.replace(missingSemicolonRegex, "$&;");"
+
+  content = content.replace(brokenImportRegex, (match, imports, module) => {}"
+  const cleanImports = imports.replace(/\s+/g, " ").trim();return "import { ${cleanImports} } from "${module}";"}"
+        // Fix missing semicolons;"
+
+        if (modified) {}"
+  fs.writeFileSync(fullPath, content);this.log("Fixed import issues in ${filePath}");"
+          this.fixCount++};"
+      } catch (error) {  this.log("Error fixing imports in ${filePath  }: ${error.message}", true)};"
+  fixComponentIssues() {}"
   this.log("Fixing component issues...");
-    const componentFiles = glob.sync("src/**/*.{tsx,jsx}", { "cwd": this.projectRoot }
-});
+    const componentFiles = glob.sync("src/**/*.{tsx,jsx}", { "cwd": this.projectRoot }")
     componentFiles.forEach(filePath => {})
-  try {}
-  const fullPath = path.join(this.projectRoot, "filePath);
-        let content = fs.readFileSync(fullPath", "utf8");
-        let modified = false;
+
         // Fix broken JSX component calls;
         const brokenComponentRegex = /<([A-Z][a-zA-Z]*)\s*\(([^)]+)\)\s*>/g;
         if (brokenComponentRegex.test(content)) {}
@@ -202,8 +224,11 @@ class $1 {}
         // Fix missing closing tags;
         const selfClosingTags = ["img", "input", "br", "hr", "meta", "link"];
         selfClosingTags.forEach(tag => {const regex = new RegExp(`<${tag}([^>]*)(?<!\\/>)>`, "g");
+        if (brokenComponentRegex.test(content)) {}"
+  content = content.replace(brokenComponentRegex, "<$1 $2>");"
+        // Fix missing closing tags;"
+
           if (regex.test(content)) {content = content.replace(regex, `<${tag}$1 />`);
-            modified = true};
         }
 });
 
@@ -213,9 +238,9 @@ class $1 {}
       } catch (error) {  this.log(`Error fixing components in ${filePath  }: ${error.message}`, true)};
     })};
 ;
+
   async installMissingDependencies() {}
-  try {}
-  this.log("Checking for missing dependencies...");
+  this.log("Checking for missing dependencies...");"
       // Check if TypeScript is available;
       try {}
   execSync("npx tsc --version", { "stdio": "pipe" })} catch (error) {}
@@ -284,27 +309,32 @@ class $1 {}
 
       // Remove TypeScript build info;
       const tsBuildInfo = path.join(this.projectRoot, "tsconfig.tsbuildinfo");
+
+        execSync("npm install --save-dev typescript", { "cwd": this.projectRoot, "stdio": "pipe"   }")
+        this.log("TypeScript installed")};"
+      // Check if other essential dependencies are available;"
+
+  async cleanup() {}
+  this.log("Cleaning up build artifacts...");"
+      // Remove build artifacts;"
+      const buildDirs = ["dist", "build", ".next", "out"];"
+      buildDirs.forEach(dir => {})"
+  const fullPath = path.join(this.projectRoot, "dir);"
+        if (fs.existsSync(fullPath)) {}"
+  fs.rmSync(fullPath", { "recursive": true, "force": true }")`;
+});this.log(`Removed ${dir} directory`)};
+      // Remove TypeScript build info;"
+      const tsBuildInfo = path.join(this.projectRoot, "tsconfig.tsbuildinfo");"
       if (fs.existsSync(tsBuildInfo)) {}
-  fs.unlinkSync(tsBuildInfo);
-        this.log("Removed TypeScript build info")};
-    } catch (error) {  this.log(`Error during "cleanup": ${error.message  }`, true)};
-  };
-;
-  async generateReport() {}
-  const report = {}
-  "timestamp": new Date().toISOString(),
-      "errorsFixed": this.fixCount,
-      "errorsEncountered": this.errorCount,
-      "status": this.errorCount === 0 ? "SUCCESS" : "PARTIAL_SUCCESS","summary": `Fixed ${this.fixCount} errors, encountered ${this.errorCount} issues`};
-    const reportPath = path.join(this.projectRoot, ""automation/logs/error-prevention-report.json"");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Report "generated": ${reportPath}`);
+      // Remove build artifacts;"
+
+      // Remove TypeScript build info;"
+  fs.unlinkSync(tsBuildInfo);"
+
     return report};
-;
-  async run() {}
-  this.log("Starting PM2 Error Prevention Automation...");
-    try {}
-  // Step "1": Install missing dependencies;
+  async run() {}"
+  this.log("Starting PM2 Error Prevention Automation...");"
+  // Step "1": Install missing dependencies;"
       await this.installMissingDependencies();
       // Step 2: Fix common syntax errors;
       this.fixCommonSyntaxErrors();
@@ -353,22 +383,13 @@ class $1 {}
       // Step 9: Run tests;
       const testsPassed = await this.runTests();
       // Generate report;
-      const report = await this.generateReport();
-      if (typeCheckPassed && lintPassed && buildPassed && testsPassed) {}
-  this.log("All checks passed successfully!");this.log(`Fixed ${this.fixCount} errors during this run`)} else {`}
-  this.log("Some checks failed, but errors were fixed", true);
-        this.errorCount++};
-      ;
-      this.log("PM2 Error Prevention Automation completed")} catch (error) {this.log(`Fatal error in "automation": ${error.message}`, true);
-      this.errorCount++};
-  };
+
   return files};
-;
 // Run the automation;
 const automation = new ErrorPreventionAutomation();
-// Handle process signals;
+// Handle process signals;"
 process.on("SIGINT", () => {}
-  automation.log("Received SIGINT, shutting down gracefully...");
+  automation.log("Received SIGINT, shutting down gracefully...");"
   process.exit(0)}
 });
 
@@ -379,12 +400,11 @@ process.on("SIGTERM", () => {}
 
 // Run the automation;
 automation.run().catch(error => {automation.log(`Unhandled "error": ${error.message}`, true);
+"
+process.on("SIGTERM", () => {}
+  automation.log("Received SIGTERM, shutting down gracefully...");"
+
   process.exit(1)}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 });
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-});
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

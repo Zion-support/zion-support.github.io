@@ -1,27 +1,14 @@
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
 
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node];import { glob } from "glob;""
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+origin/main
+main
+
 // Directories to clean
 const directories = [
   'src/**/*.{js,jsx,ts,tsx}',
@@ -137,6 +124,3 @@ async function main() {
 main().catch(console.error);
 
 export { cleanConsoleLogs, processFile };
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

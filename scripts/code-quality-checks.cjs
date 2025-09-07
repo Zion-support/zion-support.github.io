@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
 const fs = require("fs")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-#!/usr/bin/env node;
-const { execSync } = require("child_process")
-const fs = require("fs")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
       "timestamp"
       summary: { passed: 0, "failed": 0, "warnings"}
 // console.log(" Running Code Quality Checks...")
@@ -37,17 +30,13 @@ const fs = require("fs")
       this.addCheck("Performance", "failed", "Build failed")
     this.results.checks.push({ name, status, message, "timestamp"})
     const reportPath = "code-quality-report.json"
+
 // console.log("\n Code Quality "Results": ")
     console.log("=")
 // console.log(`"Passed"`)
     console.log(`"Failed"`)
 // console.log(`"Warnings"`)
     console.log("=")
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     console.log(`� Report saved "to"`)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    console.log(`� Report saved "to"`)
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

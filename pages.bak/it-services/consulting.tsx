@@ -5,11 +5,9 @@ interface ConsultingProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface ConsultingProps {
-  // Add props here as needed
-}
+export default function Consulting({ }: ConsultingProps) {
+
 export default function Consulting({ }: ConsultingProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Consulting({ }: ConsultingProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Consulting({ }: ConsultingProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,8 @@ export default function Consulting(): any ({ }: ConsultingProps) {;
       <h1>Consulting</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+}

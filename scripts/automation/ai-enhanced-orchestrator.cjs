@@ -1,4 +1,6 @@
+
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * AI-Enhanced PM2 Orchestrator;
  * Advanced intelligent system for PM2 process management with ML capabilities;
@@ -6,6 +8,7 @@
  */
 
 const pm2 = require('pm2')
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -19,6 +22,7 @@ const os = require('os')
       securityMode: process.env.SECURITY_MODE === 'true'
       performanceMode: process.env.PERFORMANCE_MODE === 'true'
       deploymentMode: process.env.DEPLOYMENT_MODE === 'true'
+
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -36,11 +40,6 @@ const os = require('os')
         '1min'
         '5min'
         '15min'
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       const result = execSync('top -bn1 | grep "Cpu(s)"
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      const result = execSync('top -bn1 | grep "Cpu(s)"
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

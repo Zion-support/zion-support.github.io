@@ -5,11 +5,9 @@ interface SolutionsProps {
   // Add props here as needed
 
 import React from 'react';
-import * as React from 'react';
 
-interface SolutionsProps {
-  // Add props here as needed
-}
+export default function Solutions({ }: SolutionsProps) {
+
 export default function Solutions({ }: SolutionsProps) {
   return (
     <div>
@@ -17,7 +15,11 @@ export default function Solutions({ }: SolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
+
+}
+
+export default function Solutions({ }: SolutionsProps) {
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,4 +60,8 @@ export default function Solutions(): any ({ }: SolutionsProps) {;
       <h1>Solutions</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
+
+}
+}
+
+}

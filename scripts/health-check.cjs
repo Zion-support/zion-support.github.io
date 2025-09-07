@@ -1,15 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+console.log('🔍 Comprehensive Health Check Starting...');
+
 const { execSync } = require('child_process')
 console.log('� Running Health Check...')
   "status"
@@ -18,11 +18,44 @@ console.log('� Running Health Check...')
     execSync('npm run build', { "stdio"})
     execSync('npm run lint', { "stdio"})
     execSync('npm run type-check', { "stdio"})
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 console.log('� Overall "status")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 console.log('� Overall "status")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+const checks = [
+  {
+    name: 'Package.json exists',
+    check: () => fs.existsSync('package.json')
+  },
+  {
+    name: 'Node modules installed',
+    check: () => fs.existsSync('node_modules')
+  },
+  {
+    name: 'Next.js config exists',
+    check: () => fs.existsSync('next.config.ts') || fs.existsSync('next.config.js')
+  },
+  {
+    name: 'TypeScript config exists',
+    check: () => fs.existsSync('tsconfig.json')
+  },
+  {
+    name: 'ESLint config exists',
+    check: () => fs.existsSync('eslint.config.js')
+  },
+  {
+    name: 'Jest config exists',
+    check: () => fs.existsSync('jest.config.smoke.cjs')
+  },
+  {
+    name: 'App component exists',
+    check: () => fs.existsSync('App.tsx')
+  },
+  {
+    name: 'Components directory exists',
+    check: () => fs.existsSync('components') || fs.existsSync('src/components')
+  }
+];
+
+let passed = 0;
+let failed = 0;
+
