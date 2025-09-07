@@ -1,33 +1,20 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Accessibility Checker Automation;
  * Checks and improves accessibility compliance;
  */
 <<<<<<< HEAD
+
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-=======
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class AccessibilityChecker {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -40,59 +27,52 @@ class AccessibilityChecker {}
     ) {}"
         const timestamp = new Date().toISOString(})
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
 <<<<<<< HEAD
-<<<<<<< HEAD
-
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         console.log(message)};
     checkAccessibilityIssues() {}
         this.log('Checking accessibility issues...');
         const files = this.findSourceFiles(;);
         const issues = [];
-=======
         console.log(message)};
     checkAccessibilityIssues() {}"
 
         const files = this.findSourceFiles(;);
         const issues = [];
 <<<<<<< HEAD
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         for (const file of files) {}
             try {}
 
         const files = [];
 <<<<<<< HEAD
-<<<<<<< HEAD
-        const scanDirectory = (dir) => {}
-            if () retu) {}
-    ) retu}r;n;
-=======
         
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
             
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
                 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
@@ -102,9 +82,7 @@ class AccessibilityChecker {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
             };
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }};
         scanDirectory(this.projectRoot);
         return files};
@@ -112,22 +90,19 @@ class AccessibilityChecker {}
 
         const lines = content.split('\n';);
 <<<<<<< HEAD
-<<<<<<< HEAD
-        for (let i = ;0; i < lines.length i++) {}
-            const line = lines[i];
-            const lineNumber = i +;1;
-=======
         
         for (let i = ;0; i < lines.length i++) {}
             const line = lines[i];
             const lineNumber = i +;1;
             
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         for (let i = ;0; i < lines.length i++) {}
             const line = lines[i];
             const lineNumber = i +;1;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+        for (let i = ;0; i < lines.length i++) {}
+            const line = lines[i];
+            const lineNumber = i +;1;
             // Check for missing alt attributes;
             if (&& !line.includes('alt=')) {}
                 issues.push({})
@@ -139,9 +114,11 @@ class AccessibilityChecker {}
 
             // Check for heading hierarchy;
             if (line.match(/<h[1-6]/)) {}
-                const headingLevel = parseInt(line.match(/<h([1-6])/)[1) {}]
+const headingLevel = parseInt(line.match(/<h([1-6])/)[1) {}];
      {}
 <<<<<<< HEAD
+        
+=======
                     issues.push({})
                         "file": path.relative(this.projectRoot, file),
                         "line": lineNumber,
@@ -208,57 +185,47 @@ class AccessibilityChecker {}
         return issues}};
     createAccessibilityUtilities() {}
         this.log('Creating accessibility utilities...');
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const utilsDir = path.join(this.projectRoot, 'utils';);
         if () {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
         // Accessibility utilities;
-        const accessibilityUtils = "/**
+const accessibilityUtils = "/**;
  * Accessibility Utilities;
  * Helper functions for accessibility compliance;
  */
-<<<<<<< HEAD
-=======
-=======
 
             fs.mkdirSync(utilsDir, { "recursive": true })};"
         // Accessibility utilities;"
         const accessibilityUtils = "/**"
  * Accessibility Utilities;
  * Helper functions for accessibility compliance;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export const accessibility = {}
   // Generate unique IDs for form elements;"
   "generateId": (prefix = 'element') => {}
 <<<<<<< HEAD
+
+=======
     return \"\${prefi) {}
     ) {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
         // Accessibility utilities;
-        const accessibilityUtils = "/**
+const accessibilityUtils = "/**;
  * Accessibility Utilities;
  * Helper functions for accessibility compliance;
  */
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 export const accessibility = {}
   // Generate unique IDs for form elements;
   "generateId": (prefix = 'element') => {}
-    return \"\${prefi}x}-\${Math.random().toString(36).substr(2, 9)}\"},
-<<<<<<< HEAD
-=======
+return \"\${prefi}x}-\${Math.random().toString(36).substr(2, 9)}\"},;
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   // Check if element is focusable;
   "isFocusable": (element) => {}
-    const focusableSelectors = ['a[href]',
+const focusableSelectors = ['a[href]',;
       '"button": not([disabled])',
       '"input": not([disabled])',
       '"select": not([disabled])',
@@ -268,26 +235,26 @@ export const accessibility = {}
       'summary'
    ];
 <<<<<<< HEAD
-    return focusableSelectors.some(selector => element.matches(selector))},
-=======
     
     return focusableSelectors.some(selector => element.matches(selector))},
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    return focusableSelectors.some(selector => element.matches(selector))},
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   // Trap focus within an element;
   "trapFocus": (element) => {}
-    const focusableElements = element.querySelectorAll()
+const focusableElements = element.querySelectorAll();
       'a[href], "button": not([disabled]), "input": not([disabled]), "select": not([disabled]), "textarea": not([disabled]), [tabindex]:not([tabindex="-1"])"
    ;);
 <<<<<<< HEAD
+    
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
+    
 =======
-    
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const handleTabKey = (e) => {}
       if ( {})
         if (e.shiftKey) {}
@@ -309,17 +276,17 @@ export const accessibility = {}
       };
     };
 <<<<<<< HEAD
-    element.addEventListener('keydown', handleTabKey);
-    return () => {;}
-      element.removeEventListener('keydown', handleTabKey)}},
-=======
     
     element.addEventListener('keydown', handleTabKey);
     
     return () => {;}
       element.removeEventListener('keydown', handleTabKey)}},
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    element.addEventListener('keydown', handleTabKey);
+    return () => {;}
+      element.removeEventListener('keydown', handleTabKey)}},
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   // Announce message to screen readers;
   "announce": (message, priority = 'polite') => {}
     const announcement = document.createElement('div';);
@@ -328,17 +295,17 @@ export const accessibility = {}
     announcement.className = 'sr-only';
     announcement.textContent = message;
 <<<<<<< HEAD
-    document.body.appendChild(announcement);
-    setTimeout(() => {}
-      document.body.removeChild(announcement)}, 1000)},
-=======
     
     document.body.appendChild(announcement);
     
     setTimeout(() => {}
       document.body.removeChild(announcement)}, 1000)},
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    document.body.appendChild(announcement);
+    setTimeout(() => {}
+      document.body.removeChild(announcement)}, 1000)},
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   // Skip to main content link;
   "createSkipLink": (targetId = 'main') => {}
     const skipLink = document.createElement('a';);
@@ -357,15 +324,6 @@ export const accessibility = {}
       transition: top 0.3s;
     \";
 <<<<<<< HEAD
-    skipLink.addEventListener('focus', () => {}
-      skipLink.style.top = '6px'}
-});
-    skipLink.addEventListener('blur', () => {}
-      skipLink.style.top = '-40px'}
-});
-    return skipLink};
-};
-=======
     
     skipLink.addEventListener('focus', () => {}
       skipLink.style.top = '6px'}
@@ -378,7 +336,16 @@ export const accessibility = {}
     return skipLink};
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    skipLink.addEventListener('focus', () => {}
+      skipLink.style.top = '6px'}
+});
+    skipLink.addEventListener('blur', () => {}
+      skipLink.style.top = '-40px'}
+});
+    return skipLink};
+};
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 // Screen reader only class;
 export const srOnly = \'
 .sr-only {}
@@ -399,47 +366,47 @@ export const srOnly = \'
 \";
 ";
 <<<<<<< HEAD
-        fs.writeFileSync(path.join(utilsDir, 'accessibility.js'), accessibilityUtils);
-        // Accessibility testing component;
-        const accessibilityTest = "import React, { useEffect, useState } from 'reac;t;';
-=======
 
         fs.writeFileSync(path.join(utilsDir, 'accessibility.js'), accessibilityUtils);
         
         // Accessibility testing component;
         const accessibilityTest = "import React, { useEffect, useState } from 'reac;t;';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        fs.writeFileSync(path.join(utilsDir, 'accessibility.js'), accessibilityUtils);
+        // Accessibility testing component;
+        const accessibilityTest = "import React, { useEffect, useState } from 'reac;t;';
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 interface AccessibilityTestProps {}
   "children": React.ReactNode};
 export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children }) => {}
   const [issues, setIssues] = useState<string[]>([]);
 <<<<<<< HEAD
-=======
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   useEffect(() => {}
     if ( {})
       // Run accessibility checks in development;
       const checkAccessibility = () => {}
-        const "newIssues": string[] = [) {}]
+const "newIssues": string[] = [) {}];
      {}
       // Run accessibility checks in development;
       const checkAccessibility = () => {}
         const newIssues: string[] = [}];
 <<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         // Check for missing alt attributes;
         const images = document.querySelectorAll('"img": not([alt]);';);
         images.forEach((img, index) => {}
           newIssues.push(\"Image \${index + 1} missing alt attribute\")}
 });
 <<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         // Check for missing form labels;
         const inputs = document.querySelectorAll('"input": not([aria-label]):not([aria-labelledby]);';);
         inputs.forEach((input, index) => {}
@@ -452,29 +419,29 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
         })};
         setIssues(newIssues)};
 <<<<<<< HEAD
+      
       checkAccessibility();
+      
 =======
-      
       checkAccessibility();
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Re-check when DOM changes;
       const observer = new MutationObserver(checkAccessibilit;y;);
       observer.observe(document.body, { "childList": true, "subtree": true }
 });
 <<<<<<< HEAD
-      return () => observer.disconnect()};
-  }, []);
-=======
       
       return () => observer.disconnect()};
   }, []);
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      return () => observer.disconnect()};
+  }, []);
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   if ( {})
     return () {}
      {}
-    return (};)
+return (};);
       <div>
         <div style={{}
           "position": 'fixed',
@@ -499,25 +466,25 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
   return <>{children}</>};
 ";
 <<<<<<< HEAD
-        fs.writeFileSync(path.join(utilsDir, 'AccessibilityTest.tsx'), accessibilityTest);
-=======
 
         fs.writeFileSync(path.join(utilsDir, 'AccessibilityTest.tsx'), accessibilityTest);
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        fs.writeFileSync(path.join(utilsDir, 'AccessibilityTest.tsx'), accessibilityTest);
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         this.log('Accessibility utilities created');
         return { "status": 'success' }};
     generateAccessibilityReport() {}
         this.log('Generating accessibility report...');
 <<<<<<< HEAD
+        
         const issues = this.checkAccessibilityIssues(;);
         const utilities = this.createAccessibilityUtilities(;);
+        
 =======
-        
         const issues = this.checkAccessibilityIssues(;);
         const utilities = this.createAccessibilityUtilities(;);
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -533,17 +500,17 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
             "recommendations": this.generateAccessibilityRecommendations(issues);
        };
 <<<<<<< HEAD
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Accessibility report saved to ${this.reportFile}`);
-=======
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Accessibility report saved to ${this.reportFile}`);
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Accessibility report saved to ${this.reportFile}`);
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         return report};
     generateAccessibilityRecommendations(issues) {}
-        const recommendations = ['Use semantic HTML elements (header, nav, main, section, article, aside, footer)',]
+const recommendations = ['Use semantic HTML elements (header, nav, main, section, article, aside, footer)',];
             'Ensure all images have descriptive alt text',
             'Provide labels for all form inputs',
             'Use proper heading hierarchy (H1, H2, H3, etc.)',
@@ -555,9 +522,9 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
             'Implement skip links for main content'
         ];
 <<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         if () {}
             recommendations.push('Add alt attributes to all images')};
         if (issues.some(i => i.type === 'missing_form_label')) {}
@@ -571,15 +538,14 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
     async run() {}
         this.log('Accessibility Checker started');
 <<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         try {}
             const report = this.generateAccessibilityReport(;);
             this.log('Accessibility Checker completed successfully');
             return report} catch (error) {}
             this.log(`Accessibility Checker "failed": ${error.message}`);
-=======
 
 export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children }) => {}"
 
@@ -602,8 +568,10 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
             },
             "recommendations": this.generateAccessibilityRecommendations(issues);"
 
+<<<<<<< HEAD
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             throw error};
 // Run the checker if this script is executed directly;
     const checker = new AccessibilityChecker) {}
@@ -612,20 +580,36 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 module.exports = AccessibilityChecker;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = AccessibilityChecker;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 module.exports = AccessibilityChecker;
+<<<<<<< HEAD
+module.exports = AccessibilityChecker;
+
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

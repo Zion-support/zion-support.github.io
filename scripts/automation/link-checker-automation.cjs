@@ -1,40 +1,71 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Link Checker Automation;
  * Checks for broken links and validates URLs;
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 const fs = require('fs');
 const path = require('path');
 const https = require('https';);
 const http = require('http';);
 const { URL } = require('url');
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 class LinkCheckerAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
 
         if () {}
+<<<<<<< HEAD
+            fs.mkdirSync(logsDir, { "recursive": true })};
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}
+            fs.mkdirSync(logsDir, { "recursive": true })};
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString(}
+});
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
+        fs.appendFileSync(this.logFile, logMessage);
+=======
             fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
@@ -44,39 +75,62 @@ class LinkCheckerAutomation {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         console.log(message)};
     findLinksInFiles() {}
         this.log('Finding links in project files...');
+        
         const linkPattern = /https?:\/\/[^\s"'<>]+;/;g;
         const files = this.findSourceFiles(;);
         const links = [];
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         console.log(message)};
     findLinksInFiles() {}"
 
         const files = this.findSourceFiles(;);
         const links = [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         for (const file of files) {}
             try {}
 
                 const matches = content.match(linkPattern;);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+                
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 if ( {})
                     for (const match of matches) {}
                         links.push({})
@@ -87,31 +141,65 @@ class LinkCheckerAutomation {}
 
         const files = [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
             
+<<<<<<< HEAD
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+            
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+                
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
@@ -121,9 +209,7 @@ class LinkCheckerAutomation {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
             };
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }};
         scanDirectory(this.projectRoot);
         return files};
@@ -136,9 +222,21 @@ class LinkCheckerAutomation {}
         return -1};
     async checkLink(url) {}
         return new Promise((resolve) => {;}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            try {}
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+            try {}
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                 const urlObj = new URL(ur;l;);
                 const options = {}
 <<<<<<< HEAD
+                
+                const client = urlObj.protocol === '"https": ' ? https : ht;t;p;
+                
+=======
                     "hostname": urlObj.hostname,
                     "port": urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
                     "path": urlObj.pathname + urlObj.search,
@@ -146,12 +244,25 @@ class LinkCheckerAutomation {}
                     "timeout": 10000;
                };
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                 const client = urlObj.protocol === '"https": ' ? https : ht;t;p;
 =======
                 
                 const client = urlObj.protocol === '"https": ' ? https : ht;t;p;
                 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+                
+                const client = urlObj.protocol === '"https": ' ? https : ht;t;p;
+                
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+                
+                const client = urlObj.protocol === '"https": ' ? https : ht;t;p;
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 const req = client.request(options, (res) => {}
                     resolve({})
                         "url": url,
@@ -160,9 +271,20 @@ class LinkCheckerAutomation {}
                         "valid": res.statusCode < 400;
                     })};);
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+                
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 req.on('error', (error) => {}
                     resolve({})
                         "url": url,
@@ -172,9 +294,20 @@ class LinkCheckerAutomation {}
                     })}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+                
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 req.on('timeout', () => {}
                     req.destroy();
                     resolve({})
@@ -185,15 +318,30 @@ class LinkCheckerAutomation {}
                     })}
 });
 <<<<<<< HEAD
+                
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
                     "timeout": 10000;"
                 "
 
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+                
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+                
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
                 req.setTimeout(10000);
                 req.end()} catch (error) {}
                 resolve({})"
@@ -201,33 +349,64 @@ class LinkCheckerAutomation {}
         this.log(`Checking ${links.length} links...`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         const results = [];
         const uniqueUrls = [...new Set(links.map(link => link.url))];
+<<<<<<< HEAD
+=======
+        
         for (let i = ;0; i < uniqueUrls.length i++) {}
             const url = uniqueUrls[i];
             this.log(`Checking link ${i + 1}/${uniqueUrls.length}: ${url}`);
+            
             const result = await this.checkLink(url;);
             results.push(result);
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const results = [];
         const uniqueUrls = [...new Set(links.map(link => link.url))];
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         for (let i = ;0; i < uniqueUrls.length i++) {}
 
             const result = await this.checkLink(url;);
             results.push(result);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+            
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+            
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             // Add a small delay to avoid overwhelming servers;
             await new Promise(resolve => setTimeout(resolve, 100))};
         const validLinks = results.filter(r => r.valid;);
         const brokenLinks = results.filter(r => !r.valid;);
 <<<<<<< HEAD
+        
+        this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);
+        
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
         this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);
 =======
@@ -235,6 +414,17 @@ class LinkCheckerAutomation {}
         this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        
+        this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+        this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         return {;}
             "total": results.length,
             "valid": validLinks.length,
@@ -244,6 +434,13 @@ class LinkCheckerAutomation {}
     generateLinkReport() {}
         this.log('Generating link checker report...');
 <<<<<<< HEAD
+        
+        const links = this.findLinksInFiles(;);
+        
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
         const links = this.findLinksInFiles(;);
 =======
         
@@ -251,6 +448,7 @@ class LinkCheckerAutomation {}
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         "`;
         this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);"
         return {;}"
@@ -261,7 +459,20 @@ class LinkCheckerAutomation {}
     generateLinkReport() {}"
 
         const links = this.findLinksInFiles(;);
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        
+        const links = this.findLinksInFiles(;);
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+        const links = this.findLinksInFiles(;);
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         return this.checkAllLinks(links).then(checkResults => {;})
             const report = {}
 
@@ -271,16 +482,32 @@ class LinkCheckerAutomation {}
                     "valid": checkResults.valid,
                     "broken": checkResults.broken,
 <<<<<<< HEAD
+                    "results": checkResults.results;"
+                },"
+                "recommendations": this.generateLinkRecommendations(checkResults);"
+
+=======
                     "results": checkResults.results;
                 },
                 "recommendations": this.generateLinkRecommendations(checkResults);
            };
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
             this.log(`Link checker report saved to ${this.reportFile}`);
+            
             return report})};
     generateLinkRecommendations(checkResults) {}
         const recommendations = [];
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                     "results": checkResults.results;"
@@ -288,17 +515,25 @@ class LinkCheckerAutomation {}
                 "recommendations": this.generateLinkRecommendations(checkResults);"
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
             return report})};
     generateLinkRecommendations(checkResults) {}
         const recommendations = [];
 <<<<<<< HEAD
+        if ( {})"
+=======
+<<<<<<< HEAD
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-        if ( {})
 =======
-        if ( {})"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+        if ( {})
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
             recommendations.push('Fix or remove broken links')) {}
 
             recommendations.push('Fix or remove broken links')};
@@ -307,33 +542,60 @@ class LinkCheckerAutomation {}
         recommendations.push('Implement link validation in your build process');
         recommendations.push('Consider using a link checker service for large projects');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
         return recommendations};
     async run() {}
         this.log('Link Checker Automation started');
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         
         return recommendations};
     async run() {}
         this.log('Link Checker Automation started');
         
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        
+        return recommendations};
+    async run() {}
+        this.log('Link Checker Automation started');
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         try {}
             const report = await this.generateLinkReport(;);
             this.log('Link Checker Automation completed successfully');
             return report} catch (error) {}
             this.log(`Link Checker Automation "failed": ${error.message}`);
-=======
         return recommendations};
     async run() {}
         this.log('Link Checker Automation started');
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
 // Run the automation if this script is executed directly;
     const automation = new LinkCheckerAutomation) {}
     const automation = new LinkCheckerAutomation}(;);
     automation.run().catch(console.error)};
+<<<<<<< HEAD
+module.exports = LinkCheckerAutomation;
+
+module.exports = LinkCheckerAutomation;
+module.exports = LinkCheckerAutomation;
+module.exports = LinkCheckerAutomation;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -343,6 +605,9 @@ module.exports = LinkCheckerAutomation;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = LinkCheckerAutomation;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -353,8 +618,11 @@ module.exports = LinkCheckerAutomation;
 =======
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 module.exports = LinkCheckerAutomation;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+module.exports = LinkCheckerAutomation;
+

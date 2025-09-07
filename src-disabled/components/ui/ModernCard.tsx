@@ -1,6 +1,6 @@
  import { motion } from 'framer-motion' import { cn } from '@/lib/utils'  interface ModernCardProps {
   children: React.ReactNode;
-   className?: string;\"\";
+   className?: string;"";
    variant?: 'default' | 'elevated' | 'glass' | 'neon';
    hoverEffect?: boolean;
    onClick?: () => void;}
@@ -20,9 +20,9 @@ export const ModernCard: React.FC<ModernCardProps /> = ({ children, className, v
   return ( <motion.div className={cn(baseClasses, variantClasses[variant], hoverClasses)} whileHover={hoverEffect && !disabled ? { y: -8 } : {}} whileTap={onClick && !disabled ? { scale: 0.98 } : {}} onClick={onClick} role={onClick ? 'button' : undefined} tabIndex={onClick && !disabled ? 0 : undefined} onKeyDown={(e) = /> { if (onClick && !disabled && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault() onClick() } }} disabled={disable}
 } initial={{ opacity: 0, y: 20 }
 } animate={{ opacity: 1, y: 0 }"
-} transition={{ duration: 0.5, ease: 'easeOut' }} > <div className=\"relative z-10 p-6\" />'{childre}"
-}' </div>';\" {}\"'\" <div className=\"absolute inset-0 opacity-20\" />\"'\" <div className=\"absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/20 to-transparent rounded-full blur-3xl\" />\"'\" <div className=\"absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-zion-purple/20 to-transparent rounded-full blur-2xl\" />\" </div>'{}'{hoverEffect && ('\" <motion.div\"';\" className=\"absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-transparent to-zion-purple/10 opacity-0\" whileHover={{ opacity: 1 }} transition={{ duration: 0.3 }} />\" ,"
-}' </motion.div>')';\" }';\"'\"\"\"}
+} transition={{ duration: 0.5, ease: 'easeOut' }} > <div className="relative z-10 p-6" />'{childre}"
+}' </div>';" {}"'" <div className="absolute inset-0 opacity-20" />"'" <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/20 to-transparent rounded-full blur-3xl" />"'" <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-zion-purple/20 to-transparent rounded-full blur-2xl" />" </div>'{}'{hoverEffect && ('" <motion.div"';" className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-transparent to-zion-purple/10 opacity-0" whileHover={{ opacity: 1 }} transition={{ duration: 0.3 }} />" ,"
+}' </motion.div>')';" }';"'"""}
 
 export const ModernCard: React.FC<ModernCardProps /> = ({ children, className, variant = 'default', hoverEffect = true, onClick, disabled = false   }) => {
 
@@ -39,7 +39,7 @@ export const ModernCard: React.FC<ModernCardProps /> = ({ children, className, v
 } animate={{ opacity: 1, y: 0 }
 } transition={{ duration: 0.5, ease: 'easeOut' }} > <div className='relative z-10 p-6' />'{childre}
 }' </div>';' {}''' <div className='absolute inset-0 opacity-20' />''' <div className='absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/20 to-transparent rounded-full blur-3xl' />''' <div className='absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-zion-purple/20 to-transparent rounded-full blur-2xl' />' </div>'{}'{hoverEffect && ('' <motion.div'';' className='absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-transparent to-zion-purple/10 opacity-0' whileHover={{ opacity: 1 }} transition={{ duration: 0.3 }} />' ,"
-}' </motion.div>')';' }';'';''\";
+}' </motion.div>')';' }';'';''";
    children: React.ReactNode;
    className?: string;
    variant?: 'default' | 'elevated' | 'glass' | 'neon';
@@ -62,8 +62,8 @@ export const ModernCard: React.FC<ModernCardProps /> = ({ children, className, v
 } initial={{ opacity: 0, y: 20 }
 } animate={{ opacity: 1, y: 0 }
 } transition={{ duration: 0.5, ease: 'easeOut' }"
-} > <div className=\"relative z-10 p-6\" />'; {children}'; </div>';\" {}\"';\" <div className=\"absolute inset-0 opacity-20\" />\"';\" <div className=\"absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/20 to-transparent rounded-full blur-3xl\" />\"';\" <div className=\"absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-zion-purple/20 to-transparent rounded-full blur-2xl\" />\" </div>'; {}'; {hoverEffect && (';\" <motion.div\"';\" className=\"absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-transparent to-zion-purple/10 opacity-0\" whileHover={{ opacity: 1 }} transition={{ duration: 0.3 }} />\" ,"
-}'; </motion.div>')';\" }';\"';\"\"\"'\";
+} > <div className="relative z-10 p-6" />'; {children}'; </div>';" {}"';" <div className="absolute inset-0 opacity-20" />"';" <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/20 to-transparent rounded-full blur-3xl" />"';" <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-zion-purple/20 to-transparent rounded-full blur-2xl" />" </div>'; {}'; {hoverEffect && (';" <motion.div"';" className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-transparent to-zion-purple/10 opacity-0" whileHover={{ opacity: 1 }} transition={{ duration: 0.3 }} />" ,"
+}'; </motion.div>')';" }';"';"""'";
 }
 
 export const ModernCard: React.FC<ModernCardProps /> = ({ children, className, variant = 'default', hoverEffect = true, onClick, disabled = false   }) => {
@@ -81,4 +81,4 @@ export const ModernCard: React.FC<ModernCardProps /> = ({ children, className, v
 } animate={{ opacity: 1, y: 0 }
 } transition={{ duration: 0.5, ease: 'easeOut' }
 } > <div className='relative z-10 p-6' />'; {children}'; </div>';' {}'';' <div className='absolute inset-0 opacity-20' />'';' <div className='absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/20 to-transparent rounded-full blur-3xl' />'';' <div className='absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-zion-purple/20 to-transparent rounded-full blur-2xl' />' </div>'; {}'; {hoverEffect && (';' <motion.div'';' className='absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-transparent to-zion-purple/10 opacity-0' whileHover={{ opacity: 1 }} transition={{ duration: 0.3 }} />' ,"
-}'; </motion.div>')';' }';'';''\"'\";"
+}'; </motion.div>')';' }';'';''"'";"

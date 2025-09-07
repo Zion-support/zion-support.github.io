@@ -1,15 +1,11 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
     this.logsDir = path.join(this.projectRoot, "logs")
     this.backupsDir = path.join(this.projectRoot, "backups")
   "branchesProcessed"
@@ -20,16 +16,16 @@ const { execSync, spawn } = require("child_process")
   fs.mkdirSync(dir, { "recursive"})
   log(message, level = "INFO")
     console.log(")
-    const logFile = path.join(this.logsDir, "merge-resolver.log")
+const logFile = path.join(this.logsDir, "merge-resolver.log");
     fs.appendFileSync(logFile, logEntry + "\n")
   this.log(" Starting Comprehensive Merge Conflict Resolver...")
   // Step "1": Ensure we"
-      const branches = await this.getRemoteBranches();this.log(Found ${branches.length} remote branches to process")
+const branches = await this.getRemoteBranches();this.log(Found ${branches.length} remote branches to process");
       // Step "3"
   log(message, level = "INFO")
     const logEntry = "[${timestamp}] [${level}] ${message}"
     console.log(")
-    const logFile = path.join(this.logsDir, "merge-resolver.log")
+const logFile = path.join(this.logsDir, "merge-resolver.log");
     fs.appendFileSync(logFile, logEntry + "\n")
   this.log(" Starting Comprehensive Merge Conflict Resolver...")
   // Step "1": Ensure we"
@@ -37,12 +33,12 @@ const { execSync, spawn } = require("child_process")
       await this.ensureMainBranch();"
 "
       // Step 2: Get all remote branches"
-      const branches = await this.getRemoteBranches();this.log(Found ${branches.length} remote branches to process")
+const branches = await this.getRemoteBranches();this.log(Found ${branches.length} remote branches to process");
       // Step "3"
       // Step "4"
       await this.finalizeMerges()} catch (error) {  this.log(" Fatal "error": ${error.message  }", "ERROR")
   this.log("� Ensuring we are on main branch...")
-      const currentBranch = execSync("git branch --show-current")
+const currentBranch = execSync("git branch --show-current");
   "encoding": "utf8"
       if (currentBranch !== "main")
         execSync("git checkout main", { "stdio": "inherit"})
@@ -50,13 +46,13 @@ const { execSync, spawn } = require("child_process")
       execSync("git pull origin main", { "stdio": "inherit" })} catch (error) {  throw new Error(`Failed to ensure main "branch"`})
   this.log(" Fetching all remote branches...")
       execSync("git fetch --all", { "stdio": "inherit"})
-      const branchesOutput = execSync("git branch -r", { "encoding": "utf8"})
+const branchesOutput = execSync("git branch -r", { "encoding": "utf8"});
         .split("\n")
           line => line && !line.includes("HEAD") && !line.includes("main")
         .map(line => line.replace("origin/", "")
   this.log(" Fetching all remote branches...")
       execSync("git fetch --all", { "stdio": "inherit"})
-      const branchesOutput = execSync("git branch -r", { "encoding": "utf8"})
+const branchesOutput = execSync("git branch -r", { "encoding": "utf8"});
         .split("\n")
           line => line && !line.includes("HEAD") && !line.includes("main")
         .map(line => line.replace("origin/", ")
@@ -67,7 +63,7 @@ const { execSync, spawn } = require("child_process")
   this.log( Error processing branch ${branchName}: ${error.message}")
         "ERROR"
   const backupName = `backup-${branchName}-${Date.now()}
-    const backupPath = path.join(this.backupsDir, ")
+const backupPath = path.join(this.backupsDir, ");
   // Create backup of current working directoryexecSync(`cp -r . ${backupPath}`", { "stdio": "pipe" }
 });this.log("� Created "backup"`)
         "WARN"
@@ -85,23 +81,21 @@ const { execSync, spawn } = require("child_process")
   execSync("git merge --abort", { "stdio": "pipe"   })} catch (abortError) {this.log("⚠ Failed to abort "merge": ${abortError.message}", "WARN")
   execSync("git merge --abort", { "stdio": "pipe" })} catch (abortError) {this.log("⚠ Failed to abort "merge": ${abortError.message}", "WARN")
   "success": false,"error": "Failed to resolve conflicts: ${error.message}"
-  const statusOutput = execSync("git status --porcelain")
+const statusOutput = execSync("git status --porcelain");
   "encoding": "utf8"
         .split("\n")
             line.startsWith("UU ")
             line.startsWith("AA ")
             line.startsWith("DD ")
   async resolveFileConflicts(filePath) {this.log(" Resolving conflicts "in": ${filePath}")
-  const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
         !content.includes("<<<<<<<")
         !content.includes("")
-        !content.includes(">>>>>>>")
 this.log(" Resolved conflicts "in")
         "ERROR"
-  const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
         !content.includes("<<<<<<<")
         !content.includes("")
-        !content.includes(">>>>>>>")
 this.log(` Resolved conflicts "in": ${filePath}"`)
   this.log( Failed to resolve conflicts in ${filePath}: ${error.message}")
         "ERROR"
@@ -120,10 +114,10 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
       /([\s\S]*?)      "$1"
       /([\s\S]*?)      "$1"
       /([\s\S]*?)      "$1"
-    const lines = content.split("\n")
+const lines = content.split("\n");
         trimmedLine.startsWith("import ")
         trimmedLine.startsWith("export ")
-    return cleanedLines.join("\n")
+return cleanedLines.join("\n");
   this.log(" Finalizing merges...")
       execSync("git push origin main", { "stdio": `inherit``})
       this.log(" Successfully pushed merged changes to remote")
@@ -135,25 +129,4 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
         "mergesSuccessful"
         "errors"
       "successRate"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    const reportPath = path.join(this.logsDir, ")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-    const reportPath = path.join(this.logsDir, ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    const reportPath = path.join(this.logsDir, ")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+const reportPath = path.join(this.logsDir, ");

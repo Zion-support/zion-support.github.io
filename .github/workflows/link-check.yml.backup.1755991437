@@ -46,6 +46,5 @@ jobs:
               });
             } catch (e) {
               core.warning('Failed to create issue: ' + e.message);
-
             }
             }

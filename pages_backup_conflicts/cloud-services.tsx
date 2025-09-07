@@ -1,5 +1,15 @@
+
+=======
 import React from 'react';
 
+interface CloudservicesProps {
+  // Add props here as needed
+}
+
+import React from 'react';
+interface CloudservicesProps {
+  // Add props here as needed
+}
 export default function Cloudservices({ }: CloudservicesProps) {
 
 class ErrorBoundary extends React.Component {
@@ -34,5 +44,8 @@ export default function Cloudservices(): any ({ }: CloudservicesProps) {;  retur
     <div>
       <h1>Cloudservices</h1>
       <p>This component is currently under development.</p>
-    </div>;
+    </div>
   );
+
+}
+}

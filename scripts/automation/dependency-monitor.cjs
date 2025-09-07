@@ -1,27 +1,21 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();"
@@ -33,17 +27,11 @@ class $1 {}
   log(message, type = "info") {}"
   const timestamp = new Date().toISOString();
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
-=======
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   async ensureDirectoryExists(dirPath) {}
   if (!fs.existsSync(dirPath)) {}"
@@ -51,7 +39,7 @@ class $1 {}
   };
   async runCommand(command, options = {}) {}
   try {}
-  const result = execSync(command, {})"
+const result = execSync(command, {});
   "encoding": "utf8",
         "cwd": this.projectRoot,
         "stdio": "pipe","
@@ -66,6 +54,8 @@ class $1 {}
     const outdatedResult = await this.runCommand("npm outdated --json");"
     if (outdatedResult.success) {}
 <<<<<<< HEAD
+
+=======
   try {}
   const outdatedData = JSON.parse(outdatedResult.output);
         if (Object.keys(outdatedData).length > 0) {this.log(`Found ${Object.keys(outdatedData).length} outdated dependencies`, "warn");this.errorsFound.push(`Outdated "dependencies": ${Object.keys(outdatedData).join(", ")}`)} else {`}
@@ -85,7 +75,7 @@ class $1 {}
       } catch (error) {}
   async runCommand(command, options = {}) {}
   try {}
-  const result = execSync(command, {})
+const result = execSync(command, {});
   "encoding": "utf8",
         "cwd": this.projectRoot,
         "stdio": "pipe",
@@ -139,14 +129,10 @@ class $1 {}
       "summary": {}
   dependenciesHealthy: this.errorsFound.length === 0,
         "totalIssues": this.errorsFound.length,
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   async generateReport() {}
   this.log("Generating dependency monitor report...");
     const report = {}
-=======
 
   this.log("All dependencies are up to date", "success")};"
   this.log("No outdated dependencies found", "success")};"
@@ -167,7 +153,6 @@ class $1 {}
   async generateReport() {}"
   this.log("Generating dependency monitor report...");"
     const report = {}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   "timestamp": new Date().toISOString(),
       "duration": Date.now() - this.startTime,
       "errorsFound": this.errorsFound,
@@ -185,35 +170,42 @@ class $1 {}
 
       await this.generateReport()};
 <<<<<<< HEAD
+monitor.run().catch(console.error);
+=======
   };
 };
 ;
-<<<<<<< HEAD
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
-<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
-=======
+// Run the dependency monitor;
+const monitor = new DependencyMonitor();
+
+<<<<<<< HEAD
 monitor.run().catch(console.error);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-// Run the dependency monitor;
-const monitor = new DependencyMonitor();
-
+monitor.run().catch(console.error);
+monitor.run().catch(console.error);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 monitor.run().catch(console.error);
 <<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 monitor.run().catch(console.error);
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+monitor.run().catch(console.error);
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

@@ -1,15 +1,11 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log(""� Starting Smart Documentation Generator...")
 // Get automation interval from environment variable ("default")
       "documentationCoverage"
@@ -24,7 +20,7 @@ console.log(""� Starting Smart Documentation Generator...")
       console.log("" Smart documentation generation completed successfully")
   console.error(" Smart documentation generation "failed": ")
   console.log(" Analyzing codebase structure...")
-    const srcPath = path.join(process.cwd(), "src"
+const srcPath = path.join(process.cwd(), "src";
   console.log("⚠ Source directory not found")
   "components"
       "utilities"
@@ -33,8 +29,8 @@ console.log(""� Starting Smart Documentation Generator...")
       "types"
       "pages"
       "configs"
-    const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx")]
-  const content = fs.readFileSync(file, "utf8")
+const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx")];
+const content = fs.readFileSync(file, "utf8");
         relativePath.includes("components/")
         content.includes("export default")
         (content.includes("function") && content.includes("props")
@@ -64,15 +60,15 @@ console.log(""� Starting Smart Documentation Generator...")
           "name": this.extractTypeName(content)})} else if (relativePath.includes("pages/") || content.includes("Route")
   "path"
           "name"
-    const configFiles = ["package.json"", "vite.config.ts", "tsconfig.json"", "tailwind.config.js", ""]
-    const configFiles = ["package.json", "vite.config.ts", "tsconfig.json", "tailwind.config.js", "]
-  const configPath = path.join(process.cwd(), "
+const configFiles = ["package.json"", "vite.config.ts", "tsconfig.json"", "tailwind.config.js", ""];
+const configFiles = ["package.json", "vite.config.ts", "tsconfig.json", "tailwind.config.js", "];
+const configPath = path.join(process.cwd(), ";
   "path": configFile", "name"
           "hasDocs"
     this.documentationMetrics.docPatterns.set("structure")
 // console.log(" Codebase structure analysis completed")
   console.log(" Identifying missing documentation...")
-    const structure = this.documentationMetrics.docPatterns.get("structure")
+const structure = this.documentationMetrics.docPatterns.get("structure");
   "type": "component"
         "items"
         "priority": "high"
@@ -89,11 +85,11 @@ console.log(""� Starting Smart Documentation Generator...")
         "items"
         "priority": "high"
   console.log("� Generating API documentation...")
-    const structure = this.documentationMetrics.docPatterns.get("structure")
-  const servicePath = path.join(process.cwd(), "src"
-        const content = fs.readFileSync(servicePath, "utf8")
-  const servicePath = path.join(process.cwd(), "src"
-        const content = fs.readFileSync(servicePath, "utf8")
+const structure = this.documentationMetrics.docPatterns.get("structure");
+const servicePath = path.join(process.cwd(), "src";
+const content = fs.readFileSync(servicePath, "utf8");
+const servicePath = path.join(process.cwd(), "src";
+const content = fs.readFileSync(servicePath, "utf8");
           this.docsDir,api"
   fs.mkdirSync(apiDocsDir, { "recursive"})
   "type"
@@ -105,9 +101,9 @@ console.log(""� Starting Smart Documentation Generator...")
 // console.log(""⚛ Generating component documentation...")
   console.log(""⚛ Generating component documentation...")
     console.log("⚛ Generating component documentation...")
-    const structure = this.documentationMetrics.docPatterns.get("structure")
-  const componentPath = path.join(process.cwd(), "src"
-        const content = fs.readFileSync(componentPath, "utf8")
+const structure = this.documentationMetrics.docPatterns.get("structure");
+const componentPath = path.join(process.cwd(), "src";
+const content = fs.readFileSync(componentPath, "utf8");
           this.docsDir,components"
   fs.mkdirSync(componentsDocsDir, { "recursive"})
   "type": "component"
@@ -122,9 +118,9 @@ console.log(""� Starting Smart Documentation Generator...")
   console.log(""� Generating setup guides...")
 // console.log(""� Generating setup guides...")
     console.log("� Generating setup guides...")
-    const installPath = path.join(this.docsDir, "installation.md")
-    const devPath = path.join(this.docsDir, "development.md")
-    const deployPath = path.join(this.docsDir, "deployment.md")
+const installPath = path.join(this.docsDir, "installation.md");
+const devPath = path.join(this.docsDir, "development.md");
+const deployPath = path.join(this.docsDir, "deployment.md");
   "type": "guide"
         "path"
         "name": "Installation Guide"
@@ -139,8 +135,8 @@ console.log(""� Starting Smart Documentation Generator...")
         "timestamp"
 // console.log(" Generated setup guides"")
   console.log(""� Updating README...")
-  const readmePath = path.join(process.cwd(), "README.md"
-      let readmeContent = "
+const readmePath = path.join(process.cwd(), "README.md";
+let readmeContent = ";
   readmeContent = fs.readFileSync(readmePath, "utf8")
   "type": "readme"
         "path"
@@ -150,9 +146,9 @@ console.log(""� Starting Smart Documentation Generator...")
   console.log("⚠ Failed to update "README": ")
 // console.log("⚠ Failed to update "README": ")
   console.log(" Calculating documentation coverage...")
-    const structure = this.documentationMetrics.docPatterns.get(")
+const structure = this.documentationMetrics.docPatterns.get(");
   console.log(" Calculating documentation coverage...")
-    const structure = this.documentationMetrics.docPatterns.get("structure")
+const structure = this.documentationMetrics.docPatterns.get("structure");
 // console.log( Documentation "coverage")
   console.log(" Generating documentation report...")
   "timestamp"
@@ -168,19 +164,19 @@ console.log(""� Starting Smart Documentation Generator...")
       "documentation-report.json"
   // Skip directories that can"
   // Skip directories that can"
-  const docExtensions = [".md", ".mdx", ".txt"]
-    const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, ""
-    return match ? match[1] : "UnknownComponent"
-    return match ? match[1] : "UnknownFunction"
-    return match ? match[1] : "UnknownHook"
-    return match ? match[1] : "UnknownService"
-    return match ? match[1] : "UnknownType"
-    return match ? match[1] : "
-const result = await ${service.name}.methodName(params`);\"\"
+const docExtensions = [".md", ".mdx", ".txt"];
+const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, "";
+return match ? match[1] : "UnknownComponent";
+return match ? match[1] : "UnknownFunction";
+return match ? match[1] : "UnknownHook";
+return match ? match[1] : "UnknownService";
+return match ? match[1] : "UnknownType";
+return match ? match[1] : ";
+const result = await ${service.name}.methodName(params`);\"\";
 \"\"
   )}\`\"\"
-  return "
-  return "
+return ";
+return ";
 1. Clone the "repository": \"\"\"
 cd zion-app\"\"\"
 2. Install dependencies:\"\"\"
@@ -192,15 +188,15 @@ Create a \".env\"
 \"\"\"
 VITE_APP_ENV=development\"\"\"
 - \"npm run dev\" - Start development server- \"npm run build\" - Build for production- \"npm run preview\" - Preview production build- \"npm run lint\" - Run ESLint- \"npm run type-check\"
-  return "
-  return "
+return ";
+return ";
 \"\"\"
 \"\"\"
 └── styles/        # CSS and styling files\"\"\"
 2. Make your changes3. Run "tests": \"npm test\"
 4. Run linting: \"npm run lint\"
-  return "
-  return "
+return ";
+return ";
 1. Build the "application": \"\"\"
 npm run build\"\"\"
 2. The build output will be in the \"dist\"
@@ -211,8 +207,8 @@ npm run build\"\"\"
 1. Upload the contents of \"dist\" directory to your web server2. Configure your server to serve \"index.html\"
 \"\"\"
 VITE_APP_ENV=production\"\"\"
-  const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")
-return "
+const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8");
+return ";
 ${packageJson.description || "A modern React application built with Vite and TypeScript."}
 \"\"\"
 npm run dev\"\"\"
@@ -231,7 +227,7 @@ npm run dev\"\"\"
 - \"npm run dev\" - Start development server- \"npm run build\" - Build for production- \"npm run preview\" - Preview production build- \"npm run lint\" - Run ESLint- \"npm run type-check\" - Run TypeScript type checking- \"npm test\"
 This project uses intelligent PM2 automations for continuous "improvement"
 View automation reports in the project root:- \"ai-analysis-report.json\" - AI code analysis results- \"deployment-optimization-report.json\" - Deployment optimization metrics- \"test-generation-report.json\" - Test generation statistics- \"refactoring-report.json\" - Code refactoring progress- \"documentation-report.json\"
-    const lines = content.split("\n")
+const lines = content.split("\n");
         line.includes("export function")
         (line.includes("export const")
           line.includes("=")
@@ -239,8 +235,8 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
         func => "- \`${func}()\` - ${this.generateFunctionDescription(func)}
       .join("\n")
   // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
-  return "- Promise resolving to the API response"
-  return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
+return "- Promise resolving to the API response";
+return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages";
   generateServiceExamples(serviceName) {return "\"\"}
   "name": `Example
   "description": "Test item"}
@@ -250,8 +246,8 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
         func => "- \`${func}()\` - ${this.generateFunctionDescription(func)}
       .join("\n")
   // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
-  return "- Promise resolving to the API response"
-  return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
+return "- Promise resolving to the API response";
+return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages";
   generateServiceExamples(serviceName) {return "\"\"}
   "name": "Example"
   "description": "Test item"}
@@ -264,12 +260,9 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
 </${componentName}>\`\"\""
   extractComponentStyling(content) {return "This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop."}
 <<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   "fetch": "Fetches data from the API"
       "create": "Creates a new resource"
       "update": "Updates an existing resource"
@@ -291,17 +284,29 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
   console.error(" Failed to start smart documentation "generator")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(" Failed to start smart documentation "generator")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error(" Failed to start smart documentation "generator")
+<<<<<<< HEAD
+  console.error(" Failed to start smart documentation "generator")
+
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -310,3 +315,7 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

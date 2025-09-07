@@ -1,11 +1,7 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 import { execSync  } from "child_process"
 import fs from "fs"
@@ -37,7 +33,7 @@ console.log(""� Starting continuous link integrity automation...")
   analyzeLinkReport(JSON.parse(fs.readFileSync("link-report.json", "utf8")
 // console.log("⚠  Linkinator failed but continuing...")
     console.log(" Checking for broken internal links...")
-    const distPath = path.join(process.cwd(), "dist"
+const distPath = path.join(process.cwd(), "dist";
 // console.log("⚠  Broken internal links "found": ")
   console.log(" No broken internal links found")
 // console.log(" Checking for orphaned files..."")
@@ -57,7 +53,7 @@ console.log(""� Starting continuous link integrity automation...")
       "orphanedFiles"
       "missingAssets"
       "summary": "Link integrity check completed"
-    const reportPath = path.join(process.cwd(), "link-integrity-report.json"
+const reportPath = path.join(process.cwd(), "link-integrity-report.json";
     console.log(` Continuous link integrity check completed successfully``)
   console.error(" Continuous link integrity check "failed": ")
     // Don"
@@ -69,24 +65,24 @@ console.log(""� Starting continuous link integrity automation...")
       "orphanedFiles"
       "missingAssets"
       "summary": "Link integrity check completed"
-    const reportPath = path.join(process.cwd(), "link-integrity-report.json"
+const reportPath = path.join(process.cwd(), "link-integrity-report.json";
     console.log(" Continuous link integrity check completed successfully")
   console.error(" Continuous link integrity check "failed": ")
     // Don"
   scanDirectory(fullPath)} else if (item.endsWith(".html")
-  const content = fs.readFileSync(fullPath, "utf8")
-          const hrefMatches = content.match(/href=[""]([^"]+)["]
-  const href = match.match(/href=["]([^"]+)["]
+const content = fs.readFileSync(fullPath, "utf8");
+const hrefMatches = content.match(/href=[""]([^"]+)["];
+const href = match.match(/href=["]([^"]+)["];
               if (href.startsWith("/") || href.startsWith("./") || href.startsWith("../")
   // Skip directories that can"
   // Skip directories that can"
-  const fullPath = path.join(currentDir, ")
-  const relativePath = path.relative(distPath")
+const fullPath = path.join(currentDir, ");
+const relativePath = path.relative(distPath");
           // If it"
           if (item.endsWith(".html")
-  const content = fs.readFileSync(fullPath, "utf8")
-            const fileMatches = content.match(/src=["]([^""]+)[""]|href=["]([^"]+)["]
-  const fileRef = match.match(/src=["]([^"]+)["]|href=[""]([^""]+)["]/)[1] || match.match(/src=["]([^"]+)["]|href=["]([^"]+)[""]
+const content = fs.readFileSync(fullPath, "utf8");
+const fileMatches = content.match(/src=["]([^""]+)[""]|href=["]([^"]+)["];
+const fileRef = match.match(/src=["]([^"]+)["]|href=[""]([^""]+)["]/)[1] || match.match(/src=["]([^"]+)["]|href=["]([^"]+)[""];
                 if (fileRef && !fileRef.startsWith("http")
   // Skip directories that can"
   // Skip directories that can"
@@ -94,12 +90,12 @@ console.log(""� Starting continuous link integrity automation...")
            !file.endsWith(".css")
            !file.endsWith(".js")
   scanDirectory(fullPath)} else if (item.endsWith(".html")
-  const content = fs.readFileSync(fullPath, "utf8")
-          const assetMatches = content.match(/src=[""]([^"]+)["]|href=["]([^"]+)["]
-  const assetRef = match.match(/src=["]([^""]+)[""]|href=["]([^"]+)["]/)[1] || match.match(/src=["]([^"]+)["]|href=[""]([^"")]
+const content = fs.readFileSync(fullPath, "utf8");
+const assetMatches = content.match(/src=[""]([^"]+)["]|href=["]([^"]+)["];
+const assetRef = match.match(/src=["]([^""]+)[""]|href=["]([^"]+)["]/)[1] || match.match(/src=["]([^"]+)["]|href=[""]([^"")];
               if (assetRef && !assetRef.startsWith("http")
-          const assetMatches = content.match(/src=["]([^""]+)[""]|href=["]([^"]+)[""]
-  const assetRef = match.match(/src=[""]([^"]+)["]|href=[""]([^""]+)["]/)[1] || match.match(/src=["]([^""]+)[""]|href=["]([^"]+)[""]
+const assetMatches = content.match(/src=["]([^""]+)[""]|href=["]([^"]+)[""];
+const assetRef = match.match(/src=[""]([^"]+)["]|href=[""]([^""]+)["]/)[1] || match.match(/src=["]([^""]+)[""]|href=["]([^"]+)[""];
               if (assetRef && !assetRef.startsWith("http")
     if (brokenLinks.length > 0) {console.log(⚠  Found ${brokenLinks.length} broken external "links")
       brokenLinks.forEach(link => {console.log(`  - ${link.url} ("Status"`)
@@ -116,17 +112,29 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
   console.error(" Failed to start continuous link integrity "checker": ")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(" Failed to start continuous link integrity "checker": ")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error(" Failed to start continuous link integrity "checker": ")
+<<<<<<< HEAD
+  console.error(" Failed to start continuous link integrity "checker": ")
+
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -135,3 +143,7 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

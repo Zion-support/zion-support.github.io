@@ -1,68 +1,125 @@
+<<<<<<< HEAD
 
-
-import type { NextPage } from "next";"
-import Head from "next/head";"
-import Link from "next/link";
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
+;
+import type { NextPage } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
+const WebDevelopmentChat: NextPage = () => {return (<div>;
+      <Head>;
+const WebDevelopmentChat: NextPage = () => {return (<div>;
+      <Head>;
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name="description" content="WebDevelopmentChat blog post" />{" "}const WebDevelopmentChat: NextPage = () => {return (<div>;
+      <Head></Head>;<meta name="description" content="WebDevelopmentChat blog post" />;
+      </Head>;
+      </Head>;<meta name="description" content="WebDevelopmentChat blog post" />;
+      </Head>;
 
-const WebDevelopmentChat: NextPage = () => {}
-  return (
-    <div>
-      <Head>
 
+=======
+<<<<<<< HEAD
+<div> <Head> <title>WebDevelopmentChat - Zion Tech Solutions</title> <meta name="description" content="WebDevelopmentChat blog post" /> </Head> <main> <h1>WebDevelopmentChat</h1> <p>Blog content coming soon...</p> <a href="/blog" >Back to Blog</a> </main> </div> export default WebDevelopmentChat
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const WebDevelopmentChat: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextPage } from "next";
 import Head from "next/head";
-
 import Link from "next/link";
+
+
+
+
 const WebDevelopmentChat: NextPage = () => {;
   return (
     <div>;
       <Head>;
-        <title>WebDevelopmentChat - Zion Tech Solutions</title>;"
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="WebDevelopmentChat blog post" />{" "}
+
+
+
+
+
+
+
+const WebDevelopmentChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
 
       </Head>;
 
+
         <meta name="description" content="WebDevelopmentChat blog post" />
       </Head>
-pr-12243
+
+      </Head>;
 
       <main>
         <h1>WebDevelopmentChat</h1>
-        <p>Blog content coming soon...</p>"
+        <p>Blog content coming soon...</p>
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
       </Head>;
 
+
+
+
       <main>;
         <h1>WebDevelopmentChat</h1>;
-        <p>Blog content coming soon...</p>;"
+        <p>Blog content coming soon...</p>;
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>;
   );
 }
 export default WebDevelopmentChat;
+<<<<<<< HEAD
+
+
+
+
+
+
 
         <title>WebDevelopmentChat - Zion Tech Solutions</title>
 
+
+
+
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>
+
+
+
+
+
+
+
+
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>
+
+
 import type { NextPage } from './next';
 import Head from './next / head';
-
 import Link from './next / link';
-const WebDevelopmentChat: NextPage = () => {}
+const WebDevelopmentChat: NextPage = () => {
   return (
     <div>;
       <Head>;
-        <title > WebDevelopmentChat - Zion Tech Solutions</title>;"
+        <title > WebDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="WebDevelopmentChat blog post" />{" "}
       </Head>;
       <main>;
         <h1 > WebDevelopmentChat</h1>;
-        <p > Blog content coming soon...</p>;"
+        <p > Blog content coming soon...</p>;
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
@@ -70,4 +127,39 @@ const WebDevelopmentChat: NextPage = () => {}
 ;
 export default WebDevelopmentChat;
 ;
+    <div>
+      <Head>
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;WebDevelopmentChat blog post&quot; />
+      </Head>
+      
+      <main>
+        <h1>WebDevelopmentChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href=&quot;/blog&quot;>Back to Blog</a>
+      </main>
+    </div>
+  )
+},
 
+export default WebDevelopmentChat
+
+
+
+
+
+
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+
+
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>
+
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

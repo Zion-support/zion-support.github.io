@@ -1,6 +1,10 @@
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -173,6 +177,7 @@ class IntelligentGitAutomation {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/git-automation.cjs
 =======
 
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 
 <<<<<<< HEAD
@@ -180,113 +185,116 @@ class IntelligentGitAutomation {
 #!/usr/bin/env node;
 
 main
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<<<<<<< HEAD
 
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/git-automation.cjs
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 =======
 =======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 =======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
 
 
 
 #!/usr/bin/env node;
 
-const { execSync, spawn } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+<<<<<<< HEAD
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+const { execSync, spawn } = require('child_process');
+const fs = require('fs');
+const path = require('path');
       
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/git-automation.cjs
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       if ( {
         ) {
      {
         }
         await this.performMerge(branchName)} else if ( {
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         ) {
      {
         }
+<<<<<<< HEAD
+=======
         await this.performMerge(branchName)} else if ( {)
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         await this.handleConflicts(branchName, conflictCheck)}
     } catch (error) {
       console.error(`Error analyzing branch ${branch}:`, error)}
-<<<<<<< HEAD
   }
+
   async performMerge(branchName) {
     try {
+      
+      
       // Create backup before merge
       if ( {
         await this.createBackup(`pre-merge-${branchName}`)}
+      
       // Switch to main branch
       execSync('git checkout main', { "stdio": 'pipe' })) {
      {
         await this.createBackup(`pre-merge-${branchName}`)}
+      
       // Switch to main branch
       execSync('git checkout main', { "stdio": 'pipe' })}
+      
       // Pull latest changes
       execSync('git pull origin main', { "stdio": 'pipe' });
+      
       // Merge the branch
       if ( {
-=======
-
-  async performMerge(branchName) {
-    try {
-
-        await this.createBackup(`pre-merge-${branchName}`)}
-      // Switch to main branch;
-      execSync('git checkout main', { "stdio": 'pipe' })) {
-     {`;
-      // Switch to main branch;
-      execSync('git checkout main', { "stdio": 'pipe' })}
-      // Pull latest changes;
-      execSync('git pull origin main', { "stdio": 'pipe' });
-      // Merge the branch;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         execSync(`git merge --squash origin/${branchName}`, { "stdio": 'pipe' })) {
+<<<<<<< HEAD
+     {
+        execSync(`git merge --squash origin/${branchName}`, { "stdio": 'pipe' })}
+        execSync(`git commit -m "Merge branch '${branchName}' into main"`, { "stdio": 'pipe' })} else {
+=======
         execSync(`git merge --squash origin/${branchName}`, { "stdio": 'pipe' })}`;
         execSync(`git commit -m "Merge branch '${branchName}' into main"`, { "stdio": 'pipe' })} else {
   // TODO: Implement
 }`;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         execSync(`git merge origin/${branchName}`, { "stdio": 'pipe' })}
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+<<<<<<< HEAD
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Push changes
       if ( {
         execSync('git push origin main', { "stdio": 'pipe' })}
+      
       // Record merge
-=======
-      // Push changes;
-        execSync('git push origin main', { "stdio": 'pipe' })}
-
-      // Record merge;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.mergeHistory.push({
-        "branch": branchName,")"
+        "branch": branchName,
         "timestamp": new Date().toISOString(),
         "strategy": this.config.mergeStrategy,
-        "success": true;"
+        "success": true
       })) {
-<<<<<<< HEAD
      {
         execSync('git push origin main', { "stdio": 'pipe' })}
+      
       // Record merge
       this.mergeHistory.push({
         "branch": branchName,
@@ -294,9 +302,13 @@ const path = require('path')
         "strategy": this.config.mergeStrategy,
         "success": true
       })}
+      
+      
+      
       // Clean up branch
       await this.cleanupBranch(branchName)} catch (error) {
       console.error(`❌ Failed to merge ${branchName}:`, error);
+      
       this.mergeHistory.push({
         "branch": branchName,
         "timestamp": new Date().toISOString(),
@@ -304,28 +316,35 @@ const path = require('path')
         "success": false,
         "error": error.message
       });
+      
       // Restore from backup if available
       if ( {
         await this.restoreBackup(`pre-merge-${branchName}`)}
     }
   }
+
   async handleConflicts(branchName, conflictDetails) {
     ) {
      {
         await this.restoreBackup(`pre-merge-${branchName}`)}
     }
   }
+
   async handleConflicts(branchName, conflictDetails) {
     }
+    
     try {
       // Use intelligent conflict resolution
       const resolution = await this.intelligentConflictResolution(conflictDetails;);
+      
       if ( {
         ) {
      {
         }
         await this.performMerge(branchName)} else {
+        
         await this.notifyManualIntervention(branchName, resolution)}
+      
       this.conflictHistory.push({
         "branch": branchName,
         "timestamp": new Date().toISOString(),
@@ -335,9 +354,21 @@ const path = require('path')
       })} catch (error) {
       console.error(`Error handling conflicts for ${branchName}:`, error)}
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
      {"
 
+<<<<<<< HEAD
+  async intelligentConflictResolution(conflictDetails) {
+    // Simple conflict resolution strategy
+    const conflicts = this.parseConflicts(conflictDetails;);
+    const resolution = {
+      "resolved": false,
+      "conflicts": conflicts.length,
+      "strategy": 'automatic',
+      "actions": []
+=======
       })}
 
 
@@ -362,17 +393,33 @@ const path = require('path')
       console.error(`Error handling conflicts for ${branchName}:`, error)}
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   async intelligentConflictResolution(conflictDetails) {
     // Simple conflict resolution strategy;
     const conflicts = this.parseConflicts(conflictDetails;);
     const resolution = {"
 
       "actions": []"
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
    };
+    
     for (const conflict of conflicts) {
-      // Analyze conflict type and apply resolution strategy;
+      // Analyze conflict type and apply resolution strategy
       const conflictType = this.analyzeConflictType(conflict;);
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       switch (conflictType) {
         case 'import':
           resolution.actions.push('resolve_import_conflict');
@@ -387,52 +434,101 @@ const path = require('path')
           resolution.resolved = false;
           return resolution}
     }
+    
     resolution.resolved = true;
     return resolution}
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
       switch (conflictType) {"
 
+<<<<<<< HEAD
+=======
         "default": resolution.actions.push('manual_review_required');
           resolution.resolved = false;
           return resolution}
     resolution.resolved = true;
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   parseConflicts(conflictDetails) {
     const conflicts = [];
     const lines = conflictDetails.split('\n';);
+    
     for (let i = ;0; i < lines.length i++) {
       if () {
         const conflict = {
+<<<<<<< HEAD
+          "start": i,
+          "file": this.extractFileName(lines[i]),
+          "content": []
+       ) {
+    ) {
+        const conflict = {
+          start: i,
+          "file": this.extractFileName(lines[i]),
+          "content": []
+=======
 
           "content": []"
           start: i,"
 
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
        } };
+        
         i++;
           conflict.content.push(lines[i]);
           i++}
+        
         conflicts.push(conflict)}
-<<<<<<< HEAD
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     return conflicts}
+
   extractFileName(line) {
-<<<<<<< HEAD
     // Extract filename from conflict marker
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
     const match = line.match(/    return match ? match[1] : 'unknown'}
 =======
     // Extract filename from conflict marker;
     const match = line.match(/"
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    const match = line.match(/<<<<<<< (.*);/;);
+    return match ? match[1] : 'unknown'}
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    const match = line.match(/<<<<<<< (.*);/;);
+    return match ? match[1] : 'unknown'}
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   analyzeConflictType(conflict) {
     const content = conflict.content.join('\n';);
+    
     if (|| content.includes('require')) {
       return 'import') {
     || content.includes('require')) {
-<<<<<<< HEAD
       return 'import'}} else if (|| content.includes('dependencies')) {
       return 'dependency') {
     || content.includes('dependencies')) {
@@ -442,9 +538,13 @@ const path = require('path')
       return 'version'}} else {
       return 'unknown'}
   }
+
   async handleNewCommit(repoInfo) {
+    
+    
     // Check if commit should trigger automatic actions
     const commitMessage = repoInfo.lastCommit[1].toLowerCase(;);
+    
     if (|| commitMessage.includes('bug')) {
       ) {
     || commitMessage.includes('bug')) {
@@ -453,164 +553,158 @@ const path = require('path')
       ) {
     || commitMessage.includes('add')) {
       }
-=======
-
-
-  async handleNewCommit(repoInfo) {
-
-
-    const commitMessage = repoInfo.lastCommit[1].toLowerCase(;);
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       await this.handleFeature(repoInfo)} else if () {
-      await this.handleRefactor(repoInfo)}
 <<<<<<< HEAD
-  }
-  async handleUncommittedChanges(repoInfo) {
-    // Analyze changes
+      ) {
+    ) {
+      }
 =======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      await this.handleRefactor(repoInfo)}
+  }
 
   async handleUncommittedChanges(repoInfo) {
+<<<<<<< HEAD
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+    
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    // Analyze changes
     const changes = repoInfo.statu;s;
     const changeTypes = {
       "modified": changes.filter(c => c.startsWith('M')).length,
       "added": changes.filter(c => c.startsWith('A')).length,
       "deleted": changes.filter(c => c.startsWith('D')).length,
-<<<<<<< HEAD
       "renamed": changes.filter(c => c.startsWith('R')).length
    };
+<<<<<<< HEAD
+
+=======
+    
+    
+    
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     // Auto-commit if configured
     if () {
       await this.autoCommit(changes)}
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
       "renamed": changes.filter(c => c.startsWith('R')).length;
 
-
-    // Auto-commit if configured;
-
-      await this.autoCommit(changes)}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<<<<<<< HEAD
   shouldAutoCommit(changes) {
-    // Auto-commit for certain types of changes;
-    const autoCommitPatterns = [/\.json$/,
+    // Auto-commit for certain types of changes
+const autoCommitPatterns = [/\.json$/,;
       /\.md$/,
       /\.txt$/,
       /package-lock\.json$/,
       /\.log$/
-<<<<<<< HEAD
     ) {
     ) {
       await this.autoCommit(changes)}
   }
+
   shouldAutoCommit(changes) {
     // Auto-commit for certain types of changes
-=======
-
-    // Auto-commit for certain types of changes;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    const autoCommitPatterns = [
+const autoCommitPatterns = [;
       /\.json$/,
-      /\.log$/]
+      /\.md$/,
+      /\.txt$/,
+      /package-lock\.json$/,
+      /\.log$/
     }];
 <<<<<<< HEAD
-    return changes.some(change => ;
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
-    return changes.some(change => ;)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    return changes.some(change => ;
       autoCommitPatterns.some(pattern => pattern.test(change))
     )}
+
   async autoCommit(changes) {
-<<<<<<< HEAD
     try {
       const timestamp = new Date().toISOString(;);
       const commitMessage = `Auto-"commit": ${changes.length} files changed at ${timestamp};`;
+      
       execSync('git add .', { "stdio": 'pipe' });
       execSync(`git commit -m "${commitMessage}"`, { "stdio": 'pipe' });
+      
       if ( {
         execSync('git push origin main', { "stdio": 'pipe' })}
+      
       ) {
      {
         execSync('git push origin main', { "stdio": 'pipe' })}
+      
       }} catch (error) {
       console.error('❌ Auto-commit "failed": ', error)}
   }
+
   async handleBugFix(repoInfo) {
     // Implement bug fix handling logic
     }
+
   async handleFeature(repoInfo) {
     // Implement feature handling logic
     }
+
   async handleRefactor(repoInfo) {
     // Implement refactor handling logic
     }
+
   async analyzeMergeOpportunities() {
     // Analyze potential merge opportunities
     }
+
   async performFullAnalysis() {
-    try {
+<<<<<<< HEAD
+
 =======
-  // TODO: Implement
-
-
-  async handleBugFix(repoInfo) {
-    // Implement bug fix handling logic;
-
-  async handleFeature(repoInfo) {
-    // Implement feature handling logic;
-
-  async handleRefactor(repoInfo) {
-    // Implement refactor handling logic;
-
-  async analyzeMergeOpportunities() {
-    // Analyze potential merge opportunities;
-
-  async performFullAnalysis() {
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    
+    
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    try {
       const analysis = {
         "timestamp": new Date().toISOString(),
         "repositories": this.repositories.length,
         "mergeHistory": this.mergeHistory.length,
         "conflictHistory": this.conflictHistory.length,
-<<<<<<< HEAD
         "recommendations": await this.generateRecommendations()
      };
+      
       await this.saveAnalysis(analysis);
       } catch (error) {
       console.error('Error in full "analysis": ', error)}
   }
+
   async generateRecommendations() {
     const recommendations = [];
+    
     // Analyze merge history for patterns
     if ( {
-=======
-
-        "recommendations": await this.generateRecommendations()"
-      await this.saveAnalysis(analysis);
-      } catch (error) {"
-
-
-  async generateRecommendations() {
-    const recommendations = [];
-    // Analyze merge history for patterns;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const failedMerges = this.mergeHistory.filter(m => !m.success) {
+<<<<<<< HEAD
+     {
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       const failedMerges = this.mergeHistory.filter(m => !m.success});
       if ( {
         recommendations.push({
-<<<<<<< HEAD
           "type": 'merge_strategy',
           "priority": 'high',
           "message": 'High merge failure rate detected. Consider reviewing merge strategy.',
           "action": 'Review and update merge strategy'
         })}
     }
+    
     // Analyze conflict patterns
     if (this.conflictHistory.length > 0) {
       const unresolvedConflicts = this.conflictHistory.filter(c => !c.resolved) {
@@ -622,6 +716,7 @@ const path = require('path')
           "action": 'Review and update merge strategy'
         })}
     }
+    
     // Analyze conflict patterns
     if (this.conflictHistory.length > 0) {
       const unresolvedConflicts = this.conflictHistory.filter(c => !c.resolved});
@@ -633,6 +728,7 @@ const path = require('path')
           "action": 'Review and resolve pending conflicts'
         })}
     }
+    
     return recommendations) {
      {
         recommendations.push({
@@ -642,6 +738,11 @@ const path = require('path')
           "action": 'Review and resolve pending conflicts'
         })}
     }
+<<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     // Analyze conflict patterns;
@@ -652,53 +753,104 @@ const path = require('path')
       const unresolvedConflicts = this.conflictHistory.filter(c => !c.resolved});
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     return recommendations}}
+
   async createBackup(name) {
-<<<<<<< HEAD
     try {
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-';);
       const backupPath = `./backups/${name}-${timestamp};`;
+      
       execSync(`git stash push -m "Backup before ${name}"`, { "stdio": 'pipe' });
       execSync(`cp -r . ${backupPath}`, { "stdio": 'pipe' });
+      
       } catch (error) {
       console.error('Error creating "backup": ', error)}
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
   // TODO: Implement
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  async restoreBackup(name) {
-  // TODO: Implement
+=======
 
-      // Find the most recent backup with the given name;
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+  async restoreBackup(name) {
+    try {
+      // Find the most recent backup with the given name
       const backupFiles = await fs.readdir('./backups';);
       const matchingBackups = backupFiles.filter(file => file.startsWith(name;););
 <<<<<<< HEAD
-      if ( {
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+      if ( {
         const latestBackup = matchingBackups.sort().pop() {
-        const latestBackup = matchingBackups.sort().pop(});`;
+     {
+        const latestBackup = matchingBackups.sort().pop(});
         const backupPath = `./backups/${latestBackup};`;
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         execSync("git reset --hard HEAD", { "stdio": 'pipe' });
         execSync("git clean -fd", { "stdio": 'pipe' });
+        
         }
     } catch (error) {
       console.error('Error restoring "backup": ', error)}
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  async cleanupBranch(branchName) {
-  // TODO: Implement
+=======
 
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+  async cleanupBranch(branchName) {
+    try {
+      // Delete remote branch
+      execSync(`git push origin --delete ${branchName}`, { "stdio": 'pipe' });
+      } catch (error) {
       console.error(`Error cleaning up branch ${branchName}:`, error)}
-<<<<<<< HEAD
   }
+
   async notifyManualIntervention(branchName, resolution) {
+    
+    
+    
     // Save notification for later review
     const notification = {
       "branch": branchName,
@@ -706,6 +858,8 @@ const path = require('path')
       resolution,
       "status": 'pending'
    };
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   async notifyManualIntervention(branchName, resolution) {
@@ -714,45 +868,101 @@ const path = require('path')
     const notification = {
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    await this.saveNotification(notification)}
-  async saveAnalysis(analysis) {
+=======
+    
 <<<<<<< HEAD
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    await this.saveNotification(notification)}
+
+  async saveAnalysis(analysis) {
     try {
       const filename = `./logs/git-analysis-${new Date().toISOString().split('T')[0]}.json;`;
       await fs.writeFile(filename, JSON.stringify(analysis, null, 2))} catch (error) {
       console.error('Error saving "analysis": ', error)}
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
   // TODO: Implement
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  async saveNotification(notification) {
-  // TODO: Implement
+=======
 
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+  async saveNotification(notification) {
+    try {
       const filename = `./logs/git-notifications-${new Date().toISOString().split('T')[0]}.json;`;
       let notifications = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+<<<<<<< HEAD
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       try {
         const existing = await fs.readFile(filename, 'utf8';);
         notifications = JSON.parse(existing)} catch (error) {
         // File doesn't exist, start with empty array
       }
+      
       notifications.push(notification);
       await fs.writeFile(filename, JSON.stringify(notifications, null, 2))} catch (error) {
       console.error('Error saving "notification": ', error)}
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
   // TODO: Implement
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  async loadHistory() {
-  // TODO: Implement
+=======
 
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+  async loadHistory() {
+    try {
+      // Load merge history
+      const mergeHistoryFile = './logs/git-merge-history.json;';
+      try {
+        const data = await fs.readFile(mergeHistoryFile, 'utf8';);
         this.mergeHistory = JSON.parse(data)} catch (error) {
         this.mergeHistory = []}
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+<<<<<<< HEAD
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Load conflict history
       const conflictHistoryFile = './logs/git-conflict-history.json;';
       try {
@@ -763,15 +973,14 @@ const path = require('path')
       console.error('Error loading "history": ', error)}
   }
 }
+
 // Start the Intelligent Git Automation
-=======
-      // Load conflict history;
-
-
-// Start the Intelligent Git Automation;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const gitAutomation = new IntelligentGitAutomation;(;);
 gitAutomation.start().catch(console.error);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/intelligent/git-automation.cjs
@@ -792,12 +1001,28 @@ gitAutomation.start().catch(console.error);
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+
+
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const { execSync, spawn } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "autoMerge"
 
       "conflictResolution"
@@ -805,32 +1030,32 @@ gitAutomation.start().catch(console.error);
       "mergeStrategy"
       console.error(' Failed to start Git "Automation")
       console.error('Error scanning "repositories")
-      const remoteUrl = execSync('git remote get-url origin, { "encoding"})
-      const currentBranch = execSync('git branch --show-current, { "encoding"})
-      const lastCommit = execSync('git log -1 --pretty="format": "%H|%s|%an|%ad", { "encoding"})
-      const status = execSync('git status --porcelain, { "encoding"})
+const remoteUrl = execSync('git remote get-url origin', { "encoding"});
+const currentBranch = execSync('git branch --show-current', { "encoding"});
+      const lastCommit = execSync('git log -1 --pretty="format": "%H|%s|%an|%ad"', { "encoding"})
+const status = execSync('git status --porcelain', { "encoding"});
         "name"
         "lastCommit"
         "status"
       console.error('Error getting repository "info")
         console.error('Error in continuous "monitoring")
         console.error('Error in full "analysis")
-      execSync('git fetch origin, { "stdio"})
-      const branches = execSync('git branch -r, { "encoding"})
+      execSync('git fetch origin', { "stdio"})
+const branches = execSync('git branch -r', { "encoding"});
       console.error('Error checking pull "requests")
       console.error('Error checking pull "requests")
-      const mergeBase = execSync(`git merge-base main ${branch}, { "encoding"`})
-      const branchCommits = execSync(`git rev-list --count ${mergeBase}..${branch}, { "encoding"`})
-      const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}, { "encoding"`})
-      execSync('git checkout main, { "stdio"})
-      execSync('git checkout main, { "stdio"})
-      execSync('git pull origin main, { "stdio"})
-        execSync(`git merge --squash origin/${branchName}, { "stdio"`})
-        execSync(`git merge --squash origin/${branchName}, { "stdio"`})
-        execSync(`git commit -m "Merge branch '${branchName} into main"`, { "stdio"`})
-        execSync(`git merge origin/${branchName}, { "stdio"`})
-        execSync('git push origin main, { "stdio"})
-        execSync('git push origin main, { "stdio"})
+const mergeBase = execSync(`git merge-base main ${branch}`, { "encoding"`});
+const branchCommits = execSync(`git rev-list --count ${mergeBase}..${branch}`, { "encoding"`});
+const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}`, { "encoding"`});
+      execSync('git checkout main', { "stdio"})
+      execSync('git checkout main', { "stdio"})
+      execSync('git pull origin main', { "stdio"})
+        execSync(`git merge --squash origin/${branchName}`, { "stdio"`})
+        execSync(`git merge --squash origin/${branchName}`, { "stdio"`})
+        execSync(`git commit -m "Merge branch '${branchName}' into main"`, { "stdio"`})
+        execSync(`git merge origin/${branchName}`, { "stdio"`})
+        execSync('git push origin main', { "stdio"})
+        execSync('git push origin main', { "stdio"})
       "strategy"
         "default"
       "modified"
@@ -869,10 +1094,20 @@ gitAutomation.start().catch(console.error);
       "status"
       console.error('Error saving "analysis")
       console.error('Error saving "notification")
+<<<<<<< HEAD
+      console.error('Error loading "history")
+
+      console.error('Error loading "history")
+
+
+=======
 <<<<<<< HEAD:backup-problematic-files/scripts/intelligent/git-automation.cjs
 
       console.error('Error loading "history")
+
       console.error('Error loading "history")
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -896,6 +1131,7 @@ gitAutomation.start().catch(console.error);
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 main
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -904,3 +1140,13 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

@@ -1,5 +1,14 @@
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
 import { Button } from "@/components/ui/button";
+:src/components/ChatAssistant/ChatInput.tsx
+import React, {
+  useState
+  useRef
+  useEffect
+  FormEvent
+  KeyboardEvent
+} from 'react'
+import { Button } from '@/components/ui/button'
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { Send } from 'lucide-react'
@@ -46,6 +55,12 @@ export function ChatInput({ onSend, disabled;
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault()
       if (message.trim() && !disabled) {
+:src/components/ChatAssistant/ChatInput.tsx
+        onSend(message)
+        setMessage('') }        setMessage('')
+      }
+    }
+  }
         onSend(message);
 setMessage('');
 
@@ -78,6 +93,17 @@ setMessage('');
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
         ref={inputRef}
+:src/components/ChatAssistant/ChatInput.tsx
+        className='flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light'
+        placeholder='Type your message...'
+        value={message}
+        onChange={e => setMessage(e.target.value)}        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
+      />
+      <Button
+        type='submit'
+        className='bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center'        onChange={(e) => setMessage(e.target.value)}
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
         placeholder="Type your message..."
         value={message}
@@ -88,6 +114,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         rows={1}
         disabled={disabled}
       />
+:src/components/ChatAssistant/ChatInput.tsx
+      <Button
+        type='submit'
+        className='bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center'
+        disabled={!message.trim() |disabled}      >
+        <Send className='h-5 w-5' />
 
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
         placeholder="Type your message..."
@@ -112,6 +144,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </form>
   )
 }
+:src/components/ChatAssistant/ChatInput.tsx
+        disabled={!message.trim() |disabled}
 
         disabled={!message.trim() || disabled}
 
@@ -120,6 +154,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Button>
     </form>
   )
+:src/components/ChatAssistant/ChatInput.tsx
+}
 
       <Button;
         type='submit';

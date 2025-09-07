@@ -1,3 +1,23 @@
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppFeatures.tsx
+import React from "react";
+import {Brain, Clock, Award, Zap} from "lucide-react";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+const features = [
+  {
+    icon: <Brain className="h-10 w-10 text-zion-cyan" />
+    title: "AI Talent Matching"
+    description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements."
+  }
+  {
+    icon: <Clock className="h-10 w-10 text-zion-cyan" />
+    title: "1-Click Hiring"
+    description: "Streamlined hiring process that lets you connect with talent instantly with just one click."
+  }
+  {
+    icon: <Award className="h-10 w-10 text-zion-cyan" />
+    title: "Resume Builder"
+    description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
+  }
 import React from "react",
 import { Brain, Clock, Award, Zap } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
@@ -15,6 +35,8 @@ const features = null;
     title: "Real-time Notifications",
     description: "Get instant alerts about new job opportunities, messages, and hiring requests." 
   }
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppFeatures.tsx
+];
 ],
 
 export const AppFeatures: React.FC = () => {
@@ -49,6 +71,9 @@ export const AppFeatures: React.FC = () => {
 ";
 ;
 
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppFeatures.tsx
+  );
+};
 import React from "react",;
 import { Brain, Clock, Award, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;

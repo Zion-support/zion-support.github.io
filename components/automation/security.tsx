@@ -1,65 +1,151 @@
+<<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface AuditReport {
+  generatedAt?: string;
+  metadata?: any;
+  vulnerabilities?: any;
+  error?: string;
+  raw?: string
+=======
+<<<<<<< HEAD
 
 
+
+>>>>>>> origin/main
 }
-</pre> </div>)
+
+<<<<<<< HEAD
+type Props = { report: AuditReport },
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  try {
+    const file = path.join(process.cwd(), 'publicautomationsecurity-audit.json');
+    const raw = fs.readFileSync(file, 'utf8');
+    const data = JSON.parse(raw);
+    return { props: { report: data }, revalidate: 86400 }
+  } catch {
+    return { props: { report: { error: 'No audit report yet.' } }, revalidate: 86400 }
+  }
+=======
+</pre> </div>) ;
+export default function SecurityAudit(): any ({ report }: Props) {;
+</pre> </div>) ;
+export default function SecurityAudit(): any ({ report }: Props) {;
+
 
 export default function SecurityAudit({ report }: Props) {};
+</pre> </div>) ;
+export default function SecurityAudit(): any ({ report }: Props) {;
+
+
+
+
+
+export default function SecurityAudit({ report }: Props) {
+>>>>>>> origin/main
 };
 
-</pre> </div>)
- 
-};
-</pre> </div>) 
+export default function SecurityAudit({ report }: Props) {
+<<<<<<< HEAD
+=======
 
+
+
+
+
+
+>>>>>>> origin/main
   return (
-    <div className="space-y-4">"
-      <header className="space-y-1">"
-        <h1 className="text-3xl font-bold">Security Audit</h1>"
+    <div className="space-y-4">
+      <header className="space-y-1">
+        <h1 className="text-3xl font-bold">Security Audit</h1>
         <p className="text-gray-600 dark:text-gray-300">Automated vulnerability scan summary.</p>
-      </header>"
+      </header>
       {report.error && <div className="text-red-600">{report.error}</div>}
-      {report.generatedAt && ("
+      {report.generatedAt && (
         <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
       )}
+<<<<<<< HEAD
+      <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">
+{JSON.stringify(report, null, 2)}
+      </pre>
+    </div>
+  )
+}
+=======
 
-;
+
+
+
     </div>;
 
 );
 }
+
+
 
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">;
 {JSON && JSON.stringify(report, null, 2)}
       </pre>;
     </div>;
   );
-});
 }
+
+
+  );
+}
+
+
+
+
+
+
 
   );
 }
 
 }
 </pre> </div>);
-export default /**;
- * SecurityAudit - Function description;
+export default /**
+ * SecurityAudit - Function description
  */
-function SecurityAudit() {}
-  return ("
-    <div className="space - y-4">;"
-      <header className="space - y-1">;"
-        <h1 className="text - 3xl font - bold">Security Audit</h1>;"
+function SecurityAudit() {
+  return (
+    <div className="space - y-4">;
+      <header className="space - y-1">;
+        <h1 className="text - 3xl font - bold">Security Audit</h1>;
         <p className="text - gray - 600 dark:text - gray - 300">Automated vulnerability scan summary.</p>;
-      </header>;"
+      </header>;
       {report.error && <div className="text - red - 600">{report.error}</div>}
-      {report.generated_at && ("
-        <div className="text - sm text - gray - 500">Generated at: {new Date (report.generated_at).toLocaleString ()}</div>)}"
+      {report.generated_at && (
+        <div className="text - sm text - gray - 500">Generated at: {new Date (report.generated_at).toLocaleString ()}</div>)}
       <pre className="whitespace - pre - wrap text - xs p - 4 rounded border border - gray - 200 dark:border - gray - 800 bg - gray - 50 dark:bg - gray - 900 / 40 overflow - auto">;
 {JSON.stringify (report, null, 2)}
       </pre>;
     </div>);
 }
 
+
+}
+</pre> </div>)
+
+};
+</pre> </div>)
+ 
+};
+</pre> </div>) 
+
+=======
+<<<<<<< HEAD
+}
+}
+</pre> </div>) 
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
 interface AuditReport {
@@ -71,7 +157,6 @@ interface AuditReport {
 }
 
 type Props = any;
-
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">
@@ -80,19 +165,27 @@ export default function SecurityAudit({ report }: Props) {
         <p className="text-gray-600 dark:text-gray-300">Automated vulnerability scan summary.</p>
       </header>
       {report.error && <div className="text-red-600">{report.error}</div>}
-      {report.generatedAt && (
-        <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString();}</div>
+      {report.generatedAt && (<div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>;
       )}
-      <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">
+      <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">;
 {JSON.stringify(report, null, 2)}
-      </pre>
-    </div>
+      </pre>;
     </div>;
+    </div>;
+)}
+  )})}
 );
 }
+<<<<<<< HEAD
 
+
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
+  );
+}
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

@@ -1,5 +1,8 @@
-import * as React from 'react';
 
+
+=======
+=======
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -14,44 +17,45 @@ import {}
   ArrowRight ';
 } from 'lucide-react';
 
+
 const features = [
   {
     icon: DollarSign,
-    title: 'Financial Analytics',
-    description: 'Advanced analytics and reporting for financial institutions'
+    title: 'Financial Data Management,',
+    description: 'Secure, real-time financial data processing and analytics for informed decision making.',
   },
-  {
+  {}
     icon: Shield,
-    title: 'Security & Compliance',
-    description: 'Bank-grade security with regulatory compliance built-in'
+    title: 'Regulatory Compliance,',
+    description: 'SOX, PCI DSS, and other financial compliance solutions to meet industry standards.',
   },
-  {
+  {}
     icon: TrendingUp,
-    title: 'Risk Management',
-    description: 'Comprehensive risk assessment and management tools'
+    title: 'Risk Management,',
+    description: 'Advanced risk assessment and management tools powered by AI and machine learning.'';
   },
-  {
+  {}
     icon: Users,
 
+
+=======
+=======
     title: 'User Management',
     description: 'Secure user management with role-based access control',
-
     benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
   }
 ];
+
+export default function FinanceSolutionsPage() {
 
   return (
     <Layout
       title="Finance Solutions - Zion Tech Group"
       description="Secure financial technology solutions for banks, fintech companies, and financial institutions. Regulatory compliant and secure."
-      keywords="finance solutions, fintech, banking technology, financial services, regulatory compliance, risk management">;
-      <div className="min-h-screen bg-white">;
-        {/* Hero Section */}
-
+      keywords="finance solutions, fintech, banking technology, financial services, regulatory compliance, risk management"
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-
         <section className="bg-gradient-to-r from-blue-600 to-green-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -96,10 +100,31 @@ const features = [
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Financial Technology Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Built for financial institutions with security, compliance, and performance as top priorities.
+              </p>
+
+
+            </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                    <feature.icon className="w-6 h-6 text-blue-600" />
+                  </div>
 
+
+=======
+=======
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
 
@@ -114,6 +139,23 @@ const features = [
                 </motion.div>
               ))}
 
+            </div>
+          </div>
+        </section>
+
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>,
+          </div>;
+        </section>;
+        {/* Solutions List */}
+        <section className="py-20 bg-gray-800/30">"
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto">";
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
@@ -235,4 +277,8 @@ const features = [
         </section>
       </div>
 
+
+    </>
+    </>
+    </>
   );

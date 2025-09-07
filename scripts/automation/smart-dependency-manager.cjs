@@ -1,15 +1,11 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
   "production"
       "development"
       "peer"
@@ -30,16 +26,16 @@ const { execSync } = require("child_process")
   console.error(" Smart Dependency Analysis "failed": ")
   console.error(" Smart Dependency Analysis "failed": ")
   console.log("� Loading current dependencies...")
-  const packageJsonPath = path.join(process.cwd(), "package.json"
+const packageJsonPath = path.join(process.cwd(), "package.json";
         await fs.readFile(packageJsonPath, "utf8")
-  const packageJsonPath = path.join(process.cwd(), "package.json"
+const packageJsonPath = path.join(process.cwd(), "package.json";
         await fs.readFile(packageJsonPath, "utf8")
       console.log( Loaded "dependencies")
         "Development"
         "Peer": ${Object.keys(this.dependencies.peer).length}"Optional"
   console.error(" Failed to load "dependencies": ")
   console.log(" Analyzing dependency patterns...")
-      const outdatedOutput = execSync("npm outdated --json")
+const outdatedOutput = execSync("npm outdated --json");
   "encoding": "utf8"
         "cwd"
   "name"
@@ -70,22 +66,22 @@ const { execSync } = require("child_process")
             "severity": "medium"
 // console.log("⚠  Could not detect "conflicts": ")
   console.log("�  Checking for vulnerabilities..."")
-  const auditOutput = execSync("npm audit --audit-level moderate --json")
+const auditOutput = execSync("npm audit --audit-level moderate --json");
   "encoding": "utf8"
         "cwd": process.cwd(),    console.log("�  Checking for vulnerabilities..."")
-  const auditOutput = execSync("npm audit --audit-level moderate --json")
+const auditOutput = execSync("npm audit --audit-level moderate --json");
   "encoding": "utf8"
         "cwd"
 // console.log(`�  Found ${this.analysis.vulnerabilities.length} vulnerabilities``)
       console.log(`�  Found ${this.analysis.vulnerabilities.length} vulnerabilities``)
 // console.log("⚠  Could not check "vulnerabilities": ")
   console.log(" Finding unused dependencies...")
-      const depcheckOutput = execSync("npx depcheck --json")
+const depcheckOutput = execSync("npx depcheck --json");
   "encoding": "utf8"
         "cwd"
 // console.log("⚠  Could not check "vulnerabilities": ")
   console.log(" Finding unused dependencies...")
-      const depcheckOutput = execSync("npx depcheck --json")
+const depcheckOutput = execSync("npx depcheck --json");
   "encoding": "utf8"
         "cwd"
   "dependencies"
@@ -123,15 +119,15 @@ const { execSync } = require("child_process")
           updatesApplied++} catch (error) {  console.log("⚠  Failed to remove ${pkg  }:")
 console.log(" Applied ${updatesApplied} smart updates")
   try {const packageJsonPath = require.resolve("${packageName}/package.json")
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
-    const requiredMajor = required.split(".")
-    const installedMajor = installed.split(".")
-  const currentMajor = current.split(".")
-    const latestMajor = latest.split(")
-    const requiredMajor = required.split(".")
-    const installedMajor = installed.split(".")
-  const currentMajor = current.split(".")
-    const latestMajor = latest.split(".")
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8");
+const requiredMajor = required.split(".");
+const installedMajor = installed.split(".");
+const currentMajor = current.split(".");
+const latestMajor = latest.split(");
+const requiredMajor = required.split(".");
+const installedMajor = installed.split(".");
+const currentMajor = current.split(".");
+const latestMajor = latest.split(".");
   "timestamp"
       "summary"
         "outdated"
@@ -146,17 +142,29 @@ console.log(" Applied ${updatesApplied} smart updates")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
   console.error(` Smart Dependency Manager "failed": "`)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(` Smart Dependency Manager "failed": "`)
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error(` Smart Dependency Manager "failed": "`)
+<<<<<<< HEAD
+  console.error(` Smart Dependency Manager "failed": "`)
+
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -165,3 +173,7 @@ console.log(" Applied ${updatesApplied} smart updates")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

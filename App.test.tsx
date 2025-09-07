@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 <<<<<<< HEAD
 import App from './App';
@@ -9,68 +10,33 @@ import HomePage from './app/page';
 =======
 <<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
-
-describe('App', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
-=======
-import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';'
+import { describe, it, expect } from 'vitest';'
+import App from './App';'
+>>>>>>> origin/main
 
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import App from './src/App';
-
-
-<<<<<<< HEAD
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import App from './App';
-import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import App from \'./App\'; describe(\'App\',() => { it(\'renders without crashing\',() => { render(<App />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<App />)}); it(\'handles user interactions\',() => { render(<App />)})});
-const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe("App",() => { it("renders without crashing",() => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<App />)}); it("handles user interactions",() => { render(<App />)})});''"
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import App from './src/App';
-import React from 'react';
-
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import App from './src/App';
-
-describe('App', () => {
-  it('renders without crashing', () => {
+describe('App', () => {'
+  }
+  it('renders without crashing', () => {'
+    }
     render(<App />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    expect(screen.getByRole('main')).toBeInTheDocument();'
   });
 
-});
-  it('displays correct content', () => {
+  it('displays correct content', () => {'
+    }
     render(<App />);
-    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();'
   });
 
-  it('handles user interactions', () => {
+  it('handles user interactions', () => {'
+    }
     render(<App />);
-    // Add interaction tests here
-    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
+    // Add interaction tests here,
+expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
@@ -227,4 +193,7 @@ pr-12325
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/main
+=======
+});
 >>>>>>> origin/main

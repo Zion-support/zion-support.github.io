@@ -1,15 +1,36 @@
+<<<<<<< HEAD
+
+;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const QualityAssuranceChat: NextPage = () => {return (<div>;
 
 
+=======
+<<<<<<< HEAD
+<div> <Head> <title>QualityAssuranceChat - Zion Tech Solutions</title> <meta name="description" content="QualityAssuranceChat blog post" /> </Head> <main> <h1>QualityAssuranceChat</h1> <p>Blog content coming soon...</p> <a href="/blog" >Back to Blog</a> </main> </div> export default QualityAssuranceChat
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const QualityAssuranceChat: NextPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import type { NextPage } from "next";
 import Head from "next/head";
-
 import Link from "next/link";
 const QualityAssuranceChat: NextPage = () => {;
   return (
     <div>;
       <Head>;
         <title>QualityAssuranceChat - Zion Tech Solutions</title>;
-
+        <meta
+          name="description"
+          content="QualityAssuranceChat blog post"
+        />{" "}
+      <main>
+        <h1>QualityAssuranceChat</h1>
+        <p>Blog content coming soon...</p>
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
@@ -17,24 +38,29 @@ const QualityAssuranceChat: NextPage = () => {;
 
       <main>;
         <h1>QualityAssuranceChat</h1>;
-        <p>Blog content coming soon...</p>;"
+        <p>Blog content coming soon...</p>;
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>;
   );
 }
 export default QualityAssuranceChat;
+<<<<<<< HEAD
 
-"
-import type { NextPage } from "next";"
-import Head from "next/head";"
+
+
+
+
+
+
+import type { NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
-
+import type { NextPage } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
 
-const QualityAssuranceChat: NextPage = () => {}
+const QualityAssuranceChat: NextPage = () => {
   return (
     <div>
       <Head>
@@ -45,23 +71,30 @@ const QualityAssuranceChat: NextPage = () => {}
 
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
 
+
+
+
+
+
+
+
+
 import type { NextPage } from './next';
 import Head from './next / head';
-
 import Link from './next / link';
-const QualityAssuranceChat: NextPage = () => {}
+const QualityAssuranceChat: NextPage = () => {
   return (
     <div>;
       <Head>;
         <title > QualityAssuranceChat - Zion Tech Solutions</title>;
-        <meta;"
-          name="description";"
-          content="QualityAssuranceChat blog post";"
+        <meta;
+          name="description";
+          content="QualityAssuranceChat blog post";
         />{" "}
       </Head>;
       <main>;
         <h1 > QualityAssuranceChat</h1>;
-        <p > Blog content coming soon...</p>;"
+        <p > Blog content coming soon...</p>;
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
@@ -69,14 +102,12 @@ const QualityAssuranceChat: NextPage = () => {}
 ;
 export default QualityAssuranceChat;
 ;
-
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
     <div>
       <Head>
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;QualityAssuranceChat blog post&quot; />
       </Head>
+      
       <main>
         <h1>QualityAssuranceChat</h1>
         <p>Blog content coming soon...</p>
@@ -88,26 +119,19 @@ pr-12243
 
 export default QualityAssuranceChat
 
-const QualityAssuranceChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>QualityAssuranceChat - Zion Tech Solutions</title>
-        <meta
-          name="description"
-          content="QualityAssuranceChat blog post"
-        />{" "}
-      </Head>
-      <main>
-        <h1>QualityAssuranceChat</h1>
-        <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
-      </main>
-    </div>
-  );
-}
-export default QualityAssuranceChat;
+
+
+
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+
 
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
 
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,84 +1,159 @@
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
+}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
+  }
+  return <div>Something went wrong.</div>;
+    }return this.props.children;
+  }
+}
+import React from 'react';'
+  return <NotificationCenter />;
+}import dynamic from 'next / dynamic';'
+
+const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'),import dynamic from 'next/dynamic';'
+
+const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'){"ssr": false;'
+  }
+)export default function NotificationsPage() {return <NotificationCenter />;
+
+}
+
+const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'),{"ssr": fals,'
+}
+)export default function NotificationsPage() ;
+  return <NotificationCenter />;
+
+const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {"ssr": fals,'
+}),export default function NotificationsPage() ;
+  return <NotificationCenter />;
+}}
+
+export default /**;
+ * NotificationsPage - Function description;
+ */;
+function NotificationsPage() {return <NotificationCenter />;
+
+}
+
+const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {"ssr": fals,'
+}),export default /**;
+ * NotificationsPage - Function description;
+ */;
+function NotificationsPage() {return <NotificationCenter />;
+}
+
 
 
 class ErrorBoundary extends React.Component {
-  constructor(props) {
-
-    super(props);
-    this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {}
-    return { hasError: true,}
+  constructor(props) {
+    }
+    super(props);
+    this.state = { "hasError": false
 };
   }
   
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
+  static getDerivedStateFromError(error) {
+}
+return { "hasError": true,;
+};
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    }
+    console.error('Error caught by "boundary":', error, errorInfo);'
   }
   
   render() {
-    if (this.state.hasError) {}
-      return <div    />Something went wrong.</div>;}
+    }
+    if (this.state.hasError) {
+      }
+      return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}'
-import React from 'react';
+}
 
-import dynamic from 'next / dynamic';
+
+
+
+  return <NotificationCenter />;
+}
+import dynamic from 'next / dynamic';'
 ;
-
 const NotificationCenter = dynamic (
-  () => import ('../components / notifications / NotificationCenter'),
-
-import React from 'react';
-
-import dynamic from 'next/dynamic';
-const NotificationCenter = null;
-const NotificationCenter = dynamic(
-  () => import('../components/notifications/NotificationCenter')
-origin/cursor/automate-test-improve-and-merge-code-2533
-
+  () => import ('../components / notifications / NotificationCenter'),'
   {
-    ssr: false}
- ,}
+    }
+    "ssr": false
+ 
 }
 );
 
 export default function NotificationsPage() {
-  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
-  ssr: false;})
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-export default function NotificationsPage() {
+}
 const NotificationCenter = dynamic(;
-
-  () => import('../components/notifications/NotificationCenter'),;
-  {;}
-    ssr: false,;}
+  () => import('../components/notifications/NotificationCenter'),;'
+  {;
+    }
+    "ssr": false,;
   }
 );
 
+export default function NotificationsPage() {;
+  }
+  return <NotificationCenter />;
+
+const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {;'
+  }
+  "ssr": fals
+}),;
+
+export default function NotificationsPage() {;
+  }
+  return <NotificationCenter />
 }
+<<<<<<< HEAD
+=======
 ;
 export default /**
- * NotificationsPage - Function description;
+ * NotificationsPage - Function description
  */
 function NotificationsPage() {
-  return <NotificationCenter    />;
+  }
+  return <NotificationCenter />;
 
-const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {}
-  ssr: fals,}
+const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {'
+  }
+  "ssr": fals
 }),
 export default /**
- * NotificationsPage - Function description;
+ * NotificationsPage - Function description
  */
 function NotificationsPage() {
- ;}
-  return <NotificationCenter    />;}
+ ;
+  }
+  return <NotificationCenter />;
 }
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
 
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+}
+
+
+
+
+
+}
+
+>>>>>>> origin/main

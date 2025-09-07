@@ -1,17 +1,11 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
-=======
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");"
@@ -173,18 +167,12 @@ throw error}
     this.dependencyHistory = []}"
   log(message, level = 'INFO') {
 <<<<<<< HEAD
+=======
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     console.log(`[${timestamp}] [${level}] ${message}`)}
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runDependencyCheck() {
   // TODO: Implement
 
@@ -224,27 +212,24 @@ throw error}
     return resolutionsApplied}
   async checkPackageLockIssues() {
 <<<<<<< HEAD
+      return { 
+        "success": false, 
+=======
     try {
       this.log('Checking package-lock.json integrity...', 'INFO');
       execSync('npm ci --dry-run', { "stdio": 'pipe' });
       return { "success": true, "issues": [] }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
-<<<<<<< HEAD
       return {
         "success": false,
-=======
-      return { 
-        "success": false, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         "issues": [{
           type: 'package-lock',
           "message": 'Package-lock.json integrity issues detected',
           "details": output
-=======
   // TODO: Implement
 
           "details": output;"]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }]
       }}
   async fixPackageLockIssues() {
@@ -257,6 +242,9 @@ throw error}
 
   async checkDuplicateDependencies() {
 <<<<<<< HEAD
+      return { 
+        "success": false, 
+=======
     try {
       this.log('Checking for duplicate dependencies...', 'INFO');
       const output = execSync('npm ls --depth=0', { "stdio": 'pipe' }).toString();
@@ -271,13 +259,9 @@ throw error}
       }
       return { "success": duplicates.length === 0, duplicates }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
-<<<<<<< HEAD
       return {
         "success": false,
-=======
-      return { 
-        "success": false, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         "duplicates": [{
           type: 'dependency-conflict',
           "message": 'Dependency conflicts detected',
@@ -289,22 +273,12 @@ throw error}
     this.log('Starting dependency resolution...');
     try {
       // Run comprehensive dependency checks
-=======
-  // TODO: Implement
-
-  // TODO: Implement
-      // Run comprehensive dependency checks;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      const [vulnCheck, outdatedCheck, packageLockCheck, duplicateCheck] = await Promise.all([this.runDependencyCheck(),
+const [vulnCheck, outdatedCheck, packageLockCheck, duplicateCheck] = await Promise.all([this.runDependencyCheck(),;
         this.runOutdatedCheck(),
         this.checkPackageLockIssues(),
         this.checkDuplicateDependencies()]
       ]);
-<<<<<<< HEAD
-      const totalIssues = vulnCheck.count + outdatedCheck.count +
-=======
-      const totalIssues = vulnCheck.count + outdatedCheck.count + 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+const totalIssues = vulnCheck.count + outdatedCheck.count +;
                          (packageLockCheck.success ? 0 : 1) + duplicateCheck.duplicates.length;
       if (totalIssues === 0) {
 
@@ -312,18 +286,15 @@ throw error}
       // Fix vulnerabilities and outdated dependencies;
       resolutionsApplied += await this.resolveDependencyIssues(
 <<<<<<< HEAD
-        vulnCheck.vulnerabilities,
-=======
         vulnCheck.vulnerabilities, 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        vulnCheck.vulnerabilities,
         outdatedCheck.outdated
       );
       // Fix package-lock issues
-=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         outdatedCheck.outdated;)
       // Fix package-lock issues;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (!packageLockCheck.success) {
         if (await this.fixPackageLockIssues()) {
           resolutionsApplied += 1}
@@ -372,7 +343,11 @@ if (require.main === module) {
 
     process.exit(1)})}
 <<<<<<< HEAD
+module.exports = DependencyErrorResolver
+=======
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -382,6 +357,9 @@ module.exports = DependencyErrorResolver
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = DependencyErrorResolver
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -390,9 +368,16 @@ module.exports = DependencyErrorResolver
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+module.exports = DependencyErrorResolver
 
 module.exports = DependencyErrorResolver
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+<<<<<<< HEAD
+module.exports = DependencyErrorResolver
+module.exports = DependencyErrorResolver
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

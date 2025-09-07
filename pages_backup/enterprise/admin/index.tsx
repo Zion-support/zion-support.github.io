@@ -1,3 +1,5 @@
+:pages/enterprise/admin/index.tsx
+type Member = any;
 import {useEffect, useMemo, useState} from 'react';
 
 import Link from 'next/link';
@@ -22,6 +24,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   amount_usd: number;
   periodStartIso: string;
   periodEndIso: string;
+:pages/enterprise/admin/index.tsx
+  status: string
+}
+const COMPANY_ID = 'cmp_acme';
+export default function CompanyAdmin() {
+  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
+    'members'
 
   status: string,;
 };'
@@ -57,6 +66,19 @@ fetch(`/api/enterprise/companies/${COMPANY_ID}/members`)
       .then(setActivity);
     fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`)
       .then(r => r.json())
+:pages/enterprise/admin/index.tsx
+      .then(setInvoices);  }, []);
+  const seatsUsed = members.length;
+  return (
+    <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
+      <header
+        style={{
+          marginBottom: 16
+          display: 'flex'
+          alignItems: 'center'
+          gap: 12
+        }}
+      >
 
 import { useEffect, useMemo, useState } from 'react',
 import Link from 'next/link',
@@ -92,6 +114,8 @@ export default function CompanyAdmin() {
       >
         <h1 style={{ margin: 0 }}>Company Admin</h1>
         <div style={{ marginLeft: 'auto' }}>
+:pages/enterprise/admin/index.tsx
+          <Link href='/workspace/acme'>Go to Workspace</Link>        </div>
           <Link href='/workspace/acme'>Go to Workspace</Link>
         </div>
       </header>
@@ -259,6 +283,22 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ memberId: id, role: newRole })
     });
+:pages/enterprise/admin/index.tsx
+    setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));  }
+  const add = async () => {
+    const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) }),
+    const created = await r.json(),
+    setMembers([created, ...members]),
+    setName(''), setEmail(''), setRole('viewer')
+  },
+  const remove = async (id: string) => {
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`, { method: 'DELETE' }),
+    setMembers(members.filter(m => m.id !== id))
+  },
+  const changeRole = async (id: string, newRole: Member['role']) => {
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ memberId: id, role: newRole }) }),
+    setMembers(members.map(m => m.id === id ? { ...m, role: newRole } : m))
+  },
     setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));
   };
 
@@ -445,6 +485,9 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
                 borderBottom: '1px solid #e5e7eb'
               }}
             >
+:pages/enterprise/admin/index.tsx
+              Actions
+            </th>          </tr>
 
         <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>Add</button>
       </div>
@@ -536,6 +579,8 @@ function UsageTab({
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ monthlyJobPosts, budgetCapUsd })
     });
+:pages/enterprise/admin/index.tsx
+    setUsage({ monthlyJobPosts, budgetCapUsd });  }
     setUsage({ monthlyJobPosts, budgetCapUsd });
   };
 
@@ -555,6 +600,7 @@ function UsageTab({
           maxWidth: 600
         }}
       >
+:pages/enterprise/admin/index.tsx
 
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
                 <button onClick={() => remove(m.id)} style={{ color: '#b91c1c' }}>Remove</button>
@@ -684,6 +730,8 @@ function ActivityTab({ events }: { events: any[] }) {
         ))}
       </ul>
     </section>
+:pages/enterprise/admin/index.tsx
+  );
 
   )
   } catch (error) {
@@ -772,6 +820,8 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
               }}
             >
               Actions
+:pages/enterprise/admin/index.tsx
+            </th>          </tr>
 
             <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Invoice #</th>
             <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Period</th>
@@ -861,6 +911,7 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
       </table>
     </section>
 );
+:pages/enterprise/admin/index.tsx
 
 }
 }
@@ -880,6 +931,8 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {}
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+:pages/enterprise/admin/index.tsx
+}
 }
 
                   border_bottom: '1px solid #f3f4f6',

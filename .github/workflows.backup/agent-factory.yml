@@ -87,8 +87,6 @@ jobs:
 
 :.github/workflows.backup/agent-factory.yml
 :.github/workflows.backup/agent-factory.yml
-:.github/workflows.backup/agent-factory.yml
-:.github/workflows.backup/agent-factory.yml
       - uses: actions/setup-node@v4
         with:
           node-version: '20'

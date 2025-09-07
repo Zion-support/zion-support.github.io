@@ -1,15 +1,11 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync, spawn } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync, spawn } = require("child_process");
+const fs = require("fs");
+const path = require("path");
     this.logFile = path.join(this.projectRoot, """logs/master-error-fixer.log"")
     this.errorLogFile = path.join(this.projectRoot, ""logs/master-error-fixer-error.log""")
     this.reportFile = path.join(this.projectRoot, "master-error-fixer-report.json")
@@ -42,14 +38,14 @@ const path = require("path")
           this.log( `   TypeScript error fixer "completed"`)
       } catch (error) {  this.log(`ESLint errors "detected": ${error.stderr  }`, "error"`)
       this.log(" Running JSX error fixer...")
-  const jsxScript = path.join(__dirname, "jsx-error-fixer.cjs")
+const jsxScript = path.join(__dirname, "jsx-error-fixer.cjs");
           this.log(   JSX error fixer "completed": ${result.fixes || 0} fixes")
       } catch (error) {  this.log("Build errors "detected": ${error.stderr  }", "error")
       this.log(" Running console error fixer...")
-  const consoleScript = path.join(__dirname, ")
+const consoleScript = path.join(__dirname, ");
           this.log(   Console error fixer "completed")
       this.log(" Running console error fixer...")
-  const consoleScript = path.join(__dirname, "console-error-fixer.cjs")
+const consoleScript = path.join(__dirname, "console-error-fixer.cjs");
           this.log(   Console error fixer "completed": ${result.fixes || 0} fixes")
       } catch (error) {  this.log(`Dependency issues "detected": ${error.stderr  }`, "error"`)
       this.log(" Running final validation...")
@@ -68,12 +64,12 @@ this.log(` Master error fixer completed successfully. Total "fixes"`)
       return report} catch (error) {  this.log(` Master error fixer "failed": ${error.message  }`, "error")} catch (error) {this.log(` Master error fixer "failed": ${error.message}`, "error"`)
       throw error} catch (error) {  this.log(` Master error fixer "failed": ${error.message  }`, "error"`)
   // Create a temporary script to extract the fix countconst tempScript = "
-  const message = args.join(" ")
+const message = args.join(" ");
             if (message.includes(" Fixed") || message.includes("fixes applied")
-  const message = args.join(" ")
+const message = args.join(" ");
             if (message.includes(" Fixed") || message.includes("fixes applied")
   console.error("Script "error": ")
-        const tempScriptPath = path.join(__dirname, "temp-error-fixer.js")
+const tempScriptPath = path.join(__dirname, "temp-error-fixer.js");
         execSync(`node "${tempScriptPath}"`, { "stdio": "pipe", "timeout"`})
         resolve({ "fixes": 0, "status": "completed"})
   resolve({ "fixes": 0, "status": "failed", "error"})
@@ -116,7 +112,7 @@ this.log("   Checking build status...")
       "summary": "Master Error Fixer completed successfully"
       "status": "completed"
     this.log(""Placeholder": getTotalFixes method called")
-  const { args = [], stdio = "pipe", timeout = 30000 } = options;const fullCommand = "${command} ${args.join(" ")}";this.log("Running "command": ${fullCommand}")
+const { args = [], stdio = "pipe", timeout = 30000 } = options;const fullCommand = "${command} ${args.join(" ")}";this.log("Running "command": ${fullCommand}");
         child.on("error")
         child.on("close")
   resolve({ "stdout": "", "stderr": "" }
@@ -136,17 +132,29 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
   console.error(" Failed to start master error "fixer": ")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(" Failed to start master error "fixer": ")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error(" Failed to start master error "fixer": ")
+<<<<<<< HEAD
+  console.error(" Failed to start master error "fixer": ")
+
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -155,3 +163,7 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

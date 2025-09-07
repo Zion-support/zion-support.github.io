@@ -1,3 +1,35 @@
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/UsageStats.tsx
+import React from "react",
+import { Slider } from "@/components/ui/slider",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
+import {
+
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+import { Sparkles } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+export function UsageStats() {
+  const handleSaveChanges = () => {
+    toast({
+      title: "Limits updated"
+      description: "The new usage limits have been saved successfully."
+    });
+  }
+
+import React from "react",
+import { Slider } from "@/components/ui/slider",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { toast } from "@/hooks/use-toast",
 import {
   Card,
   CardContent,
@@ -82,6 +114,10 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/UsageStats.tsx
+            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
+          </CardFooter>
+        </Card>
 
         <Card>
           <CardHeader>
@@ -101,6 +137,10 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/UsageStats.tsx
+            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
+          </CardFooter>
+        </Card>
 
         <Card>
 
@@ -121,6 +161,10 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/UsageStats.tsx
+            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
+          </CardFooter>
+        </Card>
 
         <Card>
           <CardHeader>
@@ -148,6 +192,11 @@ export function UsageStats() {
           </CardFooter>
         </Card>
       </div>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/UsageStats.tsx
+      <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
+            <Sparkles className="h-5 w-5 text-primary" />
 
           </div>
 
@@ -162,6 +211,12 @@ export function UsageStats() {
       </div>
 
     </div>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/UsageStats.tsx
+  );
+}
+  );
+}
+;
   )
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;

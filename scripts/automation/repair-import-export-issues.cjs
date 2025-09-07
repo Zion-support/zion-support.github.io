@@ -1,27 +1,42 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-function deriveAlias(modulePath) {}
+=======
 
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+function deriveAlias(modulePath) {}
+	const base = modulePath.split('/').filter(Boolean).pop() || 'module';
+	const alias = base.replace(/[^a-zA-Z0-9_$]/g, '_');
+const safe = /^[A-Za-z_$]/.test(alias) ? alias : `m_${alias}`;`;
+	return safe || 'moduleAlias'};
+function fixImportEllipsis(content) {}
+	return content.replace(/import\s*\{\s*\.\.\.\s*\}\s*from\s*['"]([^'"]+)['"];?/g, (_, mod) => {}
+		const alias = deriveAlias(mod);
+		return `import * as ${alias} from '${mod}';`})};
 function ensureDefaultExport(content, name) {}
 	const hasDefault = /export\s+default\s+/m.test(content);
 	if (!hasDefault) {}`;
@@ -41,14 +56,30 @@ function processFile(fullPath) {}
 
 	let content = original;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 	content = fixImportEllipsis(content);
 	content = fixExportDefaultConst(fullPath, content);
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+	content = fixImportEllipsis(content);
+	content = fixExportDefaultConst(fullPath, content);
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 	content = fixImportEllipsis(content);
 	content = fixExportDefaultConst(fullPath, content);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 	if (content !== original) {}
 
 		return true};
@@ -64,12 +95,9 @@ function run() {}
 			total++;
 			const fp = path.resolve(projectRoot, rel);
 <<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 			try {}
 				if (processFile(fp)) {}
 					changed++};
@@ -78,20 +106,36 @@ function run() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 run();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 run();
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 run();
+<<<<<<< HEAD
+run();
+
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

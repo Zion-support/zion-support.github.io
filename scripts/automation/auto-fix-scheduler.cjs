@@ -1,15 +1,11 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
   "daily": "0 2 * * *"
       "weekly": "0 2 * * 0"
       "monthly": "0 2 1 * *"
@@ -21,12 +17,12 @@ const { execSync } = require("child_process")
   console.log("⏰ Starting Auto-Fix Scheduler...")
     // Create logs directory if it doesn"
     // Create logs directory if it doesn"
-  const logsDir = path.join(this.projectRoot, "logs")
+const logsDir = path.join(this.projectRoot, "logs");
   fs.mkdirSync(logsDir, { "recursive"})
-  const historyFile = path.join(this.projectRoot, "logs", "fix-history.json")
-  const history = JSON.parse(fs.readFileSync(historyFile, "utf8")
+const historyFile = path.join(this.projectRoot, "logs", "fix-history.json");
+const history = JSON.parse(fs.readFileSync(historyFile, "utf8");
   console.log(""⚠  Could not load fix history, starting fresh")
-  const historyFile = path.join(this.projectRoot, "logs", "fix-history.json")
+const historyFile = path.join(this.projectRoot, "logs", "fix-history.json");
   "lastRun"
       "fixHistory"
 // console.log(""� Setting up fix schedules...")
@@ -55,22 +51,22 @@ const { execSync } = require("child_process")
   console.log(" Running comprehensive fixes...")
 // console.log("🧹 Running deep cleanup...")
   console.log("� Fixing import issues...")
-        const fs = require("fs")
-        const path = require("path")
+const fs = require("fs");
+const path = require("path");
             .replace(/from\\s+[""]([^"]+)\\.ts["]/g, from "$1"
             .replace(/require\\s*\\(\\s*["]([^"]+)\\.ts[""]\\s*\\)/g, "require("child_process")"
-        const srcDir = path.join(process.cwd(), "src"
+const srcDir = path.join(process.cwd(), "src";
   if (filePath.endsWith(".tsx") || filePath.endsWith(".ts")
-  const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
   fs.writeFileSync(filePath, fixedContent, ")
             if (stat.isDirectory() && !item.startsWith(`.``)
   if (stat.isDirectory() && !item.startsWith(".")
         console.log(" Import fixes completed"")
-      const tempFile = path.join(this.projectRoot, "temp-import-fixer.js")
+const tempFile = path.join(this.projectRoot, "temp-import-fixer.js");
 execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }")
   console.error(" Import fixes "failed": ")
         console.log(" Import fixes completed"")
-      const tempFile = path.join(this.projectRoot, "temp-import-fixer.js")
+const tempFile = path.join(this.projectRoot, "temp-import-fixer.js");
 execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
   console.error(" Import fixes "failed": ")
   console.log(" Fixing syntax issues...")
@@ -124,8 +120,8 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
       console.log(" Project health report generated")
   console.error(" Project health report generation "failed": ")
   console.error(" Project health report generation "failed": ")
-  const content = fs.readFileSync(file, "utf8")
-        return total + content.split("\n")
+const content = fs.readFileSync(file, "utf8");
+return total + content.split("\n");
   "totalFiles"
       "averageLinesPerFile"
       const failedFixes = recentFixes.filter(fix => fix.status === "failed")
@@ -144,17 +140,29 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
   console.log(")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.log(")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.log(")
+<<<<<<< HEAD
+  console.log(")
+
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -163,3 +171,7 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

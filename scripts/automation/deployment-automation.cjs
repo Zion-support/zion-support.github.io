@@ -1,25 +1,19 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class DeploymentAutomation {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -27,12 +21,9 @@ class DeploymentAutomation {}
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
 <<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       if () {}
         fs.mkdirSync(dirPath, { "recursive": true })};"
     })};"
@@ -42,7 +33,7 @@ class DeploymentAutomation {}
 
     const timestamp = new Date().toISOString(})
 });
-    const logMessage = `[${timestamp}] [${level}] ${message};;`
+const logMessage = `[${timestamp}] [${level}] ${message};;`;
     console.log(logMessage);
     try {}
 
@@ -57,6 +48,12 @@ class DeploymentAutomation {}
       this.log(`Completed "step": ${stepName} (${duration}ms)`);"
       return result} catch(error) {}
 <<<<<<< HEAD
+
+    // Check if working directory is clean;
+    try {}
+      const gitStatus = execSync('git status --porcelain', { })
+        "cwd": this.projectRoot, 
+=======
       const duration = Date.now() - stepSta;r;t;
       this.results.steps.push({})
         "name": stepName,
@@ -71,18 +68,10 @@ class DeploymentAutomation {}
   async preDeploymentChecks() {}
     this.log('Running pre-deployment checks...');
     const checks = [];
-<<<<<<< HEAD
     // Check if working directory is clean;
     try {}
-      const gitStatus = execSync('git status --porcelain', { })
-        "cwd": this.projectRoot,
-=======
-
-    // Check if working directory is clean;
-    try {}
-      const gitStatus = execSync('git status --porcelain', { })
+const gitStatus = execSync('git status --porcelain', { });
         "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "encoding": 'utf8',
         "stdio": 'pipe'
       };);
@@ -95,10 +84,10 @@ class DeploymentAutomation {}
     try {}
       execSync('npm test -- --watchAll=false', { })
 <<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
         "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        "cwd": this.projectRoot,
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         "stdio": 'pipe',
         "timeout": 120000;
       })) {}
@@ -111,10 +100,10 @@ class DeploymentAutomation {}
     try {}
       execSync('npm test -- --watchAll=false', { })
 <<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
         "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        "cwd": this.projectRoot,
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         "stdio": 'pipe',
         "timeout": 120000;
       })};
@@ -124,10 +113,10 @@ class DeploymentAutomation {}
     try {}
       execSync('npm run build', { })
 <<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
         "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        "cwd": this.projectRoot,
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         "stdio": 'pipe',
         "timeout": 300000;
       }
@@ -139,20 +128,19 @@ class DeploymentAutomation {}
   async buildApplication() {}
     this.log('Building application...');
     try {}
-      const buildOutput = execSync('npm run build', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
+const buildOutput = execSync('npm run build', { });
         "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        "cwd": this.projectRoot,
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 300000;
       };);
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Extract build information;
       const buildInfo = {}
         "status": 'success',
@@ -160,9 +148,9 @@ class DeploymentAutomation {}
         "timestamp": new Date().toISOString();
      };
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       this.results.build = buildInfo;
       this.log('Application built successfully');
       return buildInfo} catch(error) {}
@@ -172,29 +160,28 @@ class DeploymentAutomation {}
   async runTests() {}
     this.log('Running test suite...');
     try {}
-      const testOutput = execSync('npm test -- --coverage --watchAll=false', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
+const testOutput = execSync('npm test -- --coverage --watchAll=false', { });
         "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        "cwd": this.projectRoot,
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 120000;
       };);
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       const testInfo = {}
         "status": 'success',
         "output": testOutput,
         "timestamp": new Date().toISOString();
      };
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       this.log('Test suite passed');
       return testInfo} catch(error) {}
       this.log(`Test suite "failed": ${error.message}`, 'ERROR');
@@ -208,26 +195,26 @@ class DeploymentAutomation {}
 });
       this.log('Changes staged');
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Create commit;
-      const commitMessage = `"feat": automated deployment - ${new Date().toISOString()};;`
+const commitMessage = `"feat": automated deployment - ${new Date().toISOString()};;`;
       execSync(`git commit -m "${commitMessage}"`, { "cwd": this.projectRoot }
 });
       this.log('Changes committed');
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       const commitInfo = {}
         "message": commitMessage,
         "timestamp": new Date().toISOString();
      };
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       this.results.git.commit = commitInfo;
       return commitInfo} catch(error) {}
       this.log(`Commit "failed": ${error.message}`, 'ERROR');
@@ -236,29 +223,29 @@ class DeploymentAutomation {}
   async pushToRepository() {}
     this.log('Pushing to repository...');
     try {}
-      const currentBranch = execSync('git branch --show-current', {})
+const currentBranch = execSync('git branch --show-current', {});
         "cwd": this.projectRoot,
         "encoding": 'utf8'
       }).trim(;);
 <<<<<<< HEAD
+
       execSync(`git push origin ${currentBranch}`, { "cwd": this.projectRoot }
 });
       this.log(`Pushed to ${currentBranch}`);
+
 =======
-
       execSync(`git push origin ${currentBranch}`, { "cwd": this.projectRoot }
 });
       this.log(`Pushed to ${currentBranch}`);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       const pushInfo = {}
         "branch": currentBranch,
         "timestamp": new Date().toISOString();
      };
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       this.results.git.push = pushInfo;
       return pushInfo} catch(error) {}
       this.log(`Push "failed": ${error.message}`, 'ERROR');
@@ -267,14 +254,14 @@ class DeploymentAutomation {}
   async mergeToMain() {}
     this.log('Merging to main branch...');
     try {}
-      const currentBranch = execSync('git branch --show-current', {})
+const currentBranch = execSync('git branch --show-current', {});
         "cwd": this.projectRoot,
         "encoding": 'utf8'
       }).trim(;);
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       if ( {})
         this.log('Already on main branch')) {}
      {}
@@ -285,33 +272,33 @@ class DeploymentAutomation {}
 });
       this.log('Switched to main branch');
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Pull latest changes;
       execSync('git pull origin main', { "cwd": this.projectRoot }
 });
       this.log('Pulled latest main changes');
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Merge current branch;
       execSync(`git merge ${currentBranch}`, { "cwd": this.projectRoot }
 });
       this.log(`Merged ${currentBranch} into main`);
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Push to main;
       execSync('git push origin main', { "cwd": this.projectRoot }
 });
       this.log('Pushed merged changes to main');
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       const mergeInfo = {}
         "merged": true,
         "fromBranch": currentBranch,
@@ -319,9 +306,9 @@ class DeploymentAutomation {}
         "timestamp": new Date().toISOString();
      };
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       this.results.git.merge = mergeInfo;
       return mergeInfo} catch(error) {}
       this.log(`Merge "failed": ${error.message}`, 'ERROR');
@@ -330,26 +317,24 @@ class DeploymentAutomation {}
   async createDeploymentTag() {}
     this.log('Creating deployment tag...');
     try {}
-      const tagName = `deployment-${new Date().toISOString().split('T')[0]};;`
+const tagName = `deployment-${new Date().toISOString().split('T')[0]};;`;
       execSync(`git tag -a ${tagName} -m "Deployment tag ${tagName}"`, { "cwd": this.projectRoot }
 });
       execSync(`git push origin ${tagName}`, { "cwd": this.projectRoot }
 });
 <<<<<<< HEAD
+      
       this.log(`Created and pushed "tag": ${tagName}`);
+      
 =======
-      
       this.log(`Created and pushed "tag": ${tagName}`);
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       const tagInfo = {}
         tagName,
         "timestamp": new Date().toISOString();
      };
-<<<<<<< HEAD
-=======
-=======
 
+<<<<<<< HEAD
         "timeout": 300000;"
 });"
 
@@ -366,29 +351,28 @@ class DeploymentAutomation {}
 
       const tagInfo = {}
         tagName,"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.results.git.tag = tagInfo;
 
     const successRate = totalSteps > 0 ? Math.round((successfulSteps / totalSteps) * 100) :;0;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      this.results.git.tag = tagInfo;
+
+    const successRate = totalSteps > 0 ? Math.round((successfulSteps / totalSteps) * 100) :;0;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     this.results.summary = {}
       totalSteps,
       successfulSteps,
       failedSteps,
       successRate,
 <<<<<<< HEAD
+
+=======
       "deploymentStatus": failedSteps === 0 ? 'success' : 'failed',
       "timestamp": new Date().toISOString();
     };
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     this.log(`Deployment "Summary": ${successfulSteps}/${totalSteps} steps successful (${successRate}%)`)};
   async run() {}
     this.log('Starting Deployment Automation...');
@@ -396,50 +380,50 @@ class DeploymentAutomation {}
       // Pre-deployment checks;
       await this.runStep('Pre-deployment Checks', () => this.preDeploymentChecks());
 <<<<<<< HEAD
+      
       // Build application;
       await this.runStep('Build Application', () => this.buildApplication());
+      
       // Run tests;
       await this.runStep('Run Tests', () => this.runTests());
+      
       // Commit changes;
       await this.runStep('Commit Changes', () => this.commitChanges());
+      
       // Push to repository;
       await this.runStep('Push to Repository', () => this.pushToRepository());
+      
       // Merge to main;
       await this.runStep('Merge to Main', () => this.mergeToMain());
+      
       // Create deployment tag;
       await this.runStep('Create Deployment Tag', () => this.createDeploymentTag());
+
       this.generateDeploymentSummary();
+
 =======
-      
       // Build application;
       await this.runStep('Build Application', () => this.buildApplication());
-      
       // Run tests;
       await this.runStep('Run Tests', () => this.runTests());
-      
       // Commit changes;
       await this.runStep('Commit Changes', () => this.commitChanges());
-      
       // Push to repository;
       await this.runStep('Push to Repository', () => this.pushToRepository());
-      
       // Merge to main;
       await this.runStep('Merge to Main', () => this.mergeToMain());
-      
       // Create deployment tag;
       await this.runStep('Create Deployment Tag', () => this.createDeploymentTag());
-
       this.generateDeploymentSummary();
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Save results;
       const reportFile = path.join(this.projectRoot, 'deployment-reports', 'deployment-report.json';);
       fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));
       this.log(`Deployment report saved to ${reportFile}`);
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       this.log('Deployment Automation completed successfully!');
       return this.results} catch(error) {}
       this.log(`Deployment Automation "failed": ${error.message}`, 'ERROR');
@@ -447,12 +431,19 @@ class DeploymentAutomation {}
   };
 };
 if ( {})
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const deployment = new DeploymentAutomation) {}
   const deployment = new DeploymentAutomation}(;);
   deployment.run().catch(console.error)};
+<<<<<<< HEAD
+module.exports = DeploymentAutomation;
+
+module.exports = DeploymentAutomation;
+module.exports = DeploymentAutomation;
+module.exports = DeploymentAutomation;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -462,6 +453,9 @@ module.exports = DeploymentAutomation;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = DeploymentAutomation;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -472,8 +466,11 @@ module.exports = DeploymentAutomation;
 =======
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 module.exports = DeploymentAutomation;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+module.exports = DeploymentAutomation;
+

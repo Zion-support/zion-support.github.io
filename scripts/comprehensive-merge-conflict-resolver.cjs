@@ -1,15 +1,9 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs').promises;
 const path = require('path');
 const { exec } = require('child_process');
@@ -24,17 +18,11 @@ class ComprehensiveMergeConflictResolver {}
   async log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     console.log(`[${timestamp}] [${level}] ${message}`)};
-=======
     console.log(`[${timestamp}] [${level}] ${message})};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async findFilesWithConflicts() {}
     const filesWithConflicts = [];
     try {}
@@ -46,8 +34,36 @@ class ComprehensiveMergeConflictResolver {}
         if (file) {}
           filesWithConflicts.push(path.join(this.projectRoot, file))};
       };
+<<<<<<< HEAD
+<<<<<<< HEAD
 
       const entries = await fs.readdir(dir, { "withFileTypes": true }")
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    } catch (error) {}
+      await this.log(`Git command failed, scanning files "manually": ${error.message}`, 'WARN')};
+    // Also scan for files with merge conflict markers;
+    const allFiles = await this.getAllFiles(this.projectRoot);
+    for (const file of allFiles) {}
+      try {}
+        const content = await fs.readFile(file, 'utf8');
+          if (!filesWithConflicts.includes(file)) {}
+            filesWithConflicts.push(file)};
+        };
+      } catch (error) {}
+        // Skip files that can't be read;
+      };
+    };
+    return filesWithConflicts};
+  async getAllFiles(dir) {}
+    const files = [];
+    try {}
+      const entries = await fs.readdir(dir, { "withFileTypes": true }
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 });
       for (const entry of entries) {}
         const fullPath = path.join(dir, entry.name);
@@ -87,23 +103,4 @@ class ComprehensiveMergeConflictResolver {}
 if (require.main === module) {}
   const resolver = new ComprehensiveMergeConflictResolver();
   resolver.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 module.exports = ComprehensiveMergeConflictResolver;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-module.exports = ComprehensiveMergeConflictResolver;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ComprehensiveMergeConflictResolver;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

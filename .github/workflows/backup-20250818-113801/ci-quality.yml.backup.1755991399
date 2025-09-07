@@ -6,7 +6,13 @@ on:
     - cron: '0 */6 * * *'
 permissions:
   contents: write
-
+:.github/workflows/backup-20250818-113801/ci-quality.yml
+:.github/workflows/backup-20250818-113801/ci-quality.yml
+  pull-requests: write
+:.github/workflows/backup-20250818-113801/ci-quality.yml
+  pull-requests: write
+:.github/workflows/backup-20250818-113801/ci-quality.yml
+  pull-requests: write
   actions: read
   pull-requests: write
 concurrency:

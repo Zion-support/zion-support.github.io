@@ -1,22 +1,24 @@
 
+#!/usr/bin/env node;
 
-<<<<<<< HEAD
+main();#!/usr/bin/env node;
+main();
 
-<<<<<<< HEAD
+#!/usr/bin/env node;
+
+main();#!/usr/bin/env node;
+main();#!/usr/bin/env node
+main()
 main
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
     log('info', `Medium "severity": ${securityReport.summary.medium}`);
     log('info', `Low "severity": ${securityReport.summary.low}`);
     log('info', `Security "score": ${securityReport.summary.securityScore}/100`);
+    
     if (securityReport.vulnerabilities.length > 0) {
-<<<<<<< HEAD
       log('warn', 'Vulnerabilities "found": ');
       securityReport.vulnerabilities.forEach(vuln => {
         log('warn', `- [${vuln.severity.toUpperCase()}] ${vuln.description}`)})}
@@ -48,35 +50,39 @@ main
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 main();#!/usr/bin/env node;
 
 main();
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
+#!/usr/bin/env node;
+main();#!/usr/bin/env node;
 
-<<<<<<< HEAD
 main
-=======
 
-
+main();
 
 
 
 
 #!/usr/bin/env node;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+main();#!/usr/bin/env node;
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 // console.log('� Enhanced Security Scanner v2.0')
 console.log('======')
   log('info', 'Checking dependencies for vulnerabilities')
-    const output = execSync('npm audit --json', { "encoding"})
+const output = execSync('npm audit --json', { "encoding"});
           "type"
-  const secretPatterns = [/password\s*=\s*['"][^'']
+const secretPatterns = [/password\s*=\s*['"][^''];
     /api[_-]?key\s*=\s*['"][^'']
     /secret\s*=\s*['"][^'']
     /token\s*=\s*['"][^'']
@@ -98,5 +104,14 @@ console.log('======')
     "action"
       log('warn', 'Vulnerabilities "found")
       log('info', 'Security "Recommendations")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

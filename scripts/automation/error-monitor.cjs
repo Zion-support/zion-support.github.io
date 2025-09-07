@@ -1,27 +1,21 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
 const { spawn, exec } = require("child_process");
 <<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const fs = require("fs");
 const path = require("path");
 const { spawn, exec } = require("child_process");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class $1 {}
   constructor() {}"
   this.projectRoot = "/workspace";
@@ -44,30 +38,22 @@ class $1 {}
   this.log("error", "Uncaught "exception": ", error);      this.shutdown()})};"
   log(level, ...args) {}
 <<<<<<< HEAD
+=======
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}`;`
+const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}`;`;
     console.log("message);
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\\n");
 <<<<<<< HEAD
-=======
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\n")};
 ;
-=======
   const timestamp = new Date().toISOString();"
 
     fs.appendFileSync(logFile, message + "\n")};"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runLintCheck() {}
   return new Promise((resolve) => {}"
   exec("npm run lint", { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
@@ -214,26 +200,23 @@ class $1 {}
   if (this.isRunning) {}
   await this.performHealthCheck()};
 <<<<<<< HEAD
+
+=======
     }, this.checkInterval);
     this.log("info", "Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.")};
 ;
   shutdown() {}
   this.log("info", "Error Monitor shutting down...`);
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   shutdown() {}
   this.log("info", "Error Monitor shutting down...");
     this.isRunning = false;
-=======
     }, this.checkInterval);"
     this.log("info", "Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.")};"
   shutdown() {}"`;
   this.log("info", "Error Monitor shutting down...`);"
   shutdown() {}"
   this.log("info", "Error Monitor shutting down...");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (this.healthCheckInterval) {}
   clearInterval(this.healthCheckInterval)};
     process.exit(0)};
@@ -245,20 +228,36 @@ monitor.start().catch(error => {})"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 });
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 });
+<<<<<<< HEAD
+});
+
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

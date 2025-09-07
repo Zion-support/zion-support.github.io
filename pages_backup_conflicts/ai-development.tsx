@@ -1,5 +1,15 @@
+
+=======
 import React from 'react';
 
+interface AidevelopmentProps {
+  // Add props here as needed
+}
+
+import React from 'react';
+interface AidevelopmentProps {
+  // Add props here as needed
+}
 export default function Aidevelopment({ }: AidevelopmentProps) {
 
 class ErrorBoundary extends React.Component {
@@ -34,5 +44,8 @@ export default function Aidevelopment(): any ({ }: AidevelopmentProps) {;  retur
     <div>
       <h1>Aidevelopment</h1>
       <p>This component is currently under development.</p>
-    </div>;
+    </div>
   );
+
+}
+}

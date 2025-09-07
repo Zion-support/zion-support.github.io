@@ -1,28 +1,9 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 #!/usr/bin/env node;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-#!/usr/bin/env node;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-const fs = require("$1")
-const path = require("$1")
-const { execSync } = require("child_process")
-      let content = fs.readFileSync(filePath, "utf8")
+const fs = require("$1");
+const path = require("$1");
+const { execSync } = require("child_process");
+let content = fs.readFileSync(filePath, "utf8");
       content = content.replace(/"import": \s*/g, "import ")
       content = content.replace(/"const": \s*/g, "const ")
       content = content.replace(/"interface": \s*/g, "interface ")
@@ -45,15 +26,15 @@ const { execSync } = require("child_process")
       content = content.replace(/const\s+(\w+)\s*=\s*\[/g, "const $1 = ["]
       content = content.replace(/{\s*;/g, "{"})
       content = content.replace(/;\s*}/g, "}")
-      const lines = content.split("\n")
-        if (!seen.has(trimmed) || trimmed ===  || trimmed.startsWith("//") || trimmed.startsWith("/*")
+const lines = content.split("\n");
+        if (!seen.has(trimmed) || trimmed === "" || trimmed.startsWith("//") || trimmed.startsWith("/*")
       content = uniqueLines.join("\n")
         fs.writeFileSync(filePath, content, "utf8")
       this.errors.push({ "file": filePath, "error"})
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules"
-          searchInDirectory(fullPath)} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js")
-            const content = fs.readFileSync(fullPath, "utf8")
-            if (content.includes(import": ")
+          searchInDirectory(fullPath),} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js")
+const content = fs.readFileSync(fullPath, "utf8");
+            if (content.includes(""import": ")
                 content.includes("const:")
                 content.includes("from \"next;")
                 content.includes("from \"react;")
@@ -71,7 +52,7 @@ const { execSync } = require("child_process")
       execSync("git config pull.rebase false", { "cwd"})
       execSync("git pull origin main", { "cwd"})
       execSync("git add .", { "cwd"})
-      const commitMessage = `"fix"
+const commitMessage = `"fix";
       execSync(`git commit -m "${commitMessage}"`, { "cwd"`})
       execSync("git push origin main", { "cwd"})
       this.log(" Git operations completed successfully")
@@ -81,20 +62,36 @@ const { execSync } = require("child_process")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
       this.log(` Final automation fix "failed"`)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       this.log(` Final automation fix "failed"`)
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
       this.log(` Final automation fix "failed"`)
+<<<<<<< HEAD
+      this.log(` Final automation fix "failed"`)
+
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

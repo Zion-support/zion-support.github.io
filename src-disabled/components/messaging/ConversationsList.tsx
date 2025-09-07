@@ -1,3 +1,4 @@
+:src/components/messaging/ConversationsList.tsx
 
 
 import React, { useMemo } from 'react';
@@ -24,6 +25,7 @@ export function ConversationsList({
       </div>
     );
   }
+:src/components/messaging/ConversationsList.tsx
   if (conversations.length === 0) {
     return (
       <div className="flex items-center justify-center h-full">"
@@ -112,6 +114,18 @@ export function ConversationsList({;
           height={listHeight}
           itemCount={conversations.length}
           itemSize={itemSize}
+:src/components/messaging/ConversationsList.tsx
+          width='100%'        >
+          {Row}
+        </List>
+      )}
+    </div>
+  )
+}
+    </div>;
+  );
+}
+;
           width="100%"
         >
           {Row}

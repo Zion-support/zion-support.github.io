@@ -1,20 +1,62 @@
-
-
-
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+
+
 main
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+
+
+
+
+
+
+<<<<<<< HEAD
+      log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
 
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   }
   processDirectory(dirPath)
   return { totalFiles, fixedFiles }}
 ;
+<<<<<<< HEAD
+function main() {;
+  log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0;
+  for (const dir of sourceDirs) {;
+    if (fs.existsSync(dir)) {log(`\n📁 Processing "directory": ${dir}`, "blue");";      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);";      totalProcessed += totalFiles;
+      totalFixed += fixedFiles,,}
+function main() {;
+  log("🔧 Advanced Syntax Fixer Starting...", "cyan");
+  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
+  let totalProcessed = 0;
+  let totalFixed = 0;
+  for (const dir of sourceDirs) {;
+    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");
+  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
+  let totalProcessed = 0;
+  let totalFixed = 0;
+  for (const dir of sourceDirs) {;
+    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");
+      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);
+      totalProcessed += totalFiles;
+      totalFixed += fixedFiles,}
+  }
+log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");
+  if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"),} else {;
+    log(\nℹ️  No syntax issues found that could be automatically fixed.",
+      "blue"),}
+log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ️  No syntax issues found that could be automatically fixed.", ""blue""),"}}
+;
+if (require.main === module) {;
+  main(),}
+=======
 function main() {;"
   log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0;"
   for (const dir of sourceDirs) {;"
@@ -30,25 +72,14 @@ log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProces
 
 if (require.main === module) {;
   main()}
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
 
 
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-const fs = require("$1")
-const path = require("$1")
-const { execSync } = require("child_process")
+const fs = require("$1");
+const path = require("$1");
+const { execSync } = require("child_process");
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
   "green": "\x1b[32m"]
@@ -57,9 +88,9 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-const fs = require("$1")
-const path = require("$1")
-const { execSync } = require("child_process")
+const fs = require("$1");
+const path = require("$1");
+const { execSync } = require("child_process");
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
   "green": "\x1b[32m"]
@@ -68,7 +99,7 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-    let content = fs.readFileSync(filePath, "utf8")
+let content = fs.readFileSync(filePath, "utf8");
     // Fix "1"
       /import\s+\{\s*useState\s*\}\s+from\s+[]react["];?\s*\nimport\s+\{\s*useState\s*\}\s+from\s+["]react[]
         useStateRegex,import { useState } from "react"
@@ -78,7 +109,7 @@ function log(message, color = "reset")
       content = content.replace(linkRegex, "import { Link } from "next/link")
       fixed = true;log(`Fixed duplicate Link imports in ${filePath}, "yellow"`)
     // Fix "3"
-    const unterminatedStringRegex = /(["])([^")]
+const unterminatedStringRegex = /(["])([^")];
       content = content.replace(unterminatedStringRegex, "$1$2$1")
       fixed = true;log(`Fixed unterminated strings in ${filePath}, "yellow"`)
     // Fix "4": Fix unexpected keyword "import"
@@ -94,7 +125,7 @@ function log(message, color = "reset")
       content = content.replace(linkRegex, import { Link  } from "next/link)
       fixed = true;log("Fixed duplicate Link imports in ${filePath}", "yellow")
     // Fix "3"
-    const unterminatedStringRegex = /([])([^")]
+const unterminatedStringRegex = /([""])([^")];
       content = content.replace(unterminatedStringRegex, "$1$2$1")
       fixed = true;log("Fixed unterminated strings in ${filePath}", "yellow")
     // Fix "4": Fix unexpected keyword "import"
@@ -130,13 +161,26 @@ function log(message, color = "reset")
   log(" Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
     if (fs.existsSync(dir)) {log(`\n� Processing "directory": ${dir}, "blue");";      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);"
   log(" Advanced Syntax Fixer Starting...", "cyan")
-  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
+const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
     if (fs.existsSync(dir)) {log("\n� Processing "directory": ${dir}", "blue")
-  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
+const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
     if (fs.existsSync(dir)) {log("\n� Processing "directory": ${dir}", "blue")
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white")
   if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})
     log(\nℹ  No syntax issues found that could be automatically fixed.")
       "blue"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", blue),"`}
 
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
+log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
+<<<<<<< HEAD
+log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", blue),"`}
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

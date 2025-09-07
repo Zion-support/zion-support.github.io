@@ -1,19 +1,15 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log(""� Starting continuous dependency updates automation...")
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log(""� Starting continuous dependency updates automation...")
 // Get automation interval from environment variable ("default")
 // console.log(`" Checking for outdated dependencies..."`)
@@ -39,11 +35,11 @@ console.log(""� Starting continuous dependency updates automation...")
   console.log("⚠  Some updates failed")
 // console.log("⚠  Some updates failed")
 console.log(" Checking for major version updates...")
-  const outdatedOutput = execSync("npm outdated --json")
+const outdatedOutput = execSync("npm outdated --json");
   "encoding": "utf8"
-      const majorUpdates = Object.entries(outdated).filter((["pkg", "info")]
-  const current = info.current.split(".")
-        const latest = info.latest.split(".")
+const majorUpdates = Object.entries(outdated).filter((["pkg", "info")];
+const current = info.current.split(".");
+const latest = info.latest.split(".");
   console.log("⚠  Major version updates "available": ")
         majorUpdates.forEach((["pkg", "info")]
 // console.log("ℹ  Major updates require manual review")
@@ -91,17 +87,29 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
   console.error(" Failed to start continuous dependency "updates": ")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(" Failed to start continuous dependency "updates": ")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error(" Failed to start continuous dependency "updates": ")
+<<<<<<< HEAD
+  console.error(" Failed to start continuous dependency "updates": ")
+
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -110,3 +118,7 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

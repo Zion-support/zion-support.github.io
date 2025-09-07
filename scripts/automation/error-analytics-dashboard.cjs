@@ -1,17 +1,11 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
-=======
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");"
@@ -130,19 +124,13 @@ class ErrorAnalyticsDashboard {
     }}"
   log(message, level = 'INFO') {
 <<<<<<< HEAD
+=======
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     console.log("[${timestamp}] [${level}] ${message}")}
-=======
 
     console.log("[${timestamp}] [${level}] ${message}")}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async collectErrorReports() {
   // TODO: Implement
       const reports = [];
@@ -412,16 +400,13 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
     return trends}
   analyzeFixSuccessRates(reports) {
 <<<<<<< HEAD
-    const fixReports = reports.filter(report =>
-=======
     const fixReports = reports.filter(report => 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    const fixReports = reports.filter(report =>
       report.fixesApplied !== undefined || report.resolutionsApplied !== undefined
     );
-=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       report.fixesApplied !== undefined || report.resolutionsApplied !== undefined;)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const successRates = [];
     for (const report of fixReports) {
       const totalIssues = report.initialErrors || report.initialIssues || 0;
@@ -451,15 +436,18 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
 
             const fileName = path.basename(error.file);
             fileDistribution[fileName] = (fileDistribution[fileName] || 0) + 1}
-    // Sort by error count and take top 10;
-    return Object.entries(fileDistribution)
+        }
+      }
+    }
+    // Sort by error count and take top 10
+return Object.entries(fileDistribution);
       .sort(([,a], [,b]) => b - a)
       .slice(0, 10)
       .reduce((obj, [key, value]) => {
         obj[key] = value;
         return obj}, {})}
-  generateDashboardHTML(analyticsData) {`;
-    const html = `
+  generateDashboardHTML(analyticsData) {
+const html = `;
 <!DOCTYPE html>
 <html lang="en">"
 </html>
@@ -472,7 +460,66 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
     <title>Error Analytics Dashboard</title>"
     <script src=https": //cdn.jsdelivr.net/npm/chart.js"></script>"
     <style>
+<<<<<<< HEAD
+<<<<<<< HEAD
 </style>
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            "margin": 0;
+            padding: 20px;
+            background-color: #f5f5f5}
+        .container {
+            max-"width": 1200px;
+            margin: 0 auto}
+        .header {
+            "background": linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            "color": white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center}
+        .stats-grid {
+            "display": grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            "gap": 20px;
+            margin-bottom: 30px}
+        .stat-card {
+            "background": white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-"align": center}
+        .stat-number {
+            font-"size": 2.5em;
+            font-weight: bold;
+            color: #667eea}
+        .stat-label {
+            "color": #666;
+            margin-top: 5px}
+        .chart-container {
+            "background": white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-"bottom": 20px}
+        .chart-title {
+            font-"size": 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333}
+        .last-updated {
+            text-"align": center;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 20px}
+    </style>
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 </head>
 <body>
 </body>"
@@ -492,6 +539,8 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
         <div class="last-updated">"
     <script>
 <<<<<<< HEAD
+      const avgSuccessRate = fixSuccessRates.length > 0 
+=======
         // Error Trends Chart
         const trendsCtx = document.getElementById('trendsChart').getContext('2d');
         new Chart(trendsCtx, {
@@ -580,11 +629,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
       const fileDistribution = this.analyzeFileDistribution(reports);
       // Calculate summary statistics
       const totalErrors = Object.values(errorTypes).reduce((sum, count) => sum + count, 0);
-<<<<<<< HEAD
-      const avgSuccessRate = fixSuccessRates.length > 0
-=======
-      const avgSuccessRate = fixSuccessRates.length > 0 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+const avgSuccessRate = fixSuccessRates.length > 0;
         ? fixSuccessRates.reduce((sum, rate) => sum + parseFloat(rate.successRate), 0) / fixSuccessRates.length
         : 0;
       const analyticsData = {
@@ -650,12 +695,19 @@ if (require.main === module) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = ErrorAnalyticsDashboard
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = ErrorAnalyticsDashboard
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -664,9 +716,16 @@ module.exports = ErrorAnalyticsDashboard
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+module.exports = ErrorAnalyticsDashboard
 
 module.exports = ErrorAnalyticsDashboard
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+<<<<<<< HEAD
+module.exports = ErrorAnalyticsDashboard
+module.exports = ErrorAnalyticsDashboard
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

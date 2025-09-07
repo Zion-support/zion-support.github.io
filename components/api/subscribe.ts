@@ -1,24 +1,245 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import { supabase  } from '../../utils/supabase/client';'
 
-import { supabase } from '../../utils/supabase/client';
+export default async function handler() {if (req.method !== 'POST') return res.status(405).send('Method Not Allowed')const { email } = req.body || {},if (!email || typeof email !== 'string') return res.status(400).send('Invalid email')try {// Basic validation;'
 
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-  const { email } = req.body || {},
-  if (!email || typeof email !== 'string') return res.status(400).send('Invalid email');
+}
+
+const normalized  = null;
+
+export default async function handler() {if (req.method !== 'POST') return res.status(405).send('Method Not Allowed')try {// Basic validation;'
+
+}
+
+const normalized = email && email.trim().toLowerCase(;
+  const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized)if (!isValid);
+  return res && res.status(400).send('Invalid email format')// If placeholders are still used, just accept without DB write;'
+
+const { data, error } = await supabase;
+      .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder')if (isPlaceholder) ;'
+return res && res.status(200).json({ "ok": true, "simulated": true },;
+}
+;
+  const { data, error } = await supabase;
+      .from('email_signups')const { email } = req.body |{}'
+  if (!email |typeof email !== 'string')return res.status(400).send('Invalid email')export default async function handler() {const { email } = req.body || {}if (!email || typeof email !== 'string')return res.status(400).send('Invalid email')export default async function handler() {if (req.method !== 'POST') return res.status(405).send('Method Not Allowed')const { email } = req.body |{}'
+  if (!email |typeof email !== 'string') return res.status(400).send('Invalid email')const { email } = req.body || {}if (!email || typeof email !== 'string')return res.status(400).send('Invalid email')try {// Basic validation;'
+
+}
+
+const normalized = email && email.trim().toLowerCase()const isPlaceholder =;
+      (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||;'
+      (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder')if (isPlaceholder) {return res && res.status(200).json({ "ok": true, "simulated": true })}'
+   
+}
+
+const { data, error } = await supabase;
+      .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder')if (isPlaceholder) ;'
+return res && res.status(200).json({ "ok": true, "simulated": true },;
+}
+;
+  const { data, error } = await supabase;
+      .from('email_signups').insert({"email": normalized;'
+        }
+        "source": 'mobile-launch';'
+        "created_at": new Date().toISOString(
+})      .select('*')      .insert({ "email": normalized, "source": 'mobile-launch', "created_at": new Date().toISOString() }).select('*').single()if (error) ,'
+}
+      .select('*').single()if (!isValid) return res.status(400).send('Invalid email format')// If placeholders are still used, just accept without DB write;'
+
+const isPlaceholder =;
+      (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||;'
+      (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder')if (isPlaceholder) {return res.status(200).json({ "ok": true, "simulated": true },'
+}
+
+const { data, error } = await supabase;
+      .from('email_signups').insert({"email": normalized,"source": 'mobile-launch',"created_at": new Date().toISOString()}).select('*').single()if (error) {}'
+import { supabase  
+} from '../../utils / supabase / client';'
+
+export default async /**;
+ * handler - Function description;
+ */;
+function handler() {if (return res.status (405).send ('Method Not Allowed')) {$2;'
+
+
+}
+
+
+import { supabase } from '../../utils/supabase/client';'
+
+export default async function handler() {;
+  }
+  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');'
+
   try {
     // Basic validation
-    const normalized = null;
+}
+const normalized = email && email.trim().toLowerCase();
 
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {;
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized);
 
-    const normalized = email && email.trim().toLowerCase();
-    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized);
-'
-    if (!isValid) return res && res.status(400).send('Invalid email format');
+    if (!isValid) return res && res.status(400).send('Invalid email format');'
+
+    // If placeholders are still used, just accept without DB write,
+const { data, error } = await supabase;
+      .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');'
+    if (isPlaceholder) {
+}
+return res && res.status(200).json({ "ok": true, "simulated": true });
+   
+}
+
+const { data, error } = await supabase;
+      .from('email_signups')'
+
+
+<<<<<<< HEAD
+pr-12243
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  const { email } = req.body |{}
+  if (!email |typeof email !== 'string')'
+    return res.status(400).send('Invalid email');'
+
+export default async function handler() {
+}
+const { email } = req.body || ,;
+};
+  if (!email || typeof email !== 'string')'
+    return res.status(400).send('Invalid email');'
+
+export default async function handler() {;
+  }
+  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');'
+
+const { email } = req.body |{}
+  if (!email |typeof email !== 'string') return res.status(400).send('Invalid email');'
+
+  try {
+    // Basic validation
+}
+const normalized = email && email.trim().toLowerCase();
+
+const isPlaceholder =;
+      (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||'
+      (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');'
+    if (isPlaceholder) {
+}
+return res && res.status(200).json({ "ok": true, "simulated": true,;
+});    }
+    }
+
+const { data, error } = await supabase;
+      .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');'
+    if (isPlaceholder) {
+}
+return res && res.status(200).json({ "ok": true, "simulated": true });
+   
+}
+
+const { data, error } = await supabase;
+      .from('email_signups')'
+      .insert({
+        }
+        "email": normalized,
+"source": 'mobile-launch''
+        "created_at": new Date().toISOString()
+     
+})      .select('*')      .insert({ "email": normalized, "source": 'mobile-launch', "created_at": new Date().toISOString(),'
+})
+      .select('*')'
+      .single();
+
+    if (error) {}
+import { supabase } from '../../utils / supabase / client';'
+;
+export default async /**;
+ * handler - Function description;
+ */
+function handler() { return null; }
+  if (return res.status (405).send ('Method Not Allowed')) {}
+  $2;
+}
+  const { email } = req.body || {}
+  if ('
+    return res.status (400).send ('Invalid email')) {}
+  $2;
+}export default async /**;
+ * handler - Function description;
+ */
+function handler() { return null; }
+  if (return res.status (405).send ('Method Not Allowed')) {}
+  $2;
+}
+  const { email } = req.body || {}'
+  if (return res.status (400).send ('Invalid email')) {}
+  $2;
+}
+  try {}
+    // Basic validation;
+<<<<<<< HEAD
+    const normalized = email.trim ().toLowerCase ();
+    const is_valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test (normalized);'
+    if (return res.status (400).send ('Invalid email format')) {}
+  $2;
+}
+    // If placeholders are still used, just accept without DB write;
+    const is_placeholder =;'
+      (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes ('placeholder') ||;'
+      (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes ('placeholder');
+    // Check condition;
+if ( {) {}
+  $2;
+}
+      return res.status (200).json ({ ok: true, simulated: true });    }
+    const { data, error } = await supabase;'
+      .from ('email_signups')    const is_placeholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes ('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes ('placeholder');
+    // Check condition;
+if ( {) {}
+  $2;
+}
+      return res.status (200).json ({ ok: true, simulated: true });
+    }
+    const { data, error } = await supabase;'
+      .from ('email_signups');
+      .insert ({}
+        email: normalized,'
+        source: 'mobile - launch',
+        created_at: new Date ().toISOString (),'
+      })      .select ('*')      .insert ({ email: normalized, source: 'mobile - launch', created_at: new Date ().toISOString () });'
+      .select ('*');
+      .single ();
+;
+    // Check condition;
+if ( {) {}
+  $2;
+}
+      if () {) {}
+  $2;
+}
+        return res.status (200).json ({ ok: true, duplicate: true });
+      }'
+      return res.status (500).send (error.message || 'Database error');
+    }
+    return res.status (200).json ({ ok: true, data });
+<<<<<<< HEAD
+  } catch (e: any) {
+<<<<<<< HEAD
+=======
+const normalized = email && email.trim().toLowerCase();
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
+    const { data, error } = await supabase
+      .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
+<<<<<<< HEAD
+=======
+    if (isPlaceholder) {}
+      return res && res.status(200).json({ ok: true;, simulated: true ;})
+   ,
+}
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
     if (isPlaceholder) {
       return res && res.status(200).json({ ok: true, simulated: true })
@@ -28,119 +249,237 @@ export default async function handler(
 
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
-    return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { email } = req.body || {};
+    return res.status(400).send('Invalid email');
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  const { email } = req.body || ,
+};
   if (!email || typeof email !== 'string')
-    return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-  const { email } = req.body |{}
-
+    return res.status(400).send('Invalid email');
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');}
+}
+const { email } = req.body |{}
   if (!email |typeof email !== 'string') return res.status(400).send('Invalid email');
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-  try {}
-    // Basic validation;
-    const normalized = email && email.trim().toLowerCase();
+  try {
+    // Basic validation
+    const normalized = email.trim().toLowerCase();
     const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized);
+    if (!isValid) return res.status(400).send('Invalid email format');
 
-    const { data, error } = await supabase'
-      .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
-    if (isPlaceholder) {}
-      return res && res.status(200).json({ ok: true, simulated: true })
+<<<<<<< HEAD
+    // If placeholders are still used, just accept without DB write
+    const isPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
+    if (isPlaceholder) {
+      return res.status(200).json({ ok: true, simulated: true })
     }
-    const { data, error } = await supabase'
+
+<<<<<<< HEAD
+    const { data, error } = await supabase
       .from('email_signups')
-      .insert({}
-        email: normalized'
-        source: 'mobile-launch'
-        created_at: new Date().toISOString()'
-      })      .select('*')      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
+      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
+=======
+
+      .select('*')
+      .single();
+
+
+
+      .select('*')
+      .single();
+
+
+    if (!isValid) return res.status(400).send('Invalid email format');
+    // If placeholders are still used, just accept without DB write
+const isPlaceholder =
+      (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
+      (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
+    if (isPlaceholder) {
+      return res.status(200).json({ ok: true, simulated: true });
+    }
+    const { data, error } = await supabase
+      .from('email_signups')
+.insert({
+        email: normalized,
+        source: 'mobile-launch',
+        created_at: new Date().toISOString(),
+      })
+      .select('*')
+      .single();
+
+>>>>>>> origin/main
+      .select('*')
+      .single();
+
+    if (error) {
+<<<<<<< HEAD
+      if (error.message && error.message.includes('duplicate')) {
+        return res.status(200).json({ ok: true, duplicate: true })
+=======
+
+
+
+
+
+
 
     if (error) {
 
-pr-12243
+
+
+
+}
+=======
+const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized);
+
+const isPlaceholder =
+      (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
+      (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
+    if (isPlaceholder) {}
+      return res && res.status(200).json({ ok: true;, simulated: true;,}
+});    }
+    }
+
+const { data, error } = await supabase;
+      .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
+    if (isPlaceholder) {}
+      return res && res.status(200).json({ ok: true;, simulated: true ;})
+   ,
 }
 
+const { data, error } = await supabase;
+      .from('email_signups')
+      .insert({
+        email: normalized;
+source: 'mobile-launch';,
+  created_at: new Date().toISOString();}
+     ,}
+})      .select('*')      .insert({ email: normalized;, source: 'mobile-launch';,}
+  created_at: new Date().toISOString();,}
+})
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+      .select('*')
+      .single();
+
+    if (error) {}
+<<<<<<< HEAD
+}
 import { supabase } from '../../utils / supabase / client';
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 ;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  }
+  if (return res.status (405).send ('Method Not Allowed')) {'
+  $2
+}
+
+const { email } = req.body || {}
+  if (return res.status (400).send ('Invalid email')) {$2;'
+}
 export default async /**;
  * handler - Function description;
  */;
-function handler() {if (return res.status (405).send ('Method Not Allowed')) {$2;
+function handler() {if (return res.status (405).send ('Method Not Allowed')) {$2;'
 }
+
+const { email } = req.body || {}
+  if (return res.status (400).send ('Invalid email')) {$2;'
 }
-import { supabase } from '../../utils/supabase/client';
+  try {// Basic validation;
 
-export default async function handler(
-  req: NextApiRequest;
-res: NextApiResponse;
-) {;
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+}
 
-  try {
-    // Basic validation;
+const normalized = email.trim ().toLowerCase (;
+  const is_valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test (normalized)if ;
+  return res.status (400).send ('Invalid email format')) {$2;'
+}
+    // If placeholders are still used, just accept without DB write;
 
-      if (error.message && error.message.includes('duplicate')) {
-return res.status(200).json({ ok: true;, duplicate: true ;});
+const is_placeholder =;
+      (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes ('placeholder') ||;'
+      (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes ('placeholder')// Check condition;'
+if ( {) {$2;
+}
+return res.status (200).json ({ "ok": true, "simulated": true },;
+}
+
+const { data, error } = await supabase;
+      .from ('email_signups')    const is_placeholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes ('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes ('placeholder')// Check condition;'
+if ( {) {$2;
+}
+return res.status (200).json ({ "ok": true, "simulated": true },;
+}
+
+const { data, error } = await supabase;
+      .from ('email_signups').insert ({"email": normalized,"source": 'mobile - launch',"created_at": new Date ().toISOString ()"created_at": new Date ().toISOString (,'
+})      .select ('*')      .insert ({ "email": normalized, "source": 'mobile - launch', "created_at": new Date ().toISOString (),'
+}).select ('*').single ()// Check condition;'
+if ( {) {$2;
+}
+      if () {) {$2;}
+}
+        return res.status (200).json ({ "ok": true, "duplicate": true })}
+return res.status (500).send (error.message || 'Database error',;'
+}
+    return res.status (200).json ({ "ok": true, data })} catch ("e": any) {return res.status(500).send(e?.message |'Unexpected error')return res.status(500).send(e?.message || 'Unexpected error')if (error.message && error.message.includes('duplicate')) {return res.status(200).json({ "ok": true, "duplicate": true })}'
+return res.status(500).send(error.message |'Database error',;'
+}
+    return res.status(200).json({ "ok": true, data })} catch ("e": any) {return res.status(500).send(e?.message |'Unexpected error')return res.status(500).send(e?.message || 'Unexpected error')}      }'
+return res.status(500).send(error.message |'Database error',;'
+}
+    return res.status(200).json({ "ok": true, data })} catch ("e": any) {return res.status(500).send(e?.message |'Unexpected error')return res && res.status(500).send(error && error.message || 'Database error','
+}
+    return res && res.status(200).json({ "ok": true, data })} catch ("e": any) {return res && res.status(500).send(e?.message || 'Unexpected error')}      }'
+return res && res.status(500).send(error && error.message || 'Database error',;'
+}
+    return res && res.status(200).json({ "ok": true, data })} catch ("e": any) {return res && res.status(500).send(e?.message || 'Unexpected error')}}'
+    return res.status(500).send(e?.message |'Unexpected error')return res.status(500).send(e?.message || 'Unexpected error')return res.status (500).send (e?.message || 'Unexpected error')}      }'
+return res.status (500).send (error.message || 'Database error',;'
+}
+    return res.status (200).json ({ "ok": true, data })} catch ("e": any) {return res.status (500).send (e?.message || 'Unexpected error')}'
+}return res.status(500).send(e?.message || 'Unexpected error')return res.status(500).send(e?.message || 'Unexpected error','
+}return res.status(500).send(e?.message || 'Unexpected error')ursor/fix-website-loading-errors-and-merge-6662;'
+    return res.status(500).send(e?.message || 'Unexpected error')}'
+}
+    return res.status(500).send(e?.message || 'Unexpected error')}'
+  }
+    return res.status(500).send(e?.message || 'Unexpected error')}'
+    return res.status(500).send(e?.message || 'Unexpected error')}'
+    return res.status(500).send(e?.message || 'Unexpected error')}'
+return res.status (200).json ({ "ok": true, "duplicate": true,;
+});
       }
-      return res.status(500).send(error.message |'Database error');
+      return res.status (500).send (error.message || 'Database error');'
     }
-    return res.status(200).json({ ok: true;, data });
-  } catch (e: any) {
-    return res.status(500).send(e?.message |'Unexpected error');
-    return res.status(500).send(e?.message || 'Unexpected error');
-
-    return res.status (500).send (e?.message || 'Unexpected error');
-
+    return res.status (200).json ({ "ok": true, data });
+  } catch ("e": any) {
+    }
+    return res.status(500).send(e?.message |'Unexpected error');'
+    return res.status(500).send(e?.message || 'Unexpected error');'
+    return res.status (500).send (e?.message || 'Unexpected error');'
   }      }
-      return res.status(500).send(error.message |'Database error')
+      return res.status (500).send (error.message || 'Database error');'
     }
-    return res.status(200).json({ ok: true;, data })
-  } catch (e: any) {
-    return res.status(500).send(e?.message |'Unexpected error')
-      return res && res.status(500).send(error && error.message || 'Database error');
+    return res.status (200).json ({ "ok": true, data });
+  } catch ("e": any) {
     }
-    return res && res.status(200).json({ ok: true;, data });
-  } catch (e: any) {
-    return res && res.status(500).send(e?.message || 'Unexpected error');
-  }      }
-      return res && res.status(500).send(error && error.message || 'Database error')
-    }
-    return res && res.status(200).json({ ok: true;, data })
-  } catch (e: any) {
-    return res && res.status(500).send(e?.message || 'Unexpected error')
-  };
-}
-    return res.status(500).send(e?.message |'Unexpected error');
-    return res.status(500).send(e?.message || 'Unexpected error');
-
-    return res.status (500).send (e?.message || 'Unexpected error');
-  }      }'
-      return res.status (500).send (error.message || 'Database error');
-    }
-    return res.status (200).json ({ ok: true, data });
-  } catch (e: any) {'
-    return res.status (500).send (e?.message || 'Unexpected error');
+    return res.status (500).send (e?.message || 'Unexpected error');'
 }
 }
 
-    return res.status(500).send(e?.message || 'Unexpected error');
-}
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
+    return res.status(500).send(e?.message || 'Unexpected error');'
 
-'
 
-    return res.status(500).send(e?.message || 'Unexpected error');
+    return res.status(500).send(e?.message || 'Unexpected error');'
 
 }
-}'
-    return res.status(500).send(e?.message || 'Unexpected error');
+    return res.status(500).send(e?.message || 'Unexpected error');'
   }
   }
-
-    return res.status(500).send(e?.message || 'Unexpected error');
+    return res.status(500).send(e?.message || 'Unexpected error');'
 }
-    return res.status(500).send(e?.message || 'Unexpected error');
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
-

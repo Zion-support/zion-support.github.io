@@ -1,27 +1,40 @@
 <<<<<<< HEAD
-# Comprehensive Automation Report
+=======
+# Automation Report
+
+>>>>>>> origin/main
+<<<<<<< HEAD
+**Timestamp:** 2025-09-07T02:53:54.838Z
+**Duration:** 23172ms
 
 ## Summary
-- **Timestamp**: 2025-09-07T02:33:22.872Z
-- **Duration**: 1285ms
-- **Successful**: 3
-- **Errors**: 14
-- **Warnings**: 3
+- ✅ Successful: 5
+- ❌ Errors: 4
+=======
+**Timestamp:** 2025-09-07T02:51:20.034Z
+**Duration:** 9764ms
 
-## Results
+## Summary
+- ✅ Successful: 1
+- ❌ Errors: 8
+>>>>>>> fc9e555998eb59b8e7a598af5aaae6093b04ae4e
+- ⚠️ Warnings: 0
 
-### Successful Operations
-- Pre-automation checks passed
-- performance-monitor.cjs (performance-monitoring) completed
-- security-audit.cjs (security-audit) completed
+## Successful Operations
+- Operation
+<<<<<<< HEAD
+- scripts/auto-fixer.js
+- scripts/advanced-build-optimizer.js
+- scripts/performance-monitor-enhanced.js
+- scripts/performance-optimizer.js
 
-### Errors
-- comprehensive-error-fixer.cjs failed: Command failed: node scripts/comprehensive-error-fixer.cjs
-/workspace/scripts/comprehensive-error-fixer.cjs:10
-  constructor() {}
-                ^
+## Errors
+- scripts/comprehensive-error-fixer.cjs: Command failed: node scripts/comprehensive-error-fixer.cjs
+/workspace/scripts/comprehensive-error-fixer.cjs:62
+    content = content.replace(/#!/usr/bin/env node;/g, '#!/usr/bin/env node');
+                              ^
 
-SyntaxError: Unexpected token '{'
+SyntaxError: Invalid regular expression flags
     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
     at Module._compile (node:internal/modules/cjs/loader:1704:20)
     at Object..js (node:internal/modules/cjs/loader:1895:10)
@@ -31,35 +44,7 @@ SyntaxError: Unexpected token '{'
     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
     at node:internal/main/run_main_module:36:49
-
-Node.js v22.16.0
-
-- auto-fixer.js failed: Command failed: node scripts/auto-fixer.js
 =======
-# Automation Report
-
-<<<<<<< HEAD
-**Timestamp:** 2025-09-07T05:22:55.964Z
-**Duration:** 28320ms
-=======
-**Timestamp:** 2025-09-07T05:09:16.275Z
-**Duration:** NaNms
->>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
-
-## Summary
-- ✅ Successful: 3
-- ❌ Errors: 5
-- ⚠️ Warnings: 0
-
-## Successful Operations
-- Operation
-<<<<<<< HEAD
-- ESLint
-- Build
-=======
-- scripts/performance-monitor-enhanced.js
-- scripts/auto-fixer.js
->>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 
 ## Errors
 - scripts/comprehensive-error-fixer.cjs: Command failed: node scripts/comprehensive-error-fixer.cjs
@@ -86,6 +71,13 @@ Error fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/
 /workspace/scripts/auto-fixer.js:3
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/main
 file:///workspace/scripts/auto-fixer.js:3
 >>>>>>> main
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';
@@ -104,6 +96,14 @@ SyntaxError: Invalid or unexpected token
 
 Node.js v22.16.0
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/main
 <<<<<<< HEAD
 - syntax-fixer.cjs failed: Command failed: node scripts/syntax-fixer.cjs
 /workspace/scripts/syntax-fixer.cjs:9
@@ -148,6 +148,13 @@ Node.js v22.16.0
 /workspace/scripts/advanced-build-optimizer.js:3
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/main
 file:///workspace/scripts/advanced-build-optimizer.js:3
 >>>>>>> main
 ursor/integrate-build-improve-and-re-verify-8f7d;
@@ -166,6 +173,14 @@ SyntaxError: Invalid or unexpected token
 
 Node.js v22.16.0
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/main
 <<<<<<< HEAD
 - build-optimizer.cjs failed: Command failed: node scripts/build-optimizer.cjs
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
@@ -196,6 +211,13 @@ Node.js v22.16.0
 /workspace/scripts/performance-monitor-enhanced.js:3
 =======
 >>>>>>> origin/main
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/main
 file:///workspace/scripts/performance-monitor-enhanced.js:3
 >>>>>>> main
 ursor/fix-syntax-push-and-merge-to-main-40de;
@@ -221,6 +243,14 @@ SyntaxError: Invalid or unexpected token
 
 Node.js v22.16.0
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> origin/main
 <<<<<<< HEAD
 - performance-optimizer.js failed: Command failed: node scripts/performance-optimizer.js
 file:///workspace/scripts/performance-optimizer.js:2
@@ -278,38 +308,6 @@ SyntaxError: Invalid or unexpected token
 
 Node.js v22.16.0
 
-- seo-enhancer.js failed: Command failed: node scripts/seo-enhancer.js
-file:///workspace/scripts/seo-enhancer.js:2
-ursor/automate-test-improve-and-merge-code-646c;
-                                           ^^^
-
-SyntaxError: Invalid or unexpected token
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
-
-Node.js v22.16.0
-
-- generate-dynamic-sitemap.js failed: Command failed: node scripts/generate-dynamic-sitemap.js
-file:///workspace/scripts/generate-dynamic-sitemap.js:5
-const __filename = fileURLToPath(import.meta.url;
-                                             ^^^
-
-SyntaxError: missing ) after argument list
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
-
-Node.js v22.16.0
-
-
-### Warnings
-- ESLint had issues: Command failed: npm run lint
-=======
 - scripts/performance-optimizer.js: Command failed: node scripts/performance-optimizer.js
 file:///workspace/scripts/performance-optimizer.js:2
 const fs = require('fs');
@@ -321,20 +319,24 @@ This file is being treated as an ES module because it has a '.js' file extension
     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
->>>>>>> main
+>>>>>>> fc9e555998eb59b8e7a598af5aaae6093b04ae4e
 
 Node.js v22.16.0
 
-- TypeScript: spawnSync /bin/sh ENOBUFS
-=======
-- scripts/advanced-build-optimizer.js: spawnSync /bin/sh ENOBUFS
 - ESLint: Command failed: npm run lint
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
 >>>>>>> origin/main
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 node:internal/modules/cjs/loader:1404
   throw err;
   ^
@@ -354,20 +356,27 @@ Error: Cannot find module '/workspace/node_modules/.bin/eslint'
 
 Node.js v22.16.0
 
+<<<<<<< HEAD
 - TypeScript had issues: Command failed: npm run type-check
 =======
 
 - TypeScript: spawnSync /bin/sh ENOBUFS
 - Build: Command failed: npm run build
 >>>>>>> origin/main
+=======
+- TypeScript: Command failed: npm run type-check
+>>>>>>> origin/main
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
 <<<<<<< HEAD
+<<<<<<< HEAD
  ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 node:internal/modules/cjs/loader:1404
   throw err;
   ^
@@ -387,32 +396,37 @@ Error: Cannot find module '/workspace/node_modules/.bin/tsc'
 
 Node.js v22.16.0
 
-- Smoke Tests had issues: Command failed: npm run test:smoke
+- Build: Command failed: npm run build
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
-sh: 1: jest: not found
-=======
-Failed to compile.
->>>>>>> main
-
-> Build error occurred
-ReferenceError: module is not defined in ES module scope
-This file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
-    at <unknown> (next.config.js:58:1)
+sh: 1: next: not found
 
 >>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 
 ## Warnings
+<<<<<<< HEAD
+- ESLint had issues
+- TypeScript had issues
+=======
 >>>>>>> origin/main
 
+<<<<<<< HEAD
 
 ## Recommendations
 - Address all errors before deployment
 <<<<<<< HEAD
 - Review and address warnings for better code quality
 =======
+>>>>>>> origin/main
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+## Recommendations
+- Address all errors before deployment
+- Review and address warnings for better code quality
 >>>>>>> origin/main
 - Implement continuous integration for automated testing
 - Set up automated deployment pipeline
@@ -426,3 +440,8 @@ This file is being treated as an ES module because it has a '.js' file extension
 - Set up monitoring for production environment
 - Schedule regular automation runs
 - Document any custom automation workflows
+<<<<<<< HEAD
+=======
+
+*Generated on 2025-09-07T09:42:29.025Z*
+>>>>>>> origin/main

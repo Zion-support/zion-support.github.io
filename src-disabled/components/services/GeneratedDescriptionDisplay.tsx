@@ -1,3 +1,22 @@
+:src/components/services/GeneratedDescriptionDisplay.tsx
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import { Check, Pencil } from 'lucide-react'
+interface GeneratedDescriptionDisplayProps {
+  description: string;
+  onSave: (editedDescription: string) => void
+}
+
+export function GeneratedDescriptionDisplay({ 
+  description;
+  onSave 
+}: GeneratedDescriptionDisplayProps) {
+  const { toast } = useToast();
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedDescription, setEditedDescription] = useState(description);
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -38,6 +57,12 @@ import {
   CardFooter
 } from '@/components/ui/card'
 import { Textarea } from '@/components/ui/textarea'
+:src/components/services/GeneratedDescriptionDisplay.tsx
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
+import { Textarea } from "@/components/ui/textarea",
 import { Check, Pencil } from 'lucide-react'
 interface GeneratedDescriptionDisplayProps {
   description: string
@@ -60,6 +85,7 @@ export function GeneratedDescriptionDisplay({
       description: 'Your edited description has been saved.'
     })
   }
+:src/components/services/GeneratedDescriptionDisplay.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
@@ -112,6 +138,12 @@ export function GeneratedDescriptionDisplay({
       <CardHeader>
         <CardTitle className="text-white flex items-center justify-between">
           Generated Description
+:src/components/services/GeneratedDescriptionDisplay.tsx
+          <Button
+            variant='outline'
+            size='sm'
+            onClick={() => setIsEditing(!isEditing)}
+            className='border-zion-blue-light text-zion-slate-light hover:text-white'          >
 
           <Button 
             variant="outline" 
@@ -130,6 +162,19 @@ export function GeneratedDescriptionDisplay({
                 <Pencil className="h-4 w-4 mr-1" />
                 Edit
               </>
+:src/components/services/GeneratedDescriptionDisplay.tsx
+            )}
+          </Button>
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        {isEditing ? (
+          <Textarea
+            value={editedDescription}
+            onChange={e => setEditedDescription(e.target.value)}
+            className='bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none'          />
+        ) : (
+          <div className='bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap'>
 
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
@@ -197,6 +242,13 @@ export function GeneratedDescriptionDisplay({;
             {editedDescription}
           </div>;
         )}
+:src/components/services/GeneratedDescriptionDisplay.tsx
+      </CardContent>
+      {isEditing && (
+        <CardFooter>
+          <Button
+            onClick={handleSave}
+            className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'          >
 
       </CardContent>;
       {isEditing && (;
@@ -210,6 +262,20 @@ export function GeneratedDescriptionDisplay({;
           </Button>
         </CardFooter>
       )}
+:src/components/services/GeneratedDescriptionDisplay.tsx
+    </Card>
+  )
+  isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>)
+}</Button> </CardTitle> </CardHeader> <CardContent> {
+  isEditing ? (<Textarea value= {
+  editedDescription
+}</div>)
+}</CardContent> {
+  isEditing && (<CardFooter> <Button onClick={
+  handleSave "
+}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)
+}</Card>)
+}'"
 
 };
     </Card>;

@@ -1,15 +1,11 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log("" Starting Smart Deployment Optimizer...")
 // Get automation interval from environment variable ("default")
       "bundleSizes"
@@ -19,9 +15,9 @@ console.log("" Starting Smart Deployment Optimizer...")
     this.reportDir = path.join(process.cwd(), "deployment-reports"
   fs.mkdirSync(this.reportDir, { "recursive"})
         this.reportDir,deployment-history.json"
-  const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
+const data = JSON.parse(fs.readFileSync(historicalFile, "utf8");
   console.log(""No historical deployment data found, starting fresh")
-  const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
+const data = JSON.parse(fs.readFileSync(historicalFile, "utf8");
 // console.log(""No historical deployment data found, starting fresh")
   console.log(" Running smart deployment optimization at ${new Date().toISOString()}"
 // console.log("No historical deployment data found, starting fresh")
@@ -30,8 +26,8 @@ console.log("" Starting Smart Deployment Optimizer...")
       console.log(" Smart deployment optimization completed successfully")
   console.error(" Smart deployment optimization "failed": ")
   console.log(" Analyzing build configuration...")
-    const viteConfigPath = path.join(process.cwd(), "vite.config.ts"
-  const viteConfig = fs.readFileSync(viteConfigPath, "utf8")
+const viteConfigPath = path.join(process.cwd(), "vite.config.ts";
+const viteConfig = fs.readFileSync(viteConfigPath, "utf8");
   "hasOptimization": viteConfig.includes("optimizeDeps")
         "hasCompression": viteConfig.includes("compression")
         "hasTreeShaking": viteConfig.includes("treeshake")
@@ -50,9 +46,9 @@ console.log("" Starting Smart Deployment Optimizer...")
           "priority": "medium"
           "description": "Enable build compression for smaller bundle sizes"
           "action": "Add compression plugin to vite.config.ts"
-    const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")
+const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8");
         (["name", "version")]
-          const largePackages = ["lodash"", "moment", "date-fns"", "framer-motion", ""]
+const largePackages = ["lodash"", "moment", "date-fns"", "framer-motion", ""];
   "type": "dependency_optimization"
           "priority": "
           "description": Consider optimizing large dependencies: ${largeDependencies.map(([name]) => name).join(", "})
@@ -62,7 +58,7 @@ console.log("" Starting Smart Deployment Optimizer...")
       execSync("npm run build", { "stdio": "pipe"})
   "timestamp"
         "duration"
-      const distPath = path.join(process.cwd(), "
+const distPath = path.join(process.cwd(), ";
   "timestamp"
           "size"
           "files"
@@ -128,9 +124,9 @@ console.log("" Starting Smart Deployment Optimizer...")
       console.log(" Linting passed")
       execSync("npm run lint", { "stdio": "pipe"})
       console.log(" Linting passed")
-      const distPath = path.join(process.cwd(), "dist"
-  const indexHtml = path.join(distPath, "index.html")
-  const htmlContent = fs.readFileSync(indexHtml, "utf8")
+const distPath = path.join(process.cwd(), "dist";
+const indexHtml = path.join(distPath, "index.html");
+const htmlContent = fs.readFileSync(indexHtml, "utf8");
           if (!htmlContent.includes("<title>")
   issues.push("Missing title tag")
           if (!htmlContent.includes("meta name="viewport"")
@@ -152,7 +148,7 @@ console.log("" Starting Smart Deployment Optimizer...")
       "metrics"
       "recommendations"
       this.reportDir,deployment-optimization-${Date.now()}.json"
-    const historicalPath = path.join(this.reportDir, "deployment-history.json")
+const historicalPath = path.join(this.reportDir, "deployment-history.json");
       process.cwd(),deployment-optimization-report.json"
 // console.log("⚠ Build testing "failed": ")
   console.log(" Generating deployment optimization report...")
@@ -165,7 +161,7 @@ console.log("" Starting Smart Deployment Optimizer...")
       "metrics"
       "recommendations"
       this.reportDir,deployment-optimization-${Date.now()}.json"
-    const historicalPath = path.join(this.reportDir, "deployment-history.json")
+const historicalPath = path.join(this.reportDir, "deployment-history.json");
       process.cwd(),deployment-optimization-report.json"
   // Skip directories that can"
   console.log( Starting smart deployment optimizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
@@ -181,12 +177,23 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+<<<<<<< HEAD
   console.error(" Failed to start smart deployment "optimizer": ")
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+  console.error(" Failed to start smart deployment "optimizer": ")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(" Failed to start smart deployment "optimizer": ")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -197,8 +204,9 @@ process.on("SIGTERM")
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
           if (!htmlContent.includes("<title>")"
 </title>"`;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

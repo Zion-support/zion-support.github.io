@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+  }
+=======
 #!/usr/bin/env node
 /**
  * Fix All Automation Scripts
@@ -25,28 +27,22 @@ class ScriptFixer {
   fixMergeConflicts(content) {
     // Remove merge conflict markers
     return content
-      .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-  }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?      .replace(/<<<<<<< HEAD[\s\S]*?      .replace(/=======[\s\S]*?  }
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs').promises;
 const path = require('path');
 const { exec } = require('child_process');
 const util = require('util');
 <<<<<<< HEAD
+
+const execAsync = util.promisify(exec);
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 const execAsync = util.promisify(exec);
 =======
@@ -56,6 +52,17 @@ const execAsync = util.promisify(exec);
 const execAsync = util.promisify(exec);
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+const execAsync = util.promisify(exec);
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+const execAsync = util.promisify(exec);
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 class AutomationScriptFixer {}
   constructor() {}
 
@@ -66,27 +73,34 @@ class AutomationScriptFixer {}
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     try {}
 <<<<<<< HEAD
+=======
       await fs.appendFile(this.logFile, logEntry);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       console.log(`[${level}] ${message}`)} catch (error) {`}
       console.error(`Failed to write to log "file": ${error.message}`)};
   };
   async ensureDirectories() {}
-    const dirs = [path.dirname(this.logFile),]
+const dirs = [path.dirname(this.logFile),];
       path.dirname(this.reportFile),
       path.join(this.projectRoot, 'logs'),
       path.join(this.projectRoot, 'reports');
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     for (const dir of dirs) {}
       try {}
         await fs.mkdir(dir, { "recursive": true })} catch (error) {}
@@ -95,18 +109,25 @@ class AutomationScriptFixer {}
     };
   };
   async findScriptFiles() {}
-    const scriptDirs = [path.join(this.projectRoot, 'scripts'),]
+const scriptDirs = [path.join(this.projectRoot, 'scripts'),];
       path.join(this.projectRoot, 'scripts/automation');
     ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
     const scriptFiles = [];
 =======
 >>>>>>> origin/main
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
   fixSyntaxErrors(content) {
     // Fix common syntax errors
     let fixed = content;
     
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     // Fix missing semicolons after require statements
     fixed = fixed.replace(/(const\s+\w+\s*=\s*require\([^)]+\))\s*\n/g, '$1;\n');
@@ -224,6 +245,7 @@ fixer.fixAllScripts().catch(console.error);
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
   };
   async ensureDirectories() {}
@@ -236,7 +258,20 @@ fixer.fixAllScripts().catch(console.error);
 
 
     const scriptFiles = [];
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+
+    const scriptFiles = [];
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+    const scriptFiles = [];
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     for (const dir of scriptDirs) {}
         const files = await fs.readdir(dir);
         for (const file of files) {}
@@ -245,13 +280,25 @@ fixer.fixAllScripts().catch(console.error);
 
       let fixedContent = content;
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Fix common issues;
       const fixes = [// Fix malformed require statements;]
         {}
 <<<<<<< HEAD
+=======
           "pattern": /require\("\$1"\)/g,
           "replacement": 'require("child_process")"
         },
@@ -290,12 +337,21 @@ fixer.fixAllScripts().catch(console.error);
         };
       ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       let hasChanges = false;
       for (const fix of fixes) {}
         if (fix.pattern.test(fixedContent)) {}
@@ -311,6 +367,8 @@ fixer.fixAllScripts().catch(console.error);
       return false};
   async testScript(filePath) {}
 <<<<<<< HEAD
+
+=======
     try {}
       // Try to run the script with --help or similar to test syntax;
       const { stdout, stderr } = await execAsync(`node -c "${filePath}"`, { "timeout": 5000 }
@@ -322,13 +380,27 @@ fixer.fixAllScripts().catch(console.error);
     await this.log('Starting automation script fixing process...', 'INFO');
     await this.ensureDirectories();
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const scriptFiles = await this.findScriptFiles();
     await this.log(`Found ${scriptFiles.length} script files to check`, 'INFO');
+
     let fixedCount = 0;
     let testedCount = 0;
+
     for (const scriptFile of scriptFiles) {}
       await this.log(`"Processing": ${path.basename(scriptFile)}`, 'INFO');
+<<<<<<< HEAD
+      
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     const scriptFiles = await this.findScriptFiles();
     await this.log(`Found ${scriptFiles.length} script files to check`, 'INFO');
@@ -339,13 +411,23 @@ fixer.fixAllScripts().catch(console.error);
     for (const scriptFile of scriptFiles) {}
       await this.log(`"Processing": ${path.basename(scriptFile)}`, 'INFO');
       
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Try to run the script with --help or similar to test syntax;"`;
       const { stdout, stderr } = await execAsync(`node -c "${filePath}"`, { "timeout": 5000 }")
 });"
 
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       const wasFixed = await this.fixScriptFile(scriptFile);
       if (wasFixed) {}
         fixedCount++};
@@ -354,9 +436,20 @@ fixer.fixAllScripts().catch(console.error);
       testedCount++;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       if (testResult.success) {}
         await this.log(`✓ Syntax "OK": ${path.basename(scriptFile)}`, 'SUCCESS')} else {`}
         await this.log(`✗ Syntax "Error": ${path.basename(scriptFile)} - ${testResult.error}`, 'ERROR')};
@@ -366,19 +459,31 @@ fixer.fixAllScripts().catch(console.error);
       "timestamp": new Date().toISOString(),
       "summary": {}
         totalScripts: scriptFiles.length,
-=======
 
       "summary": {}"
         totalScripts: scriptFiles.length,"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         "fixedScripts": fixedCount,
         "testedScripts": testedCount,
         "errors": this.errors.length;"
       },"
       "fixedScripts": this.fixedScripts,
 <<<<<<< HEAD
+      "errors": this.errors;"
+
+
+    return report};
+// Run the fixer;
+if (require.main === module) {}
+  const fixer = new AutomationScriptFixer();
+  fixer.run().catch(console.error)};
+module.exports = AutomationScriptFixer;
+
+module.exports = AutomationScriptFixer;
+=======
       "errors": this.errors;
     };
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
     await fs.writeFile(this.reportFile, JSON.stringify(report, null, 2));
     await this.log(`Script fixing completed. Fixed ${fixedCount} scripts, found ${this.errors.length} errors`, 'INFO');
@@ -390,6 +495,18 @@ fixer.fixAllScripts().catch(console.error);
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+    await fs.writeFile(this.reportFile, JSON.stringify(report, null, 2));
+    await this.log(`Script fixing completed. Fixed ${fixedCount} scripts, found ${this.errors.length} errors`, 'INFO');
+    await this.log(`Report saved "to": ${this.reportFile}`, 'INFO');
+
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     return report};
 // Run the fixer;
 if (require.main === module) {}
@@ -398,12 +515,20 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 module.exports = AutomationScriptFixer;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = AutomationScriptFixer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -414,5 +539,11 @@ module.exports = AutomationScriptFixer;
 =======
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> origin/main
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

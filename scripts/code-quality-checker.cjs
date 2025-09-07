@@ -1,14 +1,43 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
-<<<<<<< HEAD
+    const lines = content.split('\n')
+      case 'console.log'
+        lines[lineIndex] = lines[lineIndex].replace(/console\.log\([^)]*\);?/g, ''
+      case 'missing_semicolon'
+        if (!lines[lineIndex].trim().endsWith(';')
+          lines[lineIndex] = lines[lineIndex].trim() + ';'
+    return lines.join('\n')
+        if (item !== 'node_modules' && item !== '.next' && item !== '.git')
+        if (['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs')]
+    this.log('\n Code Quality Report', 'INFO')
+    this.log('=')
+// console.log('\n� Issues by Type:')
+      console.log('\n Top Files with Issues:')
+      this.log(`\n Applied ${this.stats.fixesApplied} fixes automatically`, 'SUCCESS'`)
+      this.log(`\n⚠  ${this.stats.issuesFound} issues remain (some may require manual attention)`, 'WARNING'
+    this.log(' Starting Code Quality Check', 'INFO')
+        this.log('� No code quality issues found!', 'SUCCESS')
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+
+
+=======
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+const fs = require('fs')
+const path = require('path')
+  log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
       'ERROR': ''
@@ -38,13 +67,7 @@ const path = require('path')
           type: 'missing_semicolon'
           message: 'Missing semicolon'
           severity: 'error'
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const lines = content.split('\n')
       case 'console.log'
         lines[lineIndex] = lines[lineIndex].replace(/console\.log\([^)]*\);?/g, ''
@@ -65,12 +88,19 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
       this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -83,4 +113,12 @@ const path = require('path')
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
+<<<<<<< HEAD
+module.exports = CodeQualityChecker;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

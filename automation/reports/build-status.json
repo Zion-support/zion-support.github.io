@@ -1,20 +1,5 @@
 {
-  "timestamp": "2025-09-01T09:45:49.476Z",
-  "build": {
-    "status": "failed",
-    "duration": 3163,
-    "errors": []
-  },
-  "lint": {
-    "status": "unknown",
-    "issues": []
-  },
-  "typeCheck": {
-    "status": "unknown",
-    "errors": []
-  },
-  "dependencies": {
-    "status": "unknown",
+
   "timestamp": "2025-09-05T21:41:32.481Z",
   "build": {
     "status": "success",
@@ -8179,19 +8164,28 @@
   },
   "dependencies": {
     "status": "warning",
+
+  "timestamp": "2025-09-01T09:45:49.476Z",
+  "build": {
+    "status": "failed",
+    "duration": 3163,
+    "errors": []
+  },
+  "lint": {
+    "status": "unknown",
+    "issues": []
+  },
+  "typeCheck": {
+    "status": "unknown",
+    "errors": []
+  },
+  "dependencies": {
+    "status": "unknown",
     "outdated": []
   },
   "trends": {
     "consecutiveFailures": 0,
-    "improvementSinceLastRun": false,
-    "degradationSinceLastRun": false
-  },
-  "healthScore": 60,
-  "recommendations": [
-    "Fix build errors immediately",
-    "Run intelligent error fixer"
-  ]
-}
+
     "improvementSinceLastRun": true,
     "degradationSinceLastRun": false
   },
@@ -8201,5 +8195,15 @@
     "Consider running auto-formatter",
     "Fix TypeScript errors",
     "Review type definitions"
+  ]
+}
+
+    "improvementSinceLastRun": false,
+    "degradationSinceLastRun": false
+  },
+  "healthScore": 60,
+  "recommendations": [
+    "Fix build errors immediately",
+    "Run intelligent error fixer"
   ]
 }

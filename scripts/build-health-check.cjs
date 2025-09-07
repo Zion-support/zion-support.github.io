@@ -1,15 +1,9 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("fs").promises;
 const path = require("$1");
 const { exec } = require("$1");
@@ -27,19 +21,13 @@ class BuildHealthCheck {;}
     try {;}
       await fs.appendFile(this.logFile, logEntry);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       console.log(logEntry.trim()),} catch (error) {;}
       console.error("Failed to write to log "file": ", error),};
-=======
       console.log(logEntry.trim())} catch (error) {;}"
       console.error("Failed to write to log "file": ", error)};"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   };
 ;
   async checkDependencies() {;}
@@ -51,8 +39,8 @@ class BuildHealthCheck {;}
       if (!stats.isDirectory()) {;}"
 
       // Check package.json vs package-lock.json;
-      const packageJson = JSON.parse(;)"
-        await fs.readFile(path.join(this.projectRoot, "package.json"), "utf8"));"
+const packageJson = JSON.parse(;);
+        await fs.readFile(path.join(this.projectRoot, "package.json"), "utf8"));
       const totalDeps =;
         Object.keys(packageJson.dependencies || {}).length +;
         Object.keys(packageJson.devDependencies || {}).length;"
@@ -62,13 +50,14 @@ class BuildHealthCheck {;}
         await this.log(Failed to fix "dependencies": ${fixError.message}")
           "ERROR");
 <<<<<<< HEAD
+=======
         return { "status": "failed", "error": error.message };
       };
     };
   };
 ;
   async checkConfigFiles() {;}
-    const configs = [package.json",]
+const configs = [package.json",];
       "tsconfig.json",vite.config.ts",
       "eslint.config.js",tailwind.config.js",];
 const fs = require("fs").promises;const path = require("$1");
@@ -80,13 +69,8 @@ class BuildHealthCheck {;}
   async log(message, level = "INFO") {";    const timestamp = new Date().toISOString();    const logEntry = `[${timestamp}] [${level}] ${message}\n`;`;`
     try {;}
       await fs.appendFile(this.logFile, logEntry);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       console.log(logEntry.trim())} catch (error) {;}
       console.error("Failed to write to log ""file": ", error)}"};
 ;
@@ -106,7 +90,6 @@ class BuildHealthCheck {;}
 ;
   async checkConfigFiles() {;}
     const configs = [package.json", ""tsconfig.json",vite.config.ts", ""eslint.config.js",tailwind.config.js", "];
-=======
         return { "status": "failed", "error": error.message };"
   async checkConfigFiles() {;}"
 
@@ -118,7 +101,6 @@ class BuildHealthCheck {;}
       // Check package.json vs package-lock.json;"
       const packageJson = JSON.parse();        await fs.readFile(path.join(this.projectRoot, "package.json"), "utf8")");      const totalDeps =;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const results = [];
     for (const config of configs) {;}
         const filePath = path.join(this.projectRoot, config);"
@@ -140,9 +122,9 @@ class BuildHealthCheck {;}
       // Calculate overall health score;
       let healthScore = 100;"
       if (results.dependencies.status === "failed") healthScore -= 40;
-      if (results.build.status === "failed") healthScore -= 30;"
-      const invalidConfigs = results.configs.filter(;)"
-        c => c.status === "invalid").length;"
+      if (results.build.status === "failed") healthScore -= 30;
+const invalidConfigs = results.configs.filter(;);
+        c => c.status === "invalid").length;
       healthScore -= invalidConfigs * 10;
       results.healthScore = Math.max(0, healthScore);
       results.status =;
@@ -160,6 +142,8 @@ if (require.main === module) {;}
   checker.run();
   setInterval(() => checker.run(), 15 * 60 * 1000);
 <<<<<<< HEAD
+module.exports = BuildHealthCheck;
+=======
   // Keep process alive;
   process.on("SIGINT", () => {;}
     checker.log("Build health checker shutting down", "INFO');
@@ -167,25 +151,39 @@ if (require.main === module) {;}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
 module.exports = BuildHealthCheck;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = BuildHealthCheck;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 module.exports = BuildHealthCheck;
+<<<<<<< HEAD
+module.exports = BuildHealthCheck;
+  // Keep process alive;"
+
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // Keep process alive;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 `;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,7 +1,24 @@
-import { GetServerSideProps } from 'next';
+
+import { GetServerSideProps } from 'next';'
+
+export const "getServerSideProps": GetServerSideProps;
 
 export default function ApiDocsRedirect() {
+  }
   return null;
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
+      destination: '/developers / docs',
+      permanent: true,
+    },
+  }      permanent: true}}
+}
+;
+export default /**
+ * ApiDocsRedirect - Function description
+ */
+function ApiDocsRedirect() {
 
+
+}
+;
+}

@@ -26,8 +26,10 @@ pr-12325
   }
 }
 import React from 'react';
+
 interface TestimonialsProps {
   // Add props here as needed
+
 
 }
 
@@ -39,15 +41,10 @@ export default function Testimonials({ }: TestimonialsProps) {
     </div>
   );
 
+
 }
 
-:src.pages.disabled/Testimonials.jsx
 }
-}
-ursor/add-new-services-and-deploy-updates-0462
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
 :src.pages.disabled/Testimonials.jsx
 }
 }
@@ -55,7 +52,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 
-}
+
+
+
+
 
 :src.pages.disabled/Testimonials.jsx
 }
@@ -63,3 +63,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 }
+:temp_exclude/src.pages.disabled/Testimonials.jsx;

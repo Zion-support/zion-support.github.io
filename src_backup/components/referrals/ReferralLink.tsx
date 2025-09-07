@@ -13,7 +13,7 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;

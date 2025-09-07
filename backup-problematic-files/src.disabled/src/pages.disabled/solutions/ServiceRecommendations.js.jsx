@@ -1,0 +1,18 @@
+import React from 'react';'
+const ServiceRecommendations.js = ({ className }) => {return (<div className={className || ''}>;'
+      <h1>ServiceRecommendations.js</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}
+
+const ServiceRecommendations.js = ({ className }) => {
+}
+return (;
+    <div className={className || ''}>'
+      <h1>ServiceRecommendations.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

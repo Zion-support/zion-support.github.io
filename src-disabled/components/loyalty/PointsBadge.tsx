@@ -1,3 +1,19 @@
+:src/components/loyalty/PointsBadge.tsx
+import { usePoints  } from '@/hooks/usePoints';
+import { useAuth  } from '@/hooks/useAuth';
+import Link from 'next/link';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/tooltip';
+import { LoginModal  } from '@/components/auth/LoginModal';
+import { Button  } from '@/components/ui/button';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function PointsBadge() {
+
+  const { isAuthenticated } = useAuth();
+  const { ledger, balance, loading, fetchLedger } = usePoints();
+  const [loginOpen, setLoginOpen] = useState(false);
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  const points = null;
+import { Gift, RefreshCw } from 'lucide-react'
 }
   }
     } catch (error) {
@@ -20,6 +36,13 @@ if ( {) {}
     if (!isAuthenticated) return;
     setIsRefreshing(true);    try {}
       await fetchLedger()
+:src/components/loyalty/PointsBadge.tsx
+    } catch (error) {
+      logErrorToProduction('Failed to refresh points:', { data: error })
+    } finally {
+      setIsRefreshing(false)
+    }
+  }
 
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints',;
@@ -108,6 +131,15 @@ export function PointsBadge() {
       <div className="flex items-center gap-1">
         <Tooltip>
           <TooltipTrigger asChild>
+:src/components/loyalty/PointsBadge.tsx
+            <Link
+              href={isAuthenticated ? '/points' : '#'}
+              onClick={handleClick}
+              title={
+                isAuthenticated ? 'View points' : 'Earn points by participating'
+              }
+              className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
+              <Gift className='h-4 w-4' aria-hidden='true' />
 
               href={isAuthenticated ? "/points" : "#"}
               onClick={handleClick}"
@@ -191,6 +223,20 @@ export function PointsBadge() {
             )}
           </TooltipContent>
         </Tooltip>
+:src/components/loyalty/PointsBadge.tsx
+        {isAuthenticated && (
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant='ghost'
+                size='sm'
+                onClick={handleRefresh}
+                disabled={isRefreshing |loading}
+                className='p-1 h-6 w-6 text-muted-foreground hover:text-foreground'
+                aria-label='Refresh points'              >
+                <RefreshCw
+                  className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
+                  aria-hidden='true'
 
         {isAuthenticated && (
           <Tooltip>
@@ -217,6 +263,15 @@ export function PointsBadge() {
             </TooltipContent>
           </Tooltip>
         )}
+:src/components/loyalty/PointsBadge.tsx
+      </div>
+      {!isAuthenticated && (
+        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+      )}
+    </TooltipProvider>
+  )
+}
+}
 
 ;
 

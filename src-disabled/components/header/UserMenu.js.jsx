@@ -8,4 +8,4 @@ import React, { useState, useRef, useEffect } from 'react' import { Link } from 
   return $3;}
 } } document.addEventListener('mousedown', handleClickOutside);
   return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
-  const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {';''\"'\";}
+  const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {';''"'";}

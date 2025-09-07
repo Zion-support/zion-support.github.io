@@ -1,26 +1,15 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const axios = require("child_process")
-const fs = require("fs")
-const path = require("path")
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-  constructor(baseUrl = ""https": //ziontechgroup.com")
+const axios = require("child_process");
+const fs = require("fs");
+const path = require("path");
+constructor(baseUrl = ""https": //ziontechgroup.com");
   log(message, level = "info")
     this.log(` "Checking"`)
-      const response = await axios.get(url, {"timeout": 10000,"maxRedirects"})
+const response = await axios.get(url, {"timeout": 10000,"maxRedirects"});
         this.workingLinks.push({url,"status"})
           "responseTime": response.headers["x-response-time"] || "unknown"
         this.log(` "Working"`)
@@ -30,7 +19,7 @@ const path = require("path")
         "error"
       this.log(` "Error": ${url} - ${error.message}`, "error"`)
     this.log(`⚡ Analyzing "performance"`)
-      const response = await axios.get(url, { "timeout"})
+const response = await axios.get(url, { "timeout"});
       const performanceData = {url,responseTime,"status"}
         contentLength: response.headers["content-length"] || "unknown"
         contentType: response.headers["content-type"] || "unknown"
@@ -38,7 +27,7 @@ const path = require("path")
           "data"
         "type": "performance"
     this.log(` Checking "SEO"`)
-      const response = await axios.get(url, { "timeout"})
+const response = await axios.get(url, { "timeout"});
       if (!html.includes("<title>") || html.includes("<title></title>")
         seoIssues.push("Missing or empty title tag")
       if (!html.includes("name="description"")
@@ -53,7 +42,7 @@ const path = require("path")
       "timestamp"
       summary: {totalUrlsChecked: this.checkedUrls.size,"workingLinks": this.workingLinks.length,"brokenLinks"}
       "workingLinks"
-    const reportsDir = path.join(process.cwd(), "reports"
+const reportsDir = path.join(process.cwd(), "reports";
       await fs.mkdir(reportsDir, { "recursive"})
     this.log(`� Report saved "to"`)
         "type": "critical"
@@ -80,12 +69,23 @@ const path = require("path")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+<<<<<<< HEAD
       return { "success": false, "error"}
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      return { "success": false, "error"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       return { "success": false, "error"}
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -96,8 +96,9 @@ const path = require("path")
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
       if (!html.includes("<h1>")"
 </h1>"`;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -16,4 +16,4 @@ const mockAIResponses = [' 'I&apos;d be happy to help you with that! Let me prov
   return;
   const userMessage = { id: Date.now().toString(), type: 'user',}
   content: inputValue, timestamp: new Date(,}
-} setMessages(prev => [...prev, userMessage]) setInputValue(\") setIsTyping(true)\";
+} setMessages(prev => [...prev, userMessage]) setInputValue(") setIsTyping(true)";
