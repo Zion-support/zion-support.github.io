@@ -154,7 +154,7 @@
     "@types/react-dom": "^18.3.7",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
-    "autoprefixer": "^10.5.0",
+    
     "eslint": "^9.35.0",
     "eslint-config-next": "^15.5.2",
     "eslint-formatter-junit": "^8.40.0",
