@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 interface UltraAdvancedFuturisticBackgroundV2Props  {children: React.ReactNode;
@@ -9,12 +12,26 @@ interface UltraAdvancedFuturisticBackgroundV2Props  {children: React.ReactNode;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationFrameId: number;
+<<<<<<< HEAD
 let particles: Array< {const UltraAdvancedFuturisticBackgroundV2: React.FC<;
   UltraAdvancedFuturisticBackgroundV2Props;
 > = ({ children, className = '' }) => {const canvasRef  = useRef<HTMLCanvasElement>(null)useEffect(() => {const canvas = canvasRef.current;
+=======
+let particles: Array< {
+  
+
+const UltraAdvancedFuturisticBackgroundV2: React.FC<
+  UltraAdvancedFuturisticBackgroundV2Props
+> = ({ children, className = '' }) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     if (!canvas) return;
     const ctx = canvas.getContext('2d')if (!ctx) return;
     canvas.width = window.innerWidth;
+<<<<<<< HEAD
     canvas.height = window.innerHeight;canvas.width = window.inner_width;
 canvas.height = window.inner_height;
 let animationFrameId: number;
@@ -31,12 +48,26 @@ if (return) {$2;
 }
     canvas.width = window.inner_width;
     canvas.height = window.inner_height;let animationFrameId: number;let animationFrameId: number;let particles: Array<{coordinate_x: number;
+=======
+    canvas.height = window.innerHeight;
+
+
+let animationFrameId: number;
+    let particles: Array<{
+      coordinate_x: number;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       coordinate_y: number;
       vx: number;
       vy: number;
       size: number;
       color: string;
+<<<<<<< HEAD
       life: number;Math.pow(particle.y - otherParticle.y, 2)maxLife: number;
+=======
+      life: number;
+
+      maxLife: number;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     }> = [];
     const colors = [;
       '#00ffff','#ff00ff','#ffff00','#00ff00','#ff0080','#8000ff','#ff8000','#0080ff','#ff0080','#80ff00',];
@@ -65,6 +96,7 @@ particle.color = colors[Math.floor(Math.random() * colors.length)];
         const alpha = particle.life / particle.maxLife;
         ctx.globalAlpha = alpha;
         ctx.fillStyle = particle.color;
+<<<<<<< HEAD
         ctx.beginPath()ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)ctx.fill()// Draw connections;
         particles.forEach((otherParticle, otherIndex) => {if (index !== otherIndex) {const distance = Math.sqrt(Math.pow(particle.x - otherParticle.x, 2) +;
                 Math.pow(particle.y - otherParticle.y, 2))if (distance < 100) {ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
@@ -89,6 +121,27 @@ particle.color = colors[Math.floor(Math.random() * colors.length)];
             repeat: Infinity;
             ease: 'easeInOut',            ease: "easeInOut";
 ctx.stroke()}
+=======
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill();
+        // Draw connections
+        particles.forEach((otherParticle, otherIndex) => {
+          if (index !== otherIndex) {
+            const distance = Math.sqrt(
+Math.pow(particle.x - otherParticle.x, 2) +
+                Math.pow(particle.y - otherParticle.y, 2)
+            );
+            if (distance < 100) {
+              ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(particle.x, particle.y);
+              ctx.lineTo(otherParticle.x, otherParticle.y);
+
+ctx.stroke();
+            }
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           }
         })})// Draw quantum matrix overlay;
       ctx.globalAlpha = 0.1;
@@ -120,6 +173,7 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
         }}
       />;
       {/* Floating Geometric Shapes */}
+<<<<<<< HEAD
       <div className='fixed inset-0 pointer-events-none z-10'>;
         <motion.div;
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20';
@@ -141,6 +195,64 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
           animate={{rotate: [360, 0],scale: [1, 0.9, 1],opacity: [0.1, 0.3, 0.1],}}
           transition={{duration: 7,repeat: Infinity,ease: 'easeInOut',}}
           transition={{duration: 7,repeat: Infinity,}}
+=======
+      <div className='fixed inset-0 pointer-events-none z-10'>
+        <motion.div
+          className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20'
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.3, 0.1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+ease: 'easeInOut',
+          }}
+        />
+        <motion.div
+          className='absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20'
+          animate={{
+            rotate: [360, 0],
+            scale: [1, 0.8, 1],
+            opacity: [0.1, 0.4, 0.1],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+ease: 'easeInOut',
+          }}
+        />
+        <motion.div
+          className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20'
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.3, 1],
+            opacity: [0.1, 0.2, 0.1],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+ease: 'easeInOut',
+          }}
+        />
+        <motion.div
+          className='absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20'
+          animate={{
+            rotate: [360, 0],
+            scale: [1, 0.9, 1],
+            opacity: [0.1, 0.3, 0.1],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+ease: 'easeInOut',
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+          }}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       {/* Quantum Energy Particles */}
       <div className='fixed inset-0 pointer-events-none z-20'>;
         {[...Array(20)].map((_, i) => (<motion&& motion.div;
@@ -160,6 +272,7 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
             style={{left: `${Math.random() * 100}%`;
               top: `${Math.random() * 100}%`;
             }}
+<<<<<<< HEAD
             animate={{y: [0, -100, 0];
               opacity: [0, 1, 0];
               scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (<div className='fixed inset - 0 pointer - events - none z - 20'>;
@@ -173,6 +286,19 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
             animate={{y: [0, -100, 0];
               opacity: [0, 1, 0];
               scale: [0, 1, 0];
+=======
+            animate={{
+
+              y: [0, -100, 0],
+              opacity: [0, 1, 0],
+              scale: [0, 1, 0],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+ease: 'easeInOut',
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             }}
             transition={{duration: 3 + Math.random() * 2;
               repeat: Infinity;
@@ -184,6 +310,7 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
         ))}
             transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut',            }}/>;
         ))}
+<<<<<<< HEAD
       </div>;
       {/* Neural Network Connections */}<div className='fixed inset-0 pointer-events-none z-30'>;
         <svg className='w-full h-full'>;
@@ -218,11 +345,35 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
             </linearGradient>;
           </defs>;
           {[...Array(15)].map((_, i) => (<motion.line;
+=======
+      </div>
+
+      {/* Neural Network Connections */}
+
+<div className='fixed inset-0 pointer-events-none z-30'>
+        <svg className='w-full h-full'>
+          <defs>
+            <linearGradient
+              id='neuralGradient'
+              x1='0%'
+              y1='0%'
+              x2='100%'
+
+              y2='100%'
+            >
+              <stop offset='0%' stopColor='#00ffff' stopOpacity='0.3' />
+              <stop offset='100%' stopColor='#ff00ff' stopOpacity='0.3' />
+            </linearGradient>
+          </defs>
+          {[...Array(15)].map((_, i) => (
+            <motion.line
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               key={i}
               x1={Math.random() * 100}
               y1={Math.random() * 100}
               x2={Math.random() * 100}
               y2={Math.random() * 100}
+<<<<<<< HEAD
 stroke='url(#neuralGradient)';
               strokeWidth='1';
               opacity='0 && 0.1';
@@ -265,3 +416,41 @@ stroke='url(#neuralGradient)';
       <div className='relative z - 40'>{children}</div>;
     </div>)}export default UltraAdvancedFuturisticBackgroundV2;    </div>)}export default UltraAdvancedFuturisticBackgroundV2;
 }}export default UltraAdvancedFuturisticBackgroundV2;
+=======
+stroke='url(#neuralGradient)'
+              strokeWidth='1'
+              opacity='0 && 0.1'
+              animate={{
+
+                opacity: [0.1, 0.3, 0.1],
+                strokeDasharray: [0, 100, 0],
+              }}
+              transition={{
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+ease: 'easeInOut',
+              }}
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: 'easeInOut',              }}
+
+              }}
+
+                ease: 'easeInOut',              }}
+
+              }}
+
+            />
+          ))}
+
+      {/* Content */}
+<div className='relative z-40'>{children}</div>
+    </div>
+  );
+
+};
+
+export default UltraAdvancedFuturisticBackgroundV2;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

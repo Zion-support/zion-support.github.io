@@ -1,4 +1,3 @@
-import React, { JSX } from 'react';
 import React from 'react';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
@@ -12,7 +11,8 @@ import ChatAssistant from './src/components/ChatAssistant';
 import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
 
-export default function App() {
+export default function App(): React.JSX.Element {
+<<<<<<< HEAD
   const services = [
     {
       title: 'AI Solutions',
@@ -52,18 +52,11 @@ export default function App() {
     },
   ];
 
-export default function App(): JSX.Element {
-export default function App(): React.JSX.Element {
-export default function App(): React.JSX.Element {
-export default function App(): JSX.Element {
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   return (
     <main>
       <h1>Hello App</h1>
-    </main>
-
-  return (
-    <main>
-
     </main>
   );
 }

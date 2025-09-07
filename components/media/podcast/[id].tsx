@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 export default function EpisodePage() {export default function EpisodePage() {const router = useRouter()const { id } = router.query as { id?: string }
   const [episode, setEpisode] = useState<any>(null)useEffect(() => {export default function EpisodePage() {const router = useRouter()const { id } = router && router.query as { id?: string }const [episode, setEpisode]  = useState<any>(null)useEffect(() => {if (!id) return;
@@ -49,13 +50,24 @@ if (return <div > Loading…</div>) {$2;
       </div>;
     </div>)}
     <div className='space-y-4'>;
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import React, { useEffect, useState } from 'react';
 import { useRouter  } from 'next/router';
   const router = null;
+<<<<<<< HEAD
   }, [id])if (!episode) return <div>Loading…</div>;
   return (<div className='space-y-4'>;
       <h1 className='text-2xl font-bold'>{episode.title}</h1>;
       <p className='text-sm text-gray-600'>;
+=======
+  }, [id]);
+  if (!episode) return <div>Loading…</div>;
+  return (
+<div className='space-y-4'>
+      <h1 className='text-2xl font-bold'>{episode.title}</h1>
+      <p className='text-sm text-gray-600'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         Guest: {episode.invitee?.name} ·{' '}
         {new Date(episode.createdAt).toLocaleString()}
       </p>;
@@ -67,7 +79,15 @@ import { useRouter  } from 'next/router';
         <h2 className='text-xl font-semibold'>Transcript</h2>;
         <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>;
           {episode.transcript}
+<<<<<<< HEAD
         </pre>;
       </div>;
     </div>;
   )
+=======
+        </pre>
+      </div>
+    </div>
+
+  );
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

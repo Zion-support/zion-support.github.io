@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
@@ -49,3 +50,16 @@ function AiTrendsPage() {return (<div className="space-y-6">;
           </div>))}
       </div>;
     </div>)
+=======
+import fs from 'fs';
+import path from 'path';
+export type Trend = any;
+  return { props: { items } }
+}
+
+    </div>;
+
+);
+}
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

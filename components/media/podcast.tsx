@@ -1,8 +1,19 @@
 
+<<<<<<< HEAD
 ;
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 type EpisodeListItem = any;useEffect ( () => {const load = async () => {try {return (<div className='space-y-6'>;
+=======
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+type EpisodeListItem = any;
+useEffect ( () => {
+  const load = async () => {
+  try {
+  return (
+    <div className='space-y-6'>;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       <div className='flex items-center justify-between'>;
         <h1 className='text-3xl font-bold'>Zion Podcast</h1>;
         <Link href='/studio/host' className='text-blue-600 underline'>;
@@ -25,6 +36,7 @@ type EpisodeListItem = any;useEffect ( () => {const load = async () => {try {ret
               <div className='flex gap-3'>;
                 {ep && ep.audio?.mp3Url && (<a;
                     href={ep && ep.audio.mp3Url}
+<<<<<<< HEAD
                     className='px-3 py-2 bg-blue-600 text-white rounded';
                     download>                    MP3;
                   </a>;
@@ -32,6 +44,14 @@ type EpisodeListItem = any;useEffect ( () => {const load = async () => {try {ret
                 {ep && ep.audio?.wavUrl && (  if (loading) return <div>Loading episodes…</div>;download;
                   >;
   return (<div className="space-y-6">;
+=======
+                    className='px-3 py-2 bg-blue-600 text-white rounded'
+
+                    download
+                  >
+  return (
+    <div className="space-y-6">;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       <div className="flex items-center justify-between">;
         <h1 className="text-3xl font-bold">Zion Podcast</h1>;
         <Link href="/studio/host" className="text-blue-600 underline">Create Episode</Link>;
@@ -49,6 +69,7 @@ type EpisodeListItem = any;useEffect ( () => {const load = async () => {try {ret
                 {ep && ep.audio?.mp3Url && (<a href={ep && ep.audio.mp3Url} className="px-3 py-2 bg-blue-600 text-white rounded" download>;
                     MP3;
                   </a>;
+<<<<<<< HEAD
                 )}{ep && ep.audio?.wavUrl && (<a;
                     href={ep && ep.audio.wavUrl}
                     className='px-3 py-2 bg-gray-700 text-white rounded';
@@ -77,6 +98,12 @@ type EpisodeListItem = any;useEffect ( () => {const load = async () => {try {ret
               <Link href={`/media/podcast/${ep && ep.id}`} className="text-blue-600 underline">View Transcript</Link>;
             </div>;
           </li>;{ep.audio?.wavUrl && (<a;
+=======
+                )}
+
+                {ep.audio?.wavUrl && (
+<a
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                     href={ep.audio.wavUrl}
                     className='px-3 py-2 bg-gray-700 text-white rounded';
                     download;
@@ -97,6 +124,7 @@ type EpisodeListItem = any;useEffect ( () => {const load = async () => {try {ret
 <div className='mt-3 flex gap-4'>;
               <Link;
                 href={`/media/podcast/${ep.id}`}
+<<<<<<< HEAD
                 className='text-blue-600 underline';
               >;
                 View Transcript;
@@ -186,3 +214,17 @@ if (return <div > Loading episodes…</div>) {$2;
           </li>))}
       </ul>;
     </div>)}}
+=======
+                className='text-blue-600 underline'
+              >
+                View Transcript
+              </Link>
+            </div>
+          </li>
+        ))}
+      </ul>;
+    </div>;
+  );
+
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

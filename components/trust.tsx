@@ -3,6 +3,7 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
+<<<<<<< HEAD
   const [loading, setLoading] = useState<boolean>(true)const [showLogic, setShowLogic] = useState<boolean>(false)useEffect(() => {const params = new URLSearchParams(window.location.search)const u = params.get('user')if (u) setUserId(u)if (u) setUserId(u)const params  = null;}, [])useEffect(() => {async function load() {}, [])useEffect(() => {async function load() {setLoading(true)const res = await fetch(`/api/trust/${encodeURIComponent(userId)}?analyze=true`;
       )const json = await res && res.json()setData(json)setLoading(false)}
     load()}, [userId])<EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) })alert('Appeal submitted')form && form.reset()async function submitPeer() {await fetch('/api/trust/peer', {method: 'POST';
@@ -38,6 +39,69 @@ import RiskIndicator from '../components/ui/RiskIndicator';
             </label>;
           </div>;
         </div>;
+=======
+
+    const params = null;
+  }, []);
+  useEffect(() => {
+    async function load() {
+  }, []);
+
+  useEffect(() => {;
+    async function load() {;
+      setLoading(true);
+
+const res = await fetch(
+        `/api/trust/${encodeURIComponent(userId)}?analyze=true`
+      );
+      const json = await res && res.json();
+      setData(json);
+      setLoading(false);
+    }
+    load();
+  }, [userId]);
+
+  async function submitPeer(type: 'endorse' | 'flag') {
+    await fetch('/api/trust/peer', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type })
+    });
+    alert(type === 'endorse' ? 'Endorsed' : 'Flagged');
+  }
+  async function submitAppeal(e: React.FormEvent) {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const message = formData.get('message');
+    const contactEmail = formData.get('email');
+await fetch('/api/trust/appeal', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId, message, contactEmail }),
+    });
+    alert('Appeal submitted');
+    form.reset();
+    form.reset()
+  }
+  return (
+    <EnhancedLayout>
+<div className='space-y-6'>
+        <div className='flex items-center justify-between'>
+          <h1 className='text-2xl font-semibold'>Trust & Reputation</h1>
+          <div className='flex items-center gap-3'>
+            <label className='text-sm inline-flex items-center gap-2'>
+              <input
+                type='checkbox'
+                checked={showLogic}
+                onChange={() => setShowLogic(!showLogic)}
+              />{' '}
+
+              Transparent logic
+            </label>
+          </div>
+        </div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         {loading && <div>Loading...</div>}
         {!loading && data && (<div className='grid md:grid-cols-3 gap-6'>;
             <div className='md:col-span-2 space-y-4'>;
@@ -63,8 +127,14 @@ import RiskIndicator from '../components/ui/RiskIndicator';
                         <span>{c.key}</span>;
                         <span>{Math.round(c.raw * 100)} / weighted{' '}
                           {c.weighted.toFixed(3)}
+<<<<<<< HEAD
                         </span>;
                       </li>;
+=======
+                        </span>
+                      </li>
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                     ))}
                   </ul>;
                 </div>;
@@ -76,7 +146,13 @@ import RiskIndicator from '../components/ui/RiskIndicator';
                   </ul>;
                 </div>;
               )}
+<<<<<<< HEAD
               {data.reasonSummary && (<div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>;
+=======
+              {data.reasonSummary && (
+
+<div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>;
               )}
@@ -97,6 +173,7 @@ import RiskIndicator from '../components/ui/RiskIndicator';
                       placeholder='Explain why your score should be reconsidered';
                       className='w-full border rounded px-2 py-1 text-sm';
                       rows={4}
+<<<<<<< HEAD
                       required;
       </div>;
     </EnhancedLayout>;
@@ -254,3 +331,25 @@ function submit_appeal() {e.prevent_default ()const form = e.target as HTMLFormE
     </EnhancedLayout>)}</div>;
     </EnhancedLayout>;
   )}
+=======
+                      required
+
+                    />
+                    <button
+                      className='text-sm px-3 py-1 rounded bg-blue-600 text-white'
+                      type='submit'
+                    >
+                      Submit Appeal
+                    </button>
+                  </form>
+                </div>
+              )}
+            </div>;
+          </div>;
+        )}
+
+      </div>
+    </EnhancedLayout>
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

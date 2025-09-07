@@ -1,16 +1,31 @@
 
+<<<<<<< HEAD
 import {Menu,X,Search,ChevronDown,ChevronRight,Home,Users,Settings,HelpCircle,Mail,Phone,MapPin,BookOpen,MessageCircle,Star,TrendingUp,Layers,Cpu,Database,Cloud,Lock,Shield,Globe,Factory,Car,Building,GraduationCap,Scale,Palette,Camera,Video,Music,Gamepad2,Heart,Leaf,Sun,Moon,Wind,Droplets,Mountain,Code,Wrench,Smartphone,BarChart3,Eye,Globe2,Zap,Rocket,Brain,Sparkles,ShieldCheck,Target,Users2,Briefcase,Lightbulb,Award,Menu, X, Search, ChevronDown, ChevronRight;import React, { useState } from 'react',import Link from 'next/link';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Menu, X, Search, ChevronDown, ChevronRight;Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
+=======
+import React, { useState } from 'react',
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Search, ChevronDown, ChevronRight;
+  Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   BookOpen, MessageCircle, Star, TrendingUp;
   Layers, Cpu, Database, Cloud, Lock, Shield;
   Globe, Factory, Car, Building, GraduationCap, Scale;
   Palette, Camera, Video, Music, Gamepad2, Heart;
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye, Globe2;
+<<<<<<< HEAD
   Zap, Rocket, Brain, Sparkles, ShieldCheck, Target;icon: Target,color: 'from-green-600 via-yellow-600 to-orange-600',description: 'Cutting-edge micro solutions',services: [;
       'Advanced Research Automation',Users2, Briefcase, Lightbulb, Award, Clock, CheckCircle;
   } from 'lucide-react';
+=======
+  Zap, Rocket, Brain, Sparkles, ShieldCheck, Target;
+
+  Users2, Briefcase, Lightbulb, Award, Clock, CheckCircle
+ } from 'lucide-react';
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 const contactInfo = null;
 {name: 'AI Emotional Intelligence Platform', href: '/services/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3, 999/month';
 }
@@ -111,6 +126,7 @@ const contactInfo = null;
         description: 'AI-powered project optimization';
         price: '$899/month';
       }
+<<<<<<< HEAD
       {name: 'Intelligent Sales Optimization',href: '/services/intelligent-sales-optimization',description: 'AI-powered sales intelligence',price: '$1,799/month',},],},{title: '🔬 2029 Research & Development',icon: Eye,color: 'from-orange-600 via-red-600 to-pink-600',description: 'Breakthrough research solutions',services: [;
 'Advanced Research Automation','Quantum Research Platform','AI Research Assistant','Biotech Research Suite',],}, ];      'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite';
     ];
@@ -123,6 +139,66 @@ const mainNavigation = [;
 const quickLinks = [;
   { name: 'About Us', href: '/about', icon: Users },{ name: 'Case Studies', href: '/case-studies', icon: BookOpen },{ name: 'Blog', href: '/blog', icon: BookOpen },{ name: 'News', href: '/news', icon: TrendingUp },{ name: 'Careers', href: '/careers', icon: GraduationCap },{ name: 'Support', href: '/support', icon: MessageCircle },];
   { name: 'About Us', href: '/about', icon: Users },{ name: 'Case Studies', href: '/case - studies', icon: BookOpen },{ name: 'Blog', href: '/blog', icon: BookOpen },{ name: 'News', href: '/news', icon: TrendingUp },{ name: 'Careers', href: '/careers', icon: GraduationCap },export default function UltraFuturisticNavigation2029V2() {const [isOpen, setIsOpen] = useState(false)const [isOpen, setIsOpen] = useState(false)const [activeCategory, setActiveCategory] = useState<string | null>(null)const [searchQuery, setSearchQuery] = useState('')const toggleMenu = () => setIsOpen(!isOpen)const closeMenu  = () => setIsOpen(false)return (<nav className='relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20'>;
+=======
+      {
+        name: 'Intelligent Sales Optimization',
+        href: '/services/intelligent-sales-optimization',
+        description: 'AI-powered sales intelligence',
+        price: '$1,799/month',
+      },
+    ],
+  },
+  {
+    title: '🔬 2029 Research & Development',
+    icon: Eye,
+    color: 'from-orange-600 via-red-600 to-pink-600',
+    description: 'Breakthrough research solutions',
+    services: [
+'Advanced Research Automation',
+      'Quantum Research Platform',
+      'AI Research Assistant',
+      'Biotech Research Suite',
+    ],
+
+  },
+];
+const mainNavigation = [
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
+  { name: 'Quantum Tech', href: '/quantum-tech', icon: Globe },
+  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu },
+  { name: 'Space Tech', href: '/space-tech', icon: Rocket },
+  { name: 'Micro SAAS', href: '/micro-saas', icon: Target },
+  { name: 'Innovations', href: '/innovations', icon: Sparkles },
+  { name: 'About', href: '/about', icon: Users },
+{ name: 'Contact', href: '/contact', icon: MessageCircle },
+];
+const quickLinks = [
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
+  { name: 'Blog', href: '/blog', icon: BookOpen },
+  { name: 'News', href: '/news', icon: TrendingUp },
+  { name: 'Careers', href: '/careers', icon: GraduationCap },
+{ name: 'Support', href: '/support', icon: MessageCircle },
+];
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
+  { name: 'Blog', href: '/blog', icon: BookOpen },
+  { name: 'News', href: '/news', icon: TrendingUp },
+  { name: 'Careers', href: '/careers', icon: GraduationCap },
+
+export default function UltraFuturisticNavigation2029V2() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+
+  return (
+<nav className='relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       {/* Main Navigation Bar */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='flex justify-between items-center h-20'>;
@@ -131,6 +207,7 @@ const quickLinks = [;
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 className='flex-shrink-0';
           >;
             <Link href='/' className='flex items-center space-x-3 group'>;
@@ -202,10 +279,54 @@ className='flex-shrink-0';
                   <item.icon className='w-4 h-4' />;
                   <span>{item.name}</span>;
                 </Link>;
+=======
+className='flex-shrink-0'
+          >
+            <Link href='/' className='flex items-center space-x-3 group'>
+              <div className='relative'>
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                  <Rocket className='w-7 h-7 text-white' />
+                </div>
+                <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300' />
+              </div>
+              <div className='hidden sm:block'>
+                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                  Zion Tech Group
+                </h1>
+                <p className='text-xs text-gray-400'>
+                  Future Technology Solutions
+
+                </p>
+              </div>
+            </Link>
+          </motion.div>
+          {/* Desktop Navigation */}
+
+<div className='hidden lg:flex items-center space-x-8'>
+            {mainNavigation.map(item => (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+
+transition={{
+                  duration: 0.5,
+                  delay: mainNavigation.indexOf(item) * 0.1,
+                }}
+                className='relative group'
+                <Link
+                  href={item.href}
+                  className='flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10'
+                >
+                  <item.icon className='w-4 h-4' />
+                  <span>{item.name}</span>
+                </Link>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 {/* Hover effect */}
                 <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />;
               </motion.div>;
             ))}
+<<<<<<< HEAD
           </div>;
           {/* Right side - Contact & Search */}<div className='hidden lg:flex items-center space-x-4'>;
               </motion.div>;
@@ -232,11 +353,30 @@ className='flex-shrink-0';
                 className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64';
               />;
             </div>;
+=======
+          </div>
+          {/* Right side - Contact & Search */}
+
+<div className='hidden lg:flex items-center space-x-4'>
+            {/* Search */}
+            <div className='relative'>
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
+              <input
+                type='text'
+                placeholder='Search services...'
+                value={searchQuery}
+
+                onChange={e => setSearchQuery(e.target.value)}
+                className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'
+              />
+            </div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             {/* Contact Button */}
             <motion&& motion.div;
               initial={{ opacity: 0, scale: 0 && 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0 && 0.5, delay: 0 && 0.5 }}>;
+<<<<<<< HEAD
               <Link;
             <button;
               onClick={toggleMenu}
@@ -258,6 +398,18 @@ className='flex-shrink-0';
               </Link>;
             </motion.div>;
           </div>;
+=======
+              <Link
+
+href='/contact'
+                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'
+              >
+                <MessageCircle className='w-4 h-4 mr-2' />
+                Get Started
+              </Link>
+            </motion.div>
+          </div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           {/* Mobile menu button */}
 <div className='lg:hidden'>;
             <button;
@@ -267,15 +419,23 @@ className='flex-shrink-0';
               {isOpen ? (<X className='w-6 h-6' />;
               ) : (<Menu className='w-6 h-6' />;
               )}
+<<<<<<< HEAD
             </button>;
           </div>;
         </div>;
       </div>;
+=======
+            </button>
+          </div>
+        </div>
+      </div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (<motion&& motion.div;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
+<<<<<<< HEAD
             exit={{ opacity: 0, height: 0 }}transition={{ duration: 0.3 }}
 className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20';
           >;
@@ -312,6 +472,41 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20
                   </Link>;
                 ))}
               </div>;
+=======
+            exit={{ opacity: 0, height: 0 }}
+
+            transition={{ duration: 0.3 }}
+className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'
+          >
+            <div className='px-4 py-6 space-y-4'>
+              {/* Mobile Search */}
+              <div className='relative'>
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
+                <input
+                  type='text'
+                  placeholder='Search services...'
+                  value={searchQuery}
+
+                  onChange={e => setSearchQuery(e.target.value)}
+                  className='w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50'
+                />
+              </div>
+              {/* Mobile Navigation Links */}
+<div className='space-y-2'>
+                {mainNavigation.map(item => (
+                  <Link
+                    key={item && item.name}
+                    href={item && item.href}
+                    onClick={closeMenu}
+
+className='flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
+                  >
+                    <item.icon className='w-5 h-5' />
+                    <span>{item.name}</span>
+                  </Link>
+                ))}
+              </div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               {/* Quick Links */}
 <div className='pt-4 border-t border-gray-700'>;
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>;
@@ -334,6 +529,7 @@ className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
                 </div>;
               </div>;
               {/* Contact Info */}
+<<<<<<< HEAD
 <div className='pt-4 border-t border-gray-700'>;
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>;
                   Contact Info;
@@ -360,6 +556,28 @@ className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
                   </div>;
                 </div>;
               </div>;
+=======
+<div className='pt-4 border-t border-gray-700'>
+                <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
+                  Contact Info
+                </h3>
+                <div className='space-y-2 px-4'>
+                  <div className='flex items-center space-x-3 text-gray-400'>
+                    <Phone className='w-4 h-4' />
+                    <span className='text-sm'>{contactInfo.mobile}</span>
+                  </div>
+
+                  <div className='flex items-center space-x-3 text-gray-400'>
+                    <Mail className='w-4 h-4' />
+                    <span className='text-sm'>{contactInfo.email}</span>
+                  </div>
+                  <div className='flex items-center space-x-3 text-gray-400'>
+                    <MapPin className='w-4 h-4' />
+                    <span className='text-sm'>{contactInfo.address}</span>
+                  </div>
+                </div>
+              </div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       {/* Service Categories Dropdown */}
       <AnimatePresence>;
         {activeCategory && (<motion&& motion.div;
@@ -368,6 +586,7 @@ className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-4
         {activeCategory && (<motion.div;
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             exit={{ opacity: 0, y: -20 }}transition={{ duration: 0.3 }}
 className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40';
           >;
@@ -376,6 +595,20 @@ className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl bord
                 {serviceCategories.map(category => (<div key={category.title} className='space-y-4'>;
                     <div className='flex items-center space-x-3'>;
                       <div;
+=======
+            exit={{ opacity: 0, y: -20 }}
+
+            transition={{ duration: 0.3 }}
+className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
+          >
+            <div className='max-w-7xl mx-auto px-4 py-8'>
+              <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
+                {serviceCategories.map(category => (
+                  <div key={category.title} className='space-y-4'>
+                    <div className='flex items-center space-x-3'>
+                      <div
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           </motion.div>)}
       </AnimatePresence>;
       {/* Service Categories Dropdown */}
@@ -388,6 +621,7 @@ className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl bord
                           {category.title}
                         </h3>;
                         <p className='text - sm text - gray - 400'>;
+<<<<<<< HEAD
                           {category.description}<div className="max-w-7xl mx-auto px-4 py-8">;
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
                 {serviceCategories.map((category) => (<div key={category.title} className="space-y-4">;
@@ -431,6 +665,17 @@ className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl bord
                     </div>;
                     <div className='space-y-3'>;
                       {category.services.map((service, index) => (<Link;
+=======
+                          {category.description}
+
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className='space-y-3'>
+                      {category.services.map((service, index) => (
+                        <Link
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                           key={service.name}
                           href={service.href}
 className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group';
@@ -446,9 +691,15 @@ className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-c
                             </div>;
                             <span className='text-sm font-semibold text-cyan-400'>;
                               {service.price}
+<<<<<<< HEAD
                             </span>;
                           </div>;
                         </Link>;
+=======
+                            </span>
+                          </div>
+                        </Link>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                       ))}
                     </div>;
                   </div>;
@@ -456,6 +707,7 @@ className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-c
               </div>;
             </div>;
           </motion && motion.div>;
+<<<<<<< HEAD
         )}</AnimatePresence>;
     </nav>;
   ))}
@@ -517,3 +769,11 @@ className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-c
     </nav>)}</AnimatePresence>;
     </nav>;
   )}
+=======
+        )}
+
+      </AnimatePresence>
+    </nav>
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
   Check,Shield,ShieldAlert,Lock,Phone,Mail,import React from 'react',import Head from 'next/head';
 import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink   } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',import Card from '../components/ui/Card';
@@ -27,6 +28,73 @@ export default function AIGuardrailsPage() {const contactInfo = {mobile: '+1 302
     'Audit logs, alerting and exportable evidence';
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
+=======
+import React from 'react',
+import Head from 'next/head';
+import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+export default function AIGuardrailsPage() {
+	const contactInfo = null;
+	return (
+		<UltraAdvancedFuturisticBackground>
+			<Head>
+				<title>AI Guardrails Suite | Zion Tech Group</title>
+				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies." />
+				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />
+			</Head>
+
+import {
+  Check
+  Shield
+  ShieldAlert
+  Lock
+  Phone
+  Mail
+  MapPin
+  ExternalLink;
+} from 'lucide-react';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+export default function AIGuardrailsPage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+};
+
+  const features = [
+    'Prompt/output policy engine with allow/deny lists'
+    'Jailbreak and prompt injection detection'
+    'PII/PHI detection and redaction'
+    'Toxicity, bias and safety classifiers'
+    'Human handoff flows and escalation policies'
+    'Audit logs, alerting and exportable evidence'
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   }
 }
 import React from 'react';
@@ -34,6 +102,7 @@ import React from 'react';
   return (<UltraAdvancedFuturisticBackground>;
       <Head>;
         <title>AI Guardrails Suite | Zion Tech Group</title>;
+<<<<<<< HEAD
         <meta;
           name='description';
           content='Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies.';
@@ -111,6 +180,35 @@ import React from 'react';
                 </h2>;
                 <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>;
                   {features.map(f => (<li;
+=======
+        <meta
+          name='description'
+          content='Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies.'
+
+        />
+        <link rel='canonical' href='https://ziontechgroup.com/ai-guardrails' />
+      </Head>
+      <section className='min-h-screen pt-28 pb-20 px-4'>
+        <div className='max-w-6xl mx-auto'>
+          <div className='text-center mb-12'>
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-rose-400 via-red-500 to-orange-500 bg-clip-text text-transparent'>
+              AI Guardrails Suite
+            </h1>
+            <p className='mt-4 text-xl text-gray-300'>
+              Safety and governance for LLM apps with minimal integration and
+              strong guarantees.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10'>
+            <Card className='lg:col-span-2 bg-black/30 border border-rose-500/30'>
+              <div className='p-6'>
+                <h2 className='text-2xl font-semibold text-white mb-4'>
+                  Capabilities
+                </h2>
+                <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>
+                  {features.map(f => (
+                    <li
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                       key={f}
                       className='flex items-start gap-2 text-gray-200';
                     >;
@@ -188,6 +286,7 @@ import React from 'react';
                   className='text-xs';
                 >;
                   {contactInfo.address}
+<<<<<<< HEAD
                 </a>;
               </div>;
             </div>;
@@ -205,3 +304,22 @@ import React from 'react';
       </section>;
     </UltraAdvancedFuturisticBackground>;
   )
+=======
+                </a>
+              </div>
+            </div>
+            <div className='text-center mt-6'>
+              <Button
+                href='/services'
+                variant='outline'
+                className='border-rose-500 text-rose-400'
+              >
+                Explore Services <ExternalLink className='w-4 h-4 ml-2' />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </UltraAdvancedFuturisticBackground>
+  );
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

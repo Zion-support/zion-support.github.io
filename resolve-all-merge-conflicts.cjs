@@ -232,36 +232,6 @@ function resolveMergeConflicts(filePath) {
     content = content.replace(/[\s\S]*?
 console.log('🚀 Starting comprehensive merge conflict resolution...');
 
-// Function to resolve modify/delete conflicts by removing the files
-function resolveModifyDeleteConflicts() {
-  console.log('📁 Resolving modify/delete conflicts...');
-  
-  try {
-    // Get list of conflicted files
-    const statusOutput = execSync('git status --porcelain', { encoding: 'utf8' });
-    const conflictedFiles = statusOutput
-      .split('\n')
-      .filter(line => line.includes('CONFLICT (modify/delete)'))
-      .map(line => line.split(' ').pop())
-      .filter(file => file && !file.includes('temp_conflicts/'));
-    
-    console.log(`Found ${conflictedFiles.length} modify/delete conflicts`);
-    
-    // Remove the conflicted files (they were deleted in main)
-    conflictedFiles.forEach(file => {
-      if (fs.existsSync(file)) {
-        console.log(`Removing ${file} (deleted in main)`);
-        fs.unlinkSync(file);
-        execSync(`git add ${file}`);
-      }
-    });
-    
-    return conflictedFiles.length;
-  } catch (error) {
-    console.error('Error resolving modify/delete conflicts:', error.message);
-    return 0;
-  }
-}
 
 // Function to resolve content conflicts by choosing main branch version
 function resolveContentConflicts() {

@@ -2,6 +2,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
+<<<<<<< HEAD
 export default function ResourcesPage() {return (class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
@@ -49,3 +50,17 @@ export default function ResourcesPage() {return (class ErrorBoundary extends Rea
       </div>;
     </UltraFuturisticBackground>;
 )export default ResourcesPage;
+=======
+export default function ResourcesPage() {
+  return (
+
+              <div className='mt-3 text-cyan-300'>Open →</div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </UltraFuturisticBackground>
+);
+
+export default ResourcesPage;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

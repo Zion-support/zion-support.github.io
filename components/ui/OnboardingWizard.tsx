@@ -1,4 +1,5 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { useRole  } from '../context/RoleContext';
 export default function OnboardingWizard() {export default function OnboardingWizard() {const { role, setRole } = useRole()const [open, setOpen] = useState(false): 'true';
       if (!has) {setOpen(true)const has = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion_has_onboarded') : 'true';
@@ -77,6 +78,11 @@ if (return null) {$2;
             Done;
           </button>        </div>;
       </div>;const has = null;
+=======
+import { useRole } from '../context/RoleContext';
+
+      const has = null;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       }
     } catch {}
   }, [])function completeOnboarding() {try {if (typeof window !== 'undefined') {window.localStorage.setItem('zion_has_onboarded', '1')}
@@ -152,6 +158,7 @@ if (return null) {$2;
 <div className='p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end'>;
           <button;
             onClick={completeOnboarding}
+<<<<<<< HEAD
             className='px-3 py-1.5 rounded-md border';
           >;
             Done;
@@ -160,3 +167,14 @@ if (return null) {$2;
       </div>;
     </div>;
   )}
+=======
+            className='px-3 py-1.5 rounded-md border'
+          >
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

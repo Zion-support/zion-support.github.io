@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 ;
 {/* Robots Meta */;
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOProps  {title?: string;
@@ -13,6 +16,7 @@ interface SEOProps  {title?: string;
   section?: string;
   tags?: string[],structuredData?: any;
   noindex?: boolean;
+<<<<<<< HEAD
   nofollow?: boolean;
 }const SEO: React.FC<SEOProps> = ({title;}{noindex && <meta name="robots" content="noindex" />;
 }{nofollow && <meta name="robots" content="nofollow" />;
@@ -35,6 +39,57 @@ interface SEOProps  {title?: string;
 }{author && <meta property="article:author" content= {author;
 }/>;
 }{section && <meta property="article:section" content= {section;
+=======
+  nofollow?: boolean
+}
+
+const SEO: React.FC<SEOProps> = ({
+  title;
+}{
+  noindex && <meta name="robots" content="noindex" />
+}{
+  nofollow && <meta name="robots" content="nofollow" />
+}{
+  !noindex && !nofollow && <meta name="robots" content="index, follow" />
+}{
+  /* Open Graph Meta Tags */
+}<meta property="og:title" content= {
+  fullTitle
+}/> <meta property="og:description" content= {
+  description
+}/> <meta property="og:type" content= {
+  type
+}/> <meta property="og:url" content= {
+  fullUrl
+}/> <meta property="og:image" content= {
+  fullImage
+}/> <meta property="og:site name" content="Zion Tech Group" /> <meta property="og:locale" content="en US" /> {
+  /* Twitter Card Meta Tags */
+}<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@ziontechgroup" /> <meta name="twitter:creator" content="@ziontechgroup" /> <meta name="twitter:title" content= {
+  fullTitle
+}/> <meta name="twitter:description" content= {
+  description
+}/> <meta name="twitter:image" content= {
+  fullImage
+}/> {
+  /* Article Specific Meta Tags */
+}{
+  type === 'article' && (<> {
+  publishedTime && <meta property="article:published time" content= {
+  publishedTime
+}/>
+}{
+  modifiedTime && <meta property="article:modified time" content= {
+  modifiedTime
+}/>
+}{
+  author && <meta property="article:author" content= {
+  author
+}/>
+}{
+  section && <meta property="article:section" content= {
+  section
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 }
 import React from 'react';
  {/* Robots Meta */ ;
@@ -115,6 +170,7 @@ const SEO: React.FC<SEOProps> = ({title = 'Zion Tech Group - Revolutionary AI, Q
     : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http')? url;
     : `https://ziontechgroup.com${url}`;
+<<<<<<< HEAD
   const fullImage = image.startsWith('http')? image;
     : `https://ziontechgroup.com${image}`;  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
@@ -126,15 +182,30 @@ const SEO: React.FC<SEOProps> = ({title = 'Zion Tech Group - Revolutionary AI, Q
   section;
   tags = [];
   structuredData;: `https://ziontechgroup.com${image}`;return (<Head>;
+=======
+  const fullImage = image.startsWith('http')
+    ? image
+
+    : `https://ziontechgroup.com${image}`;
+
+  return (
+    <Head>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>;
 <meta name='description' content={description} />;
       <meta;
         name='keywords';
         content={Array.isArray(keywords) ? keywords.join(', ') : keywords}
+<<<<<<< HEAD
       />;
       <meta name='author' content={author} />;
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />;
+=======
+      />
+      <meta name='author' content={author} />
+      <meta name='robots' content={noindex ? 'noindex' : 'index'} />
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       {nofollow && <meta name='robots' content='nofollow' />}
       {noindex && <meta name='robots' content='noindex' />}
       {nofollow && <meta name='robots' content='nofollow' />}
@@ -249,6 +320,7 @@ const SEO: React.FC<SEOProps> = ({title = 'Zion Tech Group - Revolutionary AI, Q
         name='yandex-verification';
         content='your-yandex-verification-code';
       {/* Custom Meta Tags */}
+<<<<<<< HEAD
       {structuredData && (<script;
           type='application/ld+json';
           dangerouslySetInnerHTML={{__html: JSON && JSON.stringify(structuredData),          }}
@@ -309,3 +381,20 @@ const SEO: React.FC<SEOProps> = ({title = 'Zion Tech Group - Revolutionary AI, Q
         />)}
     </Head>)}export default SEO)}export default SEO;</Head>;
 )}export default SEO;
+=======
+      {structuredData && (;
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+
+            __html: JSON.stringify(structuredData),
+          }}
+        />;
+      )}
+
+    </Head>
+);
+};
+
+export default SEO;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

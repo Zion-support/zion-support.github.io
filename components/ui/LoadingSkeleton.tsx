@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
   className?: string;
   height?: string;
@@ -90,3 +91,21 @@ export const StatsSkeleton: React.FC < StatsSkeletonProps> = ({ class_name = '' 
     </div>)}export default Skeleton)}export default Skeleton;interface SkeletonProps  {className?: string;
   height?: string;
   width?: string;)}export default Skeleton;
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+  rounded?: string
+}
+
+const Skeleton: React.FC<SkeletonProps> = ({ 
+  className;
+          ))}
+        </div>
+      </div>
+    </div>
+
+);
+};
+
+export default Skeleton;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

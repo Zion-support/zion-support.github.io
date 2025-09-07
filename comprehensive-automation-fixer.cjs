@@ -41,6 +41,7 @@ const automationFiles = ['automation/dependency-fixer.cjs']
       .replace(/['"]framer-motion;['"]/g, ")
       .replace(/['"]lucide-react;['"]/g, ")
 =======
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -598,4 +599,4 @@ fixer
     console.error('❌ Comprehensive Automation Fixer failed:', error.message);
     process.exit(1);
   });
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

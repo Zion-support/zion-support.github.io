@@ -27,6 +27,7 @@ const { execSync } = require('child_process')
     console.error(' Security audit "failed")
       ' Enhanced automation script creation "failed"
 =======
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -909,4 +910,4 @@ creator
     );
     process.exit(1);
   });
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

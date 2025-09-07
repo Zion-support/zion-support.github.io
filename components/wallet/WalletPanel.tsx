@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 type Tx = {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }}
@@ -8,6 +9,13 @@ type Tx = {class ErrorBoundary extends React.Component {constructor(props) {supe
     return this.props.children;
   }
 }import React, { useEffect, useMemo, useState } from 'react';
+=======
+import React, { useEffect, useMemo, useState } from "react";
+import Badges from "./Badges";
+type Tx = any;
+      refresh()
+import React, { useEffect, useMemo, useState } from 'react';
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import Badges from './Badges';
 type Tx = any;
       refresh()type Tx = {type Tx = {id: string;
@@ -17,6 +25,7 @@ type Tx = any;
   if (typeof window === 'undefined') return 'demo-user';
   const fromStorage = window && window.localStorage.getItem('zion_user_id')if (fromStorage) return fromStorage;
   const generated = 'demo-user';
+<<<<<<< HEAD
   window && window.localStorage.setItem('zion_user_id', generated)return generated;export default function WalletPanel() {const [summary, setSummary] = useState<Summary | null>(null)const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>('earnings';
   )const [ethAddress, setEthAddress] = useState<string | null>(null)type Tx = {id: string;
   type: "earn" | "burn" | "issue" | "revoke" | "redeem";
@@ -81,6 +90,50 @@ if ( {) {$2;
           </div>;return balance;
   }, [balance])const progress = Math.min(100;
     Math.floor((balance / nextBadgeThreshold) * 100))async function connectWallet() {if (typeof window === 'undefined') return;
+=======
+  window && window.localStorage.setItem('zion_user_id', generated);
+  return generated;
+
+export default function WalletPanel() {;
+
+  const [summary, setSummary] = useState<Summary | null>(null);
+  const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
+    'earnings'
+
+  );
+  const [ethAddress, setEthAddress] = useState<string | null>(null);
+  const userId = useMemo(() => getUserId(), []);
+  async function refresh() {
+    const res = await fetch(`/api/wallet?userId=${encodeURIComponent(userId)}`);
+    const data = await res.json();
+setSummary(data);
+  }
+  useEffect(() => {
+    refresh();
+  }, []);
+  const balance = summary?.wallet.balance ?? 0;
+  const symbol = summary?.config.symbol ?? 'ZION$';
+  const earnings = (summary?.transactions |[]).filter(t =>
+    ['earn', 'issue'].includes(t.type)
+  );
+  const spending = (summary?.transactions || []).filter(t =>
+    ['burn', 'revoke', 'redeem'].includes(t.type)
+  );
+  const nextBadgeThreshold = useMemo(() => {
+    if (balance < 50) return 50;
+    if (balance < 200) return 200;
+    if (balance < 500) return 500;
+    if (balance < 1000) return 1000;
+
+return balance;
+  }, [balance]);
+  const progress = Math.min(
+    100
+    Math.floor((balance / nextBadgeThreshold) * 100)
+  );
+  async function connectWallet() {
+    if (typeof window === 'undefined') return;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     const eth = (window as any).ethereum;
     if (!eth) {alert('No Ethereum wallet detected. Please install MetaMask.')return;
     }
@@ -118,6 +171,7 @@ const res = await fetch('/api/wallet/redeem', {method: 'POST',headers: { 'Conten
           </div>;
           <div className='mt-2 text-xs text-gray-500'>;
             Next badge at {nextBadgeThreshold} {symbol}
+<<<<<<< HEAD
           </div>;
         </div>;
         <div className='mt-4'>;
@@ -127,6 +181,18 @@ const res = await fetch('/api/wallet/redeem', {method: 'POST',headers: { 'Conten
 <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>;
         <div className='flex gap-3 mb-4 text-sm'>;
           <button;
+=======
+          </div>
+        </div>
+        <div className='mt-4'>
+          <Badges balance={balance} />
+        </div>
+      </div>
+
+<div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
+        <div className='flex gap-3 mb-4 text-sm'>
+          <button
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             onClick={() => setTab('earnings')}
             className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}`}
           >;
@@ -176,6 +242,7 @@ const res = await fetch('/api/wallet/redeem', {method: 'POST',headers: { 'Conten
               >;
                 Redeem 250;
               </button>;
+<<<<<<< HEAD
               <button;
                 className='px-3 py-1 rounded border';
                 onClick={() => redeem(500)}<button;
@@ -295,3 +362,24 @@ const res = await fetch('/api/wallet/redeem', {method: 'POST',headers: { 'Conten
       </div>;
     </div>;
 )}})}
+=======
+              <button
+                className='px-3 py-1 rounded border'
+                onClick={() => redeem(500)}
+
+              >
+                Redeem 500
+              </button>
+            </div>
+            <div className='text-xs text-gray-500'>
+              Coming soon: Redeem for branded perks and courses.
+            </div>
+          </div>
+
+        )}
+      </div>
+    </div>
+
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

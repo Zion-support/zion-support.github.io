@@ -5,6 +5,7 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React from 'react';
+<<<<<<< HEAD
   Rocket;
   Brain;
   Atom;
@@ -75,13 +76,21 @@ function UltraFuturisticHero2032() {return (<section className='relative min - h
  * UltraFuturisticHero2032 - Function description;
  */;
 function UltraFuturisticHero2032() {return (<section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>;import { motion   } from 'framer-motion';
+=======
+
+import { motion  } from 'framer-motion';
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import Link from 'next/link';
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin;
   } from 'lucide-react';
 const contactInfo = null;
+<<<<<<< HEAD
           space technology, and emerging tech solutions. Transform your business with;
+=======
+          space technology, and emerging tech solutions. Transform your business with 
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       {/* Animated Background Elements */}
       <div className='absolute inset - 0'>;
         {/* Floating Particles */}
@@ -89,6 +98,7 @@ const contactInfo = null;
           {[...Array (50)].map ((_, i) => (<motion.div;
               key={i}
               className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30';
+<<<<<<< HEAD
               style={{))}
         </div>;
           ))}
@@ -117,6 +127,15 @@ const contactInfo = null;
                 top: `${Math.random() * 100}%`;
               }}              animate={{y: [0, -20, 0];
                 opacity: [0.3, 0.8, 0.3];
+=======
+              style={{
+
+                left: `${Math.random() * 100}%`
+                top: `${Math.random() * 100}%`
+              }}              animate={{
+                y: [0, -20, 0]
+                opacity: [0.3, 0.8, 0.3]
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               }}
               transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,}}
             />;
@@ -134,6 +153,7 @@ const contactInfo = null;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm';
         >;
           <Sparkles className='w-5 h-5 text-purple-400' />;
@@ -142,9 +162,21 @@ className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           </span>;
           <Sparkles className='w-5 h-5 text-cyan-400' />;
         </motion.div>;
+=======
+className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm'
+        >
+          <Sparkles className='w-5 h-5 text-purple-400' />
+          <span className='text-purple-300 font-medium'>
+            🚀 2032 Revolutionary Technology
+          </span>
+          <Sparkles className='w-5 h-5 text-cyan-400' />
+        </motion.div>
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         {/* Main Heading */}
         <motion&& motion.h1;
           initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.2 }}
 className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight';
         >;
@@ -163,6 +195,20 @@ className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-ti
           <span className="text-white">Technology is Here</span>;
           <span className='text-white'>Technology is Here</span>;
         </motion.h1>;
+=======
+          animate={{ opacity: 1, y: 0 }}
+
+          transition={{ duration: 0.8, delay: 0.2 }}
+className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'
+        >
+          <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+            The Future of
+          </span>
+          <br />
+
+          <span className='text-white'>Technology is Here</span>
+        </motion.h1>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
           className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'>;
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -187,6 +233,7 @@ className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-ti
         >;
           Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with ;
           technologies that were once science fiction.;
+<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.4 }}className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed";
         >;
           Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with;
@@ -201,9 +248,23 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-rel
           fiction.;
         </motion.p>;
           technologies that were once science fiction.;
+=======
+          transition={{ duration: 0.8, delay: 0.4 }}
+
+className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'
+        >
+          Experience the revolution with our cutting-edge AI consciousness
+          quantum computing, space technology, and emerging tech solutions.
+          Transform your business with technologies that were once science
+          fiction.
+        </motion.p>
+
+          technologies that were once science fiction.
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         {/* CTA Buttons */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.6 }}
 className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16';
         >;
@@ -230,15 +291,56 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16';
             <span>Call {contactInfo.mobile}</span>;
           </Link>;
         </motion.div>;
+=======
+          animate={{ opacity: 1, y: 0 }}
+
+          transition={{ duration: 0.8, delay: 0.6 }}
+className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'
+        >
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
+          className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'>;
+          <Link
+            href='/services'
+          <Link
+
+            href={`tel:${contactInfo.mobile}`}
+            className='group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300'
+          >
+            <Phone className='w-5 h-5' />
+            <span>Call {contactInfo.mobile}</span>
+          </Link>
+        </motion.div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         {/* Stats Grid */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.8 }}
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
         >;
           {heroStats.map((stat, index) => (<motion.div;
                 left: `${Math.random () * 100}%`,top: `${Math.random () * 100}%`,}}              animate={{coordinate_y: [0, -20, 0],opacity: [0.3, 0.8, 0.3],}}
               transition={{duration: 3 + Math.random () * 2,repeat: Infinity,delay: Math.random () * 2,}}            />                delay: Math.random () * 2}}
+=======
+          animate={{ opacity: 1, y: 0 }}
+
+          transition={{ duration: 0.8, delay: 0.8 }}
+className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
+        >
+          {heroStats.map((stat, index) => (
+            <motion.div
+                left: `${Math.random () * 100}%`,
+                top: `${Math.random () * 100}%`,
+              }}              animate={{
+                coordinate_y: [0, -20, 0],
+                opacity: [0.3, 0.8, 0.3],
+              }}
+              transition={{
+                duration: 3 + Math.random () * 2,
+                repeat: Infinity,
+                delay: Math.random () * 2,
+              }}            />                delay: Math.random () * 2}}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             />))}
         </div>;
         {/* Gradient Orbs */}
@@ -286,23 +388,39 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}</motion && motion.div>;className='text-center group';
 className='text-center group';
             >;
               <div;
+=======
+              transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
+
+className='text-center group'
+            >
+              <div
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}
               >;
                 <stat.icon className='w-8 h-8 text-white' />;
               </div>;
               <div className='text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2'>;
                 {stat.number}
+<<<<<<< HEAD
               </div>;
               <div className='text-gray-400 text-sm'>{stat.label}</div>;
             </motion.div>;
+=======
+              </div>
+
+              <div className='text-gray-400 text-sm'>{stat.label}</div>
+            </motion.div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           ))}
         {/* Featured Services */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 1.2 }}
 className='mb-16';
         >;
@@ -317,6 +435,26 @@ className='mb-16';
                 transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}className='group';
 className='group';
               >;
+=======
+          animate={{ opacity: 1, y: 0 }}
+
+          transition={{ duration: 0.8, delay: 1.2 }}
+className='mb-16'
+        >
+          <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>
+            Featured Revolutionary Services
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {featuredServices.map((service, index) => (
+              <motion.div
+                key={service.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
+
+className='group'
+              >
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           transition={{ duration: 0 && 0.8, delay: 1 && 1.2 }}
           className='mb-16'>;
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>;
@@ -336,8 +474,13 @@ className='group';
                 <Link;
                   href={service && service.href}
                   className='block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50'>;
+<<<<<<< HEAD
                   <div;
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />;
+=======
+                  <div
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                     className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}
                   >;
                     <service.icon className='w-8 h-8 text-white' />;
@@ -350,6 +493,7 @@ className='group';
                   <div className='flex items-center justify-between'>;
                     <div className='text-2xl font-bold text-cyan-400'>;
                       {service.price}
+<<<<<<< HEAD
                     </div>;
                     <div className='text-purple-400 group-hover:text-cyan-400 transition-colors'>;
                       <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
@@ -358,6 +502,17 @@ className='group';
                   <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />;
                 </Link>;
               </motion.div>;
+=======
+                    </div>
+                    <div className='text-purple-400 group-hover:text-cyan-400 transition-colors'>
+                      <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                    </div>
+                  </div>
+
+                  <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />
+                </Link>
+              </motion.div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             ))}
           </div>;
         </motion.div>;
@@ -382,6 +537,7 @@ className='group';
         </motion && motion.div>;{/* Contact Information */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 1.6 }}
 className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto';
         >;
@@ -391,6 +547,19 @@ className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl b
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>;
             <div className='flex items-center space-x-3 text-gray-300'>;
               <Phone className='w-5 h-5 text-cyan-400' />;
+=======
+          animate={{ opacity: 1, y: 0 }}
+
+          transition={{ duration: 0.8, delay: 1.6 }}
+className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'
+        >
+          <h3 className='text-2xl font-bold text-white mb-6 text-center'>
+            Ready to Transform Your Business?
+          </h3>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>
+            <div className='flex items-center space-x-3 text-gray-300'>
+              <Phone className='w-5 h-5 text-cyan-400' />
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           transition={{ duration: 0 && 0.8, delay: 1 && 1.6 }}
           className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'>;
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>;
@@ -406,6 +575,7 @@ className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl b
             </div>;
             <div className='flex items-center space-x-3 text-gray-300'>;
               <Mail className='w-5 h-5 text-purple-400' />;
+<<<<<<< HEAD
               <a;
           <h3 className="text-2xl font-bold text-white mb-6 text-center">;
             Ready to Transform Your Business?;
@@ -435,10 +605,15 @@ className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl b
             >;
               <span>Get Started Today</span>;
               <ArrowRight className="w-5 h-5" />;
+=======
+              <a
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 href={`mailto:${contactInfo.email}`}
                 className='hover:text-purple-400 transition-colors';
               >;
                 {contactInfo.email}
+<<<<<<< HEAD
               </a>;
             </div>;
             <div className='flex items-center space-x-3 text-gray-300'>;
@@ -457,6 +632,26 @@ className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl b
           </div>;
         </motion.div>;
       </div>;
+=======
+              </a>
+            </div>
+            <div className='flex items-center space-x-3 text-gray-300'>
+              <MapPin className='w-5 h-5 text-green-400' />
+              <span>{contactInfo.address}</span>
+            </div>
+          </div>
+          <div className='text-center'>
+            <Link
+              href='/contact'
+              className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25'
+            >
+              <span>Get Started Today</span>
+              <ArrowRight className='w-5 h-5' />
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='hover:text-purple-400 transition-colors'>;
                 {contactInfo && contactInfo.email}
@@ -608,6 +803,7 @@ className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl b
       {/* Floating Action Button */}
       <motion.div;
         initial={{ opacity: 0, scale: 0 }}
+<<<<<<< HEAD
         animate={{ opacity: 1, scale: 1 }}}href={`tel:${contactInfo && contactInfo.mobile}`}
           className='group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40'>;
           <Phone className='w-7 h-7 text-white group-hover:rotate-12 transition-transform' />;
@@ -658,3 +854,20 @@ className='fixed bottom-8 right-8 z-50';
   ))</section>;
   )</section>;
   )
+=======
+        animate={{ opacity: 1, scale: 1 }}
+
+        transition={{ duration: 0.8, delay: 2 }}
+className='fixed bottom-8 right-8 z-50'
+      >
+        <Link
+          href={`tel:${contactInfo.mobile}`}
+          className='group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40'
+        >
+          <Phone className='w-7 h-7 text-white group-hover:rotate-12 transition-transform' />
+        </Link>
+      </motion.div>
+
+    </section>
+  );
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

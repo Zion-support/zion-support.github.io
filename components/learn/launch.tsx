@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GetServerSideProps  } from 'next';
   }permanent: false}}export default function LaunchRedirect() {return null;
 }
@@ -8,3 +9,11 @@ import { GetServerSideProps  } from 'next';
 function LaunchRedirect() {}export const getServerSideProps: GetServerSideProps;
 export default function LaunchRedirect() {return null;
 }
+=======
+import { GetServerSideProps } from 'next';
+
+export const getServerSideProps: GetServerSideProps;
+export default function LaunchRedirect() {
+  return null;
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

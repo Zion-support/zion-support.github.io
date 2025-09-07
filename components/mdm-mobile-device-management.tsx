@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
   Phone,Mail,MapPin,Check,ArrowRight,Smartphone,import React from 'react',import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone   } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',import Button from '../components/ui/Button';
@@ -25,6 +26,41 @@ export default function MDMPage() {const service = extraServices && extraService
         <link;
           rel='canonical';
           href='https://ziontechgroup && ziontechgroup.com/mdm-mobile-device-management';
+=======
+import React from 'react',
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button';
+import { extraServices } from '../data/extra-services';
+export default function MDMPage() {
+  const service = null;
+import {
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Smartphone;
+} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { extraServices } from '../data/extra-services';
+export default function MDMPage() {
+  const service = extraServices.find(s =>
+    s.link.endsWith('/mdm-mobile-device-management')
+
+  );
+  if (!service) return null;
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>{service.name} - Zion Tech Group</title>
+<meta name='description' content={service.description} />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup && ziontechgroup.com/mdm-mobile-device-management'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         />;
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
         <div className='max-w-6xl mx-auto'>;
@@ -68,6 +104,7 @@ export default function MDMPage() {const service = extraServices && extraService
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <Button;
                 href='/contact';
                 variant='quantum';
@@ -225,3 +262,38 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-reac
     </UltraAdvancedFuturisticBackground>;
 }
 }</UltraAdvancedFuturisticBackground>)})}
+=======
+              <Button
+                href='/contact'
+                variant='quantum'
+                size='lg'
+
+                className='w-full'
+              >
+                Start Trial
+                <ArrowRight className='w-5 h-5 ml-2' />
+              </Button>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>
+                <div className='flex items-center space-x-2'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
+                  <span>{service.contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Mail className='w-4 h-4 text-purple-400' />
+                  <span>{service.contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <MapPin className='w-4 h-4 text-green-400' />
+                  <span className='text-xs'>{service.contactInfo.address}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+
+  );
+}
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

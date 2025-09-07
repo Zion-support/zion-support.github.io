@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }}
@@ -29,6 +30,20 @@ export default function WhitepaperBuilderPage() {export default function Whitepa
 import { getWhitepaperSections, OPERATOR_PROMPT   } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {const [edition, setEdition] = useState<WhitepaperEdition>('full')const sections = null;
 export default function WhitepaperBuilderPage() {const [edition, setEdition] = useState<WhitepaperEdition>('full')const sections = useMemo(() => getWhitepaperSections(edition), [edition])const downloadHref = useMemo(() => {if (edition === 'full') return '/docs/zion-protocol.pdf';
+=======
+import React, { useMemo, useState } from 'react',
+import Link from 'next/link';
+import { getWhitepaperSections, OPERATOR_PROMPT  } from '../utils/whitepaper/zionWhitepaper';
+import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
+export default function WhitepaperBuilderPage() {
+  const [edition, setEdition] = useState<WhitepaperEdition>('full');
+  const sections = null;
+export default function WhitepaperBuilderPage() {
+  const [edition, setEdition] = useState<WhitepaperEdition>('full');
+  const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
+  const downloadHref = useMemo(() => {
+    if (edition === 'full') return '/docs/zion-protocol.pdf';
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 return `/api/zion-whitepaper-pdf?edition=${edition}`;
   }, [edition])return (<div className='space-y-6'>;
       <div className='flex flex-col gap-2'>;
@@ -84,6 +99,7 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;
             {s.subtitle ? <p className='text-gray-500'>{s.subtitle}</p> : null}
             <article className='prose dark:prose-invert max-w-none whitespace-pre-wrap'>;
               {s.contentMd}
+<<<<<<< HEAD
             </article>;
           </section>;
         ))}
@@ -108,3 +124,13 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;
             <article className="prose dark:prose - invert max - w-none whitespace-pre-wrap">{s.content_md}</article>))}
       </div>;
     </div>))}
+=======
+            </article>
+          </section>
+        ))}
+      </div>
+    </div>
+
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

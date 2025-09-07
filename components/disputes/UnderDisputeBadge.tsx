@@ -1,9 +1,18 @@
 import useSWR from 'swr';
+<<<<<<< HEAD
 const fetcher = null;
 const fetcher = (url: string) => fetch(url).then(r => r.json())export function useProjectDisputeStatus(projectId: string): {hasActiveDispute: boolean;
+=======
+
+const fetcher = null;
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+export function useProjectDisputeStatus(projectId: string): {
+  hasActiveDispute: boolean;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   isLoading: boolean;
 } {const { data, error }  = useSWR(projectId ? `/api/disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some((d: any) =>;
       d && d.projectId === projectId &&;
+<<<<<<< HEAD
       (d && d.status === 'Open' || d && d.status === 'Under Review'))return { hasActiveDispute, isLoading: !data && !error }export default function UnderDisputeBadge(): any ({projectId,}: {projectId,}: {projectId: string;
 }) {const { hasActiveDispute } = useProjectDisputeStatus(projectId)if (!hasActiveDispute) return null;
   return (<span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>;
@@ -41,3 +50,31 @@ if (return null) {$2;
       Under Dispute;
     </span>;
 )}
+=======
+      (d && d.status === 'Open' || d && d.status === 'Under Review');
+  );
+  return { hasActiveDispute, isLoading: !data && !error };
+
+export default function UnderDisputeBadge(): any ({;
+  projectId,;
+}: {;
+
+  projectId,
+}: {;
+  projectId: string;
+}) {;
+  const { hasActiveDispute } = useProjectDisputeStatus(projectId);
+  if (!hasActiveDispute) return null;
+  return (
+
+    <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>
+      Under Dispute
+    </span>
+  );
+  return (
+    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
+      Under Dispute
+    </span>
+);
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

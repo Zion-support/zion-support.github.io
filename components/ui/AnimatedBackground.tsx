@@ -4,6 +4,7 @@ export default function AnimatedBackground() {return (<div className='pointer-ev
         style={{background:;
             'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)';
         }}
+<<<<<<< HEAD
             transform: translateY(0px) rotate(0deg)}
           50% {transform: translateY(-20px) rotate(10deg)}
           100% {transform: translateY(0px) rotate(0deg)}
@@ -84,3 +85,18 @@ function AnimatedBackground() {return (<div className='pointer - events - none f
       `}</style>;
     </div>;
   )
+=======
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {;
+            transform: translateY(-20px) rotate(10deg);
+          }
+          100% {;
+            transform: translateY(0px) rotate(0deg);
+          }
+        }
+
+      `}</style>
+    </div>
+  );
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

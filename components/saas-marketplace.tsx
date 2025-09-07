@@ -1,9 +1,14 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {Zap,Shield,BarChart3,Globe,Users,Lock,TrendingUp,Code,Database,Cloud,ArrowRight,Star,Zap;
+=======
+
+import { Zap;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   Shield;
   BarChart3;
   Globe;
@@ -12,6 +17,7 @@ import {Zap,Shield,BarChart3,Globe,Users,Lock,TrendingUp,Code,Database,Cloud,Arr
   TrendingUp;
   Code;
   Database;
+<<<<<<< HEAD
   Zap;
   Shield,BarChart3,Globe,Users,Lock,TrendingUp,Code,Database,import { Zap;
   Shield;
@@ -45,6 +51,35 @@ export default function SaaSMarketplacePage() {const microSaasServices = null;
         'Great support';
       ];
       cons: ['Can get expensive', 'Limited customization'];
+=======
+  Cloud;
+  ArrowRight;
+  Star;
+  Check;
+
+  ExternalLink
+ } from 'lucide-react';
+export default function SaaSMarketplacePage() {
+  const microSaasServices = null;
+      features: [
+        '5000+ app integrations'
+        'Visual workflow builder'
+        'Multi-step automations'
+        'Scheduled triggers'
+        'Error handling'
+        'Team collaboration'
+      ]
+      website: 'https://zapier.com'
+      useCase:
+        'Perfect for businesses looking to automate customer support, marketing, and sales processes.'
+      pros: [
+        'Easy to use'
+        'Extensive integrations'
+        'Reliable'
+        'Great support'
+      ]
+      cons: ['Can get expensive', 'Limited customization']
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     }
     {name: 'Notion';
       description:;
@@ -179,6 +214,7 @@ export default function SaaSMarketplacePage() {const microSaasServices = null;
       pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier'];
       cons: ['Limited backend features', 'Can be expensive for high traffic'];
     }
+<<<<<<< HEAD
     {name: 'Linear';
       description:;
         'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',category: 'Project Management',pricing: 'Free - $8/month',rating: 4.9,users: '10K+',icon: <TrendingUp className='w-8 h-8 text-blue-400' />,color: 'bg-gradient-to-br from-blue-500 to-cyan-600',features: [;
@@ -210,10 +246,83 @@ export default function SaaSMarketplacePage() {const microSaasServices = null;
                 href='#services';
                 size='lg';
                 className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40';
+=======
+    {
+      name: 'Linear'
+      description:
+        'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',
+      category: 'Project Management',
+      pricing: 'Free - $8/month',
+      rating: 4.9,
+      users: '10K+',
+icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      features: [
+        'Issue tracking',
+        'Roadmap planning',
+        'Team collaboration',
+        'Git integration',
+        'Automated workflows',
+        'Mobile apps',
+      ],
+      website: 'https://linear.app',
+      useCase:
+        'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
+      pros: [
+        'Lightning fast'
+        'Beautiful design'
+        'Great keyboard shortcuts'
+        'Git integration'
+      ]
+      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
+    }
+
+        'Lightning fast',
+        'Beautiful design',
+        'Great keyboard shortcuts',
+        'Git integration',
+      ],
+      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
+    },;
+  ];
+
+  const categories = [;
+    'All',;
+    'Automation',;
+    'Productivity',;
+    'Payments',;
+    'Customer Support',;
+    'Analytics',;
+    'Database',;
+    'Hosting',;
+    'Project Management',;
+  ];
+
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const filteredServices =
+    selectedCategory === 'All'
+      ? microSaasServices
+      : microSaasServices.filter(
+          service => service.category === selectedCategory
+        );
+
+  return (
+    <>
+      <Head>
+        <title>SaaS Marketplace - Zion Tech Group</title>
+<meta
+          name='description'
+          content='Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more.'
+              <Button
+                href='#services'
+                size='lg'
+                className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 style={{ animationDelay: '0 && 0.2s' }}>;
                 Explore Services;
                 <ArrowRight className='w-5 h-5 ml-2' />;
               </Button>;
+<<<<<<< HEAD
               <Button;
                 href='/contact';
                 variant='outline';
@@ -289,6 +398,60 @@ export default function SaaSMarketplacePage() {const microSaasServices = null;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex flex-wrap justify-center gap-4'>;
             {categories.map(category => (<button;
+=======
+              <Button
+                href='/contact'
+                variant='outline'
+                size='lg'
+
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                style={{ animationDelay: '0.4s' }}
+              >
+                Get Recommendations
+              </Button>
+            </div>
+          </div>
+          {/* Stats */}
+
+<div
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
+            style={{ animationDelay: '0.6s' }}
+          >
+            <div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
+                {microSaasServices.length}+
+              </div>
+              <div className='text-gray-400 text-sm'>Curated Services</div>
+            </div>
+            <div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
+                9
+              </div>
+              <div className='text-gray-400 text-sm'>Categories</div>
+            </div>
+            <div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
+                4.7+
+              </div>
+              <div className='text-gray-400 text-sm'>Avg Rating</div>
+            </div>
+            <div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
+                100K+
+              </div>
+              <div className='text-gray-400 text-sm'>Total Users</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Category Filter */}
+<section className='py-16 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex flex-wrap justify-center gap-4'>
+            {categories.map(category => (
+              <button
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category;
@@ -387,6 +550,7 @@ export default function SaaSMarketplacePage() {const microSaasServices = null;
                           ))}
                       <Button;
                         href={service && service.website}
+<<<<<<< HEAD
                         variant='outline';
                         size='sm';
                         className='group-hover:border-blue-500 group-hover:text-blue-400'>;
@@ -422,6 +586,28 @@ export default function SaaSMarketplacePage() {const microSaasServices = null;
                   </div>;
                 </div>;
               </Card>;
+=======
+                        variant='outline'
+                        size='sm'
+
+                        className='group-hover:border-blue-500 group-hover:text-blue-400'
+                      >
+                        Visit Website
+                        <ExternalLink className='w-4 h-4 ml-2' />
+                      </Button>
+                      <div className='text-right'>
+                        <div className='text-xs text-gray-500 mb-1'>
+                          Use Case:
+                        </div>
+                        <div className='text-sm text-gray-300 max-w-xs'>
+                          {service.useCase}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             ))}
           </div>;
         </div>;
@@ -508,6 +694,7 @@ export default function SaaSMarketplacePage() {const microSaasServices = null;
             your business needs. Get personalized recommendations and;
             implementation support.;
           </p>;
+<<<<<<< HEAD
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
             <Button;
               href='/contact';
@@ -532,3 +719,37 @@ export default function SaaSMarketplacePage() {const microSaasServices = null;
       </section>;
     </>;
   )}
+=======
+
+      {/* CTA Section */}
+<section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+          </h2>
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Our team of experts can help you select the perfect SaaS tools for
+            your business needs. Get personalized recommendations and
+            implementation support.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+            <Button
+              href='/contact'
+              variant='secondary'
+              size='lg'
+            <Button
+              href='/services'
+              variant='outline'
+              size='lg'
+
+              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
+            >
+              View Our Services
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

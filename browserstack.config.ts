@@ -274,6 +274,10 @@ import { define_config, devices } from '@playwright / test',export default defin
       name: "Desktop Firefox"
 
       use: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         browserName: 'chromium';
         channel: 'chrome'}
     },
@@ -298,8 +302,23 @@ import { define_config, devices } from '@playwright / test',export default defin
   reporter: [
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66636f0649a4af9daff867918bf1282f740567c2
+=======
+
+>>>>>>> 8728a638150a751be87fc16c540c14de41b00a43
       use: {
+=======
+      use: {
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         browser_name: 'firefox';
         browser_name: 'firefox';
 }
@@ -330,12 +349,8 @@ import { define_config, devices } from '@playwright / test',export default defin
         browser_name: 'webkit',
         ...devices['i_phone 12'];
 
-      }
 
-    }
 
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
-});
 
 
 
@@ -405,9 +420,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
   ]
   reporter: [
 
-    ['list']
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
-]
 
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });

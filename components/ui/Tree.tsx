@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
@@ -14,6 +15,11 @@ function NodeItem({node;
 }: {interface TreeProps  {nodes: TreeNode[];
   onDeploy?: (path: string) => void;function NodeItem(): any ({node,depth,onDeploy,}: {node: TreeNode;
   depth: number;
+=======
+import React, { useState } from 'react';
+
+export interface TreeNode {
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   name: string;
   path: string;
   type: "folder" | "file";
@@ -36,6 +42,7 @@ function NodeItem({node;
     await fetch(url, {method: 'POST',exists?: boolean;
   children?: TreeNode[];
 }
+<<<<<<< HEAD
 interface TreeProps  {nodes: TreeNode[];
   onDeploy?: (path: string) => void;
 }
@@ -45,6 +52,27 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         'x-admin-token': localStorage.getItem('ADMIN_TOKEN') || '',} as any,body: JSON.stringify({ path: node.path }),})}const deploy = () => onDeploy && onDeploy(node.path)return (<div className='ml-2'>;
       <div className='flex items-center gap-2 py-1'>;
         {hasChildren ? (<button className='text-sm' onClick={toggle} aria-label='Toggle'>;
+=======
+function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const hasChildren = null;
+      headers: {
+        'Content-Type': 'application/json'
+        // Expect an admin token in local storage, fall back to prompt
+        'x-admin-token': localStorage.getItem('ADMIN_TOKEN') || '',
+      } as any,
+      body: JSON.stringify({ path: node.path }),
+    });
+  };
+
+  const deploy = () => onDeploy && onDeploy(node.path);
+  return (
+<div className='ml-2'>
+      <div className='flex items-center gap-2 py-1'>
+        {hasChildren ? (
+          <button className='text-sm' onClick={toggle} aria-label='Toggle'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             {open ? '▾' : '▸'}
           </button>;
         ) : (<span className='inline-block w-4' />;
@@ -119,12 +147,20 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
         </div>;
       </div>;
               node={child}
+<<<<<<< HEAD
               depth={depth + 1}on_deploy={on_deploy}
             />          ))}onDeploy={onDeploy}
             />;
+=======
+              depth={depth + 1}
+
+              onDeploy={onDeploy}
+            />
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
           ))}
         </div>;
       )}
+<<<<<<< HEAD
     </div>;
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {return (return (<div className="w-full">;
       {nodes && nodes.map((n) => ()export function Tree() {return (<div className='w-full'>;
@@ -152,3 +188,33 @@ function Tree() {return (<div className="w-full"> {nodes.map ( (n) => (<NodeItem
 }on_deploy= {on_deploy;
 }/>) )}</div>)}export default Tree;}
 export default Tree;}/>) )}</div>)}export default Tree;
+=======
+    </div>
+
+);
+
+export function Tree({ nodes, onDeploy }: TreeProps) {
+  return (
+    <div className='w-full'>
+      {nodes.map(n => (
+        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
+      ))}
+    </div>;
+  );
+export default Tree;
+}node= {
+  child
+}depth= {
+  depth + 1
+}onDeploy= {
+}node= {
+  n
+}depth= {
+  0
+}onDeploy= {
+  onDeploy 
+
+}/>) ) 
+}</div>) 
+}export default Tree;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

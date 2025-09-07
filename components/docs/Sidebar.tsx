@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import React from 'react';
 import { ApiDocsSpec, Visibility  } from '../../data/api-docs/types';
 interface SidebarProps  {spec: ApiDocsSpec;
@@ -8,6 +11,7 @@ interface SidebarProps  {spec: ApiDocsSpec;
   selectedVersion: string;
   onChangeVersion: (v: string) => void;
   visibilityFilter: Visibility | 'all';
+<<<<<<< HEAD
   onChangeVisibility: (v: Visibility | 'all') => void;
 }export default function Sidebar() {return (<button;
               key={v}
@@ -19,6 +23,27 @@ interface SidebarProps  {spec: ApiDocsSpec;
               {section.endpoints;
                 .filter((e) => e.versions.includes(selectedVersion)).filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter).map((e) => (<li key={e.id}>;
             >;
+=======
+  onChangeVisibility: (v: Visibility | 'all') => void
+}
+
+export default function Sidebar({
+  spec
+  activeEndpointId
+  onSelectEndpoint
+  selectedVersion
+  onChangeVersion
+  visibilityFilter
+  onChangeVisibility
+}: SidebarProps) {
+  return (
+            <button
+              key={v}
+              onClick={() => onChangeVersion(v)}
+              className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
+
+            >
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               {v}
             </button>;
           ))}
@@ -55,10 +80,17 @@ interface SidebarProps  {spec: ApiDocsSpec;
                     >;
 <span className='mr-2 inline-block w-10 text-center text-[10px] opacity-80'>;
                         {e.method}
+<<<<<<< HEAD
                       </span>;
                       <span className='font-mono'>{e.path}</span>;
                     </button>;
                   </li>;
+=======
+                      </span>
+                      <span className='font-mono'>{e.path}</span>
+                    </button>
+                  </li>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 ))}
             </ul>;
           </div>;
@@ -138,5 +170,13 @@ function Sidebar() {return (<aside className='w - 72 shrink - 0 h - full overflo
 }
 }
 }
+<<<<<<< HEAD
     </aside>;
   )}
+=======
+}
+    </aside>
+  );
+
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

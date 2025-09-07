@@ -83,6 +83,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
   getRevolutionaryServicesByCategory;
   getPopularRevolutionaryServices;
   getRevolutionaryServicesByPriceRange;
+<<<<<<< HEAD
   revolutionaryMicroSaasServices,revolutionaryServiceCategories,getRevolutionaryServicesByCategory,getPopularRevolutionaryServices,getRevolutionaryServicesByPriceRange,import {revolutionaryMicroSaasServices,revolutionaryServiceCategories,getRevolutionaryServicesByCategory,getPopularRevolutionaryServices,getRevolutionaryServicesByPriceRange,} from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon  } from 'lucide-react';
@@ -136,6 +137,89 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
         'Revolutionary quantum AI solutions with human-level reasoning capabilities',icon: <Brain className='w-6 h-6' />,count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing';
       ).length;
       color: 'from-purple-500 to-indigo-600';
+=======
+  revolutionaryMicroSaasServices,
+  revolutionaryServiceCategories,
+  getRevolutionaryServicesByCategory,
+  getPopularRevolutionaryServices,;
+  getRevolutionaryServicesByPriceRange,;
+
+import {;
+  revolutionaryMicroSaasServices,;
+  revolutionaryServiceCategories,;
+  getRevolutionaryServicesByCategory,;
+  getPopularRevolutionaryServices,;
+  getRevolutionaryServicesByPriceRange,;
+
+} from '../data/revolutionary-micro-saas-services';
+
+import { motion, AnimatePresence } from 'framer-motion';
+export default function RevolutionaryServicesPage() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [priceRange, setPriceRange] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('name');
+  const [showFilters, setShowFilters] = useState(false);
+
+    { value: 'All', label: 'All Prices' },
+{ value: '0-1000', label: '$0 - $1,000' },
+    { value: '1001-2500', label: '$1,001 - $2,500' },
+    { value: '2501-5000', label: '$2,501 - $5,000' },
+    { value: '5001+', label: '$5,001+' },
+  ];
+
+  const sortOptions = [
+    { value: 'name', label: 'Name A-Z' },
+    { value: 'price', label: 'Price Low-High' },
+    { value: 'popularity', label: 'Most Popular' },
+    { value: 'category', label: 'Category' },
+{ value: 'roi', label: 'Highest ROI' },
+  ];
+  // Filter and sort services
+  let filteredServices = revolutionaryMicroSaasServices;
+  // Category filter
+  if (selectedCategory !== 'All') {
+filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
+  }
+
+  // Price range filter
+  if (priceRange !== 'All') {
+const [min, max] = priceRange
+      .split('-')
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max);
+  }
+  // Search filter
+  if (searchQuery) {
+filteredServices = filteredServices.filter(
+      service =>
+        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.category.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }
+
+  // Sort services
+  filteredServices.sort((a, b) => {
+    switch (sortBy) {
+      case 'price':
+
+return (
+          parseFloat(a.price.replace('$', '').replace(',', '')) -
+          parseFloat(b.price.replace('$', '').replace(',', ''))
+        );
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      case 'category':
+        return a.category.localeCompare(b.category);
+      case 'roi':
+        return bRoi - aRoi;
+
+default:
+        return a.name.localeCompare(b.name);
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     }
       name: 'Autonomous Manufacturing & Industry 4.0';
       description:;
@@ -199,12 +283,39 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
       ).length;
       color: 'from-emerald-500 to-green-600';
     }
+<<<<<<< HEAD
     {name: 'Smart Energy & Renewable Energy';
       description:;
         'AI platforms for smart energy grids and renewable energy optimization';
       icon: <LeafIcon className='w-6 h-6' />;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy';
       ).length,color: 'from-yellow-500 to-orange-600',},];const containerVariants = {hidden: { opacity: 0 }
+=======
+    {
+      name: 'Autonomous Vehicles & Smart Transportation'
+      description:
+        'AI platforms for autonomous vehicles and smart transportation'
+      icon: <CarIcon className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Autonomous Vehicles & Smart Transportation'
+      ).length
+      color: 'from-emerald-500 to-green-600'
+    }
+    {
+      name: 'Smart Energy & Renewable Energy'
+      description:
+        'AI platforms for smart energy grids and renewable energy optimization'
+      icon: <LeafIcon className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Smart Energy & Renewable Energy'
+      ).length,
+      color: 'from-yellow-500 to-orange-600',
+    },
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 }
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }const popular_services  = getPopularRevolutionaryServices ()// Enhanced service categories with better descriptions;
   const enhanced_categories = [;
@@ -218,11 +329,60 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
         'AI platforms for autonomous vehicles and smart transportation',icon: <CarIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Autonomous Vehicles & Smart Transportation').length,color: 'from - emerald - 500 to - green - 600',},{name: 'Smart Energy & Renewable Energy',description:;
         'AI platforms for smart energy grids and renewable energy optimization',icon: <LeafIcon className='w - 6 h - 6' />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600',},  ];      description: 'AI platforms for smart energy grids and renewable energy optimization',icon: <LeafIcon className="w - 6 h - 6" />,count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,color: 'from - yellow - 500 to - orange - 600';
     }
+<<<<<<< HEAD
   const container_variants = {hidden: { opacity: 0 },visible: {opacity: 1;
       transition: {staggerChildren: 0.1,},},}const itemVariants = {hidden: { y: 20, opacity: 0 }
     visible: {y: 0;
       opacity: 1;
       transition: {duration: 0.5,},},duration: 0.5,},},}return (<UltraFuturisticBackground variant='quantum' intensity='high'>;
+=======
+  const container_variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1
+      transition: {
+
+staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 }
+    visible: {
+      y: 0
+      opacity: 1
+      transition: {
+
+duration: 0.5,
+      },
+    },
+  };
+
+  return (
+    <UltraFuturisticBackground variant='quantum' intensity='high'>
+      <div className='min-h-screen'>
+        <Head>
+          <title>
+            Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI
+            Autonomous Systems, Space Technology
+          </title>
+      }
+    }
+  };
+
+  const itemVariants = {;
+    hidden: { y: 20, opacity: 0 },;
+    visible: {;
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0 && 0.5,;
+      },;
+    },;
+  return (
+    <UltraFuturisticBackground variant='quantum' intensity='high'>;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       <div className='min-h-screen'>;
         <Head>;
           <title>Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI;
@@ -257,6 +417,7 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
             content='https://ziontechgroup && ziontechgroup.com/revolutionary-services';
           />;
           <meta property='og:type' content='website' />;
+<<<<<<< HEAD
           <link;
             rel='canonical';
                 </span>;
@@ -268,6 +429,14 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
             href='https://ziontechgroup.com/revolutionary-services';
           />;
         </Head>;
+=======
+          <link
+            rel='canonical'
+
+            href='https://ziontechgroup.com/revolutionary-services'
+          />
+        </Head>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         {/* Hero Section */}
         <section className='relative py-20 overflow-hidden'>;
           <div className='container mx-auto px-4 text-center'>;
@@ -277,6 +446,7 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               >;
 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                   Revolutionary;
@@ -361,12 +531,66 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
                   <div className='text-gray-400'>Average ROI</div>;
                 </div>;
               </motion.div>;
+=======
+              >
+<span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                  Revolutionary
+                </span>
+                <br />
+                <span className='text-white'>Micro SaaS Services</span>
+              </motion.h1>
+              <motion.p
+                className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+
+Experience the future of technology with our revolutionary micro
+                SaaS platform. Quantum AI, autonomous systems, space technology,
+                and cutting-edge solutions that redefine what's possible.
+              </motion.p>
+              {/* Service Count Stats */}
+              <motion.div
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+
+<div className='text-center'>
+                  <div className='text-3xl font-bold text-cyan-400 mb-2'>
+                    {revolutionaryMicroSaasServices.length}+
+                  </div>
+                  <div className='text-gray-400'>Revolutionary Services</div>
+                </div>
+                <div className='text-center'>
+                  <div className='text-3xl font-bold text-purple-400 mb-2'>
+                    99.99%
+                  </div>
+                  <div className='text-gray-400'>Accuracy Rate</div>
+                </div>
+                <div className='text-center'>
+                  <div className='text-3xl font-bold text-green-400 mb-2'>
+                    21
+                  </div>
+                  <div className='text-gray-400'>Day Free Trial</div>
+                </div>
+                <div className='text-center'>
+                  <div className='text-3xl font-bold text-pink-400 mb-2'>
+                    2000%+
+                  </div>
+                  <div className='text-gray-400'>Average ROI</div>
+                </div>
+              </motion.div>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               {/* CTA Buttons */}
 <motion.div;
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center';
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
               >;
 <Button;
                   variant='primary';
@@ -450,14 +674,67 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
             </div>;
           </div>;
         </section>;
+=======
+              >
+<Button
+                  variant='primary'
+                  size='lg'
+                  onClick={() =>
+                    document
+                      .getElementById('services-grid')
+                      ?.scrollIntoView({ behavior: 'smooth' })
+                  }
+                  Explore Services
+                  <ArrowRight className='ml-2 w-5 h-5' />
+                </Button>
+                <Button
+                  variant='futuristic'
+                  size='lg'
+                  onClick={() =>
+                    window.open('https://ziontechgroup.com/contact', '_blank')
+                  }
+                >
+                  Get Started
+                  <Rocket className='ml-2 w-5 h-5' />
+                </Button>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+        {/* Contact Information Banner */}
+
+<section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>
+          <div className='container mx-auto px-4'>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
+              <div className='flex items-center gap-4'>
+                <Phone className='w-5 h-5 text-cyan-400' />
+                <span className='text-white'>{contactInfo.mobile}</span>
+                <Mail className='w-5 h-5 text-purple-400' />
+                <span className='text-white'>{contactInfo.email}</span>
+              </div>
+              <div className='flex items-center gap-4'>
+                <MapPin className='w-5 h-5 text-green-400' />
+                <span className='text-white'>{contactInfo.address}</span>
+                <Globe className='w-5 h-5 text-blue-400' />
+                <span className='text-white'>{contactInfo.website}</span>
+              </div>
+            </div>
+          </div>
+        </section>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         {/* Category Navigation */}
 <section className='py-12'>;
           <div className='container mx-auto px-4'>;
             <motion.div;
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6';
               variants={containerVariants}
+<<<<<<< HEAD
               initial='hidden';
               whileInView='visible';
+=======
+              initial='hidden'
+              whileInView='visible'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               viewport={{ once: true }}
             >;
               {enhancedCategories.map((category, index) => (<motion.div;
@@ -465,6 +742,7 @@ return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
                   variants={itemVariants}
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}>;
+<<<<<<< HEAD
                   <UltraFuturisticCard;
         {/* Popular Services Showcase */}<section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -483,6 +761,21 @@ variant='quantum-advanced';
                           : category.name;
                       )}
                     <div;
+=======
+                  <UltraFuturisticCard
+
+variant='quantum-advanced'
+                    size='small'
+                    className='text-center cursor-pointer h-full'
+                    onClick={() =>
+                      setSelectedCategory(
+                        category.name === selectedCategory
+                          ? 'All'
+                          : category.name
+                      )
+                    }
+                    <div
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                       className={`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br ${category.color} flex items-center justify-center text-white`}
                     >;
                       {category.icon}
@@ -504,6 +797,7 @@ variant='quantum-advanced';
           </div>;
         </section>;
         {/* Popular Services Showcase */}
+<<<<<<< HEAD
 <section className='py-16'>;
           <div className='container mx-auto px-4'>;
             <motion.div;
@@ -546,6 +840,32 @@ variant='quantum-advanced';
             </motion.div>;
             <motion.div;
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
+=======
+<section className='py-16'>
+          <div className='container mx-auto px-4'>
+            <motion.div
+              className='text-center mb-12'
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+
+<h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
+                <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
+                  Most Popular
+                </span>
+                <br />
+                <span className='text-white'>Revolutionary Services</span>
+              </h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Discover our most sought-after revolutionary micro SaaS services
+                that are transforming industries worldwide.
+              </p>
+            </motion.div>
+            <motion.div
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               variants={containerVariants}
               initial='hidden';
               whileInView='visible';
@@ -561,10 +881,17 @@ variant='quantum-advanced';
 size='large';
                     className='h-full cursor-pointer';
                     onClick={() => setSelectedService(service)}
+<<<<<<< HEAD
                   >;
                     <div className='text-center mb-6'>;
                       <div className='text-4xl mb-4'>{service.icon}</div>;
                       <h3 className='text-2xl font-bold text-white mb-2'>;
+=======
+                  >
+                    <div className='text-center mb-6'>
+                      <div className='text-4xl mb-4'>{service.icon}</div>
+                      <h3 className='text-2xl font-bold text-white mb-2'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                         {service.name}
                       </h3>;
                       <p className='text - gray - 300 mb - 4'>{service.tagline}</p>;
@@ -572,6 +899,7 @@ size='large';
                         {service.price}
                       </div>;
                       <div className='text - sm text - gray - 400'>;
+<<<<<<< HEAD
                         {service.period}size="md";
                       </div>;
                     </div>;
@@ -579,6 +907,17 @@ size='large';
                       {service.features.slice(0, 4).map((feature, idx) => (<div key={idx} className='flex items-center gap-2'>;
                           <Check className='w-4 h-4 text-green-400 flex-shrink-0' />;
                           <span className='text-sm text-gray-300'>;
+=======
+                        {service.period}
+
+                      </div>
+                    </div>
+                    <div className='space-y-3 mb-6'>
+                      {service.features.slice(0, 4).map((feature, idx) => (
+                        <div key={idx} className='flex items-center gap-2'>
+                          <Check className='w-4 h-4 text-green-400 flex-shrink-0' />
+                          <span className='text-sm text-gray-300'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                             {feature}
                           </span>;
                         </div>;
@@ -589,6 +928,7 @@ size='large';
                         variant='primary';
                         size='md';
                         onClick={() => window.open(service.link, '_blank')}
+<<<<<<< HEAD
                         className='w-full';
                       >;
                         Learn More;
@@ -613,6 +953,21 @@ size='large';
               <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
                 <div className='flex flex-wrap gap-4'>;<section id='services-grid' className='py-16'>;
           <div className='container mx-auto px-4'>;
+=======
+                        className='w-full'
+                      >
+                        Learn More
+                        <ExternalLink className='ml-2 w-4 h-4' />
+                      </Button>
+                    </div>
+                  </UltraFuturisticCard>
+                </motion.div>
+              ))}
+        {/* Services Grid */}
+
+<section id='services-grid' className='py-16'>
+          <div className='container mx-auto px-4'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             {/* Filters and Controls */}
             <motion.div;
               className='mb-8';
@@ -620,10 +975,17 @@ size='large';
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+<<<<<<< HEAD
             >;
 <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
                 <div className='flex flex-wrap gap-4'>;
                   <select;
+=======
+            >
+<div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+                <div className='flex flex-wrap gap-4'>
+                  <select
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e && e.target.value)}
                     className='px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400';
@@ -633,6 +995,7 @@ size='large';
                         {category}
                       </option>;
                     ))}
+<<<<<<< HEAD
                     <input;
                       type='text';
                       placeholder='Search services...';
@@ -655,6 +1018,13 @@ size='large';
               }
               variants={containerVariants}
               initial="hidden";
+=======
+                    <input
+                      type='text'
+                      placeholder='Search services...'
+                      value={searchQuery}
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                       onChange={e => setSearchQuery(e.target.value)}
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
                     />;
@@ -683,10 +1053,19 @@ size='large';
                   : 'space-y-6';
               }
               variants={containerVariants}
+<<<<<<< HEAD
               initial='hidden';
               whileInView='visible';
               viewport={{ once: true }}>;
               {filteredServices.map((service, index) => (<motion.div;
+=======
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true }}
+            >
+              {filteredServices.map((service, index) => (
+                <motion.div
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                   key={service.id}
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
@@ -694,6 +1073,7 @@ size='large';
                     variant={service && service.variant as any}
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
+<<<<<<< HEAD
                     onClick={() => setSelectedService(service)}<div;
                               key={idx}
                               className='flex items-center gap-2 text-sm'>;
@@ -720,6 +1100,16 @@ size='large';
 <div className='text-center'>;
                         <div className='text-4xl mb-4'>{service.icon}</div>;
                         <h3 className='text-xl font-bold text-white mb-2'>;
+=======
+                    onClick={() => setSelectedService(service)}
+
+                  >
+                    {viewMode === 'grid' ? (
+                      // Grid View
+<div className='text-center'>
+                        <div className='text-4xl mb-4'>{service.icon}</div>
+                        <h3 className='text-xl font-bold text-white mb-2'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                           {service.name}
                         </h3>;
                         <p className='text-gray-300 mb-4 text-sm'>;
@@ -828,6 +1218,7 @@ size='large';
                               variant='futuristic';
                               size='sm';
                               onClick={() => setSelectedService(service)}
+<<<<<<< HEAD
                             >;
                               View Details;
                               <Eye className='ml-2 w-4 h-4' />;
@@ -847,6 +1238,24 @@ size='large';
             </motion.div>;
             {filteredServices.length === 0 && (<motion.div;
                 className='text-center py-16';
+=======
+                            >
+                              View Details
+                              <Eye className='ml-2 w-4 h-4' />
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </UltraFuturisticCard>;
+                </motion && motion.div>;
+              ))}
+
+            </motion.div>
+            {filteredServices.length === 0 && (
+<motion.div
+                className='text-center py-16'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -870,6 +1279,7 @@ size='large';
                            Clear Filters;
                          </Button>;
             )}
+<<<<<<< HEAD
           </div>;
         </section>;
         {/* Service Details Modal */}
@@ -908,6 +1318,24 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
             </motion && motion.div>;>;
               <motion.div;
 className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto';
+=======
+          </div>
+        </section>
+        {/* Service Details Modal */}
+        <AnimatePresence>
+          {selectedService && (
+            <motion.div
+
+className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedService(null)}
+
+            >
+              <motion.div
+className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
@@ -1055,6 +1483,7 @@ className='text-gray-400 hover:text-white text-2xl';
                             window.open('https://ziontechgroup.com/contact';
                               '_blank';
                             )}
+<<<<<<< HEAD
                         >;
                           Contact Sales;
                           <Mail className='ml-2 w-4 h-4' />;
@@ -1090,6 +1519,74 @@ className='text-gray-400 hover:text-white text-2xl';
                 <Button;
                   variant='primary';
                   size='lg';
+=======
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+<div className='mt-8 pt-6 border-t border-gray-700'>
+                    <div className='flex flex-col sm:flex-row gap-4 justify-between items-center'>
+                      <div className='text-sm text-gray-400'>
+                        <div>Setup Time: {selectedService.setupTime}</div>
+                        <div>Trial: {selectedService.trialDays} days</div>
+                      </div>
+                      <div className='flex gap-4'>
+                        <Button
+                          variant='primary'
+                          onClick={() =>
+                            window.open(selectedService.link, '_blank')
+                          }
+                        >
+                          Visit Service
+                          <ExternalLink className='ml-2 w-4 h-4' />
+                        </Button>
+                        <Button
+                          variant='futuristic'
+                          onClick={() =>
+                            window.open(
+                              'https://ziontechgroup.com/contact'
+                              '_blank'
+                            )
+                          }
+                        >
+                          Contact Sales
+                          <Mail className='ml-2 w-4 h-4' />
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Contact Section */}
+
+<section className='py-20'>
+          <div className='container mx-auto px-4 text-center'>
+            <motion.div
+              className='max-w-4xl mx-auto'
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+
+<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                Ready to Experience the Future?
+              </h2>
+              <p className='text-xl text-gray-300 mb-8'>
+                Join thousands of companies already transforming their business
+                with our revolutionary micro SaaS services.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
+                <Button
+                  variant='primary'
+                  size='lg'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                   onClick={() =>;
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank')}
                 >;
@@ -1100,6 +1597,7 @@ className='text-gray-400 hover:text-white text-2xl';
                   variant='futuristic';
                   size='lg';
                   onClick={() =>;
+<<<<<<< HEAD
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank')}</h2>;
               <p className="text-xl text-gray-300 mb-8">;
                 Join thousands of companies already transforming their business with our revolutionary micro SaaS services.;
@@ -1146,6 +1644,20 @@ className='text-gray-400 hover:text-white text-2xl';
                 <div>;
                   <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
                   <div className='text-white font-semibold'>;
+=======
+                    window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
+                  }
+
+                >
+                  Schedule Demo
+                  <Calendar className='ml-2 w-5 h-5' />
+                </Button>
+              </div>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
+                <div>
+                  <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />
+                  <div className='text-white font-semibold'>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                     {contactInfo.mobile}
                   </div>;
                   <div className='text-gray-400 text-sm'>Call us anytime</div>;
@@ -1161,6 +1673,7 @@ className='text-gray-400 hover:text-white text-2xl';
                   <MapPin className='w-8 h-8 text-green-400 mx-auto mb-2' />;
                   <div className='text-white font-semibold'>;
                     {contactInfo.address}
+<<<<<<< HEAD
                   </div>;
                   <div className='text-gray-400 text-sm'>Visit our office</div>;
                 </div>;
@@ -1318,3 +1831,16 @@ className='text-gray-400 hover:text-white text-2xl';
         </section>;
       </div>;
     </UltraFuturisticBackground>))}))
+=======
+                  </div>
+                  <div className='text-gray-400 text-sm'>Visit our office</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </UltraFuturisticBackground>
+
+);
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

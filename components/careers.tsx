@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 }export default CareersPage;import React, { useState } from 'react';
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment)const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment)> <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {/* Company Culture */;
@@ -264,3 +265,16 @@ import { Users, Rocket, Brain, Globe, Award, Zap;
   } from 'lucide-react';
 export default function Careers() {const [selectedDepartment, setSelectedDepartment] = useState('all')const departments = null;
 export default CareersPage;
+=======
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { Users, Rocket, Brain, Globe, Award, Zap;
+  Heart, Star, ArrowRight, CheckCircle, Briefcase
+ } from 'lucide-react';
+export default function Careers() {
+  const [selectedDepartment, setSelectedDepartment] = useState('all');
+  const departments = null;
+export default CareersPage;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

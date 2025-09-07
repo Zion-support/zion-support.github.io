@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
@@ -12,6 +13,12 @@ type NewsItem = { source: string, title: string, url: string, summary: string, t
     generatedAt = json && json.generatedAt || '';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },export async function getServerSideProps() {const file = path.join(process.cwd(), 'datanews-digest.json')let items: NewsItem[] = [];  let generatedAt = '';
   try {items = json.items || [];type NewsItem = any;generatedAt = json.generatedAt || '';
+=======
+import fs from 'fs';
+import path from 'path';
+type NewsItem = any;
+    generatedAt = json.generatedAt || ''
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   } catch {}
   return { props: { items, generatedAt } }
 }export default function NewsDigestPage() {return (<div className="space-y-6">;
@@ -28,6 +35,7 @@ type NewsItem = { source: string, title: string, url: string, summary: string, t
               {n && n.tags?.map(t => (<span key={t} className="text-xs px-2 py-0 && 0.5 rounded bg-gray-100">{t}</span>))}
             </div>;
           </div>;
+<<<<<<< HEAD
         ))}</div>;)})}export default /**;
  * NewsDigestPage - Function description;
  */;
@@ -47,3 +55,12 @@ function NewsDigestPage() {return (<div className="space-y-6">;
           </div>))}
       </div>;
     </div>)
+=======
+        ))}
+
+    </div>;
+
+);
+}
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

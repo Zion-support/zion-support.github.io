@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 ) {const method = (req.method |'POST').toUpperCase()) {const method  = (req.method || 'POST').toUpperCase()if (method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })const auth = authenticateRequest(req, false)if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error })import { Star  } from 'lucide-react';
 export default async function handler() {if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const auth = authenticateRequest(req, false)if (!auth.ok) return res.status(401).json({ error: auth.error })const {candidateName;
     roleTitle;
@@ -38,3 +39,16 @@ function handler() {const method = (req.method || 'POST').toUpperCase (),if (ret
     `Notes: ${notes || ''}\n` +;
     `Include signature and next steps.`;const text = await generate_text (prompt,'You are a recruiting ops specialist with excellent writing skills.')return res.status (200).json ({ email: text })const text = await generate_text (prompt, 'You are a recruiting ops specialist with excellent writing skills.')return res.status (200).json ({ email: text })return res.status(405).json({ error: 'Method not allowed' })const method = null;
   return res.status(200).json({ email: text })}
+=======
+) {
+  const method = (req.method |'POST').toUpperCase();
+) {;
+  const method = (req.method || 'POST').toUpperCase();
+
+  if (method !== 'POST')
+
+    return res.status(405).json({ error: 'Method not allowed' });
+  const method = null;
+  return res.status(200).json({ email: text })
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

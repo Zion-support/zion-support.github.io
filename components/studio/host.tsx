@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import React, { useState } from 'react';
 type PersonaConfig = any;
   language: string;
   cloneStyleText?: string;
 }
+<<<<<<< HEAD
 export default function StudioHostPage() {const [persona, setPersona] = useState<PersonaConfig>({voice: 'Visionary';
     language: 'English';
     voice: 'Visionary',language: 'English',})const [inviteeName, setInviteeName] = useState('')const [inviteeBio, setInviteeBio] = useState('')const [topic, setTopic]  = useState('')export default function StudioHostPage() {const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),const [inviteeName, setInviteeName] = useState('')const [inviteeBio, setInviteeBio] = useState('')const [topic, setTopic] = useState('')const [operatorPrompt, setOperatorPrompt]  = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.')const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.';
@@ -30,6 +34,94 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
             <label className='block text-sm font-medium'>Voice</label>;
             <select;
               className='mt-1 w-full border rounded p-2';
+=======
+export default function StudioHostPage() {
+  const [persona, setPersona] = useState<PersonaConfig>({
+    voice: 'Visionary'
+    language: 'English'
+    voice: 'Visionary',
+    language: 'English',;
+
+  });
+  const [inviteeName, setInviteeName] = useState('');
+  const [inviteeBio, setInviteeBio] = useState('');
+  const [topic, setTopic] = useState('');
+
+  const [operatorPrompt, setOperatorPrompt] = useState(
+    'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
+  );
+
+  const [generating, setGenerating] = useState(false);
+  const [episode, setEpisode] = useState<any>(null);
+  const [synthesizing, setSynthesizing] = useState(false);
+  const [publishing, setPublishing] = useState(false);
+
+  const handleGenerate = async () => {
+    setGenerating(true);
+    try {
+      const res = await fetch('/api/podcast/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({
+          persona,
+          invitee: { name: inviteeName, bio: inviteeBio },
+          topic,
+          operatorPrompt,
+        }),
+      });
+      const data = await res.json();
+      setEpisode(data.episode);
+    } catch (e) {
+      console.error (e);
+      alert ('Failed to generate episode');
+    } finally {
+
+      setGenerating(false);
+    }
+  }
+  const handleSynthesize = async () => {
+    if (!episode?.id) return;
+    setSynthesizing(true);
+    try {
+      const res = await fetch('/api/podcast/synthesize', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ episodeId: episode.id, persona }),
+      });
+      const data = await res.json();
+      setEpisode(data.episode);
+    } catch (e) {
+      console.error(e);
+      alert('Failed to synthesize audio');
+    } finally {
+      setSynthesizing(false);
+    }
+  }
+  const handlePublishRss = async () => {
+    if (!episode?.id) return;
+    setPublishing(true);
+    try {
+const res = await fetch('/api/podcast/rss', { method: 'POST' });
+      await res.json();
+      alert('RSS feed updated. Platforms will pull on next refresh.');
+    } catch (e) {
+      console.error(e);
+      alert('Failed to update RSS');
+    } finally {
+      setPublishing(false);
+    }
+  }
+  return (
+<div className='space-y-8'>
+      <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>
+      <section className='space-y-3'>
+        <h2 className='text-xl font-semibold'>AI Persona</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          <div>
+            <label className='block text-sm font-medium'>Voice</label>
+            <select
+              className='mt-1 w-full border rounded p-2'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               value={persona && persona.voice}
               onChange={e =>;
                 setPersona({ ...persona, voice: e && e.target.value as any })set_publishing (false)}
@@ -56,6 +148,7 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
           </div>;
           <div>value={persona && persona.cloneStyleText || ''}
               onChange={e =>;
+<<<<<<< HEAD
                 setPersona({ ...persona, cloneStyleText: e && e.target.value })}/>          </div>;
         </div>;
       </section>;
@@ -79,6 +172,23 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
             <label className='block text-sm font-medium'>Invitee Name</label>;
             <input;
               className='mt-1 w-full border rounded p-2';
+=======
+                setPersona({ ...persona, cloneStyleText: e && e.target.value });
+              }
+
+            />
+          </div>
+        </div>
+      </section>
+
+<section className='space-y-3'>
+        <h2 className='text-xl font-semibold'>Episode Generator</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          <div>
+            <label className='block text-sm font-medium'>Invitee Name</label>
+            <input
+              className='mt-1 w-full border rounded p-2'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
               value={inviteeName}
               onChange={e => setInviteeName(e && e.target.value)}
             />;
@@ -110,6 +220,7 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
             />;
           </div>;
         </div>;
+<<<<<<< HEAD
         <button;
           className='px-4 py-2 bg-blue-600 text-white rounded';
           onClick={handleGenerate}disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
@@ -228,6 +339,29 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
               <h4 className='font-semibold'>Questions</h4>;
               <ol className='list-decimal list-inside space-y-1'>;
                 {episode.questions?.map((q: string, idx: number) => (<li key={idx}>{q}</li>;
+=======
+        <button
+          className='px-4 py-2 bg-blue-600 text-white rounded'
+          onClick={handleGenerate}
+
+          disabled={generating}
+        >
+          {generating ? 'Generating…' : 'Generate Episode'}
+        </button>
+      </section>
+      {episode && (
+
+<section className='space-y-4'>
+          <h2 className='text-xl font-semibold'>Episode Draft</h2>
+          <div className='border rounded p-4 space-y-3'>
+            <p className='text-sm text-gray-600'>ID: {episode.id}</p>
+            <h3 className='text-lg font-bold'>{episode.title}</h3>
+            <div>
+              <h4 className='font-semibold'>Questions</h4>
+              <ol className='list-decimal list-inside space-y-1'>
+                {episode.questions?.map((q: string, idx: number) => (
+                  <li key={idx}>{q}</li>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                 ))}
               </ol>;
             </div>;
@@ -267,11 +401,22 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
                 className='px-4 py-2 bg-gray-800 text-white rounded';
                 onClick={handlePublishRss}
                 disabled={publishing}
+<<<<<<< HEAD
               >;
                 {publishing ? 'Publishing…' : 'Update RSS'}</button>;
             </div>;
             {episode.audio && (<div className='flex gap-3'>;
                 {episode.audio.mp3Url && (<a;
+=======
+              >
+                {publishing ? 'Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+            {episode.audio && (
+<div className='flex gap-3'>
+                {episode.audio.mp3Url && (
+                  <a
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
                     href={episode.audio.mp3Url}
                     className='text-blue-600 underline';
                   >;
@@ -297,8 +442,15 @@ export default function StudioHostPage() {const [persona, setPersona] = useState
           </div>;
         </section>;
       )}
+<<<<<<< HEAD
     </div>;
   )}{episode.audio && ({publishing ? 'Publishing…' : 'Update RSS'}
               </button>;
             </div>;
             {episode.audio && (
+=======
+    </div>
+  );
+}
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

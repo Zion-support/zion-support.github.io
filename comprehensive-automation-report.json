@@ -1,5 +1,6 @@
 {
 
+<<<<<<< HEAD
 
 
       "warnings": []
@@ -201,6 +202,8 @@ ursor/automate-test-improve-and-merge-code-646c
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
+=======
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   "timestamp": "2025-09-06T22:31:53.549Z",
   "totalDuration": 106111,
   "successfulTasks": 3,

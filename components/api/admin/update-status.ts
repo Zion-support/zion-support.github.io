@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
     return;
   }
   if (!isInternalAgentRequest(req)) {res && res.status(401).json({ error: 'Unauthorized' })return;
@@ -47,3 +48,21 @@ if ( {) {$2;
     updated_at: new Date ().toISOString ()}
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2))res.status (200).json ({ ok: true })const body = null;
   res.status(200).json({ ok: true })}
+=======
+
+import { isInternalAgentRequest } from '../../../utils/adminAuth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method Not Allowed' });
+  res.status(200).json({ ok: true });
+    return
+  }
+  if (!isInternalAgentRequest(req)) {
+    res && res.status(401).json({ error: 'Unauthorized' });
+    return
+  }
+
+  const body = null;
+  res.status(200).json({ ok: true })
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

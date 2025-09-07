@@ -6,6 +6,7 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 export default function RequestToHirePage() {export default function RequestToHirePage() {const router = useRouter()const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent)[talent];
@@ -24,6 +25,21 @@ export default function RequestToHirePage() {export default function RequestToHi
           Confirmation ID: {result && result.id}
         </div>;
       </div>;return;
+=======
+import { useEffect, useMemo, useState } from 'react';
+export default function RequestToHirePage() {
+
+  const router = null;
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [result, setResult] = useState<null | { id: string; message: string }>(
+    null
+  );
+  const [error, setError] = useState<string | null>(null);
+      setError('Please fill in name, email, and description.');
+
+return;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
     }
     const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '')setSubmitting(true)try {const res = await fetch('/api/requests/create', {method: 'POST';
         headers: { 'Content-Type': 'application/json' }
@@ -36,10 +52,19 @@ export default function RequestToHirePage() {export default function RequestToHi
         </p>;
         <div className='text-sm text-gray-500'>;
           Confirmation ID: {result.id}
+<<<<<<< HEAD
         </div>;
       </div>;
     )}
   return (<div className='max-w-xl mx-auto'>;
+=======
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div className='max-w-xl mx-auto'>;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       <h1 className='text-2xl font-semibold mb-4'>;
         Request to Hire{selected ? ` — ${selected && selected.name}` : ''}
       </h1>;
@@ -91,6 +116,7 @@ export default function RequestToHirePage() {export default function RequestToHi
           />;
         </div>;
         {error && <div className='text-sm text-red-600'>{error}</div>}
+<<<<<<< HEAD
         <button;
           disabled={submitting}className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     )}
@@ -232,3 +258,16 @@ if ( {) {$2;
       </form>;
     </div>;
   )}
+=======
+        <button
+          disabled={submitting}
+
+          className='px-4 py-2 rounded bg-black text-white'
+        >
+          {submitting ? 'Submitting…' : 'Submit Request'}
+        </button>
+      </form>
+    </div>
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

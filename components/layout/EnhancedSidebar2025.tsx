@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 ];
  ];
@@ -11,6 +12,11 @@
 }{child.badge;
 }</span>)}</a>) )}</motion.div>)}</AnimatePresence> </div>) )}</div> </div> <span>Quick Links</span> </h3> <div className="space-y-2" > <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > Contact Us </div> <div className="text-xs text-gray-500" >Get in touch with our team</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > View Pricing </div> <div className="text-xs text-gray-500" >Explore our pricing plans</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > About Us </div> <div className="text-xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-blue-400" >1000+</div> <div className="text-xs text-gray-400" >Clients</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-purple-400" >24/7</div> <div className="text-xs text-gray-400" >Support</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-green-400" >99.9%</div> <div className="text-xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25" > <span>Get Started Today</span> <ArrowRight className="w-4 h-4 ml-2 inline" /> </a> </div> </div> </motion.aside>)}export default EnhancedSidebar2025;interface SidebarItem  {name: string,href: string,import React, { useState, useEffect } from 'react',import Link from 'next/link';
 import { motion, AnimatePresence  } from 'framer-motion';
+=======
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import { X, ChevronRight, Home, Star, Users;
   Settings, HelpCircle, Mail, Phone, MapPin;
   Brain, Atom, Shield, Rocket, DollarSign;
@@ -18,14 +24,24 @@ import { X, ChevronRight, Home, Star, Users;
   TrendingUp, Award, CheckCircle, Clock;
   ArrowRight, Search, Menu, X as CloseIcon;
   Target, BookOpen, Truck, BarChart3;
+<<<<<<< HEAD
   Sparkles, Eye, Lightbulb, Palette, Code;
   } from 'lucide-react';
 interface SidebarItem  {name: string;
   href: string;icon?: React.ReactNode;
+=======
+  Sparkles, Eye, Lightbulb, Palette, Code
+ } from 'lucide-react';
+interface SidebarItem {
+  name: string;
+  href: string;
+  icon?: React.ReactNode;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   description?: string;
   children?: SidebarItem[];
   badge?: string;
   isNew?: boolean;
+<<<<<<< HEAD
   isHot?: boolean;
 import React, { useState, useEffect               } from 'react';
   'react.ts';
@@ -94,6 +110,74 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, Ma
   ' }'        ];
   '';
     ];
+=======
+  isHot?: boolean
+=======
+import React, { useState, useEffect               } from 'react'
+  'react.ts'
+import Link from 'next/link' from 'next/link.ts';{ motion, AnimatePresence               } from
+  'framer-motion.ts'
+import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, '  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star } from'
+  'lucide-react.ts'';interface SidebarItem {'
+  name: string
+   href: string
+   icon: React.ReactNode
+   description?: string
+   children?: SidebarItem[]
+   badge?: string
+   color?: string
+   isNew?: boolean
+   isHot?: boolean
+   isPremium?: boolean
+   category?: string
+}
+
+
+    title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', icon: Zap, , color: 'from-cyan-500 to-blue-600, items[, {
+  ''
+        name: 'AI & Consciousness,'        href: '/ai-services', icon: Brain, , description: 'Advanced AI consciousness and evolution platforms, subItems[, { name: 'AI Consciousness Evolution, href:, /ai-consciousness-evolution' }, { name: 'AI Autonomous Ecosystem, href:, /ai-autonomous-ecosystem' }, { name: 'AI Ethics & Governance, href:, /ai-ethics-governance' }, { name: 'AI Creativity Studio, href:, /ai-creativity-studio' }, { name: 'AI Education Platform, href:, /ai-education-platform' }, { name: 'AI Healthcare Diagnostics, href:, /ai-healthcare-diagnostics' }, { name: 'AI Financial Intelligence, href:, /ai-financial-intelligence' }, { name: 'AI Sustainability Platform, href:, /ai-sustainability-platform' }, { name: 'AI Emotional Intelligence, href:, /ai-emotional-intelligence-platform' }, { name: 'AI Legal Contract Analyzer, href:, /ai-legal-contract-analyzer' }'
+  '        ]'      }, {
+
+        name: 'Quantum Computing, , href: '/quantum-services, icon: Atom, '        description:, Next-generation quantum computing solutions', subItems[
+  '          { name: 'Quantum Cloud Infrastructure, href:, /quantum-cloud-infrastructure
+  ' }, { name: 'Quantum Bio-Computing, href:, /quantum-bio-computing
+  ' }, { name: 'Quantum Energy Platform, href:, /quantum-energy-platform
+  ' }, { name: 'Quantum Materials Discovery, href:, /quantum-materials-discovery
+  ' }, { name: 'Quantum Robotics, href:, /quantum-robotics
+  ' }, { name: 'Quantum Internet Security, href:, /quantum-internet-security
+  ' }, { name: 'Quantum Logistics, href:, /quantum-logistics-optimization
+  ' }, { name: 'Quantum Cybersecurity, href:, /quantum-cybersecurity-platform
+  ' }'        ]
+  '      }, {'
+
+        name: 'Enterprise IT,'        href: '/enterprise-it', icon: Shield, , description: 'Enterprise-grade IT infrastructure and security, subItems[, { name: 'Edge Computing Orchestrator, href:, /edge-computing-orchestration' }, { name: 'Zero Trust Security Platform, href:, /zero-trust-network-architecture' }, { name: 'Blockchain Enterprise Platform, href:, /blockchain-infrastructure-platform' }, { name: 'AI-Powered DevOps, href:, /ai-powered-devops' }, { name: 'Quantum Networking, href:, /quantum-networking' }, { name: 'Autonomous IT Operations, href:, /autonomous-it-operations' }, { name: 'Quantum Data Center, href:, /quantum-data-center' }, { name: 'Quantum Cloud Migration, href:, /quantum-cloud-migration' }'
+  '        ]'      }, {
+
+        name: 'Micro SAAS, , href: '/micro-saas, icon: Rocket, '        description:, AI-powered micro SAAS solutions', subItems[
+  '          { name: 'AI Content Factory Platform, href:, /ai-content-factory
+  ' }, { name: 'CRM Intelligence & Automation, href:, /crm-intelligence-automation
+  ' }, { name: 'AI Decision Engine Platform, href:, /ai-decision-engine
+  ' }, { name: 'E-commerce Optimization, href:, /ecommerce-optimization-platform
+  ' }, { name: 'AI HR & Talent Platform, href:, /ai-hr-talent-platform
+  ' }, { name: 'Financial Analytics Platform, href:, /financial-analytics-platform
+  ' }, { name: 'Supply Chain Intelligence, href:, /supply-chain-intelligence
+  ' }, { name: 'Marketing Automation Platform, href:, /marketing-automation-platform
+  ' }, { name: 'Project Management AI, href:, /project-management-ai
+  ' }'        ]
+  '      }, {'
+
+        name: 'Space Technology,'        href: '/space-tech', icon: Globe, , description: 'Cutting-edge space exploration and mining, subItems[, { name: 'Space Mining Platform, href:, /space-mining-platform' }, { name: 'Satellite Technology, href:, /satellite-technology' }, { name: 'Space Resource Management, href:, /space-resource-management' }, { name: 'Interplanetary Communication, href:, /interplanetary-communication' }'
+  '        ]'      }, {
+
+        name: 'Emerging Tech, , href: '/emerging-tech, icon: Sparkles, '        description:, Future technologies and innovations', subItems[
+  '          { name: 'Brain-Computer Interface, href:, /brain-computer-interface
+  ' }, { name: 'Autonomous Vehicle AI, href:, /autonomous-vehicle-ai
+  ' }, { name: 'Advanced Robotics, href:, /advanced-robotics
+  ' }, { name: 'Biotechnology Platform, href:, /biotechnology-platform
+  ' }'        ]
+  ''
+    ]
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
   }
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }
@@ -250,6 +334,7 @@ const sidebar_items: SidebarItem[] = [;
               {expanded_sections.has (section.title) ? (<ChevronDown className="w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition-colors duration-200" />) : (<ChevronRight className="w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition-colors duration-200" />)}
             </button>;
             <AnimatePresence>;
+<<<<<<< HEAD
               {expanded_sections.has (section.title) && (<motion.div;
     ];
   }
@@ -269,6 +354,201 @@ const supportLinks = [;
   '          { name: 'Contact Support, href:, /contact-support;
   ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:, /training'}, '          { name: 'Community Forum, href:, /community' },'          { name: 'Knowledge Base, href: ';
   '/knowledge-base' }'        ]'      }]  }
+=======
+              {expanded_sections.has (section.title) && (
+                <motion.div;
+    ]
+
+  }, {
+    title: 'Comp & Resources, '    icon: Users, color:, from-green-500 to-emerald-600
+  ', '    items[
+  '      {'
+        name: 'About Us, href: '/about
+  ', '        icon: Users, description:, Learn about Zion Tech Group', '        subItems['          { name: 'Our Mission, href:, /mission' }, '          { name: 'Leadership Team, href:, /leadership'
+  ' },'          { name: 'Comp History, href:, /history' }, '          { name: 'Careers, href:, /careers
+  ' }'        ]
+  '      }, {'
+
+        name: 'Resources,'        href: '/resources', icon: BookOpen, , description: 'Educational content and documentation, subItems[, { name: 'Documentation, href:, /docs' }, { name: 'API Reference, href:, /api-docs' }, { name: 'Blog & News, href:, /blog' }, { name: 'Case Studies, href:, /case-studies' }, { name: 'Whitepapers, href:, /whitepapers' }, { name: 'Webinars, href:, /webinars' }'
+  '        ]'      }, {
+
+        name: 'Support, , href: '/support, icon: HelpCircle, '        description:, Get help and support', subItems[
+  '          { name: 'Contact Support, href:, /contact-support
+  ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:, /training'}, '          { name: 'Community Forum, href:, /community' },'          { name: 'Knowledge Base, href: '
+  '/knowledge-base' }'        ]'      }]  }
+]
+
+  };
+  {
+    name: 'AI & Consciousness',
+    href: '/ai-services',
+    icon: <Brain className="w-5 h-5" />,
+    description: 'Revolutionary AI consciousness and emotional intelligence',
+    badge: 'New',
+    isNew: true,
+    children: [
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025', description: 'Emotional intelligence and self-awareness' },
+      { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network', description: 'Hybrid AI-Quantum computing platform' },
+      { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed AI research' },
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', description: 'EQ training platform' },
+      { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform', description: 'Equipment failure prediction' },
+      { name: 'AI Content Personalization', href: '/ai-content-personalization-engine', description: 'Personalized content delivery' },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager', description: 'Self-managing AI systems' },
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework', description: 'Ethical AI frameworks' },
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
+      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized AI learning' },
+      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics', description: 'Medical AI solutions' },
+      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' },
+      { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental AI solutions' },
+      { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' }
+    ]
+  };
+  {
+    name: 'Quantum & Emerging Tech',
+    href: '/quantum-services',
+    icon: <Atom className="w-5 h-5" />,
+    description: 'Quantum computing and breakthrough technologies',
+    badge: 'Hot',
+    isHot: true,
+    children: [
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform', description: 'Asteroid mining and space resources' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform', description: 'Unbreakable encryption' },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform', description: 'Neural interface technology' },
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform', description: 'Materials science acceleration' },
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform', description: 'Self-driving AI systems' },
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform', description: 'Quantum-biological hybrid processing' },
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' },
+      { name: 'Quantum Robotics', href: '/quantum-robotics', description: 'Quantum-enhanced robotics' },
+      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform', description: 'Next-gen security' },
+      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization', description: 'Route optimization' },
+      { name: 'Quantum Metaverse', href: '/quantum-metaverse', description: 'Quantum-enhanced virtual worlds' },
+      { name: 'Quantum IoT Platform', href: '/quantum-iot', description: 'Quantum-secured IoT' },
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading', description: 'Quantum trading algorithms' }
+    ]
+  };
+  {
+    name: 'Enterprise IT',
+    href: '/enterprise-it',
+    icon: <Shield className="w-5 h-5" />,
+    color: 'text-blue-400',
+    items: [
+      { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', badge: 'New' },
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', badge: 'New' },
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', badge: 'New' },
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform', badge: 'New' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform', badge: 'New' },
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform' },
+      { name: 'Zero Trust Security', href: '/zero-trust-security-platform' },
+      { name: 'Quantum Networking', href: '/quantum-networking' },
+      { name: 'Quantum Data Center', href: '/quantum-data-center' },
+      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
+      { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' }
+    ]
+  };
+  {
+    name: 'Micro SAAS',
+    href: '/micro-saas',
+    icon: <Rocket className="w-5 h-5" />,
+    description: 'Innovative business solutions for modern enterprises',
+    badge: 'Popular',
+    children: [
+      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite', description: 'Data-driven insights' },
+      { name: 'AI Content Generation', href: '/ai-content-generation-platform', description: 'Automated content creation' },
+      { name: 'AI Customer Service', href: '/ai-customer-service-automation', description: 'Intelligent support automation' },
+      { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform', description: 'Sales performance optimization' },
+      { name: 'AI Marketing Automation', href: '/ai-marketing-automation-suite', description: 'Campaign optimization' },
+      { name: 'AI Project Management', href: '/ai-project-management-platform', description: 'Intelligent project coordination' },
+      { name: 'AI Financial Analytics', href: '/ai-financial-analytics-platform', description: 'Financial insights and optimization' },
+      { name: 'AI HR Management', href: '/ai-hr-management-platform', description: 'HR operations automation' },
+      { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', description: 'Supply chain optimization' },
+      { name: 'AI Legal Analysis', href: '/ai-legal-document-analysis', description: 'Legal document processing' }
+    ]
+  };
+  {
+    name: 'Creative & Design',
+    href: '/creative-services',
+    icon: <Palette className="w-5 h-5" />,
+    description: 'AI-powered creative and design solutions',
+    children: [
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
+      { name: 'Metaverse Development', href: '/metaverse-development-studio', description: '3D world creation' },
+      { name: 'Quantum Metaverse', href: '/quantum-metaverse-platform', description: 'Quantum-enhanced experiences' },
+      { name: '3D Design & Modeling', href: '/3d-design-platform', description: 'Advanced 3D creation tools' },
+      { name: 'AI Video Generation', href: '/ai-video-generation', description: 'Automated video content' },
+      { name: 'AI Music Composition', href: '/ai-music-composition', description: 'AI-generated music' }
+    ]
+  };
+  {
+    name: 'Research & Development',
+    href: '/research-development',
+    icon: <BookOpen className="w-5 h-5" />,
+    description: 'Cutting-edge research and development services',
+    children: [
+      { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed research' },
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform', description: 'Materials science acceleration' },
+      { name: 'Space Technology Research', href: '/space-technology-research', description: 'Space exploration solutions' },
+      { name: 'Biotech AI Research', href: '/biotech-ai-research-platform', description: 'Biological research automation' },
+      { name: 'Neuroscience Research', href: '/neuroscience-research-platform', description: 'Brain research tools' },
+      { name: 'Climate Research AI', href: '/climate-research-ai', description: 'Environmental research automation' }
+    ]
+  };
+  {
+    name: 'Industry Solutions',
+    href: '/industry-solutions',
+    icon: <Truck className="w-5 h-5" />,
+    description: 'Specialized solutions for specific industries',
+    children: [
+      { name: 'Healthcare AI', href: '/healthcare-ai-solutions', description: 'Medical AI applications' },
+      { name: 'Financial Services', href: '/financial-ai-solutions', description: 'Fintech AI solutions' },
+      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions', description: 'Industrial automation' },
+      { name: 'Retail AI', href: '/retail-ai-solutions', description: 'Retail optimization' },
+      { name: 'Education AI', href: '/education-ai-solutions', description: 'Educational technology' },
+      { name: 'Transportation AI', href: '/transportation-ai-solutions', description: 'Smart transportation' }
+    ]
+  };
+  {
+    name: 'Pricing & Plans',
+    href: '/pricing',
+    icon: <DollarSign className="w-5 h-5" />,
+    description: 'Flexible pricing options for all services',
+    children: [
+      { name: '2025 Pricing', href: '/pricing-2025', description: 'Current year pricing' },
+      { name: '2026 Pricing', href: '/pricing-2026', description: 'Next year pricing' },
+      { name: 'Enterprise Plans', href: '/enterprise-pricing', description: 'Large organization pricing' },
+      { name: 'Startup Plans', href: '/startup-pricing', description: 'Small business pricing' },
+      { name: 'Custom Solutions', href: '/custom-pricing', description: 'Tailored pricing' },
+      { name: 'ROI Calculator', href: '/roi-calculator', description: 'Calculate your return on investment' }
+    ]
+  };
+  {
+    name: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className="w-5 h-5" />,
+    description: 'Educational resources and documentation',
+    children: [
+      { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
+      { name: 'API Reference', href: '/api-docs', description: 'API documentation' },
+      { name: 'Tutorials', href: '/tutorials', description: 'Step-by-step guides' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+      { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
+      { name: 'Research Papers', href: '/research-papers', description: 'Academic publications' }
+    ]
+  };
+  {
+    name: 'Support',
+    href: '/support',
+    icon: <Settings className="w-5 h-5" />,
+    description: 'Technical support and customer service',
+    children: [
+      { name: 'Help Center', href: '/help', description: 'Self-service support' },
+      { name: 'Contact Support', href: '/contact', description: 'Get in touch' },
+      { name: 'Live Chat', href: '/live-chat', description: 'Real-time assistance' },
+      { name: 'Training Programs', href: '/training', description: 'Skill development' },
+      { name: 'Community Forum', href: '/community', description: 'User community' },
+      { name: 'Status Page', href: '/status', description: 'Service status' }
+    ]
+  }
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 ];
   }{name: 'AI & Consciousness',href: '/ai-services',icon: <Brain className="w-5 h-5" />,description: 'Revolutionary AI consciousness and emotional intelligence',badge: 'New',isNew: true,children: [;
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025', description: 'Emotional intelligence and self-awareness' },{ name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network', description: 'Hybrid AI-Quantum computing platform' },{ name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed AI research' },{ name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', description: 'EQ training platform' },{ name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform', description: 'Equipment failure prediction' },{ name: 'AI Content Personalization', href: '/ai-content-personalization-engine', description: 'Personalized content delivery' },{ name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager', description: 'Self-managing AI systems' },{ name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework', description: 'Ethical AI frameworks' },{ name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },{ name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized AI learning' },{ name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics', description: 'Medical AI solutions' },{ name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' },{ name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental AI solutions' },{ name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' }
@@ -601,6 +881,7 @@ const supportLinks = [;
                         </div>;
                         <span className="text-gray-300 group-hover:text-white transition-colors duration-200">;
                           {item.name}
+<<<<<<< HEAD
                         </span>;
                       </div>;
                       <ChevronRight;
@@ -1005,6 +1286,41 @@ initial = {{ opacity: 0}}
    return () => {document.body.style.overflow =;
   'unset'}}, [isOpen])'  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (';
     <>;
+=======
+                        </span>
+                      </div>
+                      <ChevronRight
+                        className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+                          expandedCategory === item && item.name ? 'rotate-90' : ''
+                        }`} 
+                      />;
+                    </button>;
+
+
+  const filteredServices = sidebarSections.flatMap(section =>
+    section.items.flatMap(item =>
+      item.subItems?.filter(child =>
+        child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        child.description?.toLowerCase().includes(searchQuery.toLowerCase())
+      ) || []
+    )
+  )
+
+      newExpanded.delete(itemName)} else {
+      newExpanded.add(itemName)}
+    setExpandedItems(newExpanded)}
+
+  useEffect(() => {
+    if (isOpen) {
+document.body.style.overflow =
+  'hidden'} else {''
+  '      document.body.style.overflow = 'unset
+  '}'
+   return () => {
+      document.body.style.overflow =
+  'unset'}}, [isOpen])'  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return ('
+    <>
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       {/* Backdrop */}
       <AnimatePresence>;
         {isOpen && (<motion && motion.div>;
@@ -1072,6 +1388,7 @@ className="{"fixed" left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - 
           {/* Contact Bar */}";
           <div className="space-y-3">"            <div className="flex items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border-gray-700 / 30>              <Phone className="w - 4 h - 4 text - cyan - 400" />              <span className="text-sm" text - gray - 300">{contact_info.mobile}</span>"            </div>            <div className="flex" items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">"              <Mail className="w-4" h - 4 text - cyan - 400 />"              <span className="text - sm text-gray-300>{contact_info.email}</span>            </div>"          </div>";
         </div>;
+<<<<<<< HEAD
       {/* Sidebar */}damping: 25,'  stiffness: 200 '}}
 className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto}<motion.div;
 initial={{ x:, -100%;
@@ -1079,6 +1396,16 @@ initial={{ x:, -100%;
   '-100% }}';
 , transition = {'';
   { type: 'spring, damping: 25, , stiffness: 200}}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`';
+=======
+      {/* Sidebar */}
+
+      <motion.div
+initial={{ x:, -100%
+  ' }}'        animate={{ x: isOpen ? 0 :
+  '-100% }}'
+, transition = {''
+  { type: 'spring, damping: 25, , stiffness: 200}}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`'
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
         {/* Header */}
         <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6>          <div className="flex items-center justify-between mb-6">"            <div className="flex items-center gap-3>              <div className="relative">"                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center>                  <Zap className="w-6 h-6 text-white" />"                </div>"                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20></div>              </div>"              <div>;
                 <h2 className="text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent>                  Zion Tech Group"                </h2>;
@@ -1430,4 +1757,10 @@ Contact Us";
             </div>;
       </motion && motion.div>;
     </>;
+<<<<<<< HEAD
 ";const contactInfo  = null;
+=======
+";
+=======
+const contactInfo = null;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

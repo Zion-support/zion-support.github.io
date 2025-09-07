@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function CloudAutomationsPage() {export default function CloudAutomationsPage() {const [data, setData] = useState<any>(null)useEffect(() => {fetch('/api/cloud-automations-status').then(r => r && r.json()).then(setData).catch(() => setData({ ok: false }))}, []).then((r) => r && r.json()).then(setData).catch(() => setData({ ok: false }))export default function CloudAutomationsPage() {const [data, setData] = useState<any>(null)useEffect(() => {fetch('/api/cloud-automations-status').then((r) => r.json()).then(setData).catch(() => setData({ ok: false }))}, [])const items  = data?.data ? Object && Object.entries(data && data.data) : [];const items = null;
   return (<div className='space-y-6'>;
       <h1 className='text-3xl font-bold'>Cloud Automations</h1>;
@@ -7,6 +8,35 @@ export default function CloudAutomationsPage() {export default function CloudAut
       </p>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
         {items.map(([key, value]: any) => (<div;
+=======
+export default function CloudAutomationsPage() {
+
+export default function CloudAutomationsPage() {;
+  const [data, setData] = useState<any>(null);
+  useEffect(() => {;
+    fetch('/api/cloud-automations-status');
+      .then(r => r && r.json());
+      .then(setData);
+      .catch(() => setData({ ok: false }));  }, []);      .then((r) => r && r.json());
+      .then(setData);
+      .catch(() => setData({ ok: false }));
+export default function CloudAutomationsPage() {
+  const [data, setData] = useState<any>(null);
+  useEffect(() => {
+    fetch('/api/cloud-automations-status')
+
+  const items = null;
+  return (
+    <div className='space-y-6'>
+      <h1 className='text-3xl font-bold'>Cloud Automations</h1>
+      <p className='text-gray-600 dark:text-gray-300'>
+        Autonomous agents running in the cloud. No servers to babysit. No manual
+        ops.
+      </p>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        {items.map(([key, value]: any) => (
+          <div
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
             key={key}
             className='border rounded p-4 bg-gray-50 dark:bg-gray-900';
           >;
@@ -24,6 +54,7 @@ export default function CloudAutomationsPage() {export default function CloudAut
             </p>;
             {value.metrics ? (<pre className='mt-2 text-xs whitespace-pre-wrap'>;
                 {JSON.stringify(value.metrics, null, 2)}
+<<<<<<< HEAD
               </pre>;
             ) : null}
           </div>;
@@ -41,3 +72,14 @@ export default function CloudAutomationsPage() {export default function CloudAut
     </div>)</div>;
     </div>;
   )}
+=======
+              </pre>
+            ) : null}
+          </div>;
+        ))}
+
+      </div>
+    </div>
+  );
+}
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215

@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 
-
-const { execSync } = require('child_process')
-// console.log(' Starting Bundle Analysis...')
-    console.log(' Analyzing bundle size...')
-    execSync('npx @next/bundle-analyzer', { "stdio"})
-        "recommendations"
-
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -255,4 +246,3 @@ if (require.main === module) {
 }
 
 module.exports = BundleAnalyzer;
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8

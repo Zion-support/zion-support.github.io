@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '@testing-library/jest-dom';// Polyfill for TextEncoder/TextDecoder;
 const { TextEncoder, TextDecoder } = require('util')global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;// Mock Next.js router;
@@ -63,4 +64,7 @@ Object.defineProperty(window, 'matchMedia', {
     "removeEventListener": jest.fn(),
     "dispatchEvent": jest.fn()}))});
 import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn()}))});
+=======
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
 import '@testing-library/jest-dom'

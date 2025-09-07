@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
 import fs from 'fs';
 import path from 'path';
@@ -8,6 +9,14 @@ type Props = { report: Report | null },export const getStaticProps: GetStaticPro
   } catch {return { props: { report: null }, revalidate: 21600 }
   }
 export default function SiteValidator(): any ({ report }: Props) {}export default function SiteValidator() {export default function SiteValidator() {if (!report) return <div>No validation report yet.</div>;import fs from 'fs',type Broken = any;return (<div className="space-y-6">;
+=======
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Broken = any;
+  return (
+    <div className="space-y-6">;
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
       <header className="space-y-1">;
         <h1 className="text-3xl font-bold">Site Validator</h1>;
         <p className="text-gray-600 dark:text-gray-300">Broken links and Open Graph checks from exported site.</p>;
@@ -61,5 +70,13 @@ if (return <div > No validation report yet.</div>) {$2;
             {report.og_issues.map ((o, i) => (<li key={i} className="flex justify-between gap-4"><span className="truncate">{o.page}</span><span className="text-gray-500 truncate">{o.missing.join (', ')}</span></li>))}
           </ul>;
         </section>)}
+<<<<<<< HEAD
     </div>)</div>;
 )})}
+=======
+    </div>);
+    </div>
+);
+}
+
+>>>>>>> aab6cad50d24864653d33f46d023039adfa50215
