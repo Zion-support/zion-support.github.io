@@ -1,98 +1,39 @@
-<<<<<<< HEAD
-name,
-  price,
-  duration,
-
-  name: string;
-  price: string;
-  duration: string;
-
-            <span className="text-blue-500 mr-2">✓</span> {feature}
-          </li>
-        ))}
-      </ul>
-
-      </a>
-      </div>
-  );
-
-      <div className="mt-6 text-sm text-gray-500">
-        <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-      </div>
-      </div>
-  );
-=======
 import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Professional page solutions for your business needs.',
-  keywords: 'page',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page solutions for your business needs.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Page | Zion Tech Group',
-    description: 'Professional page solutions for your business needs.',
-  },
+  title: 'Mobile Development - Zion Tech Group',
+  description: 'Professional mobile development services to help your business grow and succeed.',
+  keywords: 'mobile development, business solutions, professional services'
 };
 
-export default function ServicePage() {
+export default function MobileDevelopmentPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional page solutions for your business needs.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h3>
-            <p className="text-gray-600 mb-4">
-              Advanced features and capabilities for your business needs.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Professional solutions</li>
-              <li>• 24/7 support</li>
-              <li>• Scalable architecture</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
-            <p className="text-gray-600 mb-4">
-              Transform your business with our cutting-edge solutions.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Increased efficiency</li>
-              <li>• Cost savings</li>
-              <li>• Better results</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Support</h3>
-            <p className="text-gray-600 mb-4">
-              Comprehensive support and maintenance services.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Expert consultation</li>
-              <li>• Training and documentation</li>
-              <li>• Ongoing maintenance</li>
-            </ul>
-          </div>
-        </div>
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Mobile Development
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Professional mobile development services to help your business grow and succeed.
+        </p>
+      </div>
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Coming Soon
+        </h2>
+        <p className="text-lg text-gray-600 text-center">
+          This service is currently under development. Please contact us for more information.
+        </p>
+      </div>
+      <div className="text-center">
+        <a
+          href="mailto:kleber@ziontechgroup.com?subject=Mobile Development Inquiry"
+          className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Contact Us
+        </a>
       </div>
     </div>
   );
 }
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

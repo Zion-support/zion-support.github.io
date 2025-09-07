@@ -1,49 +1,23 @@
-}}}};
-;
-;
-
-}
-}
-}
-},
-
-export const messageChannelHandler = {
-  sendMessage: (message: string) => {},
-  receiveMessage: (callback: (message: string) => void) => {},
-  sendMessage: (message: any) => {},
-  receiveMessage: (callback: any) => {},
-
-type MessageHandler = {
-  sendMessage: (message: unknown) => void;
-  receiveMessage: (callback: (message: unknown) => void) => void
-
-};
-export const messageChannelHandler: MessageHandler = {
-  sendMessage: (_message) => {
-    // No-op: placeholder for message channel integration
-  },
-  receiveMessage: (_callback) => {
-    // No-op: placeholder for message listener registration
-  sendMessage: (message: string) => {
-    // Implementation for sending messages
-    // eslint-disable-next-line no-console
-    console.log('Sending message: ', message);
-  }, receiveMessage: (_callback: (message: string) => void) => {
-    // Implementation for receiving messages
-    // eslint-disable-next-line no-console
-    console.log('Setting up message receiver');
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-  }
-
-};
-};
-};
-};
-,
-
 // Message channel handler for real-time communication
-export class MessageChannelHandler {;
+export interface MessageChannel {
+  id: string;
+  name: string;
+  type: 'direct' | 'group' | 'broadcast';
+  participants: string[];
+  createdAt: string;
+  lastMessageAt?: string;
+}
 
+export interface Message {
+  id: string;
+  channelId: string;
+  senderId: string;
+  content: string;
+  timestamp: string;
+  type: 'text' | 'image' | 'file' | 'system';
+}
+
+export class MessageChannelHandler {
   private channels: Map<string, MessageChannel> = new Map();
   private messages: Map<string, Message[]> = new Map();
 
@@ -61,12 +35,6 @@ export class MessageChannelHandler {;
     
     return channel;
   }
-
-      }
-    });
-  }
-}
-export default MessageChannelHandler;
 
   sendMessage(channelId: string, senderId: string, content: string, type: Message['type'] = 'text'): Message {
     const message: Message = {
@@ -95,9 +63,25 @@ export default MessageChannelHandler;
     return this.messages.get(channelId) || [];
   }
 
-}}}};
+  getChannels(): MessageChannel[] {
+    return Array.from(this.channels.values());
+  }
 
-;
+  getChannel(channelId: string): MessageChannel | undefined {
+    return this.channels.get(channelId);
+  }
+}
 
-},;
-,;
+// Simple message handler for basic functionality
+export const messageChannelHandler = {
+  sendMessage: (message: string) => {
+    // Implementation for sending messages
+    console.log('Sending message:', message);
+  },
+  receiveMessage: (callback: (message: string) => void) => {
+    // Implementation for receiving messages
+    console.log('Setting up message receiver');
+  }
+};
+
+export default MessageChannelHandler;

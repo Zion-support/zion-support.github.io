@@ -2,11 +2,16 @@ const fs = require('fs');
 const path = require('path');
 
 const corruptedFiles = [
-  'app/services/analytics-dashboard/page.tsx',
-  'app/services/automation-solutions/page.tsx',
-  'app/services/cloud-services/page.tsx',
-  'app/services/crm-platform/page.tsx',
-  'app/services/crm-solution/page.tsx'
+  'pages/docs.tsx',
+  'pages/support.tsx',
+  'pages/automation.tsx',
+  'pages/resources.tsx',
+  'pages/api-docs.tsx',
+  'pages/calendar.tsx',
+  'pages/sitemap.xml.tsx',
+  'pages/guides.tsx',
+  'pages/api-documentation.tsx',
+  'pages/blockchain-solutions.tsx'
 ];
 
 const basicPageTemplate = (title, description, keywords) => `import React from 'react';
@@ -34,7 +39,7 @@ export default function ${title.replace(/\s+/g, '')}Page() {
           Coming Soon
         </h2>
         <p className="text-lg text-gray-600 text-center">
-          This service is currently under development. Please contact us for more information.
+          This page is currently under development. Please contact us for more information.
         </p>
       </div>
       <div className="text-center">
@@ -58,13 +63,13 @@ corruptedFiles.forEach(filePath => {
     fs.mkdirSync(dir, { recursive: true });
   }
   
-  // Extract service name from path
-  const serviceName = path.basename(path.dirname(filePath)).replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  // Extract page name from path
+  const pageName = path.basename(filePath, '.tsx').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   
   const content = basicPageTemplate(
-    serviceName,
-    `Professional ${serviceName.toLowerCase()} services to help your business grow and succeed.`,
-    `${serviceName.toLowerCase()}, business solutions, professional services`
+    pageName,
+    `Professional ${pageName.toLowerCase()} services to help your business grow and succeed.`,
+    `${pageName.toLowerCase()}, business solutions, professional services`
   );
   
   fs.writeFileSync(fullPath, content);
