@@ -68,12 +68,12 @@ const Pricing: React.FC = () => {
               Simple, Transparent Pricing
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that's right for your business. All plans include our core features with no hidden fees.
+              Choose the plan that&apos;s right for your business. All plans include our core features with no hidden fees.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan, index) => (
+            {plans.map((plan, _index) => (
               <Card
                 key={plan.name}
                 className={`relative p-8 ${
@@ -134,7 +134,7 @@ const Pricing: React.FC = () => {
 
           <div className="text-center mt-16">
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Need a custom solution? We're here to help.
+              Need a custom solution? We&apos;re here to help.
             </p>
             <Link href="/contact">
               <Button variant="outline">

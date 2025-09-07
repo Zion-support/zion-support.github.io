@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Zap, Target, CheckCircle } from 'lucide-react';
+// import { Link } from 'react-router-dom';
+import { Brain, Zap, Target } from 'lucide-react';
 import Card from '../components/Card';
-import Button from '../components/Button';
+// import Button from '../components/Button';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';

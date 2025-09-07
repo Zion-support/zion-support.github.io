@@ -27,8 +27,8 @@ const About: React.FC = () => {
             </p>
             <p className="text-gray-300">
               Our team of expert engineers, data scientists, and business strategists
-              work together to deliver solutions that not only meet today's needs but
-              anticipate tomorrow's challenges.
+              work together to deliver solutions that not only meet today&apos;s needs but
+              anticipate tomorrow&apos;s challenges.
             </p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
@@ -128,7 +128,7 @@ const About: React.FC = () => {
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Work With Us?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help transform your business with cutting-edge technology solutions.
+            Let&apos;s discuss how we can help transform your business with cutting-edge technology solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

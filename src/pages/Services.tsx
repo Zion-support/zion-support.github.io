@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Database, Code } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Zap, Shield, Cloud, Database, Code } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Button from '../components/Button';
@@ -68,7 +68,7 @@ const Services: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {services.map((service, index) => (
+            {services.map((service, _index) => (
               <Card key={service.title} className="p-8 hover:shadow-lg transition-shadow">
                 <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
                   <service.icon className="h-8 w-8 text-blue-600 dark:text-blue-400" />

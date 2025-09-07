@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield } from 'lucide-react';
+import { ArrowRight, Users, Zap, Shield } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import TypingAnimation from '../components/TypingAnimation';
 import ScrollAnimation from '../components/ScrollAnimation';
-import ParallaxSection from '../components/ParallaxSection';
+// import ParallaxSection from '../components/ParallaxSection';
 import ParticleBackground from '../components/ParticleBackground';
 import Testimonials from '../components/Testimonials';
 import BlogSection from '../components/BlogSection';
