@@ -61,7 +61,7 @@ export default function ContactPage() {
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-900 border border-green-700 rounded-lg flex items-center">
                 <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                <span className="text-green-300">Message sent successfully! We'll get back to you soon.</span>
+                <span className="text-green-300">Message sent successfully! We&apos;ll get back to you soon.</span>
               </div>
             )}
 
@@ -168,8 +168,8 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                We're here to help you succeed. Reach out to us through any of the channels below, 
-                and we'll get back to you within 24 hours.
+                We&apos;re here to help you succeed. Reach out to us through any of the channels below, 
+                and we&apos;ll get back to you within 24 hours.
               </p>
             </div>
 
@@ -179,7 +179,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                   <p className="text-gray-300">kleber@ziontechgroup.com</p>
-                  <p className="text-gray-400 text-sm">We'll respond within 24 hours</p>
+                  <p className="text-gray-400 text-sm">We&apos;ll respond within 24 hours</p>
                 </div>
               </div>
 
@@ -221,7 +221,7 @@ export default function ContactPage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Let's discuss how Zion Tech Group can help you achieve your goals.
+              Let&apos;s discuss how Zion Tech Group can help you achieve your goals.
             </p>
             <Link
               href="/services"
