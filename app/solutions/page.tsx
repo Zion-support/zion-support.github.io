@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: 'Solutions | Zion Tech Group',
   description: 'Comprehensive technology solutions for modern businesses. AI, automation, and digital transformation services.',
   keywords: 'solutions, technology, AI, automation, digital transformation, business',
@@ -14,11 +13,6 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
-=======
-  title: 'Solutions - Zion Tech Group',
-  description: 'Professional solutions services to help your business grow and succeed.',
-  keywords: 'solutions, business solutions, professional services'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09
 };
 
 export default function SolutionsPage() {
@@ -77,7 +71,6 @@ export default function SolutionsPage() {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
