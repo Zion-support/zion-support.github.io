@@ -6,12 +6,18 @@ export const securityHeaders: Array<{ key: string; value: string }> = [
 
 export const contentSecurityPolicy = {
   directives: {
-    "default-src": ["'self'"],
-    "script-src": ["'self'", "'unsafe-inline'"],
-    "style-src": ["'self'", "'unsafe-inline'"],
-    "img-src": ["'self'", 'data:', 'https:'],
-    "font-src": ["'self'", 'https:', 'data:'],
-    "connect-src": ["'self'"],
-    "frame-ancestors": ["'none'"],
-  } as Record<string, string[]>,
+    defaultSrc: ["'self'"],
+    styleSrc: ["'self'", "'unsafe-inline'"],
+    scriptSrc: ["'self'"],
+    imgSrc: ["'self'", "data:", "https:"],
+    connectSrc: ["'self'"],
+    fontSrc: ["'self'"],
+    objectSrc: ["'none'"],
+    mediaSrc: ["'self'"],
+    frameSrc: ["'none'"],
+<<<<<<< HEAD
+  }}
+=======
+  }
 };
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

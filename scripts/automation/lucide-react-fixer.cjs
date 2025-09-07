@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -7,15 +22,26 @@ const { execSync } = require("child_process")
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
     return ["User"", "UserCheck", "UserX", "UserPlus", "UserMinus", "UserEdit", "UserSearch", "Users"", "Users2", "UserStar", "UserHeart", "UserCog", "UserShield", "Eye"", "EyeOff", "MousePointer", "Clock", "MapPin", "Smartphone", "Tablet", "Laptop", "Server"", "Database", "HardDrive", "Cpu", "Network", "Wifi", "Bluetooth", "Radio", "Signal"", "Antenna", "Satellite", "Orbit", "Star", "Navigation", "Moon", "Sun", "Binary"", "Lock", "Key", "Fingerprint", "Brain", "Rocket", "DollarSign", "Search", "Sparkles"", "Zap", "Settings", "Settings2", "Cog", "Cog2", "Device", "Desktop", "Monitor"", "Smartphone", "Tablet", "Laptop", "Server", "Database", "HardDrive", "Cpu"", "Network", "Wifi", "Bluetooth", "Radio", "Signal", "Antenna", "Satellite", "Orbit"", "Star", "Navigation", "Moon", "Sun", "Binary", "Lock", "Key", "Fingerprint", "Brain"", "Rocket", "DollarSign", "Search", "Sparkles", "Zap"]
+>>>>>>> origin/chore/fix-lint-and-merge
   this.log("� Starting Lucide React icon fix automation...")
-  "file"
+  file
             "error"
-    return ["User", "UserCheck", "UserX", "UserPlus", "UserMinus", "UserEdit", "UserSearch", "Users", "Users2", "UserStar", "UserHeart", "UserCog", "UserShield", "Eye", "EyeOff", "MousePointer", "Clock", "MapPin", "Smartphone", "Tablet", "Laptop", "Server", "Database", "HardDrive", "Cpu", "Network", "Wifi", "Bluetooth", "Radio", "Signal", "Antenna", "Satellite", "Orbit", "Star", "Navigation", "Moon", "Sun", "Binary", "Lock", "Key", "Fingerprint", "Brain", "Rocket", "DollarSign", "Search", "Sparkles", "Zap", "Settings", "Settings2", "Cog", "Cog2", "Device", "Desktop", "Monitor", "Smartphone", "Tablet", "Laptop", "Server", "Database", "HardDrive", "Cpu", "Network", "Wifi", "Bluetooth", "Radio", "Signal", "Antenna", "Satellite", "Orbit", "Star", "Navigation", "Moon", "Sun", "Binary", "Lock", "Key", "Fingerprint", "Brain", "Rocket", "DollarSign", "Search", "Sparkles", "Zap"]
+    return [User, "UserCheck", UserX, "UserPlus", UserMinus, "UserEdit", UserSearch, "Users", Users2, "UserStar", UserHeart, "UserCog", UserShield, "Eye", EyeOff, "MousePointer", Clock, "MapPin", Smartphone, "Tablet", Laptop, "Server", Database, "HardDrive", Cpu, "Network", Wifi, "Bluetooth", Radio, "Signal", Antenna, "Satellite", Orbit, "Star", Navigation, "Moon", Sun, "Binary", Lock, "Key", Fingerprint, "Brain", Rocket, "DollarSign", Search, "Sparkles", Zap, "Settings", Settings2, "Cog", Cog2, "Device", Desktop, "Monitor", Smartphone, "Tablet", Laptop, "Server", Database, "HardDrive", Cpu, "Network", Wifi, "Bluetooth", Radio, "Signal", Antenna, "Satellite", Orbit, "Star", Navigation, "Moon", Sun, "Binary", Lock, "Key", Fingerprint, "Brain", Rocket, "DollarSign", Search, "Sparkles", Zap]
   this.log("� Starting Lucide React icon fix automation...")
-  "file"
+  file
             "error"
-  this.log("Icon fix automation "failed": ${error.message  }", "ERROR")
+  this.log(Icon fix automation failed": ${error.message  }", ERROR)
         await this.commitFixes(fixes);")}"
+<<<<<<< HEAD
+
+  arrayOfFiles = await this.getAllFiles(fullPath")
+
+
+
+=======
+  const fullPath = path.join(dirPath, ")
+
+=======
 ")} catch (error) {"}
       this.log("Icon fix automation "failed": ${error.message}", "ERROR")
       this.log("Icon fix automation "failed": ${error.message}", "ERROR")
@@ -57,7 +83,11 @@ const { execSync } = require("child_process")
       if (line.trim().startsWith("import ") && line.includes("lucide-react")
         const match = line.match(/import\s*\{([^}]+)\}\s*from\s*["]lucide-react[""]
   const icons = match[1].split(",")
+<<<<<<< HEAD
   if($2) {importLines.push("import { ${usedIcons.join(", ")} } from "lucide-react";"
+=======
+          if (usedIcons.length > 0) {importLines.push("import { ${usedIcons.join(", ")} } from "lucide-react";"
+>>>>>>> merged-prs-20250907-203621
       } else if (inImportBlock && line.trim() === ""
         newLines.push("")
     return newLines.join("\n")
@@ -72,7 +102,44 @@ const { execSync } = require("child_process")
       .replace(/{\s*}/g, "{}")
   const fullPath = path.join(dirPath, ")
   arrayOfFiles = await this.getAllFiles(fullPath")
+<<<<<<< HEAD
+
+  const fullPath = path.join(dirPath, ")
   const fullPath = path.join(dirPath, ")
   const fullPath = path.join(dirPath, ")
 
 
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  const fullPath = path.join(dirPath, ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  const fullPath = path.join(dirPath, ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  const fullPath = path.join(dirPath, ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+<<<<<<< HEAD
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621

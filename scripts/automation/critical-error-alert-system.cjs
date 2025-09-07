@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -22,14 +37,22 @@ const { execSync } = require("child_process")
     fs.appendFileSync(logFile, logMessage + "\n")
   this.log("� Checking for critical errors...")
     const resourceStatus = await this.checkSystemResources();"
+<<<<<<< HEAD
   if($2) {"}
+=======
+    if (resourceStatus.critical) {"}
+>>>>>>> merged-prs-20250907-203621
       criticalErrors.push(resourceStatus);")}"
+>>>>>>> origin/chore/fix-lint-and-merge
 this.log(Found ${criticalErrors.length} critical error conditions")
-  this.log(" Checking build status...")
+  this.log( Checking build status...)
       execSync("npm run build")
-  "cwd"
-        "stdio": "pipe"
+  cwd
+        "stdio": pipe
         "timeout"
+<<<<<<< HEAD
+
+=======
   "type": "build"
         "critical"
         "message": "Build successful"
@@ -37,14 +60,18 @@ this.log(Found ${criticalErrors.length} critical error conditions")
   const errorCount = this.countBuildErrors(error.stdout || "")
   "type": "build"
         "critical": errorCount >= this.criticalThresholds.buildFailures,"message": "Build failed with ${errorCount  } errors"
+>>>>>>> origin/chore/fix-lint-and-merge
         "severity"
-            ? "critical"
+            ? critical
             : "high"
-  this.log(" Checking TypeScript status...")
+  this.log( Checking TypeScript status...)
       execSync("npm run type-check")
-  "cwd"
-        "stdio": "pipe"
+  cwd
+        "stdio": pipe
         "timeout"
+<<<<<<< HEAD
+
+=======
   "type": "typescript"
         "critical"
         "message": "TypeScript check passed"
@@ -52,14 +79,18 @@ this.log(Found ${criticalErrors.length} critical error conditions")
   const errorCount = this.countTypeScriptErrors(error.stdout || "")
   "type": "typescript"
         "critical": errorCount >= this.criticalThresholds.typeErrors,"message": "TypeScript check failed with ${errorCount  } errors"
+>>>>>>> origin/chore/fix-lint-and-merge
         "severity"
-            ? "critical"
+            ? critical
             : "high"
-  this.log(" Checking ESLint status...")
+  this.log( Checking ESLint status...)
       execSync("npm run lint")
-  "cwd"
-        "stdio": "pipe"
+  cwd
+        "stdio": pipe
         "timeout"
+<<<<<<< HEAD
+
+=======
   "type": "lint"
         "critical"
         "message": "ESLint check passed"
@@ -67,14 +98,18 @@ this.log(Found ${criticalErrors.length} critical error conditions")
   const errorCount = this.countLintErrors(error.stdout || "")
   "type": "lint"
         "critical": errorCount >= this.criticalThresholds.lintErrors,"message": "ESLint check failed with ${errorCount  } errors"
+>>>>>>> origin/chore/fix-lint-and-merge
         "severity"
-            ? "critical"
+            ? critical
             : "high"
-  this.log(" Checking dependency status...")
+  this.log( Checking dependency status...)
       execSync("npm ls")
-  "cwd"
-        "stdio": "pipe"
+  cwd
+        "stdio": pipe
         "timeout"
+<<<<<<< HEAD
+
+=======
   "type": "dependencies"
         "critical"
         "message": "Dependencies check passed"
@@ -82,9 +117,13 @@ this.log(Found ${criticalErrors.length} critical error conditions")
   const issueCount = this.countDependencyIssues(error.stdout || "")
   "type": "dependencies"
         "critical": issueCount >= this.criticalThresholds.dependencyIssues,"message": "Dependency check failed with ${issueCount  } issues"
+>>>>>>> origin/chore/fix-lint-and-merge
         "severity"
-            ? "critical"
+            ? critical
             : "high"
+<<<<<<< HEAD
+
+=======
   this.log(" Checking system resources...")
       const diskSpace = execSync("df -h .")
   "cwd"
@@ -108,75 +147,121 @@ this.log(Found ${criticalErrors.length} critical error conditions")
   "type": "system"
             "critical": true,"message": "Disk usage critical: ${usage}%"
             "severity": "critical"
+>>>>>>> origin/chore/fix-lint-and-merge
             "details"
-  "type": "system"
+  type: "system"
+        critical
+        "message": System resources OK
+        "severity": low
+  "type": system
         "critical"
-        "message": "System resources OK"
-        "severity": "low"
-  "type": "system"
-        "critical"
-        "message": "Could not check system resources"
-        "severity": "medium"
-        "error"
+        message: "Could not check system resources"
+        severity: "medium"
+        error
       .split("\n")
-          line.includes("error")
+          line.includes(error)
           line.includes("Error")
-          line.includes("ERROR")
+          line.includes(ERROR)
       .split("\n")
-      .filter(line => line.includes("error TS") || line.includes("warning TS")
+      .filter(line => line.includes(error TS) || line.includes("warning TS")
+      .split(\n)
+      .filter(line => line.includes("error") || line.includes(warning)
       .split("\n")
-      .filter(line => line.includes("error") || line.includes("warning")
-      .split("\n")
-          line.includes("UNMET PEER DEPENDENCY")
+          line.includes(UNMET PEER DEPENDENCY)
           line.includes("npm ERR!")
-          line.includes(")
-  this.log(� SENDING CRITICAL "ALERT")
-      "CRITICAL"
-      this.reportsPath,critical-alert-${Date.now()}.json"
+          line.includes()
+  this.log(� SENDING CRITICAL ALERT")
+      "CRITICAL
+      this.reportsPath,critical-alert-${Date.now()}.json
   "timestamp"
-      "type"
+      type
       "message"
-      "severity"
+      severity
       "details"
-      "actionRequired"
-    console.error("\n" + "=")
+      actionRequired
+    console.error("\n" + =)
     console.error("� CRITICAL ERROR ALERT �")
-    console.error("=".repeat(80));console.error(""Type": ${error.type.toUpperCase()}");console.error(""Message": ${error.message}");console.error(""Severity": ${error.severity.toUpperCase()}");console.error(""Timestamp": ${new Date().toISOString()}"
+    console.error(=.repeat(80));console.error(""Type: ${error.type.toUpperCase()});console.error(""Message: ${error.message});console.error(""Severity: ${error.severity.toUpperCase()});console.error(""Timestamp: ${new Date().toISOString()}
     console.error("=")
-    console.error("IMMEDIATE ACTION REQUIRED!")
-    console.error("=".repeat(80) + "\n"
-    console.error("\n" + "=")
+    console.error(IMMEDIATE ACTION REQUIRED!)
+    console.error("=".repeat(80) + \n
+    console.error("\n" + =)
     console.error("� CRITICAL ERROR ALERT �")
-    console.error("=".repeat(80));console.error(""Type": ${error.type.toUpperCase()}");console.error(""Message": ${error.message}");console.error(""Severity": ${error.severity.toUpperCase()}");console.error(""Timestamp": ${new Date().toISOString()}"
+    console.error(=.repeat(80));console.error(""Type: ${error.type.toUpperCase()});console.error(""Message: ${error.message});console.error(""Severity: ${error.severity.toUpperCase()});console.error(""Timestamp: ${new Date().toISOString()}
     console.error("=")
-    console.error("IMMEDIATE ACTION REQUIRED!")
-    console.error("=".repeat(80) + "\n"
+    console.error(IMMEDIATE ACTION REQUIRED!)
+    console.error("=".repeat(80) + \n
     // Store in alert historythis.alertHistory.set("${error.type}-${Date.now()}"
-  this.log(" Generating critical error alert report...")
+  this.log( Generating critical error alert report...)
   "timestamp"
-      "summary"
+      summary
         "criticalTypes"
-        "highestSeverity"
-                  e.severity === "critical" ? 3 : e.severity === "high"
+        highestSeverity
+                  e.severity === "critical" ? 3 : e.severity === high
       "criticalErrors"
-      "alertHistory"
-      "recommendations": ["Address critical errors immediately"", "Review error patterns and implement preventive measures", "Consider rolling back to last stable version"", "Implement automated error recovery systems", ""]
-      this.reportsPath,critical-error-alert-report.json"
-this.log(`� Report "generated"`)
-  this.log(" Starting Critical Error Alert System...")
-  this.log(" No critical errors detected")
-        return { "success": true, "criticalErrors": [], "alerts"}
-  this.log(" Starting Critical Error Alert System...")
-  this.log(" No critical errors detected")
-        return { "success": true, "criticalErrors": [], "alerts"}
-      this.log("� Critical Error Alert System completed!")
-      this.log( Detected ${criticalErrors.length} critical error conditions")
+      alertHistory
+      "recommendations": [Address critical errors immediately", "Review error patterns and implement preventive measures, Consider rolling back to last stable version"", Implement automated error recovery systems, ""]
+      this.reportsPath,critical-error-alert-report.json
+this.log(`� Report generated"`)
+  this.log(" Starting Critical Error Alert System...)
+  this.log( No critical errors detected")
+        return { "success: true, criticalErrors": [], "alerts}
+  this.log( Starting Critical Error Alert System...")
+  this.log(" No critical errors detected)
+        return { success": true, "criticalErrors: [], alerts"}
+      this.log("� Critical Error Alert System completed!)
+      this.log( Detected ${criticalErrors.length} critical error conditions)
       );this.log(")
+<<<<<<< HEAD
+  "success
+        criticalErrors"
+        "alerts
+  this.log(� Critical Error Alert System failed")
+
+
+        "ERROR
+
+        ERROR"
+=======
   "success"
         "criticalErrors"
         "alerts"
   this.log(� Critical Error Alert System "failed")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+        "ERROR"
+<<<<<<< HEAD
         "ERROR"
         "ERROR"
 
 
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+        "ERROR"
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+        "ERROR"
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

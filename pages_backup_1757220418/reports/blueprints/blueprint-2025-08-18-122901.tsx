@@ -63,7 +63,6 @@ const Blueprint20250818122901: React.FC = () => {
       benefit: 'Versatile content delivery'
       status: 'implemented'
     }
-  const systemComponents = [
     {
       name: 'Content Generator',
       description: 'AI-powered content creation engine',
@@ -93,7 +92,6 @@ const Blueprint20250818122901: React.FC = () => {
   }
 }
   ];
-  const features = [
     {
       feature: 'Natural Language Generation',
       description: 'Advanced NLP for human-like content creation',

@@ -91,7 +91,6 @@ const PerformancePage: React.FC = () => {
   }
 }
   ];
-  const recentReports = [
     {
       id: 'performance-weekly-2025-01-17',
       title: 'Weekly Performance Report',

@@ -1,19 +1,20 @@
 import React from 'react';
 
+<<<<<<< HEAD
 interface AppMinimalProps {
   className?: string;
   children?: React.ReactNode;
 }
 
 const AppMinimal: React.FC<AppMinimalProps> = ({ 
-  className = '', 
+  className = ', 
   children 
 }) => {
   return (
     <main 
       className={`app-minimal ${className}`}
-      role="main"
-      data-testid="app-minimal"
+      role="main
+      data-testid=app-minimal"
     >
       {children || (
         <div className="minimal-content">
@@ -26,3 +27,19 @@ const AppMinimal: React.FC<AppMinimalProps> = ({
 };
 
 export default AppMinimal;
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+export default function AppMinimal(): React.JSX.Element {
+  return (
+    <main>
+      <h1>Zion Tech Group - Minimal App</h1>
+      <p>Building the future with innovative technology solutions</p>
+<<<<<<< HEAD
+    </main>)
+
+=======
+    </main>
+  );
+}
+>>>>>>> origin/chore/fix-lint-and-merge

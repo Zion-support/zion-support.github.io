@@ -46,7 +46,6 @@ function resolveMergeConflicts(filePath) {
     
     // Remove merge conflict markers and keep the HEAD version (first part)
     content = content.replace(/    // Clean up any remaining conflict markers
-    content = content.replace(/    content = content.replace(/=======\n?/g, '');
     content = content.replace(/    
     // Clean up extra newlines
     content = content.replace(/\n{3,}/g, '\n\n');

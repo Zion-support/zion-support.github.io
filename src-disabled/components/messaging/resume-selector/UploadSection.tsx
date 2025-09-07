@@ -68,7 +68,6 @@ interface UploadSectionProps {;
 }
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Upload, FileText } from 'lucide-react';
 
 interface UploadSectionProps {
   customFile: File | null;,
@@ -181,9 +180,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
           </div>
         </div>
-import React from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Upload, FileText } from 'lucide-react';
 interface UploadSectionProps {;
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;

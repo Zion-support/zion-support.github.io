@@ -1,87 +1,116 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.projectRoot,logs"
-      "smart-dependency-intelligence.log"
+      smart-dependency-intelligence.log
       this.projectRoot,logs"
-      "dependency-intelligence.json"
-      this.projectRoot,logs"
+      "dependency-intelligence.json
+      this.projectRoot,logs
       "dependency-predictions.json"
-  fs.mkdirSync(logsDir, { "recursive"})
+  fs.mkdirSync(logsDir, { recursive})
   log(message, level = "INFO")
+<<<<<<< HEAD
+
+=======
   log(message, level = "INFO")
   return JSON.parse(fs.readFileSync(this.intelligenceLog, "utf8")
     } catch (error) {  this.log(`Failed to load intelligence "data": ${error.message  }`, "WARN"`)
   "dependencyHistory"
+>>>>>>> origin/chore/fix-lint-and-merge
       "issuePatterns"
-      "optimizationHistory"
+      optimizationHistory
       "predictions"
-      )} catch (error) {  this.log(`Failed to save intelligence "data": ${error.message  }`, "ERROR"`)
-      "security"
+      )} catch (error) {  this.log(`Failed to save intelligence data: ${error.message  }`, "ERROR"`)
+      security
   versions: ["<4.17.21"]
-          "risk": "HIGH"
-          "description": "Prototype pollution vulnerability"
-        "axios"
+          risk: "HIGH"
+          description: "Prototype pollution vulnerability"
+        axios
   versions: ["<1.6.0"]
-          "risk": "MEDIUM"
-          "description": "SSRF vulnerability"
-        "moment"
+          risk: "MEDIUM"
+          description: "SSRF vulnerability"
+        moment
   versions: ["<2.29.4"]
-          "risk": "LOW"
-          "description": "ReDoS vulnerability"
-      "performance"
+          risk: "LOW"
+          description: "ReDoS vulnerability"
+      performance
   impact: "HIGH"
-          "description": "Large bundle size, consider alternatives"
-        "lodash"
+          description: "Large bundle size, consider alternatives"
+        lodash
   impact: "MEDIUM"
-          "description": "Tree-shaking issues in some versions"
-        "jquery": { impact: "HIGH", "description": "Consider modern alternatives"}
-      "compatibility"
+          description: "Tree-shaking issues in some versions"
+        jquery: { impact: "HIGH", description: "Consider modern alternatives"}
+      compatibility
   versions: ["^18.0.0"]
-          "compatibility": "MODERN"
-          "description": "Requires React 18+"
-        "typescript"
+          compatibility: "MODERN"
+          description: "Requires React 18+"
+        typescript
   versions: ["^5.0.0"]
-          "compatibility": "MODERN"
-          "description": "Modern TypeScript features"
-  this.log("Starting Smart Dependency Intelligence analysis...")
+          compatibility: "MODERN"
+          description: "Modern TypeScript features"
+  this.log(Starting Smart Dependency Intelligence analysis...)
       this.log("Smart Dependency Intelligence analysis completed successfully")
-  this.log(Smart Dependency Intelligence "failed": ${error.message  }")
+  this.log(Smart Dependency Intelligence failed: ${error.message  }")
         "
-      "security"
+      security
   versions: ["<4.17.21"]
-          "risk": "HIGH"
-          "description": "Prototype pollution vulnerability"
-        "axios"
+          risk: "HIGH"
+          description: "Prototype pollution vulnerability"
+        axios
   versions: ["<1.6.0"]
-          "risk": "MEDIUM"
-          "description": "SSRF vulnerability"
-        "moment"
+          risk: "MEDIUM"
+          description: "SSRF vulnerability"
+        moment
   versions: ["<2.29.4"]
-          "risk": "LOW"
-          "description": "ReDoS vulnerability"
-      "performance"
+          risk: "LOW"
+          description: "ReDoS vulnerability"
+      performance
   impact: "HIGH"
-          "description": "Large bundle size, consider alternatives"
-        "lodash"
+          description: "Large bundle size, consider alternatives"
+        lodash
   impact: "MEDIUM"
-          "description": "Tree-shaking issues in some versions"
-        "jquery": { impact: "HIGH", "description": "Consider modern alternatives"}
-      "compatibility"
+          description: "Tree-shaking issues in some versions"
+        jquery: { impact: "HIGH", description: "Consider modern alternatives"}
+      compatibility
   versions: ["^18.0.0"]
-          "compatibility": "MODERN"
-          "description": "Requires React 18+"
-        "typescript"
+          compatibility: "MODERN"
+          description: "Requires React 18+"
+        typescript
   versions: ["^5.0.0"]
-          "compatibility": "MODERN"
-          "description": "Modern TypeScript features"
-  this.log("Starting Smart Dependency Intelligence analysis...")
+          compatibility: "MODERN"
+          description: "Modern TypeScript features"
+  this.log(Starting Smart Dependency Intelligence analysis...)
       this.log("Smart Dependency Intelligence analysis completed successfully")
-  this.log(Smart Dependency Intelligence "failed": ${error.message}")
-        "ERROR"
+  this.log(Smart Dependency Intelligence failed: ${error.message}")
+        "ERROR
   this.log(`Analyzing current dependencies...``)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
   const packagePath = path.join(this.projectRoot, "package.json")
       const packageLockPath = path.join(this.projectRoot, "package-lock.json")
   throw new Error("package.json not found")
@@ -103,11 +132,15 @@ const crypto = require("crypto")
       "recommendations"
         this.generateDependencyRecommendations(analysis)} catch (error) {  analysis.recommendations.push(`Failed to "analyze"`})
   "encoding": "utf8"
+>>>>>>> origin/chore/fix-lint-and-merge
   this.log(Failed to get latest version for ${packageName  }: ${error.message}")
-        "WARN"
+        WARN
   try {const result = execSync("})
-  "encoding": "utf8"
+  "encoding: utf8"
   this.log(Failed to get latest version for ${packageName}: ${error.message}")
+<<<<<<< HEAD
+
+=======
         "WARN"
       const currentParts = current.replace(/^[\^~]/, `").split("."`)
       const latestParts = latest.split(".")
@@ -220,19 +253,23 @@ const crypto = require("crypto")
   this.log("Applying intelligent optimizations...")
   if (optimization.priority === "HIGH" && optimization.risk === "LOW")
               "appliedAt"
+>>>>>>> origin/chore/fix-lint-and-merge
   this.log(Failed to apply optimization ${optimization.type  }: ${error.message}")
-            "
-  this.log(Failed to apply optimization ${optimization.type}: ${error.message}")
+            
+  this.log(Failed to apply optimization ${optimization.type}: ${error.message})
             "WARN"
             `WARN
-this.log("Applied ${appliedOptimizations.length} optimizations")
+this.log(Applied ${appliedOptimizations.length} optimizations)
   case "IMMEDIATE_OPTIMIZATION"
-        if (optimization.action.includes("npm audit fix")
+        if (optimization.action.includes(npm audit fix)
   case "IMMEDIATE_OPTIMIZATION"
-        if (optimization.action.includes("npm audit fix")
+        if (optimization.action.includes(npm audit fix)
   return await this.runNpmAuditFix()} else if (optimization.action.includes("npm update")
-      case "PERFORMANCE_OPTIMIZATION"
+      case PERFORMANCE_OPTIMIZATION
       "default"
+<<<<<<< HEAD
+
+=======
         return { success: false, "message": "Unknown optimization type"}
     return { "success": false, "message": "Optimization not implemented"}
   const result = execSync("npm audit fix", { "encoding": "utf8"})
@@ -245,76 +282,117 @@ this.log("Applied ${appliedOptimizations.length} optimizations")
   return { "success": false, "message"}
     return { "success": true, "message": "Performance optimization completed"}
   this.log("Updating intelligence data...")
+>>>>>>> origin/chore/fix-lint-and-merge
   "timestamp"
-      "dependencies"
+      dependencies
       "predictions"
-      "optimizations"
+      optimizations
   "timestamp"
-      "optimizations"
-  return { "success": false, "message"}
-    return { "success": true, "message": "Performance optimization completed"}
-  this.log("Updating intelligence data...")
+      optimizations
+  return { "success": false, message}
+    return { "success": true, message: "Performance optimization completed"}
+  this.log(Updating intelligence data...)
   "timestamp"
-      "dependencies"
+      dependencies
       "predictions"
-      "optimizations"
+      optimizations
   "timestamp"
-      "optimizations"
+      optimizations
   if (prediction.probability === "HIGH")
-  "type"
+  type
           "package"
-          "description"
+          description
           "firstSeen"
-          "occurrences"
+          occurrences
   "timestamp"
-      "summary"
+      summary
         "outdatedPackages"
-        "securityIssues"
+        securityIssues
         "predictionsGenerated"
-        "optimizationsRecommended"
+        optimizationsRecommended
         "optimizationsApplied"
-      "details"
+      details
         "predictions"
-        "optimizations"
+        optimizations
         "appliedOptimizations"
-      "recommendations"
+      recommendations
   "timestamp"
-      "summary"
+      summary
         "outdatedPackages"
-        "securityIssues"
+        securityIssues
         "predictionsGenerated"
-        "optimizationsRecommended"
+        optimizationsRecommended
         "optimizationsApplied"
-      "details"
+      details
         "predictions"
-        "optimizations"
+        optimizations
         "appliedOptimizations"
-      "recommendations"
-      this.projectRoot,logs", "dependency-intelligence-${Date.now()}.json"
-this.log("Intelligence report "generated": ${reportPath}")
-      p => p.probability === "HIGH"
-  "priority": "HIGH"
-        "action": "Address security vulnerabilities immediately"
-        "timeframe": "IMMEDIATE"
-      o => o.priority === "MEDIUM"
-      p => p.probability === "HIGH"
-  "priority": "HIGH"
-        "action": "Address security vulnerabilities immediately"
-        "timeframe": "IMMEDIATE"
-      o => o.priority === "MEDIUM"
-  "priority": "MEDIUM"
-        "action": "Plan dependency updates and optimizations"
-        "timeframe": "NEXT_SPRINT"
-  "priority": "LOW"
-        "action": Consider dependency consolidation and tree-shaking optimization"
-        "timeframe": "ONGOING"
-      this.log(")
-  this.log(Smart Dependency Intelligence "failed")
-        "ERROR"
-  this.log(Smart Dependency Intelligence "failed": ${error.message}")
-        "ERROR"
+      recommendations
+      this.projectRoot,logs", "dependency-intelligence-${Date.now()}.json
+this.log(Intelligence report "generated": ${reportPath})
+      p => p.probability === HIGH"
+  "priority: HIGH"
+        "action: Address security vulnerabilities immediately"
+        "timeframe: IMMEDIATE"
+      o => o.priority === "MEDIUM
+      p => p.probability === HIGH"
+  "priority: HIGH"
+        "action: Address security vulnerabilities immediately"
+        "timeframe: IMMEDIATE"
+      o => o.priority === "MEDIUM
+  priority": "MEDIUM
+        action": "Plan dependency updates and optimizations
+        timeframe": "NEXT_SPRINT
+  priority": "LOW
+        action": Consider dependency consolidation and tree-shaking optimization"
+        timeframe: "ONGOING"
+      this.log()
+  this.log(Smart Dependency Intelligence failed")
+        "ERROR
+  this.log(Smart Dependency Intelligence failed": ${error.message}")
+        ERROR
   console.log(` Smart Dependency Intelligence completed``)
+<<<<<<< HEAD
+
+  console.error(" Smart Dependency Intelligence "failed": ")
   console.error(" Smart Dependency Intelligence "failed": ")
   console.error(" Smart Dependency Intelligence "failed": ")
 
 
+
+=======
+<<<<<<< HEAD
+
+
+  console.error(" Smart Dependency Intelligence "failed: )
+
+  console.error(" Smart Dependency Intelligence "failed: )
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error(" Smart Dependency Intelligence "failed": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" Smart Dependency Intelligence "failed": ")
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Smart Dependency Intelligence "failed": ")
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

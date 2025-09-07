@@ -201,7 +201,6 @@ interface VideoCallRoomProps {}
 export const VideoCallRoom: React.FC < VideoCallRoomProps> = ({};
   room_id;
   participants = [],
-    const secs = seconds % 60;
 }  on_leave,
   onToggleMute,
   onToggleVideo,

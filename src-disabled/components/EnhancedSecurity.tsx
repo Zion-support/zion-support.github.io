@@ -9,7 +9,7 @@ interface SecurityThreat {}
 export const EnhancedSecurity: React.FC = () => { const [isOpen, setIsOpen] =;
   useState(false);}
   const [securityStatus, setSecurityStatus] = useState<SecurityStatus />({ https: false, csp: false, hsts: false, xss: false, frameOptions: false, contentType: false, referrerPolicy: false, permissionsPolicy: false}
-}) const [threats, setThreats] = useState<SecurityThreat []"  />([]) const [isScanning, setIsScanning] = useState(false);"
-  const [lastScan, setLastScan] = useState<Date | null"  />(null)  useEffect(() => {}"
-"";}
+}) const [threats, setThreats] = useState<SecurityThreat []\"  />([]) const [isScanning, setIsScanning] = useState(false);"
+  const [lastScan, setLastScan] = useState<Date | null\"  />(null)  useEffect(() => {}"
+\"\";}
 }}"

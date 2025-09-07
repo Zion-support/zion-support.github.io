@@ -3,13 +3,13 @@
   useState (false) ;}
   useEffect ( () => { const timer = setTimeout ( () => setIsVisible (true) , 100)  const loadTimer = setTimeout ( () => setIsLoaded (true) , 500) ;}
   return () => { clearTimeout (timer)  clearTimeout (loadTimer)  } }, []) ;
-  const stats = [ {number: '100+'}
+  const stats = [ { number: '100+',}
   label: 'AI Services', icon: ', color: 'from - cyan - 400 to - blue - 400,}
-}, {number: '150+'}
+}, { number: '150+',}
   label: 'Micro SAAS Solutions', icon: ', color: 'from - blue - 400 to - purple - 400,}
-}, {number: '24 / 7'}
+}, { number: '24 / 7',}
   label: 'IT Support', icon: ', color: 'from - purple - 400 to - pink - 400,}
-}, {number: 'Global'}
+}, { number: 'Global',}
   label: 'Service Coverage', icon: ', color: 'from - green - 400 to - teal - 400'}] if (!isVisible) { return (' <section className='relative py - 20 px - 4 overflow - hidden min - h-[600px] flex items - center justify - center' />' <div className='text - center' />' <div className='w - 16 h - 16 border - 4 border - cyan - 500 border - t-transparent rounded - full animate - spin mx - auto mb - 4' /></div>' <p className='text - cyan - 400 text - lg font - medium' /> Loading Zion Tech Group... </p> </div> </section>),}
 };
   return () <section' className='relative py - 20 px - 4 overflow - hidden' role='banner' aria - label='Zion Tech Group Hero Section'  /> {}' <div className='absolute inset - 0 futuristic - bg' /> <div' className='absolute top - 0 left - 0 w - 96 h - 96 bg - cyan - 500 / 10 rounded - full blur - 3xl animate - pulse animate - quantum - float' aria - hidden='true'  /></div> <div' className='absolute top - 0 right - 0 w - 96 h - 96 bg - blue - 500 / 10 rounded - full blur - 3xl animate - pulse animate - quantum - float animation - delay - 1000' aria - hidden='true'  /></div> <div' className='absolute bottom - 0 left - 1/2 w - 96 h - 96 bg - purple - 500 / 10 rounded - full blur - 3xl animate - pulse animate - quantum - float animation - delay - 2000' aria - hidden='true'  /></div> </div> {} <div' className='absolute inset - 0 cyber - grid - bg opacity - 30' aria - hidden='true'  /></div> {} {isLoaded && (<div' className='absolute inset - 0 overflow - hidden pointer - events - none' aria - hidden='true'  /> {[...Array (10) ].map ( (_, i) => (<div key={i}' className='absolute text - cyan - 400 text - xs animate - matrix - rain opacity - 20' style={{ ` left: `${Math.random () * 10,}
@@ -209,7 +209,7 @@ const timer = setTimeout(() => setIsVisible(true), 100)const loadTimer = setTime
            /></div>'''';
           <div'''';
             className='absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000''''';
-            aria-hidden='true''"'";
+            aria-hidden='true''\"'\";
            /></div>;}
 </>;}
       )}

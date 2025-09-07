@@ -13,9 +13,6 @@ export function EnhancedNewsletterForm() {
   const { toast } = useToast();
 
   const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
 
           toast.success(data.message || "Thanks for subscribing!")
         }
@@ -226,7 +223,6 @@ const res = await fetch('/api/newsletter', {
 
 }
 
-      const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: trimmed })

@@ -63,6 +63,7 @@ const AdminPartnersPage: React.FC = () => {
   useEffect(() => {
     // Simulate loading partners
     setTimeout(() => {
+<<<<<<< HEAD:pages_backup_1757220418/admin/partners.tsx
       setPartners(mockPartners)
       setLoading(false)
     }, 1000)
@@ -90,6 +91,32 @@ const AdminPartnersPage: React.FC = () => {
       case 'pending': return 'bg-yellow-100 text-yellow-800'
       default: return 'bg-gray-100 text-gray-800'
     }
+=======
+      setPartners(mockPartners);
+      setLoading(false);
+    }, 1000);  }, []);
+  async function updatePartner(code: string, updates: any) {
+    await fetch('/api/admin/partners/update', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ code, ...updates })
+    });
+    const res = await fetch('/api/admin/partners/list');
+    const json = await res.json();
+    setPartners(json.partners |[]);  }
+  async function viewFlags(code: string) {
+    setSelected(code)
+    const res = await fetch(
+      `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
+    );
+    setFlags(json.flags |[]);
+
+  }
+    setFlags(json.flags || []);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/admin/partners.tsx
   }
   const totalPartners = partners.length
   const activePartners = partners.filter(p => p.status === 'active').length

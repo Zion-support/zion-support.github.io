@@ -15,7 +15,6 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {
-<<<<<<< HEAD
 
   const router = useRouter();
   const { slug } = router.query as { slug: string },
@@ -26,16 +25,6 @@ export default function BlogPost() {
   const [error, setError] = useState<string | null>(null);
   const timedOut = useSkeletonTimeout(20000);
   
-=======
-  const router = useRouter($2);
-  const { slug } = router.query as { slug: string},
-  const [post, setPost] = useState<BlogPostType | null>(null),
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
-  const [showShareMenu, setShowShareMenu] = useState($2);
-  const [isLoading, setIsLoading] = useState($2);
-  const [error, setError] = useState<string | null>(null),
-  const timedOut = useSkeletonTimeout($2);
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
   useEffect(() => {
     const fetchPost = async () => {
       setIsLoading(true);
@@ -56,15 +45,10 @@ export default function BlogPost() {
         logErrorToProduction('Failed to fetch blog post', { data: err }),
         setError('Failed to load article')
       }
-<<<<<<< HEAD
 
       const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
-=======
-      const currentPost = $2;
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
       if (currentPost) {
         setPost(currentPost);
-        const related = BLOG_POSTS.filter(
           (p) =>
             p.id !== currentPost.id &&
             (p.category === currentPost.category ||
@@ -75,19 +59,12 @@ export default function BlogPost() {
         router.replace('/blog')
       }
       setIsLoading(false)
-<<<<<<< HEAD
     };
 
     fetchPost();
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router]);
   
-=======
-    },
-    fetchPost(),
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [slug, router]),
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
   if (isLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
@@ -112,7 +89,6 @@ export default function BlogPost() {
       </div>
     )
   }
-<<<<<<< HEAD
 
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
@@ -121,13 +97,6 @@ export default function BlogPost() {
     const url = encodeURIComponent(window.location.href);
     const title = encodeURIComponent(post.title);
     
-=======
-  // Helper function to get share URL,
-  const getShareUrl = (platform: string) => {,
-    if (!post) return '',
-    const url = encodeURIComponent(window.location.href),
-    const title = encodeURIComponent(post.title),
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
     switch (platform) {
       case 'facebook':
         return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
@@ -137,7 +106,6 @@ export default function BlogPost() {
         return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
       default: return '#'
     }
-<<<<<<< HEAD
   };
 
   const articleLd = {
@@ -147,16 +115,6 @@ export default function BlogPost() {
     description: post.excerpt,
     image: post.featuredImage,
     datePublished: post.publishedDate,
-=======
-  },
-  const articleLd = {;
-    "@context": "https: //schema.org";
-    "@type": "BlogPosting",
-    headline: post.title;
-    description: post.excerpt;
-    image: post.featuredImage;
-    datePublished: post.publishedDate;
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
     author: {
       "@type": "Person";
       name: post.author.name}},
@@ -354,10 +312,5 @@ export default function BlogPost() {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  ),
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57

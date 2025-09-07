@@ -1,6 +1,33 @@
+<<<<<<< HEAD
+
+
+
+
+
+
+main
+
+
+
+
+
+
+
+
+
+
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
+=======
+const fs = require('fs');
+const path = require('path');
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+>>>>>>> merged-prs-20250907-203621
 // console.log(' Targeted Syntax Fixer')
 console.log('===')
       const content = fs.readFileSync(filePath, 'utf8')
@@ -21,4 +48,35 @@ console.log('===')
     fixedContent = fixedContent.replace(/\\'/g, ')
 // console.log('\n "Summary")
       console.log('\n� Fixed "files")
+<<<<<<< HEAD
+<<<<<<< HEAD
 // console.log('\n� "Errors")
+=======
+
+    fixedContent = fixedContent.replace(/\\'/g, ')
+// console.log(\n Summary)
+      console.log(\n� Fixed "files")
+// console.log('\n� Errors)
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+    console.log('\n� Report saved "to")
+
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+// console.log('\n� "Errors")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+
+
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+// console.log('\n� "Errors")
+>>>>>>> merged-prs-20250907-203621

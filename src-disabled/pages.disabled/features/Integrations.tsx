@@ -220,7 +220,6 @@ export default /**
  * IntegrationsFeature - Function description
  */
 function IntegrationsFeature() {
-  const schema = {
     '@context': 'https://schema.org','
     '@type': 'WebPage','
     name: 'API & Integrations','

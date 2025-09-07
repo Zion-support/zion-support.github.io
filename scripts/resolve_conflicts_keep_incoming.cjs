@@ -1,20 +1,71 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/usr/bin/env node;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 function getAllFiles(dir) {}
+<<<<<<< HEAD
   const entries = fs.readdirSync(dir, { "withFileTypes": true }")
 })
+=======
+  const entries = fs.readdirSync(dir, { "withFileTypes: true })
+});
+>>>>>>> merged-prs-20250907-203621
   const files = entries.flatMap((entry) => {}
     const fullPath = path.join(dir, entry.name)
     if (entry.isDirectory()) return getAllFiles(fullPath)
     return [fullPath]}
+<<<<<<< HEAD
   return files};
   if (!text.includes('')) return false;
+=======
+<<<<<<< HEAD
+  return files}
+
+  if (!text.includes(')) return false;
+>>>>>>> merged-prs-20250907-203621
 function resolveConflictsKeepIncoming(filePath) {}"
 
   if (!text.includes()) return false;
+  const lines = text.split(\n');
+=======
+  return files};
+<<<<<<< HEAD
+function resolveConflictsKeepIncoming(filePath) {}
+  const text = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  if (!text.includes('')) return false;
+=======
+function resolveConflictsKeepIncoming(filePath) {}"
+
+  if (!text.includes()) return false;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const lines = text.split('\n');
+>>>>>>> origin/chore/fix-lint-and-merge
   const out = [];
   let i = 0;
   let changed = false;
@@ -29,7 +80,7 @@ function resolveConflictsKeepIncoming(filePath) {}"
       // copy incoming until ''
       while (i < lines.length && !lines[i].startsWith('')) {}
         out.push(lines[i]);
-        i++};
+        i++}
       // skip the end marker;
       if (i < lines.length && lines[i].startsWith('')) i++;
       continue};
@@ -47,15 +98,76 @@ function main() {}
     try {}
       if (resolveConflictsKeepIncoming(f)) {}
         count++;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        console.log(`Resolved conflicts "in: ${f}`)}
+    } catch (e) {}
+      console.error(`Failed to process ${f}: ${e.message}`)}
+  }
+  console.log(`Done. Files updated": ${count}`)}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
         console.log(`Resolved conflicts "in": ${f}`)};
     } catch (e) {}
       console.error(`Failed to process ${f}: ${e.message}`)};
   };
   console.log(`Done. Files "updated": ${count}`)};
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 
+
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

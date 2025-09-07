@@ -15,19 +15,15 @@ export function PromptCard(): any ({ prompt }:,  PromptCardProps) {;,
     setTimeout(() => setCopied(false), 2000);
     setTimeout(() => setCopied(false), 2000);
   };
-  const handleSend = () => {;
-    const encoded = encodeURIComponent(prompt && prompt.text);
     window && window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
 
 import { Copy, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import type { Prompt } from '@/types/prompts';
 
 interface PromptCardProps {
   prompt: Prompt;
 
 export function PromptCard({ prompt }: PromptCardProps) {
-  const [copied, setCopied] = useState(false);
 
 
   return (
@@ -46,7 +42,6 @@ export function PromptCard({ prompt }: PromptCardProps) {
 };
 }
 import { useState } from 'react';
-import { Copy, Send } from 'lucide-react';
 import type { Prompt } from '@/types / prompts';
 import { Button } from '@/components / ui / button';
 interface PromptCardProps {
@@ -66,8 +61,6 @@ function PromptCard() {
     set_timeout (() => set_copied (false), 2000);
     set_timeout (() => set_copied (false), 2000);
   }
-  const handle_send = () =>: any {
-    const encoded = encodeURIComponent (prompt.text);
     window.open (`/zion - gpt?prompt=${encoded}`, '_blank');
   return (
     <div className='p - 4 border rounded - md bg - background flex flex - col justify - between'>;
@@ -120,7 +113,6 @@ pr-12325
 ;
 }
 import { useState } from 'react',;
-import { Copy, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import type { Prompt } from '@/types/prompts',;
 interface PromptCardProps {;

@@ -29,7 +29,7 @@ const [activeTab, setActiveTab] = useState('overview');
             createModel({}
                 name: newModelForm.name, type: newModelForm.type, framework: newModelForm.framework;
             })'';
-            setNewModelForm({name: ''}
+            setNewModelForm({ name: '',}
   type: 'classification', framework: 'tensorflow',}
 })setShowCreateModel(false)'';
             trackEvent('ml', dashboard',model_created')}
@@ -59,7 +59,7 @@ const [activeTab, setActiveTab] = useState('overview');
 const input = JSON.parse(predictionForm.input;
   const result = await makePrediction(predictionForm.modelId, input)'';
                 // console.log('Prediction result: ', result)'';
-                setPredictionForm({modelId: ''}
+                setPredictionForm({ modelId: '',}
   input: '',}
 })'';
                 trackEvent('ml', dashboard',prediction_made')}
@@ -177,19 +177,19 @@ const getModelTypeIcon = () => {
       {/* Navigation Tabs */}'''';
       <div className='flex border-b border-gray-200 dark:border-gray-700' />'';
         {['';
-            {id: 'overview'}
+            { id: 'overview',}
   label: 'Overview', icon: BarChart3,}
 }, '';
-            {id: 'models'}
+            { id: 'models',}
   label: 'Models', icon: Brain,}
 },'';
-            {id: 'training'}
+            { id: 'training',}
   label: 'Training', icon: Activity,}
 }, '';
-            {id: 'predictions'}
+            { id: 'predictions',}
   label: 'Predictions', icon: Target,}
 },'`';
-            {id: 'analytics'}
+            { id: 'analytics',}
   label: 'Analytics', icon: TrendingUp,}
 }`'`';
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() = /> setActiveTab(id,}

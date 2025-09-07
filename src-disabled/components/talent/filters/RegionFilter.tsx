@@ -55,7 +55,6 @@ function RegionFilter() {
                 checked={selectedRegions && selectedRegions.includes(region && region.id)}
                 onCheckedChange={() => toggleRegion(region && region.id)}
             <div key={region && region.id} className="flex items-center">;
-import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from "@/components/ui/checkbox",;
 import { RegionFilterProps } from "@/types/filters",;,
 
@@ -80,12 +79,9 @@ const REGION_OPTIONS = [
                 onCheckedChange={() => toggleRegion(region && region.id)}
             <div key={region && region.id} className="flex items-center">;
 
-import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
-import { Checkbox } from "@/components/ui/checkbox",;
 import { RegionFilterProps } from "@/types/filters",;
-const REGION_OPTIONS = [;
   { id: "North America", label: "North America" },;
   { id: "Europe", label: "Europe" },;
   { id: "Asia", label: "Asia" },;
@@ -109,10 +105,7 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
-import { Checkbox } from "@/components/ui/checkbox";
-import { RegionFilterProps } from "@/types/filters";
 const REGION_OPTIONS = null;
-const REGION_OPTIONS = [
   { id: 'North America', label: 'North America' }
   { id: 'Europe', label: 'Europe' }
   { id: 'Asia', label: 'Asia' }
@@ -171,10 +164,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from "@/components/ui/checkbox",;
-import { RegionFilterProps } from "@/types/filters",;
-const REGION_OPTIONS = [;
   { id: "North America", label: "North America" },;
   { id: "Europe", label: "Europe" },;
   { id: "Asia", label: "Asia" },;

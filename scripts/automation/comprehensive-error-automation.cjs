@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -23,63 +38,91 @@ const ErrorFixerAutomation = require("./error-fixer-automation.cjs")
   console.warn("Could not load existing "stats": ")
   const statsFile = path.join(this.reportsDir, "automation-stats.json")
   console.log(" Running Error Fixing...")
+>>>>>>> origin/chore/fix-lint-and-merge
   await this.logError("Error fixing failed")
-// console.log(" Running Code Quality Checks...")
+// console.log( Running Code Quality Checks...)
       console.log("  Running ESLint...")
-      execSync("npm run lint")
+      execSync(npm run lint)
   "cwd"
-        "stdio": "pipe"
-      console.log("  Running TypeScript check...")
+        stdio: "pipe"
+      console.log(  Running TypeScript check...)
       execSync("npm run type-check")
-  "cwd"
-        "stdio": "pipe"
+  cwd
+        "stdio": pipe
       console.log("  Running Prettier format check...")
-      execSync("npx prettier --check "src/**/*.{js,jsx,tstsx}")
-  "cwd"
-        "stdio": "pipe"
-  await this.logError("Code quality checks failed")
-// console.log("⚡ Running Performance Optimizations...")
-      console.log("  Analyzing bundle...")
-      execSync("npm run build")
-  "cwd"
-        "stdio": "pipe"
-// console.log("  Running performance monitoring...")
-      console.log("  Running performance monitoring...")
-  await this.logError("Performance optimizations failed")
-// console.log("� Running Security Checks...")
-      console.log("  Running npm audit...")
-      execSync("npm audit")
-  "cwd"
-        "stdio": "pipe"
-// console.log("  Running security scanning...")
-      console.log("  Running security scanning...")
-  await this.logError("Security checks failed")
-// console.log("� Running Dependency Updates...")
-      console.log("  Checking for outdated packages...")
-      execSync("npm outdated")
-  "cwd"
-        "stdio": "pipe"
-      console.log("  Updating dependencies...")
-  await this.logError("Dependency updates failed")
+      execSync(npx prettier --check src/**/*.{js,jsx,tstsx}")
+  "cwd
+        stdio": "pipe
+  await this.logError(Code quality checks failed")
+// console.log("⚡ Running Performance Optimizations...)
+      console.log(  Analyzing bundle...")
+      execSync("npm run build)
+  cwd"
+        "stdio: pipe"
+// console.log("  Running performance monitoring...)
+      console.log(  Running performance monitoring...")
+  await this.logError("Performance optimizations failed)
+// console.log(� Running Security Checks...")
+      console.log("  Running npm audit...)
+      execSync(npm audit")
+  "cwd
+        stdio": "pipe
+// console.log(  Running security scanning...")
+      console.log("  Running security scanning...)
+  await this.logError(Security checks failed")
+// console.log("� Running Dependency Updates...)
+      console.log(  Checking for outdated packages...")
+      execSync("npm outdated)
+  cwd"
+        "stdio: pipe"
+      console.log("  Updating dependencies...)
+  await this.logError(Dependency updates failed")
   console.log(")
-  "timestamp"
+  timestamp
       "duration"
-      "stats"
+      stats
       "summary"
-        "averageFixesPerRun"
+        averageFixesPerRun
         "totalErrorsRemaining"
-      "recommendations"
+      recommendations
       console.log("  Updating dependencies...")
-  await this.logError("Dependency updates failed")
+  await this.logError(Dependency updates failed)
   console.log(" Generating Comprehensive Report...")
-  "timestamp"
-      "duration": ${duration}ms"
-      "stats"
-      "summary"
-        "averageFixesPerRun"
-        "totalErrorsRemaining"
-      "recommendations"
+  timestamp
+      "duration": ${duration}ms
+      stats"
+      "summary
+        averageFixesPerRun"
+        "totalErrorsRemaining
+      recommendations"
       this.reportsDir,comprehensive-report-${Date.now()}.json"
+<<<<<<< HEAD
+
+=======
+console.log(� Comprehensive report saved to: ${reportFile}```)
+  "priority": high
+        "category": code_quality
+        "message": High number of errors detected. Consider code review and refactoring.
+        action": "Review and fix critical errors first, then address warnings.
+  priority": "medium
+        category": "automation
+        message": "Some automation runs have failed. Check logs for details.
+        action": "Review automation logs and fix underlying issues.
+  priority": "low
+        category": "maintenance
+        message": "No fixes applied. Codebase may be in good condition.
+        action": "Continue monitoring for new issues.
+  timestamp"
+      "error
+      stack"
+const logFile = path.join(this.logsDir, ")
+    fs.writeFileSync(logFile)
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+
+
+console.error()
+
+=======
 console.log(� Comprehensive report saved "to": ${reportFile}```)
   "priority": "high"
         "category": "code_quality"
@@ -98,7 +141,41 @@ console.log(� Comprehensive report saved "to": ${reportFile}```)
       "stack"
 const logFile = path.join(this.logsDir, ")
     fs.writeFileSync(logFile")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
+
+=======
+console.error(")
+<<<<<<< HEAD
 console.error(")
 console.error(")
 
 
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+console.error(")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+console.error(")
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

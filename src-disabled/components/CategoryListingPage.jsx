@@ -1,20 +1,20 @@
-' ' ' ' ' export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [{label: 'Newest First'}
+' ' ' ' ' export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [{ label: 'Newest First',}
   value: 'newest',}
-}, {label: 'Oldest First'}
+}, { label: 'Oldest First',}
   value: 'oldest',}
-}, {label: 'Highest Rating'}
+}, { label: 'Highest Rating',}
   value: 'rating-high',}
-}, {label: 'Highest AI Match'}
+}, { label: 'Highest AI Match',}
   value: 'ai-match',}
-}, {label: 'A-Z'}
+}, { label: 'A-Z',}
   value: 'a-z',}
-}, {label: 'Z-A'}
+}, { label: 'Z-A',}
   value: 'z-a',}
-}], filterOptions = [' {label: 'All'}
+}], filterOptions = [' { label: 'All',}
   value: 'all',}
-}, {label: 'Highly Rated'}
+}, { label: 'Highly Rated',}
   value: 'high-rating',}
-}, {label: 'Best AI Match'}
+}, { label: 'Best AI Match',}
   value: 'best-match' }],
 }) { ' const [searchQuery, setSearchQuery] =;
   useState(');}
@@ -23,5 +23,5 @@
  localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]) useEffect(() => {
  setIsLoading(true);}
   const timeout = setTimeout(() => setIsLoading(false), 300);}
-  return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter])"";
+  return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter])\"\";
 }

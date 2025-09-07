@@ -1,7 +1,63 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+
+
+
+
+
+
+
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require(path');
+const { execSync, spawn } = require('child_process');
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+///usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+const { execSync, spawn } = require('child_process')
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
+
+
+
+
+
+
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
   "summary": {}"
     total: 0,"
     "passed": 0,
@@ -13,6 +69,25 @@ const { execSync, spawn } = require('child_process');
   "recommendations": [];"
 }
 function log(level, message) {}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+  const timestamp = new Date().toISOString();
+  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message})};
+async function runJestTests() {}"
+
+<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
   log('info', 'Running Jest tests');
@@ -26,20 +101,83 @@ async function runJestTests() {}
     const endTime = Date.now();
     const result = JSON.parse(output);
     testReport.tests.push({})
+
+      "result": result;"
       "framework": 'jest',
       "duration": endTime - startTime,
       "result": result;
     }
 });
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+
+      "result": result;"
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
     testReport.summary.total += result.numTotalTests;
     testReport.summary.passed += result.numPassedTests;
     testReport.summary.failed += result.numFailedTests;
     testReport.summary.skipped += result.numPendingTests;
     testReport.summary.duration += endTime - startTime;
     if (result.coverageMap) {}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+const timestamp = new Date().toISOString()
+  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message})}
+async function runJestTests() {}"
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+
+    
+
+<<<<<<< HEAD
+      "result": result;"    testReport.summary.total += result.numTotalTests
+    testReport.summary.passed += result.numPassedTests
+    testReport.summary.failed += result.numFailedTests
+    testReport.summary.skipped += result.numPendingTests
+    testReport.summary.duration += endTime - startTime
+  if($2) {}
+
+    testReport.summary.total += result.total
+    testReport.summary.passed += result.passed
+    testReport.summary.failed += result.failed
+      "result": { passed: true, output };"
+    testReport.summary.passed++
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+
+
+    testReport.summary.total += result.total;
+    testReport.summary.passed += result.passed;
+    testReport.summary.failed += result.failed;
+
+
+      "result": { passed: true, output };"
+    testReport.summary.passed++;
     "
       "result": { passed: false, "error": error.message };"
     testReport.summary.failed++;"
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+    "
+      "result": { passed: false, "error": error.message };"
+    testReport.summary.failed++;"
+>>>>>>> merged-prs-20250907-203621
       testReport.summary.coverage = result.coverageMap.getCoverageSummary().lines.pct};
     log('info', `Jest tests "completed": ${result.numPassedTests}/${result.numTotalTests} passed`)} catch (error) {`}
     log('warn', 'Jest tests failed or not configured', error.message)};
@@ -148,11 +286,44 @@ async function runTypeTests() {}
     testReport.summary.failed++;
     log('warn', 'TypeScript type tests failed', error.message)};
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    log('warn, TypeScript type tests failed', error.message)}
+}
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
+function generateRecommendations() {}
+  const recommendations = [];
+  const { total, passed, failed, coverage } = testReport.summary;
+  if (total === 0) {}
+    recommendations.push({})
+
+<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> merged-prs-20250907-203621
 function generateRecommendations() {}
   const recommendations = []
   const { total, passed, failed, coverage } = testReport.summary,
   if($2) {}
     recommendations.push({})
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
       "priority": 'high',
       "message": 'No tests found',
       "action": 'Implement comprehensive test suite'
@@ -185,6 +356,22 @@ function generateRecommendations() {}
 async function main() {}
   try {}
     log('info', 'Starting enhanced test runner');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  
+  return recommendations}
+async function main() {}
+  try {}
+    log('info, Starting enhanced test runner');
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+    
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
     await runJestTests();
     await runPlaywrightTests();
     await runCypressTests();
@@ -193,6 +380,10 @@ async function main() {}
     testReport.summary.total = testReport.tests.reduce((sum, test) => sum + (test.result.total || 1), 0);
     testReport.recommendations = generateRecommendations();
     // Display summary;
+
+    process.exit(1)};
+main();
+`;
     log('info', 'Enhanced Test Runner Summary');
     log('info', '');
     log('info', `Total "tests": ${testReport.summary.total}`);
@@ -220,4 +411,37 @@ async function main() {}
     log('error', 'Fatal error in enhanced test runner', error.message);
     process.exit(1)};
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
 main();
+<<<<<<< HEAD
+await runJestTests()
+    await runPlaywrightTests()
+    await runCypressTests()
+    await runLintTests()
+    await runTypeTests()
+    testReport.summary.total = testReport.tests.reduce((sum, test) => sum + (test.result.total || 1), 0)
+    testReport.recommendations = generateRecommendations()
+    // Display summary
+=======
+    log(error', 'Fatal error in enhanced test runner', error.message);
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+    process.exit(1)}
+}
+main();
+
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+main();
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+
+    process.exit(1)};
+main();
+`;
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+main();
+>>>>>>> merged-prs-20250907-203621

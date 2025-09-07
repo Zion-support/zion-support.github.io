@@ -167,22 +167,22 @@ const getCategoryIcon = () => {
 }'';'';
 
 const categories = ['''''';
-        {id: 'all'}
+        { id: 'all',}
   name: 'All Categories', icon: <Globe className='w-4 h-4'/>,}
 }, '''''';
-        {id: 'quantum'}
+        { id: 'quantum',}
   name: 'Quantum Technology', icon: <Atom className='w-4 h-4'/>,}
 },'''''';
-        {id: 'ai'}
+        { id: 'ai',}
   name: 'Artificial Intelligence', icon: <Brain className='w-4 h-4'/>,}
 }, '''''';
-        {id: 'space-tech'}
+        { id: 'space-tech',}
   name: 'Space Technology', icon: <Satellite className='w-4 h-4'/>,}
 },'''''';
-        {id: 'green-tech'}
+        { id: 'green-tech',}
   name: 'Green Technology', icon: <Leaf className='w-4 h-4'/>,}
 }, '''''';
-        {id: 'biotech-ai'}
+        { id: 'biotech-ai',}
   name: 'Biotech AI', icon: <Dna className='w-4 h-4'/>,}
 }'''';
     ]';''';
@@ -223,7 +223,7 @@ const categories = ['''''';
 }} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
-}} transition={{delay: 0.1 }
+}} transition={{ delay: 0.1 ,}
 } className='bg-white rounded-lg shadow-lg p-6 mb-8' />'''';
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4' />'''';
               <div />'''';
@@ -268,13 +268,13 @@ const categories = ['''''';
 }} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
-}} transition={{delay: 0.2 }
+}} transition={{ delay: 0.2 ,}
 } className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8' />;
             {filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial = {}
   { opacity: 0, x: index % 2 === 0 ? -20 : 20;}
 }} animate = {}
   { opacity: 1, x: 0';';}
-}} transition={{delay: 0.1 * index }
+}} transition={{ delay: 0.1 * index ,}
 } />'''';
                 <Card className='h-full hover:shadow-lg transition-shadow' />'''';
                   <CardHeader />'''';
@@ -355,13 +355,13 @@ const categories = ['''''';
 }} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
-}} transition={{delay: 0.1 }
+}} transition={{ delay: 0.1 ,}
 } className='space-y-6' />;
           {futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial = {}
   { opacity: 0, x: -20;}
 }} animate = {}
   { opacity: 1, x: 0';';}
-}} transition={{delay: 0.1 * index }
+}} transition={{ delay: 0.1 * index ,}
 } />'''';
               <Card className='hover:shadow-lg transition-shadow' />'''';
                 <CardHeader />'''';
@@ -446,7 +446,7 @@ const categories = ['''''';
 }} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
-}} transition={{delay: 0.1 }
+}} transition={{ delay: 0.1 ,}
 } className='space-y-6' />'''';
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-6' />;
             <Card />'''';
@@ -463,7 +463,7 @@ const categories = ['''''';
                     <span className='font-semibold text-zion-cyan' />$150B+</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
-                    <div className='bg-zion-cyan h-2 rounded-full' style={{width: '85%' }
+                    <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '85%' ,}
 } /></div>;
                   </div>'''';
                   '''';
@@ -472,7 +472,7 @@ const categories = ['''''';
                     <span className='font-semibold text-zion-purple' />$300B+</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
-                    <div className='bg-zion-purple h-2 rounded-full' style={{width: '95%' }
+                    <div className='bg-zion-purple h-2 rounded-full' style={{ width: '95%' ,}
 } /></div>;
                   </div>'''';
                   '''';
@@ -481,7 +481,7 @@ const categories = ['''''';
                     <span className='font-semibold text-zion-blue' />$200B+</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
-                    <div className='bg-zion-blue h-2 rounded-full' style={{width: '70%' }
+                    <div className='bg-zion-blue h-2 rounded-full' style={{ width: '70%' ,}
 } /></div>;
                   </div>'''';
                   '''';
@@ -490,7 +490,7 @@ const categories = ['''''';
                     <span className='font-semibold text-zion-green' />$100B+</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
-                    <div className='bg-zion-green h-2 rounded-full' style={{width: '60%' }
+                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '60%' ,}
 } /></div>;
                   </div>;
                 </div>;
@@ -510,7 +510,7 @@ const categories = ['''''';
                     <span className='font-semibold text-zion-cyan' />15%</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
-                    <div className='bg-zion-cyan h-2 rounded-full' style={{width: '15%' }
+                    <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '15%' ,}
 } /></div>;
                   </div>'''';
                   '''';
@@ -519,7 +519,7 @@ const categories = ['''''';
                     <span className='font-semibold text-zion-purple' />35%</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
-                    <div className='bg-zion-purple h-2 rounded-full' style={{width: '35%' }
+                    <div className='bg-zion-purple h-2 rounded-full' style={{ width: '35%' ,}
 } /></div>;
                   </div>'''';
                   '''';
@@ -528,7 +528,7 @@ const categories = ['''''';
                     <span className='font-semibold text-zion-blue' />40%</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
-                    <div className='bg-zion-blue h-2 rounded-full' style={{width: '40%' }
+                    <div className='bg-zion-blue h-2 rounded-full' style={{ width: '40%' ,}
 } /></div>;
                   </div>'''';
                   '''';
@@ -537,7 +537,7 @@ const categories = ['''''';
                     <span className='font-semibold text-zion-green' />10%</span>'''';
                   </div>'''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2' />'''''';
-                    <div className='bg-zion-green h-2 rounded-full' style={{width: '10%' }
+                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '10%' ,}
 } /></div>;
                   </div>;
                 </div>;
@@ -597,7 +597,7 @@ const categories = ['''''';
 }} animate = {}
   { opacity: 1, y: 0 '''';}
 '''';}
-}} transition={{delay: 0.4 }
+}} transition={{ delay: 0.4 ,}
 } className='mt-12 text-center' />'''';
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white' />'''';
           <h3 className='text-3xl font-bold mb-4' />Ready to Shape the Future?</h3>'''';
@@ -621,7 +621,7 @@ const categories = ['''''';
   () = /> window.open('tel: +13024640950', _blank')';
 '''';
 }>'''';
-              <Zap className='w-5 h-5 mr-2"/>'";
+              <Zap className='w-5 h-5 mr-2\"/>'\";
               Speak with an Expert;
             </Button>;
           </div>;

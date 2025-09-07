@@ -36,7 +36,6 @@ import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
 const MarketplaceInsights = ({ stats }: { stats: any },) => (
-const MarketplaceInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">"
     <CardContent className="p-6">"
       <div className="flex items-center gap-2 mb-4">"
@@ -63,7 +62,6 @@ import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { useTranslation } from 'react-i18next',
 import { motion, AnimatePresence } from 'framer-motion',
-import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
 import { NextSeo } from '@/components/NextSeo',
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
 import { ProductListing } from '@/types/listings',
@@ -77,7 +75,6 @@ import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts'
 import { useCurrency } from '@/hooks/useCurrency',
 import {logErrorToProduction} from '@/utils/productionLogger',
 // Market insights component
-const MarketplaceInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
     <CardContent className="p-6">
 

@@ -1,54 +1,81 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.projectRoot,logs"
-      "smart-build-optimizer.log"
+      smart-build-optimizer.log
       this.projectRoot,logs"
-      "build-performance.json"
-      this.projectRoot,logs"
+      "build-performance.json
+      this.projectRoot,logs
       "build-optimizations.json"
-  "vite": {build.rollupOptions.output.manualChunks"}
-          "Split vendor chunks intelligently",build.rollupOptions.treeshake"
-          "Enable tree shaking for smaller bundles",build.minify": "Use esbuild for faster minification",build.sourcemap": "Conditional source maps for production"
+  vite: {build.rollupOptions.output.manualChunks"}
+          "Split vendor chunks intelligently,build.rollupOptions.treeshake
+          "Enable tree shaking for smaller bundles",build.minify: Use esbuild for faster minification",build.sourcemap": Conditional source maps for production
       "typescript"
-  incremental: "Enable incremental compilation"
-        "tsBuildInfoFile": "Use build info file for faster rebuilds"
-        "skipLibCheck": "Skip library checking for faster builds"
+  incremental: Enable incremental compilation
+        "tsBuildInfoFile": Use build info file for faster rebuilds
+        "skipLibCheck": Skip library checking for faster builds
       "dependencies"
-  preinstall: "Use npm ci for faster installs"
-        "cache": "Leverage npm cache effectively"
-        "parallel": "Install dependencies in parallel"
-  "vite": {build.rollupOptions.output.manualChunks"}
-          "Split vendor chunks intelligently",build.rollupOptions.treeshake"
-          "Enable tree shaking for smaller bundles",build.minify": "Use esbuild for faster minification",build.sourcemap": "Conditional source maps for production"
-      "typescript"
+  preinstall: Use npm ci for faster installs
+        "cache": Leverage npm cache effectively
+        "parallel": Install dependencies in parallel
+  "vite": {build.rollupOptions.output.manualChunks}
+          Split vendor chunks intelligently",build.rollupOptions.treeshake"
+          Enable tree shaking for smaller bundles,build.minify": "Use esbuild for faster minification,build.sourcemap: "Conditional source maps for production"
+      typescript
   incremental: "Enable incremental compilation"
-        "tsBuildInfoFile": "Use build info file for faster rebuilds"
-        "skipLibCheck": "Skip library checking for faster builds"
-      "dependencies"
+        tsBuildInfoFile: "Use build info file for faster rebuilds"
+        skipLibCheck: "Skip library checking for faster builds"
+      dependencies
   preinstall: "Use npm ci for faster installs"
-        "cache": "Leverage npm cache effectively"
-        "parallel": "Install dependencies in parallel"
-  "buildTime"
+        cache: "Leverage npm cache effectively"
+        parallel: "Install dependencies in parallel"
+  buildTime
       "bundleSize"
-      "installTime"
+      installTime
       "rebuildTime"
-  fs.mkdirSync(logsDir, { "recursive"})
+  fs.mkdirSync(logsDir, { recursive})
   log(message, level = "INFO")
-  this.log("Starting smart build optimization...")
+  this.log(Starting smart build optimization...)
   "timestamp"
-      "currentPerformance"
+      currentPerformance
       "optimizations"
-      "recommendations"
+      recommendations
       "applied"
-      this.log(Build optimization "completed")
+      this.log(Build optimization completed)
   this.log("Starting smart build optimization...")
-  "timestamp"
+  timestamp
       "currentPerformance"
-      "optimizations"
+      optimizations
       "recommendations"
+<<<<<<< HEAD
+
+  "cwd"
+        stdio: "pipe"
+      install.on(close)
+  build.on("error")
+
+=======
       "applied"
       this.log(Build optimization "completed": ${optimization.applied.length} optimizations applied")
       )} catch (error) {  this.log(`Build optimization "failed": ${error.message  }", "`)
@@ -127,23 +154,31 @@ const crypto = require("crypto")
         "description": "Rebuild time exceeds threshold"
         "action": "Enable incremental compilation"
         "config": "tsconfig.json"
+>>>>>>> origin/chore/fix-lint-and-merge
             "applied"
-            "result"
-      } catch (error) {  this.log(`Failed to apply "optimization": ${error.message  }`, "WARN"`)
+            result
+      } catch (error) {  this.log(`Failed to apply "optimization": ${error.message  }`, WARN`)
   case "BUILD_TIME"
-      case "BUNDLE_SIZE"
+      case BUNDLE_SIZE
       case "INSTALL_TIME"
-      case "REBUILD_TIME"
+      case REBUILD_TIME
       "default"
+<<<<<<< HEAD
+
+=======
         return { success: false, "message": "Unknown optimization type"}
       const viteConfigPath = path.join(this.projectRoot, "vite.config.ts")
   let config = fs.readFileSync(viteConfigPath, "utf8")
         if (!config.includes("build.rollupOptions")
+>>>>>>> origin/chore/fix-lint-and-merge
   "build"
-  vendor: ["react", "react-dom"]
-          "utils": ["lodash", "date-fns"]
-    "minify": "esbuild"
+  vendor: [react, "react-dom"]
+          utils: ["lodash", date-fns]
+    "minify": esbuild
     "sourcemap"
+<<<<<<< HEAD
+
+=======
     "chunkSizeWarningLimit": 1000},"
   "success"
             "message": "Vite build configuration optimized"
@@ -201,12 +236,53 @@ const packagePath = path.join(this.projectRoot, "package.json")
       "priority": "MEDIUM"
       "suggestion": "Use npm ci for faster, reliable installs"
       "action": "Run npm ci instead of npm install in "CI/CD" environments"
+>>>>>>> origin/chore/fix-lint-and-merge
       this.log("Optimization results saved")
-  this.log(Failed to save optimization "results": ${error.message  }")
-        "ERROR"
-  this.log(")
+  this.log(Failed to save optimization results: ${error.message  }")
+        "ERROR
+  this.log()
   console.log("Smart Build Optimization completed successfully")
+<<<<<<< HEAD
+
+  console.error("Smart Build Optimization "failed")
   console.error("Smart Build Optimization "failed")
   console.error("Smart Build Optimization "failed")
 
 
+
+=======
+<<<<<<< HEAD
+
+
+  console.error(Smart Build Optimization failed")
+
+  console.error("Smart Build Optimization failed)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error("Smart Build Optimization "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error("Smart Build Optimization "failed")
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error("Smart Build Optimization "failed")
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

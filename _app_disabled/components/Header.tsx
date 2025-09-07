@@ -24,9 +24,7 @@ export default function Header() {
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
-              <span className="text-xl font-bold text-white">
-                Zion Tech Group
-              </span>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
           </div>
 
@@ -61,7 +59,7 @@ export default function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
             aria-expanded={isMenuOpen}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-controls="mobile-menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

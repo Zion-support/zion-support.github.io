@@ -14,7 +14,6 @@ const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "l
 
 </p>'
 
-const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default TestimonialsSection' ,'
 
 </p>'
 
@@ -31,7 +30,6 @@ const TestimonialsSection = dynamic(() => import(\"./TestimonialsSection\"),{'; 
 </p>';
 </p>';
 ;
-const TestimonialsSection = dynamic(() => import(\"./TestimonialsSection\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default TestimonialsSection' ,';
 </p>';
 </p>';
 </p>';
@@ -53,7 +51,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
-const TestimonialsSection = dynamic(() => import(\"./TestimonialsSection\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default TestimonialsSection' ,';
 </p>';
 </p>';
 </p>';
@@ -62,7 +59,6 @@ const TestimonialsSection = dynamic(() => import(\"./TestimonialsSection\"),{'; 
 </p>';
 </p>';
 </p>';
-const TestimonialsSection = dynamic(() => import(\"./TestimonialsSection\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default TestimonialsSection' ,';
 </p>'</p>';
 const TestimonialsSection = dynamic(() => import(\"./TestimonialsSection\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default TestimonialsSection' ,'
 </p>'
@@ -89,7 +85,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 </p>'
 
 </p>'
-const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default TestimonialsSection' ,'
 </p>'
 </p>'
 </p>'

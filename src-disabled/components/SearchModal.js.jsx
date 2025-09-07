@@ -15,8 +15,8 @@ export function SearchModal({ isOpen, onClose }) { const [query, setQuery] = use
   category: 'Hardware', tags['GPU', Server',AI', ML'], price: '$15,000' }, { id: '4',
   type: 'page', title: 'Cybersecurity Services',
   description: 'Comprehensive cybersecurity solutions for enterprise protection', url: '/services/cybersecurity',}
-  category: 'Security', tags['Security',Cybersecurity', Enterprise',Protection"] } ] useEffect(() => {}
+  category: 'Security', tags['Security',Cybersecurity', Enterprise',Protection\"] } ] useEffect(() => {}
  if(isOpen && searchInputRef.current) { searchInputRef.current.focus()} }, [isOpen]);
   useEffect(() => {}
  if(query.trim()) { performSearch()} else { setResults([])} }, [query, activeFilter]);
-  const performSearch = async () => { setIsLoading(true) ";}
+  const performSearch = async () => { setIsLoading(true) \";}

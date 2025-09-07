@@ -8,5 +8,5 @@ import { useState, useCallback, useRef, useEffect } from 'react' import { useAna
   const [codeAnalysis, setCodeAnalysis] = useState(null);
   const [suggestions, setSuggestions] = useState([]);
   const [history, setHistory] = useState([]);
-  const generationTimeoutRef = useRef(null)"";
+  const generationTimeoutRef = useRef(null)\"\";
 }

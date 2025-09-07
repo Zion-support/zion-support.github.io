@@ -25,7 +25,7 @@ function forgotPassword () {try {try {try {' const res = await fetch ('/api / au
 } catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) 
 } catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email }
 }) ;
-  const data = await res.json () .catch ( () => ({}) ) ';'";'";
+  const data = await res.json () .catch ( () => ({}) ) ';'\";'\";
 /**
  * Authentication service;
  * Handles user authentication and session management;
