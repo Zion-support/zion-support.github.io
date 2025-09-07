@@ -64,7 +64,8 @@ const nextConfig = {
           "**/performance-*.html",
           "**/performance-*.md",
           "**/performance-*.txt",
-          "**/apps/**"
+          "**/apps/**",
+          "**/pages/api/admin/**" // Exclude problematic admin API routes
         ],
         poll: 1000,
         aggregateTimeout: 300
@@ -100,6 +101,7 @@ const nextConfig = {
         /contracts/,
         /hardhat/,
         /^components\//, // Exclude root components directory
+        /pages\/api\/admin/ // Exclude admin API routes with merge conflicts
       ]
     });
 
