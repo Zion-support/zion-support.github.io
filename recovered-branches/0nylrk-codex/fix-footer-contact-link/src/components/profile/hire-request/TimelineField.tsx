@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {UseFormReturn} from "react-hook-form";
@@ -10,15 +11,45 @@ import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/compon
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {UseFormReturn} from "react-hook-form";
 import {FormValues} from "./useHireRequestForm";
+=======
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { UseFormReturn } from "react-hook-form";
+import { FormValues } from "./useHireRequestForm";
+interface TimelineFieldProps {
+  form: UseFormReturn<FormValues>;
+}
+
+export function TimelineField({ form }: TimelineFieldProps) {
+  const timelineOptions = [
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
     { value: "Less than 1 week", label: "Less than 1 week" },
     { value: "1-2 weeks", label: "1-2 weeks" },
     { value: "2-4 weeks", label: "2-4 weeks" },
     { value: "1-2 months", label: "1-2 months" },
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
+<<<<<<< HEAD
   ];
     { value: "Ongoing", label: "Ongoing" }
   ],
+=======
+    { value: "Ongoing", label: "Ongoing" },
+  ];
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   return (
     <FormField
       control={form.control}
@@ -38,6 +69,7 @@ import {FormValues} from "./useHireRequestForm";
               <SelectContent>
                 {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
+<<<<<<< HEAD
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { UseFormReturn } from "react-hook-form",;
@@ -87,6 +119,10 @@ function TimelineField() {
                 {timeline_options.map ((option) => (
                   <SelectItem key={option.value} value={option.value}>;
                     {option.label}
+=======
+                    {option.label}
+                  </SelectItem>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
                 ))}
               </SelectContent>
             </Select>
@@ -96,4 +132,8 @@ function TimelineField() {
       )}
     />
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

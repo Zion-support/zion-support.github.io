@@ -1,8 +1,15 @@
 import React from "react";
 interface TalentDirectoryHeaderProps {
+<<<<<<< HEAD
   title: string,
   description: string;
 }
+=======
+  title: string;
+  description: string;
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 export function TalentDirectoryHeader({
   title,
   description,
@@ -18,6 +25,7 @@ export function TalentDirectoryHeader({
     </div>
   );
 }
+<<<<<<< HEAD
         </h1>;
         <p className="text-zion-slate-light max-w-2xl">;
 =======}
@@ -81,3 +89,5 @@ function TalentDirectoryHeader() {
         <p className="text-zion-slate-light max-w-2xl">
 }
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

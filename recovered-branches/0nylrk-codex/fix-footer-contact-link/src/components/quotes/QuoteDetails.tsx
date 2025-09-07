@@ -12,6 +12,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
+<<<<<<< HEAD
 import React from "react",
 import { 
   Dialog,
@@ -27,10 +28,15 @@ import { Separator } from "@/components/ui/separator",
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",interface QuoteDetailsProps {
+=======
+import { format } from "date-fns";
+interface QuoteDetailsProps {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void;
 }
+<<<<<<< HEAD
 import {format} from "date-fns";
   const formatDate = (dateString?: string) => {
     if (!dateString) return "Not specified";
@@ -53,6 +59,12 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   }
   };
 import {format} from "date-fns";
+=======
+
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
+  if (!quote) return null;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   const formatDate = (dateString?: string) => {
     if (!dateString) return "Not specified";
     try {
@@ -61,6 +73,7 @@ import {format} from "date-fns";
       return dateString;
     }
   };
+<<<<<<< HEAD
 import React from "react";
 import {;
   Dialog,;
@@ -116,6 +129,9 @@ if (return "Not specified") {
     try {
       return format (new Date (date_string), "PPP");
     } catch (e) {
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -128,7 +144,13 @@ if (return "Not specified") {
             Quote request submitted on {formatDate(quote.created_at)}
           </DialogDescription>
         </DialogHeader>
+<<<<<<< HEAD
         <Separator className="my-4" />
+=======
+
+        <Separator className="my-4" />
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card>
             <CardContent className="pt-6">
@@ -147,6 +169,10 @@ if (return "Not specified") {
               </div>
             </CardContent>
           </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
@@ -163,16 +189,28 @@ if (return "Not specified") {
             </CardContent>
           </Card>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
         <Card className="mt-6">
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
             <p className="mb-4">{quote.project_summary}</p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
             {quote.project_description && (
               <>
                 <h4 className="font-medium mt-4">Additional Details</h4>
                 <p>{quote.project_description}</p>
               </>
             )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
             <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
               <span className="font-medium">Budget: </span>
@@ -185,11 +223,16 @@ if (return "Not specified") {
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
         <div className="mt-6 flex justify-end">
           <Button onClick={onClose}>Close</Button>
         </div>
       </DialogContent>
     </Dialog>
+<<<<<<< HEAD
   )
 };
       return date_string;
@@ -272,3 +315,7 @@ if (return "Not specified") {
 }
 ;
   )
+=======
+  );
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

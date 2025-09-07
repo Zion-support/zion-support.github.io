@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   FormField,
 
@@ -13,6 +14,8 @@ import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 import {
   FormField,
   FormItem,
@@ -27,6 +30,7 @@ interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
 }
 
+<<<<<<< HEAD
 interface PersonalInfoFieldsProps {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -92,6 +96,25 @@ function PersonalInfoFields() {
             <FormLabel>Phone</FormLabel>;      />;
         )}
       />
+=======
+export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <FormField
+        control={control}
+        name="fullName"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Full Name</FormLabel>
+            <FormControl>
+              <Input placeholder="John Doe" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
       <FormField
         control={control}
         name="title"
@@ -105,6 +128,10 @@ function PersonalInfoFields() {
           </FormItem>
         )}
       />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
       <FormField
         control={control}
         name="email"
@@ -118,6 +145,10 @@ function PersonalInfoFields() {
           </FormItem>
         )}
       />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
       <FormField
         control={control}
         name="phone"
@@ -134,6 +165,7 @@ function PersonalInfoFields() {
     </div>
   );
 }
+<<<<<<< HEAD
 ;
 
           </FormItem>;
@@ -169,3 +201,5 @@ function PersonalInfoFields() {
   )
 }
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

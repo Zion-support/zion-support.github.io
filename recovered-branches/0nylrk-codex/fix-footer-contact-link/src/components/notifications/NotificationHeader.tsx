@@ -1,8 +1,19 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 interface NotificationHeaderProps {;
   unreadCount: number,;
   onMarkAllAsRead: () => Promise<void>;export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+interface NotificationHeaderProps {
+  unreadCount: number;
+  onMarkAllAsRead: () => Promise<void>;
+}
+
+export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   unreadCount,
   onMarkAllAsRead,
 }) => {
@@ -14,6 +25,7 @@ interface NotificationHeaderProps {;
           variant="ghost"
           size="sm"
           onClick={onMarkAllAsRead}
+<<<<<<< HEAD
           className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark">;
           Mark all as read;
         </Button>;
@@ -49,3 +61,13 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
   )
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark"
+        >
+          Mark all as read
+        </Button>
+      )}
+    </div>
+  );
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

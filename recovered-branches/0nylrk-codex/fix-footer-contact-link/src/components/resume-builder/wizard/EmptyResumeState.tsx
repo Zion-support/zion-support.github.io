@@ -18,6 +18,7 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 };
 
@@ -32,3 +33,7 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
     </Card>);
 }
 }
+=======
+  );
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

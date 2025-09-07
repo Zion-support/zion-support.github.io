@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Jest setup file for testing environment;
 import '@testing-library/jest-dom';
 // Mock global objects that might not be available in test environment;
@@ -23,3 +24,6 @@ beforeAll(() => {console.error = (...args: any[]) => {if (typeof args[0] === 'st
 })afterAll(() => {console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 })
+=======
+import '@testing-library/jest-dom';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0ffd

@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 ursor/automate-test-improve-and-merge-code-646c;
 // Type definitions index;
 
 export interface ContactInfo {
   phone: string;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
 // Type definitions index
 
 export interface ContactInfo {
@@ -28,6 +31,7 @@ export interface ProjectBrief {
   techStack?: string[];
   talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
 }
+<<<<<<< HEAD
 // Global types for the Zion Tech Group application
 
 export interface ContactInfo {
@@ -126,10 +130,21 @@ export interface ContactForm  {name: string;
   budget?: string;
   message: string;
   name: string;
+=======
+
+// Service interfaces
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
   price: number;
-  period: string;
+  duration: string;
   features: string[];
+  icon?: string;
   popular?: boolean;
+<<<<<<< HEAD
 
 }
 
@@ -139,11 +154,52 @@ export interface ServiceCategory  {title: string;
   features: string[];
   cta: string;
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
 }
 
 export interface ServiceCategory {
+  id: string;
+  name: string;
+  description: string;
+  services: Service[];
+  icon?: string;
+}
+
+// User interfaces
+export interface User {
+  id: string;
+  email: string;
+  name: string;
+  avatar?: string;
+  role: 'admin' | 'user' | 'moderator';
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface UserProfile {
+  id: string;
+  userId: string;
+  firstName: string;
+  lastName: string;
+  bio?: string;
+  skills: string[];
+  experience: number;
+  location: string;
+  website?: string;
+  socialLinks: {
+    linkedin?: string;
+    github?: string;
+    twitter?: string;
+  };
+}
+
+// Project interfaces
+export interface Project {
+  id: string;
   title: string;
   description: string;
+<<<<<<< HEAD
   count: number;
   features: string[];href: string;
 
@@ -293,14 +349,58 @@ export interface Testimonial  {"id": string;
 }
 
 // Content interfaces
+=======
+  status: 'draft' | 'active' | 'completed' | 'cancelled';
+  client: string;
+  budget: number;
+  startDate: string;
+  endDate?: string;
+  team: string[];
+  technologies: string[];
+  deliverables: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ProjectTask {
+  id: string;
+  projectId: string;
+  title: string;
+  description: string;
+  status: 'todo' | 'in_progress' | 'review' | 'done';
+  assignee?: string;
+  dueDate?: string;
+  priority: 'low' | 'medium' | 'high';
+  createdAt: string;
+  updatedAt: string;
+}
+
+// Content interfaces
+export interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  content: string;
+  excerpt: string;
+  author: string;
+  publishedAt: string;
+  updatedAt: string;
+  tags: string[];
+  featured: boolean;
+  image?: string;
+  readTime: number;
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
 export interface Testimonial {
-  "id": string;
+  id: string;
   name: string;
   company: string;
-  position: string;
+  role: string;
   content: string;
   rating: number;
   avatar?: string;
+<<<<<<< HEAD
   image?: string;
   project?: string;
 
@@ -310,11 +410,16 @@ export interface BlogPost {
   id: string;
   image?: string;
   project?: string
+=======
+  featured: boolean;
+  createdAt: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
 }
 
 export interface CaseStudy {
-  "id": string;
+  id: string;
   title: string;
+  slug: string;
   client: string;
   industry: string;
   challenge: string;
@@ -323,6 +428,7 @@ export interface CaseStudy {
   technologies: string[];
   duration: string;
   teamSize: number;
+<<<<<<< HEAD
   image: string;
   featured?: boolean
 }
@@ -1133,8 +1239,15 @@ export interface Technology {
   yearsOfExperience: number;
   projects: number;
 
+=======
+  featured: boolean;
+  image?: string;
+  createdAt: string;
+  updatedAt: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
 }
 
+// Form interfaces
 export interface ContactFormData {
   name: string;
   email: string;
@@ -1144,12 +1257,16 @@ export interface ContactFormData {
   message: string;budget?: string;
   timeline?: string;
   source?: string;
+<<<<<<< HEAD
   preferredContact?: 'email' | 'phone' | 'both';
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
 }
 
 export interface NewsletterSubscription {
   email: string;
+<<<<<<< HEAD
   interests: string[];
   frequency: 'daily' | 'weekly' | 'monthly';
   subscribed: boolean;
@@ -3510,6 +3627,26 @@ export interface Environment {
 
 }
 
+=======
+  preferences: {
+    weekly: boolean;
+    monthly: boolean;
+    productUpdates: boolean;
+    caseStudies: boolean;
+  };
+}
+
+// Technology interfaces
+export interface Technology {
+  name: string;
+  category: 'frontend' | 'backend' | 'database' | 'cloud' | 'mobile' | 'ai' | 'devops';
+  proficiency: 'beginner' | 'intermediate' | 'advanced' | 'expert';
+  yearsOfExperience: number;
+  projects: number;
+}
+
+// Partner interfaces
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
 export interface Partner {
   name: string;
   logo: string;
@@ -3519,9 +3656,12 @@ export interface Partner {
 
 }
 
+<<<<<<< HEAD
 export interface Award {
   title: string;
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
 export interface Award {
   title: string;
   organization: string;
@@ -3531,19 +3671,23 @@ export interface Award {
 
 }
 
+<<<<<<< HEAD
 export interface Certification {
   name: string;
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
 export interface Certification {
   name: string;
   issuer: string;
   date: string;
   expiry?: string;
-  credential_id?: string;
+  credentialId?: string;
   image?: string;
 
 }
 
+<<<<<<< HEAD
 export interface Technology {
   name: string;
   category: 'frontend' | 'backend' | 'database' | 'cloud' | 'mobile' | 'ai' | 'devops';
@@ -3606,24 +3750,59 @@ export interface Pagination  {current_page: number;
   itemsPerPage: number;
   has_next: boolean;
   has_prev: boolean;
-}
-  data: T;
-  success: boolean;
-  message?: string;
-  errors?: string[];
-  pagination?: Pagination;
+=======
+// Environment
+export interface Environment {
+  NODE_ENV: 'development' | 'production' | 'test';
+  NEXT_PUBLIC_API_URL?: string;
+  NEXT_PUBLIC_APP_URL?: string;
+  NEXT_PUBLIC_GA_ID?: string;
+  NEXT_PUBLIC_SENTRY_DSN?: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
 }
 
-export interface ErrorResponse  {success: false;
+// API Response interfaces
+export interface ApiResponse<T> {
+  data: T;
   message: string;
-  errors: string[];
-  code?: string;
-}
-  success: true;
-  data: T;
-  message?: string;
+  success: boolean;
+  timestamp: string;
 }
 
+<<<<<<< HEAD
+export interface ErrorResponse  {success: false;
+=======
+export interface PaginatedResponse<T> {
+  data: T[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
+}
+
+// Error interfaces
+export interface ApiError {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
+  message: string;
+  code: string;
+  details?: any;
+  timestamp: string;
+}
+
+// Component props interfaces
+export interface ButtonProps {
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  disabled?: boolean;
+  loading?: boolean;
+  children: React.ReactNode;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+}
+
+<<<<<<< HEAD
 export type Response<T> = SuccessResponse<T> | ErrorResponse;ursor/fix-website-loading-errors-and-merge-6662;
 }
 
@@ -5535,3 +5714,34 @@ export interface ApiRequest {
 }
 
 export interface Environment { NODE_ENV: | 'development' | 'production' | 'test'; NEXT_PUBLIC_API_URL?: string; NEXT_PUBLIC_APP_URL?: string; NEXT_PUBLIC_GA_ID?: string; NEXT_PUBLIC_SENTRY_DSN?: string}
+=======
+export interface InputProps {
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url';
+  placeholder?: string;
+  value: string;
+  onChange: (value: string) => void;
+  error?: string;
+  disabled?: boolean;
+  required?: boolean;
+  label?: string;
+}
+
+export interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  title?: string;
+  children: React.ReactNode;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+}
+
+// Utility types
+export type Status = 'idle' | 'loading' | 'success' | 'error';
+
+export type SortOrder = 'asc' | 'desc';
+
+export type Theme = 'light' | 'dark' | 'system';
+
+// Re-export from other type files
+export * from './moderation';
+export * from './global';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1

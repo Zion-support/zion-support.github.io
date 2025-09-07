@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;  const [progress, setProgress] = useState(0);
+=======
+import { useState, useEffect } from "react";
+import { Resume } from "@/types/resume";
+export const useResumeProgress = (resume: Resume | null) => {
+  const [progress, setProgress] = useState(0);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   useEffect(() => {
     // Calculate progress based on completed sections
     if (!resume) {
       setProgress(0);
       return;
     }
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Resume } from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;
@@ -28,18 +37,40 @@ if ( {) {
     if (resume.work_experience && resume.work_experience.length > 0) {;
       completed += 1;      completed += 1;
     }
+=======
+
+    let completed = 0;
+
+    // Basic info is always considered (1 point)
+    completed += 1;
+
+    // Work experience (1 point if at least one entry)
+    if (resume.work_experience && resume.work_experience.length > 0) {
+      completed += 1;
+    }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
     // Education (1 point if at least one entry)
     if (resume.education && resume.education.length > 0) {
       completed += 1;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
     // Skills (1 point if at least one entry)
     if (resume.skills && resume.skills.length > 0) {
       completed += 1;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
     // Certifications (1 point if at least one entry)
     if (resume.certifications && resume.certifications.length > 0) {
       completed += 1;
     }
+<<<<<<< HEAD
     const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage);
   }, [resume]);
@@ -110,3 +141,12 @@ export const useResumeProgress = (resume:Resume | null) => {;
 };
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    const progressPercentage = (completed / 5) * 100;
+    setProgress(progressPercentage);
+  }, [resume]);
+
+  return progress;
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

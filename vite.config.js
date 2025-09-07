@@ -50,6 +50,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+<<<<<<< HEAD
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom'],
   },
@@ -61,3 +62,6 @@ export default defineConfig({
   }
 });
 
+=======
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1

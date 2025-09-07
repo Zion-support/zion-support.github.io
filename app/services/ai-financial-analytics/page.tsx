@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import Link from 'next/link';
@@ -9,6 +10,9 @@ import React from 'react';
 
 
 
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
 
 export const metadata = {
   title: 'Ai Financial Analytics | Zion Tech Group',

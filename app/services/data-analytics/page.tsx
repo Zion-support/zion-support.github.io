@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
@@ -7,6 +8,9 @@ export const metadata = {
 
 
 import Link from "next/link";
+=======
+import type { Metadata } from 'next';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
 
 export const metadata = {
   title: "Data Analytics & BI | Zion Tech Group",

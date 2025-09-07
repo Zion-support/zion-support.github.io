@@ -6,10 +6,19 @@ import { FileText } from "lucide-react";
 interface ProfileProjectsProps {
   projects: ProfileProject[];
 }
+<<<<<<< HEAD
 export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
+=======
+
+export function ProfileProjects({ projects }: ProfileProjectsProps) {
+  return (
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
+      <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
           <Card
@@ -29,6 +38,7 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
               </div>
             )}
+<<<<<<< HEAD
 <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
 import { Card, CardContent } from "@/components/ui/card";
@@ -70,6 +80,15 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;              <p className="text-zion-slate text-sm mb-3 line-clamp-2">
                 {project.description}
               </p>
+=======
+
+            <CardContent className="p-4">
+              <h4 className="text-white font-medium mb-2">{project.title}</h4>
+              <p className="text-zion-slate text-sm mb-3 line-clamp-2">
+                {project.description}
+              </p>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
               {project.tags && project.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1 mb-2">
                   {project.tags.map((tag, i) => (
@@ -79,10 +98,18 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                       className="text-xs border-zion-slate-dark text-zion-slate-light"
                     >
                       {tag}
+<<<<<<< HEAD
                     </Badge>;
                   ))}
                 </div>;
               )}
+=======
+                    </Badge>
+                  ))}
+                </div>
+              )}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
               <div className="text-xs text-zion-slate-light mt-2">
                 {project.date}
               </div>
@@ -91,5 +118,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   )}
 }
+=======
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
