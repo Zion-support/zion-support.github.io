@@ -2,8 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true,
-  },
+    ignoreDuringBuilds: true},
 <<<<<<< HEAD
   typescript: { 
     ignoreBuildErrors: true 
@@ -21,8 +20,7 @@ const nextConfig = {
   // Image optimization
 =======
   typescript: {
-    ignoreBuildErrors: true,
-  },
+    ignoreBuildErrors: true},
 >>>>>>> 716160b064bcc2ca60645a7e5c009cf722f6fb29
   images: {
     domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
@@ -61,23 +59,18 @@ const nextConfig = {
     unoptimized: true,
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"},
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
 >>>>>>> 716160b064bcc2ca60645a7e5c009cf722f6fb29
   },
   experimental: {
-    optimizePackageImports: ['@heroicons/react'],
-  },
+    optimizePackageImports: ['@heroicons/react']},
   turbopack: {
     rules: {
       '*.svg': {
         loaders: ['@svgr/webpack'],
-        as: '*.js',
-      },
-    },
-  },
+        as: '*.js'}}},
   poweredByHeader: false,
   generateEtags: false,
   compress: true,

@@ -19,9 +19,7 @@ export default [
       parser: typescriptParser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true}},
       globals: {
         ...globals.browser,
         ...globals.node
@@ -292,7 +290,7 @@ export default [
       '*.ts',
       'public/sw*.js',
       'resolve-*.js',
-      'run-complete-automation.js',
+      'run-complete-automation.js';
       'security-config.js';
       'seo-improvements.js';
       'simple-test.js';

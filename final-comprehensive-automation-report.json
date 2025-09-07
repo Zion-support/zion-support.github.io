@@ -1,60 +1,64 @@
 {
-  "timestamp": "2025-09-07T11:13:33.062Z",
-  "duration": "48s",
+  "timestamp": "2025-09-07T11:23:53.957Z",
+  "duration": "1s",
   "summary": {
     "totalTasks": 7,
-    "successful": 4,
-    "failed": 3,
-    "successRate": 57
+    "successful": 0,
+    "failed": 7,
+    "successRate": 0
   },
   "results": [
     {
       "command": "npm install --legacy-peer-deps",
       "description": "Installing dependencies",
-      "success": true,
-      "output": "\n> bolt.new.zion.app@0.1.0 prepare\n> echo 'Husky prepare script disabled'\n\nHusky prepare script disabled\n\nadded 344 packages, removed 199 packages, and changed 84 packages in 5s\n"
+      "success": false,
+      "error": "Command failed: npm install --legacy-peer-deps\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error path /workspace/package.json\nnpm error Merge conflict detected in your package.json.\nnpm error\nnpm error Please resolve the package.json conflict and retry.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_090Z-debug-0.log\n"
     },
     {
       "command": "npm run lint:fix",
       "description": "Fixing linting issues",
       "success": false,
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:13676) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 352 (line 10 column 1) while parsing near \"... \\\"dev\\\": \\\"next dev\\\",\\n<<<<<<< HEAD\\n    \\\"bu...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_308Z-debug-0.log\n"
     },
     {
       "command": "npm run type-check",
       "description": "Type checking",
       "success": false,
-      "error": "spawnSync /bin/sh ENOBUFS"
+      "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 352 (line 10 column 1) while parsing near \"... \\\"dev\\\": \\\"next dev\\\",\\n<<<<<<< HEAD\\n    \\\"bu...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_390Z-debug-0.log\n"
     },
     {
       "command": "npm run test:smoke",
       "description": "Running smoke tests",
-      "success": true,
-      "output": "\n> bolt.new.zion.app@0.1.0 test:smoke\n> jest --config jest.config.smoke.cjs --passWithNoTests\n\n"
+      "success": false,
+      "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 352 (line 10 column 1) while parsing near \"... \\\"dev\\\": \\\"next dev\\\",\\n<<<<<<< HEAD\\n    \\\"bu...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_469Z-debug-0.log\n"
     },
     {
       "command": "npm run build",
       "description": "Building Next.js project",
       "success": false,
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token '<<']\n"
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 352 (line 10 column 1) while parsing near \"... \\\"dev\\\": \\\"next dev\\\",\\n<<<<<<< HEAD\\n    \\\"bu...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_546Z-debug-0.log\n"
     },
     {
       "command": "npm audit",
       "description": "Security audit",
-      "success": true,
-      "output": "found 0 vulnerabilities\n"
+      "success": false,
+      "error": "Command failed: npm audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_625Z-debug-0.log\n"
     },
     {
       "command": "npm audit fix",
       "description": "Fixing security vulnerabilities",
-      "success": true,
-      "output": "\nup to date, audited 1652 packages in 3s\n\nfound 0 vulnerabilities\n"
+      "success": false,
+      "error": "Command failed: npm audit fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_804Z-debug-0.log\n"
     }
   ],
   "errors": [
-    "Fixing linting issues: Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:13676) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n",
-    "Type checking: spawnSync /bin/sh ENOBUFS",
-    "Building Next.js project: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token '<<']\n"
+    "Installing dependencies: Command failed: npm install --legacy-peer-deps\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error path /workspace/package.json\nnpm error Merge conflict detected in your package.json.\nnpm error\nnpm error Please resolve the package.json conflict and retry.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_090Z-debug-0.log\n",
+    "Fixing linting issues: Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 352 (line 10 column 1) while parsing near \"... \\\"dev\\\": \\\"next dev\\\",\\n<<<<<<< HEAD\\n    \\\"bu...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_308Z-debug-0.log\n",
+    "Type checking: Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 352 (line 10 column 1) while parsing near \"... \\\"dev\\\": \\\"next dev\\\",\\n<<<<<<< HEAD\\n    \\\"bu...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_390Z-debug-0.log\n",
+    "Running smoke tests: Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 352 (line 10 column 1) while parsing near \"... \\\"dev\\\": \\\"next dev\\\",\\n<<<<<<< HEAD\\n    \\\"bu...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_469Z-debug-0.log\n",
+    "Building Next.js project: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 352 (line 10 column 1) while parsing near \"... \\\"dev\\\": \\\"next dev\\\",\\n<<<<<<< HEAD\\n    \\\"bu...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_546Z-debug-0.log\n",
+    "Security audit: Command failed: npm audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_625Z-debug-0.log\n",
+    "Fixing security vulnerabilities: Command failed: npm audit fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_23_53_804Z-debug-0.log\n"
   ],
   "improvements": [
     "Fixed syntax errors in configuration files",
