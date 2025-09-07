@@ -20,7 +20,9 @@ import Referrals from "@/pages/Referrals";
 import DeveloperPortal from "@/pages/DeveloperPortal";
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
-const DashboardRoutes = () => {import {Fragment} from "react";
+const DashboardRoutes = () => {
+const DashboardRoutes = () => {;
+import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Dashboard from "@/pages/Dashboard";
@@ -271,6 +273,61 @@ import WalletPage from "@/pages/Wallet",;
 import ContractBuilder from "@/pages/ContractBuilder",;
 const DashboardRoutes = () => {
 const DashboardRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Dashboard Routes */}
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/client-dashboard"
+        element={
+          <ProtectedRoute>
+            <ClientDashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/talent-dashboard"
+        element={
+          <ProtectedRoute>;
+            <TalentDashboard />;
+          </ProtectedRoute>;
+        }
+      />
+      <Route
+        path="/creator-dashboard"
+        element={
+          <ProtectedRoute>
+            <CreatorDashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/analytics"
+        element={
+          <ProtectedRoute>
+            <Analytics />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/project/:id/milestones"
+        element={
+          <ProtectedRoute>
+            <ProjectMilestones />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/project/:id"
+        element={
+          <ProtectedRoute>;
             <ProjectDetails />;
           </ProtectedRoute>;
         }
@@ -354,7 +411,8 @@ const DashboardRoutes = () => {;
       />
       <Route
         path="/developers"
-        element={          <ProtectedRoute>;
+        element={
+          <ProtectedRoute>;
             <DeveloperPortal />;
           </ProtectedRoute>;
         }
@@ -372,10 +430,41 @@ const DashboardRoutes = () => {;
         }
       />
       <Route
-        path="/contract-builder"        }
+        path="/contract-builder"
+
+        }
       />;
     </Routes>);
 }
 ;
 export default DashboardRoutes;
 ;
+      />
+      <Route
+        path="/wallet"
+        element={
+          <ProtectedRoute>
+            <WalletPage />
+          </ProtectedRoute>
+        }
+      />;
+      <Route;
+        path="/dashboard/api-access";
+        element={;
+          <ProtectedRoute>;
+            <DeveloperPortal />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route;
+        path="/contract-builder";
+        element={;
+          <ProtectedRoute>;
+            <ContractBuilder />;
+          </ProtectedRoute>;
+        } ;
+      />;
+    </Routes>;
+  );
+},;
+export default DashboardRoutes;

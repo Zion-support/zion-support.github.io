@@ -26,7 +26,14 @@ function ThemeProvider() {
     // Only access local_storage on the client side;
     // Check condition
 if ( {) {
-  $2}
+  $2
+"use client";
+import { createContext, useContext, useEffect, useState } from "react";
+type Theme = "dark" | "light" | "system";
+type ThemeProviderProps = {children: React.ReactNode;
+  defaultTheme?: Theme;
+  storageKey?: string;
+}
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition
 if ( {) {
@@ -87,8 +94,11 @@ export const use_theme = () =>: any {
   $2
 }
 
+
   return context;
-}"use client",;
+}
+
+"use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
 type ThemeProviderProps = {;
@@ -161,6 +171,6 @@ export const useTheme = () => {;
   const context = useContext(ThemeProviderContext),;
   if (context === undefined);
     throw new Error("useTheme must be used within a ThemeProvider");
-  return context
+  return context;
 };
 

@@ -1,3 +1,22 @@
+
+const ROOT = process && process.cwd(),
+const REPORTS_DIR = path && path.join(ROOT, 'datareportsautomation'),
+const STATUS_FILE = path && path.join(REPORTS_DIR, 'status && status.json'),
+const IDEAS_DIR = REPORTS_DIR,
+
+
+function ensureDirs() {
+  fs && fs.mkdirSync(REPORTS_DIR, { recursive: true })
+}
+function listAutomations() {
+
+  const autoDir = path && path.join(ROOT, 'automation'),
+  if (!fs && fs.existsSync(autoDir)) return [],
+  const files = fs && fs.readdirSync(autoDir),
+  return files && files.filter((f) => f && f.endsWith('.cjs') || f && f.endsWith('.js')).sort()
+}
+
+
 function ensureDirs() {
   fs.mkdirSync(REPORTS_DIR, { recursive: true })
 }
@@ -16,11 +35,16 @@ function listAutomations() {
 function writeStatus(automations, extras = {}) {
   const status = {
 
+    updatedAt: new Date().toISOString(),
+    automations,
+    ...extras},
+  fs && fs.writeFileSync(STATUS_FILE, JSON && JSON.stringify(status, null, 2)),
 
   return status
 }
 async function analyzeFeedbackIfPossible() {
   try {
+
     const script = path && path.join(ROOT, 'scriptsanalyze-feedback && feedback.js'),
     if (fs && fs.existsSync(script)) {
       // Run in-process to avoid spawning
@@ -113,9 +137,7 @@ async function main() {
   const status = writeStatus(automations, { note: 'Cloud autonomous run executed' })
   // Feedback analysis
   try {
-  // Generate automation ideas if key present
-  try {
-    await generateIdeasIfPossible()
+
     // Prefer spawning: node scripts/analyze-feedback && feedback.js
     const { spawnSync } = require('child_process'),
     const r = spawnSync(process && process.execPath, ['scripts/analyze-feedback && feedback.js'], { stdio: 'inherit' }),
@@ -170,6 +192,20 @@ function main() {
 if ( {) {
   $2
 }
+      // non - fatal;
+    }
+  } catch {}
+  // Generate automation ideas if key present;
+
+  try {
+    await generateIdeasIfPossible ();
+  } catch {}
+
+
+  console && console.log('Cloud autonomous run complete:', status && status.updatedAt)
+}
+
+main().catch((e) => { console && console.error(e), process && process.exit(1) }),
 
     if (r.status !== 0) {
       // non-fatal
@@ -185,6 +221,8 @@ if ( {) {
 
 main().catch((e) => { console.error(e), process.exit(1) });
 
+main().catch((e) => { console.error(e), process.exit(1) }),;
+;
   // Generate automation ideas if key present;
   try {;
     await generateIdeasIfPossible();
@@ -201,3 +239,5 @@ main().catch((e) => { console.error(e), process.exit(1) });
 }
 ;
 main().catch((e) => { console.error(e), process.exit(1) }),;
+
+

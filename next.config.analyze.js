@@ -23,12 +23,22 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
 export const Next.config.analyze = () => {
   // Implementation here
   return null;
+
+
 };
 
 ,;
 ;};
 
 };
+
+
+
+
+
+
+
+
 
 
 
@@ -58,6 +68,9 @@ module && module.exports = {
 ,;
 ;};
 ;
+};
+
+
 
 
 
@@ -111,6 +124,8 @@ module.exports = {
   if (!isServer) {
   config.plugins.push(;
         new BundleAnalyzerPlugin({
+};
+,
 
 
 
@@ -164,8 +179,6 @@ const { BundleAnalyzerPlugin } = require ("webpack - bundle - analyzer"); module
 if ( { config.plugins.push () {
   $2
 } new BundleAnalyzerPlugin ({ analyzer_mode: "static", open_analyzer: false, report_filename: "bundle - analysis.html", }))} return config} }
-},;
-,;
 };
 ;
 ,;

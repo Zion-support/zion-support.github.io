@@ -159,5 +159,4 @@ if (require.main === module) {}
   }
 });
 };
-module.exports = ErrorFixer;
-module.exports = ErrorFixer;
+

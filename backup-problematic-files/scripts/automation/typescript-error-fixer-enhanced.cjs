@@ -99,5 +99,4 @@ async log(message, type = "INFO")
         await new Promise(resolve => setTimeout(resolve, interval))} catch (error) {  await this.log(` Error in continuous "run": ${error.message  }`, "ERROR"`)
   const continuous = args.includes("--continuous") || args.includes("-c")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
-  console.error(""Error": ")
-  console.error(""Error": ")
+

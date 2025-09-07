@@ -1,4 +1,6 @@
 
+
+
 import { Resume  } from '@/types / resume';
 
 export interface ResumeOption {
@@ -7,7 +9,12 @@ export interface ResumeOption {
   type: 'ai_resume' | 'custom_upload';
   resume?: Resume;
   file?: File
-}import { Resume } from "@/types/resume",
+}
+export interface ResumeSelectorProps {
+
+
+
+import { Resume } from "@/types/resume",
 export interface ResumeOption {
   id: string,
   title: string,
@@ -23,8 +30,11 @@ export interface ResumeOption {;
   file?: File;
 }
 ;
+
+export interface ResumeSelectorProps {;
+
+
   onResumeSelected: (resumeOption: ResumeOption) => void;
-  onResumeSelected: (resume_option: ResumeOption) => void;  onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;
   onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;

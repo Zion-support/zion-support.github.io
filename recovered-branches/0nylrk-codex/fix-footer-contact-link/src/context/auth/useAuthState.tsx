@@ -1,8 +1,22 @@
 
 
+
+import React, { useState } from "react",
+import type { UserProfile } from "@/types/auth";
+import type { UserProfile } from "@/types/auth",
+
+
+/**
  * Custom hook to manage auth state
  */
 export function useAuthState() {
+
+  const [user, setUser] = useState<UserProfile | null>(null),
+  const [isLoading, setIsLoading] = useState<boolean>(true),
+  const [onboardingStep, setOnboardingStep] = useState<string | null>(null),
+
+  
+
   return {
     user,
     setUser,
@@ -11,6 +25,9 @@ export function useAuthState() {
     onboardingStep,
     setOnboardingStep
 
+
+import React, { useState } from "react",;
+import type { UserProfile } from "@/types/auth",;
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
   }
@@ -33,7 +50,8 @@ export /**
 function useAuthState() {
   const [user, set_user] = useState < UserProfile | null>(null);
   const [is_loading, setIsLoading] = useState < boolean>(true);
-  const [onboarding_step, setOnboardingStep] = useState < string | null>(null);  const [user, setUser] = useState<UserProfile | null>(null),;
+  const [onboarding_step, setOnboardingStep] = useState < string | null>(null);
+  const [user, setUser] = useState<UserProfile | null>(null),;
   const [isLoading, setIsLoading] = useState<boolean>(true),;
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),;
   return {;
@@ -43,6 +61,9 @@ function useAuthState() {
     setIsLoading;
     onboardingStep;
     setOnboardingStep;
+
+
+
 
   }
 }
@@ -54,3 +75,9 @@ function useAuthState() {
     set_user;
     is_loading;
     setIsLoading;
+
+    onboarding_step;
+
+    setOnboardingStep;
+  }
+}

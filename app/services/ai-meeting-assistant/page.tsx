@@ -1,13 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import FeatureCard from '../../../components/FeatureCard';
-import TestimonialCard from '../../../components/TestimonialCard';
 
 export const metadata = {
   title: 'AI Meeting Assistant | Zion Tech Group',
   description: 'Revolutionary AI meeting platform with real-time transcription, intelligent summaries, and action item extraction. Transform your meetings with 95% accuracy and 50% time savings.',
   keywords: 'AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meetings'
 };
+
 
 export default function AIMeetingAssistantPage() {
   return (
@@ -93,7 +92,7 @@ export default function AIMeetingAssistantPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
             <blockquote className="text-gray-600 mb-4">
-              "The AI Meeting Assistant has transformed our client meetings. We never miss important details and our follow-up is 100% accurate."
+              &ldquo;The AI Meeting Assistant has transformed our client meetings. We never miss important details and our follow-up is 100% accurate.&rdquo;
             </blockquote>
             <div>
               <p className="font-semibold text-gray-900">Jennifer Martinez</p>
@@ -102,7 +101,7 @@ export default function AIMeetingAssistantPage() {
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
             <blockquote className="text-gray-600 mb-4">
-              "Our team meetings are now 50% more productive. The action item extraction is incredibly accurate and saves us hours of manual work."
+              &ldquo;Our team meetings are now 50% more productive. The action item extraction is incredibly accurate and saves us hours of manual work.&rdquo;
             </blockquote>
             <div>
               <p className="font-semibold text-gray-900">David Kim</p>
@@ -111,7 +110,7 @@ export default function AIMeetingAssistantPage() {
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
             <blockquote className="text-gray-600 mb-4">
-              "As a consultant, this tool is invaluable. I can focus on the conversation knowing that every detail is being captured perfectly."
+              &ldquo;As a consultant, this tool is invaluable. I can focus on the conversation knowing that every detail is being captured perfectly.&rdquo;
             </blockquote>
             <div>
               <p className="font-semibold text-gray-900">Lisa Thompson</p>

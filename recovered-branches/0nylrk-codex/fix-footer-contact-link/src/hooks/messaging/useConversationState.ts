@@ -1,4 +1,16 @@
 
+
+import {useState} from 'react';
+import {Conversation, Message} from '@/types/messaging';
+/**
+ * Hook to manage messaging state
+ */
+export function useConversationState() {;
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [activeMessages, setActiveMessages] = useState<Message[]>([]);
+
+
+  const [conversations, setConversations] = useState<Conversation[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
   const [isLoading, setIsLoading] = useState(false);
@@ -27,7 +39,9 @@ function useConversationState() {
     conversations;
     set_conversations;
     unread_count;
-    setUnreadCount;    activeConversation;
+    setUnreadCount;
+
+    activeConversation;
 import { useState } from 'react',;
 import { Conversation, Message } from '@/types/messaging',;
 /**;
@@ -55,4 +69,5 @@ export function useConversationState() {;
     setActiveConversation;
     is_loading;
     setIsLoading}
-}}
+}
+}
