@@ -1,50 +1,67 @@
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
-
-// Define public routes that don't require authentication
-const publicRoutes = [
-  "/",
-  "/about",
-  "/contact",
-  "/blog",
-  "/services",
-  "/products",
-  "/talent",
-  "/auth/login",
-  "/auth/register",
-  "/auth/forgot-password",
-  "/auth/reset-password",
-  "/auth/verify",
-];
+<<<<<<< HEAD
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+export function middleware() {
+  const response = NextResponse.next();
 
-  // Allow public routes
-  if (publicRoutes.includes(pathname)) {
-    return NextResponse.next();
-  }
+  // Security headers
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-XSS-Protection', '1; mode=block');
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  response.headers.set(
+    "Permissions-Policy"
+    "camera=(), microphone=(), geolocation=()"
+  );
 
-  // Check for authentication cookie
-  const authCookie = request.cookies.get("auth-token");
+  // Content Security Policy
+  const csp = [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: https:",
+    "font-src 'self'",
+    "connect-src 'self'",
+    "frame-ancestors 'none'"
+  ].join('; ');
 
-  if (!authCookie) {
-    // Redirect to login if not authenticated
-    return NextResponse.redirect(new URL("/auth/login", request.url));
-  }
-
+  response.headers.set('Content-Security-Policy', csp);
+  
+  return response;
+export function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-    "/((?!api|_next/static|_next/image|favicon.ico).*)",
+};
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 };
+    '/((?!api|_next/static|_next/image|favicon.ico).*)'
+  ]
+};
+=======
+import type { NextRequest } from "next/server";
+export function middleware(request: NextRequest) {
+  const response = NextResponse.next();
+  // Security headers
+  response.headers.set("X-Frame-Options", "DENY");
+  response.headers.set("X-Content-Type-Options", "nosniff");
+  response.headers.set("Referrer-Policy", "origin-when-cross-origin");
+  response.headers.set(
+    "Permissions-Policy",
+    "camera=(), microphone=(), geolocation=()"
+  );
+  // CSP header
+  response.headers.set(
+    "Content-Security-Policy",
+    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+  );
+return response;
+}
+export const config = {
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,20 +1,30 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
+const ForgotPassword: NextPage = $2;
+export default ForgotPassword,
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
 
-const ForgotPassword: NextPage = () => {
+export default function ForgotPassword() {
   return (
-    <div>
+    <Layout>
       <Head>
-        <title>ForgotPassword - Zion Tech Solutions</title>
-        <meta name="description" content="ForgotPassword page" />
+        <title>Forgot Password - Zion Tech Group</title>
+        <meta name="description" content="Forgot password page." />
       </Head>
       
-      <main>
-        <h1>ForgotPassword</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Forgot Password</h1>
+          <p className="text-lg text-gray-600">
+            Reset your password functionality coming soon.
+          </p>
+        </div>
+      </div>
+    </Layout>
   );
-};
-
-export default ForgotPassword;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

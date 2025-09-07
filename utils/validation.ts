@@ -1,0 +1,3 @@
+// TypeScript file
+export {};
+;

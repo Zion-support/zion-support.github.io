@@ -1,0 +1,13 @@
+  // Add props here as needed
+export default function Industry({}: IndustryProps) {
+  return (
+    <div>;
+      <h1>Industry</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  );
+
+
+
+
+}

@@ -1,20 +1,30 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
+const CloudComputingStrategies: NextPage = $2;
+export default CloudComputingStrategies,
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
 
-const CloudComputingStrategies: NextPage = () => {
+export default function cloudcomputingstrategies() {
   return (
-    <div>
+    <Layout>
       <Head>
-        <title>CloudComputingStrategies - Zion Tech Solutions</title>
-        <meta name="description" content="CloudComputingStrategies page" />
+        <title>Cloud Computing Strategies - Zion Tech Group</title>
+        <meta name="description" content="Cloud Computing Strategies solutions and services." />
       </Head>
       
-      <main>
-        <h1>CloudComputingStrategies</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cloud Computing Strategies</h1>
+          <p className="text-lg text-gray-600">
+            Professional cloud computing strategies solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
   );
-};
-
-export default CloudComputingStrategies;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,20 +1,28 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+<<<<<<< HEAD
 
-const Index: NextPage = () => {
+
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function index() {
   return (
-    <div>
+    <Layout>
       <Head>
-        <title>Index - Zion Tech Solutions</title>
-        <meta name="description" content="Index page" />
+        <title>Index - Zion Tech Group</title>
+        <meta name="description" content="Index solutions and services." />
       </Head>
       
-      <main>
-        <h1>Index</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Index</h1>
+          <p className="text-lg text-gray-600">
+            Professional index solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
   );
-};
-
-export default Index;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,20 +1,30 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
+const Callback: NextPage = $2;
+export default Callback,
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
 
-const Callback: NextPage = () => {
+export default function Callback() {
   return (
-    <div>
+    <Layout>
       <Head>
-        <title>Callback - Zion Tech Solutions</title>
-        <meta name="description" content="Callback page" />
+        <title>Auth Callback - Zion Tech Group</title>
+        <meta name="description" content="Authentication callback page." />
       </Head>
       
-      <main>
-        <h1>Callback</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Authentication Callback</h1>
+          <p className="text-lg text-gray-600">
+            Processing authentication...
+          </p>
+        </div>
+      </div>
+    </Layout>
   );
-};
-
-export default Callback;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

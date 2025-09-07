@@ -1,20 +1,30 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
+const EnhancedHome: NextPage = $2;
+export default EnhancedHome,
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 
-const EnhancedHome: NextPage = () => {
+export default function enhancedhome() {
   return (
-    <div>
+    <Layout>
       <Head>
-        <title>EnhancedHome - Zion Tech Solutions</title>
-        <meta name="description" content="EnhancedHome page" />
+        <title>Enhanced Home - Zion Tech Group</title>
+        <meta name="description" content="Enhanced Home solutions and services." />
       </Head>
       
-      <main>
-        <h1>EnhancedHome</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Enhanced Home</h1>
+          <p className="text-lg text-gray-600">
+            Professional enhanced home solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
   );
-};
-
-export default EnhancedHome;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

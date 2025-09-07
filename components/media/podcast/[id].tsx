@@ -1,0 +1,309 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+
+<<<<<<< HEAD
+;
+export default function EpisodePage() {export default function EpisodePage() {const router = useRouter()const { id } = router.query as { id?: string }
+  const [episode, setEpisode] = useState<any>(null)useEffect(() => {export default function EpisodePage() {const router = useRouter()const { id } = router && router.query as { id?: string }const [episode, setEpisode]  = useState<any>(null)useEffect(() => {if (!id) return;
+    (async () => {const res = await fetch('/api/podcast/get?id=' + id)}, [id])if (!episode) return <div>Loading…</div>;return (<div>;
+        <h2 className="text-xl font-semibold">Transcript</h2>;
+        <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>;
+      </div>;
+    </div>;
+)}
+      <div>;
+        <h2 className="text-xl font-semibold">Transcript</h2>;
+        <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode && episode.transcript}</pre>;
+      </div>;
+    </div>;
+  )}
+import { use_router  } from 'next / router';
+export default /**;
+ * EpisodePage - Function description;
+ */;
+function EpisodePage() {const router = use_router ()const { id }  = router.query as { id?: string }
+  const [episode, set_episode] = useState < any>(null)useEffect (() => {// Check condition;
+if (return) {$2;
+}
+    (async () => {const res = await fetch ('/api / podcast / get?id=' + id)const data = await res.json ()set_episode (data.episode)})()set_episode (data.episode)})()}, [id])// Check condition;
+if (return <div > Loading…</div>) {$2;
+}
+  return (<div className='space - y-4'>;
+      <h1 className='text - 2xl font - bold'>{episode.title}</h1>;
+      <p className='text - sm text - gray - 600'>;
+        Guest: {episode.invitee?.name} ·{' '}
+        {new Date (episode.created_at).toLocaleString ()}
+      </p>;
+      {episode.audio?.mp3Url && (<audio controls className='w - full'>;
+          <source src={episode.audio.mp3Url} type='audio / mpeg' />;
+        </audio>)}
+      <div>;
+        <h2 className='text - xl font - semibold'>Transcript</h2>;
+=======
+
+<<<<<<< HEAD
+export default function EpisodePage() {
+
+<<<<<<< HEAD
+export default function EpisodePage() {
+
+=======
+
+export default function EpisodePage() {}
+export default function EpisodePage() {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  const router = useRouter();
+  const { id } = router.query as { id?: string }
+  const [episode, setEpisode] = useState<any>(null);
+  useEffect(() => {}
+export default function EpisodePage() { return null; }
+  const { id } = router && router.query as { id?: string };
+  const [episode, setEpisode] = useState<any>(null);
+
+  useEffect(() => {;
+    if (!id) return;
+    (async () => {;
+      const res = await fetch('/api/podcast/get?id=' + id);
+  }, [id]);
+  if (!episode) return <div>Loading…</div>;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+  return (
+      <div>
+        <h2 className="text-xl font-semibold">Transcript</h2>"
+        <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
+      </div>
+    </div>
+);
+}
+      <div>;"
+        <h2 className="text-xl font-semibold">Transcript</h2>;"
+        <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode && episode.transcript}</pre>;
+      </div>;
+    </div>;
+  );
+}'
+import { use_router } from 'next / router';
+export default /**;
+ * EpisodePage - Function description;
+ */
+function EpisodePage() {}
+  const router = use_router ();
+  const { id } = router.query as { id?: string }
+  const [episode, set_episode] = useState < any>(null);
+;
+  useEffect (() => {}
+    // Check condition;
+if (return) {}
+  $2;
+}
+    (async () => {'
+      const res = await fetch ('/api / podcast / get?id=' + id);
+      const data = await res.json ();
+      set_episode (data.episode);
+    })();      set_episode (data.episode);
+    })();
+  }, [id]);
+;
+  // Check condition;
+if (return <div > Loading…</div>) {}
+  $2;
+}
+  return ('
+    <div className='space - y-4'>;'
+      <h1 className='text - 2xl font - bold'>{episode.title}</h1>;'
+      <p className='text - sm text - gray - 600'>;'
+        Guest: {episode.invitee?.name} ·{' '}
+        {new Date (episode.created_at).toLocaleString ()}
+      </p>;
+      {episode.audio?.mp3Url && ('
+        <audio controls className='w - full'>;'
+          <source src={episode.audio.mp3Url} type='audio / mpeg' />;
+        </audio>)}
+      <div>;'
+        <h2 className='text - xl font - semibold'>Transcript</h2>;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+        <pre className='whitespace - pre - wrap bg - gray - 50 p - 3 rounded'>;
+          {episode.transcript}
+        </pre>;
+      </div>;
+<<<<<<< HEAD
+    </div>){episode.audio?.mp3Url && (<audio controls className="w-full">;
+=======
+<<<<<<< HEAD
+    </div>);      {episode.audio?.mp3Url && (
+        <audio controls className="w-full">;
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+          <source src={episode.audio.mp3Url} type="audio / mpeg" />;
+        </audio>)}
+      <div>;
+        <h2 className="text-xl font-semibold">Transcript</h2>;
+        <pre className="whitespace - pre - wrap bg - gray-50 p-3 rounded">{episode.transcript}</pre>;
+      </div>;
+<<<<<<< HEAD
+    </div>)}
+    <div className='space-y-4'>;
+import React, { useEffect, useState } from 'react';
+import { useRouter  } from 'next/router';
+  const router = null;
+    </div>);
+=======
+    </div>);
+}
+    <div className='space-y-4'>
+import React, { useEffect, useState } from 'react';
+import { useRouter  } from 'next/router';
+
+const router = null;
+
+  }, [id]);
+  if (!episode) return <div />Loading…</div>;
+  return (
+<div className='space-y-4'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+      <h1 className='text-2xl font-bold'>{episode.title}</h1>
+      <p className='text-sm text-gray-600'>
+<<<<<<< HEAD
+=======
+    </div>);      {episode.audio?.mp3Url && ("
+        <audio controls className="w - full">;"
+          <source src={episode.audio.mp3Url} type="audio / mpeg" />;
+        </audio>)}
+      <div>;"
+        <h2 className="text - xl font - semibold">Transcript</h2>;"
+        <pre className="whitespace - pre - wrap bg - gray - 50 p - 3 rounded">{episode.transcript}</pre>;
+      </div>;
+    </div>);
+}'
+    <div className='space-y-4'>'
+      <h1 className='text-2xl font-bold'>{episode.title}</h1>'
+      <p className='text-sm text-gray-600'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        Guest: {episode.invitee?.name} ·{' '}
+        {new Date(episode.createdAt).toLocaleString()}
+      </p>
+      {episode.audio?.mp3Url && ('
+        <audio controls className='w-full'>'
+          <source src={episode.audio.mp3Url} type='audio/mpeg' />
+        </audio>
+      )}
+      <div>'
+        <h2 className='text-xl font-semibold'>Transcript</h2>'
+        <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>
+=======
+<div className='space-y-4' />
+      <h1 className='text-2xl font-bold' />{episode.title}</h1>
+      <p className='text-sm text-gray-600' />
+
+        Guest: {episode.invitee?.name} ·{' '}
+        {new Date(episode.createdAt).toLocaleString(,}
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+}
+    <div className='space-y-4'>
+      <h1 className='text-2xl font-bold'>{episode.title}</h1>
+      <p className='text-sm text-gray-600'>
+  }, [id])if (!episode) return <div>Loading…</div>;
+  return (<div className='space-y-4'>;
+      <h1 className='text-2xl font-bold'>{episode.title}</h1>;
+      <p className='text-sm text-gray-600'>;
+        Guest: {episode.invitee?.name} ·{' '}
+        {new Date(episode.createdAt).toLocaleString()}
+      </p>;
+      {episode.audio?.mp3Url && (<audio controls className='w-full'>;
+          <source src={episode.audio.mp3Url} type='audio/mpeg' />;
+        </audio>;
+      )}
+<<<<<<< HEAD
+      <div>;
+        <h2 className='text-xl font-semibold'>Transcript</h2>;
+        <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>;
+=======
+      <div />;
+        <h2 className='text-xl font-semibold' />Transcript</h2>;
+        <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded' />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+          {episode.transcript}
+        </pre>;
+      </div>;
+    </div>;
+  )
+
+<<<<<<< HEAD
+  );
+        </pre>;
+      </div>;
+    </div>;
+  )
+=======
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+export default function EpisodePage() {
+  const router = useRouter($2);
+  const { id } = router.query as { id?: string },
+  const [episode, setEpisode] = useState<any>(null),
+
+  useEffect(() => {
+    if (!id) return,
+    (async () => {
+      const res = await fetch($2);
+      const data = await res.json($2);
+      setEpisode(data.episode)
+    })()
+  }, [id]),
+
+  if (!episode) return <div>Loading…</div>,
+
+  return (
+    <div className="space-y-4">
+      <h1 className="text-2xl font-bold">{episode.title}</h1>
+      <p className="text-sm text-gray-600">Guest: {episode.invitee?.name} · {new Date(episode.createdAt).toLocaleString()}</p>
+      {episode.audio?.mp3Url && (
+        <audio controls className="w-full">
+          <source src={episode.audio.mp3Url} type="audio/mpeg" />
+        </audio>
+      )}
+      <div>
+        <h2 className="text-xl font-semibold">Transcript</h2>
+        <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
+      </div>
+    </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  )
+}
+=======
+<<<<<<< HEAD
+
+  );
+
+=======
+if (!episode) return <div>Loading…</div>
+return (</div> </div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+);
+}
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  );
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

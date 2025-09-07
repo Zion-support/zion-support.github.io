@@ -1,20 +1,30 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
+const FutureOfWorkAndAutomation: NextPage = $2;
+export default FutureOfWorkAndAutomation,
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
 
-const FutureOfWorkAndAutomation: NextPage = () => {
+export default function futureofworkandautomation() {
   return (
-    <div>
+    <Layout>
       <Head>
-        <title>FutureOfWorkAndAutomation - Zion Tech Solutions</title>
-        <meta name="description" content="FutureOfWorkAndAutomation page" />
+        <title>Future Of Work And Automation - Zion Tech Group</title>
+        <meta name="description" content="Future Of Work And Automation solutions and services." />
       </Head>
       
-      <main>
-        <h1>FutureOfWorkAndAutomation</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Future Of Work And Automation</h1>
+          <p className="text-lg text-gray-600">
+            Professional future of work and automation solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
   );
-};
-
-export default FutureOfWorkAndAutomation;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
