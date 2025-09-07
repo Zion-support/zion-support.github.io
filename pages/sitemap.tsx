@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+// import { GetServerSideProps } from 'next';
 
 const sitemap_data = [
   {
@@ -47,7 +47,7 @@ function SiteMap() {
   // getServerSideProps will do the heavy lifting
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+export const getServerSideProps = async ({ res }) => {
   // We generate the XML sitemap with the posts data
   const sitemap = generateSiteMap();
 
