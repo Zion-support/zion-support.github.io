@@ -57,37 +57,37 @@ export default function BlockchainPage() {
             title="DeFi Platform"
             description="Complete decentralized finance platform with trading, lending, and staking"
             price="Starting at $50k"
-            features={["DEX integration", "Liquidity pools", "Yield farming", "Governance token"]
+            features={["DEX integration", "Liquidity pools", "Yield farming", "Governance token"]}
           />
           <ServiceCard
             title="NFT Marketplace"
             description="Multi-chain NFT marketplace with minting, trading, and auction features"
             price="Starting at $35k"
-            features={["Multi-chain support", "Royalty system", "Auction mechanism", "Creator tools"]
+            features={["Multi-chain support", "Royalty system", "Auction mechanism", "Creator tools"]}
           />
           <ServiceCard
             title="Smart Contract Audit"
             description="Comprehensive security audit and testing for smart contracts"
             price="Starting at $8k"
-            features={["Code review", "Vulnerability assessment", "Gas optimization", "Test coverage"]
+            features={["Code review", "Vulnerability assessment", "Gas optimization", "Test coverage"]}
           />
           <ServiceCard
             title="Token Development"
             description="Custom token creation with advanced features and tokenomics"
             price="Starting at $12k"
-            features={["ERC-20/721/1155", "Tokenomics design", "Vesting contracts", "Multi-signature"]
+            features={["ERC-20/721/1155", "Tokenomics design", "Vesting contracts", "Multi-signature"]}
           />
           <ServiceCard
             title="DAO Platform"
             description="Decentralized autonomous organization platform with governance"
             price="Starting at $25k"
-            features={["Proposal system", "Voting mechanism", "Treasury management", "Member management"]
+            features={["Proposal system", "Voting mechanism", "Treasury management", "Member management"]}
           />
           <ServiceCard
             title="Cross-Chain Bridge"
             description="Secure bridge for transferring assets between different blockchains"
             price="Starting at $40k"
-            features={["Multi-chain support", "Security protocols", "Liquidity pools", "Monitoring system"]
+            features={["Multi-chain support", "Security protocols", "Liquidity pools", "Monitoring system"]}
           />
         </div>
       </div>

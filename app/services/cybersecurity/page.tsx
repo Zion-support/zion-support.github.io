@@ -87,7 +87,6 @@ export default function CybersecurityPage() {
             step="4"
             title="Monitoring & Maintenance"
             description="Ongoing monitoring, updates, and continuous security improvement"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           />
         </div>
       </section>
