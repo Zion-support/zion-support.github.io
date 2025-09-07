@@ -99,9 +99,6 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
 =======
 import React from 'react';
 
-interface SetupProps {
-  // Add props here as needed
-}
 
 export default function Setup({ }: SetupProps) {
   return (
