@@ -30,19 +30,20 @@ function fixMergeConflicts() {
   
   try {
     // Find files with merge conflicts
-    const conflictFiles = execSync('find . -name "*.js" -o -name "*.cjs" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | grep -v node_modules | grep -v .git | xargs grep -l ")
-      conflictFiles.forEach(file => {
-        if (fs.existsSync(file)) {
-          try {
-            let content = fs.readFileSync(file, 'utf8');
-            
-            // Remove merge conflict markers and keep the newer version
-            content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)
-            
-            // Clean up any remaining conflict markers
-            content = content.replace(/[\s\S]*?
-            
-            fs.writeFileSync(file, content);
+    const conflictFiles = execSync('find . -name "*.js" -o -name "*.cjs" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | grep -v node_modules | grep -v .git | xargs grep -l "<<<<<<< HEAD"', { encoding: 'utf8' }).trim().split('\n').filter(f => f);
+    
+    conflictFiles.forEach(file => {
+      if (fs.existsSync(file)) {
+        try {
+          let content = fs.readFileSync(file, 'utf8');
+          
+          // Remove merge conflict markers and keep the newer version
+          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+          
+          // Clean up any remaining conflict markers
+          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+          
+          fs.writeFileSync(file, content);
             console.log(`✅ Fixed merge conflicts in ${file}`);
           } catch (err) {
             console.log(`❌ Failed to fix ${file}: ${err.message}`);

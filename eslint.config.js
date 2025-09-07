@@ -2,16 +2,40 @@ import js from '@eslint/js';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
+import tsparser from '@typescript-eslint/parser';
 
 export default [
   js.configs.recommended,
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
+      parser: tsparser,
       ecmaVersion: 2022,
       sourceType: 'module',
-      parser: tsParser,
+      globals: {
+        React: 'readonly',
+        JSX: 'readonly',
+        process: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+        HTMLElement: 'readonly',
+        Document: 'readonly',
+        Window: 'readonly',
+        console: 'readonly',
+        fetch: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        location: 'readonly',
+        history: 'readonly',
+      },
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
@@ -79,6 +103,7 @@ export default [
         'warn',
         { argsIgnorePattern: '^_' }
       ],
+<<<<<<< HEAD
     },
   },
   {
@@ -95,6 +120,8 @@ export default [
         require: 'readonly',
         exports: 'readonly',
       },
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-1b2e
     },
   },
   {
@@ -164,6 +191,7 @@ export default [
       'components/tokens/**',
       'components/layout/**',
       'components/ui/**',
+<<<<<<< HEAD
       'components.disabled/**',
       'components.disabled_full/**',
       'components-disabled/**',
@@ -198,6 +226,12 @@ export default [
       'backup-merge-conflicts/**',
       'broken_files_backup/**',
       '*.js',
+=======
+      'api-backup/**',
+      'api.disabled/**',
+      'pages_backup_conflict/**',
+      'pages_api.disabled/**',
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-1b2e
       '*.cjs',
       'fix_typescript_syntax_errors.jsx',
       'fix_utils_files.ts',
