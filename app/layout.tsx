@@ -1,61 +1,67 @@
-<<<<<<< HEAD
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
-  keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
+  description: 'Zion Tech Group is a leading technology company specializing in AI, micro SaaS development, and IT services. Transform your business with cutting-edge technology.',
+  keywords: ['AI', 'artificial intelligence', 'micro SaaS', 'IT services', 'technology', 'innovation', 'business solutions', 'zion tech'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
-  robots: 'index, follow',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://ziontechgroup.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
-    type: 'website',
-    locale: 'en_US',
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+    url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - AI and Technology Solutions',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
     description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+    images: ['/og-image.jpg'],
   },
-}
+  verification: {
+    google: 'your-google-verification-code',
+  },
+  category: 'technology',
+  classification: 'Business',
+  referrer: 'origin-when-cross-origin',
+  colorScheme: 'light',
+  themeColor: '#000000',
+};
 
-=======
-import { Inter } from 'next/font/google';
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
-
->>>>>>> origin/main
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-<<<<<<< HEAD
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         {children}
-=======
-    <html lang="en" className={inter.className}>
-      <body className="antialiased">
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
->>>>>>> origin/main
       </body>
     </html>
-  )
+  );
 }

@@ -1,388 +1,73 @@
-<<<<<<< HEAD
-export const metadata = {
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
   title: 'AI Code Reviewer | Zion Tech Group',
-  description: 'Professional AI code reviewer solutions for your business needs.',
-  keywords: 'ai-code-reviewer, services, business, technology'
-}
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Code Reviewer
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional AI code reviewer solutions for your business needs.
-=======
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-
+  description: 'Professional AI code reviewer solutions for automated code analysis, quality assurance, and best practices enforcement.',
+  keywords: 'AI code reviewer, code analysis, quality assurance, automated code review, software development',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'AI Code Reviewer | Zion Tech Group',
+    description: 'Professional AI code reviewer solutions for automated code analysis and quality assurance.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Code Reviewer | Zion Tech Group',
+    description: 'Professional AI code reviewer solutions for automated code analysis and quality assurance.',
+  },
 };
 
-export default function ServicePage() {
+export default function AICodeReviewerPage() {
   return (
-    <div className="animate-fade-in">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          AI Code Reviewer
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-Automated code review and quality analysis powered by advanced AI.
-          Improve code quality, catch bugs early, and maintain consistent coding
-          standards across your team.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div>
-<h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Key Features
-          </h2>
-          <div className="space-y-4">
-            <FeatureItem
-              icon="🔍"
-              title="Intelligent Code Analysis"
-              description="AI-powered analysis that understands context, patterns, and best practices to provide meaningful feedback."
-            />
-            <FeatureItem
-              icon="🐛"
-              title="Bug Detection"
-              description="Automatically identify potential bugs, security vulnerabilities, and performance issues before they reach production."
-            />
-            <FeatureItem
-              icon="📏"
-              title="Code Quality Metrics"
-              description="Comprehensive quality metrics including complexity, maintainability, test coverage, and technical debt analysis."
-            />
-            <FeatureItem
-              icon="🎯"
-              title="Custom Rules Engine"
-              description="Define custom coding standards and rules specific to your team's requirements and project needs."
-            />
-            <FeatureItem
-              icon="⚡"
-              title="Real-time Feedback"
-              description="Get instant feedback as you code with IDE integrations and continuous analysis during development."
-            />
-            <FeatureItem
-              icon="📊"
-              title="Team Analytics"
-              description="Track code quality trends, team performance metrics, and improvement areas across your organization."
-            />
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Code Reviewer
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional ai code reviewer services for your business needs.
->>>>>>> origin/main
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-<<<<<<< HEAD
-              Tailored ai-code-reviewer solutions designed for your specific business requirements.
-=======
-              Tailored ai code reviewer solutions designed for your specific business requirements.
->>>>>>> origin/main
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
-          </div>
-<<<<<<< HEAD
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your ai-code-reviewer solutions run smoothly.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
-
-=======
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-=======
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-            Ai Code Reviewer
-          </h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Code Reviewer</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Transform your business with our advanced ai code reviewer solutions.
+            Professional AI code reviewer solutions for automated code analysis, quality assurance, and best practices enforcement.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
-              Get Started
-              <ArrowRightIcon className="h-5 w-5 ml-2" />
-            </Link>
-            <Link href="/services" className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors">
-              View All Services
-            </Link>
-          </div>
-
-<<<<<<< HEAD
-        <div>
-<h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
-          <div className="space-y-6">
-            <PricingCard
-              plan="Starter"
-              price="$29"
-              period="per month"
-              description="Perfect for small teams and individual developers"
-              features={[
-                "Up to 5 repositories",
-                "Basic code analysis",
-                "Standard bug detection",
-                "Email support",
-                "GitHub/GitLab integration",
-              ]}
-              popular={false}
-            />
-            <PricingCard
-              plan="Professional"
-              price="$99"
-              period="per month"
-              description="Ideal for growing teams and mid-size projects"
-              features={[
-                "Up to 25 repositories",
-                "Advanced AI analysis",
-                "Custom rules engine",
-                "Priority support",
-                "All integrations",
-                "Team analytics dashboard",
-              ]}
-              popular={true}
-            />
-            <PricingCard
-              plan="Enterprise"
-              price="$299"
-              period="per month"
-              description="For large organizations with complex needs"
-              features={[
-                "Unlimited repositories",
-                "Advanced security scanning",
-                "Custom AI model training",
-                "Dedicated support",
-                "On-premise deployment",
-                "Custom integrations",
-              ]}
-              popular={false}
-            />
-          </div>
         </div>
-      </div>
 
-<div className="bg-gray-50 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-          How It Works
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <StepCard
-            step="1"
-            title="Connect Your Repository"
-            description="Integrate with GitHub, GitLab, or Bitbucket in just a few clicks. No complex setup required."
-          />
-          <StepCard
-            step="2"
-            title="AI Analysis"
-            description="Our AI analyzes your code for quality issues, bugs, security vulnerabilities, and adherence to best practices."
-          />
-          <StepCard
-            step="3"
-            title="Get Actionable Insights"
-            description="Receive detailed reports with specific recommendations to improve your code quality and team productivity."
-          />
-        </div>
-      </div>
-
-      <div className="text-center">
-<h2 className="text-2xl font-bold text-gray-900 mb-6">
-          Ready to Improve Your Code Quality?
-        </h2>
-        <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join thousands of developers who trust our AI-powered code review
-          platform to maintain high-quality codebases.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-        <div className="mt-4 text-sm text-gray-500">
-          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-
-<<<<<<< HEAD
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">📈</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Scalable Solutions</h3>
-              <p className="text-gray-600">
-                Built to grow with your business and adapt to changing needs.
-              </p>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-white rounded-xl shadow-lg p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss your ai code reviewer requirements 
-              and get a custom solution tailored to your needs.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Automated Analysis</h3>
+            <p className="text-gray-600 mb-4">
+              AI-powered code analysis that identifies issues, bugs, and potential improvements.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-              >
-                Get Started
-                <ArrowRightIcon className="h-5 w-5 ml-2" />
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
-              >
-                View All Services
-              </Link>
-            </div>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Bug detection</li>
+              <li>• Performance optimization</li>
+              <li>• Security vulnerabilities</li>
+            </ul>
           </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-=======
->>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 
-=======
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-}
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Quality Assurance</h3>
+            <p className="text-gray-600 mb-4">
+              Ensure code quality and adherence to best practices across your development team.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Code standards enforcement</li>
+              <li>• Best practices recommendations</li>
+              <li>• Documentation requirements</li>
+            </ul>
+          </div>
 
-function FeatureItem({
-icon,
-  title,
-  description,
-}: {
-  icon: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="flex items-start space-x-4">
-<div className="text-2xl">{icon}</div>
-      <div>
-        <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
-      </div>
-    </div>
-  );
-}
-
-function PricingCard({
-  plan,
-  price,
-period,
-  description,
-  features,
-  popular,
-}: {
-  plan: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-}) {
-  return (
-    <div
-      className={`border rounded-xl p-6 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200"}`}
-    >
-      {popular && (
-        <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-          Most Popular
-        </div>
-      )}
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{plan}</h3>
-      <div className="mb-4">
-        <span className="text-3xl font-bold text-gray-900">{price}</span>
-        <span className="text-gray-600 ml-1">{period}</span>
-      </div>
-      <p className="text-gray-600 mb-6">{description}</p>
-      <ul className="space-y-2">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-green-500 mr-2">✓</span>
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function StepCard({
-  step,
-  title,
-  description,
-}: {
-  step: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center">
-<div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-        {step}
-      </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Integration</h3>
+            <p className="text-gray-600 mb-4">
+              Seamlessly integrate with your existing development workflow and CI/CD pipeline.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• CI/CD integration</li>
+              <li>• IDE plugins</li>
+              <li>• Real-time feedback</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   );
 }
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> origin/main
