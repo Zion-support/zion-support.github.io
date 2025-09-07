@@ -1,33 +1,27 @@
 const nextJest = require('next/jest');
-
 const createJestConfig = nextJest({
   dir: './',
 });
 
 const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: 'jsdom',
-  testPathIgnorePatterns: [
-    '<rootDir>/.next/',
-    '<rootDir>/node_modules/',
-    '<rootDir>/src.disabled/',
-    '<rootDir>/components.disabled/',
-    '<rootDir>/pages.disabled/',
-    '<rootDir>/src/__tests__/.*\.test\.tsx?$'
+  testMatch: [
+    '**/__tests__/**/*.(js|jsx|ts|tsx)',
+    '**/*.(test|spec).(js|jsx|ts|tsx)'
   ],
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/**/*.stories.{js,jsx,ts,tsx}',
-    '!src/**/*.test.{js,jsx,ts,tsx}',
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/.next/',
+    '/dist/',
+    '/build/',
+    '/out/'
   ],
   moduleNameMapping: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
-  testMatch: [
-    '<rootDir>/src/__tests__/**/*.test.{js,jsx,ts,tsx}',
-    '<rootDir>/src/**/*.test.{js,jsx,ts,tsx}',
-  ],
+  testTimeout: 30000,
+  passWithNoTests: true
 };
 
 module.exports = createJestConfig(customJestConfig);

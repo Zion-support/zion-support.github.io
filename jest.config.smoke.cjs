@@ -1,15 +1,16 @@
 const nextJest = require('next/jest');
 const createJestConfig = nextJest({
-  dir: ./,
+  dir: './',
 });
 
 // Add any custom config to be passed to Jest
 const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: 'jsdom',
   testMatch: [
-    '**/__tests__/**/*.(js|jsx|ts|tsx)',
-    '**/*.(test|spec).(js|jsx|ts|tsx)'
+    '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
+    '**/*.smoke.test.(js|jsx|ts|tsx)',
+    '**/*.smoke.spec.(js|jsx|ts|tsx)'
   ],
   testPathIgnorePatterns: [
     '/node_modules/',
@@ -32,7 +33,16 @@ const customJestConfig = {
     '/pages.broken/',
     '/pages.corrupted/',
     '/components.broken/',
-    '/components.corrupted/'
+    '/components.corrupted/',
+    '/dist/',
+    '/build/',
+    '/temp_exclude/',
+    '/temp_components/',
+    '/temp_conflicts/',
+    '/temp_working/',
+    '/backup*/',
+    '/corrupted_backup/',
+    '/temp_*/'
   ],
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
@@ -42,25 +52,14 @@ const customJestConfig = {
   moduleNameMapping: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
-  testMatch: [<rootDir>/__tests__/**/*.smoke.(js|jsx|ts|tsx),<rootDir>/**/*.smoke.test.(js|jsx|ts|tsx),
+  coveragePathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/.next/',
+    '<rootDir>/dist/',
+    '<rootDir>/build/',
   ],
-  testPathIgnorePatterns: [<rootDir>/node_modules/,<rootDir>/dist/,<rootDir>/build/,<rootDir>/backup-problematic-files/,<rootDir>/temp_exclude/,<rootDir>/src_backup/,<rootDir>/temp_backup/,<rootDir>/temp_components/,<rootDir>/temp_conflicts/,<rootDir>/temp_working/,<rootDir>/backup*/,<rootDir>/corrupted_backup/,<rootDir>/temp_*/,
-  ],
-  collectCoverageFrom: [src/**/*.{js,jsx,ts,tsx},!src/**/*.d.ts,!src/**/*.stories.{js,jsx,ts,tsx},
-  ],
-  coveragePathIgnorePatterns: [<rootDir>/node_modules/,<rootDir>/.next/,<rootDir>/dist/,<rootDir>/build/,
-  ],
-};
-
-module.exports = createJestConfig(config);
-module.exports = {
-  preset: ts-jest,
-  testEnvironment: jsdom,
-  roots: [<rootDir>/src],
-  testMatch: [**/__tests__/**/*.smoke.+(ts|tsx|js),**/*.smoke.(test|spec).+(ts|tsx|js)],
-  transform: {^.+\\.(ts|tsx)$: ts-jest},
-  setupFilesAfterEnv: [<rootDir>/src/setupTests.ts],
-  moduleNameMapping: {^@/(.*)$: <rootDir>/src/$1},
   testTimeout: 30000,
   passWithNoTests: true
 };
+
+module.exports = createJestConfig(customJestConfig);

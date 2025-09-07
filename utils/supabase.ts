@@ -1,12 +1,12 @@
 // Supabase utilities;
 export const supabase = {
   // Add supabase functionality here;
-
-  auth: {,
+;
+  auth: {,;
   getUser: () => Promise<any>;
-</any>
+</any>;
     signIn: (credentials: any) => Promise<any>;
-</any>
+</any>;
     signOut: () => Promise<any>;
-</any>
+</any>;
 
