@@ -7,7 +7,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-<<<<<<< HEAD
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
@@ -304,22 +303,10 @@
     "@sendgrid/mail": "^8.1.5",
     "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
-=======
-    "lint": "next lint",
-    "seo:generate": "node scripts/generate-dynamic-sitemap.js"
-  },
-  "dependencies": {
-    "framer-motion": "^10.18.0",
-    "lucide-react": "^0.536.0",
-    "next": "^15.5.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
->>>>>>> 70a7e91307b7b137e58209a8df72dcd2ceb02acb
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
-<<<<<<< HEAD
     "@tanstack/react-query": "^5.85.5",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
@@ -388,12 +375,7 @@
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.0.0",
-    "vite": "^5.4.19"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=10.0.0"
-=======
+    "vite": "^5.4.19",
     "web-vitals": "^5.1.0",
     "@heroicons/react": "^2.2.0"
   },
@@ -410,8 +392,7 @@
   },
   "engines": {
     "node": ">=18.0.0",
-    "npm": ">=8.0.0"
->>>>>>> 70a7e91307b7b137e58209a8df72dcd2ceb02acb
+    "npm": ">=10.0.0"
   },
   "repository": {
     "type": "git",
@@ -428,8 +409,4 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 70a7e91307b7b137e58209a8df72dcd2ceb02acb
