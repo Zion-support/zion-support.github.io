@@ -780,7 +780,25 @@ export default function ComprehensiveServicesShowcase2025() {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
+
+          {/* No Results Message */}
+          {filteredServices.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-gray-400 text-lg mb-4">
+                No services found matching your criteria.
+              </div>
+              <button
+                onClick={() => {
+                  setSelectedCategory('all');
+                  setSearchQuery('');
+                }}
+                className="text-cyan-400 hover:text-cyan-300 underline"
+              >
+                Clear filters and show all services
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
