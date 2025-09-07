@@ -1,21 +1,20 @@
 declare global {
-<<<<<<< HEAD
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-this-alias */
-/* eslint-disable prefer-const */
-/**
- * Serverless Environment Polyfill
- * 
- * This polyfill addresses common issues in serverless environments like Netlify: * - "self is not defined" errors
- * - Missing global objects
- * - Webpack chunk loading issues
- * - TypeScript helper function issues
- * 
- * This runs as the VERY FIRST script before any other code loads.
- */
-// Type declarations for global augmentation
-declare global {
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  /* eslint-disable @typescript-eslint/no-unused-vars */
+  /* eslint-disable @typescript-eslint/no-this-alias */
+  /* eslint-disable prefer-const */
+  /**
+   * Serverless Environment Polyfill
+   * 
+   * This polyfill addresses common issues in serverless environments like Netlify:
+   * - "self is not defined" errors
+   * - Missing global objects
+   * - Webpack chunk loading issues
+   * - TypeScript helper function issues
+   * 
+   * This runs as the VERY FIRST script before any other code loads.
+   */
+  // Type declarations for global augmentation
   var webpackChunk_N_E: any[];
   var __webpack_require__: any;
   var __webpack_exports__: any;
@@ -24,13 +23,6 @@ declare global {
   var __assign: any;
   var __rest: any;
   var __decorate: any;
-
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  var webpackChunk_N_E: any[]
-  var __webpack_require__: any
   var __webpack_exports__: any
   var __non_webpack_require__: any
   var __extends: any
