@@ -6,8 +6,7 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: 'AI Meeting Assistant', href: '/services/ai-meeting-assistant' },
-      { name: 'Smart Invoice Generator', href: '/services/smart-invoice-generator' },
+      { name: 'AI Solutions', href: '/services/ai-chatbot-platform' },
       { name: 'Web Development', href: '#' },
       { name: 'Cloud Services', href: '#' },
       { name: 'Mobile Apps', href: '#' },
@@ -48,42 +47,34 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
+            <Link href="/" className="text-2xl font-bold text-white mb-4 block">
+              Zion Tech Group
             </Link>
-            <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
-              Leading technology solutions provider specializing in web development, 
-              mobile applications, AI integration, and cloud services. Transform your business with cutting-edge technology.
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading technology solutions provider specializing in AI, web development, 
+              mobile applications, cloud services, and digital transformation.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors duration-200"
+                  className="text-gray-300 hover:text-white transition-colors"
                   aria-label={social.name}
                 >
-                  <span className="text-lg">{social.icon}</span>
+                  <span className="text-2xl">{social.icon}</span>
                 </a>
               ))}
             </div>
           </div>
-
+          
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
-                  >
+                  <Link href={link.href} className="text-gray-300 hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -91,70 +82,27 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="space-y-2 text-gray-300">
-              <div className="flex items-center">
-                <MapPin className="h-4 w-4 mr-2" />
-                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-              </div>
-              <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center">
-                <Mail className="h-4 w-4 mr-2" />
-                <span>kleber@ziontechgroup.com</span>
-              <li><a href="/about" className="text-gray-300 hover:text-white">About</a></li>
-              <li><a href="/services" className="text-gray-300 hover:text-white">Services</a></li>
-              <li><a href="/solutions" className="text-gray-300 hover:text-white">Solutions</a></li>
-              <li><a href="/research" className="text-gray-300 hover:text-white">Research</a></li>
-            </ul>
-          </div>
-
-
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Company</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              )
-}
-            </ul>
-          </div>
-
-          {/* Support & Legal */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Support</h3>
-            <ul className="space-y-3 mb-8">
-              {footerLinks.support.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
-                  >
+                  <Link href={link.href} className="text-gray-300 hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
-            
-            <h3 className="text-lg font-semibold mb-6">Legal</h3>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
+          </div>
+          
+          {/* Support */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <ul className="space-y-2">
+              {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
-                  >
+                  <Link href={link.href} className="text-gray-300 hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -162,15 +110,22 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-
-        {/* Bottom Bar */}
+        
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-300 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex items-center space-x-6 mt-4 md:mt-0">
-              <span className="text-gray-400 text-sm">Made with ❤️ by Zion Tech Group</span>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              {footerLinks.legal.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
