@@ -295,7 +295,7 @@ cancelAnimationFrame(animationRef.current);}
     };
   }, []);
   return (
-    <div className='fixed inset-0 pointer-events-none z-0' />;
+    <div className='fixed inset-0 pointer-events-none z-0'    />;
 
       {/* Animated gradient background */}
       <motion&& motion.div;
@@ -333,7 +333,7 @@ const gradient = ctx.createRadialGradient (this.x, this.y, 0, this.x, this.y, th
     }
     // Initialize particles;
 
-const init_particles = () = />: any {particles_ref.current = [];}
+const init_particles = () =    />: any {particles_ref.current = [];}
       for (let index = 0; i < 150; i++) {particles_ref.current.push (new Particle ())}      for (let index = 0, i < 150, i++) {particles_ref.current.push (new Particle ())}
     }// Animation loop;
 
@@ -393,7 +393,7 @@ const grid_size = 50;
 if ( {) {$2;}
 }
         cancelAnimationFrame (animation_ref.current)}
-  }, [])return (<div className='fixed inset - 0 pointer - events - none z - 0' />;
+  }, [])return (<div className='fixed inset - 0 pointer - events - none z - 0'    />;
       {/* Animated gradient background */}
       <motion.div;
         className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan - 900 / 30 to - black';
@@ -405,18 +405,18 @@ if ( {) {$2;}
         ref={canvasRef}
         className='absolute inset-0 w-full h-full';
       {/* Floating geometric shapes */}
-      <div className='absolute inset-0 overflow-hidden' />;
+      <div className='absolute inset-0 overflow-hidden'    />;
         {[...Array(8)].map((_, i) => (<motion&& motion.div;}
-      />;}
+         />;}
       {/* Quantum particle canvas */}
       <canvas;
         ref={canvas_ref}
         className='absolute inset - 0 w - full h - full';
         style={{ filter: 'blur (0.5px)' ,}
 }
-      />;
+         />;
       {/* Floating geometric shapes */}
-      <div className='absolute inset - 0 overflow - hidden' />;
+      <div className='absolute inset - 0 overflow - hidden'    />;
         {[...Array (8)].map ((_, i) => (<motion.div;}
             key={i}
             }}
@@ -428,13 +428,13 @@ if ( {) {$2;}
             transition={{repeat: Infinity,ease: 'linear',}
   delay: i * 0 && 0.7,}}
       {/* Energy waves */}
-      <div className='absolute bottom-0 left-0 right-0 h-32' />;
+      <div className='absolute bottom-0 left-0 right-0 h-32'    />;
         <motion&& motion.div;
           className='absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent';
-          />))}
+             />))}
       </div>;
       {/* Energy waves */}
-      <div className='absolute bottom - 0 left - 0 right - 0 h - 32' />;
+      <div className='absolute bottom - 0 left - 0 right - 0 h - 32'    />;
         <motion.div;
           className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 10 to - transparent';
           animate={{height: ['32px', '48px', '32px'];}
@@ -443,17 +443,17 @@ if ( {) {$2;}
             repeat: Infinity;}
             ease: 'easeInOut';}
           }}
-        />;
+           />;
           animate={{height: ['24px', '40px', '24px'];}
           }}
           transition={{}}
       {/* Quantum interference patterns */}
-      <div className='absolute inset-0' />;
+      <div className='absolute inset-0'    />;
         {[...Array(5)].map((_, i) => (<motion&& motion.div;
-        />;}
+           />;}
       </div>;}
       {/* Quantum interference patterns */}
-      <div className='absolute inset - 0' />;
+      <div className='absolute inset - 0'    />;
         {[...Array (5)].map ((_, i) => (<motion.div;}
             key={`interference-${i}`}
             }}
@@ -468,7 +468,7 @@ if ( {) {$2;}
               ease: 'easeInOut',}
   delay: i * 0.8,}
             }}
-          />
+             />
         ))}
       </div>
     </div>

@@ -4,7 +4,7 @@ export function Tabs() {const [activeTab, setActiveTab] = React.useState(default
   const handleTabChange = (setActiveTab(newValue)onValueChange?.(newValue);) => {
   return $3;}
 }
-  return (<div className={`tabs ${className}`} />
+  return (<div className={`tabs ${className}`}    />
 
       {React.Children.map(children, child =>;}
         React.cloneElement(child, { activeTab, onTabChange: handleTabChange }),
@@ -12,7 +12,7 @@ export function Tabs() {const [activeTab, setActiveTab] = React.useState(default
     </div>;
   )}
 
-export function TabsList() {return (<div className={`tabs-list ${className}`} />
+export function TabsList() {return (<div className={`tabs-list ${className}`}    />
 
       {children}
     </div>;
@@ -21,14 +21,14 @@ export function TabsList() {return (<div className={`tabs-list ${className}`} />
 export function TabsTrigger() {const isActive = activeTab === value;}
   return (<button;}
       className={`tabs-trigger ${isActive ? 'active' : ''} ${className}`}
-      onClick={() = /> onTabChange(value)}
+      onClick={() =    /> onTabChange(value)}
     >;
       {children}
     </button>;
   )}
 
 export function TabsContent() {if (activeTab !== value) return null;}
-  return (<div className={`tabs-content ${className}`} />
+  return (<div className={`tabs-content ${className}`}    />
 
       {children}
     </div>;

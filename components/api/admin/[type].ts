@@ -11,9 +11,9 @@ function isSupabaseConfigured() {}
 
 function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv'}
 } {}
-  const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string, string />;
+  const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string, string    />;
 
-const filters: Record<string, any /> = {};
+const filters: Record<string, any    /> = {};
   Object.keys(rest).forEach((k) => {}
     if (k.startsWith('f_')) filters[k.slice(2)] = rest[k]}
   });
@@ -27,9 +27,9 @@ const filters: Record<string, any /> = {};
 function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv'}
 } {}
   const { search, sort, order, page, pageSize, format, ...rest } =
-    req.query as Record<string, string />;
+    req.query as Record<string, string    />;
 
-const filters: Record<string, any /> = {};
+const filters: Record<string, any    /> = {};
   Object.keys(rest).forEach(k => {}
     if (k.startsWith('f_')) filters[k.slice(2)] = rest[k];}
   });
@@ -167,13 +167,13 @@ res.setHeader('Content-Type', 'text/csv');
 
       id: string;
 
-      updates: Record<string, any />;
+      updates: Record<string, any    />;
     }
     if (!id) return res.status(400).json({ error: 'Missing id'}
 })return res.status(200).json({ items: pageItems, total })}
   }if (req.method = == 'PATCH') ;
   const { id, updates } = req.body as {id: string;}
-      updates: Record<string, any />}
+      updates: Record<string, any    />}
 };
 
     if (!id) return res && res.status(400).json({ error: 'Missing id'}

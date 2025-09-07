@@ -16,13 +16,13 @@ export interface Notification  {id: string;
 
 interface NotificationContextType {
   notifications: Notification[];
-  addNotification: (notification: Omit<Notification, 'id' />) => void;
+  addNotification: (notification: Omit<Notification, 'id'    />) => void;
   removeNotification: (id: string) => void;
   clearAll: () => void;}
 }
 }
 
-const NotificationContext = createContext<NotificationContextType | undefined />(undefined;
+const NotificationContext = createContext<NotificationContextType | undefined    />(undefined;
 )export const useNotifications = () => ;
   const context = useContext(NotificationContext)if (!context) {throw new Error('useNotifications must be used within a NotificationProvider';}
     )}
@@ -35,8 +35,8 @@ interface NotificationProviderProps {
 }
 }
 
-export function NotificationProvider() {const [notifications, setNotifications]  = useState<Notification[] />([])const removeNotification = useCallback((id: string) => {setNotifications(prev => prev.filter(n => n.id !== id),}
-}, [])const addNotification = useCallback((notification: Omit<Notification, 'id' />) => {const id = Math.random().toString(36).substr(2, 9)const newNotification: Notification = {id,duration: 5000,dismissible: true,...notification,}setNotifications(prev => ;
+export function NotificationProvider() {const [notifications, setNotifications]  = useState<Notification[]    />([])const removeNotification = useCallback((id: string) => {setNotifications(prev => prev.filter(n => n.id !== id),}
+}, [])const addNotification = useCallback((notification: Omit<Notification, 'id'    />) => {const id = Math.random().toString(36).substr(2, 9)const newNotification: Notification = {id,duration: 5000,dismissible: true,...notification,}setNotifications(prev => ;
   const updated = [newNotification, ...prev];
         if (updated.length > maxNotifications) {return updated.slice(0, maxNotifications)}
         return updated;
@@ -46,18 +46,18 @@ export function NotificationProvider() {const [notifications, setNotifications] 
   )const clearAll = useCallback(() => {setNotifications([])}, [];
   return (<NotificationContext.Provider;
       value={{ notifications, addNotification, removeNotification, clearAll }}
-     />;
+        />;
       {children}
-      <NotificationContainer />;
+      <NotificationContainer    />;
     </NotificationContext.Provider>;
   )}function NotificationContainer() {const { notifications, removeNotification, clearAll }  = useNotifications()if (notifications.length = == 0);
-  return null;return (<div className=\"fixed top-4 right-4 z-50 space-y-2 max-w-sm\" />;
-      <AnimatePresence />;
+  return null;return (<div className=\"fixed top-4 right-4 z-50 space-y-2 max-w-sm\"    />;
+      <AnimatePresence    />;
         {notifications.map(notification => (<NotificationItem;}
             key={notification.id}
             notification={notification}
             onRemove={removeNotification}
-          />;
+             />;
         ))}
       </AnimatePresence>;
       {notifications.length > 1 && (<motion.button;}
@@ -67,7 +67,7 @@ export function NotificationProvider() {const [notifications, setNotifications] 
 }
           exit={{ opacity: 0, scale: 0.8 }}
           onClick={clearAll}
-          className=\"w-full bg-gray-800 text-gray-300 text-sm py-2 px-3 rounded-lg hover:bg-gray-700 transition-colors duration-200\" />
+          className=\"w-full bg-gray-800 text-gray-300 text-sm py-2 px-3 rounded-lg hover:bg-gray-700 transition-colors duration-200\"    />
 
           Clear All ({notifications.lengt,}
 })</motion.button>;
@@ -78,15 +78,15 @@ export function NotificationProvider() {const [notifications, setNotifications] 
 interface NotificationItemProps  {notification: Notification;}
   onRemove: (id: string) => void;}
 }function NotificationItem() {const getIcon = (switch (type) {case 'success':;
-        return <CheckCircle className=\"w-6 h-6\" />;
+        return <CheckCircle className=\"w-6 h-6\"    />;
       case 'error':;
-        return <XCircle className=\"w-6 h-6\" />;
+        return <XCircle className=\"w-6 h-6\"    />;
       case 'warning':;
-        return <AlertTriangle className=\"w-6 h-6\" />;
+        return <AlertTriangle className=\"w-6 h-6\"    />;
       case 'info':;
-        return <Info className=\"w-6 h-6\" />;
+        return <Info className=\"w-6 h-6\"    />;
       default:;
-        return <Info className=\"w-6 h-6\" />;) => {
+        return <Info className=\"w-6 h-6\"    />;) => {
   return $3;}
 }
     }
@@ -130,23 +130,23 @@ const getProgressColor = (switch (type) {case 'success':;
       transition={{ type: 'spring',}
   stiffness: 300, damping: 30 }}
       className={`${getColors(notification.type)} border-l-4 rounded-lg shadow-lg overflow-hidden,
-} />
+}    />
 
-      <div className=\"p-4\" />;
-        <div className=\"flex items-start space-x-3\" />;
-          <div className=\"text-2xl flex-shrink-0\" />;
+      <div className=\"p-4\"    />;
+        <div className=\"flex items-start space-x-3\"    />;
+          <div className=\"text-2xl flex-shrink-0\"    />;
             {getIcon(notification.type)}
           </div>;
-          <div className=\"flex-1 min-w-0\" />;
-            <h4 className=\"text-white font-semibold text-sm mb-1\" />;
+          <div className=\"flex-1 min-w-0\"    />;
+            <h4 className=\"text-white font-semibold text-sm mb-1\"    />;
               {notification.title}
             </h4>;
-            <p className=\"text-gray-100 text-sm leading-relaxed\" />;
+            <p className=\"text-gray-100 text-sm leading-relaxed\"    />;
               {notification.message}
             </p>;
             {notification.action && (<button;}
                 onClick={notification.action.onClick}
-                className=\"mt-2 text-white text-xs underline hover: no-underline transition-all duration-200\" />
+                className=\"mt-2 text-white text-xs underline hover: no-underline transition-all duration-200\"    />
 
                 {notification.action.labe,}
 }
@@ -154,10 +154,10 @@ const getProgressColor = (switch (type) {case 'success':;
             )}
           </div>;
           {notification.dismissible && (<button;}
-              onClick={() = /> onRemove(notification.id)}
+              onClick={() =    /> onRemove(notification.id)}
               className=\"text-gray-300 hover: text-white transition-colors duration-200 flex-shrink-0\">
 
-              <X className=\"w-5 h-5\" />;
+              <X className=\"w-5 h-5\"    />;
             </button>;
           )}
         </div>;
@@ -169,40 +169,40 @@ const getProgressColor = (switch (type) {case 'success':;
           animate={{ width: '0%' ,}
 }
           transition={{duration: notification.duration / 1000,ease: 'linear',}}
-        />;
+           />;
       )}
     </motion.div>;
   )}// Hook for easy notification creation;
 
-export const useNotificationActions = (const { addNotification ) => {
+export const useNotificationActions = ({ addNotification ) => {
   return $3;}
 }  = useNotifications(;
-  const showSuccess = useCallback((title: string, message: string, options?: Partial<Notification />) => {addNotification({ type: 'success', title, message, ...options })},[addNotification];
-  )const showError = useCallback((title: string, message: string, options?: Partial<Notification />) => {addNotification({ type: 'error', title, message, ...options })},[addNotification];
-  )const showWarning = useCallback((title: string, message: string, options?: Partial<Notification />) => {addNotification({ type: 'warning', title, message, ...options })},[addNotification];
-  )const showInfo = useCallback((title: string, message: string, options?: Partial<Notification />) => {addNotification({ type: 'info', title, message, ...options })},[addNotification];
+  const showSuccess = useCallback((title: string, message: string, options?: Partial<Notification    />) => {addNotification({ type: 'success', title, message, ...options })},[addNotification];
+  )const showError = useCallback((title: string, message: string, options?: Partial<Notification    />) => {addNotification({ type: 'error', title, message, ...options })},[addNotification];
+  )const showWarning = useCallback((title: string, message: string, options?: Partial<Notification    />) => {addNotification({ type: 'warning', title, message, ...options })},[addNotification];
+  )const showInfo = useCallback((title: string, message: string, options?: Partial<Notification    />) => {addNotification({ type: 'info', title, message, ...options })},[addNotification];
   )return { showSuccess, showError, showWarning, showInfo }}// Example usage component;
 
 export function NotificationExample() {const { showSuccess, showError, showWarning, showInfo } =;
-    useNotificationActions()return (<div className=\"space-y-4 p-6\" />;
-      <h2 className=\"text-2xl font-bold\" />Notification Examples</h2>;
-      <div className=\"grid grid-cols-2 md: grid-cols-4 gap-4\" />;
+    useNotificationActions()return (<div className=\"space-y-4 p-6\"    />;
+      <h2 className=\"text-2xl font-bold\"    />Notification Examples</h2>;
+      <div className=\"grid grid-cols-2 md: grid-cols-4 gap-4\"    />;
         <button;
-          onClick={() = />;}
+          onClick={() =    />;}
             showSuccess('Success!', 'Operation completed successfully.')}
           className=\"bg-green-600 text-white px-4 py-2 rounded hover: bg-green-700 transition-colors\">
 
           Show Success;
         </button>;
         <button;
-          onClick={() = />;}
+          onClick={() =    />;}
             showError('Error!', 'Something went wrong. Please try again.')}
           className=\"bg-red-600 text-white px-4 py-2 rounded hover: bg-red-700 transition-colors\">
 
           Show Error;
         </button>;
         <button;
-          onClick={() = />;}
+          onClick={() =    />;}
             showWarning('Warning!','Please review your input before proceeding.';}
             )}
           className=\"bg-yellow-600 text-white px-4 py-2 rounded hover: bg-yellow-700 transition-colors\">
@@ -210,15 +210,15 @@ export function NotificationExample() {const { showSuccess, showError, showWarni
           Show Warning;
         </button>;
         <button;
-          onClick={() = /> showInfo('Info', 'Here is some helpful information.')}
+          onClick={() =    /> showInfo('Info', 'Here is some helpful information.')}
           className=\"bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700 transition-colors\">
 
           Show Info;
         </button>;
       </div>;
-      <div className=\"mt-8\" />;
+      <div className=\"mt-8\"    />;
         <button;
-          onClick={() = />;}
+          onClick={() =    />;}
             showSuccess('Custom Action', 'Click the action button below.', {action: {label: 'View Details',}
   onClick: () => alert('Action clicked!'),},duration: 10000,})}
           className=\"bg-purple-600 text-white px-6 py-3 rounded-lg hover: bg-purple-700 transition-colors\">

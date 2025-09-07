@@ -26,7 +26,7 @@ export type AnalyzeResponse = {
 
 export default async function handler(
   req: NextApiRequest;
-res: NextApiResponse<AnalyzeResponse | { error: string } />
+res: NextApiResponse<AnalyzeResponse | { error: string }    />
 ) {
 
   if (req.method !== 'POST') {}

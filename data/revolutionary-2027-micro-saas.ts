@@ -55,9 +55,9 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
     },
   ];    features: [
 '
-      "Revolutionary features";""
-      "Transformative capabilities";""
-      "Advanced technology";"
+      'Revolutionary features';""
+      'Transformative capabilities';""
+      'Advanced technology';"
 export interface Revolutionary2027MicroSaas {;
 "
       "Future-ready solutions""]
@@ -71,10 +71,10 @@ export interface Revolutionary2027MicroSaas {;
 
     }
   ];    features: [
-      \"Revolutionary features\";
-      \"Transformative capabilities\";
+      \'Revolutionary features\';
+      \'Transformative capabilities\';
 
-      \"Advanced technology\";export interface Revolutionary2027MicroSaas {}
+      \'Advanced technology\';export interface Revolutionary2027MicroSaas {}
 };
 
 export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
@@ -104,10 +104,10 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
       },
     },;
   ];    features: ['
-      "Revolutionary features";""
-      "Transformative capabilities";""
-      "Advanced technology";""
-      "Innovation platform";"
+      'Revolutionary features';""
+      'Transformative capabilities';""
+      'Advanced technology';""
+      'Innovation platform';"
 
   id: string,;
   name: string,;

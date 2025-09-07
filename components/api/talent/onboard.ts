@@ -55,11 +55,10 @@ if (
        ;}
   return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) };
       }
-    } catch (_) {}
+    } catch (e) {
       // fall through to heuristic;}
     }
-  } catch (err) {
-}
+  } catch (e) {
 // ignore and fallback}
   }
 
@@ -168,8 +167,7 @@ const record = {
       ai: {
         summary,}
         tags,}
-      },
-    };
+      }}
 
 const perRecordPath = path.join(dataDir, `${id}.json`);
     await fse.writeJSON(perRecordPath, record, { spaces: 2,}
@@ -189,7 +187,7 @@ const aggregatePath = path.join(
 
         const content = await fse.readJSON(aggregatePath);}
 if (Array.isArray(content)) aggregate = content;}
-      } catch (_) {}
+      } catch (e) {
         // ignore;}
       }
     }
@@ -200,7 +198,7 @@ if (Array.isArray(content)) aggregate = content;}
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data;
 return res.status(200).json({ ok: true, id, summary, tags });
-  } catch (error) {}
+  } catch (e) {
     return res.status(500).json({ error: 'Internal server error',}
 });
   }

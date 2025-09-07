@@ -16,7 +16,7 @@ type Props = {participant: RemoteParticipant | LocalParticipant;
   displayName?: string;participant;
   isLocal;}
   displayName;}
-  participant,isLocal,displayName}: Props) {  const videoRef = useRef<HTMLVideoElement | null />(null)type Props = {participant: RemoteParticipant | LocalParticipant;
+  participant,isLocal,displayName}: Props) {  const videoRef = useRef<HTMLVideoElement | null    />(null)type Props = {participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
 }
@@ -28,9 +28,9 @@ export default function ParticipantTile({
   isLocal}
   displayName}
 }: Props) {
-  const videoRef = useRef<HTMLVideoElement | null />(null);
+  const videoRef = useRef<HTMLVideoElement | null    />(null);
 
-const audioRef = useRef<HTMLAudioElement | null />(null);
+const audioRef = useRef<HTMLAudioElement | null    />(null);
   useEffect(() => {
 
     const handleTrackSubscribed = (
@@ -71,7 +71,7 @@ participant.off('trackUnsubscribed', handleTrackUnsubscribed)}
 
   }, [participant]);
   return (
-    <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative' />
+    <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'    />
       <video;
 ref={videoRef}
         autoPlay;
@@ -80,9 +80,9 @@ ref={videoRef}
 
         className='w-full h-48 object-cover bg-black'
 
-      />
-      <audio ref={audioRef} autoPlay className='hidden' />
-      <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white' />
+         />
+      <audio ref={audioRef} autoPlay className='hidden'    />
+      <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'    />
         {displayName |}
           (participant as any).name |}
           (isLocal ? 'You' : 'Participant')}
@@ -157,26 +157,26 @@ if ( {) {$2;}
 }    })if (handleTrackSubscribed (pub, track)) {$2;}
 }
     })participant.on ('track_subscribed', handleTrackSubscribed)participant.on ('track_unsubscribed', handleTrackUnsubscribed)return () => {participant.off ('track_subscribed', handleTrackSubscribed)participant.off ('track_unsubscribed', handleTrackUnsubscribed)}
-  }, [participant])return (<div className='bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative' />;
+  }, [participant])return (<div className='bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative'    />;
       <video;
         ref={video_ref}
         auto_play;
         plays_inline;
         muted={Boolean (is_local)}
         className='w - full h - 48 object - cover bg - black';
-      />;
-      <audio ref={audio_ref} auto_play className='hidden' />;
-      <div className='absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white' />;
+         />;
+      <audio ref={audio_ref} auto_play className='hidden'    />;
+      <div className='absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white'    />;
         {display_name ||;}
           (participant as any).name ||;}
           (is_local ? 'You' : 'Participant')}
       </div>
     </div>
   );
-}, [participant])return (<div className=\"bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative\" />;"
-      <video ref={video_ref} auto_play plays_inline muted={Boolean (is_local)} className=\"w - full h - 48 object - cover bg - black\" />;"
-      <audio ref={audio_ref} auto_play className=\"hidden\" />;"
-      <div className=\"absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white\" />;
+}, [participant])return (<div className=\"bg - black / 60 rounded - lg overflow - hidden border border - gray - 700 relative\"    />;"
+      <video ref={video_ref} auto_play plays_inline muted={Boolean (is_local)} className=\"w - full h - 48 object - cover bg - black\"    />;"
+      <audio ref={audio_ref} auto_play className=\"hidden\"    />;"
+      <div className=\"absolute bottom - 2 left - 2 text - xs px - 2 py - 1 rounded bg - black / 60 text - white\"    />;
         {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
       </div>;
 

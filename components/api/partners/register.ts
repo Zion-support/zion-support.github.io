@@ -30,7 +30,7 @@ const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
       apiKey: apiKey.key;
       dashboardUrl: `/partners/dashboard?pid = ${partner.id}`})
  
-} catch (e) {}
+} catch (e) {
    ;}"
   return res.status(500).json({ error: \"Failed to create partner\" })
   }

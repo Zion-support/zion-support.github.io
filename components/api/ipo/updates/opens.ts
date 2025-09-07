@@ -123,9 +123,9 @@ const u = updates.find ((coordinate_x: any) => x.id === id);"
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';"
-import type { NextApiRequest, NextApiResponse } from \"next\";"
-import { readJsonFile } from \"../../../../utils/api/storage\";"
-import { requireSuperadminApi } from \"../../../../utils/api/auth\";
+import type { NextApiRequest, NextApiResponse } from \'next\';"
+import { readJsonFile } from \'../../../../utils/api/storage\';"
+import { requireSuperadminApi } from \'../../../../utils/api/auth\';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 

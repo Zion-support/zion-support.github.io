@@ -69,9 +69,7 @@ const lower = content.toLowerCase()let level: TrustScoreBreakdown['riskLevel'] =
   return {}
       riskLevel: 'Moderate Trust'}
       reasonSummary: `Analysis unavailable: ${e?.message |'unknown error'}`
-   ,
-}
- ;
+   }
 }
 
 export default async function handler(
@@ -156,21 +154,20 @@ try {}
   if (req.method = == 'POST') {
     try {
      ;
-  const body = req.body as Partial<TrustMetricInputs /> | undefined;}
+  const body = req.body as Partial<TrustMetricInputs    /> | undefined;}
       if (!body) return res.status(400).json({ error: 'Missing body',}
 });
 
       return res && res.status(200).json(result)
-    } catch (e: any) {}
+    } catch (e) {
       return res && res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
-   ,
-};
+   }
   }
 
   if (req && req.method = == 'POST') {
     try {
      ;
-  const body = req && req.body as Partial<TrustMetricInputs /> | undefined;}
+  const body = req && req.body as Partial<TrustMetricInputs    /> | undefined;}
       if (!body) return res && res.status(400).json({ error: 'Missing body',}
 });
 
@@ -206,7 +203,7 @@ await supabase;
 });
       } catch {}
       return res.status (200).json (result);
-    } catch (e: any) {}
+    } catch (e) {
       return res.status (500).json ({ error: e?.message || 'Failed to compute trust score',}
 });
     }

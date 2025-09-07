@@ -84,7 +84,7 @@ cancelAnimationFrame(animationFrameId)}
   }, []);
 ;
   return (
-    <div className='fixed inset - 0 pointer - events - none overflow - hidden z - 0' />;
+    <div className='fixed inset - 0 pointer - events - none overflow - hidden z - 0'    />;
 
       {/* Canvas for particle effects */}
       <canvas;
@@ -93,7 +93,7 @@ cancelAnimationFrame(animationFrameId)}
         style={{ background: 'transparent' }}
       {/* Animated gradient background *}
 }
-      <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/20 to-black' />;
+      <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/20 to-black'    />;
 
         <motion&& motion.div;
 className='absolute inset-0 opacity-30'
@@ -111,7 +111,7 @@ className='absolute inset-0 opacity-30'
             repeat: Infinity}
 ease: 'easeInOut'}
           }}
-        />
+           />
       </div>
             duration: 20,
             repeat: Infinity
@@ -140,7 +140,7 @@ ease: 'easeInOut'}
           transition={{duration: 20;}
             repeat: Infinity;}
             duration: 20,repeat: Infinity,ease: 'easeInOut',"
-  ease: \"easeInOut\";'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)','radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)','radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)','radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)']}}
+  ease: \'easeInOut\';'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)','radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)','radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)','radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)']}}
           transition={{duration: 20,repeat: Infinity,ease: 'easeInOut'}}
         />;
       </div>;
@@ -160,7 +160,7 @@ className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-l
           repeat: Infinity}
 ease: 'linear'}
         }}
-      />
+         />
       <motion.div;
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
         animate={{
@@ -172,7 +172,7 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounde
           repeat: Infinity}
 ease: 'easeInOut'}
         }}
-      />
+         />
 
       <motion.div;
 className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45'
@@ -189,7 +189,7 @@ ease: 'linear'}
 
       {/* Animated grid lines */}
 
-<div className='absolute inset-0 opacity-20' />
+<div className='absolute inset-0 opacity-20'    />
         <motion.div;
 className='absolute inset-0'
           style={{
@@ -209,25 +209,25 @@ className='absolute inset-0'
             repeat: Infinity}
 ease: 'linear'}
           }}
-        />
+           />
       </div>
       {/* Quantum energy waves */}
-<div className='absolute inset-0' />
+<div className='absolute inset-0'    />
         <motion.div;
         <motion.div;
           }}
 
 
-        />;
+           />;
       </div>;
       {/* Quantum energy waves */}
-<div className='absolute inset-0' />;
+<div className='absolute inset-0'    />;
         <motion.div;
         <motion.div;
-          }}/>;
+          }}   />;
       </div>;{/* Quantum energy waves */}}}
       {/* Quantum energy waves */}
-      <div className='absolute inset-0' />;
+      <div className='absolute inset-0'    />;
         <motion&& motion.div;
           className='absolute inset-0';
           style={{background:;}
@@ -249,7 +249,7 @@ ease: 'easeInOut'}
             repeat: Infinity,
 
 
-        />
+           />
       </div>}
 }
       {/* Holographic elements */}
@@ -266,7 +266,7 @@ className='absolute top-1/2 left-1/2 w-64 h-64 border border-cyan-400/20 rounded
           repeat: Infinity}
 ease: 'linear'}
         }}
-      />
+         />
       <motion.div;
 className='absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full'
         animate={{
@@ -279,9 +279,9 @@ className='absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 round
           repeat: Infinity}
 ease: 'linear'}
         }}
-      />
+         />
       {/* Neural network connections */}
-<div className='absolute inset-0' />
+<div className='absolute inset-0'    />
         {Array.from({ length: 8}
 }).map((_, i) => (
           <motion.div;
@@ -304,11 +304,11 @@ key={i}
               delay: i * 0.3}
 ease: 'easeInOut'}
             }}
-          />
+             />
         ))}
       {/* Data streams */}
 
-<div className='absolute inset-0 overflow-hidden' />
+<div className='absolute inset-0 overflow-hidden'    />
         {Array.from({ length: 5}
 }).map((_, i) => (
           <motion.div;
@@ -331,7 +331,7 @@ key={i}
 ease: 'linear'}
             }}
 
-          />
+             />
         ))}
       </div>
 

@@ -56,9 +56,9 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
     },
   ];    features: [
 '
-      "Immersive experiences";""
-      "Digital reality";""
-      "Metaverse platform";"
+      'Immersive experiences';""
+      'Digital reality';""
+      'Metaverse platform';"
 export interface MetaverseDigitalRealityService2026 {;
 "
       "Social interactions""]
@@ -107,10 +107,10 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       },
     },;
   ];    features: ['
-      "Immersive experiences";""
-      "Digital reality";""
-      "Metaverse platform";""
-      "Advanced graphics";"
+      'Immersive experiences';""
+      'Digital reality';""
+      'Metaverse platform';""
+      'Advanced graphics';"
 
   id: string,;
   name: string,;

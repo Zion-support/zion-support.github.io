@@ -40,11 +40,11 @@ body: JSON.stringify ({
 }
 budgetRange: values.budgetRange;
 }
-<Head /> <title />Zion AI Marketplace - Services</title> <meta name=\"description\" content=\"Discover curated IT services. Request quotes with AI-assisted summaries.\" /> </Head>) )
+<Head><title>Zion AI Marketplace - Services</title> <meta name=\"description\" content=\"Discover curated IT services. Request quotes with AI-assisted summaries.\"    /> </Head>) )
 }</div> </div> </div> </div> <QuoteRequestModal open= {}
   modalOpen}
 }onClose= {}
-  () = /> setModalOpen (false)}
+  () =    /> setModalOpen (false)}
 }service= {}
   selected}
 }onSubmit= {

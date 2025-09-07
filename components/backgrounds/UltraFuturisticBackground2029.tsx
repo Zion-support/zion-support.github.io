@@ -30,8 +30,8 @@ if (particle.y > canvas.height) particle.y = 0;
 // Draw particle ctx.save ()ctx.globalAlpha = particle.opacity;
 // Different effects for different particle types switch (particle.type) {case 'quantum': // Quantum particles with glow effect;
 
-export default function UltraFuturisticBackground2029() {const canvasRef = useRef<HTMLCanvasElement />(null)const particlesRef = useRef<Particle[] />([])const animationRef =;
-  useRef<number | undefined />(undefined;
+export default function UltraFuturisticBackground2029() {const canvasRef = useRef<HTMLCanvasElement    />(null)const particlesRef = useRef<Particle[]    />([])const animationRef =;
+  useRef<number | undefined    />(undefined;
   useEffect(() => ;
   const canvas = canvasRef.current;
     if (!canvas) return;
@@ -217,7 +217,7 @@ ctx.stroke();
   return () => {window.removeEventListener('resize', resizeCanvas)if (animationRef.current) {cancelAnimationFrame(animationRef.current)}
     }
   }, [];
-  const drawGeometricShapes = (const time = Date.now() * 0.0005;
+  const drawGeometricShapes = (time = Date.now() * 0.0005;
     // Floating hexagons;
     for (let i = 0; i < 5; i++) {const x = width * 0.2 + Math.sin(time + i) * 100;
 
@@ -249,7 +249,7 @@ const px = x + size * Math.cos(angle)const py = y + size * Math.sin(angle)if (j 
       ctx.closePath()ctx.stroke()ctx.restore()}
   }
 ;
-  const drawEnergyWaves = (const time = Date.now() * 0.001;
+  const drawEnergyWaves = (time = Date.now() * 0.001;
     // Horizontal energy waves;
     for (let i = 0; i < 3; i++) {ctx.save()ctx.globalAlpha = 0.05;) => {
   return $3;}
@@ -276,7 +276,7 @@ const px = x + size * Math.cos(angle)const py = y + size * Math.sin(angle)if (j 
 
  ;
   return (
-<div className='fixed inset-0 -z-10 overflow-hidden' />
+<div className='fixed inset-0 -z-10 overflow-hidden'    />
       {/* Animated gradient overlay */}
       <motion&& motion.div;
 className='absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30'
@@ -304,33 +304,33 @@ ease: 'easeInOut'}
             ease: 'easeInOut',      {/* Canvas for particle effects */}
       <canvas;
         ref={canvasRef}
-        className=\"absolute inset-0 w-full h-full\";
+        className=\'absolute inset-0 w-full h-full\';
         style={{ filter: 'blur(0.5px)' }
 }
-      />;
+         />;
       {/* Additional visual layers */}"
-      <div className=\"absolute inset-0\" />;
+      <div className=\"absolute inset-0\"    />;
         {/* Quantum field ripples */}
         <motion.div;"
-          className=\"absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20\";
+          className=\'absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20\';
         style={{ filter: 'blur(0 && 0.5px)' }
 }
-      />;{/* Additional visual layers */}"
-      <div className=\"absolute inset-0\" />;
+         />;{/* Additional visual layers */}"
+      <div className=\"absolute inset-0\"    />;
         {/* Quantum field ripples */}
         <motion&& motion.div;"
-          className=\"absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20\";
+          className=\'absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20\';
       <canvas;
         ref={canvas_ref}"
-        className=\"absolute inset - 0 w-full h-full\";
+        className=\'absolute inset - 0 w-full h-full\';
         style={{ filter: 'blur (0.5px)' }
 }
-      />;
+         />;
       {/* Additional visual layers */}"
-      <div className=\"absolute inset-0\" />;
+      <div className=\"absolute inset-0\"    />;
         {/* Quantum field ripples */}
         <motion.div;"
-          className=\"absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border-cyan-500 / 20\";
+          className=\'absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border-cyan-500 / 20\';
           animate={{scale: [1, 1 && 1.2, 1];}
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1];}
           }}
@@ -341,11 +341,11 @@ ease: 'easeInOut'}
           animate={{transition={{duration: 5;}
             repeat: Infinity;}
             ease: 'easeInOut'          }}
-        />;
+           />;
         />;{/* Holographic matrix */}
         <motion&& motion.div;"
-          className=\"absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20\";
-        />;
+          className=\'absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20\';
+           />;
         {/* Holographic matrix */}
         <motion.div;
           className='absolute top - 3/4 right - 1/4 w - 80 h - 80 rounded - full border border - purple - 500 / 20';
@@ -354,7 +354,7 @@ ease: 'easeInOut'}
         {/* Neural network nodes */}
         <motion&& motion.div;
           className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20';
-        />;
+           />;
         {/* Neural network nodes */}
         <motion.div;
           className='absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20';
@@ -363,25 +363,25 @@ ease: 'easeInOut'}
             ease: 'easeInOut'          }}
         {/* Neural network nodes */}
         <motion&& motion.div;"
-          className=\"absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20\";
-        />;
+          className=\'absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20\';
+           />;
         {/* Neural network nodes */}
         <motion.div;"
-          className=\"absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border-green-500 / 20\";
+          className=\'absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border-green-500 / 20\';
           animate={{scale: [1, 1 && 1.1, 1];}
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2];}
           }}
           transition={{}}
       {/* Floating orbs with glow effects */}
-      <div className='absolute inset-0 pointer-events-none' />;
+      <div className='absolute inset-0 pointer-events-none'    />;
         {[...Array(8)].map((_, i) => (<motion&& motion.div;}
             key={i}
             className='absolute w-2 h-2 rounded-full bg-cyan-400';
             style={{{/* Floating orbs with glow effects */}"
-      <div className=\"absolute inset-0 pointer-events-none\" />;
+      <div className=\"absolute inset-0 pointer-events-none\"    />;
         {[...Array(8)].map((_, i) => (<motion&& motion.div;}
             key={i}"
-            className=\"absolute w-2 h-2 rounded-full bg-cyan-400\";
+            className=\'absolute w-2 h-2 rounded-full bg-cyan-400\';
             style={{scale: [1, 1.2, 1],opacity: [0.1, 0.3, 0.1]          }}
           transition={{duration: 4,repeat: Infinity,ease: 'easeInOut'}}
           transition={{duration: 4,repeat: Infinity}}
@@ -390,16 +390,16 @@ ease: 'easeInOut'}
           repeat: Infinity;}
           ease: 'easeInOut';}
         }}
-      />;
+         />;
 {/* Canvas for particle effects */}
       <canvas;
         ref={canvasRef}
         className='absolute inset-0 w-full h-full';
         style={{ filter: 'blur(0.5px)' }
 }
-      />;
+         />;
       {/* Additional visual layers */}
-      <div className='absolute inset-0' />;
+      <div className='absolute inset-0'    />;
         {/* Quantum field ripples */}
 
         <motion.div;
@@ -414,23 +414,23 @@ className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-5
             repeat: Infinity}
 ease: 'easeInOut'}
           }}
-        />
+           />
 
         {/* Holographic matrix */}
         <motion.div;
           className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20';
           animate={{scale: [1.2, 1, 1.2],opacity: [0.3, 0.1, 0.3]}}
           transition={{duration: 5,repeat: Infinity,ease: 'easeInOut'}}
-        />;
+           />;
         {/* Neural network nodes */}
         <motion.div;
           className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20';
           animate={{scale: [1, 1.1, 1],opacity: [0.2, 0.4, 0.2]}}
           transition={{duration: 6,repeat: Infinity,ease: 'easeInOut'}}
-        />;
+           />;
       </div>;
       {/* Floating orbs with glow effects */}
-      <div className='absolute inset-0 pointer-events-none' />;
+      <div className='absolute inset-0 pointer-events-none'    />;
         {[...Array(8)].map((_, i) => (<motion.div;}
             key={i}
 
@@ -462,7 +462,7 @@ ease: 'easeInOut'}
             animate={{y: [0, -20, 0],opacity: [0.3, 0.8, 0.3],scale: [1, 1.2, 1]}}duration: 4,repeat: Infinity,transition={{delay: i * 0.3;}
               duration: 3 + i * 0.5,repeat: Infinity,ease: 'easeInOut',
   delay: i * 0.3}}
-          />;
+             />;
 
         ))}
 

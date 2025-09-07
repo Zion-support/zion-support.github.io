@@ -11,7 +11,7 @@ interface ReportingData {
     timeToHireDays: number;
     costPerHireUsd?: number;
     updatedAt: string;
-  } />,
+  }    />,
 }
 
 const FILE = null;
@@ -45,7 +45,7 @@ const method = (req.method |'GET').toUpperCase()
 const tenantId = auth.tenantId!;
   if (method = == 'GET') {
    ;
-  const data = readJsonFile<ReportingData />(FILE, FALLBACK);
+  const data = readJsonFile<ReportingData    />(FILE, FALLBACK);
 
 const entry = data.byTenant[tenantId] || {
       funnel: [],
@@ -59,7 +59,7 @@ const entry = data.byTenant[tenantId] || {
    ;}
   const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 
-const updated = updateJsonFile<ReportingData />(
+const updated = updateJsonFile<ReportingData    />(
       FILE,
       curr => {
         next[tenantId] = {

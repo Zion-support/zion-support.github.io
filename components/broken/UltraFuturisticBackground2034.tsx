@@ -17,9 +17,9 @@ const UltraFuturisticBackground2034: React.FC<
 
 
  ;
-  const canvasRef = useRef<HTMLCanvasElement />(null);
+  const canvasRef = useRef<HTMLCanvasElement    />(null);
 
-const animationRef = useRef<number | undefined />(undefined);
+const animationRef = useRef<number | undefined    />(undefined);
 }
 const [mousePosition, setMousePosition] = useState({ x: 0, y: 0}
 });
@@ -341,14 +341,14 @@ const handleMouseMove = (;) => {
     return () => window && window.removeEventListener('mousemove', handleMouseMove);
   }, []);
   return (
-    <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden' />;
+    <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'    />;
 
       {/* HTML Canvas Background */}
       <canvas;
         ref={canvasRef}
         className='absolute inset-0 w-full h-full';
       {/* Framer Motion Geometric Shapes */}
-      <div className='absolute inset-0' />;
+      <div className='absolute inset-0'    />;
         {/* Floating geometric shapes */}
 
         <motion&& motion.div;
@@ -364,7 +364,7 @@ className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
             repeat: -1}
 ease: 'linear'}
           }}
-        />
+           />
         <motion.div;
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
           animate={{
@@ -377,7 +377,7 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounde
             repeat: -1}
 ease: 'easeInOut'}
           }}
-        />
+           />
         <motion.div;
 className='absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30'
           style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
@@ -391,11 +391,11 @@ className='absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30'
             repeat: -1}
 ease: 'linear'}
           }}
-        />
+           />
       </div>
       {/* Energy waves */}
 
-<div className='absolute inset-0' />
+<div className='absolute inset-0'    />
         <motion.div;
 className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
           animate={{}
@@ -406,7 +406,7 @@ className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to
             repeat: -1}
 ease: 'linear'}
           }}
-        />
+           />
         <motion.div;
 className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent'
           animate={{}
@@ -419,7 +419,7 @@ ease: 'linear'}
           }}
             duration: 20,
             repeat: -1,
-        />
+           />
       </div>
 
         />;
@@ -427,13 +427,13 @@ ease: 'linear'}
           className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent';
           animate={{y: ['-100%', '100%']}}
           transition={{duration: 20,repeat: -1,ease: 'linear'}}
-            duration: 20,repeat: -1,/>;
+            duration: 20,repeat: -1,   />;
       </div>;
 
 
       {/* Holographic matrix effect */}
 
-<div className='absolute inset-0' />
+<div className='absolute inset-0'    />
         {Array.from({ length: 20}
 }).map((_, i) => (
           <motion.div;
@@ -452,21 +452,21 @@ key={i}
               repeat: -1}
 ease: 'easeInOut'}
             }}
-          />
+             />
         ))}
       </div>
       {/* Cyberpunk grid */}
 
-<div className='absolute inset-0' />
+<div className='absolute inset-0'    />
         <motion.div;
 className=\"absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]\"
 "
-              ease: 'easeInOut'            }}              ease: \"easeInOut\";
+              ease: 'easeInOut'            }}              ease: \'easeInOut\';
             }}
-          />))}
+             />))}
       </div>;
       {/* Cyberpunk grid */}
-      <div className='absolute inset - 0' />;
+      <div className='absolute inset - 0'    />;
         <motion.div;
           className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]';
 
@@ -488,10 +488,10 @@ ease: 'easeInOut'}
 }
 export default UltraFuturisticBackground2034;}}
           transition={{duration: 4,repeat: -1,ease: 'easeInOut'}"
-  ease: \"easeInOut\";}
+  ease: \'easeInOut\';}
             opacity: [0.3, 0.6, 0.3]}}
           transition={{duration: 4,repeat: -1,ease: 'easeInOut'}}
-        />;
+           />;
       </div>;
     </div>;
 

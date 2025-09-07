@@ -59,17 +59,17 @@ const items = episodes;
 }
 const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
       return `
-    <item />
-      <pubDate />${pubDate}</pubDate>
-      <enclosure url=\"${audioUrl}\" length=\"0\" type=\"audio/mpeg\" />
+    <item    />
+      <pubDate    />${pubDate}</pubDate>
+      <enclosure url=\"${audioUrl}\" length=\"0\" type=\"audio/mpeg\"    />
 
     </item>`;
-    }).join('\n')<channel />;
-    <title />Zion Podcast</title>;
-    <link />${siteUrl}/media/podcast</link>;
-    <language />en-us</language>;
-    <itunes:author />Zion</itunes:author>;
-    <description />Zion interviews builders, founders, and contributors.</description>;
+    }).join('\n')<channel    />;
+    <title    />Zion Podcast</title>;
+    <link    />${siteUrl}/media/podcast</link>;
+    <language    />en-us</language>;
+    <itunes:author    />Zion</itunes:author>;
+    <description    />Zion interviews builders, founders, and contributors.</description>;
     ${items}
 
   </channel>
@@ -81,9 +81,9 @@ return res.status(200).json({ ok: true, path: '/podcast.xml'}
 });
 
 }) .join ('\n');
-<channel /> <title />Zion Podcast</title> <link />$ {}
+<channel    /> <title    />Zion Podcast</title> <link    />$ {}
   siteUrl}
-}/media/podcast</link> <language />en-us</language> <itunes:author />Zion</itunes:author> <description />Zion interviews builders, founders, and contributors.</description> $ {
+}/media/podcast</link> <language    />en-us</language> <itunes:author    />Zion</itunes:author> <description    />Zion interviews builders, founders, and contributors.</description> $ {
 }
   items }
 }</channel> </rss>`;

@@ -140,9 +140,7 @@ const section = String (fields.section || 'General';
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 
-export const config = { api: { body_parser: false },
-}
-;
+export const config = { api: { body_parser: false }}
 
 export default /**
  * handler - Function description;

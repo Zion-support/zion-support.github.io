@@ -26,16 +26,16 @@ initial={{ opacity: 0, scale: 0.5 }
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }
 }
-className='text-center' />
+className='text-center'    />
 
-      <div className='relative' />;
-        <Loader2 className='w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4' />;
-        <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse' /></div>;
+      <div className='relative'    />;
+        <Loader2 className='w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4'    />;
+        <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse'    /></div>;
       </div>;
-      <p className='text-xl text-gray-300 mb-2' />;
+      <p className='text-xl text-gray-300 mb-2'    />;
         Loading Zion Tech Group 2045...;
       </p>;
-      <p className='text-sm text-gray-500' />;
+      <p className='text-sm text-gray-500'    />;
         Preparing your futuristic digital transformation journey;
       </p>;
     </motion.div>;
@@ -77,26 +77,26 @@ const getColorClasses = (index: number) => ;
 
   if (isLoading) {
     return (
-<div className='min-h-screen bg-black flex items-center justify-center' />
-        <div className='text-center' />
-          <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4' /></div>
-          <p className='text-cyan-400 text-xl' />Loading Zion Tech Group...</p>
+<div className='min-h-screen bg-black flex items-center justify-center'    />
+        <div className='text-center'    />
+          <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4'    /></div>
+          <p className='text-cyan-400 text-xl'    />Loading Zion Tech Group...</p>
         </div>
       </div>}
     );}
   }
 
 return (
-    <Layout />
-      <div className='min-h-screen bg-black text-white relative overflow-x-hidden' />
+    <Layout    />
+      <div className='min-h-screen bg-black text-white relative overflow-x-hidden'    />
 
         {/* Hero Section */}
         <section;
           id='hero';
-          className='relative min-h-screen flex items-center justify-center overflow-hidden' />
+          className='relative min-h-screen flex items-center justify-center overflow-hidden'    />
 
           {/* Animated Background Elements */}
-          <div className='absolute inset-0 pointer-events-none' />;
+          <div className='absolute inset-0 pointer-events-none'    />;
             <motion.div;
               className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg';
               animate={{rotate: [0, 360];
@@ -109,7 +109,7 @@ return (
                 scale: [1, 1.1, 1];}
                 opacity: [0.3, 0.6, 0.3]}}
               transition={{duration: 8,repeat: Infinity,ease: 'easeInOut'              }}
-            />;
+               />;
             <motion.div;
               className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full';
               animate = {{rotate: [360, 0],scale: [1, 1.2, 1],opacity: [0.3, 0.7, 0.3],staggerChildren: 0.1,delayChildren: 0.2}}  }
@@ -129,7 +129,7 @@ return (
 }
                 ease: 'easeInOut'}
               }}
-            />
+               />
           </div>
 
             />;
@@ -137,7 +137,7 @@ return (
 
           {/* Hero Content */}
 
-<div className='relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8' />
+<div className='relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'    />
             <motion.div;
 initial={{ opacity: 0, y: 30 }
 }
@@ -146,7 +146,7 @@ initial={{ opacity: 0, y: 30 }
 }
 
 className='mb-8'
-             />
+                />
               <motion.h1;
 initial={{ opacity: 0, y: 20 }
 }
@@ -156,8 +156,8 @@ initial={{ opacity: 0, y: 20 }
 }
 
 className='text-5xl md:text-7xl font-bold mb-6'
-               />
-                <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent' />
+                  />
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'    />
                   Future of Technology;
                 </span>
               </motion.h1>
@@ -170,7 +170,7 @@ initial={{ opacity: 0, y: 20 }
                 transition={{ duration: 0.8, delay: 0.4 }
 }
 className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'
-               />
+                  />
                 Transform your business with Zion Tech Group's revolutionary AI;
 services, quantum computing, and cutting-edge emerging;
 technologies. Leading the future of technology innovation.
@@ -196,17 +196,17 @@ technologies. Leading the future of technology innovation.
 
               transition={{ duration: 0.8, delay: 0.6 }}
 className='flex flex-col sm:flex-row gap-4 justify-center items-center'
-             />
+                />
               <Link;
 href='/contact'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105'
-               />
+                  />
                 Get Started;
               </Link>
               <Link;
 href='/services'
                 className='px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105'
-               />
+                  />
                 Explore Services;
               </Link>
             </motion.div>
@@ -222,25 +222,25 @@ href='/services'
 
               transition={{ duration: 0.8, delay: 0.8 }}
 className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'
-             />
-              <div className='text-center' />
-                <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2' />
+                />
+              <div className='text-center'    />
+                <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'    />
                   500+
                 </div>
-                <div className='text-gray-400' />Innovative Services</div>
+                <div className='text-gray-400'    />Innovative Services</div>
               </div>
-              <div className='text-center' />
-                <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2' />
+              <div className='text-center'    />
+                <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2'    />
                   4.9/5;
                 </div>
-                <div className='text-gray-400' />Customer Rating</div>
+                <div className='text-gray-400'    />Customer Rating</div>
               </div>
-              <div className='text-center' />
-                <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2' />
+              <div className='text-center'    />
+                <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2'    />
                   1000+
                 </div>
 
-                <div className='text-gray-400' />Happy Clients</div>
+                <div className='text-gray-400'    />Happy Clients</div>
               </div>
             </motion.div>
           </div>
@@ -248,8 +248,8 @@ className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'
         {/* Featured Services Section *}
 }
 
-<section id='featured-services' className='py-20 relative' />
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />
+<section id='featured-services' className='py-20 relative'    />
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />
             <motion.div;
 initial={{ opacity: 0, y: 30 }
 }
@@ -258,13 +258,13 @@ initial={{ opacity: 0, y: 30 }
               viewport={{ once: true }}
 
 className='text-center mb-16'
-             />
-              <h2 className='text-4xl md:text-5xl font-bold mb-6' />
-                <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent' />
+                />
+              <h2 className='text-4xl md:text-5xl font-bold mb-6'    />
+                <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'    />
                   Revolutionary Services;
                 </span>
               </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto' />
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'    />
                 Discover our cutting-edge solutions that are transforming;
 industries and pushing the boundaries of what's possible with;
 technology.
@@ -273,44 +273,44 @@ technology.
 
             {/* Service Categories Grid *}
 }
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />;
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'    />;
               {[;
-                {icon: <Brain className='w-12 h-12' />;
+                {icon: <Brain className='w-12 h-12'    />;
                   title: 'AI & Consciousness';
                   description:;
                     'Revolutionary AI platforms with emotional intelligence and autonomous operations';
                   color: 'from-cyan-400 to-blue-500';}
                   href: '/ai-services';}
                 }
-                {icon: <Atom className='w-12 h-12' />;
+                {icon: <Atom className='w-12 h-12'    />;
                   title: 'Quantum Technology';
                   description:;
                     'Breakthrough quantum computing solutions for next-generation applications';
                   color: 'from-purple-400 to-pink-500';}
                   href: '/quantum-services';}
                 }
-                {icon: <Rocket className='w-12 h-12' />;
+                {icon: <Rocket className='w-12 h-12'    />;
                   title: 'Space Technology';
                   description:;
                     'Advanced space exploration and resource management platforms';
                   color: 'from-emerald-400 to-teal-500';}
                   href: '/space-technology';}
                 }
-                {icon: <Shield className='w-12 h-12' />;
+                {icon: <Shield className='w-12 h-12'    />;
                   title: 'Enterprise Solutions';
                   description:;
                     'Advanced infrastructure and security solutions for modern enterprises';
                   color: 'from-orange-400 to-red-500';}
                   href: '/enterprise-solutions';}
                 }
-                {icon: <Target className='w-12 h-12' />;
+                {icon: <Target className='w-12 h-12'    />;
                   title: 'Micro SAAS';
                   description:;
                     'Innovative business solutions that drive growth and efficiency';
                   color: 'from-indigo-400 to-purple-500';}
                   href: '/micro-saas';}
                 }
-                {icon: <Sparkles className='w-12 h-12' />;
+                {icon: <Sparkles className='w-12 h-12'    />;
                   title: 'Emerging Tech';}
                   description:;}
                     'Cutting-edge technologies that define the future of innovation',color: 'from-yellow-400 to-orange-500',
@@ -322,26 +322,26 @@ technology.
 }
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-className='group' />
+className='group'    />
 
                   <Link href={service.hre}
-} />;
-                    <div className='relative p-8 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25' />;
+}    />;
+                    <div className='relative p-8 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25'    />;
                       <div;
-                        className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover: scale-110 transition-transform duration-300`} />
+                        className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover: scale-110 transition-transform duration-300`}    />
 
                         {service.ico}
 }
                       </div>;
-                      <h3 className='text-2xl font-bold text-white mb-4' />;
+                      <h3 className='text-2xl font-bold text-white mb-4'    />;
                         {service.title}
                       </h3>;
-                      <p className='text-gray-400 mb-6' />;
+                      <p className='text-gray-400 mb-6'    />;
                         {service.description}
                       </p>;
-                      <div className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors' />;
-                        <span className='mr-2' />Learn More</span>;
-                        <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
+                      <div className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors'    />;
+                        <span className='mr-2'    />Learn More</span>;
+                        <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform'    />;
                       </div>;
                     </div>;
                   </Link>;
@@ -355,8 +355,8 @@ className='group' />
 <section;
 id='latest-innovations'
           className='py-20 relative bg-gray-900/30'
-         />
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />
+            />
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />
             <motion.div;
 initial={{ opacity: 0, y: 30 }
 }
@@ -366,42 +366,42 @@ initial={{ opacity: 0, y: 30 }
 }
 
 className='text-center mb-16'
-             />
-              <h2 className='text-4xl md:text-5xl font-bold mb-6' />
-                <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent' />
+                />
+              <h2 className='text-4xl md:text-5xl font-bold mb-6'    />
+                <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'    />
                   Latest Innovations;
                 </span>
               </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto' />
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'    />
                 Explore our newest revolutionary services that are setting new;
 standards in technology innovation.
               </p>
             </motion.div>
 
               className='text-center mb-16'>;
-              <h2 className='text-4xl md:text-5xl font-bold mb-6' />;
-                <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent' />;
+              <h2 className='text-4xl md:text-5xl font-bold mb-6'    />;
+                <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'    />;
                   Latest Innovations;
                 </span>;
               </h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto' />;
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'    />;
                 Explore our newest revolutionary services that are setting new;
                 standards in technology innovation.              </p>;
             </motion && motion.div>;
             {/* Featured New Services */}            >;"
-              <h2 className=\"text-4xl md:text-5xl font-bold mb-6\" />;"
-                <span className=\"bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent\" />;
+              <h2 className=\"text-4xl md:text-5xl font-bold mb-6\"    />;"
+                <span className=\"bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent\"    />;
                   Latest Innovations;
                 </span>;
               </h2>;"
-              <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\" />;
+              <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"    />;
                 Explore our newest revolutionary services that are setting new standards in technology innovation.;
               </p>;
             </motion && motion.div>;
 
             {/* Featured New Services */}
 
-<div className='grid grid-cols-1 lg:grid-cols-2 gap-8' />
+<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'    />
               {revolutionary2043AdvancedServices;
                 .slice(0, 4)
                 .map((service, index) => (}
@@ -413,32 +413,32 @@ key={service.id}
 }
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className='group' />
+                    className='group'    />
 
                     <Link href={service.lin}
-} />;
-                      <div className='relative p-6 bg-black/50 backdrop-blur-sm border border-gray-700/50 rounded-xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105' />;
-                        <div className='flex items-start justify-between mb-4' />;
-                          <div className='text-3xl' />{service.icon}</div>;
-                          {service.popular && (<span className='px-3 py-1 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full' />;
+}    />;
+                      <div className='relative p-6 bg-black/50 backdrop-blur-sm border border-gray-700/50 rounded-xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105'    />;
+                        <div className='flex items-start justify-between mb-4'    />;
+                          <div className='text-3xl'    />{service.icon}</div>;
+                          {service.popular && (<span className='px-3 py-1 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full'    />;
                               New;}
                             </span>;}
                           )}
                         </div>;
-                        <h3 className='text-xl font-bold text-white mb-2' />;
+                        <h3 className='text-xl font-bold text-white mb-2'    />;
                           {service.name}
                         </h3>;
-                        <p className='text-gray-400 text-sm mb-4' />;
+                        <p className='text-gray-400 text-sm mb-4'    />;
                           {service.description}
                         </p>;
-                        <div className='flex items-center justify-between' />;
-                          <div className='text-cyan-400 font-semibold' />;
+                        <div className='flex items-center justify-between'    />;
+                          <div className='text-cyan-400 font-semibold'    />;
                             {service.price}
                             {service.period}
                           </div>;
-                          <div className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors' />;
-                            <span className='mr-2 text-sm' />Learn More</span>;
-                            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />;
+                          <div className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors'    />;
+                            <span className='mr-2 text-sm'    />Learn More</span>;
+                            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform'    />;
                           </div>;
                         </div>;
                       </div>;
@@ -456,13 +456,13 @@ initial={{ opacity: 0, y: 20 }
               viewport={{ once: true }}
 
 className='text-center mt-12'
-             />
+                />
               <Link;
 href='/services'
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105'
-               />
+                  />
                 View All Services;
-                <ArrowRight className='ml-2 w-5 h-5' />
+                <ArrowRight className='ml-2 w-5 h-5'    />
               </Link>
             </motion.div>
           </div>
@@ -470,8 +470,8 @@ href='/services'
         {/* Contact CTA Section *}
 }
 
-<section id='contact-cta' className='py-20 relative' />
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center' />
+<section id='contact-cta' className='py-20 relative'    />
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'    />
             <motion.div;
 initial={{ opacity: 0, y: 30 }
 }
@@ -480,28 +480,28 @@ initial={{ opacity: 0, y: 30 }
               viewport={{ once: true }
 }
 
-             />
+                />
 
-<h2 className='text-4xl md:text-5xl font-bold mb-6' />
-                <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent' />
+<h2 className='text-4xl md:text-5xl font-bold mb-6'    />
+                <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'    />
                   Ready to Transform?
                 </span>
               </h2>
-              <p className='text-xl text-gray-300 mb-8' />
+              <p className='text-xl text-gray-300 mb-8'    />
                 Let's discuss how our revolutionary technology solutions can;
 drive your business into the future.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center' />
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'    />
                 <Link;
 href='/contact'
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105'
-                 />
+                    />
                   Get Started;
                 </Link>
                 <a;
 href='tel:+1 302 464 0950'
                   className='px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105'
-                 />
+                    />
                   Call Now;
                 </a>
               </div>
@@ -516,14 +516,14 @@ href='tel:+1 302 464 0950'
   transition: {}
 };
   /* CTA Buttons */ "
-}<motion.div  /> <Link href=\"/contact\" className=\"px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105\"  /> Get Started </a> <Link href=\"/services\" className=\"px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105\"  /> Explore Services </a> </motion.div> {}
+}<motion.div     /> <Link href=\"/contact\" className=\"px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105\"     /> Get Started </a> <Link href=\"/services\" className=\"px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105\"     /> Explore Services </a> </motion.div> {}
   /* Stats */}"
-}<motion.div  /> <div className=\"text-center\"  /> <div className=\"text-3xl md:text-4xl font-bold text-cyan-400 mb-2\"  />500+</div> <div className=\"text-gray-400\"  />Innovative Services</div> </div> <div className=\"text-center\"  /> <div className=\"text-3xl md:text-4xl font-bold text-purple-400 mb-2\"  />4.9/5</div> <div className=\"text-gray-400\"  />Customer Rating</div> </div> <div className=\"text-center\"  /> <div className=\"text-3xl md:text-4xl font-bold text-pink-400 mb-2\"  />1000+</div> <div className=\"text-gray-400\"  />Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className=\"text-4xl md:text-5xl font-bold mb-6\"  /> <span className=\"bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent\"  /> Revolutionary Services </span> </h2> <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"  /> Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) )"
-}</div> </div> </section> > <h2 className=\"text-4xl md:text-5xl font-bold mb-6\"  /> <span className=\"bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent\"  /> Latest Innovations </span> </h2> <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"  /> Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>)"
-}</div> </div> <div className=\"flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors\"  /> <span className=\"mr-2 text-sm\"  />Learn More</span> <ArrowRight className=\"w-4 h-4 group-hover:translate-x-1 transition-transform\" /> </div> </div> </div> </a> </motion.div>) )
+}<motion.div     /> <div className=\"text-center\"     /> <div className=\"text-3xl md:text-4xl font-bold text-cyan-400 mb-2\"     />500+</div> <div className=\"text-gray-400\"     />Innovative Services</div> </div> <div className=\"text-center\"     /> <div className=\"text-3xl md:text-4xl font-bold text-purple-400 mb-2\"     />4.9/5</div> <div className=\"text-gray-400\"     />Customer Rating</div> </div> <div className=\"text-center\"     /> <div className=\"text-3xl md:text-4xl font-bold text-pink-400 mb-2\"     />1000+</div> <div className=\"text-gray-400\"     />Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className=\"text-4xl md:text-5xl font-bold mb-6\"     /> <span className=\"bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent\"     /> Revolutionary Services </span> </h2> <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"     /> Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) )"
+}</div> </div> </section> > <h2 className=\"text-4xl md:text-5xl font-bold mb-6\"     /> <span className=\"bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent\"     /> Latest Innovations </span> </h2> <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"     /> Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>)"
+}</div> </div> <div className=\"flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors\"     /> <span className=\"mr-2 text-sm\"     />Learn More</span> <ArrowRight className=\"w-4 h-4 group-hover:translate-x-1 transition-transform\"    /> </div> </div> </div> </a> </motion.div>) )
 }</div> {}
   /* View All Services CTA */;}"
-}<motion.div  /> <Link href=\"/services\" className=\"inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan-500 / 30 transform hover:scale-105\"  /> View All Services <ArrowRight className=\"ml - 2 w-5 h-5\" /> </a> </motion.div> </div> </section> <motion.div initial= {
+}<motion.div     /> <Link href=\"/services\" className=\"inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan-500 / 30 transform hover:scale-105\"     /> View All Services <ArrowRight className=\"ml - 2 w-5 h-5\"    /> </a> </motion.div> </div> </section> <motion.div initial= {
   {}
   opacity: 0, coordinate_y: 30;}
 }whileInView= {
@@ -537,7 +537,7 @@ href='tel:+1 302 464 0950'
 
   once: true }
 }"
-} /> Ready to Transform? </span> </h2> <p className=\"text-xl text-gray-300 mb-8\"  /> Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className=\"flex flex-col sm:flex-row gap-4 justify-center items-center\"  /> <Link href=\"/contact\" className=\"px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105\"  /> Get Started </a> <a href=\"tel:+1 302 464 0950\" className=\"px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105\"  /> Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+}    /> Ready to Transform? </span> </h2> <p className=\"text-xl text-gray-300 mb-8\"     /> Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className=\"flex flex-col sm:flex-row gap-4 justify-center items-center\"     /> <Link href=\"/contact\" className=\"px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105\"     /> Get Started </a> <a href=\"tel:+1 302 464 0950\" className=\"px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105\"     /> Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
 };
 
 export default Homepage2045;

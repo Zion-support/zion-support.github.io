@@ -80,9 +80,7 @@ if ( {) {
 }
 }
    ;
-  return res.status (200).json ({ tenants: get_tenants () },
-}
-;
+  return res.status (200).json ({ tenants: get_tenants () }}
   const auth = authenticate_request (req, false)if ;
   return res.status (401).json ({ error: auth.error,}
 })) {$2;}

@@ -7,7 +7,7 @@ function getUserId(req: NextApiRequest): string {
       countOnly,
       limit = '50',}
       offset = '0',}
-    } = req.query as Record<string, string />;
+    } = req.query as Record<string, string    />;
 
     // If countOnly, return unread count quickly;
 if (countOnly = == 'true') {}
@@ -93,7 +93,7 @@ id: 'seed-1',
     }
     return res.status (200).json ({ notifications: data as NotificationItem[],}
 });
-  } catch (e) {}
+  } catch (e) {
 return res.status (500).json ({ error: 'Unexpected error',}
 });
   }    return res.status (500).json ({ error: 'Unexpected error',}

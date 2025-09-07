@@ -1,6 +1,6 @@
 
 
-import type { NextApiRequest, NextApiResponse } from \"next\";
+import type { NextApiRequest, NextApiResponse } from \'next\';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   authenticateRequest;
@@ -33,8 +33,8 @@ const { apiKey } = auth;
 const keys = await listApiKeys();
   // Deactivate old key;
 const existing = keys.find(k => k.id === apiKey.id);"
-import { authenticateRequest, listApiKeys, saveApiKeys } from \"../../../utils/api/partnerAuth\";"
-import { v4 as uuidv4 } from \"uuid\";
+import { authenticateRequest, listApiKeys, saveApiKeys } from \'../../../utils/api/partnerAuth\';"
+import { v4 as uuidv4 } from \'uuid\';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {"
   if (req.method !== \"POST\") {}"

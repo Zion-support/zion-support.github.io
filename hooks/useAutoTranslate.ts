@@ -9,9 +9,9 @@ export function useAutoTranslate(
   targets: string[],
   debounceMs = 600;
 ): UseAutoTranslateResult {}
-  const [translations, setTranslations] = useState<Record<string, string />>({});
+  const [translations, setTranslations] = useState<Record<string, string    />>({});
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | undefined />(undefined);
+  const [error, setError] = useState<string | undefined    />(undefined);
       setTranslations({});
 
 return;

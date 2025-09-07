@@ -6,7 +6,7 @@ type UserRole = any;
   setRole: (role: UserRole) => void;
 }
 
-const AuthContext = createContext<AuthContextType />({
+const AuthContext = createContext<AuthContextType    />({
   role: 'talent',}
   setRole: () => ,}
 },
@@ -14,7 +14,7 @@ const AuthContext = createContext<AuthContextType />({
 
 export function AuthProvider({ children }: { children: React.ReactNode,}
 }) {
-  const [role, setRoleState] = useState<UserRole />('talent');
+  const [role, setRoleState] = useState<UserRole    />('talent');
   useEffect(() => {
 
     try {
@@ -36,7 +36,7 @@ try {
 
     } catch {}
   }
-  return (<AuthContext.Provider value={{ role, setRole }} />;
+  return (<AuthContext.Provider value={{ role, setRole }}    />;
       {children}
 
     </AuthContext.Provider>

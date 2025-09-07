@@ -2,7 +2,7 @@
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) ;}
-  return <div />Something went wrong.</div>;}
+  return <div    />Something went wrong.</div>;}
     }
     return this.props.children;
   }
@@ -20,7 +20,7 @@ const isClient = typeof window !== 'undefined';
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
 
-const [error, setError] = useState<string | null />(null);
+const [error, setError] = useState<string | null>(null);
   useEffect(() => {
 
     if (!isOpen) {
@@ -161,49 +161,49 @@ body: JSON.stringify({
   if (!isOpen) return null;
   return (
 
-<div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60' />
-      <div className='w-full max-w-md rounded-xl bg-white dark: bg-neutral-900 p-6 shadow-2xl' />
-        <div className='mb-4' />
-          <h2 className='text-lg font-semibold' />Connect your wallet</h2>
-          <p className='text-sm text-gray-500 dark:text-gray-400' />
+<div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'    />
+      <div className='w-full max-w-md rounded-xl bg-white dark: bg-neutral-900 p-6 shadow-2xl'    />
+        <div className='mb-4'    />
+          <h2 className='text-lg font-semibold'    />Connect your wallet</h2>
+          <p className='text-sm text-gray-500 dark:text-gray-400'    />
             No gas needed. We will verify your ownership with a signed message.
           </p>
         </div>
         {error && (}
-          <div className='mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300' />}
+          <div className='mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300'    />}
             {error}
           </div>
 
         
 }
-        <div className=\"space-y-3\" />;"
-          <button onClick={handleEvmConnect} disabled={loading} className=\"w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black\" />;
+        <div className=\"space-y-3\"    />;"
+          <button onClick={handleEvmConnect} disabled={loading} className=\"w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black\"    />;
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
           </button>;"
-          <button onClick={handlePhantomConnect} disabled={loading} className=\"w-full rounded-lg bg-purple-600 text-white py-2.5\" />;
+          <button onClick={handlePhantomConnect} disabled={loading} className=\"w-full rounded-lg bg-purple-600 text-white py-2.5\"    />;
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
           </button>;
         </div>;"
-        <div className=\"mt-4 flex justify-end\" />;
+        <div className=\"mt-4 flex justify-end\"    />;
         </div>;
       </div>;
     </div>;
   )}
 
-export default function Web3LoginModal() {if (!isClient) return null;return <ModalInner {...props} />;        </div>;"
-        {error && (<div className=\"mb-3 rounded-md bg-red-50 dark: bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300\" />{erro}
+export default function Web3LoginModal() {if (!isClient) return null;return <ModalInner {...props}    />;        </div>;"
+        {error && (<div className=\"mb-3 rounded-md bg-red-50 dark: bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300\"    />{erro}
 }</div>;
         )}"
-        <div className=\"space-y-3\" />;"
-          <button onClick={handleEvmConnect} disabled={loading} className=\"w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black\" />;
+        <div className=\"space-y-3\"    />;"
+          <button onClick={handleEvmConnect} disabled={loading} className=\"w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black\"    />;
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
           </button>;"
-          <button onClick={handlePhantomConnect} disabled={loading} className=\"w-full rounded-lg bg-purple-600 text-white py-2.5\" />;
+          <button onClick={handlePhantomConnect} disabled={loading} className=\"w-full rounded-lg bg-purple-600 text-white py-2.5\"    />;
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
 
           </button>
         </div>"
-        <div className = \"mt-4 flex justify-end\" />
+        <div className = \"mt-4 flex justify-end\"    />
         </div>
       </div>
     </div>
@@ -213,8 +213,8 @@ export default function Web3LoginModal() {if (!isClient) return null;return <Mod
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;}
 }
-  return <ModalInner {...props} />;
-  return <ModalInner {...props} />
+  return <ModalInner {...props}    />;
+  return <ModalInner {...props}    />
 }
 
 "

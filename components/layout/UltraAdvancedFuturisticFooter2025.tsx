@@ -213,19 +213,19 @@ const footerSections: FooterSection[] = [;
 
 const socialLinks = [
   {
-    icon: <Linkedin className='w-5 h-5' />,
+    icon: <Linkedin className='w-5 h-5'    />,
     href: 'https://linkedin.com/company/ziontechgroup',
   label: 'LinkedIn'}
     external: true}
   },
   {
-    icon: <Twitter className='w-5 h-5' />,
+    icon: <Twitter className='w-5 h-5'    />,
     href: 'https://twitter.com/ziontechgroup',
   label: 'Twitter'}
     external: true}
   },
   {
-    icon: <Github className='w-5 h-5' />,
+    icon: <Github className='w-5 h-5'    />,
     href: 'https://github.com/ziontechgroup',
   label: 'GitHub'}
     external: true}
@@ -234,26 +234,26 @@ const socialLinks = [
 
 const quickLinks = [
   { name: 'About Us'}
-  href: '/about', icon: <Users className='w-4 h-4' />}
+  href: '/about', icon: <Users className='w-4 h-4'    />}
 },
   { name: 'Contact'}
-  href: '/contact', icon: <Phone className='w-4 h-4' />}
+  href: '/contact', icon: <Phone className='w-4 h-4'    />}
 },
   {
     name: 'Support',
   href: '/support'}
-    icon: <HelpCircle className='w-4 h-4' />}
+    icon: <HelpCircle className='w-4 h-4'    />}
   },
   {
     name: 'Documentation',
   href: '/docs'}
-    icon: <FileText className='w-4 h-4' />}
+    icon: <FileText className='w-4 h-4'    />}
   },
   { name: 'API Reference'}
-  href: '/api', icon: <Code className='w-4 h-4' />}
+  href: '/api', icon: <Code className='w-4 h-4'    />}
 },
   { name: 'Status'}
-  href: '/status', icon: <TrendingUp className='w-4 h-4' />}
+  href: '/status', icon: <TrendingUp className='w-4 h-4'    />}
 }
 ];
 
@@ -396,9 +396,9 @@ duration: 0.5}
   };
 
   return (
-    <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden' />
+    <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'    />
       {/* Animated Background Elements */}
-      <div className='absolute inset-0 -z-10' />
+      <div className='absolute inset-0 -z-10'    />
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (;}
           <motion&& motion.div;}
@@ -417,69 +417,69 @@ className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-f
               delay: Math.random() * 8}
 ease: 'easeInOut'}
             }}
-          />;
+             />;
         ))}
         {/* Main Footer Content */}
 
-        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20' />
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20'    />
           <motion.div;
 variants={containerVariant}
 }
             initial='hidden';
             whileInView='visible';
             viewport={{ once: true }}
-            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12' />
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12'    />
 
             {/* Company Info */}
 
             <motion.div variants={itemVariant}
-} className='lg:col-span-2' />
-              <div className='flex items-center space-x-3 mb-6' />
-                <div className='relative' />
-                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center' />
-                    <Crown className='w-7 h-7 text-white' />
+} className='lg:col-span-2'    />
+              <div className='flex items-center space-x-3 mb-6'    />
+                <div className='relative'    />
+                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center'    />
+                    <Crown className='w-7 h-7 text-white'    />
                   </div>
-                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl blur-lg opacity-50' /></div>
+                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl blur-lg opacity-50'    /></div>
                 </div>
-                <div />
-                  <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent' />
+                <div    />
+                  <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />
                     Zion Tech Group;
                   </h3>
-                  <p className='text-sm text-gray-400' />
+                  <p className='text-sm text-gray-400'    />
                     Future Technology Solutions;
                   </p>
                 </div>
               </div>
-              <p className='text-gray-300 mb-6 leading-relaxed' />
+              <p className='text-gray-300 mb-6 leading-relaxed'    />
                 Pioneering the future with revolutionary AI consciousness;
 quantum computing, and autonomous systems. Transforming;
 businesses through next-generation technology.
               </p>
-              <p className='text-gray-300 leading-relaxed mb-6 max-w-md' />
+              <p className='text-gray-300 leading-relaxed mb-6 max-w-md'    />
                 Leading provider of innovative technology solutions;
 specializing in AI, automation, and future-ready services. We;
 help businesses transform and thrive in the digital age.
               </p>
               {/* Contact Info */}
-              <div className='space-y-3' />
-                <div className='flex items-center space-x-3 text-gray-300' />
-                  <Phone className='w-4 h-4 text-cyan-400' />
-                  <span />+1 302 464 0950</span>
+              <div className='space-y-3'    />
+                <div className='flex items-center space-x-3 text-gray-300'    />
+                  <Phone className='w-4 h-4 text-cyan-400'    />
+                  <span    />+1 302 464 0950</span>
                 </div>
-                <div className='flex items-center space-x-3 text-gray-300' />
-                  <Mail className='w-4 h-4 text-purple-400' />
-                  <span />kleber@ziontechgroup.com</span>
+                <div className='flex items-center space-x-3 text-gray-300'    />
+                  <Mail className='w-4 h-4 text-purple-400'    />
+                  <span    />kleber@ziontechgroup.com</span>
                 </div>
-                <div className='flex items-center space-x-3 text-gray-300' />
-                  <MapPin className='w-4 h-4 text-pink-400' />
-                  <span />364 E Main St STE 1008, Middletown DE 19709</span>
+                <div className='flex items-center space-x-3 text-gray-300'    />
+                  <MapPin className='w-4 h-4 text-pink-400'    />
+                  <span    />364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
-                <div className='flex items-center space-x-3 text-gray-300' />
-                  <Globe className='w-4 h-4 text-blue-400' />
+                <div className='flex items-center space-x-3 text-gray-300'    />
+                  <Globe className='w-4 h-4 text-blue-400'    />
                   <a;
 href='https: //ziontechgroup.com'
                     className='hover:text-white transition-colors duration-200'
-                   />
+                      />
                     ziontechgroup.com;
                   </a>
                 </div>
@@ -489,55 +489,55 @@ href='https: //ziontechgroup.com'
             {/* Footer Sections *}
 }
             {footerSections.map((section, index) => (}
-              <motion.div key={section.title} variants={itemVariants} />
-<h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2' />
+              <motion.div key={section.title} variants={itemVariants}    />
+<h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2'    />
                   {section.title === 'Services' && (
-                    <Briefcase className='w-5 h-5 text-cyan-400' />}
+                    <Briefcase className='w-5 h-5 text-cyan-400'    />}
 }
                   )}
-                  {section.title === 'Solutions' && (<Zap className='w-5 h-5 text-purple-400' />;}
+                  {section.title === 'Solutions' && (<Zap className='w-5 h-5 text-purple-400'    />;}
                   )}
-                  {section.title === 'Company' && (<Users className='w-5 h-5 text-pink-400' />;}
+                  {section.title === 'Company' && (<Users className='w-5 h-5 text-pink-400'    />;}
                   )}
-                  {section.title === 'Resources' && (<BookOpen className='w-5 h-5 text-blue-400' />;}
+                  {section.title === 'Resources' && (<BookOpen className='w-5 h-5 text-blue-400'    />;}
                   )}
-                  <span />{section.title}</span>;
+                  <span    />{section.title}</span>;
                 </h4>;
-                <ul className='space-y-3' />;
-                  {section.items.map(item => (<li key={item.label} />;
+                <ul className='space-y-3'    />;
+                  {section.items.map(item => (<li key={item.label}    />;
                       <Link;
                         href={item.href}
 
                         className='text-gray-300 hover: text-white transition-colors duration-200 hover:translate-x-1 inline-block'
-                       />
+                          />
 
                         {item.label}
             {/* Footer Sections *}
 }
-            {footerSections && footerSections.map((section, index) => (<motion && motion.div key={section && section.title} variants={itemVariants} />;
-                <h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2' />;
-                  {section && section.title === 'Services' && (<Briefcase className='w-5 h-5 text-cyan-400' />;}
+            {footerSections && footerSections.map((section, index) => (<motion && motion.div key={section && section.title} variants={itemVariants}    />;
+                <h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2'    />;
+                  {section && section.title === 'Services' && (<Briefcase className='w-5 h-5 text-cyan-400'    />;}
                   )}
-                  {section && section.title === 'Solutions' && (<Zap className='w-5 h-5 text-purple-400' />;}
+                  {section && section.title === 'Solutions' && (<Zap className='w-5 h-5 text-purple-400'    />;}
                   )}
-                  {section && section.title === 'Company' && (<Users className='w-5 h-5 text-pink-400' />;}
+                  {section && section.title === 'Company' && (<Users className='w-5 h-5 text-pink-400'    />;}
                   )}
-                  {section && section.title === 'Resources' && (<BookOpen className='w-5 h-5 text-blue-400' />;}
+                  {section && section.title === 'Resources' && (<BookOpen className='w-5 h-5 text-blue-400'    />;}
                   )}
-                  <span />{section && section.title}</span>;
+                  <span    />{section && section.title}</span>;
                 </h4>;
-                <ul className='space-y-3' />;
-                  {section && section.items.map(item => (<li key={item && item.label} />;
+                <ul className='space-y-3'    />;
+                  {section && section.items.map(item => (<li key={item && item.label}    />;
                       <Link;
                         href={item && item.href}
-                        className='text-gray-300 hover: text-white transition-colors duration-200 hover:translate-x-1 inline-block' />                  <span />{section && section.titl}
+                        className='text-gray-300 hover: text-white transition-colors duration-200 hover:translate-x-1 inline-block'    />                  <span    />{section && section.titl}
 }</span>;
                 </h4>;
-                <ul className=\"space-y-3\" />;
-                  {section && section.items.map((item) => (<li key={item && item.label} />;
+                <ul className=\"space-y-3\"    />;
+                  {section && section.items.map((item) => (<li key={item && item.label}    />;
                       <Link;
                         href={item && item.href}"
-                        className=\"text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block\" />;
+                        className=\"text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block\"    />;
                         {item && item.label}
                       </Link>;
                     </li>;
@@ -555,13 +555,13 @@ href='https: //ziontechgroup.com'
             viewport={{ once: true }}
 
 className='mt-16 pt-12 border-t border-gray-800/50'
-           />
-            <div className='flex flex-col lg:flex-row items-center justify-between gap-8' />
+              />
+            <div className='flex flex-col lg:flex-row items-center justify-between gap-8'    />
 
               {/* Social Links *}
 }
-              <div className='flex items-center space-x-6' />;
-                <span className='text-gray-400 font-medium' />Follow Us:</span>;
+              <div className='flex items-center space-x-6'    />;
+                <span className='text-gray-400 font-medium'    />Follow Us:</span>;
                 {socialLinks && socialLinks.map(social => (<motion&& motion.a;}
                     key={social && social.label}
                     href={social && social.href}
@@ -574,34 +574,34 @@ className='mt-16 pt-12 border-t border-gray-800/50'
 
                     whileTap={{ scale: 0.95 }
 }
-                   />;
-                    <social.icon className='w-5 h-5' />;
+                      />;
+                    <social.icon className='w-5 h-5'    />;
                   </motion.a>;
                 ))}
 
               </div>
               {/* Newsletter Signup */}
-<div className='flex-1 max-w-md' />
-                <h5 className='text-lg font-semibold text-white mb-3' />
+<div className='flex-1 max-w-md'    />
+                <h5 className='text-lg font-semibold text-white mb-3'    />
                   Stay Updated;
                 </h5>
-                <p className='text-gray-400 text-sm mb-4' />
+                <p className='text-gray-400 text-sm mb-4'    />
                   Get the latest insights on AI consciousness, quantum;
 computing, and future technology.
                 </p>
-                <div className='flex space-x-2' />
+                <div className='flex space-x-2'    />
                   <input;
 type='email'
                     placeholder='Enter your email'
                     className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
-                  />
+                     />
                   <motion.button;
 className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'
 
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }
 }
-                   />;
+                      />;
                     Subscribe;
                   </motion.button>;
                 </div>;
@@ -620,7 +620,7 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
           </motion && motion.div>;
         </div>;{/* Bottom Bar */}
         <motion&& motion.div;
-                      </Link />;
+                      </Link    />;
                     </li>))}
                 </ul>;
               </motion.div>))}
@@ -633,12 +633,12 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
             transition={{ duration: 0.6 }}
             viewport={{ once: true }
 }
-            className='mt - 16 pt - 12 border - t border - gray - 800 / 50' />
+            className='mt - 16 pt - 12 border - t border - gray - 800 / 50'    />
 
-            <div className='flex flex - col lg:flex - row items - center justify - between gap - 8' />;
+            <div className='flex flex - col lg:flex - row items - center justify - between gap - 8'    />;
               {/* Social Links */}
-              <div className='flex items - center space - x-6' />;
-                <span className='text - gray - 400 font - medium' />Follow Us:</span>;
+              <div className='flex items - center space - x-6'    />;
+                <span className='text - gray - 400 font - medium'    />Follow Us:</span>;
                 {social_links.map (social => (<motion.a;}
                     key={social.label}
                     href={social.href}
@@ -648,55 +648,55 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
                     while_hover={{ coordinate_y: -2 }}
                     while_tap={{ scale: 0.95 }
 }
-                   />;
-                    <social.icon className='w - 5 h - 5' />                  </motion.a>          >;"
-            <div className=\"flex flex - col lg:flex - row items - center justify-between gap-8\" />;
+                      />;
+                    <social.icon className='w - 5 h - 5'    />                  </motion.a>          >;"
+            <div className=\"flex flex - col lg:flex - row items - center justify-between gap-8\"    />;
               {/* Social Links */}"
-              <div className=\"flex items-center space-x-6\" />;"
-                <span className=\"text - gray-400 font-medium\" />Follow Us:</span>;
+              <div className=\"flex items-center space-x-6\"    />;"
+                <span className=\"text - gray-400 font-medium\"    />Follow Us:</span>;
                 {social_links.map ((social) => (<motion.a;}
                     key={social.label}
                     href={social.href}"
-                    target=\"_blank\";"
-                    rel=\"noopener noreferrer\";"
-                    className=\"w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gradient - to - r hover:from - cyan - 500 hover:to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 hover:text - white transition - all duration-200 hover:scale-110\";
+                    target=\'_blank\';"
+                    rel=\'noopener noreferrer\';"
+                    className=\'w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gradient - to - r hover:from - cyan - 500 hover:to - purple - 500 rounded - xl flex items - center justify - center text - gray - 300 hover:text - white transition - all duration-200 hover:scale-110\';
                     while_hover={{ coordinate_y: -2 }}
                     while_tap={{ scale: 0.95 }
 }
-                   />;"
-                    <social.icon className=\"w-5 h-5\" />;
+                      />;"
+                    <social.icon className=\"w-5 h-5\"    />;
                   </motion.a>))}
               </div>;
               {/* Newsletter Signup */}
-              <div className='flex - 1 max - w-md' />;
-                <h5 className='text - lg font - semibold text - white mb - 3' />;
+              <div className='flex - 1 max - w-md'    />;
+                <h5 className='text - lg font - semibold text - white mb - 3'    />;
                   Stay Updated;
                 </h5>;
-                <p className='text - gray - 400 text - sm mb - 4' />;
+                <p className='text - gray - 400 text - sm mb - 4'    />;
                   Get the latest insights on AI consciousness, quantum;
                   computing, and future technology.;
                 </p>;
-                <div className='flex space - x-2' />;
+                <div className='flex space - x-2'    />;
                   <input;
                     type='email';
                     placeholder='Enter your email';
                     className='flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent';
-                  />;
+                     />;
                   <motion.button;
                     className='px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover: from - purple - 600 hover:to - pink - 600 transition - all duration - 200'                    while_hover={{ scale: 1.05 }
-}                </p />;"
-                <div className=\"flex space-x-2\" />;
+}                </p    />;"
+                <div className=\"flex space-x-2\"    />;
                   <input;"
-                    type=\"email\";"
-                    placeholder=\"Enter your email\";"
-                    className=\"flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple-500 focus:border-transparent\";
-                  />;
+                    type=\'email\';"
+                    placeholder=\'Enter your email\';"
+                    className=\'flex - 1 px - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple-500 focus:border-transparent\';
+                     />;
                   <motion.button;"
-                    className=\"px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition-all duration-200\";
+                    className=\'px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition-all duration-200\';
                     while_hover={{ scale: 1.05 }}
                     while_tap={{ scale: 0.95 }
 }
-                   />;
+                      />;
                     Subscribe;
                   </motion.button>;
                 </div>;
@@ -714,18 +714,18 @@ className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rou
 }
 
 className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
-         />
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6' />
-            <div className='flex flex-col md:flex-row items-center justify-between gap-4' />
-              <div className='text-gray-400 text-sm' />
+            />
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'    />
+            <div className='flex flex-col md:flex-row items-center justify-between gap-4'    />
+              <div className='text-gray-400 text-sm'    />
 
           className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'>;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6' />;
-            <div className='flex flex-col md:flex-row items-center justify-between gap-4' />;
-              <div className='text-gray-400 text-sm' />;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'    />;
+            <div className='flex flex-col md:flex-row items-center justify-between gap-4'    />;
+              <div className='text-gray-400 text-sm'    />;
                 <Link;
                   href='/privacy';
-                  className='hover:text-white transition-colors duration-200 ml-2' />;
+                  className='hover:text-white transition-colors duration-200 ml-2'    />;
                   Privacy Policy;
 
                 </Link>{' '}
@@ -733,24 +733,24 @@ className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
                 <Link;
 href='/terms'
                   className='hover: text-white transition-colors duration-200 ml-2'
-                 />
+                    />
                   Terms of Service;
                 </Link>
               </div>
-              <div className='flex items-center space-x-4 text-gray-400 text-sm' />
-                <span />Powered by</span>
-                <div className='flex items-center space-x-2' />
-                  <Brain className='w-4 h-4 text-cyan-400' />                  <span />AI Consciousness</span>
+              <div className='flex items-center space-x-4 text-gray-400 text-sm'    />
+                <span    />Powered by</span>
+                <div className='flex items-center space-x-2'    />
+                  <Brain className='w-4 h-4 text-cyan-400'    />                  <span    />AI Consciousness</span>
                 </div>
-                <span />•</span>
-                <div className='flex items-center space-x-2' />
-                  <Atom className='w-4 h-4 text-purple-400' />
-                  <span />Quantum Computing</span>
+                <span    />•</span>
+                <div className='flex items-center space-x-2'    />
+                  <Atom className='w-4 h-4 text-purple-400'    />
+                  <span    />Quantum Computing</span>
                 </div>
-                <span />•</span>
-                <div className='flex items-center space-x-2' />
-                  <Rocket className='w-4 h-4 text-pink-400' />
-                  <span />Space Technology</span>
+                <span    />•</span>
+                <div className='flex items-center space-x-2'    />
+                  <Rocket className='w-4 h-4 text-pink-400'    />
+                  <span    />Space Technology</span>
                 </div>
               </div>
             </div>
@@ -773,9 +773,9 @@ className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-
 }
         transition={{ duration: 0.3, delay: 1 }}
 
-       />
+          />
 
-<ArrowUp className='w-6 h-6 mx-auto' />
+<ArrowUp className='w-6 h-6 mx-auto'    />
       </motion.button>
     </footer>
   )

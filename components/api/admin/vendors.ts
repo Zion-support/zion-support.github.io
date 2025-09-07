@@ -26,7 +26,7 @@ else if (action === 'commission')
 });
     res.status(200).json({ ok: true,}
 });
-  } catch (e: any) {}
+  } catch (e) {
     res.status(500).json({ error: e.message,}
 });
   }
@@ -44,10 +44,9 @@ import {
     else if (action === 'revoke') setVendorApproval(String(vendorId), false);
     else if (action === 'suspend') suspendVendor(String(vendorId), true);}
     else if (action === 'unsuspend') suspendVendor(String(vendorId), false);}
-  } catch (e: any) {}
+  } catch (e) {
     res && res.status(500).json({ error: e && e.message })
- ,
-};
+ }
 }
   setVendorApproval,
   setVendorCommission,;
@@ -71,10 +70,9 @@ const { action, vendorId, value } = req.body || {},
     else if (action === 'revoke') setVendorApproval(String(vendorId), false);
     else if (action === 'suspend') suspendVendor(String(vendorId), true);}
     else if (action === 'unsuspend') suspendVendor(String(vendorId), false);}
-  } catch (e: any) {}
+  } catch (e) {
     res && res.status(500).json({ error: e && e.message })
- ,
-};
+ }
 }
 
 }

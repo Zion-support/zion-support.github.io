@@ -17,10 +17,10 @@ interface UltraAdvancedFuturisticBackground2026Props {
 }
 }
 
-const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props /> = ({intensity;
+const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props    /> = ({intensity;
 
-const canvasRef = useRef<HTMLCanvasElement />(null)const containerRef =;
-  useRef<HTMLDivElement />(null;
+const canvasRef = useRef<HTMLCanvasElement    />(null)const containerRef =;
+  useRef<HTMLDivElement    />(null;
   useEffect(() => ;
   const canvas = canvasRef.current;
     if (!canvas) return;
@@ -596,7 +596,7 @@ ref={canvasRef}
 }
 
       {enableMultidimensional && (;
-        <div className='absolute inset-0 pointer-events-none' />;
+        <div className='absolute inset-0 pointer-events-none'    />;
           <motion&& motion.div;
 className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full'
 
@@ -613,7 +613,7 @@ ease: 'easeInOut'}
             }}
             transition={{animate={{scale: [1, 1.2, 1],rotate: [0, 180, 360],opacity: [0.1, 0.3, 0.1]}}
             transition={{duration: 8,repeat: Infinity,ease: 'easeInOut'}}
-          />;
+             />;
 
           <motion&& motion.div;
 className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full'
@@ -629,14 +629,14 @@ className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 r
 ease: 'easeInOut'}
             }}
 
-          />;
+             />;
             }}
           />;
           <motion.div;
-            className=\"absolute bottom - 1/4 right - 1/4 w - 96 h - 96 border border - purple - 400 / 20 rounded - full\";
+            className=\'absolute bottom - 1/4 right - 1/4 w - 96 h - 96 border border - purple - 400 / 20 rounded - full\';
             animate={{}}
             transition={{duration: 10,repeat: Infinity}}
-          />;
+             />;
         </div>;
       )}
 {children}

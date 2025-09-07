@@ -115,8 +115,7 @@ return res.status(200).json(json);}
     } catch {}
       return fallback ();}
     }
-  } catch (err) {
-}
+  } catch (e) {
     return fallback();}
   }
 

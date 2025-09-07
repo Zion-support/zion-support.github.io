@@ -10,7 +10,7 @@ interface UltraAdvancedQuantumBackgroundProps {
 }
 }
 
-const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps /> = ({children;
+const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps    /> = ({children;
   className;
 canvas.width = window.innerWidth;
 
@@ -43,7 +43,7 @@ const UltraAdvancedQuantumBackground: React.FC<
 
 
  ;
-  const canvasRef = useRef<HTMLCanvasElement />(null);
+  const canvasRef = useRef<HTMLCanvasElement    />(null);
 
   useEffect(() => {
 
@@ -281,20 +281,20 @@ cancelAnimationFrame(animationFrameId)}
 
   }, []);
   return (
-    <div className={`relative min-h-screen overflow-hidden ${className}`} />
+    <div className={`relative min-h-screen overflow-hidden ${className}`}    />
 
       {/* Quantum Matrix Overlay */}
 
-<div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black' />
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]' />
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]' />
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]' />
+<div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'    />
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]'    />
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]'    />
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]'    />
       </div>
 
       {/* Animated Quantum Grid */}
-      <div className='absolute inset-0 opacity-20' />;
-        <div className='absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]' />;
-        <div className='absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]' />;
+      <div className='absolute inset-0 opacity-20'    />;
+        <div className='absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]'    />;
+        <div className='absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]'    />;
       </div>;
       {/* Floating Quantum Elements */}
       <motion.div;
@@ -308,7 +308,7 @@ className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-b
           repeat: Infinity,}
           ease: 'easeInOut',}
         }}
-      />
+         />
 
       <motion.div;
 className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl'
@@ -322,7 +322,7 @@ className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 t
           ease: 'easeInOut',}
   delay: 1,}
         }}
-      />
+         />
       <motion.div;
 className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-20 blur-xl'
         animate={{
@@ -355,24 +355,24 @@ ref={canvasRef}
 
 className='absolute inset-0 w-full h-full opacity-60'
         style={{ zIndex: 1 }}
-      />
+         />
       {/* Content Layer */}
-<div className='relative z-10' />{children}</div>
+<div className='relative z-10'    />{children}</div>
 
 
       {/* Quantum Energy Waves *,}
 }
-      <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden' />;
+      <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'    />;
         <motion&& motion.div;
           className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent';
           animate={{x: [0, -100, 0];}
-      />;}
+         />;}
       {/* Quantum Canvas */}
       <canvas;
         ref={canvas_ref}
         className='absolute inset - 0 w - full h - full opacity - 60'        style={{ z_index: 1 ,}
 }
-      />;
+         />;
       {/* Content Layer */}
           }}
           transition={{duration: 8;}
@@ -391,7 +391,7 @@ className='absolute inset-0 w-full h-full opacity-60'
             ease: 'linear',}
   delay: 2,}
           }}
-        />
+           />
       </div>
     </div>
 )

@@ -55,9 +55,9 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     },
   ];    features: [
 '
-      "Emerging tech breakthroughs";""
-      "Innovation platform";""
-      "Future capabilities";"
+      'Emerging tech breakthroughs';""
+      'Innovation platform';""
+      'Future capabilities';"
 export interface EmergingTechBreakthrough2029 {;
 "
       "Expert insights""]
@@ -71,10 +71,10 @@ export interface EmergingTechBreakthrough2029 {;
 
     }
   ];    features: [
-      \"Emerging tech breakthroughs\";
-      \"Innovation platform\";
+      \'Emerging tech breakthroughs\';
+      \'Innovation platform\';
 
-      \"Future capabilities\";export interface EmergingTechBreakthrough2029 {}
+      \'Future capabilities\';export interface EmergingTechBreakthrough2029 {}
 };
 
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
@@ -104,10 +104,10 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       },
     },;
   ];    features: ['
-      "Emerging tech breakthroughs";""
-      "Innovation platform";""
-      "Future capabilities";""
-      "Advanced features";"
+      'Emerging tech breakthroughs';""
+      'Innovation platform';""
+      'Future capabilities';""
+      'Advanced features';"
 
   id: string,;
   name: string,;

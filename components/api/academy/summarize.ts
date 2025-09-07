@@ -40,11 +40,10 @@ const completion = await client.chat.completions.create({
 const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status (200).json ({ summary: text.trim (),}
 });
-  } catch (err) {}
-  }
+  } catch (e) {
 
     return res.status(200).json({ summary: text.trim() })
-  } catch (err) {}
+  } catch (e) {
     return fallback()}
 },
 }

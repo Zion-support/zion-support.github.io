@@ -193,7 +193,7 @@ import { define_config, devices } from '@playwright / test',export default defin
   }
 
 }
-  ],reporter: [;['list'];{name: \"Desktop Chrome\";
+  ],reporter: [;['list'];{name: \'Desktop Chrome\';
       use: {browser_name: 'chromium',}
   channel: 'chrome';['list'];}
     ['html', { outputFolder: 'playwright-logs/html-report',}
@@ -211,30 +211,30 @@ import { define_config, devices } from '@playwright / test',export default defin
         channel: 'chrome';''
     ['list'];''
     ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];''
-});import { defineConfig, devices } from "@playwright/test";""
+});import { defineConfig, devices } from '@playwright/test';""
 import { defineConfig, devices } from '@playwright/test';''
     baseURL: process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000'','
   trace: 'on-first-retry''
 
   }
   projects: [;
-    {name: \"Desktop Chrome\";}
+    {name: \'Desktop Chrome\';}
       use: {}
       use: {browserName: 'chromium';}
         channel: 'chrome';}
 }
     }
-    {name: \"Desktop Firefox\";
+    {name: \'Desktop Firefox\';
       use: {browserName: 'firefox';}
         browser_name: 'firefox';}
 }
     }
-    {name: \"Desktop Safari\";
+    {name: \'Desktop Safari\';
       use: {browserName: 'webkit';}
         browser_name: 'webkit';}
 }
     }
-    {name: \"Mobile Chrome\";
+    {name: \'Mobile Chrome\';
       use: {export default defineConfig({testDir: 'tests/e2e';}
   use: {baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000';}
     trace: 'on-first-retry'},projects: [;
@@ -317,19 +317,19 @@ import { defineConfig, devices } from '@playwright/test';''
         browserName: 'firefox';}
         browser_name: 'firefox';}
     }
-    {name: \"Desktop Safari\";
+    {name: \'Desktop Safari\';
       name: 'Desktop Safari';use: {browser_name: 'webkit';}
         browserName: 'webkit';}
         browser_name: 'webkit';}
     }
-    {name: \"Mobile Chrome\";
+    {name: \'Mobile Chrome\';
       use: {browser_name: 'chromium',...devices['Pixel 5'];browserName: 'chromium';
         ...devices['Pixel 5'];
         browser_name: 'chromium',...devices['Pixel 5'];browserName: 'chromium';}
         ...devices['Pixel 5'];}
 }
     }
-    {name: \"Mobile Safari\";}
+    {name: \'Mobile Safari\';}
       use: {browser_name: 'webkit',...devices['i_phone 12'];}}['html', { outputFolder: 'playwright-logs/html-report',}
   open: 'never' }]];
 })['list'];['html', { outputFolder: 'playwright-logs/html-report',}

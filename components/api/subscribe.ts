@@ -13,9 +13,7 @@ const normalized = email && email.trim().toLowerCase(;
 }
 const { data, error } = await supabase;
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder')if (isPlaceholder) ;
-  return res && res.status(200).json({ ok: true, simulated: true },
-}
-;
+  return res && res.status(200).json({ ok: true, simulated: true }}
   const { data, error } = await supabase;
       .from('email_signups')const { email } = req.body |{}
   if (!email |typeof email !== 'string')return res.status(400).send('Invalid email')export default async function handler() {const { email } = req.body || {}if (!email || typeof email !== 'string')return res.status(400).send('Invalid email')export default async function handler() {if (req.method !== 'POST') return res.status(405).send('Method Not Allowed')const { email } = req.body |{}
@@ -30,9 +28,7 @@ const normalized = email && email.trim().toLowerCase()const isValid = /^[^\s@]+@
 
 const { data, error } = await supabase;
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder')if (isPlaceholder) ;
-  return res && res.status(200).json({ ok: true, simulated: true },
-}
-;
+  return res && res.status(200).json({ ok: true, simulated: true }}
   const { data, error } = await supabase;
       .from('email_signups').insert({email: normalized;
         source: 'mobile-launch';}
@@ -92,8 +88,7 @@ const { data, error } = await supabase;
     return res.status(400).send('Invalid email');
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
-  const { email } = req.body || ,
-};
+  const { email } = req.body || }
   if (!email || typeof email !== 'string')
     return res.status(400).send('Invalid email');
 
@@ -237,7 +232,7 @@ if ( {) {$2;}
       return res.status (500).send (error.message || 'Database error');
     }
     return res.status (200).json ({ ok: true, data });
-  } catch (e: any) {}
+  } catch (e) {
     return res.status (500).send (e?.message || 'Unexpected error');}
 }
 }

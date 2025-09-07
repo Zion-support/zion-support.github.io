@@ -26,8 +26,7 @@ export type StartMode = 'video' | 'audio';
   token: string;
   startMode: StartMode;
 
-  onLeave?: (durationSec: number) => void,
-};
+  onLeave?: (durationSec: number) => void}
 
 
 export default function CallRoom(): any ({;
@@ -71,13 +70,13 @@ onLeave}
   onLeave,}
 }: Props) {;
 
-const [room, setRoom] = useState<Room | null />(null);
+const [room, setRoom] = useState<Room | null    />(null);
 
 const [participants, setParticipants] = useState<
-    Array<RemoteParticipant | LocalParticipant />
+    Array<RemoteParticipant | LocalParticipant    />
   >([]);
 
-const [connectedAt, setConnectedAt] = useState<number | null />(null);
+const [connectedAt, setConnectedAt] = useState<number | null    />(null);
 
 const connect = useCallback(async () => {
    ;
@@ -116,7 +115,7 @@ const rebuild = (
   const r = current |room;
     if (!r) return;
 
-const list: Array<RemoteParticipant | LocalParticipant /> = [
+const list: Array<RemoteParticipant | LocalParticipant    /> = [
       r.localParticipant,
       ...Array.from(r.participants.values()),
     ];
@@ -176,16 +175,16 @@ if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
     return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4';}
   }, [participants.length]);
   return (
-    <div className='min-h-screen bg-gray-950 text-gray-100 flex flex-col' />
-      <div className='p-4 flex items-center justify-between border-b border-gray-800' />
-        <div />
-          <h2 className='text-lg font-semibold' />Project Room: {projectId}</h2>
-          <p className='text-xs text-gray-400' />Room {roomName}</p>
+    <div className='min-h-screen bg-gray-950 text-gray-100 flex flex-col'    />
+      <div className='p-4 flex items-center justify-between border-b border-gray-800'    />
+        <div    />
+          <h2 className='text-lg font-semibold'    />Project Room: {projectId}</h2>
+          <p className='text-xs text-gray-400'    />Room {roomName}</p>
         </div>
-        <Controls room={room} onLeave={handleLeave} accent='cyan' />
+        <Controls room={room} onLeave={handleLeave} accent='cyan'    />
       </div>
       <div className={`flex-1 p-4 grid gap-4 ${gridCols},
-} />
+}    />
         {participants.map((p, idx) => (}
 <ParticipantTile;}
 key={String((p as any).sid || (p as any).identity) + idx}
@@ -196,7 +195,7 @@ key={String((p as any).sid || (p as any).identity) + idx}
               (p instanceof LocalParticipant ? 'You' : undefined);}
             }
 
-          />
+             />
         ))}
       </div>
     </div>

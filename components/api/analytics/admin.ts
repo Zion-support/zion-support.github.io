@@ -108,11 +108,11 @@ const quotesAccepted = quotesData.filter(
 const activeProjects = projectsData.filter(p => p.status === 'active';
     ).length;
 
-const categoryCounts: Record<string, number /> = {}
+const categoryCounts: Record<string, number    /> = {}
     jobsData.forEach(j => {categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1;}
     })const referralConversions  = referralsData.filter(r => r.converted).length;
 
-const geoCounts: Record<string, number /> = {}usersData.forEach(u => {geoCounts[u.country || 'Unknown'] =;
+const geoCounts: Record<string, number    /> = {}usersData.forEach(u => {geoCounts[u.country || 'Unknown'] =;
         (geoCounts[u.country || 'Unknown'] || 0) + 1;}
 }
     });

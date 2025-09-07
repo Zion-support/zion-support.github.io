@@ -20,14 +20,13 @@ const { error } = await supabase;
 
 return res.status(200).json({ ok: true,}
 });
-  } catch (e) {}
+  } catch (e) {
     return res.status(500).json({ error: 'Unexpected error',}
 });
   }
-  } catch (e) {}
+  } catch (e) {
     return res && res.status(500).json({ error: 'Unexpected error' })
- ,
-};
+ }
 }
 }
 }

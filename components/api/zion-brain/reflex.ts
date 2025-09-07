@@ -39,7 +39,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
 
 const triggers = evaluateReflexes(metrics);
 
-const state = readState<any />();
+const state = readState<any    />();
       state && state.metrics = metrics;
       state && state.lastTriggers = triggers;
       writeState(state);
@@ -91,7 +91,7 @@ return res.status (405).json ({ error: 'Method not allowed',}
 }      append_log ({ module: 'reflex',}
   type: 'metrics', status: 'ok', latency_ms, payload: { metrics, triggers } });
       return res.status (200).json ({ triggers });
-    } catch (e: any) {}
+    } catch (e) {
       append_log ({ module: 'reflex',
   type: 'metrics', status: 'error',}
   payload: { error: e?.message || 'unknown' },

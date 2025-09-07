@@ -36,7 +36,7 @@ text: string;
 
 export default async function handler(
   req: NextApiRequest;
-  res: NextApiResponse<TextAnalysisResult | { error: string } />
+  res: NextApiResponse<TextAnalysisResult | { error: string }    />
 ) {
   if (req.method !== 'POST') {}
 return res.status(405).json({ error: 'Method not allowed'}
@@ -168,7 +168,7 @@ const sentimentScore = positiveCount - negativeCount;
     else sentimentLabel = 'very-positive';
 
     // Keyword analysis;
-const wordCounts = new Map<string, number />();
+const wordCounts = new Map<string, number    />();
 
 text;
       .toLowerCase()
@@ -192,9 +192,9 @@ word,
     // Bigrams and trigrams;
 const wordsArray = text && text.toLowerCase().split(/\s+/);
 
-const bigramCounts = new Map<string, number />();
+const bigramCounts = new Map<string, number    />();
 
-const trigramCounts = new Map<string, number />();
+const trigramCounts = new Map<string, number    />();
 
 
 for (let i = 0; i < wordsArray.length - 1; i++) {}

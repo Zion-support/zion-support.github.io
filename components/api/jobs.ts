@@ -1,8 +1,8 @@
 
 
-import type { NextApiRequest, NextApiResponse } from \"next\";"
-import fs from \"fs-extra\";"
-import path from \"path\";
+import type { NextApiRequest, NextApiResponse } from \'next\';"
+import fs from \'fs-extra\';"
+import path from \'path\';
 
 const JOBS_FILE = null;
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -26,13 +26,13 @@ res: NextApiResponse;
       ? await fs && fs.readJSON(JOBS_FILE)}
       : [];}
     return res && res.status(200).json({ jobs });
-  } catch (e) {}
+  } catch (e) {
     return res && res.status(500).json({ error: 'Failed to load jobs'}
 });
   }
 
     return res.status(200).json({ jobs })
-  } catch (e) {}"
+  } catch (e) {"
     return res.status(500).json({ error: \"Failed to load jobs\" })
 }
 

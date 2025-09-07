@@ -37,7 +37,7 @@
   mobile: '+1 302 464 0950',''
   email: 'kleber@ziontechgroup.com',''
   address: '364 E Main St STE 1008 Middletown DE 19709',''
-  website: 'https://ziontechgroup.com',};'
+  website: 'https://ziontechgroup.com'}'
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;,'
   mobile: '+1 302 464 0950',''
   email: 'kleber@ziontechgroup.com',''
@@ -56,7 +56,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   mobile: '+1 302 464 0950',''
   email: 'kleber@ziontechgroup && ziontechgroup.com',''
   address: '364 E Main St STE 1008 Middletown DE 19709',''
-  website: 'https://ziontechgroup && ziontechgroup.com',};''
+  website: 'https://ziontechgroup && ziontechgroup.com'}''
     tagline: 'Fully autonomous business process optimization with zero human intervention'','
   price: '$1,299'''
     period: '/month'',

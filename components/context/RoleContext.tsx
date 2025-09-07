@@ -13,7 +13,7 @@ type RoleContextValue = {role: UserRole;}
 };
 
 
-const RoleContext = createContext<RoleContextValue | undefined />(undefined);
+const RoleContext = createContext<RoleContextValue | undefined    />(undefined);
 
 export const RoleProvider: React.FC<{ children: React.ReactNode,}
 }> = ({ children,}
@@ -21,7 +21,7 @@ export const RoleProvider: React.FC<{ children: React.ReactNode,}
 
 
 
-  const [role, setRole] = useState<UserRole />('client');
+  const [role, setRole] = useState<UserRole    />('client');
   useEffect(() => {
 
     try {
@@ -54,7 +54,7 @@ window.localStorage.setItem('zion_user_role', role);}
 const value = useMemo(() => ({ role, setRole }), [role]);
 
 
-return <RoleContext.Provider value={value} />{children}</RoleContext.Provider>
+return <RoleContext.Provider value={value}    />{children}</RoleContext.Provider>
 };
 
 

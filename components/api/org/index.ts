@@ -27,15 +27,13 @@ departments: parseArray(req.query.departments)
     regions: parseArray(req.query.regions)
     countries: parseArray(req.query.countries)}
     search: (req.query.search as string) |undefined;}
-teamOnly: req.query.teamOnly === 'true' ? true : undefined,  }
-;
+teamOnly: req.query.teamOnly === 'true' ? true : undefined}
   const filters: OrgFilters = {
     view: (req.query.view as OrgFilters['view']) |'all';
 
     roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined;}
     departments: parseArray(req.query.departments)categories: parseArray(req.query.categories)zones: parseArray(req.query.zones)regions: parseArray(req.query.regions)countries: parseArray(req.query.countries)search: (req.query.search as string) |undefined;}
-    teamOnly: req.query.teamOnly = == 'true' ? true : undefined,  }
-;
+    teamOnly: req.query.teamOnly = == 'true' ? true : undefined}
   const filters: OrgFilters = {view: (req.query.view as OrgFilters['view']) |'all';
     roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined;
     departments: parseArray(req.query.departments)categories: parseArray(req.query.categories)zones: parseArray(req.query.zones)regions: parseArray(req.query.regions)countries: parseArray(req.query.countries)search: (req.query.search as string) |undefined;}

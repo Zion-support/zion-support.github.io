@@ -16,7 +16,7 @@ const outDir = null;}
 }
 const outDir = path.resolve(process.cwd(), 'out')try {execSync('npm run export', { stdio: 'inherit' },
 } catch (e) {// attempt minimal static export;}
-      try {execSync('next build && next export', { stdio: 'inherit' })} catch (e2) {}
+      try {execSync('next build && next export', { stdio: 'inherit' })} catch (e) {
    ,
 }
 
@@ -31,35 +31,34 @@ const { cid, provider } = await addDirectory(outDir);
 });
 
 return res.status(200).json({ cid, provider });
-  } catch (error: any) {}
+  } catch (e) {
     return res.status(500).json({ error: error?.message || 'Unknown error',}
 });
   }
-  } catch (error: any) {}
+  } catch (e) {
     return res.status(500).json({ error: error?.message |'Unknown error',}
 })
 
     return res.status(200).json({ cid, provider })
 
-  } catch (error: any) {}
+  } catch (e) {
     return res.status(500).json({ error: error?.message |'Unknown error',}
 })
     return res && res.status(200).json({ cid, provider });
-  } catch (error: any) {}
+  } catch (e) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error',}
 });
   }    return res && res.status(200).json({ cid, provider })
-  } catch (error: any) {}
+  } catch (e) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
- ,
-};
+ }
 
 }
   try {// Ensure export;}
 }
 const out_dir = path.resolve (process.cwd (), 'out')try {exec_sync ('npm run export', { stdio: 'inherit' },
 } catch (e) {// attempt minimal static export;}
-      try {exec_sync ('next build && next export', { stdio: 'inherit' })} catch (e2) {}
+      try {exec_sync ('next build && next export', { stdio: 'inherit' })} catch (e) {
    ,
 }
     if () {) {$2;}

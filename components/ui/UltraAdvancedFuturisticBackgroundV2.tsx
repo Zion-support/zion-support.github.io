@@ -10,7 +10,7 @@ interface UltraAdvancedFuturisticBackgroundV2Props {
 }
 }
 
-const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props /> = ({ children;
+const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props    /> = ({ children;
   className;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -26,7 +26,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<}
 
 
  ;
-  const canvasRef = useRef<HTMLCanvasElement />(null);
+  const canvasRef = useRef<HTMLCanvasElement    />(null);
 
   useEffect(() => {
 
@@ -139,7 +139,7 @@ const handleResize = (canvas.width = window.innerWidth;
   return $3;}
 }
 initParticles()}window.addEventListener('resize', handleResize)initParticles()updateParticles()return () => {window.removeEventListener('resize', handleResize)if (animationFrameId) {cancelAnimationFrame(animationFrameId)}
-    }}, [])return (<div className={`relative min-h-screen overflow-hidden ${className}`} />
+    }}, [])return (<div className={`relative min-h-screen overflow-hidden ${className}`}    />
 
       {/* Animated Canvas Background */}
       <canvas;
@@ -148,10 +148,10 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0';
         style={{background:;}
             'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)';}
         }}
-      />;
+         />;
       {/* Floating Geometric Shapes */}
 
-      <div className='fixed inset-0 pointer-events-none z-10' />
+      <div className='fixed inset-0 pointer-events-none z-10'    />
         <motion.div;
 className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20'
           animate={{
@@ -164,7 +164,7 @@ className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20'
             repeat: Infinity}
 ease: 'easeInOut'}
           }}
-        />
+           />
         <motion.div;
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20'
           animate={{
@@ -177,7 +177,7 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-2
             repeat: Infinity}
 ease: 'easeInOut'}
           }}
-        />
+           />
         <motion.div;
 className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20'
           animate={{
@@ -190,7 +190,7 @@ className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-2
             repeat: Infinity}
 ease: 'easeInOut'}
           }}
-        />
+           />
         <motion.div;
 className='absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20'
           animate={{
@@ -209,20 +209,20 @@ ease: 'easeInOut'}
           }}
 
       {/* Quantum Energy Particles */}
-      <div className='fixed inset-0 pointer-events-none z-20' />;
+      <div className='fixed inset-0 pointer-events-none z-20'    />;
         {[...Array(20)].map((_, i) => (<motion&& motion.div;
             ease: 'easeInOut'}
-  ease: \"easeInOut\";}
+  ease: \'easeInOut\';}
           }}
-        />;
+           />;
       </div>;
       {/* Quantum Energy Particles */}
             duration: 7,repeat: Infinity,ease: 'easeInOut',"
-  ease: \"easeInOut\";
+  ease: \'easeInOut\';
           }}}}/>;
       </div>;
       {/* Quantum Energy Particles */}
-<div className='fixed inset-0 pointer-events-none z-20' />;
+<div className='fixed inset-0 pointer-events-none z-20'    />;
         {[...Array(20)].map((_, i) => (<motion.div;}
             key={i}
             className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
@@ -248,10 +248,10 @@ ease: 'easeInOut'}
             transition={{duration: 3 + Math.random() * 2;
               repeat: Infinity;}
               delay: Math.random() * 2;}"
-              duration: 3 + Math && Math.random() * 2,repeat: Infinity,delay: Math && Math.random() * 2,transition={{ease: 'easeInOut'            }}              ease: \"easeInOut\";
+              duration: 3 + Math && Math.random() * 2,repeat: Infinity,delay: Math && Math.random() * 2,transition={{ease: 'easeInOut'            }}              ease: \'easeInOut\';
               y: [0, -100, 0],opacity: [0, 1, 0],scale: [0, 1, 0]}}
             transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut'}}
-          />;
+             />;
         ))}
             transition={{duration: 3 + Math.random() * 2,repeat: Infinity,delay: Math.random() * 2,ease: 'easeInOut'            }}/>;
         ))}
@@ -260,9 +260,9 @@ ease: 'easeInOut'}
 
       {/* Neural Network Connections */}
 
-<div className='fixed inset-0 pointer-events-none z-30' />
-        <svg className='w-full h-full' />
-          <defs />
+<div className='fixed inset-0 pointer-events-none z-30'    />
+        <svg className='w-full h-full'    />
+          <defs    />
             <linearGradient;
 id='neuralGradient'
               x1='0%'
@@ -270,9 +270,9 @@ id='neuralGradient'
               x2='100%'
 
               y2='100%'
-             />
-              <stop offset='0%' stopColor='#00ffff' stopOpacity='0.3' />
-              <stop offset='100%' stopColor='#ff00ff' stopOpacity='0.3' />
+                />
+              <stop offset='0%' stopColor='#00ffff' stopOpacity='0.3'    />
+              <stop offset='100%' stopColor='#ff00ff' stopOpacity='0.3'    />
             </linearGradient>
           </defs>
           {[...Array(15)].map((_, i) => (}
@@ -308,11 +308,11 @@ ease: 'easeInOut'}
 
               }}
 
-            />
+               />
           ))}
 
       {/* Content */}
-<div className='relative z-40' />{children}</div>
+<div className='relative z-40'    />{children}</div>
     </div>
   )
 };

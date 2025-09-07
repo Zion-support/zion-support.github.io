@@ -33,6 +33,6 @@ interface ServiceCardProps {
 }
 }
 
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps /> = ({ service, variant;
+const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps    /> = ({ service, variant;
 }
 }

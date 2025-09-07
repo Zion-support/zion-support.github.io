@@ -26,10 +26,10 @@ particles.push ({ intensity = 'high',
   children: React.ReactNode;}
 }
 
-const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps /> = ({intensity;
+const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps    /> = ({intensity;
 
-const canvasRef = useRef<HTMLCanvasElement />(null)const containerRef =;
-  useRef<HTMLDivElement />(null;
+const canvasRef = useRef<HTMLCanvasElement    />(null)const containerRef =;
+  useRef<HTMLDivElement    />(null;
   useEffect(() => ;
   const canvas = canvasRef.current;
     if (!canvas) return;
@@ -114,8 +114,7 @@ holographic: '#ff0088',}
   quantum: '#00ff88',
 }
 holographic: '#ff0088',}
-      },
-    };
+      }}
 
 const colors = colorSchemes[colorScheme];
     // Initialize particles;
@@ -452,32 +451,32 @@ enableHolographic;
 enableQuantumEffects;
   ]);
   return (
-    <div ref={containerRef} className='relative w-full h-full overflow-hidden' />;
+    <div ref={containerRef} className='relative w-full h-full overflow-hidden'    />;
       <canvas;
 ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none';
         style={{ zIndex: -1 }}
       {/* Additional CSS-based effects *,}
 }
-      <div className='absolute inset-0 pointer-events-none' />;
+      <div className='absolute inset-0 pointer-events-none'    />;
         {/* Floating geometric shapes */}
         {/* Quantum particles */}
         {enableQuantumEffects && (<>;
-            <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping' /></div>;
-            <div className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300' /></div>;
-            <div className='absolute bottom-1/4 right-1/3 w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full animate-ping delay-700' /></div>;}
-          </>;}
+            <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping'    /></div>;
+            <div className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300'    /></div>;
+            <div className='absolute bottom-1/4 right-1/3 w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full animate-ping delay-700'    /></div>;}
+          <   />;}
         )}
         {/* Holographic elements */}
         {enableHolographic && (<>;
             <div;
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin';}
               style={{ animationDuration: '20s' ,}
-} /></div>;
+}    /></div>;
             <div;
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin';
               style={{{children}
-    </div />;
+    </div    />;
 
   );
 }

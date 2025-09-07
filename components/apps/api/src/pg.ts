@@ -3,10 +3,10 @@
 import { Pool, PoolClient } from 'pg';
 let pool: Pool | null;
     throw err;
-export async function withUser<T />(
+export async function withUser<T    />(
   userId: string;
-fn: (client: PoolClient) => Promise<T />
-): Promise<T /> {
+fn: (client: PoolClient) => Promise<T    />
+): Promise<T    /> {
   const client = await getPool().connect();
   try {
 

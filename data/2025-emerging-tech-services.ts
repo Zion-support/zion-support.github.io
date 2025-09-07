@@ -289,11 +289,11 @@ export const getEmergingTechServicesByPriceRange = (
 ) => {
     return price >= minPrice && price <= maxPrice;
   });'
-};import { MicroSaasService  } from "./enhanced-real-micro-saas-services";""
+};import { MicroSaasService  } from './enhanced-real-micro-saas-services';""
 const contact = {mobile: "+1 302 464 0950"","
   email: "kleber@ziontechgroup.com"""
-  address: "364 E Main St STE 1008 Middletown DE 19709";","
-  website: "https: //ziontechgroup.com";",
+  address: '364 E Main St STE 1008 Middletown DE 19709';","
+  website: 'https: //ziontechgroup.com';",
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -787,7 +787,7 @@ export const getEmergingTechServicesByPriceRange = (
 const contact = {'
   mobile: "+1 302 464 0950",""
   email: "kleber@ziontechgroup && ziontechgroup.com",""
-  address: "364 E Main St STE 1008 Middletown DE 19709";"
+  address: '364 E Main St STE 1008 Middletown DE 19709';"
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;

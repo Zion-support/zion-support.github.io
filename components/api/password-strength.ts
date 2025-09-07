@@ -28,7 +28,7 @@ if (entropy < 30) feedback.push ('Password is too predictable');
 export default async function handler(
 
   req: NextApiRequest;
-  res: NextApiResponse<PasswordStrengthResult | { error: string } />
+  res: NextApiResponse<PasswordStrengthResult | { error: string }    />
 ) {
   if (req.method !== 'POST') {}
 return res.status(405).json({ error: 'Method not allowed'}

@@ -21,11 +21,11 @@ defaultKind = 'general'}
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
 }
-  userHeaders?: Record<string, string />;}
+  userHeaders?: Record<string, string    />;}
 }) {
-  const [rating, setRating] = useState<number />(0);
+  const [rating, setRating] = useState<number    />(0);
 
-const [hover, setHover] = useState<number />(0);
+const [hover, setHover] = useState<number    />(0);
 
 const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
 
@@ -53,14 +53,14 @@ context: defaultContext |{}
     onClose(true);
   }
   return (
-    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/40' />
-      <div className='bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4' />
-        <div className='text-lg font-medium' />Was this helpful?</div>
-        <div className='flex gap-2' />
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/40'    />
+      <div className='bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4'    />
+        <div className='text-lg font-medium'    />Was this helpful?</div>
+        <div className='flex gap-2'    />
           {[1, 2, 3, 4, 5].map(n => (}
             <button;}
 key={n}
-              onMouseEnter={() = /> setHover(n)}
+              onMouseEnter={() =    /> setHover(n)}
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}
 
@@ -74,39 +74,39 @@ className={
             </button>;
           ))}
         </div>;
-        <div className='text-sm' />;
-          <label className='block mb-1' />Optional comment</label>;
+        <div className='text-sm'    />;
+          <label className='block mb-1'    />Optional comment</label>;
           <textarea;
             value={comment}
-            onChange={e = /> setComment(e && e.target.value)}
+            onChange={e =    /> setComment(e && e.target.value)}
             className='w-full border rounded p-2';
             rows={3}
           />;
         </div>;
-        <div className='text-sm' />;
-          <label className='block mb-1' />Also</label>;
-          <div className='flex gap-3' />;
-            <label className='inline-flex items-center gap-1' />;
+        <div className='text-sm'    />;
+          <label className='block mb-1'    />Also</label>;
+          <div className='flex gap-3'    />;
+            <label className='inline-flex items-center gap-1'    />;
               <input;
                 type='radio';
                 checked={kind === 'general'}
-                onChange={() = /> setKind('general')}
+                onChange={() =    /> setKind('general')}
               />;
               General;
             </label>;
-            <label className='inline-flex items-center gap-1' />;
+            <label className='inline-flex items-center gap-1'    />;
               <input;
                 type='radio';
                 checked={kind === 'bug'}
-                onChange={() = /> setKind('bug')}
+                onChange={() =    /> setKind('bug')}
               />;
               Report a bug;
             </label>;
-            <label className='inline-flex items-center gap-1' />;
+            <label className='inline-flex items-center gap-1'    />;
               <input;
                 type='radio';
                 checked = {kind === 'feature'}
-                onChange={() = /> setKind('feature';}
+                onChange={() =    /> setKind('feature';}
 }
 
 export type FeedbackContext = { action_type?: string; metadata?: any }
@@ -133,14 +133,14 @@ function submit() {if (return on_close (false)) {$2;}
     set_loading (true)try {await fetch ('/api / feedback', {method: 'POST'}
   headers: { 'Content - Type': 'application / json', ...(user_headers || {}) },body: JSON.stringify ({rating,comment,kind,context: default_context || }
 }})})set_loading (false)on_close (true)}
-  return (<div className='fixed inset - 0 z - 50 flex items - center justify - center bg - black / 40' />;
-      <div className='bg - white w - full max - w-md rounded shadow - lg p - 5 space - y-4' />;
-        <div className='text - lg font - medium' />Was this helpful?</div>;
-        <div className='flex gap - 2' />;
-          {[1, 2, 3, 4, 5].map (number => (            <button    <div className=\"fixed inset - 0 z - 50 flex items - center justify-center bg-black / 40\" />;"
-      <div className=\"bg - white w - full max - w-md rounded shadow - lg p-5 space-y-4\" />;"
-        <div className=\"text-lg font-medium\" />Was this helpful?</div>;}"
-        <div className=\"flex gap-2\" />;}
+  return (<div className='fixed inset - 0 z - 50 flex items - center justify - center bg - black / 40'    />;
+      <div className='bg - white w - full max - w-md rounded shadow - lg p - 5 space - y-4'    />;
+        <div className='text - lg font - medium'    />Was this helpful?</div>;
+        <div className='flex gap - 2'    />;
+          {[1, 2, 3, 4, 5].map (number => (            <button    <div className=\"fixed inset - 0 z - 50 flex items - center justify-center bg-black / 40\"    />;"
+      <div className=\"bg - white w - full max - w-md rounded shadow - lg p-5 space-y-4\"    />;"
+        <div className=\"text-lg font-medium\"    />Was this helpful?</div>;}"
+        <div className=\"flex gap-2\"    />;}
           {[1, 2, 3, 4, 5].map (number => (key={n}
               onMouseEnter={() => set_hover (n)}
               onMouseLeave={() => set_hover (0)}
@@ -152,39 +152,39 @@ function submit() {if (return on_close (false)) {$2;}
               ★;
             </button>))}
         </div>;
-        <div className='text - sm' />;
-          <label className='block mb - 1' />Optional comment</label>;
+        <div className='text - sm'    />;
+          <label className='block mb - 1'    />Optional comment</label>;
           <textarea;
             value={comment}
-            on_change={e = /> set_comment (e.target.value)}
+            on_change={e =    /> set_comment (e.target.value)}
             className='w - full border rounded p - 2';
             rows={3}
           />;
         </div>;
-        <div className='text - sm' />;
-          <label className='block mb - 1' />Also</label>;
-          <div className='flex gap - 3' />;
-            <label className='inline - flex items - center gap - 1' />;
+        <div className='text - sm'    />;
+          <label className='block mb - 1'    />Also</label>;
+          <div className='flex gap - 3'    />;
+            <label className='inline - flex items - center gap - 1'    />;
               <input;
                 type='radio';
                 checked={kind === 'general'}
-                on_change={() = /> set_kind ('general')}
+                on_change={() =    /> set_kind ('general')}
               />;
               General;
             </label>;
-            <label className='inline - flex items - center gap - 1' />;
+            <label className='inline - flex items - center gap - 1'    />;
               <input;
                 type='radio';
                 checked={kind === 'bug'}
-                on_change={() = /> set_kind ('bug')}
+                on_change={() =    /> set_kind ('bug')}
               />;
               Report a bug;
             </label>;
-            <label className='inline - flex items - center gap - 1' />;
+            <label className='inline - flex items - center gap - 1'    />;
               <input;
                 type='radio';
                 checked={kind === 'feature'}
-                on_change={() = /> set_kind ('feature')}
+                on_change={() =    /> set_kind ('feature')}
               />;
               Suggest a feature;
             </label>;
@@ -192,12 +192,12 @@ function submit() {if (return on_close (false)) {$2;}
         </div>;
           ))}
 "
-          <button onClick={submit} disabled={loading || rating<1} className=\"px-3 py-2 rounded bg-gray-900 text-white\" />{loading? 'Submitting…' : 'Submit'}</button>
+          <button onClick={submit} disabled={loading || rating<1} className=\"px-3 py-2 rounded bg-gray-900 text-white\"    />{loading? 'Submitting…' : 'Submit'}</button>
         </div>
 
-        <div className='flex justify-end gap-2' />
+        <div className='flex justify-end gap-2'    />
           <button;
-onClick={() = /> onClose(false)}
+onClick={() =    /> onClose(false)}
             className='px-3 py-2 rounded border'>
 
             Later;
@@ -205,7 +205,7 @@ onClick={() = /> onClose(false)}
           <button;
             onClick={submit}
             disabled={loading |rating < 1}
-            className='px-3 py-2 rounded bg-gray-900 text-white' />
+            className='px-3 py-2 rounded bg-gray-900 text-white'    />
 
             {loading ? 'Submitting…' : 'Submit'}
 

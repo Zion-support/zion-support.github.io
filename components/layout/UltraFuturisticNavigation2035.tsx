@@ -47,7 +47,7 @@ const navigationItems: NavigationItem[] = [
     name: 'Pricing',
   href: '/pricing',
 
-icon: <DollarSign className = 'w-5 h-5' />,
+icon: <DollarSign className = 'w-5 h-5'    />,
     description: 'Plans and average market prices',
   children: [
       { name: 'Standard Pricing'}
@@ -63,7 +63,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
   {
     name: 'Resources',
   href: '/resources',
-    icon: <BookOpen className='w-5 h-5' />,
+    icon: <BookOpen className='w-5 h-5'    />,
     description: 'Guides, reports and tools',
   children: [
       { name: 'Blog'}
@@ -88,7 +88,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
 
     name: 'Contact',
   href: '/contact',
-    icon: <Phone className='w-5 h-5' />,
+    icon: <Phone className='w-5 h-5'    />,
     description: 'Talk to our team',
   featured: true,
     children: [
@@ -103,7 +103,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
   {
     name: 'Services',
   href: '/services',
-    icon: <Grid className='w-5 h-5' />,
+    icon: <Grid className='w-5 h-5'    />,
     description: 'Browse by category',
   badge: 'New',
     children: [
@@ -137,7 +137,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
   {
     name: 'All Services',
   href: '/comprehensive-services-showcase-2025',
-    icon: <Globe className='w-5 h-5' />,
+    icon: <Globe className='w-5 h-5'    />,
     description: 'Complete portfolio of all technology services',
   badge: 'Showcase',
     featured: true,
@@ -215,7 +215,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
   {
     name: 'AI & Consciousness',
   href: '/ai-services',
-    icon: <Brain className='w-5 h-5' />,
+    icon: <Brain className='w-5 h-5'    />,
     description: 'Revolutionary AI consciousness and emotional intelligence',
   badge: 'New',
     featured: true,
@@ -309,7 +309,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
   {
     name: 'Micro SAAS Solutions',
   href: '/micro-saas',
-    icon: <Rocket className='w-5 h-5' />,
+    icon: <Rocket className='w-5 h-5'    />,
     description: 'Innovative business solutions for modern enterprises',
   badge: 'Hot',
     featured: true,
@@ -400,7 +400,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
   {
     name: 'Quantum & Emerging Tech',
   href: '/quantum-services',
-    icon: <Atom className='w-5 h-5' />,
+    icon: <Atom className='w-5 h-5'    />,
     description: 'Quantum computing and breakthrough technologies',
   badge: 'Hot',
     featured: true,
@@ -491,7 +491,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
   {
     name: 'Enterprise IT',
   href: '/enterprise-it',
-    icon: <Shield className='w-5 h-5' />,
+    icon: <Shield className='w-5 h-5'    />,
     description: 'Advanced enterprise infrastructure and security',
   badge: 'Enterprise',
     featured: true,
@@ -541,7 +541,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
   {
     name: 'Industry Solutions',
   href: '/industry-solutions',
-    icon: <Building className='w-5 h-5' />,
+    icon: <Building className='w-5 h-5'    />,
     description: 'Industry-specific technology solutions',
   badge: 'Industry',
     children: [
@@ -591,11 +591,11 @@ icon: <DollarSign className = 'w-5 h-5' />,
   {
     name: 'Resources',
   href: '/resources',
-    icon: <BookOpen className='w-5 h-5' />,
+    icon: <BookOpen className='w-5 h-5'    />,
     description: 'Documentation, support, and learning resources',
   children: [
     href: '/enterprise - it',
-  icon: <Shield className=\"w - 5 h - 5\" />,
+  icon: <Shield className=\"w - 5 h - 5\"    />,
     badge: 'Enterprise',
   featured: true,
     children: [;
@@ -643,7 +643,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
   },
     name: 'Industry Solutions',
   href: '/industry - solutions',
-    icon: <Building className='w - 5 h - 5' />,
+    icon: <Building className='w - 5 h - 5'    />,
     description: 'Industry - specific technology solutions',
   badge: 'Industry',
     children: [;
@@ -692,7 +692,7 @@ icon: <DollarSign className = 'w-5 h-5' />,
   {
     name: 'Resources',
   href: '/resources',
-    icon: <BookOpen className='w - 5 h - 5' />,
+    icon: <BookOpen className='w - 5 h - 5'    />,
     description: 'Documentation, support, and learning resources',
   children: [;
       {
@@ -735,46 +735,46 @@ const quickActions = [
   {
     name: 'Get Started',
   href: '/contact',
-    icon: <ArrowRight className='w-4 h-4' />}
+    icon: <ArrowRight className='w-4 h-4'    />}
     primary: true}
   },
   {
     name: 'Get a Quote',
   href: '/quote'}
-    icon: <DollarSign className='w-4 h-4' />}
+    icon: <DollarSign className='w-4 h-4'    />}
   },
   { name: 'Book Demo'}
-  href: '/demo', icon: <Video className='w-4 h-4' />}
+  href: '/demo', icon: <Video className='w-4 h-4'    />}
 },
   {
     name: 'Live Chat',
   href: '/chat'}
-    icon: <MessageCircle className='w-4 h-4' />}
+    icon: <MessageCircle className='w-4 h-4'    />}
   },
   {
     name: 'View Pricing',
   href: '/pricing'}
-    icon: <DollarSign className='w-4 h-4' />}
+    icon: <DollarSign className='w-4 h-4'    />}
   },
   {
     name: 'Market Pricing',
   href: '/market-pricing'}
-    icon: <BarChart3 className='w-4 h-4' />}
+    icon: <BarChart3 className='w-4 h-4'    />}
   },
   {
     name: 'Services Advertising',
   href: '/services-advertising'}
-    icon: <Sparkles className='w-4 h-4' />}
+    icon: <Sparkles className='w-4 h-4'    />}
   },
   {
     name: 'Documentation',
   href: '/docs'}
-    icon: <BookOpen className='w-4 h-4' />}
+    icon: <BookOpen className='w-4 h-4'    />}
   },
   {
     name: 'Support',
   href: '/support'}
-    icon: <HelpCircle className='w-4 h-4' />}
+    icon: <HelpCircle className='w-4 h-4'    />}
   }
 ];
 
@@ -782,7 +782,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
  ;
   const [isOpen, setIsOpen] = useState(false);
 
-const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
+const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
 const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -825,42 +825,42 @@ closeDropdowns()) => {
     >
 
       {/* Background Effects */}
-      <div className='absolute inset-0' />;
+      <div className='absolute inset-0'    />;
         <div;
           className={`absolute inset-0 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0';}
-          }`} />
+          }`}    />
 
-          <div className='absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95' />;
-          <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5' />;
+          <div className='absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95'    />;
+          <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5'    />;
         </div>;
       </div>;
-      <div className='relative z-10' />;
-        <div className='container mx-auto px-4' />;
-          <div className='flex items-center justify-between h-20' />;
+      <div className='relative z-10'    />;
+        <div className='container mx-auto px-4'    />;
+          <div className='flex items-center justify-between h-20'    />;
             {/* Logo */}
-            <Link href='/' className='flex items-center gap-3 group' />;
-              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300' />;
-                <Brain className='w-6 h-6 text-white' />;
+            <Link href='/' className='flex items-center gap-3 group'    />;
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'    />;
+                <Brain className='w-6 h-6 text-white'    />;
               </div>;
-              <div />;
-                <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent' />;
+              <div    />;
+                <div className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'    />;
                   Zion Tech Group;
                 </div>;
-                <div className='text-xs text-gray-400' />;
+                <div className='text-xs text-gray-400'    />;
                   Revolutionary Technology;
                 </div>;
               </div>;
             </Link>;
             {/* Desktop Navigation */}
-<div className='hidden lg:flex items-center gap-8' />;
-              {navigationItems.map(item => (<div key={item.name} className='relative group' />;
+<div className='hidden lg:flex items-center gap-8'    />;
+              {navigationItems.map(item => (<div key={item.name} className='relative group'    />;
                   <button;
-                    onClick={() = /> toggleDropdown(item.name)}
+                    onClick={() =    /> toggleDropdown(item.name)}
 
                     className='flex items-center gap-2 px-4 py-2 text-gray-300 hover: text-white transition-colors duration-200 group-hover:text-cyan-400'
                   >
                     {item.icon}
-                    <span />{item.name}</span>
+                    <span    />{item.name}</span>
                     {item.badge && (
 
 <span;
@@ -879,7 +879,7 @@ className={`px-2 py-1 text-xs rounded-full ${
                                       ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30'
                                       : 'bg-gray-500/20 text-gray-400 border border-gray-500/30'}
 }
-                        }`} />
+                        }`}    />
 
                         {item.badg}
 }
@@ -889,11 +889,11 @@ className={`px-2 py-1 text-xs rounded-full ${
                       className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : '';}
                       }`}
 
-                    />
+                       />
                   </button>
 
                   {/* Dropdown Menu */}
-                  <AnimatePresence />
+                  <AnimatePresence    />
                     {activeDropdown === item.name && (
                       <motion.div;}
 initial={{ opacity: 0, y: 10, scale: 0.95 }
@@ -908,41 +908,41 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
 
                         onMouseLeave={closeDropdown}
 }
-                       />;
-                        <div className='p-6' />;
-                          <div className='flex items-center gap-3 mb-4' />;
+                          />;
+                        <div className='p-6'    />;
+                          <div className='flex items-center gap-3 mb-4'    />;
                             {item.icon}
-                            <div />;
-                              <h3 className='font-semibold text-white' />;
+                            <div    />;
+                              <h3 className='font-semibold text-white'    />;
                                 {item.title |item.name}
                               </h3>;
-                              {item.description && (<p className='text-sm text-gray-400' />;}
+                              {item.description && (<p className='text-sm text-gray-400'    />;}
                                   {item.description}
                                 </p>;
                               )}
 
                             </div>
                           </div>
-                          <div className='space-y-2' />
+                          <div className='space-y-2'    />
                             {item.children?.map(child => (}
                               <Link;}
 key={child && child.name}
                                 href={child && child.href}
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${: 'text-gray-300 hover:text-white hover:bg-gray-800/50';}
                                 }`}
-                                onClick={closeDropdowns} />;
-                                {child && child.featured && (<Star className='w-4 h-4 text-cyan-400' />;}
+                                onClick={closeDropdowns}    />;
+                                {child && child.featured && (<Star className='w-4 h-4 text-cyan-400'    />;}
                                 )}
-                                <div className='flex-1' />;
-                                  <div className='font-medium' />;
+                                <div className='flex-1'    />;
+                                  <div className='font-medium'    />;
                                     {child && child.name}
                                   </div>;
-                                    <div className='text-sm opacity-75' />;
+                                    <div className='text-sm opacity-75'    />;
                                       {child && child.description}
                                     </div>;
                                   )}
                                 </div>;"
-                                <ArrowRight className='w-4 h-4 opacity-50' />                              </Link>                                <ArrowRight className=\"w-4 h-4 opacity-50\" />;
+                                <ArrowRight className='w-4 h-4 opacity-50'    />                              </Link>                                <ArrowRight className=\"w-4 h-4 opacity-50\"    />;
                               </Link>;
                             ))}
                           </div>;
@@ -955,17 +955,17 @@ key={child && child.name}
                     }`}
                   >;
                     {action && action.icon}
-                    <span />{action && action.name}</span>;
+                    <span    />{action && action.name}</span>;
                   </Link>;
                 ))}
               {/* Contact Info */}
-              <div className='flex items-center gap-4 text-sm text-gray-400' />;
+              <div className='flex items-center gap-4 text-sm text-gray-400'    />;
                 <a;
                   href={`tel: ${contactInfo && contactInfo.mobile}
 }
-                  className='flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200' />;
-                  <Phone className='w-4 h-4' />;
-                  <span className='hidden xl: inline' />{contactInfo && contactInfo.mobil}
+                  className='flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200'    />;
+                  <Phone className='w-4 h-4'    />;
+                  <span className='hidden xl: inline'    />{contactInfo && contactInfo.mobil}
 }</span>;
                 </a>;
                 <a;
@@ -974,62 +974,62 @@ key={child && child.name}
                     className={`flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 ${action.primary;
                         ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover:from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25';}
                         : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';}
-                    }`} />
+                    }`}    />
 
                     {action.icon}
-                    <span />{action.name}</span>;
+                    <span    />{action.name}</span>;
                   </Link>))}
               </div>;
               {/* Contact Info */}
                   href={`mailto: ${contactInfo && contactInfo.email}
 }
                   className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200'>;
-                  <Mail className='w-4 h-4' />;
-                  <span className='hidden xl: inline' />{contactInfo && contactInfo.emai}"
-}</span>                </a>              <div className=\"flex items-center gap-4 text-sm text-gray-400\" />;
+                  <Mail className='w-4 h-4'    />;
+                  <span className='hidden xl: inline'    />{contactInfo && contactInfo.emai}"
+}</span>                </a>              <div className=\"flex items-center gap-4 text-sm text-gray-400\"    />;
                 <a href={`tel: ${contactInfo && contactInfo.mobile},"
-} className=\"flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200\" />;"
-                  <Phone className=\"w-4 h-4\" />;"
-                  <span className=\"hidden xl: inline\" />{contactInfo && contactInfo.mobil}
+} className=\"flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200\"    />;"
+                  <Phone className=\"w-4 h-4\"    />;"
+                  <span className=\"hidden xl: inline\"    />{contactInfo && contactInfo.mobil}
 }</span>;
                 </a>;
                 <a href={`mailto: ${contactInfo && contactInfo.email},"
-} className=\"flex items-center gap-2 hover:text-purple-400 transition-colors duration-200\" />;"
-                  <Mail className=\"w-4 h-4\" />;"
-                  <span className=\"hidden xl: inline\" />{contactInfo && contactInfo.emai}
+} className=\"flex items-center gap-2 hover:text-purple-400 transition-colors duration-200\"    />;"
+                  <Mail className=\"w-4 h-4\"    />;"
+                  <span className=\"hidden xl: inline\"    />{contactInfo && contactInfo.emai}
 }</span>;
               </div>;
             </div>;{/* Mobile Menu Button */}
             <button;
-              onClick={() = /> setIsOpen(!isOpen)}
+              onClick={() =    /> setIsOpen(!isOpen)}
               className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200';
               aria-label='Toggle mobile menu'>
 
-              {isOpen ? (<X className='w-6 h-6' />;}
-              ) : (<Menu className='w-6 h-6' />;}"
-              )}            </button>              className=\"lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200\";"
+              {isOpen ? (<X className='w-6 h-6'    />;}
+              ) : (<Menu className='w-6 h-6'    />;}"
+              )}            </button>              className=\'lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200\';"
               aria-label=\"Toggle mobile menu\">
 "
-              {isOpen ? <X className=\"w-6 h-6\" /> : <Menu className=\"w-6 h-6\" />}
+              {isOpen ? <X className=\"w-6 h-6\"    /> : <Menu className=\"w-6 h-6\"    />}
           </div>;
         </div>;
             {/* Mobile Menu Button */}
             <button;
-              onClick={() = /> setIsOpen(!isOpen)}
+              onClick={() =    /> setIsOpen(!isOpen)}
               className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200';
               aria-label='Toggle mobile menu'>
 
-              {isOpen ? (<X className='w-6 h-6' />;}
-              ) : (<Menu className='w-6 h-6' />;}"
-              )}            </button>              className=\"lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200\";"
+              {isOpen ? (<X className='w-6 h-6'    />;}
+              ) : (<Menu className='w-6 h-6'    />;}"
+              )}            </button>              className=\'lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200\';"
               aria-label=\"Toggle mobile menu\">
 "
-              {isOpen ? <X className=\"w-6 h-6\" /> : <Menu className=\"w-6 h-6\" />}
+              {isOpen ? <X className=\"w-6 h-6\"    /> : <Menu className=\"w-6 h-6\"    />}
           </div>;
         </div>;
           </div>;
         </div>;{/* Mobile Menu */}
-        <AnimatePresence />;
+        <AnimatePresence    />;
           {isOpen && (<motion&& motion.div;
                         item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :;
                         item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :;
@@ -1038,7 +1038,7 @@ key={child && child.name}
                         item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :;}
                         item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :;}
                   {/* Dropdown Menu */}
-                  <AnimatePresence />;
+                  <AnimatePresence    />;
                     {activeDropdown === item.name && (<motion.div;}
                         initial={{ opacity: 0, y: 10, scale: 0.95 }
 }
@@ -1048,12 +1048,12 @@ key={child && child.name}
                         transition={{ duration: 0.2 }}
                         onMouseLeave={closeDropdown}
 }
-                       />;
-                        <div className='p-6' />;
-                          <div className='flex items-center gap-3 mb-4' />;
+                          />;
+                        <div className='p-6'    />;
+                          <div className='flex items-center gap-3 mb-4'    />;
                             {item.icon}
-                            <div />;
-                              <h3 className='font-semibold text-white' />;
+                            <div    />;
+                              <h3 className='font-semibold text-white'    />;
                                 {item.title |item.name}
                               </h3>;
                               {item.description && ({item.description}
@@ -1061,7 +1061,7 @@ key={child && child.name}
                               )}
                             </div>;
                           </div>;
-                          <div className='space-y-2' />;
+                          <div className='space-y-2'    />;
                             {item.children?.map(child => (                              <Link;}
                                 key={child.name}
                                 href={child.href}
@@ -1076,23 +1076,23 @@ child.featured;
                                 }`}
 
                                 onClick={closeDropdowns}
-                               />
+                                  />
 {child.featured && (
-                                  <Star className='w-4 h-4 text-cyan-400' />
+                                  <Star className='w-4 h-4 text-cyan-400'    />
 }
                                 }
 }
-                                <div className='flex-1' />;
-                                  <div className='font-medium' />;
+                                <div className='flex-1'    />;
+                                  <div className='font-medium'    />;
                                     {child.name}
                                   </div>;
-                                    <div className='text-sm opacity-75' />;
+                                    <div className='text-sm opacity-75'    />;
                                       {child.description}
                                     </div>;
                                   )}
 
                                 </div>
-                                <ArrowRight className='w-4 h-4 opacity-50' />
+                                <ArrowRight className='w-4 h-4 opacity-50'    />
                               </Link>
 
                             ))}
@@ -1104,13 +1104,13 @@ child.featured;
                 </div>;
               ))}
             {/* Right Side Actions */}
-            <div className='hidden lg:flex items-center gap-4' />;
+            <div className='hidden lg:flex items-center gap-4'    />;
               {/* Quick Actions */}
             {/* Right Side Actions */}
-<div className='hidden lg:flex items-center gap-4' />;
+<div className='hidden lg:flex items-center gap-4'    />;
               {/* Quick Actions */}
 
-              <div className='flex items-center gap-2' />
+              <div className='flex items-center gap-2'    />
 
                 {quickActions.map(action => (}
                   <Link;}
@@ -1119,48 +1119,48 @@ key={action.name}
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${action.primary;
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25';}
                         : 'text-gray-300 hover:text-white hover:bg-gray-800/50';}
-                    }`} />
+                    }`}    />
 
                     {action.icon}
-                    <span />{action.name}</span>;
+                    <span    />{action.name}</span>;
                   </Link>;
                 ))}
               {/* Contact Info */}
-<div className='flex items-center gap-4 text-sm text-gray-400' />;
+<div className='flex items-center gap-4 text-sm text-gray-400'    />;
                 <a;
                   href={`tel: ${contactInfo.mobile}
 }
-                  className='flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200' />
+                  className='flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200'    />
 
-                  <Phone className='w-4 h-4' />;
-                  <span className='hidden xl: inline' />{contactInfo.mobil}
+                  <Phone className='w-4 h-4'    />;
+                  <span className='hidden xl: inline'    />{contactInfo.mobil}
 }</span>;
                 </a>;
                 <a;
                   href={`mailto: ${contactInfo.email}
 }
-                  className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200' />
+                  className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200'    />
 
-                  <Mail className='w-4 h-4' />;
-                  <span className='hidden xl: inline' />{contactInfo.emai}
+                  <Mail className='w-4 h-4'    />;
+                  <span className='hidden xl: inline'    />{contactInfo.emai}
 }</span>;
                 </a>;
               </div>;
             </div>;
             {/* Mobile Menu Button */}
             <button;
-              onClick={() = /> setIsOpen(!isOpen)}
+              onClick={() =    /> setIsOpen(!isOpen)}
 className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200';
               aria-label='Toggle mobile menu'>
 
-              {isOpen ? (<X className='w-6 h-6' />;}
-              ) : (<Menu className='w-6 h-6' />;}
+              {isOpen ? (<X className='w-6 h-6'    />;}
+              ) : (<Menu className='w-6 h-6'    />;}
               )}
             </button>;
           </div>;
         </div>;
         {/* Mobile Menu */}
-        <AnimatePresence />;
+        <AnimatePresence    />;
           {isOpen && (<motion.div;}
               initial={{ opacity: 0, height: 0 }
 }
@@ -1171,20 +1171,20 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors durati
 
               transition={{ duration: 0.3 }}
 className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50'
-             />
-              <div className='container mx-auto px-4 py-6' />
-                <div className='space-y-6' />
+                />
+              <div className='container mx-auto px-4 py-6'    />
+                <div className='space-y-6'    />
 
                   {/* Mobile Navigation Items */}
                   {navigationItems.map(item => (<div key={item.nam}
-} />;
+}    />;
                       <button;
-                        onClick={() = /> toggleDropdown(item.name)}
+                        onClick={() =    /> toggleDropdown(item.name)}
                         className='flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white transition-colors duration-200'>
 
-                        <div className='flex items-center gap-3' />;
+                        <div className='flex items-center gap-3'    />;
                           {item.icon}
-                          <span />{item.name}</span>;
+                          <span    />{item.name}</span>;
                           {item.badge && (<span;
                               className={`px-2 py-1 text-xs rounded-full ${item.badge === 'New';
                                   ? 'bg-green-500/20 text-green-400';
@@ -1195,7 +1195,7 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
                                       : 'bg-gray-500/20 text-gray-400';}
                               }`}
 
-                             />
+                                />
                               {item.badge}
                             </span>
 
@@ -1204,7 +1204,7 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
 <ChevronDown;
                           className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : '';}
                           }`}
-                        />;
+                           />;
                       </button>;
 
 
@@ -1213,7 +1213,7 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
 
                       {/* Mobile Dropdown */}
 
-                      <AnimatePresence />
+                      <AnimatePresence    />
                         {activeDropdown === item.name && (
                           <motion.div;}
 initial={{ opacity: 0, height: 0 }
@@ -1224,7 +1224,7 @@ initial={{ opacity: 0, height: 0 }
                             transition={{ duration: 0.2 }}
 
 className='ml-6 mt-2 space-y-2'
-                           />
+                              />
                             {item.children?.map(child => (}
                               <Link;}
 key={child && child.name}
@@ -1238,9 +1238,9 @@ child.featured;
                                 }`}
                                 onClick={closeMobileMen}
 }
-                               />;
-<div className='font-medium' />{child.name}</div>;
-                                {child.description && (<div className='text-sm opacity-75 mt-1' />;}
+                                  />;
+<div className='font-medium'    />{child.name}</div>;
+                                {child.description && (<div className='text-sm opacity-75 mt-1'    />;}
                                     {child.description}
 
                                   </div>
@@ -1261,8 +1261,8 @@ child.featured;
                   ))}
 
                   {/* Mobile Quick Actions */}
-<div className='pt-4 border-t border-gray-800/50' />
-                    <div className='space-y-3' />
+<div className='pt-4 border-t border-gray-800/50'    />
+                    <div className='space-y-3'    />
                       {quickActions.map(action => (}
                         <Link;}
 key={action.name}
@@ -1274,29 +1274,29 @@ key={action.name}
                               ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white';}
                               : 'text-gray-300 hover:text-white hover:bg-gray-800/50';}
                           }`}
-                          onClick={closeMobileMenu} />;
+                          onClick={closeMobileMenu}    />;
                           {action && action.icon}
-                          <span />{action && action.name}</span>;
+                          <span    />{action && action.name}</span>;
                         </Link>;
                       ))}
 
                   {/* Mobile Contact Info */}
 
-<div className='pt-4 border-t border-gray-800/50' />
-                    <div className='space-y-3 text-sm text-gray-400' />
+<div className='pt-4 border-t border-gray-800/50'    />
+                    <div className='space-y-3 text-sm text-gray-400'    />
                       <a;
-                        <span />{contactInfo.mobile}</span>
+                        <span    />{contactInfo.mobile}</span>
                       </a>
                       <a;
 href={`mailto: ${contactInfo.email}`}
                         className='flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200'
-                       />
-                        <Mail className='w-4 h-4' />
-                        <span />{contactInfo.email}</span>
+                          />
+                        <Mail className='w-4 h-4'    />
+                        <span    />{contactInfo.email}</span>
                       </a>
-                      <div className='flex items-center gap-3 p-3 rounded-lg' />
-                        <MapPin className='w-4 h-4' />
-                        <span className='text-sm' />{contactInfo.address}</span>
+                      <div className='flex items-center gap-3 p-3 rounded-lg'    />
+                        <MapPin className='w-4 h-4'    />
+                        <span className='text-sm'    />{contactInfo.address}</span>
                       </div>
                     </div>
                   </div>
@@ -1316,9 +1316,9 @@ href={`mailto: ${contactInfo.email}`}
 };
 
 }, []);"
-</div> <div /> <div className=\"text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent\"  /> Zion Tech Group </div> <div className=\"text - xs text - gray - 400\"  />Revolutionary Technology</div> </div> </a> > {}
+</div> <div    /> <div className=\"text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent\"     /> Zion Tech Group </div> <div className=\"text - xs text - gray - 400\"     />Revolutionary Technology</div> </div> </a> > {}
   item.icon;}
-}<span /> {}
+}<span    /> {}
   item.name;}
 }</span> {
   item.badge && (<span className= {
@@ -1326,33 +1326,33 @@ href={`mailto: ${contactInfo.email}`}
   item.badge === 'New' ? 'bg - green - 500 / 20 text - green - 400 border border - green - 500 / 30' : item.badge === 'Hot' ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30' : item.badge === 'Showcase' ? 'bg - cyan - 500 / 20 text - cyan - 400 border border - cyan - 500 / 30' : item.badge === 'Future' ? 'bg - purple - 500 / 20 text - purple - 400 border border - purple - 500 / 30' : item.badge === 'Enterprise' ? 'bg - blue - 500 / 20 text - blue - 400 border border - blue - 500 / 30' : item.badge === 'Industry' ? 'bg - orange - 500 / 20 text - orange - 400 border border - orange - 500 / 30' : 'bg - gray - 500 / 20 text - gray - 400 border border - gray - 500 / 30';}
 }
 }`;
-} /> {item.badge;}
+}    /> {item.badge;}
 }</span>)}<ChevronDown className= {`w - 4 h - 4 transition - transform duration - 200 $ {active_dropdown === item.name ? 'rotate - 180' : '';}
 }`;
-}/> </button> {/* Dropdown Menu */;}
-}<AnimatePresence /> {active_dropdown === item.name && (<motion.div)}</div /> </div> <Link key= {child.name;}
+}   /> </button> {/* Dropdown Menu */;}
+}<AnimatePresence    /> {active_dropdown === item.name && (<motion.div)}</div    /> </div> <Link key= {child.name;}
 }href= {child.href;}
 }className= {`flex items - center gap - 3 p - 3 rounded - xl transition - all duration - 200 $ {child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';}
 }`;
 }on_click= {close_dropdowns;}"
-} />)}</div> <ArrowRight className=\"w - 4 h - 4 opacity - 50\" /> </a>) )}</div> </div> </motion.div>)}</AnimatePresence> </div>) )}</div> <Link key= {action.name;}
+}    />)}</div> <ArrowRight className=\"w - 4 h - 4 opacity - 50\"    /> </a>) )}</div> </div> </motion.div>)}</AnimatePresence> </div>) )}</div> <Link key= {action.name;}
 }href= {action.href;}
 }className= {`flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 $ {action.primary ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover:from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';}
 }`;
-} /> </a> </div> </div> {/* Mobile Menu Button */;}
-}<button </button /> </div> </div> {/* Mobile Menu */;}
-}<AnimatePresence /> <span className= {`px - 2 py - 1 text - xs rounded - full $ {item.badge === 'New'? 'bg - green - 500 / 20 text - green - 400': item.badge === 'Hot'? 'bg - red - 500 / 20 text - red - 400': item.badge === 'Showcase'? 'bg - cyan - 500 / 20 text - cyan - 400': 'bg - gray - 500 / 20 text - gray - 400';}
+}    /> </a> </div> </div> {/* Mobile Menu Button */;}
+}<button </button    /> </div> </div> {/* Mobile Menu */;}
+}<AnimatePresence    /> <span className= {`px - 2 py - 1 text - xs rounded - full $ {item.badge === 'New'? 'bg - green - 500 / 20 text - green - 400': item.badge === 'Hot'? 'bg - red - 500 / 20 text - red - 400': item.badge === 'Showcase'? 'bg - cyan - 500 / 20 text - cyan - 400': 'bg - gray - 500 / 20 text - gray - 400';}
 }`;
-} /> {item.badge;}
+}    /> {item.badge;}
 }</span>)}</div> <ChevronDown className= {`w - 4 h - 4 transition - transform duration - 200 $ {active_dropdown === item.name ? 'rotate - 180': '';}
 }`;
-}/> </button> {/* Mobile Dropdown */;}
-}<AnimatePresence /> > {item.children?.map ( (child) => (<Link key= {child.name;}
+}   /> </button> {/* Mobile Dropdown */;}
+}<AnimatePresence    /> > {item.children?.map ( (child) => (<Link key= {child.name;}
 }href= {child.href;}
 }className= {`block p - 3 rounded - lg transition - colors duration - 200 $ {child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 text - cyan - 400': 'text - gray - 400 hover:text - white hover:bg - gray - 800 / 50';}
 }`;
 }on_click= {closeMobileMenu;}
-} />)}</a>) )}</motion.div>)}</AnimatePresence> </div>) )}<Link key= {action.name;}
+}    />)}</a>) )}</motion.div>)}</AnimatePresence> </div>) )}<Link key= {action.name;}
 }href= {action.href;}
 }className = {}
 

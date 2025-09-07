@@ -20,8 +20,7 @@ const variantClasses = {primary:;
       'bg-transparent text-white border border-white/20 hover:bg-white/10 hover:border-white/30 focus:ring-white/50',}
 
 const sizeClasses = {sm: 'px-3 py-1 && 1.5 text-sm',}
-  md: 'px-4 py-2 text-base',lg: 'px-6 py-3 text-lg',}
-;
+  md: 'px-4 py-2 text-base',lg: 'px-6 py-3 text-lg'}
   const disabledClasses = disabled;
     ? 'opacity-50 cursor-not-allowed';
     : 'hover:scale-105 transform';
@@ -56,8 +55,7 @@ const variant_classes = {primary:;
       'bg - transparent text - white border border - white / 20 hover:bg - white / 10 hover:border - white / 30 focus:ring - white / 50',}
 
 const size_classes = {sm: 'px - 3 py - 1.5 text - sm',}
-  md: 'px - 4 py - 2 text - base',lg: 'px - 6 py - 3 text - lg',}
-;
+  md: 'px - 4 py - 2 text - base',lg: 'px - 6 py - 3 text - lg'}
   const disabled_classes = disabled;
     ? 'opacity - 50 cursor - not - allowed';
     : 'hover:scale - 105 transform';
@@ -87,7 +85,7 @@ export default function Button({children;}
       on_click={on_click}
       disabled={disabled}
       {children}
-    </button />;
+    </button    />;
 )}>;
       {children}
     </button>;
@@ -96,7 +94,7 @@ export default function Button({children;}
       className={_classes}
       onClick={_onClick}
       disabled={_disabled}
-     />;
+        />;
       {_children}
     </button>;
   )}</button>)}

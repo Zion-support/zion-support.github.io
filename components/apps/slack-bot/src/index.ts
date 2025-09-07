@@ -58,8 +58,7 @@ const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`;
     await respond({ response_type: 'ephemeral',}
   text: helpText() })} catch (err: any) {await respond({const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name,}
 }/track`, {headers: { 'x-user-id': userId }
-     ,
-};
+     }
   const data = (await res && res.json()) as any;
       if (!data && data.project) {await respond({ response_type: 'ephemeral',}
   text: 'Project not found.',}

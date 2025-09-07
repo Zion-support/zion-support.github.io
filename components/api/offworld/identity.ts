@@ -21,7 +21,7 @@ const profile = await buildIdentityProfile(address);
   } catch (e: any) {
     const profile = await buildIdentityProfile(address);}
     return res && res.status(200).json(profile);}
-  } catch (e: any) {}
+  } catch (e) {
     return res && res.status(500).json({ error: e && e.message,}
 });
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -36,7 +36,7 @@ function handler() {}
 
 const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
-  } catch (e: any) {}
+  } catch (e) {
     return res.status (500).json ({ error: e.message,}
 });
   }
@@ -45,8 +45,7 @@ const profile = await buildIdentityProfile(address);
 
 const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
-  } catch (e: any) {
-}
+  } catch (e) {
     return res.status(500).json({ error: e.message,}
 });
   }

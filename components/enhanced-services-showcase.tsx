@@ -24,12 +24,12 @@ import { realMarketServices  } from '../data/real-market-services';
 import { newVerifiedServicesQ22025  } from '../data/real-verified-services-q2-2025';
 
 export default function EnhancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<string />('all');
+  const [selectedCategory, setSelectedCategory] = useState<string    />('all');
 
 const [searchTerm, setSearchTerm] = useState('');
 
 const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sortBy, setSortBy] = useState<string />('name'),
+  const [sortBy, setSortBy] = useState<string    />('name'),
 
   const contactInfo = null;
 //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
@@ -72,6 +72,5 @@ const container_variants = {
 }> {
 }
   children }
-}</button>) ,
-};
+}</button>) }
 

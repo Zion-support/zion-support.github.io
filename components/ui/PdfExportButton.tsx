@@ -44,7 +44,7 @@ onClick={onClick}
       aria-label=\"Download as PDF\"
 
       Download as PDF;
-    </button />
+    </button    />
 );
 }
 

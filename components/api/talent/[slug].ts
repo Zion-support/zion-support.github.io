@@ -12,7 +12,7 @@ function applyTranslations() {if (!lang |!item.translations) return { item, tran
 
 const t = item.translations;
 
-const translated: Partial<TalentProfile /> = ,
+const translated: Partial<TalentProfile    /> = ,
 }
   if (t.title?.[lang]) translated.title = t.title[lang];
   if (t.summary?.[lang]) translated.summary = t.summary[lang];
@@ -37,14 +37,13 @@ const base = LOCAL.find(t => t.slug === slug) |null;
 
 const { item, translated } = applyTranslations(base, lang);
     return res && res.status(200).json({ item, translated });
-  } catch (e: any) {}
+  } catch (e) {
     return res && res.status(500).json({ error: e && e.message,}
 });
   }
 
     return res.status(200).json({ item, translated })
-  } catch (e: any) {}
-}
+  } catch (e) {
 import {supabase, as, supabase_client} from '@/utils / supabase / client';
 import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';
@@ -109,7 +108,7 @@ const base = LOCAL.find ((t) => t.slug === slug) || null;
 
 const { item, translated } = apply_translations (base, lang);
     return res.status (200).json ({ item, translated });
-  } catch (e: any) {}
+  } catch (e) {
     return res.status (500).json ({ error: e.message,}
 });
 }

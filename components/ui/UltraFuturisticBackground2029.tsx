@@ -28,13 +28,13 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
 }) {
   const canvasRef = null;
             ease: \"easeInOut\"
-  const canvasRef = useRef<HTMLCanvasElement />(null);
+  const canvasRef = useRef<HTMLCanvasElement    />(null);
 
-const particlesRef = useRef<Particle[] />([]);
+const particlesRef = useRef<Particle[]    />([]);
 
-const energyFieldsRef = useRef<EnergyField[] />([]);
+const energyFieldsRef = useRef<EnergyField[]    />([]);
 
-const animationRef = useRef<number | undefined />(undefined);
+const animationRef = useRef<number | undefined    />(undefined);
 }
 const [mousePosition, setMousePosition] = useState({ x: 0, y: 0}
 });
@@ -336,10 +336,10 @@ cancelAnimationFrame(animationRef.current);}
         className='absolute inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
 
-      />
+         />
       {/* Floating geometric shapes *}
 }
-      <div className='absolute inset-0 pointer-events-none' />
+      <div className='absolute inset-0 pointer-events-none'    />
         <motion.div;
 className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20'
           animate={{
@@ -352,7 +352,7 @@ className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20'
             repeat: Infinity}
 ease: 'easeInOut'}
           }}
-        />
+           />
         <motion.div;
 className='absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full'
           animate={{
@@ -369,10 +369,10 @@ ease: 'easeInOut'}
 repeat: Infinity;}
 ease: 'easeInOut'          }}
           }}"
-          transition={{duration: 6,repeat: Infinity,ease: \"easeInOut\";}
+          transition={{duration: 6,repeat: Infinity,ease: \'easeInOut\';}
           }}"
-          className=\"absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45\";
-        />;
+          className=\'absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45\';
+           />;
         <motion.div;
           className='absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45';
 
@@ -386,7 +386,7 @@ ease: 'easeInOut'          }}
             repeat: Infinity}
 ease: 'easeInOut'}
           }}
-        />
+           />
         <motion.div;
 className='absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20'
           animate={{
@@ -404,37 +404,37 @@ ease: 'easeInOut'}
             repeat: Infinity,
 
 
-        />
+           />
       </div>
       {/* Gradient overlays for depth */}
 
-<div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />
-      <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />
+<div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none'    />
+      <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none'    />
 
       {/* Content */}
-      <div className='relative z-10' />{children}</div>;
+      <div className='relative z-10'    />{children}</div>;
     </div>;
   ){/* Content */}"
-      <div className=\"relative z-10\" />;
+      <div className=\"relative z-10\"    />;
         {children}
             ease: 'easeInOut',"
-  ease: \"easeInOut\";
+  ease: \'easeInOut\';
           }}
         />;
       </div>;
       {/* Gradient overlays for depth */}
-      <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - transparent to - black / 20 pointer - events - none' />;
-      <div className='absolute inset - 0 bg - gradient - to - tl from - transparent via - transparent to - blue - 900 / 10 pointer - events - none' />;
+      <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - transparent to - black / 20 pointer - events - none'    />;
+      <div className='absolute inset - 0 bg - gradient - to - tl from - transparent via - transparent to - blue - 900 / 10 pointer - events - none'    />;
       {/* Content */}
-      <div className='relative z - 10' />{children}</div>;
+      <div className='relative z - 10'    />{children}</div>;
     </div>){/* Content */}"
-      <div className=\"relative z - 10\" />;
+      <div className=\"relative z - 10\"    />;
         {children}
       </div>;
 
     </div>);
 }
-      <div className='relative z-10' />{children}</div>
+      <div className='relative z-10'    />{children}</div>
     </div>
 
   );

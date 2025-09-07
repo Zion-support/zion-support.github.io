@@ -74,7 +74,7 @@ if ( {) {}
 
 ;
 }
-}: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement />(null)import React, {;}
+}: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement    />(null)import React, {;}
   useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -261,7 +261,7 @@ break;
       ctx.restore()}
     // Quantum particle with wave-like effects;
 
-const drawQuantumParticle = (const time = Date.now() * 0.001;
+const drawQuantumParticle = (time = Date.now() * 0.001;
 
 const wave = Math.sin(time + particle.x * 0.01) * 0.5;
       ctx.beginPath()ctx.arc(particle.x, particle.y + wave, particle.size, 0, Math.PI * 2)ctx.fillStyle = particle.color;
@@ -275,7 +275,7 @@ const wave = Math.sin(time + particle.x * 0.01) * 0.5;
     }
     // Hologram particle with transparency and distortion;
 
-const drawHologramParticle = (const time = Date.now() * 0.002;
+const drawHologramParticle = (time = Date.now() * 0.002;
 
 const distortion = Math.sin(time + particle.y * 0.02) * 2;
       ctx.globalAlpha *= 0.7;
@@ -305,7 +305,7 @@ const drawNeonParticle = (// Bright core;
 }
     }// Energy particle with pulsing effect;
 
-const drawEnergyParticle = (const time = Date.now() * 0.003;
+const drawEnergyParticle = (time = Date.now() * 0.003;
 
 const pulse = Math.sin(time) * 0.3 + 0.7;
 
@@ -372,10 +372,10 @@ cancelAnimationFrame(animationFrameId);}
   return (
 
     <>
-<div className='fixed inset-0 z-0 overflow-hidden' />
+<div className='fixed inset-0 z-0 overflow-hidden'    />
 
         {/* Enhanced background layers */}
-        <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
+        <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'    />;
         {/* Animated gradient overlay */}
 
         <motion.div;
@@ -394,10 +394,10 @@ repeat: Infinity;}
 ease: 'easeInOut'}
           }}
 
-        />
+           />
 {/* Holographic grid effect *,}
 }
-        <div className='absolute inset-0 opacity-20' />
+        <div className='absolute inset-0 opacity-20'    />
           <div;
 className='h-full w-full'
             style={{
@@ -407,7 +407,7 @@ className='h-full w-full'
               backgroundSize: '50px 50px'}
             }}
 
-          />
+             />
         </div>
 
         {/* Canvas for animated particles *,}
@@ -418,7 +418,7 @@ className='h-full w-full'
 className='absolute inset-0 w-full h-full'
           style={{ filter: 'blur(0.5px)' }}
 
-        />
+           />
 
         {/* Floating neon orbs *,}
 }
@@ -435,7 +435,7 @@ className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r fro
             repeat: Infinity,}
 ease: 'easeInOut',}
           }}
-        />
+           />
 
         <motion.div;
 className='absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20'
@@ -450,11 +450,11 @@ className='absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r fr
 ease: 'easeInOut',}
           }}
 
-        />;
+           />;
 
         {/* Quantum energy waves */}
 
-<div className='absolute inset-0 overflow-hidden' />
+<div className='absolute inset-0 overflow-hidden'    />
           <motion.div;
 className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent'
             animate={{
@@ -466,7 +466,7 @@ className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent 
               repeat: Infinity,}
 ease: 'easeInOut',}
             }}
-          />
+             />
           <motion.div;
 className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent'
             animate={{
@@ -478,15 +478,15 @@ className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent 
               repeat: Infinity,}
 ease: 'easeInOut',}
             }}
-          />
+             />
         </div>
       </div>
 
 {/* Render children */}
-      {children}</>){/* Render children */}
+      {children}<   />){/* Render children */}
       {children}
 
 
-    </>
+    <   />
   );
 

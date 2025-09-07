@@ -12,25 +12,25 @@ class ComprehensiveAutomationOrchestrator {
   }
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
-    const prefix = {INFO: ℹ️,SUCCESS: ✅,ERROR: ❌,WARNING: ⚠️,PROGRESS: 🔄}[type] ||ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message});
+    const prefix = {INFO: 'ℹ️',SUCCESS: '✅',ERROR: '❌',WARNING: '⚠️',PROGRESS: '🔄'}[type] || 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
   async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description},PROGRESS');
+    this.log(`Running: ${description}`, 'PROGRESS');
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
-        stdio: pipe,
-        encoding: utf8,
+        stdio: 'pipe',
+        encoding: 'utf8',
         timeout: 300000, // 5 minutes timeout
         maxBuffer: 1024 * 1024 * 10, // 10MB buffer
         ...options
       });
-      this.log(`${description} completed successfully`,SUCCESS');
+      this.log(`${description} completed successfully`, 'SUCCESS');
       return { success: true, output: result };
     } catch (error) {
-      this.log(`${description} failed: ${error.message},ERROR');
+      this.log(`${description} failed: ${error.message}`, 'ERROR');
       this.errors.push({ command, description, error: error.message });
       return { success: false, error: error.message };
     }

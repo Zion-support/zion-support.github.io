@@ -18,9 +18,9 @@ return res.status(200).json({
     });
   }
 
-const byModule: Record<string, number /> = {};
+const byModule: Record<string, number    /> = {};
 
-const byType: Record<string, number /> = {};
+const byType: Record<string, number    /> = {};
 return res.status(200).json({
     entries: entries.slice(-200),
     byModule,

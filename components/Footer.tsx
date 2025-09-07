@@ -50,25 +50,25 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'LinkedIn', icon: <Linkedin className="w-5 h-5" />, href: '#' },
-    { name: 'Twitter', icon: <Twitter className="w-5 h-5" />, href: '#' },
-    { name: 'GitHub', icon: <Github className="w-5 h-5" />, href: '#' },
-    { name: 'Website', icon: <Globe className="w-5 h-5" />, href: '#' }
+    { name: 'LinkedIn', icon: <Linkedin className="w-5 h-5"    />, href: '#' },
+    { name: 'Twitter', icon: <Twitter className="w-5 h-5"    />, href: '#' },
+    { name: 'GitHub', icon: <Github className="w-5 h-5"    />, href: '#' },
+    { name: 'Website', icon: <Globe className="w-5 h-5"    />, href: '#' }
   ];
 
   const contactInfo = [
     {
-      icon: <Mail className="w-5 h-5" />,
+      icon: <Mail className="w-5 h-5"    />,
       text: 'hello@ziontechgroup.com',
       href: 'mailto:hello@ziontechgroup.com'
     },
     {
-      icon: <Phone className="w-5 h-5" />,
+      icon: <Phone className="w-5 h-5"    />,
       text: '+1 (555) 123-4567',
       href: 'tel:+15551234567'
     },
     {
-      icon: <MapPin className="w-5 h-5" />,
+      icon: <MapPin className="w-5 h-5"    />,
       text: 'San Francisco, CA',
       href: '#'
     }
@@ -156,7 +156,7 @@ const Footer = () => {
                     className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
                     whileHover={{ x: 5 }}
                   >
-                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"    />
                     {link.name}
                   </motion.a>
                 </li>
@@ -175,7 +175,7 @@ const Footer = () => {
                     className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
                     whileHover={{ x: 5 }}
                   >
-                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"    />
                     {link.name}
                   </motion.a>
                 </li>
@@ -194,7 +194,7 @@ const Footer = () => {
                     className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
                     whileHover={{ x: 5 }}
                   >
-                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"    />
                     {link.name}
                   </motion.a>
                 </li>
@@ -210,7 +210,7 @@ const Footer = () => {
                     className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
                     whileHover={{ x: 5 }}
                   >
-                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"    />
                     {link.name}
                   </motion.a>
                 </li>
@@ -237,14 +237,14 @@ const Footer = () => {
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-              />
+                 />
               <motion.button
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Subscribe
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4"    />
               </motion.button>
             </div>
           </div>
@@ -267,15 +267,15 @@ const Footer = () => {
             
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
-                <Shield className="w-4 h-4" />
+                <Shield className="w-4 h-4"    />
                 <span>Secure & Reliable</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Award className="w-4 h-4" />
+                <Award className="w-4 h-4"    />
                 <span>Certified Experts</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Users className="w-4 h-4" />
+                <Users className="w-4 h-4"    />
                 <span>500+ Projects</span>
               </div>
             </div>

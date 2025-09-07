@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 
 const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json');
-async function loadRequests(): Promise<any[] /> {
+async function loadRequests(): Promise<any[]    /> {
   try {
     const raw = null;
 }

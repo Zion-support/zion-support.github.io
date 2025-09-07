@@ -24,7 +24,7 @@ interface TouchGesture {
 }
 }
 
-const MobileOptimizer: React.FC<MobileOptimizerProps /> = ({children;
+const MobileOptimizer: React.FC<MobileOptimizerProps    /> = ({children;
   showDebugInfo;
 
 setIsMobile (isMobileDevice);
@@ -142,19 +142,19 @@ if ;
   const images = document.querySelectorAll ('img');
 }{}
   /* Mobile Optimization Panel */}
-}<AnimatePresence /> {}
-  showMobilePanel && (<motion.div  /> <div className=\"p-6\"  /> <div className=\"flex items-center justify-between mb-6\"  /> <h2 className=\"text-xl font-bold text-white\"  />Mobile Optimizer</h2> <button  /> × </button> </div> </div>) )}
-}</div> </div> > Scroll to Top </button> <button  /> Scroll to Bottom </button> </div> </div> </div> </motion.div>)
+}<AnimatePresence    /> {}
+  showMobilePanel && (<motion.div     /> <div className=\"p-6\"     /> <div className=\"flex items-center justify-between mb-6\"     /> <h2 className=\"text-xl font-bold text-white\"     />Mobile Optimizer</h2> <button     /> × </button> </div> </div>) )}
+}</div> </div> > Scroll to Top </button> <button     /> Scroll to Bottom </button> </div> </div> </div> </motion.div>)
 }</AnimatePresence> {}
   /* Mobile Toggle Button */}
-}<button </svg /> </button> {}
+}<button </svg    /> </button> {}
   /* Global Mobile Styles */}
-}<style jsx global /> {
+}<style jsx global    /> {
   `.mobile-optimized * {
 }
   }
 }` 
-}</style> </>) 
+}</style> <   />) 
 };
 
 export default MobileOptimizer;

@@ -19,14 +19,14 @@ interface UltraFuturisticBackground2035Props {
 }
 }
 
-const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props /> = ({
+const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props    /> = ({
   intensity;
 
-const canvasRef = useRef<HTMLCanvasElement />(null);
+const canvasRef = useRef<HTMLCanvasElement    />(null);
 
-const particlesRef = useRef<any[] />([]);
+const particlesRef = useRef<any[]    />([]);
 
-const animationRef = useRef<number | undefined />(undefined);
+const animationRef = useRef<number | undefined    />(undefined);
 
 const getColorScheme = (;
     switch (colorScheme) {;
@@ -308,16 +308,16 @@ const y = centerY + Math.sin(angle) * radius;
 const alpha  = 1 - i / 20;ctx.globalAlpha = alpha * 0.5;}
       ctx.fillStyle = colors.accent;}
       ctx.beginPath()ctx.arc(x, y, 2, 0, Math.PI * 2)ctx.fill()}
-  }return (<div className='fixed inset-0 -z-10 overflow-hidden' />;
+  }return (<div className='fixed inset-0 -z-10 overflow-hidden'    />;
       <canvas;
         ref={canvasRef}
         className='w-full h-full';
         style={{background: colors.background;}
         }}
 
-      />
+         />
       {/* Additional overlay effects */}
-      <div className='absolute inset-0 pointer-events-none' />;
+      <div className='absolute inset-0 pointer-events-none'    />;
         {/* Quantum energy field */}
         <motion&& motion.div;
 className='absolute inset-0'
@@ -336,15 +336,15 @@ ease: 'easeInOut'}
           }}
 
         {/* Holographic scan lines */}
-        <div className=\"absolute inset-0 opacity-20\" />;
+        <div className=\"absolute inset-0 opacity-20\"    />;
           {[...Array(20)].map((_, i) => (<motion&& motion.div;}
                 opacity: [0, 1, 0],scale_x: [0, 1, 0]              }}          }}
-        />;
+           />;
         {/* Holographic scan lines */}"
-        <div className=\"absolute inset - 0 opacity - 20\" />;
+        <div className=\"absolute inset - 0 opacity - 20\"    />;
           {[...Array (20)].map ((_, i) => (<motion.div;}
               key={i}"
-              className=\"absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent\";
+              className=\'absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent\';
               style={{}}
               animate={{opacity: [0, 1, 0];
                 scaleX: [0, 1, 0];}
@@ -377,7 +377,7 @@ ease: 'easeInOut'}
 
 
 
-            />}
+               />}
 }
           ))}
 

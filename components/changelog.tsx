@@ -4,45 +4,45 @@ import path from 'path';
 type Props = any;
     return { props: { content, generatedAt: new Date().toISOString(),}
 }, revalidate: 300 }
-      <h1 className='text-2xl font-bold text-gray-900' />Changelog</h1>
+      <h1 className='text-2xl font-bold text-gray-900'    />Changelog</h1>
       {generatedAt && (}
-        <p className='mt-2 text-sm text-gray-600' />Generated: {generatedAt}</p>
+        <p className='mt-2 text-sm text-gray-600'    />Generated: {generatedAt}</p>
       ,
 }
 
-    <main className='mx - auto max - w-4xl px - 4 py - 12' />;
-      <h1 className='text - 2xl font - bold text - gray - 900' />Changelog</h1>;
+    <main className='mx - auto max - w-4xl px - 4 py - 12'    />;
+      <h1 className='text - 2xl font - bold text - gray - 900'    />Changelog</h1>;
       {generated_at && (}
-        <p className='mt - 2 text - sm text - gray - 600' />Generated: {generated_at}</p>,
+        <p className='mt - 2 text - sm text - gray - 600'    />Generated: {generated_at}</p>,
 }
       {content ? (}
-        <pre className='mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm' />;}
+        <pre className='mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm'    />;}
           {content}
 
         </pre>
       ) : (
-        <div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600' />
+        <div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600'    />
           No changelog generated yet.
         </div>
 
       )}
     </main>;
 
-export default function ChangelogPage(): any ({ content, generatedAt }: Props) {return (<main className='mx-auto max-w-4xl px-4 py-12' />;
-      <h1 className='text-2xl font-bold text-gray-900' />Changelog</h1>;}
-      {generatedAt && (<p className='mt-2 text-sm text-gray-600' />Generated: {generatedA,}
+export default function ChangelogPage(): any ({ content, generatedAt }: Props) {return (<main className='mx-auto max-w-4xl px-4 py-12'    />;
+      <h1 className='text-2xl font-bold text-gray-900'    />Changelog</h1>;}
+      {generatedAt && (<p className='mt-2 text-sm text-gray-600'    />Generated: {generatedA,}
 }</p>;
       )}
-      {content ? (<pre className='mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm' />;}
+      {content ? (<pre className='mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm'    />;}
           {content}
         </pre>;
-      ) : (<div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600' />          No changelog generated yet.      {generatedAt && (<p className=\"mt-2 text-sm text-gray-600\" />Generated: {generatedA,}
+      ) : (<div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600'    />          No changelog generated yet.      {generatedAt && (<p className=\"mt-2 text-sm text-gray-600\"    />Generated: {generatedA,}
 }</p>;
       )}
-      {content ? (<pre className=\"mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm\" />;}
+      {content ? (<pre className=\"mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm\"    />;}
 {content}
         </pre>;
-      ) : (<div className=\"mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600\" />;
+      ) : (<div className=\"mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600\"    />;
           No changelog generated yet.;
         </div>;
       )}
@@ -58,8 +58,7 @@ export default function ChangelogPage(): any ({ content, generatedAt }: Props) {
  ,
 } catch ;
   return { props: { content: null, generatedAt: null,}
-}, revalidate: 300,
-};
+}, revalidate: 300}
 }
 
 export async /**;
@@ -72,8 +71,7 @@ function getStaticProps() {export async function getStaticProps() {try {const fi
 }, revalidate: 300 },
 } catch ;
   return { props: { content: null, generatedAt: null,}
-}, revalidate: 300,
-};
+}, revalidate: 300}
 }
 
 export async function getStaticProps() {
@@ -85,13 +83,11 @@ const content = fs.readFileSync(file, 'utf8');
     return {}
       props: { content, generatedAt: new Date().toISOString(),}
 },
-      revalidate: 300,
-    };
+      revalidate: 300}
   } catch {
 }
     return { props: { content: null, generatedAt: null,}
-}, revalidate: 300,
-};
+}, revalidate: 300}
   }
   } catch {}
     return { props: { content: null, generatedAt: null,}

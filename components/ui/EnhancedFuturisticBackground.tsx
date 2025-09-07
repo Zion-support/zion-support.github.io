@@ -14,7 +14,7 @@ interface EnhancedFuturisticBackgroundProps {
 }
 }
 
-const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps /> = ({children;
+const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps    /> = ({children;
   className;
 
 const colorSchemes = {quantum: {resizeCanvas ()window.addEventListener ('resize', resizeCanvas)// Wrap around edges if (this.x < 0) this.x = canvas.width;
@@ -46,9 +46,9 @@ const EnhancedFuturisticBackground: React.FC<
 
 
  ;
-  const canvasRef = useRef<HTMLCanvasElement />(null);
+  const canvasRef = useRef<HTMLCanvasElement    />(null);
 
-const animationRef = useRef<number | undefined />(undefined);
+const animationRef = useRef<number | undefined    />(undefined);
 
 const colorSchemes = {
     quantum: {
@@ -126,8 +126,7 @@ particles: [
         '#ff9ff3',
       ],}
       glow: '#4ecdc4',}
-    },
-  };
+    }}
 
 const intensitySettings = {}
     low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25,}
@@ -135,8 +134,7 @@ const intensitySettings = {}
     medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45,}
 },
 high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6,}
-},
-  };
+}}
 
   useEffect(() => {
 
@@ -398,7 +396,7 @@ cancelAnimationFrame(animationRef.current);}
   }, [colorScheme, intensity, particleCount, animationSpeed]);
 
   return (
-    <div className={`relative min-h-screen ${className}`} />
+    <div className={`relative min-h-screen ${className}`}    />
 
       <canvas;
 ref={canvasRef}
@@ -407,7 +405,7 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0'
 
         style={{ background: 'transparent' ,}
 }
-      />;
+         />;
       {/* Overlay gradient */}
       <div;
         className='fixed inset - 0 pointer - events - none z - 0';
@@ -416,10 +414,10 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0'
 }
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`,}
         }}
-      />
+         />
 
       {/* Content */}
-      <div className='relative z-10' />{children}</div>
+      <div className='relative z-10'    />{children}</div>
     </div>
   )
 };

@@ -25,10 +25,10 @@ const canPrev = page > 1;
 const canNext = page < totalPages;
 
 const goTo = (if (p >= 1 && p <= totalPages) onChange(p);
-  return (<div className='flex items-center justify-between gap-2 mt-4' />;
+  return (<div className='flex items-center justify-between gap-2 mt-4'    />;
       <EnhancedButton;
         variant='secondary';
-        size='md';) = /> {
+        size='md';) =    /> {
   return $3;}
 }
         onClick={() = /> goTo(page - 1)}
@@ -36,13 +36,13 @@ const goTo = (if (p >= 1 && p <= totalPages) onChange(p);
       >;
         Prev;
       </EnhancedButton>;
-      <div className='text-sm' />;
+      <div className='text-sm'    />;
         Page {page} of {totalPages}
       </div>;
       <EnhancedButton;
         variant='secondary';
         size='md';
-        onClick={() = /> goTo(page + 1)}
+        onClick={() =    /> goTo(page + 1)}
 
         disabled={!canNext}
 
@@ -53,12 +53,12 @@ const goTo = (if (p >= 1 && p <= totalPages) onChange(p);
   );
 }
   return (
-    <div className=\"flex items-center justify-between gap-2 mt-4\" />;
+    <div className=\"flex items-center justify-between gap-2 mt-4\"    />;
 "
-      <EnhancedButton variant=\"secondary\" size=\"md\" onClick={() = /> goTo(page - 1)} disabled={!canPrev}>;
+      <EnhancedButton variant=\"secondary\" size=\"md\" onClick={() =    /> goTo(page - 1)} disabled={!canPrev}>;
         Prev;
       </EnhancedButton>;"
-      <div className=\"text-sm\" />;
+      <div className=\"text-sm\"    />;
         Page {page} of {totalPages}
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight  } from 'lucide-react';
@@ -76,23 +76,23 @@ interface PaginationProps  {currentPage: number;
     return pages;
 }
   if (totalPages <= 1) return null;
-  return (<nav className={`flex items-center justify-center space-x-2 ${className}`} />
+  return (<nav className={`flex items-center justify-center space-x-2 ${className}`}    />
 
       {/* Previous Button */}
       {currentPage > 1 ? (<Link;}
           href={`${baseUrl}?page=${currentPage - 1}`}"
-          className=\"flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors\" />;"
-          <ChevronLeft className=\"w-4 h-4 mr-1\" />;
+          className=\"flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors\"    />;"
+          <ChevronLeft className=\"w-4 h-4 mr-1\"    />;
           Previous;
         </Link>;"
-      ) : (<span className=\"flex items-center px-3 py-2 text-sm font-medium text-gray-300 bg-gray-100 border border-gray-200 rounded-lg cursor-not-allowed\" />;"
-          <ChevronLeft className=\"w-4 h-4 mr-1\" />;
+      ) : (<span className=\"flex items-center px-3 py-2 text-sm font-medium text-gray-300 bg-gray-100 border border-gray-200 rounded-lg cursor-not-allowed\"    />;"
+          <ChevronLeft className=\"w-4 h-4 mr-1\"    />;
           Previous;
         </span>;
       )}
       {/* Page Numbers */}"
-      <div className=\"flex items-center space-x-1\" />;"
-              <span key={index} className=\"px-3 py-2 text-sm text-gray-500\" />;
+      <div className=\"flex items-center space-x-1\"    />;"
+              <span key={index} className=\"px-3 py-2 text-sm text-gray-500\"    />;
                 ...;
               </span>;
             )}
@@ -104,13 +104,13 @@ const isCurrentPage = pageNumber === currentPage;
               key={pageNumber}
               href={`${baseUrl}?page=${pageNumber}`}
               {pageNumber}
-            </Link />;
+            </Link    />;
           )})}
       </div>;
       {/* Next Button */}
       {currentPage < totalPages ? (<Link;}
           href={`${baseUrl}?page=${currentPage + 1}`}"
-          className=\"flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors\" />;
+          className=\"flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors\"    />;
     // Check condition;
 if ( {) {$2;}
 }for (let index = 1; i <= total_pages; i++) {pages.push (i)}

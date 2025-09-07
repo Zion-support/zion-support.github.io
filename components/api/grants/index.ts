@@ -84,7 +84,7 @@ id,
         'utf8'
       );
       res.status(201).json({ id, record });
-    } catch (e: any) {}
+    } catch (e) {
       res.status(500).json({ error: e?.message |'Failed to create grant',}
 });
     }

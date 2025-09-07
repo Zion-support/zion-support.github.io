@@ -9,14 +9,14 @@ import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shiel
 export default function CloudMonitoringPage() {
   const features = null;
     {
-      icon: <Activity className='w-8 h-8 text-white' />
+      icon: <Activity className='w-8 h-8 text-white'    />
       description: 'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.',
   color: 'bg-gradient-to-br from-green-500 to-emerald-600'
       gradient: 'from-green-400 to-emerald-500'}
    ,}
 }
     {
-      icon: <BarChart3 className='w-8 h-8 text-white' />
+      icon: <BarChart3 className='w-8 h-8 text-white'    />
       title: 'Advanced Analytics',
   description:
         'Deep insights into performance metrics, resource utilization, and business intelligence.'
@@ -24,7 +24,7 @@ export default function CloudMonitoringPage() {
   gradient: 'from-blue-400 to-cyan-500'}
     }
     {
-      icon: <AlertTriangle className='w-8 h-8 text-white' />
+      icon: <AlertTriangle className='w-8 h-8 text-white'    />
       title: 'Smart Alerting',
   description:
         'AI-powered anomaly detection and intelligent alerting to prevent issues before they impact users.'
@@ -33,7 +33,7 @@ export default function CloudMonitoringPage() {
    ,}
 }
     {
-      icon: <Database className='w-8 h-8 text-white' />
+      icon: <Database className='w-8 h-8 text-white'    />
       title: 'Multi-Cloud Support',
   description:
         'Monitor AWS, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.'
@@ -42,7 +42,7 @@ export default function CloudMonitoringPage() {
    ,}
 }
     {
-      icon: <Shield className='w-8 h-8 text-white' />
+      icon: <Shield className='w-8 h-8 text-white'    />
       title: 'Security Monitoring',
   description:
         'Comprehensive security monitoring with threat detection, compliance reporting, and audit trails.'
@@ -51,7 +51,7 @@ export default function CloudMonitoringPage() {
    ,}
 }
     {
-      icon: <Zap className='w-8 h-8 text-white' />
+      icon: <Zap className='w-8 h-8 text-white'    />
       title: 'Auto-scaling',
   description:
         'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
@@ -64,7 +64,7 @@ export default function CloudMonitoringPage() {
 const monitoringCapabilities = [
     {
       category: 'Infrastructure',
-  icon: <Server className='w-6 h-6 text-blue-400' />
+  icon: <Server className='w-6 h-6 text-blue-400'    />
       metrics: [
         'CPU Usage'
         'Memory Utilization'
@@ -75,7 +75,7 @@ const monitoringCapabilities = [
     }
     {
       category: 'Applications',
-  icon: <Code className='w-6 h-6 text-green-400' />
+  icon: <Code className='w-6 h-6 text-green-400'    />
       metrics: [
         'Response Time'
         'Error Rates'
@@ -86,7 +86,7 @@ const monitoringCapabilities = [
     }
     {
       category: 'Databases',
-  icon: <Database className='w-6 h-6 text-purple-400' />
+  icon: <Database className='w-6 h-6 text-purple-400'    />
       metrics: [
         'Query Performance'
         'Connection Pool'
@@ -98,7 +98,7 @@ const monitoringCapabilities = [
 }
     {
       category: 'Security',
-  icon: <Shield className='w-6 h-6 text-red-400' />
+  icon: <Shield className='w-6 h-6 text-red-400'    />
       metrics: [
 
         'Threat Detection',
@@ -252,130 +252,129 @@ const useCases = [
   ];
   return (
     <>
-      <Head />
-<title />
+      <Head><title>
           Cloud Monitoring & Analytics | Zion Tech Group - Real-time;
 Infrastructure Monitoring;
         </title>
         <meta;
 name='description'
           content='Comprehensive cloud monitoring and analytics platform with real-time insights, AI-powered alerting, and multi-cloud support. Monitor your entire infrastructure from a single dashboard.'
-        />
+           />
         <meta;
 property='og:title'
           content='Cloud Monitoring & Analytics | Zion Tech Group'
-        />
+           />
         <meta;
 property='og:description'
           content='Real-time infrastructure monitoring with advanced analytics, smart alerting, and multi-cloud support.'
-        />
-        <meta name='twitter: card' content='summary_large_image' />
+           />
+        <meta name='twitter: card' content='summary_large_image'    />
       </Head>
 
       {/* Hero Section *,}
 }
-      <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black' />;
-        <div className='absolute inset-0' />;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.1),transparent_50%)]' />;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]' />;
+      <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'    />;
+        <div className='absolute inset-0'    />;
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.1),transparent_50%)]'    />;
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]'    />;
         </div>;
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center' />;
-          <div className='mb-8' />;
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6' />;
-              <Eye className='w-4 h-4 mr-2' />;
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'    />;
+          <div className='mb-8'    />;
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6'    />;
+              <Eye className='w-4 h-4 mr-2'    />;
               Real-time Infrastructure Monitoring;
             </div>;
           </div>;
-          <h1 className='text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight' />;
+          <h1 className='text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight'    />;
             Cloud Monitoring & Analytics;
           </h1>;
-          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed' />;
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed'    />;
             Monitor your entire infrastructure in real-time with AI-powered;
             insights and intelligent alerting;
           </p>;
-          <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20' />;
+          <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'    />;
             <Button;
               href='#pricing';
               size='lg';
-              className='bg-green-600 hover:bg-green-700 shadow-2xl shadow-green-500/25' />
+              className='bg-green-600 hover:bg-green-700 shadow-2xl shadow-green-500/25'    />
 
               Start Free Trial;
-              <ArrowRight className='w-5 h-5 ml-2' />;
+              <ArrowRight className='w-5 h-5 ml-2'    />;
             </Button>;
             <Button;
               href='#demo';
               variant='outline';
               size='lg';
-              className='border-white/20 hover:border-white/40 hover:bg-white/5' />
+              className='border-white/20 hover:border-white/40 hover:bg-white/5'    />
 
-              <Play className='w-5 h-5 mr-2' />;
+              <Play className='w-5 h-5 mr-2'    />;
               Watch Demo;
             </Button>;
           </div>;
           {/* Stats */}
-<div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto' />;
-            <div className='text-center' />;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400' />;
+<div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto'    />;
+            <div className='text-center'    />;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400'    />;
                 99.99%;
               </div>;
-              <div className='text-gray-400' />Uptime</div>;
+              <div className='text-gray-400'    />Uptime</div>;
             </div>;
-            <div className='text-center' />;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400' />;
+            <div className='text-center'    />;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400'    />;
                 1M+;
               </div>;
-              <div className='text-gray-400' />Metrics Tracked</div>;
+              <div className='text-gray-400'    />Metrics Tracked</div>;
             </div>;
-            <div className='text-center' />;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400' />;
+            <div className='text-center'    />;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400'    />;
                 50+;
               </div>;
-              <div className='text-gray-400' />Integrations</div>;
+              <div className='text-gray-400'    />Integrations</div>;
             </div>;
-            <div className='text-center' />;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400' />;
+            <div className='text-center'    />;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400'    />;
                 &lt;100ms;
               </div>;
-              <div className='text-gray-400' />Latency</div>;
+              <div className='text-gray-400'    />Latency</div>;
             </div>;
           </div>;
         </div>;
       </section>;
       {/* Features Section */}
 
-<section className='py-24 bg-gray-900 relative overflow-hidden' />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10' />
-          <div className='text-center mb-20' />
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight' />
+<section className='py-24 bg-gray-900 relative overflow-hidden'    />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'    />
+          <div className='text-center mb-20'    />
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'    />
               Powerful Monitoring Features;
             </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed' />
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'    />
               Everything you need to monitor and optimize your infrastructure;
             </p>
           </div>
 
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'    />
             {features.map((feature, index) => (}
               <Card;}
 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1';
                 style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` ,
-} />;
-                <div className='relative' />;
+}    />;
+                <div className='relative'    />;
 
                   <div;
 className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover: scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
-                   />
+                      />
 
                     {feature.ico,}
 }
                   </div>;
                 </div>;
-                <h3 className='text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300' />;
+                <h3 className='text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300'    />;
                   {feature.title}
 
                 </h3>
-                <p className='text-gray-400 leading-relaxed' />
+                <p className='text-gray-400 leading-relaxed'    />
 
                   {feature.description}
                 </p>;
@@ -386,40 +385,40 @@ className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center 
       </section>;
       {/* Monitoring Capabilities */}
 
-<section className='py-24 bg-black relative overflow-hidden' />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10' />
-          <div className='text-center mb-20' />
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight' />
+<section className='py-24 bg-black relative overflow-hidden'    />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'    />
+          <div className='text-center mb-20'    />
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'    />
 
               Comprehensive Monitoring;
             </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed' />
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'    />
               Monitor every aspect of your infrastructure with detailed metrics;
 and insights;
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8' />
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'    />
             {monitoringCapabilities.map((capability, index) => (
 }
               <Card;}
 key={index}
                 className='group border border-gray-700 hover: border-green-500/30 hover:bg-gray-900/80 transition-all duration-300'
-               />
-                <div className='flex items-start space-x-4' />
-                  <div className='flex-shrink-0' />{capability.icon}</div>
-                  <div className='flex-1' />
-                    <h3 className='text-xl font-bold mb-3 text-white group-hover:text-green-400 transition-colors duration-300' />
+                  />
+                <div className='flex items-start space-x-4'    />
+                  <div className='flex-shrink-0'    />{capability.icon}</div>
+                  <div className='flex-1'    />
+                    <h3 className='text-xl font-bold mb-3 text-white group-hover:text-green-400 transition-colors duration-300'    />
 
                       {capability.categor,}
 }
                     </h3>;
-                    <div className='grid grid-cols-1 gap-2' />;
+                    <div className='grid grid-cols-1 gap-2'    />;
                       {capability.metrics.map((metric, metricIndex) => (<div;}
                           key={metricIndex}
 
                           className='flex items-center text-sm text-gray-300'
-                         />
-                          <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
+                            />
+                          <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0'    />
 
                           {metric}
                         </div>;
@@ -431,44 +430,44 @@ key={index}
             ))}
       {/* Use Cases Section */}
 
-<section className='py-24 bg-gray-900 relative overflow-hidden' />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10' />
-          <div className='text-center mb-20' />
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight' />
+<section className='py-24 bg-gray-900 relative overflow-hidden'    />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'    />
+          <div className='text-center mb-20'    />
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'    />
 
 
 
 
               Use Cases;
             </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed' />
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'    />
               Trusted by teams across industries for reliable infrastructure;
 monitoring;
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8' />
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'    />
             {useCases.map((useCase, index) => (
 }
               <Card;}
 key={index}
-                className='group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300' />
+                className='group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300'    />
 
-                <div className='flex items-start space-x-4' />;
-                  <div className='text-4xl' />{useCase.icon}</div>;
-                  <div className='flex-1' />;
-                    <h3 className='text-xl font-bold mb-3 text-white group-hover:text-green-400 transition-colors duration-300' />;
+                <div className='flex items-start space-x-4'    />;
+                  <div className='text-4xl'    />{useCase.icon}</div>;
+                  <div className='flex-1'    />;
+                    <h3 className='text-xl font-bold mb-3 text-white group-hover:text-green-400 transition-colors duration-300'    />;
                       {useCase.title}
                     </h3>;
-                    <p className='text-gray-400 mb-4 leading-relaxed' />;
+                    <p className='text-gray-400 mb-4 leading-relaxed'    />;
                       {useCase.description}
                     </p>;
-                    <div className='grid grid-cols-2 gap-2' />;
+                    <div className='grid grid-cols-2 gap-2'    />;
                       {useCase.benefits.map((benefit, benefitIndex) => (<div;}
                           key={benefitIndex}
 
                           className='flex items-center text-sm text-gray-300'
-                         />
-                          <TrendingUp className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
+                            />
+                          <TrendingUp className='w-4 h-4 text-green-400 mr-2 flex-shrink-0'    />
 
                           {benefit}
                         </div>;
@@ -485,59 +484,59 @@ key={index}
 
       {/* Pricing Section */}
 
-<section id='pricing' className='py-24 bg-black relative overflow-hidden' />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10' />
-          <div className='text-center mb-20' />
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight' />
+<section id='pricing' className='py-24 bg-black relative overflow-hidden'    />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'    />
+          <div className='text-center mb-20'    />
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'    />
               Simple, Transparent Pricing;
             </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed' />
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'    />
               Choose the plan that fits your monitoring needs;
             </p>
           </div>
 
-<div className='grid grid-cols-1 md:grid-cols-3 gap-8' />
+<div className='grid grid-cols-1 md:grid-cols-3 gap-8'    />
             {pricingPlans.map((plan, index) => (}
               <Card;}
 key={index}
                 className={`relative group ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''} border ${plan.color} hover: border-green-500/50 transition-all duration-300,
-} />
+}    />
 
-                {plan.popular && (<div className='absolute -top-4 left-1/2 transform -translate-x-1/2' />;
-                    <span className='bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold' />;
+                {plan.popular && (<div className='absolute -top-4 left-1/2 transform -translate-x-1/2'    />;
+                    <span className='bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold'    />;
                       Most Popular;
                     </span>;}
                   </div>;}
                 )}
 
-<div className='text-center mb-8' />
-                  <h3 className='text-2xl font-bold text-white mb-2' />
+<div className='text-center mb-8'    />
+                  <h3 className='text-2xl font-bold text-white mb-2'    />
 
                     {plan.name}
                   </h3>;
-                  <div className='text - 4xl font - bold text - white mb - 2' />;
-                    {plan.price}<div className='text-center mb-8' />;
-                  <h3 className='text-2xl font-bold text-white mb-2' />;
+                  <div className='text - 4xl font - bold text - white mb - 2'    />;
+                    {plan.price}<div className='text-center mb-8'    />;
+                  <h3 className='text-2xl font-bold text-white mb-2'    />;
                     {plan && plan.name}
                   </h3>;
-                  <div className='text-4xl font-bold text-white mb-2' />;
+                  <div className='text-4xl font-bold text-white mb-2'    />;
                     {plan && plan.price}
-                    <span className='text-lg text-gray-400' />{plan && plan.period}</span>;
+                    <span className='text-lg text-gray-400'    />{plan && plan.period}</span>;
                   </div>;
-                  <p className='text-gray-400' />{plan && plan.description}</p>;
+                  <p className='text-gray-400'    />{plan && plan.description}</p>;
                 </div>;
                   </div>;
-                  <p className='text-gray-400' />{plan.description}</p>;
+                  <p className='text-gray-400'    />{plan.description}</p>;
                 </div>;
-                <ul className='space-y-4 mb-8' />;
+                <ul className='space-y-4 mb-8'    />;
 
                   {plan && plan.features.map((feature, featureIndex) => (;}
                     <li;}
 key={featureIndex}
 
                       className='flex items-center text-gray-300'
-                     />
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
+                        />
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'    />
 
                       {feature}
                     </li>;
@@ -545,13 +544,13 @@ key={featureIndex}
                 <Button;
                   href='/contact';
                   className={`w-full ${plan && plan.buttonColor} text-white`}
-                  size='lg' />;
+                  size='lg'    />;
                   Get Started;
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan && plan.buttonColor} text-white`}
+                  <ArrowRight className='w-5 h-5 ml-2'    />                </Button>                  className={`w-full ${plan && plan.buttonColor} text-white`}
                   size=\"lg\">
 
                   Get Started;
-                  <ArrowRight className=\"w-5 h-5 ml-2\" />;
+                  <ArrowRight className=\"w-5 h-5 ml-2\"    />;
                 </Button>;
               </Card>;</li>;
                   ))}
@@ -562,38 +561,38 @@ key={featureIndex}
 href='/contact'
                   className={`w-full ${plan.buttonColor} text-white`}
                   size='lg'
-                 />
+                    />
                   Get Started;
-                  <ArrowRight className='w-5 h-5 ml-2' />
+                  <ArrowRight className='w-5 h-5 ml-2'    />
                 </Button>
               </Card>
             ))}
       {/* Integrations Section */}
 
-<section className='py-24 bg-gray-900 relative overflow-hidden' />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10' />
-          <div className='text-center mb-20' />
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight' />
+<section className='py-24 bg-gray-900 relative overflow-hidden'    />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'    />
+          <div className='text-center mb-20'    />
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'    />
               Seamless Integrations;
             </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed' />
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'    />
               Connect with your favorite tools and platforms;
             </p>
           </div>
 
-<div className='grid grid-cols-2 md:grid-cols-4 gap-6' />
+<div className='grid grid-cols-2 md:grid-cols-4 gap-6'    />
             {integrations.map((integration, index) => (}
               <Card;}
 key={index}
-                className='text-center group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300' />
+                className='text-center group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300'    />
 
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-300' />;
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-300'    />;
                   {integration.icon}
                 </div>;
-                <h3 className='font-semibold text-white mb-2' />;
+                <h3 className='font-semibold text-white mb-2'    />;
                   {integration.name}
                 </h3>;
-                <p className='text-sm text-gray-400' />;
+                <p className='text-sm text-gray-400'    />;
                   {integration.description}
 
                 </p>
@@ -614,28 +613,28 @@ key={index}
             ))}
       {/* CTA Section */}
       {/* CTA Section */}
-<section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden' />;
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10' />;
-          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8' />;
+<section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden'    />;
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10'    />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'    />;
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'    />;
             Ready to Monitor Your Infrastructure?;
           </h2>;
-          <p className='text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed' />;
+          <p className='text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'    />;
             Join thousands of DevOps teams who trust us to monitor their;
             critical infrastructure.;
           </p>;
-          <div className='flex flex-col sm:flex-row gap-6 justify-center' />;
-      <section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden' />;
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10' />;
-          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8' />;
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'    />;
+      <section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden'    />;
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10'    />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'    />;
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'    />;
             Ready to Monitor Your Infrastructure?;
           </h2>;
-          <p className='text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed' />;
+          <p className='text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'    />;
             Join thousands of DevOps teams who trust us to monitor their;
             critical infrastructure.;
           </p>;
-          <div className='flex flex-col sm:flex-row gap-6 justify-center' />;
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'    />;
 
             <Button;
 href='/contact'
@@ -647,14 +646,14 @@ href='#demo'
               size='lg'
 
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'
-             />
-              <Play className='w-5 h-5 mr-2' />
+                />
+              <Play className='w-5 h-5 mr-2'    />
               Watch Demo;
             </Button>
           </div>
         </div>
       </section>
-    </>
+    <   />
   );
 }
 

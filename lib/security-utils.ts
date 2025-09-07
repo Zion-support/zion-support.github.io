@@ -8,8 +8,7 @@ export const sanitizeInput = (input: string): string => {
         '<': '&lt;',
         '>': '&gt;',
         '"': '&quot;',
-        "'": '&#x27;',
-      };
+        "'": '&#x27;'}
       return escapeMap[match];
     });
 };

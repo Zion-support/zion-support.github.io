@@ -25,8 +25,8 @@ import { motion } from 'framer-motion';
   children?: React.ReactNode;
 }
 
-export default function UltraFuturisticBackground2038() {const canvasRef = useRef<HTMLCanvasElement />(null)const containerRef =;
-  useRef<HTMLDivElement />(null;
+export default function UltraFuturisticBackground2038() {const canvasRef = useRef<HTMLCanvasElement    />(null)const containerRef =;
+  useRef<HTMLDivElement    />(null;
   useEffect(() => ;
   const canvas = canvasRef.current;
     if (!canvas) return;
@@ -496,7 +496,7 @@ window.removeEventListener('resize', resizeCanvas)}
 
   }, [intensity, theme]);
   return (
-    <div ref={containerRef} className='fixed inset-0 pointer-events-none' />;
+    <div ref={containerRef} className='fixed inset-0 pointer-events-none'    />;
       <canvas;
 ref={canvasRef}
         className='w-full h-full';
@@ -507,11 +507,11 @@ ref={canvasRef}
                 ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)';}
                 : theme === 'holographic';}
         }}
-      />;
+         />;
       {/* Additional visual effects */}
-      <div className='absolute inset-0' />;
+      <div className='absolute inset-0'    />;
         {/* Quantum field lines */}
-        {theme === 'consciousness' && (<div className='absolute inset-0' />;
+        {theme === 'consciousness' && (<div className='absolute inset-0'    />;
             {[...Array(20)].map((_, i) => (<motion&& motion.div;
         // Regenerate particles;
         // Check condition;}
@@ -524,8 +524,8 @@ if ( {) {$2;}
         }
       })requestAnimationFrame (animate)}          particle.quantum_state = Math.random () * Math.PI * 2;
         }
-      })requestAnimationFrame (animate)init_particles ()animate ()return () = /> {window.removeEventListener ('resize', resize_canvas)}
-  }, [intensity, theme])return (<div ref={container_ref} className='fixed inset - 0 pointer - events - none' />;
+      })requestAnimationFrame (animate)init_particles ()animate ()return () =    /> {window.removeEventListener ('resize', resize_canvas)}
+  }, [intensity, theme])return (<div ref={container_ref} className='fixed inset - 0 pointer - events - none'    />;
       <canvas;
         ref={canvas_ref}
         className='w - full h - full';
@@ -537,11 +537,11 @@ if ( {) {$2;}
                 : theme === 'holographic';}
                   ? 'radial - gradient (ellipse at center, rgba (78, 205, 196, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)';}
                   : 'radial - gradient (ellipse at center, rgba (139, 92, 246, 0.1) 0%, rgba (0, 0, 0, 0.8) 100%)'}}
-      />;
+         />;
       {/* Additional visual effects */}
-      <div className='absolute inset - 0' />;
+      <div className='absolute inset - 0'    />;
         {/* Quantum field lines */}
-        {theme === 'consciousness' && (<div className='absolute inset - 0' />;}
+        {theme === 'consciousness' && (<div className='absolute inset - 0'    />;}
             {[...Array (20)].map ((_, i) => (<motion.div;}
                 key={i}
                 className='absolute w - px h - 32 bg - gradient - to - b from - transparent via - purple - 500 to - transparent opacity - 20';
@@ -572,7 +572,7 @@ if ( {) {$2;}
 }
                   opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
                 transition={{ease: 'easeInOut'                }}
-              />;
+                 />;
             ))}
           </div>;
         )}
@@ -580,7 +580,7 @@ if ( {) {$2;}
 
         {theme === 'holographic' && (
 
-<div className='absolute inset-0' />
+<div className='absolute inset-0'    />
             {[...Array(15)].map((_, i) => (}
               <motion.div;}
 key={i}
@@ -606,7 +606,7 @@ key={i}
 repeat: Infinity;
 duration: 4 + i * 0 && 0.3,
                   repeat: Infinity,
-                  ease: \"easeInOut\";
+                  ease: \'easeInOut\';
                   duration: 4 + i * 0.3;
 repeat: Infinity;"
 ease: \"easeInOut\"}
@@ -625,7 +625,7 @@ ease: \"easeInOut\"}
         {/* Consciousness waves */}
         {theme === 'consciousness' && (
 
-<div className='absolute inset-0' />
+<div className='absolute inset-0'    />
             {[...Array(8)].map((_, i) => (}
               <motion.div;}
 key={i}
@@ -635,9 +635,9 @@ key={i}
 }%`}}
                 animate={{scale: [1, 1.5, 1],opacity: [0.2, 0.6, 0.2]}}
                 transition={{duration: 6 + i * 0.5,repeat: Infinity,ease: 'easeInOut',"
-  ease: \"easeInOut\";}
+  ease: \'easeInOut\';}
                   top: `${(i * 8) % 10}"
-}%`,ease: \"easeInOut\";
+}%`,ease: \'easeInOut\';
                   left: `${(i * 12) % 10}
 }%`}}
                 animate={{scale: [1, 1.5, 1];}
@@ -686,7 +686,7 @@ top: `${(i * 8) % 10}
                   duration: 6 + i * 0 && 0.5}
                   repeat: Infinity}
                   ease: 'easeInOut'                }}
-              />
+                 />
 
             ))}
           </div>;

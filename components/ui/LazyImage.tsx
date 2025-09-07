@@ -15,7 +15,7 @@ interface LazyImageProps {
 }
 }
 
-export const LazyImage: React.FC<LazyImageProps /> = ({src;
+export const LazyImage: React.FC<LazyImageProps    /> = ({src;
   alt;
 
   className;
@@ -24,7 +24,7 @@ const [isLoaded, setIsLoaded] = useState(false);
 
 const [isInView, setIsInView] = useState(false);
 
-const imgRef = useRef<HTMLImageElement />(null);
+const imgRef = useRef<HTMLImageElement    />(null);
           setIsInView(true);
 }
 observer.disconnect();}
@@ -46,7 +46,7 @@ const handleLoad = (
 
 
   return (
-    <div className={`relative overflow - hidden ${class_name}`} />
+    <div className={`relative overflow - hidden ${class_name}`}    />
 
       {/* Placeholder */}
 
@@ -57,7 +57,7 @@ alt=''
           isLoaded ? 'opacity-0' : 'opacity-100'}
         }`}
         style={{ width, height }}
-      />
+         />
 
 
 
@@ -77,7 +77,7 @@ alt=''
 className='w-full h-full object-cover'
           loading='lazy'
           style={{ width, height }}
-        />;
+           />;
       )}
 
     </div>

@@ -20,7 +20,7 @@ animate ();
 export default function UltraFuturisticBackground2028({}
   children}
 }: UltraFuturisticBackground2028Props) {
-  const canvasRef = useRef<HTMLCanvasElement />(null);}
+  const canvasRef = useRef<HTMLCanvasElement    />(null);}
 }
 import { motion } from 'framer-motion';
 
@@ -44,7 +44,7 @@ export default function UltraFuturisticBackground2028({ children}
 export default /**;
  * UltraFuturisticBackground2028 - Function description;
  */;
-function UltraFuturisticBackground2028() {  const canvas_ref = useRef < HTMLCanvasElement />(null)import React, {;}
+function UltraFuturisticBackground2028() {  const canvas_ref = useRef < HTMLCanvasElement    />(null)import React, {;}
   useEffect, useRef } from 'react';
 
 interface UltraFuturisticBackground2028Props {
@@ -150,7 +150,7 @@ window.removeEventListener('resize', handleResize)}
 
   }, []);
   return (
-    <div className='relative min-h-screen bg-black overflow-hidden' />;
+    <div className='relative min-h-screen bg-black overflow-hidden'    />;
       {/* Animated Background Canvas */}
       <canvas;
 ref={canvasRef}
@@ -164,16 +164,16 @@ ref={canvasRef}
         className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20';
         style={{ zIndex: 1 }
 }
-      />;
+         />;
       {/* Gradient Overlays */}"
       <div className=\"absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20\" style={{ zIndex: 1 }
-} />;"
+}    />;"
       <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(147,51,234,0.15),transparent_50%)]\" style={{ zIndex: 1 }
-} />;"
+}    />;"
       <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.15),transparent_50%)]\" style={{ zIndex: 1 }
-} />;"
+}    />;"
       <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]\" style={{ zIndex: 1 }
-} />;
+}    />;
       {/* Floating Geometric Shapes */}
 
           animate={{
@@ -202,7 +202,7 @@ className='absolute top-40 right-32 w-24 h-24 border border-blue-500/30 rotate-4
             repeat: Infinity}
 ease: 'easeInOut'}
           }}
-        />
+           />
         <motion.div;
 className='absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotate-45'
           animate={{
@@ -215,7 +215,7 @@ className='absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotat
             repeat: Infinity}
 ease: 'easeInOut'}
           }}
-        />
+           />
             duration: 12,
             repeat: Infinity
 
@@ -239,7 +239,7 @@ className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 round
             repeat: Infinity}
 ease: 'easeInOut'}
           }}
-        />
+           />
         <motion.div;
 className='absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounded-full'
           animate={{
@@ -252,7 +252,7 @@ className='absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounde
 ease: 'easeInOut'}
           }}
 
-        />
+           />
         <motion.div;
 className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rounded-full'
           animate={{
@@ -267,7 +267,7 @@ ease: 'easeInOut'}
 
           }}
 
-        />
+           />
       </div>
 
         />;
@@ -276,12 +276,12 @@ className='absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounde
           animate={{y: [0, 25, 0],opacity: [0.2, 0.5, 0.2]}}transition={{duration: 7,repeat: Infinity,ease: 'easeInOut'}}animate={{y: [0, -15, 0];}
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25];}
           transition={{duration: 5,repeat: Infinity}}duration: 5,repeat: Infinity,ease: 'easeInOut',"
-  ease: \"easeInOut\";
-        />;
+  ease: \'easeInOut\';
+           />;
         <motion.div;
 className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rounded-full';
           animate={{y: [0, -15, 0],opacity: [0.25, 0.55, 0.25]}}
-          transition={{duration: 5,repeat: Infinity,ease: 'easeInOut'}}}}/>;
+          transition={{duration: 5,repeat: Infinity,ease: 'easeInOut'}}}}   />;
       </div>;
 
 
@@ -291,7 +291,7 @@ className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rou
 className='absolute inset-0 pointer-events-none'
         style={{ zIndex: 3 }
 }
-       />
+          />
         <motion.div;
 className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent'
           animate={{
@@ -303,7 +303,7 @@ className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent vi
             repeat: Infinity}
 ease: 'linear'}
           }}
-        />
+           />
 
         <motion.div;
 className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent'
@@ -317,7 +317,7 @@ className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent vi
 ease: 'linear'}
   delay: 2}
           }}
-        />
+           />
         <motion.div;
 className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent'
           animate={{
@@ -339,7 +339,7 @@ ease: 'linear'}
             repeat: Infinity,
             ease: 'linear',"
   delay: 4,            ease: \"linear\",
-        />
+           />
       </div>
 
         />;
@@ -349,7 +349,7 @@ ease: 'linear'}
         className='absolute inset-0 pointer-events-none';
         style={{ zIndex: 4 }
 }
-       />;
+          />;
         {[...Array(20)].map((_, i) => (<motion.div;}
             key={i}
             className='absolute w - 2 h - 2 bg - purple - 400 rounded - full';
@@ -370,7 +370,7 @@ ease: 'linear'}
               delay: Math.random() * 3}
 ease: 'easeInOut'}
             }}
-          />
+             />
         ))}
       </div>
 
@@ -380,7 +380,7 @@ ease: 'easeInOut'}
 
       {/* Content */}
 
-<div className='relative' style={{ zIndex: 10 }} />
+<div className='relative' style={{ zIndex: 10 }}    />
         {childre}
 }
       </div>;
@@ -390,7 +390,7 @@ ease: 'easeInOut'}
 className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none'
         style={{ zIndex: 5 }
 }
-      />
+         />
     </div>
   );
 

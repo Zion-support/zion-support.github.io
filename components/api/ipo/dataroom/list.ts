@@ -10,10 +10,10 @@ import { appendAuditLog, resolveDataPath  } from '../../../../utils/api/storage'
 
 
 "
-import type { NextApiRequest, NextApiResponse } from \"next\";"
-import fs from \"fs\";"
-import path from \"path\";"
-import { appendAuditLog, resolveDataPath } from \"../../../../utils/api/storage\";
+import type { NextApiRequest, NextApiResponse } from \'next\';"
+import fs from \'fs\';"
+import path from \'path\';"
+import { appendAuditLog, resolveDataPath } from \'../../../../utils/api/storage\';
 
 
   if (!fs.existsSync(dir)) return res.status(200).json([]);
@@ -62,7 +62,7 @@ import { appendAuditLog, resolveDataPath    } from '../../../../utils / api / st
 export default /**;
  * handler - Function description;
  */;"
-function handler() {const section = String (req.query.section || \"General\";"
+function handler() {const section = String (req.query.section || \'General\';"
   const dir = resolveDataPath (path.join (\"dataroom\", section))if ();}
   return res.status (200).json ([])) {$2;}
 }

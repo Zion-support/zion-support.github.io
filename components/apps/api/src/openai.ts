@@ -8,7 +8,7 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {export functio
 })export async function generateJobPost(openai: OpenAIClient;
   role: string;
   opts: any;
-): Promise<string /> {const prompt = `Create a concise, compelling job post for a ${role}.;
+): Promise<string    /> {const prompt = `Create a concise, compelling job post for a ${role}.;
 
   return new OpenAI({ apiKey });
 
@@ -16,7 +16,7 @@ export async function generateJobPost(
   openai: OpenAIClient;
 role: string;
 opts: any;
-): Promise<string /> {}
+): Promise<string    /> {}
   const prompt = `Create a concise, compelling job post for a ${role}.
 Company: ${opts.company |'Confidential'}
 Location: ${opts.location |'Remote,}

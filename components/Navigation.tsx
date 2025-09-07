@@ -116,7 +116,7 @@ const Navigation = () => {
               transition={{ duration: 0.3, delay: 0.5 }}
             >
               Get Started
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"    />
             </motion.button>
           </div>
 
@@ -137,7 +137,7 @@ const Navigation = () => {
                 >
                   <X className={`w-6 h-6 ${
                     scrolled ? 'text-gray-700' : 'text-white'
-                  }`} />
+                  }`}    />
                 </motion.div>
               ) : (
                 <motion.div
@@ -149,7 +149,7 @@ const Navigation = () => {
                 >
                   <Menu className={`w-6 h-6 ${
                     scrolled ? 'text-gray-700' : 'text-white'
-                  }`} />
+                  }`}    />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -186,7 +186,7 @@ const Navigation = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   Get Started
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"    />
                 </motion.button>
               </div>
             </motion.div>

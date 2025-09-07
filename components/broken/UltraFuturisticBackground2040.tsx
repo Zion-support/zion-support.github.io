@@ -191,21 +191,21 @@ const handleResize = (
 canvas.height = window.innerHeight;) => {
   return $3;}
 }
-    }window.addEventListener('resize', handleResize)return () => {window.removeEventListener('resize', handleResize)cancelAnimationFrame(animationFrameId)}}, [])return (<div className='fixed inset-0 pointer-events-none overflow-hidden' />;
+    }window.addEventListener('resize', handleResize)return () => {window.removeEventListener('resize', handleResize)cancelAnimationFrame(animationFrameId)}}, [])return (<div className='fixed inset-0 pointer-events-none overflow-hidden'    />;
       {/* Canvas Background */}
       <canvas;
         ref={canvasRef}
         className='absolute inset-0 w-full h-full';
         style={{ zIndex: -1 ,}
 }
-      />;
+         />;
       {/* Overlay Gradients */}
 
-      <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80' />
-      <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />
+      <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80'    />
+      <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60'    />
 
       {/* Floating Elements */}
-      <div className='absolute inset-0' />;
+      <div className='absolute inset-0'    />;
         {/* Animated Grid Pattern */}
 
           <div;
@@ -217,7 +217,7 @@ className='absolute top-0 left-0 w-full h-full'
   animation: 'grid_move 20s linear infinite',}
             }}
 
-          />
+             />
         </div>
         {/* Floating Geometric Elements */}
         <motion.div;
@@ -232,7 +232,7 @@ className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-l
             repeat: Infinity,}
 ease: 'linear',}
           }}
-        />
+           />
         <motion.div;
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full'
           animate={{
@@ -245,7 +245,7 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounde
             repeat: Infinity,}
 ease: 'linear',}
           }}
-        />
+           />
         <motion.div;
 className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45'
           animate={{
@@ -258,7 +258,7 @@ className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transf
             repeat: Infinity,}
 ease: 'linear',}
           }}
-        />
+           />
         {/* Additional Floating Elements */}
         <motion.div;
 className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
@@ -273,7 +273,7 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transf
             repeat: Infinity,}
 ease: 'linear',}
           }}
-        />
+           />
         <motion.div;
 className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full'
           animate={{
@@ -300,7 +300,7 @@ className='absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full'
 ease: 'easeInOut',}
           }}
 
-        />;
+           />;
 
         <motion&& motion.div;
 className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full'
@@ -310,7 +310,7 @@ className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full'
             opacity: [0.4, 0.7, 0.4],}
 }
           }}
-        />;
+           />;
       </div>;
             transform: translate(0, 0)opacity: [0.4, 0.7, 0.4],}}
           transition={{duration: 4,repeat: Infinity,ease: 'easeInOut',}
@@ -321,11 +321,11 @@ className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full'
           animate={{y: [0, -25, 0],opacity: [0.4, 0.9, 0.4],}}
           transition={{duration: 5,repeat: Infinity,ease: 'easeInOut',}
   delay: 2,}}
-        />;
+           />;
       </div>;
       {/* CSS Animations */}
 
-      <style jsx />{`
+      <style jsx    />{`
         @keyframes gridMove {
           0% {}
 transform: translate(0, 0);}
@@ -340,7 +340,7 @@ transform: translate(0, 0);}
             opacity: 0.2;}
       }
       {/* CSS Animations */}
-      <style jsx />{`
+      <style jsx    />{`
         @keyframes gridMove {
           0% {}
             transform: translate(0, 0)}

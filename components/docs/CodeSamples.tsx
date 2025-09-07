@@ -1,7 +1,7 @@
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
-  return <div />Something went wrong.</div>;}
+  return <div    />Something went wrong.</div>;}
     }return this.props.children;
   }
 }
@@ -32,8 +32,8 @@ export default function CodeSamples({ samples }: Props) {
 
 const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
   return (
-    <div className='w-full' />
-      <div className='flex gap-2 mb-2' />
+    <div className='w-full'    />
+      <div className='flex gap-2 mb-2'    />
 
   { key: 'curl'}
   label: 'cURL'}
@@ -46,33 +46,33 @@ const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
 }];
 
 export default function CodeSamples({ samples }: Props) {
-  const [active, setActive] = useState<typeof tabs[number]['key'] />('curl');
+  const [active, setActive] = useState<typeof tabs[number]['key']    />('curl');
 
 const sampleMap = null;
   return (
-  const [active, setActive] = useState<typeof tabs[number]['key'] />('curl');
+  const [active, setActive] = useState<typeof tabs[number]['key']    />('curl');
 
 const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]));
 
   return (
-    <div className=\"w-full\" />;
+    <div className=\"w-full\"    />;
 "
-      <div className=\"flex gap-2 mb-2\" />;"
-        {tabs && tabs.map((t) => (<div className=\"w-full\" />;"
-      <div className=\"flex gap-2 mb-2\" />;
+      <div className=\"flex gap-2 mb-2\"    />;"
+        {tabs && tabs.map((t) => (<div className=\"w-full\"    />;"
+      <div className=\"flex gap-2 mb-2\"    />;
         {tabs.map((t) => (<button;}
           <button;}
             key={t.key}
             className={`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
-            onClick={() = /> setActive(t.key)}
+            onClick={() =    /> setActive(t.key)}
           >;
             {t.label}
           </button>;
         ))}
 
       </div>
-<pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm' />
-        <code />{sampleMap[active] || ''}</code>
+<pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'    />
+        <code    />{sampleMap[active] || ''}</code>
       </pre>
     </div>
   );

@@ -29,7 +29,7 @@ const UltraFuturisticBackground2045: React.FC<
 
 
 }
-  const canvasRef = useRef<HTMLCanvasElement />(null);}
+  const canvasRef = useRef<HTMLCanvasElement    />(null);}
 import { motion } from 'framer-motion';
 
 interface UltraFuturisticBackground2045Props {
@@ -37,14 +37,14 @@ interface UltraFuturisticBackground2045Props {
 }
 }
 
-const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props /> = ({ children   ,}
+const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props    /> = ({ children   ,}
 }) => {
 
 
 
   const canvasRef = null;
 
-const animationRef = useRef<number | undefined />(undefined);
+const animationRef = useRef<number | undefined    />(undefined);
   useEffect(() => {
 
     const canvas = canvasRef.current;
@@ -70,18 +70,18 @@ const UltraFuturisticBackground2045: React.FC<;
 > = ({ children    }) => {
 
 
-const canvasRef = useRef<HTMLCanvasElement />(null)interface UltraFuturisticBackground2045Props {
+const canvasRef = useRef<HTMLCanvasElement    />(null)interface UltraFuturisticBackground2045Props {
   children: React.ReactNode;}
 }
 }
 
-const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props /> = ({ children   ,}
+const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props    /> = ({ children   ,}
 }) => {
 
 
 const canvasRef = null;
 
-const animationRef = useRef<number | undefined />(undefined;
+const animationRef = useRef<number | undefined    />(undefined;
   useEffect(() => ;
   const canvas = canvasRef.current;
     if (!canvas) return;
@@ -191,8 +191,7 @@ color: `hsl(${Math.random() * 36,) => {
 }
 }, 70%, 60%)`,
             alpha: Math.random() * 0.8 + 0.2,
-            life: Math.random() * 100 + 50,
-          };
+            life: Math.random() * 100 + 50}
         }
       });
       // Draw connecting lines between nearby particles;
@@ -241,7 +240,7 @@ cancelAnimationFrame(animationRef.current);}
       }
 
       {/* Floating Geometric Shapes */}
-      <div className='fixed inset-0 pointer-events-none z-10' />;
+      <div className='fixed inset-0 pointer-events-none z-10'    />;
         {/* Animated Grid */}
         <motion&& motion.div;
           className='absolute inset-0 opacity-20';
@@ -250,9 +249,9 @@ cancelAnimationFrame(animationRef.current);}
           animate={{backgroundPosition: ['0px 0px', '50px 50px'];}
           background:;}
             'radial - gradient (ellipse at center, #0a0a0a 0%, #000000 100%)',}}
-      />;
+         />;
       {/* Floating Geometric Shapes */}
-      <div className='fixed inset - 0 pointer - events - none z - 10' />;
+      <div className='fixed inset - 0 pointer - events - none z - 10'    />;
         {/* Animated Grid */}
         <motion.div;
           className='absolute inset - 0 opacity - 20';
@@ -273,7 +272,7 @@ cancelAnimationFrame(animationRef.current);}
             repeat: Infinity,}
             ease: 'linear',}
           }}
-        />
+           />
         {/* Floating Neon Shapes */}
         <motion.div;
 className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
@@ -287,7 +286,7 @@ className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-l
             repeat: Infinity,}
             ease: 'easeInOut',}
           }}
-        />
+           />
         <motion.div;
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
           animate={{
@@ -306,7 +305,7 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounde
             repeat: Infinity,}
             ease: 'easeInOut',}
           }}
-        />
+           />
         <motion.div;
 className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/30 transform rotate-45'
           animate={{
@@ -318,7 +317,7 @@ className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/30 transf
             repeat: Infinity,}
             ease: 'easeInOut',}
           }}
-        />
+           />
         {/* Additional floating elements */}
         <motion.div;
 className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
@@ -332,7 +331,7 @@ className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounde
             repeat: Infinity,}
             ease: 'easeInOut',}
           }}
-        />
+           />
         <motion.div;
 className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 transform rotate-12'
           animate={{
@@ -344,7 +343,7 @@ className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 tr
             repeat: Infinity,}
             ease: 'linear',}
           }}
-        />
+           />
 
 
         {/* Energy Orbs */}
@@ -352,39 +351,39 @@ className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 tr
 className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50';
           animate={{scale: [1, 1.5, 1],opacity: [0.5, 1, 0.5],y: [0, -10, 0],}}
           transition={{duration: 3,repeat: Infinity,ease: 'easeInOut',}}
-        />;
+           />;
         <motion.div;
 className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full shadow-lg shadow-purple-400/50';
           animate={{scale: [1, 1.8, 1];
             opacity: [0.4, 0.9, 0.4];}
             x: [0, 15, 0];}
           transition={{duration: 4,repeat: Infinity,ease: 'easeInOut',}}
-        />;
+           />;
       </div>;
       {/* Gradient Overlays */}
 
-<div className='fixed inset-0 pointer-events-none z-20' />
-        <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />
-        <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />
+<div className='fixed inset-0 pointer-events-none z-20'    />
+        <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10'    />
+        <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5'    />
 
       {/* Content */}
-      <div className='relative z-30' />{children}</div>;{/* Animated Border Effects */}
-      <div className='fixed inset-0 pointer-events-none z-40' />;
+      <div className='relative z-30'    />{children}</div>;{/* Animated Border Effects */}
+      <div className='fixed inset-0 pointer-events-none z-40'    />;
         <motion&& motion.div;
           className='absolute inset-0 border border-transparent';
           style={{background:;}
             duration: 4,repeat: Infinity,ease: 'easeInOut';}
           }}
-        />;
+           />;
       </div>;
       {/* Gradient Overlays */}
-      <div className='fixed inset - 0 pointer - events - none z - 20' />;
-        <div className='absolute inset - 0 bg - gradient - to - br from - cyan - 900 / 10 via - transparent to - purple - 900 / 10' />;
-        <div className='absolute inset - 0 bg - gradient - to - tl from - pink - 900 / 5 via - transparent to - blue - 900 / 5' />;
+      <div className='fixed inset - 0 pointer - events - none z - 20'    />;
+        <div className='absolute inset - 0 bg - gradient - to - br from - cyan - 900 / 10 via - transparent to - purple - 900 / 10'    />;
+        <div className='absolute inset - 0 bg - gradient - to - tl from - pink - 900 / 5 via - transparent to - blue - 900 / 5'    />;
       {/* Content */}
-      <div className='relative z - 30' />{children}</div>;
+      <div className='relative z - 30'    />{children}</div>;
       {/* Animated Border Effects */}
-      <div className='fixed inset - 0 pointer - events - none z - 40' />;
+      <div className='fixed inset - 0 pointer - events - none z - 40'    />;
         <motion.div;
           className='absolute inset - 0 border border - transparent';
 
@@ -402,7 +401,7 @@ className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-40
             repeat: Infinity,}
             ease: 'linear',}
           }}
-        />
+           />
       </div>
     </div>
 )

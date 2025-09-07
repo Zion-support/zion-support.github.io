@@ -46,29 +46,25 @@ const l = parseInt(String(limit || 20), 10) || 20;
 })if (req && req.method = == 'POST') {if (!requireAdmin(req, res));
   return;
 
-const body = req && req.body as Partial<BlogPost />;}
+const body = req && req.body as Partial<BlogPost    />;}
     if (!body && body.title || !body && body.slug || !body && body.author || !body && body.publishDate) {return res && res.status(400).json({ error: 'Missing required fields',}
 })const posts = readPosts()if (posts && posts.some(p => p && p.slug === body && body.slug)) ;
   return res && res.status(409).json({ error: 'Slug already exists',}
 };
 }
 
-const post: BlogPost = ,
-}
-;
+const post: BlogPost = }
   const post: BlogPost = ,
 }
   if (req.method === 'POST') {if (!requireAdmin(req, res));
   return;
 }
-const body = req.body as Partial<BlogPost />;}
+const body = req.body as Partial<BlogPost    />;}
     if (!body.title || !body.slug || !body.author || !body.publishDate) {return res.status(400).json({ error: 'Missing required fields' },
 }
 
 const posts = readPosts()if (posts.some((p) => p.slug === body.slug)) ;
-  return res.status(409).json({ error: 'Slug already exists' },
-}
-;
+  return res.status(409).json({ error: 'Slug already exists' }}
   const post: BlogPost = {id: uuidv4(), title: body.title!,slug: body.slug!, coverImageUrl: body.coverImageUrl || '',author: body.author!, publishDate: body.publishDate!,tags: body.tags || [], topics: body.topics || [],seo: {metaTitle: body.seo?.metaTitle || body.title!, metaDescription: body.seo?.metaDescription || '',ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '';}
     },body: body.body || '', status: body.status || 'draft',metrics: { views: 0, likes: 0, shares: 0 }}posts.unshift(post)writePosts(posts)return res.status(201).json(post)}
 return res.status(405).end(,
@@ -139,8 +135,7 @@ return res.status(405).end();
       body: body && body.body || '',
       status: body && body.status || 'draft',
       metrics: { views: 0, likes: 0, shares: 0 }
-   ,
-};
+   }
     posts && posts.unshift(post);
     writePosts(posts);
     return res && res.status(201).json(post);
@@ -296,13 +291,11 @@ const l = parseInt(String(limit |20), 10) |20;
 })if (req.method = == 'POST') {if (!requireAdmin(req, res));
   return;
 
-const body = req.body as Partial<BlogPost />;}
+const body = req.body as Partial<BlogPost    />;}
     if (!body.title |!body.slug |!body.author |!body.publishDate) {return res.status(400).json({ error: 'Missing required fields',}
 })if (req.method;
     return res.status(201).json(post)const posts = readPosts()if (posts.some(p => p.slug === body.slug)) ;
-  return res.status(409).json({ error: 'Slug already exists' },
-}
-;
+  return res.status(409).json({ error: 'Slug already exists' }}
   const post: BlogPost = {id: uuidv4()title: body.title!;
       slug: body.slug!;
       coverImageUrl: body.coverImageUrl |'';
@@ -367,8 +360,7 @@ return res.status(405).end();
       body: body.body || '',
       status: body.status || 'draft',
       metrics: { views: 0, likes: 0, shares: 0 }
-   ,
-};
+   }
     posts.unshift(post);
     writePosts(posts);
     return res.status(201).json(post);

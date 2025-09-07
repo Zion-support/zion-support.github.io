@@ -36,7 +36,7 @@ interface ToastProps {;
 ) => {
   return $3;}
 }
-const ToastItem: React.FC<ToastProps /> = ({ toast, onRemove    }) => {
+const ToastItem: React.FC<ToastProps    /> = ({ toast, onRemove    }) => {
 
 
 
@@ -55,24 +55,24 @@ setTimeout(() => onRemove(toast.id), 300);}
 const getIcon = (
     switch (toast.type) {
       case 'success':;
-  return <CheckCircle className='w-5 h-5 text-green-400' />;
+  return <CheckCircle className='w-5 h-5 text-green-400'    />;
       case 'error':
 
-        return <AlertCircle className='w-5 h-5 text-red-400' />;
+        return <AlertCircle className='w-5 h-5 text-red-400'    />;
       case 'warning':;
-        return <AlertCircle className='w-5 h-5 text-yellow-400' />;
+        return <AlertCircle className='w-5 h-5 text-yellow-400'    />;
       case 'info':;
-        return <Info className='w-5 h-5 text-blue-400' />;
+        return <Info className='w-5 h-5 text-blue-400'    />;
 
       default:
 
-        return <Info className='w-5 h-5 text-blue-400' />;) => {
+        return <Info className='w-5 h-5 text-blue-400'    />;) => {
   return $3;}
 }
     }
   }
 
-        return <Info className='w-5 h-5 text-blue-400' />;    }
+        return <Info className='w-5 h-5 text-blue-400'    />;    }
 
     }
 
@@ -114,23 +114,23 @@ default:
     }
   }
     >;
-      <div className='flex items-start space-x-3' />;
-        <div className='flex-shrink-0 mt-0.5' />{getIcon()}</div>;
-        <div className='flex-1 min-w-0' />;
-          <h4 className='text-sm font-semibold text-white' />{toast.title}</h4>;
-          {toast.message && (<p className='mt-1 text-sm text-white/70' />{toast.message}</p>;
+      <div className='flex items-start space-x-3'    />;
+        <div className='flex-shrink-0 mt-0.5'    />{getIcon()}</div>;
+        <div className='flex-1 min-w-0'    />;
+          <h4 className='text-sm font-semibold text-white'    />{toast.title}</h4>;
+          {toast.message && (<p className='mt-1 text-sm text-white/70'    />{toast.message}</p>;
           )}
 
         </div>
         <button;
-onClick={() = /> {;
+onClick={() =    /> {;
             setIsVisible(false);
 }
 setTimeout(() => onRemove(toast.id), 300);}
           }}
 
       {/* Progress bar */}
-      <div className='absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden' />;
+      <div className='absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden'    />;
         <motion&& motion.div;
           className={`h-full ${toast && toast.type === 'success';
               ? 'bg-green-400';
@@ -142,7 +142,7 @@ setTimeout(() => onRemove(toast.id), 300);}
           }`}
           initial={{ width: '100%' }}
           animate={{ width: '0%' }}
-}) = /> {transition={{ duration: toast && toast.duration || 5000, ease: 'linear' }
+}) =    /> {transition={{ duration: toast && toast.duration || 5000, ease: 'linear' }
 }
         />;
       </div>;
@@ -152,20 +152,20 @@ setTimeout(() => onRemove(toast.id), 300);}
 interface ToastContainerProps  {toasts: Toast[];
   onRemove: (id: string) => void;}
 }
-export const ToastContainer: React.FC<ToastContainerProps /> = ({ toasts,onRemove   }) => {
+export const ToastContainer: React.FC<ToastContainerProps    /> = ({ toasts,onRemove   }) => {
 
 
 return (className=\"flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200\">
 "
-          <X className=\"w-4 h-4 text-white/60 hover:text-white\" />;
+          <X className=\"w-4 h-4 text-white/60 hover:text-white\"    />;
         </button>;
       </div>;"
           className=\"flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200\">
 "
-          <X className=\"w-4 h-4 text-white/60 hover:text-white\" />;}
+          <X className=\"w-4 h-4 text-white/60 hover:text-white\"    />;}
         </button>;}
       </div>;{/* Progress bar */}"
-      <div className=\"absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden\" />;
+      <div className=\"absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden\"    />;
         <motion&& motion.div;
           className={`h-full ${toast && toast.type === 'success' ? 'bg-green-400' :;
             toast && toast.type === 'error' ? 'bg-red-400' :;
@@ -176,11 +176,11 @@ return (className=\"flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transiti
 
           animate={{ width: '0%' }}
 
-    <div className='fixed top-4 right-4 z-50 space-y-3' />
-      <AnimatePresence />
+    <div className='fixed top-4 right-4 z-50 space-y-3'    />
+      <AnimatePresence    />
 
         {toasts.map(toast => (}
-          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
+          <ToastItem key={toast.id} toast={toast} onRemove={onRemove}    />
         ))}
       </AnimatePresence>
     </div>
@@ -191,9 +191,9 @@ return (className=\"flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transiti
 // Hook for managing toasts;
 export const useToast = (
  ;
-  const [toasts, setToasts] = useState<Toast[] />([]);
+  const [toasts, setToasts] = useState<Toast[]    />([]);
 
-const addToast = (toast: Omit<Toast, 'id' />) => {
+const addToast = (toast: Omit<Toast, 'id'    />) => {
    ;
   const id = Math.random().toString(36).substr(2, 9);
 ) => {

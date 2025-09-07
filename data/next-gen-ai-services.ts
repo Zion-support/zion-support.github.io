@@ -5275,7 +5275,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Fully functional neural quantum brain interface with direct neural signal processing and quantum AI cognitive enhancement. Includes neural support center and 24/7 monitoring.",""
@@ -5327,7 +5327,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Fully functional quantum AI content factory with massive-scale content generation and multi-media creation capabilities. Includes content operations center and 24/7 support.",""
@@ -5379,7 +5379,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Fully functional AI autonomous research platform with breakthrough discovery capabilities and cross-domain knowledge synthesis. Includes research operations center and 24/7 autonomous research.",""
@@ -5431,7 +5431,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Fully functional quantum AI video production studio with Hollywood-quality output and 100x faster production capabilities. Includes video production center and 24/7 support.",""
@@ -5483,7 +5483,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Fully functional AI quantum computing platform with accessible quantum computing and AI optimization capabilities. Includes quantum operations center and 24/7 support.",""
@@ -5535,7 +5535,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Fully functional neural network evolution platform with self-evolving capabilities and continuous improvement. Includes evolution monitoring center and 24/7 support.",""
@@ -5587,7 +5587,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Fully functional quantum AI creativity engine with unlimited creative content generation and multi-domain capabilities. Includes creative operations center and 24/7 support.",""
@@ -5639,7 +5639,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Advanced neural interface system with AI enhancement capabilities, real-time processing, and secure quantum encryption.",""
@@ -5690,7 +5690,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Enterprise quantum computing platform with AI optimization, hybrid computing capabilities, and comprehensive quantum development tools.",""
@@ -5741,7 +5741,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Advanced AI-powered space mission control system with autonomous decision-making, real-time optimization, and comprehensive mission management capabilities.",""
@@ -5792,7 +5792,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Comprehensive AI biotech platform with drug discovery algorithms, genetic analysis tools, and clinical trial optimization capabilities.",""
@@ -5843,7 +5843,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Comprehensive predictive maintenance platform with IoT integration, AI algorithms, and enterprise-grade monitoring capabilities.",""
@@ -5895,7 +5895,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Full enterprise platform with advanced ML models, real-time data processing, comprehensive security, and scalable architecture.",""
@@ -5947,7 +5947,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Full SaaS platform with advanced AI models, real-time personalization, comprehensive analytics, and enterprise-grade security.",""
@@ -5999,7 +5999,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Full enterprise platform with advanced ML models, real-time optimization, comprehensive analytics, and enterprise integration capabilities.",""
@@ -6051,7 +6051,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Full professional trading platform with advanced AI models, real-time execution, comprehensive risk management, and regulatory compliance.",""
@@ -6103,7 +6103,7 @@ export const nextGenAIServices: NextGenAIService[] = [;
   mobile: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709",""
-      website: "https://ziontechgroup.com";,"
+      website: 'https://ziontechgroup.com';,"
 },
     realImplementation: true,"
     implementationDetails: "Full healthcare platform with advanced AI models, HIPAA compliance, comprehensive security, and medical device integration.",""

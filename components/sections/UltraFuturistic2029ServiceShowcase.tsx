@@ -122,7 +122,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<;
   title?: string;
   subtitle?: string;
 
-const [selectedCategory, setSelectedCategory] = useState<string />('all');
+const [selectedCategory, setSelectedCategory] = useState<string    />('all');
 
 const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>(;
     'innovation';
@@ -205,18 +205,18 @@ ease: 'easeOut' as const}
   };
 
   return (
-    <section className=\"py-20 relative overflow-hidden\" />;
+    <section className=\"py-20 relative overflow-hidden\"    />;
       {/* Background Elements */}
 
-      <div className='absolute inset-0 pointer-events-none' />
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl' /></div>
-        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl' /></div>
-        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl' /></div>
+      <div className='absolute inset-0 pointer-events-none'    />
+        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'    /></div>
+        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'    /></div>
+        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'    /></div>
       </div>
 
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'    />
         {/* Header */}
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />        {/* Header */}
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />        {/* Header */}
 
         {/* Header *}
 }
@@ -229,7 +229,7 @@ initial={{ opacity: 0, y: 30 }
 }
 
 className='text-center mb-16'
-         />
+            />
           <motion.h2;
 initial={{ opacity: 0, y: 20 }
 }
@@ -238,7 +238,7 @@ initial={{ opacity: 0, y: 20 }
             transition={{ duration: 0.8, delay: 0.1 }}
 
 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'
-           />
+              />
 
             {titl}
 }
@@ -251,7 +251,7 @@ className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
             transition={{ duration: 0.8, delay: 0.2 }}
 
 className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
-           />
+              />
 
             {subtitl}
 }
@@ -273,17 +273,17 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
 
           transition={{ duration: 0.6, delay: 0.3 }}
 className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
-         />
+            />
           {/* Category Filter */}
-          <div className='flex items-center space-x-2' />
-            <span className='text-gray-300 text-sm font-medium' />
+          <div className='flex items-center space-x-2'    />
+            <span className='text-gray-300 text-sm font-medium'    />
               Filter by:
             </span>
-            <div className='flex flex-wrap gap-2' />
+            <div className='flex flex-wrap gap-2'    />
               {categories.map(category => (}
                 <button;}
 key={category}
-                  onClick={() = /> setSelectedCategory(category}
+                  onClick={() =    /> setSelectedCategory(category}
 }
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${selectedCategory === category;
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg';}
@@ -300,17 +300,17 @@ key={category}
           </div>;
           {/* Sort Options */}
 
-<div className='flex items-center space-x-2' />
-            <span className='text-gray-300 text-sm font-medium' />Sort by: </span>
+<div className='flex items-center space-x-2'    />
+            <span className='text-gray-300 text-sm font-medium'    />Sort by: </span>
             <select;
 value={sortBy}
-              onChange={e = /> setSortBy(e.target.value as any)}
+              onChange={e =    /> setSortBy(e.target.value as any)}
               className='px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500'
             >
-              <option value='innovation' />Innovation Level</option>
-              <option value='price' />Price</option>
+              <option value='innovation'    />Innovation Level</option>
+              <option value='price'    />Price</option>
 
-              <option value='rating' />Rating</option>
+              <option value='rating'    />Rating</option>
             </select>
 
           </div>
@@ -328,18 +328,18 @@ initial='hidden'
 }
 
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-         />
+            />
           {filteredServices.map((service, index) => (}
             <motion.div;}
 key={service.id}
               variants={itemVariants}
-className='group' />
+className='group'    />
 
               <UltraFuturisticServiceCard;
                 service={service}
 
                 className='h-full transform group-hover: shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'
-              />
+                 />
             </motion.div>
 
           ))}
@@ -354,27 +354,27 @@ className='group' />
 
           transition={{ duration: 0.8, delay: 0.4 }}
 className='text-center mt-16'
-         />
-          <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm' />
-            <h3 className='text-3xl font-bold text-white mb-4' />
+            />
+          <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'    />
+            <h3 className='text-3xl font-bold text-white mb-4'    />
               Ready to Experience the Future?
             </h3>
-            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto' />
+            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'    />
               Join thousands of forward-thinking companies already using our;
 revolutionary 2029 technology solutions.
             </p>
-            <div className='flex flex-col sm:flex-row items-center justify-center gap-4' />
+            <div className='flex flex-col sm:flex-row items-center justify-center gap-4'    />
               <a;
 href='/contact'
 
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'
-               />
+                  />
                 Get Started Today;
               </a>
               <a;
 href='/pricing'
                 className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'
-               />
+                  />
                 View Pricing;
               </a>
             </div>
@@ -390,9 +390,9 @@ href='/pricing'
 }
           transition={{ duration: 0.8, delay: 0.5 }
 }
-className='mt-20' />
+className='mt-20'    />
 
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8' />;
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'    />;
             {[;
               {label: 'Revolutionary Services';
                 value: services.filter(s => s.innovationLevel === 'Revolutionary';
@@ -421,7 +421,7 @@ className='mt-20' />
               }
             ].map((stat, index) => (
               <motion.div;
-<div className='grid grid-cols-1 md:grid-cols-4 gap-8' />;
+<div className='grid grid-cols-1 md:grid-cols-4 gap-8'    />;
             {[;
               {label: 'Revolutionary Services'}
   value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary';}
@@ -449,17 +449,17 @@ className='mt-20' />
 
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 className='text-center'
-               />
+                  />
                 <div;
 className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4
-} />
+}    />
 
-                  <stat.icon className='w-8 h-8 text-white' />;
+                  <stat.icon className='w-8 h-8 text-white'    />;
                 </div>;
-                <div className='text-3xl font-bold text-white mb-2' />;
+                <div className='text-3xl font-bold text-white mb-2'    />;
                   {stat.value}
                 </div>;
-                <div className='text-gray-400' />{stat.label}</div>;
+                <div className='text-gray-400'    />{stat.label}</div>;
               </motion.div>;
             ))}
 

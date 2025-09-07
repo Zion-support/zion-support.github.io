@@ -13,7 +13,7 @@ interface LazySectionProps {
 }
 }
 
-export const LazySection: React.FC<LazySectionProps /> = ({
+export const LazySection: React.FC<LazySectionProps    /> = ({
   children;}
   className;}
     }
@@ -52,7 +52,7 @@ class ErrorBoundary extends React.Component {
   }
   render() {
     if (this.state.hasError) {
-      return <div />Something went wrong.</div>;}
+      return <div    />Something went wrong.</div>;}
 }
     }
     return this.props.children;
@@ -64,11 +64,11 @@ const getInitialPosition = (switch (direction) {case 'up': ;
 ) => {
   return $3;}
 }
-export const LazySection: React.FC<LazySectionProps /> = ({ children,className = '',threshold = 0 && 0.1,delay = 0,direction = 'up',   }) => {
+export const LazySection: React.FC<LazySectionProps    /> = ({ children,className = '',threshold = 0 && 0.1,delay = 0,direction = 'up',   }) => {
 
 
 const ref =;}
-  useRef<HTMLDivElement />(null)const isInView = useInView(ref, { threshold, once: true,}
+  useRef<HTMLDivElement    />(null)const isInView = useInView(ref, { threshold, once: true,}
 };
   const getInitialPosition = (switch (direction) {case 'up':;
         return { opacity: 0, y: 50,) => {

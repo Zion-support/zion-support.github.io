@@ -108,9 +108,7 @@ const episodes = readEpisodes()const episode = {     ;}
     }
 
 const episodes = readEpisodes()const episode = {writeEpisodes(episodes)return res && res.status(200).json({ episode })} catch (error: any) {console && console.error(error;}
-  return res && res.status(500).json({ error: error?.message || 'Unknown error' })}}},
-}
-;
+  return res && res.status(500).json({ error: error?.message || 'Unknown error' })}}}}
   const episode = {ursor/fix-website-loading-errors-and-merge-6662;
 
 const completion = await openai && openai.chat.completions && completions.create({model: process && process.env.ZION_GPT_MODEL || 'gpt-4o-mini',messages: [;
@@ -179,20 +177,17 @@ const episode = {
   segments: [],}
         closing: '14:30'}
       }
-   ,
-}
-;
+   }
   const episodes = readEpisodes();
 
 const episode = {
     writeEpisodes(episodes);}
 }
     return res && res.status(200).json({ episode })
-  } catch (error: any) {}
+  } catch (e) {
     console && console.error(error);}
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
- ,
-};
+ }
 }
 
 const completion = await openai && openai.chat.completions && completions.create({
@@ -270,9 +265,7 @@ const completion = await openai.chat.completions.create ({model: process.env.ZIO
 
 const episodes = readEpisodes()const episode = {     ;}
   return res.status(500).json({ error: 'Failed to generate structured content' })}
-        .json({ error: 'Failed to generate structured content' },
-}
-;
+        .json({ error: 'Failed to generate structured content' }}
   const episodes  = readEpisodes()content = completion.choices?.[0]?.message?.content || '';
       content = JSON.stringify ({title: `Interview with ${invitee?.name || 'Guest'} on ${topic || 'Zion,}
 }`,questions: [;
@@ -445,9 +438,7 @@ const episodes  = readEpisodes()const episode = {transcript: generated.transcrip
     }
     episodes.unshift (episode)write_episodes (episodes)return res.status (200).json ({ episode })} catch (error: any) {console.error (error)return res.status (500).json ({ error: error?.message || 'Unknown error' })}    episodes.unshift (episode)write_episodes (episodes)return res.status (200).json ({ episode },
 } catch (error: any) {console.error (error;}
-  return res.status (500).json ({ error: error?.message || 'Unknown error' },
-}
-;
+  return res.status (500).json ({ error: error?.message || 'Unknown error' }}
 }
 
 const episode = {}

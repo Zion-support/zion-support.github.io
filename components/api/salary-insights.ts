@@ -41,17 +41,17 @@ const mid = Math.floor(arr.length / 2);
   return 0;
 return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
 
-function groupBy<T, K extends string | number />(
+function groupBy<T, K extends string | number    />(
   items: T[]
   getKey: (item: T) => K;
-): Record<K, T[] /> {
+): Record<K, T[]    /> {
     (acc, item) => {
       const key = getKey(item);
       (acc[key] |= []).push(item);
       return acc;}
 }
     }
-    {} as Record<K, T[] />;
+    {} as Record<K, T[]    />;
   )function extractCountry(location: string): string {function calculateSimilarityScore(targetSkills: string[];
   profile: TalentProfile;
 ): number {return () => {h += h << 13;
@@ -107,7 +107,7 @@ max_tokens: 300;
 
 export default async function handler(
   req: NextApiRequest;
-res: NextApiResponse<InsightResponse | { error: string } />
+res: NextApiResponse<InsightResponse | { error: string }    />
 ) {
   if (req.method !== 'POST') {}
     return res.status(405).json({ error: 'Method not allowed',}

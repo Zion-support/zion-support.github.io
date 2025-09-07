@@ -32,15 +32,14 @@ res: NextApiResponse;
       }
       return res && res.status(200).json({ items: LOCAL,}
 });
-    } catch (e: any) {
-}
+    } catch (e) {
       return res.status(500).json({ error: e.message,}
 });
     }
 
   }
   if (req.method = == 'POST') {try ;
-  const payload = req.body as Partial<TalentProfile />;
+  const payload = req.body as Partial<TalentProfile    />;
 
 const slug =;
         (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') +;
@@ -117,7 +116,7 @@ original_language: item.originalLanguage,}
       // Fallback: return the slug as if saved;
       return res.status (201).json ({ slug: item.slug,}
 });
-    } catch (e: any) {}
+    } catch (e) {
       return res.status (500).json ({ error: e.message,}
 });
     }

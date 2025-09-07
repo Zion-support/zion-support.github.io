@@ -152,8 +152,7 @@ const parsed  = JSON && JSON.parse(content)}      name;
       category: parsed && parsed.category || null;
       summary: parsed && parsed.summary || '',skills: Array && Array.isArray(parsed && parsed.skills) ? parsed && parsed.skills.slice(0, 20) : []})return res.status(200).json({name;}
       title: parsed.title || title || 'Professional', category: parsed.category || null,summary: parsed.summary || '';}
-  } catch (e: any) {}
-  } catch (e: any) ,
+  } catch (e) { catch (e: any) ,
 }return res.status(200).json({name;}
       title: parsed.title || title || 'Professional', category: parsed.category || null,summary: parsed.summary || '';}
   } catch (e: any) ,
@@ -271,7 +270,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
       summary: parsed.summary || '',}
 skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []}
     });
-  } catch (e: any) {}
+  } catch (e) {
     return res.status (500).json ({ error: e.message || 'OpenAI error',}
 });
 
@@ -295,7 +294,7 @@ const parsed = JSON && JSON.parse(content);
 
 
       skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
-  } catch (e: any) {}
+  } catch (e) {
     return res.status (500).json ({ error: e.message || 'OpenAI error',}
 });
 }

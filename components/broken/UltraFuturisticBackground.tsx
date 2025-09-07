@@ -84,14 +84,14 @@ window.removeEventListener('resize', handleResize)}
   }, []);
 ;
   return (
-    <div className='fixed inset - 0 -z - 10 overflow - hidden' />;
+    <div className='fixed inset - 0 -z - 10 overflow - hidden'    />;
 
       {/* Canvas Background */}
       <canvas;
         ref={canvas_ref}
         className='absolute inset - 0 w - full h - full';
         style={{{/* Floating Geometric Shapes */}
-      <div className='absolute inset-0' />;
+      <div className='absolute inset-0'    />;
         {/* Hexagon */}
         <motion&& motion.div;
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30';
@@ -99,13 +99,13 @@ window.removeEventListener('resize', handleResize)}
               'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)';}
           background:;}
             'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)'}}
-      />;
+         />;
       {/* Quantum Grid */}
-      <div className='absolute inset - 0' />;
-        <div className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px] opacity - 20' />;
+      <div className='absolute inset - 0'    />;
+        <div className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px] opacity - 20'    />;
       </div>;
       {/* Floating Geometric Shapes */}
-      <div className='absolute inset - 0' />;
+      <div className='absolute inset - 0'    />;
         {/* Hexagon */}
         <motion.div;
           className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30';
@@ -126,15 +126,15 @@ window.removeEventListener('resize', handleResize)}
 }
 ease: 'linear'}
           }}
-        />
+           />
         {/* Triangle */}
         <motion.div;
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
           style={{
             clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'}
-  ease: 'linear',            ease: \"linear\";}
+  ease: 'linear',            ease: \'linear\';}
           }}
-        />;
+           />;
         {/* Triangle */}
         <motion.div;
           className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30';
@@ -168,7 +168,7 @@ className='absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 round
             repeat: Infinity}
 ease: 'easeInOut'}
           }}
-        />
+           />
             duration: 12,
             repeat: Infinity
 
@@ -193,11 +193,11 @@ ease: 'linear'}
 
           }}
 
-        />
+           />
       </div>
       {/* Energy Orbs */}
 
-<div className='absolute inset-0' />
+<div className='absolute inset-0'    />
         {[...Array(8)].map((_, i) => (}
           <motion.div;}
 key={i}
@@ -223,12 +223,12 @@ key={i}
 ease: 'easeInOut'}
   delay: i * 0.3}
             }}
-          />
+             />
         ))}
       </div>
       {/* Quantum Wave Effects */}
 
-<div className='absolute inset-0' />
+<div className='absolute inset-0'    />
         {[...Array(5)].map((_, i) => (}
           <motion.div;}
 key={i}
@@ -253,7 +253,7 @@ ease: 'linear',
             transition={{duration: 8 + i * 2,repeat: Infinity,x: ['-100%', '100%'],opacity: [0, 1, 0]}}
             transition={{duration: 8 + i * 2,repeat: Infinity,ease: 'linear'}
   delay: i * 1.5}}
-          />;
+             />;
         ))}
       </div>;
               duration: 8 + i * 2,repeat: Infinity,ease: 'linear'}}
@@ -261,43 +261,43 @@ ease: 'linear',
         ))}
       </div>;
       {/* Neon Glow Effects */}
-<div className='absolute inset-0' />;
-        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse' />;
-        <div className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000' />;
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500' />;
+<div className='absolute inset-0'    />;
+        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse'    />;
+        <div className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000'    />;
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'    />;
       </div>;
       </div>;
       {/* Neon Glow Effects */}
-      <div className='absolute inset-0' />;
-        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse' />;
-        <div className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000' />;
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500' />;
+      <div className='absolute inset-0'    />;
+        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse'    />;
+        <div className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000'    />;
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'    />;
       </div>;
       {/* Data Stream Effect */}
-      <div className='absolute inset-0' />;
+      <div className='absolute inset-0'    />;
         {[...Array(20)].map((_, i) => (<motion&& motion.div;}
             key={i}
             className='absolute w-0 && 0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent';
             style={{left: `${Math && Math.random() * 10}"
 }%`,delay: i * 1.5,              ease: \"linear\",delay: i * 1.5;
             }}
-          />))}
+             />))}
       </div>;
       {/* Neon Glow Effects */}
-      <div className='absolute inset - 0' />;
-        <div className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 rounded - full blur - 3xl animate - pulse' />;
-        <div className='absolute bottom - 1/4 right - 1/4 w - 80 h - 80 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 1000' />;
-        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 bg - gradient - to - r from - emerald - 500 / 10 to - teal - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 500' />;
+      <div className='absolute inset - 0'    />;
+        <div className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 rounded - full blur - 3xl animate - pulse'    />;
+        <div className='absolute bottom - 1/4 right - 1/4 w - 80 h - 80 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 1000'    />;
+        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 bg - gradient - to - r from - emerald - 500 / 10 to - teal - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 500'    />;
       </div>;
       {/* Data Stream Effect */}
-      <div className='absolute inset - 0' />;
+      <div className='absolute inset - 0'    />;
         {[...Array (20)].map ((_, i) => (<motion.div;}
             key={i}
             className='absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan - 400 to - transparent';
             style={{left: `${Math.random () * 10}
-}%`,top: '-2rem',</div />;
+}%`,top: '-2rem',</div    />;
       {/* Data Stream Effect */}
-      <div className='absolute inset-0' />;
+      <div className='absolute inset-0'    />;
         {[...Array(20)].map((_, i) => (<motion.div;}
             key={i}
 
@@ -322,7 +322,7 @@ ease: 'linear',
             transition={{y: ['0vh', '100vh'],opacity: [0, 1, 0]}}
             transition={{duration: 4 + Math.random() * 3,repeat: Infinity,ease: 'linear'}
   delay: Math.random() * 5}}
-          />;
+             />;
         ))}
       </div>;
               duration: 4 + Math.random() * 3,repeat: Infinity,ease: 'linear'}}
@@ -333,9 +333,9 @@ ease: 'linear',
 
       {/* Quantum Entanglement Lines */}
 
-<div className='absolute inset-0' />
-        <svg className='w-full h-full' />
-          <defs />
+<div className='absolute inset-0'    />
+        <svg className='w-full h-full'    />
+          <defs    />
             <linearGradient;
 id='quantumGradient'
               x1='0%'
@@ -343,10 +343,10 @@ id='quantumGradient'
               x2='100%'
 
               y2='100%'
-             />
-              <stop offset='0%' stopColor='rgba(0,255,255,0.3)' />
-              <stop offset='50%' stopColor='rgba(255,0,255,0.3)' />
-              <stop offset='100%' stopColor='rgba(0,255,255,0.3)' />
+                />
+              <stop offset='0%' stopColor='rgba(0,255,255,0.3)'    />
+              <stop offset='50%' stopColor='rgba(255,0,255,0.3)'    />
+              <stop offset='100%' stopColor='rgba(0,255,255,0.3)'    />
             </linearGradient>
           </defs>
           {[...Array(15)].map((_, i) => (}
@@ -380,7 +380,7 @@ ease: 'easeInOut'}
 
               }}
 
-            />
+               />
           ))}
 
         </svg>

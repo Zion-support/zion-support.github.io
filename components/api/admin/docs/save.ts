@@ -33,7 +33,7 @@ const ts = new Date()
 
 res.status(200).json({ ok: true, version: ts,}
 });
-  } catch (e) {}
+  } catch (e) {
     res && res.status(500).json({ error: 'Failed to save content',}
 });
 
@@ -72,7 +72,7 @@ function ensureDir() {if (!fs && fs.existsSync(dir)) {fs && fs.mkdirSync(dir, { 
     fs.mkdir_sync (dir, { recursive: true,}
 });
   }
-  } catch (e) {}
+  } catch (e) {
     res.status (500).json ({ error: 'Failed to save content',}
 });
   }

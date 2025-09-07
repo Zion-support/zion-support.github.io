@@ -14,20 +14,19 @@ if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
   try {
     const data = fs.readFileSync(CONTENT_PATH, 'utf8');}
 res.status(200).json(JSON.parse(data));}
-  } catch (e) {}
+  } catch (e) {
     res && res.status(500).json({ error: 'Failed to read content',}
 });
   }
 
-  } catch (e) {}
+  } catch (e) {
     res.status (500).json ({ error: 'Failed to read content',}
 });
   }
-  } catch (e) {}
+  } catch (e) {
     res.status (500).json ({ error: 'Failed to read content',}
 });
-  }  } catch (e) {}
-}
+  }  } catch (e) {
     res.status(500).json({ error: 'Failed to read content' })
   },
 }

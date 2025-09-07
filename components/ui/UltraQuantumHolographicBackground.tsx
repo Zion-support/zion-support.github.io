@@ -50,7 +50,7 @@ className = '') => {
   className = ''}
 }: UltraQuantumHolographicBackgroundProps) {;
 
-const canvasRef = useRef<HTMLCanvasElement />(null);
+const canvasRef = useRef<HTMLCanvasElement    />(null);
 }
 const [dimensions, setDimensions] = useState({ width: 0, height: 0}
 });
@@ -331,9 +331,9 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0'
           filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px}
 })`
         }}
-      />
+         />
       {/* Holographic Overlay Effects */}
-<div className='fixed inset-0 z-10 pointer-events-none' />
+<div className='fixed inset-0 z-10 pointer-events-none'    />
         {/* Quantum Field Lines */}
         <motion.div;
 className='absolute inset-0'
@@ -351,10 +351,10 @@ className='absolute inset-0'
             repeat: Infinity}
 ease: 'easeInOut'}
           }}
-        />;
+           />;
         {/* Holographic Scan Lines */}
 
-<div className='absolute inset-0 opacity-20' />
+<div className='absolute inset-0 opacity-20'    />
           {Array.from({ length: Math.ceil(dimensions.height / 4)}
 }).map(
             (_, i) => (
@@ -372,7 +372,7 @@ key={i}
                   repeat: Infinity;}
                   ease: 'easeInOut';}
                 }}
-              />;
+                 />;
             ))}
         </div>;
         {/* Quantum Fluctuations */}
@@ -397,17 +397,17 @@ ease: 'easeInOut'}
 
 
 
-        />
+           />
       </div>
         />;
       </div>;
       {/* Content Layer */}
 
-<div className='relative z-20' />{children}</div>
+<div className='relative z-20'    />{children}</div>
 
 
       {/* Quantum Noise Effect */}
-      <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5' />;
+      <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'    />;
         <motion.div;
           className='absolute inset - 0';
 
@@ -423,7 +423,7 @@ ease: 'easeInOut'}
             repeat: Infinity}
 ease: 'easeInOut'}
           }}
-        />
+           />
       </div>
     </div>
 

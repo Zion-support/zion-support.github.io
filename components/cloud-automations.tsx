@@ -3,7 +3,7 @@ export default function CloudAutomationsPage() {
 
 export default function CloudAutomationsPage() {;
 
-const [data, setData] = useState<any />(null);
+const [data, setData] = useState<any    />(null);
   useEffect(() => {
 ;
     fetch('/api/cloud-automations-status');
@@ -16,41 +16,41 @@ const [data, setData] = useState<any />(null);
 }));
 
 export default function CloudAutomationsPage() {
-  const [data, setData] = useState<any />(null);
+  const [data, setData] = useState<any    />(null);
   useEffect(() => {
 
     fetch('/api/cloud-automations-status')
 
   const items = null;
   return (
-    <div className='space-y-6' />
-      <h1 className='text-3xl font-bold' />Cloud Automations</h1>
-      <p className='text-gray-600 dark:text-gray-300' />
+    <div className='space-y-6'    />
+      <h1 className='text-3xl font-bold'    />Cloud Automations</h1>
+      <p className='text-gray-600 dark:text-gray-300'    />
         Autonomous agents running in the cloud. No servers to babysit. No manual;
 ops.
       </p>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4' />
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'    />
         {items.map(([key, value]: any) => (}
           <div;}
 key={key}
-            className='border rounded p-4 bg-gray-50 dark: bg-gray-900' />
+            className='border rounded p-4 bg-gray-50 dark: bg-gray-900'    />
 
-            <h2 className='text-xl font-semibold' />{value.name |ke,}
+            <h2 className='text-xl font-semibold'    />{value.name |ke,}
 }</h2>;
-            <p className='text-sm text-gray-500' />;
+            <p className='text-sm text-gray-500'    />;
               Started: {value.startedAt |'—,}
 }
             </p>;
-            <p className='text-sm text-gray-500' />;
+            <p className='text-sm text-gray-500'    />;
               Finished: {value.finishedAt |'—,}
 }
             </p>;
             <p;
-              className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`} />
+              className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}    />
 
               {value.success ? 'Success' : 'Failed'}
             </p>;
-            {value.metrics ? (<pre className='mt-2 text-xs whitespace-pre-wrap' />;}
+            {value.metrics ? (<pre className='mt-2 text-xs whitespace-pre-wrap'    />;}
                 {JSON.stringify(value.metrics, null, 2)}
 
               </pre>

@@ -44,10 +44,9 @@ const content = chat && chat.choices?.[0]?.message?.content || baseSummary;
 });
   }
     return res.status(200).json({ summary: content, provider: 'openai' })
-  } catch (e: any) {}
+  } catch (e) {
     return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
- ,
-};
+ }
 }
 
 }

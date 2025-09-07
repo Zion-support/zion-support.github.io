@@ -94,19 +94,19 @@ const categories = [
   count: '75+',icon: Sparkles,color: 'from-blue-500 to-cyan-500'},{name: 'Emerging Tech'}
   count: '100+',icon: Rocket,color: 'from-green-500 to-emerald-500'},{name: 'IT Solutions'}
   count: '200+',icon: Cloud,color: 'from-yellow-500 to-orange-500'}];
-  return (<section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden' />;
+  return (<section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'    />;
       {/* Background Effects */}{ name: 'IT Solutions'}
   count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500'}
 }
   ];
 
   return (
-    <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden' />;
+    <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'    />;
       {/* Background Effects */}
 
-      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10' /></div>
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'    /></div>
 
-      <div className='max-w-7xl mx-auto relative z-10' />
+      <div className='max-w-7xl mx-auto relative z-10'    />
 
         {/* Section Header */}
         <motion&& motion.div;
@@ -119,33 +119,33 @@ const categories = [
 }
 
 className='text-center mb-16'
-         />
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />
-            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent' />
+            />
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'    />
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />
               2026 Revolutionary Services;
             </span>
           </h2>
-          <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed' />
+          <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed'    />
             Experience the future with our cutting-edge AI, quantum, and;
 emerging technology services designed to transform your business;
           </p>
         </motion.div>
 
           className='text-center mb-16'>;
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
-            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent' />;
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'    />;
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />;
               2026 Revolutionary Services;
             </span>;
           </h2>;
-          <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed' />;
+          <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed'    />;
             Experience the future with our cutting-edge AI, quantum, and;
             emerging technology services designed to transform your business          </p>        >;
-          <h2 className=\"text-4xl md:text-5xl font-bold text-white mb-6\" />;"
-            <span className=\"bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\" />;
+          <h2 className=\"text-4xl md:text-5xl font-bold text-white mb-6\"    />;"
+            <span className=\"bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent\"    />;
               2026 Revolutionary Services;
             </span>;
           </h2>;"
-          <p className=\"text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed\" />;
+          <p className=\"text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed\"    />;
             Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business;
           </p>;
         </motion && motion.div>;{/* Category Overview */}
@@ -160,7 +160,7 @@ emerging technology services designed to transform your business;
 }
 
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
-         />
+            />
           {categories.map((category, index) => (}
             <motion.div;}
 key={category.name}
@@ -175,7 +175,7 @@ key={category.name}
 }
 
 className='group text-center'
-             />
+                />
 
               whileInView={{ opacity: 1, scale: 1 }
 }
@@ -188,15 +188,15 @@ className='group text-center'
 
               <div;
 className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
-               />
-                <category.icon className='w-8 h-8 text-white' />
+                  />
+                <category.icon className='w-8 h-8 text-white'    />
               </div>
-              <h3 className='text-lg font-bold text-white mb-2' />
+              <h3 className='text-lg font-bold text-white mb-2'    />
 
                 {category.nam}
 }
               </h3>;
-              <p className='text-2xl font-bold text-cyan-400' />;
+              <p className='text-2xl font-bold text-cyan-400'    />;
                 {category.count}
 
               </p>
@@ -204,7 +204,7 @@ className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items
           ))}
         {/* Featured Services Grid */}
 
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16' />
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'    />
           {featuredServices.map((service, index) => (}
             <motion.div;}
 key={service.id}
@@ -216,98 +216,98 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               viewport={{ once: true }
 }whileHover={{ scale: 1.02, y: -5 }
 }
-className='group relative' />
+className='group relative'    />
 
               <div;
                 className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500
 }
-               /></div>;
-              <div className='relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300' />;
+                  /></div>;
+              <div className='relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300'    />;
                 {/* Service Header */}
 
-                <div className='flex items-center space-x-3 mb-4' />
+                <div className='flex items-center space-x-3 mb-4'    />
                   <div;
 className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center`}
-                   />
-                    <service.icon className='w-6 h-6 text-white' />
+                      />
+                    <service.icon className='w-6 h-6 text-white'    />
                   </div>
-                  <div />
-                    <h3 className='text-lg font-bold text-white' />
+                  <div    />
+                    <h3 className='text-lg font-bold text-white'    />
 
                       {service.name}
                     </h3>;
-                    <p className='text-gray-400 text-sm' />{service.category}</p>;
+                    <p className='text-gray-400 text-sm'    />{service.category}</p>;
                   </div>;
                 </div>;
                 {/* Description */}
 
-<p className='text-gray-300 text-sm mb-4 leading-relaxed' />
+<p className='text-gray-300 text-sm mb-4 leading-relaxed'    />
 
                   {service.description}
                 </p>;
                     className={`w-12 h-12 bg-gradient-to-br ${service && service.color} rounded-xl flex items-center justify-center`}>
 
-                    <service && service.icon className='w-6 h-6 text-white' />;
+                    <service && service.icon className='w-6 h-6 text-white'    />;
                   </div>;
-                  <div />;
-                    <h3 className='text-lg font-bold text-white' />;
+                  <div    />;
+                    <h3 className='text-lg font-bold text-white'    />;
                       {service && service.name}
                     </h3>;
-                    <p className='text-gray-400 text-sm' />{service && service.category}</p>                  </div>;
+                    <p className='text-gray-400 text-sm'    />{service && service.category}</p>                  </div>;
                 </div>;
                 {/* Features */}            >;
               <div className={`absolute inset-0 bg-gradient-to-r ${service && service.color} opacity-10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500
-} /></div>;"
-              <div className=\"relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300\" />;
+}    /></div>;"
+              <div className=\"relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300\"    />;
                 {/* Service Header */}"
-                <div className=\"flex items-center space-x-3 mb-4\" />;
-                  <div className={`w-12 h-12 bg-gradient-to-br ${service && service.color} rounded-xl flex items-center justify-center`} />
+                <div className=\"flex items-center space-x-3 mb-4\"    />;
+                  <div className={`w-12 h-12 bg-gradient-to-br ${service && service.color} rounded-xl flex items-center justify-center`}    />
 "
-                    <service && service.icon className=\"w-6 h-6 text-white\" />;
+                    <service && service.icon className=\"w-6 h-6 text-white\"    />;
                   </div>;
-                  <div />;"
-                    <h3 className=\"text-lg font-bold text-white\" />{service && service.name}</h3>;"
-                    <p className=\"text-gray-400 text-sm\" />{service && service.category}</p>;
+                  <div    />;"
+                    <h3 className=\"text-lg font-bold text-white\"    />{service && service.name}</h3>;"
+                    <p className=\"text-gray-400 text-sm\"    />{service && service.category}</p>;
                   </div>;
                 </div>;
                 {/* Description */}"
-                <p className='text-gray-300 text-sm mb-4 leading-relaxed' />                <p className=\"text-gray-300 text-sm mb-4 leading-relaxed\" />;
+                <p className='text-gray-300 text-sm mb-4 leading-relaxed'    />                <p className=\"text-gray-300 text-sm mb-4 leading-relaxed\"    />;
                   {service && service.description}
                 </p>;
 
                 {/* Features */}
 
-<div className='mb-4' />
-                  <ul className='space-y-1' />
+<div className='mb-4'    />
+                  <ul className='space-y-1'    />
                     {service.features.slice(0, 2).map((feature, i) => (}
                       <li;}
 key={i}
                         className='flex items-center text-gray-400 text-xs'
-                       />
-                        <Star className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />
+                          />
+                        <Star className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0'    />
                         {feature}
                       </li>
                     ))}
                 {/* Price and CTA */}
 
-<div className='flex items-center justify-between' />
-                  <div />
-                    <span className='text-2xl font-bold text-cyan-400' />
+<div className='flex items-center justify-between'    />
+                  <div    />
+                    <span className='text-2xl font-bold text-cyan-400'    />
 
                       {service.price}
                     </span>;
-                    <span className='text-gray-400 text-sm' />;
+                    <span className='text-gray-400 text-sm'    />;
                       {service.period}
                     </span>;
                   </div>;
                     ))}
                 {/* Price and CTA */}
-                <div className='flex items-center justify-between' />;
-                  <div />;
-                    <span className='text-2xl font-bold text-cyan-400' />;
+                <div className='flex items-center justify-between'    />;
+                  <div    />;
+                    <span className='text-2xl font-bold text-cyan-400'    />;
                       {service && service.price}
                     </span>;
-                    <span className='text-gray-400 text-sm' />;
+                    <span className='text-gray-400 text-sm'    />;
                       {service && service.period}
                     </span>;
                   </div>;
@@ -315,8 +315,8 @@ key={i}
                   <Link;
 href={`/${service.id}`}
                     className='inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'
-                   />
-                    Learn More <ArrowRight className='w-4 h-4 ml-1' />
+                      />
+                    Learn More <ArrowRight className='w-4 h-4 ml-1'    />
                   </Link>
                 </div>
               </div>
@@ -327,14 +327,14 @@ href={`/${service.id}`}
         </div>;
                     href={`/${service && service.id}`}
                     className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'>;
-                    Learn More <ArrowRight className='w-4 h-4 ml-1' />                  </Link>                  <div />;"
-                    <span className=\"text-2xl font-bold text-cyan-400\" />{service && service.price}</span>;"
-                    <span className=\"text-gray-400 text-sm\" />{service && service.period}</span>;
+                    Learn More <ArrowRight className='w-4 h-4 ml-1'    />                  </Link>                  <div    />;"
+                    <span className=\"text-2xl font-bold text-cyan-400\"    />{service && service.price}</span>;"
+                    <span className=\"text-gray-400 text-sm\"    />{service && service.period}</span>;
                   </div>;
                   <Link;
                     href={`/${service && service.id}`}"
-                    className=\"inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200\" />;"
-                    Learn More <ArrowRight className=\"w-4 h-4 ml-1\" />;
+                    className=\"inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200\"    />;"
+                    Learn More <ArrowRight className=\"w-4 h-4 ml-1\"    />;
                   </Link>;
                 </div>;
               </div>;
@@ -351,26 +351,26 @@ href={`/${service.id}`}
           viewport={{ once: true }}
 
 className='text-center'
-         />
-          <div className='bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8' />
-            <h3 className='text-2xl font-bold text-white mb-4' />
+            />
+          <div className='bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8'    />
+            <h3 className='text-2xl font-bold text-white mb-4'    />
               Ready to Transform Your Business?
             </h3>
-            <p className='text-gray-300 mb-6 max-w-2xl mx-auto' />
+            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'    />
               Join thousands of businesses already leveraging our revolutionary;
 services to achieve unprecedented growth and innovation.
             </p>
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6' />
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'    />
               <motion.div;
 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
-               />
+                  />
                 <Link;
 href='/services'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200'
-                 />
-                  <Rocket className='w-5 h-5 mr-2' />
+                    />
+                  <Rocket className='w-5 h-5 mr-2'    />
                   View All Services;
                 </Link>
               </motion.div>
@@ -379,12 +379,12 @@ whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }
 }
                 transition={{ duration: 0.2, delay: 0.1 }}
-               />
+                  />
                 <Link;
 href='/contact'
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-200'
-                 />
-                  <Shield className='w-5 h-5 mr-2' />
+                    />
+                  <Shield className='w-5 h-5 mr-2'    />
                   Get Started;
                 </Link>
               </motion.div>

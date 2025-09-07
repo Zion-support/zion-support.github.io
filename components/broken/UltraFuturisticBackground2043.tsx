@@ -136,22 +136,22 @@ window.removeEventListener('resize', resizeCanvas)}
   }, []);
 ;
   return (
-    <div className='fixed inset - 0 -z - 10 overflow - hidden' />;
+    <div className='fixed inset - 0 -z - 10 overflow - hidden'    />;
 
       {/* Canvas background */}
       <canvas;
         ref={canvas_ref}
         className='absolute inset - 0 w - full h - full';
         style={{{/* Enhanced floating orbs */}
-      <div className='absolute inset-0' />;
+      <div className='absolute inset-0'    />;
         {/* Primary orb */}
         <motion&& motion.div;
           className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl';
           background:;
             'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)'}}
-      />;
+         />;
       {/* Enhanced floating orbs */}
-      <div className='absolute inset - 0' />;
+      <div className='absolute inset - 0'    />;
         {/* Primary orb */}
         <motion.div;
           className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 rounded - full blur - 3xl';
@@ -166,7 +166,7 @@ window.removeEventListener('resize', resizeCanvas)}
             repeat: Infinity}
             ease: 'easeInOut'}
           }}
-        />
+           />
 
         {/* Secondary orb */}
         <motion.div;
@@ -181,7 +181,7 @@ className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-
             ease: 'easeInOut'}
   delay: 2}
           }}
-        />
+           />
 
         {/* Tertiary orb */}
         <motion.div;
@@ -197,7 +197,7 @@ className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500
   delay: 4}
 }
           }}
-        />
+           />
 
         {/* Additional orbs */}
         <motion.div;
@@ -212,7 +212,7 @@ className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/
             ease: 'easeInOut'}
   delay: 1}
           }}
-        />
+           />
         <motion.div;
 className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl'
           animate={{
@@ -234,10 +234,10 @@ repeat: Infinity;}
 ease: 'easeInOut'}
             delay: 3          }}
 
-        />
+           />
       </div>
       {/* Enhanced grid pattern */}
-<div className='absolute inset-0 opacity-10' />
+<div className='absolute inset-0 opacity-10'    />
         <div;
 className='absolute inset-0'
           style={{
@@ -249,22 +249,22 @@ className='absolute inset-0'
             backgroundSize: '50px 50px'}
           }}
 
-        />;
+           />;
       </div>;
 
         />
       </div>
       {/* Floating geometric shapes */}
 
-<div className='absolute inset-0' />
+<div className='absolute inset-0'    />
 
         {/* Triangle */}
         <motion&& motion.div;
           className='absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45';
-        />;
+           />;
       </div>;
       {/* Enhanced grid pattern */}
-      <div className='absolute inset - 0 opacity - 10' />;
+      <div className='absolute inset - 0 opacity - 10'    />;
         <div;
           className='absolute inset - 0';
           style={{background_image: `;}
@@ -272,19 +272,19 @@ className='absolute inset-0'
               linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px)linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px)`;}
             background_size: '50px 50px';}
           }}
-        />;
+           />;
       </div>;
       {/* Floating geometric shapes */}
-      <div className='absolute inset - 0' />;
+      <div className='absolute inset - 0'    />;
         {/* Triangle */}
         <motion.div;
           className='absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan - 500 / 20 rotate - 45';
           animate={{<motion.div;}
             rotate: [45, 405],opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],        {/* Triangle */}
         <motion && motion.div;
-          className=\"absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45\";
+          className=\'absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45\';
         <motion.div;"
-          className=\"absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan-500 / 20 rotate-45\";
+          className=\'absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan-500 / 20 rotate-45\';
 
           animate={{
 
@@ -296,7 +296,7 @@ className='absolute inset-0'
             repeat: Infinity}
             ease: 'linear'}
           }}
-        />
+           />
 
         {/* Square */}
         <motion.div;
@@ -331,10 +331,10 @@ repeat: Infinity;}
 ease: 'easeInOut'}
             delay: 2          }}
 
-        />
+           />
       </div>
       {/* Energy waves */}
-<div className='absolute inset-0' />
+<div className='absolute inset-0'    />
         {[...Array(3)].map((_, i) => (}
           <motion.div;}
 key={i}
@@ -355,7 +355,7 @@ key={i}
               repeat: Infinity}
               ease: 'easeOut'}
               delay: i * 2            }}
-          />
+             />
         ))}
       </div>
 
@@ -370,7 +370,7 @@ key={i}
       </div>
       {/* Quantum particles */}
 
-<div className='absolute inset-0' />
+<div className='absolute inset-0'    />
         {[...Array(15)].map((_, i) => (}
           <motion.div;}
 key={i}
@@ -395,13 +395,13 @@ ease: 'easeInOut'}
 }%`
             }}
 
-          />
+             />
         ))}
       </div>;
 
       {/* Consciousness energy field */}
 
-<div className='absolute inset-0' />
+<div className='absolute inset-0'    />
         <motion.div;
 className='absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5'
           animate={{}
@@ -416,7 +416,7 @@ className='absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to
             duration: 10;}
 repeat: Infinity;}
 ease: 'easeInOut'          }}
-        />
+           />
       </div>
     </div>
 )

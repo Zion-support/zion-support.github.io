@@ -43,9 +43,9 @@ export default function UltraAdvancedFuturisticBackground({
 }
 }: UltraAdvancedFuturisticBackgroundProps) {
  ;
-  const canvasRef = useRef<HTMLCanvasElement />(null);
+  const canvasRef = useRef<HTMLCanvasElement    />(null);
 
-const animationRef = useRef<number | undefined />(undefined);
+const animationRef = useRef<number | undefined    />(undefined);
   useEffect(() => {
 
     const canvas = canvasRef.current;
@@ -438,7 +438,7 @@ enableHolographic;
 enableQuantumEffects;
   ]);
   return (
-    <div className='relative min-h-screen' />;
+    <div className='relative min-h-screen'    />;
       <canvas;
 ref={canvasRef}
         className='fixed inset-0 w-full h-full pointer-events-none';
@@ -448,17 +448,17 @@ ref={canvasRef}
       {enableHolographic && (<div;
           className='fixed inset-0 pointer-events-none';}
           style={{ zIndex: -1 ,}
-} />;
-          <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5' />;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0 && 0.03),transparent_50%)]' />;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.03),transparent_50%)]' />;
+}    />;
+          <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5'    />;
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0 && 0.03),transparent_50%)]'    />;
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.03),transparent_50%)]'    />;
         </div>;
       )}
         <div;
           className='fixed inset-0 pointer-events-none';
           style={{ zIndex: -1 ,}
-} />;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]' />;
+}    />;
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]'    />;
         </div>;
       )}
 
@@ -467,23 +467,23 @@ ref={canvasRef}
     </div>
   );
   return (
-    <div className='relative min - h-screen' />;
+    <div className='relative min - h-screen'    />;
 
       <canvas;
         ref={canvas_ref}
         className='fixed inset - 0 w - full h - full pointer - events - none';
         style={{ z_index: -1 ,}
 }
-      />;
+         />;
       {/* Additional futuristic overlay effects */}
       {enable_holographic && (<div;
           className='fixed inset - 0 pointer - events - none';}
           style={{ z_index: -1 ,}
 }
-         />;
-          <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to - purple - 500 / 5' />;
-          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]' />;
-          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]' />
+            />;
+          <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to - purple - 500 / 5'    />;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]'    />;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]'    />
     </div>
   );
 }
@@ -491,8 +491,8 @@ ref={canvasRef}
           className='fixed inset - 0 pointer - events - none';}
           style={{ z_index: -1 ,}
 }
-         />;
-          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.02), transparent_70%)]' />
+            />;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.02), transparent_70%)]'    />
     </div>
   );
 }
