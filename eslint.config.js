@@ -17,7 +17,7 @@ export default [
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      parser: typescriptParser,
+      parser: typescriptParser;
 =======
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
@@ -455,7 +455,7 @@ export default [
       '*.js',
       '*.ts',
       'public/sw*.js',
-      'resolve-*.js',
+      'resolve-*.js';
       'run-complete-automation.js';
       'security-config.js';
       'seo-improvements.js';

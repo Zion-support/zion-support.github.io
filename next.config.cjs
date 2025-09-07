@@ -66,10 +66,7 @@ const nextConfig = {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
+            chunks: 'all'}}};
     }
     
     return config;
@@ -81,8 +78,7 @@ export default nextConfig;
 =======
   output: 'export',
   images: {
-    unoptimized: true,
-  },
+    unoptimized: true},
 =======
 <<<<<<< HEAD
 /** @type {import(
@@ -126,8 +122,7 @@ module.exports = nextConfig;
 =======
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true,
-  },
+    ignoreDuringBuilds: true},
   typescript: {
     ignoreBuildErrors: true,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-625f

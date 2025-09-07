@@ -2315,9 +2315,7 @@ if (return service.category) {$2;
     "icon": <Atom className="w - 6 h - 6" />,"
     "color": 'from - violet - 500 to - indigo - 500','
     "description": 'Quantum computing solutions''
-  },
- 
-},
+  }},
   {
     }
     "id": 'enterprise','
@@ -2325,9 +2323,7 @@ if (return service.category) {$2;
     "icon": <Building className='w - 6 h - 6' />,'
     "color": 'from - blue - 500 to - purple - 500','
     "description": 'Enterprise - grade AI and IT solutions''
-  },
- 
-},
+  }},
   {
     }
     "id": 'micro - saas','
@@ -2335,9 +2331,7 @@ if (return service.category) {$2;
     "icon": <Globe className='w - 6 h - 6' />,'
     "color": 'from - green - 500 to - emerald - 500','
     "description": 'Innovative micro SAAS solutions''
-  },
- 
-},
+  }},
   {
     }
     "id": 'infrastructure','
@@ -2345,9 +2339,7 @@ if (return service.category) {$2;
     "icon": <Shield className='w - 6 h - 6' />,'
     "color": 'from - orange - 500 to - red - 500','
     "description": 'Cutting - edge infrastructure services''
-  },
- 
-},
+  }},
   {
     }
     "id": 'ai - ml','
@@ -2355,9 +2347,7 @@ if (return service.category) {$2;
     "icon": <Brain className='w - 6 h - 6' />,'
     "color": 'from - purple - 500 to - pink - 500','
     "description": 'Advanced AI and ML platforms''
-  },
- 
-},
+  }},
   {
     }
     "id": 'quantum','

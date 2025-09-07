@@ -222,7 +222,7 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             >;
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg "hover":bg-cyan-500 "hover":text-white transition-all duration-200">"
 
-            transition={{ duration: 0.8, delay: 0.4 ,}
+            transition={{ duration: 0.8, delay: 0.4 }
 
           >
             <a
