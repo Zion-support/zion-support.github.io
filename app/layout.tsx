@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 
@@ -9,32 +9,20 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
-<<<<<<< HEAD
-  keywords: 'AI, artificial intelligence, technology solutions, cloud computing, cybersecurity, data analytics, digital transformation',
-=======
-  keywords: ['AI', 'artificial intelligence', 'blockchain', 'technology', 'innovation', 'automation'],
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+  keywords: ['AI', 'artificial intelligence', 'blockchain', 'technology', 'innovation', 'automation', 'cloud computing', 'cybersecurity', 'data analytics', 'digital transformation'],
   authors: [{ name: 'Zion Tech Group' }],
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-<<<<<<< HEAD
-    description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
-=======
     description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-<<<<<<< HEAD
-    description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
-=======
     description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
   },
 };
 
@@ -44,17 +32,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-<<<<<<< HEAD
-    <html lang="en" className={inter.className}>
-      <body className="antialiased">
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
-=======
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -65,9 +42,14 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
-        {children}
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </div>
         <PerformanceMonitor />
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
       </body>
     </html>
   );
