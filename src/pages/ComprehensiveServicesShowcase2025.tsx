@@ -252,6 +252,7 @@ import {
   Cloud,
   ShoppingCart as ShoppingCartIcon
 } from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 export default function ComprehensiveServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -395,6 +396,69 @@ export default function ComprehensiveServicesShowcase2025() {
     : services.filter(service => service.category === selectedCategory);
 
   const highlightedServices = services.filter(service => service.highlight);
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'rating':
+        return b.rating - a.rating;
+      case 'price':
+        return a.price - b.price;
+      case 'reviews':
+        return b.reviewCount - a.reviewCount;
+      case 'name':
+        return a.title.localeCompare(b.title);
+      default:
+        return 0;
+    }
+  });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'AI & Machine Learning':
+      case 'AI Development':
+      case 'AI Content':
+      case 'AI HR':
+        return <Brain className="w-5 h-5" />;
+      case 'Quantum Computing':
+        return <Chip className="w-5 h-5" />;
+      case 'Blockchain':
+        return <Lock className="w-5 h-5" />;
+      case 'Healthcare Technology':
+        return <Heart className="w-5 h-5" />;
+      case 'Edge Computing':
+        return <Network className="w-5 h-5" />;
+      case 'Metaverse':
+        return <Globe className="w-5 h-5" />;
+      case 'Cybersecurity':
+        return <Shield className="w-5 h-5" />;
+      case 'Sustainability':
+        return <Award className="w-5 h-5" />;
+      default:
+        return <Rocket className="w-5 h-5" />;
+    }
+  };
 
   return (
     <div className="min-h-screen bg-zion-blue">
